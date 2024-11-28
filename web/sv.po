@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-26 02:49+0000\n"
+"POT-Creation-Date: 2024-11-28 02:50+0000\n"
 "PO-Revision-Date: 2024-10-29 12:48+0000\n"
 "Last-Translator: Luna  Jernberg <bittin@opensuse.org>\n"
 "Language-Team: Swedish <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -23,11 +23,11 @@ msgstr ""
 msgid "Change product"
 msgstr "Ändra produkt"
 
-#: src/components/core/InstallButton.tsx:51
+#: src/components/core/InstallButton.tsx:50
 msgid "Confirm Installation"
 msgstr "Bekräfta Installation"
 
-#: src/components/core/InstallButton.tsx:55
+#: src/components/core/InstallButton.tsx:54
 msgid ""
 "If you continue, partitions on your hard disk will be modified according to "
 "the provided installation settings."
@@ -35,27 +35,32 @@ msgstr ""
 "Om du fortsätter kommer partitionerna på din hårddisk att modifieras enligt "
 "de medföljande installationsinställningarna."
 
-#: src/components/core/InstallButton.tsx:59
+#: src/components/core/InstallButton.tsx:58
 msgid "Please, cancel and check the settings if you are unsure."
 msgstr "Vänligen, avbryt och kontrollera inställningarna om du är osäker."
 
 #. TRANSLATORS: button label
-#: src/components/core/InstallButton.tsx:64
+#: src/components/core/InstallButton.tsx:63
 msgid "Continue"
 msgstr "Fortsätt"
 
 #. TRANSLATORS: button label
-#: src/components/core/InstallButton.tsx:68 src/components/core/Page.tsx:238
+#: src/components/core/InstallButton.tsx:67 src/components/core/Page.tsx:238
 #: src/components/core/Popup.jsx:133
 #: src/components/network/WifiConnectionForm.tsx:153
 #: src/components/product/ProductSelectionPage.tsx:95
 msgid "Cancel"
 msgstr "Avbryt"
 
-#. TRANSLATORS: button label
-#: src/components/core/InstallButton.tsx:103
+#. TRANSLATORS: The install button label
+#: src/components/core/InstallButton.tsx:102
 msgid "Install"
 msgstr "Installera"
+
+#. TRANSLATORS: Accessible text included with the install button when there are issues
+#: src/components/core/InstallButton.tsx:104
+msgid "Not possible with the current setup. Click to know more."
+msgstr ""
 
 #: src/components/core/InstallationFinished.tsx:53
 msgid "TPM sealing requires the new system to be booted directly."
@@ -147,21 +152,38 @@ msgstr "Kan inte ändras i fjärrinstallation"
 msgid "Accept"
 msgstr "Acceptera"
 
+#: src/components/core/IssuesDrawer.tsx:49
+#: src/components/users/UsersPage.tsx:36 src/routes/users.tsx:33
+msgid "Users"
+msgstr "Användare"
+
+#: src/components/core/IssuesDrawer.tsx:50
+#: src/components/overview/StorageSection.tsx:100
+#: src/components/storage/ProposalPage.tsx:108 src/routes/storage.tsx:39
+msgid "Storage"
+msgstr "Lagring"
+
+#: src/components/core/IssuesDrawer.tsx:51
+#: src/components/overview/SoftwareSection.tsx:70
+#: src/components/software/SoftwarePage.tsx:106 src/routes/software.tsx:33
+msgid "Software"
+msgstr "Programvara"
+
+#: src/components/core/IssuesDrawer.tsx:58
+#, fuzzy
+msgid "Pre-installation checks"
+msgstr "Installationsproblem"
+
+#: src/components/core/IssuesDrawer.tsx:63
+msgid ""
+"Before installing, you have to make some decisions. Click on each section to "
+"review the settings."
+msgstr ""
+
 #: src/components/core/IssuesHint.jsx:35
 msgid ""
 "Before starting the installation, you need to address the following problems:"
 msgstr "Innan du startar installationen måste du åtgärda följande problem:"
-
-#: src/components/core/IssuesLink.tsx:49
-msgid ""
-"Installation not possible yet because of issues. Check them at Overview page."
-msgstr ""
-"Installationen är inte möjlig ännu på grund av problem. Kontrollera dem på "
-"översikt sidan."
-
-#: src/components/core/IssuesLink.tsx:51
-msgid "Installation issues"
-msgstr "Installationsproblem"
 
 #: src/components/core/ListSearch.jsx:49
 msgid "Search"
@@ -345,19 +367,19 @@ msgstr "Inget av tidszonerna matchar filtret."
 msgid " Timezone selection"
 msgstr " Tidszon val"
 
-#: src/components/layout/Header.tsx:81
+#: src/components/layout/Header.tsx:83
 msgid "Options toggle"
 msgstr "Växla mellan alternativ"
 
-#: src/components/layout/Header.tsx:92
+#: src/components/layout/Header.tsx:94
 msgid "Download logs"
 msgstr "Ladda ner loggar"
 
-#: src/components/layout/Header.tsx:98
+#: src/components/layout/Header.tsx:100
 msgid "Installer Options"
 msgstr "Installationsalternativ"
 
-#: src/components/layout/Header.tsx:140
+#: src/components/layout/Header.tsx:143
 msgid "Main navigation"
 msgstr "Huvudnavigering"
 
@@ -662,36 +684,11 @@ msgstr "Anslut till ett Wi-Fi nätverk"
 msgid "The system will use %s as its default language."
 msgstr "Systemet kommer att använda %s som dess standardspråk."
 
-#: src/components/overview/OverviewPage.tsx:48
-#: src/components/users/UsersPage.tsx:36 src/routes/users.tsx:33
-msgid "Users"
-msgstr "Användare"
-
-#: src/components/overview/OverviewPage.tsx:49
-#: src/components/overview/StorageSection.tsx:100
-#: src/components/storage/ProposalPage.tsx:108 src/routes/storage.tsx:39
-msgid "Storage"
-msgstr "Lagring"
-
-#: src/components/overview/OverviewPage.tsx:50
-#: src/components/overview/SoftwareSection.tsx:70
-#: src/components/software/SoftwarePage.tsx:106 src/routes/software.tsx:33
-msgid "Software"
-msgstr "Programvara"
-
-#: src/components/overview/OverviewPage.tsx:87
-msgid "Installation blocking issues"
-msgstr "Installationsblockerande problem"
-
-#: src/components/overview/OverviewPage.tsx:88
-msgid "Before installing, please check the following problems."
-msgstr "Innan du installerar, vänligen kontrollera följande problem."
-
-#: src/components/overview/OverviewPage.tsx:97 src/router.js:43
+#: src/components/overview/OverviewPage.tsx:33 src/router.js:43
 msgid "Overview"
 msgstr "Översikt"
 
-#: src/components/overview/OverviewPage.tsx:99
+#: src/components/overview/OverviewPage.tsx:35
 msgid ""
 "These are the most relevant installation settings. Feel free to browse the "
 "sections in the menu for further details."
@@ -699,7 +696,7 @@ msgstr ""
 "Dessa är de mest relevanta installationsinställningarna. Bläddra gärna "
 "igenom avsnitten i menyn för ytterligare detaljer."
 
-#: src/components/overview/OverviewPage.tsx:121
+#: src/components/overview/OverviewPage.tsx:55
 msgid ""
 "Take your time to check your configuration before starting the installation "
 "process."
@@ -2550,6 +2547,19 @@ msgstr "Rensa"
 #: src/routes/storage.tsx:74
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#~ msgid ""
+#~ "Installation not possible yet because of issues. Check them at Overview "
+#~ "page."
+#~ msgstr ""
+#~ "Installationen är inte möjlig ännu på grund av problem. Kontrollera dem "
+#~ "på översikt sidan."
+
+#~ msgid "Installation blocking issues"
+#~ msgstr "Installationsblockerande problem"
+
+#~ msgid "Before installing, please check the following problems."
+#~ msgstr "Innan du installerar, vänligen kontrollera följande problem."
 
 #~ msgid "About"
 #~ msgstr "Om"

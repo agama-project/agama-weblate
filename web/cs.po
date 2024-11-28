@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-26 02:49+0000\n"
+"POT-Creation-Date: 2024-11-28 02:50+0000\n"
 "PO-Revision-Date: 2024-11-13 18:48+0000\n"
 "Last-Translator: Jan Papež <honyczek@centrum.cz>\n"
 "Language-Team: Czech <https://l10n.opensuse.org/projects/agama/agama-web/cs/"
@@ -24,11 +24,11 @@ msgstr ""
 msgid "Change product"
 msgstr "Změnit produkt"
 
-#: src/components/core/InstallButton.tsx:51
+#: src/components/core/InstallButton.tsx:50
 msgid "Confirm Installation"
 msgstr "Potvrdit instalaci"
 
-#: src/components/core/InstallButton.tsx:55
+#: src/components/core/InstallButton.tsx:54
 msgid ""
 "If you continue, partitions on your hard disk will be modified according to "
 "the provided installation settings."
@@ -36,27 +36,32 @@ msgstr ""
 "Budete-li pokračovat, oddíly na pevném disku budou upraveny podle zadaných "
 "instalačních nastavení."
 
-#: src/components/core/InstallButton.tsx:59
+#: src/components/core/InstallButton.tsx:58
 msgid "Please, cancel and check the settings if you are unsure."
 msgstr "Nejste-li si jisti, zrušte akci a zkontrolujte nastavení."
 
 #. TRANSLATORS: button label
-#: src/components/core/InstallButton.tsx:64
+#: src/components/core/InstallButton.tsx:63
 msgid "Continue"
 msgstr "Pokračovat"
 
 #. TRANSLATORS: button label
-#: src/components/core/InstallButton.tsx:68 src/components/core/Page.tsx:238
+#: src/components/core/InstallButton.tsx:67 src/components/core/Page.tsx:238
 #: src/components/core/Popup.jsx:133
 #: src/components/network/WifiConnectionForm.tsx:153
 #: src/components/product/ProductSelectionPage.tsx:95
 msgid "Cancel"
 msgstr "Zrušit"
 
-#. TRANSLATORS: button label
-#: src/components/core/InstallButton.tsx:103
+#. TRANSLATORS: The install button label
+#: src/components/core/InstallButton.tsx:102
 msgid "Install"
 msgstr "Instalovat"
+
+#. TRANSLATORS: Accessible text included with the install button when there are issues
+#: src/components/core/InstallButton.tsx:104
+msgid "Not possible with the current setup. Click to know more."
+msgstr ""
 
 #: src/components/core/InstallationFinished.tsx:53
 msgid "TPM sealing requires the new system to be booted directly."
@@ -146,20 +151,38 @@ msgstr "U instalace na dálku nelze změnit"
 msgid "Accept"
 msgstr "Přijmout"
 
+#: src/components/core/IssuesDrawer.tsx:49
+#: src/components/users/UsersPage.tsx:36 src/routes/users.tsx:33
+msgid "Users"
+msgstr "Uživatelé"
+
+#: src/components/core/IssuesDrawer.tsx:50
+#: src/components/overview/StorageSection.tsx:100
+#: src/components/storage/ProposalPage.tsx:108 src/routes/storage.tsx:39
+msgid "Storage"
+msgstr "Úložiště"
+
+#: src/components/core/IssuesDrawer.tsx:51
+#: src/components/overview/SoftwareSection.tsx:70
+#: src/components/software/SoftwarePage.tsx:106 src/routes/software.tsx:33
+msgid "Software"
+msgstr "Software"
+
+#: src/components/core/IssuesDrawer.tsx:58
+#, fuzzy
+msgid "Pre-installation checks"
+msgstr "Problémy s instalací"
+
+#: src/components/core/IssuesDrawer.tsx:63
+msgid ""
+"Before installing, you have to make some decisions. Click on each section to "
+"review the settings."
+msgstr ""
+
 #: src/components/core/IssuesHint.jsx:35
 msgid ""
 "Before starting the installation, you need to address the following problems:"
 msgstr "Před zahájením instalace vyřešte tyto problémy:"
-
-#: src/components/core/IssuesLink.tsx:49
-msgid ""
-"Installation not possible yet because of issues. Check them at Overview page."
-msgstr ""
-"Instalace zatím není možná kvůli problémům, které najdete na stránce Přehled."
-
-#: src/components/core/IssuesLink.tsx:51
-msgid "Installation issues"
-msgstr "Problémy s instalací"
 
 #: src/components/core/ListSearch.jsx:49
 msgid "Search"
@@ -343,19 +366,19 @@ msgstr "Žádné z časových pásem neodpovídá filtru."
 msgid " Timezone selection"
 msgstr " Výběr časového pásma"
 
-#: src/components/layout/Header.tsx:81
+#: src/components/layout/Header.tsx:83
 msgid "Options toggle"
 msgstr "Přepínač možností"
 
-#: src/components/layout/Header.tsx:92
+#: src/components/layout/Header.tsx:94
 msgid "Download logs"
 msgstr "Stáhnout protokoly"
 
-#: src/components/layout/Header.tsx:98
+#: src/components/layout/Header.tsx:100
 msgid "Installer Options"
 msgstr "Možnosti instalátoru"
 
-#: src/components/layout/Header.tsx:140
+#: src/components/layout/Header.tsx:143
 msgid "Main navigation"
 msgstr "Hlavní navigace"
 
@@ -659,36 +682,11 @@ msgstr "Připojení k síti Wi-Fi"
 msgid "The system will use %s as its default language."
 msgstr "Systém použije jako výchozí jazyk %s."
 
-#: src/components/overview/OverviewPage.tsx:48
-#: src/components/users/UsersPage.tsx:36 src/routes/users.tsx:33
-msgid "Users"
-msgstr "Uživatelé"
-
-#: src/components/overview/OverviewPage.tsx:49
-#: src/components/overview/StorageSection.tsx:100
-#: src/components/storage/ProposalPage.tsx:108 src/routes/storage.tsx:39
-msgid "Storage"
-msgstr "Úložiště"
-
-#: src/components/overview/OverviewPage.tsx:50
-#: src/components/overview/SoftwareSection.tsx:70
-#: src/components/software/SoftwarePage.tsx:106 src/routes/software.tsx:33
-msgid "Software"
-msgstr "Software"
-
-#: src/components/overview/OverviewPage.tsx:87
-msgid "Installation blocking issues"
-msgstr "Problémy zabraňující instalaci"
-
-#: src/components/overview/OverviewPage.tsx:88
-msgid "Before installing, please check the following problems."
-msgstr "Před instalací zkontrolujte tyto problémy."
-
-#: src/components/overview/OverviewPage.tsx:97 src/router.js:43
+#: src/components/overview/OverviewPage.tsx:33 src/router.js:43
 msgid "Overview"
 msgstr "Přehled"
 
-#: src/components/overview/OverviewPage.tsx:99
+#: src/components/overview/OverviewPage.tsx:35
 msgid ""
 "These are the most relevant installation settings. Feel free to browse the "
 "sections in the menu for further details."
@@ -696,7 +694,7 @@ msgstr ""
 "Toto je nejdůležitější nastavení instalace. Další podrobnosti najdete v "
 "sekcích v nabídce."
 
-#: src/components/overview/OverviewPage.tsx:121
+#: src/components/overview/OverviewPage.tsx:55
 msgid ""
 "Take your time to check your configuration before starting the installation "
 "process."
@@ -2539,6 +2537,19 @@ msgstr "Smazat"
 #: src/routes/storage.tsx:74
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#~ msgid ""
+#~ "Installation not possible yet because of issues. Check them at Overview "
+#~ "page."
+#~ msgstr ""
+#~ "Instalace zatím není možná kvůli problémům, které najdete na stránce "
+#~ "Přehled."
+
+#~ msgid "Installation blocking issues"
+#~ msgstr "Problémy zabraňující instalaci"
+
+#~ msgid "Before installing, please check the following problems."
+#~ msgstr "Před instalací zkontrolujte tyto problémy."
 
 #~ msgid "About"
 #~ msgstr "O"
