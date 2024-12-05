@@ -8,7 +8,8 @@ at once in a bigger batch.
 
 If you want to contribute see the [CONTRIBUTING.md](./CONTRIBUTING.md) file,
 for more details see the [Agama internationalization](
-https://github.com/openSUSE/agama/blob/master/doc/i18n.md) documentation.
+https://agama-project.github.io/docs/devel/i18n) documentation.
+
 
 ## Translation Statistics
 
