@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-12-17 02:52+0000\n"
-"PO-Revision-Date: 2024-12-31 15:50+0000\n"
+"PO-Revision-Date: 2025-01-01 11:50+0000\n"
 "Last-Translator: Arif Budiman <arifpedia@gmail.com>\n"
 "Language-Team: Indonesian <https://l10n.opensuse.org/projects/agama/"
 "agama-web/id/>\n"
@@ -1824,46 +1824,35 @@ msgstr ""
 #. TRANSLATORS: Title of the dialog for changing the location of a file system. %s is replaced
 #. by a mount path (e.g., /home).
 #: src/components/storage/VolumeLocationDialog.tsx:137
-#, fuzzy, c-format
+#, c-format
 msgid "Location for %s file system"
-msgstr "Ukuran yang tepat untuk sistem berkas."
+msgstr "Lokasi untuk sistem file %s"
 
 #: src/components/storage/VolumeLocationDialog.tsx:147
-#, fuzzy
 msgid "Select in which device to allocate the file system"
-msgstr ""
-"Memilih cara mengosongkan ruang pada disk yang dipilih untuk mengalokasikan "
-"sistem berkas."
+msgstr "Pilih perangkat mana yang akan dialokasikan sebagai sistem file"
 
 #: src/components/storage/VolumeLocationDialog.tsx:150
-#, fuzzy
 msgid "Select a location"
-msgstr "Pilih disk"
+msgstr "Pilih lokasi"
 
 #: src/components/storage/VolumeLocationDialog.tsx:162
-#, fuzzy
 msgid "Select how to allocate the file system"
-msgstr "Ukuran yang tepat untuk sistem berkas."
+msgstr "Pilih cara mengalokasikan sistem file"
 
 #: src/components/storage/VolumeLocationDialog.tsx:167
-#, fuzzy
 msgid "Create a new partition"
-msgstr ""
-"Sistem berkas akan dialokasikan secara baku sebagai <b>partisi baru di "
-"perangkat yang dipilih</b>."
+msgstr "Membuat partisi baru"
 
 #: src/components/storage/VolumeLocationDialog.tsx:169
-#, fuzzy
 msgid ""
 "The file system will be allocated as a new partition at the selected   disk."
 msgstr ""
-"Sistem berkas akan dialokasikan secara baku sebagai <b>partisi baru di "
-"perangkat yang dipilih</b>."
+"Sistem file akan dialokasikan sebagai partisi baru pada disk yang dipilih."
 
 #: src/components/storage/VolumeLocationDialog.tsx:179
-#, fuzzy
 msgid "Create a dedicated LVM volume group"
-msgstr "Membuat Grup Volume LVM"
+msgstr "Membuat grup volume LVM khusus"
 
 #: src/components/storage/VolumeLocationDialog.tsx:181
 msgid ""
@@ -1874,21 +1863,17 @@ msgstr ""
 "dibuat sebagai volume logis."
 
 #: src/components/storage/VolumeLocationDialog.tsx:191
-#, fuzzy
 msgid "Format the device"
-msgstr "Memformat perangkat DASD"
+msgstr "Memformat perangkat"
 
 #: src/components/storage/VolumeLocationDialog.tsx:195
-#, fuzzy, c-format
+#, c-format
 msgid "The selected device will be formatted as %s file system."
-msgstr ""
-"Memilih cara mengosongkan ruang pada disk yang dipilih untuk mengalokasikan "
-"sistem berkas."
+msgstr "Perangkat yang dipilih akan diformat sebagai sistem file %s."
 
 #: src/components/storage/VolumeLocationDialog.tsx:206
-#, fuzzy
 msgid "Mount the file system"
-msgstr "Edit sistem berkas"
+msgstr "Mount sistem file"
 
 #: src/components/storage/VolumeLocationDialog.tsx:208
 msgid ""
@@ -1907,21 +1892,18 @@ msgid "Formatting DASD devices"
 msgstr "Memformat perangkat DASD"
 
 #: src/components/storage/dasd/DASDPage.tsx:39 src/routes/storage.tsx:65
-#, fuzzy
 msgid "DASD"
-msgstr "DASD %s"
+msgstr "DASD"
 
 #. TRANSLATORS: DASD devices selection table
 #: src/components/storage/dasd/DASDPage.tsx:44
-#, fuzzy
 msgid "DASD devices selection table"
-msgstr "Belum ada perangkat yang dipilih"
+msgstr "Tabel pemilihan perangkat DASD"
 
 #: src/components/storage/dasd/DASDPage.tsx:54
 #: src/components/storage/zfcp/ZFCPPage.tsx:199
-#, fuzzy
 msgid "Back to device selection"
-msgstr "Belum ada perangkat yang dipilih"
+msgstr "Kembali ke pemilihan perangkat"
 
 #: src/components/storage/dasd/DASDTable.tsx:68
 #: src/components/storage/iscsi/InitiatorPresenter.tsx:57
@@ -1973,9 +1955,8 @@ msgid "Partition Info"
 msgstr "Info Partisi"
 
 #: src/components/storage/dasd/DASDTable.tsx:94
-#, fuzzy
 msgid "Cannot format all selected devices"
-msgstr "Menunggu informasi tentang perangkat yang dipilih"
+msgstr "Tidak dapat memformat semua perangkat yang dipilih"
 
 #: src/components/storage/dasd/DASDTable.tsx:98
 msgid ""
@@ -1986,9 +1967,8 @@ msgstr ""
 "atau aktifkan perangkat yang tercantum di bawah ini dan coba lagi"
 
 #: src/components/storage/dasd/DASDTable.tsx:110
-#, fuzzy
 msgid "Format selected devices?"
-msgstr "Memformat perangkat DASD"
+msgstr "Memformat perangkat yang dipilih?"
 
 #: src/components/storage/dasd/DASDTable.tsx:114
 msgid ""
@@ -2045,9 +2025,8 @@ msgid "Remove max channel filter"
 msgstr "Menghapus filter saluran maks"
 
 #: src/components/storage/dasd/DASDTable.tsx:384
-#, fuzzy
 msgid "DASDs table section"
-msgstr "Perangkat Lunak %s"
+msgstr "Bagian tabel DASD"
 
 #: src/components/storage/device-utils.tsx:75
 msgid "Unused space"
@@ -2251,39 +2230,35 @@ msgstr "Semua partisi akan dihapus dan semua data dalam disk akan hilang."
 #. TRANSLATORS: This is presented next to the label "Find space", so the whole sentence
 #. would read as "Find space deleting current content". Keep it short
 #: src/components/storage/utils.ts:78
-#, fuzzy
 msgid "deleting current content"
-msgstr "Hapus konten saat ini"
+msgstr "menghapus konten saat ini"
 
 #: src/components/storage/utils.ts:83
 msgid "Shrink existing partitions"
 msgstr "Perkecil partisi yang ada"
 
 #: src/components/storage/utils.ts:84
-#, fuzzy
 msgid "The data is kept, but the current partitions will be resized as needed."
 msgstr ""
-"Data akan disimpan, namun partisi yang ada akan diubah ukurannya sesuai "
-"kebutuhan untuk menyediakan ruang yang cukup."
+"Data tetap dipertahankan, tetapi partisi saat ini akan diubah ukurannya "
+"sesuai kebutuhan."
 
 #. TRANSLATORS: This is presented next to the label "Find space", so the whole sentence
 #. would read as "Find space shrinking partitions". Keep it short.
 #: src/components/storage/utils.ts:88
-#, fuzzy
 msgid "shrinking partitions"
-msgstr "Perkecil partisi yang ada"
+msgstr "menyusutkan partisi"
 
 #: src/components/storage/utils.ts:93
 msgid "Use available space"
 msgstr "Gunakan ruang yang tersedia"
 
 #: src/components/storage/utils.ts:94
-#, fuzzy
 msgid ""
 "The data is kept. Only the space not assigned to any partition will be used."
 msgstr ""
-"Data akan disimpan dan partisi yang ada tidak akan diubah. Hanya ruang yang "
-"tidak ditetapkan ke partisi mana pun yang akan digunakan."
+"Data tetap dipertahankan. Hanya ruang yang tidak ditetapkan ke partisi mana "
+"pun yang akan digunakan."
 
 #. TRANSLATORS: This is presented next to the label "Find space", so the whole sentence
 #. would read as "Find space without modifying any partition". Keep it short.
@@ -2292,21 +2267,18 @@ msgid "without modifying any partition"
 msgstr "tanpa memodifikasi partisi apa pun"
 
 #: src/components/storage/utils.ts:103
-#, fuzzy
 msgid "Custom"
-msgstr "Perangkat khusus"
+msgstr "Khusus"
 
 #: src/components/storage/utils.ts:104
-#, fuzzy
 msgid "Select what to do with each partition."
-msgstr "Perkecil partisi yang ada"
+msgstr "Pilih apa yang akan dilakukan dengan setiap partisi."
 
 #. TRANSLATORS: This is presented next to the label "Find space", so the whole sentence
 #. would read as "Find space with custom actions". Keep it short.
 #: src/components/storage/utils.ts:108
-#, fuzzy
 msgid "with custom actions"
-msgstr "%s dengan partisi %d"
+msgstr "dengan tindakan khusus"
 
 #: src/components/storage/zfcp/ZFCPControllersTable.tsx:22
 msgid "Auto LUNs Scan"
@@ -2346,16 +2318,14 @@ msgid "LUN"
 msgstr "LUN"
 
 #: src/components/storage/zfcp/ZFCPPage.tsx:54
-#, fuzzy
 msgid ""
 "Automatic LUN scan is [enabled]. Activating a controller which is       "
 "running in NPIV mode will automatically configures all its LUNs."
 msgstr ""
 "Pemindaian LUN otomatis [diaktifkan]. Mengaktifkan pengontrol yang berjalan "
-"dalam mode NPIV akan secara otomatis mengonfigurasi semua LUN-nya."
+"dalam mode NPIV akan secara otomatis mengonfigurasi semua LUN."
 
 #: src/components/storage/zfcp/ZFCPPage.tsx:59
-#, fuzzy
 msgid ""
 "Automatic LUN scan is [disabled]. LUNs have to be manually       configured "
 "after activating a controller."
@@ -2435,9 +2405,8 @@ msgid "Discard"
 msgstr "Buang"
 
 #: src/components/users/FirstUser.tsx:95
-#, fuzzy
 msgid "First user"
-msgstr "Edit %s"
+msgstr "Pengguna pertama"
 
 #: src/components/users/FirstUserForm.tsx:58
 msgid "Username suggestion dropdown"
@@ -2449,19 +2418,16 @@ msgid "Use suggested username"
 msgstr "Gunakan nama pengguna yang disarankan"
 
 #: src/components/users/FirstUserForm.tsx:152
-#, fuzzy
 msgid "All fields are required"
-msgstr "Diperlukan nilai ukuran"
+msgstr "Semua bidang wajib diisi"
 
 #: src/components/users/FirstUserForm.tsx:209
-#, fuzzy
 msgid "Create user"
-msgstr "Buat akun pengguna"
+msgstr "Membuat pengguna"
 
 #: src/components/users/FirstUserForm.tsx:209
-#, fuzzy
 msgid "Edit user"
-msgstr "Edit %s"
+msgstr "Edit pengguna"
 
 #: src/components/users/FirstUserForm.tsx:229
 #: src/components/users/FirstUserForm.tsx:231
@@ -2545,27 +2511,24 @@ msgid "Add a SSH Public Key for root"
 msgstr "Tambahkan Kunci Publik SSH untuk root"
 
 #: src/components/users/RootAuthMethodsPage.tsx:66
-#, fuzzy
 msgid "Setup root user authentication"
-msgstr "Autentikasi root"
+msgstr "Menyiapkan autentikasi pengguna root"
 
 #: src/components/users/RootAuthMethodsPage.tsx:70
 msgid "Provide a password to ensure administrative access to the system."
 msgstr "Berikan kata sandi untuk memastikan akses administratif ke sistem."
 
 #: src/components/users/RootAuthMethodsPage.tsx:74
-#, fuzzy
 msgid ""
 "You can change it or select another authentication method in the 'Users' "
 "section before installing."
 msgstr ""
-"Tentukan setidaknya satu metode autentikasi untuk masuk ke sistem sebagai "
-"root."
+"Anda dapat mengubahnya atau memilih metode autentikasi lain di bagian "
+"'Pengguna' sebelum menginstal."
 
 #: src/components/users/RootAuthMethodsPage.tsx:83
-#, fuzzy
 msgid "Password for root user"
-msgstr "Kata sandi tidak cocok"
+msgstr "Kata sandi untuk pengguna root"
 
 #: src/components/users/RootPasswordPopup.jsx:44
 msgid "Root password"
