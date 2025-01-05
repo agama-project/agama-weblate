@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-17 02:52+0000\n"
+"POT-Creation-Date: 2025-01-05 02:44+0000\n"
 "PO-Revision-Date: 2024-12-04 23:58+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -133,7 +133,7 @@ msgstr "インストーラのオプション"
 #: src/components/core/InstallerOptions.tsx:76
 #: src/components/core/InstallerOptions.tsx:80
 #: src/components/core/InstallerOptions.tsx:81
-#: src/components/l10n/L10nPage.jsx:49
+#: src/components/l10n/L10nPage.tsx:49
 msgid "Language"
 msgstr "言語"
 
@@ -183,12 +183,12 @@ msgstr ""
 "インストールを行う前に、あらかじめいくつかの決定をしておかなければなりませ"
 "ん。それぞれのセクションを押して設定内容をご確認ください。"
 
-#: src/components/core/IssuesHint.jsx:35
+#: src/components/core/IssuesHint.tsx:36
 msgid ""
 "Before starting the installation, you need to address the following problems:"
 msgstr "インストールを開始する前に、下記の問題に対応する必要があります:"
 
-#: src/components/core/ListSearch.jsx:49
+#: src/components/core/ListSearch.tsx:52
 msgid "Search"
 msgstr "検索"
 
@@ -276,15 +276,11 @@ msgstr "処理中"
 msgid "Finished"
 msgstr "完了"
 
-#: src/components/core/RowActions.jsx:65
+#: src/components/core/RowActions.tsx:71
 #: src/components/storage/PartitionsField.tsx:458
 #: src/components/storage/ProposalActionsSummary.tsx:242
 msgid "Actions"
 msgstr "処理"
-
-#: src/components/core/SectionSkeleton.jsx:28
-msgid "Waiting"
-msgstr "お待ちください"
 
 #: src/components/core/ServerError.tsx:45
 msgid "Cannot connect to Agama server"
@@ -311,8 +307,8 @@ msgid "Keyboard selection"
 msgstr "キーボードの選択"
 
 #: src/components/l10n/KeyboardSelection.tsx:92
-#: src/components/l10n/L10nPage.jsx:53 src/components/l10n/L10nPage.jsx:64
-#: src/components/l10n/L10nPage.jsx:75
+#: src/components/l10n/L10nPage.tsx:53 src/components/l10n/L10nPage.tsx:64
+#: src/components/l10n/L10nPage.tsx:75
 #: src/components/l10n/LocaleSelection.tsx:93
 #: src/components/l10n/TimezoneSelection.tsx:138
 #: src/components/product/ProductSelectionPage.tsx:148
@@ -320,18 +316,18 @@ msgstr "キーボードの選択"
 msgid "Select"
 msgstr "選択"
 
-#: src/components/l10n/L10nPage.jsx:42
-#: src/components/overview/L10nSection.jsx:38 src/routes/l10n.tsx:32
+#: src/components/l10n/L10nPage.tsx:42
+#: src/components/overview/L10nSection.tsx:38 src/routes/l10n.tsx:32
 msgid "Localization"
 msgstr "ローカライゼーション"
 
-#: src/components/l10n/L10nPage.jsx:50 src/components/l10n/L10nPage.jsx:61
-#: src/components/l10n/L10nPage.jsx:72
+#: src/components/l10n/L10nPage.tsx:50 src/components/l10n/L10nPage.tsx:61
+#: src/components/l10n/L10nPage.tsx:72
 msgid "Not selected yet"
 msgstr "まだ何も選択していません"
 
-#: src/components/l10n/L10nPage.jsx:53 src/components/l10n/L10nPage.jsx:64
-#: src/components/l10n/L10nPage.jsx:75
+#: src/components/l10n/L10nPage.tsx:53 src/components/l10n/L10nPage.tsx:64
+#: src/components/l10n/L10nPage.tsx:75
 #: src/components/network/NetworkPage.tsx:64
 #: src/components/storage/InstallationDeviceField.tsx:105
 #: src/components/storage/ProposalActionsSummary.tsx:248
@@ -340,11 +336,11 @@ msgstr "まだ何も選択していません"
 msgid "Change"
 msgstr "変更"
 
-#: src/components/l10n/L10nPage.jsx:60
+#: src/components/l10n/L10nPage.tsx:60
 msgid "Keyboard"
 msgstr "キーボード"
 
-#: src/components/l10n/L10nPage.jsx:71
+#: src/components/l10n/L10nPage.tsx:71
 msgid "Time zone"
 msgstr "タイムゾーン"
 
@@ -685,12 +681,12 @@ msgstr "Wi-Fi ネットワークへの接続"
 
 #. TRANSLATORS: %s will be replaced by a language name and territory, example:
 #. "English (United States)".
-#: src/components/overview/L10nSection.jsx:34
+#: src/components/overview/L10nSection.tsx:34
 #, c-format
 msgid "The system will use %s as its default language."
 msgstr "システムは %s を既定の言語として使用します。"
 
-#: src/components/overview/OverviewPage.tsx:33 src/router.js:44
+#: src/components/overview/OverviewPage.tsx:33 src/router.tsx:44
 msgid "Overview"
 msgstr "概要"
 
@@ -835,7 +831,7 @@ msgstr "製品の選択"
 msgid "Available products"
 msgstr "利用可能な製品"
 
-#: src/components/product/ProductSelectionProgress.jsx:45
+#: src/components/product/ProductSelectionProgress.tsx:43
 msgid "Configuring the product, please wait ..."
 msgstr "製品を設定しています。しばらくお待ちください..."
 
@@ -1130,7 +1126,7 @@ msgstr "詳細"
 #: src/components/storage/PartitionsField.tsx:455
 #: src/components/storage/ProposalResultTable.tsx:134
 #: src/components/storage/SpaceActionsTable.tsx:214
-#: src/components/storage/VolumeFields.tsx:524
+#: src/components/storage/VolumeFields.tsx:521
 #: src/components/storage/VolumeLocationSelectorTable.tsx:112
 msgid "Size"
 msgstr "サイズ"
@@ -1753,16 +1749,16 @@ msgid "Exact size for the file system."
 msgstr "ファイルシステムに対して正確なサイズを設定します。"
 
 #. TRANSLATORS: requested partition size
-#: src/components/storage/VolumeFields.tsx:351
+#: src/components/storage/VolumeFields.tsx:350
 msgid "Exact size"
 msgstr "正確なサイズ"
 
 #. TRANSLATORS: units selector (like KiB, MiB, GiB...)
-#: src/components/storage/VolumeFields.tsx:368
+#: src/components/storage/VolumeFields.tsx:367
 msgid "Size unit"
 msgstr "サイズの単位"
 
-#: src/components/storage/VolumeFields.tsx:407
+#: src/components/storage/VolumeFields.tsx:406
 msgid ""
 "Limits for the file system size. The final size will be a value between the "
 "given minimum and maximum. If no maximum is given then the file system will "
@@ -1773,45 +1769,45 @@ msgstr ""
 "きくなるように設定されます。"
 
 #. TRANSLATORS: the minimal partition size
-#: src/components/storage/VolumeFields.tsx:415
+#: src/components/storage/VolumeFields.tsx:414
 msgid "Minimum"
 msgstr "最小"
 
 #. TRANSLATORS: the minium partition size
-#: src/components/storage/VolumeFields.tsx:426
+#: src/components/storage/VolumeFields.tsx:424
 msgid "Minimum desired size"
 msgstr "最小必須サイズ"
 
-#: src/components/storage/VolumeFields.tsx:437
+#: src/components/storage/VolumeFields.tsx:435
 msgid "Unit for the minimum size"
 msgstr "最小サイズの単位"
 
 #. TRANSLATORS: the maximum partition size
-#: src/components/storage/VolumeFields.tsx:449
+#: src/components/storage/VolumeFields.tsx:447
 msgid "Maximum"
 msgstr "最大"
 
 #. TRANSLATORS: the maximum partition size
-#: src/components/storage/VolumeFields.tsx:461
+#: src/components/storage/VolumeFields.tsx:458
 msgid "Maximum desired size"
 msgstr "最大要求サイズ"
 
-#: src/components/storage/VolumeFields.tsx:471
+#: src/components/storage/VolumeFields.tsx:468
 msgid "Unit for the maximum size"
 msgstr "最大サイズの単位"
 
 #. TRANSLATORS: radio button label, fully automatically computed partition size, no user input
-#: src/components/storage/VolumeFields.tsx:489
+#: src/components/storage/VolumeFields.tsx:486
 msgid "Auto"
 msgstr "自動"
 
 #. TRANSLATORS: radio button label, exact partition size requested by user
-#: src/components/storage/VolumeFields.tsx:491
+#: src/components/storage/VolumeFields.tsx:488
 msgid "Fixed"
 msgstr "固定値"
 
 #. TRANSLATORS: radio button label, automatically computed partition size within the user provided min and max limits
-#: src/components/storage/VolumeFields.tsx:493
+#: src/components/storage/VolumeFields.tsx:490
 msgid "Range"
 msgstr "範囲"
 
@@ -2561,6 +2557,9 @@ msgstr "消去"
 #: src/routes/storage.tsx:74
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#~ msgid "Waiting"
+#~ msgstr "お待ちください"
 
 #, c-format
 #~ msgid ""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-17 02:52+0000\n"
+"POT-Creation-Date: 2025-01-05 02:44+0000\n"
 "PO-Revision-Date: 2024-12-11 11:48+0000\n"
 "Last-Translator: David Medina <medipas@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -131,7 +131,7 @@ msgstr "Opcions de l'instal·lador"
 #: src/components/core/InstallerOptions.tsx:76
 #: src/components/core/InstallerOptions.tsx:80
 #: src/components/core/InstallerOptions.tsx:81
-#: src/components/l10n/L10nPage.jsx:49
+#: src/components/l10n/L10nPage.tsx:49
 msgid "Language"
 msgstr "Llengua"
 
@@ -181,13 +181,13 @@ msgstr ""
 "Abans d'instal·lar, heu de prendre algunes decisions. Cliqueu a cada secció "
 "per revisar-ne la configuració."
 
-#: src/components/core/IssuesHint.jsx:35
+#: src/components/core/IssuesHint.tsx:36
 msgid ""
 "Before starting the installation, you need to address the following problems:"
 msgstr ""
 "Abans de començar la instal·lació, heu de resoldre els problemes següents:"
 
-#: src/components/core/ListSearch.jsx:49
+#: src/components/core/ListSearch.tsx:52
 msgid "Search"
 msgstr "Cerca"
 
@@ -276,15 +276,11 @@ msgstr "En curs"
 msgid "Finished"
 msgstr "Acabada"
 
-#: src/components/core/RowActions.jsx:65
+#: src/components/core/RowActions.tsx:71
 #: src/components/storage/PartitionsField.tsx:458
 #: src/components/storage/ProposalActionsSummary.tsx:242
 msgid "Actions"
 msgstr "Accions"
-
-#: src/components/core/SectionSkeleton.jsx:28
-msgid "Waiting"
-msgstr "Escrivint"
 
 #: src/components/core/ServerError.tsx:45
 msgid "Cannot connect to Agama server"
@@ -311,8 +307,8 @@ msgid "Keyboard selection"
 msgstr "Selecció del teclat"
 
 #: src/components/l10n/KeyboardSelection.tsx:92
-#: src/components/l10n/L10nPage.jsx:53 src/components/l10n/L10nPage.jsx:64
-#: src/components/l10n/L10nPage.jsx:75
+#: src/components/l10n/L10nPage.tsx:53 src/components/l10n/L10nPage.tsx:64
+#: src/components/l10n/L10nPage.tsx:75
 #: src/components/l10n/LocaleSelection.tsx:93
 #: src/components/l10n/TimezoneSelection.tsx:138
 #: src/components/product/ProductSelectionPage.tsx:148
@@ -320,18 +316,18 @@ msgstr "Selecció del teclat"
 msgid "Select"
 msgstr "Selecciona"
 
-#: src/components/l10n/L10nPage.jsx:42
-#: src/components/overview/L10nSection.jsx:38 src/routes/l10n.tsx:32
+#: src/components/l10n/L10nPage.tsx:42
+#: src/components/overview/L10nSection.tsx:38 src/routes/l10n.tsx:32
 msgid "Localization"
 msgstr "Localització"
 
-#: src/components/l10n/L10nPage.jsx:50 src/components/l10n/L10nPage.jsx:61
-#: src/components/l10n/L10nPage.jsx:72
+#: src/components/l10n/L10nPage.tsx:50 src/components/l10n/L10nPage.tsx:61
+#: src/components/l10n/L10nPage.tsx:72
 msgid "Not selected yet"
 msgstr "Encara no s'ha seleccionat."
 
-#: src/components/l10n/L10nPage.jsx:53 src/components/l10n/L10nPage.jsx:64
-#: src/components/l10n/L10nPage.jsx:75
+#: src/components/l10n/L10nPage.tsx:53 src/components/l10n/L10nPage.tsx:64
+#: src/components/l10n/L10nPage.tsx:75
 #: src/components/network/NetworkPage.tsx:64
 #: src/components/storage/InstallationDeviceField.tsx:105
 #: src/components/storage/ProposalActionsSummary.tsx:248
@@ -340,11 +336,11 @@ msgstr "Encara no s'ha seleccionat."
 msgid "Change"
 msgstr "Canvia"
 
-#: src/components/l10n/L10nPage.jsx:60
+#: src/components/l10n/L10nPage.tsx:60
 msgid "Keyboard"
 msgstr "Teclat"
 
-#: src/components/l10n/L10nPage.jsx:71
+#: src/components/l10n/L10nPage.tsx:71
 msgid "Time zone"
 msgstr "Zona horària"
 
@@ -685,12 +681,12 @@ msgstr "Connecteu-vos a una xarxa Wi-Fi"
 
 #. TRANSLATORS: %s will be replaced by a language name and territory, example:
 #. "English (United States)".
-#: src/components/overview/L10nSection.jsx:34
+#: src/components/overview/L10nSection.tsx:34
 #, c-format
 msgid "The system will use %s as its default language."
 msgstr "El sistema usarà el %s com a llengua per defecte."
 
-#: src/components/overview/OverviewPage.tsx:33 src/router.js:44
+#: src/components/overview/OverviewPage.tsx:33 src/router.tsx:44
 msgid "Overview"
 msgstr "Resum"
 
@@ -840,7 +836,7 @@ msgstr "Seleccioneu un producte"
 msgid "Available products"
 msgstr "Productes disponibles"
 
-#: src/components/product/ProductSelectionProgress.jsx:45
+#: src/components/product/ProductSelectionProgress.tsx:43
 msgid "Configuring the product, please wait ..."
 msgstr "Configurant el producte. Espereu, si us plau..."
 
@@ -1139,7 +1135,7 @@ msgstr "Detalls"
 #: src/components/storage/PartitionsField.tsx:455
 #: src/components/storage/ProposalResultTable.tsx:134
 #: src/components/storage/SpaceActionsTable.tsx:214
-#: src/components/storage/VolumeFields.tsx:524
+#: src/components/storage/VolumeFields.tsx:521
 #: src/components/storage/VolumeLocationSelectorTable.tsx:112
 msgid "Size"
 msgstr "Mida"
@@ -1768,16 +1764,16 @@ msgid "Exact size for the file system."
 msgstr "Mida exacta per al sistema de fitxers."
 
 #. TRANSLATORS: requested partition size
-#: src/components/storage/VolumeFields.tsx:351
+#: src/components/storage/VolumeFields.tsx:350
 msgid "Exact size"
 msgstr "Mida exacta"
 
 #. TRANSLATORS: units selector (like KiB, MiB, GiB...)
-#: src/components/storage/VolumeFields.tsx:368
+#: src/components/storage/VolumeFields.tsx:367
 msgid "Size unit"
 msgstr "Unitat de mida"
 
-#: src/components/storage/VolumeFields.tsx:407
+#: src/components/storage/VolumeFields.tsx:406
 msgid ""
 "Limits for the file system size. The final size will be a value between the "
 "given minimum and maximum. If no maximum is given then the file system will "
@@ -1788,45 +1784,45 @@ msgstr ""
 "de fitxers serà el més gros possible."
 
 #. TRANSLATORS: the minimal partition size
-#: src/components/storage/VolumeFields.tsx:415
+#: src/components/storage/VolumeFields.tsx:414
 msgid "Minimum"
 msgstr "Mínim"
 
 #. TRANSLATORS: the minium partition size
-#: src/components/storage/VolumeFields.tsx:426
+#: src/components/storage/VolumeFields.tsx:424
 msgid "Minimum desired size"
 msgstr "Mida mínima desitjada"
 
-#: src/components/storage/VolumeFields.tsx:437
+#: src/components/storage/VolumeFields.tsx:435
 msgid "Unit for the minimum size"
 msgstr "Unitat per a la mida mínima"
 
 #. TRANSLATORS: the maximum partition size
-#: src/components/storage/VolumeFields.tsx:449
+#: src/components/storage/VolumeFields.tsx:447
 msgid "Maximum"
 msgstr "Màxim"
 
 #. TRANSLATORS: the maximum partition size
-#: src/components/storage/VolumeFields.tsx:461
+#: src/components/storage/VolumeFields.tsx:458
 msgid "Maximum desired size"
 msgstr "Mida màxima desitjada"
 
-#: src/components/storage/VolumeFields.tsx:471
+#: src/components/storage/VolumeFields.tsx:468
 msgid "Unit for the maximum size"
 msgstr "Unitat per a la mida màxima"
 
 #. TRANSLATORS: radio button label, fully automatically computed partition size, no user input
-#: src/components/storage/VolumeFields.tsx:489
+#: src/components/storage/VolumeFields.tsx:486
 msgid "Auto"
 msgstr "Automàtica"
 
 #. TRANSLATORS: radio button label, exact partition size requested by user
-#: src/components/storage/VolumeFields.tsx:491
+#: src/components/storage/VolumeFields.tsx:488
 msgid "Fixed"
 msgstr "Fixa"
 
 #. TRANSLATORS: radio button label, automatically computed partition size within the user provided min and max limits
-#: src/components/storage/VolumeFields.tsx:493
+#: src/components/storage/VolumeFields.tsx:490
 msgid "Range"
 msgstr "Interval"
 
@@ -2582,6 +2578,9 @@ msgstr "Neteja"
 #: src/routes/storage.tsx:74
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#~ msgid "Waiting"
+#~ msgstr "Escrivint"
 
 #, c-format
 #~ msgid ""
