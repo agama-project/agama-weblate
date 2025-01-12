@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-09 03:06+0000\n"
+"POT-Creation-Date: 2025-01-12 02:47+0000\n"
 "PO-Revision-Date: 2024-05-09 06:43+0000\n"
 "Last-Translator: Kristijan Fremen Velkovski <me@krisfremen.com>\n"
 "Language-Team: Macedonian <https://l10n.opensuse.org/projects/agama/agama-"
@@ -23,11 +23,11 @@ msgstr ""
 msgid "Change product"
 msgstr ""
 
-#: src/components/core/InstallButton.tsx:52
+#: src/components/core/InstallButton.tsx:44
 msgid "Confirm Installation"
 msgstr "Потврдете ја инсталацијата"
 
-#: src/components/core/InstallButton.tsx:56
+#: src/components/core/InstallButton.tsx:48
 msgid ""
 "If you continue, partitions on your hard disk will be modified according to "
 "the provided installation settings."
@@ -35,18 +35,18 @@ msgstr ""
 "Ако продолжите, партициите на вашиот хард диск ќе бидат изменети според "
 "дадените поставки за инсталација."
 
-#: src/components/core/InstallButton.tsx:60
+#: src/components/core/InstallButton.tsx:52
 msgid "Please, cancel and check the settings if you are unsure."
 msgstr ""
 "Ве молиме, откажете ги и проверете ги поставките доколку не сте сигурни."
 
 #. TRANSLATORS: button label
-#: src/components/core/InstallButton.tsx:65
+#: src/components/core/InstallButton.tsx:57
 msgid "Continue"
 msgstr "Продолжи"
 
 #. TRANSLATORS: button label
-#: src/components/core/InstallButton.tsx:69 src/components/core/Page.tsx:238
+#: src/components/core/InstallButton.tsx:61 src/components/core/Page.tsx:240
 #: src/components/core/Popup.tsx:130
 #: src/components/network/WifiConnectionForm.tsx:153
 #: src/components/product/ProductSelectionPage.tsx:93
@@ -54,12 +54,12 @@ msgid "Cancel"
 msgstr "Откажи"
 
 #. TRANSLATORS: The install button label
-#: src/components/core/InstallButton.tsx:104
+#: src/components/core/InstallButton.tsx:96
 msgid "Install"
 msgstr "Инсталирајте"
 
 #. TRANSLATORS: Accessible text included with the install button when there are issues
-#: src/components/core/InstallButton.tsx:106
+#: src/components/core/InstallButton.tsx:98
 msgid "Not possible with the current setup. Click to know more."
 msgstr ""
 
@@ -144,7 +144,7 @@ msgid "Cannot be changed in remote installation"
 msgstr "Потврдете ја инсталацијата"
 
 #: src/components/core/InstallerOptions.tsx:120
-#: src/components/core/Page.tsx:271
+#: src/components/core/Page.tsx:273
 #: src/components/storage/EncryptionSettingsDialog.tsx:154
 #: src/components/storage/VolumeDialog.tsx:641
 #: src/components/storage/dasd/DASDTable.tsx:104
@@ -158,7 +158,8 @@ msgstr ""
 
 #: src/components/core/IssuesDrawer.tsx:50
 #: src/components/overview/StorageSection.tsx:100
-#: src/components/storage/ProposalPage.tsx:108 src/routes/storage.tsx:39
+#: src/components/storage/ProposalPage.tsx:50
+#: src/components/storage/ProposalPage.tsx:122 src/routes/storage.tsx:39
 msgid "Storage"
 msgstr ""
 
@@ -168,12 +169,19 @@ msgstr ""
 msgid "Software"
 msgstr ""
 
-#: src/components/core/IssuesDrawer.tsx:58
+#: src/components/core/IssuesDrawer.tsx:52
+#: src/components/product/ProductRegistrationPage.tsx:154
+#: src/routes/registration.tsx:31
+#, fuzzy
+msgid "Registration"
+msgstr "Потврдете ја инсталацијата"
+
+#: src/components/core/IssuesDrawer.tsx:59
 #, fuzzy
 msgid "Pre-installation checks"
 msgstr "Потврдете ја инсталацијата"
 
-#: src/components/core/IssuesDrawer.tsx:63
+#: src/components/core/IssuesDrawer.tsx:64
 msgid ""
 "Before installing, you have to make some decisions. Click on each section to "
 "review the settings."
@@ -223,7 +231,7 @@ msgstr ""
 msgid "Log in"
 msgstr ""
 
-#: src/components/core/Page.tsx:260
+#: src/components/core/Page.tsx:262
 msgid "Back"
 msgstr ""
 
@@ -681,20 +689,15 @@ msgstr ""
 msgid "The system will use %s as its default language."
 msgstr ""
 
-#: src/components/overview/OverviewPage.tsx:33 src/router.tsx:44
+#: src/components/overview/OverviewPage.tsx:35
+#: src/components/overview/OverviewPage.tsx:42 src/router.tsx:45
 msgid "Overview"
 msgstr ""
 
-#: src/components/overview/OverviewPage.tsx:35
+#: src/components/overview/OverviewPage.tsx:44
 msgid ""
 "These are the most relevant installation settings. Feel free to browse the "
 "sections in the menu for further details."
-msgstr ""
-
-#: src/components/overview/OverviewPage.tsx:55
-msgid ""
-"Take your time to check your configuration before starting the installation "
-"process."
 msgstr ""
 
 #: src/components/overview/SoftwareSection.tsx:42
@@ -760,37 +763,90 @@ msgid ""
 "custom strategy to find the needed space"
 msgstr ""
 
-#: src/components/overview/StorageSection.tsx:150
+#: src/components/overview/StorageSection.tsx:121
+msgid "Install using an advanced configuration."
+msgstr ""
+
+#: src/components/overview/StorageSection.tsx:156
 #: src/components/storage/InstallationDeviceField.tsx:56
 msgid "No device selected yet"
 msgstr ""
 
 #. TRANSLATORS: %s will be replaced by the device name and its size,
 #. example: "/dev/sda, 20 GiB"
-#: src/components/overview/StorageSection.tsx:157
+#: src/components/overview/StorageSection.tsx:163
 #, c-format
 msgid "Install using device %s shrinking existing partitions as needed"
 msgstr ""
 
 #. TRANSLATORS: %s will be replaced by the device name and its size,
 #. example: "/dev/sda, 20 GiB"
-#: src/components/overview/StorageSection.tsx:161
+#: src/components/overview/StorageSection.tsx:167
 #, c-format
 msgid "Install using device %s without modifying existing partitions"
 msgstr ""
 
 #. TRANSLATORS: %s will be replaced by the device name and its size,
 #. example: "/dev/sda, 20 GiB"
-#: src/components/overview/StorageSection.tsx:165
+#: src/components/overview/StorageSection.tsx:171
 #, c-format
 msgid "Install using device %s and deleting all its content"
 msgstr ""
 
 #. TRANSLATORS: %s will be replaced by the device name and its size,
 #. example: "/dev/sda, 20 GiB"
-#: src/components/overview/StorageSection.tsx:170
+#: src/components/overview/StorageSection.tsx:176
 #, c-format
 msgid "Install using device %s with a custom strategy to find the needed space"
+msgstr ""
+
+#: src/components/product/ProductRegistrationAlert.tsx:40
+msgid "Register it now"
+msgstr ""
+
+#: src/components/product/ProductRegistrationAlert.tsx:56
+#, c-format
+msgid "%s must be registered."
+msgstr ""
+
+#: src/components/product/ProductRegistrationPage.tsx:48
+#, fuzzy
+msgid "Registration code"
+msgstr "Потврдете ја инсталацијата"
+
+#: src/components/product/ProductRegistrationPage.tsx:59
+msgid "Product registered"
+msgstr ""
+
+#: src/components/product/ProductRegistrationPage.tsx:60
+#, c-format
+msgid "%s has been registered with below information."
+msgstr ""
+
+#: src/components/product/ProductRegistrationPage.tsx:70
+msgid "Hide"
+msgstr ""
+
+#: src/components/product/ProductRegistrationPage.tsx:70
+msgid "Show"
+msgstr ""
+
+#: src/components/product/ProductRegistrationPage.tsx:112
+msgid "Product registration form"
+msgstr ""
+
+#: src/components/product/ProductRegistrationPage.tsx:114
+msgid ""
+"Enter a registration code and optionally a valid email address for "
+"registering the product."
+msgstr ""
+
+#: src/components/product/ProductRegistrationPage.tsx:127
+msgid "(optional)"
+msgstr ""
+
+#: src/components/product/ProductRegistrationPage.tsx:136
+msgid "Register"
 msgstr ""
 
 #. TRANSLATORS: %s will be replaced by a product name. E.g., "openSUSE Tumbleweed"
@@ -960,49 +1016,49 @@ msgid ""
 "No partitions will be automatically configured for booting. Use with caution."
 msgstr ""
 
-#: src/components/storage/DeviceSelection.tsx:106
+#: src/components/storage/DeviceSelection.tsx:120
 msgid ""
 "The file systems will be allocated by default as [new partitions in the "
 "selected device]."
 msgstr ""
 
-#: src/components/storage/DeviceSelection.tsx:113
+#: src/components/storage/DeviceSelection.tsx:127
 msgid ""
 "The file systems will be allocated by default as [logical volumes of a new "
 "LVM Volume Group]. The corresponding physical volumes will be created on "
 "demand as new partitions at the selected devices."
 msgstr ""
 
-#: src/components/storage/DeviceSelection.tsx:122
+#: src/components/storage/DeviceSelection.tsx:138
 msgid "Select installation device"
 msgstr ""
 
-#: src/components/storage/DeviceSelection.tsx:128
+#: src/components/storage/DeviceSelection.tsx:144
 #, fuzzy
 msgid "Install new system on"
 msgstr "Инсталирањето заврши"
 
-#: src/components/storage/DeviceSelection.tsx:131
+#: src/components/storage/DeviceSelection.tsx:147
 msgid "An existing disk"
 msgstr ""
 
-#: src/components/storage/DeviceSelection.tsx:140
+#: src/components/storage/DeviceSelection.tsx:156
 msgid "A new LVM Volume Group"
 msgstr ""
 
-#: src/components/storage/DeviceSelection.tsx:163
+#: src/components/storage/DeviceSelection.tsx:179
 msgid "Device selector for target disk"
 msgstr ""
 
-#: src/components/storage/DeviceSelection.tsx:186
+#: src/components/storage/DeviceSelection.tsx:202
 msgid "Device selector for new LVM volume group"
 msgstr ""
 
-#: src/components/storage/DeviceSelection.tsx:199
+#: src/components/storage/DeviceSelection.tsx:215
 msgid "Prepare more devices by configuring advanced"
 msgstr ""
 
-#: src/components/storage/DeviceSelection.tsx:200
+#: src/components/storage/DeviceSelection.tsx:216
 msgid "storage techs"
 msgstr ""
 
@@ -1113,7 +1169,7 @@ msgid "Connect to iSCSI targets"
 msgstr ""
 
 #: src/components/storage/DevicesTechMenu.tsx:71
-#: src/components/storage/ISCSIPage.tsx:33 src/routes/storage.tsx:60
+#: src/components/storage/ISCSIPage.tsx:34 src/routes/storage.tsx:60
 msgid "iSCSI"
 msgstr ""
 
@@ -1168,6 +1224,12 @@ msgstr ""
 
 #: src/components/storage/EncryptionSettingsDialog.tsx:128
 msgid "Encrypt the system"
+msgstr ""
+
+#: src/components/storage/ISCSIPage.tsx:48
+#: src/components/storage/dasd/DASDPage.tsx:54
+#: src/components/storage/zfcp/ZFCPPage.tsx:199
+msgid "Back to device selection"
 msgstr ""
 
 #. TRANSLATORS: %s is the installation disk (eg. "/dev/sda, 80 GiB)
@@ -1494,7 +1556,14 @@ msgstr[1] ""
 msgid "Waiting for actions information..."
 msgstr ""
 
-#: src/components/storage/ProposalPage.tsx:130
+#: src/components/storage/ProposalPage.tsx:55
+msgid ""
+"The system layout was set up using a advanced configuration that cannot be "
+"modified with the current version of this visual interface. This limitation "
+"will be removed in a future version of Agama."
+msgstr ""
+
+#: src/components/storage/ProposalPage.tsx:144
 msgid "Planned Actions"
 msgstr ""
 
@@ -1840,11 +1909,6 @@ msgstr ""
 #. TRANSLATORS: DASD devices selection table
 #: src/components/storage/dasd/DASDPage.tsx:44
 msgid "DASD devices selection table"
-msgstr ""
-
-#: src/components/storage/dasd/DASDPage.tsx:54
-#: src/components/storage/zfcp/ZFCPPage.tsx:199
-msgid "Back to device selection"
 msgstr ""
 
 #: src/components/storage/dasd/DASDTable.tsx:68

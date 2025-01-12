@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-09 03:06+0000\n"
+"POT-Creation-Date: 2025-01-12 02:47+0000\n"
 "PO-Revision-Date: 2024-07-03 14:46+0000\n"
 "Last-Translator: Monstorix <monstorix@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.opensuse.org/projects/"
@@ -23,27 +23,27 @@ msgstr ""
 msgid "Change product"
 msgstr "更改产品"
 
-#: src/components/core/InstallButton.tsx:52
+#: src/components/core/InstallButton.tsx:44
 msgid "Confirm Installation"
 msgstr "确认安装"
 
-#: src/components/core/InstallButton.tsx:56
+#: src/components/core/InstallButton.tsx:48
 msgid ""
 "If you continue, partitions on your hard disk will be modified according to "
 "the provided installation settings."
 msgstr "如果继续，硬盘上的分区将会根据已提供的安装设置进行修改。"
 
-#: src/components/core/InstallButton.tsx:60
+#: src/components/core/InstallButton.tsx:52
 msgid "Please, cancel and check the settings if you are unsure."
 msgstr "如果不确定任何事项，请务必取消并检查已进行的设置。"
 
 #. TRANSLATORS: button label
-#: src/components/core/InstallButton.tsx:65
+#: src/components/core/InstallButton.tsx:57
 msgid "Continue"
 msgstr "继续"
 
 #. TRANSLATORS: button label
-#: src/components/core/InstallButton.tsx:69 src/components/core/Page.tsx:238
+#: src/components/core/InstallButton.tsx:61 src/components/core/Page.tsx:240
 #: src/components/core/Popup.tsx:130
 #: src/components/network/WifiConnectionForm.tsx:153
 #: src/components/product/ProductSelectionPage.tsx:93
@@ -51,12 +51,12 @@ msgid "Cancel"
 msgstr "取消"
 
 #. TRANSLATORS: The install button label
-#: src/components/core/InstallButton.tsx:104
+#: src/components/core/InstallButton.tsx:96
 msgid "Install"
 msgstr "安装"
 
 #. TRANSLATORS: Accessible text included with the install button when there are issues
-#: src/components/core/InstallButton.tsx:106
+#: src/components/core/InstallButton.tsx:98
 msgid "Not possible with the current setup. Click to know more."
 msgstr ""
 
@@ -138,7 +138,7 @@ msgid "Cannot be changed in remote installation"
 msgstr "无法在远程安装中更改"
 
 #: src/components/core/InstallerOptions.tsx:120
-#: src/components/core/Page.tsx:271
+#: src/components/core/Page.tsx:273
 #: src/components/storage/EncryptionSettingsDialog.tsx:154
 #: src/components/storage/VolumeDialog.tsx:641
 #: src/components/storage/dasd/DASDTable.tsx:104
@@ -152,7 +152,8 @@ msgstr "用户"
 
 #: src/components/core/IssuesDrawer.tsx:50
 #: src/components/overview/StorageSection.tsx:100
-#: src/components/storage/ProposalPage.tsx:108 src/routes/storage.tsx:39
+#: src/components/storage/ProposalPage.tsx:50
+#: src/components/storage/ProposalPage.tsx:122 src/routes/storage.tsx:39
 msgid "Storage"
 msgstr "存储"
 
@@ -162,12 +163,18 @@ msgstr "存储"
 msgid "Software"
 msgstr "软件"
 
-#: src/components/core/IssuesDrawer.tsx:58
+#: src/components/core/IssuesDrawer.tsx:52
+#: src/components/product/ProductRegistrationPage.tsx:154
+#: src/routes/registration.tsx:31
+msgid "Registration"
+msgstr "注册"
+
+#: src/components/core/IssuesDrawer.tsx:59
 #, fuzzy
 msgid "Pre-installation checks"
 msgstr "安装完毕"
 
-#: src/components/core/IssuesDrawer.tsx:63
+#: src/components/core/IssuesDrawer.tsx:64
 msgid ""
 "Before installing, you have to make some decisions. Click on each section to "
 "review the settings."
@@ -217,7 +224,7 @@ msgstr "密码输入"
 msgid "Log in"
 msgstr "登录"
 
-#: src/components/core/Page.tsx:260
+#: src/components/core/Page.tsx:262
 msgid "Back"
 msgstr "返回"
 
@@ -677,21 +684,16 @@ msgstr "连接到 Wi-Fi 网络"
 msgid "The system will use %s as its default language."
 msgstr "系统会使用 %s 作为默认语言。"
 
-#: src/components/overview/OverviewPage.tsx:33 src/router.tsx:44
+#: src/components/overview/OverviewPage.tsx:35
+#: src/components/overview/OverviewPage.tsx:42 src/router.tsx:45
 msgid "Overview"
 msgstr "概览"
 
-#: src/components/overview/OverviewPage.tsx:35
+#: src/components/overview/OverviewPage.tsx:44
 msgid ""
 "These are the most relevant installation settings. Feel free to browse the "
 "sections in the menu for further details."
 msgstr "这些是最主要的安装设置。如需获取更详细的信息，请随意浏览菜单中的各节。"
-
-#: src/components/overview/OverviewPage.tsx:55
-msgid ""
-"Take your time to check your configuration before starting the installation "
-"process."
-msgstr "开始安装进程前，请花些时间检查您的配置。"
 
 #: src/components/overview/SoftwareSection.tsx:42
 msgid "The installation will take"
@@ -759,38 +761,95 @@ msgstr ""
 "安装在 %s 上新建的逻辑卷管理 (LVM) 卷组中，并采用自定义策略寻找磁盘上的所需空"
 "间"
 
-#: src/components/overview/StorageSection.tsx:150
+#: src/components/overview/StorageSection.tsx:121
+#, fuzzy
+msgid "Install using an advanced configuration."
+msgstr "使用设备 %s 安装"
+
+#: src/components/overview/StorageSection.tsx:156
 #: src/components/storage/InstallationDeviceField.tsx:56
 msgid "No device selected yet"
 msgstr "尚未选择设备"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size,
 #. example: "/dev/sda, 20 GiB"
-#: src/components/overview/StorageSection.tsx:157
+#: src/components/overview/StorageSection.tsx:163
 #, c-format
 msgid "Install using device %s shrinking existing partitions as needed"
 msgstr "使用设备 %s 进行安装，并在需要时缩小现有的分区"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size,
 #. example: "/dev/sda, 20 GiB"
-#: src/components/overview/StorageSection.tsx:161
+#: src/components/overview/StorageSection.tsx:167
 #, c-format
 msgid "Install using device %s without modifying existing partitions"
 msgstr "使用设备 %s 进行安装且不修改已存在的分区"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size,
 #. example: "/dev/sda, 20 GiB"
-#: src/components/overview/StorageSection.tsx:165
+#: src/components/overview/StorageSection.tsx:171
 #, c-format
 msgid "Install using device %s and deleting all its content"
 msgstr "使用设备 %s 进行安装并删除其上的现有内容"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size,
 #. example: "/dev/sda, 20 GiB"
-#: src/components/overview/StorageSection.tsx:170
+#: src/components/overview/StorageSection.tsx:176
 #, c-format
 msgid "Install using device %s with a custom strategy to find the needed space"
 msgstr "使用设备 %s 进行安装，并采用自定义策略寻找所需空间"
+
+#: src/components/product/ProductRegistrationAlert.tsx:40
+#, fuzzy
+msgid "Register it now"
+msgstr "注册"
+
+#: src/components/product/ProductRegistrationAlert.tsx:56
+#, fuzzy, c-format
+msgid "%s must be registered."
+msgstr "%s （已注册）"
+
+#: src/components/product/ProductRegistrationPage.tsx:48
+msgid "Registration code"
+msgstr "注册码"
+
+#: src/components/product/ProductRegistrationPage.tsx:59
+#, fuzzy
+msgid "Product registered"
+msgstr "产品问题"
+
+#: src/components/product/ProductRegistrationPage.tsx:60
+#, c-format
+msgid "%s has been registered with below information."
+msgstr ""
+
+#: src/components/product/ProductRegistrationPage.tsx:70
+msgid "Hide"
+msgstr ""
+
+#: src/components/product/ProductRegistrationPage.tsx:70
+#, fuzzy
+msgid "Show"
+msgstr "显示日志"
+
+#: src/components/product/ProductRegistrationPage.tsx:112
+#, fuzzy
+msgid "Product registration form"
+msgstr "此产品要求注册。"
+
+#: src/components/product/ProductRegistrationPage.tsx:114
+msgid ""
+"Enter a registration code and optionally a valid email address for "
+"registering the product."
+msgstr ""
+
+#: src/components/product/ProductRegistrationPage.tsx:127
+msgid "(optional)"
+msgstr ""
+
+#: src/components/product/ProductRegistrationPage.tsx:136
+msgid "Register"
+msgstr "注册"
 
 #. TRANSLATORS: %s will be replaced by a product name. E.g., "openSUSE Tumbleweed"
 #: src/components/product/ProductSelectionPage.tsx:56
@@ -964,13 +1023,13 @@ msgid ""
 "No partitions will be automatically configured for booting. Use with caution."
 msgstr "不会自动配置任何用于启动的分区。请谨慎使用。"
 
-#: src/components/storage/DeviceSelection.tsx:106
+#: src/components/storage/DeviceSelection.tsx:120
 msgid ""
 "The file systems will be allocated by default as [new partitions in the "
 "selected device]."
 msgstr "默认情况下，文件系统将被分配为[所选设备上的新分区]。"
 
-#: src/components/storage/DeviceSelection.tsx:113
+#: src/components/storage/DeviceSelection.tsx:127
 msgid ""
 "The file systems will be allocated by default as [logical volumes of a new "
 "LVM Volume Group]. The corresponding physical volumes will be created on "
@@ -979,35 +1038,35 @@ msgstr ""
 "默认情况下，文件系统将被分配为[新建 LVM 卷组中的逻辑卷]。相应的物理卷将作为新"
 "分区按需创建在所选设备上。"
 
-#: src/components/storage/DeviceSelection.tsx:122
+#: src/components/storage/DeviceSelection.tsx:138
 msgid "Select installation device"
 msgstr "选择安装设备"
 
-#: src/components/storage/DeviceSelection.tsx:128
+#: src/components/storage/DeviceSelection.tsx:144
 msgid "Install new system on"
 msgstr "安装新系统到"
 
-#: src/components/storage/DeviceSelection.tsx:131
+#: src/components/storage/DeviceSelection.tsx:147
 msgid "An existing disk"
 msgstr "现存磁盘"
 
-#: src/components/storage/DeviceSelection.tsx:140
+#: src/components/storage/DeviceSelection.tsx:156
 msgid "A new LVM Volume Group"
 msgstr "新建 LVM 卷组"
 
-#: src/components/storage/DeviceSelection.tsx:163
+#: src/components/storage/DeviceSelection.tsx:179
 msgid "Device selector for target disk"
 msgstr "目标磁盘的设备选择器"
 
-#: src/components/storage/DeviceSelection.tsx:186
+#: src/components/storage/DeviceSelection.tsx:202
 msgid "Device selector for new LVM volume group"
 msgstr "新建 LVM 卷组的设备选择器"
 
-#: src/components/storage/DeviceSelection.tsx:199
+#: src/components/storage/DeviceSelection.tsx:215
 msgid "Prepare more devices by configuring advanced"
 msgstr "通过高级配置来准备更多设备"
 
-#: src/components/storage/DeviceSelection.tsx:200
+#: src/components/storage/DeviceSelection.tsx:216
 msgid "storage techs"
 msgstr "存储技术"
 
@@ -1117,7 +1176,7 @@ msgid "Connect to iSCSI targets"
 msgstr "连接到 iSCSI 目标"
 
 #: src/components/storage/DevicesTechMenu.tsx:71
-#: src/components/storage/ISCSIPage.tsx:33 src/routes/storage.tsx:60
+#: src/components/storage/ISCSIPage.tsx:34 src/routes/storage.tsx:60
 msgid "iSCSI"
 msgstr "iSCSI"
 
@@ -1176,6 +1235,13 @@ msgstr ""
 #: src/components/storage/EncryptionSettingsDialog.tsx:128
 msgid "Encrypt the system"
 msgstr "加密系统"
+
+#: src/components/storage/ISCSIPage.tsx:48
+#: src/components/storage/dasd/DASDPage.tsx:54
+#: src/components/storage/zfcp/ZFCPPage.tsx:199
+#, fuzzy
+msgid "Back to device selection"
+msgstr "尚未选择设备"
 
 #. TRANSLATORS: %s is the installation disk (eg. "/dev/sda, 80 GiB)
 #: src/components/storage/InstallationDeviceField.tsx:42
@@ -1494,7 +1560,14 @@ msgstr[0] "检查 %d 个已计划的操作"
 msgid "Waiting for actions information..."
 msgstr "正在等待操作信息……"
 
-#: src/components/storage/ProposalPage.tsx:130
+#: src/components/storage/ProposalPage.tsx:55
+msgid ""
+"The system layout was set up using a advanced configuration that cannot be "
+"modified with the current version of this visual interface. This limitation "
+"will be removed in a future version of Agama."
+msgstr ""
+
+#: src/components/storage/ProposalPage.tsx:144
 msgid "Planned Actions"
 msgstr "计划执行的操作"
 
@@ -1848,12 +1921,6 @@ msgstr "DASD %s"
 #: src/components/storage/dasd/DASDPage.tsx:44
 #, fuzzy
 msgid "DASD devices selection table"
-msgstr "尚未选择设备"
-
-#: src/components/storage/dasd/DASDPage.tsx:54
-#: src/components/storage/zfcp/ZFCPPage.tsx:199
-#, fuzzy
-msgid "Back to device selection"
 msgstr "尚未选择设备"
 
 #: src/components/storage/dasd/DASDTable.tsx:68
@@ -2502,6 +2569,11 @@ msgstr "清除"
 msgid "ZFCP"
 msgstr ""
 
+#~ msgid ""
+#~ "Take your time to check your configuration before starting the "
+#~ "installation process."
+#~ msgstr "开始安装进程前，请花些时间检查您的配置。"
+
 #~ msgid "Waiting"
 #~ msgstr "正在等候"
 
@@ -2589,9 +2661,6 @@ msgstr ""
 #, c-format
 #~ msgid "Register %s"
 #~ msgstr "注册 %s"
-
-#~ msgid "Registration code"
-#~ msgstr "注册码"
 
 #~ msgid "Email"
 #~ msgstr "电子邮件"
@@ -2708,9 +2777,6 @@ msgstr ""
 #~ msgid "Page Actions"
 #~ msgstr "页面操作"
 
-#~ msgid "Show Logs"
-#~ msgstr "显示日志"
-
 #~ msgid "YaST Logs"
 #~ msgstr "YaST 日志"
 
@@ -2719,9 +2785,6 @@ msgstr ""
 
 #~ msgid "Software issues"
 #~ msgstr "软件问题"
-
-#~ msgid "Product issues"
-#~ msgstr "产品问题"
 
 #~ msgid "Found Issues"
 #~ msgstr "发现问题"
@@ -2799,10 +2862,6 @@ msgstr ""
 #~ msgid "Installation Summary"
 #~ msgstr "安装概要"
 
-#, c-format
-#~ msgid "%s (registered)"
-#~ msgstr "%s （已注册）"
-
 #~ msgid "Product"
 #~ msgstr "产品"
 
@@ -2849,9 +2908,6 @@ msgstr ""
 #~ msgid "The product %s must be deregistered before selecting a new product."
 #~ msgstr "选择新产品之前，必须先取消注册产品 %s 。"
 
-#~ msgid "Register"
-#~ msgstr "注册"
-
 #~ msgid "Deregister product"
 #~ msgstr "取消注册产品"
 
@@ -2860,12 +2916,6 @@ msgstr ""
 
 #~ msgid "Email:"
 #~ msgstr "电子邮件："
-
-#~ msgid "Registration"
-#~ msgstr "注册"
-
-#~ msgid "This product requires registration."
-#~ msgstr "此产品要求注册。"
 
 #~ msgid "This product does not require registration."
 #~ msgstr "此产品无需注册。"
@@ -3021,10 +3071,6 @@ msgstr ""
 
 #~ msgid "Find Space"
 #~ msgstr "查找空间"
-
-#, c-format
-#~ msgid "Install using device %s"
-#~ msgstr "使用设备 %s 安装"
 
 #~ msgid "No devices found."
 #~ msgstr "未找到设备。"

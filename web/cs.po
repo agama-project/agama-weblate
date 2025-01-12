@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-09 03:06+0000\n"
+"POT-Creation-Date: 2025-01-12 02:47+0000\n"
 "PO-Revision-Date: 2024-12-10 15:48+0000\n"
 "Last-Translator: Anežka Lábusová <instantgamer@email.cz>\n"
 "Language-Team: Czech <https://l10n.opensuse.org/projects/agama/agama-web/cs/"
@@ -24,11 +24,11 @@ msgstr ""
 msgid "Change product"
 msgstr "Změnit produkt"
 
-#: src/components/core/InstallButton.tsx:52
+#: src/components/core/InstallButton.tsx:44
 msgid "Confirm Installation"
 msgstr "Potvrdit instalaci"
 
-#: src/components/core/InstallButton.tsx:56
+#: src/components/core/InstallButton.tsx:48
 msgid ""
 "If you continue, partitions on your hard disk will be modified according to "
 "the provided installation settings."
@@ -36,17 +36,17 @@ msgstr ""
 "Budete-li pokračovat, oddíly na pevném disku budou upraveny podle zadaných "
 "instalačních nastavení."
 
-#: src/components/core/InstallButton.tsx:60
+#: src/components/core/InstallButton.tsx:52
 msgid "Please, cancel and check the settings if you are unsure."
 msgstr "Nejste-li si jisti, zrušte akci a zkontrolujte nastavení."
 
 #. TRANSLATORS: button label
-#: src/components/core/InstallButton.tsx:65
+#: src/components/core/InstallButton.tsx:57
 msgid "Continue"
 msgstr "Pokračovat"
 
 #. TRANSLATORS: button label
-#: src/components/core/InstallButton.tsx:69 src/components/core/Page.tsx:238
+#: src/components/core/InstallButton.tsx:61 src/components/core/Page.tsx:240
 #: src/components/core/Popup.tsx:130
 #: src/components/network/WifiConnectionForm.tsx:153
 #: src/components/product/ProductSelectionPage.tsx:93
@@ -54,12 +54,12 @@ msgid "Cancel"
 msgstr "Zrušit"
 
 #. TRANSLATORS: The install button label
-#: src/components/core/InstallButton.tsx:104
+#: src/components/core/InstallButton.tsx:96
 msgid "Install"
 msgstr "Instalovat"
 
 #. TRANSLATORS: Accessible text included with the install button when there are issues
-#: src/components/core/InstallButton.tsx:106
+#: src/components/core/InstallButton.tsx:98
 msgid "Not possible with the current setup. Click to know more."
 msgstr ""
 
@@ -144,7 +144,7 @@ msgid "Cannot be changed in remote installation"
 msgstr "U instalace na dálku nelze změnit"
 
 #: src/components/core/InstallerOptions.tsx:120
-#: src/components/core/Page.tsx:271
+#: src/components/core/Page.tsx:273
 #: src/components/storage/EncryptionSettingsDialog.tsx:154
 #: src/components/storage/VolumeDialog.tsx:641
 #: src/components/storage/dasd/DASDTable.tsx:104
@@ -158,7 +158,8 @@ msgstr "Uživatelé"
 
 #: src/components/core/IssuesDrawer.tsx:50
 #: src/components/overview/StorageSection.tsx:100
-#: src/components/storage/ProposalPage.tsx:108 src/routes/storage.tsx:39
+#: src/components/storage/ProposalPage.tsx:50
+#: src/components/storage/ProposalPage.tsx:122 src/routes/storage.tsx:39
 msgid "Storage"
 msgstr "Úložiště"
 
@@ -168,12 +169,19 @@ msgstr "Úložiště"
 msgid "Software"
 msgstr "Software"
 
-#: src/components/core/IssuesDrawer.tsx:58
+#: src/components/core/IssuesDrawer.tsx:52
+#: src/components/product/ProductRegistrationPage.tsx:154
+#: src/routes/registration.tsx:31
+#, fuzzy
+msgid "Registration"
+msgstr "Registrační kód"
+
+#: src/components/core/IssuesDrawer.tsx:59
 #, fuzzy
 msgid "Pre-installation checks"
 msgstr "Problémy s instalací"
 
-#: src/components/core/IssuesDrawer.tsx:63
+#: src/components/core/IssuesDrawer.tsx:64
 msgid ""
 "Before installing, you have to make some decisions. Click on each section to "
 "review the settings."
@@ -223,7 +231,7 @@ msgstr "Zadejte heslo"
 msgid "Log in"
 msgstr "Přihlásit se"
 
-#: src/components/core/Page.tsx:260
+#: src/components/core/Page.tsx:262
 msgid "Back"
 msgstr "Zpět"
 
@@ -678,23 +686,18 @@ msgstr "Připojení k síti Wi-Fi"
 msgid "The system will use %s as its default language."
 msgstr "Systém použije jako výchozí jazyk %s."
 
-#: src/components/overview/OverviewPage.tsx:33 src/router.tsx:44
+#: src/components/overview/OverviewPage.tsx:35
+#: src/components/overview/OverviewPage.tsx:42 src/router.tsx:45
 msgid "Overview"
 msgstr "Přehled"
 
-#: src/components/overview/OverviewPage.tsx:35
+#: src/components/overview/OverviewPage.tsx:44
 msgid ""
 "These are the most relevant installation settings. Feel free to browse the "
 "sections in the menu for further details."
 msgstr ""
 "Toto je nejdůležitější nastavení instalace. Další podrobnosti najdete v "
 "sekcích v nabídce."
-
-#: src/components/overview/OverviewPage.tsx:55
-msgid ""
-"Take your time to check your configuration before starting the installation "
-"process."
-msgstr "Před zahájením instalace zkontrolujte konfiguraci."
 
 #: src/components/overview/SoftwareSection.tsx:42
 msgid "The installation will take"
@@ -774,14 +777,18 @@ msgstr ""
 "Instalace do nové skupiny svazků LVM (Logical Volume Manager) na %s s "
 "použitím vlastní strategie pro nalezení potřebného místa"
 
-#: src/components/overview/StorageSection.tsx:150
+#: src/components/overview/StorageSection.tsx:121
+msgid "Install using an advanced configuration."
+msgstr ""
+
+#: src/components/overview/StorageSection.tsx:156
 #: src/components/storage/InstallationDeviceField.tsx:56
 msgid "No device selected yet"
 msgstr "Zatím nebylo vybráno žádné zařízení"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size,
 #. example: "/dev/sda, 20 GiB"
-#: src/components/overview/StorageSection.tsx:157
+#: src/components/overview/StorageSection.tsx:163
 #, c-format
 msgid "Install using device %s shrinking existing partitions as needed"
 msgstr ""
@@ -789,26 +796,77 @@ msgstr ""
 
 #. TRANSLATORS: %s will be replaced by the device name and its size,
 #. example: "/dev/sda, 20 GiB"
-#: src/components/overview/StorageSection.tsx:161
+#: src/components/overview/StorageSection.tsx:167
 #, c-format
 msgid "Install using device %s without modifying existing partitions"
 msgstr "Instalace pomocí zařízení %s bez úpravy stávajících oddílů"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size,
 #. example: "/dev/sda, 20 GiB"
-#: src/components/overview/StorageSection.tsx:165
+#: src/components/overview/StorageSection.tsx:171
 #, c-format
 msgid "Install using device %s and deleting all its content"
 msgstr "Instalace pomocí zařízení %s a odstranění veškerého jeho obsahu"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size,
 #. example: "/dev/sda, 20 GiB"
-#: src/components/overview/StorageSection.tsx:170
+#: src/components/overview/StorageSection.tsx:176
 #, c-format
 msgid "Install using device %s with a custom strategy to find the needed space"
 msgstr ""
 "Instalace pomocí zařízení %s s vlastní strategií pro vyhledání potřebného "
 "místa"
+
+#: src/components/product/ProductRegistrationAlert.tsx:40
+#, fuzzy
+msgid "Register it now"
+msgstr "Registrovat %s"
+
+#: src/components/product/ProductRegistrationAlert.tsx:56
+#, c-format
+msgid "%s must be registered."
+msgstr ""
+
+#: src/components/product/ProductRegistrationPage.tsx:48
+msgid "Registration code"
+msgstr "Registrační kód"
+
+#: src/components/product/ProductRegistrationPage.tsx:59
+msgid "Product registered"
+msgstr ""
+
+#: src/components/product/ProductRegistrationPage.tsx:60
+#, c-format
+msgid "%s has been registered with below information."
+msgstr ""
+
+#: src/components/product/ProductRegistrationPage.tsx:70
+msgid "Hide"
+msgstr ""
+
+#: src/components/product/ProductRegistrationPage.tsx:70
+msgid "Show"
+msgstr ""
+
+#: src/components/product/ProductRegistrationPage.tsx:112
+#, fuzzy
+msgid "Product registration form"
+msgstr "Registrační kód"
+
+#: src/components/product/ProductRegistrationPage.tsx:114
+msgid ""
+"Enter a registration code and optionally a valid email address for "
+"registering the product."
+msgstr ""
+
+#: src/components/product/ProductRegistrationPage.tsx:127
+msgid "(optional)"
+msgstr ""
+
+#: src/components/product/ProductRegistrationPage.tsx:136
+#, fuzzy
+msgid "Register"
+msgstr "Registrovat %s"
 
 #. TRANSLATORS: %s will be replaced by a product name. E.g., "openSUSE Tumbleweed"
 #: src/components/product/ProductSelectionPage.tsx:56
@@ -985,7 +1043,7 @@ msgstr ""
 "Žádné oddíly nebudou automaticky konfigurovány pro zavádění systému. "
 "Používejte opatrně."
 
-#: src/components/storage/DeviceSelection.tsx:106
+#: src/components/storage/DeviceSelection.tsx:120
 msgid ""
 "The file systems will be allocated by default as [new partitions in the "
 "selected device]."
@@ -993,7 +1051,7 @@ msgstr ""
 "Souborové systémy budou ve výchozím nastavení přiděleny jako [nové oddíly ve "
 "vybraném zařízení]."
 
-#: src/components/storage/DeviceSelection.tsx:113
+#: src/components/storage/DeviceSelection.tsx:127
 msgid ""
 "The file systems will be allocated by default as [logical volumes of a new "
 "LVM Volume Group]. The corresponding physical volumes will be created on "
@@ -1003,35 +1061,35 @@ msgstr ""
 "nové skupiny svazků LVM]. Odpovídající fyzické svazky budou na vyžádání "
 "vytvořeny jako nové oddíly na vybraných zařízeních."
 
-#: src/components/storage/DeviceSelection.tsx:122
+#: src/components/storage/DeviceSelection.tsx:138
 msgid "Select installation device"
 msgstr "Výběr instalačního zařízení"
 
-#: src/components/storage/DeviceSelection.tsx:128
+#: src/components/storage/DeviceSelection.tsx:144
 msgid "Install new system on"
 msgstr "Instalace nového systému na"
 
-#: src/components/storage/DeviceSelection.tsx:131
+#: src/components/storage/DeviceSelection.tsx:147
 msgid "An existing disk"
 msgstr "Existující disk"
 
-#: src/components/storage/DeviceSelection.tsx:140
+#: src/components/storage/DeviceSelection.tsx:156
 msgid "A new LVM Volume Group"
 msgstr "Nová skupina svazků LVM"
 
-#: src/components/storage/DeviceSelection.tsx:163
+#: src/components/storage/DeviceSelection.tsx:179
 msgid "Device selector for target disk"
 msgstr "Výběr zařízení pro cílový disk"
 
-#: src/components/storage/DeviceSelection.tsx:186
+#: src/components/storage/DeviceSelection.tsx:202
 msgid "Device selector for new LVM volume group"
 msgstr "Výběr zařízení pro novou skupinu svazků LVM"
 
-#: src/components/storage/DeviceSelection.tsx:199
+#: src/components/storage/DeviceSelection.tsx:215
 msgid "Prepare more devices by configuring advanced"
 msgstr "Připravte další zařízení pomocí pokročilé konfigurace"
 
-#: src/components/storage/DeviceSelection.tsx:200
+#: src/components/storage/DeviceSelection.tsx:216
 msgid "storage techs"
 msgstr "technologie úložiště"
 
@@ -1141,7 +1199,7 @@ msgid "Connect to iSCSI targets"
 msgstr "Připojení k cílům iSCSI"
 
 #: src/components/storage/DevicesTechMenu.tsx:71
-#: src/components/storage/ISCSIPage.tsx:33 src/routes/storage.tsx:60
+#: src/components/storage/ISCSIPage.tsx:34 src/routes/storage.tsx:60
 msgid "iSCSI"
 msgstr "iSCSI"
 
@@ -1206,6 +1264,12 @@ msgstr ""
 #: src/components/storage/EncryptionSettingsDialog.tsx:128
 msgid "Encrypt the system"
 msgstr "Šifrování systému"
+
+#: src/components/storage/ISCSIPage.tsx:48
+#: src/components/storage/dasd/DASDPage.tsx:54
+#: src/components/storage/zfcp/ZFCPPage.tsx:199
+msgid "Back to device selection"
+msgstr "Zpět na výběr zařízení"
 
 #. TRANSLATORS: %s is the installation disk (eg. "/dev/sda, 80 GiB)
 #: src/components/storage/InstallationDeviceField.tsx:42
@@ -1534,7 +1598,14 @@ msgstr[2] "Zkontrolujte %d plánovaných akcí"
 msgid "Waiting for actions information..."
 msgstr "Čekáme na informace o akcích..."
 
-#: src/components/storage/ProposalPage.tsx:130
+#: src/components/storage/ProposalPage.tsx:55
+msgid ""
+"The system layout was set up using a advanced configuration that cannot be "
+"modified with the current version of this visual interface. This limitation "
+"will be removed in a future version of Agama."
+msgstr ""
+
+#: src/components/storage/ProposalPage.tsx:144
 msgid "Planned Actions"
 msgstr "Plánované akce"
 
@@ -1895,11 +1966,6 @@ msgstr "DASD"
 #: src/components/storage/dasd/DASDPage.tsx:44
 msgid "DASD devices selection table"
 msgstr "Tabulka výběru zařízení DASD"
-
-#: src/components/storage/dasd/DASDPage.tsx:54
-#: src/components/storage/zfcp/ZFCPPage.tsx:199
-msgid "Back to device selection"
-msgstr "Zpět na výběr zařízení"
 
 #: src/components/storage/dasd/DASDTable.tsx:68
 #: src/components/storage/iscsi/InitiatorPresenter.tsx:57
@@ -2557,6 +2623,11 @@ msgstr "Smazat"
 msgid "ZFCP"
 msgstr "ZFCP"
 
+#~ msgid ""
+#~ "Take your time to check your configuration before starting the "
+#~ "installation process."
+#~ msgstr "Před zahájením instalace zkontrolujte konfiguraci."
+
 #~ msgid "Waiting"
 #~ msgstr "Čekám"
 
@@ -2648,13 +2719,6 @@ msgstr "ZFCP"
 
 #~ msgid "Proposal"
 #~ msgstr "Návrh"
-
-#, c-format
-#~ msgid "Register %s"
-#~ msgstr "Registrovat %s"
-
-#~ msgid "Registration code"
-#~ msgstr "Registrační kód"
 
 #~ msgid "Email"
 #~ msgstr "E-mail"

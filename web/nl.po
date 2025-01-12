@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-09 03:06+0000\n"
+"POT-Creation-Date: 2025-01-12 02:47+0000\n"
 "PO-Revision-Date: 2025-01-07 11:50+0000\n"
 "Last-Translator: Natasha Ament <stacheldrahtje@ament-teusink.eu>\n"
 "Language-Team: Dutch <https://l10n.opensuse.org/projects/agama/agama-web/nl/"
@@ -23,11 +23,11 @@ msgstr ""
 msgid "Change product"
 msgstr "Wijzig product"
 
-#: src/components/core/InstallButton.tsx:52
+#: src/components/core/InstallButton.tsx:44
 msgid "Confirm Installation"
 msgstr "Bevestig installatie"
 
-#: src/components/core/InstallButton.tsx:56
+#: src/components/core/InstallButton.tsx:48
 msgid ""
 "If you continue, partitions on your hard disk will be modified according to "
 "the provided installation settings."
@@ -35,18 +35,18 @@ msgstr ""
 "Indien u doorgaat zullen de partities op de harde schijf worden gewijzigd op "
 "basis van de opgegeven installatie instellingen."
 
-#: src/components/core/InstallButton.tsx:60
+#: src/components/core/InstallButton.tsx:52
 msgid "Please, cancel and check the settings if you are unsure."
 msgstr ""
 "Klik bij twijfel alstbulieft op annuleren en controleer de instellingen."
 
 #. TRANSLATORS: button label
-#: src/components/core/InstallButton.tsx:65
+#: src/components/core/InstallButton.tsx:57
 msgid "Continue"
 msgstr "Doorgaan"
 
 #. TRANSLATORS: button label
-#: src/components/core/InstallButton.tsx:69 src/components/core/Page.tsx:238
+#: src/components/core/InstallButton.tsx:61 src/components/core/Page.tsx:240
 #: src/components/core/Popup.tsx:130
 #: src/components/network/WifiConnectionForm.tsx:153
 #: src/components/product/ProductSelectionPage.tsx:93
@@ -54,12 +54,12 @@ msgid "Cancel"
 msgstr "Annuleren"
 
 #. TRANSLATORS: The install button label
-#: src/components/core/InstallButton.tsx:104
+#: src/components/core/InstallButton.tsx:96
 msgid "Install"
 msgstr "Installeren"
 
 #. TRANSLATORS: Accessible text included with the install button when there are issues
-#: src/components/core/InstallButton.tsx:106
+#: src/components/core/InstallButton.tsx:98
 msgid "Not possible with the current setup. Click to know more."
 msgstr "Niet mogelijk met de huidige configuratie. Click voor meer informatie."
 
@@ -149,7 +149,7 @@ msgstr ""
 "Toetsenbordindeling kan niet worden gewijzigd in een installatie op afstand"
 
 #: src/components/core/InstallerOptions.tsx:120
-#: src/components/core/Page.tsx:271
+#: src/components/core/Page.tsx:273
 #: src/components/storage/EncryptionSettingsDialog.tsx:154
 #: src/components/storage/VolumeDialog.tsx:641
 #: src/components/storage/dasd/DASDTable.tsx:104
@@ -163,7 +163,8 @@ msgstr "Gebruikers"
 
 #: src/components/core/IssuesDrawer.tsx:50
 #: src/components/overview/StorageSection.tsx:100
-#: src/components/storage/ProposalPage.tsx:108 src/routes/storage.tsx:39
+#: src/components/storage/ProposalPage.tsx:50
+#: src/components/storage/ProposalPage.tsx:122 src/routes/storage.tsx:39
 msgid "Storage"
 msgstr "Opslag"
 
@@ -173,12 +174,19 @@ msgstr "Opslag"
 msgid "Software"
 msgstr "Software"
 
-#: src/components/core/IssuesDrawer.tsx:58
+#: src/components/core/IssuesDrawer.tsx:52
+#: src/components/product/ProductRegistrationPage.tsx:154
+#: src/routes/registration.tsx:31
+#, fuzzy
+msgid "Registration"
+msgstr "Vraag"
+
+#: src/components/core/IssuesDrawer.tsx:59
 #, fuzzy
 msgid "Pre-installation checks"
 msgstr "Installatie voltooid"
 
-#: src/components/core/IssuesDrawer.tsx:63
+#: src/components/core/IssuesDrawer.tsx:64
 msgid ""
 "Before installing, you have to make some decisions. Click on each section to "
 "review the settings."
@@ -235,7 +243,7 @@ msgstr "Wachtwoord"
 msgid "Log in"
 msgstr "Inloggen"
 
-#: src/components/core/Page.tsx:260
+#: src/components/core/Page.tsx:262
 msgid "Back"
 msgstr "Terug"
 
@@ -714,25 +722,18 @@ msgstr "Verbind met een WiFi netwerk"
 msgid "The system will use %s as its default language."
 msgstr "Het systeem zal het %s als standaard taal gebruiken."
 
-#: src/components/overview/OverviewPage.tsx:33 src/router.tsx:44
+#: src/components/overview/OverviewPage.tsx:35
+#: src/components/overview/OverviewPage.tsx:42 src/router.tsx:45
 msgid "Overview"
 msgstr "Overzicht"
 
-#: src/components/overview/OverviewPage.tsx:35
+#: src/components/overview/OverviewPage.tsx:44
 msgid ""
 "These are the most relevant installation settings. Feel free to browse the "
 "sections in the menu for further details."
 msgstr ""
 "Dit zijn de meest relevante installatie instellingen. Twijfel niet en "
 "controleer de onderdelen in het menu voor meer details."
-
-#: src/components/overview/OverviewPage.tsx:55
-msgid ""
-"Take your time to check your configuration before starting the installation "
-"process."
-msgstr ""
-"Neem de tijd om de configuratie te controleren voordat u het "
-"installatieproces start."
 
 #: src/components/overview/SoftwareSection.tsx:42
 #, fuzzy
@@ -805,38 +806,96 @@ msgid ""
 "custom strategy to find the needed space"
 msgstr "Installeer op apparaat %s en verwijder alle daarop opgeslagen inhoud"
 
-#: src/components/overview/StorageSection.tsx:150
+#: src/components/overview/StorageSection.tsx:121
+#, fuzzy
+msgid "Install using an advanced configuration."
+msgstr "Installatie apparaat"
+
+#: src/components/overview/StorageSection.tsx:156
 #: src/components/storage/InstallationDeviceField.tsx:56
 msgid "No device selected yet"
 msgstr "Nog geen apparaat geselecteerd"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size,
 #. example: "/dev/sda, 20 GiB"
-#: src/components/overview/StorageSection.tsx:157
+#: src/components/overview/StorageSection.tsx:163
 #, fuzzy, c-format
 msgid "Install using device %s shrinking existing partitions as needed"
 msgstr "Installeer op apparaat %s en verwijder alle daarop opgeslagen inhoud"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size,
 #. example: "/dev/sda, 20 GiB"
-#: src/components/overview/StorageSection.tsx:161
+#: src/components/overview/StorageSection.tsx:167
 #, fuzzy, c-format
 msgid "Install using device %s without modifying existing partitions"
 msgstr "Installeer op apparaat %s en verwijder alle daarop opgeslagen inhoud"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size,
 #. example: "/dev/sda, 20 GiB"
-#: src/components/overview/StorageSection.tsx:165
+#: src/components/overview/StorageSection.tsx:171
 #, c-format
 msgid "Install using device %s and deleting all its content"
 msgstr "Installeer op apparaat %s en verwijder alle daarop opgeslagen inhoud"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size,
 #. example: "/dev/sda, 20 GiB"
-#: src/components/overview/StorageSection.tsx:170
+#: src/components/overview/StorageSection.tsx:176
 #, fuzzy, c-format
 msgid "Install using device %s with a custom strategy to find the needed space"
 msgstr "Installeer op apparaat %s en verwijder alle daarop opgeslagen inhoud"
+
+#: src/components/product/ProductRegistrationAlert.tsx:40
+#, fuzzy
+msgid "Register it now"
+msgstr "Registreer %s"
+
+#: src/components/product/ProductRegistrationAlert.tsx:56
+#, c-format
+msgid "%s must be registered."
+msgstr ""
+
+#: src/components/product/ProductRegistrationPage.tsx:48
+msgid "Registration code"
+msgstr "Registratie code"
+
+#: src/components/product/ProductRegistrationPage.tsx:59
+#, fuzzy
+msgid "Product registered"
+msgstr "Problemen van het product"
+
+#: src/components/product/ProductRegistrationPage.tsx:60
+#, c-format
+msgid "%s has been registered with below information."
+msgstr ""
+
+#: src/components/product/ProductRegistrationPage.tsx:70
+msgid "Hide"
+msgstr ""
+
+#: src/components/product/ProductRegistrationPage.tsx:70
+#, fuzzy
+msgid "Show"
+msgstr "Toon logs"
+
+#: src/components/product/ProductRegistrationPage.tsx:112
+#, fuzzy
+msgid "Product registration form"
+msgstr "Registratie code"
+
+#: src/components/product/ProductRegistrationPage.tsx:114
+msgid ""
+"Enter a registration code and optionally a valid email address for "
+"registering the product."
+msgstr ""
+
+#: src/components/product/ProductRegistrationPage.tsx:127
+msgid "(optional)"
+msgstr ""
+
+#: src/components/product/ProductRegistrationPage.tsx:136
+#, fuzzy
+msgid "Register"
+msgstr "Registreer %s"
 
 #. TRANSLATORS: %s will be replaced by a product name. E.g., "openSUSE Tumbleweed"
 #: src/components/product/ProductSelectionPage.tsx:56
@@ -1027,7 +1086,7 @@ msgstr ""
 "Er worden geen partities automatisch geconfigureerd voor opstarten. Pas op "
 "met het gebruiken."
 
-#: src/components/storage/DeviceSelection.tsx:106
+#: src/components/storage/DeviceSelection.tsx:120
 msgid ""
 "The file systems will be allocated by default as [new partitions in the "
 "selected device]."
@@ -1035,7 +1094,7 @@ msgstr ""
 "De bestandssystemen worden standaard toegewezen als [nieuwe partities in het "
 "geselecteerde apparaat]."
 
-#: src/components/storage/DeviceSelection.tsx:113
+#: src/components/storage/DeviceSelection.tsx:127
 msgid ""
 "The file systems will be allocated by default as [logical volumes of a new "
 "LVM Volume Group]. The corresponding physical volumes will be created on "
@@ -1045,37 +1104,37 @@ msgstr ""
 "een LVM Volume Group]. De bijbehorende fysieke volumes worden aangemaakt "
 "indien nodig als nieuwe partities op de geselecteerde apparaten."
 
-#: src/components/storage/DeviceSelection.tsx:122
+#: src/components/storage/DeviceSelection.tsx:138
 #, fuzzy
 msgid "Select installation device"
 msgstr "Installatie apparaat"
 
-#: src/components/storage/DeviceSelection.tsx:128
+#: src/components/storage/DeviceSelection.tsx:144
 #, fuzzy
 msgid "Install new system on"
 msgstr "Installatie opties"
 
-#: src/components/storage/DeviceSelection.tsx:131
+#: src/components/storage/DeviceSelection.tsx:147
 msgid "An existing disk"
 msgstr "Een bestaande disk"
 
-#: src/components/storage/DeviceSelection.tsx:140
+#: src/components/storage/DeviceSelection.tsx:156
 msgid "A new LVM Volume Group"
 msgstr "Een nieuwe LVM Volume Group"
 
-#: src/components/storage/DeviceSelection.tsx:163
+#: src/components/storage/DeviceSelection.tsx:179
 msgid "Device selector for target disk"
 msgstr "Apparaat selector voor doel schijf"
 
-#: src/components/storage/DeviceSelection.tsx:186
+#: src/components/storage/DeviceSelection.tsx:202
 msgid "Device selector for new LVM volume group"
 msgstr "Apparaat selector voor nieuwe LVM volume group"
 
-#: src/components/storage/DeviceSelection.tsx:199
+#: src/components/storage/DeviceSelection.tsx:215
 msgid "Prepare more devices by configuring advanced"
 msgstr "Meer apparaten voorbereiden door geavanceerd te configureren"
 
-#: src/components/storage/DeviceSelection.tsx:200
+#: src/components/storage/DeviceSelection.tsx:216
 #, fuzzy
 msgid "storage techs"
 msgstr "Opslag problemen"
@@ -1187,7 +1246,7 @@ msgid "Connect to iSCSI targets"
 msgstr "Verbind met iSCSI doelen"
 
 #: src/components/storage/DevicesTechMenu.tsx:71
-#: src/components/storage/ISCSIPage.tsx:33 src/routes/storage.tsx:60
+#: src/components/storage/ISCSIPage.tsx:34 src/routes/storage.tsx:60
 msgid "iSCSI"
 msgstr "iSCSI"
 
@@ -1254,6 +1313,13 @@ msgstr ""
 #, fuzzy
 msgid "Encrypt the system"
 msgstr "Wijzig bestandssysteem"
+
+#: src/components/storage/ISCSIPage.tsx:48
+#: src/components/storage/dasd/DASDPage.tsx:54
+#: src/components/storage/zfcp/ZFCPPage.tsx:199
+#, fuzzy
+msgid "Back to device selection"
+msgstr "Nog geen apparaat geselecteerd"
 
 #. TRANSLATORS: %s is the installation disk (eg. "/dev/sda, 80 GiB)
 #: src/components/storage/InstallationDeviceField.tsx:42
@@ -1595,7 +1661,14 @@ msgstr[1] "Geplande acties"
 msgid "Waiting for actions information..."
 msgstr "Wacht op voortgangs rapport"
 
-#: src/components/storage/ProposalPage.tsx:130
+#: src/components/storage/ProposalPage.tsx:55
+msgid ""
+"The system layout was set up using a advanced configuration that cannot be "
+"modified with the current version of this visual interface. This limitation "
+"will be removed in a future version of Agama."
+msgstr ""
+
+#: src/components/storage/ProposalPage.tsx:144
 msgid "Planned Actions"
 msgstr "Geplande acties"
 
@@ -1968,12 +2041,6 @@ msgstr "DASD %s"
 #: src/components/storage/dasd/DASDPage.tsx:44
 #, fuzzy
 msgid "DASD devices selection table"
-msgstr "Nog geen apparaat geselecteerd"
-
-#: src/components/storage/dasd/DASDPage.tsx:54
-#: src/components/storage/zfcp/ZFCPPage.tsx:199
-#, fuzzy
-msgid "Back to device selection"
 msgstr "Nog geen apparaat geselecteerd"
 
 #: src/components/storage/dasd/DASDTable.tsx:68
@@ -2653,6 +2720,13 @@ msgstr "Leegmaken"
 msgid "ZFCP"
 msgstr "ZFCP"
 
+#~ msgid ""
+#~ "Take your time to check your configuration before starting the "
+#~ "installation process."
+#~ msgstr ""
+#~ "Neem de tijd om de configuratie te controleren voordat u het "
+#~ "installatieproces start."
+
 #~ msgid "Waiting"
 #~ msgstr "Wachten"
 
@@ -2748,13 +2822,6 @@ msgstr "ZFCP"
 #~ msgid "Waiting for progress status..."
 #~ msgstr "Wacht op voortgangs rapport"
 
-#, c-format
-#~ msgid "Register %s"
-#~ msgstr "Registreer %s"
-
-#~ msgid "Registration code"
-#~ msgstr "Registratie code"
-
 #~ msgid "Email"
 #~ msgstr "E-mail"
 
@@ -2833,9 +2900,6 @@ msgstr "ZFCP"
 #~ msgid "Page Actions"
 #~ msgstr "Pagina acties"
 
-#~ msgid "Show Logs"
-#~ msgstr "Toon logs"
-
 #~ msgid "YaST Logs"
 #~ msgstr "YaST logs"
 
@@ -2844,9 +2908,6 @@ msgstr "ZFCP"
 
 #~ msgid "Software issues"
 #~ msgstr "Software problemen"
-
-#~ msgid "Product issues"
-#~ msgstr "Problemen van het product"
 
 #~ msgid "Found Issues"
 #~ msgstr "Gevonden problemen"
@@ -2962,10 +3023,6 @@ msgstr "ZFCP"
 #~ msgid "Deregister product"
 #~ msgstr "Wijzig product"
 
-#, fuzzy
-#~ msgid "Registration"
-#~ msgstr "Vraag"
-
 #~ msgid "Product selection"
 #~ msgstr "Product selectie"
 
@@ -3062,10 +3119,6 @@ msgstr "ZFCP"
 #, fuzzy
 #~ msgid "Size details"
 #~ msgstr "Verberg details"
-
-#, fuzzy, c-format
-#~ msgid "Install using device %s"
-#~ msgstr "Installatie apparaat"
 
 #, fuzzy
 #~ msgid "No devices found."

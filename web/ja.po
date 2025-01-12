@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-09 03:06+0000\n"
+"POT-Creation-Date: 2025-01-12 02:47+0000\n"
 "PO-Revision-Date: 2025-01-08 04:50+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -23,11 +23,11 @@ msgstr ""
 msgid "Change product"
 msgstr "製品の変更"
 
-#: src/components/core/InstallButton.tsx:52
+#: src/components/core/InstallButton.tsx:44
 msgid "Confirm Installation"
 msgstr "インストールの確認"
 
-#: src/components/core/InstallButton.tsx:56
+#: src/components/core/InstallButton.tsx:48
 msgid ""
 "If you continue, partitions on your hard disk will be modified according to "
 "the provided installation settings."
@@ -35,18 +35,18 @@ msgstr ""
 "続行すると、お使いのコンピュータのハードディスクにあるパーティションは、ここ"
 "までのダイアログで設定したとおりに変更されます。"
 
-#: src/components/core/InstallButton.tsx:60
+#: src/components/core/InstallButton.tsx:52
 msgid "Please, cancel and check the settings if you are unsure."
 msgstr ""
 "何か不安な点があれば、キャンセルして設定を確認しておくことをお勧めします。"
 
 #. TRANSLATORS: button label
-#: src/components/core/InstallButton.tsx:65
+#: src/components/core/InstallButton.tsx:57
 msgid "Continue"
 msgstr "続行"
 
 #. TRANSLATORS: button label
-#: src/components/core/InstallButton.tsx:69 src/components/core/Page.tsx:238
+#: src/components/core/InstallButton.tsx:61 src/components/core/Page.tsx:240
 #: src/components/core/Popup.tsx:130
 #: src/components/network/WifiConnectionForm.tsx:153
 #: src/components/product/ProductSelectionPage.tsx:93
@@ -54,12 +54,12 @@ msgid "Cancel"
 msgstr "キャンセル"
 
 #. TRANSLATORS: The install button label
-#: src/components/core/InstallButton.tsx:104
+#: src/components/core/InstallButton.tsx:96
 msgid "Install"
 msgstr "インストール"
 
 #. TRANSLATORS: Accessible text included with the install button when there are issues
-#: src/components/core/InstallButton.tsx:106
+#: src/components/core/InstallButton.tsx:98
 msgid "Not possible with the current setup. Click to know more."
 msgstr ""
 "現在の設定ではインストールできません。詳しく表示したい場合は、ここを押してく"
@@ -147,7 +147,7 @@ msgid "Cannot be changed in remote installation"
 msgstr "リモートインストールの場合は変更できません"
 
 #: src/components/core/InstallerOptions.tsx:120
-#: src/components/core/Page.tsx:271
+#: src/components/core/Page.tsx:273
 #: src/components/storage/EncryptionSettingsDialog.tsx:154
 #: src/components/storage/VolumeDialog.tsx:641
 #: src/components/storage/dasd/DASDTable.tsx:104
@@ -161,7 +161,8 @@ msgstr "ユーザ"
 
 #: src/components/core/IssuesDrawer.tsx:50
 #: src/components/overview/StorageSection.tsx:100
-#: src/components/storage/ProposalPage.tsx:108 src/routes/storage.tsx:39
+#: src/components/storage/ProposalPage.tsx:50
+#: src/components/storage/ProposalPage.tsx:122 src/routes/storage.tsx:39
 msgid "Storage"
 msgstr "ストレージ"
 
@@ -171,11 +172,17 @@ msgstr "ストレージ"
 msgid "Software"
 msgstr "ソフトウエア"
 
-#: src/components/core/IssuesDrawer.tsx:58
+#: src/components/core/IssuesDrawer.tsx:52
+#: src/components/product/ProductRegistrationPage.tsx:154
+#: src/routes/registration.tsx:31
+msgid "Registration"
+msgstr "登録"
+
+#: src/components/core/IssuesDrawer.tsx:59
 msgid "Pre-installation checks"
 msgstr "インストール前チェック"
 
-#: src/components/core/IssuesDrawer.tsx:63
+#: src/components/core/IssuesDrawer.tsx:64
 msgid ""
 "Before installing, you have to make some decisions. Click on each section to "
 "review the settings."
@@ -229,7 +236,7 @@ msgstr "パスワード入力"
 msgid "Log in"
 msgstr "ログイン"
 
-#: src/components/core/Page.tsx:260
+#: src/components/core/Page.tsx:262
 msgid "Back"
 msgstr "戻る"
 
@@ -686,23 +693,18 @@ msgstr "Wi-Fi ネットワークへの接続"
 msgid "The system will use %s as its default language."
 msgstr "システムは %s を既定の言語として使用します。"
 
-#: src/components/overview/OverviewPage.tsx:33 src/router.tsx:44
+#: src/components/overview/OverviewPage.tsx:35
+#: src/components/overview/OverviewPage.tsx:42 src/router.tsx:45
 msgid "Overview"
 msgstr "概要"
 
-#: src/components/overview/OverviewPage.tsx:35
+#: src/components/overview/OverviewPage.tsx:44
 msgid ""
 "These are the most relevant installation settings. Feel free to browse the "
 "sections in the menu for further details."
 msgstr ""
 "インストールにあたっての主要な項目のみを表示しています。さらに詳しい設定を確"
 "認したい場合は、それぞれのセクションを開いてください。"
-
-#: src/components/overview/OverviewPage.tsx:55
-msgid ""
-"Take your time to check your configuration before starting the installation "
-"process."
-msgstr "インストール処理を開始する前に、設定内容をよくご確認ください。"
 
 #: src/components/overview/SoftwareSection.tsx:42
 msgid "The installation will take"
@@ -782,14 +784,19 @@ msgstr ""
 "%s 内での必要な領域検出に際して独自の方式を利用し、新しく論理ボリュームマネー"
 "ジャのボリュームグループを作成してインストールします"
 
-#: src/components/overview/StorageSection.tsx:150
+#: src/components/overview/StorageSection.tsx:121
+#, fuzzy
+msgid "Install using an advanced configuration."
+msgstr "デバイス %s を利用してインストールします"
+
+#: src/components/overview/StorageSection.tsx:156
 #: src/components/storage/InstallationDeviceField.tsx:56
 msgid "No device selected yet"
 msgstr "まだ何もデバイスを選択していません"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size,
 #. example: "/dev/sda, 20 GiB"
-#: src/components/overview/StorageSection.tsx:157
+#: src/components/overview/StorageSection.tsx:163
 #, c-format
 msgid "Install using device %s shrinking existing partitions as needed"
 msgstr ""
@@ -797,25 +804,77 @@ msgstr ""
 
 #. TRANSLATORS: %s will be replaced by the device name and its size,
 #. example: "/dev/sda, 20 GiB"
-#: src/components/overview/StorageSection.tsx:161
+#: src/components/overview/StorageSection.tsx:167
 #, c-format
 msgid "Install using device %s without modifying existing partitions"
 msgstr "デバイス %s の既存パーティションを変更せずにインストールします"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size,
 #. example: "/dev/sda, 20 GiB"
-#: src/components/overview/StorageSection.tsx:165
+#: src/components/overview/StorageSection.tsx:171
 #, c-format
 msgid "Install using device %s and deleting all its content"
 msgstr "デバイス %s の内容を全て削除してインストールします"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size,
 #. example: "/dev/sda, 20 GiB"
-#: src/components/overview/StorageSection.tsx:170
+#: src/components/overview/StorageSection.tsx:176
 #, c-format
 msgid "Install using device %s with a custom strategy to find the needed space"
 msgstr ""
 "必要な領域検出に際して独自の方式を利用し、デバイス %s にインストールします"
+
+#: src/components/product/ProductRegistrationAlert.tsx:40
+#, fuzzy
+msgid "Register it now"
+msgstr "登録"
+
+#: src/components/product/ProductRegistrationAlert.tsx:56
+#, fuzzy, c-format
+msgid "%s must be registered."
+msgstr "%s (登録済み)"
+
+#: src/components/product/ProductRegistrationPage.tsx:48
+msgid "Registration code"
+msgstr "登録コード"
+
+#: src/components/product/ProductRegistrationPage.tsx:59
+#, fuzzy
+msgid "Product registered"
+msgstr "製品の問題"
+
+#: src/components/product/ProductRegistrationPage.tsx:60
+#, c-format
+msgid "%s has been registered with below information."
+msgstr ""
+
+#: src/components/product/ProductRegistrationPage.tsx:70
+msgid "Hide"
+msgstr ""
+
+#: src/components/product/ProductRegistrationPage.tsx:70
+#, fuzzy
+msgid "Show"
+msgstr "ログの表示"
+
+#: src/components/product/ProductRegistrationPage.tsx:112
+#, fuzzy
+msgid "Product registration form"
+msgstr "この製品には登録が必要です。"
+
+#: src/components/product/ProductRegistrationPage.tsx:114
+msgid ""
+"Enter a registration code and optionally a valid email address for "
+"registering the product."
+msgstr ""
+
+#: src/components/product/ProductRegistrationPage.tsx:127
+msgid "(optional)"
+msgstr ""
+
+#: src/components/product/ProductRegistrationPage.tsx:136
+msgid "Register"
+msgstr "登録"
 
 #. TRANSLATORS: %s will be replaced by a product name. E.g., "openSUSE Tumbleweed"
 #: src/components/product/ProductSelectionPage.tsx:56
@@ -993,7 +1052,7 @@ msgid ""
 "No partitions will be automatically configured for booting. Use with caution."
 msgstr "起動用のパーティションを自動設定しません。注意してお使いください。"
 
-#: src/components/storage/DeviceSelection.tsx:106
+#: src/components/storage/DeviceSelection.tsx:120
 msgid ""
 "The file systems will be allocated by default as [new partitions in the "
 "selected device]."
@@ -1001,7 +1060,7 @@ msgstr ""
 "既定では、ファイルシステムは [選択したデバイス内の新規パーティション] として"
 "割り当てます。"
 
-#: src/components/storage/DeviceSelection.tsx:113
+#: src/components/storage/DeviceSelection.tsx:127
 msgid ""
 "The file systems will be allocated by default as [logical volumes of a new "
 "LVM Volume Group]. The corresponding physical volumes will be created on "
@@ -1011,35 +1070,35 @@ msgstr ""
 "して割り当てます。対応する物理ボリュームは、必要に応じて選択したデバイス内の"
 "新規パーティションとして作成します。"
 
-#: src/components/storage/DeviceSelection.tsx:122
+#: src/components/storage/DeviceSelection.tsx:138
 msgid "Select installation device"
 msgstr "インストール先デバイスの選択"
 
-#: src/components/storage/DeviceSelection.tsx:128
+#: src/components/storage/DeviceSelection.tsx:144
 msgid "Install new system on"
 msgstr "新しいシステムのインストール先"
 
-#: src/components/storage/DeviceSelection.tsx:131
+#: src/components/storage/DeviceSelection.tsx:147
 msgid "An existing disk"
 msgstr "既存のディスク"
 
-#: src/components/storage/DeviceSelection.tsx:140
+#: src/components/storage/DeviceSelection.tsx:156
 msgid "A new LVM Volume Group"
 msgstr "新規 LVM ボリュームグループ"
 
-#: src/components/storage/DeviceSelection.tsx:163
+#: src/components/storage/DeviceSelection.tsx:179
 msgid "Device selector for target disk"
 msgstr "宛先のディスクデバイス選択"
 
-#: src/components/storage/DeviceSelection.tsx:186
+#: src/components/storage/DeviceSelection.tsx:202
 msgid "Device selector for new LVM volume group"
 msgstr "新規 LVM ボリュームグループのデバイス選択"
 
-#: src/components/storage/DeviceSelection.tsx:199
+#: src/components/storage/DeviceSelection.tsx:215
 msgid "Prepare more devices by configuring advanced"
 msgstr "高度な設定でさらにデバイスを検出"
 
-#: src/components/storage/DeviceSelection.tsx:200
+#: src/components/storage/DeviceSelection.tsx:216
 msgid "storage techs"
 msgstr "ストレージ技術"
 
@@ -1149,7 +1208,7 @@ msgid "Connect to iSCSI targets"
 msgstr "iSCSI ターゲットへの接続"
 
 #: src/components/storage/DevicesTechMenu.tsx:71
-#: src/components/storage/ISCSIPage.tsx:33 src/routes/storage.tsx:60
+#: src/components/storage/ISCSIPage.tsx:34 src/routes/storage.tsx:60
 msgid "iSCSI"
 msgstr "iSCSI"
 
@@ -1214,6 +1273,12 @@ msgstr ""
 #: src/components/storage/EncryptionSettingsDialog.tsx:128
 msgid "Encrypt the system"
 msgstr "システムの暗号化"
+
+#: src/components/storage/ISCSIPage.tsx:48
+#: src/components/storage/dasd/DASDPage.tsx:54
+#: src/components/storage/zfcp/ZFCPPage.tsx:199
+msgid "Back to device selection"
+msgstr "デバイス選択に戻る"
 
 #. TRANSLATORS: %s is the installation disk (eg. "/dev/sda, 80 GiB)
 #: src/components/storage/InstallationDeviceField.tsx:42
@@ -1534,7 +1599,14 @@ msgstr[0] "%d 個の処理計画を確認する"
 msgid "Waiting for actions information..."
 msgstr "処理に関する情報を待機しています..."
 
-#: src/components/storage/ProposalPage.tsx:130
+#: src/components/storage/ProposalPage.tsx:55
+msgid ""
+"The system layout was set up using a advanced configuration that cannot be "
+"modified with the current version of this visual interface. This limitation "
+"will be removed in a future version of Agama."
+msgstr ""
+
+#: src/components/storage/ProposalPage.tsx:144
 msgid "Planned Actions"
 msgstr "処理の計画"
 
@@ -1897,11 +1969,6 @@ msgstr "DASD"
 #: src/components/storage/dasd/DASDPage.tsx:44
 msgid "DASD devices selection table"
 msgstr "DASD デバイス選択テーブル"
-
-#: src/components/storage/dasd/DASDPage.tsx:54
-#: src/components/storage/zfcp/ZFCPPage.tsx:199
-msgid "Back to device selection"
-msgstr "デバイス選択に戻る"
 
 #: src/components/storage/dasd/DASDTable.tsx:68
 #: src/components/storage/iscsi/InitiatorPresenter.tsx:57
@@ -2558,6 +2625,11 @@ msgstr "消去"
 msgid "ZFCP"
 msgstr "ZFCP"
 
+#~ msgid ""
+#~ "Take your time to check your configuration before starting the "
+#~ "installation process."
+#~ msgstr "インストール処理を開始する前に、設定内容をよくご確認ください。"
+
 #~ msgid "Waiting"
 #~ msgstr "お待ちください"
 
@@ -2666,9 +2738,6 @@ msgstr "ZFCP"
 #, c-format
 #~ msgid "Register %s"
 #~ msgstr "%s の登録"
-
-#~ msgid "Registration code"
-#~ msgstr "登録コード"
 
 #~ msgid "Email"
 #~ msgstr "電子メール"
@@ -2792,9 +2861,6 @@ msgstr "ZFCP"
 #~ msgid "Page Actions"
 #~ msgstr "ページアクション"
 
-#~ msgid "Show Logs"
-#~ msgstr "ログの表示"
-
 #~ msgid "YaST Logs"
 #~ msgstr "YaST ログ"
 
@@ -2803,9 +2869,6 @@ msgstr "ZFCP"
 
 #~ msgid "Software issues"
 #~ msgstr "ソフトウエアの問題"
-
-#~ msgid "Product issues"
-#~ msgstr "製品の問題"
 
 #~ msgid "Storage issues"
 #~ msgstr "ストレージの問題"
@@ -2888,10 +2951,6 @@ msgstr "ZFCP"
 #~ msgid "Installation Summary"
 #~ msgstr "インストールの概要"
 
-#, c-format
-#~ msgid "%s (registered)"
-#~ msgstr "%s (登録済み)"
-
 #~ msgid "Product"
 #~ msgstr "製品"
 
@@ -2939,9 +2998,6 @@ msgstr "ZFCP"
 #~ msgstr ""
 #~ "新しい製品を選択する前に、製品 %s の登録を解除しなければなりません。"
 
-#~ msgid "Register"
-#~ msgstr "登録"
-
 #~ msgid "Deregister product"
 #~ msgstr "製品の登録解除"
 
@@ -2950,12 +3006,6 @@ msgstr "ZFCP"
 
 #~ msgid "Email:"
 #~ msgstr "電子メール:"
-
-#~ msgid "Registration"
-#~ msgstr "登録"
-
-#~ msgid "This product requires registration."
-#~ msgstr "この製品には登録が必要です。"
 
 #~ msgid "This product does not require registration."
 #~ msgstr "この製品には登録は不要です。"
@@ -3112,10 +3162,6 @@ msgstr "ZFCP"
 
 #~ msgid "Find Space"
 #~ msgstr "領域の検出"
-
-#, c-format
-#~ msgid "Install using device %s"
-#~ msgstr "デバイス %s を利用してインストールします"
 
 #~ msgid "No devices found."
 #~ msgstr "デバイスが見つかりませんでした。"

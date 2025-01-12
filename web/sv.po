@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-09 03:06+0000\n"
+"POT-Creation-Date: 2025-01-12 02:47+0000\n"
 "PO-Revision-Date: 2024-12-10 10:48+0000\n"
 "Last-Translator: Luna  Jernberg <bittin@opensuse.org>\n"
 "Language-Team: Swedish <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -23,11 +23,11 @@ msgstr ""
 msgid "Change product"
 msgstr "Ändra produkt"
 
-#: src/components/core/InstallButton.tsx:52
+#: src/components/core/InstallButton.tsx:44
 msgid "Confirm Installation"
 msgstr "Bekräfta Installation"
 
-#: src/components/core/InstallButton.tsx:56
+#: src/components/core/InstallButton.tsx:48
 msgid ""
 "If you continue, partitions on your hard disk will be modified according to "
 "the provided installation settings."
@@ -35,17 +35,17 @@ msgstr ""
 "Om du fortsätter kommer partitionerna på din hårddisk att modifieras enligt "
 "de medföljande installationsinställningarna."
 
-#: src/components/core/InstallButton.tsx:60
+#: src/components/core/InstallButton.tsx:52
 msgid "Please, cancel and check the settings if you are unsure."
 msgstr "Vänligen, avbryt och kontrollera inställningarna om du är osäker."
 
 #. TRANSLATORS: button label
-#: src/components/core/InstallButton.tsx:65
+#: src/components/core/InstallButton.tsx:57
 msgid "Continue"
 msgstr "Fortsätt"
 
 #. TRANSLATORS: button label
-#: src/components/core/InstallButton.tsx:69 src/components/core/Page.tsx:238
+#: src/components/core/InstallButton.tsx:61 src/components/core/Page.tsx:240
 #: src/components/core/Popup.tsx:130
 #: src/components/network/WifiConnectionForm.tsx:153
 #: src/components/product/ProductSelectionPage.tsx:93
@@ -53,12 +53,12 @@ msgid "Cancel"
 msgstr "Avbryt"
 
 #. TRANSLATORS: The install button label
-#: src/components/core/InstallButton.tsx:104
+#: src/components/core/InstallButton.tsx:96
 msgid "Install"
 msgstr "Installera"
 
 #. TRANSLATORS: Accessible text included with the install button when there are issues
-#: src/components/core/InstallButton.tsx:106
+#: src/components/core/InstallButton.tsx:98
 msgid "Not possible with the current setup. Click to know more."
 msgstr ""
 "Inte möjligt med den aktuella konfigurationen. Klicka för att veta mer."
@@ -146,7 +146,7 @@ msgid "Cannot be changed in remote installation"
 msgstr "Kan inte ändras i fjärrinstallation"
 
 #: src/components/core/InstallerOptions.tsx:120
-#: src/components/core/Page.tsx:271
+#: src/components/core/Page.tsx:273
 #: src/components/storage/EncryptionSettingsDialog.tsx:154
 #: src/components/storage/VolumeDialog.tsx:641
 #: src/components/storage/dasd/DASDTable.tsx:104
@@ -160,7 +160,8 @@ msgstr "Användare"
 
 #: src/components/core/IssuesDrawer.tsx:50
 #: src/components/overview/StorageSection.tsx:100
-#: src/components/storage/ProposalPage.tsx:108 src/routes/storage.tsx:39
+#: src/components/storage/ProposalPage.tsx:50
+#: src/components/storage/ProposalPage.tsx:122 src/routes/storage.tsx:39
 msgid "Storage"
 msgstr "Lagring"
 
@@ -170,11 +171,17 @@ msgstr "Lagring"
 msgid "Software"
 msgstr "Programvara"
 
-#: src/components/core/IssuesDrawer.tsx:58
+#: src/components/core/IssuesDrawer.tsx:52
+#: src/components/product/ProductRegistrationPage.tsx:154
+#: src/routes/registration.tsx:31
+msgid "Registration"
+msgstr "Registrering"
+
+#: src/components/core/IssuesDrawer.tsx:59
 msgid "Pre-installation checks"
 msgstr "Förinstallationskontroller"
 
-#: src/components/core/IssuesDrawer.tsx:63
+#: src/components/core/IssuesDrawer.tsx:64
 msgid ""
 "Before installing, you have to make some decisions. Click on each section to "
 "review the settings."
@@ -226,7 +233,7 @@ msgstr "Lösenordsinmatning"
 msgid "Log in"
 msgstr "Logga in"
 
-#: src/components/core/Page.tsx:260
+#: src/components/core/Page.tsx:262
 msgid "Back"
 msgstr "Bakåt"
 
@@ -682,25 +689,18 @@ msgstr "Anslut till ett Wi-Fi nätverk"
 msgid "The system will use %s as its default language."
 msgstr "Systemet kommer att använda %s som dess standardspråk."
 
-#: src/components/overview/OverviewPage.tsx:33 src/router.tsx:44
+#: src/components/overview/OverviewPage.tsx:35
+#: src/components/overview/OverviewPage.tsx:42 src/router.tsx:45
 msgid "Overview"
 msgstr "Översikt"
 
-#: src/components/overview/OverviewPage.tsx:35
+#: src/components/overview/OverviewPage.tsx:44
 msgid ""
 "These are the most relevant installation settings. Feel free to browse the "
 "sections in the menu for further details."
 msgstr ""
 "Dessa är de mest relevanta installationsinställningarna. Bläddra gärna "
 "igenom avsnitten i menyn för ytterligare detaljer."
-
-#: src/components/overview/OverviewPage.tsx:55
-msgid ""
-"Take your time to check your configuration before starting the installation "
-"process."
-msgstr ""
-"Ta dig tid att kontrollera din konfiguration innan du startar "
-"installationsprocessen."
 
 #: src/components/overview/SoftwareSection.tsx:42
 msgid "The installation will take"
@@ -781,40 +781,97 @@ msgstr ""
 "Installera i en ny logisk volymhanterare (LVM) volymgrupp på %s använd en "
 "anpassad strategi för att hitta det nödvändiga utrymmet"
 
-#: src/components/overview/StorageSection.tsx:150
+#: src/components/overview/StorageSection.tsx:121
+#, fuzzy
+msgid "Install using an advanced configuration."
+msgstr "Installera på enhet %s"
+
+#: src/components/overview/StorageSection.tsx:156
 #: src/components/storage/InstallationDeviceField.tsx:56
 msgid "No device selected yet"
 msgstr "Ingen enhet vald ännu"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size,
 #. example: "/dev/sda, 20 GiB"
-#: src/components/overview/StorageSection.tsx:157
+#: src/components/overview/StorageSection.tsx:163
 #, c-format
 msgid "Install using device %s shrinking existing partitions as needed"
 msgstr "Installera på enhet %s som krymper befintliga partitioner efter behov"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size,
 #. example: "/dev/sda, 20 GiB"
-#: src/components/overview/StorageSection.tsx:161
+#: src/components/overview/StorageSection.tsx:167
 #, c-format
 msgid "Install using device %s without modifying existing partitions"
 msgstr "Installera på enhet %s utan att ändra befintliga partitioner"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size,
 #. example: "/dev/sda, 20 GiB"
-#: src/components/overview/StorageSection.tsx:165
+#: src/components/overview/StorageSection.tsx:171
 #, c-format
 msgid "Install using device %s and deleting all its content"
 msgstr "Installerar på enhet %s och raderar allt innehåll"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size,
 #. example: "/dev/sda, 20 GiB"
-#: src/components/overview/StorageSection.tsx:170
+#: src/components/overview/StorageSection.tsx:176
 #, c-format
 msgid "Install using device %s with a custom strategy to find the needed space"
 msgstr ""
 "Installera på enhet %s med en anpassad strategi för att hitta det utrymme "
 "som behövs"
+
+#: src/components/product/ProductRegistrationAlert.tsx:40
+#, fuzzy
+msgid "Register it now"
+msgstr "Registrera"
+
+#: src/components/product/ProductRegistrationAlert.tsx:56
+#, fuzzy, c-format
+msgid "%s must be registered."
+msgstr "%s (registrerad)"
+
+#: src/components/product/ProductRegistrationPage.tsx:48
+msgid "Registration code"
+msgstr "Registreringskod"
+
+#: src/components/product/ProductRegistrationPage.tsx:59
+#, fuzzy
+msgid "Product registered"
+msgstr "Produktproblem"
+
+#: src/components/product/ProductRegistrationPage.tsx:60
+#, c-format
+msgid "%s has been registered with below information."
+msgstr ""
+
+#: src/components/product/ProductRegistrationPage.tsx:70
+msgid "Hide"
+msgstr ""
+
+#: src/components/product/ProductRegistrationPage.tsx:70
+#, fuzzy
+msgid "Show"
+msgstr "Visa loggar"
+
+#: src/components/product/ProductRegistrationPage.tsx:112
+#, fuzzy
+msgid "Product registration form"
+msgstr "Denna produkt kräver registrering."
+
+#: src/components/product/ProductRegistrationPage.tsx:114
+msgid ""
+"Enter a registration code and optionally a valid email address for "
+"registering the product."
+msgstr ""
+
+#: src/components/product/ProductRegistrationPage.tsx:127
+msgid "(optional)"
+msgstr ""
+
+#: src/components/product/ProductRegistrationPage.tsx:136
+msgid "Register"
+msgstr "Registrera"
 
 #. TRANSLATORS: %s will be replaced by a product name. E.g., "openSUSE Tumbleweed"
 #: src/components/product/ProductSelectionPage.tsx:56
@@ -998,7 +1055,7 @@ msgstr ""
 "Inga partitioner kommer att konfigureras automatiskt för uppstart. Använd "
 "med försiktighet."
 
-#: src/components/storage/DeviceSelection.tsx:106
+#: src/components/storage/DeviceSelection.tsx:120
 msgid ""
 "The file systems will be allocated by default as [new partitions in the "
 "selected device]."
@@ -1006,7 +1063,7 @@ msgstr ""
 "Filsystemen kommer som standard att tilldelas som [nya partitioner på den "
 "valda enheten]."
 
-#: src/components/storage/DeviceSelection.tsx:113
+#: src/components/storage/DeviceSelection.tsx:127
 msgid ""
 "The file systems will be allocated by default as [logical volumes of a new "
 "LVM Volume Group]. The corresponding physical volumes will be created on "
@@ -1016,35 +1073,35 @@ msgstr ""
 "LVM volymgrupp]. Motsvarande fysiska volymer kommer att skapas på begäran "
 "som nya partitioner på de valda enheterna."
 
-#: src/components/storage/DeviceSelection.tsx:122
+#: src/components/storage/DeviceSelection.tsx:138
 msgid "Select installation device"
 msgstr "Välj installationsenhet"
 
-#: src/components/storage/DeviceSelection.tsx:128
+#: src/components/storage/DeviceSelection.tsx:144
 msgid "Install new system on"
 msgstr "Installera nytt system på"
 
-#: src/components/storage/DeviceSelection.tsx:131
+#: src/components/storage/DeviceSelection.tsx:147
 msgid "An existing disk"
 msgstr "En existerande disk"
 
-#: src/components/storage/DeviceSelection.tsx:140
+#: src/components/storage/DeviceSelection.tsx:156
 msgid "A new LVM Volume Group"
 msgstr "En ny LVM volymgrupp"
 
-#: src/components/storage/DeviceSelection.tsx:163
+#: src/components/storage/DeviceSelection.tsx:179
 msgid "Device selector for target disk"
 msgstr "Enhetsväljare för måldisk"
 
-#: src/components/storage/DeviceSelection.tsx:186
+#: src/components/storage/DeviceSelection.tsx:202
 msgid "Device selector for new LVM volume group"
 msgstr "Enhetsväljare för ny LVM volymgrupp"
 
-#: src/components/storage/DeviceSelection.tsx:199
+#: src/components/storage/DeviceSelection.tsx:215
 msgid "Prepare more devices by configuring advanced"
 msgstr "Förbered fler enheter genom att använda avancerad konfiguration"
 
-#: src/components/storage/DeviceSelection.tsx:200
+#: src/components/storage/DeviceSelection.tsx:216
 msgid "storage techs"
 msgstr "lagringsteknologier"
 
@@ -1154,7 +1211,7 @@ msgid "Connect to iSCSI targets"
 msgstr "Anslut till iSCSI mål"
 
 #: src/components/storage/DevicesTechMenu.tsx:71
-#: src/components/storage/ISCSIPage.tsx:33 src/routes/storage.tsx:60
+#: src/components/storage/ISCSIPage.tsx:34 src/routes/storage.tsx:60
 msgid "iSCSI"
 msgstr "iSCSI"
 
@@ -1219,6 +1276,12 @@ msgstr ""
 #: src/components/storage/EncryptionSettingsDialog.tsx:128
 msgid "Encrypt the system"
 msgstr "Kryptera systemet"
+
+#: src/components/storage/ISCSIPage.tsx:48
+#: src/components/storage/dasd/DASDPage.tsx:54
+#: src/components/storage/zfcp/ZFCPPage.tsx:199
+msgid "Back to device selection"
+msgstr "Tillbaka till val av enhet"
 
 #. TRANSLATORS: %s is the installation disk (eg. "/dev/sda, 80 GiB)
 #: src/components/storage/InstallationDeviceField.tsx:42
@@ -1543,7 +1606,14 @@ msgstr[1] "Kontrollera de %d planerade åtgärderna"
 msgid "Waiting for actions information..."
 msgstr "Väntar på åtgärdsinformation..."
 
-#: src/components/storage/ProposalPage.tsx:130
+#: src/components/storage/ProposalPage.tsx:55
+msgid ""
+"The system layout was set up using a advanced configuration that cannot be "
+"modified with the current version of this visual interface. This limitation "
+"will be removed in a future version of Agama."
+msgstr ""
+
+#: src/components/storage/ProposalPage.tsx:144
 msgid "Planned Actions"
 msgstr "Planerade åtgärder"
 
@@ -1905,11 +1975,6 @@ msgstr "DASD"
 #: src/components/storage/dasd/DASDPage.tsx:44
 msgid "DASD devices selection table"
 msgstr "DASD-enhetsvalstabell"
-
-#: src/components/storage/dasd/DASDPage.tsx:54
-#: src/components/storage/zfcp/ZFCPPage.tsx:199
-msgid "Back to device selection"
-msgstr "Tillbaka till val av enhet"
 
 #: src/components/storage/dasd/DASDTable.tsx:68
 #: src/components/storage/iscsi/InitiatorPresenter.tsx:57
@@ -2568,6 +2633,13 @@ msgstr "Rensa"
 msgid "ZFCP"
 msgstr "ZFCP"
 
+#~ msgid ""
+#~ "Take your time to check your configuration before starting the "
+#~ "installation process."
+#~ msgstr ""
+#~ "Ta dig tid att kontrollera din konfiguration innan du startar "
+#~ "installationsprocessen."
+
 #~ msgid "Waiting"
 #~ msgstr "Väntande"
 
@@ -2677,9 +2749,6 @@ msgstr "ZFCP"
 #, c-format
 #~ msgid "Register %s"
 #~ msgstr "Registrera %s"
-
-#~ msgid "Registration code"
-#~ msgstr "Registreringskod"
 
 #~ msgid "Email"
 #~ msgstr "E-post"
@@ -2805,9 +2874,6 @@ msgstr "ZFCP"
 #~ msgid "Page Actions"
 #~ msgstr "Sidåtgärder"
 
-#~ msgid "Show Logs"
-#~ msgstr "Visa loggar"
-
 #~ msgid "YaST Logs"
 #~ msgstr "YaST loggar"
 
@@ -2816,9 +2882,6 @@ msgstr "ZFCP"
 
 #~ msgid "Software issues"
 #~ msgstr "Programvaruproblem"
-
-#~ msgid "Product issues"
-#~ msgstr "Produktproblem"
 
 #~ msgid "Storage issues"
 #~ msgstr "Lagringsproblem"
@@ -2903,10 +2966,6 @@ msgstr "ZFCP"
 #~ msgid "Installation Summary"
 #~ msgstr "Installationssammanfattning"
 
-#, c-format
-#~ msgid "%s (registered)"
-#~ msgstr "%s (registrerad)"
-
 #~ msgid "Product"
 #~ msgstr "Produkt"
 
@@ -2956,9 +3015,6 @@ msgstr "ZFCP"
 #~ msgid "The product %s must be deregistered before selecting a new product."
 #~ msgstr "Produkten %s måste avregistreras innan du väljer en ny produkt."
 
-#~ msgid "Register"
-#~ msgstr "Registrera"
-
 #~ msgid "Deregister product"
 #~ msgstr "Avregistrera produkt"
 
@@ -2967,12 +3023,6 @@ msgstr "ZFCP"
 
 #~ msgid "Email:"
 #~ msgstr "E-post:"
-
-#~ msgid "Registration"
-#~ msgstr "Registrering"
-
-#~ msgid "This product requires registration."
-#~ msgstr "Denna produkt kräver registrering."
 
 #~ msgid "This product does not require registration."
 #~ msgstr "Denna produkt kräver ingen registrering."
@@ -3132,10 +3182,6 @@ msgstr "ZFCP"
 
 #~ msgid "Find Space"
 #~ msgstr "Hitta utrymme"
-
-#, c-format
-#~ msgid "Install using device %s"
-#~ msgstr "Installera på enhet %s"
 
 #~ msgid "No devices found."
 #~ msgstr "Inga enheter hittades."
