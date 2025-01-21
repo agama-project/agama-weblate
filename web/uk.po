@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-15 02:36+0000\n"
+"POT-Creation-Date: 2025-01-21 02:36+0000\n"
 "PO-Revision-Date: 2025-01-16 20:50+0000\n"
 "Last-Translator: Eugene Krater <lachend@gmail.com>\n"
 "Language-Team: Ukrainian <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -46,10 +46,10 @@ msgid "Continue"
 msgstr "Продовжити"
 
 #. TRANSLATORS: button label
-#: src/components/core/InstallButton.tsx:61 src/components/core/Page.tsx:240
+#: src/components/core/InstallButton.tsx:61 src/components/core/Page.tsx:246
 #: src/components/core/Popup.tsx:130
 #: src/components/network/WifiConnectionForm.tsx:153
-#: src/components/product/ProductSelectionPage.tsx:95
+#: src/components/product/ProductSelectionPage.tsx:100
 msgid "Cancel"
 msgstr "Скасувати"
 
@@ -145,7 +145,7 @@ msgid "Cannot be changed in remote installation"
 msgstr "Неможливо змінити під час віддаленого встановлення"
 
 #: src/components/core/InstallerOptions.tsx:120
-#: src/components/core/Page.tsx:273
+#: src/components/core/Page.tsx:279
 #: src/components/storage/EncryptionSettingsDialog.tsx:154
 #: src/components/storage/VolumeDialog.tsx:641
 #: src/components/storage/dasd/DASDTable.tsx:104
@@ -166,7 +166,7 @@ msgstr "Сховище"
 
 #: src/components/core/IssuesDrawer.tsx:51
 #: src/components/overview/SoftwareSection.tsx:70
-#: src/components/software/SoftwarePage.tsx:106 src/routes/software.tsx:33
+#: src/components/software/SoftwarePage.tsx:159 src/routes/software.tsx:33
 msgid "Software"
 msgstr "Програми"
 
@@ -235,7 +235,7 @@ msgstr "Ввід пароля"
 msgid "Log in"
 msgstr "Вхід"
 
-#: src/components/core/Page.tsx:262
+#: src/components/core/Page.tsx:268
 msgid "Back"
 msgstr "Назад"
 
@@ -317,7 +317,7 @@ msgstr "Вибір клавіатури"
 #: src/components/l10n/L10nPage.tsx:75
 #: src/components/l10n/LocaleSelection.tsx:93
 #: src/components/l10n/TimezoneSelection.tsx:138
-#: src/components/product/ProductSelectionPage.tsx:151
+#: src/components/product/ProductSelectionPage.tsx:214
 #: src/components/software/SoftwarePatternsSelection.tsx:167
 msgid "Select"
 msgstr "Вибір"
@@ -822,6 +822,16 @@ msgstr ""
 "Встановити, використовуючи пристрій %s з користувацькою стратегією для "
 "пошуку потрібного місця"
 
+#: src/components/product/LicenseDialog.tsx:47
+#, fuzzy
+msgid "License language"
+msgstr "Мова"
+
+#: src/components/product/LicenseDialog.tsx:96
+#: src/components/software/SoftwarePatternsSelection.tsx:206
+msgid "Close"
+msgstr "Закрити"
+
 #: src/components/product/ProductRegistrationAlert.tsx:40
 msgid "Register it now"
 msgstr "Зареєструвати це зараз"
@@ -871,16 +881,24 @@ msgid "Register"
 msgstr ""
 
 #. TRANSLATORS: %s will be replaced by a product name. E.g., "openSUSE Tumbleweed"
-#: src/components/product/ProductSelectionPage.tsx:58
+#: src/components/product/ProductSelectionPage.tsx:63
 #, c-format
 msgid "%s logo"
 msgstr ""
 
-#: src/components/product/ProductSelectionPage.tsx:127
+#. TRANSLATORS: Text used for the license acceptance checkbox. %s will be
+#. replaced with the product name and the text in the square brackets [] is
+#. used for the link to show the license, please keep the brackets.
+#: src/components/product/ProductSelectionPage.tsx:140
+#, c-format
+msgid "I have read and accept the [license] for %s"
+msgstr ""
+
+#: src/components/product/ProductSelectionPage.tsx:151
 msgid "Select a product"
 msgstr ""
 
-#: src/components/product/ProductSelectionPage.tsx:128
+#: src/components/product/ProductSelectionPage.tsx:152
 msgid "Available products"
 msgstr ""
 
@@ -911,27 +929,50 @@ msgstr ""
 msgid "Password Required"
 msgstr ""
 
-#: src/components/software/SoftwarePage.tsx:48
+#: src/components/software/SoftwarePage.tsx:57
 msgid "No additional software was selected."
 msgstr ""
 
-#: src/components/software/SoftwarePage.tsx:53
+#: src/components/software/SoftwarePage.tsx:62
 msgid "The following software patterns are selected for installation:"
 msgstr ""
 
-#: src/components/software/SoftwarePage.tsx:68
-#: src/components/software/SoftwarePage.tsx:80
+#: src/components/software/SoftwarePage.tsx:77
+#: src/components/software/SoftwarePage.tsx:89
 msgid "Selected patterns"
 msgstr ""
 
-#: src/components/software/SoftwarePage.tsx:71
+#: src/components/software/SoftwarePage.tsx:80
 msgid "Change selection"
 msgstr ""
 
-#: src/components/software/SoftwarePage.tsx:83
+#: src/components/software/SoftwarePage.tsx:92
 msgid ""
 "This product does not allow to select software patterns during installation. "
 "However, you can add additional software once the installation is finished."
+msgstr ""
+
+#. TRANSLATORS: error details followed by a "Try again" link
+#: src/components/software/SoftwarePage.tsx:100
+msgid ""
+"Some installation repositories could not be loaded. The system cannot be "
+"installed without them."
+msgstr ""
+
+#. TRANSLATORS: title for an error message box, at least one repository could not be loaded
+#: src/components/software/SoftwarePage.tsx:113
+msgid "Repository load failed"
+msgstr ""
+
+#. TRANSLATORS: progress message
+#: src/components/software/SoftwarePage.tsx:117
+#, fuzzy
+msgid "Loading the installation repositories..."
+msgstr "Завантаження оточення встановлення, зачекайте."
+
+#. TRANSLATORS: link for retrying failed repository load
+#: src/components/software/SoftwarePage.tsx:124
+msgid "Try again"
 msgstr ""
 
 #: src/components/software/SoftwarePatternsSelection.tsx:98
@@ -955,10 +996,6 @@ msgstr ""
 #: src/components/software/SoftwarePatternsSelection.tsx:191
 msgid "Filter by pattern title or description"
 msgstr ""
-
-#: src/components/software/SoftwarePatternsSelection.tsx:206
-msgid "Close"
-msgstr "Закрити"
 
 #. TRANSLATORS: %s will be replaced by the estimated installation size,
 #. example: "728.8 MiB"

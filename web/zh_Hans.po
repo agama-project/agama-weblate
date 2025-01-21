@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-15 02:36+0000\n"
+"POT-Creation-Date: 2025-01-21 02:36+0000\n"
 "PO-Revision-Date: 2024-07-03 14:46+0000\n"
 "Last-Translator: Monstorix <monstorix@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.opensuse.org/projects/"
@@ -43,10 +43,10 @@ msgid "Continue"
 msgstr "继续"
 
 #. TRANSLATORS: button label
-#: src/components/core/InstallButton.tsx:61 src/components/core/Page.tsx:240
+#: src/components/core/InstallButton.tsx:61 src/components/core/Page.tsx:246
 #: src/components/core/Popup.tsx:130
 #: src/components/network/WifiConnectionForm.tsx:153
-#: src/components/product/ProductSelectionPage.tsx:95
+#: src/components/product/ProductSelectionPage.tsx:100
 msgid "Cancel"
 msgstr "取消"
 
@@ -138,7 +138,7 @@ msgid "Cannot be changed in remote installation"
 msgstr "无法在远程安装中更改"
 
 #: src/components/core/InstallerOptions.tsx:120
-#: src/components/core/Page.tsx:273
+#: src/components/core/Page.tsx:279
 #: src/components/storage/EncryptionSettingsDialog.tsx:154
 #: src/components/storage/VolumeDialog.tsx:641
 #: src/components/storage/dasd/DASDTable.tsx:104
@@ -159,7 +159,7 @@ msgstr "存储"
 
 #: src/components/core/IssuesDrawer.tsx:51
 #: src/components/overview/SoftwareSection.tsx:70
-#: src/components/software/SoftwarePage.tsx:106 src/routes/software.tsx:33
+#: src/components/software/SoftwarePage.tsx:159 src/routes/software.tsx:33
 msgid "Software"
 msgstr "软件"
 
@@ -224,7 +224,7 @@ msgstr "密码输入"
 msgid "Log in"
 msgstr "登录"
 
-#: src/components/core/Page.tsx:262
+#: src/components/core/Page.tsx:268
 msgid "Back"
 msgstr "返回"
 
@@ -306,7 +306,7 @@ msgstr "键盘选择"
 #: src/components/l10n/L10nPage.tsx:75
 #: src/components/l10n/LocaleSelection.tsx:93
 #: src/components/l10n/TimezoneSelection.tsx:138
-#: src/components/product/ProductSelectionPage.tsx:151
+#: src/components/product/ProductSelectionPage.tsx:214
 #: src/components/software/SoftwarePatternsSelection.tsx:167
 msgid "Select"
 msgstr "选择"
@@ -799,6 +799,16 @@ msgstr "使用设备 %s 进行安装并删除其上的现有内容"
 msgid "Install using device %s with a custom strategy to find the needed space"
 msgstr "使用设备 %s 进行安装，并采用自定义策略寻找所需空间"
 
+#: src/components/product/LicenseDialog.tsx:47
+#, fuzzy
+msgid "License language"
+msgstr "选择语言"
+
+#: src/components/product/LicenseDialog.tsx:96
+#: src/components/software/SoftwarePatternsSelection.tsx:206
+msgid "Close"
+msgstr "关闭"
+
 #: src/components/product/ProductRegistrationAlert.tsx:40
 #, fuzzy
 msgid "Register it now"
@@ -852,17 +862,25 @@ msgid "Register"
 msgstr "注册"
 
 #. TRANSLATORS: %s will be replaced by a product name. E.g., "openSUSE Tumbleweed"
-#: src/components/product/ProductSelectionPage.tsx:58
+#: src/components/product/ProductSelectionPage.tsx:63
 #, c-format
 msgid "%s logo"
 msgstr ""
 
-#: src/components/product/ProductSelectionPage.tsx:127
+#. TRANSLATORS: Text used for the license acceptance checkbox. %s will be
+#. replaced with the product name and the text in the square brackets [] is
+#. used for the link to show the license, please keep the brackets.
+#: src/components/product/ProductSelectionPage.tsx:140
+#, c-format
+msgid "I have read and accept the [license] for %s"
+msgstr ""
+
+#: src/components/product/ProductSelectionPage.tsx:151
 #, fuzzy
 msgid "Select a product"
 msgstr "选择位置"
 
-#: src/components/product/ProductSelectionPage.tsx:128
+#: src/components/product/ProductSelectionPage.tsx:152
 msgid "Available products"
 msgstr "可用产品"
 
@@ -895,28 +913,52 @@ msgstr "加密密码"
 msgid "Password Required"
 msgstr "密码输入"
 
-#: src/components/software/SoftwarePage.tsx:48
+#: src/components/software/SoftwarePage.tsx:57
 msgid "No additional software was selected."
 msgstr "没有选择附加软件。"
 
-#: src/components/software/SoftwarePage.tsx:53
+#: src/components/software/SoftwarePage.tsx:62
 msgid "The following software patterns are selected for installation:"
 msgstr "下列软件合集已被选择以进行安装："
 
-#: src/components/software/SoftwarePage.tsx:68
-#: src/components/software/SoftwarePage.tsx:80
+#: src/components/software/SoftwarePage.tsx:77
+#: src/components/software/SoftwarePage.tsx:89
 msgid "Selected patterns"
 msgstr "已选择合集"
 
-#: src/components/software/SoftwarePage.tsx:71
+#: src/components/software/SoftwarePage.tsx:80
 msgid "Change selection"
 msgstr "修改选择"
 
-#: src/components/software/SoftwarePage.tsx:83
+#: src/components/software/SoftwarePage.tsx:92
 msgid ""
 "This product does not allow to select software patterns during installation. "
 "However, you can add additional software once the installation is finished."
 msgstr ""
+
+#. TRANSLATORS: error details followed by a "Try again" link
+#: src/components/software/SoftwarePage.tsx:100
+msgid ""
+"Some installation repositories could not be loaded. The system cannot be "
+"installed without them."
+msgstr ""
+
+#. TRANSLATORS: title for an error message box, at least one repository could not be loaded
+#: src/components/software/SoftwarePage.tsx:113
+msgid "Repository load failed"
+msgstr ""
+
+#. TRANSLATORS: progress message
+#: src/components/software/SoftwarePage.tsx:117
+#, fuzzy
+msgid "Loading the installation repositories..."
+msgstr "正在载入安装环境，请稍候。"
+
+#. TRANSLATORS: link for retrying failed repository load
+#: src/components/software/SoftwarePage.tsx:124
+#, fuzzy
+msgid "Try again"
+msgstr "再试一次"
 
 #: src/components/software/SoftwarePatternsSelection.tsx:98
 msgid "None of the patterns match the filter."
@@ -940,10 +982,6 @@ msgstr "软件选择"
 #: src/components/software/SoftwarePatternsSelection.tsx:191
 msgid "Filter by pattern title or description"
 msgstr "按合集名称或描述筛选"
-
-#: src/components/software/SoftwarePatternsSelection.tsx:206
-msgid "Close"
-msgstr "关闭"
 
 #. TRANSLATORS: %s will be replaced by the estimated installation size,
 #. example: "728.8 MiB"
@@ -2819,9 +2857,6 @@ msgstr ""
 #~ msgid "Time zone not selected yet"
 #~ msgstr "尚未选择时区"
 
-#~ msgid "Select language"
-#~ msgstr "选择语言"
-
 #, c-format
 #~ msgid "%s will use the selected language."
 #~ msgstr "%s 将会使用已选择的语言。"
@@ -2979,9 +3014,6 @@ msgstr ""
 #, c-format
 #~ msgid "The server at %s is not reachable."
 #~ msgstr "无法访问位于 %s 上的服务器。"
-
-#~ msgid "Try Again"
-#~ msgstr "再试一次"
 
 #~ msgid "Cockpit server"
 #~ msgstr "Cockpit 服务器"

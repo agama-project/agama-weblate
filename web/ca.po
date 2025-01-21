@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-15 02:36+0000\n"
+"POT-Creation-Date: 2025-01-21 02:36+0000\n"
 "PO-Revision-Date: 2025-01-13 13:50+0000\n"
 "Last-Translator: David Medina <medipas@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -46,10 +46,10 @@ msgid "Continue"
 msgstr "Continua"
 
 #. TRANSLATORS: button label
-#: src/components/core/InstallButton.tsx:61 src/components/core/Page.tsx:240
+#: src/components/core/InstallButton.tsx:61 src/components/core/Page.tsx:246
 #: src/components/core/Popup.tsx:130
 #: src/components/network/WifiConnectionForm.tsx:153
-#: src/components/product/ProductSelectionPage.tsx:95
+#: src/components/product/ProductSelectionPage.tsx:100
 msgid "Cancel"
 msgstr "Cancel·la"
 
@@ -145,7 +145,7 @@ msgid "Cannot be changed in remote installation"
 msgstr "No es pot canviar a la instal·lació remota."
 
 #: src/components/core/InstallerOptions.tsx:120
-#: src/components/core/Page.tsx:273
+#: src/components/core/Page.tsx:279
 #: src/components/storage/EncryptionSettingsDialog.tsx:154
 #: src/components/storage/VolumeDialog.tsx:641
 #: src/components/storage/dasd/DASDTable.tsx:104
@@ -166,7 +166,7 @@ msgstr "Emmagatzematge"
 
 #: src/components/core/IssuesDrawer.tsx:51
 #: src/components/overview/SoftwareSection.tsx:70
-#: src/components/software/SoftwarePage.tsx:106 src/routes/software.tsx:33
+#: src/components/software/SoftwarePage.tsx:159 src/routes/software.tsx:33
 msgid "Software"
 msgstr "Programari"
 
@@ -236,7 +236,7 @@ msgstr "Introducció de contrasenya"
 msgid "Log in"
 msgstr "Inicia la sessió"
 
-#: src/components/core/Page.tsx:262
+#: src/components/core/Page.tsx:268
 msgid "Back"
 msgstr "Enrere"
 
@@ -318,7 +318,7 @@ msgstr "Selecció del teclat"
 #: src/components/l10n/L10nPage.tsx:75
 #: src/components/l10n/LocaleSelection.tsx:93
 #: src/components/l10n/TimezoneSelection.tsx:138
-#: src/components/product/ProductSelectionPage.tsx:151
+#: src/components/product/ProductSelectionPage.tsx:214
 #: src/components/software/SoftwarePatternsSelection.tsx:167
 msgid "Select"
 msgstr "Selecciona"
@@ -826,6 +826,16 @@ msgstr ""
 "Instal·la usant el dispositiu %s amb una estratègia personalitzada per "
 "trobar l'espai necessari."
 
+#: src/components/product/LicenseDialog.tsx:47
+#, fuzzy
+msgid "License language"
+msgstr "Seleccioneu una llengua"
+
+#: src/components/product/LicenseDialog.tsx:96
+#: src/components/software/SoftwarePatternsSelection.tsx:206
+msgid "Close"
+msgstr "Tanca"
+
 #: src/components/product/ProductRegistrationAlert.tsx:40
 msgid "Register it now"
 msgstr "Registra'l ara"
@@ -877,16 +887,24 @@ msgid "Register"
 msgstr "Registra"
 
 #. TRANSLATORS: %s will be replaced by a product name. E.g., "openSUSE Tumbleweed"
-#: src/components/product/ProductSelectionPage.tsx:58
+#: src/components/product/ProductSelectionPage.tsx:63
 #, c-format
 msgid "%s logo"
 msgstr "Logotip per a %s"
 
-#: src/components/product/ProductSelectionPage.tsx:127
+#. TRANSLATORS: Text used for the license acceptance checkbox. %s will be
+#. replaced with the product name and the text in the square brackets [] is
+#. used for the link to show the license, please keep the brackets.
+#: src/components/product/ProductSelectionPage.tsx:140
+#, c-format
+msgid "I have read and accept the [license] for %s"
+msgstr ""
+
+#: src/components/product/ProductSelectionPage.tsx:151
 msgid "Select a product"
 msgstr "Seleccioneu un producte"
 
-#: src/components/product/ProductSelectionPage.tsx:128
+#: src/components/product/ProductSelectionPage.tsx:152
 msgid "Available products"
 msgstr "Productes disponibles"
 
@@ -917,25 +935,25 @@ msgstr "Contrasenya d'encriptació"
 msgid "Password Required"
 msgstr "Cal una contrasenya."
 
-#: src/components/software/SoftwarePage.tsx:48
+#: src/components/software/SoftwarePage.tsx:57
 msgid "No additional software was selected."
 msgstr "No s'ha seleccionat cap programari addicional."
 
-#: src/components/software/SoftwarePage.tsx:53
+#: src/components/software/SoftwarePage.tsx:62
 msgid "The following software patterns are selected for installation:"
 msgstr ""
 "S'han seleccionat els patrons de programari següents per a la instal·lació:"
 
-#: src/components/software/SoftwarePage.tsx:68
-#: src/components/software/SoftwarePage.tsx:80
+#: src/components/software/SoftwarePage.tsx:77
+#: src/components/software/SoftwarePage.tsx:89
 msgid "Selected patterns"
 msgstr "Patrons seleccionats"
 
-#: src/components/software/SoftwarePage.tsx:71
+#: src/components/software/SoftwarePage.tsx:80
 msgid "Change selection"
 msgstr "Canvia la selecció"
 
-#: src/components/software/SoftwarePage.tsx:83
+#: src/components/software/SoftwarePage.tsx:92
 msgid ""
 "This product does not allow to select software patterns during installation. "
 "However, you can add additional software once the installation is finished."
@@ -943,6 +961,30 @@ msgstr ""
 "Aquest producte no permet seleccionar patrons de programari durant la "
 "instal·lació. Tanmateix, hi podeu afegir programari addicional un cop "
 "acabada la instal·lació."
+
+#. TRANSLATORS: error details followed by a "Try again" link
+#: src/components/software/SoftwarePage.tsx:100
+msgid ""
+"Some installation repositories could not be loaded. The system cannot be "
+"installed without them."
+msgstr ""
+
+#. TRANSLATORS: title for an error message box, at least one repository could not be loaded
+#: src/components/software/SoftwarePage.tsx:113
+msgid "Repository load failed"
+msgstr ""
+
+#. TRANSLATORS: progress message
+#: src/components/software/SoftwarePage.tsx:117
+#, fuzzy
+msgid "Loading the installation repositories..."
+msgstr "Carregant l'entorn d'instal·lació. Espereu, si us plau."
+
+#. TRANSLATORS: link for retrying failed repository load
+#: src/components/software/SoftwarePage.tsx:124
+#, fuzzy
+msgid "Try again"
+msgstr "Torna-ho a provar"
 
 #: src/components/software/SoftwarePatternsSelection.tsx:98
 msgid "None of the patterns match the filter."
@@ -965,10 +1007,6 @@ msgstr "Selecció de programari"
 #: src/components/software/SoftwarePatternsSelection.tsx:191
 msgid "Filter by pattern title or description"
 msgstr "Filtra per títol o descripció del patró"
-
-#: src/components/software/SoftwarePatternsSelection.tsx:206
-msgid "Close"
-msgstr "Tanca"
 
 #. TRANSLATORS: %s will be replaced by the estimated installation size,
 #. example: "728.8 MiB"
@@ -2936,9 +2974,6 @@ msgstr "ZFCP"
 #~ msgid "Time zone not selected yet"
 #~ msgstr "La zona horària encara no s'ha seleccionat."
 
-#~ msgid "Select language"
-#~ msgstr "Seleccioneu una llengua"
-
 #, c-format
 #~ msgid "%s will use the selected language."
 #~ msgstr "%s usarà la llengua seleccionada."
@@ -3100,9 +3135,6 @@ msgstr "ZFCP"
 #, c-format
 #~ msgid "The server at %s is not reachable."
 #~ msgstr "No es pot accedir al servidor a %s."
-
-#~ msgid "Try Again"
-#~ msgstr "Torna-ho a provar"
 
 #~ msgid "Cockpit server"
 #~ msgstr "Servidor Cockpit"

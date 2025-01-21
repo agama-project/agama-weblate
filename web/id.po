@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-15 02:36+0000\n"
+"POT-Creation-Date: 2025-01-21 02:36+0000\n"
 "PO-Revision-Date: 2025-01-01 11:50+0000\n"
 "Last-Translator: Arif Budiman <arifpedia@gmail.com>\n"
 "Language-Team: Indonesian <https://l10n.opensuse.org/projects/agama/agama-"
@@ -45,10 +45,10 @@ msgid "Continue"
 msgstr "Lanjutkan"
 
 #. TRANSLATORS: button label
-#: src/components/core/InstallButton.tsx:61 src/components/core/Page.tsx:240
+#: src/components/core/InstallButton.tsx:61 src/components/core/Page.tsx:246
 #: src/components/core/Popup.tsx:130
 #: src/components/network/WifiConnectionForm.tsx:153
-#: src/components/product/ProductSelectionPage.tsx:95
+#: src/components/product/ProductSelectionPage.tsx:100
 msgid "Cancel"
 msgstr "Batal"
 
@@ -147,7 +147,7 @@ msgid "Cannot be changed in remote installation"
 msgstr "Tidak dapat diubah dalam instalasi jarak jauh"
 
 #: src/components/core/InstallerOptions.tsx:120
-#: src/components/core/Page.tsx:273
+#: src/components/core/Page.tsx:279
 #: src/components/storage/EncryptionSettingsDialog.tsx:154
 #: src/components/storage/VolumeDialog.tsx:641
 #: src/components/storage/dasd/DASDTable.tsx:104
@@ -168,7 +168,7 @@ msgstr "Penyimpanan"
 
 #: src/components/core/IssuesDrawer.tsx:51
 #: src/components/overview/SoftwareSection.tsx:70
-#: src/components/software/SoftwarePage.tsx:106 src/routes/software.tsx:33
+#: src/components/software/SoftwarePage.tsx:159 src/routes/software.tsx:33
 msgid "Software"
 msgstr "Perangkat lunak"
 
@@ -235,7 +235,7 @@ msgstr "Masukan kata sandi"
 msgid "Log in"
 msgstr "Masuk"
 
-#: src/components/core/Page.tsx:262
+#: src/components/core/Page.tsx:268
 msgid "Back"
 msgstr "Kembali"
 
@@ -317,7 +317,7 @@ msgstr "Pemilihan keyboard"
 #: src/components/l10n/L10nPage.tsx:75
 #: src/components/l10n/LocaleSelection.tsx:93
 #: src/components/l10n/TimezoneSelection.tsx:138
-#: src/components/product/ProductSelectionPage.tsx:151
+#: src/components/product/ProductSelectionPage.tsx:214
 #: src/components/software/SoftwarePatternsSelection.tsx:167
 msgid "Select"
 msgstr "Pilih"
@@ -822,6 +822,16 @@ msgstr ""
 "Instal menggunakan perangkat %s dengan strategi khusus untuk menemukan ruang "
 "yang dibutuhkan"
 
+#: src/components/product/LicenseDialog.tsx:47
+#, fuzzy
+msgid "License language"
+msgstr "Pilih bahasa"
+
+#: src/components/product/LicenseDialog.tsx:96
+#: src/components/software/SoftwarePatternsSelection.tsx:206
+msgid "Close"
+msgstr "Tutup"
+
 #: src/components/product/ProductRegistrationAlert.tsx:40
 #, fuzzy
 msgid "Register it now"
@@ -875,16 +885,24 @@ msgid "Register"
 msgstr "Mendaftar"
 
 #. TRANSLATORS: %s will be replaced by a product name. E.g., "openSUSE Tumbleweed"
-#: src/components/product/ProductSelectionPage.tsx:58
+#: src/components/product/ProductSelectionPage.tsx:63
 #, c-format
 msgid "%s logo"
 msgstr "logo %s"
 
-#: src/components/product/ProductSelectionPage.tsx:127
+#. TRANSLATORS: Text used for the license acceptance checkbox. %s will be
+#. replaced with the product name and the text in the square brackets [] is
+#. used for the link to show the license, please keep the brackets.
+#: src/components/product/ProductSelectionPage.tsx:140
+#, c-format
+msgid "I have read and accept the [license] for %s"
+msgstr ""
+
+#: src/components/product/ProductSelectionPage.tsx:151
 msgid "Select a product"
 msgstr "Pilih produk"
 
-#: src/components/product/ProductSelectionPage.tsx:128
+#: src/components/product/ProductSelectionPage.tsx:152
 msgid "Available products"
 msgstr "Produk yang tersedia"
 
@@ -915,24 +933,24 @@ msgstr "Kata Sandi Enkripsi"
 msgid "Password Required"
 msgstr "Diperlukan Kata Sandi"
 
-#: src/components/software/SoftwarePage.tsx:48
+#: src/components/software/SoftwarePage.tsx:57
 msgid "No additional software was selected."
 msgstr "Tidak ada perangkat lunak tambahan yang dipilih."
 
-#: src/components/software/SoftwarePage.tsx:53
+#: src/components/software/SoftwarePage.tsx:62
 msgid "The following software patterns are selected for installation:"
 msgstr "Pola perangkat lunak berikut ini dipilih untuk instalasi:"
 
-#: src/components/software/SoftwarePage.tsx:68
-#: src/components/software/SoftwarePage.tsx:80
+#: src/components/software/SoftwarePage.tsx:77
+#: src/components/software/SoftwarePage.tsx:89
 msgid "Selected patterns"
 msgstr "Pola yang dipilih"
 
-#: src/components/software/SoftwarePage.tsx:71
+#: src/components/software/SoftwarePage.tsx:80
 msgid "Change selection"
 msgstr "Mengubah pilihan"
 
-#: src/components/software/SoftwarePage.tsx:83
+#: src/components/software/SoftwarePage.tsx:92
 msgid ""
 "This product does not allow to select software patterns during installation. "
 "However, you can add additional software once the installation is finished."
@@ -940,6 +958,30 @@ msgstr ""
 "Produk ini tidak memungkinkan untuk memilih pola perangkat lunak selama "
 "instalasi. Namun demikian, Anda dapat menambahkan perangkat lunak tambahan "
 "setelah penginstalan selesai."
+
+#. TRANSLATORS: error details followed by a "Try again" link
+#: src/components/software/SoftwarePage.tsx:100
+msgid ""
+"Some installation repositories could not be loaded. The system cannot be "
+"installed without them."
+msgstr ""
+
+#. TRANSLATORS: title for an error message box, at least one repository could not be loaded
+#: src/components/software/SoftwarePage.tsx:113
+msgid "Repository load failed"
+msgstr ""
+
+#. TRANSLATORS: progress message
+#: src/components/software/SoftwarePage.tsx:117
+#, fuzzy
+msgid "Loading the installation repositories..."
+msgstr "Memuat lingkungan penginstalan, harap tunggu."
+
+#. TRANSLATORS: link for retrying failed repository load
+#: src/components/software/SoftwarePage.tsx:124
+#, fuzzy
+msgid "Try again"
+msgstr "Coba lagi"
 
 #: src/components/software/SoftwarePatternsSelection.tsx:98
 msgid "None of the patterns match the filter."
@@ -962,10 +1004,6 @@ msgstr "Pemilihan perangkat lunak"
 #: src/components/software/SoftwarePatternsSelection.tsx:191
 msgid "Filter by pattern title or description"
 msgstr "Memfilter berdasarkan judul atau deskripsi pola"
-
-#: src/components/software/SoftwarePatternsSelection.tsx:206
-msgid "Close"
-msgstr "Tutup"
 
 #. TRANSLATORS: %s will be replaced by the estimated installation size,
 #. example: "728.8 MiB"
@@ -2859,9 +2897,6 @@ msgstr "ZFCP"
 #~ msgid "Time zone not selected yet"
 #~ msgstr "Zona waktu belum dipilih"
 
-#~ msgid "Select language"
-#~ msgstr "Pilih bahasa"
-
 #, c-format
 #~ msgid "%s will use the selected language."
 #~ msgstr "%s akan menggunakan bahasa yang dipilih."
@@ -3024,9 +3059,6 @@ msgstr "ZFCP"
 #, c-format
 #~ msgid "The server at %s is not reachable."
 #~ msgstr "Server di %s tidak dapat dijangkau."
-
-#~ msgid "Try Again"
-#~ msgstr "Coba lagi"
 
 #~ msgid "Cockpit server"
 #~ msgstr "Server Cockpit"
