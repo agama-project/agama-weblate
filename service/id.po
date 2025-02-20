@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-18 02:37+0000\n"
+"POT-Creation-Date: 2025-02-20 02:39+0000\n"
 "PO-Revision-Date: 2025-02-17 07:50+0000\n"
 "Last-Translator: Arif Budiman <arifpedia@gmail.com>\n"
 "Language-Team: Indonesian <https://l10n.opensuse.org/projects/agama/agama-"
@@ -59,22 +59,20 @@ msgstr "Memuat terjemahan perangkat lunak"
 msgid "Load storage translations"
 msgstr "Memuat terjemahan penyimpanan"
 
-#. TRANSLATORS: %s is a package name
-#: service/lib/agama/software/callbacks/progress.rb:92
-#, c-format
-msgid "Package %s could not be installed."
-msgstr "Paket %s tidak dapat diinstal."
+#. TRANSLATORS: button label, try downloading the failed package again
+#: service/lib/agama/software/callbacks/base.rb:39
+msgid "Try again"
+msgstr ""
 
-#. "Not found" (error 1) is handled by the MediaChange callback.
-#: service/lib/agama/software/callbacks/provide.rb:71
-#, ycp-format
-msgid "Package %1 could not be downloaded (input/output error)."
-msgstr "Paket %1 tidak dapat diunduh (kesalahan input/output)."
+#. TRANSLATORS: button label, ignore the failed download, skip package installation
+#: service/lib/agama/software/callbacks/base.rb:45
+msgid "Continue anyway"
+msgstr ""
 
-#: service/lib/agama/software/callbacks/provide.rb:74
-#, ycp-format
-msgid "Package %1 is broken, integrity check has failed."
-msgstr "Paket %1 rusak, pemeriksaan integritas gagal."
+#. TRANSLATORS: button label, abort the installation completely after an error
+#: service/lib/agama/software/callbacks/base.rb:51
+msgid "Abort installation"
+msgstr ""
 
 #. DoneProvide callback
 #.
@@ -342,11 +340,23 @@ msgstr[0] ""
 "Perangkat yang dipilih berikut ini tidak ditemukan dalam sistem: %{devices}"
 
 #. Recalculates the list of issues
-#: service/lib/agama/users.rb:154
+#: service/lib/agama/users.rb:165
 msgid ""
 "Defining a user, setting the root password or a SSH public key is required"
 msgstr ""
 "Wajib menentukan pengguna, mengatur kata sandi root atau kunci publik SSH"
+
+#, c-format
+#~ msgid "Package %s could not be installed."
+#~ msgstr "Paket %s tidak dapat diinstal."
+
+#, ycp-format
+#~ msgid "Package %1 could not be downloaded (input/output error)."
+#~ msgstr "Paket %1 tidak dapat diunduh (kesalahan input/output)."
+
+#, ycp-format
+#~ msgid "Package %1 is broken, integrity check has failed."
+#~ msgstr "Paket %1 rusak, pemeriksaan integritas gagal."
 
 #~ msgid "Probing Storage"
 #~ msgstr "Memeriksa Penyimpanan"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-18 02:37+0000\n"
+"POT-Creation-Date: 2025-02-20 02:39+0000\n"
 "PO-Revision-Date: 2025-02-13 06:50+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/agama/agama-"
@@ -60,22 +60,20 @@ msgstr "ソフトウエアの翻訳の読み込み"
 msgid "Load storage translations"
 msgstr "ストレージの翻訳の読み込み"
 
-#. TRANSLATORS: %s is a package name
-#: service/lib/agama/software/callbacks/progress.rb:92
-#, c-format
-msgid "Package %s could not be installed."
-msgstr "パッケージ %s をインストールできませんでした。"
+#. TRANSLATORS: button label, try downloading the failed package again
+#: service/lib/agama/software/callbacks/base.rb:39
+msgid "Try again"
+msgstr ""
 
-#. "Not found" (error 1) is handled by the MediaChange callback.
-#: service/lib/agama/software/callbacks/provide.rb:71
-#, ycp-format
-msgid "Package %1 could not be downloaded (input/output error)."
-msgstr "パッケージ %1 をダウンロードできませんでした (入出力エラーです) 。"
+#. TRANSLATORS: button label, ignore the failed download, skip package installation
+#: service/lib/agama/software/callbacks/base.rb:45
+msgid "Continue anyway"
+msgstr ""
 
-#: service/lib/agama/software/callbacks/provide.rb:74
-#, ycp-format
-msgid "Package %1 is broken, integrity check has failed."
-msgstr "パッケージ %1 は壊れています。整合性チェックが失敗しました。"
+#. TRANSLATORS: button label, abort the installation completely after an error
+#: service/lib/agama/software/callbacks/base.rb:51
+msgid "Abort installation"
+msgstr ""
 
 #. DoneProvide callback
 #.
@@ -337,11 +335,23 @@ msgid_plural ""
 msgstr[0] "システム内には下記のデバイスが見つかりません: %{devices}"
 
 #. Recalculates the list of issues
-#: service/lib/agama/users.rb:154
+#: service/lib/agama/users.rb:165
 msgid ""
 "Defining a user, setting the root password or a SSH public key is required"
 msgstr ""
 "ユーザの設定、 root パスワードの設定、 SSH 公開鍵の設定のいずれかが必要です"
+
+#, c-format
+#~ msgid "Package %s could not be installed."
+#~ msgstr "パッケージ %s をインストールできませんでした。"
+
+#, ycp-format
+#~ msgid "Package %1 could not be downloaded (input/output error)."
+#~ msgstr "パッケージ %1 をダウンロードできませんでした (入出力エラーです) 。"
+
+#, ycp-format
+#~ msgid "Package %1 is broken, integrity check has failed."
+#~ msgstr "パッケージ %1 は壊れています。整合性チェックが失敗しました。"
 
 #~ msgid "No device found for an optional drive"
 #~ msgstr "任意指定のドライブに対応するデバイスが見つかりません"
