@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-25 02:43+0000\n"
-"PO-Revision-Date: 2025-02-24 20:50+0000\n"
+"PO-Revision-Date: 2025-02-25 15:50+0000\n"
 "Last-Translator: Eugene Krater <lachend@gmail.com>\n"
 "Language-Team: Ukrainian <https://l10n.opensuse.org/projects/agama/agama-web/"
 "uk/>\n"
@@ -1452,9 +1452,9 @@ msgstr ""
 
 #. TRANSLATORS: %1$s is a disk name (eg. "/dev/sda") and %2$s is its size (eg. "250 GiB")
 #: src/components/storage/PartitionPage.tsx:483
-#, fuzzy, c-format
+#, c-format
 msgid "As a new partition on %1$s (%2$s)"
-msgstr "Як новий розділ на %s"
+msgstr "Як новий розділ на %1$s (%2$s)"
 
 #: src/components/storage/PartitionPage.tsx:485
 #, c-format
@@ -1644,6 +1644,8 @@ msgid ""
 "The size range for %1$s will be dynamically adjusted based on the amount of "
 "RAM in the system and the presence of a separate file system for %2$s."
 msgstr ""
+"Діапазон розмірів для %1$s буде динамічно змінюватися залежно від обсягу "
+"оперативної пам'яті в системі та наявності окремої файлової системи для %2$s."
 
 #: src/components/storage/PartitionPage.tsx:819
 #, c-format
@@ -1651,6 +1653,8 @@ msgid ""
 "The size range for %1$s will be dynamically adjusted based on the amount of "
 "RAM in the system and the presence of separate file systems for %2$s."
 msgstr ""
+"Діапазон розмірів для %1$s буде динамічно змінюватися залежно від обсягу "
+"оперативної пам'яті в системі та наявності окремих файлових систем для %2$s."
 
 #: src/components/storage/PartitionPage.tsx:831
 #, c-format
@@ -1658,6 +1662,8 @@ msgid ""
 "The size range for %1$s will be dynamically adjusted based on the usage of "
 "Btrfs snapshots and the presence of a separate file system for %2$s."
 msgstr ""
+"Діапазон розмірів для %1$s буде динамічно змінюватися на основі використання "
+"знімків Btrfs і наявності окремої файлової системи для %2$s."
 
 #: src/components/storage/PartitionPage.tsx:842
 #, c-format
@@ -1665,6 +1671,8 @@ msgid ""
 "The size range for %1$s will be dynamically adjusted based on the usage of "
 "Btrfs snapshots and the presence of separate file systems for %2$s."
 msgstr ""
+"Діапазон розмірів для %1$s буде динамічно змінено на основі використання "
+"знімків Btrfs та наявності окремих файлових систем для %2$s."
 
 #: src/components/storage/PartitionPage.tsx:852
 #, c-format
@@ -1672,6 +1680,8 @@ msgid ""
 "The size range for %s will be dynamically adjusted based on the usage of "
 "Btrfs snapshots."
 msgstr ""
+"Діапазон розмірів для %s буде динамічно коригуватися на основі використання "
+"знімків Btrfs."
 
 #: src/components/storage/PartitionPage.tsx:862
 #, c-format
@@ -1679,6 +1689,8 @@ msgid ""
 "The size range for %1$s will be dynamically adjusted based on the presence "
 "of a separate file system for %2$s."
 msgstr ""
+"Діапазон розмірів для %1$s буде динамічно змінюватися залежно від наявності "
+"окремої файлової системи для %2$s."
 
 #: src/components/storage/PartitionPage.tsx:872
 #, c-format
@@ -1686,12 +1698,14 @@ msgid ""
 "The size range for %1$s will be dynamically adjusted based on the presence "
 "of separate file systems for %2$s."
 msgstr ""
+"Діапазон розмірів для %1$s буде динамічно змінюватися залежно від наявності "
+"окремих файлових систем для %2$s."
 
 #. TRANSLATORS: %s is a size with units (eg. 10 GiB)
 #: src/components/storage/PartitionPage.tsx:884
 #, c-format
 msgid "The current configuration will result in a partition of %s."
-msgstr ""
+msgstr "Поточна конфігурація призведе до розділення %s."
 
 #: src/components/storage/PartitionPage.tsx:892
 #, c-format
@@ -1699,20 +1713,22 @@ msgid ""
 "The current configuration will result in a partition with a size between "
 "%1$s and %2$s."
 msgstr ""
+"Поточна конфігурація призведе до створення розділу розміром від %1$s до %2$s."
 
 #. TRANSLATORS: %s is a size with units (eg. 10 GiB)
 #: src/components/storage/PartitionPage.tsx:901
 #, c-format
 msgid "The current configuration will result in a partition of at least %s."
 msgstr ""
+"Поточна конфігурація призведе до створення розділу розміром щонайменше %s."
 
 #: src/components/storage/PartitionPage.tsx:963
 msgid "Same as minimum"
-msgstr ""
+msgstr "Те саме, що й мінімум"
 
 #: src/components/storage/PartitionPage.tsx:965
 msgid "Limited"
-msgstr ""
+msgstr "Обмежено"
 
 #: src/components/storage/PartitionPage.tsx:973
 msgid "Maximum size options"
@@ -1720,25 +1736,30 @@ msgstr "Параметри максимального розміру"
 
 #: src/components/storage/PartitionPage.tsx:976
 msgid "The partition is created exactly with the given size"
-msgstr ""
+msgstr "Розділ буде створено точно з заданим розміром"
 
 #: src/components/storage/PartitionPage.tsx:982
 msgid "The partition can grow until a given limit size"
-msgstr ""
+msgstr "Розділ може збільшуватися до заданого граничного розміру"
 
 #: src/components/storage/PartitionPage.tsx:988
 msgid "The partition can grow to use all the contiguous free space"
 msgstr ""
+"Розділ може розростатися, щоб використовувати весь суміжний вільний простір"
 
 #: src/components/storage/PartitionPage.tsx:1040
 msgid "Sizes must be entered as a numbers optionally followed by a unit."
 msgstr ""
+"Розміри повинні бути введені у вигляді чисел, після чого можна вказати "
+"одиницю виміру."
 
 #: src/components/storage/PartitionPage.tsx:1044
 msgid ""
 "If the unit is omitted, bytes (B) will be used. Greater units can be "
 "of               the form GiB (power of 2) or GB (power of 10)."
 msgstr ""
+"Якщо одиницю виміру не вказано, буде використано байти (B). Більші одиниці "
+"можуть мати                 вигляд GiB (кратно 2) або GB (кратно 10)."
 
 #: src/components/storage/PartitionPage.tsx:1052
 msgid "Minimum"
@@ -1825,26 +1846,32 @@ msgid ""
 "It is not possible to install the system with the current configuration. "
 "Adjust the settings below."
 msgstr ""
+"Неможливо встановити систему з поточною конфігурацією. Налаштуйте параметри "
+"нижче."
 
 #: src/components/storage/ProposalFailedInfo.tsx:62
 msgid ""
 "Adjust the settings below to make the new system fit into the available "
 "space."
 msgstr ""
+"Відрегулюйте наведені нижче налаштування, щоб нова система вписувалася в "
+"наявний простір."
 
 #: src/components/storage/ProposalFailedInfo.tsx:81
 msgid "Failed to calculate a storage layout"
-msgstr ""
+msgstr "Не вдалося розрахувати схему зберігання"
 
 #: src/components/storage/ProposalPage.tsx:67
 msgid "Invalid storage settings"
-msgstr ""
+msgstr "Неправильні налаштування сховища"
 
 #: src/components/storage/ProposalPage.tsx:88
 msgid ""
 "You may want to discard those settings and start from scratch with a simple "
 "configuration."
 msgstr ""
+"Можливо, Ви захочете відкинути ці налаштування і почати з чистого аркуша з "
+"простою конфігурацією."
 
 #: src/components/storage/ProposalPage.tsx:92
 #: src/components/storage/ProposalPage.tsx:120
@@ -1855,24 +1882,29 @@ msgstr "Скинути до типової конфігурації"
 #: src/components/storage/ProposalPage.tsx:104
 #: src/components/storage/UnsupportedModelInfo.tsx:39
 msgid "Unable to modify the settings"
-msgstr ""
+msgstr "Не вдається змінити налаштування"
 
 #: src/components/storage/ProposalPage.tsx:110
 msgid ""
 "The storage configuration uses elements not supported by this interface."
 msgstr ""
+"Конфігурація сховища використовує елементи, не підтримувані цим інтерфейсом."
 
 #: src/components/storage/ProposalPage.tsx:116
 msgid ""
 "You may want to discard the current settings and start from scratch with a "
 "simple configuration."
 msgstr ""
+"Можливо, Ви захочете відкинути поточні налаштування і почати з чистого "
+"аркуша з простою конфігурацією."
 
 #: src/components/storage/ProposalPage.tsx:132
 msgid ""
 "There are not disks available for the installation. You may need to "
 "configure some device."
 msgstr ""
+"Диски для встановлення не доступні. Можливо, вам потрібно налаштувати якийсь "
+"пристрій."
 
 #: src/components/storage/ProposalPage.tsx:137
 msgid "No devices found"
@@ -1917,13 +1949,15 @@ msgstr "Перевірити %d заплановані дії"
 
 #: src/components/storage/ProposalResultSection.tsx:126
 msgid "Result"
-msgstr ""
+msgstr "Результат"
 
 #: src/components/storage/ProposalResultSection.tsx:128
 msgid ""
 "During installation, several actions will be performed to setup the layout "
 "shown at the table below."
 msgstr ""
+"Під час інсталяції буде виконано кілька дій, щоб налаштувати схему, як "
+"показано в таблиці нижче."
 
 #: src/components/storage/ProposalResultTable.tsx:77
 msgid "New"
@@ -2009,23 +2043,29 @@ msgid ""
 "Select what to do with each partition in order to find space for allocating "
 "the new system."
 msgstr ""
+"Виберіть, що робити з кожним розділом, щоб знайти місце для розміщення нової "
+"системи."
 
 #: src/components/storage/SpacePolicySelection.tsx:102
 #, c-format
 msgid "Find space in %s"
-msgstr ""
+msgstr "Знайти місце в %s"
 
 #: src/components/storage/UnsupportedModelInfo.tsx:44
 msgid ""
 "The storage configuration is valid (see result below) but uses elements not "
 "supported by this interface."
 msgstr ""
+"Конфігурація сховища є правильною (див. результат нижче), але використовує "
+"елементи, які не підтримуються цим інтерфейсом."
 
 #: src/components/storage/UnsupportedModelInfo.tsx:49
 msgid ""
 "You can proceed to install with the current settings or you may want to "
 "discard the configuration and start from scratch with a simple one."
 msgstr ""
+"Ви можете продовжити інсталяцію з поточними налаштуваннями або відкинути "
+"конфігурацію і почати з чистого аркуша."
 
 #: src/components/storage/dasd/DASDFormatProgress.tsx:49
 msgid "Formatting DASD devices"
@@ -2526,7 +2566,7 @@ msgstr "Розділ буде видалений"
 
 #: src/components/storage/utils/drive.tsx:49
 msgid "At least one partition will be deleted"
-msgstr ""
+msgstr "Принаймні один розділ буде видалено"
 
 #: src/components/storage/utils/drive.tsx:50
 msgid "Several partitions will be deleted"
@@ -2554,14 +2594,14 @@ msgstr "Деякі розділи можуть бути зменшені"
 #: src/components/storage/utils/drive.tsx:91
 #, c-format
 msgid "%s - %s"
-msgstr ""
+msgstr "%s - %s"
 
 #. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case).
 #: src/components/storage/utils/drive.tsx:145
 #, c-format
 msgid "Partitions will be used and created for %s"
-msgstr ""
+msgstr "Буде використано та створено розділи для %s"
 
 #. TRANSLATORS: %1$s is an already formatted mount path (eg. "/"),
 #. %2$s is a size description (eg. at least 10 GiB)
@@ -2673,7 +2713,7 @@ msgstr "Контролери zFCP не знайдені."
 
 #: src/components/storage/zfcp/ZFCPPage.tsx:160
 msgid "Read zFCP devices"
-msgstr ""
+msgstr "Прочитати пристрої zFCP"
 
 #: src/components/storage/zfcp/ZFCPPage.tsx:191
 msgid "zFCP"
@@ -2681,100 +2721,104 @@ msgstr "zFCP"
 
 #: src/components/users/FirstUser.tsx:46
 msgid "Define a user now"
-msgstr ""
+msgstr "Вкажіть користувача"
 
 #: src/components/users/FirstUser.tsx:54
 msgid "Discard"
-msgstr ""
+msgstr "Відмовитись"
 
 #: src/components/users/FirstUser.tsx:66
 msgid "No user defined yet."
-msgstr ""
+msgstr "Користувача ще не вказано."
 
 #: src/components/users/FirstUser.tsx:74
 #: src/components/users/FirstUserForm.tsx:202
 msgid "Full name"
-msgstr ""
+msgstr "Повне ім'я"
 
 #: src/components/users/FirstUser.tsx:80
 #: src/components/users/FirstUserForm.tsx:211
 msgid "Username"
-msgstr ""
+msgstr "Ім'я користувача"
 
 #: src/components/users/FirstUser.tsx:96
 msgid "First user"
-msgstr ""
+msgstr "Перший користувач"
 
 #: src/components/users/FirstUser.tsx:98
 msgid ""
 "Define the first user with admin (sudo) privileges for system management."
 msgstr ""
+"Визначте першого користувача з правами адміністратора (sudo) для керування "
+"системою."
 
 #: src/components/users/FirstUserForm.tsx:56
 msgid "Username suggestion dropdown"
-msgstr ""
+msgstr "Спадний список із пропозицією імені користувача"
 
 #. TRANSLATORS: dropdown username suggestions
 #: src/components/users/FirstUserForm.tsx:71
 msgid "Use suggested username"
-msgstr ""
+msgstr "Використайте запропоноване ім'я користувача"
 
 #: src/components/users/FirstUserForm.tsx:126
 msgid "All fields are required"
-msgstr ""
+msgstr "Всі поля обов'язкові"
 
 #: src/components/users/FirstUserForm.tsx:190
 msgid "Create user"
-msgstr ""
+msgstr "Створити користувача"
 
 #: src/components/users/FirstUserForm.tsx:190
 msgid "Edit user"
-msgstr ""
+msgstr "Змінити користувача"
 
 #: src/components/users/FirstUserForm.tsx:232
 #: src/components/users/RootUserForm.tsx:165
 msgid "Using a hashed password."
-msgstr ""
+msgstr "Використовуючи хешований пароль."
 
 #: src/components/users/RootUser.tsx:51
 msgid "Root user"
-msgstr ""
+msgstr "Користувач root"
 
 #: src/components/users/RootUser.tsx:53
 msgid ""
 "Alongside defining the first user, authentication methods for the root user "
 "can be configured."
 msgstr ""
+"Крім зазначення першого користувача, можна налаштувати методи автентифікації "
+"для root-користувача."
 
 #: src/components/users/RootUser.tsx:63
 msgid "Defined (hidden)"
-msgstr ""
+msgstr "Заданий (приховано)"
 
 #: src/components/users/RootUser.tsx:63 src/components/users/RootUser.tsx:69
 msgid "Not defined"
-msgstr ""
+msgstr "Не заданий"
 
 #: src/components/users/RootUser.tsx:67
 msgid "Public SSH Key"
-msgstr ""
+msgstr "Відкритий SSH-ключ"
 
 #: src/components/users/RootUserForm.tsx:63
 msgid "Upload, paste, or drop an SSH public key"
-msgstr ""
+msgstr "Завантажте, вставте або скиньте відкритий ключ SSH"
 
 #. TRANSLATORS: push button label
 #: src/components/users/RootUserForm.tsx:65
 msgid "Upload"
-msgstr ""
+msgstr "Завантажити"
 
 #. TRANSLATORS: push button label, clears the related input field
 #: src/components/users/RootUserForm.tsx:67
 msgid "Clear"
-msgstr ""
+msgstr "Очистити"
 
 #: src/components/users/RootUserForm.tsx:110
 msgid "Public SSH Key is empty."
-msgstr ""
+msgstr "Відкритий ключ SSH порожній."
 
 #: src/components/users/RootUserForm.tsx:139
 msgid "Root authentication methods"
@@ -2786,11 +2830,11 @@ msgstr "Використовувати пароль"
 
 #: src/components/users/RootUserForm.tsx:186
 msgid "Use public SSH Key"
-msgstr ""
+msgstr "Використати відкритий ключ SSH"
 
 #: src/routes/storage.tsx:85
 msgid "ZFCP"
-msgstr ""
+msgstr "ZFCP"
 
 #~ msgid ""
 #~ "Install in a new Logical Volume Manager (LVM) volume group shrinking "
