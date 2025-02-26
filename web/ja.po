@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-25 02:43+0000\n"
+"POT-Creation-Date: 2025-02-26 02:42+0000\n"
 "PO-Revision-Date: 2025-02-25 12:50+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -307,23 +307,23 @@ msgstr "再読み込み"
 msgid "More actions"
 msgstr "さらなる処理"
 
-#: src/components/l10n/KeyboardSelection.tsx:42
+#: src/components/l10n/KeyboardSelection.tsx:41
 msgid "Filter by description or keymap code"
 msgstr "説明またはキーマップコードでフィルタ"
 
-#: src/components/l10n/KeyboardSelection.tsx:72
+#: src/components/l10n/KeyboardSelection.tsx:69
 msgid "None of the keymaps match the filter."
 msgstr "フィルタに該当するキーマップがありません。"
 
-#: src/components/l10n/KeyboardSelection.tsx:78
+#: src/components/l10n/KeyboardSelection.tsx:75
 msgid "Keyboard selection"
 msgstr "キーボードの選択"
 
-#: src/components/l10n/KeyboardSelection.tsx:91
+#: src/components/l10n/KeyboardSelection.tsx:86
 #: src/components/l10n/L10nPage.tsx:51 src/components/l10n/L10nPage.tsx:65
 #: src/components/l10n/L10nPage.tsx:77
-#: src/components/l10n/LocaleSelection.tsx:94
-#: src/components/l10n/TimezoneSelection.tsx:137
+#: src/components/l10n/LocaleSelection.tsx:86
+#: src/components/l10n/TimezoneSelection.tsx:134
 #: src/components/product/ProductSelectionPage.tsx:204
 #: src/components/software/SoftwarePatternsSelection.tsx:168
 msgid "Select"
@@ -359,11 +359,11 @@ msgstr "タイムゾーン"
 msgid "Filter by language, territory or locale code"
 msgstr "言語／地域／ロケールコードでフィルタ"
 
-#: src/components/l10n/LocaleSelection.tsx:75
+#: src/components/l10n/LocaleSelection.tsx:69
 msgid "None of the locales match the filter."
 msgstr "フィルタに該当するロケールがありません。"
 
-#: src/components/l10n/LocaleSelection.tsx:81
+#: src/components/l10n/LocaleSelection.tsx:75
 msgid "Locale selection"
 msgstr "ロケールの選択"
 
@@ -371,11 +371,11 @@ msgstr "ロケールの選択"
 msgid "Filter by territory, time zone code or UTC offset"
 msgstr "地域／タイムゾーンコード／UTC オフセット値でフィルタ"
 
-#: src/components/l10n/TimezoneSelection.tsx:114
+#: src/components/l10n/TimezoneSelection.tsx:113
 msgid "None of the time zones match the filter."
 msgstr "フィルタに該当するタイムゾーンがありません。"
 
-#: src/components/l10n/TimezoneSelection.tsx:120
+#: src/components/l10n/TimezoneSelection.tsx:119
 msgid " Timezone selection"
 msgstr " タイムゾーンの選択"
 
@@ -609,7 +609,7 @@ msgstr "ネットワーク"
 
 #. TRANSLATORS: WiFi authentication mode
 #: src/components/network/WifiConnectionForm.tsx:49
-#: src/components/storage/PartitionPage.tsx:964
+#: src/components/storage/PartitionPage.tsx:980
 #: src/components/storage/iscsi/InitiatorPresenter.tsx:60
 msgid "None"
 msgstr "無し"
@@ -701,8 +701,7 @@ msgstr "Wi-Fi ネットワークへの接続"
 msgid "The system will use %s as its default language."
 msgstr "システムは %s を既定の言語として使用します。"
 
-#: src/components/overview/OverviewPage.tsx:35
-#: src/components/overview/OverviewPage.tsx:42 src/router.tsx:44
+#: src/components/overview/OverviewPage.tsx:35 src/router.tsx:44
 msgid "Overview"
 msgstr "概要"
 
@@ -992,6 +991,11 @@ msgstr "インストール用リポジトリを読み込んでいます..."
 msgid "Try again"
 msgstr "再試行"
 
+#: src/components/software/SoftwarePage.tsx:176
+#, fuzzy
+msgid "Used space"
+msgstr "未使用の領域"
+
 #: src/components/software/SoftwarePatternsSelection.tsx:99
 msgid "None of the patterns match the filter."
 msgstr "フィルタに該当するパターンがありません。"
@@ -1029,15 +1033,15 @@ msgstr ""
 "この容量にはシステムの基本部分のほか、選択したソフトウエアパターンが含まれま"
 "す。"
 
-#: src/components/storage/AddExistingDeviceMenu.tsx:61
+#: src/components/storage/AddExistingDeviceMenu.tsx:64
 msgid "Select another disk to define partitions"
 msgstr "パーティションの設定作業を行う他のディスクを選択"
 
-#: src/components/storage/AddExistingDeviceMenu.tsx:76
+#: src/components/storage/AddExistingDeviceMenu.tsx:79
 msgid "Use additional disk toggle"
 msgstr "追加ディスクの使用切り替え"
 
-#: src/components/storage/AddExistingDeviceMenu.tsx:79
+#: src/components/storage/AddExistingDeviceMenu.tsx:82
 msgid "Use additional disk"
 msgstr "追加のディスクを使用"
 
@@ -1232,115 +1236,115 @@ msgstr "起動に必要なパーティションが %s に残されます"
 msgid "Partitions needed for booting will also be adapted"
 msgstr "起動に必要なパーティションについても調整を行います"
 
-#: src/components/storage/DriveEditor.tsx:287
+#: src/components/storage/DriveEditor.tsx:307
 msgid "The configured partitions will be created as logical volumes"
 msgstr "設定したパーティションは論理ボリュームとして作成します"
 
-#: src/components/storage/DriveEditor.tsx:290
+#: src/components/storage/DriveEditor.tsx:310
 msgid "New LVM volume group"
 msgstr "新規 LVM ボリュームグループ"
 
-#: src/components/storage/DriveEditor.tsx:379
+#: src/components/storage/DriveEditor.tsx:397
 msgid "Remove the configuration for this device"
 msgstr "このデバイス向けの設定を削除"
 
-#: src/components/storage/DriveEditor.tsx:382
+#: src/components/storage/DriveEditor.tsx:400
 msgid "Do not use"
 msgstr "使用しない"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:441
+#: src/components/storage/DriveEditor.tsx:459
 #, c-format
 msgid "Use %s to install, host LVM and boot"
 msgstr "インストール／ LVM の配置／起動用に %s を使用する"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:444
+#: src/components/storage/DriveEditor.tsx:462
 #, c-format
 msgid "Use %s to install and host LVM"
 msgstr "インストールと LVM の配置用に %s を使用する"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:449
+#: src/components/storage/DriveEditor.tsx:467
 #, c-format
 msgid "Use %s to install and boot"
 msgstr "インストールと起動用に %s を使用する"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:452
+#: src/components/storage/DriveEditor.tsx:470
 #, c-format
 msgid "Use %s to install"
 msgstr "インストールに %s を使用する"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:459
+#: src/components/storage/DriveEditor.tsx:477
 #, c-format
 msgid "Use %s for LVM, additional partitions and booting"
 msgstr "LVM ／追加パーティション／起動用に %s を使用する"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:462
+#: src/components/storage/DriveEditor.tsx:480
 #, c-format
 msgid "Use %s for LVM and additional partitions"
 msgstr "LVM と追加パーティション用に %s を使用する"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:467
+#: src/components/storage/DriveEditor.tsx:485
 #, c-format
 msgid "Use %s for additional partitions and booting"
 msgstr "追加パーティションと起動用に %s を使用する"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:470
+#: src/components/storage/DriveEditor.tsx:488
 #, c-format
 msgid "Use %s for additional partitions"
 msgstr "追加パーティション用に %s を使用する"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:476
+#: src/components/storage/DriveEditor.tsx:494
 #, c-format
 msgid "Use %s to host LVM and boot"
 msgstr "LVM の配置と起動用に %s を使用する"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:479
+#: src/components/storage/DriveEditor.tsx:497
 #, c-format
 msgid "Use %s to host LVM"
 msgstr "LVM の配置用に %s を使用する"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:484
+#: src/components/storage/DriveEditor.tsx:502
 #, c-format
 msgid "Use %s to boot"
 msgstr "起動用に %s を使用する"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:487
+#: src/components/storage/DriveEditor.tsx:505
 #, c-format
 msgid "Use %s"
 msgstr "%s を使用する"
 
 #. TRANSLATORS: a disk drive
-#: src/components/storage/DriveEditor.tsx:492
+#: src/components/storage/DriveEditor.tsx:510
 msgid "Drive"
 msgstr "ドライブ"
 
-#: src/components/storage/DriveEditor.tsx:524
+#: src/components/storage/DriveEditor.tsx:542
 msgid "No additional partitions will be created"
 msgstr "追加パーティションは作成しません"
 
-#: src/components/storage/DriveEditor.tsx:535
-#: src/components/storage/DriveEditor.tsx:643
+#: src/components/storage/DriveEditor.tsx:553
+#: src/components/storage/DriveEditor.tsx:661
 msgid "Add another partition or mount an existing one"
 msgstr "他のパーティションの追加または既存のパーティションのマウント"
 
-#: src/components/storage/DriveEditor.tsx:542
-#: src/components/storage/DriveEditor.tsx:649
+#: src/components/storage/DriveEditor.tsx:560
+#: src/components/storage/DriveEditor.tsx:667
 msgid "Add or use partition"
 msgstr "パーティションの追加または使用"
 
-#: src/components/storage/DriveEditor.tsx:662
-#: src/components/storage/DriveEditor.tsx:665
+#: src/components/storage/DriveEditor.tsx:680
+#: src/components/storage/DriveEditor.tsx:683
 msgid "Partitions"
 msgstr "パーティション"
 
@@ -1411,36 +1415,36 @@ msgstr "システムの暗号化"
 msgid "iSCSI"
 msgstr "iSCSI"
 
-#: src/components/storage/PartitionPage.tsx:292
+#: src/components/storage/PartitionPage.tsx:300
 msgid "Select or enter a valid mount point"
 msgstr "正しいマウントポイントを選択または入力してください"
 
-#: src/components/storage/PartitionPage.tsx:302
+#: src/components/storage/PartitionPage.tsx:310
 msgid ""
 "Select or enter a mount point that is not already assigned to another device"
 msgstr ""
 "他のデバイスには割り当てられていないマウントポイントを選択または入力してくだ"
 "さい"
 
-#: src/components/storage/PartitionPage.tsx:330
+#: src/components/storage/PartitionPage.tsx:338
 msgid "The minimum cannot be greater than the maximum"
 msgstr "最小サイズは最大サイズより小さくなければいけません"
 
-#: src/components/storage/PartitionPage.tsx:338
+#: src/components/storage/PartitionPage.tsx:346
 msgid ""
 "The maximum must be a number optionally followed by a unit like GiB or GB"
 msgstr ""
 "最大サイズは数値でなければいけません。なお、 GiB や GB のように単位を付けるこ"
 "ともできます"
 
-#: src/components/storage/PartitionPage.tsx:346
+#: src/components/storage/PartitionPage.tsx:354
 msgid ""
 "The minimum must be a number optionally followed by a unit like GiB or GB"
 msgstr ""
 "最小サイズは数値でなければいけません。なお、 GiB や GB のように単位を付けるこ"
 "ともできます"
 
-#: src/components/storage/PartitionPage.tsx:353
+#: src/components/storage/PartitionPage.tsx:361
 msgid ""
 "Size limits must be numbers optionally followed by a unit like GiB or GB"
 msgstr ""
@@ -1448,104 +1452,104 @@ msgstr ""
 "ともできます"
 
 #. TRANSLATORS: %1$s is a disk name (eg. "/dev/sda") and %2$s is its size (eg. "250 GiB")
-#: src/components/storage/PartitionPage.tsx:483
+#: src/components/storage/PartitionPage.tsx:491
 #, c-format
 msgid "As a new partition on %1$s (%2$s)"
 msgstr "%1$s に新しいパーティションとして (%2$s)"
 
-#: src/components/storage/PartitionPage.tsx:485
+#: src/components/storage/PartitionPage.tsx:493
 #, c-format
 msgid "Using partition %s"
 msgstr "パーティション %s の使用"
 
-#: src/components/storage/PartitionPage.tsx:506
+#: src/components/storage/PartitionPage.tsx:522
 msgid "Mount point options"
 msgstr "マウントポイントのオプション"
 
-#: src/components/storage/PartitionPage.tsx:511
+#: src/components/storage/PartitionPage.tsx:527
 msgid "Using an existing partition"
 msgstr "既存パーティションの使用"
 
-#: src/components/storage/PartitionPage.tsx:522
+#: src/components/storage/PartitionPage.tsx:538
 msgid "There are not usable partitions"
 msgstr "利用可能なパーティションがありません"
 
-#: src/components/storage/PartitionPage.tsx:537
-#: src/components/storage/PartitionPage.tsx:636
+#: src/components/storage/PartitionPage.tsx:553
+#: src/components/storage/PartitionPage.tsx:652
 msgid "Waiting for a mount point"
 msgstr "マウントポイントを待機しています"
 
 #. TRANSLATORS: %s is a filesystem type, like Btrfs
 #. TRANSLATORS: %s is a device name (eg. /dev/sda3).
-#: src/components/storage/PartitionPage.tsx:539
+#: src/components/storage/PartitionPage.tsx:555
 #: src/components/storage/utils/partition.tsx:55
 #, c-format
 msgid "Current %s"
 msgstr "現在の %s"
 
-#: src/components/storage/PartitionPage.tsx:540
+#: src/components/storage/PartitionPage.tsx:556
 #: src/components/storage/utils.ts:301
 msgid "Btrfs with snapshots"
 msgstr "スナップショット有りの btrfs"
 
-#: src/components/storage/PartitionPage.tsx:558
+#: src/components/storage/PartitionPage.tsx:574
 #, c-format
 msgid "Default file system for %s"
 msgstr "%s に対する既定のファイルシステム"
 
-#: src/components/storage/PartitionPage.tsx:559
+#: src/components/storage/PartitionPage.tsx:575
 msgid "Default file system for generic partitions"
 msgstr "汎用パーティションに対する既定のファイルシステム"
 
-#: src/components/storage/PartitionPage.tsx:561
+#: src/components/storage/PartitionPage.tsx:577
 msgid "Destroy current data and format partition as"
 msgstr "現在のデータを消去して下記の形式でパーティションをフォーマット:"
 
-#: src/components/storage/PartitionPage.tsx:562
+#: src/components/storage/PartitionPage.tsx:578
 msgid "Format partition as"
 msgstr "下記の形式でフォーマット:"
 
 #. TRANSLATORS: %s is the name of a partition, like /dev/vda2
-#: src/components/storage/PartitionPage.tsx:575
+#: src/components/storage/PartitionPage.tsx:591
 #, c-format
 msgid "Do not format %s and keep the data"
 msgstr "%s をフォーマットせず既存のデータを維持"
 
-#: src/components/storage/PartitionPage.tsx:638
+#: src/components/storage/PartitionPage.tsx:654
 msgid "Calculated automatically"
 msgstr "自動計算"
 
-#: src/components/storage/PartitionPage.tsx:639
+#: src/components/storage/PartitionPage.tsx:655
 #: src/components/storage/utils.ts:115
 msgid "Custom"
 msgstr "独自設定"
 
-#: src/components/storage/PartitionPage.tsx:651
+#: src/components/storage/PartitionPage.tsx:667
 msgid "Size options"
 msgstr "サイズのオプション"
 
 #. TRANSLATORS: %s is a partition name like /dev/vda2
-#: src/components/storage/PartitionPage.tsx:659
+#: src/components/storage/PartitionPage.tsx:675
 #, c-format
 msgid "Keep size of %s"
 msgstr "%s のサイズを維持"
 
-#: src/components/storage/PartitionPage.tsx:667
+#: src/components/storage/PartitionPage.tsx:683
 msgid "Let the installer propose a sensible range of sizes"
 msgstr "インストーラでのサイズ範囲の提案"
 
-#: src/components/storage/PartitionPage.tsx:671
+#: src/components/storage/PartitionPage.tsx:687
 msgid "Define a custom size or a range"
 msgstr "独自にサイズや範囲を指定する"
 
 #. TRANSLATORS: %s is a size with units, like "3 GiB"
-#: src/components/storage/PartitionPage.tsx:685
+#: src/components/storage/PartitionPage.tsx:701
 #, c-format
 msgid "A generic size of %s will be used for the new partition"
 msgstr "新しいパーティションに対しては汎用サイズ %s を使用します"
 
 #. TRANSLATORS: %1$s is a min size and %2$s is the max, both with units like "3 GiB"
-#: src/components/storage/PartitionPage.tsx:692
+#: src/components/storage/PartitionPage.tsx:708
 #, c-format
 msgid ""
 "A generic size range between %1$s and %2$s will be used for the new partition"
@@ -1553,31 +1557,31 @@ msgstr ""
 "新しいパーティションに対しては汎用サイズ %1$s から %2$s の範囲を使用します"
 
 #. TRANSLATORS: %s is a size with units, like "3 GiB"
-#: src/components/storage/PartitionPage.tsx:700
+#: src/components/storage/PartitionPage.tsx:716
 #, c-format
 msgid "A generic minimum size of %s will be used for the new partition"
 msgstr "新しいパーティションに対しては少なくとも %s を使用します"
 
 #. TRANSLATORS: %1$s is a size with units (10 GiB) and %2$s is a mount path (/home)
-#: src/components/storage/PartitionPage.tsx:710
+#: src/components/storage/PartitionPage.tsx:726
 #, c-format
 msgid "A partition of %1$s will be created for %2$s"
 msgstr "%1$s のパーティションを %2$s 向けに作成します"
 
 #. TRANSLATORS: %1$s is a min size, %2$s is the max size and %3$s is a mount path
-#: src/components/storage/PartitionPage.tsx:718
+#: src/components/storage/PartitionPage.tsx:734
 #, c-format
 msgid "A partition with a size between %1$s and %2$s will be created for %3$s"
 msgstr "%1$s から %2$s までの範囲でパーティションを %3$s 向けに作成します"
 
 #. TRANSLATORS: %1$s is a size with units (10 GiB) and %2$s is a mount path (/home)
-#: src/components/storage/PartitionPage.tsx:727
+#: src/components/storage/PartitionPage.tsx:743
 #, c-format
 msgid "A partition of at least %1$s will be created for %2$s"
 msgstr "少なくとも %1$s のパーティションを %2$s 向けに作成します"
 
 #. TRANSLATORS: %1$s is a size with units (10 GiB) and %2$s is a mount path (/home)
-#: src/components/storage/PartitionPage.tsx:738
+#: src/components/storage/PartitionPage.tsx:754
 #, c-format
 msgid ""
 "Based on the amount of RAM in the system, a partition of %1$s will be "
@@ -1586,7 +1590,7 @@ msgstr ""
 "システムのメモリサイズに応じて、 %1$s のパーティションを %2$s 向けに作成しま"
 "す"
 
-#: src/components/storage/PartitionPage.tsx:747
+#: src/components/storage/PartitionPage.tsx:763
 #, c-format
 msgid ""
 "Based on the amount of RAM in the system, a partition with a size between "
@@ -1595,7 +1599,7 @@ msgstr ""
 "システムのメモリサイズに応じて、 %1$s から %2$s までの範囲でパーティションを "
 "%3$s 向けに作成します"
 
-#: src/components/storage/PartitionPage.tsx:758
+#: src/components/storage/PartitionPage.tsx:774
 #, c-format
 msgid ""
 "Based on the amount of RAM in the system a partition of at least %1$s will "
@@ -1604,7 +1608,7 @@ msgstr ""
 "システムのメモリサイズに応じて、少なくとも %1$s のパーティションを %2$s 向け"
 "に作成します"
 
-#: src/components/storage/PartitionPage.tsx:777
+#: src/components/storage/PartitionPage.tsx:793
 #, c-format
 msgid ""
 "The size range for %1$s will be dynamically adjusted based on the amount of "
@@ -1614,7 +1618,7 @@ msgstr ""
 "システムのメモリサイズと btrfs スナップショットの使用方法、そして %2$s 向けの"
 "個別ファイルシステムの存在に応じて %1$s 向けのサイズ範囲を動的に調整します。"
 
-#: src/components/storage/PartitionPage.tsx:788
+#: src/components/storage/PartitionPage.tsx:804
 #, c-format
 msgid ""
 "The size range for %1$s will be dynamically adjusted based on the amount of "
@@ -1624,7 +1628,7 @@ msgstr ""
 "システムのメモリサイズと btrfs スナップショットの使用方法、そして %2$s 向けの"
 "個別ファイルシステムの存在に応じて %1$s 向けのサイズ範囲を動的に調整します。"
 
-#: src/components/storage/PartitionPage.tsx:798
+#: src/components/storage/PartitionPage.tsx:814
 #, c-format
 msgid ""
 "The size range for %s will be dynamically adjusted based on the amount of "
@@ -1633,7 +1637,7 @@ msgstr ""
 "システムのメモリサイズと btrfs スナップショットの使用方法に応じて %s 向けのサ"
 "イズ範囲を動的に調整します。"
 
-#: src/components/storage/PartitionPage.tsx:809
+#: src/components/storage/PartitionPage.tsx:825
 #, c-format
 msgid ""
 "The size range for %1$s will be dynamically adjusted based on the amount of "
@@ -1642,7 +1646,7 @@ msgstr ""
 "システムのメモリサイズと %2$s 向けの個別ファイルシステムの存在に応じて %1$s "
 "向けのサイズ範囲を動的に調整します。"
 
-#: src/components/storage/PartitionPage.tsx:819
+#: src/components/storage/PartitionPage.tsx:835
 #, c-format
 msgid ""
 "The size range for %1$s will be dynamically adjusted based on the amount of "
@@ -1651,7 +1655,7 @@ msgstr ""
 "システムのメモリサイズと %2$s 向けの個別ファイルシステムの存在に応じて %1$s "
 "向けのサイズ範囲を動的に調整します。"
 
-#: src/components/storage/PartitionPage.tsx:831
+#: src/components/storage/PartitionPage.tsx:847
 #, c-format
 msgid ""
 "The size range for %1$s will be dynamically adjusted based on the usage of "
@@ -1660,7 +1664,7 @@ msgstr ""
 "btrfs スナップショットの使用方法と %2$s 向けの個別ファイルシステムの存在に応"
 "じて %1$s 向けのサイズ範囲を動的に調整します。"
 
-#: src/components/storage/PartitionPage.tsx:842
+#: src/components/storage/PartitionPage.tsx:858
 #, c-format
 msgid ""
 "The size range for %1$s will be dynamically adjusted based on the usage of "
@@ -1669,7 +1673,7 @@ msgstr ""
 "btrfs スナップショットの使用方法と %2$s 向けに個別のファイルシステムの存在に"
 "応じて %1$s 向けのサイズ範囲を動的に調整します。"
 
-#: src/components/storage/PartitionPage.tsx:852
+#: src/components/storage/PartitionPage.tsx:868
 #, c-format
 msgid ""
 "The size range for %s will be dynamically adjusted based on the usage of "
@@ -1678,7 +1682,7 @@ msgstr ""
 "btrfs スナップショットの使用方法に応じて %s 向けのサイズ範囲を動的に調整しま"
 "す。"
 
-#: src/components/storage/PartitionPage.tsx:862
+#: src/components/storage/PartitionPage.tsx:878
 #, c-format
 msgid ""
 "The size range for %1$s will be dynamically adjusted based on the presence "
@@ -1687,7 +1691,7 @@ msgstr ""
 "%2$s 向けの個別ファイルシステムの存在に応じて %1$s 向けのサイズ範囲を動的に調"
 "整します。"
 
-#: src/components/storage/PartitionPage.tsx:872
+#: src/components/storage/PartitionPage.tsx:888
 #, c-format
 msgid ""
 "The size range for %1$s will be dynamically adjusted based on the presence "
@@ -1697,12 +1701,12 @@ msgstr ""
 "整します。"
 
 #. TRANSLATORS: %s is a size with units (eg. 10 GiB)
-#: src/components/storage/PartitionPage.tsx:884
+#: src/components/storage/PartitionPage.tsx:900
 #, c-format
 msgid "The current configuration will result in a partition of %s."
 msgstr "現在の設定では %s のパーティションになります。"
 
-#: src/components/storage/PartitionPage.tsx:892
+#: src/components/storage/PartitionPage.tsx:908
 #, c-format
 msgid ""
 "The current configuration will result in a partition with a size between "
@@ -1710,107 +1714,107 @@ msgid ""
 msgstr "現在の設定では %1$s から %2$s までのパーティションになります。"
 
 #. TRANSLATORS: %s is a size with units (eg. 10 GiB)
-#: src/components/storage/PartitionPage.tsx:901
+#: src/components/storage/PartitionPage.tsx:917
 #, c-format
 msgid "The current configuration will result in a partition of at least %s."
 msgstr "現在の設定では少なくとも %s のパーティションになります。"
 
-#: src/components/storage/PartitionPage.tsx:963
+#: src/components/storage/PartitionPage.tsx:979
 msgid "Same as minimum"
 msgstr "最小値と同じ"
 
-#: src/components/storage/PartitionPage.tsx:965
+#: src/components/storage/PartitionPage.tsx:981
 msgid "Limited"
 msgstr "制限"
 
-#: src/components/storage/PartitionPage.tsx:973
+#: src/components/storage/PartitionPage.tsx:989
 msgid "Maximum size options"
 msgstr "最大サイズのオプション"
 
-#: src/components/storage/PartitionPage.tsx:976
+#: src/components/storage/PartitionPage.tsx:992
 msgid "The partition is created exactly with the given size"
 msgstr "指定したサイズでパーティションを作成します"
 
-#: src/components/storage/PartitionPage.tsx:982
+#: src/components/storage/PartitionPage.tsx:998
 msgid "The partition can grow until a given limit size"
 msgstr "指定した上限サイズまでパーティションを拡大できます"
 
-#: src/components/storage/PartitionPage.tsx:988
+#: src/components/storage/PartitionPage.tsx:1004
 msgid "The partition can grow to use all the contiguous free space"
 msgstr "連続した空き領域の範囲までパーティションを拡大できます"
 
-#: src/components/storage/PartitionPage.tsx:1040
+#: src/components/storage/PartitionPage.tsx:1056
 msgid "Sizes must be entered as a numbers optionally followed by a unit."
 msgstr "サイズには単位付きもしくは単位無しの数値を入力しなければなりません。"
 
-#: src/components/storage/PartitionPage.tsx:1044
+#: src/components/storage/PartitionPage.tsx:1060
 msgid ""
 "If the unit is omitted, bytes (B) will be used. Greater units can be "
 "of               the form GiB (power of 2) or GB (power of 10)."
 msgstr ""
 "単位を省略した場合はバイト (B) 単位であるものとみなされます。なお、単位は "
-"GiB のように 2 のべき乗のほか、 GB のように 10 "
-"のべき乗でも指定することができます。"
+"GiB のように 2 のべき乗のほか、 GB のように 10 のべき乗でも指定することができ"
+"ます。"
 
-#: src/components/storage/PartitionPage.tsx:1052
+#: src/components/storage/PartitionPage.tsx:1068
 msgid "Minimum"
 msgstr "最小"
 
-#: src/components/storage/PartitionPage.tsx:1057
+#: src/components/storage/PartitionPage.tsx:1073
 msgid "Minimum size value"
 msgstr "最小サイズの値"
 
-#: src/components/storage/PartitionPage.tsx:1063
+#: src/components/storage/PartitionPage.tsx:1079
 msgid "Maximum"
 msgstr "最大"
 
-#: src/components/storage/PartitionPage.tsx:1070
+#: src/components/storage/PartitionPage.tsx:1086
 msgid "Maximum size mode"
 msgstr "最大サイズのモード"
 
-#: src/components/storage/PartitionPage.tsx:1079
+#: src/components/storage/PartitionPage.tsx:1095
 msgid "Maximum size value"
 msgstr "最大サイズの値"
 
-#: src/components/storage/PartitionPage.tsx:1201
+#: src/components/storage/PartitionPage.tsx:1217
 #, c-format
 msgid "Define partition at %s"
 msgstr "%s でのパーティションの設定"
 
-#: src/components/storage/PartitionPage.tsx:1208
-#: src/components/storage/PartitionPage.tsx:1215
+#: src/components/storage/PartitionPage.tsx:1224
+#: src/components/storage/PartitionPage.tsx:1231
 msgid "Mount point"
 msgstr "マウントポイント"
 
-#: src/components/storage/PartitionPage.tsx:1213
+#: src/components/storage/PartitionPage.tsx:1229
 msgid "Mount point toggle"
 msgstr "マウントポイントの切り替え"
 
-#: src/components/storage/PartitionPage.tsx:1214
+#: src/components/storage/PartitionPage.tsx:1230
 msgid "Suggested mount points"
 msgstr "提案されたマウントポイント"
 
-#: src/components/storage/PartitionPage.tsx:1216
+#: src/components/storage/PartitionPage.tsx:1232
 msgid "Clear selected mount point"
 msgstr "マウントポイントの選択を解除"
 
-#: src/components/storage/PartitionPage.tsx:1219
+#: src/components/storage/PartitionPage.tsx:1235
 msgid "Use"
 msgstr "使用"
 
-#: src/components/storage/PartitionPage.tsx:1225
+#: src/components/storage/PartitionPage.tsx:1241
 msgid "Mount point mode"
 msgstr "マウントポイントのモード"
 
-#: src/components/storage/PartitionPage.tsx:1237
+#: src/components/storage/PartitionPage.tsx:1253
 msgid "Select or enter a mount point"
 msgstr "マウントポイントの選択または入力"
 
-#: src/components/storage/PartitionPage.tsx:1243
+#: src/components/storage/PartitionPage.tsx:1259
 msgid "File system"
 msgstr "ファイルシステム"
 
-#: src/components/storage/PartitionPage.tsx:1252
+#: src/components/storage/PartitionPage.tsx:1268
 #: src/components/storage/ProposalResultTable.tsx:135
 #: src/components/storage/SpaceActionsTable.tsx:240
 msgid "Size"
@@ -2012,7 +2016,7 @@ msgstr "内容が削除されるかもしれません"
 #. TRANSLATORS: status message, no existing content was found on the disk,
 #. i.e. the disk is completely empty
 #: src/components/storage/SpaceActionsTable.tsx:211
-#: src/components/storage/utils/device.tsx:86
+#: src/components/storage/utils/device.tsx:87
 msgid "No content found"
 msgstr "内容が見つかりませんでした"
 
@@ -2506,39 +2510,39 @@ msgid "at least %s"
 msgstr "少なくとも %s"
 
 #. TRANSLATORS: multipath device type
-#: src/components/storage/utils/device.tsx:38
+#: src/components/storage/utils/device.tsx:39
 msgid "Multipath"
 msgstr "マルチパス"
 
 #. TRANSLATORS: %s is replaced by the device bus ID
-#: src/components/storage/utils/device.tsx:43
+#: src/components/storage/utils/device.tsx:44
 #, c-format
 msgid "DASD %s"
 msgstr "DASD %s"
 
 #. TRANSLATORS: software RAID device, %s is replaced by the RAID level, e.g. RAID-1
-#: src/components/storage/utils/device.tsx:48
+#: src/components/storage/utils/device.tsx:49
 #, c-format
 msgid "Software %s"
 msgstr "ソフトウエア %s"
 
-#: src/components/storage/utils/device.tsx:53
+#: src/components/storage/utils/device.tsx:54
 msgid "SD Card"
 msgstr "SD カード"
 
 #. TRANSLATORS: %s is substituted by the type of disk like "iSCSI" or "SATA"
-#: src/components/storage/utils/device.tsx:58
+#: src/components/storage/utils/device.tsx:59
 #, c-format
 msgid "%s disk"
 msgstr "%s ディスク"
 
-#: src/components/storage/utils/device.tsx:59
+#: src/components/storage/utils/device.tsx:60
 msgid "Disk"
 msgstr "ディスク"
 
 #. TRANSLATORS: disk partition info, %s is replaced by partition table
 #. type (MS-DOS or GPT), %d is the number of the partitions
-#: src/components/storage/utils/device.tsx:80
+#: src/components/storage/utils/device.tsx:81
 #, c-format
 msgid "%s with %d partitions"
 msgstr "%s (%d 個のパーティション)"
