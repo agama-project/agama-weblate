@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-20 02:39+0000\n"
-"PO-Revision-Date: 2025-02-25 16:50+0000\n"
+"PO-Revision-Date: 2025-03-05 21:56+0000\n"
 "Last-Translator: Eugene Krater <lachend@gmail.com>\n"
 "Language-Team: Ukrainian <https://l10n.opensuse.org/projects/agama/"
 "agama-service-master/uk/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.10.1\n"
+"X-Generator: Weblate 5.10.2\n"
 
 #. Reports the problems and decide whether to continue or not.
 #.
@@ -82,7 +82,7 @@ msgstr "Перервати встановлення"
 #. @see https://github.com/yast/yast-yast2/blob/19180445ab935a25edd4ae0243aa7a3bcd09c9de/library/packages/src/modules/PackageCallbacks.rb#L620
 #: service/lib/agama/software/callbacks/script.rb:59
 msgid "There was a problem running a package script."
-msgstr ""
+msgstr "Виникла проблема із запуском скрипта пакунка."
 
 #. Callback to handle unsigned files
 #.
@@ -91,12 +91,12 @@ msgstr ""
 #: service/lib/agama/software/callbacks/signature.rb:63
 #, perl-brace-format
 msgid "The file %{filename} from repository %{repo_name} (%{repo_url})"
-msgstr ""
+msgstr "Файл %{filename} із репозиторію %{repo_name} (%{repo_url})"
 
 #: service/lib/agama/software/callbacks/signature.rb:67
 #, perl-brace-format
 msgid "The file %{filename}"
-msgstr ""
+msgstr "Файл %{filename}"
 
 #: service/lib/agama/software/callbacks/signature.rb:71
 #, perl-brace-format
@@ -104,6 +104,8 @@ msgid ""
 "%{source} is not digitally signed. The origin and integrity of the file cannot"
 " be verified. Use it anyway?"
 msgstr ""
+"%{source} не має цифрового підпису. Походження та цілісність файлу неможливо "
+"перевірити. Все одно використати його?"
 
 #. Callback to handle signature verification failures
 #.
@@ -115,19 +117,21 @@ msgid ""
 "The key %{id} (%{name}) with fingerprint %{fingerprint} is unknown. Do you wan"
 "t to trust this key?"
 msgstr ""
+"Ключ %{id} (%{name}) з відбитком %{fingerprint} не відомий. Бажаєте довіряти "
+"цьому ключу?"
 
 #. Should an error be raised?
 #: service/lib/agama/software/manager.rb:141
 msgid "Initializing sources"
-msgstr ""
+msgstr "Ініціалізація джерел"
 
 #: service/lib/agama/software/manager.rb:146
 msgid "Refreshing repositories metadata"
-msgstr ""
+msgstr "Оновлення метаданих репозиторіїв"
 
 #: service/lib/agama/software/manager.rb:147
 msgid "Calculating the software proposal"
-msgstr ""
+msgstr "Розрахунок пропозиції щодо програмного забезпечення"
 
 #. Issues related to the software proposal.
 #.
@@ -137,21 +141,21 @@ msgstr ""
 #: service/lib/agama/software/manager.rb:596
 #, c-format
 msgid "Could not read repository \"%s\""
-msgstr ""
+msgstr "Не вдалося прочитати репозиторій \"%s\""
 
 #. Issue when a product is missing
 #.
 #. @return [Agama::Issue]
 #: service/lib/agama/software/manager.rb:606
 msgid "Product not selected yet"
-msgstr ""
+msgstr "Продукт ще не вибрано"
 
 #. Issue when a product requires registration but it is not registered yet.
 #.
 #. @return [Agama::Issue]
 #: service/lib/agama/software/manager.rb:615
 msgid "Product must be registered"
-msgstr ""
+msgstr "Продукт повинен бути зареєстрованим"
 
 #. Returns solver error messages from the last attempt
 #.
@@ -159,7 +163,7 @@ msgstr ""
 #: service/lib/agama/software/proposal.rb:225
 #, c-format
 msgid "Found %s dependency issues."
-msgstr ""
+msgstr "Знайдено %s проблем із залежностями."
 
 #. Issue for not found device.
 #.
@@ -167,24 +171,24 @@ msgstr ""
 #. @return [Agama::Issue]
 #: service/lib/agama/storage/config_checker.rb:87
 msgid "No device found for a mandatory drive"
-msgstr ""
+msgstr "Не знайдено пристрою для обов'язкового накопичувача"
 
 #: service/lib/agama/storage/config_checker.rb:89
 msgid "No device found for a mandatory partition"
-msgstr ""
+msgstr "Не знайдено пристрою для обов'язкового розділу"
 
 #. TRANSLATORS: %s is the replaced by a mount path (e.g., "/home").
 #: service/lib/agama/storage/config_checker.rb:118
 #, c-format
 msgid "Missing file system type for '%s'"
-msgstr ""
+msgstr "Відсутній тип файлової системи для '%s'"
 
 #. TRANSLATORS: %{filesystem} is replaced by a file system type (e.g., "Btrfs") and
 #. %{path} is replaced by a mount path (e.g., "/home").
 #: service/lib/agama/storage/config_checker.rb:145
 #, perl-brace-format
 msgid "The file system type '%{filesystem}' is not suitable for '%{path}'"
-msgstr ""
+msgstr "Тип файлової системи '%{filesystem}' непридатний для '%{path}'"
 
 #. TRANSLATORS: 'crypt_method' is the identifier of the method to encrypt the device
 #. (e.g., 'luks1', 'random_swap').
@@ -192,26 +196,29 @@ msgstr ""
 #, perl-brace-format
 msgid "No passphrase provided (required for using the method '%{crypt_method}')."
 msgstr ""
+"Не вказано пароль (необхідно для використання методу '%{crypt_method}')."
 
 #. TRANSLATORS: 'crypt_method' is the identifier of the method to encrypt the device
 #. (e.g., 'luks1', 'random_swap').
 #: service/lib/agama/storage/config_checker.rb:196
 #, perl-brace-format
 msgid "Encryption method '%{crypt_method}' is not available in this system."
-msgstr ""
+msgstr "Метод шифрування '%{crypt_method}' недоступний у цій системі."
 
 #. TRANSLATORS: 'crypt_method' is the identifier of the method to encrypt the device
 #. (e.g., 'luks1', 'random_swap').
 #: service/lib/agama/storage/config_checker.rb:226
 #, perl-brace-format
 msgid "'%{crypt_method}' is not a suitable method to encrypt the device."
-msgstr ""
+msgstr "'%{crypt_method}' не є прийнятним методом для шифрування пристрою."
 
 #. TRANSLATORS: %s is the replaced by a device alias (e.g., "disk1").
 #: service/lib/agama/storage/config_checker.rb:276
 #, c-format
 msgid "The device '%s' is used several times as target device for physical volumes"
 msgstr ""
+"Пристрій '%s' використано кілька разів як цільовий пристрій для фізичних "
+"томів"
 
 #. TRANSLATORS: %s is the replaced by a device alias (e.g., "pv1").
 #: service/lib/agama/storage/config_checker.rb:350
