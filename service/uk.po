@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-20 02:39+0000\n"
-"PO-Revision-Date: 2025-03-05 21:56+0000\n"
+"PO-Revision-Date: 2025-03-07 16:32+0000\n"
 "Last-Translator: Eugene Krater <lachend@gmail.com>\n"
 "Language-Team: Ukrainian <https://l10n.opensuse.org/projects/agama/"
 "agama-service-master/uk/>\n"
@@ -224,26 +224,26 @@ msgstr ""
 #: service/lib/agama/storage/config_checker.rb:350
 #, c-format
 msgid "There is no LVM thin pool volume with alias '%s'"
-msgstr ""
+msgstr "Не існує тому тонкого пулу LVM з псевдонімом '%s'"
 
 #. TRANSLATORS: %s is the replaced by a device alias (e.g., "pv1").
 #: service/lib/agama/storage/config_checker.rb:375
 #, c-format
 msgid "There is no LVM physical volume with alias '%s'"
-msgstr ""
+msgstr "Фізичного тому LVM з псевдонімом '%s' не існує"
 
 #. TRANSLATORS: %s is the replaced by a device alias (e.g., "disk1").
 #: service/lib/agama/storage/config_checker.rb:401
 #, c-format
 msgid "There is no target device for LVM physical volumes with alias '%s'"
-msgstr ""
+msgstr "Для фізичних томів LVM з псевдонімом '%s' не існує цільового пристрою"
 
 #. TRANSLATORS: 'crypt_method' is the identifier of the method to encrypt the device
 #. (e.g., 'luks1').
 #: service/lib/agama/storage/config_checker.rb:434
 #, perl-brace-format
 msgid "'%{crypt_method}' is not a suitable method to encrypt the physical volumes."
-msgstr ""
+msgstr "'%{crypt_method}' не є придатним методом для шифрування фізичних томів."
 
 #. Text of the reason preventing to shrink because there is no content.
 #.
@@ -254,69 +254,72 @@ msgid ""
 " the device does contain a file system or a storage system that is not support"
 "ed, resizing will most likely cause data loss."
 msgstr ""
+"На пристрої не виявлено ані файлової системи, ані системи зберігання даних. "
+"Якщо пристрій містить файлову систему або систему зберігання даних, які не "
+"підтримуються, зміна розміру, найімовірніше, призведе до втрати даних."
 
 #. Text of the reason preventing to shrink because there is no valid minimum size.
 #.
 #. @return [String, nil] nil if there is a minimum size or there is any other reasons.
 #: service/lib/agama/storage/device_shrinking.rb:162
 msgid "Shrinking is not supported by this device"
-msgstr ""
+msgstr "Цей пристрій не підтримує стискання"
 
 #. Probes storage devices and performs an initial proposal
 #: service/lib/agama/storage/manager.rb:120
 msgid "Activating storage devices"
-msgstr ""
+msgstr "Активація пристроїв зберігання"
 
 #: service/lib/agama/storage/manager.rb:121
 msgid "Probing storage devices"
-msgstr ""
+msgstr "Пошук пристроїв зберігання"
 
 #: service/lib/agama/storage/manager.rb:122
 msgid "Calculating the storage proposal"
-msgstr ""
+msgstr "Розрахунок пропозиції зі зберігання"
 
 #: service/lib/agama/storage/manager.rb:123
 msgid "Selecting Linux Security Modules"
-msgstr ""
+msgstr "Вибір модулів безпеки Linux"
 
 #. Prepares the partitioning to install the system
 #: service/lib/agama/storage/manager.rb:131
 msgid "Preparing bootloader proposal"
-msgstr ""
+msgstr "Підготовка пропозиції щодо завантажувача"
 
 #. then also apply changes to that proposal
 #: service/lib/agama/storage/manager.rb:138
 msgid "Adding storage-related packages"
-msgstr ""
+msgstr "Додавання пакетів, пов'язаних зі сховищем"
 
 #: service/lib/agama/storage/manager.rb:139
 msgid "Preparing the storage devices"
-msgstr ""
+msgstr "Підготовка пристроїв зберігання"
 
 #: service/lib/agama/storage/manager.rb:140
 msgid "Writing bootloader sysconfig"
-msgstr ""
+msgstr "Запис системної конфігурації завантажувача"
 
 #. Issue representing the proposal is not valid.
 #.
 #. @return [Issue]
 #: service/lib/agama/storage/proposal.rb:287
 msgid "Cannot accommodate the required file systems for installation"
-msgstr ""
+msgstr "Неможливо розмістити необхідні файлові системи для встановлення"
 
 #. Issue to communicate a generic Y2Storage error.
 #.
 #. @return [Issue]
 #: service/lib/agama/storage/proposal.rb:298
 msgid "A problem ocurred while calculating the storage setup"
-msgstr ""
+msgstr "Виникла проблема при розрахунку конфігурації накопичувачів"
 
 #. Returns an issue if there is no target device.
 #.
 #. @return [Issue, nil]
 #: service/lib/agama/storage/proposal_strategies/guided.rb:127
 msgid "No device selected for installation"
-msgstr ""
+msgstr "Не вибрано пристрій для встановлення"
 
 #. Returns an issue if any of the devices required for the proposal is not found
 #.
@@ -325,10 +328,12 @@ msgstr ""
 #, perl-brace-format
 msgid "The following selected device is not found in the system: %{devices}"
 msgid_plural "The following selected devices are not found in the system: %{devices}"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Наступний вибраний пристрій не знайдено в системі: %{devices}"
+msgstr[1] "Наступні вибрані пристрої не знайдені в системі: %{devices}"
+msgstr[2] "Наступні вибрані пристрої не знайдені в системі: %{devices}"
 
 #. Recalculates the list of issues
 #: service/lib/agama/users.rb:165
 msgid "Defining a user, setting the root password or a SSH public key is required"
 msgstr ""
+"Необхідно вказати користувача, встановити пароль root або відкритий ключ SSH"
