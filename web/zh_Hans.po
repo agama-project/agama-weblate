@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-16 02:50+0000\n"
+"POT-Creation-Date: 2025-03-18 02:48+0000\n"
 "PO-Revision-Date: 2024-07-03 14:46+0000\n"
 "Last-Translator: Monstorix <monstorix@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.opensuse.org/projects/"
@@ -140,6 +140,7 @@ msgstr "无法在远程安装中更改"
 #: src/components/core/InstallerOptions.tsx:120
 #: src/components/core/Page.tsx:266
 #: src/components/storage/dasd/DASDTable.tsx:104
+#: src/components/system/HostnamePage.tsx:130
 msgid "Accept"
 msgstr "接受"
 
@@ -167,7 +168,7 @@ msgid "Software"
 msgstr "软件"
 
 #: src/components/core/IssuesDrawer.tsx:52
-#: src/components/product/ProductRegistrationPage.tsx:155
+#: src/components/product/ProductRegistrationPage.tsx:191
 #: src/routes/registration.tsx:31
 msgid "Registration"
 msgstr "注册"
@@ -515,7 +516,7 @@ msgstr "所选模式要求至少提供一个地址"
 
 #: src/components/network/IpSettingsForm.tsx:158
 #: src/components/network/WifiConnectionForm.tsx:109
-#: src/components/storage/EncryptionSettingsPage.tsx:118
+#: src/components/storage/EncryptionSettingsPage.tsx:117
 #: src/components/storage/iscsi/DiscoverForm.tsx:98
 #: src/components/storage/iscsi/LoginForm.jsx:70
 #: src/components/storage/zfcp/ZFCPDiskForm.tsx:112
@@ -695,7 +696,7 @@ msgstr "连接到 Wi-Fi 网络"
 msgid "The system will use %s as its default language."
 msgstr "系统会使用 %s 作为默认语言。"
 
-#: src/components/overview/OverviewPage.tsx:35 src/router.tsx:44
+#: src/components/overview/OverviewPage.tsx:35 src/router.tsx:45
 msgid "Overview"
 msgstr "概览"
 
@@ -799,43 +800,40 @@ msgstr "%s （已注册）"
 msgid "Registration code"
 msgstr "注册码"
 
-#: src/components/product/ProductRegistrationPage.tsx:60
-#, fuzzy
-msgid "Product registered"
-msgstr "产品问题"
-
 #: src/components/product/ProductRegistrationPage.tsx:61
 #, c-format
 msgid "%s has been registered with below information."
 msgstr ""
 
-#: src/components/product/ProductRegistrationPage.tsx:71
+#: src/components/product/ProductRegistrationPage.tsx:70
 msgid "Hide"
 msgstr ""
 
-#: src/components/product/ProductRegistrationPage.tsx:71
+#: src/components/product/ProductRegistrationPage.tsx:70
 #, fuzzy
 msgid "Show"
 msgstr "显示日志"
 
-#: src/components/product/ProductRegistrationPage.tsx:113
+#: src/components/product/ProductRegistrationPage.tsx:135
 #, fuzzy
-msgid "Product registration form"
-msgstr "此产品要求注册。"
+msgid "Provide email address"
+msgstr "添加地址"
 
-#: src/components/product/ProductRegistrationPage.tsx:115
-msgid ""
-"Enter a registration code and optionally a valid email address for "
-"registering the product."
-msgstr ""
-
-#: src/components/product/ProductRegistrationPage.tsx:128
-msgid "(optional)"
-msgstr ""
-
-#: src/components/product/ProductRegistrationPage.tsx:137
+#: src/components/product/ProductRegistrationPage.tsx:149
 msgid "Register"
 msgstr "注册"
+
+#: src/components/product/ProductRegistrationPage.tsx:165
+#, c-format
+msgid ""
+"You cannot change it later. Go to the %s section if you want to modify it "
+"before proceeding with registration."
+msgstr ""
+
+#: src/components/product/ProductRegistrationPage.tsx:170
+#, fuzzy
+msgid "hostname"
+msgstr "用户名"
 
 #. TRANSLATORS: %s will be replaced by a product name. E.g., "openSUSE Tumbleweed"
 #: src/components/product/ProductSelectionPage.tsx:62
@@ -1379,18 +1377,18 @@ msgid ""
 "data, programs, and system files."
 msgstr "保护存储在设备上的信息，包括数据、程序以及系统文件。"
 
-#: src/components/storage/EncryptionSettingsPage.tsx:74
+#: src/components/storage/EncryptionSettingsPage.tsx:73
 #: src/components/users/RootUserForm.tsx:105
 #, fuzzy
 msgid "Password is empty."
 msgstr "密码输入"
 
-#: src/components/storage/EncryptionSettingsPage.tsx:91
+#: src/components/storage/EncryptionSettingsPage.tsx:90
 msgid ""
 "Use the Trusted Platform Module (TPM) to decrypt automatically on each boot"
 msgstr "使用可信平台模块 (TPM) 在每次启动时自动解密"
 
-#: src/components/storage/EncryptionSettingsPage.tsx:96
+#: src/components/storage/EncryptionSettingsPage.tsx:95
 msgid ""
 "The password will not be needed to boot and access the data if the TPM can "
 "verify the integrity of the system. TPM sealing requires the new system to "
@@ -1399,11 +1397,11 @@ msgstr ""
 "若 TPM 可以验证系统的完整性，启动和访问数据的时候将无需使用密码。 TPM 密封要"
 "求新系统在首次启动时直接开始引导。"
 
-#: src/components/storage/EncryptionSettingsPage.tsx:106
+#: src/components/storage/EncryptionSettingsPage.tsx:105
 msgid "Encryption settings"
 msgstr "加密设置"
 
-#: src/components/storage/EncryptionSettingsPage.tsx:109
+#: src/components/storage/EncryptionSettingsPage.tsx:108
 #, fuzzy
 msgid ""
 "Full Disk Encryption (FDE) allows to protect the information stored at the "
@@ -1411,7 +1409,7 @@ msgid ""
 msgstr ""
 "全盘加密 (FDE) 允许设备上存储的信息受到保护，包括数据、程序以及系统文件。"
 
-#: src/components/storage/EncryptionSettingsPage.tsx:125
+#: src/components/storage/EncryptionSettingsPage.tsx:124
 msgid "Encrypt the system"
 msgstr "加密系统"
 
@@ -2696,6 +2694,63 @@ msgstr "读取 zFCP 设备"
 msgid "zFCP"
 msgstr "zFCP"
 
+#: src/components/system/HostnamePage.tsx:61
+msgid "Please provide a hostname"
+msgstr ""
+
+#: src/components/system/HostnamePage.tsx:76
+#, c-format
+msgid "Using %1$s hostname: %2$s"
+msgstr ""
+
+#: src/components/system/HostnamePage.tsx:77
+#, fuzzy, c-format
+msgid "static"
+msgstr "自动"
+
+#: src/components/system/HostnamePage.tsx:77
+#, c-format
+msgid "transient"
+msgstr ""
+
+#: src/components/system/HostnamePage.tsx:84
+#, fuzzy
+msgid "Hostname settings"
+msgstr "LVM 设定"
+
+#: src/components/system/HostnamePage.tsx:89
+#, fuzzy
+msgid "Product is already registered"
+msgstr "产品问题"
+
+#: src/components/system/HostnamePage.tsx:91
+msgid ""
+"Updating the hostname now or later will not change the currently registered "
+"hostname."
+msgstr ""
+
+#: src/components/system/HostnamePage.tsx:98
+msgid "This hostname is permanent and will not change unless manually updated."
+msgstr ""
+
+#: src/components/system/HostnamePage.tsx:99
+msgid ""
+"This hostname is dynamic and may change after a reboot or network update."
+msgstr ""
+
+#: src/components/system/HostnamePage.tsx:107
+msgid "Use static hostname"
+msgstr ""
+
+#: src/components/system/HostnamePage.tsx:109
+msgid ""
+"Allows setting a permanent hostname that won’t change with network updates."
+msgstr ""
+
+#: src/components/system/HostnamePage.tsx:120
+msgid "Static hostname"
+msgstr ""
+
 #: src/components/users/FirstUser.tsx:46
 msgid "Define a user now"
 msgstr "现在设定用户"
@@ -2813,9 +2868,18 @@ msgstr "用户密码"
 msgid "Use public SSH Key"
 msgstr "Root 的 SSH 公钥"
 
+#: src/router.tsx:50
+#, fuzzy
+msgid "Hostname"
+msgstr "用户名"
+
 #: src/routes/storage.tsx:85
 msgid "ZFCP"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Product registration form"
+#~ msgstr "此产品要求注册。"
 
 #~ msgid "Users"
 #~ msgstr "用户"
@@ -3803,9 +3867,6 @@ msgstr ""
 
 #~ msgid "Configure the LVM settings"
 #~ msgstr "配置 LVM 设定"
-
-#~ msgid "LVM settings"
-#~ msgstr "LVM 设定"
 
 #~ msgid "logical volume"
 #~ msgstr "逻辑卷"

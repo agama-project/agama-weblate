@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-16 02:50+0000\n"
+"POT-Creation-Date: 2025-03-18 02:48+0000\n"
 "PO-Revision-Date: 2025-03-17 08:56+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -149,6 +149,7 @@ msgstr "リモートインストールの場合は変更できません"
 #: src/components/core/InstallerOptions.tsx:120
 #: src/components/core/Page.tsx:266
 #: src/components/storage/dasd/DASDTable.tsx:104
+#: src/components/system/HostnamePage.tsx:130
 msgid "Accept"
 msgstr "受け入れる"
 
@@ -175,7 +176,7 @@ msgid "Software"
 msgstr "ソフトウエア"
 
 #: src/components/core/IssuesDrawer.tsx:52
-#: src/components/product/ProductRegistrationPage.tsx:155
+#: src/components/product/ProductRegistrationPage.tsx:191
 #: src/routes/registration.tsx:31
 msgid "Registration"
 msgstr "登録"
@@ -522,7 +523,7 @@ msgstr ""
 
 #: src/components/network/IpSettingsForm.tsx:158
 #: src/components/network/WifiConnectionForm.tsx:109
-#: src/components/storage/EncryptionSettingsPage.tsx:118
+#: src/components/storage/EncryptionSettingsPage.tsx:117
 #: src/components/storage/iscsi/DiscoverForm.tsx:98
 #: src/components/storage/iscsi/LoginForm.jsx:70
 #: src/components/storage/zfcp/ZFCPDiskForm.tsx:112
@@ -701,7 +702,7 @@ msgstr "Wi-Fi ネットワークへの接続"
 msgid "The system will use %s as its default language."
 msgstr "システムは %s を既定の言語として使用します。"
 
-#: src/components/overview/OverviewPage.tsx:35 src/router.tsx:44
+#: src/components/overview/OverviewPage.tsx:35 src/router.tsx:45
 msgid "Overview"
 msgstr "概要"
 
@@ -805,42 +806,39 @@ msgstr "%s [登録しなければなりません] 。"
 msgid "Registration code"
 msgstr "登録コード"
 
-#: src/components/product/ProductRegistrationPage.tsx:60
-msgid "Product registered"
-msgstr "製品を登録しました"
-
 #: src/components/product/ProductRegistrationPage.tsx:61
 #, c-format
 msgid "%s has been registered with below information."
 msgstr "%s を下記の情報で登録しました。"
 
-#: src/components/product/ProductRegistrationPage.tsx:71
+#: src/components/product/ProductRegistrationPage.tsx:70
 msgid "Hide"
 msgstr "隠す"
 
-#: src/components/product/ProductRegistrationPage.tsx:71
+#: src/components/product/ProductRegistrationPage.tsx:70
 msgid "Show"
 msgstr "表示"
 
-#: src/components/product/ProductRegistrationPage.tsx:113
-msgid "Product registration form"
-msgstr "製品登録フォーム"
+#: src/components/product/ProductRegistrationPage.tsx:135
+#, fuzzy
+msgid "Provide email address"
+msgstr "アドレスの追加"
 
-#: src/components/product/ProductRegistrationPage.tsx:115
-msgid ""
-"Enter a registration code and optionally a valid email address for "
-"registering the product."
-msgstr ""
-"製品を登録するのに必要な登録コードと、任意でメールアドレスを入力してくださ"
-"い。"
-
-#: src/components/product/ProductRegistrationPage.tsx:128
-msgid "(optional)"
-msgstr "(任意)"
-
-#: src/components/product/ProductRegistrationPage.tsx:137
+#: src/components/product/ProductRegistrationPage.tsx:149
 msgid "Register"
 msgstr "登録"
+
+#: src/components/product/ProductRegistrationPage.tsx:165
+#, c-format
+msgid ""
+"You cannot change it later. Go to the %s section if you want to modify it "
+"before proceeding with registration."
+msgstr ""
+
+#: src/components/product/ProductRegistrationPage.tsx:170
+#, fuzzy
+msgid "hostname"
+msgstr "ユーザ名"
 
 #. TRANSLATORS: %s will be replaced by a product name. E.g., "openSUSE Tumbleweed"
 #: src/components/product/ProductSelectionPage.tsx:62
@@ -1371,19 +1369,19 @@ msgstr ""
 "データやプログラム、システムファイルなど、新しく作成するファイルシステム内に"
 "配置される情報への保護を行います。"
 
-#: src/components/storage/EncryptionSettingsPage.tsx:74
+#: src/components/storage/EncryptionSettingsPage.tsx:73
 #: src/components/users/RootUserForm.tsx:105
 msgid "Password is empty."
 msgstr "パスワードが指定されていません。"
 
-#: src/components/storage/EncryptionSettingsPage.tsx:91
+#: src/components/storage/EncryptionSettingsPage.tsx:90
 msgid ""
 "Use the Trusted Platform Module (TPM) to decrypt automatically on each boot"
 msgstr ""
 "毎回の起動時に Trusted Platform Module (TPM) を利用して自動的に暗号化解除しま"
 "す"
 
-#: src/components/storage/EncryptionSettingsPage.tsx:96
+#: src/components/storage/EncryptionSettingsPage.tsx:95
 msgid ""
 "The password will not be needed to boot and access the data if the TPM can "
 "verify the integrity of the system. TPM sealing requires the new system to "
@@ -1393,11 +1391,11 @@ msgstr ""
 "てパスワードが不要になります。 TPM シーリングを使用するには、新しいシステムの"
 "初回起動時に直接起動を行う必要があります。"
 
-#: src/components/storage/EncryptionSettingsPage.tsx:106
+#: src/components/storage/EncryptionSettingsPage.tsx:105
 msgid "Encryption settings"
 msgstr "暗号化の設定"
 
-#: src/components/storage/EncryptionSettingsPage.tsx:109
+#: src/components/storage/EncryptionSettingsPage.tsx:108
 msgid ""
 "Full Disk Encryption (FDE) allows to protect the information stored at the "
 "new file systems, including data, programs, and system files."
@@ -1406,7 +1404,7 @@ msgstr ""
 "グラム、システムファイルなど、新しく作成するファイルシステム内に配置される情"
 "報への保護を行います。"
 
-#: src/components/storage/EncryptionSettingsPage.tsx:125
+#: src/components/storage/EncryptionSettingsPage.tsx:124
 msgid "Encrypt the system"
 msgstr "システムの暗号化"
 
@@ -2712,6 +2710,63 @@ msgstr "zFCP デバイスの読み込み"
 msgid "zFCP"
 msgstr "zFCP"
 
+#: src/components/system/HostnamePage.tsx:61
+msgid "Please provide a hostname"
+msgstr ""
+
+#: src/components/system/HostnamePage.tsx:76
+#, c-format
+msgid "Using %1$s hostname: %2$s"
+msgstr ""
+
+#: src/components/system/HostnamePage.tsx:77
+#, fuzzy, c-format
+msgid "static"
+msgstr "自動"
+
+#: src/components/system/HostnamePage.tsx:77
+#, c-format
+msgid "transient"
+msgstr ""
+
+#: src/components/system/HostnamePage.tsx:84
+#, fuzzy
+msgid "Hostname settings"
+msgstr "正しくないストレージ設定です"
+
+#: src/components/system/HostnamePage.tsx:89
+#, fuzzy
+msgid "Product is already registered"
+msgstr "製品を登録しました"
+
+#: src/components/system/HostnamePage.tsx:91
+msgid ""
+"Updating the hostname now or later will not change the currently registered "
+"hostname."
+msgstr ""
+
+#: src/components/system/HostnamePage.tsx:98
+msgid "This hostname is permanent and will not change unless manually updated."
+msgstr ""
+
+#: src/components/system/HostnamePage.tsx:99
+msgid ""
+"This hostname is dynamic and may change after a reboot or network update."
+msgstr ""
+
+#: src/components/system/HostnamePage.tsx:107
+msgid "Use static hostname"
+msgstr ""
+
+#: src/components/system/HostnamePage.tsx:109
+msgid ""
+"Allows setting a permanent hostname that won’t change with network updates."
+msgstr ""
+
+#: src/components/system/HostnamePage.tsx:120
+msgid "Static hostname"
+msgstr ""
+
 #: src/components/users/FirstUser.tsx:46
 msgid "Define a user now"
 msgstr "今すぐユーザを設定する"
@@ -2824,9 +2879,27 @@ msgstr "パスワードの使用"
 msgid "Use public SSH Key"
 msgstr "公開 SSH 鍵の使用"
 
+#: src/router.tsx:50
+#, fuzzy
+msgid "Hostname"
+msgstr "ユーザ名"
+
 #: src/routes/storage.tsx:85
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#~ msgid "Product registration form"
+#~ msgstr "製品登録フォーム"
+
+#~ msgid ""
+#~ "Enter a registration code and optionally a valid email address for "
+#~ "registering the product."
+#~ msgstr ""
+#~ "製品を登録するのに必要な登録コードと、任意でメールアドレスを入力してくださ"
+#~ "い。"
+
+#~ msgid "(optional)"
+#~ msgstr "(任意)"
 
 #~ msgid "Users"
 #~ msgstr "ユーザ"

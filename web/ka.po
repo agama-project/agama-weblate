@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-16 02:50+0000\n"
+"POT-Creation-Date: 2025-03-18 02:48+0000\n"
 "PO-Revision-Date: 2025-02-25 15:50+0000\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -137,6 +137,7 @@ msgstr "ვერ შეიცვლება დაშორებული დ
 #: src/components/core/InstallerOptions.tsx:120
 #: src/components/core/Page.tsx:266
 #: src/components/storage/dasd/DASDTable.tsx:104
+#: src/components/system/HostnamePage.tsx:130
 msgid "Accept"
 msgstr "დასტური"
 
@@ -163,7 +164,7 @@ msgid "Software"
 msgstr "პროგრამები"
 
 #: src/components/core/IssuesDrawer.tsx:52
-#: src/components/product/ProductRegistrationPage.tsx:155
+#: src/components/product/ProductRegistrationPage.tsx:191
 #: src/routes/registration.tsx:31
 msgid "Registration"
 msgstr "რეგისტრაცია"
@@ -505,7 +506,7 @@ msgstr ""
 
 #: src/components/network/IpSettingsForm.tsx:158
 #: src/components/network/WifiConnectionForm.tsx:109
-#: src/components/storage/EncryptionSettingsPage.tsx:118
+#: src/components/storage/EncryptionSettingsPage.tsx:117
 #: src/components/storage/iscsi/DiscoverForm.tsx:98
 #: src/components/storage/iscsi/LoginForm.jsx:70
 #: src/components/storage/zfcp/ZFCPDiskForm.tsx:112
@@ -681,7 +682,7 @@ msgstr "Wi-Fi ქსელთან მიერთება"
 msgid "The system will use %s as its default language."
 msgstr ""
 
-#: src/components/overview/OverviewPage.tsx:35 src/router.tsx:44
+#: src/components/overview/OverviewPage.tsx:35 src/router.tsx:45
 msgid "Overview"
 msgstr "გადახედვა"
 
@@ -778,40 +779,39 @@ msgstr "%s [დარეგისტრირებული უნდა იყ
 msgid "Registration code"
 msgstr "რეგისტრაციის კოდი"
 
-#: src/components/product/ProductRegistrationPage.tsx:60
-msgid "Product registered"
-msgstr "პროდუქტი რეგისტრირებულია"
-
 #: src/components/product/ProductRegistrationPage.tsx:61
 #, c-format
 msgid "%s has been registered with below information."
 msgstr ""
 
-#: src/components/product/ProductRegistrationPage.tsx:71
+#: src/components/product/ProductRegistrationPage.tsx:70
 msgid "Hide"
 msgstr "დამალვა"
 
-#: src/components/product/ProductRegistrationPage.tsx:71
+#: src/components/product/ProductRegistrationPage.tsx:70
 msgid "Show"
 msgstr "ჩვენება"
 
-#: src/components/product/ProductRegistrationPage.tsx:113
-msgid "Product registration form"
-msgstr "პროდუქტის რეგისტრაციის ფორმა"
+#: src/components/product/ProductRegistrationPage.tsx:135
+#, fuzzy
+msgid "Provide email address"
+msgstr "მისამართის დამატება"
 
-#: src/components/product/ProductRegistrationPage.tsx:115
-msgid ""
-"Enter a registration code and optionally a valid email address for "
-"registering the product."
-msgstr ""
-
-#: src/components/product/ProductRegistrationPage.tsx:128
-msgid "(optional)"
-msgstr "(არასავალდებულო)"
-
-#: src/components/product/ProductRegistrationPage.tsx:137
+#: src/components/product/ProductRegistrationPage.tsx:149
 msgid "Register"
 msgstr "რესგისტრაცია"
+
+#: src/components/product/ProductRegistrationPage.tsx:165
+#, c-format
+msgid ""
+"You cannot change it later. Go to the %s section if you want to modify it "
+"before proceeding with registration."
+msgstr ""
+
+#: src/components/product/ProductRegistrationPage.tsx:170
+#, fuzzy
+msgid "hostname"
+msgstr "მომხმარებლის სახელი"
 
 #. TRANSLATORS: %s will be replaced by a product name. E.g., "openSUSE Tumbleweed"
 #: src/components/product/ProductSelectionPage.tsx:62
@@ -1320,34 +1320,34 @@ msgid ""
 "data, programs, and system files."
 msgstr ""
 
-#: src/components/storage/EncryptionSettingsPage.tsx:74
+#: src/components/storage/EncryptionSettingsPage.tsx:73
 #: src/components/users/RootUserForm.tsx:105
 msgid "Password is empty."
 msgstr "პაროლი ცარიელია."
 
-#: src/components/storage/EncryptionSettingsPage.tsx:91
+#: src/components/storage/EncryptionSettingsPage.tsx:90
 msgid ""
 "Use the Trusted Platform Module (TPM) to decrypt automatically on each boot"
 msgstr ""
 
-#: src/components/storage/EncryptionSettingsPage.tsx:96
+#: src/components/storage/EncryptionSettingsPage.tsx:95
 msgid ""
 "The password will not be needed to boot and access the data if the TPM can "
 "verify the integrity of the system. TPM sealing requires the new system to "
 "be booted directly on its first run."
 msgstr ""
 
-#: src/components/storage/EncryptionSettingsPage.tsx:106
+#: src/components/storage/EncryptionSettingsPage.tsx:105
 msgid "Encryption settings"
 msgstr "დაშიფვრის პარამეტრები"
 
-#: src/components/storage/EncryptionSettingsPage.tsx:109
+#: src/components/storage/EncryptionSettingsPage.tsx:108
 msgid ""
 "Full Disk Encryption (FDE) allows to protect the information stored at the "
 "new file systems, including data, programs, and system files."
 msgstr ""
 
-#: src/components/storage/EncryptionSettingsPage.tsx:125
+#: src/components/storage/EncryptionSettingsPage.tsx:124
 msgid "Encrypt the system"
 msgstr "სისტემის დაშიფვრა"
 
@@ -2585,6 +2585,63 @@ msgstr "zFCP მოწყობილობების წაკითხვა
 msgid "zFCP"
 msgstr "zFCP"
 
+#: src/components/system/HostnamePage.tsx:61
+msgid "Please provide a hostname"
+msgstr ""
+
+#: src/components/system/HostnamePage.tsx:76
+#, c-format
+msgid "Using %1$s hostname: %2$s"
+msgstr ""
+
+#: src/components/system/HostnamePage.tsx:77
+#, fuzzy, c-format
+msgid "static"
+msgstr "ავტომატური"
+
+#: src/components/system/HostnamePage.tsx:77
+#, c-format
+msgid "transient"
+msgstr ""
+
+#: src/components/system/HostnamePage.tsx:84
+#, fuzzy
+msgid "Hostname settings"
+msgstr "LVM-ის მორგება"
+
+#: src/components/system/HostnamePage.tsx:89
+#, fuzzy
+msgid "Product is already registered"
+msgstr "პროდუქტი რეგისტრირებულია"
+
+#: src/components/system/HostnamePage.tsx:91
+msgid ""
+"Updating the hostname now or later will not change the currently registered "
+"hostname."
+msgstr ""
+
+#: src/components/system/HostnamePage.tsx:98
+msgid "This hostname is permanent and will not change unless manually updated."
+msgstr ""
+
+#: src/components/system/HostnamePage.tsx:99
+msgid ""
+"This hostname is dynamic and may change after a reboot or network update."
+msgstr ""
+
+#: src/components/system/HostnamePage.tsx:107
+msgid "Use static hostname"
+msgstr ""
+
+#: src/components/system/HostnamePage.tsx:109
+msgid ""
+"Allows setting a permanent hostname that won’t change with network updates."
+msgstr ""
+
+#: src/components/system/HostnamePage.tsx:120
+msgid "Static hostname"
+msgstr ""
+
 #: src/components/users/FirstUser.tsx:46
 msgid "Define a user now"
 msgstr ""
@@ -2694,9 +2751,20 @@ msgstr "პაროლის გამოყენება"
 msgid "Use public SSH Key"
 msgstr ""
 
+#: src/router.tsx:50
+#, fuzzy
+msgid "Hostname"
+msgstr "მომხმარებლის სახელი"
+
 #: src/routes/storage.tsx:85
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#~ msgid "Product registration form"
+#~ msgstr "პროდუქტის რეგისტრაციის ფორმა"
+
+#~ msgid "(optional)"
+#~ msgstr "(არასავალდებულო)"
 
 #~ msgid "Users"
 #~ msgstr "მომხმარებლები"
@@ -3185,9 +3253,6 @@ msgstr "ZFCP"
 
 #~ msgid "Custom devices"
 #~ msgstr "მომხმარებლის მოწყობილობები"
-
-#~ msgid "LVM settings"
-#~ msgstr "LVM-ის მორგება"
 
 #~ msgid "encrypted"
 #~ msgstr "დაშიფრულია"
