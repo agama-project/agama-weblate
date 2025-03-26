@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-25 02:49+0000\n"
+"POT-Creation-Date: 2025-03-26 02:48+0000\n"
 "PO-Revision-Date: 2025-03-18 06:56+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -149,7 +149,7 @@ msgstr "リモートインストールの場合は変更できません"
 #: src/components/core/InstallerOptions.tsx:120
 #: src/components/core/Page.tsx:266
 #: src/components/storage/dasd/DASDTable.tsx:104
-#: src/components/system/HostnamePage.tsx:130
+#: src/components/system/HostnamePage.tsx:133
 msgid "Accept"
 msgstr "受け入れる"
 
@@ -2711,33 +2711,27 @@ msgid "zFCP"
 msgstr "zFCP"
 
 #: src/components/system/HostnamePage.tsx:61
-msgid "Please provide a hostname"
-msgstr "ホスト名を設定してください"
+#, fuzzy
+msgid "Enter a hostname."
+msgstr "固定のホスト名"
 
-#: src/components/system/HostnamePage.tsx:76
-#, c-format
-msgid "Using %1$s hostname: %2$s"
+#. TRANSLATORS: The title for a notification shown when the static hostname
+#. has not been set. "transient" refers to the hostname mode, and %s will be
+#. replaced with the current hostname value.
+#: src/components/system/HostnamePage.tsx:75
+#, fuzzy, c-format
+msgid "Using transient hostname: %s"
 msgstr "%1$s ホスト名の使用: %2$s"
 
-#: src/components/system/HostnamePage.tsx:77
-#, c-format
-msgid "static"
-msgstr "固定の"
-
-#: src/components/system/HostnamePage.tsx:77
-#, c-format
-msgid "transient"
-msgstr "暫定の"
-
-#: src/components/system/HostnamePage.tsx:84
+#: src/components/system/HostnamePage.tsx:80
 msgid "Hostname settings"
 msgstr "ホスト名の設定"
 
-#: src/components/system/HostnamePage.tsx:89
+#: src/components/system/HostnamePage.tsx:85
 msgid "Product is already registered"
 msgstr "製品は既に登録済みです"
 
-#: src/components/system/HostnamePage.tsx:91
+#: src/components/system/HostnamePage.tsx:87
 msgid ""
 "Updating the hostname now or later will not change the currently registered "
 "hostname."
@@ -2745,31 +2739,32 @@ msgstr ""
 "ここでホスト名を変更した場合も後から変更した場合も、登録済みのホスト名は変更"
 "されないことに注意してください。"
 
-#: src/components/system/HostnamePage.tsx:98
-msgid "This hostname is permanent and will not change unless manually updated."
-msgstr ""
-"ホスト名は恒久的な設定となります。そのため、手作業で変更しない限り変化するこ"
-"とはありません。"
-
-#: src/components/system/HostnamePage.tsx:99
+#: src/components/system/HostnamePage.tsx:95
+#, fuzzy
 msgid ""
-"This hostname is dynamic and may change after a reboot or network update."
+"This hostname is dynamic and may change after a reboot or network update, as "
+"configured by the local network administrator."
 msgstr ""
 "ホスト名は動的なものとなります。再起動やネットワーク側の変更によって変化する"
 "場合があります。"
 
-#: src/components/system/HostnamePage.tsx:107
+#: src/components/system/HostnamePage.tsx:103
+msgid "Check the following before continuing"
+msgstr ""
+
+#: src/components/system/HostnamePage.tsx:110
 msgid "Use static hostname"
 msgstr "固定のホスト名を使用する"
 
-#: src/components/system/HostnamePage.tsx:109
+#: src/components/system/HostnamePage.tsx:112
+#, fuzzy
 msgid ""
-"Allows setting a permanent hostname that won’t change with network updates."
+"For setting a permanent hostname that won’t change with network updates."
 msgstr ""
 "ネットワーク側の設定が変更された場合でも変化しない、固定のホスト名を設定しま"
 "す。"
 
-#: src/components/system/HostnamePage.tsx:120
+#: src/components/system/HostnamePage.tsx:123
 msgid "Static hostname"
 msgstr "固定のホスト名"
 
@@ -2892,6 +2887,23 @@ msgstr "ホスト名"
 #: src/routes/storage.tsx:85
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#~ msgid "Please provide a hostname"
+#~ msgstr "ホスト名を設定してください"
+
+#, c-format
+#~ msgid "static"
+#~ msgstr "固定の"
+
+#, c-format
+#~ msgid "transient"
+#~ msgstr "暫定の"
+
+#~ msgid ""
+#~ "This hostname is permanent and will not change unless manually updated."
+#~ msgstr ""
+#~ "ホスト名は恒久的な設定となります。そのため、手作業で変更しない限り変化する"
+#~ "ことはありません。"
 
 #~ msgid "Product registration form"
 #~ msgstr "製品登録フォーム"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-25 02:49+0000\n"
+"POT-Creation-Date: 2025-03-26 02:48+0000\n"
 "PO-Revision-Date: 2025-03-18 11:56+0000\n"
 "Last-Translator: David Medina <medipas@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -147,7 +147,7 @@ msgstr "No es pot canviar a la instal·lació remota."
 #: src/components/core/InstallerOptions.tsx:120
 #: src/components/core/Page.tsx:266
 #: src/components/storage/dasd/DASDTable.tsx:104
-#: src/components/system/HostnamePage.tsx:130
+#: src/components/system/HostnamePage.tsx:133
 msgid "Accept"
 msgstr "Accepta-ho"
 
@@ -2741,33 +2741,27 @@ msgid "zFCP"
 msgstr "zFCP"
 
 #: src/components/system/HostnamePage.tsx:61
-msgid "Please provide a hostname"
-msgstr "Si us plau, proporcioneu un nom d'amfitrió."
+#, fuzzy
+msgid "Enter a hostname."
+msgstr "Nom d'amfitrió estàtic"
 
-#: src/components/system/HostnamePage.tsx:76
-#, c-format
-msgid "Using %1$s hostname: %2$s"
+#. TRANSLATORS: The title for a notification shown when the static hostname
+#. has not been set. "transient" refers to the hostname mode, and %s will be
+#. replaced with the current hostname value.
+#: src/components/system/HostnamePage.tsx:75
+#, fuzzy, c-format
+msgid "Using transient hostname: %s"
 msgstr "S'usa el nom d'amfitrió de %1$s: %2$s"
 
-#: src/components/system/HostnamePage.tsx:77
-#, c-format
-msgid "static"
-msgstr "estàtic"
-
-#: src/components/system/HostnamePage.tsx:77
-#, c-format
-msgid "transient"
-msgstr "transitori"
-
-#: src/components/system/HostnamePage.tsx:84
+#: src/components/system/HostnamePage.tsx:80
 msgid "Hostname settings"
 msgstr "Paràmetres del nom d'amfitrió"
 
-#: src/components/system/HostnamePage.tsx:89
+#: src/components/system/HostnamePage.tsx:85
 msgid "Product is already registered"
 msgstr "El producte ja està registrat."
 
-#: src/components/system/HostnamePage.tsx:91
+#: src/components/system/HostnamePage.tsx:87
 msgid ""
 "Updating the hostname now or later will not change the currently registered "
 "hostname."
@@ -2775,31 +2769,32 @@ msgstr ""
 "Actualitzar el nom d'amfitrió ara o més tard no canviarà el nom d'amfitrió "
 "registrat actualment."
 
-#: src/components/system/HostnamePage.tsx:98
-msgid "This hostname is permanent and will not change unless manually updated."
-msgstr ""
-"Aquest nom d'amfitrió és permanent i no canviarà tret que s'actualitzi "
-"manualment."
-
-#: src/components/system/HostnamePage.tsx:99
+#: src/components/system/HostnamePage.tsx:95
+#, fuzzy
 msgid ""
-"This hostname is dynamic and may change after a reboot or network update."
+"This hostname is dynamic and may change after a reboot or network update, as "
+"configured by the local network administrator."
 msgstr ""
 "Aquest nom d'amfitrió és dinàmic i pot canviar després d'un reinici o una "
 "actualització de xarxa."
 
-#: src/components/system/HostnamePage.tsx:107
+#: src/components/system/HostnamePage.tsx:103
+msgid "Check the following before continuing"
+msgstr ""
+
+#: src/components/system/HostnamePage.tsx:110
 msgid "Use static hostname"
 msgstr "Usa un nom d'amfitrió estàtic"
 
-#: src/components/system/HostnamePage.tsx:109
+#: src/components/system/HostnamePage.tsx:112
+#, fuzzy
 msgid ""
-"Allows setting a permanent hostname that won’t change with network updates."
+"For setting a permanent hostname that won’t change with network updates."
 msgstr ""
 "Permet establir un nom d'amfitrió permanent que no canviarà amb les "
 "actualitzacions de xarxa."
 
-#: src/components/system/HostnamePage.tsx:120
+#: src/components/system/HostnamePage.tsx:123
 msgid "Static hostname"
 msgstr "Nom d'amfitrió estàtic"
 
@@ -2923,6 +2918,23 @@ msgstr "Nom d'amfitrió"
 #: src/routes/storage.tsx:85
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#~ msgid "Please provide a hostname"
+#~ msgstr "Si us plau, proporcioneu un nom d'amfitrió."
+
+#, c-format
+#~ msgid "static"
+#~ msgstr "estàtic"
+
+#, c-format
+#~ msgid "transient"
+#~ msgstr "transitori"
+
+#~ msgid ""
+#~ "This hostname is permanent and will not change unless manually updated."
+#~ msgstr ""
+#~ "Aquest nom d'amfitrió és permanent i no canviarà tret que s'actualitzi "
+#~ "manualment."
 
 #~ msgid "Product registration form"
 #~ msgstr "Formulari de registre del producte"

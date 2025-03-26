@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-25 02:49+0000\n"
+"POT-Creation-Date: 2025-03-26 02:48+0000\n"
 "PO-Revision-Date: 2025-03-22 16:56+0000\n"
 "Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
 "Language-Team: German <https://l10n.opensuse.org/projects/agama/agama-web/de/"
@@ -151,7 +151,7 @@ msgstr "Kann bei der Ferninstallation nicht geändert werden"
 #: src/components/core/InstallerOptions.tsx:120
 #: src/components/core/Page.tsx:266
 #: src/components/storage/dasd/DASDTable.tsx:104
-#: src/components/system/HostnamePage.tsx:130
+#: src/components/system/HostnamePage.tsx:133
 msgid "Accept"
 msgstr "Annehmen"
 
@@ -2774,33 +2774,27 @@ msgid "zFCP"
 msgstr "zFCP"
 
 #: src/components/system/HostnamePage.tsx:61
-msgid "Please provide a hostname"
-msgstr "Bitte einen Hostnamen angeben"
+#, fuzzy
+msgid "Enter a hostname."
+msgstr "Statischer Hostname"
 
-#: src/components/system/HostnamePage.tsx:76
-#, c-format
-msgid "Using %1$s hostname: %2$s"
-msgstr ""
+#. TRANSLATORS: The title for a notification shown when the static hostname
+#. has not been set. "transient" refers to the hostname mode, and %s will be
+#. replaced with the current hostname value.
+#: src/components/system/HostnamePage.tsx:75
+#, fuzzy, c-format
+msgid "Using transient hostname: %s"
+msgstr "Statischen Hostnamen verwenden"
 
-#: src/components/system/HostnamePage.tsx:77
-#, c-format
-msgid "static"
-msgstr "statisch"
-
-#: src/components/system/HostnamePage.tsx:77
-#, c-format
-msgid "transient"
-msgstr "transient"
-
-#: src/components/system/HostnamePage.tsx:84
+#: src/components/system/HostnamePage.tsx:80
 msgid "Hostname settings"
 msgstr "Hostnamen-Einstellungen"
 
-#: src/components/system/HostnamePage.tsx:89
+#: src/components/system/HostnamePage.tsx:85
 msgid "Product is already registered"
 msgstr "Produkt ist bereits registriert"
 
-#: src/components/system/HostnamePage.tsx:91
+#: src/components/system/HostnamePage.tsx:87
 msgid ""
 "Updating the hostname now or later will not change the currently registered "
 "hostname."
@@ -2808,31 +2802,32 @@ msgstr ""
 "Wenn Sie den Hostnamen jetzt oder später aktualisieren, wird der aktuell "
 "registrierte Hostname nicht geändert."
 
-#: src/components/system/HostnamePage.tsx:98
-msgid "This hostname is permanent and will not change unless manually updated."
-msgstr ""
-"Dieser Hostname ist dauerhaft und wird nicht geändert, es sei denn, er wird "
-"manuell aktualisiert."
-
-#: src/components/system/HostnamePage.tsx:99
+#: src/components/system/HostnamePage.tsx:95
+#, fuzzy
 msgid ""
-"This hostname is dynamic and may change after a reboot or network update."
+"This hostname is dynamic and may change after a reboot or network update, as "
+"configured by the local network administrator."
 msgstr ""
 "Dieser Hostname ist dynamisch und kann sich nach einem Neustart oder einer "
 "Netzwerkaktualisierung ändern."
 
-#: src/components/system/HostnamePage.tsx:107
+#: src/components/system/HostnamePage.tsx:103
+msgid "Check the following before continuing"
+msgstr ""
+
+#: src/components/system/HostnamePage.tsx:110
 msgid "Use static hostname"
 msgstr "Statischen Hostnamen verwenden"
 
-#: src/components/system/HostnamePage.tsx:109
+#: src/components/system/HostnamePage.tsx:112
+#, fuzzy
 msgid ""
-"Allows setting a permanent hostname that won’t change with network updates."
+"For setting a permanent hostname that won’t change with network updates."
 msgstr ""
 "Ermöglicht das Festlegen eines permanenten Hostnamens, der sich bei "
 "Netzwerkaktualisierungen nicht ändert."
 
-#: src/components/system/HostnamePage.tsx:120
+#: src/components/system/HostnamePage.tsx:123
 msgid "Static hostname"
 msgstr "Statischer Hostname"
 
@@ -2956,6 +2951,23 @@ msgstr "Hostname"
 #: src/routes/storage.tsx:85
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#~ msgid "Please provide a hostname"
+#~ msgstr "Bitte einen Hostnamen angeben"
+
+#, c-format
+#~ msgid "static"
+#~ msgstr "statisch"
+
+#, c-format
+#~ msgid "transient"
+#~ msgstr "transient"
+
+#~ msgid ""
+#~ "This hostname is permanent and will not change unless manually updated."
+#~ msgstr ""
+#~ "Dieser Hostname ist dauerhaft und wird nicht geändert, es sei denn, er "
+#~ "wird manuell aktualisiert."
 
 #~ msgid "Product registration form"
 #~ msgstr "Formular zur Produktregistrierung"

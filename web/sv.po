@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-25 02:49+0000\n"
+"POT-Creation-Date: 2025-03-26 02:48+0000\n"
 "PO-Revision-Date: 2025-03-18 06:56+0000\n"
 "Last-Translator: Luna  Jernberg <bittin@opensuse.org>\n"
 "Language-Team: Swedish <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -148,7 +148,7 @@ msgstr "Kan inte ändras i fjärrinstallation"
 #: src/components/core/InstallerOptions.tsx:120
 #: src/components/core/Page.tsx:266
 #: src/components/storage/dasd/DASDTable.tsx:104
-#: src/components/system/HostnamePage.tsx:130
+#: src/components/system/HostnamePage.tsx:133
 msgid "Accept"
 msgstr "Acceptera"
 
@@ -2729,33 +2729,27 @@ msgid "zFCP"
 msgstr "zFCP"
 
 #: src/components/system/HostnamePage.tsx:61
-msgid "Please provide a hostname"
-msgstr "Vänligen ange ett värdnamn"
+#, fuzzy
+msgid "Enter a hostname."
+msgstr "Statiskt värdnamn"
 
-#: src/components/system/HostnamePage.tsx:76
-#, c-format
-msgid "Using %1$s hostname: %2$s"
+#. TRANSLATORS: The title for a notification shown when the static hostname
+#. has not been set. "transient" refers to the hostname mode, and %s will be
+#. replaced with the current hostname value.
+#: src/components/system/HostnamePage.tsx:75
+#, fuzzy, c-format
+msgid "Using transient hostname: %s"
 msgstr "Använder %1$s värdnamn: %2$s"
 
-#: src/components/system/HostnamePage.tsx:77
-#, c-format
-msgid "static"
-msgstr "statisk"
-
-#: src/components/system/HostnamePage.tsx:77
-#, c-format
-msgid "transient"
-msgstr "transient"
-
-#: src/components/system/HostnamePage.tsx:84
+#: src/components/system/HostnamePage.tsx:80
 msgid "Hostname settings"
 msgstr "Värdnamnsinställningar"
 
-#: src/components/system/HostnamePage.tsx:89
+#: src/components/system/HostnamePage.tsx:85
 msgid "Product is already registered"
 msgstr "Produkten är redan registrerad"
 
-#: src/components/system/HostnamePage.tsx:91
+#: src/components/system/HostnamePage.tsx:87
 msgid ""
 "Updating the hostname now or later will not change the currently registered "
 "hostname."
@@ -2763,31 +2757,32 @@ msgstr ""
 "Att uppdatera värdnamnet nu eller senare kommer inte att ändra det för "
 "närvarande registrerade värdnamnet."
 
-#: src/components/system/HostnamePage.tsx:98
-msgid "This hostname is permanent and will not change unless manually updated."
-msgstr ""
-"Detta värdnamn är permanent och kommer inte att ändras om det inte "
-"uppdateras manuellt."
-
-#: src/components/system/HostnamePage.tsx:99
+#: src/components/system/HostnamePage.tsx:95
+#, fuzzy
 msgid ""
-"This hostname is dynamic and may change after a reboot or network update."
+"This hostname is dynamic and may change after a reboot or network update, as "
+"configured by the local network administrator."
 msgstr ""
 "Detta värdnamn är dynamiskt och kan ändras efter en omstart eller "
 "nätverksuppdatering."
 
-#: src/components/system/HostnamePage.tsx:107
+#: src/components/system/HostnamePage.tsx:103
+msgid "Check the following before continuing"
+msgstr ""
+
+#: src/components/system/HostnamePage.tsx:110
 msgid "Use static hostname"
 msgstr "Använd statiskt värdnamn"
 
-#: src/components/system/HostnamePage.tsx:109
+#: src/components/system/HostnamePage.tsx:112
+#, fuzzy
 msgid ""
-"Allows setting a permanent hostname that won’t change with network updates."
+"For setting a permanent hostname that won’t change with network updates."
 msgstr ""
 "Tillåter inställning av ett permanent värdnamn som inte ändras med "
 "nätverksuppdateringar."
 
-#: src/components/system/HostnamePage.tsx:120
+#: src/components/system/HostnamePage.tsx:123
 msgid "Static hostname"
 msgstr "Statiskt värdnamn"
 
@@ -2911,6 +2906,23 @@ msgstr "Värdnamn"
 #: src/routes/storage.tsx:85
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#~ msgid "Please provide a hostname"
+#~ msgstr "Vänligen ange ett värdnamn"
+
+#, c-format
+#~ msgid "static"
+#~ msgstr "statisk"
+
+#, c-format
+#~ msgid "transient"
+#~ msgstr "transient"
+
+#~ msgid ""
+#~ "This hostname is permanent and will not change unless manually updated."
+#~ msgstr ""
+#~ "Detta värdnamn är permanent och kommer inte att ändras om det inte "
+#~ "uppdateras manuellt."
 
 #~ msgid "Product registration form"
 #~ msgstr "Produktregistreringsformulär"
