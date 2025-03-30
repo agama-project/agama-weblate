@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-26 02:48+0000\n"
+"POT-Creation-Date: 2025-03-30 02:55+0000\n"
 "PO-Revision-Date: 2025-01-07 17:50+0000\n"
 "Last-Translator: Aleksey Fedorov <Aleksejfedorov963@gmail.com>\n"
 "Language-Team: Russian <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -47,7 +47,7 @@ msgstr "Продолжить"
 
 #. TRANSLATORS: button label
 #: src/components/core/InstallButton.tsx:62 src/components/core/Page.tsx:234
-#: src/components/core/Popup.tsx:144
+#: src/components/core/Popup.tsx:140
 #: src/components/network/WifiConnectionForm.tsx:153
 #: src/components/product/ProductSelectionPage.tsx:99
 msgid "Cancel"
@@ -148,7 +148,7 @@ msgstr "Нельзя изменить при удаленной установк
 #: src/components/core/InstallerOptions.tsx:120
 #: src/components/core/Page.tsx:266
 #: src/components/storage/dasd/DASDTable.tsx:104
-#: src/components/system/HostnamePage.tsx:133
+#: src/components/system/HostnamePage.tsx:131
 msgid "Accept"
 msgstr "Подтвердить"
 
@@ -165,7 +165,7 @@ msgstr "Аутентификация root"
 
 #: src/components/core/IssuesDrawer.tsx:50
 #: src/components/overview/StorageSection.tsx:111
-#: src/components/storage/ProposalPage.tsx:250 src/routes/storage.tsx:42
+#: src/components/storage/ProposalPage.tsx:250 src/routes/storage.tsx:44
 msgid "Storage"
 msgstr "Хранилище"
 
@@ -197,38 +197,34 @@ msgstr ""
 msgid "Search"
 msgstr "Поиск"
 
-#: src/components/core/LoginPage.tsx:61
+#: src/components/core/LoginPage.tsx:64
 msgid "Could not log in. Please, make sure that the password is correct."
 msgstr ""
 "Не удалось войти в систему. Пожалуйста, убедитесь, что пароль введен "
 "правильно."
 
-#: src/components/core/LoginPage.tsx:63
+#: src/components/core/LoginPage.tsx:66
 msgid "Could not authenticate against the server, please check it."
 msgstr ""
 "Не удалось пройти аутентификацию на сервере, пожалуйста, проверьте его."
 
 #. TRANSLATORS: Title for a form to provide the password for the root user. %s
 #. will be replaced by "root"
-#: src/components/core/LoginPage.tsx:71
+#: src/components/core/LoginPage.tsx:74
 #, c-format
 msgid "Log in as %s"
 msgstr "Вход как %s"
 
-#: src/components/core/LoginPage.tsx:77
+#: src/components/core/LoginPage.tsx:80
 msgid "The installer requires [root] user privileges."
 msgstr "Программа установки требует привилегий пользователя [root]."
 
 #: src/components/core/LoginPage.tsx:107
-msgid "Please, provide its password to log in to the system."
-msgstr "Пожалуйста, укажите его пароль для входа в систему."
-
-#: src/components/core/LoginPage.tsx:111
 msgid "Login form"
 msgstr "Форма входа"
 
 #. TRANSLATORS: field label
-#: src/components/core/LoginPage.tsx:112
+#: src/components/core/LoginPage.tsx:110
 #: src/components/core/PasswordAndConfirmationInput.tsx:96
 #: src/components/network/WifiConnectionForm.tsx:140
 #: src/components/questions/QuestionWithPassword.tsx:59
@@ -238,15 +234,21 @@ msgstr "Форма входа"
 msgid "Password"
 msgstr "Пароль"
 
-#: src/components/core/LoginPage.tsx:117
+#: src/components/core/LoginPage.tsx:115
 msgid "Password input"
 msgstr "Ввод пароля"
 
-#: src/components/core/LoginPage.tsx:125
+#: src/components/core/LoginPage.tsx:124
+msgid "Please, provide its password to log in to the system."
+msgstr "Пожалуйста, укажите его пароль для входа в систему."
+
+#: src/components/core/LoginPage.tsx:132
 msgid "Log in"
 msgstr "Вход"
 
-#: src/components/core/Page.tsx:255 src/components/storage/ISCSIPage.tsx:48
+#: src/components/core/Page.tsx:255
+#: src/components/storage/ConfigureDeviceMenu.tsx:90
+#: src/components/storage/ISCSIPage.tsx:48
 #: src/components/storage/dasd/DASDPage.tsx:54
 #: src/components/storage/zfcp/ZFCPPage.tsx:198
 msgid "Back"
@@ -264,12 +266,12 @@ msgstr "Подтверждение пароля"
 msgid "Password visibility button"
 msgstr "Кнопка отображения пароля"
 
-#: src/components/core/Popup.tsx:108
+#: src/components/core/Popup.tsx:104
 msgid "Confirm"
 msgstr "Подтвердить"
 
 #. TRANSLATORS: progress message
-#: src/components/core/Popup.tsx:215
+#: src/components/core/Popup.tsx:211
 msgid "Loading data..."
 msgstr "Загрузка данных..."
 
@@ -342,7 +344,7 @@ msgstr "Локализация"
 #: src/components/l10n/L10nPage.tsx:77
 #: src/components/network/NetworkPage.tsx:64
 #: src/components/users/FirstUserForm.tsx:234
-#: src/components/users/RootUserForm.tsx:167
+#: src/components/users/RootUserForm.tsx:163
 msgid "Change"
 msgstr "Изменить"
 
@@ -441,6 +443,7 @@ msgstr "Список данных адресов"
 #. TRANSLATORS: table header
 #: src/components/network/ConnectionsTable.tsx:74
 #: src/components/network/ConnectionsTable.tsx:103
+#: src/components/storage/LvmPage.tsx:154
 #: src/components/storage/iscsi/InitiatorForm.tsx:53
 #: src/components/storage/iscsi/InitiatorPresenter.tsx:54
 #: src/components/storage/iscsi/InitiatorPresenter.tsx:73
@@ -525,12 +528,12 @@ msgstr "Для выбранного режима необходимо предо
 
 #: src/components/network/IpSettingsForm.tsx:158
 #: src/components/network/WifiConnectionForm.tsx:109
-#: src/components/storage/EncryptionSettingsPage.tsx:117
+#: src/components/storage/EncryptionSettingsPage.tsx:109
 #: src/components/storage/iscsi/DiscoverForm.tsx:98
 #: src/components/storage/iscsi/LoginForm.jsx:70
 #: src/components/storage/zfcp/ZFCPDiskForm.tsx:112
 #: src/components/users/FirstUserForm.tsx:196
-#: src/components/users/RootUserForm.tsx:145
+#: src/components/users/RootUserForm.tsx:143
 msgid "Something went wrong"
 msgstr "Что-то пошло не так"
 
@@ -611,7 +614,8 @@ msgstr "Сеть"
 
 #. TRANSLATORS: WiFi authentication mode
 #: src/components/network/WifiConnectionForm.tsx:49
-#: src/components/storage/PartitionPage.tsx:1006
+#: src/components/storage/LogicalVolumePage.tsx:624
+#: src/components/storage/PartitionPage.tsx:748
 #: src/components/storage/iscsi/InitiatorPresenter.tsx:60
 msgid "None"
 msgstr "Отсутствует"
@@ -1040,18 +1044,163 @@ msgstr ""
 "Это пространство включает в себя базовую систему и выбранные шаблоны "
 "программного обеспечения, если таковые имеются."
 
-#: src/components/storage/AddExistingDeviceMenu.tsx:64
+#: src/components/storage/AutoSizeText.tsx:33
 #, fuzzy
-msgid "Select another disk to define partitions"
-msgstr "Выберите, что делать с каждым разделом."
+msgid "logical volume"
+msgstr "Логический том в системе LVM"
 
-#: src/components/storage/AddExistingDeviceMenu.tsx:79
+#: src/components/storage/AutoSizeText.tsx:33
 #, fuzzy
-msgid "Use additional disk toggle"
-msgstr "Показ настроек"
+msgid "partition"
+msgstr "Раздел на %s"
 
-#: src/components/storage/AddExistingDeviceMenu.tsx:82
-msgid "Use additional disk"
+#. TRANSLATORS: %1s$ is a size with units (eg. 3 GiB) and %1$s is a device type (eg. partition)
+#: src/components/storage/AutoSizeText.tsx:46
+#, fuzzy
+msgid "A generic size of %s will be used for the new %2$s"
+msgstr "Выбранное устройство будет отформатировано в файловую систему %s."
+
+#. TRANSLATORS: %1s$ and %2s$ are sizes with units (eg. 3 GiB) and %3$s is a device type (eg. partition)
+#: src/components/storage/AutoSizeText.tsx:54
+#, c-format
+msgid ""
+"A generic size range between %1$s and %2$s will be used for the new %3$s"
+msgstr ""
+
+#. TRANSLATORS: %1s$ is a size with units (eg. 3 GiB) and %1$s is a device type (eg. partition)
+#: src/components/storage/AutoSizeText.tsx:63
+#, c-format
+msgid "A generic minimum size of %1$s will be used for the new %2$s"
+msgstr ""
+
+#. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
+#: src/components/storage/AutoSizeText.tsx:80
+#, fuzzy, c-format
+msgid "A %1$s of %2$s will be created for %3$s"
+msgstr "Будет создан пользователь %s"
+
+#. TRANSLATORS: %1$s is a device type (eg. partition), %2$s and %3$s are sizes with units (10 GiB), and %4$s is a mount path (/home)
+#: src/components/storage/AutoSizeText.tsx:89
+#, c-format
+msgid "A %1$s with a size between %2$s and %3$s will be created for %4$s"
+msgstr ""
+
+#. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
+#: src/components/storage/AutoSizeText.tsx:99
+#, c-format
+msgid "A %1$s of at least %2$s will be created for %3$s"
+msgstr ""
+
+#. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
+#: src/components/storage/AutoSizeText.tsx:117
+msgid ""
+"Based on the amount of RAM in the system, a %1s$ of %2$s will be created for "
+"%3$s"
+msgstr ""
+
+#: src/components/storage/AutoSizeText.tsx:127
+msgid ""
+"Based on the amount of RAM in the system, a %1s$ with a size between %2$s "
+"and %3$s will be created for %4$s"
+msgstr ""
+
+#. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
+#: src/components/storage/AutoSizeText.tsx:138
+msgid ""
+"Based on the amount of RAM in the system, a %1s$ of at least %2$s will be "
+"created for %3$s"
+msgstr ""
+
+#: src/components/storage/AutoSizeText.tsx:167
+#, c-format
+msgid ""
+"The size range for %1$s will be dynamically adjusted based on the amount of "
+"RAM in the system, the usage of Btrfs snapshots and the presence of a "
+"separate file system for %2$s."
+msgstr ""
+
+#: src/components/storage/AutoSizeText.tsx:178
+#, c-format
+msgid ""
+"The size range for %1$s will be dynamically adjusted based on the amount of "
+"RAM in the system, the usage of Btrfs snapshots and the presence of separate "
+"file systems for %2$s."
+msgstr ""
+
+#: src/components/storage/AutoSizeText.tsx:188
+#, c-format
+msgid ""
+"The size range for %s will be dynamically adjusted based on the amount of "
+"RAM in the system and the usage of Btrfs snapshots."
+msgstr ""
+
+#: src/components/storage/AutoSizeText.tsx:199
+#, c-format
+msgid ""
+"The size range for %1$s will be dynamically adjusted based on the amount of "
+"RAM in the system and the presence of a separate file system for %2$s."
+msgstr ""
+
+#: src/components/storage/AutoSizeText.tsx:209
+#, c-format
+msgid ""
+"The size range for %1$s will be dynamically adjusted based on the amount of "
+"RAM in the system and the presence of separate file systems for %2$s."
+msgstr ""
+
+#: src/components/storage/AutoSizeText.tsx:221
+#, c-format
+msgid ""
+"The size range for %1$s will be dynamically adjusted based on the usage of "
+"Btrfs snapshots and the presence of a separate file system for %2$s."
+msgstr ""
+
+#: src/components/storage/AutoSizeText.tsx:232
+#, c-format
+msgid ""
+"The size range for %1$s will be dynamically adjusted based on the usage of "
+"Btrfs snapshots and the presence of separate file systems for %2$s."
+msgstr ""
+
+#: src/components/storage/AutoSizeText.tsx:242
+#, c-format
+msgid ""
+"The size range for %s will be dynamically adjusted based on the usage of "
+"Btrfs snapshots."
+msgstr ""
+
+#: src/components/storage/AutoSizeText.tsx:252
+#, c-format
+msgid ""
+"The size range for %1$s will be dynamically adjusted based on the presence "
+"of a separate file system for %2$s."
+msgstr ""
+
+#: src/components/storage/AutoSizeText.tsx:262
+#, c-format
+msgid ""
+"The size range for %1$s will be dynamically adjusted based on the presence "
+"of separate file systems for %2$s."
+msgstr ""
+
+#. TRANSLATORS: %1$s is a device type (eg. partition) and %2s is a size with units (eg. 10 GiB)
+#: src/components/storage/AutoSizeText.tsx:274
+#, c-format
+msgid "The current configuration will result in a %1$s of %2$s."
+msgstr ""
+
+#. TRANSLATORS: %1$s is a device type (eg. partition) %2$s is a min size, %3$s is the max size
+#: src/components/storage/AutoSizeText.tsx:282
+#, c-format
+msgid ""
+"The current configuration will result in a %1$s with a size between %2$s and "
+"%3$s."
+msgstr ""
+
+#. TRANSLATORS: %1$s is a device type (eg. partition) and %2$s is a size with units (eg. 10 GiB)
+#: src/components/storage/AutoSizeText.tsx:291
+#, c-format
+msgid "The current configuration will result in a %1$s of at least %2$s."
 msgstr ""
 
 #: src/components/storage/BootSelection.tsx:111
@@ -1106,15 +1255,33 @@ msgstr ""
 "Ни один раздел не будет автоматически настроен для загрузки. Используйте с "
 "осторожностью."
 
+#: src/components/storage/ConfigEditor.tsx:33
+#, fuzzy
+msgid "No devices configured yet"
+msgstr "Устройство ещё не выбрано"
+
+#: src/components/storage/ConfigEditor.tsx:36
+#, c-format
+msgid ""
+"Use actions below to set up your devices or click %s to start from scratch "
+"with the default configuration."
+msgstr ""
+
+#. TRANSLATORS: label for a button
+#: src/components/storage/ConfigEditor.tsx:47
+#, fuzzy
+msgid "reset to defaults"
+msgstr "Сбросить по умолчанию"
+
 #: src/components/storage/ConfigEditorMenu.tsx:57
 #, fuzzy
-msgid "More options toggle"
+msgid "Other options toggle"
 msgstr "Показ настроек"
 
 #: src/components/storage/ConfigEditorMenu.tsx:60
 #, fuzzy
-msgid "More options"
-msgstr "Общие параметры"
+msgid "Other options"
+msgstr "Параметры установщика"
 
 #: src/components/storage/ConfigEditorMenu.tsx:68
 #, fuzzy
@@ -1164,62 +1331,99 @@ msgstr "Форматирование устройств DASD"
 msgid "Configure DASD"
 msgstr "настроено"
 
-#: src/components/storage/DriveEditor.tsx:78
+#: src/components/storage/ConfigureDeviceMenu.tsx:66
+msgid "Already using all available disks"
+msgstr ""
+
+#: src/components/storage/ConfigureDeviceMenu.tsx:76
+#, fuzzy
+msgid "Start configuring a basic installation"
+msgstr "Раздел на диске для установки"
+
+#: src/components/storage/ConfigureDeviceMenu.tsx:78
+#, fuzzy
+msgid "Select another disk to define partitions"
+msgstr "Выберите, что делать с каждым разделом."
+
+#: src/components/storage/ConfigureDeviceMenu.tsx:79
+#, fuzzy
+msgid "Select a disk to define partitions"
+msgstr "Выберите, что делать с каждым разделом."
+
+#: src/components/storage/ConfigureDeviceMenu.tsx:197
+msgid "Define a new LVM on top of one or several disks"
+msgstr ""
+
+#: src/components/storage/ConfigureDeviceMenu.tsx:198
+msgid "Define a new LVM on the disk"
+msgstr ""
+
+#: src/components/storage/ConfigureDeviceMenu.tsx:207
+#, fuzzy
+msgid "More devices"
+msgstr "Отформатировать устройство"
+
+#: src/components/storage/ConfigureDeviceMenu.tsx:236
+#, fuzzy
+msgid "Add LVM volume group"
+msgstr "новую группу томов LVM"
+
+#: src/components/storage/DriveEditor.tsx:61
 #, fuzzy
 msgid "Choose what to with current content"
 msgstr "удаление текущего содержимого"
 
-#: src/components/storage/DriveEditor.tsx:174
+#: src/components/storage/DriveEditor.tsx:141
 #, fuzzy
 msgid "This uses existing partitions at the device"
 msgstr "Уменьшение существующих разделов"
 
-#: src/components/storage/DriveEditor.tsx:183
+#: src/components/storage/DriveEditor.tsx:150
 msgid ""
 "This device will contain the configured LVM groups and any partition needed "
 "to boot"
 msgstr ""
 
-#: src/components/storage/DriveEditor.tsx:186
+#: src/components/storage/DriveEditor.tsx:153
 msgid "This device will contain the configured LVM groups"
 msgstr ""
 
 #. TRANSLATORS: %s is the name of the LVM
-#: src/components/storage/DriveEditor.tsx:191
+#: src/components/storage/DriveEditor.tsx:158
 #, c-format
 msgid ""
 "This device will contain the LVM group '%s' and any partition needed to boot"
 msgstr ""
 
 #. TRANSLATORS: %s is the name of the LVM
-#: src/components/storage/DriveEditor.tsx:197
+#: src/components/storage/DriveEditor.tsx:164
 #, c-format
 msgid "This device will contain the LVM group '%s'"
 msgstr ""
 
-#: src/components/storage/DriveEditor.tsx:202
+#: src/components/storage/DriveEditor.tsx:169
 #, fuzzy
 msgid "This device will contain any partition needed for booting"
 msgstr "Установка не будет настраивать разделы для загрузки."
 
-#: src/components/storage/DriveEditor.tsx:206
+#: src/components/storage/DriveEditor.tsx:173
 msgid "Select a device to configure"
 msgstr ""
 
-#: src/components/storage/DriveEditor.tsx:210
+#: src/components/storage/DriveEditor.tsx:177
 #, fuzzy
 msgid "Select a device to install the system"
 msgstr "Устройство для установки системы"
 
 #. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case).
-#: src/components/storage/DriveEditor.tsx:220
+#: src/components/storage/DriveEditor.tsx:187
 #, fuzzy, c-format
 msgid "Select a device to create %s"
 msgstr "Выберите, на каком устройстве разместить файловую систему"
 
 #. TRANSLATORS: %s is the name of the disk (eg. sda)
-#: src/components/storage/DriveEditor.tsx:237
+#: src/components/storage/DriveEditor.tsx:204
 #, c-format
 msgid ""
 "%s will still contain the configured LVM groups and any partition needed to "
@@ -1227,149 +1431,149 @@ msgid ""
 msgstr ""
 
 #. TRANSLATORS: %s is the name of the disk (eg. sda)
-#: src/components/storage/DriveEditor.tsx:243
+#: src/components/storage/DriveEditor.tsx:210
 #, c-format
 msgid "The configured LVM groups will remain at %s"
 msgstr ""
 
 #. TRANSLATORS: %1$s is the name of the disk (eg. sda) and %2$s the name of the LVM
-#: src/components/storage/DriveEditor.tsx:249
+#: src/components/storage/DriveEditor.tsx:216
 #, c-format
 msgid ""
 "%1$s will still contain the LVM group '%2$s' and any partition needed to boot"
 msgstr ""
 
 #. TRANSLATORS: %1$s is the name of the LVM and %2$s the name of the disk (eg. sda)
-#: src/components/storage/DriveEditor.tsx:257
+#: src/components/storage/DriveEditor.tsx:224
 #, c-format
 msgid "The LVM group '%1$s' will remain at %2$s"
 msgstr ""
 
 #. TRANSLATORS: %s is the name of the disk (eg. sda)
-#: src/components/storage/DriveEditor.tsx:265
+#: src/components/storage/DriveEditor.tsx:232
 #, fuzzy, c-format
 msgid "Partitions needed for booting will remain at %s"
 msgstr "Разделы для загрузки"
 
-#: src/components/storage/DriveEditor.tsx:269
+#: src/components/storage/DriveEditor.tsx:236
 #, fuzzy
 msgid "Partitions needed for booting will also be adapted"
 msgstr "Разделы для загрузки"
 
-#: src/components/storage/DriveEditor.tsx:307
+#: src/components/storage/DriveEditor.tsx:274
 msgid "The configured partitions will be created as logical volumes"
 msgstr ""
 
-#: src/components/storage/DriveEditor.tsx:310
+#: src/components/storage/DriveEditor.tsx:277
 #, fuzzy
 msgid "New LVM volume group"
 msgstr "новую группу томов LVM"
 
-#: src/components/storage/DriveEditor.tsx:403
+#: src/components/storage/DriveEditor.tsx:370
 #, fuzzy
 msgid "Remove the configuration for this device"
 msgstr "конфигурация моментальных снимков"
 
-#: src/components/storage/DriveEditor.tsx:406
+#: src/components/storage/DriveEditor.tsx:373
 #, fuzzy
 msgid "Do not use"
 msgstr "Не настраивать"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:465
+#: src/components/storage/DriveEditor.tsx:407
 #, c-format
 msgid "Use %s to install, host LVM and boot"
 msgstr ""
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:468
+#: src/components/storage/DriveEditor.tsx:410
 #, c-format
 msgid "Use %s to install and host LVM"
 msgstr ""
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:473
+#: src/components/storage/DriveEditor.tsx:415
 #, c-format
 msgid "Use %s to install and boot"
 msgstr ""
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:476
+#: src/components/storage/DriveEditor.tsx:418
 #, c-format
 msgid "Use %s to install"
 msgstr ""
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:483
+#: src/components/storage/DriveEditor.tsx:425
 #, c-format
 msgid "Use %s for LVM, additional partitions and booting"
 msgstr ""
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:486
+#: src/components/storage/DriveEditor.tsx:428
 #, c-format
 msgid "Use %s for LVM and additional partitions"
 msgstr ""
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:491
+#: src/components/storage/DriveEditor.tsx:433
 #, fuzzy, c-format
 msgid "Use %s for additional partitions and booting"
 msgstr "Не настраивать разделы для загрузки"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:494
+#: src/components/storage/DriveEditor.tsx:436
 #, fuzzy, c-format
 msgid "Use %s for additional partitions"
 msgstr "уменьшение разделов"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:500
+#: src/components/storage/DriveEditor.tsx:442
 #, c-format
 msgid "Use %s to host LVM and boot"
 msgstr ""
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:503
+#: src/components/storage/DriveEditor.tsx:445
 #, c-format
 msgid "Use %s to host LVM"
 msgstr ""
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:508
-#, c-format
-msgid "Use %s to boot"
-msgstr ""
+#: src/components/storage/DriveEditor.tsx:450
+#, fuzzy, c-format
+msgid "Use %s to configure boot partitions"
+msgstr "уменьшение разделов"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:511
+#: src/components/storage/DriveEditor.tsx:453
 #, c-format
 msgid "Use %s"
 msgstr ""
 
 #. TRANSLATORS: a disk drive
-#: src/components/storage/DriveEditor.tsx:516
+#: src/components/storage/DriveEditor.tsx:456
 msgid "Drive"
 msgstr ""
 
-#: src/components/storage/DriveEditor.tsx:548
+#: src/components/storage/DriveEditor.tsx:470
 #, fuzzy
 msgid "No additional partitions will be created"
 msgstr "Никакого дополнительного программного обеспечения выбрано не было."
 
-#: src/components/storage/DriveEditor.tsx:559
-#: src/components/storage/DriveEditor.tsx:663
+#: src/components/storage/DriveEditor.tsx:477
+#: src/components/storage/DriveEditor.tsx:528
 msgid "Add another partition or mount an existing one"
 msgstr ""
 
-#: src/components/storage/DriveEditor.tsx:566
-#: src/components/storage/DriveEditor.tsx:669
+#: src/components/storage/DriveEditor.tsx:484
+#: src/components/storage/DriveEditor.tsx:534
 #, fuzzy
 msgid "Add or use partition"
 msgstr "Создать новый раздел"
 
-#: src/components/storage/DriveEditor.tsx:682
-#: src/components/storage/DriveEditor.tsx:685
+#: src/components/storage/DriveEditor.tsx:544
+#: src/components/storage/DriveEditor.tsx:547
 #, fuzzy
 msgid "Partitions"
 msgstr "Раздел на %s"
@@ -1403,19 +1607,20 @@ msgstr ""
 "системные файлы."
 
 #: src/components/storage/EncryptionSettingsPage.tsx:73
-#: src/components/users/RootUserForm.tsx:105
+#: src/components/users/RootUserForm.tsx:103
 #, fuzzy
 msgid "Password is empty."
 msgstr "Ввод пароля"
 
-#: src/components/storage/EncryptionSettingsPage.tsx:90
+#. TRANSLATORS: "Trusted Platform Module" is the name of the technology and TPM its abbreviation
+#: src/components/storage/EncryptionSettingsPage.tsx:89
 msgid ""
 "Use the Trusted Platform Module (TPM) to decrypt automatically on each boot"
 msgstr ""
 "Используйте Доверенный платформенный модуль (TPM) для автоматического "
 "дешифрования при каждой загрузке"
 
-#: src/components/storage/EncryptionSettingsPage.tsx:95
+#: src/components/storage/EncryptionSettingsPage.tsx:93
 msgid ""
 "The password will not be needed to boot and access the data if the TPM can "
 "verify the integrity of the system. TPM sealing requires the new system to "
@@ -1425,12 +1630,16 @@ msgstr ""
 "проверить целостность системы. Запечатывание TPM требует непосредственной "
 "загрузки новой системы при первом запуске."
 
-#: src/components/storage/EncryptionSettingsPage.tsx:105
+#: src/components/storage/EncryptionSettingsPage.tsx:103
 #, fuzzy
 msgid "Encryption settings"
 msgstr "Шифрование"
 
-#: src/components/storage/EncryptionSettingsPage.tsx:108
+#: src/components/storage/EncryptionSettingsPage.tsx:117
+msgid "Encrypt the system"
+msgstr "Зашифровать систему"
+
+#: src/components/storage/EncryptionSettingsPage.tsx:119
 #, fuzzy
 msgid ""
 "Full Disk Encryption (FDE) allows to protect the information stored at the "
@@ -1439,408 +1648,378 @@ msgstr ""
 "Полнодисковое шифрование (FDE) позволяет защитить информацию, хранящуюся на "
 "устройстве, включая данные, программы и системные файлы."
 
-#: src/components/storage/EncryptionSettingsPage.tsx:124
-msgid "Encrypt the system"
-msgstr "Зашифровать систему"
-
-#: src/components/storage/ISCSIPage.tsx:34 src/routes/storage.tsx:71
+#: src/components/storage/ISCSIPage.tsx:34 src/routes/storage.tsx:89
 msgid "iSCSI"
 msgstr "iSCSI"
 
-#: src/components/storage/PartitionPage.tsx:305
+#: src/components/storage/LogicalVolumePage.tsx:251
+#: src/components/storage/PartitionPage.tsx:306
 msgid "Select or enter a valid mount point"
 msgstr ""
 
-#: src/components/storage/PartitionPage.tsx:315
+#: src/components/storage/LogicalVolumePage.tsx:261
+#: src/components/storage/PartitionPage.tsx:316
 msgid ""
 "Select or enter a mount point that is not already assigned to another device"
 msgstr ""
 
-#: src/components/storage/PartitionPage.tsx:343
+#: src/components/storage/LogicalVolumePage.tsx:272
+#, fuzzy
+msgid "Enter a name"
+msgstr "Имя пользователя"
+
+#: src/components/storage/LogicalVolumePage.tsx:299
+#: src/components/storage/PartitionPage.tsx:344
 #, fuzzy
 msgid "The minimum cannot be greater than the maximum"
 msgstr "Максимум должен быть больше минимума"
 
-#: src/components/storage/PartitionPage.tsx:351
+#: src/components/storage/LogicalVolumePage.tsx:307
+#: src/components/storage/PartitionPage.tsx:352
 msgid ""
 "The maximum must be a number optionally followed by a unit like GiB or GB"
 msgstr ""
 
-#: src/components/storage/PartitionPage.tsx:359
+#: src/components/storage/LogicalVolumePage.tsx:315
+#: src/components/storage/PartitionPage.tsx:360
 msgid ""
 "The minimum must be a number optionally followed by a unit like GiB or GB"
 msgstr ""
 
-#: src/components/storage/PartitionPage.tsx:366
+#: src/components/storage/LogicalVolumePage.tsx:322
+#: src/components/storage/PartitionPage.tsx:367
 msgid ""
 "Size limits must be numbers optionally followed by a unit like GiB or GB"
 msgstr ""
 
-#. TRANSLATORS: %1$s is a disk name (eg. "/dev/sda") and %2$s is its size (eg. "250 GiB")
-#: src/components/storage/PartitionPage.tsx:497
-#, fuzzy, c-format
-msgid "As a new partition on %1$s (%2$s)"
-msgstr "Создать новый раздел"
-
-#: src/components/storage/PartitionPage.tsx:499
-#, fuzzy, c-format
-msgid "Using partition %s"
-msgstr "уменьшение разделов"
-
-#: src/components/storage/PartitionPage.tsx:528
+#: src/components/storage/LogicalVolumePage.tsx:441
+#: src/components/storage/LogicalVolumePage.tsx:444
 #, fuzzy
-msgid "Mount point options"
-msgstr "Точка монтирования"
+msgid "Logical volume name"
+msgstr "Логический том в системе LVM"
 
-#: src/components/storage/PartitionPage.tsx:533
-#, fuzzy
-msgid "Using an existing partition"
-msgstr "Уменьшение существующих разделов"
-
-#: src/components/storage/PartitionPage.tsx:544
-#, fuzzy
-msgid "There are not usable partitions"
-msgstr "Создать новый раздел"
-
-#: src/components/storage/PartitionPage.tsx:559
-#: src/components/storage/PartitionPage.tsx:678
+#: src/components/storage/LogicalVolumePage.tsx:446
+#: src/components/storage/LogicalVolumePage.tsx:465
+#: src/components/storage/LogicalVolumePage.tsx:563
+#: src/components/storage/PartitionPage.tsx:560
+#: src/components/storage/PartitionPage.tsx:679
 #, fuzzy
 msgid "Waiting for a mount point"
 msgstr "Ожидание отчёта о процессе"
 
-#. TRANSLATORS: %s is a device name (eg. /dev/sda3).
-#: src/components/storage/PartitionPage.tsx:562
-#: src/components/storage/utils/partition.tsx:55
-#, c-format
-msgid "Current %s"
-msgstr ""
-
-#: src/components/storage/PartitionPage.tsx:563
+#: src/components/storage/LogicalVolumePage.tsx:466
+#: src/components/storage/PartitionPage.tsx:564
 #: src/components/storage/utils.ts:298
 msgid "Btrfs with snapshots"
 msgstr "Btrfs с моментальными снимками"
 
-#: src/components/storage/PartitionPage.tsx:581
+#: src/components/storage/LogicalVolumePage.tsx:481
+#: src/components/storage/PartitionPage.tsx:582
 #, fuzzy, c-format
 msgid "Default file system for %s"
 msgstr "Для %s уже существует файловая система."
 
-#: src/components/storage/PartitionPage.tsx:582
+#: src/components/storage/LogicalVolumePage.tsx:482
 #, fuzzy
-msgid "Default file system for generic partitions"
+msgid "Default file system for generic logical volumes"
 msgstr "Файловые системы созданы как новые разделы на %s"
 
-#: src/components/storage/PartitionPage.tsx:584
-msgid "Destroy current data and format partition as"
-msgstr ""
-
-#: src/components/storage/PartitionPage.tsx:585
+#: src/components/storage/LogicalVolumePage.tsx:484
 #, fuzzy
-msgid "Format partition as"
-msgstr "Загрузочные разделы на %s"
+msgid "Format logical volume as"
+msgstr "Логический том в системе LVM"
 
-#. TRANSLATORS: %s is the name of a partition, like /dev/vda2
-#: src/components/storage/PartitionPage.tsx:598
-#, c-format
-msgid "Do not format %s and keep the data"
-msgstr ""
-
-#: src/components/storage/PartitionPage.tsx:663
+#: src/components/storage/LogicalVolumePage.tsx:550
+#: src/components/storage/PartitionPage.tsx:664
 #, fuzzy
 msgid "File system label"
 msgstr "Тип файловой системы"
 
-#: src/components/storage/PartitionPage.tsx:680
+#: src/components/storage/LogicalVolumePage.tsx:564
+#: src/components/storage/PartitionPage.tsx:681
 msgid "Calculated automatically"
 msgstr ""
 
-#: src/components/storage/PartitionPage.tsx:681
+#: src/components/storage/LogicalVolumePage.tsx:565
+#: src/components/storage/PartitionPage.tsx:682
 #: src/components/storage/utils.ts:112
 msgid "Custom"
 msgstr "По-своему"
 
-#: src/components/storage/PartitionPage.tsx:693
+#: src/components/storage/LogicalVolumePage.tsx:576
+#: src/components/storage/PartitionPage.tsx:694
 #, fuzzy
 msgid "Size options"
 msgstr "Показать параметры установки"
 
-#. TRANSLATORS: %s is a partition name like /dev/vda2
-#: src/components/storage/PartitionPage.tsx:701
-#, c-format
-msgid "Keep size of %s"
-msgstr ""
-
-#: src/components/storage/PartitionPage.tsx:709
+#: src/components/storage/LogicalVolumePage.tsx:586
+#: src/components/storage/PartitionPage.tsx:710
 msgid "Let the installer propose a sensible range of sizes"
 msgstr ""
 
-#: src/components/storage/PartitionPage.tsx:713
+#: src/components/storage/LogicalVolumePage.tsx:590
+#: src/components/storage/PartitionPage.tsx:714
 #, fuzzy
 msgid "Define a custom size or a range"
 msgstr "Определить пользователя"
 
-#. TRANSLATORS: %s is a size with units, like "3 GiB"
-#: src/components/storage/PartitionPage.tsx:727
-#, c-format
-msgid "A generic size of %s will be used for the new partition"
-msgstr ""
-
-#. TRANSLATORS: %1$s is a min size and %2$s is the max, both with units like "3 GiB"
-#: src/components/storage/PartitionPage.tsx:734
-#, c-format
-msgid ""
-"A generic size range between %1$s and %2$s will be used for the new partition"
-msgstr ""
-
-#. TRANSLATORS: %s is a size with units, like "3 GiB"
-#: src/components/storage/PartitionPage.tsx:742
-#, c-format
-msgid "A generic minimum size of %s will be used for the new partition"
-msgstr ""
-
-#. TRANSLATORS: %1$s is a size with units (10 GiB) and %2$s is a mount path (/home)
-#: src/components/storage/PartitionPage.tsx:752
-#, c-format
-msgid "A partition of %1$s will be created for %2$s"
-msgstr ""
-
-#. TRANSLATORS: %1$s is a min size, %2$s is the max size and %3$s is a mount path
-#: src/components/storage/PartitionPage.tsx:760
-#, c-format
-msgid "A partition with a size between %1$s and %2$s will be created for %3$s"
-msgstr ""
-
-#. TRANSLATORS: %1$s is a size with units (10 GiB) and %2$s is a mount path (/home)
-#: src/components/storage/PartitionPage.tsx:769
-#, c-format
-msgid "A partition of at least %1$s will be created for %2$s"
-msgstr ""
-
-#. TRANSLATORS: %1$s is a size with units (10 GiB) and %2$s is a mount path (/home)
-#: src/components/storage/PartitionPage.tsx:780
-#, c-format
-msgid ""
-"Based on the amount of RAM in the system, a partition of %1$s will be "
-"created for %2$s"
-msgstr ""
-
-#: src/components/storage/PartitionPage.tsx:789
-#, c-format
-msgid ""
-"Based on the amount of RAM in the system, a partition with a size between "
-"%1$s and %2$s will be created for %3$s"
-msgstr ""
-
-#: src/components/storage/PartitionPage.tsx:800
-#, c-format
-msgid ""
-"Based on the amount of RAM in the system a partition of at least %1$s will "
-"be created for %2$s"
-msgstr ""
-
-#: src/components/storage/PartitionPage.tsx:819
-#, c-format
-msgid ""
-"The size range for %1$s will be dynamically adjusted based on the amount of "
-"RAM in the system, the usage of Btrfs snapshots and the presence of a "
-"separate file system for %2$s."
-msgstr ""
-
-#: src/components/storage/PartitionPage.tsx:830
-#, c-format
-msgid ""
-"The size range for %1$s will be dynamically adjusted based on the amount of "
-"RAM in the system, the usage of Btrfs snapshots and the presence of separate "
-"file systems for %2$s."
-msgstr ""
-
-#: src/components/storage/PartitionPage.tsx:840
-#, c-format
-msgid ""
-"The size range for %s will be dynamically adjusted based on the amount of "
-"RAM in the system and the usage of Btrfs snapshots."
-msgstr ""
-
-#: src/components/storage/PartitionPage.tsx:851
-#, c-format
-msgid ""
-"The size range for %1$s will be dynamically adjusted based on the amount of "
-"RAM in the system and the presence of a separate file system for %2$s."
-msgstr ""
-
-#: src/components/storage/PartitionPage.tsx:861
-#, c-format
-msgid ""
-"The size range for %1$s will be dynamically adjusted based on the amount of "
-"RAM in the system and the presence of separate file systems for %2$s."
-msgstr ""
-
-#: src/components/storage/PartitionPage.tsx:873
-#, c-format
-msgid ""
-"The size range for %1$s will be dynamically adjusted based on the usage of "
-"Btrfs snapshots and the presence of a separate file system for %2$s."
-msgstr ""
-
-#: src/components/storage/PartitionPage.tsx:884
-#, c-format
-msgid ""
-"The size range for %1$s will be dynamically adjusted based on the usage of "
-"Btrfs snapshots and the presence of separate file systems for %2$s."
-msgstr ""
-
-#: src/components/storage/PartitionPage.tsx:894
-#, c-format
-msgid ""
-"The size range for %s will be dynamically adjusted based on the usage of "
-"Btrfs snapshots."
-msgstr ""
-
-#: src/components/storage/PartitionPage.tsx:904
-#, c-format
-msgid ""
-"The size range for %1$s will be dynamically adjusted based on the presence "
-"of a separate file system for %2$s."
-msgstr ""
-
-#: src/components/storage/PartitionPage.tsx:914
-#, c-format
-msgid ""
-"The size range for %1$s will be dynamically adjusted based on the presence "
-"of separate file systems for %2$s."
-msgstr ""
-
-#. TRANSLATORS: %s is a size with units (eg. 10 GiB)
-#: src/components/storage/PartitionPage.tsx:926
-#, c-format
-msgid "The current configuration will result in a partition of %s."
-msgstr ""
-
-#: src/components/storage/PartitionPage.tsx:934
-#, c-format
-msgid ""
-"The current configuration will result in a partition with a size between "
-"%1$s and %2$s."
-msgstr ""
-
-#. TRANSLATORS: %s is a size with units (eg. 10 GiB)
-#: src/components/storage/PartitionPage.tsx:943
-#, c-format
-msgid "The current configuration will result in a partition of at least %s."
-msgstr ""
-
-#: src/components/storage/PartitionPage.tsx:1005
+#: src/components/storage/LogicalVolumePage.tsx:623
+#: src/components/storage/PartitionPage.tsx:747
 msgid "Same as minimum"
 msgstr ""
 
-#: src/components/storage/PartitionPage.tsx:1007
+#: src/components/storage/LogicalVolumePage.tsx:625
+#: src/components/storage/PartitionPage.tsx:749
 msgid "Limited"
 msgstr ""
 
-#: src/components/storage/PartitionPage.tsx:1015
+#: src/components/storage/LogicalVolumePage.tsx:633
+#: src/components/storage/PartitionPage.tsx:757
 #, fuzzy
 msgid "Maximum size options"
 msgstr "Максимальный желаемый размер"
 
-#: src/components/storage/PartitionPage.tsx:1018
-msgid "The partition is created exactly with the given size"
+#: src/components/storage/LogicalVolumePage.tsx:636
+msgid "The logical volume is created exactly with the given size"
 msgstr ""
 
-#: src/components/storage/PartitionPage.tsx:1024
-msgid "The partition can grow until a given limit size"
+#: src/components/storage/LogicalVolumePage.tsx:642
+msgid "The logical volume can grow until a given limit size"
 msgstr ""
 
-#: src/components/storage/PartitionPage.tsx:1030
-msgid "The partition can grow to use all the contiguous free space"
+#: src/components/storage/LogicalVolumePage.tsx:648
+msgid "The logical volume can grow to use all the contiguous free space"
 msgstr ""
 
-#: src/components/storage/PartitionPage.tsx:1082
+#: src/components/storage/LogicalVolumePage.tsx:700
+#: src/components/storage/PartitionPage.tsx:824
 msgid "Sizes must be entered as a numbers optionally followed by a unit."
 msgstr ""
 
-#: src/components/storage/PartitionPage.tsx:1086
+#: src/components/storage/LogicalVolumePage.tsx:704
+#: src/components/storage/PartitionPage.tsx:828
 msgid ""
 "If the unit is omitted, bytes (B) will be used. Greater units can be "
 "of               the form GiB (power of 2) or GB (power of 10)."
 msgstr ""
 
-#: src/components/storage/PartitionPage.tsx:1094
+#: src/components/storage/LogicalVolumePage.tsx:712
+#: src/components/storage/PartitionPage.tsx:836
 msgid "Minimum"
 msgstr "Минимум"
 
-#: src/components/storage/PartitionPage.tsx:1099
+#: src/components/storage/LogicalVolumePage.tsx:717
+#: src/components/storage/PartitionPage.tsx:841
 #, fuzzy
 msgid "Minimum size value"
 msgstr "Требуется минимальный размер"
 
-#: src/components/storage/PartitionPage.tsx:1105
+#: src/components/storage/LogicalVolumePage.tsx:723
+#: src/components/storage/PartitionPage.tsx:847
 msgid "Maximum"
 msgstr "Максимум"
 
-#: src/components/storage/PartitionPage.tsx:1112
+#: src/components/storage/LogicalVolumePage.tsx:730
+#: src/components/storage/PartitionPage.tsx:854
 #, fuzzy
 msgid "Maximum size mode"
 msgstr "Максимальный желаемый размер"
 
-#: src/components/storage/PartitionPage.tsx:1121
+#: src/components/storage/LogicalVolumePage.tsx:739
+#: src/components/storage/PartitionPage.tsx:863
 #, fuzzy
 msgid "Maximum size value"
 msgstr "Максимальный желаемый размер"
 
-#: src/components/storage/PartitionPage.tsx:1247
-#, fuzzy, c-format
-msgid "Define partition at %s"
-msgstr "Раздел на %s"
+#: src/components/storage/LogicalVolumePage.tsx:859
+#, c-format
+msgid "Configure LVM logical volume at %s volume group"
+msgstr ""
 
-#: src/components/storage/PartitionPage.tsx:1254
-#: src/components/storage/PartitionPage.tsx:1261
+#: src/components/storage/LogicalVolumePage.tsx:869
+#: src/components/storage/LogicalVolumePage.tsx:874
+#: src/components/storage/PartitionPage.tsx:1000
+#: src/components/storage/PartitionPage.tsx:1007
 msgid "Mount point"
 msgstr "Точка монтирования"
 
-#: src/components/storage/PartitionPage.tsx:1259
+#: src/components/storage/LogicalVolumePage.tsx:872
+#: src/components/storage/PartitionPage.tsx:1005
 #, fuzzy
 msgid "Mount point toggle"
 msgstr "Точка монтирования"
 
-#: src/components/storage/PartitionPage.tsx:1260
+#: src/components/storage/LogicalVolumePage.tsx:873
+#: src/components/storage/PartitionPage.tsx:1006
 #, fuzzy
 msgid "Suggested mount points"
 msgstr "Таблица с точками монтирования"
 
-#: src/components/storage/PartitionPage.tsx:1262
+#: src/components/storage/LogicalVolumePage.tsx:875
+#: src/components/storage/PartitionPage.tsx:1008
 #, fuzzy
 msgid "Clear selected mount point"
 msgstr "Таблица с точками монтирования"
 
-#: src/components/storage/PartitionPage.tsx:1265
+#: src/components/storage/LogicalVolumePage.tsx:878
+#: src/components/storage/PartitionPage.tsx:1011
 #, fuzzy
 msgid "Use"
 msgstr "Пользователь"
 
-#: src/components/storage/PartitionPage.tsx:1271
-#, fuzzy
-msgid "Mount point mode"
-msgstr "Точка монтирования"
-
-#: src/components/storage/PartitionPage.tsx:1283
+#: src/components/storage/LogicalVolumePage.tsx:884
+#: src/components/storage/PartitionPage.tsx:1029
 #, fuzzy
 msgid "Select or enter a mount point"
 msgstr "Таблица с точками монтирования"
 
-#: src/components/storage/PartitionPage.tsx:1292
+#: src/components/storage/LogicalVolumePage.tsx:909
+#: src/components/storage/PartitionPage.tsx:1038
 #, fuzzy
 msgid "File system"
 msgstr "Тип файловой системы"
 
-#: src/components/storage/PartitionPage.tsx:1304
+#: src/components/storage/LogicalVolumePage.tsx:920
+#: src/components/storage/PartitionPage.tsx:1050
 msgid "Label"
 msgstr ""
 
-#: src/components/storage/PartitionPage.tsx:1315
+#: src/components/storage/LogicalVolumePage.tsx:932
+#: src/components/storage/PartitionPage.tsx:1061
 #: src/components/storage/ProposalResultTable.tsx:135
 #: src/components/storage/SpaceActionsTable.tsx:240
 msgid "Size"
 msgstr "Размер"
+
+#: src/components/storage/LvmPage.tsx:57
+#, fuzzy
+msgid "Enter a name for the volume group."
+msgstr "Создать выделенную группу томов LVM"
+
+#: src/components/storage/LvmPage.tsx:61
+#, c-format
+msgid "Volume group '%s' already exists. Enter a different name."
+msgstr ""
+
+#: src/components/storage/LvmPage.tsx:65
+#, fuzzy
+msgid "Select at least one disk."
+msgstr "Выберите диск"
+
+#: src/components/storage/LvmPage.tsx:142
+#, fuzzy
+msgid "Configure LVM Volume Group"
+msgstr "Создание группы томов LVM"
+
+#: src/components/storage/LvmPage.tsx:148
+#: src/components/system/HostnamePage.tsx:103
+msgid "Check the following before continuing"
+msgstr ""
+
+#: src/components/storage/LvmPage.tsx:157
+#: src/components/storage/zfcp/ZFCPPage.tsx:131
+msgid "Disks"
+msgstr "Диски"
+
+#: src/components/storage/LvmPage.tsx:160
+msgid ""
+"The needed LVM physical volumes will be added as partitions on the chosen "
+"disks,                 based on the sizes of the logical volumes. If you "
+"select more than one disk, the                 physical volumes may be "
+"distributed along several disks."
+msgstr ""
+
+#: src/components/storage/LvmPage.tsx:195
+#, fuzzy
+msgid "Move mount points"
+msgstr "Точка монтирования"
+
+#: src/components/storage/LvmPage.tsx:199
+msgid ""
+"Move the mount points currently configured at the selected disks to "
+"logical                   volumes of this volume group."
+msgstr ""
+
+#. TRANSLATORS: %1$s is a disk name (eg. "/dev/sda") and %2$s is its size (eg. "250 GiB")
+#: src/components/storage/PartitionPage.tsx:498
+#, fuzzy, c-format
+msgid "As a new partition on %1$s (%2$s)"
+msgstr "Создать новый раздел"
+
+#: src/components/storage/PartitionPage.tsx:500
+#, fuzzy, c-format
+msgid "Using partition %s"
+msgstr "уменьшение разделов"
+
+#: src/components/storage/PartitionPage.tsx:529
+#, fuzzy
+msgid "Mount point options"
+msgstr "Точка монтирования"
+
+#: src/components/storage/PartitionPage.tsx:534
+#, fuzzy
+msgid "Using an existing partition"
+msgstr "Уменьшение существующих разделов"
+
+#: src/components/storage/PartitionPage.tsx:545
+#, fuzzy
+msgid "There are not usable partitions"
+msgstr "Создать новый раздел"
+
+#. TRANSLATORS: %s is a device name (eg. /dev/sda3).
+#: src/components/storage/PartitionPage.tsx:563
+#: src/components/storage/utils/partition.tsx:69
+#, c-format
+msgid "Current %s"
+msgstr ""
+
+#: src/components/storage/PartitionPage.tsx:583
+#, fuzzy
+msgid "Default file system for generic partitions"
+msgstr "Файловые системы созданы как новые разделы на %s"
+
+#: src/components/storage/PartitionPage.tsx:585
+msgid "Destroy current data and format partition as"
+msgstr ""
+
+#: src/components/storage/PartitionPage.tsx:586
+#, fuzzy
+msgid "Format partition as"
+msgstr "Загрузочные разделы на %s"
+
+#. TRANSLATORS: %s is the name of a partition, like /dev/vda2
+#: src/components/storage/PartitionPage.tsx:599
+#, c-format
+msgid "Do not format %s and keep the data"
+msgstr ""
+
+#. TRANSLATORS: %s is a partition name like /dev/vda2
+#: src/components/storage/PartitionPage.tsx:702
+#, c-format
+msgid "Keep size of %s"
+msgstr ""
+
+#: src/components/storage/PartitionPage.tsx:760
+msgid "The partition is created exactly with the given size"
+msgstr ""
+
+#: src/components/storage/PartitionPage.tsx:766
+msgid "The partition can grow until a given limit size"
+msgstr ""
+
+#: src/components/storage/PartitionPage.tsx:772
+msgid "The partition can grow to use all the contiguous free space"
+msgstr ""
+
+#: src/components/storage/PartitionPage.tsx:993
+#, fuzzy, c-format
+msgid "Configure partition at %s"
+msgstr "Раздел на %s"
+
+#: src/components/storage/PartitionPage.tsx:1017
+#, fuzzy
+msgid "Mount point mode"
+msgstr "Точка монтирования"
 
 #: src/components/storage/ProposalActionsDialog.tsx:73
 #, c-format
@@ -1864,13 +2043,13 @@ msgid ""
 "Adjust the settings below."
 msgstr ""
 
-#: src/components/storage/ProposalFailedInfo.tsx:62
+#: src/components/storage/ProposalFailedInfo.tsx:74
 msgid ""
 "Adjust the settings below to make the new system fit into the available "
 "space."
 msgstr ""
 
-#: src/components/storage/ProposalFailedInfo.tsx:83
+#: src/components/storage/ProposalFailedInfo.tsx:96
 msgid "Failed to calculate a storage layout"
 msgstr ""
 
@@ -2076,11 +2255,48 @@ msgid ""
 "discard the configuration and start from scratch with a simple one."
 msgstr ""
 
+#: src/components/storage/VolumeGroupEditor.tsx:56
+msgid "Delete the volume group and its logical volumes"
+msgstr ""
+
+#: src/components/storage/VolumeGroupEditor.tsx:60
+#, fuzzy
+msgid "Delete volume group"
+msgstr "новую группу томов LVM"
+
+#: src/components/storage/VolumeGroupEditor.tsx:72
+msgid "Modify settings and physical volumes"
+msgstr ""
+
+#: src/components/storage/VolumeGroupEditor.tsx:76
+#, fuzzy
+msgid "Edit volume group"
+msgstr "новую группу томов LVM"
+
+#: src/components/storage/VolumeGroupEditor.tsx:94
+#, fuzzy, c-format
+msgid "Create LVM volume group %s"
+msgstr "Создание группы томов LVM"
+
+#: src/components/storage/VolumeGroupEditor.tsx:95
+#, fuzzy, c-format
+msgid "Empty LVM volume group %s"
+msgstr "новую группу томов LVM"
+
+#: src/components/storage/VolumeGroupEditor.tsx:119
+#, fuzzy
+msgid "Logical volumes"
+msgstr "Логический том в системе LVM"
+
+#: src/components/storage/VolumeGroupEditor.tsx:140
+msgid "Add logical volume"
+msgstr ""
+
 #: src/components/storage/dasd/DASDFormatProgress.tsx:49
 msgid "Formatting DASD devices"
 msgstr "Форматирование устройств DASD"
 
-#: src/components/storage/dasd/DASDPage.tsx:39 src/routes/storage.tsx:76
+#: src/components/storage/dasd/DASDPage.tsx:39 src/routes/storage.tsx:94
 msgid "DASD"
 msgstr "DASD"
 
@@ -2573,36 +2789,36 @@ msgstr "Диск"
 msgid "%s with %d partitions"
 msgstr "%s с %d разделами"
 
-#: src/components/storage/utils/drive.tsx:48
+#: src/components/storage/utils/drive.tsx:44
 #, fuzzy
 msgid "A partition will be deleted"
 msgstr "%d раздел будет сокращён"
 
-#: src/components/storage/utils/drive.tsx:49
+#: src/components/storage/utils/drive.tsx:45
 msgid "At least one partition will be deleted"
 msgstr ""
 
-#: src/components/storage/utils/drive.tsx:50
+#: src/components/storage/utils/drive.tsx:46
 #, fuzzy
 msgid "Several partitions will be deleted"
 msgstr "%d раздел будет сокращён"
 
-#: src/components/storage/utils/drive.tsx:51
+#: src/components/storage/utils/drive.tsx:47
 #, fuzzy
 msgid "A partition may be deleted"
 msgstr "Содержимое может быть удалено"
 
-#: src/components/storage/utils/drive.tsx:53
+#: src/components/storage/utils/drive.tsx:49
 #, fuzzy
 msgid "Some partitions may be deleted"
 msgstr "Содержимое может быть удалено"
 
-#: src/components/storage/utils/drive.tsx:64
+#: src/components/storage/utils/drive.tsx:60
 #, fuzzy
 msgid "A partition may be shrunk"
 msgstr "%d раздел будет сокращён"
 
-#: src/components/storage/utils/drive.tsx:66
+#: src/components/storage/utils/drive.tsx:62
 #, fuzzy
 msgid "Some partitions may be shrunk"
 msgstr "%d раздел будет сокращён"
@@ -2610,14 +2826,14 @@ msgstr "%d раздел будет сокращён"
 #. TRANSLATORS: this simply concatenates the two sentences that describe what is going to happen
 #. with partitions. The first %s corresponds to deleted partitions and the second one to resized
 #. ones.
-#: src/components/storage/utils/drive.tsx:91
+#: src/components/storage/utils/drive.tsx:87
 #, c-format
 msgid "%s - %s"
 msgstr ""
 
 #. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case).
-#: src/components/storage/utils/drive.tsx:145
+#: src/components/storage/utils/drive.tsx:141
 #, c-format
 msgid "Partitions will be used and created for %s"
 msgstr ""
@@ -2626,23 +2842,28 @@ msgstr ""
 #. %2$s is a size description (eg. at least 10 GiB)
 #. TRANSLATORS: %1$s is a filesystem type description (eg. "Btrfs with snapshots"),
 #. %2$s is a description of the size or the size limits (eg. "at least 10 GiB")
-#: src/components/storage/utils/partition.tsx:37
-#: src/components/storage/utils/partition.tsx:71
+#: src/components/storage/utils/partition.tsx:41
+#: src/components/storage/utils/partition.tsx:85
 #, fuzzy, c-format
 msgid "%1$s (%2$s)"
 msgstr "Подкачка на %1$s (%2$s)"
 
 #. TRANSLATORS: %1$s is a filesystem type (eg. Btrfs), %2$s is a device name (eg. /dev/sda3).
-#: src/components/storage/utils/partition.tsx:52
+#: src/components/storage/utils/partition.tsx:66
 #, fuzzy, c-format
 msgid "Current %1$s at %2$s"
 msgstr "Установить %1$s в %2$s (%3$s)"
 
 #. TRANSLATORS: %1$s is a filesystem type (eg. Btrfs), %2$s is a device name (eg. /dev/sda3).
-#: src/components/storage/utils/partition.tsx:59
+#: src/components/storage/utils/partition.tsx:73
 #, fuzzy, c-format
 msgid "%1$s at %2$s"
 msgstr "%1$s корень на %2$s (%3$s)"
+
+#: src/components/storage/utils/volume-group.tsx:29
+#, fuzzy
+msgid "No logical volumes are defined yet"
+msgstr "Пользователь еще не определен."
 
 #: src/components/storage/zfcp/ZFCPControllersTable.tsx:22
 msgid "Auto LUNs Scan"
@@ -2718,10 +2939,6 @@ msgstr "Активировать диск zFCP"
 msgid "Activate new disk"
 msgstr "Активировать новый диск"
 
-#: src/components/storage/zfcp/ZFCPPage.tsx:131
-msgid "Disks"
-msgstr "Диски"
-
 #: src/components/storage/zfcp/ZFCPPage.tsx:141
 msgid "Controllers"
 msgstr "Контроллеры"
@@ -2751,10 +2968,10 @@ msgstr "Имя пользователя"
 msgid "Using transient hostname: %s"
 msgstr "уменьшение разделов"
 
-#: src/components/system/HostnamePage.tsx:80
+#: src/components/system/HostnamePage.tsx:80 src/router.tsx:50
 #, fuzzy
-msgid "Hostname settings"
-msgstr "Шифрование"
+msgid "Hostname"
+msgstr "Имя пользователя"
 
 #: src/components/system/HostnamePage.tsx:85
 #, fuzzy
@@ -2773,20 +2990,15 @@ msgid ""
 "configured by the local network administrator."
 msgstr ""
 
-#: src/components/system/HostnamePage.tsx:103
-msgid "Check the following before continuing"
-msgstr ""
-
 #: src/components/system/HostnamePage.tsx:110
 msgid "Use static hostname"
 msgstr ""
 
-#: src/components/system/HostnamePage.tsx:112
-msgid ""
-"For setting a permanent hostname that won’t change with network updates."
+#: src/components/system/HostnamePage.tsx:111
+msgid "Set a permanent hostname that won’t change with network updates."
 msgstr ""
 
-#: src/components/system/HostnamePage.tsx:123
+#: src/components/system/HostnamePage.tsx:121
 msgid "Static hostname"
 msgstr ""
 
@@ -2843,7 +3055,7 @@ msgid "Edit user"
 msgstr "Изменить пользователя"
 
 #: src/components/users/FirstUserForm.tsx:232
-#: src/components/users/RootUserForm.tsx:165
+#: src/components/users/RootUserForm.tsx:161
 #, fuzzy
 msgid "Using a hashed password."
 msgstr "Пароль пользователя"
@@ -2876,47 +3088,58 @@ msgstr "Пользователи еще не определены"
 msgid "Public SSH Key"
 msgstr "Ключ SSH"
 
-#: src/components/users/RootUserForm.tsx:63
+#: src/components/users/RootUserForm.tsx:61
 msgid "Upload, paste, or drop an SSH public key"
 msgstr "Загрузите, вставьте или сбросьте публичный ключ SSH"
 
 #. TRANSLATORS: push button label
-#: src/components/users/RootUserForm.tsx:65
+#: src/components/users/RootUserForm.tsx:63
 msgid "Upload"
 msgstr "Загрузить"
 
 #. TRANSLATORS: push button label, clears the related input field
-#: src/components/users/RootUserForm.tsx:67
+#: src/components/users/RootUserForm.tsx:65
 msgid "Clear"
 msgstr "Очистить"
 
-#: src/components/users/RootUserForm.tsx:110
+#: src/components/users/RootUserForm.tsx:108
 msgid "Public SSH Key is empty."
 msgstr ""
 
-#: src/components/users/RootUserForm.tsx:139
+#: src/components/users/RootUserForm.tsx:137
 #, fuzzy
 msgid "Root authentication methods"
 msgstr "Аутентификация root"
 
-#: src/components/users/RootUserForm.tsx:154
+#: src/components/users/RootUserForm.tsx:152
 #, fuzzy
 msgid "Use password"
 msgstr "Пароль пользователя"
 
-#: src/components/users/RootUserForm.tsx:186
+#: src/components/users/RootUserForm.tsx:180
 #, fuzzy
 msgid "Use public SSH Key"
 msgstr "Публичный ключ SSH для root"
 
-#: src/router.tsx:50
-#, fuzzy
-msgid "Hostname"
-msgstr "Имя пользователя"
-
-#: src/routes/storage.tsx:85
+#: src/routes/storage.tsx:103
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#, fuzzy
+#~ msgid "Use additional disk toggle"
+#~ msgstr "Показ настроек"
+
+#, fuzzy
+#~ msgid "More options toggle"
+#~ msgstr "Показ настроек"
+
+#, fuzzy
+#~ msgid "More options"
+#~ msgstr "Общие параметры"
+
+#, fuzzy
+#~ msgid "Hostname settings"
+#~ msgstr "Шифрование"
 
 #, fuzzy, c-format
 #~ msgid "static"
@@ -3161,12 +3384,6 @@ msgstr "ZFCP"
 #~ msgid "Separate LVM at %s"
 #~ msgstr "Отдельный LVM на %s"
 
-#~ msgid "Logical volume at system LVM"
-#~ msgstr "Логический том в системе LVM"
-
-#~ msgid "Partition at installation disk"
-#~ msgstr "Раздел на диске для установки"
-
 #~ msgid "Reset location"
 #~ msgstr "Сбросить расположение"
 
@@ -3375,18 +3592,12 @@ msgstr "ZFCP"
 #~ "Файловая система будет выделена в качестве нового раздела на выбранном   "
 #~ "диске."
 
-#~ msgid "Create a dedicated LVM volume group"
-#~ msgstr "Создать выделенную группу томов LVM"
-
 #~ msgid ""
 #~ "A new volume group will be allocated in the selected disk and the   file "
 #~ "system will be created as a logical volume."
 #~ msgstr ""
 #~ "На выбранном диске будет выделена новая группа томов, а   файловая "
 #~ "система будет создана как логический том."
-
-#~ msgid "Format the device"
-#~ msgstr "Отформатировать устройство"
 
 #~ msgid "Mount the file system"
 #~ msgstr "Смонтировать файловую систему"
@@ -3787,10 +3998,6 @@ msgstr "ZFCP"
 #~ msgid "Probing storage devices"
 #~ msgstr "Поиск устройств хранения"
 
-#, c-format
-#~ msgid "User %s will be created"
-#~ msgstr "Будет создан пользователь %s"
-
 #~ msgid "Root authentication set for using both, password and public SSH Key"
 #~ msgstr ""
 #~ "Настройка аутентификации root для использования пароля и публичного ключа "
@@ -3841,9 +4048,6 @@ msgstr "ZFCP"
 
 #~ msgid "Storage DASD"
 #~ msgstr "Хранилище DASD"
-
-#~ msgid "Create an LVM Volume Group"
-#~ msgstr "Создание группы томов LVM"
 
 #~ msgid "Settings"
 #~ msgstr "Настройки"
