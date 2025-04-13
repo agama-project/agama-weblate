@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-30 02:55+0000\n"
+"POT-Creation-Date: 2025-04-13 04:02+0000\n"
 "PO-Revision-Date: 2025-04-02 05:56+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -274,15 +274,15 @@ msgstr "確認"
 msgid "Loading data..."
 msgstr "データを読み込んでいます..."
 
-#: src/components/core/ProgressReport.tsx:62
+#: src/components/core/ProgressReport.tsx:57
 msgid "Pending"
 msgstr "保留中"
 
-#: src/components/core/ProgressReport.tsx:71
+#: src/components/core/ProgressReport.tsx:66
 msgid "In progress"
 msgstr "処理中"
 
-#: src/components/core/ProgressReport.tsx:86
+#: src/components/core/ProgressReport.tsx:81
 msgid "Finished"
 msgstr "完了"
 
@@ -398,9 +398,10 @@ msgstr "インストーラのオプション"
 msgid "Main navigation"
 msgstr "メインナビゲーション"
 
-#: src/components/layout/Loading.tsx:35
-msgid "Loading installation environment, please wait."
-msgstr "インストール環境を読み込んでいます。しばらくお待ちください。"
+#: src/components/layout/Loading.tsx:132
+#, fuzzy
+msgid "Loading"
+msgstr "データを読み込んでいます..."
 
 #. TRANSLATORS: button label
 #: src/components/network/AddressesDataList.tsx:103
@@ -1089,16 +1090,18 @@ msgstr "システムのメモリサイズに応じて、 %2$s の %1$s を %3$s 
 msgid ""
 "Based on the amount of RAM in the system, a %1s$ with a size between %2$s "
 "and %3$s will be created for %4$s"
-msgstr "システムのメモリサイズに応じて、 %2$s から %3$s までの範囲で %1$s を %4$s "
-"向けに作成します"
+msgstr ""
+"システムのメモリサイズに応じて、 %2$s から %3$s までの範囲で %1$s を %4$s 向"
+"けに作成します"
 
 #. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
 #: src/components/storage/AutoSizeText.tsx:138
 msgid ""
 "Based on the amount of RAM in the system, a %1s$ of at least %2$s will be "
 "created for %3$s"
-msgstr "システムのメモリサイズに応じて、少なくとも %2$s の %1$s を %3$s "
-"向けに作成します"
+msgstr ""
+"システムのメモリサイズに応じて、少なくとも %2$s の %1$s を %3$s 向けに作成し"
+"ます"
 
 #: src/components/storage/AutoSizeText.tsx:167
 #, c-format
@@ -1270,8 +1273,9 @@ msgstr "まだ何もデバイスを選択していません"
 msgid ""
 "Use actions below to set up your devices or click %s to start from scratch "
 "with the default configuration."
-msgstr "下記にあるアクションを押してデバイスを設定するか、もしくは %s "
-"を押して何もない状態から設定を行ってください。"
+msgstr ""
+"下記にあるアクションを押してデバイスを設定するか、もしくは %s を押して何もな"
+"い状態から設定を行ってください。"
 
 #. TRANSLATORS: label for a button
 #: src/components/storage/ConfigEditor.tsx:47
@@ -1870,7 +1874,8 @@ msgstr "ボリュームグループに対する名前を入力してください
 #: src/components/storage/LvmPage.tsx:61
 #, c-format
 msgid "Volume group '%s' already exists. Enter a different name."
-msgstr "ボリュームグループ '%s' は既に存在しています。別の名前を入力してください。"
+msgstr ""
+"ボリュームグループ '%s' は既に存在しています。別の名前を入力してください。"
 
 #: src/components/storage/LvmPage.tsx:65
 msgid "Select at least one disk."
@@ -1897,10 +1902,9 @@ msgid ""
 "select more than one disk, the                 physical volumes may be "
 "distributed along several disks."
 msgstr ""
-"必要な LVM "
-"物理ボリュームは、論理ボリュームのサイズを元に、選択したディスク内のパーティ"
-"ションとして追加されます。複数のディスクを選択した場合、物理ボリュームはそれ"
-"らのディスクに分散して配置されます。"
+"必要な LVM 物理ボリュームは、論理ボリュームのサイズを元に、選択したディスク内"
+"のパーティションとして追加されます。複数のディスクを選択した場合、物理ボ"
+"リュームはそれらのディスクに分散して配置されます。"
 
 #: src/components/storage/LvmPage.tsx:195
 msgid "Move mount points"
@@ -1910,7 +1914,8 @@ msgstr "マウントポイントの移動"
 msgid ""
 "Move the mount points currently configured at the selected disks to "
 "logical                   volumes of this volume group."
-msgstr "選択したディスク内に設定されたマウントポイントを、このボリュームグループの論"
+msgstr ""
+"選択したディスク内に設定されたマウントポイントを、このボリュームグループの論"
 "理ボリュームに移動します。"
 
 #. TRANSLATORS: %1$s is a disk name (eg. "/dev/sda") and %2$s is its size (eg. "250 GiB")
@@ -2195,7 +2200,8 @@ msgstr "処理"
 msgid ""
 "Select what to do with each partition in order to find space for allocating "
 "the new system."
-msgstr "新しいシステムのインストール先となる領域を確保するため、各パーティションに対"
+msgstr ""
+"新しいシステムのインストール先となる領域を確保するため、各パーティションに対"
 "してすべきことを選択します。"
 
 #: src/components/storage/SpacePolicySelection.tsx:102
@@ -2948,7 +2954,8 @@ msgstr "固定のホスト名を使用する"
 
 #: src/components/system/HostnamePage.tsx:111
 msgid "Set a permanent hostname that won’t change with network updates."
-msgstr "ネットワーク側から指定された場合でも変化しない、固定のホスト名を設定します。"
+msgstr ""
+"ネットワーク側から指定された場合でも変化しない、固定のホスト名を設定します。"
 
 #: src/components/system/HostnamePage.tsx:121
 msgid "Static hostname"
@@ -3069,6 +3076,9 @@ msgstr "公開 SSH 鍵の使用"
 #: src/routes/storage.tsx:103
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#~ msgid "Loading installation environment, please wait."
+#~ msgstr "インストール環境を読み込んでいます。しばらくお待ちください。"
 
 #~ msgid "Use additional disk toggle"
 #~ msgstr "追加ディスクの使用切り替え"
