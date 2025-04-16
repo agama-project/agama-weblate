@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-15 02:55+0000\n"
+"POT-Creation-Date: 2025-04-16 02:54+0000\n"
 "PO-Revision-Date: 2025-01-07 11:50+0000\n"
 "Last-Translator: Natasha Ament <stacheldrahtje@ament-teusink.eu>\n"
 "Language-Team: Dutch <https://l10n.opensuse.org/projects/agama/agama-web/nl/"
@@ -181,7 +181,7 @@ msgid "Software"
 msgstr "Software"
 
 #: src/components/core/IssuesDrawer.tsx:52
-#: src/components/product/ProductRegistrationPage.tsx:188
+#: src/components/product/ProductRegistrationPage.tsx:212
 #: src/routes/registration.tsx:31
 #, fuzzy
 msgid "Registration"
@@ -356,6 +356,7 @@ msgstr "Lokalisatie"
 #: src/components/l10n/L10nPage.tsx:51 src/components/l10n/L10nPage.tsx:65
 #: src/components/l10n/L10nPage.tsx:77
 #: src/components/network/NetworkPage.tsx:64
+#: src/components/storage/iscsi/InitiatorForm.tsx:89
 #: src/components/users/FirstUserForm.tsx:234
 #: src/components/users/RootUserForm.tsx:163
 msgid "Change"
@@ -463,9 +464,9 @@ msgstr "Adressen data lijst"
 #: src/components/network/ConnectionsTable.tsx:74
 #: src/components/network/ConnectionsTable.tsx:103
 #: src/components/storage/LvmPage.tsx:154
-#: src/components/storage/iscsi/InitiatorForm.tsx:53
-#: src/components/storage/iscsi/InitiatorPresenter.tsx:54
-#: src/components/storage/iscsi/InitiatorPresenter.tsx:73
+#: src/components/storage/iscsi/InitiatorForm.tsx:75
+#: src/components/storage/iscsi/InitiatorForm.tsx:85
+#: src/components/storage/iscsi/InitiatorSection.tsx:40
 #: src/components/storage/iscsi/NodesPresenter.jsx:100
 #: src/components/storage/iscsi/NodesPresenter.jsx:121
 #: src/components/storage/zfcp/ZFCPDisksTable.tsx:42
@@ -488,7 +489,6 @@ msgstr "Verbinden"
 #: src/components/network/WifiNetworksListPage.tsx:130
 #: src/components/network/WifiNetworksListPage.tsx:154
 #: src/components/storage/EncryptionSection.tsx:50
-#: src/components/storage/iscsi/InitiatorPresenter.tsx:45
 #: src/components/storage/iscsi/NodesPresenter.jsx:75
 #: src/components/users/FirstUser.tsx:52 src/components/users/RootUser.tsx:55
 msgid "Edit"
@@ -643,7 +643,6 @@ msgstr "Netwerk"
 #: src/components/network/WifiConnectionForm.tsx:49
 #: src/components/storage/LogicalVolumePage.tsx:624
 #: src/components/storage/PartitionPage.tsx:748
-#: src/components/storage/iscsi/InitiatorPresenter.tsx:60
 msgid "None"
 msgstr "Geen"
 
@@ -842,45 +841,58 @@ msgstr "Sluiten"
 msgid "%s [must be registered]."
 msgstr "Problemen van het product"
 
-#: src/components/product/ProductRegistrationPage.tsx:49
-msgid "Registration code"
-msgstr "Registratie code"
-
-#: src/components/product/ProductRegistrationPage.tsx:61
+#: src/components/product/ProductRegistrationPage.tsx:63
 #, c-format
 msgid "%s has been registered with below information."
 msgstr ""
 
-#: src/components/product/ProductRegistrationPage.tsx:70
+#. TRANSLATORS: input field label
+#: src/components/product/ProductRegistrationPage.tsx:68
+#: src/components/product/ProductRegistrationPage.tsx:127
+#: src/components/product/RegistrationExtension.tsx:141
+msgid "Registration code"
+msgstr "Registratie code"
+
+#. TRANSLATORS: switch for displaying or hiding the registration code
+#: src/components/product/ProductRegistrationPage.tsx:73
+#: src/components/product/RegistrationExtension.tsx:60
 msgid "Hide"
 msgstr ""
 
-#: src/components/product/ProductRegistrationPage.tsx:70
+#: src/components/product/ProductRegistrationPage.tsx:73
+#: src/components/product/RegistrationExtension.tsx:60
 #, fuzzy
 msgid "Show"
 msgstr "Toon logs"
 
-#: src/components/product/ProductRegistrationPage.tsx:131
+#: src/components/product/ProductRegistrationPage.tsx:134
 #, fuzzy
 msgid "Provide email address"
 msgstr "Een adres toevoegen"
 
-#: src/components/product/ProductRegistrationPage.tsx:145
+#. TRANSLATORS: button label
+#: src/components/product/ProductRegistrationPage.tsx:148
+#: src/components/product/RegistrationExtension.tsx:158
+#: src/components/product/RegistrationExtension.tsx:173
 #, fuzzy
 msgid "Register"
 msgstr "Registreer %s"
 
-#: src/components/product/ProductRegistrationPage.tsx:161
+#: src/components/product/ProductRegistrationPage.tsx:164
 #, c-format
 msgid ""
 "You cannot change it later. Go to the %s section if you want to modify it "
 "before proceeding with registration."
 msgstr ""
 
-#: src/components/product/ProductRegistrationPage.tsx:166
+#: src/components/product/ProductRegistrationPage.tsx:169
 #, fuzzy
 msgid "hostname"
 msgstr "Gebruikersnaam"
+
+#: src/components/product/ProductRegistrationPage.tsx:194
+msgid "Extensions"
+msgstr ""
 
 #. TRANSLATORS: %s will be replaced by a product name. E.g., "openSUSE Tumbleweed"
 #: src/components/product/ProductSelectionPage.tsx:62
@@ -909,6 +921,35 @@ msgstr "Beschikbare producten"
 #, fuzzy
 msgid "Configuring the product, please wait ..."
 msgstr "Laad verschillende producten, wacht alstublieft..."
+
+#. TRANSLATORS: %s will be replaced by the registration key.
+#: src/components/product/RegistrationExtension.tsx:51
+#, c-format
+msgid "The extension has been registered with key %s."
+msgstr ""
+
+#. TRANSLATORS: Beta version label
+#: src/components/product/RegistrationExtension.tsx:122
+msgid "Beta"
+msgstr ""
+
+#. TRANSLATORS: Label for recommended extensions
+#: src/components/product/RegistrationExtension.tsx:128
+msgid "Recommended"
+msgstr ""
+
+#. TRANSLATORS: warning title, the extension is not available on the server and cannot be registered
+#: src/components/product/RegistrationExtension.tsx:179
+#, fuzzy
+msgid "Not available"
+msgstr "Beschikbare apparaten"
+
+#. TRANSLATORS: warning message, the extension is not available on the server and cannot be registered
+#: src/components/product/RegistrationExtension.tsx:182
+msgid ""
+"This extension is not available on the server. Ask the server administrator "
+"to mirror the extension."
+msgstr ""
 
 #: src/components/questions/GenericQuestion.tsx:49
 #: src/components/questions/LuksActivationQuestion.tsx:70
@@ -2338,14 +2379,12 @@ msgid "DASD devices selection table"
 msgstr "Nog geen apparaat geselecteerd"
 
 #: src/components/storage/dasd/DASDTable.tsx:68
-#: src/components/storage/iscsi/InitiatorPresenter.tsx:59
 #: src/components/storage/iscsi/NodesPresenter.jsx:103
 #: src/components/storage/zfcp/ZFCPControllersTable.tsx:36
 msgid "No"
 msgstr "Nee"
 
 #: src/components/storage/dasd/DASDTable.tsx:68
-#: src/components/storage/iscsi/InitiatorPresenter.tsx:59
 #: src/components/storage/iscsi/NodesPresenter.jsx:103
 #: src/components/storage/zfcp/ZFCPControllersTable.tsx:36
 msgid "Yes"
@@ -2536,31 +2575,46 @@ msgstr "Onjuiste poort"
 msgid "Edit %s"
 msgstr "Wijzig %s"
 
-#: src/components/storage/iscsi/InitiatorForm.tsx:43
-msgid "Edit iSCSI Initiator"
-msgstr "Wijzig iSCSI initiator"
+#: src/components/storage/iscsi/InitiatorForm.tsx:42
+msgid "Initiator name successfully updated"
+msgstr ""
+
+#: src/components/storage/iscsi/InitiatorForm.tsx:46
+msgid "Initiator name could not be updated"
+msgstr ""
+
+#: src/components/storage/iscsi/InitiatorForm.tsx:57
+#, fuzzy
+msgid "The initiator name cannot be blank"
+msgstr "Het apparaat kan niet gekrompen worden:"
+
+#: src/components/storage/iscsi/InitiatorForm.tsx:67
+#, fuzzy
+msgid "Updating the initiator name"
+msgstr "Initiator naam"
 
 #. TRANSLATORS: iSCSI initiator name
-#: src/components/storage/iscsi/InitiatorForm.tsx:50
+#: src/components/storage/iscsi/InitiatorForm.tsx:82
 msgid "Initiator name"
 msgstr "Initiator naam"
 
-#. TRANSLATORS: usually just keep the original text
-#. iBFT = iSCSI Boot Firmware Table, HW support for booting from iSCSI
-#: src/components/storage/iscsi/InitiatorPresenter.tsx:59
-#: src/components/storage/iscsi/InitiatorPresenter.tsx:74
-#: src/components/storage/iscsi/NodesPresenter.jsx:103
-#: src/components/storage/iscsi/NodesPresenter.jsx:124
-msgid "iBFT"
-msgstr "iBFT"
+#: src/components/storage/iscsi/InitiatorSection.tsx:38
+#, fuzzy
+msgid "Initiator details"
+msgstr "Initiator naam"
 
-#: src/components/storage/iscsi/InitiatorPresenter.tsx:60
-#: src/components/storage/iscsi/InitiatorPresenter.tsx:75
-msgid "Offload card"
-msgstr "Offload kaart"
+#: src/components/storage/iscsi/InitiatorSection.tsx:57
+msgid "Configuration read from the iSCSI Boot Firmware Table (iBFT)."
+msgstr ""
+
+#: src/components/storage/iscsi/InitiatorSection.tsx:58
+msgid ""
+"No iSCSI Boot Firmware Table (iBFT) found. The initiator can be configured "
+"manually."
+msgstr ""
 
 #. TRANSLATORS: iSCSI initiator section name
-#: src/components/storage/iscsi/InitiatorSection.tsx:36
+#: src/components/storage/iscsi/InitiatorSection.tsx:62
 msgid "Initiator"
 msgstr "Initiator"
 
@@ -2607,6 +2661,11 @@ msgstr "Portaal"
 #: src/components/storage/iscsi/NodesPresenter.jsx:123
 msgid "Interface"
 msgstr "Interface"
+
+#: src/components/storage/iscsi/NodesPresenter.jsx:103
+#: src/components/storage/iscsi/NodesPresenter.jsx:124
+msgid "iBFT"
+msgstr "iBFT"
 
 #: src/components/storage/iscsi/TargetsSection.tsx:57
 #, fuzzy
@@ -3178,6 +3237,12 @@ msgstr "Root publieke SSH sleutel"
 #: src/routes/storage.tsx:103
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#~ msgid "Edit iSCSI Initiator"
+#~ msgstr "Wijzig iSCSI initiator"
+
+#~ msgid "Offload card"
+#~ msgstr "Offload kaart"
 
 #~ msgid "Loading installation environment, please wait."
 #~ msgstr "Installatie omgeving aan het laden, wacht alstublieft."
