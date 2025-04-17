@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-16 02:54+0000\n"
+"POT-Creation-Date: 2025-04-17 02:53+0000\n"
 "PO-Revision-Date: 2025-04-14 07:56+0000\n"
 "Last-Translator: David Medina <medipas@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -245,8 +245,7 @@ msgstr ""
 msgid "Log in"
 msgstr "Inicia la sessió"
 
-#: src/components/core/Page.tsx:255
-#: src/components/storage/ConfigureDeviceMenu.tsx:90
+#: src/components/core/MenuButton.tsx:59 src/components/core/Page.tsx:255
 #: src/components/storage/ISCSIPage.tsx:48
 #: src/components/storage/dasd/DASDPage.tsx:54
 #: src/components/storage/zfcp/ZFCPPage.tsx:198
@@ -1389,95 +1388,111 @@ msgstr "Activa i formata dispositius DASD"
 msgid "Configure DASD"
 msgstr "Configuració de DASD"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:66
+#: src/components/storage/ConfigureDeviceMenu.tsx:55
 msgid "Already using all available disks"
 msgstr "Ja s'usen tots els discs disponibles"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:76
+#: src/components/storage/ConfigureDeviceMenu.tsx:65
 msgid "Start configuring a basic installation"
 msgstr "Comenceu a configurar una instal·lació bàsica"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:78
+#: src/components/storage/ConfigureDeviceMenu.tsx:67
 msgid "Select another disk to define partitions"
 msgstr "Seleccioneu un altre disc per definir-ne les particions"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:79
+#: src/components/storage/ConfigureDeviceMenu.tsx:68
 msgid "Select a disk to define partitions"
 msgstr "Seleccioneu un disc per definir-ne les particions"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:197
+#: src/components/storage/ConfigureDeviceMenu.tsx:72
+#, fuzzy
+msgid "Add device menu"
+msgstr "%d dispositiu establert:"
+
+#: src/components/storage/ConfigureDeviceMenu.tsx:121
 msgid "Define a new LVM on top of one or several disks"
 msgstr "Definiu un LVM nou en un o diversos discs"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:198
+#: src/components/storage/ConfigureDeviceMenu.tsx:122
 msgid "Define a new LVM on the disk"
 msgstr "Definiu un LVM nou al disc"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:207
-msgid "More devices"
-msgstr "Més dispositius"
+#: src/components/storage/ConfigureDeviceMenu.tsx:127
+#, fuzzy
+msgid "Configure device menu"
+msgstr "Configuració d'iSCSI"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:236
+#: src/components/storage/ConfigureDeviceMenu.tsx:143
 msgid "Add LVM volume group"
 msgstr "Afegeix un grup de volums d'LVM"
 
-#: src/components/storage/DriveEditor.tsx:61
-msgid "Choose what to with current content"
-msgstr "Trieu què voleu fer del contingut actual"
+#: src/components/storage/ConfigureDeviceMenu.tsx:147
+msgid "More devices"
+msgstr "Més dispositius"
 
-#: src/components/storage/DriveEditor.tsx:141
-msgid "This uses existing partitions at the device"
+#: src/components/storage/DriveDeviceMenu.tsx:150
+msgid "Selected disk (cannot be changed)"
+msgstr ""
+
+#: src/components/storage/DriveDeviceMenu.tsx:154
+#, fuzzy
+msgid "Select a disk to configure"
+msgstr "Seleccioneu un dispositiu per configurar-lo"
+
+#: src/components/storage/DriveDeviceMenu.tsx:158
+#, fuzzy
+msgid "Select a disk to install the system"
+msgstr "Seleccioneu un dispositiu on instal·lar el sistema"
+
+#. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
+#. single mount point in the singular case).
+#: src/components/storage/DriveDeviceMenu.tsx:168
+#, fuzzy, c-format
+msgid "Select a disk to create %s"
+msgstr "Seleccioneu un dispositiu per crear-hi %s"
+
+#: src/components/storage/DriveDeviceMenu.tsx:178
+#, fuzzy
+msgid "This uses existing partitions at the disk"
 msgstr "Això usa les particions existents al dispositiu"
 
-#: src/components/storage/DriveEditor.tsx:150
+#: src/components/storage/DriveDeviceMenu.tsx:187
+#, fuzzy
 msgid ""
-"This device will contain the configured LVM groups and any partition needed "
-"to boot"
+"This disk will contain the configured LVM groups and any partition needed to "
+"boot"
 msgstr ""
 "Aquest dispositiu contindrà els grups d'LVM configurats i qualsevol partició "
 "necessària per a arrencar"
 
-#: src/components/storage/DriveEditor.tsx:153
-msgid "This device will contain the configured LVM groups"
+#: src/components/storage/DriveDeviceMenu.tsx:190
+#, fuzzy
+msgid "This disk will contain the configured LVM groups"
 msgstr "Aquest dispositiu contindrà els grups d'LVM configurats"
 
 #. TRANSLATORS: %s is the name of the LVM
-#: src/components/storage/DriveEditor.tsx:158
-#, c-format
+#: src/components/storage/DriveDeviceMenu.tsx:195
+#, fuzzy, c-format
 msgid ""
-"This device will contain the LVM group '%s' and any partition needed to boot"
+"This disk will contain the LVM group '%s' and any partition needed to boot"
 msgstr ""
 "Aquest dispositiu contindrà el grup d'LVM %s i qualsevol partició necessària "
 "per a arrencar"
 
 #. TRANSLATORS: %s is the name of the LVM
-#: src/components/storage/DriveEditor.tsx:164
-#, c-format
-msgid "This device will contain the LVM group '%s'"
+#: src/components/storage/DriveDeviceMenu.tsx:201
+#, fuzzy, c-format
+msgid "This disk will contain the LVM group '%s'"
 msgstr "Aquest dispositiu contindrà el grup d'LVM %s"
 
-#: src/components/storage/DriveEditor.tsx:169
-msgid "This device will contain any partition needed for booting"
+#: src/components/storage/DriveDeviceMenu.tsx:206
+#, fuzzy
+msgid "This disk will contain any partition needed for booting"
 msgstr ""
 "Aquest dispositiu contindrà qualsevol partició necessària per a arrencar"
 
-#: src/components/storage/DriveEditor.tsx:173
-msgid "Select a device to configure"
-msgstr "Seleccioneu un dispositiu per configurar-lo"
-
-#: src/components/storage/DriveEditor.tsx:177
-msgid "Select a device to install the system"
-msgstr "Seleccioneu un dispositiu on instal·lar el sistema"
-
-#. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
-#. single mount point in the singular case).
-#: src/components/storage/DriveEditor.tsx:187
-#, c-format
-msgid "Select a device to create %s"
-msgstr "Seleccioneu un dispositiu per crear-hi %s"
-
 #. TRANSLATORS: %s is the name of the disk (eg. sda)
-#: src/components/storage/DriveEditor.tsx:204
+#: src/components/storage/DriveDeviceMenu.tsx:215
 #, c-format
 msgid ""
 "%s will still contain the configured LVM groups and any partition needed to "
@@ -1487,13 +1502,13 @@ msgstr ""
 "necessària per a arrencar"
 
 #. TRANSLATORS: %s is the name of the disk (eg. sda)
-#: src/components/storage/DriveEditor.tsx:210
+#: src/components/storage/DriveDeviceMenu.tsx:221
 #, c-format
 msgid "The configured LVM groups will remain at %s"
 msgstr "Els grups d'LVM configurats es mantindran a %s"
 
 #. TRANSLATORS: %1$s is the name of the disk (eg. sda) and %2$s the name of the LVM
-#: src/components/storage/DriveEditor.tsx:216
+#: src/components/storage/DriveDeviceMenu.tsx:227
 #, c-format
 msgid ""
 "%1$s will still contain the LVM group '%2$s' and any partition needed to boot"
@@ -1502,130 +1517,157 @@ msgstr ""
 "a arrencar"
 
 #. TRANSLATORS: %1$s is the name of the LVM and %2$s the name of the disk (eg. sda)
-#: src/components/storage/DriveEditor.tsx:224
+#: src/components/storage/DriveDeviceMenu.tsx:235
 #, c-format
 msgid "The LVM group '%1$s' will remain at %2$s"
 msgstr "El grup d'LVM %1$s es mantindrà a %2$s"
 
 #. TRANSLATORS: %s is the name of the disk (eg. sda)
-#: src/components/storage/DriveEditor.tsx:232
+#: src/components/storage/DriveDeviceMenu.tsx:243
 #, c-format
 msgid "Partitions needed for booting will remain at %s"
 msgstr "Les particions necessàries per a arrencar es mantindran a %s"
 
-#: src/components/storage/DriveEditor.tsx:236
+#: src/components/storage/DriveDeviceMenu.tsx:247
 msgid "Partitions needed for booting will also be adapted"
 msgstr "També s'adaptaran les particions necessàries per a l'arrencada"
 
-#: src/components/storage/DriveEditor.tsx:274
-msgid "The configured partitions will be created as logical volumes"
-msgstr "Les particions configurades es crearan com a volums lògics"
+#: src/components/storage/DriveDeviceMenu.tsx:255
+#, fuzzy
+msgid "Change device menu"
+msgstr "Canvia la zona horària"
 
-#: src/components/storage/DriveEditor.tsx:277
-msgid "New LVM volume group"
-msgstr "Grup de volums nou d'LVM"
+#: src/components/storage/DriveDeviceMenu.tsx:283
+#, fuzzy
+msgid "The disk is used for LVM and boot"
+msgstr "Usa %s per allotjar-hi l'LVM i per a l'arrencada"
 
-#: src/components/storage/DriveEditor.tsx:370
-msgid "Remove the configuration for this device"
+#: src/components/storage/DriveDeviceMenu.tsx:285
+msgid "The disk is used for booting"
+msgstr ""
+
+#: src/components/storage/DriveDeviceMenu.tsx:289
+msgid "The disk is used for LVM"
+msgstr ""
+
+#: src/components/storage/DriveDeviceMenu.tsx:291
+#, fuzzy
+msgid "Remove the configuration for this disk"
 msgstr "Suprimeix la configuració d'aquest dispositiu"
 
-#: src/components/storage/DriveEditor.tsx:373
+#: src/components/storage/DriveDeviceMenu.tsx:303
 msgid "Do not use"
 msgstr "No l'usis"
 
+#. TRANSLATORS: %s is the short name of a disk, like 'sda'
+#: src/components/storage/DriveDeviceMenu.tsx:319
+#, fuzzy, c-format
+msgid "Create another LVM volume group on %s"
+msgstr "Crea el grup de volums d'LVM %s"
+
+#. TRANSLATORS: %s is the short name of a disk, like 'sda'
+#: src/components/storage/DriveDeviceMenu.tsx:323
+#, fuzzy, c-format
+msgid "Create LVM volume group on %s"
+msgstr "Crea el grup de volums d'LVM %s"
+
+#: src/components/storage/DriveDeviceMenu.tsx:376
+#, fuzzy, c-format
+msgid "Device %s menu"
+msgstr "Dispositius: %s"
+
+#: src/components/storage/DriveEditor.tsx:58
+msgid "Choose what to with current content"
+msgstr "Trieu què voleu fer del contingut actual"
+
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:407
+#: src/components/storage/DriveEditor.tsx:134
 #, c-format
 msgid "Use %s to install, host LVM and boot"
 msgstr "Usa %s per a la instal·lació, allotjar-hi l'LVM i per a l'arrencada"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:410
+#: src/components/storage/DriveEditor.tsx:137
 #, c-format
 msgid "Use %s to install and host LVM"
 msgstr "Usa %s per a la instal·lació i allotjar-hi l'LVM"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:415
+#: src/components/storage/DriveEditor.tsx:142
 #, c-format
 msgid "Use %s to install and boot"
 msgstr "Usa %s per a la instal·lació i l'arrencada"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:418
+#: src/components/storage/DriveEditor.tsx:145
 #, c-format
 msgid "Use %s to install"
 msgstr "Usa %s per a la instal·lació"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:425
+#: src/components/storage/DriveEditor.tsx:152
 #, c-format
 msgid "Use %s for LVM, additional partitions and booting"
 msgstr "Usa %s per a l'LVM, les particions addicionals i l'arrencada"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:428
+#: src/components/storage/DriveEditor.tsx:155
 #, c-format
 msgid "Use %s for LVM and additional partitions"
 msgstr "Usa %s per a l'LVM i les particions addicionals"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:433
+#: src/components/storage/DriveEditor.tsx:160
 #, c-format
 msgid "Use %s for additional partitions and booting"
 msgstr "Usa %s per a les particions addicionals i l'arrencada"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:436
+#: src/components/storage/DriveEditor.tsx:163
 #, c-format
 msgid "Use %s for additional partitions"
 msgstr "Usa %s per a les particions addicionals"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:442
+#: src/components/storage/DriveEditor.tsx:169
 #, c-format
 msgid "Use %s to host LVM and boot"
 msgstr "Usa %s per allotjar-hi l'LVM i per a l'arrencada"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:445
+#: src/components/storage/DriveEditor.tsx:172
 #, c-format
 msgid "Use %s to host LVM"
 msgstr "Usa %s per allotjar-hi l'LVM"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:450
+#: src/components/storage/DriveEditor.tsx:177
 #, c-format
 msgid "Use %s to configure boot partitions"
 msgstr "Usa %s per configurar les particions d'arrencada"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:453
+#: src/components/storage/DriveEditor.tsx:180
 #, c-format
 msgid "Use %s"
 msgstr "Usa %s"
 
-#. TRANSLATORS: a disk drive
-#: src/components/storage/DriveEditor.tsx:456
-msgid "Drive"
-msgstr "Unitat"
-
-#: src/components/storage/DriveEditor.tsx:470
+#: src/components/storage/DriveEditor.tsx:195
 msgid "No additional partitions will be created"
 msgstr "No es crearan particions addicionals"
 
-#: src/components/storage/DriveEditor.tsx:477
-#: src/components/storage/DriveEditor.tsx:528
+#: src/components/storage/DriveEditor.tsx:202
+#: src/components/storage/DriveEditor.tsx:253
 msgid "Add another partition or mount an existing one"
 msgstr "Afegiu-hi una altra partició o munteu-ne una d'existent"
 
-#: src/components/storage/DriveEditor.tsx:484
-#: src/components/storage/DriveEditor.tsx:534
+#: src/components/storage/DriveEditor.tsx:209
+#: src/components/storage/DriveEditor.tsx:259
 msgid "Add or use partition"
 msgstr "Afegiu o useu una partició"
 
-#: src/components/storage/DriveEditor.tsx:544
-#: src/components/storage/DriveEditor.tsx:547
+#: src/components/storage/DriveEditor.tsx:269
+#: src/components/storage/DriveEditor.tsx:272
 msgid "Partitions"
 msgstr "Particions"
 
@@ -1758,7 +1800,7 @@ msgstr "S'espera un punt de muntatge"
 
 #: src/components/storage/LogicalVolumePage.tsx:466
 #: src/components/storage/PartitionPage.tsx:564
-#: src/components/storage/utils.ts:298
+#: src/components/storage/utils.ts:316
 msgid "Btrfs with snapshots"
 msgstr "Btrfs amb instantànies"
 
@@ -1979,10 +2021,10 @@ msgstr ""
 "Mou els punts de muntatge configurats actualment als discs "
 "seleccionats                    als volums lògics d'aquest grup de volums."
 
-#. TRANSLATORS: %1$s is a disk name (eg. "/dev/sda") and %2$s is its size (eg. "250 GiB")
+#. TRANSLATORS: %s is a disk name with its size (eg. "sda, 10 GiB"
 #: src/components/storage/PartitionPage.tsx:498
-#, c-format
-msgid "As a new partition on %1$s (%2$s)"
+#, fuzzy, c-format
+msgid "As a new partition on %s"
 msgstr "Com a partició nova a %1$s (%2$s)"
 
 #: src/components/storage/PartitionPage.tsx:500
@@ -2294,37 +2336,33 @@ msgstr ""
 "Podeu procedir a la instal·lació amb la configuració actual o potser voleu "
 "descartar-la i començar des de zero amb una de simple."
 
-#: src/components/storage/VolumeGroupEditor.tsx:56
-msgid "Delete the volume group and its logical volumes"
-msgstr "Suprimeix el grup de volums i els seus volums lògics"
-
-#: src/components/storage/VolumeGroupEditor.tsx:60
+#: src/components/storage/VolumeGroupEditor.tsx:89
 msgid "Delete volume group"
 msgstr "Suprimeix el grup de volums"
 
-#: src/components/storage/VolumeGroupEditor.tsx:72
+#: src/components/storage/VolumeGroupEditor.tsx:101
 msgid "Modify settings and physical volumes"
 msgstr "Modifica la configuració i els volums físics"
 
-#: src/components/storage/VolumeGroupEditor.tsx:76
+#: src/components/storage/VolumeGroupEditor.tsx:105
 msgid "Edit volume group"
 msgstr "Edita el grup de volums"
 
-#: src/components/storage/VolumeGroupEditor.tsx:94
+#: src/components/storage/VolumeGroupEditor.tsx:123
 #, c-format
 msgid "Create LVM volume group %s"
 msgstr "Crea el grup de volums d'LVM %s"
 
-#: src/components/storage/VolumeGroupEditor.tsx:95
+#: src/components/storage/VolumeGroupEditor.tsx:124
 #, c-format
 msgid "Empty LVM volume group %s"
 msgstr "Grup de volums d'LVM %s buit"
 
-#: src/components/storage/VolumeGroupEditor.tsx:119
+#: src/components/storage/VolumeGroupEditor.tsx:148
 msgid "Logical volumes"
 msgstr "Volums lògics"
 
-#: src/components/storage/VolumeGroupEditor.tsx:140
+#: src/components/storage/VolumeGroupEditor.tsx:169
 msgid "Add logical volume"
 msgstr "Afegeix un volum lògic"
 
@@ -2794,13 +2832,13 @@ msgid "Select what to do with each partition."
 msgstr "Seleccioneu què voleu fer amb cada partició."
 
 #. TRANSLATORS: Size range, %1$s is the min size and %2$s is the max
-#: src/components/storage/utils.ts:329
+#: src/components/storage/utils.ts:347
 #, c-format
 msgid "%1$s - %2$s"
 msgstr "%1$s - %2$s"
 
 #. TRANSLATORS: minimum device size, %s is replaced by size string, e.g. "17.5 GiB"
-#: src/components/storage/utils.ts:331
+#: src/components/storage/utils.ts:349
 #, c-format
 msgid "at least %s"
 msgstr "almenys %s"
@@ -3179,6 +3217,18 @@ msgstr "Usa una clau pública SSH"
 msgid "ZFCP"
 msgstr "ZFCP"
 
+#~ msgid "The configured partitions will be created as logical volumes"
+#~ msgstr "Les particions configurades es crearan com a volums lògics"
+
+#~ msgid "New LVM volume group"
+#~ msgstr "Grup de volums nou d'LVM"
+
+#~ msgid "Drive"
+#~ msgstr "Unitat"
+
+#~ msgid "Delete the volume group and its logical volumes"
+#~ msgstr "Suprimeix el grup de volums i els seus volums lògics"
+
 #~ msgid "Edit iSCSI Initiator"
 #~ msgstr "Edita l'iniciador iSCSI"
 
@@ -3360,10 +3410,6 @@ msgstr "ZFCP"
 #, c-format
 #~ msgid "Members: %s"
 #~ msgstr "Membres: %s"
-
-#, c-format
-#~ msgid "Devices: %s"
-#~ msgstr "Dispositius: %s"
 
 #, c-format
 #~ msgid "Wires: %s"
@@ -4066,9 +4112,6 @@ msgstr "ZFCP"
 #~ msgid "%s will use the selected time zone."
 #~ msgstr "%s usarà la zona horària seleccionada."
 
-#~ msgid "Change time zone"
-#~ msgstr "Canvia la zona horària"
-
 #~ msgid "Time zone not selected yet"
 #~ msgstr "La zona horària encara no s'ha seleccionat."
 
@@ -4103,12 +4146,6 @@ msgstr "ZFCP"
 
 #~ msgid "No network devices detected"
 #~ msgstr "No s'ha detectat cap dispositiu de xarxa."
-
-#, c-format
-#~ msgid "%d device set:"
-#~ msgid_plural "%d devices set:"
-#~ msgstr[0] "%d dispositiu establert:"
-#~ msgstr[1] "%d dispositius establerts:"
 
 #~ msgid "Installation Summary"
 #~ msgstr "Resum de la instal·lació"

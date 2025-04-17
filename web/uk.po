@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-16 02:54+0000\n"
+"POT-Creation-Date: 2025-04-17 02:53+0000\n"
 "PO-Revision-Date: 2025-03-26 21:56+0000\n"
 "Last-Translator: Eugene Krater <lachend@gmail.com>\n"
 "Language-Team: Ukrainian <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -244,8 +244,7 @@ msgstr "Будь ласка, вкажіть його пароль для вхо�
 msgid "Log in"
 msgstr "Вхід"
 
-#: src/components/core/Page.tsx:255
-#: src/components/storage/ConfigureDeviceMenu.tsx:90
+#: src/components/core/MenuButton.tsx:59 src/components/core/Page.tsx:255
 #: src/components/storage/ISCSIPage.tsx:48
 #: src/components/storage/dasd/DASDPage.tsx:54
 #: src/components/storage/zfcp/ZFCPPage.tsx:198
@@ -1388,99 +1387,114 @@ msgstr "Активувати та форматувати DASD-пристрої"
 msgid "Configure DASD"
 msgstr "Налаштувати DASD"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:66
+#: src/components/storage/ConfigureDeviceMenu.tsx:55
 msgid "Already using all available disks"
 msgstr ""
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:76
+#: src/components/storage/ConfigureDeviceMenu.tsx:65
 #, fuzzy
 msgid "Start configuring a basic installation"
 msgstr "Розділ на диску для встановлення"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:78
+#: src/components/storage/ConfigureDeviceMenu.tsx:67
 msgid "Select another disk to define partitions"
 msgstr "Виберіть інший диск для створення розділів"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:79
+#: src/components/storage/ConfigureDeviceMenu.tsx:68
 #, fuzzy
 msgid "Select a disk to define partitions"
 msgstr "Виберіть інший диск для створення розділів"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:197
+#: src/components/storage/ConfigureDeviceMenu.tsx:72
+msgid "Add device menu"
+msgstr ""
+
+#: src/components/storage/ConfigureDeviceMenu.tsx:121
 msgid "Define a new LVM on top of one or several disks"
 msgstr ""
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:198
+#: src/components/storage/ConfigureDeviceMenu.tsx:122
 msgid "Define a new LVM on the disk"
 msgstr ""
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:207
+#: src/components/storage/ConfigureDeviceMenu.tsx:127
 #, fuzzy
-msgid "More devices"
-msgstr "Відформатувати пристрій"
+msgid "Configure device menu"
+msgstr "Налаштувати iSCSI"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:236
+#: src/components/storage/ConfigureDeviceMenu.tsx:143
 #, fuzzy
 msgid "Add LVM volume group"
 msgstr "Нова група томів LVM"
 
-#: src/components/storage/DriveEditor.tsx:61
-msgid "Choose what to with current content"
-msgstr "Оберіть, що робити з поточним контентом"
+#: src/components/storage/ConfigureDeviceMenu.tsx:147
+#, fuzzy
+msgid "More devices"
+msgstr "Відформатувати пристрій"
 
-#: src/components/storage/DriveEditor.tsx:141
-msgid "This uses existing partitions at the device"
+#: src/components/storage/DriveDeviceMenu.tsx:150
+msgid "Selected disk (cannot be changed)"
+msgstr ""
+
+#: src/components/storage/DriveDeviceMenu.tsx:154
+#, fuzzy
+msgid "Select a disk to configure"
+msgstr "Виберіть пристрій для налаштування"
+
+#: src/components/storage/DriveDeviceMenu.tsx:158
+#, fuzzy
+msgid "Select a disk to install the system"
+msgstr "Виберіть пристрій для встановлення системи"
+
+#. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
+#. single mount point in the singular case).
+#: src/components/storage/DriveDeviceMenu.tsx:168
+#, fuzzy, c-format
+msgid "Select a disk to create %s"
+msgstr "Виберіть пристрій для створення %s"
+
+#: src/components/storage/DriveDeviceMenu.tsx:178
+#, fuzzy
+msgid "This uses existing partitions at the disk"
 msgstr "Для цього використовуються наявні розділи на пристрої"
 
-#: src/components/storage/DriveEditor.tsx:150
+#: src/components/storage/DriveDeviceMenu.tsx:187
+#, fuzzy
 msgid ""
-"This device will contain the configured LVM groups and any partition needed "
-"to boot"
+"This disk will contain the configured LVM groups and any partition needed to "
+"boot"
 msgstr ""
 "Цей пристрій міститиме налаштовані групи LVM і будь-який розділ, необхідний "
 "для завантаження"
 
-#: src/components/storage/DriveEditor.tsx:153
-msgid "This device will contain the configured LVM groups"
+#: src/components/storage/DriveDeviceMenu.tsx:190
+#, fuzzy
+msgid "This disk will contain the configured LVM groups"
 msgstr "Цей пристрій міститиме налаштовані групи LVM"
 
 #. TRANSLATORS: %s is the name of the LVM
-#: src/components/storage/DriveEditor.tsx:158
-#, c-format
+#: src/components/storage/DriveDeviceMenu.tsx:195
+#, fuzzy, c-format
 msgid ""
-"This device will contain the LVM group '%s' and any partition needed to boot"
+"This disk will contain the LVM group '%s' and any partition needed to boot"
 msgstr ""
 "Цей пристрій міститиме групу LVM '%s' і будь-який розділ, необхідний для "
 "завантаження"
 
 #. TRANSLATORS: %s is the name of the LVM
-#: src/components/storage/DriveEditor.tsx:164
-#, c-format
-msgid "This device will contain the LVM group '%s'"
+#: src/components/storage/DriveDeviceMenu.tsx:201
+#, fuzzy, c-format
+msgid "This disk will contain the LVM group '%s'"
 msgstr "Цей пристрій міститиме групу LVM '%s'"
 
-#: src/components/storage/DriveEditor.tsx:169
-msgid "This device will contain any partition needed for booting"
+#: src/components/storage/DriveDeviceMenu.tsx:206
+#, fuzzy
+msgid "This disk will contain any partition needed for booting"
 msgstr ""
 "Цей пристрій буде містити будь-який розділ, необхідний для завантаження"
 
-#: src/components/storage/DriveEditor.tsx:173
-msgid "Select a device to configure"
-msgstr "Виберіть пристрій для налаштування"
-
-#: src/components/storage/DriveEditor.tsx:177
-msgid "Select a device to install the system"
-msgstr "Виберіть пристрій для встановлення системи"
-
-#. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
-#. single mount point in the singular case).
-#: src/components/storage/DriveEditor.tsx:187
-#, c-format
-msgid "Select a device to create %s"
-msgstr "Виберіть пристрій для створення %s"
-
 #. TRANSLATORS: %s is the name of the disk (eg. sda)
-#: src/components/storage/DriveEditor.tsx:204
+#: src/components/storage/DriveDeviceMenu.tsx:215
 #, c-format
 msgid ""
 "%s will still contain the configured LVM groups and any partition needed to "
@@ -1490,13 +1504,13 @@ msgstr ""
 "для завантаження"
 
 #. TRANSLATORS: %s is the name of the disk (eg. sda)
-#: src/components/storage/DriveEditor.tsx:210
+#: src/components/storage/DriveDeviceMenu.tsx:221
 #, c-format
 msgid "The configured LVM groups will remain at %s"
 msgstr "Налаштовані групи LVM залишаться у %s"
 
 #. TRANSLATORS: %1$s is the name of the disk (eg. sda) and %2$s the name of the LVM
-#: src/components/storage/DriveEditor.tsx:216
+#: src/components/storage/DriveDeviceMenu.tsx:227
 #, c-format
 msgid ""
 "%1$s will still contain the LVM group '%2$s' and any partition needed to boot"
@@ -1505,130 +1519,156 @@ msgstr ""
 "для завантаження"
 
 #. TRANSLATORS: %1$s is the name of the LVM and %2$s the name of the disk (eg. sda)
-#: src/components/storage/DriveEditor.tsx:224
+#: src/components/storage/DriveDeviceMenu.tsx:235
 #, c-format
 msgid "The LVM group '%1$s' will remain at %2$s"
 msgstr "Група LVM '%1$s' залишиться на %2$s"
 
 #. TRANSLATORS: %s is the name of the disk (eg. sda)
-#: src/components/storage/DriveEditor.tsx:232
+#: src/components/storage/DriveDeviceMenu.tsx:243
 #, c-format
 msgid "Partitions needed for booting will remain at %s"
 msgstr "Розділи, необхідні для завантаження, залишаться на %s"
 
-#: src/components/storage/DriveEditor.tsx:236
+#: src/components/storage/DriveDeviceMenu.tsx:247
 msgid "Partitions needed for booting will also be adapted"
 msgstr "Розділи, необхідні для завантаження, також будуть адаптовані"
 
-#: src/components/storage/DriveEditor.tsx:274
-msgid "The configured partitions will be created as logical volumes"
-msgstr "Налаштовані розділи буде створено як логічні томи"
+#: src/components/storage/DriveDeviceMenu.tsx:255
+msgid "Change device menu"
+msgstr ""
 
-#: src/components/storage/DriveEditor.tsx:277
-msgid "New LVM volume group"
-msgstr "Нова група томів LVM"
+#: src/components/storage/DriveDeviceMenu.tsx:283
+#, fuzzy
+msgid "The disk is used for LVM and boot"
+msgstr "Використати %s для розміщення LVM і завантаження"
 
-#: src/components/storage/DriveEditor.tsx:370
-msgid "Remove the configuration for this device"
+#: src/components/storage/DriveDeviceMenu.tsx:285
+msgid "The disk is used for booting"
+msgstr ""
+
+#: src/components/storage/DriveDeviceMenu.tsx:289
+msgid "The disk is used for LVM"
+msgstr ""
+
+#: src/components/storage/DriveDeviceMenu.tsx:291
+#, fuzzy
+msgid "Remove the configuration for this disk"
 msgstr "Видалити конфігурацію для цього пристрою"
 
-#: src/components/storage/DriveEditor.tsx:373
+#: src/components/storage/DriveDeviceMenu.tsx:303
 msgid "Do not use"
 msgstr "Не використовувати"
 
+#. TRANSLATORS: %s is the short name of a disk, like 'sda'
+#: src/components/storage/DriveDeviceMenu.tsx:319
+#, fuzzy, c-format
+msgid "Create another LVM volume group on %s"
+msgstr "Нова група томів LVM"
+
+#. TRANSLATORS: %s is the short name of a disk, like 'sda'
+#: src/components/storage/DriveDeviceMenu.tsx:323
+#, fuzzy, c-format
+msgid "Create LVM volume group on %s"
+msgstr "Нова група томів LVM"
+
+#: src/components/storage/DriveDeviceMenu.tsx:376
+#, fuzzy, c-format
+msgid "Device %s menu"
+msgstr "Пристрої: %s"
+
+#: src/components/storage/DriveEditor.tsx:58
+msgid "Choose what to with current content"
+msgstr "Оберіть, що робити з поточним контентом"
+
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:407
+#: src/components/storage/DriveEditor.tsx:134
 #, c-format
 msgid "Use %s to install, host LVM and boot"
 msgstr "Використати %s для встановлення, розміщення LVM та завантаження"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:410
+#: src/components/storage/DriveEditor.tsx:137
 #, c-format
 msgid "Use %s to install and host LVM"
 msgstr "Використати %s для встановлення та розміщення LVM"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:415
+#: src/components/storage/DriveEditor.tsx:142
 #, c-format
 msgid "Use %s to install and boot"
 msgstr "Використати %s для встановлення та завантаження"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:418
+#: src/components/storage/DriveEditor.tsx:145
 #, c-format
 msgid "Use %s to install"
 msgstr "Використати %s для встановлення"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:425
+#: src/components/storage/DriveEditor.tsx:152
 #, c-format
 msgid "Use %s for LVM, additional partitions and booting"
 msgstr "Використати %s для розміщення LVM, додаткових розділів та тавантаження"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:428
+#: src/components/storage/DriveEditor.tsx:155
 #, c-format
 msgid "Use %s for LVM and additional partitions"
 msgstr "Використати %s для LVM і додаткових розділів"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:433
+#: src/components/storage/DriveEditor.tsx:160
 #, c-format
 msgid "Use %s for additional partitions and booting"
 msgstr "Використовувати %s для додаткових розділів і завантаження"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:436
+#: src/components/storage/DriveEditor.tsx:163
 #, c-format
 msgid "Use %s for additional partitions"
 msgstr "Використати %s для додаткових розділів"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:442
+#: src/components/storage/DriveEditor.tsx:169
 #, c-format
 msgid "Use %s to host LVM and boot"
 msgstr "Використати %s для розміщення LVM і завантаження"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:445
+#: src/components/storage/DriveEditor.tsx:172
 #, c-format
 msgid "Use %s to host LVM"
 msgstr "Використати %s для розміщення LVM"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:450
+#: src/components/storage/DriveEditor.tsx:177
 #, fuzzy, c-format
 msgid "Use %s to configure boot partitions"
 msgstr "Використати %s для додаткових розділів"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:453
+#: src/components/storage/DriveEditor.tsx:180
 #, c-format
 msgid "Use %s"
 msgstr "Використати %s"
 
-#. TRANSLATORS: a disk drive
-#: src/components/storage/DriveEditor.tsx:456
-msgid "Drive"
-msgstr "Накопичувач"
-
-#: src/components/storage/DriveEditor.tsx:470
+#: src/components/storage/DriveEditor.tsx:195
 msgid "No additional partitions will be created"
 msgstr "Додаткові розділи не створюватимуться"
 
-#: src/components/storage/DriveEditor.tsx:477
-#: src/components/storage/DriveEditor.tsx:528
+#: src/components/storage/DriveEditor.tsx:202
+#: src/components/storage/DriveEditor.tsx:253
 msgid "Add another partition or mount an existing one"
 msgstr "Додати новий розділ або змонтувати наявний"
 
-#: src/components/storage/DriveEditor.tsx:484
-#: src/components/storage/DriveEditor.tsx:534
+#: src/components/storage/DriveEditor.tsx:209
+#: src/components/storage/DriveEditor.tsx:259
 msgid "Add or use partition"
 msgstr "Створити або використати розділ"
 
-#: src/components/storage/DriveEditor.tsx:544
-#: src/components/storage/DriveEditor.tsx:547
+#: src/components/storage/DriveEditor.tsx:269
+#: src/components/storage/DriveEditor.tsx:272
 msgid "Partitions"
 msgstr "Розділи"
 
@@ -1762,7 +1802,7 @@ msgstr "Очікуємо на точку монтування"
 
 #: src/components/storage/LogicalVolumePage.tsx:466
 #: src/components/storage/PartitionPage.tsx:564
-#: src/components/storage/utils.ts:298
+#: src/components/storage/utils.ts:316
 msgid "Btrfs with snapshots"
 msgstr "Btrfs з моментальними знімками"
 
@@ -1988,10 +2028,10 @@ msgid ""
 "logical                   volumes of this volume group."
 msgstr ""
 
-#. TRANSLATORS: %1$s is a disk name (eg. "/dev/sda") and %2$s is its size (eg. "250 GiB")
+#. TRANSLATORS: %s is a disk name with its size (eg. "sda, 10 GiB"
 #: src/components/storage/PartitionPage.tsx:498
-#, c-format
-msgid "As a new partition on %1$s (%2$s)"
+#, fuzzy, c-format
+msgid "As a new partition on %s"
 msgstr "Як новий розділ на %1$s (%2$s)"
 
 #: src/components/storage/PartitionPage.tsx:500
@@ -2306,40 +2346,36 @@ msgstr ""
 "Ви можете продовжити інсталяцію з поточними налаштуваннями або відкинути "
 "конфігурацію і почати з чистого аркуша."
 
-#: src/components/storage/VolumeGroupEditor.tsx:56
-msgid "Delete the volume group and its logical volumes"
-msgstr ""
-
-#: src/components/storage/VolumeGroupEditor.tsx:60
+#: src/components/storage/VolumeGroupEditor.tsx:89
 #, fuzzy
 msgid "Delete volume group"
 msgstr "Нова група томів LVM"
 
-#: src/components/storage/VolumeGroupEditor.tsx:72
+#: src/components/storage/VolumeGroupEditor.tsx:101
 msgid "Modify settings and physical volumes"
 msgstr ""
 
-#: src/components/storage/VolumeGroupEditor.tsx:76
+#: src/components/storage/VolumeGroupEditor.tsx:105
 #, fuzzy
 msgid "Edit volume group"
 msgstr "Нова група томів LVM"
 
-#: src/components/storage/VolumeGroupEditor.tsx:94
+#: src/components/storage/VolumeGroupEditor.tsx:123
 #, fuzzy, c-format
 msgid "Create LVM volume group %s"
 msgstr "Нова група томів LVM"
 
-#: src/components/storage/VolumeGroupEditor.tsx:95
+#: src/components/storage/VolumeGroupEditor.tsx:124
 #, fuzzy, c-format
 msgid "Empty LVM volume group %s"
 msgstr "Нова група томів LVM"
 
-#: src/components/storage/VolumeGroupEditor.tsx:119
+#: src/components/storage/VolumeGroupEditor.tsx:148
 #, fuzzy
 msgid "Logical volumes"
 msgstr "Логічний том в системі LVM"
 
-#: src/components/storage/VolumeGroupEditor.tsx:140
+#: src/components/storage/VolumeGroupEditor.tsx:169
 msgid "Add logical volume"
 msgstr ""
 
@@ -2805,13 +2841,13 @@ msgid "Select what to do with each partition."
 msgstr "Оберіть, що робити з кожним розділом."
 
 #. TRANSLATORS: Size range, %1$s is the min size and %2$s is the max
-#: src/components/storage/utils.ts:329
+#: src/components/storage/utils.ts:347
 #, c-format
 msgid "%1$s - %2$s"
 msgstr "%1$s - %2$s"
 
 #. TRANSLATORS: minimum device size, %s is replaced by size string, e.g. "17.5 GiB"
-#: src/components/storage/utils.ts:331
+#: src/components/storage/utils.ts:349
 #, c-format
 msgid "at least %s"
 msgstr "не менше %s"
@@ -3190,6 +3226,15 @@ msgstr "Використати відкритий ключ SSH"
 msgid "ZFCP"
 msgstr "ZFCP"
 
+#~ msgid "The configured partitions will be created as logical volumes"
+#~ msgstr "Налаштовані розділи буде створено як логічні томи"
+
+#~ msgid "New LVM volume group"
+#~ msgstr "Нова група томів LVM"
+
+#~ msgid "Drive"
+#~ msgstr "Накопичувач"
+
 #~ msgid "Edit iSCSI Initiator"
 #~ msgstr "Змінити ініціатор iSCSI"
 
@@ -3366,10 +3411,6 @@ msgstr "ZFCP"
 #, c-format
 #~ msgid "Members: %s"
 #~ msgstr "Учасники: %s"
-
-#, c-format
-#~ msgid "Devices: %s"
-#~ msgstr "Пристрої: %s"
 
 #, c-format
 #~ msgid "Wires: %s"

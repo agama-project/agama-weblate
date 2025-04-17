@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-16 02:54+0000\n"
+"POT-Creation-Date: 2025-04-17 02:53+0000\n"
 "PO-Revision-Date: 2025-01-07 17:50+0000\n"
 "Last-Translator: Aleksey Fedorov <Aleksejfedorov963@gmail.com>\n"
 "Language-Team: Russian <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -246,8 +246,7 @@ msgstr "Пожалуйста, укажите его пароль для вход
 msgid "Log in"
 msgstr "Вход"
 
-#: src/components/core/Page.tsx:255
-#: src/components/storage/ConfigureDeviceMenu.tsx:90
+#: src/components/core/MenuButton.tsx:59 src/components/core/Page.tsx:255
 #: src/components/storage/ISCSIPage.tsx:48
 #: src/components/storage/dasd/DASDPage.tsx:54
 #: src/components/storage/zfcp/ZFCPPage.tsx:198
@@ -1373,99 +1372,110 @@ msgstr "Форматирование устройств DASD"
 msgid "Configure DASD"
 msgstr "настроено"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:66
+#: src/components/storage/ConfigureDeviceMenu.tsx:55
 msgid "Already using all available disks"
 msgstr ""
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:76
+#: src/components/storage/ConfigureDeviceMenu.tsx:65
 #, fuzzy
 msgid "Start configuring a basic installation"
 msgstr "Раздел на диске для установки"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:78
+#: src/components/storage/ConfigureDeviceMenu.tsx:67
 #, fuzzy
 msgid "Select another disk to define partitions"
 msgstr "Выберите, что делать с каждым разделом."
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:79
+#: src/components/storage/ConfigureDeviceMenu.tsx:68
 #, fuzzy
 msgid "Select a disk to define partitions"
 msgstr "Выберите, что делать с каждым разделом."
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:197
+#: src/components/storage/ConfigureDeviceMenu.tsx:72
+#, fuzzy
+msgid "Add device menu"
+msgstr "Установлено %d устройство:"
+
+#: src/components/storage/ConfigureDeviceMenu.tsx:121
 msgid "Define a new LVM on top of one or several disks"
 msgstr ""
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:198
+#: src/components/storage/ConfigureDeviceMenu.tsx:122
 msgid "Define a new LVM on the disk"
 msgstr ""
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:207
+#: src/components/storage/ConfigureDeviceMenu.tsx:127
 #, fuzzy
-msgid "More devices"
-msgstr "Отформатировать устройство"
+msgid "Configure device menu"
+msgstr "Хранилище iSCSI"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:236
+#: src/components/storage/ConfigureDeviceMenu.tsx:143
 #, fuzzy
 msgid "Add LVM volume group"
 msgstr "новую группу томов LVM"
 
-#: src/components/storage/DriveEditor.tsx:61
+#: src/components/storage/ConfigureDeviceMenu.tsx:147
 #, fuzzy
-msgid "Choose what to with current content"
-msgstr "удаление текущего содержимого"
+msgid "More devices"
+msgstr "Отформатировать устройство"
 
-#: src/components/storage/DriveEditor.tsx:141
+#: src/components/storage/DriveDeviceMenu.tsx:150
+msgid "Selected disk (cannot be changed)"
+msgstr ""
+
+#: src/components/storage/DriveDeviceMenu.tsx:154
 #, fuzzy
-msgid "This uses existing partitions at the device"
-msgstr "Уменьшение существующих разделов"
+msgid "Select a disk to configure"
+msgstr "Выберите, что делать с каждым разделом."
 
-#: src/components/storage/DriveEditor.tsx:150
-msgid ""
-"This device will contain the configured LVM groups and any partition needed "
-"to boot"
-msgstr ""
-
-#: src/components/storage/DriveEditor.tsx:153
-msgid "This device will contain the configured LVM groups"
-msgstr ""
-
-#. TRANSLATORS: %s is the name of the LVM
-#: src/components/storage/DriveEditor.tsx:158
-#, c-format
-msgid ""
-"This device will contain the LVM group '%s' and any partition needed to boot"
-msgstr ""
-
-#. TRANSLATORS: %s is the name of the LVM
-#: src/components/storage/DriveEditor.tsx:164
-#, c-format
-msgid "This device will contain the LVM group '%s'"
-msgstr ""
-
-#: src/components/storage/DriveEditor.tsx:169
+#: src/components/storage/DriveDeviceMenu.tsx:158
 #, fuzzy
-msgid "This device will contain any partition needed for booting"
-msgstr "Установка не будет настраивать разделы для загрузки."
-
-#: src/components/storage/DriveEditor.tsx:173
-msgid "Select a device to configure"
-msgstr ""
-
-#: src/components/storage/DriveEditor.tsx:177
-#, fuzzy
-msgid "Select a device to install the system"
+msgid "Select a disk to install the system"
 msgstr "Устройство для установки системы"
 
 #. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case).
-#: src/components/storage/DriveEditor.tsx:187
+#: src/components/storage/DriveDeviceMenu.tsx:168
 #, fuzzy, c-format
-msgid "Select a device to create %s"
+msgid "Select a disk to create %s"
 msgstr "Выберите, на каком устройстве разместить файловую систему"
 
+#: src/components/storage/DriveDeviceMenu.tsx:178
+#, fuzzy
+msgid "This uses existing partitions at the disk"
+msgstr "Уменьшение существующих разделов"
+
+#: src/components/storage/DriveDeviceMenu.tsx:187
+#, fuzzy
+msgid ""
+"This disk will contain the configured LVM groups and any partition needed to "
+"boot"
+msgstr "Установка не будет настраивать разделы для загрузки."
+
+#: src/components/storage/DriveDeviceMenu.tsx:190
+msgid "This disk will contain the configured LVM groups"
+msgstr ""
+
+#. TRANSLATORS: %s is the name of the LVM
+#: src/components/storage/DriveDeviceMenu.tsx:195
+#, fuzzy, c-format
+msgid ""
+"This disk will contain the LVM group '%s' and any partition needed to boot"
+msgstr "Установка не будет настраивать разделы для загрузки."
+
+#. TRANSLATORS: %s is the name of the LVM
+#: src/components/storage/DriveDeviceMenu.tsx:201
+#, c-format
+msgid "This disk will contain the LVM group '%s'"
+msgstr ""
+
+#: src/components/storage/DriveDeviceMenu.tsx:206
+#, fuzzy
+msgid "This disk will contain any partition needed for booting"
+msgstr "Установка не будет настраивать разделы для загрузки."
+
 #. TRANSLATORS: %s is the name of the disk (eg. sda)
-#: src/components/storage/DriveEditor.tsx:204
+#: src/components/storage/DriveDeviceMenu.tsx:215
 #, c-format
 msgid ""
 "%s will still contain the configured LVM groups and any partition needed to "
@@ -1473,149 +1483,174 @@ msgid ""
 msgstr ""
 
 #. TRANSLATORS: %s is the name of the disk (eg. sda)
-#: src/components/storage/DriveEditor.tsx:210
+#: src/components/storage/DriveDeviceMenu.tsx:221
 #, c-format
 msgid "The configured LVM groups will remain at %s"
 msgstr ""
 
 #. TRANSLATORS: %1$s is the name of the disk (eg. sda) and %2$s the name of the LVM
-#: src/components/storage/DriveEditor.tsx:216
+#: src/components/storage/DriveDeviceMenu.tsx:227
 #, c-format
 msgid ""
 "%1$s will still contain the LVM group '%2$s' and any partition needed to boot"
 msgstr ""
 
 #. TRANSLATORS: %1$s is the name of the LVM and %2$s the name of the disk (eg. sda)
-#: src/components/storage/DriveEditor.tsx:224
+#: src/components/storage/DriveDeviceMenu.tsx:235
 #, c-format
 msgid "The LVM group '%1$s' will remain at %2$s"
 msgstr ""
 
 #. TRANSLATORS: %s is the name of the disk (eg. sda)
-#: src/components/storage/DriveEditor.tsx:232
+#: src/components/storage/DriveDeviceMenu.tsx:243
 #, fuzzy, c-format
 msgid "Partitions needed for booting will remain at %s"
 msgstr "Разделы для загрузки"
 
-#: src/components/storage/DriveEditor.tsx:236
+#: src/components/storage/DriveDeviceMenu.tsx:247
 #, fuzzy
 msgid "Partitions needed for booting will also be adapted"
 msgstr "Разделы для загрузки"
 
-#: src/components/storage/DriveEditor.tsx:274
-msgid "The configured partitions will be created as logical volumes"
+#: src/components/storage/DriveDeviceMenu.tsx:255
+#, fuzzy
+msgid "Change device menu"
+msgstr "Изменить часовой пояс"
+
+#: src/components/storage/DriveDeviceMenu.tsx:283
+msgid "The disk is used for LVM and boot"
 msgstr ""
 
-#: src/components/storage/DriveEditor.tsx:277
-#, fuzzy
-msgid "New LVM volume group"
-msgstr "новую группу томов LVM"
+#: src/components/storage/DriveDeviceMenu.tsx:285
+msgid "The disk is used for booting"
+msgstr ""
 
-#: src/components/storage/DriveEditor.tsx:370
+#: src/components/storage/DriveDeviceMenu.tsx:289
+msgid "The disk is used for LVM"
+msgstr ""
+
+#: src/components/storage/DriveDeviceMenu.tsx:291
 #, fuzzy
-msgid "Remove the configuration for this device"
+msgid "Remove the configuration for this disk"
 msgstr "конфигурация моментальных снимков"
 
-#: src/components/storage/DriveEditor.tsx:373
+#: src/components/storage/DriveDeviceMenu.tsx:303
 #, fuzzy
 msgid "Do not use"
 msgstr "Не настраивать"
 
+#. TRANSLATORS: %s is the short name of a disk, like 'sda'
+#: src/components/storage/DriveDeviceMenu.tsx:319
+#, fuzzy, c-format
+msgid "Create another LVM volume group on %s"
+msgstr "Создание группы томов LVM"
+
+#. TRANSLATORS: %s is the short name of a disk, like 'sda'
+#: src/components/storage/DriveDeviceMenu.tsx:323
+#, fuzzy, c-format
+msgid "Create LVM volume group on %s"
+msgstr "Создание группы томов LVM"
+
+#: src/components/storage/DriveDeviceMenu.tsx:376
+#, fuzzy, c-format
+msgid "Device %s menu"
+msgstr "Устройства: %s"
+
+#: src/components/storage/DriveEditor.tsx:58
+#, fuzzy
+msgid "Choose what to with current content"
+msgstr "удаление текущего содержимого"
+
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:407
+#: src/components/storage/DriveEditor.tsx:134
 #, c-format
 msgid "Use %s to install, host LVM and boot"
 msgstr ""
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:410
+#: src/components/storage/DriveEditor.tsx:137
 #, c-format
 msgid "Use %s to install and host LVM"
 msgstr ""
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:415
+#: src/components/storage/DriveEditor.tsx:142
 #, c-format
 msgid "Use %s to install and boot"
 msgstr ""
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:418
+#: src/components/storage/DriveEditor.tsx:145
 #, c-format
 msgid "Use %s to install"
 msgstr ""
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:425
+#: src/components/storage/DriveEditor.tsx:152
 #, c-format
 msgid "Use %s for LVM, additional partitions and booting"
 msgstr ""
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:428
+#: src/components/storage/DriveEditor.tsx:155
 #, c-format
 msgid "Use %s for LVM and additional partitions"
 msgstr ""
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:433
+#: src/components/storage/DriveEditor.tsx:160
 #, fuzzy, c-format
 msgid "Use %s for additional partitions and booting"
 msgstr "Не настраивать разделы для загрузки"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:436
+#: src/components/storage/DriveEditor.tsx:163
 #, fuzzy, c-format
 msgid "Use %s for additional partitions"
 msgstr "уменьшение разделов"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:442
+#: src/components/storage/DriveEditor.tsx:169
 #, c-format
 msgid "Use %s to host LVM and boot"
 msgstr ""
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:445
+#: src/components/storage/DriveEditor.tsx:172
 #, c-format
 msgid "Use %s to host LVM"
 msgstr ""
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:450
+#: src/components/storage/DriveEditor.tsx:177
 #, fuzzy, c-format
 msgid "Use %s to configure boot partitions"
 msgstr "уменьшение разделов"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:453
+#: src/components/storage/DriveEditor.tsx:180
 #, c-format
 msgid "Use %s"
 msgstr ""
 
-#. TRANSLATORS: a disk drive
-#: src/components/storage/DriveEditor.tsx:456
-msgid "Drive"
-msgstr ""
-
-#: src/components/storage/DriveEditor.tsx:470
+#: src/components/storage/DriveEditor.tsx:195
 #, fuzzy
 msgid "No additional partitions will be created"
 msgstr "Никакого дополнительного программного обеспечения выбрано не было."
 
-#: src/components/storage/DriveEditor.tsx:477
-#: src/components/storage/DriveEditor.tsx:528
+#: src/components/storage/DriveEditor.tsx:202
+#: src/components/storage/DriveEditor.tsx:253
 msgid "Add another partition or mount an existing one"
 msgstr ""
 
-#: src/components/storage/DriveEditor.tsx:484
-#: src/components/storage/DriveEditor.tsx:534
+#: src/components/storage/DriveEditor.tsx:209
+#: src/components/storage/DriveEditor.tsx:259
 #, fuzzy
 msgid "Add or use partition"
 msgstr "Создать новый раздел"
 
-#: src/components/storage/DriveEditor.tsx:544
-#: src/components/storage/DriveEditor.tsx:547
+#: src/components/storage/DriveEditor.tsx:269
+#: src/components/storage/DriveEditor.tsx:272
 #, fuzzy
 msgid "Partitions"
 msgstr "Раздел на %s"
@@ -1751,7 +1786,7 @@ msgstr "Ожидание отчёта о процессе"
 
 #: src/components/storage/LogicalVolumePage.tsx:466
 #: src/components/storage/PartitionPage.tsx:564
-#: src/components/storage/utils.ts:298
+#: src/components/storage/utils.ts:316
 msgid "Btrfs with snapshots"
 msgstr "Btrfs с моментальными снимками"
 
@@ -1982,10 +2017,10 @@ msgid ""
 "logical                   volumes of this volume group."
 msgstr ""
 
-#. TRANSLATORS: %1$s is a disk name (eg. "/dev/sda") and %2$s is its size (eg. "250 GiB")
+#. TRANSLATORS: %s is a disk name with its size (eg. "sda, 10 GiB"
 #: src/components/storage/PartitionPage.tsx:498
 #, fuzzy, c-format
-msgid "As a new partition on %1$s (%2$s)"
+msgid "As a new partition on %s"
 msgstr "Создать новый раздел"
 
 #: src/components/storage/PartitionPage.tsx:500
@@ -2297,40 +2332,36 @@ msgid ""
 "discard the configuration and start from scratch with a simple one."
 msgstr ""
 
-#: src/components/storage/VolumeGroupEditor.tsx:56
-msgid "Delete the volume group and its logical volumes"
-msgstr ""
-
-#: src/components/storage/VolumeGroupEditor.tsx:60
+#: src/components/storage/VolumeGroupEditor.tsx:89
 #, fuzzy
 msgid "Delete volume group"
 msgstr "новую группу томов LVM"
 
-#: src/components/storage/VolumeGroupEditor.tsx:72
+#: src/components/storage/VolumeGroupEditor.tsx:101
 msgid "Modify settings and physical volumes"
 msgstr ""
 
-#: src/components/storage/VolumeGroupEditor.tsx:76
+#: src/components/storage/VolumeGroupEditor.tsx:105
 #, fuzzy
 msgid "Edit volume group"
 msgstr "новую группу томов LVM"
 
-#: src/components/storage/VolumeGroupEditor.tsx:94
+#: src/components/storage/VolumeGroupEditor.tsx:123
 #, fuzzy, c-format
 msgid "Create LVM volume group %s"
 msgstr "Создание группы томов LVM"
 
-#: src/components/storage/VolumeGroupEditor.tsx:95
+#: src/components/storage/VolumeGroupEditor.tsx:124
 #, fuzzy, c-format
 msgid "Empty LVM volume group %s"
 msgstr "новую группу томов LVM"
 
-#: src/components/storage/VolumeGroupEditor.tsx:119
+#: src/components/storage/VolumeGroupEditor.tsx:148
 #, fuzzy
 msgid "Logical volumes"
 msgstr "Логический том в системе LVM"
 
-#: src/components/storage/VolumeGroupEditor.tsx:140
+#: src/components/storage/VolumeGroupEditor.tsx:169
 msgid "Add logical volume"
 msgstr ""
 
@@ -2800,13 +2831,13 @@ msgid "Select what to do with each partition."
 msgstr "Выберите, что делать с каждым разделом."
 
 #. TRANSLATORS: Size range, %1$s is the min size and %2$s is the max
-#: src/components/storage/utils.ts:329
+#: src/components/storage/utils.ts:347
 #, fuzzy, c-format
 msgid "%1$s - %2$s"
 msgstr "Подкачка на %1$s (%2$s)"
 
 #. TRANSLATORS: minimum device size, %s is replaced by size string, e.g. "17.5 GiB"
-#: src/components/storage/utils.ts:331
+#: src/components/storage/utils.ts:349
 #, c-format
 msgid "at least %s"
 msgstr "не менее %s"
@@ -3193,6 +3224,10 @@ msgstr "Публичный ключ SSH для root"
 msgid "ZFCP"
 msgstr "ZFCP"
 
+#, fuzzy
+#~ msgid "New LVM volume group"
+#~ msgstr "новую группу томов LVM"
+
 #~ msgid "Edit iSCSI Initiator"
 #~ msgstr "Изменить инициатор iSCSI"
 
@@ -3347,10 +3382,6 @@ msgstr "ZFCP"
 #, c-format
 #~ msgid "Members: %s"
 #~ msgstr "Участники: %s"
-
-#, c-format
-#~ msgid "Devices: %s"
-#~ msgstr "Устройства: %s"
 
 #, c-format
 #~ msgid "Wires: %s"
@@ -4015,9 +4046,6 @@ msgstr "ZFCP"
 #~ msgid "%s will use the selected time zone."
 #~ msgstr "%s будет использовать выбранный часовой пояс."
 
-#~ msgid "Change time zone"
-#~ msgstr "Изменить часовой пояс"
-
 #~ msgid "Time zone not selected yet"
 #~ msgstr "Часовой пояс еще не выбран"
 
@@ -4052,13 +4080,6 @@ msgstr "ZFCP"
 
 #~ msgid "No network devices detected"
 #~ msgstr "Сетевые устройства не обнаружены"
-
-#, c-format
-#~ msgid "%d device set:"
-#~ msgid_plural "%d devices set:"
-#~ msgstr[0] "Установлено %d устройство:"
-#~ msgstr[1] "Установлено %d устройства:"
-#~ msgstr[2] "Установлено %d устройств:"
 
 #~ msgid "Installation Summary"
 #~ msgstr "Сводка по установке"
