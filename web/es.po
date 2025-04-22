@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-17 02:53+0000\n"
+"POT-Creation-Date: 2025-04-22 02:53+0000\n"
 "PO-Revision-Date: 2025-04-14 13:56+0000\n"
 "Last-Translator: \"Marina J. Donis\" <marinajdonis@gmail.com>\n"
 "Language-Team: Spanish <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -47,7 +47,8 @@ msgstr "Continuar"
 #. TRANSLATORS: button label
 #: src/components/core/InstallButton.tsx:62 src/components/core/Page.tsx:234
 #: src/components/core/Popup.tsx:140
-#: src/components/network/WifiConnectionForm.tsx:153
+#: src/components/network/IpSettingsForm.tsx:217
+#: src/components/network/WifiConnectionForm.tsx:188
 #: src/components/product/ProductSelectionPage.tsx:99
 msgid "Cancel"
 msgstr "Cancelar"
@@ -226,7 +227,7 @@ msgstr "Formulario de inicio de sesión"
 #. TRANSLATORS: field label
 #: src/components/core/LoginPage.tsx:110
 #: src/components/core/PasswordAndConfirmationInput.tsx:96
-#: src/components/network/WifiConnectionForm.tsx:140
+#: src/components/network/WifiConnectionForm.tsx:177
 #: src/components/questions/QuestionWithPassword.tsx:59
 #: src/components/storage/iscsi/AuthFields.jsx:87
 #: src/components/storage/iscsi/AuthFields.jsx:91
@@ -340,7 +341,6 @@ msgstr "Lugar"
 
 #: src/components/l10n/L10nPage.tsx:51 src/components/l10n/L10nPage.tsx:65
 #: src/components/l10n/L10nPage.tsx:77
-#: src/components/network/NetworkPage.tsx:64
 #: src/components/storage/iscsi/InitiatorForm.tsx:89
 #: src/components/users/FirstUserForm.tsx:234
 #: src/components/users/RootUserForm.tsx:163
@@ -405,36 +405,37 @@ msgid "Loading"
 msgstr "Cargando..."
 
 #. TRANSLATORS: button label
-#: src/components/network/AddressesDataList.tsx:103
-#: src/components/network/DnsDataList.tsx:107
+#: src/components/network/AddressesDataList.tsx:102
+#: src/components/network/DnsDataList.tsx:106
 msgid "Remove"
 msgstr "Retirar"
 
 #. TRANSLATORS: input field name
-#: src/components/network/AddressesDataList.tsx:113
+#: src/components/network/AddressesDataList.tsx:112
 #: src/components/network/IpAddressInput.tsx:35
 msgid "IP Address"
 msgstr "Dirección IP"
 
 #. TRANSLATORS: input field name
-#: src/components/network/AddressesDataList.tsx:121
+#: src/components/network/AddressesDataList.tsx:120
 msgid "Prefix length or netmask"
 msgstr "Longitud del prefijo o máscara de red"
 
-#: src/components/network/AddressesDataList.tsx:139
+#: src/components/network/AddressesDataList.tsx:138
 msgid "Add an address"
 msgstr "Añadir una dirección"
 
 #. TRANSLATORS: button label
-#: src/components/network/AddressesDataList.tsx:139
+#: src/components/network/AddressesDataList.tsx:138
 msgid "Add another address"
 msgstr "Añadir otras direcciones"
 
-#: src/components/network/AddressesDataList.tsx:144
+#: src/components/network/AddressesDataList.tsx:141
+#: src/components/network/WifiConnectionDetails.tsx:118
 msgid "Addresses"
 msgstr "Direcciones"
 
-#: src/components/network/AddressesDataList.tsx:147
+#: src/components/network/AddressesDataList.tsx:148
 msgid "Addresses data list"
 msgstr "Lista de datos de direcciones"
 
@@ -455,6 +456,8 @@ msgstr "Nombre"
 #. TRANSLATORS: table header
 #: src/components/network/ConnectionsTable.tsx:76
 #: src/components/network/ConnectionsTable.tsx:104
+#: src/components/network/WifiNetworksList.tsx:139
+#: src/components/network/WiredConnectionsList.tsx:66
 msgid "IP addresses"
 msgstr "Direcciones IP"
 
@@ -464,8 +467,8 @@ msgid "Connection actions"
 msgstr "Acciones de conexión"
 
 #: src/components/network/ConnectionsTable.tsx:85
-#: src/components/network/WifiNetworksListPage.tsx:130
-#: src/components/network/WifiNetworksListPage.tsx:154
+#: src/components/network/WifiConnectionDetails.tsx:99
+#: src/components/network/WiredConnectionDetails.tsx:75
 #: src/components/storage/EncryptionSection.tsx:50
 #: src/components/storage/iscsi/NodesPresenter.jsx:75
 #: src/components/users/FirstUser.tsx:52 src/components/users/RootUser.tsx:55
@@ -474,14 +477,12 @@ msgstr "Editar"
 
 #. TRANSLATORS: %s is replaced by a network connection name
 #: src/components/network/ConnectionsTable.tsx:88
-#: src/components/network/IpSettingsForm.tsx:153
+#: src/components/network/IpSettingsForm.tsx:152
 #, c-format
 msgid "Edit connection %s"
 msgstr "Editar conexión %s"
 
 #: src/components/network/ConnectionsTable.tsx:92
-#: src/components/network/WifiNetworksListPage.tsx:133
-#: src/components/network/WifiNetworksListPage.tsx:157
 msgid "Forget"
 msgstr "Olvidar"
 
@@ -498,20 +499,22 @@ msgid "Actions for connection %s"
 msgstr "Acciones para la conexión %s"
 
 #. TRANSLATORS: input field name
-#: src/components/network/DnsDataList.tsx:91
+#: src/components/network/DnsDataList.tsx:90
 msgid "Server IP"
 msgstr "Servidor IP"
 
-#: src/components/network/DnsDataList.tsx:116
+#: src/components/network/DnsDataList.tsx:115
 msgid "Add DNS"
 msgstr "Añadir DNS"
 
 #. TRANSLATORS: button label
-#: src/components/network/DnsDataList.tsx:116
+#: src/components/network/DnsDataList.tsx:115
 msgid "Add another DNS"
 msgstr "Añadir otro DNS"
 
-#: src/components/network/DnsDataList.tsx:121
+#: src/components/network/DnsDataList.tsx:118
+#: src/components/network/WifiConnectionDetails.tsx:137
+#: src/components/network/WiredConnectionDetails.tsx:114
 msgid "DNS"
 msgstr "DNS"
 
@@ -520,12 +523,11 @@ msgid "Ip prefix or netmask"
 msgstr "Prefijo IP o máscara de red"
 
 #. TRANSLATORS: error message
-#: src/components/network/IpSettingsForm.tsx:106
+#: src/components/network/IpSettingsForm.tsx:105
 msgid "At least one address must be provided for selected mode"
 msgstr "Se debe proporcionar al menos una dirección para el modo seleccionado"
 
-#: src/components/network/IpSettingsForm.tsx:158
-#: src/components/network/WifiConnectionForm.tsx:109
+#: src/components/network/IpSettingsForm.tsx:157
 #: src/components/storage/EncryptionSettingsPage.tsx:109
 #: src/components/storage/iscsi/DiscoverForm.tsx:98
 #: src/components/storage/iscsi/LoginForm.jsx:70
@@ -536,69 +538,42 @@ msgid "Something went wrong"
 msgstr "Algo salió mal"
 
 #. TRANSLATORS: network connection mode (automatic via DHCP or manual with static IP)
+#: src/components/network/IpSettingsForm.tsx:163
 #: src/components/network/IpSettingsForm.tsx:168
-#: src/components/network/IpSettingsForm.tsx:173
-#: src/components/network/IpSettingsForm.tsx:175
+#: src/components/network/IpSettingsForm.tsx:170
+#: src/components/network/WifiConnectionDetails.tsx:105
+#: src/components/network/WiredConnectionDetails.tsx:81
 msgid "Mode"
 msgstr "Modo"
 
-#: src/components/network/IpSettingsForm.tsx:182
+#: src/components/network/IpSettingsForm.tsx:177
 msgid "Automatic (DHCP)"
 msgstr "Automático (DHCP)"
 
-#: src/components/network/IpSettingsForm.tsx:188
+#. TRANSLATORS: manual network configuration mode with a static IP address
+#: src/components/network/IpSettingsForm.tsx:180
 #: src/components/storage/iscsi/NodeStartupOptions.js:26
 msgid "Manual"
 msgstr "Manual"
 
 #. TRANSLATORS: network gateway configuration
-#: src/components/network/IpSettingsForm.tsx:197
-#: src/components/network/IpSettingsForm.tsx:200
+#: src/components/network/IpSettingsForm.tsx:188
+#: src/components/network/IpSettingsForm.tsx:191
+#: src/components/network/WifiConnectionDetails.tsx:128
+#: src/components/network/WiredConnectionDetails.tsx:95
 msgid "Gateway"
 msgstr "Puerta de enlace"
 
-#: src/components/network/IpSettingsForm.tsx:209
+#: src/components/network/IpSettingsForm.tsx:200
 msgid "Gateway can be defined only in 'Manual' mode"
 msgstr "La puerta de enlace sólo se puede definir en modo 'Manual'"
 
-#: src/components/network/NetworkPage.tsx:38
-msgid "Wired"
-msgstr "Cableada"
-
-#: src/components/network/NetworkPage.tsx:45
-msgid "No wired connections found"
-msgstr "No se encontraron conexiones por cable"
-
-#: src/components/network/NetworkPage.tsx:61
-msgid "Wi-Fi"
-msgstr "WiFi"
-
-#. TRANSLATORS: button label, connect to a WiFi network
-#: src/components/network/NetworkPage.tsx:64
-#: src/components/network/WifiConnectionForm.tsx:149
-#: src/components/network/WifiNetworksListPage.tsx:128
-msgid "Connect"
-msgstr "Conectar"
-
-#: src/components/network/NetworkPage.tsx:70
-#, c-format
-msgid "Connected to %s"
-msgstr "Conectado a %s"
-
-#: src/components/network/NetworkPage.tsx:77
-msgid "No connected yet"
-msgstr "Aún no conectado"
-
-#: src/components/network/NetworkPage.tsx:78
-msgid ""
-"The system has not been configured for connecting to a Wi-Fi network yet."
-msgstr "El sistema aún no se ha configurado para conectarse a una red WiFi."
-
-#: src/components/network/NetworkPage.tsx:87
-msgid "No Wi-Fi supported"
+#: src/components/network/NetworkPage.tsx:33
+#, fuzzy
+msgid "Wi-Fi not supported"
 msgstr "Wi-Fi no admitida"
 
-#: src/components/network/NetworkPage.tsx:89
+#: src/components/network/NetworkPage.tsx:35
 msgid ""
 "The system does not support Wi-Fi connections, probably because of missing "
 "or disabled hardware."
@@ -606,97 +581,235 @@ msgstr ""
 "El sistema no admite conexiones WiFi, probablemente debido a que falta "
 "hardware o está deshabilitado."
 
-#: src/components/network/NetworkPage.tsx:106 src/routes/network.tsx:32
+#: src/components/network/NetworkPage.tsx:51
+#: src/components/network/WifiConnectionDetails.tsx:44
+#: src/routes/network.tsx:37
 msgid "Network"
 msgstr "Red"
 
+#: src/components/network/NetworkPage.tsx:57
+#: src/components/network/NetworkPage.tsx:58
+#, fuzzy
+msgid "Wired connections"
+msgstr "Olvidar conexión %s"
+
+#: src/components/network/NetworkPage.tsx:63
+#: src/components/network/NetworkPage.tsx:64
+#, fuzzy
+msgid "Wi-Fi networks"
+msgstr "Redes cableadas"
+
+#: src/components/network/WifiConnectionDetails.tsx:45
+#, fuzzy
+msgid "Network details"
+msgstr "Ver más detalles"
+
+#: src/components/network/WifiConnectionDetails.tsx:47
+msgid "SSID"
+msgstr "SSID"
+
+#: src/components/network/WifiConnectionDetails.tsx:51
+msgid "Signal strength"
+msgstr ""
+
+#: src/components/network/WifiConnectionDetails.tsx:55
+#: src/components/network/WifiConnectionDetails.tsx:78
+#: src/components/network/WiredConnectionDetails.tsx:54
+#: src/components/storage/dasd/DASDTable.tsx:76
+#: src/components/storage/iscsi/NodesPresenter.jsx:104
+#: src/components/storage/iscsi/NodesPresenter.jsx:125
+#: src/components/storage/zfcp/ZFCPControllersTable.tsx:21
+msgid "Status"
+msgstr "Estado"
+
+#: src/components/network/WifiConnectionDetails.tsx:59
+#: src/components/network/WifiConnectionForm.tsx:154
+#: src/components/network/WifiConnectionForm.tsx:157
+msgid "Security"
+msgstr "Seguridad"
+
+#: src/components/network/WifiConnectionDetails.tsx:71
+#: src/components/network/WiredConnectionDetails.tsx:47
+#: src/components/storage/ProposalResultTable.tsx:132
+#: src/components/storage/SpaceActionsTable.tsx:233
+#: src/components/storage/dasd/DASDTable.tsx:77
+msgid "Device"
+msgstr "Dispositivo"
+
+#: src/components/network/WifiConnectionDetails.tsx:72
+#: src/components/network/WifiNetworkPage.tsx:70
+#: src/components/network/WiredConnectionPage.tsx:68
+#, fuzzy
+msgid "Connection details"
+msgstr "Acciones de conexión"
+
+#: src/components/network/WifiConnectionDetails.tsx:74
+#: src/components/network/WiredConnectionDetails.tsx:50
+#: src/components/storage/iscsi/NodesPresenter.jsx:102
+#: src/components/storage/iscsi/NodesPresenter.jsx:123
+msgid "Interface"
+msgstr "Interfaz"
+
+#: src/components/network/WifiConnectionDetails.tsx:82
+#: src/components/network/WiredConnectionDetails.tsx:58
+msgid "MAC"
+msgstr ""
+
+#: src/components/network/WifiConnectionDetails.tsx:95
+#: src/components/network/WiredConnectionDetails.tsx:71
+#, fuzzy
+msgid "IP settings"
+msgstr "Ajustes"
+
+#: src/components/network/WifiConnectionDetails.tsx:109
+#: src/components/network/WiredConnectionDetails.tsx:85
+msgid "IPv4"
+msgstr ""
+
+#: src/components/network/WifiConnectionDetails.tsx:112
+#: src/components/network/WiredConnectionDetails.tsx:88
+msgid "IPv6"
+msgstr ""
+
+#: src/components/network/WifiConnectionDetails.tsx:147
+#: src/components/network/WiredConnectionDetails.tsx:124
+msgid "Routes"
+msgstr ""
+
 #. TRANSLATORS: WiFi authentication mode
-#: src/components/network/WifiConnectionForm.tsx:49
+#: src/components/network/WifiConnectionForm.tsx:43
 #: src/components/storage/LogicalVolumePage.tsx:624
 #: src/components/storage/PartitionPage.tsx:748
 msgid "None"
 msgstr "Ninguno"
 
 #. TRANSLATORS: WiFi authentication mode
-#: src/components/network/WifiConnectionForm.tsx:51
+#: src/components/network/WifiConnectionForm.tsx:45
 msgid "WPA & WPA2 Personal"
 msgstr "WPA y WPA2 personales"
 
+#: src/components/network/WifiConnectionForm.tsx:56
+#, fuzzy
+msgid "Not protected network"
+msgstr "Olvidar red"
+
+#: src/components/network/WifiConnectionForm.tsx:58
+msgid ""
+"You will connect to a public network without encryption. Your data may not "
+"be secure."
+msgstr ""
+
+#: src/components/network/WifiConnectionForm.tsx:69
+#, fuzzy
+msgid "Setting up connection"
+msgstr "Editar %s conexión"
+
+#: src/components/network/WifiConnectionForm.tsx:71
+msgid "It may take some time."
+msgstr ""
+
+#: src/components/network/WifiConnectionForm.tsx:73
+msgid "Details will appear after the connection is successfully established."
+msgstr ""
+
+#. TRANSLATORS: %s will be replaced by network ssid.
+#: src/components/network/WifiConnectionForm.tsx:81
+#, fuzzy, c-format
+msgid "Could not connect to %s"
+msgstr "No se puede conectar a D-Bus"
+
+#: src/components/network/WifiConnectionForm.tsx:85
+#, fuzzy
+msgid "Check the authentication parameters."
+msgstr "Métodos de autenticación de root"
+
 #. TRANSLATORS: accessible name for the WiFi connection form
-#: src/components/network/WifiConnectionForm.tsx:101
-msgid "WiFi connection form"
+#: src/components/network/WifiConnectionForm.tsx:149
+#, fuzzy
+msgid "Wi-Fi connection form"
 msgstr "Formulario de conexión WiFi"
 
-#: src/components/network/WifiConnectionForm.tsx:108
-msgid "Authentication failed, please try again"
-msgstr "Error de autenticación, inténtelo de nuevo"
-
-#: src/components/network/WifiConnectionForm.tsx:112
-msgid "Please, review provided settings and try again."
-msgstr ""
-"Por favor, revise la configuración proporcionada y vuelva a intentarlo."
-
-#. TRANSLATORS: SSID (Wifi network name) configuration
-#: src/components/network/WifiConnectionForm.tsx:118
-msgid "SSID"
-msgstr "SSID"
-
-#. TRANSLATORS: Wifi security configuration (password protected or not)
-#: src/components/network/WifiConnectionForm.tsx:124
-#: src/components/network/WifiConnectionForm.tsx:127
-msgid "Security"
-msgstr "Seguridad"
-
 #. TRANSLATORS: WiFi password
-#: src/components/network/WifiConnectionForm.tsx:136
+#: src/components/network/WifiConnectionForm.tsx:173
 msgid "WPA Password"
 msgstr "Contraseña WPA"
 
-#. TRANSLATORS: Wifi network status
-#: src/components/network/WifiNetworksListPage.tsx:75
-#: src/components/network/WifiNetworksListPage.tsx:141
-msgid "Connecting"
-msgstr "Conectando"
+#. TRANSLATORS: button label, connect to a Wi-Fi network
+#: src/components/network/WifiConnectionForm.tsx:186
+msgid "Connect"
+msgstr "Conectar"
 
-#. TRANSLATORS: Wifi network status
-#: src/components/network/WifiNetworksListPage.tsx:78
-#: src/components/network/WifiNetworksListPage.tsx:145
-#: src/components/network/WifiNetworksListPage.tsx:188
+#: src/components/network/WifiNetworkPage.tsx:47
+msgid "Network not found or lost"
+msgstr ""
+
+#: src/components/network/WifiNetworkPage.tsx:55
+#: src/components/network/WiredConnectionPage.tsx:54
+#, fuzzy
+msgid "Go to network page"
+msgstr "Olvidar red"
+
+#: src/components/network/WifiNetworkPage.tsx:70
+#, fuzzy, c-format
+msgid "Connect to %s"
+msgstr "Conectado a %s"
+
+#: src/components/network/WifiNetworksList.tsx:53
+msgid "Excellent signal"
+msgstr ""
+
+#: src/components/network/WifiNetworksList.tsx:56
+msgid "Good signal"
+msgstr ""
+
+#: src/components/network/WifiNetworksList.tsx:59
+msgid "Weak signal"
+msgstr ""
+
+#: src/components/network/WifiNetworksList.tsx:79
+#, fuzzy
+msgid "Secured network"
+msgstr "Redes cableadas"
+
+#: src/components/network/WifiNetworksList.tsx:87
+#, fuzzy
+msgid "Public network"
+msgstr "Redes cableadas"
+
+#. TRANSLATORS: %s will be replaced by Wi-Fi network SSID
+#: src/components/network/WifiNetworksList.tsx:97
+#, fuzzy, c-format
+msgid "Connecting to %s"
+msgstr "Conectado a %s"
+
+#: src/components/network/WifiNetworksList.tsx:132
 msgid "Connected"
 msgstr "Conectado"
 
-#. TRANSLATORS: iSCSI connection status
-#. TRANSLATORS: Wifi network status
-#: src/components/network/WifiNetworksListPage.tsx:83
-#: src/components/network/WifiNetworksListPage.tsx:143
-#: src/components/storage/iscsi/NodesPresenter.jsx:65
-msgid "Disconnected"
-msgstr "Desconectado"
-
-#: src/components/network/WifiNetworksListPage.tsx:151
-msgid "Disconnect"
-msgstr "Desconectar"
-
-#: src/components/network/WifiNetworksListPage.tsx:172
-#: src/components/network/WifiNetworksListPage.tsx:293
-msgid "Connect to hidden network"
-msgstr "Conectar a una red oculta"
-
-#: src/components/network/WifiNetworksListPage.tsx:185
-msgid "configured"
-msgstr "Configurado"
-
-#: src/components/network/WifiNetworksListPage.tsx:274
-msgid "No visible Wi-Fi networks found"
+#: src/components/network/WifiNetworksList.tsx:171
+#, fuzzy
+msgid "No Wi-Fi networks were found"
 msgstr "No se encontraron redes Wi-Fi visibles"
 
-#: src/components/network/WifiNetworksListPage.tsx:278
-msgid "Visible Wi-Fi networks"
-msgstr "Redes WIFI visibles"
+#: src/components/network/WiredConnectionDetails.tsx:48
+#, fuzzy
+msgid "Device details"
+msgstr "Ocultar detalles"
 
-#: src/components/network/WifiSelectorPage.tsx:36
-msgid "Connect to a Wi-Fi network"
-msgstr "Conectado a una red WIFI"
+#: src/components/network/WiredConnectionDetails.tsx:104
+#, fuzzy
+msgid "IP Addresses"
+msgstr "Direcciones IP"
+
+#: src/components/network/WiredConnectionPage.tsx:47
+#, fuzzy
+msgid "Connection not found or lost"
+msgstr "Acciones de conexión"
+
+#: src/components/network/WiredConnectionsList.tsx:87
+#, fuzzy
+msgid "No wired connections were found"
+msgstr "No se encontraron conexiones por cable"
 
 #. TRANSLATORS: %s will be replaced by a language name and territory, example:
 #. "English (United States)".
@@ -2246,12 +2359,6 @@ msgstr "Nuevo"
 msgid "Before %s"
 msgstr "Antes de %s"
 
-#: src/components/storage/ProposalResultTable.tsx:132
-#: src/components/storage/SpaceActionsTable.tsx:233
-#: src/components/storage/dasd/DASDTable.tsx:77
-msgid "Device"
-msgstr "Dispositivo"
-
 #: src/components/storage/ProposalResultTable.tsx:133
 msgid "Mount Point"
 msgstr "Punto de montaje"
@@ -2403,13 +2510,6 @@ msgstr "Sí"
 #: src/components/storage/zfcp/ZFCPDisksTable.tsx:43
 msgid "Channel ID"
 msgstr "Canal ID"
-
-#: src/components/storage/dasd/DASDTable.tsx:76
-#: src/components/storage/iscsi/NodesPresenter.jsx:104
-#: src/components/storage/iscsi/NodesPresenter.jsx:125
-#: src/components/storage/zfcp/ZFCPControllersTable.tsx:21
-msgid "Status"
-msgstr "Estado"
 
 #: src/components/storage/dasd/DASDTable.tsx:78
 msgid "Type"
@@ -2642,6 +2742,11 @@ msgstr "Puesta en marcha"
 msgid "On boot"
 msgstr "En arranque"
 
+#. TRANSLATORS: iSCSI connection status
+#: src/components/storage/iscsi/NodesPresenter.jsx:65
+msgid "Disconnected"
+msgstr "Desconectado"
+
 #. TRANSLATORS: iSCSI connection status, %s is replaced by node label
 #: src/components/storage/iscsi/NodesPresenter.jsx:69
 #, c-format
@@ -2664,11 +2769,6 @@ msgstr "Cerrar sesión"
 #: src/components/storage/iscsi/NodesPresenter.jsx:122
 msgid "Portal"
 msgstr "Portal"
-
-#: src/components/storage/iscsi/NodesPresenter.jsx:102
-#: src/components/storage/iscsi/NodesPresenter.jsx:123
-msgid "Interface"
-msgstr "Interfaz"
 
 #: src/components/storage/iscsi/NodesPresenter.jsx:103
 #: src/components/storage/iscsi/NodesPresenter.jsx:124
@@ -3219,6 +3319,44 @@ msgstr "Utilice clave pública SSH"
 #: src/routes/storage.tsx:103
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#~ msgid "Wired"
+#~ msgstr "Cableada"
+
+#~ msgid "Wi-Fi"
+#~ msgstr "WiFi"
+
+#~ msgid "No connected yet"
+#~ msgstr "Aún no conectado"
+
+#~ msgid ""
+#~ "The system has not been configured for connecting to a Wi-Fi network yet."
+#~ msgstr "El sistema aún no se ha configurado para conectarse a una red WiFi."
+
+#~ msgid "Authentication failed, please try again"
+#~ msgstr "Error de autenticación, inténtelo de nuevo"
+
+#~ msgid "Please, review provided settings and try again."
+#~ msgstr ""
+#~ "Por favor, revise la configuración proporcionada y vuelva a intentarlo."
+
+#~ msgid "Connecting"
+#~ msgstr "Conectando"
+
+#~ msgid "Disconnect"
+#~ msgstr "Desconectar"
+
+#~ msgid "Connect to hidden network"
+#~ msgstr "Conectar a una red oculta"
+
+#~ msgid "configured"
+#~ msgstr "Configurado"
+
+#~ msgid "Visible Wi-Fi networks"
+#~ msgstr "Redes WIFI visibles"
+
+#~ msgid "Connect to a Wi-Fi network"
+#~ msgstr "Conectado a una red WIFI"
 
 #~ msgid "The configured partitions will be created as logical volumes"
 #~ msgstr "Las particiones configuradas serán creadas como volúmenes lógicos"
@@ -3997,10 +4135,6 @@ msgstr "ZFCP"
 #~ msgid "No WiFi connections found."
 #~ msgstr "No se encontraron conexiones WiFi."
 
-#, fuzzy
-#~ msgid "Wired connections"
-#~ msgstr "Olvidar conexión %s"
-
 #~ msgid "Disconnecting"
 #~ msgstr "Desconectando"
 
@@ -4010,9 +4144,6 @@ msgstr "ZFCP"
 #, c-format
 #~ msgid "%s connection is waiting for an state change"
 #~ msgstr "%s conexión está esperando un cambio de estado"
-
-#~ msgid "Forget network"
-#~ msgstr "Olvidar red"
 
 #, fuzzy
 #~ msgid "Create or edit the first user"
@@ -4138,9 +4269,6 @@ msgstr "ZFCP"
 #~ msgid "Available time zones"
 #~ msgstr "Zonas horarias disponibles"
 
-#~ msgid "Wired networks"
-#~ msgstr "Redes cableadas"
-
 #~ msgid "No network devices detected"
 #~ msgstr "No se detectaron dispositivos de red"
 
@@ -4209,9 +4337,6 @@ msgstr "ZFCP"
 #~ msgid "Storage DASD"
 #~ msgstr "Almacenamiento DASD"
 
-#~ msgid "Settings"
-#~ msgstr "Ajustes"
-
 #~ msgid "Storage zFCP"
 #~ msgstr "Almacenamiento zFCP"
 
@@ -4231,9 +4356,6 @@ msgstr "ZFCP"
 
 #~ msgid "D-Bus Error"
 #~ msgstr "Error en D-Bus"
-
-#~ msgid "Cannot connect to D-Bus"
-#~ msgstr "No se puede conectar a D-Bus"
 
 #~ msgid "Diagnostic tools"
 #~ msgstr "Herramientas de diagnóstico"
@@ -4356,10 +4478,6 @@ msgstr "ZFCP"
 #~ msgstr[0] "Esto sólo afectará al dispositivo de instalación"
 #~ msgstr[1] ""
 #~ "Esto sólo afectará a los %d discos seleccionados para la instalación"
-
-#, c-format
-#~ msgid "Edit %s connection"
-#~ msgstr "Editar %s conexión"
 
 #~ msgid "Have a lot of fun! Your openSUSE Development Team."
 #~ msgstr "Have a lot of fun! El equipo de desarrollo de openSUSE."

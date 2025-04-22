@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-17 02:53+0000\n"
+"POT-Creation-Date: 2025-04-22 02:53+0000\n"
 "PO-Revision-Date: 2025-03-26 21:56+0000\n"
 "Last-Translator: Eugene Krater <lachend@gmail.com>\n"
 "Language-Team: Ukrainian <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -48,7 +48,8 @@ msgstr "Продовжити"
 #. TRANSLATORS: button label
 #: src/components/core/InstallButton.tsx:62 src/components/core/Page.tsx:234
 #: src/components/core/Popup.tsx:140
-#: src/components/network/WifiConnectionForm.tsx:153
+#: src/components/network/IpSettingsForm.tsx:217
+#: src/components/network/WifiConnectionForm.tsx:188
 #: src/components/product/ProductSelectionPage.tsx:99
 msgid "Cancel"
 msgstr "Скасувати"
@@ -224,7 +225,7 @@ msgstr "Форма входу"
 #. TRANSLATORS: field label
 #: src/components/core/LoginPage.tsx:110
 #: src/components/core/PasswordAndConfirmationInput.tsx:96
-#: src/components/network/WifiConnectionForm.tsx:140
+#: src/components/network/WifiConnectionForm.tsx:177
 #: src/components/questions/QuestionWithPassword.tsx:59
 #: src/components/storage/iscsi/AuthFields.jsx:87
 #: src/components/storage/iscsi/AuthFields.jsx:91
@@ -337,7 +338,6 @@ msgstr "Локалізація"
 
 #: src/components/l10n/L10nPage.tsx:51 src/components/l10n/L10nPage.tsx:65
 #: src/components/l10n/L10nPage.tsx:77
-#: src/components/network/NetworkPage.tsx:64
 #: src/components/storage/iscsi/InitiatorForm.tsx:89
 #: src/components/users/FirstUserForm.tsx:234
 #: src/components/users/RootUserForm.tsx:163
@@ -403,36 +403,37 @@ msgid "Loading"
 msgstr "Завантаження даних..."
 
 #. TRANSLATORS: button label
-#: src/components/network/AddressesDataList.tsx:103
-#: src/components/network/DnsDataList.tsx:107
+#: src/components/network/AddressesDataList.tsx:102
+#: src/components/network/DnsDataList.tsx:106
 msgid "Remove"
 msgstr "Видалити"
 
 #. TRANSLATORS: input field name
-#: src/components/network/AddressesDataList.tsx:113
+#: src/components/network/AddressesDataList.tsx:112
 #: src/components/network/IpAddressInput.tsx:35
 msgid "IP Address"
 msgstr "IP-адреса"
 
 #. TRANSLATORS: input field name
-#: src/components/network/AddressesDataList.tsx:121
+#: src/components/network/AddressesDataList.tsx:120
 msgid "Prefix length or netmask"
 msgstr "Довжина префікса або маска мережі"
 
-#: src/components/network/AddressesDataList.tsx:139
+#: src/components/network/AddressesDataList.tsx:138
 msgid "Add an address"
 msgstr "Додати адресу"
 
 #. TRANSLATORS: button label
-#: src/components/network/AddressesDataList.tsx:139
+#: src/components/network/AddressesDataList.tsx:138
 msgid "Add another address"
 msgstr "Додати іншу адресу"
 
-#: src/components/network/AddressesDataList.tsx:144
+#: src/components/network/AddressesDataList.tsx:141
+#: src/components/network/WifiConnectionDetails.tsx:118
 msgid "Addresses"
 msgstr "Адреси"
 
-#: src/components/network/AddressesDataList.tsx:147
+#: src/components/network/AddressesDataList.tsx:148
 msgid "Addresses data list"
 msgstr "Список даних адрес"
 
@@ -453,6 +454,8 @@ msgstr "Назва"
 #. TRANSLATORS: table header
 #: src/components/network/ConnectionsTable.tsx:76
 #: src/components/network/ConnectionsTable.tsx:104
+#: src/components/network/WifiNetworksList.tsx:139
+#: src/components/network/WiredConnectionsList.tsx:66
 msgid "IP addresses"
 msgstr "IP-адреси"
 
@@ -462,8 +465,8 @@ msgid "Connection actions"
 msgstr "Дії при підключенні"
 
 #: src/components/network/ConnectionsTable.tsx:85
-#: src/components/network/WifiNetworksListPage.tsx:130
-#: src/components/network/WifiNetworksListPage.tsx:154
+#: src/components/network/WifiConnectionDetails.tsx:99
+#: src/components/network/WiredConnectionDetails.tsx:75
 #: src/components/storage/EncryptionSection.tsx:50
 #: src/components/storage/iscsi/NodesPresenter.jsx:75
 #: src/components/users/FirstUser.tsx:52 src/components/users/RootUser.tsx:55
@@ -472,14 +475,12 @@ msgstr "Редагувати"
 
 #. TRANSLATORS: %s is replaced by a network connection name
 #: src/components/network/ConnectionsTable.tsx:88
-#: src/components/network/IpSettingsForm.tsx:153
+#: src/components/network/IpSettingsForm.tsx:152
 #, c-format
 msgid "Edit connection %s"
 msgstr "Редагувати з'єднання %s"
 
 #: src/components/network/ConnectionsTable.tsx:92
-#: src/components/network/WifiNetworksListPage.tsx:133
-#: src/components/network/WifiNetworksListPage.tsx:157
 msgid "Forget"
 msgstr "Забути"
 
@@ -496,20 +497,22 @@ msgid "Actions for connection %s"
 msgstr "Дії для з'єднання %s"
 
 #. TRANSLATORS: input field name
-#: src/components/network/DnsDataList.tsx:91
+#: src/components/network/DnsDataList.tsx:90
 msgid "Server IP"
 msgstr "IP сервера"
 
-#: src/components/network/DnsDataList.tsx:116
+#: src/components/network/DnsDataList.tsx:115
 msgid "Add DNS"
 msgstr "Додати DNS"
 
 #. TRANSLATORS: button label
-#: src/components/network/DnsDataList.tsx:116
+#: src/components/network/DnsDataList.tsx:115
 msgid "Add another DNS"
 msgstr "Додати інший DNS"
 
-#: src/components/network/DnsDataList.tsx:121
+#: src/components/network/DnsDataList.tsx:118
+#: src/components/network/WifiConnectionDetails.tsx:137
+#: src/components/network/WiredConnectionDetails.tsx:114
 msgid "DNS"
 msgstr "DNS"
 
@@ -518,12 +521,11 @@ msgid "Ip prefix or netmask"
 msgstr "Ip префікс або маска мережі"
 
 #. TRANSLATORS: error message
-#: src/components/network/IpSettingsForm.tsx:106
+#: src/components/network/IpSettingsForm.tsx:105
 msgid "At least one address must be provided for selected mode"
 msgstr "Для обраного режиму має бути вказана принаймні одна адреса"
 
-#: src/components/network/IpSettingsForm.tsx:158
-#: src/components/network/WifiConnectionForm.tsx:109
+#: src/components/network/IpSettingsForm.tsx:157
 #: src/components/storage/EncryptionSettingsPage.tsx:109
 #: src/components/storage/iscsi/DiscoverForm.tsx:98
 #: src/components/storage/iscsi/LoginForm.jsx:70
@@ -534,69 +536,42 @@ msgid "Something went wrong"
 msgstr "Щось пішло не так"
 
 #. TRANSLATORS: network connection mode (automatic via DHCP or manual with static IP)
+#: src/components/network/IpSettingsForm.tsx:163
 #: src/components/network/IpSettingsForm.tsx:168
-#: src/components/network/IpSettingsForm.tsx:173
-#: src/components/network/IpSettingsForm.tsx:175
+#: src/components/network/IpSettingsForm.tsx:170
+#: src/components/network/WifiConnectionDetails.tsx:105
+#: src/components/network/WiredConnectionDetails.tsx:81
 msgid "Mode"
 msgstr "Режим"
 
-#: src/components/network/IpSettingsForm.tsx:182
+#: src/components/network/IpSettingsForm.tsx:177
 msgid "Automatic (DHCP)"
 msgstr "Автоматично (DHCP)"
 
-#: src/components/network/IpSettingsForm.tsx:188
+#. TRANSLATORS: manual network configuration mode with a static IP address
+#: src/components/network/IpSettingsForm.tsx:180
 #: src/components/storage/iscsi/NodeStartupOptions.js:26
 msgid "Manual"
 msgstr "Вручну"
 
 #. TRANSLATORS: network gateway configuration
-#: src/components/network/IpSettingsForm.tsx:197
-#: src/components/network/IpSettingsForm.tsx:200
+#: src/components/network/IpSettingsForm.tsx:188
+#: src/components/network/IpSettingsForm.tsx:191
+#: src/components/network/WifiConnectionDetails.tsx:128
+#: src/components/network/WiredConnectionDetails.tsx:95
 msgid "Gateway"
 msgstr "Шлюз"
 
-#: src/components/network/IpSettingsForm.tsx:209
+#: src/components/network/IpSettingsForm.tsx:200
 msgid "Gateway can be defined only in 'Manual' mode"
 msgstr "Шлюз можна вказати тільки в ручному режимі"
 
-#: src/components/network/NetworkPage.tsx:38
-msgid "Wired"
-msgstr "Дротове"
-
-#: src/components/network/NetworkPage.tsx:45
-msgid "No wired connections found"
-msgstr "Дротові з'єднання не знайдено"
-
-#: src/components/network/NetworkPage.tsx:61
-msgid "Wi-Fi"
-msgstr "Wi-Fi"
-
-#. TRANSLATORS: button label, connect to a WiFi network
-#: src/components/network/NetworkPage.tsx:64
-#: src/components/network/WifiConnectionForm.tsx:149
-#: src/components/network/WifiNetworksListPage.tsx:128
-msgid "Connect"
-msgstr "З'єднати"
-
-#: src/components/network/NetworkPage.tsx:70
-#, c-format
-msgid "Connected to %s"
-msgstr "Під'єднано до %s"
-
-#: src/components/network/NetworkPage.tsx:77
-msgid "No connected yet"
-msgstr "Ще не під'єднано"
-
-#: src/components/network/NetworkPage.tsx:78
-msgid ""
-"The system has not been configured for connecting to a Wi-Fi network yet."
-msgstr "Система ще не налаштована на підключення до мережі Wi-Fi."
-
-#: src/components/network/NetworkPage.tsx:87
-msgid "No Wi-Fi supported"
+#: src/components/network/NetworkPage.tsx:33
+#, fuzzy
+msgid "Wi-Fi not supported"
 msgstr "Немає підтримки Wi-Fi"
 
-#: src/components/network/NetworkPage.tsx:89
+#: src/components/network/NetworkPage.tsx:35
 msgid ""
 "The system does not support Wi-Fi connections, probably because of missing "
 "or disabled hardware."
@@ -604,96 +579,233 @@ msgstr ""
 "Система не підтримує Wi-Fi з'єднання, ймовірно, через відсутність або "
 "відключення обладнання."
 
-#: src/components/network/NetworkPage.tsx:106 src/routes/network.tsx:32
+#: src/components/network/NetworkPage.tsx:51
+#: src/components/network/WifiConnectionDetails.tsx:44
+#: src/routes/network.tsx:37
 msgid "Network"
 msgstr "Мережа"
 
+#: src/components/network/NetworkPage.tsx:57
+#: src/components/network/NetworkPage.tsx:58
+#, fuzzy
+msgid "Wired connections"
+msgstr "Забути з'єднання %s"
+
+#: src/components/network/NetworkPage.tsx:63
+#: src/components/network/NetworkPage.tsx:64
+#, fuzzy
+msgid "Wi-Fi networks"
+msgstr "Видимі мережі WiFi"
+
+#: src/components/network/WifiConnectionDetails.tsx:45
+#, fuzzy
+msgid "Network details"
+msgstr "Див. докладніше"
+
+#: src/components/network/WifiConnectionDetails.tsx:47
+msgid "SSID"
+msgstr "Назва мережі"
+
+#: src/components/network/WifiConnectionDetails.tsx:51
+msgid "Signal strength"
+msgstr ""
+
+#: src/components/network/WifiConnectionDetails.tsx:55
+#: src/components/network/WifiConnectionDetails.tsx:78
+#: src/components/network/WiredConnectionDetails.tsx:54
+#: src/components/storage/dasd/DASDTable.tsx:76
+#: src/components/storage/iscsi/NodesPresenter.jsx:104
+#: src/components/storage/iscsi/NodesPresenter.jsx:125
+#: src/components/storage/zfcp/ZFCPControllersTable.tsx:21
+msgid "Status"
+msgstr "Стан"
+
+#: src/components/network/WifiConnectionDetails.tsx:59
+#: src/components/network/WifiConnectionForm.tsx:154
+#: src/components/network/WifiConnectionForm.tsx:157
+msgid "Security"
+msgstr "Захист"
+
+#: src/components/network/WifiConnectionDetails.tsx:71
+#: src/components/network/WiredConnectionDetails.tsx:47
+#: src/components/storage/ProposalResultTable.tsx:132
+#: src/components/storage/SpaceActionsTable.tsx:233
+#: src/components/storage/dasd/DASDTable.tsx:77
+msgid "Device"
+msgstr "Пристрій"
+
+#: src/components/network/WifiConnectionDetails.tsx:72
+#: src/components/network/WifiNetworkPage.tsx:70
+#: src/components/network/WiredConnectionPage.tsx:68
+#, fuzzy
+msgid "Connection details"
+msgstr "Дії при підключенні"
+
+#: src/components/network/WifiConnectionDetails.tsx:74
+#: src/components/network/WiredConnectionDetails.tsx:50
+#: src/components/storage/iscsi/NodesPresenter.jsx:102
+#: src/components/storage/iscsi/NodesPresenter.jsx:123
+msgid "Interface"
+msgstr "Інтерфейс"
+
+#: src/components/network/WifiConnectionDetails.tsx:82
+#: src/components/network/WiredConnectionDetails.tsx:58
+msgid "MAC"
+msgstr ""
+
+#: src/components/network/WifiConnectionDetails.tsx:95
+#: src/components/network/WiredConnectionDetails.tsx:71
+#, fuzzy
+msgid "IP settings"
+msgstr "Налаштування імені хосту"
+
+#: src/components/network/WifiConnectionDetails.tsx:109
+#: src/components/network/WiredConnectionDetails.tsx:85
+msgid "IPv4"
+msgstr ""
+
+#: src/components/network/WifiConnectionDetails.tsx:112
+#: src/components/network/WiredConnectionDetails.tsx:88
+msgid "IPv6"
+msgstr ""
+
+#: src/components/network/WifiConnectionDetails.tsx:147
+#: src/components/network/WiredConnectionDetails.tsx:124
+msgid "Routes"
+msgstr ""
+
 #. TRANSLATORS: WiFi authentication mode
-#: src/components/network/WifiConnectionForm.tsx:49
+#: src/components/network/WifiConnectionForm.tsx:43
 #: src/components/storage/LogicalVolumePage.tsx:624
 #: src/components/storage/PartitionPage.tsx:748
 msgid "None"
 msgstr "Відсутнє"
 
 #. TRANSLATORS: WiFi authentication mode
-#: src/components/network/WifiConnectionForm.tsx:51
+#: src/components/network/WifiConnectionForm.tsx:45
 msgid "WPA & WPA2 Personal"
 msgstr "WPA і WPA2 Personal"
 
+#: src/components/network/WifiConnectionForm.tsx:56
+#, fuzzy
+msgid "Not protected network"
+msgstr "Ще не вибрано"
+
+#: src/components/network/WifiConnectionForm.tsx:58
+msgid ""
+"You will connect to a public network without encryption. Your data may not "
+"be secure."
+msgstr ""
+
+#: src/components/network/WifiConnectionForm.tsx:69
+#, fuzzy
+msgid "Setting up connection"
+msgstr "Дії для з'єднання %s"
+
+#: src/components/network/WifiConnectionForm.tsx:71
+msgid "It may take some time."
+msgstr ""
+
+#: src/components/network/WifiConnectionForm.tsx:73
+msgid "Details will appear after the connection is successfully established."
+msgstr ""
+
+#. TRANSLATORS: %s will be replaced by network ssid.
+#: src/components/network/WifiConnectionForm.tsx:81
+#, fuzzy, c-format
+msgid "Could not connect to %s"
+msgstr "Під'єднано до %s"
+
+#: src/components/network/WifiConnectionForm.tsx:85
+#, fuzzy
+msgid "Check the authentication parameters."
+msgstr "Методи автентифікації користувача root"
+
 #. TRANSLATORS: accessible name for the WiFi connection form
-#: src/components/network/WifiConnectionForm.tsx:101
-msgid "WiFi connection form"
+#: src/components/network/WifiConnectionForm.tsx:149
+#, fuzzy
+msgid "Wi-Fi connection form"
 msgstr "Форма WiFi з'єднання"
 
-#: src/components/network/WifiConnectionForm.tsx:108
-msgid "Authentication failed, please try again"
-msgstr "Помилка автентифікації, спробуйте ще раз"
-
-#: src/components/network/WifiConnectionForm.tsx:112
-msgid "Please, review provided settings and try again."
-msgstr "Будь ласка, перегляньте надані налаштування та спробуйте ще раз."
-
-#. TRANSLATORS: SSID (Wifi network name) configuration
-#: src/components/network/WifiConnectionForm.tsx:118
-msgid "SSID"
-msgstr "Назва мережі"
-
-#. TRANSLATORS: Wifi security configuration (password protected or not)
-#: src/components/network/WifiConnectionForm.tsx:124
-#: src/components/network/WifiConnectionForm.tsx:127
-msgid "Security"
-msgstr "Захист"
-
 #. TRANSLATORS: WiFi password
-#: src/components/network/WifiConnectionForm.tsx:136
+#: src/components/network/WifiConnectionForm.tsx:173
 msgid "WPA Password"
 msgstr "Пароль WPA"
 
-#. TRANSLATORS: Wifi network status
-#: src/components/network/WifiNetworksListPage.tsx:75
-#: src/components/network/WifiNetworksListPage.tsx:141
-msgid "Connecting"
-msgstr "З'єднання"
+#. TRANSLATORS: button label, connect to a Wi-Fi network
+#: src/components/network/WifiConnectionForm.tsx:186
+msgid "Connect"
+msgstr "З'єднати"
 
-#. TRANSLATORS: Wifi network status
-#: src/components/network/WifiNetworksListPage.tsx:78
-#: src/components/network/WifiNetworksListPage.tsx:145
-#: src/components/network/WifiNetworksListPage.tsx:188
+#: src/components/network/WifiNetworkPage.tsx:47
+msgid "Network not found or lost"
+msgstr ""
+
+#: src/components/network/WifiNetworkPage.tsx:55
+#: src/components/network/WiredConnectionPage.tsx:54
+msgid "Go to network page"
+msgstr ""
+
+#: src/components/network/WifiNetworkPage.tsx:70
+#, fuzzy, c-format
+msgid "Connect to %s"
+msgstr "Під'єднано до %s"
+
+#: src/components/network/WifiNetworksList.tsx:53
+msgid "Excellent signal"
+msgstr ""
+
+#: src/components/network/WifiNetworksList.tsx:56
+msgid "Good signal"
+msgstr ""
+
+#: src/components/network/WifiNetworksList.tsx:59
+msgid "Weak signal"
+msgstr ""
+
+#: src/components/network/WifiNetworksList.tsx:79
+msgid "Secured network"
+msgstr ""
+
+#: src/components/network/WifiNetworksList.tsx:87
+#, fuzzy
+msgid "Public network"
+msgstr "Видимі мережі WiFi"
+
+#. TRANSLATORS: %s will be replaced by Wi-Fi network SSID
+#: src/components/network/WifiNetworksList.tsx:97
+#, fuzzy, c-format
+msgid "Connecting to %s"
+msgstr "Під'єднано до %s"
+
+#: src/components/network/WifiNetworksList.tsx:132
 msgid "Connected"
 msgstr "З'єднано"
 
-#. TRANSLATORS: iSCSI connection status
-#. TRANSLATORS: Wifi network status
-#: src/components/network/WifiNetworksListPage.tsx:83
-#: src/components/network/WifiNetworksListPage.tsx:143
-#: src/components/storage/iscsi/NodesPresenter.jsx:65
-msgid "Disconnected"
-msgstr "Роз'єднано"
-
-#: src/components/network/WifiNetworksListPage.tsx:151
-msgid "Disconnect"
-msgstr "Роз'єднати"
-
-#: src/components/network/WifiNetworksListPage.tsx:172
-#: src/components/network/WifiNetworksListPage.tsx:293
-msgid "Connect to hidden network"
-msgstr "Підключитися до прихованої мережі"
-
-#: src/components/network/WifiNetworksListPage.tsx:185
-msgid "configured"
-msgstr "налаштовано"
-
-#: src/components/network/WifiNetworksListPage.tsx:274
-msgid "No visible Wi-Fi networks found"
+#: src/components/network/WifiNetworksList.tsx:171
+#, fuzzy
+msgid "No Wi-Fi networks were found"
 msgstr "Мережі WiFi не знайдені"
 
-#: src/components/network/WifiNetworksListPage.tsx:278
-msgid "Visible Wi-Fi networks"
-msgstr "Видимі мережі WiFi"
+#: src/components/network/WiredConnectionDetails.tsx:48
+#, fuzzy
+msgid "Device details"
+msgstr "Приховати подробиці"
 
-#: src/components/network/WifiSelectorPage.tsx:36
-msgid "Connect to a Wi-Fi network"
-msgstr "Підключитися до мережі Wi-Fi"
+#: src/components/network/WiredConnectionDetails.tsx:104
+#, fuzzy
+msgid "IP Addresses"
+msgstr "IP-адреси"
+
+#: src/components/network/WiredConnectionPage.tsx:47
+#, fuzzy
+msgid "Connection not found or lost"
+msgstr "Дії при підключенні"
+
+#: src/components/network/WiredConnectionsList.tsx:87
+#, fuzzy
+msgid "No wired connections were found"
+msgstr "Дротові з'єднання не знайдено"
 
 #. TRANSLATORS: %s will be replaced by a language name and territory, example:
 #. "English (United States)".
@@ -2249,12 +2361,6 @@ msgstr "Новий"
 msgid "Before %s"
 msgstr "До %s"
 
-#: src/components/storage/ProposalResultTable.tsx:132
-#: src/components/storage/SpaceActionsTable.tsx:233
-#: src/components/storage/dasd/DASDTable.tsx:77
-msgid "Device"
-msgstr "Пристрій"
-
 #: src/components/storage/ProposalResultTable.tsx:133
 msgid "Mount Point"
 msgstr "Точка монтування"
@@ -2410,13 +2516,6 @@ msgstr "Так"
 #: src/components/storage/zfcp/ZFCPDisksTable.tsx:43
 msgid "Channel ID"
 msgstr "Ідентифікатор каналу"
-
-#: src/components/storage/dasd/DASDTable.tsx:76
-#: src/components/storage/iscsi/NodesPresenter.jsx:104
-#: src/components/storage/iscsi/NodesPresenter.jsx:125
-#: src/components/storage/zfcp/ZFCPControllersTable.tsx:21
-msgid "Status"
-msgstr "Стан"
 
 #: src/components/storage/dasd/DASDTable.tsx:78
 msgid "Type"
@@ -2650,6 +2749,11 @@ msgstr "Запуск"
 msgid "On boot"
 msgstr "При завантаженні"
 
+#. TRANSLATORS: iSCSI connection status
+#: src/components/storage/iscsi/NodesPresenter.jsx:65
+msgid "Disconnected"
+msgstr "Роз'єднано"
+
 #. TRANSLATORS: iSCSI connection status, %s is replaced by node label
 #: src/components/storage/iscsi/NodesPresenter.jsx:69
 #, c-format
@@ -2672,11 +2776,6 @@ msgstr "Вихід"
 #: src/components/storage/iscsi/NodesPresenter.jsx:122
 msgid "Portal"
 msgstr "Портал"
-
-#: src/components/storage/iscsi/NodesPresenter.jsx:102
-#: src/components/storage/iscsi/NodesPresenter.jsx:123
-msgid "Interface"
-msgstr "Інтерфейс"
 
 #: src/components/storage/iscsi/NodesPresenter.jsx:103
 #: src/components/storage/iscsi/NodesPresenter.jsx:124
@@ -3226,6 +3325,40 @@ msgstr "Використати відкритий ключ SSH"
 msgid "ZFCP"
 msgstr "ZFCP"
 
+#~ msgid "Wired"
+#~ msgstr "Дротове"
+
+#~ msgid "Wi-Fi"
+#~ msgstr "Wi-Fi"
+
+#~ msgid "No connected yet"
+#~ msgstr "Ще не під'єднано"
+
+#~ msgid ""
+#~ "The system has not been configured for connecting to a Wi-Fi network yet."
+#~ msgstr "Система ще не налаштована на підключення до мережі Wi-Fi."
+
+#~ msgid "Authentication failed, please try again"
+#~ msgstr "Помилка автентифікації, спробуйте ще раз"
+
+#~ msgid "Please, review provided settings and try again."
+#~ msgstr "Будь ласка, перегляньте надані налаштування та спробуйте ще раз."
+
+#~ msgid "Connecting"
+#~ msgstr "З'єднання"
+
+#~ msgid "Disconnect"
+#~ msgstr "Роз'єднати"
+
+#~ msgid "Connect to hidden network"
+#~ msgstr "Підключитися до прихованої мережі"
+
+#~ msgid "configured"
+#~ msgstr "налаштовано"
+
+#~ msgid "Connect to a Wi-Fi network"
+#~ msgstr "Підключитися до мережі Wi-Fi"
+
 #~ msgid "The configured partitions will be created as logical volumes"
 #~ msgstr "Налаштовані розділи буде створено як логічні томи"
 
@@ -3259,9 +3392,6 @@ msgstr "ZFCP"
 #, c-format
 #~ msgid "Use %s to boot"
 #~ msgstr "Використати %s для завантаження"
-
-#~ msgid "Hostname settings"
-#~ msgstr "Налаштування імені хосту"
 
 #~ msgid "Please provide a hostname"
 #~ msgstr "Будь ласка, вкажіть ім'я хоста"
