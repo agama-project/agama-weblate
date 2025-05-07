@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-04 03:08+0000\n"
+"POT-Creation-Date: 2025-05-07 03:02+0000\n"
 "PO-Revision-Date: 2025-05-01 07:59+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -2202,7 +2202,7 @@ msgid "Show %d subvolume action"
 msgid_plural "Show %d subvolume actions"
 msgstr[0] "%d 個のサブボリューム処理を表示"
 
-#: src/components/storage/ProposalFailedInfo.tsx:39
+#: src/components/storage/ProposalFailedInfo.tsx:54
 msgid ""
 "It is not possible to install the system with the current configuration. "
 "Adjust the settings below."
@@ -2210,13 +2210,27 @@ msgstr ""
 "現在の設定ではシステムをインストールすることができません。下記の設定を調整し"
 "てください。"
 
-#: src/components/storage/ProposalFailedInfo.tsx:74
+#. TRANSLATORS: %s is a list of formatted mount points with a partition size like
+#. '"/" (at least 10 GiB), "/var" (20 GiB) and "swap" (2 GiB)'
+#: src/components/storage/ProposalFailedInfo.tsx:67
+#, c-format
+msgid "It is not possible to allocate space for the boot partition and for %s."
+msgstr ""
+
+#. TRANSLATORS: %s is a list of formatted mount points with a partition size like
+#. '"/" (at least 10 GiB), "/var" (20 GiB) and "swap" (2 GiB)'
+#: src/components/storage/ProposalFailedInfo.tsx:70
+#, c-format
+msgid "It is not possible to allocate space for %s."
+msgstr ""
+
+#: src/components/storage/ProposalFailedInfo.tsx:75
 msgid ""
 "Adjust the settings below to make the new system fit into the available "
 "space."
 msgstr "新しいシステムが利用可能な領域内に収まるように設定を調整してください。"
 
-#: src/components/storage/ProposalFailedInfo.tsx:96
+#: src/components/storage/ProposalFailedInfo.tsx:98
 msgid "Failed to calculate a storage layout"
 msgstr "ストレージ配置の算出に失敗しました"
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-04 03:08+0000\n"
+"POT-Creation-Date: 2025-05-07 03:02+0000\n"
 "PO-Revision-Date: 2025-05-02 15:59+0000\n"
 "Last-Translator: \"Marina J. Donis\" <marinajdonis@gmail.com>\n"
 "Language-Team: Spanish <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -2231,7 +2231,7 @@ msgid_plural "Show %d subvolume actions"
 msgstr[0] "Mostrar %d acción de subvolumen"
 msgstr[1] "Mostrar %d acciones de subvolumen"
 
-#: src/components/storage/ProposalFailedInfo.tsx:39
+#: src/components/storage/ProposalFailedInfo.tsx:54
 msgid ""
 "It is not possible to install the system with the current configuration. "
 "Adjust the settings below."
@@ -2239,7 +2239,21 @@ msgstr ""
 "No es posible instalar el sistema con la configuración actual. Ajuste las "
 "opciones a continuación."
 
-#: src/components/storage/ProposalFailedInfo.tsx:74
+#. TRANSLATORS: %s is a list of formatted mount points with a partition size like
+#. '"/" (at least 10 GiB), "/var" (20 GiB) and "swap" (2 GiB)'
+#: src/components/storage/ProposalFailedInfo.tsx:67
+#, c-format
+msgid "It is not possible to allocate space for the boot partition and for %s."
+msgstr ""
+
+#. TRANSLATORS: %s is a list of formatted mount points with a partition size like
+#. '"/" (at least 10 GiB), "/var" (20 GiB) and "swap" (2 GiB)'
+#: src/components/storage/ProposalFailedInfo.tsx:70
+#, c-format
+msgid "It is not possible to allocate space for %s."
+msgstr ""
+
+#: src/components/storage/ProposalFailedInfo.tsx:75
 msgid ""
 "Adjust the settings below to make the new system fit into the available "
 "space."
@@ -2247,7 +2261,7 @@ msgstr ""
 "Ajuste las opciones debajo para hacer el sistema nuevo quepa dentro del "
 "espacio disponible."
 
-#: src/components/storage/ProposalFailedInfo.tsx:96
+#: src/components/storage/ProposalFailedInfo.tsx:98
 msgid "Failed to calculate a storage layout"
 msgstr "Ha fallado al calcular una distribución de almacenaje"
 
