@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-07 03:02+0000\n"
+"POT-Creation-Date: 2025-05-08 03:04+0000\n"
 "PO-Revision-Date: 2025-05-07 08:59+0000\n"
 "Last-Translator: Aleksey Fedorov <Aleksejfedorov963@gmail.com>\n"
 "Language-Team: Russian <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -306,6 +306,10 @@ msgstr "Пожалуйста, проверьте, запущен ли он."
 msgid "Reload"
 msgstr "Обновить"
 
+#: src/components/core/SkipTo.tsx:72
+msgid "Skip to content"
+msgstr ""
+
 #: src/components/core/SplitButton.tsx:76
 msgid "More actions"
 msgstr "Доп. действия"
@@ -382,19 +386,19 @@ msgstr "Ни один из часовых поясов не соответств
 msgid " Timezone selection"
 msgstr " Выбор часового пояса"
 
-#: src/components/layout/Header.tsx:84
+#: src/components/layout/Header.tsx:86
 msgid "Options toggle"
 msgstr "Показ настроек"
 
-#: src/components/layout/Header.tsx:96
+#: src/components/layout/Header.tsx:98
 msgid "Download logs"
 msgstr "Скачать журналы"
 
-#: src/components/layout/Header.tsx:102
+#: src/components/layout/Header.tsx:104
 msgid "Installer Options"
 msgstr "Параметры установщика"
 
-#: src/components/layout/Header.tsx:155
+#: src/components/layout/Header.tsx:159
 msgid "Main navigation"
 msgstr "Навигация"
 
@@ -437,65 +441,6 @@ msgstr "Адреса"
 msgid "Addresses data list"
 msgstr "Список данных адресов"
 
-#. TRANSLATORS: input field for the iSCSI initiator name
-#. TRANSLATORS: table header
-#: src/components/network/ConnectionsTable.tsx:74
-#: src/components/network/ConnectionsTable.tsx:103
-#: src/components/storage/LvmPage.tsx:154
-#: src/components/storage/iscsi/InitiatorForm.tsx:75
-#: src/components/storage/iscsi/InitiatorForm.tsx:85
-#: src/components/storage/iscsi/InitiatorSection.tsx:40
-#: src/components/storage/iscsi/NodesPresenter.jsx:100
-#: src/components/storage/iscsi/NodesPresenter.jsx:121
-#: src/components/storage/zfcp/ZFCPDisksTable.tsx:42
-msgid "Name"
-msgstr "Имя"
-
-#. TRANSLATORS: table header
-#: src/components/network/ConnectionsTable.tsx:76
-#: src/components/network/ConnectionsTable.tsx:104
-#: src/components/network/WifiNetworksList.tsx:140
-#: src/components/network/WiredConnectionsList.tsx:66
-msgid "IP addresses"
-msgstr "IP-адреса"
-
-#. TRANSLATORS: table header aria label
-#: src/components/network/ConnectionsTable.tsx:78
-msgid "Connection actions"
-msgstr "Действия подключения"
-
-#: src/components/network/ConnectionsTable.tsx:85
-#: src/components/network/WifiConnectionDetails.tsx:99
-#: src/components/network/WiredConnectionDetails.tsx:75
-#: src/components/storage/EncryptionSection.tsx:50
-#: src/components/storage/iscsi/NodesPresenter.jsx:75
-#: src/components/users/FirstUser.tsx:52 src/components/users/RootUser.tsx:55
-msgid "Edit"
-msgstr "Изменить"
-
-#. TRANSLATORS: %s is replaced by a network connection name
-#: src/components/network/ConnectionsTable.tsx:88
-#: src/components/network/IpSettingsForm.tsx:152
-#, c-format
-msgid "Edit connection %s"
-msgstr "Отредактировать подключение %s"
-
-#: src/components/network/ConnectionsTable.tsx:92
-msgid "Forget"
-msgstr "Забыть"
-
-#. TRANSLATORS: %s is replaced by a network connection name
-#: src/components/network/ConnectionsTable.tsx:94
-#, c-format
-msgid "Forget connection %s"
-msgstr "Забыть подключение %s"
-
-#. TRANSLATORS: %s is replaced by a network connection name
-#: src/components/network/ConnectionsTable.tsx:111
-#, c-format
-msgid "Actions for connection %s"
-msgstr "Действия для подключения %s"
-
 #. TRANSLATORS: input field name
 #: src/components/network/DnsDataList.tsx:90
 msgid "Server IP"
@@ -524,6 +469,11 @@ msgstr "Ip префикс или маска сети"
 #: src/components/network/IpSettingsForm.tsx:105
 msgid "At least one address must be provided for selected mode"
 msgstr "Для выбранного режима необходимо предоставить не менее одного адреса"
+
+#: src/components/network/IpSettingsForm.tsx:152
+#, c-format
+msgid "Edit connection %s"
+msgstr "Отредактировать подключение %s"
 
 #: src/components/network/IpSettingsForm.tsx:157
 #: src/components/storage/EncryptionSettingsPage.tsx:109
@@ -653,6 +603,14 @@ msgstr "MAC-адрес"
 msgid "IP settings"
 msgstr "Настройки IP"
 
+#: src/components/network/WifiConnectionDetails.tsx:99
+#: src/components/network/WiredConnectionDetails.tsx:75
+#: src/components/storage/EncryptionSection.tsx:50
+#: src/components/storage/iscsi/NodesPresenter.jsx:75
+#: src/components/users/FirstUser.tsx:52 src/components/users/RootUser.tsx:55
+msgid "Edit"
+msgstr "Изменить"
+
 #: src/components/network/WifiConnectionDetails.tsx:109
 #: src/components/network/WiredConnectionDetails.tsx:85
 msgid "IPv4"
@@ -772,6 +730,11 @@ msgstr "Подключение к сети %s"
 #: src/components/network/WifiNetworksList.tsx:133
 msgid "Connected"
 msgstr "Подключено"
+
+#: src/components/network/WifiNetworksList.tsx:140
+#: src/components/network/WiredConnectionsList.tsx:66
+msgid "IP addresses"
+msgstr "IP-адреса"
 
 #: src/components/network/WifiNetworksList.tsx:172
 msgid "No Wi-Fi networks were found"
@@ -2114,6 +2077,17 @@ msgstr "Настройка группы томов LVM"
 msgid "Check the following before continuing"
 msgstr "Прежде чем продолжить, проверьте следующее"
 
+#. TRANSLATORS: input field for the iSCSI initiator name
+#: src/components/storage/LvmPage.tsx:154
+#: src/components/storage/iscsi/InitiatorForm.tsx:75
+#: src/components/storage/iscsi/InitiatorForm.tsx:85
+#: src/components/storage/iscsi/InitiatorSection.tsx:40
+#: src/components/storage/iscsi/NodesPresenter.jsx:100
+#: src/components/storage/iscsi/NodesPresenter.jsx:121
+#: src/components/storage/zfcp/ZFCPDisksTable.tsx:42
+msgid "Name"
+msgstr "Имя"
+
 #: src/components/storage/LvmPage.tsx:157
 #: src/components/storage/zfcp/ZFCPPage.tsx:131
 msgid "Disks"
@@ -3336,6 +3310,20 @@ msgstr "Использовать публичный ключ SSH"
 #: src/routes/storage.tsx:103
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#~ msgid "Connection actions"
+#~ msgstr "Действия подключения"
+
+#~ msgid "Forget"
+#~ msgstr "Забыть"
+
+#, c-format
+#~ msgid "Forget connection %s"
+#~ msgstr "Забыть подключение %s"
+
+#, c-format
+#~ msgid "Actions for connection %s"
+#~ msgstr "Действия для подключения %s"
 
 #~ msgid "Wired"
 #~ msgstr "Проводное"

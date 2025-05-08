@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-07 03:02+0000\n"
+"POT-Creation-Date: 2025-05-08 03:04+0000\n"
 "PO-Revision-Date: 2025-03-13 14:56+0000\n"
 "Last-Translator: Ondřej  Sedlák <sedlak.o@tutanota.com>\n"
 "Language-Team: Czech <https://l10n.opensuse.org/projects/agama/agama-web/cs/"
@@ -303,6 +303,10 @@ msgstr "Zkontrolujte, zda je spuštěn."
 msgid "Reload"
 msgstr "Znovu načíst"
 
+#: src/components/core/SkipTo.tsx:72
+msgid "Skip to content"
+msgstr ""
+
 #: src/components/core/SplitButton.tsx:76
 #, fuzzy
 msgid "More actions"
@@ -380,19 +384,19 @@ msgstr "Žádné z časových pásem neodpovídá filtru."
 msgid " Timezone selection"
 msgstr " Výběr časového pásma"
 
-#: src/components/layout/Header.tsx:84
+#: src/components/layout/Header.tsx:86
 msgid "Options toggle"
 msgstr "Přepínač možností"
 
-#: src/components/layout/Header.tsx:96
+#: src/components/layout/Header.tsx:98
 msgid "Download logs"
 msgstr "Stáhnout protokoly"
 
-#: src/components/layout/Header.tsx:102
+#: src/components/layout/Header.tsx:104
 msgid "Installer Options"
 msgstr "Možnosti instalátoru"
 
-#: src/components/layout/Header.tsx:155
+#: src/components/layout/Header.tsx:159
 msgid "Main navigation"
 msgstr "Hlavní navigace"
 
@@ -436,65 +440,6 @@ msgstr "Adresy"
 msgid "Addresses data list"
 msgstr "Seznam údajů o adresách"
 
-#. TRANSLATORS: input field for the iSCSI initiator name
-#. TRANSLATORS: table header
-#: src/components/network/ConnectionsTable.tsx:74
-#: src/components/network/ConnectionsTable.tsx:103
-#: src/components/storage/LvmPage.tsx:154
-#: src/components/storage/iscsi/InitiatorForm.tsx:75
-#: src/components/storage/iscsi/InitiatorForm.tsx:85
-#: src/components/storage/iscsi/InitiatorSection.tsx:40
-#: src/components/storage/iscsi/NodesPresenter.jsx:100
-#: src/components/storage/iscsi/NodesPresenter.jsx:121
-#: src/components/storage/zfcp/ZFCPDisksTable.tsx:42
-msgid "Name"
-msgstr "Název"
-
-#. TRANSLATORS: table header
-#: src/components/network/ConnectionsTable.tsx:76
-#: src/components/network/ConnectionsTable.tsx:104
-#: src/components/network/WifiNetworksList.tsx:140
-#: src/components/network/WiredConnectionsList.tsx:66
-msgid "IP addresses"
-msgstr "IP adresy"
-
-#. TRANSLATORS: table header aria label
-#: src/components/network/ConnectionsTable.tsx:78
-msgid "Connection actions"
-msgstr "Akce připojení"
-
-#: src/components/network/ConnectionsTable.tsx:85
-#: src/components/network/WifiConnectionDetails.tsx:99
-#: src/components/network/WiredConnectionDetails.tsx:75
-#: src/components/storage/EncryptionSection.tsx:50
-#: src/components/storage/iscsi/NodesPresenter.jsx:75
-#: src/components/users/FirstUser.tsx:52 src/components/users/RootUser.tsx:55
-msgid "Edit"
-msgstr "Upravit"
-
-#. TRANSLATORS: %s is replaced by a network connection name
-#: src/components/network/ConnectionsTable.tsx:88
-#: src/components/network/IpSettingsForm.tsx:152
-#, c-format
-msgid "Edit connection %s"
-msgstr "Upravit připojení %s"
-
-#: src/components/network/ConnectionsTable.tsx:92
-msgid "Forget"
-msgstr "Zapomenout"
-
-#. TRANSLATORS: %s is replaced by a network connection name
-#: src/components/network/ConnectionsTable.tsx:94
-#, c-format
-msgid "Forget connection %s"
-msgstr "Zapomenout připojení %s"
-
-#. TRANSLATORS: %s is replaced by a network connection name
-#: src/components/network/ConnectionsTable.tsx:111
-#, c-format
-msgid "Actions for connection %s"
-msgstr "Akce pro připojení %s"
-
 #. TRANSLATORS: input field name
 #: src/components/network/DnsDataList.tsx:90
 msgid "Server IP"
@@ -523,6 +468,11 @@ msgstr "Předpona IP nebo maska sítě"
 #: src/components/network/IpSettingsForm.tsx:105
 msgid "At least one address must be provided for selected mode"
 msgstr "Pro zvolený režim musí být uvedena alespoň jedna adresa"
+
+#: src/components/network/IpSettingsForm.tsx:152
+#, c-format
+msgid "Edit connection %s"
+msgstr "Upravit připojení %s"
 
 #: src/components/network/IpSettingsForm.tsx:157
 #: src/components/storage/EncryptionSettingsPage.tsx:109
@@ -658,6 +608,14 @@ msgstr ""
 msgid "IP settings"
 msgstr "Šifrování"
 
+#: src/components/network/WifiConnectionDetails.tsx:99
+#: src/components/network/WiredConnectionDetails.tsx:75
+#: src/components/storage/EncryptionSection.tsx:50
+#: src/components/storage/iscsi/NodesPresenter.jsx:75
+#: src/components/users/FirstUser.tsx:52 src/components/users/RootUser.tsx:55
+msgid "Edit"
+msgstr "Upravit"
+
 #: src/components/network/WifiConnectionDetails.tsx:109
 #: src/components/network/WiredConnectionDetails.tsx:85
 msgid "IPv4"
@@ -780,6 +738,11 @@ msgstr "Připojeno k %s"
 #: src/components/network/WifiNetworksList.tsx:133
 msgid "Connected"
 msgstr "Připojeno"
+
+#: src/components/network/WifiNetworksList.tsx:140
+#: src/components/network/WiredConnectionsList.tsx:66
+msgid "IP addresses"
+msgstr "IP adresy"
 
 #: src/components/network/WifiNetworksList.tsx:172
 #, fuzzy
@@ -2120,6 +2083,17 @@ msgstr "Nová skupina svazků LVM"
 msgid "Check the following before continuing"
 msgstr ""
 
+#. TRANSLATORS: input field for the iSCSI initiator name
+#: src/components/storage/LvmPage.tsx:154
+#: src/components/storage/iscsi/InitiatorForm.tsx:75
+#: src/components/storage/iscsi/InitiatorForm.tsx:85
+#: src/components/storage/iscsi/InitiatorSection.tsx:40
+#: src/components/storage/iscsi/NodesPresenter.jsx:100
+#: src/components/storage/iscsi/NodesPresenter.jsx:121
+#: src/components/storage/zfcp/ZFCPDisksTable.tsx:42
+msgid "Name"
+msgstr "Název"
+
 #: src/components/storage/LvmPage.tsx:157
 #: src/components/storage/zfcp/ZFCPPage.tsx:131
 msgid "Disks"
@@ -3344,6 +3318,20 @@ msgstr "Veřejný klíč SSH pro roota"
 #: src/routes/storage.tsx:103
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#~ msgid "Connection actions"
+#~ msgstr "Akce připojení"
+
+#~ msgid "Forget"
+#~ msgstr "Zapomenout"
+
+#, c-format
+#~ msgid "Forget connection %s"
+#~ msgstr "Zapomenout připojení %s"
+
+#, c-format
+#~ msgid "Actions for connection %s"
+#~ msgstr "Akce pro připojení %s"
 
 #~ msgid "Wired"
 #~ msgstr "Připojení kabelem"

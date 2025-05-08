@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-07 03:02+0000\n"
+"POT-Creation-Date: 2025-05-08 03:04+0000\n"
 "PO-Revision-Date: 2025-05-07 08:59+0000\n"
 "Last-Translator: Luna  Jernberg <bittin@opensuse.org>\n"
 "Language-Team: Swedish <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -303,6 +303,10 @@ msgstr "Vänligen kontrollera om den är igång."
 msgid "Reload"
 msgstr "Ladda om"
 
+#: src/components/core/SkipTo.tsx:72
+msgid "Skip to content"
+msgstr ""
+
 #: src/components/core/SplitButton.tsx:76
 msgid "More actions"
 msgstr "Mer åtgärder"
@@ -379,19 +383,19 @@ msgstr "Inget av tidszonerna matchar filtret."
 msgid " Timezone selection"
 msgstr " Tidszon val"
 
-#: src/components/layout/Header.tsx:84
+#: src/components/layout/Header.tsx:86
 msgid "Options toggle"
 msgstr "Växla mellan alternativ"
 
-#: src/components/layout/Header.tsx:96
+#: src/components/layout/Header.tsx:98
 msgid "Download logs"
 msgstr "Ladda ner loggar"
 
-#: src/components/layout/Header.tsx:102
+#: src/components/layout/Header.tsx:104
 msgid "Installer Options"
 msgstr "Installationsalternativ"
 
-#: src/components/layout/Header.tsx:155
+#: src/components/layout/Header.tsx:159
 msgid "Main navigation"
 msgstr "Huvudnavigering"
 
@@ -434,65 +438,6 @@ msgstr "Adresser"
 msgid "Addresses data list"
 msgstr "Adresser data lista"
 
-#. TRANSLATORS: input field for the iSCSI initiator name
-#. TRANSLATORS: table header
-#: src/components/network/ConnectionsTable.tsx:74
-#: src/components/network/ConnectionsTable.tsx:103
-#: src/components/storage/LvmPage.tsx:154
-#: src/components/storage/iscsi/InitiatorForm.tsx:75
-#: src/components/storage/iscsi/InitiatorForm.tsx:85
-#: src/components/storage/iscsi/InitiatorSection.tsx:40
-#: src/components/storage/iscsi/NodesPresenter.jsx:100
-#: src/components/storage/iscsi/NodesPresenter.jsx:121
-#: src/components/storage/zfcp/ZFCPDisksTable.tsx:42
-msgid "Name"
-msgstr "Namn"
-
-#. TRANSLATORS: table header
-#: src/components/network/ConnectionsTable.tsx:76
-#: src/components/network/ConnectionsTable.tsx:104
-#: src/components/network/WifiNetworksList.tsx:140
-#: src/components/network/WiredConnectionsList.tsx:66
-msgid "IP addresses"
-msgstr "IP adresser"
-
-#. TRANSLATORS: table header aria label
-#: src/components/network/ConnectionsTable.tsx:78
-msgid "Connection actions"
-msgstr "Anslutningsåtgärder"
-
-#: src/components/network/ConnectionsTable.tsx:85
-#: src/components/network/WifiConnectionDetails.tsx:99
-#: src/components/network/WiredConnectionDetails.tsx:75
-#: src/components/storage/EncryptionSection.tsx:50
-#: src/components/storage/iscsi/NodesPresenter.jsx:75
-#: src/components/users/FirstUser.tsx:52 src/components/users/RootUser.tsx:55
-msgid "Edit"
-msgstr "Redigera"
-
-#. TRANSLATORS: %s is replaced by a network connection name
-#: src/components/network/ConnectionsTable.tsx:88
-#: src/components/network/IpSettingsForm.tsx:152
-#, c-format
-msgid "Edit connection %s"
-msgstr "Redigera anslutning %s"
-
-#: src/components/network/ConnectionsTable.tsx:92
-msgid "Forget"
-msgstr "Glöm"
-
-#. TRANSLATORS: %s is replaced by a network connection name
-#: src/components/network/ConnectionsTable.tsx:94
-#, c-format
-msgid "Forget connection %s"
-msgstr "Glöm anslutning %s"
-
-#. TRANSLATORS: %s is replaced by a network connection name
-#: src/components/network/ConnectionsTable.tsx:111
-#, c-format
-msgid "Actions for connection %s"
-msgstr "Åtgärder för anslutning %s"
-
 #. TRANSLATORS: input field name
 #: src/components/network/DnsDataList.tsx:90
 msgid "Server IP"
@@ -521,6 +466,11 @@ msgstr "IP prefix eller nätmask"
 #: src/components/network/IpSettingsForm.tsx:105
 msgid "At least one address must be provided for selected mode"
 msgstr "Minst en adress måste tillhandahållas för valt läge"
+
+#: src/components/network/IpSettingsForm.tsx:152
+#, c-format
+msgid "Edit connection %s"
+msgstr "Redigera anslutning %s"
 
 #: src/components/network/IpSettingsForm.tsx:157
 #: src/components/storage/EncryptionSettingsPage.tsx:109
@@ -650,6 +600,14 @@ msgstr "MAC"
 msgid "IP settings"
 msgstr "IP inställningar"
 
+#: src/components/network/WifiConnectionDetails.tsx:99
+#: src/components/network/WiredConnectionDetails.tsx:75
+#: src/components/storage/EncryptionSection.tsx:50
+#: src/components/storage/iscsi/NodesPresenter.jsx:75
+#: src/components/users/FirstUser.tsx:52 src/components/users/RootUser.tsx:55
+msgid "Edit"
+msgstr "Redigera"
+
 #: src/components/network/WifiConnectionDetails.tsx:109
 #: src/components/network/WiredConnectionDetails.tsx:85
 msgid "IPv4"
@@ -769,6 +727,11 @@ msgstr "Ansluter till %s"
 #: src/components/network/WifiNetworksList.tsx:133
 msgid "Connected"
 msgstr "Ansluten"
+
+#: src/components/network/WifiNetworksList.tsx:140
+#: src/components/network/WiredConnectionsList.tsx:66
+msgid "IP addresses"
+msgstr "IP adresser"
 
 #: src/components/network/WifiNetworksList.tsx:172
 msgid "No Wi-Fi networks were found"
@@ -2097,6 +2060,17 @@ msgstr "Konfigurera LVM volymgrupp"
 msgid "Check the following before continuing"
 msgstr "Kontrollera följande innan du fortsätter"
 
+#. TRANSLATORS: input field for the iSCSI initiator name
+#: src/components/storage/LvmPage.tsx:154
+#: src/components/storage/iscsi/InitiatorForm.tsx:75
+#: src/components/storage/iscsi/InitiatorForm.tsx:85
+#: src/components/storage/iscsi/InitiatorSection.tsx:40
+#: src/components/storage/iscsi/NodesPresenter.jsx:100
+#: src/components/storage/iscsi/NodesPresenter.jsx:121
+#: src/components/storage/zfcp/ZFCPDisksTable.tsx:42
+msgid "Name"
+msgstr "Namn"
+
 #: src/components/storage/LvmPage.tsx:157
 #: src/components/storage/zfcp/ZFCPPage.tsx:131
 msgid "Disks"
@@ -3315,6 +3289,20 @@ msgstr "Använd publik SSH nyckel"
 #: src/routes/storage.tsx:103
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#~ msgid "Connection actions"
+#~ msgstr "Anslutningsåtgärder"
+
+#~ msgid "Forget"
+#~ msgstr "Glöm"
+
+#, c-format
+#~ msgid "Forget connection %s"
+#~ msgstr "Glöm anslutning %s"
+
+#, c-format
+#~ msgid "Actions for connection %s"
+#~ msgstr "Åtgärder för anslutning %s"
 
 #~ msgid "Wired"
 #~ msgstr "Trådbunden"

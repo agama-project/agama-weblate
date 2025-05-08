@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-07 03:02+0000\n"
+"POT-Creation-Date: 2025-05-08 03:04+0000\n"
 "PO-Revision-Date: 2025-03-01 09:56+0000\n"
 "Last-Translator: Arif Budiman <arifpedia@gmail.com>\n"
 "Language-Team: Indonesian <https://l10n.opensuse.org/projects/agama/agama-"
@@ -305,6 +305,10 @@ msgstr "Silakan periksa apakah sudah berjalan."
 msgid "Reload"
 msgstr "Muat ulang"
 
+#: src/components/core/SkipTo.tsx:72
+msgid "Skip to content"
+msgstr ""
+
 #: src/components/core/SplitButton.tsx:76
 msgid "More actions"
 msgstr "Tindakan lainnya"
@@ -381,19 +385,19 @@ msgstr "Tidak ada zona waktu yang cocok dengan filter."
 msgid " Timezone selection"
 msgstr " Pemilihan zona waktu"
 
-#: src/components/layout/Header.tsx:84
+#: src/components/layout/Header.tsx:86
 msgid "Options toggle"
 msgstr "Sakelar opsi"
 
-#: src/components/layout/Header.tsx:96
+#: src/components/layout/Header.tsx:98
 msgid "Download logs"
 msgstr "Unduh log"
 
-#: src/components/layout/Header.tsx:102
+#: src/components/layout/Header.tsx:104
 msgid "Installer Options"
 msgstr "Opsi Penginstal"
 
-#: src/components/layout/Header.tsx:155
+#: src/components/layout/Header.tsx:159
 msgid "Main navigation"
 msgstr "Navigasi utama"
 
@@ -437,65 +441,6 @@ msgstr "Alamat"
 msgid "Addresses data list"
 msgstr "Daftar data alamat"
 
-#. TRANSLATORS: input field for the iSCSI initiator name
-#. TRANSLATORS: table header
-#: src/components/network/ConnectionsTable.tsx:74
-#: src/components/network/ConnectionsTable.tsx:103
-#: src/components/storage/LvmPage.tsx:154
-#: src/components/storage/iscsi/InitiatorForm.tsx:75
-#: src/components/storage/iscsi/InitiatorForm.tsx:85
-#: src/components/storage/iscsi/InitiatorSection.tsx:40
-#: src/components/storage/iscsi/NodesPresenter.jsx:100
-#: src/components/storage/iscsi/NodesPresenter.jsx:121
-#: src/components/storage/zfcp/ZFCPDisksTable.tsx:42
-msgid "Name"
-msgstr "Nama"
-
-#. TRANSLATORS: table header
-#: src/components/network/ConnectionsTable.tsx:76
-#: src/components/network/ConnectionsTable.tsx:104
-#: src/components/network/WifiNetworksList.tsx:140
-#: src/components/network/WiredConnectionsList.tsx:66
-msgid "IP addresses"
-msgstr "Alamat IP"
-
-#. TRANSLATORS: table header aria label
-#: src/components/network/ConnectionsTable.tsx:78
-msgid "Connection actions"
-msgstr "Tindakan koneksi"
-
-#: src/components/network/ConnectionsTable.tsx:85
-#: src/components/network/WifiConnectionDetails.tsx:99
-#: src/components/network/WiredConnectionDetails.tsx:75
-#: src/components/storage/EncryptionSection.tsx:50
-#: src/components/storage/iscsi/NodesPresenter.jsx:75
-#: src/components/users/FirstUser.tsx:52 src/components/users/RootUser.tsx:55
-msgid "Edit"
-msgstr "Edit"
-
-#. TRANSLATORS: %s is replaced by a network connection name
-#: src/components/network/ConnectionsTable.tsx:88
-#: src/components/network/IpSettingsForm.tsx:152
-#, c-format
-msgid "Edit connection %s"
-msgstr "Edit koneksi %s"
-
-#: src/components/network/ConnectionsTable.tsx:92
-msgid "Forget"
-msgstr "Lupakan"
-
-#. TRANSLATORS: %s is replaced by a network connection name
-#: src/components/network/ConnectionsTable.tsx:94
-#, c-format
-msgid "Forget connection %s"
-msgstr "Lupakan koneksi %s"
-
-#. TRANSLATORS: %s is replaced by a network connection name
-#: src/components/network/ConnectionsTable.tsx:111
-#, c-format
-msgid "Actions for connection %s"
-msgstr "Tindakan untuk koneksi %s"
-
 #. TRANSLATORS: input field name
 #: src/components/network/DnsDataList.tsx:90
 msgid "Server IP"
@@ -524,6 +469,11 @@ msgstr "Awalan IP atau netmask"
 #: src/components/network/IpSettingsForm.tsx:105
 msgid "At least one address must be provided for selected mode"
 msgstr "Setidaknya satu alamat harus disediakan untuk mode yang dipilih"
+
+#: src/components/network/IpSettingsForm.tsx:152
+#, c-format
+msgid "Edit connection %s"
+msgstr "Edit koneksi %s"
 
 #: src/components/network/IpSettingsForm.tsx:157
 #: src/components/storage/EncryptionSettingsPage.tsx:109
@@ -659,6 +609,14 @@ msgstr ""
 msgid "IP settings"
 msgstr "Pengaturan"
 
+#: src/components/network/WifiConnectionDetails.tsx:99
+#: src/components/network/WiredConnectionDetails.tsx:75
+#: src/components/storage/EncryptionSection.tsx:50
+#: src/components/storage/iscsi/NodesPresenter.jsx:75
+#: src/components/users/FirstUser.tsx:52 src/components/users/RootUser.tsx:55
+msgid "Edit"
+msgstr "Edit"
+
 #: src/components/network/WifiConnectionDetails.tsx:109
 #: src/components/network/WiredConnectionDetails.tsx:85
 msgid "IPv4"
@@ -783,6 +741,11 @@ msgstr "Terhubung ke %s"
 #: src/components/network/WifiNetworksList.tsx:133
 msgid "Connected"
 msgstr "Tersambung"
+
+#: src/components/network/WifiNetworksList.tsx:140
+#: src/components/network/WiredConnectionsList.tsx:66
+msgid "IP addresses"
+msgstr "Alamat IP"
 
 #: src/components/network/WifiNetworksList.tsx:172
 #, fuzzy
@@ -2126,6 +2089,17 @@ msgstr "Membuat Grup Volume LVM"
 msgid "Check the following before continuing"
 msgstr ""
 
+#. TRANSLATORS: input field for the iSCSI initiator name
+#: src/components/storage/LvmPage.tsx:154
+#: src/components/storage/iscsi/InitiatorForm.tsx:75
+#: src/components/storage/iscsi/InitiatorForm.tsx:85
+#: src/components/storage/iscsi/InitiatorSection.tsx:40
+#: src/components/storage/iscsi/NodesPresenter.jsx:100
+#: src/components/storage/iscsi/NodesPresenter.jsx:121
+#: src/components/storage/zfcp/ZFCPDisksTable.tsx:42
+msgid "Name"
+msgstr "Nama"
+
 #: src/components/storage/LvmPage.tsx:157
 #: src/components/storage/zfcp/ZFCPPage.tsx:131
 msgid "Disks"
@@ -3353,6 +3327,20 @@ msgstr "Kunci publik SSH root"
 #: src/routes/storage.tsx:103
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#~ msgid "Connection actions"
+#~ msgstr "Tindakan koneksi"
+
+#~ msgid "Forget"
+#~ msgstr "Lupakan"
+
+#, c-format
+#~ msgid "Forget connection %s"
+#~ msgstr "Lupakan koneksi %s"
+
+#, c-format
+#~ msgid "Actions for connection %s"
+#~ msgstr "Tindakan untuk koneksi %s"
 
 #~ msgid "Wired"
 #~ msgstr "Kabel"

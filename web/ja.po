@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-07 03:02+0000\n"
+"POT-Creation-Date: 2025-05-08 03:04+0000\n"
 "PO-Revision-Date: 2025-05-01 07:59+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -306,6 +306,10 @@ msgstr "問題なく動作しているかどうかご確認ください。"
 msgid "Reload"
 msgstr "再読み込み"
 
+#: src/components/core/SkipTo.tsx:72
+msgid "Skip to content"
+msgstr ""
+
 #: src/components/core/SplitButton.tsx:76
 msgid "More actions"
 msgstr "さらなる処理"
@@ -382,19 +386,19 @@ msgstr "フィルタに該当するタイムゾーンがありません。"
 msgid " Timezone selection"
 msgstr " タイムゾーンの選択"
 
-#: src/components/layout/Header.tsx:84
+#: src/components/layout/Header.tsx:86
 msgid "Options toggle"
 msgstr "オプションの切り替え"
 
-#: src/components/layout/Header.tsx:96
+#: src/components/layout/Header.tsx:98
 msgid "Download logs"
 msgstr "ログのダウンロード"
 
-#: src/components/layout/Header.tsx:102
+#: src/components/layout/Header.tsx:104
 msgid "Installer Options"
 msgstr "インストーラのオプション"
 
-#: src/components/layout/Header.tsx:155
+#: src/components/layout/Header.tsx:159
 msgid "Main navigation"
 msgstr "メインナビゲーション"
 
@@ -437,65 +441,6 @@ msgstr "アドレス"
 msgid "Addresses data list"
 msgstr "アドレスデータの一覧"
 
-#. TRANSLATORS: input field for the iSCSI initiator name
-#. TRANSLATORS: table header
-#: src/components/network/ConnectionsTable.tsx:74
-#: src/components/network/ConnectionsTable.tsx:103
-#: src/components/storage/LvmPage.tsx:154
-#: src/components/storage/iscsi/InitiatorForm.tsx:75
-#: src/components/storage/iscsi/InitiatorForm.tsx:85
-#: src/components/storage/iscsi/InitiatorSection.tsx:40
-#: src/components/storage/iscsi/NodesPresenter.jsx:100
-#: src/components/storage/iscsi/NodesPresenter.jsx:121
-#: src/components/storage/zfcp/ZFCPDisksTable.tsx:42
-msgid "Name"
-msgstr "名前"
-
-#. TRANSLATORS: table header
-#: src/components/network/ConnectionsTable.tsx:76
-#: src/components/network/ConnectionsTable.tsx:104
-#: src/components/network/WifiNetworksList.tsx:140
-#: src/components/network/WiredConnectionsList.tsx:66
-msgid "IP addresses"
-msgstr "IP アドレス"
-
-#. TRANSLATORS: table header aria label
-#: src/components/network/ConnectionsTable.tsx:78
-msgid "Connection actions"
-msgstr "接続処理"
-
-#: src/components/network/ConnectionsTable.tsx:85
-#: src/components/network/WifiConnectionDetails.tsx:99
-#: src/components/network/WiredConnectionDetails.tsx:75
-#: src/components/storage/EncryptionSection.tsx:50
-#: src/components/storage/iscsi/NodesPresenter.jsx:75
-#: src/components/users/FirstUser.tsx:52 src/components/users/RootUser.tsx:55
-msgid "Edit"
-msgstr "編集"
-
-#. TRANSLATORS: %s is replaced by a network connection name
-#: src/components/network/ConnectionsTable.tsx:88
-#: src/components/network/IpSettingsForm.tsx:152
-#, c-format
-msgid "Edit connection %s"
-msgstr "接続 %s の編集"
-
-#: src/components/network/ConnectionsTable.tsx:92
-msgid "Forget"
-msgstr "削除"
-
-#. TRANSLATORS: %s is replaced by a network connection name
-#: src/components/network/ConnectionsTable.tsx:94
-#, c-format
-msgid "Forget connection %s"
-msgstr "接続 %s の削除"
-
-#. TRANSLATORS: %s is replaced by a network connection name
-#: src/components/network/ConnectionsTable.tsx:111
-#, c-format
-msgid "Actions for connection %s"
-msgstr "接続 %s に対する処理"
-
 #. TRANSLATORS: input field name
 #: src/components/network/DnsDataList.tsx:90
 msgid "Server IP"
@@ -525,6 +470,11 @@ msgstr "IP プレフィクスもしくはネットマスク"
 msgid "At least one address must be provided for selected mode"
 msgstr ""
 "選択しているモードの場合、 1 つ以上のアドレスを設定しなければなりません"
+
+#: src/components/network/IpSettingsForm.tsx:152
+#, c-format
+msgid "Edit connection %s"
+msgstr "接続 %s の編集"
 
 #: src/components/network/IpSettingsForm.tsx:157
 #: src/components/storage/EncryptionSettingsPage.tsx:109
@@ -654,6 +604,14 @@ msgstr "MAC"
 msgid "IP settings"
 msgstr "IP 設定"
 
+#: src/components/network/WifiConnectionDetails.tsx:99
+#: src/components/network/WiredConnectionDetails.tsx:75
+#: src/components/storage/EncryptionSection.tsx:50
+#: src/components/storage/iscsi/NodesPresenter.jsx:75
+#: src/components/users/FirstUser.tsx:52 src/components/users/RootUser.tsx:55
+msgid "Edit"
+msgstr "編集"
+
 #: src/components/network/WifiConnectionDetails.tsx:109
 #: src/components/network/WiredConnectionDetails.tsx:85
 msgid "IPv4"
@@ -773,6 +731,11 @@ msgstr "%s に接続しています"
 #: src/components/network/WifiNetworksList.tsx:133
 msgid "Connected"
 msgstr "接続済み"
+
+#: src/components/network/WifiNetworksList.tsx:140
+#: src/components/network/WiredConnectionsList.tsx:66
+msgid "IP addresses"
+msgstr "IP アドレス"
 
 #: src/components/network/WifiNetworksList.tsx:172
 msgid "No Wi-Fi networks were found"
@@ -2087,6 +2050,17 @@ msgstr "LVM ボリュームグループの設定"
 msgid "Check the following before continuing"
 msgstr "続行する前に下記をご確認ください"
 
+#. TRANSLATORS: input field for the iSCSI initiator name
+#: src/components/storage/LvmPage.tsx:154
+#: src/components/storage/iscsi/InitiatorForm.tsx:75
+#: src/components/storage/iscsi/InitiatorForm.tsx:85
+#: src/components/storage/iscsi/InitiatorSection.tsx:40
+#: src/components/storage/iscsi/NodesPresenter.jsx:100
+#: src/components/storage/iscsi/NodesPresenter.jsx:121
+#: src/components/storage/zfcp/ZFCPDisksTable.tsx:42
+msgid "Name"
+msgstr "名前"
+
 #: src/components/storage/LvmPage.tsx:157
 #: src/components/storage/zfcp/ZFCPPage.tsx:131
 msgid "Disks"
@@ -3295,6 +3269,20 @@ msgstr "公開 SSH 鍵の使用"
 #: src/routes/storage.tsx:103
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#~ msgid "Connection actions"
+#~ msgstr "接続処理"
+
+#~ msgid "Forget"
+#~ msgstr "削除"
+
+#, c-format
+#~ msgid "Forget connection %s"
+#~ msgstr "接続 %s の削除"
+
+#, c-format
+#~ msgid "Actions for connection %s"
+#~ msgstr "接続 %s に対する処理"
 
 #~ msgid "Wired"
 #~ msgstr "有線"

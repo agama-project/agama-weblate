@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-07 03:02+0000\n"
+"POT-Creation-Date: 2025-05-08 03:04+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -294,6 +294,10 @@ msgstr "请检查它是否在运行。"
 msgid "Reload"
 msgstr "重载"
 
+#: src/components/core/SkipTo.tsx:72
+msgid "Skip to content"
+msgstr ""
+
 #: src/components/core/SplitButton.tsx:76
 #, fuzzy
 msgid "More actions"
@@ -371,20 +375,20 @@ msgstr "没有符合过滤器的时区。"
 msgid " Timezone selection"
 msgstr " 时区选择"
 
-#: src/components/layout/Header.tsx:84
+#: src/components/layout/Header.tsx:86
 msgid "Options toggle"
 msgstr ""
 
-#: src/components/layout/Header.tsx:96
+#: src/components/layout/Header.tsx:98
 msgid "Download logs"
 msgstr "下载日志"
 
-#: src/components/layout/Header.tsx:102
+#: src/components/layout/Header.tsx:104
 #, fuzzy
 msgid "Installer Options"
 msgstr "安装程序选项"
 
-#: src/components/layout/Header.tsx:155
+#: src/components/layout/Header.tsx:159
 msgid "Main navigation"
 msgstr ""
 
@@ -428,66 +432,6 @@ msgstr "地址"
 msgid "Addresses data list"
 msgstr "地址数据列表"
 
-#. TRANSLATORS: input field for the iSCSI initiator name
-#. TRANSLATORS: table header
-#: src/components/network/ConnectionsTable.tsx:74
-#: src/components/network/ConnectionsTable.tsx:103
-#: src/components/storage/LvmPage.tsx:154
-#: src/components/storage/iscsi/InitiatorForm.tsx:75
-#: src/components/storage/iscsi/InitiatorForm.tsx:85
-#: src/components/storage/iscsi/InitiatorSection.tsx:40
-#: src/components/storage/iscsi/NodesPresenter.jsx:100
-#: src/components/storage/iscsi/NodesPresenter.jsx:121
-#: src/components/storage/zfcp/ZFCPDisksTable.tsx:42
-msgid "Name"
-msgstr "名称"
-
-#. TRANSLATORS: table header
-#: src/components/network/ConnectionsTable.tsx:76
-#: src/components/network/ConnectionsTable.tsx:104
-#: src/components/network/WifiNetworksList.tsx:140
-#: src/components/network/WiredConnectionsList.tsx:66
-msgid "IP addresses"
-msgstr "IP 地址"
-
-#. TRANSLATORS: table header aria label
-#: src/components/network/ConnectionsTable.tsx:78
-#, fuzzy
-msgid "Connection actions"
-msgstr "正在连接"
-
-#: src/components/network/ConnectionsTable.tsx:85
-#: src/components/network/WifiConnectionDetails.tsx:99
-#: src/components/network/WiredConnectionDetails.tsx:75
-#: src/components/storage/EncryptionSection.tsx:50
-#: src/components/storage/iscsi/NodesPresenter.jsx:75
-#: src/components/users/FirstUser.tsx:52 src/components/users/RootUser.tsx:55
-msgid "Edit"
-msgstr "编辑"
-
-#. TRANSLATORS: %s is replaced by a network connection name
-#: src/components/network/ConnectionsTable.tsx:88
-#: src/components/network/IpSettingsForm.tsx:152
-#, c-format
-msgid "Edit connection %s"
-msgstr "编辑连接 %s"
-
-#: src/components/network/ConnectionsTable.tsx:92
-msgid "Forget"
-msgstr "忘掉"
-
-#. TRANSLATORS: %s is replaced by a network connection name
-#: src/components/network/ConnectionsTable.tsx:94
-#, c-format
-msgid "Forget connection %s"
-msgstr "忘掉连接 %s"
-
-#. TRANSLATORS: %s is replaced by a network connection name
-#: src/components/network/ConnectionsTable.tsx:111
-#, c-format
-msgid "Actions for connection %s"
-msgstr "对连接 %s 的操作"
-
 #. TRANSLATORS: input field name
 #: src/components/network/DnsDataList.tsx:90
 msgid "Server IP"
@@ -517,6 +461,11 @@ msgstr "IP 前缀或掩码"
 #: src/components/network/IpSettingsForm.tsx:105
 msgid "At least one address must be provided for selected mode"
 msgstr "所选模式要求至少提供一个地址"
+
+#: src/components/network/IpSettingsForm.tsx:152
+#, c-format
+msgid "Edit connection %s"
+msgstr "编辑连接 %s"
 
 #: src/components/network/IpSettingsForm.tsx:157
 #: src/components/storage/EncryptionSettingsPage.tsx:109
@@ -649,6 +598,14 @@ msgstr ""
 msgid "IP settings"
 msgstr "设置"
 
+#: src/components/network/WifiConnectionDetails.tsx:99
+#: src/components/network/WiredConnectionDetails.tsx:75
+#: src/components/storage/EncryptionSection.tsx:50
+#: src/components/storage/iscsi/NodesPresenter.jsx:75
+#: src/components/users/FirstUser.tsx:52 src/components/users/RootUser.tsx:55
+msgid "Edit"
+msgstr "编辑"
+
 #: src/components/network/WifiConnectionDetails.tsx:109
 #: src/components/network/WiredConnectionDetails.tsx:85
 msgid "IPv4"
@@ -773,6 +730,11 @@ msgstr "已连接到 %s"
 #: src/components/network/WifiNetworksList.tsx:133
 msgid "Connected"
 msgstr "已连接"
+
+#: src/components/network/WifiNetworksList.tsx:140
+#: src/components/network/WiredConnectionsList.tsx:66
+msgid "IP addresses"
+msgstr "IP 地址"
 
 #: src/components/network/WifiNetworksList.tsx:172
 #, fuzzy
@@ -2100,6 +2062,17 @@ msgstr "创建 LVM 卷组"
 msgid "Check the following before continuing"
 msgstr ""
 
+#. TRANSLATORS: input field for the iSCSI initiator name
+#: src/components/storage/LvmPage.tsx:154
+#: src/components/storage/iscsi/InitiatorForm.tsx:75
+#: src/components/storage/iscsi/InitiatorForm.tsx:85
+#: src/components/storage/iscsi/InitiatorSection.tsx:40
+#: src/components/storage/iscsi/NodesPresenter.jsx:100
+#: src/components/storage/iscsi/NodesPresenter.jsx:121
+#: src/components/storage/zfcp/ZFCPDisksTable.tsx:42
+msgid "Name"
+msgstr "名称"
+
 #: src/components/storage/LvmPage.tsx:157
 #: src/components/storage/zfcp/ZFCPPage.tsx:131
 msgid "Disks"
@@ -3315,6 +3288,21 @@ msgstr "Root 的 SSH 公钥"
 #: src/routes/storage.tsx:103
 msgid "ZFCP"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Connection actions"
+#~ msgstr "正在连接"
+
+#~ msgid "Forget"
+#~ msgstr "忘掉"
+
+#, c-format
+#~ msgid "Forget connection %s"
+#~ msgstr "忘掉连接 %s"
+
+#, c-format
+#~ msgid "Actions for connection %s"
+#~ msgstr "对连接 %s 的操作"
 
 #~ msgid "Wired"
 #~ msgstr "有线连接"
