@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-08 03:04+0000\n"
+"POT-Creation-Date: 2025-05-18 03:09+0000\n"
 "PO-Revision-Date: 2025-05-12 08:59+0000\n"
 "Last-Translator: Andrea Manzini <andrea.manzini@suse.com>\n"
 "Language-Team: Italian <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -127,32 +127,102 @@ msgstr "Riavvia"
 msgid "Installing the system, please wait..."
 msgstr "Installazione del sistema in corso, attendere prego..."
 
-#: src/components/core/InstallerOptions.tsx:73
-msgid "Installer options"
-msgstr "Opzioni di installazione"
-
-#: src/components/core/InstallerOptions.tsx:76
-#: src/components/core/InstallerOptions.tsx:80
-#: src/components/core/InstallerOptions.tsx:81
-#: src/components/l10n/L10nPage.tsx:48
+#: src/components/core/InstallerOptions.tsx:74
+#: src/components/l10n/L10nPage.tsx:81
 msgid "Language"
 msgstr "Lingua"
 
-#: src/components/core/InstallerOptions.tsx:93
-#: src/components/core/InstallerOptions.tsx:98
+#: src/components/core/InstallerOptions.tsx:96
+#: src/components/core/InstallerOptions.tsx:103
+#: src/components/core/InstallerOptions.tsx:107
 msgid "Keyboard layout"
 msgstr "Layout di tastiera"
 
-#: src/components/core/InstallerOptions.tsx:107
+#: src/components/core/InstallerOptions.tsx:97
+#: src/components/core/InstallerOptions.tsx:403
 msgid "Cannot be changed in remote installation"
 msgstr "Non può essere cambiato nell'installazione remota"
 
-#: src/components/core/InstallerOptions.tsx:120
+#: src/components/core/InstallerOptions.tsx:260
+msgid ""
+"This will affect only the installer interface, not the product to be "
+"installed. You can adjust the product’s localization later in the "
+"Localization settings page."
+msgstr ""
+
+#. TRANSLATORS: Explains where users can find more language and keymap
+#. options for the product to install. Keep the text in square brackets []
+#. as it will be replaced with a clickable link.
+#: src/components/core/InstallerOptions.tsx:311
+msgid ""
+"More language and keyboard layout options for the selected product may be "
+"available in [Localization] page."
+msgstr ""
+
+#: src/components/core/InstallerOptions.tsx:315
+msgid "Language and keyboard"
+msgstr ""
+
+#: src/components/core/InstallerOptions.tsx:323
+msgid "Use these same settings for the selected product"
+msgstr ""
+
+#: src/components/core/InstallerOptions.tsx:345
+#: src/components/core/InstallerOptions.tsx:391
+#: src/components/core/InstallerOptions.tsx:405
+#: src/components/core/InstallerOptions.tsx:448
 #: src/components/core/Page.tsx:266
 #: src/components/storage/dasd/DASDTable.tsx:104
 #: src/components/system/HostnamePage.tsx:132
 msgid "Accept"
 msgstr "Accetta"
+
+#. TRANSLATORS: Explains where users can find more languages options for the
+#. product to install. Keep the text in square brackets [] as it will be
+#. replaced with a clickable link.
+#: src/components/core/InstallerOptions.tsx:358
+msgid ""
+"More languages might be available for the selected product at [Localization] "
+"page"
+msgstr ""
+
+#: src/components/core/InstallerOptions.tsx:362
+#, fuzzy
+msgid "Change Language"
+msgstr "Lingua"
+
+#: src/components/core/InstallerOptions.tsx:369
+#: src/components/core/InstallerOptions.tsx:426
+msgid "Use for the selected product too"
+msgstr ""
+
+#: src/components/core/InstallerOptions.tsx:402
+#: src/components/core/InstallerOptions.tsx:419
+#, fuzzy
+msgid "Change keyboard"
+msgstr "Cambia prodotto"
+
+#. TRANSLATORS: Explains where users can find more keymap options for the
+#. product to install. Keep the text in square brackets [] as it will be
+#. replaced with a clickable link.
+#: src/components/core/InstallerOptions.tsx:415
+msgid ""
+"More keymap layout might be available for the selected product at "
+"[Localization] page"
+msgstr ""
+
+#: src/components/core/InstallerOptions.tsx:476
+msgid "Change display language and keyboard layout"
+msgstr ""
+
+#: src/components/core/InstallerOptions.tsx:487
+msgid "Change display language"
+msgstr ""
+
+#: src/components/core/InstallerOptions.tsx:496
+#, fuzzy
+msgid "Change keyboard layout"
+msgstr "Layout di tastiera"
 
 #: src/components/core/IssuesAlert.tsx:34
 msgid ""
@@ -228,7 +298,7 @@ msgstr "Modulo di login"
 #: src/components/core/LoginPage.tsx:110
 #: src/components/core/PasswordAndConfirmationInput.tsx:96
 #: src/components/network/WifiConnectionForm.tsx:177
-#: src/components/questions/QuestionWithPassword.tsx:59
+#: src/components/questions/QuestionWithPassword.tsx:64
 #: src/components/storage/iscsi/AuthFields.jsx:87
 #: src/components/storage/iscsi/AuthFields.jsx:91
 #: src/components/users/RootUser.tsx:61
@@ -239,11 +309,11 @@ msgstr "Password"
 msgid "Password input"
 msgstr "Inserimento password"
 
-#: src/components/core/LoginPage.tsx:124
+#: src/components/core/LoginPage.tsx:125
 msgid "Please, provide its password to log in to the system."
 msgstr "Per favore, inserire la password per collegarsi al sistema."
 
-#: src/components/core/LoginPage.tsx:132
+#: src/components/core/LoginPage.tsx:133
 msgid "Log in"
 msgstr "Accesso"
 
@@ -262,7 +332,22 @@ msgstr "Le password non corrispondono"
 msgid "Password confirmation"
 msgstr "Conferma password"
 
-#: src/components/core/PasswordInput.tsx:68
+#. TRANSLATORS: Message to inform users which keyboard layout is active. %s
+#. will be replaced with the layout name (e.g., "de", "cn", "cz"). Keep
+#. square brackets around %s to apply special formatting in
+#. the UI.
+#: src/components/core/PasswordInput.tsx:69
+#, c-format
+msgid "Using [%s] keyboard"
+msgstr ""
+
+#. TRANSLATORS: Warns users that CAPS LOCK is on.
+#. Keep square brackets to apply special formatting in the UI.
+#: src/components/core/PasswordInput.tsx:90
+msgid "[CAPS LOCK] is on"
+msgstr ""
+
+#: src/components/core/PasswordInput.tsx:144
 msgid "Password visibility button"
 msgstr "bottone visibilità password"
 
@@ -328,8 +413,8 @@ msgid "Keyboard selection"
 msgstr "Selezione tastiera"
 
 #: src/components/l10n/KeyboardSelection.tsx:86
-#: src/components/l10n/L10nPage.tsx:51 src/components/l10n/L10nPage.tsx:65
-#: src/components/l10n/L10nPage.tsx:77
+#: src/components/l10n/L10nPage.tsx:84 src/components/l10n/L10nPage.tsx:98
+#: src/components/l10n/L10nPage.tsx:110
 #: src/components/l10n/LocaleSelection.tsx:86
 #: src/components/l10n/TimezoneSelection.tsx:134
 #: src/components/product/ProductSelectionPage.tsx:204
@@ -337,29 +422,42 @@ msgstr "Selezione tastiera"
 msgid "Select"
 msgstr "Selezionare"
 
-#: src/components/l10n/L10nPage.tsx:41
+#: src/components/l10n/L10nPage.tsx:37
+msgid ""
+"These are the settings for the product to install. The installer language "
+"and keyboard layout can be adjusted via the [settings panel] accessible from "
+"the top bar."
+msgstr ""
+
+#: src/components/l10n/L10nPage.tsx:43
+msgid ""
+"These are the settings for the product to install. The installer language "
+"can be adjusted via the [settings panel] accessible from the top bar."
+msgstr ""
+
+#: src/components/l10n/L10nPage.tsx:74
 #: src/components/overview/L10nSection.tsx:37 src/routes/l10n.tsx:32
 msgid "Localization"
 msgstr "Localizzazione"
 
-#: src/components/l10n/L10nPage.tsx:51 src/components/l10n/L10nPage.tsx:65
-#: src/components/l10n/L10nPage.tsx:77
+#: src/components/l10n/L10nPage.tsx:84 src/components/l10n/L10nPage.tsx:98
+#: src/components/l10n/L10nPage.tsx:110
 #: src/components/storage/iscsi/InitiatorForm.tsx:89
 #: src/components/users/FirstUserForm.tsx:234
 #: src/components/users/RootUserForm.tsx:163
 msgid "Change"
 msgstr "Cambia"
 
-#: src/components/l10n/L10nPage.tsx:56 src/components/l10n/L10nPage.tsx:69
-#: src/components/l10n/L10nPage.tsx:82
+#: src/components/l10n/L10nPage.tsx:89 src/components/l10n/L10nPage.tsx:102
+#: src/components/l10n/L10nPage.tsx:115
 msgid "Not selected yet"
 msgstr "Non selezionato al momento"
 
-#: src/components/l10n/L10nPage.tsx:62
+#: src/components/l10n/L10nPage.tsx:95
 msgid "Keyboard"
 msgstr "Tastiera"
 
-#: src/components/l10n/L10nPage.tsx:74
+#: src/components/l10n/L10nPage.tsx:107
 msgid "Time zone"
 msgstr "Fuso orario"
 
@@ -387,19 +485,15 @@ msgstr "Nessuno dei fusi orari corrisponde al filtro."
 msgid " Timezone selection"
 msgstr " Selezione fuso orario"
 
-#: src/components/layout/Header.tsx:86
+#: src/components/layout/Header.tsx:80
 msgid "Options toggle"
 msgstr "Abilita opzioni"
 
-#: src/components/layout/Header.tsx:98
+#: src/components/layout/Header.tsx:92
 msgid "Download logs"
 msgstr "Scarica i logs"
 
-#: src/components/layout/Header.tsx:104
-msgid "Installer Options"
-msgstr "Opzioni installazione"
-
-#: src/components/layout/Header.tsx:159
+#: src/components/layout/Header.tsx:130
 msgid "Main navigation"
 msgstr "Navigazione principale"
 
@@ -994,16 +1088,16 @@ msgid ""
 msgstr ""
 
 #: src/components/questions/GenericQuestion.tsx:49
-#: src/components/questions/LuksActivationQuestion.tsx:70
+#: src/components/questions/LuksActivationQuestion.tsx:69
 msgid "Question"
 msgstr "Domanda"
 
 #. TRANSLATORS: error message, user entered a wrong password
-#: src/components/questions/LuksActivationQuestion.tsx:38
+#: src/components/questions/LuksActivationQuestion.tsx:37
 msgid "The encryption password did not work"
 msgstr "La password di crittografia non ha funzionato"
 
-#: src/components/questions/LuksActivationQuestion.tsx:69
+#: src/components/questions/LuksActivationQuestion.tsx:68
 msgid "Encrypted Device"
 msgstr "Dispositivo criptato"
 
@@ -1033,7 +1127,7 @@ msgstr ""
 msgid "Package installation failed"
 msgstr "Installazione del pacchetto non riuscita"
 
-#: src/components/questions/QuestionWithPassword.tsx:54
+#: src/components/questions/QuestionWithPassword.tsx:56
 msgid "Password Required"
 msgstr "Password richiesta"
 
@@ -3287,6 +3381,12 @@ msgstr ""
 #: src/routes/storage.tsx:103
 msgid "ZFCP"
 msgstr ""
+
+#~ msgid "Installer options"
+#~ msgstr "Opzioni di installazione"
+
+#~ msgid "Installer Options"
+#~ msgstr "Opzioni installazione"
 
 #~ msgid "Connection actions"
 #~ msgstr "Azioni di connessione"
