@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-20 03:04+0000\n"
+"POT-Creation-Date: 2025-05-25 03:11+0000\n"
 "PO-Revision-Date: 2024-05-09 06:43+0000\n"
 "Last-Translator: Kristijan Fremen Velkovski <me@krisfremen.com>\n"
 "Language-Team: Macedonian <https://l10n.opensuse.org/projects/agama/agama-"
@@ -217,9 +217,14 @@ msgstr ""
 msgid "Change display language and keyboard layout"
 msgstr ""
 
-#: src/components/core/IssuesAlert.tsx:34
+#: src/components/core/IssuesAlert.tsx:36
 msgid ""
 "Before starting the installation, you need to address the following problems:"
+msgstr ""
+
+#. TRANSLATORS: Clickable link to show and resolve package dependency conflicts
+#: src/components/core/IssuesAlert.tsx:46
+msgid "Review and fix"
 msgstr ""
 
 #: src/components/core/IssuesDrawer.tsx:49
@@ -235,7 +240,7 @@ msgstr ""
 
 #: src/components/core/IssuesDrawer.tsx:51
 #: src/components/overview/SoftwareSection.tsx:69
-#: src/components/software/SoftwarePage.tsx:160 src/routes/software.tsx:33
+#: src/components/software/SoftwarePage.tsx:160 src/routes/software.tsx:34
 msgid "Software"
 msgstr ""
 
@@ -721,7 +726,7 @@ msgstr ""
 #. TRANSLATORS: WiFi authentication mode
 #: src/components/network/WifiConnectionForm.tsx:43
 #: src/components/storage/LogicalVolumePage.tsx:624
-#: src/components/storage/PartitionPage.tsx:748
+#: src/components/storage/PartitionPage.tsx:753
 msgid "None"
 msgstr ""
 
@@ -941,6 +946,7 @@ msgid "License language"
 msgstr ""
 
 #: src/components/product/LicenseDialog.tsx:93
+#: src/components/software/SoftwareConflicts.tsx:294
 #: src/components/software/SoftwarePatternsSelection.tsx:207
 msgid "Close"
 msgstr "Затвори"
@@ -1151,6 +1157,61 @@ msgstr ""
 
 #: src/components/questions/UnsupportedAutoYaST.tsx:99
 msgid "No support is planned."
+msgstr ""
+
+#: src/components/software/SoftwareConflicts.tsx:100
+#, fuzzy
+msgid "Show less actions"
+msgstr "Не може да се поврзе со D-Bus"
+
+#: src/components/software/SoftwareConflicts.tsx:100
+#, fuzzy
+msgid "Show more actions"
+msgstr "Не може да се поврзе со D-Bus"
+
+#: src/components/software/SoftwareConflicts.tsx:138
+msgid "Select a solution to continue"
+msgstr ""
+
+#: src/components/software/SoftwareConflicts.tsx:160
+msgid "Apply selected solution"
+msgstr ""
+
+#: src/components/software/SoftwareConflicts.tsx:183
+msgid ""
+"Multiple conflicts found. You can address them in any order, and resolving "
+"one may resolve others."
+msgstr ""
+
+#: src/components/software/SoftwareConflicts.tsx:191
+msgid "Skip to previous"
+msgstr ""
+
+#. TRANSLATORS: This is a short status message like "1 of 3". It
+#. indicates the position of the current item out of a total. The
+#. first %d will be replaced with the current item number, the
+#. second %d with the total number of items.
+#: src/components/software/SoftwareConflicts.tsx:202
+#, c-format
+msgid "%d of %d"
+msgstr ""
+
+#: src/components/software/SoftwareConflicts.tsx:208
+msgid "Skip to next"
+msgstr ""
+
+#: src/components/software/SoftwareConflicts.tsx:223
+msgid "No conflicts to address"
+msgstr ""
+
+#: src/components/software/SoftwareConflicts.tsx:226
+msgid ""
+"All conflicts have been resolved, or none were detected. You can safely "
+"continue with your setup."
+msgstr ""
+
+#: src/components/software/SoftwareConflicts.tsx:286
+msgid "Software conflicts resolution"
 msgstr ""
 
 #: src/components/software/SoftwarePage.tsx:58
@@ -1441,11 +1502,11 @@ msgid ""
 "No partitions will be automatically configured for booting. Use with caution."
 msgstr ""
 
-#: src/components/storage/ConfigEditor.tsx:33
+#: src/components/storage/ConfigEditor.tsx:34
 msgid "No devices configured yet"
 msgstr ""
 
-#: src/components/storage/ConfigEditor.tsx:36
+#: src/components/storage/ConfigEditor.tsx:37
 #, c-format
 msgid ""
 "Use actions below to set up your devices or click %s to start from scratch "
@@ -1453,7 +1514,7 @@ msgid ""
 msgstr ""
 
 #. TRANSLATORS: label for a button
-#: src/components/storage/ConfigEditor.tsx:47
+#: src/components/storage/ConfigEditor.tsx:48
 msgid "reset to defaults"
 msgstr ""
 
@@ -1658,116 +1719,10 @@ msgstr ""
 msgid "Do not use"
 msgstr ""
 
-#. TRANSLATORS: %s is the short name of a disk, like 'sda'
-#: src/components/storage/DriveDeviceMenu.tsx:319
-#, c-format
-msgid "Create another LVM volume group on %s"
-msgstr ""
-
-#. TRANSLATORS: %s is the short name of a disk, like 'sda'
-#: src/components/storage/DriveDeviceMenu.tsx:323
-#, c-format
-msgid "Create LVM volume group on %s"
-msgstr ""
-
-#: src/components/storage/DriveDeviceMenu.tsx:376
+#: src/components/storage/DriveDeviceMenu.tsx:329
+#: src/components/storage/MdRaidDeviceMenu.tsx:47
 #, c-format
 msgid "Device %s menu"
-msgstr ""
-
-#: src/components/storage/DriveEditor.tsx:58
-msgid "Choose what to with current content"
-msgstr ""
-
-#. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:134
-#, c-format
-msgid "Use %s to install, host LVM and boot"
-msgstr ""
-
-#. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:137
-#, c-format
-msgid "Use %s to install and host LVM"
-msgstr ""
-
-#. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:142
-#, c-format
-msgid "Use %s to install and boot"
-msgstr ""
-
-#. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:145
-#, c-format
-msgid "Use %s to install"
-msgstr ""
-
-#. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:152
-#, c-format
-msgid "Use %s for LVM, additional partitions and booting"
-msgstr ""
-
-#. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:155
-#, c-format
-msgid "Use %s for LVM and additional partitions"
-msgstr ""
-
-#. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:160
-#, c-format
-msgid "Use %s for additional partitions and booting"
-msgstr ""
-
-#. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:163
-#, c-format
-msgid "Use %s for additional partitions"
-msgstr ""
-
-#. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:169
-#, c-format
-msgid "Use %s to host LVM and boot"
-msgstr ""
-
-#. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:172
-#, c-format
-msgid "Use %s to host LVM"
-msgstr ""
-
-#. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:177
-#, c-format
-msgid "Use %s to configure boot partitions"
-msgstr ""
-
-#. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/DriveEditor.tsx:180
-#, c-format
-msgid "Use %s"
-msgstr ""
-
-#: src/components/storage/DriveEditor.tsx:195
-msgid "No additional partitions will be created"
-msgstr ""
-
-#: src/components/storage/DriveEditor.tsx:202
-#: src/components/storage/DriveEditor.tsx:253
-msgid "Add another partition or mount an existing one"
-msgstr ""
-
-#: src/components/storage/DriveEditor.tsx:209
-#: src/components/storage/DriveEditor.tsx:259
-msgid "Add or use partition"
-msgstr ""
-
-#: src/components/storage/DriveEditor.tsx:269
-#: src/components/storage/DriveEditor.tsx:272
-msgid "Partitions"
 msgstr ""
 
 #: src/components/storage/EncryptionSection.tsx:32
@@ -1829,12 +1784,12 @@ msgid "iSCSI"
 msgstr ""
 
 #: src/components/storage/LogicalVolumePage.tsx:251
-#: src/components/storage/PartitionPage.tsx:306
+#: src/components/storage/PartitionPage.tsx:314
 msgid "Select or enter a valid mount point"
 msgstr ""
 
 #: src/components/storage/LogicalVolumePage.tsx:261
-#: src/components/storage/PartitionPage.tsx:316
+#: src/components/storage/PartitionPage.tsx:324
 msgid ""
 "Select or enter a mount point that is not already assigned to another device"
 msgstr ""
@@ -1844,24 +1799,24 @@ msgid "Enter a name"
 msgstr ""
 
 #: src/components/storage/LogicalVolumePage.tsx:299
-#: src/components/storage/PartitionPage.tsx:344
+#: src/components/storage/PartitionPage.tsx:352
 msgid "The minimum cannot be greater than the maximum"
 msgstr ""
 
 #: src/components/storage/LogicalVolumePage.tsx:307
-#: src/components/storage/PartitionPage.tsx:352
+#: src/components/storage/PartitionPage.tsx:360
 msgid ""
 "The maximum must be a number optionally followed by a unit like GiB or GB"
 msgstr ""
 
 #: src/components/storage/LogicalVolumePage.tsx:315
-#: src/components/storage/PartitionPage.tsx:360
+#: src/components/storage/PartitionPage.tsx:368
 msgid ""
 "The minimum must be a number optionally followed by a unit like GiB or GB"
 msgstr ""
 
 #: src/components/storage/LogicalVolumePage.tsx:322
-#: src/components/storage/PartitionPage.tsx:367
+#: src/components/storage/PartitionPage.tsx:375
 msgid ""
 "Size limits must be numbers optionally followed by a unit like GiB or GB"
 msgstr ""
@@ -1874,19 +1829,19 @@ msgstr ""
 #: src/components/storage/LogicalVolumePage.tsx:446
 #: src/components/storage/LogicalVolumePage.tsx:465
 #: src/components/storage/LogicalVolumePage.tsx:563
-#: src/components/storage/PartitionPage.tsx:560
-#: src/components/storage/PartitionPage.tsx:679
+#: src/components/storage/PartitionPage.tsx:565
+#: src/components/storage/PartitionPage.tsx:684
 msgid "Waiting for a mount point"
 msgstr ""
 
 #: src/components/storage/LogicalVolumePage.tsx:466
-#: src/components/storage/PartitionPage.tsx:564
-#: src/components/storage/utils.ts:316
+#: src/components/storage/PartitionPage.tsx:569
+#: src/components/storage/utils.ts:318
 msgid "Btrfs with snapshots"
 msgstr ""
 
 #: src/components/storage/LogicalVolumePage.tsx:481
-#: src/components/storage/PartitionPage.tsx:582
+#: src/components/storage/PartitionPage.tsx:587
 #, c-format
 msgid "Default file system for %s"
 msgstr ""
@@ -1900,49 +1855,49 @@ msgid "Format logical volume as"
 msgstr ""
 
 #: src/components/storage/LogicalVolumePage.tsx:550
-#: src/components/storage/PartitionPage.tsx:664
+#: src/components/storage/PartitionPage.tsx:669
 msgid "File system label"
 msgstr ""
 
 #: src/components/storage/LogicalVolumePage.tsx:564
-#: src/components/storage/PartitionPage.tsx:681
+#: src/components/storage/PartitionPage.tsx:686
 msgid "Calculated automatically"
 msgstr ""
 
 #: src/components/storage/LogicalVolumePage.tsx:565
-#: src/components/storage/PartitionPage.tsx:682
+#: src/components/storage/PartitionPage.tsx:687
 #: src/components/storage/utils.ts:112
 msgid "Custom"
 msgstr ""
 
 #: src/components/storage/LogicalVolumePage.tsx:576
-#: src/components/storage/PartitionPage.tsx:694
+#: src/components/storage/PartitionPage.tsx:699
 #, fuzzy
 msgid "Size options"
 msgstr "Инсталирањето заврши"
 
 #: src/components/storage/LogicalVolumePage.tsx:586
-#: src/components/storage/PartitionPage.tsx:710
+#: src/components/storage/PartitionPage.tsx:715
 msgid "Let the installer propose a sensible range of sizes"
 msgstr ""
 
 #: src/components/storage/LogicalVolumePage.tsx:590
-#: src/components/storage/PartitionPage.tsx:714
+#: src/components/storage/PartitionPage.tsx:719
 msgid "Define a custom size or a range"
 msgstr ""
 
 #: src/components/storage/LogicalVolumePage.tsx:623
-#: src/components/storage/PartitionPage.tsx:747
+#: src/components/storage/PartitionPage.tsx:752
 msgid "Same as minimum"
 msgstr ""
 
 #: src/components/storage/LogicalVolumePage.tsx:625
-#: src/components/storage/PartitionPage.tsx:749
+#: src/components/storage/PartitionPage.tsx:754
 msgid "Limited"
 msgstr ""
 
 #: src/components/storage/LogicalVolumePage.tsx:633
-#: src/components/storage/PartitionPage.tsx:757
+#: src/components/storage/PartitionPage.tsx:762
 msgid "Maximum size options"
 msgstr ""
 
@@ -1959,39 +1914,39 @@ msgid "The logical volume can grow to use all the contiguous free space"
 msgstr ""
 
 #: src/components/storage/LogicalVolumePage.tsx:700
-#: src/components/storage/PartitionPage.tsx:824
+#: src/components/storage/PartitionPage.tsx:829
 msgid "Sizes must be entered as a numbers optionally followed by a unit."
 msgstr ""
 
 #: src/components/storage/LogicalVolumePage.tsx:704
-#: src/components/storage/PartitionPage.tsx:828
+#: src/components/storage/PartitionPage.tsx:833
 msgid ""
 "If the unit is omitted, bytes (B) will be used. Greater units can be "
 "of               the form GiB (power of 2) or GB (power of 10)."
 msgstr ""
 
 #: src/components/storage/LogicalVolumePage.tsx:712
-#: src/components/storage/PartitionPage.tsx:836
+#: src/components/storage/PartitionPage.tsx:841
 msgid "Minimum"
 msgstr ""
 
 #: src/components/storage/LogicalVolumePage.tsx:717
-#: src/components/storage/PartitionPage.tsx:841
+#: src/components/storage/PartitionPage.tsx:846
 msgid "Minimum size value"
 msgstr ""
 
 #: src/components/storage/LogicalVolumePage.tsx:723
-#: src/components/storage/PartitionPage.tsx:847
+#: src/components/storage/PartitionPage.tsx:852
 msgid "Maximum"
 msgstr ""
 
 #: src/components/storage/LogicalVolumePage.tsx:730
-#: src/components/storage/PartitionPage.tsx:854
+#: src/components/storage/PartitionPage.tsx:859
 msgid "Maximum size mode"
 msgstr ""
 
 #: src/components/storage/LogicalVolumePage.tsx:739
-#: src/components/storage/PartitionPage.tsx:863
+#: src/components/storage/PartitionPage.tsx:868
 msgid "Maximum size value"
 msgstr ""
 
@@ -2002,77 +1957,77 @@ msgstr ""
 
 #: src/components/storage/LogicalVolumePage.tsx:869
 #: src/components/storage/LogicalVolumePage.tsx:874
-#: src/components/storage/PartitionPage.tsx:1000
-#: src/components/storage/PartitionPage.tsx:1007
+#: src/components/storage/PartitionPage.tsx:1008
+#: src/components/storage/PartitionPage.tsx:1015
 msgid "Mount point"
 msgstr ""
 
 #: src/components/storage/LogicalVolumePage.tsx:872
-#: src/components/storage/PartitionPage.tsx:1005
+#: src/components/storage/PartitionPage.tsx:1013
 msgid "Mount point toggle"
 msgstr ""
 
 #: src/components/storage/LogicalVolumePage.tsx:873
-#: src/components/storage/PartitionPage.tsx:1006
+#: src/components/storage/PartitionPage.tsx:1014
 msgid "Suggested mount points"
 msgstr ""
 
 #: src/components/storage/LogicalVolumePage.tsx:875
-#: src/components/storage/PartitionPage.tsx:1008
+#: src/components/storage/PartitionPage.tsx:1016
 msgid "Clear selected mount point"
 msgstr ""
 
 #: src/components/storage/LogicalVolumePage.tsx:878
-#: src/components/storage/PartitionPage.tsx:1011
+#: src/components/storage/PartitionPage.tsx:1019
 msgid "Use"
 msgstr ""
 
 #: src/components/storage/LogicalVolumePage.tsx:884
-#: src/components/storage/PartitionPage.tsx:1029
+#: src/components/storage/PartitionPage.tsx:1037
 msgid "Select or enter a mount point"
 msgstr ""
 
 #: src/components/storage/LogicalVolumePage.tsx:909
-#: src/components/storage/PartitionPage.tsx:1038
+#: src/components/storage/PartitionPage.tsx:1046
 msgid "File system"
 msgstr ""
 
 #: src/components/storage/LogicalVolumePage.tsx:920
-#: src/components/storage/PartitionPage.tsx:1050
+#: src/components/storage/PartitionPage.tsx:1058
 msgid "Label"
 msgstr ""
 
 #: src/components/storage/LogicalVolumePage.tsx:932
-#: src/components/storage/PartitionPage.tsx:1061
+#: src/components/storage/PartitionPage.tsx:1069
 #: src/components/storage/ProposalResultTable.tsx:135
 #: src/components/storage/SpaceActionsTable.tsx:240
 msgid "Size"
 msgstr ""
 
-#: src/components/storage/LvmPage.tsx:57
+#: src/components/storage/LvmPage.tsx:76
 msgid "Enter a name for the volume group."
 msgstr ""
 
-#: src/components/storage/LvmPage.tsx:61
+#: src/components/storage/LvmPage.tsx:80
 #, c-format
 msgid "Volume group '%s' already exists. Enter a different name."
 msgstr ""
 
-#: src/components/storage/LvmPage.tsx:65
+#: src/components/storage/LvmPage.tsx:84
 msgid "Select at least one disk."
 msgstr ""
 
-#: src/components/storage/LvmPage.tsx:142
+#: src/components/storage/LvmPage.tsx:162
 msgid "Configure LVM Volume Group"
 msgstr ""
 
-#: src/components/storage/LvmPage.tsx:148
+#: src/components/storage/LvmPage.tsx:168
 #: src/components/system/HostnamePage.tsx:104
 msgid "Check the following before continuing"
 msgstr ""
 
 #. TRANSLATORS: input field for the iSCSI initiator name
-#: src/components/storage/LvmPage.tsx:154
+#: src/components/storage/LvmPage.tsx:174
 #: src/components/storage/iscsi/InitiatorForm.tsx:75
 #: src/components/storage/iscsi/InitiatorForm.tsx:85
 #: src/components/storage/iscsi/InitiatorSection.tsx:40
@@ -2082,12 +2037,12 @@ msgstr ""
 msgid "Name"
 msgstr ""
 
-#: src/components/storage/LvmPage.tsx:157
+#: src/components/storage/LvmPage.tsx:177
 #: src/components/storage/zfcp/ZFCPPage.tsx:131
 msgid "Disks"
 msgstr ""
 
-#: src/components/storage/LvmPage.tsx:160
+#: src/components/storage/LvmPage.tsx:180
 msgid ""
 "The needed LVM physical volumes will be added as partitions on the chosen "
 "disks,                 based on the sizes of the logical volumes. If you "
@@ -2095,89 +2050,192 @@ msgid ""
 "distributed along several disks."
 msgstr ""
 
-#: src/components/storage/LvmPage.tsx:195
+#: src/components/storage/LvmPage.tsx:215
 msgid "Move mount points"
 msgstr ""
 
-#: src/components/storage/LvmPage.tsx:199
+#: src/components/storage/LvmPage.tsx:219
 msgid ""
 "Move the mount points currently configured at the selected disks to "
 "logical                   volumes of this volume group."
 msgstr ""
 
+#. TRANSLATORS: %s is the short name of a disk, like 'sda'
+#: src/components/storage/NewVgMenuOption.tsx:43
+#, c-format
+msgid "Create another LVM volume group on %s"
+msgstr ""
+
+#. TRANSLATORS: %s is the short name of a disk, like 'sda'
+#: src/components/storage/NewVgMenuOption.tsx:47
+#, c-format
+msgid "Create LVM volume group on %s"
+msgstr ""
+
 #. TRANSLATORS: %s is a disk name with its size (eg. "sda, 10 GiB"
-#: src/components/storage/PartitionPage.tsx:498
+#: src/components/storage/PartitionPage.tsx:503
 #, c-format
 msgid "As a new partition on %s"
 msgstr ""
 
-#: src/components/storage/PartitionPage.tsx:500
+#: src/components/storage/PartitionPage.tsx:505
 #, c-format
 msgid "Using partition %s"
 msgstr ""
 
-#: src/components/storage/PartitionPage.tsx:529
+#: src/components/storage/PartitionPage.tsx:534
 msgid "Mount point options"
 msgstr ""
 
-#: src/components/storage/PartitionPage.tsx:534
+#: src/components/storage/PartitionPage.tsx:539
 msgid "Using an existing partition"
 msgstr ""
 
-#: src/components/storage/PartitionPage.tsx:545
+#: src/components/storage/PartitionPage.tsx:550
 msgid "There are not usable partitions"
 msgstr ""
 
 #. TRANSLATORS: %s is a device name (eg. /dev/sda3).
-#: src/components/storage/PartitionPage.tsx:563
+#: src/components/storage/PartitionPage.tsx:568
 #: src/components/storage/utils/partition.tsx:69
 #, c-format
 msgid "Current %s"
 msgstr ""
 
-#: src/components/storage/PartitionPage.tsx:583
+#: src/components/storage/PartitionPage.tsx:588
 msgid "Default file system for generic partitions"
 msgstr ""
 
-#: src/components/storage/PartitionPage.tsx:585
+#: src/components/storage/PartitionPage.tsx:590
 msgid "Destroy current data and format partition as"
 msgstr ""
 
-#: src/components/storage/PartitionPage.tsx:586
+#: src/components/storage/PartitionPage.tsx:591
 msgid "Format partition as"
 msgstr ""
 
 #. TRANSLATORS: %s is the name of a partition, like /dev/vda2
-#: src/components/storage/PartitionPage.tsx:599
+#: src/components/storage/PartitionPage.tsx:604
 #, c-format
 msgid "Do not format %s and keep the data"
 msgstr ""
 
 #. TRANSLATORS: %s is a partition name like /dev/vda2
-#: src/components/storage/PartitionPage.tsx:702
+#: src/components/storage/PartitionPage.tsx:707
 #, c-format
 msgid "Keep size of %s"
 msgstr ""
 
-#: src/components/storage/PartitionPage.tsx:760
+#: src/components/storage/PartitionPage.tsx:765
 msgid "The partition is created exactly with the given size"
 msgstr ""
 
-#: src/components/storage/PartitionPage.tsx:766
+#: src/components/storage/PartitionPage.tsx:771
 msgid "The partition can grow until a given limit size"
 msgstr ""
 
-#: src/components/storage/PartitionPage.tsx:772
+#: src/components/storage/PartitionPage.tsx:777
 msgid "The partition can grow to use all the contiguous free space"
 msgstr ""
 
-#: src/components/storage/PartitionPage.tsx:993
+#: src/components/storage/PartitionPage.tsx:1001
 #, c-format
 msgid "Configure partition at %s"
 msgstr ""
 
-#: src/components/storage/PartitionPage.tsx:1017
+#: src/components/storage/PartitionPage.tsx:1025
 msgid "Mount point mode"
+msgstr ""
+
+#. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
+#: src/components/storage/PartitionableHeader.tsx:43
+#, c-format
+msgid "Use %s to install, host LVM and boot"
+msgstr ""
+
+#. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
+#: src/components/storage/PartitionableHeader.tsx:46
+#, c-format
+msgid "Use %s to install and host LVM"
+msgstr ""
+
+#. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
+#: src/components/storage/PartitionableHeader.tsx:51
+#, c-format
+msgid "Use %s to install and boot"
+msgstr ""
+
+#. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
+#: src/components/storage/PartitionableHeader.tsx:54
+#, c-format
+msgid "Use %s to install"
+msgstr ""
+
+#. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
+#: src/components/storage/PartitionableHeader.tsx:61
+#, c-format
+msgid "Use %s for LVM, additional partitions and booting"
+msgstr ""
+
+#. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
+#: src/components/storage/PartitionableHeader.tsx:64
+#, c-format
+msgid "Use %s for LVM and additional partitions"
+msgstr ""
+
+#. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
+#: src/components/storage/PartitionableHeader.tsx:69
+#, c-format
+msgid "Use %s for additional partitions and booting"
+msgstr ""
+
+#. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
+#: src/components/storage/PartitionableHeader.tsx:72
+#, c-format
+msgid "Use %s for additional partitions"
+msgstr ""
+
+#. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
+#: src/components/storage/PartitionableHeader.tsx:78
+#, c-format
+msgid "Use %s to host LVM and boot"
+msgstr ""
+
+#. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
+#: src/components/storage/PartitionableHeader.tsx:81
+#, c-format
+msgid "Use %s to host LVM"
+msgstr ""
+
+#. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
+#: src/components/storage/PartitionableHeader.tsx:86
+#, c-format
+msgid "Use %s to configure boot partitions"
+msgstr ""
+
+#. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
+#: src/components/storage/PartitionableHeader.tsx:89
+#, c-format
+msgid "Use %s"
+msgstr ""
+
+#: src/components/storage/PartitionsMenu.tsx:39
+msgid "No additional partitions will be created"
+msgstr ""
+
+#: src/components/storage/PartitionsMenu.tsx:46
+#: src/components/storage/PartitionsMenu.tsx:100
+msgid "Add another partition or mount an existing one"
+msgstr ""
+
+#: src/components/storage/PartitionsMenu.tsx:51
+#: src/components/storage/PartitionsMenu.tsx:104
+msgid "Add or use partition"
+msgstr ""
+
+#: src/components/storage/PartitionsMenu.tsx:114
+#: src/components/storage/PartitionsMenu.tsx:117
+msgid "Partitions"
 msgstr ""
 
 #: src/components/storage/ProposalActionsDialog.tsx:73
@@ -2384,13 +2442,17 @@ msgstr ""
 msgid "Action"
 msgstr ""
 
-#: src/components/storage/SpacePolicySelection.tsx:96
+#: src/components/storage/SpacePolicyMenu.tsx:38
+msgid "Choose what to with current content"
+msgstr ""
+
+#: src/components/storage/SpacePolicySelection.tsx:97
 msgid ""
 "Select what to do with each partition in order to find space for allocating "
 "the new system."
 msgstr ""
 
-#: src/components/storage/SpacePolicySelection.tsx:102
+#: src/components/storage/SpacePolicySelection.tsx:103
 #, c-format
 msgid "Find space in %s"
 msgstr ""
@@ -2407,33 +2469,33 @@ msgid ""
 "discard the configuration and start from scratch with a simple one."
 msgstr ""
 
-#: src/components/storage/VolumeGroupEditor.tsx:89
+#: src/components/storage/VolumeGroupEditor.tsx:88
 msgid "Delete volume group"
 msgstr ""
 
-#: src/components/storage/VolumeGroupEditor.tsx:101
+#: src/components/storage/VolumeGroupEditor.tsx:100
 msgid "Modify settings and physical volumes"
 msgstr ""
 
-#: src/components/storage/VolumeGroupEditor.tsx:105
+#: src/components/storage/VolumeGroupEditor.tsx:104
 msgid "Edit volume group"
 msgstr ""
 
-#: src/components/storage/VolumeGroupEditor.tsx:123
+#: src/components/storage/VolumeGroupEditor.tsx:122
 #, c-format
 msgid "Create LVM volume group %s"
 msgstr ""
 
-#: src/components/storage/VolumeGroupEditor.tsx:124
+#: src/components/storage/VolumeGroupEditor.tsx:123
 #, c-format
 msgid "Empty LVM volume group %s"
 msgstr ""
 
-#: src/components/storage/VolumeGroupEditor.tsx:148
+#: src/components/storage/VolumeGroupEditor.tsx:147
 msgid "Logical volumes"
 msgstr ""
 
-#: src/components/storage/VolumeGroupEditor.tsx:169
+#: src/components/storage/VolumeGroupEditor.tsx:168
 msgid "Add logical volume"
 msgstr ""
 
@@ -2881,13 +2943,13 @@ msgid "Select what to do with each partition."
 msgstr ""
 
 #. TRANSLATORS: Size range, %1$s is the min size and %2$s is the max
-#: src/components/storage/utils.ts:347
+#: src/components/storage/utils.ts:349
 #, c-format
 msgid "%1$s - %2$s"
 msgstr ""
 
 #. TRANSLATORS: minimum device size, %s is replaced by size string, e.g. "17.5 GiB"
-#: src/components/storage/utils.ts:349
+#: src/components/storage/utils.ts:351
 #, c-format
 msgid "at least %s"
 msgstr ""
