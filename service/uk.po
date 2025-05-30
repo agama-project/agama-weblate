@@ -8,17 +8,17 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-05-29 03:06+0000\n"
-"PO-Revision-Date: 2025-03-07 16:32+0000\n"
+"PO-Revision-Date: 2025-05-30 20:59+0000\n"
 "Last-Translator: Eugene Krater <lachend@gmail.com>\n"
-"Language-Team: Ukrainian <https://l10n.opensuse.org/projects/agama/agama-"
-"service-master/uk/>\n"
+"Language-Team: Ukrainian <https://l10n.opensuse.org/projects/agama/"
+"agama-service-master/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.10.2\n"
+"X-Generator: Weblate 5.11.4\n"
 
 #. Reports the problems and decide whether to continue or not.
 #.
@@ -67,6 +67,8 @@ msgid ""
 "Trying to import a self signed certificate. Do you want to trust it and "
 "register the product?"
 msgstr ""
+"Спроба імпортувати самопідписаний сертифікат. Чи хочете Ви довіряти йому і "
+"зареєструвати продукт?"
 
 #. TRANSLATORS: button label, try downloading the failed package again
 #: service/lib/agama/software/callbacks/base.rb:48
@@ -86,17 +88,17 @@ msgstr "Перервати встановлення"
 #. TRANSLATORS: button label, skip the error
 #: service/lib/agama/software/callbacks/base.rb:66
 msgid "Skip"
-msgstr ""
+msgstr "Пропустити"
 
 #. TRANSLATORS: button label
 #: service/lib/agama/software/callbacks/base.rb:72
 msgid "Yes"
-msgstr ""
+msgstr "Так"
 
 #. TRANSLATORS: button label
 #: service/lib/agama/software/callbacks/base.rb:78
 msgid "No"
-msgstr ""
+msgstr "Ні"
 
 #. Callback to accept a file without a checksum
 #.
@@ -109,6 +111,9 @@ msgid ""
 "that although the file is part of the signed repository, the list of "
 "checksums does not mention this file. Use it anyway?"
 msgstr ""
+"У сховищі не знайдено контрольної суми для файлу %{file}. Це означає, що "
+"хоча файл є частиною підписаного сховища, у списку контрольних сум він не "
+"згадується. Використовувати його в будь-якому випадку?"
 
 #. Callback to accept an unknown digest
 #.
@@ -116,14 +121,15 @@ msgstr ""
 #. @param digest [String] expected checksum
 #. @return [Boolean]
 #: service/lib/agama/software/callbacks/digest.rb:84
-#, fuzzy, perl-brace-format
+#, perl-brace-format
 msgid ""
 "The checksum of the file %{file} is \"%{digest}\" but the expected checksum "
 "is unknown. This means that the origin and integrity of the file cannot be "
 "verified. Use it anyway?"
 msgstr ""
-"%{source} не має цифрового підпису. Походження та цілісність файлу неможливо "
-"перевірити. Все одно використати його?"
+"Контрольна сума файлу %{file} дорівнює «%{digest}», але очікувана контрольна "
+"сума невідома. Це означає, що походження і цілісність файлу не можуть бути "
+"перевірені. Все одно використовувати його?"
 
 #. Callback to accept wrong digest
 #.
@@ -138,6 +144,9 @@ msgid ""
 "be \"%{expected}\". The file has changed by accident or by an attacker since "
 "the creater signed it. Use it anyway?"
 msgstr ""
+"Очікувана контрольна сума файлу %{file} дорівнює «%{found}», а повинна була "
+"бути «%{expected}». Файл був змінений випадково або зловмисно з моменту "
+"підписання його творцем. Використовувати його в будь-якому разі?"
 
 #. DoneProvide callback
 #.
@@ -153,22 +162,22 @@ msgstr "Виникла проблема із запуском скрипта п�
 #. @param filename [String] File name
 #. @param repo_id [Integer] Repository ID. It might be -1 if there is not an associated repo.
 #: service/lib/agama/software/callbacks/signature.rb:61
-#, fuzzy, perl-brace-format
+#, perl-brace-format
 msgid ""
 "The file %{filename} from %{repo_url} is not digitally signed. The origin "
 "and integrity of the file cannot be verified. Use it anyway?"
 msgstr ""
-"%{source} не має цифрового підпису. Походження та цілісність файлу неможливо "
-"перевірити. Все одно використати його?"
+"Файл %{filename} з %{repo_url} не має цифрового підпису. Походження та "
+"цілісність файлу не можуть бути перевірені. Все одно використовувати його?"
 
 #: service/lib/agama/software/callbacks/signature.rb:67
-#, fuzzy, perl-brace-format
+#, perl-brace-format
 msgid ""
 "The file %{filename} is not digitally signed. The origin and integrity of "
 "the file cannot be verified. Use it anyway?"
 msgstr ""
-"%{source} не має цифрового підпису. Походження та цілісність файлу неможливо "
-"перевірити. Все одно використати його?"
+"Файл %{filename} не має цифрового підпису. Походження та цілісність файлу не "
+"можуть бути перевірені. Все одно використовувати його?"
 
 #. Callback to handle signature verification failures
 #.
@@ -194,6 +203,8 @@ msgid ""
 "The file %{filename} from %{repo_url} is digitally signed with the following "
 "unknown GnuPG key: %{key_id}. Use it anyway?"
 msgstr ""
+"Файл %{filename} із %{repo_url} підписано цифровим підписом таким невідомим "
+"ключем GnuPG: %{key_id}. Використовувати його в будь-якому випадку?"
 
 #: service/lib/agama/software/callbacks/signature.rb:129
 #, perl-brace-format
@@ -201,6 +212,8 @@ msgid ""
 "The file %{filename} is digitally signed with the following unknown GnuPG "
 "key: %{key_id}. Use it anyway?"
 msgstr ""
+"Файл %{filename} підписано цифровим підписом з невідомим ключем GnuPG: "
+"%{key_id}. Використовувати його у будь-якому випадку?"
 
 #. Callback to handle file verification failures
 #.
@@ -214,6 +227,9 @@ msgid ""
 "GnuPG key, but the integrity check failed: %{key_id} (%{key_name}). Use it "
 "anyway?"
 msgstr ""
+"Файл %{filename} з %{repo_url} підписано цифровим ключем GnuPG, але "
+"перевірка цілісності завершилася невдало: %{key_id} (%{key_name}). "
+"Використовувати його все одно?"
 
 #: service/lib/agama/software/callbacks/signature.rb:167
 #, perl-brace-format
@@ -221,11 +237,13 @@ msgid ""
 "The file %{filename} is digitally signed with the following GnuPG key, but "
 "the integrity check failed: %{key_id} (%{key_name}). Use it anyway?"
 msgstr ""
+"Файл %{filename} підписано цифровим ключем GnuPG, але перевірка цілісності "
+"не вдалася: %{key_id} (%{key_name}). Використовувати його все одно?"
 
 #. TRANSLATORS: button label, trust the GPG key or the signature
 #: service/lib/agama/software/callbacks/signature.rb:191
 msgid "Trust"
-msgstr ""
+msgstr "Довіряти"
 
 #. Should an error be raised?
 #: service/lib/agama/software/manager.rb:149
@@ -244,31 +262,31 @@ msgstr "Ініціалізація джерел"
 #: service/lib/agama/software/manager.rb:378
 #, c-format
 msgid "Adding service '%s' failed."
-msgstr ""
+msgstr "Збій додавання служби «%s»."
 
 #. error message
 #: service/lib/agama/software/manager.rb:383
 #, c-format
 msgid "Updating service '%s' failed."
-msgstr ""
+msgstr "Збій оновлення служби «%s»."
 
 #. error message
 #: service/lib/agama/software/manager.rb:389
 #, c-format
 msgid "Saving service '%s' failed."
-msgstr ""
+msgstr "Збій збереження служби «%s»."
 
 #. error message
 #: service/lib/agama/software/manager.rb:395
-#, fuzzy, c-format
+#, c-format
 msgid "Refreshing service '%s' failed."
-msgstr "Оновлення метаданих репозиторіїв"
+msgstr "Збій оновлення даних служби «%s»."
 
 #. rubocop:enable Metrics/AbcSize
 #: service/lib/agama/software/manager.rb:404
 #, c-format
 msgid "Removing service '%s' failed."
-msgstr ""
+msgstr "Збій вилучення служби «%s»."
 
 #. Issues related to the software proposal.
 #.
@@ -305,38 +323,38 @@ msgstr "Знайдено %s проблем із залежностями."
 #. TRANSLATORS: SSL certificate details
 #: service/lib/agama/ssl/certificate_details.rb:31
 msgid "Certificate:"
-msgstr ""
+msgstr "Сертифікат:"
 
 #: service/lib/agama/ssl/certificate_details.rb:31
 msgid "Issued To"
-msgstr ""
+msgstr "Випущено для"
 
 #: service/lib/agama/ssl/certificate_details.rb:32
 msgid "Issued By"
-msgstr ""
+msgstr "Ким виданий"
 
 #: service/lib/agama/ssl/certificate_details.rb:32
 msgid "SHA1 Fingerprint: "
-msgstr ""
+msgstr "Відбиток SHA1: "
 
 #: service/lib/agama/ssl/certificate_details.rb:34
 msgid "SHA256 Fingerprint: "
-msgstr ""
+msgstr "Відбиток SHA256: "
 
 #. label followed by the SSL certificate identification
 #: service/lib/agama/ssl/certificate_details.rb:46
 msgid "Common Name (CN): "
-msgstr ""
+msgstr "Загальна назва (CN): "
 
 #. label followed by the SSL certificate identification
 #: service/lib/agama/ssl/certificate_details.rb:48
 msgid "Organization (O): "
-msgstr ""
+msgstr "Організація (O): "
 
 #. label followed by the SSL certificate identification
 #: service/lib/agama/ssl/certificate_details.rb:50
 msgid "Organization Unit (OU): "
-msgstr ""
+msgstr "Підрозділ (OU): "
 
 #. Issue when the device has several users.
 #.
@@ -344,7 +362,7 @@ msgstr ""
 #: service/lib/agama/storage/config_checkers/alias.rb:74
 #, c-format
 msgid "The device with alias '%s' is used by more than one device"
-msgstr ""
+msgstr "Пристрій із псевдонімом «%s» використовується більш ніж одним пристроєм"
 
 #. Issue when the device has both filesystem and a user.
 #.
@@ -355,6 +373,8 @@ msgid ""
 "The device with alias '%s' cannot be formatted because it is used by other "
 "device"
 msgstr ""
+"Пристрій із псевдонімом «%s» не може бути відформатований, оскільки він "
+"використовується іншим пристроєм"
 
 #. Issue when the device has both partitions and a user.
 #.
@@ -365,6 +385,8 @@ msgid ""
 "The device with alias '%s' cannot be partitioned because it is used by other "
 "device"
 msgstr ""
+"Пристрій із псевдонімом «%s» не може бути розбитий на розділи, тому що він "
+"використовується іншим пристроєм"
 
 #. Error if a boot device is required and unknown.
 #.
@@ -374,13 +396,13 @@ msgstr ""
 #. @return [Issue, nil]
 #: service/lib/agama/storage/config_checkers/boot.rb:75
 msgid "The boot device cannot be automatically selected"
-msgstr ""
+msgstr "Пристрій завантаження не може бути обрано автоматично"
 
 #. TRANSLATORS: %s is replaced by a device alias (e.g., "boot").
 #: service/lib/agama/storage/config_checkers/boot.rb:86
-#, fuzzy, c-format
+#, c-format
 msgid "There is no boot device with alias '%s'"
-msgstr "Не існує тому тонкого пулу LVM з псевдонімом '%s'"
+msgstr "Не існує завантажувального пристрою з псевдонімом '%s'"
 
 #. TRANSLATORS: 'crypt_method' is the identifier of the method to encrypt the device
 #. (e.g., 'luks1', 'random_swap').
@@ -426,9 +448,9 @@ msgstr "Не існує тому тонкого пулу LVM з псевдоні
 
 #. TRANSLATORS: %s is the replaced by a device alias (e.g., "md1").
 #: service/lib/agama/storage/config_checkers/md_raid.rb:98
-#, fuzzy, c-format
+#, c-format
 msgid "There is no MD RAID member device with alias '%s'"
-msgstr "Не існує тому тонкого пулу LVM з псевдонімом '%s'"
+msgstr "Не існує пристрою-члена MD RAID з псевдонімом '%s'"
 
 #. Issue if the MD RAID level is missing and the device is not reused.
 #.
