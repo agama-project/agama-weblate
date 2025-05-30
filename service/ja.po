@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-05-29 03:06+0000\n"
-"PO-Revision-Date: 2025-05-30 03:59+0000\n"
+"PO-Revision-Date: 2025-05-30 06:59+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/agama/"
 "agama-service-master/ja/>\n"
@@ -483,7 +483,8 @@ msgstr "少なくとも %s 個のデバイスが必要です (%s に対して)"
 msgid ""
 "The device '%{member}' cannot be formatted because it is a device member of "
 "the reused MD RAID %{md_raid}"
-msgstr ""
+msgstr "デバイス '%{member}' は再利用する MD RAID %{md_raid} "
+"のデバイスメンバーであるため、フォーマットできません"
 
 #. Issue if the device member is partitioned.
 #.
@@ -495,6 +496,8 @@ msgid ""
 "The device '%{member}' cannot be partitioned because it is a device member "
 "of the reused MD RAID %{md_raid}"
 msgstr ""
+"デバイス '%{member}' は再利用する MD RAID %{md_raid} "
+"のデバイスメンバーであるため、パーティション設定できません"
 
 #. Issue if the device member is used by other device (e.g., as target for physical volumes).
 #.
@@ -505,40 +508,40 @@ msgstr ""
 msgid ""
 "The device '%{member}' cannot be used because it is a device member of the "
 "reused MD RAID %{md_raid}"
-msgstr ""
+msgstr "デバイス '%{member}' は再利用する MD RAID %{md_raid} "
+"のデバイスメンバーであるため、使用できません"
 
 #. TRANSLATORS: 'method' is the identifier of the method to encrypt the device
 #. (e.g., 'luks1').
 #: service/lib/agama/storage/config_checkers/physical_volumes_encryption.rb:61
-#, fuzzy, perl-brace-format
+#, perl-brace-format
 msgid "'%{method}' is not a suitable method to encrypt the physical volumes."
-msgstr "'%{crypt_method}' は物理ボリュームの暗号化方式として不適切です。"
+msgstr "'%{method}' は物理ボリュームの暗号化方式として適切ではありません。"
 
 #. TRANSLATORS: %s is replaced by a device name (e.g., "/dev/vda").
 #: service/lib/agama/storage/config_checkers/search.rb:74
 #, c-format
 msgid "Mandatory device %s not found"
-msgstr ""
+msgstr "必須のデバイス %s が見つかりませんでした"
 
 #. TRANSLATORS: %s is replaced by a device type (e.g., "drive").
 #: service/lib/agama/storage/config_checkers/search.rb:77
 #, c-format
 msgid "Mandatory %s not found"
-msgstr ""
+msgstr "必須の %s が見つかりませんでした"
 
 #. @return [String]
 #: service/lib/agama/storage/config_checkers/search.rb:85
 msgid "drive"
-msgstr ""
+msgstr "ドライブ"
 
 #: service/lib/agama/storage/config_checkers/search.rb:87
 msgid "MD RAID"
-msgstr ""
+msgstr "MD RAID"
 
 #: service/lib/agama/storage/config_checkers/search.rb:89
-#, fuzzy
 msgid "partition"
-msgstr "パーティションを設定しています"
+msgstr "パーティション"
 
 #: service/lib/agama/storage/config_checkers/search.rb:91
 msgid "LVM logical volume"
