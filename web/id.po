@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-05 03:09+0000\n"
+"POT-Creation-Date: 2025-06-08 03:14+0000\n"
 "PO-Revision-Date: 2025-03-01 09:56+0000\n"
 "Last-Translator: Arif Budiman <arifpedia@gmail.com>\n"
 "Language-Team: Indonesian <https://l10n.opensuse.org/projects/agama/agama-"
@@ -254,7 +254,7 @@ msgid "Software"
 msgstr "Perangkat lunak"
 
 #: src/components/core/IssuesDrawer.tsx:52
-#: src/components/product/ProductRegistrationPage.tsx:212
+#: src/components/product/ProductRegistrationPage.tsx:213
 #: src/routes/registration.tsx:31
 msgid "Registration"
 msgstr "Pendaftaran"
@@ -271,7 +271,7 @@ msgstr ""
 "Sebelum menginstal, Anda harus membuat beberapa keputusan. Klik pada setiap "
 "bagian untuk meninjau pengaturan."
 
-#: src/components/core/ListSearch.tsx:52
+#: src/components/core/ListSearch.tsx:58
 msgid "Search"
 msgstr "Cari"
 
@@ -533,7 +533,7 @@ msgid "Add another address"
 msgstr "Tambahkan alamat lain"
 
 #: src/components/network/AddressesDataList.tsx:141
-#: src/components/network/WifiConnectionDetails.tsx:118
+#: src/components/network/WifiConnectionDetails.tsx:119
 msgid "Addresses"
 msgstr "Alamat"
 
@@ -556,10 +556,21 @@ msgid "Add another DNS"
 msgstr "Tambahkan DNS lain"
 
 #: src/components/network/DnsDataList.tsx:118
-#: src/components/network/WifiConnectionDetails.tsx:137
+#: src/components/network/WifiConnectionDetails.tsx:138
 #: src/components/network/WiredConnectionDetails.tsx:114
 msgid "DNS"
 msgstr "DNS"
+
+#: src/components/network/InstallationOnlySwitch.tsx:47
+#, fuzzy
+msgid "Use for installation only"
+msgstr "Konfirmasi Instalasi"
+
+#: src/components/network/InstallationOnlySwitch.tsx:49
+msgid ""
+"The connection will be used only during installation and not available in "
+"the installed system."
+msgstr ""
 
 #: src/components/network/IpPrefixInput.tsx:35
 msgid "Ip prefix or netmask"
@@ -589,8 +600,8 @@ msgstr "Ada yang tidak beres"
 #: src/components/network/IpSettingsForm.tsx:163
 #: src/components/network/IpSettingsForm.tsx:168
 #: src/components/network/IpSettingsForm.tsx:170
-#: src/components/network/WifiConnectionDetails.tsx:105
-#: src/components/network/WiredConnectionDetails.tsx:81
+#: src/components/network/WifiConnectionDetails.tsx:106
+#: src/components/network/WiredConnectionDetails.tsx:82
 msgid "Mode"
 msgstr "Mode"
 
@@ -607,7 +618,7 @@ msgstr "Manual"
 #. TRANSLATORS: network gateway configuration
 #: src/components/network/IpSettingsForm.tsx:188
 #: src/components/network/IpSettingsForm.tsx:191
-#: src/components/network/WifiConnectionDetails.tsx:128
+#: src/components/network/WifiConnectionDetails.tsx:129
 #: src/components/network/WiredConnectionDetails.tsx:95
 msgid "Gateway"
 msgstr "Gateway"
@@ -616,12 +627,12 @@ msgstr "Gateway"
 msgid "Gateway can be defined only in 'Manual' mode"
 msgstr "Gateway hanya dapat ditentukan dalam mode 'Manual'"
 
-#: src/components/network/NetworkPage.tsx:33
+#: src/components/network/NetworkPage.tsx:34
 #, fuzzy
 msgid "Wi-Fi not supported"
 msgstr "Tidak mendukung Wi-Fi"
 
-#: src/components/network/NetworkPage.tsx:35
+#: src/components/network/NetworkPage.tsx:36
 msgid ""
 "The system does not support Wi-Fi connections, probably because of missing "
 "or disabled hardware."
@@ -629,40 +640,51 @@ msgstr ""
 "Sistem tidak mendukung koneksi Wi-Fi, mungkin karena perangkat keras yang "
 "tidak ada atau dinonaktifkan."
 
-#: src/components/network/NetworkPage.tsx:51
-#: src/components/network/WifiConnectionDetails.tsx:44
+#: src/components/network/NetworkPage.tsx:52
+#: src/components/network/WifiConnectionDetails.tsx:45
 #: src/routes/network.tsx:37
 msgid "Network"
 msgstr "Jaringan"
 
-#: src/components/network/NetworkPage.tsx:57
-#: src/components/network/NetworkPage.tsx:58
+#: src/components/network/NetworkPage.tsx:60
+#: src/components/network/NetworkPage.tsx:61
 #, fuzzy
 msgid "Wired connections"
 msgstr "Lupakan koneksi %s"
 
-#: src/components/network/NetworkPage.tsx:63
-#: src/components/network/NetworkPage.tsx:64
+#: src/components/network/NetworkPage.tsx:66
+#: src/components/network/NetworkPage.tsx:67
 #, fuzzy
 msgid "Wi-Fi networks"
 msgstr "Jaringan berkabel"
 
-#: src/components/network/WifiConnectionDetails.tsx:45
+#: src/components/network/NoPersistentConnectionsAlert.tsx:39
+msgid "Installed system may not have network connections"
+msgstr ""
+
+#: src/components/network/NoPersistentConnectionsAlert.tsx:41
+msgid ""
+"All network connections managed through this interface are currently set to "
+"be         used only during installation and will not be copied to the "
+"installed system"
+msgstr ""
+
+#: src/components/network/WifiConnectionDetails.tsx:46
 #, fuzzy
 msgid "Network details"
 msgstr "Lihat detail lebih lanjut"
 
-#: src/components/network/WifiConnectionDetails.tsx:47
+#: src/components/network/WifiConnectionDetails.tsx:48
 msgid "SSID"
 msgstr "SSID"
 
-#: src/components/network/WifiConnectionDetails.tsx:51
+#: src/components/network/WifiConnectionDetails.tsx:52
 msgid "Signal strength"
 msgstr ""
 
-#: src/components/network/WifiConnectionDetails.tsx:55
-#: src/components/network/WifiConnectionDetails.tsx:78
-#: src/components/network/WiredConnectionDetails.tsx:54
+#: src/components/network/WifiConnectionDetails.tsx:56
+#: src/components/network/WifiConnectionDetails.tsx:79
+#: src/components/network/WiredConnectionDetails.tsx:55
 #: src/components/storage/dasd/DASDTable.tsx:76
 #: src/components/storage/iscsi/NodesPresenter.jsx:104
 #: src/components/storage/iscsi/NodesPresenter.jsx:125
@@ -670,72 +692,72 @@ msgstr ""
 msgid "Status"
 msgstr "Status"
 
-#: src/components/network/WifiConnectionDetails.tsx:59
+#: src/components/network/WifiConnectionDetails.tsx:60
 #: src/components/network/WifiConnectionForm.tsx:154
 #: src/components/network/WifiConnectionForm.tsx:157
 msgid "Security"
 msgstr "Keamanan"
 
-#: src/components/network/WifiConnectionDetails.tsx:71
-#: src/components/network/WiredConnectionDetails.tsx:47
+#: src/components/network/WifiConnectionDetails.tsx:72
+#: src/components/network/WiredConnectionDetails.tsx:48
 #: src/components/storage/ProposalResultTable.tsx:132
 #: src/components/storage/SpaceActionsTable.tsx:233
 #: src/components/storage/dasd/DASDTable.tsx:77
 msgid "Device"
 msgstr "Perangkat"
 
-#: src/components/network/WifiConnectionDetails.tsx:72
+#: src/components/network/WifiConnectionDetails.tsx:73
 #: src/components/network/WifiNetworkPage.tsx:70
 #: src/components/network/WiredConnectionPage.tsx:68
 #, fuzzy
 msgid "Connection details"
 msgstr "Tindakan koneksi"
 
-#: src/components/network/WifiConnectionDetails.tsx:74
-#: src/components/network/WiredConnectionDetails.tsx:50
+#: src/components/network/WifiConnectionDetails.tsx:75
+#: src/components/network/WiredConnectionDetails.tsx:51
 #: src/components/storage/iscsi/NodesPresenter.jsx:102
 #: src/components/storage/iscsi/NodesPresenter.jsx:123
 msgid "Interface"
 msgstr "Antarmuka"
 
-#: src/components/network/WifiConnectionDetails.tsx:82
-#: src/components/network/WiredConnectionDetails.tsx:58
+#: src/components/network/WifiConnectionDetails.tsx:83
+#: src/components/network/WiredConnectionDetails.tsx:59
 msgid "MAC"
 msgstr ""
 
-#: src/components/network/WifiConnectionDetails.tsx:95
-#: src/components/network/WiredConnectionDetails.tsx:71
+#: src/components/network/WifiConnectionDetails.tsx:96
+#: src/components/network/WiredConnectionDetails.tsx:72
 #, fuzzy
 msgid "IP settings"
 msgstr "Pengaturan"
 
-#: src/components/network/WifiConnectionDetails.tsx:99
-#: src/components/network/WiredConnectionDetails.tsx:75
+#: src/components/network/WifiConnectionDetails.tsx:100
+#: src/components/network/WiredConnectionDetails.tsx:76
 #: src/components/storage/EncryptionSection.tsx:50
 #: src/components/storage/iscsi/NodesPresenter.jsx:75
 #: src/components/users/FirstUser.tsx:52 src/components/users/RootUser.tsx:55
 msgid "Edit"
 msgstr "Edit"
 
-#: src/components/network/WifiConnectionDetails.tsx:109
-#: src/components/network/WiredConnectionDetails.tsx:85
+#: src/components/network/WifiConnectionDetails.tsx:110
+#: src/components/network/WiredConnectionDetails.tsx:86
 msgid "IPv4"
 msgstr ""
 
-#: src/components/network/WifiConnectionDetails.tsx:112
-#: src/components/network/WiredConnectionDetails.tsx:88
+#: src/components/network/WifiConnectionDetails.tsx:113
+#: src/components/network/WiredConnectionDetails.tsx:89
 msgid "IPv6"
 msgstr ""
 
-#: src/components/network/WifiConnectionDetails.tsx:147
+#: src/components/network/WifiConnectionDetails.tsx:148
 #: src/components/network/WiredConnectionDetails.tsx:124
 msgid "Routes"
 msgstr ""
 
 #. TRANSLATORS: WiFi authentication mode
 #: src/components/network/WifiConnectionForm.tsx:43
-#: src/components/storage/LogicalVolumePage.tsx:624
-#: src/components/storage/PartitionPage.tsx:753
+#: src/components/storage/LogicalVolumePage.tsx:625
+#: src/components/storage/PartitionPage.tsx:754
 msgid "None"
 msgstr "Tidak ada"
 
@@ -847,12 +869,18 @@ msgstr "Tersambung"
 msgid "IP addresses"
 msgstr "Alamat IP"
 
-#: src/components/network/WifiNetworksList.tsx:172
+#: src/components/network/WifiNetworksList.tsx:146
+#: src/components/network/WiredConnectionsList.tsx:70
+#, fuzzy
+msgid "Configured for installation only"
+msgstr "Konfirmasi Instalasi"
+
+#: src/components/network/WifiNetworksList.tsx:176
 #, fuzzy
 msgid "No Wi-Fi networks were found"
 msgstr "Tidak ditemukan jaringan Wi-Fi"
 
-#: src/components/network/WiredConnectionDetails.tsx:48
+#: src/components/network/WiredConnectionDetails.tsx:49
 #, fuzzy
 msgid "Device details"
 msgstr "Sembunyikan detail"
@@ -867,7 +895,7 @@ msgstr "Alamat IP"
 msgid "Connection not found or lost"
 msgstr "Tindakan koneksi"
 
-#: src/components/network/WiredConnectionsList.tsx:87
+#: src/components/network/WiredConnectionsList.tsx:90
 #, fuzzy
 msgid "No wired connections were found"
 msgstr "Tidak ditemukan koneksi kabel"
@@ -987,54 +1015,54 @@ msgstr "Tutup"
 msgid "%s [must be registered]."
 msgstr "%s harus didaftarkan."
 
-#: src/components/product/ProductRegistrationPage.tsx:63
+#: src/components/product/ProductRegistrationPage.tsx:64
 #, c-format
 msgid "%s has been registered with below information."
 msgstr "%s telah terdaftar dengan informasi di bawah ini."
 
 #. TRANSLATORS: input field label
-#: src/components/product/ProductRegistrationPage.tsx:68
-#: src/components/product/ProductRegistrationPage.tsx:127
+#: src/components/product/ProductRegistrationPage.tsx:69
+#: src/components/product/ProductRegistrationPage.tsx:128
 #: src/components/product/RegistrationExtension.tsx:141
 msgid "Registration code"
 msgstr "Kode pendaftaran"
 
 #. TRANSLATORS: switch for displaying or hiding the registration code
-#: src/components/product/ProductRegistrationPage.tsx:73
+#: src/components/product/ProductRegistrationPage.tsx:74
 #: src/components/product/RegistrationExtension.tsx:60
 msgid "Hide"
 msgstr "Sembunyikan"
 
-#: src/components/product/ProductRegistrationPage.tsx:73
+#: src/components/product/ProductRegistrationPage.tsx:74
 #: src/components/product/RegistrationExtension.tsx:60
 msgid "Show"
 msgstr "Tampilkan"
 
-#: src/components/product/ProductRegistrationPage.tsx:134
+#: src/components/product/ProductRegistrationPage.tsx:135
 #, fuzzy
 msgid "Provide email address"
 msgstr "Tambahkan alamat"
 
 #. TRANSLATORS: button label
-#: src/components/product/ProductRegistrationPage.tsx:148
+#: src/components/product/ProductRegistrationPage.tsx:149
 #: src/components/product/RegistrationExtension.tsx:158
 #: src/components/product/RegistrationExtension.tsx:173
 msgid "Register"
 msgstr "Mendaftar"
 
-#: src/components/product/ProductRegistrationPage.tsx:164
+#: src/components/product/ProductRegistrationPage.tsx:165
 #, c-format
 msgid ""
 "You cannot change it later. Go to the %s section if you want to modify it "
 "before proceeding with registration."
 msgstr ""
 
-#: src/components/product/ProductRegistrationPage.tsx:169
+#: src/components/product/ProductRegistrationPage.tsx:170
 #, fuzzy
 msgid "hostname"
 msgstr "Nama pengguna"
 
-#: src/components/product/ProductRegistrationPage.tsx:194
+#: src/components/product/ProductRegistrationPage.tsx:195
 msgid "Extensions"
 msgstr ""
 
@@ -1875,235 +1903,235 @@ msgstr ""
 msgid "iSCSI"
 msgstr "iSCSI"
 
-#: src/components/storage/LogicalVolumePage.tsx:251
-#: src/components/storage/PartitionPage.tsx:314
+#: src/components/storage/LogicalVolumePage.tsx:252
+#: src/components/storage/PartitionPage.tsx:315
 msgid "Select or enter a valid mount point"
 msgstr ""
 
-#: src/components/storage/LogicalVolumePage.tsx:261
-#: src/components/storage/PartitionPage.tsx:324
+#: src/components/storage/LogicalVolumePage.tsx:262
+#: src/components/storage/PartitionPage.tsx:325
 msgid ""
 "Select or enter a mount point that is not already assigned to another device"
 msgstr ""
 
-#: src/components/storage/LogicalVolumePage.tsx:272
+#: src/components/storage/LogicalVolumePage.tsx:273
 #, fuzzy
 msgid "Enter a name"
 msgstr "Nama pengguna"
 
-#: src/components/storage/LogicalVolumePage.tsx:299
-#: src/components/storage/PartitionPage.tsx:352
+#: src/components/storage/LogicalVolumePage.tsx:300
+#: src/components/storage/PartitionPage.tsx:353
 #, fuzzy
 msgid "The minimum cannot be greater than the maximum"
 msgstr "Maksimum harus lebih besar dari minimum"
 
-#: src/components/storage/LogicalVolumePage.tsx:307
+#: src/components/storage/LogicalVolumePage.tsx:308
 msgid ""
 "The maximum must be a number optionally followed by a unit like GiB or GB"
 msgstr ""
 
-#: src/components/storage/LogicalVolumePage.tsx:315
+#: src/components/storage/LogicalVolumePage.tsx:316
 msgid ""
 "The minimum must be a number optionally followed by a unit like GiB or GB"
 msgstr ""
 
-#: src/components/storage/LogicalVolumePage.tsx:322
+#: src/components/storage/LogicalVolumePage.tsx:323
 msgid ""
 "Size limits must be numbers optionally followed by a unit like GiB or GB"
 msgstr ""
 
-#: src/components/storage/LogicalVolumePage.tsx:441
-#: src/components/storage/LogicalVolumePage.tsx:444
+#: src/components/storage/LogicalVolumePage.tsx:442
+#: src/components/storage/LogicalVolumePage.tsx:445
 #, fuzzy
 msgid "Logical volume name"
 msgstr "volume logis"
 
-#: src/components/storage/LogicalVolumePage.tsx:446
-#: src/components/storage/LogicalVolumePage.tsx:465
-#: src/components/storage/LogicalVolumePage.tsx:563
-#: src/components/storage/PartitionPage.tsx:565
-#: src/components/storage/PartitionPage.tsx:684
+#: src/components/storage/LogicalVolumePage.tsx:447
+#: src/components/storage/LogicalVolumePage.tsx:466
+#: src/components/storage/LogicalVolumePage.tsx:564
+#: src/components/storage/PartitionPage.tsx:566
+#: src/components/storage/PartitionPage.tsx:685
 #, fuzzy
 msgid "Waiting for a mount point"
 msgstr "Menunggu laporan kemajuan"
 
-#: src/components/storage/LogicalVolumePage.tsx:466
-#: src/components/storage/PartitionPage.tsx:569
+#: src/components/storage/LogicalVolumePage.tsx:467
+#: src/components/storage/PartitionPage.tsx:570
 #: src/components/storage/utils.ts:318
 msgid "Btrfs with snapshots"
 msgstr "Btrfs dengan snapshot"
 
-#: src/components/storage/LogicalVolumePage.tsx:481
-#: src/components/storage/PartitionPage.tsx:587
+#: src/components/storage/LogicalVolumePage.tsx:482
+#: src/components/storage/PartitionPage.tsx:588
 #, fuzzy, c-format
 msgid "Default file system for %s"
 msgstr "Sudah ada sistem file untuk %s."
 
-#: src/components/storage/LogicalVolumePage.tsx:482
+#: src/components/storage/LogicalVolumePage.tsx:483
 #, fuzzy
 msgid "Default file system for generic logical volumes"
 msgstr "Sistem file yang dibuat sebagai partisi baru di %s"
 
-#: src/components/storage/LogicalVolumePage.tsx:484
+#: src/components/storage/LogicalVolumePage.tsx:485
 #, fuzzy
 msgid "Format logical volume as"
 msgstr "volume logis"
 
-#: src/components/storage/LogicalVolumePage.tsx:550
-#: src/components/storage/PartitionPage.tsx:669
+#: src/components/storage/LogicalVolumePage.tsx:551
+#: src/components/storage/PartitionPage.tsx:670
 #, fuzzy
 msgid "File system label"
 msgstr "Jenis sistem file"
 
-#: src/components/storage/LogicalVolumePage.tsx:564
-#: src/components/storage/PartitionPage.tsx:686
+#: src/components/storage/LogicalVolumePage.tsx:565
+#: src/components/storage/PartitionPage.tsx:687
 msgid "Calculated automatically"
 msgstr ""
 
-#: src/components/storage/LogicalVolumePage.tsx:565
-#: src/components/storage/PartitionPage.tsx:687
+#: src/components/storage/LogicalVolumePage.tsx:566
+#: src/components/storage/PartitionPage.tsx:688
 #: src/components/storage/utils.ts:112
 msgid "Custom"
 msgstr "Khusus"
 
-#: src/components/storage/LogicalVolumePage.tsx:576
-#: src/components/storage/PartitionPage.tsx:699
+#: src/components/storage/LogicalVolumePage.tsx:577
+#: src/components/storage/PartitionPage.tsx:700
 #, fuzzy
 msgid "Size options"
 msgstr "Sembunyikan detail"
 
-#: src/components/storage/LogicalVolumePage.tsx:586
-#: src/components/storage/PartitionPage.tsx:715
+#: src/components/storage/LogicalVolumePage.tsx:587
+#: src/components/storage/PartitionPage.tsx:716
 msgid "Let the installer propose a sensible range of sizes"
 msgstr ""
 
-#: src/components/storage/LogicalVolumePage.tsx:590
-#: src/components/storage/PartitionPage.tsx:719
+#: src/components/storage/LogicalVolumePage.tsx:591
+#: src/components/storage/PartitionPage.tsx:720
 #, fuzzy
 msgid "Define a custom size or a range"
 msgstr "Tentukan pengguna sekarang"
 
-#: src/components/storage/LogicalVolumePage.tsx:623
-#: src/components/storage/PartitionPage.tsx:752
+#: src/components/storage/LogicalVolumePage.tsx:624
+#: src/components/storage/PartitionPage.tsx:753
 msgid "Same as minimum"
 msgstr ""
 
-#: src/components/storage/LogicalVolumePage.tsx:625
-#: src/components/storage/PartitionPage.tsx:754
+#: src/components/storage/LogicalVolumePage.tsx:626
+#: src/components/storage/PartitionPage.tsx:755
 msgid "Limited"
 msgstr ""
 
-#: src/components/storage/LogicalVolumePage.tsx:633
-#: src/components/storage/PartitionPage.tsx:762
+#: src/components/storage/LogicalVolumePage.tsx:634
+#: src/components/storage/PartitionPage.tsx:763
 #, fuzzy
 msgid "Maximum size options"
 msgstr "Ukuran maksimum yang diinginkan"
 
-#: src/components/storage/LogicalVolumePage.tsx:636
+#: src/components/storage/LogicalVolumePage.tsx:637
 msgid "The logical volume is created exactly with the given size"
 msgstr ""
 
-#: src/components/storage/LogicalVolumePage.tsx:642
+#: src/components/storage/LogicalVolumePage.tsx:643
 msgid "The logical volume can grow until a given limit size"
 msgstr ""
 
-#: src/components/storage/LogicalVolumePage.tsx:648
+#: src/components/storage/LogicalVolumePage.tsx:649
 msgid "The logical volume can grow to use all the contiguous free space"
 msgstr ""
 
-#: src/components/storage/LogicalVolumePage.tsx:700
+#: src/components/storage/LogicalVolumePage.tsx:701
 msgid "Sizes must be entered as a numbers optionally followed by a unit."
 msgstr ""
 
-#: src/components/storage/LogicalVolumePage.tsx:704
+#: src/components/storage/LogicalVolumePage.tsx:705
 msgid ""
 "If the unit is omitted, bytes (B) will be used. Greater units can be "
 "of               the form GiB (power of 2) or GB (power of 10)."
 msgstr ""
 
-#: src/components/storage/LogicalVolumePage.tsx:712
-#: src/components/storage/PartitionPage.tsx:838
+#: src/components/storage/LogicalVolumePage.tsx:713
+#: src/components/storage/PartitionPage.tsx:839
 msgid "Minimum"
 msgstr "Minimum"
 
-#: src/components/storage/LogicalVolumePage.tsx:717
-#: src/components/storage/PartitionPage.tsx:843
+#: src/components/storage/LogicalVolumePage.tsx:718
+#: src/components/storage/PartitionPage.tsx:844
 #, fuzzy
 msgid "Minimum size value"
 msgstr "Diperlukan ukuran minimum"
 
-#: src/components/storage/LogicalVolumePage.tsx:723
-#: src/components/storage/PartitionPage.tsx:849
+#: src/components/storage/LogicalVolumePage.tsx:724
+#: src/components/storage/PartitionPage.tsx:850
 msgid "Maximum"
 msgstr "Maksimum"
 
-#: src/components/storage/LogicalVolumePage.tsx:730
-#: src/components/storage/PartitionPage.tsx:856
+#: src/components/storage/LogicalVolumePage.tsx:731
+#: src/components/storage/PartitionPage.tsx:857
 #, fuzzy
 msgid "Maximum size mode"
 msgstr "Ukuran maksimum yang diinginkan"
 
-#: src/components/storage/LogicalVolumePage.tsx:739
-#: src/components/storage/PartitionPage.tsx:865
+#: src/components/storage/LogicalVolumePage.tsx:740
+#: src/components/storage/PartitionPage.tsx:866
 #, fuzzy
 msgid "Maximum size value"
 msgstr "Ukuran maksimum yang diinginkan"
 
-#: src/components/storage/LogicalVolumePage.tsx:859
+#: src/components/storage/LogicalVolumePage.tsx:860
 #, fuzzy, c-format
 msgid "Configure LVM logical volume at %s volume group"
 msgstr "Grup volume <abbr title='Logical Volume Manager'>LVM</abbr>"
 
-#: src/components/storage/LogicalVolumePage.tsx:869
-#: src/components/storage/LogicalVolumePage.tsx:874
-#: src/components/storage/PartitionPage.tsx:1005
-#: src/components/storage/PartitionPage.tsx:1012
+#: src/components/storage/LogicalVolumePage.tsx:870
+#: src/components/storage/LogicalVolumePage.tsx:875
+#: src/components/storage/PartitionPage.tsx:1006
+#: src/components/storage/PartitionPage.tsx:1013
 msgid "Mount point"
-msgstr "Titik pemasangan"
-
-#: src/components/storage/LogicalVolumePage.tsx:872
-#: src/components/storage/PartitionPage.tsx:1010
-#, fuzzy
-msgid "Mount point toggle"
 msgstr "Titik pemasangan"
 
 #: src/components/storage/LogicalVolumePage.tsx:873
 #: src/components/storage/PartitionPage.tsx:1011
 #, fuzzy
+msgid "Mount point toggle"
+msgstr "Titik pemasangan"
+
+#: src/components/storage/LogicalVolumePage.tsx:874
+#: src/components/storage/PartitionPage.tsx:1012
+#, fuzzy
 msgid "Suggested mount points"
 msgstr "Tabel dengan titik pemasangan"
 
-#: src/components/storage/LogicalVolumePage.tsx:875
-#: src/components/storage/PartitionPage.tsx:1013
+#: src/components/storage/LogicalVolumePage.tsx:876
+#: src/components/storage/PartitionPage.tsx:1014
 #, fuzzy
 msgid "Clear selected mount point"
 msgstr "Tabel dengan titik pemasangan"
 
-#: src/components/storage/LogicalVolumePage.tsx:878
-#: src/components/storage/PartitionPage.tsx:1016
+#: src/components/storage/LogicalVolumePage.tsx:879
+#: src/components/storage/PartitionPage.tsx:1017
 #, fuzzy
 msgid "Use"
 msgstr "Pengguna"
 
-#: src/components/storage/LogicalVolumePage.tsx:884
-#: src/components/storage/PartitionPage.tsx:1034
+#: src/components/storage/LogicalVolumePage.tsx:885
+#: src/components/storage/PartitionPage.tsx:1035
 #, fuzzy
 msgid "Select or enter a mount point"
 msgstr "Tabel dengan titik pemasangan"
 
-#: src/components/storage/LogicalVolumePage.tsx:909
-#: src/components/storage/PartitionPage.tsx:1043
+#: src/components/storage/LogicalVolumePage.tsx:910
+#: src/components/storage/PartitionPage.tsx:1044
 #, fuzzy
 msgid "File system"
 msgstr "Jenis sistem berkas"
 
-#: src/components/storage/LogicalVolumePage.tsx:920
-#: src/components/storage/PartitionPage.tsx:1055
+#: src/components/storage/LogicalVolumePage.tsx:921
+#: src/components/storage/PartitionPage.tsx:1056
 msgid "Label"
 msgstr ""
 
-#: src/components/storage/LogicalVolumePage.tsx:932
-#: src/components/storage/PartitionPage.tsx:1066
+#: src/components/storage/LogicalVolumePage.tsx:933
+#: src/components/storage/PartitionPage.tsx:1067
 #: src/components/storage/ProposalResultTable.tsx:135
 #: src/components/storage/SpaceActionsTable.tsx:240
 msgid "Size"
@@ -2181,101 +2209,101 @@ msgstr "Membuat Grup Volume LVM"
 msgid "Create LVM volume group on %s"
 msgstr "Membuat Grup Volume LVM"
 
-#: src/components/storage/PartitionPage.tsx:360
+#: src/components/storage/PartitionPage.tsx:361
 msgid "The maximum must be a number followed by a unit like GiB or GB"
 msgstr ""
 
-#: src/components/storage/PartitionPage.tsx:368
+#: src/components/storage/PartitionPage.tsx:369
 msgid "The minimum must be a number followed by a unit like GiB or GB"
 msgstr ""
 
-#: src/components/storage/PartitionPage.tsx:375
+#: src/components/storage/PartitionPage.tsx:376
 msgid "Size limits must be numbers followed by a unit like GiB or GB"
 msgstr ""
 
 #. TRANSLATORS: %s is a disk name with its size (eg. "sda, 10 GiB"
-#: src/components/storage/PartitionPage.tsx:503
+#: src/components/storage/PartitionPage.tsx:504
 #, fuzzy, c-format
 msgid "As a new partition on %s"
 msgstr "Membuat partisi baru"
 
-#: src/components/storage/PartitionPage.tsx:505
+#: src/components/storage/PartitionPage.tsx:506
 #, fuzzy, c-format
 msgid "Using partition %s"
 msgstr "menyusutkan partisi"
 
-#: src/components/storage/PartitionPage.tsx:534
+#: src/components/storage/PartitionPage.tsx:535
 #, fuzzy
 msgid "Mount point options"
 msgstr "Titik pemasangan"
 
-#: src/components/storage/PartitionPage.tsx:539
+#: src/components/storage/PartitionPage.tsx:540
 #, fuzzy
 msgid "Using an existing partition"
 msgstr "Perkecil partisi yang ada"
 
-#: src/components/storage/PartitionPage.tsx:550
+#: src/components/storage/PartitionPage.tsx:551
 #, fuzzy
 msgid "There are not usable partitions"
 msgstr "Membuat partisi baru"
 
 #. TRANSLATORS: %s is a device name (eg. /dev/sda3).
-#: src/components/storage/PartitionPage.tsx:568
+#: src/components/storage/PartitionPage.tsx:569
 #: src/components/storage/utils/partition.tsx:69
 #, fuzzy, c-format
 msgid "Current %s"
 msgstr "Hapus konten saat ini"
 
-#: src/components/storage/PartitionPage.tsx:588
+#: src/components/storage/PartitionPage.tsx:589
 #, fuzzy
 msgid "Default file system for generic partitions"
 msgstr "Sistem file yang dibuat sebagai partisi baru di %s"
 
-#: src/components/storage/PartitionPage.tsx:590
+#: src/components/storage/PartitionPage.tsx:591
 msgid "Destroy current data and format partition as"
 msgstr ""
 
-#: src/components/storage/PartitionPage.tsx:591
+#: src/components/storage/PartitionPage.tsx:592
 #, fuzzy
 msgid "Format partition as"
 msgstr "Partisi boot pada %s"
 
 #. TRANSLATORS: %s is the name of a partition, like /dev/vda2
-#: src/components/storage/PartitionPage.tsx:604
+#: src/components/storage/PartitionPage.tsx:605
 #, c-format
 msgid "Do not format %s and keep the data"
 msgstr ""
 
 #. TRANSLATORS: %s is a partition name like /dev/vda2
-#: src/components/storage/PartitionPage.tsx:707
+#: src/components/storage/PartitionPage.tsx:708
 #, c-format
 msgid "Keep size of %s"
 msgstr ""
 
-#: src/components/storage/PartitionPage.tsx:765
+#: src/components/storage/PartitionPage.tsx:766
 msgid "The partition is created exactly with the given size"
 msgstr ""
 
-#: src/components/storage/PartitionPage.tsx:771
+#: src/components/storage/PartitionPage.tsx:772
 msgid "The partition can grow until a given limit size"
 msgstr ""
 
-#: src/components/storage/PartitionPage.tsx:777
+#: src/components/storage/PartitionPage.tsx:778
 msgid "The partition can grow to use all the contiguous free space"
 msgstr ""
 
-#: src/components/storage/PartitionPage.tsx:830
+#: src/components/storage/PartitionPage.tsx:831
 msgid ""
 "Sizes must be entered as a numbers followed by a unit of               the "
 "form GiB (power of 2) or GB (power of 10)."
 msgstr ""
 
-#: src/components/storage/PartitionPage.tsx:998
+#: src/components/storage/PartitionPage.tsx:999
 #, fuzzy, c-format
 msgid "Configure partition at %s"
 msgstr "Partisi pada %s"
 
-#: src/components/storage/PartitionPage.tsx:1022
+#: src/components/storage/PartitionPage.tsx:1023
 #, fuzzy
 msgid "Mount point mode"
 msgstr "Titik pemasangan"
@@ -4226,10 +4254,6 @@ msgstr "ZFCP"
 
 #~ msgid "Something went wrong while collecting logs. Please, try again."
 #~ msgstr "Terjadi kesalahan saat mengumpulkan log. Silakan coba lagi."
-
-#, fuzzy
-#~ msgid "Ready for installation"
-#~ msgstr "Konfirmasi Instalasi"
 
 #, fuzzy
 #~ msgid "Installation"
