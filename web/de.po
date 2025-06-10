@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-06-10 03:10+0000\n"
-"PO-Revision-Date: 2025-05-18 09:59+0000\n"
+"PO-Revision-Date: 2025-06-10 21:59+0000\n"
 "Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
 "Language-Team: German <https://l10n.opensuse.org/projects/agama/agama-web/de/"
 ">\n"
@@ -242,7 +242,7 @@ msgstr ""
 #. TRANSLATORS: Clickable link to show and resolve package dependency conflicts
 #: src/components/core/IssuesAlert.tsx:46
 msgid "Review and fix"
-msgstr ""
+msgstr "Überprüfen und korrigieren"
 
 #: src/components/core/IssuesDrawer.tsx:49
 #: src/components/users/UsersPage.tsx:36 src/routes/users.tsx:34
@@ -578,15 +578,16 @@ msgid "DNS"
 msgstr "DNS"
 
 #: src/components/network/InstallationOnlySwitch.tsx:47
-#, fuzzy
 msgid "Use for installation only"
-msgstr "Bereit zur Installation"
+msgstr "Nur für die Installation verwenden"
 
 #: src/components/network/InstallationOnlySwitch.tsx:49
 msgid ""
 "The connection will be used only during installation and not available in "
 "the installed system."
 msgstr ""
+"Die Verbindung wird nur während der Installation verwendet und ist im "
+"installierten System nicht verfügbar."
 
 #: src/components/network/IpPrefixInput.tsx:35
 msgid "Ip prefix or netmask"
@@ -678,6 +679,8 @@ msgstr "Wi-Fi-Netzwerke"
 #: src/components/network/NoPersistentConnectionsAlert.tsx:39
 msgid "Installed system may not have network connections"
 msgstr ""
+"Das installierte System verfügt möglicherweise nicht über "
+"Netzwerkverbindungen"
 
 #: src/components/network/NoPersistentConnectionsAlert.tsx:41
 msgid ""
@@ -685,6 +688,9 @@ msgid ""
 "be used only during installation and will not be copied to the installed "
 "system"
 msgstr ""
+"Alle über diese Schnittstelle verwalteten Netzwerkverbindungen sind derzeit "
+"so eingestellt, dass sie nur während der Installation verwendet und nicht "
+"auf das installierte System kopiert werden"
 
 #: src/components/network/WifiConnectionDetails.tsx:46
 msgid "Network details"
@@ -883,9 +889,8 @@ msgstr "IP-Adressen"
 
 #: src/components/network/WifiNetworksList.tsx:146
 #: src/components/network/WiredConnectionsList.tsx:70
-#, fuzzy
 msgid "Configured for installation only"
-msgstr "Bereit zur Installation"
+msgstr "Nur für die Installation konfiguriert"
 
 #: src/components/network/WifiNetworksList.tsx:176
 #, fuzzy
@@ -936,7 +941,7 @@ msgstr "Die Installation benötigt"
 #: src/components/overview/SoftwareSection.tsx:48
 #, c-format
 msgid "The installation will take %s including:"
-msgstr "Die Installation dauert %s einschließlich:"
+msgstr "Die Installation benötigt %s einschließlich:"
 
 #: src/components/overview/StorageSection.tsx:36
 msgid "No device selected yet"
@@ -1237,34 +1242,33 @@ msgid "No support is planned."
 msgstr "Es ist keine Unterstützung geplant."
 
 #: src/components/software/SoftwareConflicts.tsx:100
-#, fuzzy
 msgid "Show less actions"
-msgstr "Weitere Aktionen"
+msgstr "Weniger Aktionen anzeigen"
 
 #: src/components/software/SoftwareConflicts.tsx:100
-#, fuzzy
 msgid "Show more actions"
-msgstr "Weitere Aktionen"
+msgstr "Weitere Aktionen anzeigen"
 
 #: src/components/software/SoftwareConflicts.tsx:138
-#, fuzzy
 msgid "Select a solution to continue"
-msgstr "Festplatte zum Konfigurieren auswählen"
+msgstr "Eine Lösung auswählen, um fortzufahren"
 
 #: src/components/software/SoftwareConflicts.tsx:160
-#, fuzzy
 msgid "Apply selected solution"
-msgstr "Ausgewählten Einhängepunkt löschen"
+msgstr "Ausgewählte Lösung anwenden"
 
 #: src/components/software/SoftwareConflicts.tsx:183
 msgid ""
 "Multiple conflicts found. You can address them in any order, and resolving "
 "one may resolve others."
 msgstr ""
+"Mehrere Konflikte gefunden. Sie können sie in beliebiger Reihenfolge "
+"angehen, und die Lösung eines Konflikts kann andere Konflikte lösen."
 
 #: src/components/software/SoftwareConflicts.tsx:191
+#, fuzzy
 msgid "Skip to previous"
-msgstr ""
+msgstr "Zum vorherigen Punkt springen"
 
 #. TRANSLATORS: This is a short status message like "1 of 3". It
 #. indicates the position of the current item out of a total. The
@@ -1273,28 +1277,28 @@ msgstr ""
 #: src/components/software/SoftwareConflicts.tsx:202
 #, c-format
 msgid "%d of %d"
-msgstr ""
+msgstr "%d von %d"
 
 #: src/components/software/SoftwareConflicts.tsx:208
 #, fuzzy
 msgid "Skip to next"
-msgstr "Zum Inhalt springen"
+msgstr "Zum nächsten Punkt springen"
 
 #: src/components/software/SoftwareConflicts.tsx:223
-#, fuzzy
 msgid "No conflicts to address"
-msgstr "Falsche IP-Adresse"
+msgstr "Keine zu lösenden Konflikte"
 
 #: src/components/software/SoftwareConflicts.tsx:226
 msgid ""
 "All conflicts have been resolved, or none were detected. You can safely "
 "continue with your setup."
 msgstr ""
+"Alle Konflikte wurden gelöst, oder es wurden keine erkannt. Sie können "
+"gefahrlos mit Ihrer Einrichtung fortfahren."
 
 #: src/components/software/SoftwareConflicts.tsx:286
-#, fuzzy
 msgid "Software conflicts resolution"
-msgstr "Softwareauswahl"
+msgstr "Lösung von Softwarekonflikten"
 
 #: src/components/software/SoftwarePage.tsx:58
 msgid "No additional software was selected."
@@ -2244,25 +2248,20 @@ msgid "Create LVM volume group on %s"
 msgstr "LVM-Volume-Gruppe auf %s erstellen"
 
 #: src/components/storage/PartitionPage.tsx:361
-#, fuzzy
 msgid "The maximum must be a number followed by a unit like GiB or GB"
 msgstr ""
-"Das Maximum muss eine Zahl sein, optional gefolgt von einer Einheit wie GiB "
-"oder GB"
+"Das Maximum muss eine Zahl sein, gefolgt von einer Einheit wie GiB oder GB"
 
 #: src/components/storage/PartitionPage.tsx:369
-#, fuzzy
 msgid "The minimum must be a number followed by a unit like GiB or GB"
 msgstr ""
-"Das Minimum muss eine Zahl sein, optional gefolgt von einer Einheit wie GiB "
-"oder GB"
+"Das Minimum muss eine Zahl sein, gefolgt von einer Einheit wie GiB oder GB"
 
 #: src/components/storage/PartitionPage.tsx:376
-#, fuzzy
 msgid "Size limits must be numbers followed by a unit like GiB or GB"
 msgstr ""
-"Größenbeschränkungen müssen Zahlen sein, optional gefolgt von einer Einheit "
-"wie GiB oder GB"
+"Größenbeschränkungen müssen Zahlen sein, gefolgt von einer Einheit wie GiB "
+"oder GB"
 
 #. TRANSLATORS: %s is a disk name with its size (eg. "sda, 10 GiB"
 #: src/components/storage/PartitionPage.tsx:504
