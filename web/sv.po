@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-06-11 03:09+0000\n"
-"PO-Revision-Date: 2025-05-19 04:59+0000\n"
+"PO-Revision-Date: 2025-06-11 10:59+0000\n"
 "Last-Translator: Luna  Jernberg <bittin@opensuse.org>\n"
 "Language-Team: Swedish <https://l10n.opensuse.org/projects/agama/agama-web/"
 "sv/>\n"
@@ -237,7 +237,7 @@ msgstr "Innan du startar installationen måste du åtgärda följande problem:"
 #. TRANSLATORS: Clickable link to show and resolve package dependency conflicts
 #: src/components/core/IssuesAlert.tsx:46
 msgid "Review and fix"
-msgstr ""
+msgstr "Granska och åtgärda"
 
 #: src/components/core/IssuesDrawer.tsx:49
 #: src/components/users/UsersPage.tsx:36 src/routes/users.tsx:34
@@ -570,15 +570,16 @@ msgid "DNS"
 msgstr "DNS"
 
 #: src/components/network/InstallationOnlySwitch.tsx:47
-#, fuzzy
 msgid "Use for installation only"
-msgstr "Redo för installation"
+msgstr "Använd för installation endast"
 
 #: src/components/network/InstallationOnlySwitch.tsx:49
 msgid ""
 "The connection will be used only during installation and not available in "
 "the installed system."
 msgstr ""
+"Anslutningen kommer endast att användas under installationen och är inte "
+"tillgänglig i det installerade systemet."
 
 #: src/components/network/IpPrefixInput.tsx:35
 msgid "Ip prefix or netmask"
@@ -665,7 +666,7 @@ msgstr "Wi-Fi nätverk"
 
 #: src/components/network/NoPersistentConnectionsAlert.tsx:39
 msgid "Installed system may not have network connections"
-msgstr ""
+msgstr "Det installerade systemet kanske inte har nätverksanslutningar"
 
 #: src/components/network/NoPersistentConnectionsAlert.tsx:41
 msgid ""
@@ -673,6 +674,9 @@ msgid ""
 "be used only during installation and will not be copied to the installed "
 "system"
 msgstr ""
+"Alla nätverksanslutningar som hanteras via det här gränssnittet är för "
+"närvarande inställda på att endast användas under installationen och kommer "
+"inte att kopieras till det installerade systemet"
 
 #: src/components/network/WifiConnectionDetails.tsx:46
 msgid "Network details"
@@ -868,9 +872,8 @@ msgstr "IP adresser"
 
 #: src/components/network/WifiNetworksList.tsx:146
 #: src/components/network/WiredConnectionsList.tsx:70
-#, fuzzy
 msgid "Configured for installation only"
-msgstr "Redo för installation"
+msgstr "Endast konfigurerad för installation"
 
 #: src/components/network/WifiNetworksList.tsx:176
 msgid "No Wi-Fi networks were found"
@@ -1208,34 +1211,32 @@ msgid "No support is planned."
 msgstr "Inget stöd är planerat."
 
 #: src/components/software/SoftwareConflicts.tsx:100
-#, fuzzy
 msgid "Show less actions"
-msgstr "Mer åtgärder"
+msgstr "Visa mindre åtgärder"
 
 #: src/components/software/SoftwareConflicts.tsx:100
-#, fuzzy
 msgid "Show more actions"
-msgstr "Mer åtgärder"
+msgstr "Visa mer åtgärder"
 
 #: src/components/software/SoftwareConflicts.tsx:138
-#, fuzzy
 msgid "Select a solution to continue"
-msgstr "Välj en disk att konfigurera"
+msgstr "Välj en lösning för att fortsätta"
 
 #: src/components/software/SoftwareConflicts.tsx:160
-#, fuzzy
 msgid "Apply selected solution"
-msgstr "Rensa vald monteringspunkt"
+msgstr "Använd den valda lösningen"
 
 #: src/components/software/SoftwareConflicts.tsx:183
 msgid ""
 "Multiple conflicts found. You can address them in any order, and resolving "
 "one may resolve others."
 msgstr ""
+"Flera konflikter hittades. Du kan åtgärda dem i valfri ordning, och att lösa "
+"en kan lösa andra."
 
 #: src/components/software/SoftwareConflicts.tsx:191
 msgid "Skip to previous"
-msgstr ""
+msgstr "Hoppa till föregående"
 
 #. TRANSLATORS: This is a short status message like "1 of 3". It
 #. indicates the position of the current item out of a total. The
@@ -1244,28 +1245,27 @@ msgstr ""
 #: src/components/software/SoftwareConflicts.tsx:202
 #, c-format
 msgid "%d of %d"
-msgstr ""
+msgstr "%d av %d"
 
 #: src/components/software/SoftwareConflicts.tsx:208
-#, fuzzy
 msgid "Skip to next"
-msgstr "Hoppa till innehåll"
+msgstr "Hoppa till nästa"
 
 #: src/components/software/SoftwareConflicts.tsx:223
-#, fuzzy
 msgid "No conflicts to address"
-msgstr "Felaktig IP adress"
+msgstr "Det finns inga konflikter att ta itu med"
 
 #: src/components/software/SoftwareConflicts.tsx:226
 msgid ""
 "All conflicts have been resolved, or none were detected. You can safely "
 "continue with your setup."
 msgstr ""
+"Alla konflikter har lösts, eller så har inga upptäckts. Du kan tryggt "
+"fortsätta med din installation."
 
 #: src/components/software/SoftwareConflicts.tsx:286
-#, fuzzy
 msgid "Software conflicts resolution"
-msgstr "Val av programvara"
+msgstr "Lösning av programvarukonflikter"
 
 #: src/components/software/SoftwarePage.tsx:58
 msgid "No additional software was selected."
@@ -2202,25 +2202,17 @@ msgid "Create LVM volume group on %s"
 msgstr "Skapa LVM volymgrupp på %s"
 
 #: src/components/storage/PartitionPage.tsx:361
-#, fuzzy
 msgid "The maximum must be a number followed by a unit like GiB or GB"
 msgstr ""
-"Det maximala måste vara ett tal, eventuellt följt av en enhet som GiB eller "
-"GB"
+"Det maximala antalet måste vara ett tal följt av en enhet som GiB eller GB"
 
 #: src/components/storage/PartitionPage.tsx:369
-#, fuzzy
 msgid "The minimum must be a number followed by a unit like GiB or GB"
-msgstr ""
-"Det minsta måste vara ett nummer, eventuellt följt av en enhet som GiB eller "
-"GB"
+msgstr "Det minsta måste vara ett tal följt av en enhet som GiB eller GB"
 
 #: src/components/storage/PartitionPage.tsx:376
-#, fuzzy
 msgid "Size limits must be numbers followed by a unit like GiB or GB"
-msgstr ""
-"Storleksgränser måste vara siffror, eventuellt följt av en enhet som GiB "
-"eller GB"
+msgstr "Storleksgränser måste vara siffror följt av en enhet som GiB eller GB"
 
 #. TRANSLATORS: %s is a disk name with its size (eg. "sda, 10 GiB"
 #: src/components/storage/PartitionPage.tsx:504
@@ -2289,13 +2281,12 @@ msgid "The partition can grow to use all the contiguous free space"
 msgstr "Partitionen kan växa för att använda allt angränsande ledigt utrymme"
 
 #: src/components/storage/PartitionPage.tsx:831
-#, fuzzy
 msgid ""
 "Sizes must be entered as a numbers followed by a unit of               the "
 "form GiB (power of 2) or GB (power of 10)."
 msgstr ""
-"Om enheten utelämnas kommer byte (B) att användas. Större enheter kan vara "
-"av              formen av GiB (effekt av 2) eller GB (effekt av 10)."
+"Storlekar måste anges som siffror följt av en enhet              formen GiB ("
+"potens av 2) eller GB (potens av 10)."
 
 #: src/components/storage/PartitionPage.tsx:999
 #, c-format
