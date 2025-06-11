@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-10 03:10+0000\n"
+"POT-Creation-Date: 2025-06-11 03:09+0000\n"
 "PO-Revision-Date: 2024-11-14 15:48+0000\n"
 "Last-Translator: Rodrigo Macedo <sottomaiormacedotec@sottomaiormacedo.tech>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.opensuse.org/projects/agama/"
@@ -447,37 +447,70 @@ msgstr ""
 msgid "At least %s devices are required for %s"
 msgstr ""
 
+#. Issue if the device member is deleted.
+#.
+#. @param member_config [#search]
+#. @return [Issue, nil]
+#: service/lib/agama/storage/config_checkers/md_raid.rb:168
+#, perl-brace-format
+msgid ""
+"The device '%{member}' cannot be deleted because it is part of the MD RAID "
+"%{md_raid}"
+msgstr ""
+
+#. Issue if the device member is resized.
+#.
+#. @param member_config [#search]
+#. @return [Issue, nil]
+#: service/lib/agama/storage/config_checkers/md_raid.rb:191
+#, perl-brace-format
+msgid ""
+"The device '%{member}' cannot be resized because it is part of the MD RAID "
+"%{md_raid}"
+msgstr ""
+
 #. Issue if the device member is formatted.
 #.
 #. @param member_config [#search]
 #. @return [Issue, nil]
-#: service/lib/agama/storage/config_checkers/md_raid.rb:174
+#: service/lib/agama/storage/config_checkers/md_raid.rb:214
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be formatted because it is a device member of "
-"the reused MD RAID %{md_raid}"
+"The device '%{member}' cannot be formatted because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
 
 #. Issue if the device member is partitioned.
 #.
 #. @param member_config [#search]
 #. @return [Issue, nil]
-#: service/lib/agama/storage/config_checkers/md_raid.rb:197
+#: service/lib/agama/storage/config_checkers/md_raid.rb:237
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be partitioned because it is a device member "
-"of the reused MD RAID %{md_raid}"
+"The device '%{member}' cannot be partitioned because it is part of the MD "
+"RAID %{md_raid}"
 msgstr ""
 
 #. Issue if the device member is used by other device (e.g., as target for physical volumes).
 #.
 #. @param member_config [#search]
 #. @return [Issue, nil]
-#: service/lib/agama/storage/config_checkers/md_raid.rb:219
+#: service/lib/agama/storage/config_checkers/md_raid.rb:259
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be used because it is a device member of the "
-"reused MD RAID %{md_raid}"
+"The device '%{member}' cannot be used because it is part of the MD RAID "
+"%{md_raid}"
+msgstr ""
+
+#. Issue if the parent of the device member is formatted.
+#.
+#. @param device [Y2Storage::BlkDevice]
+#. @return [Issue, nil]
+#: service/lib/agama/storage/config_checkers/md_raid.rb:284
+#, perl-brace-format
+msgid ""
+"The device '%{device}' cannot be formatted because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
 
 #. TRANSLATORS: 'method' is the identifier of the method to encrypt the device
@@ -638,14 +671,14 @@ msgstr "Escrevendo sysconfig do bootloader"
 #. Issue representing the proposal is not valid.
 #.
 #. @return [Issue]
-#: service/lib/agama/storage/proposal.rb:371
+#: service/lib/agama/storage/proposal.rb:364
 msgid "Cannot calculate a valid storage setup with the current configuration"
 msgstr ""
 
 #. Issue to communicate a generic Y2Storage error.
 #.
 #. @return [Issue]
-#: service/lib/agama/storage/proposal.rb:382
+#: service/lib/agama/storage/proposal.rb:375
 msgid "A problem ocurred while calculating the storage setup"
 msgstr "Ocorreu um problema ao calcular a configuração de armazenamento"
 
@@ -667,8 +700,8 @@ msgid_plural ""
 msgstr[0] ""
 "O seguinte dispositivo selecionado não foi encontrado no sistema: %{devices}"
 msgstr[1] ""
-"Os seguintes dispositivos selecionados não foram encontrados no sistema: %"
-"{devices}"
+"Os seguintes dispositivos selecionados não foram encontrados no sistema: "
+"%{devices}"
 
 #. Recalculates the list of issues
 #: service/lib/agama/users.rb:154

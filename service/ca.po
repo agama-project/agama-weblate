@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-10 03:10+0000\n"
+"POT-Creation-Date: 2025-06-11 03:09+0000\n"
 "PO-Revision-Date: 2025-05-29 10:59+0000\n"
 "Last-Translator: David Medina <medipas@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.opensuse.org/projects/agama/agama-"
@@ -228,8 +228,8 @@ msgid ""
 "anyway?"
 msgstr ""
 "El fitxer %{filename} de %{repo_url} està signat digitalment amb la clau "
-"GnuPG següent, però la comprovació d'integritat ha fallat: %{key_id} (%"
-"{key_name}). Voleu usar-lo tanmateix?"
+"GnuPG següent, però la comprovació d'integritat ha fallat: %{key_id} "
+"(%{key_name}). Voleu usar-lo tanmateix?"
 
 #: service/lib/agama/software/callbacks/signature.rb:175
 #, perl-brace-format
@@ -412,8 +412,8 @@ msgstr "No hi ha cap dispositiu d'arrencada amb l'àlies %s."
 msgid ""
 "No passphrase provided (required for using the method '%{crypt_method}')."
 msgstr ""
-"No s'ha proporcionat cap frase de contrasenya (cal per usar el mètode %"
-"{crypt_method})."
+"No s'ha proporcionat cap frase de contrasenya (cal per usar el mètode "
+"%{crypt_method})."
 
 #. TRANSLATORS: 'crypt_method' is the identifier of the method to encrypt the device
 #. (e.g., 'luks1', 'random_swap').
@@ -473,15 +473,41 @@ msgstr "Hi ha una RAID MD sense nivell."
 msgid "At least %s devices are required for %s"
 msgstr "Calen almenys %s dispositius per a %s."
 
+#. Issue if the device member is deleted.
+#.
+#. @param member_config [#search]
+#. @return [Issue, nil]
+#: service/lib/agama/storage/config_checkers/md_raid.rb:168
+#, fuzzy, perl-brace-format
+msgid ""
+"The device '%{member}' cannot be deleted because it is part of the MD RAID "
+"%{md_raid}"
+msgstr ""
+"El dispositiu %{member} no es pot usar perquè és un dispositiu membre de la "
+"RAID MD reutilitzada %{md_raid}"
+
+#. Issue if the device member is resized.
+#.
+#. @param member_config [#search]
+#. @return [Issue, nil]
+#: service/lib/agama/storage/config_checkers/md_raid.rb:191
+#, fuzzy, perl-brace-format
+msgid ""
+"The device '%{member}' cannot be resized because it is part of the MD RAID "
+"%{md_raid}"
+msgstr ""
+"El dispositiu %{member} no es pot usar perquè és un dispositiu membre de la "
+"RAID MD reutilitzada %{md_raid}"
+
 #. Issue if the device member is formatted.
 #.
 #. @param member_config [#search]
 #. @return [Issue, nil]
-#: service/lib/agama/storage/config_checkers/md_raid.rb:174
-#, perl-brace-format
+#: service/lib/agama/storage/config_checkers/md_raid.rb:214
+#, fuzzy, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be formatted because it is a device member of "
-"the reused MD RAID %{md_raid}"
+"The device '%{member}' cannot be formatted because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
 "El dispositiu %{member} no es pot formatar perquè és un dispositiu membre de "
 "la RAID MD reutilitzada %{md_raid}"
@@ -490,11 +516,11 @@ msgstr ""
 #.
 #. @param member_config [#search]
 #. @return [Issue, nil]
-#: service/lib/agama/storage/config_checkers/md_raid.rb:197
-#, perl-brace-format
+#: service/lib/agama/storage/config_checkers/md_raid.rb:237
+#, fuzzy, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be partitioned because it is a device member "
-"of the reused MD RAID %{md_raid}"
+"The device '%{member}' cannot be partitioned because it is part of the MD "
+"RAID %{md_raid}"
 msgstr ""
 "El dispositiu %{member} no es pot partir perquè és un dispositiu membre de "
 "la RAID MD reutilitzada %{md_raid}"
@@ -503,14 +529,27 @@ msgstr ""
 #.
 #. @param member_config [#search]
 #. @return [Issue, nil]
-#: service/lib/agama/storage/config_checkers/md_raid.rb:219
-#, perl-brace-format
+#: service/lib/agama/storage/config_checkers/md_raid.rb:259
+#, fuzzy, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be used because it is a device member of the "
-"reused MD RAID %{md_raid}"
+"The device '%{member}' cannot be used because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
 "El dispositiu %{member} no es pot usar perquè és un dispositiu membre de la "
 "RAID MD reutilitzada %{md_raid}"
+
+#. Issue if the parent of the device member is formatted.
+#.
+#. @param device [Y2Storage::BlkDevice]
+#. @return [Issue, nil]
+#: service/lib/agama/storage/config_checkers/md_raid.rb:284
+#, fuzzy, perl-brace-format
+msgid ""
+"The device '%{device}' cannot be formatted because it is part of the MD RAID "
+"%{md_raid}"
+msgstr ""
+"El dispositiu %{member} no es pot formatar perquè és un dispositiu membre de "
+"la RAID MD reutilitzada %{md_raid}"
 
 #. TRANSLATORS: 'method' is the identifier of the method to encrypt the device
 #. (e.g., 'luks1').
@@ -674,7 +713,7 @@ msgstr "Escrivint la configuració de sistema del carregador d'arrencada"
 #. Issue representing the proposal is not valid.
 #.
 #. @return [Issue]
-#: service/lib/agama/storage/proposal.rb:371
+#: service/lib/agama/storage/proposal.rb:364
 msgid "Cannot calculate a valid storage setup with the current configuration"
 msgstr ""
 "No es pot calcular una configuració d'emmagatzematge vàlida amb la "
@@ -683,7 +722,7 @@ msgstr ""
 #. Issue to communicate a generic Y2Storage error.
 #.
 #. @return [Issue]
-#: service/lib/agama/storage/proposal.rb:382
+#: service/lib/agama/storage/proposal.rb:375
 msgid "A problem ocurred while calculating the storage setup"
 msgstr ""
 "Hi ha hagut un problema en calcular la configuració de l'emmagatzematge."

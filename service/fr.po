@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-10 03:10+0000\n"
+"POT-Creation-Date: 2025-06-11 03:09+0000\n"
 "PO-Revision-Date: 2025-06-10 14:59+0000\n"
 "Last-Translator: Sophie Leroy <sophie@stoquart.com>\n"
-"Language-Team: French <https://l10n.opensuse.org/projects/agama/"
-"agama-service-master/fr/>\n"
+"Language-Team: French <https://l10n.opensuse.org/projects/agama/agama-"
+"service-master/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -129,8 +129,8 @@ msgid ""
 msgstr ""
 "La somme de contrôle du fichier %{file} est \"%{digest}\", mais la somme de "
 "contrôle attendue est inconnue. Cela signifie que l'origine et l'intégrité "
-"du fichier ne peuvent pas être vérifiées. Voulez-vous l'utiliser malgré tout "
-"?"
+"du fichier ne peuvent pas être vérifiées. Voulez-vous l'utiliser malgré "
+"tout ?"
 
 #. Callback to accept wrong digest
 #.
@@ -482,15 +482,41 @@ msgstr "Il existe un MD RAID sans niveau"
 msgid "At least %s devices are required for %s"
 msgstr "Au moins %s périphériques sont requis pour %s"
 
+#. Issue if the device member is deleted.
+#.
+#. @param member_config [#search]
+#. @return [Issue, nil]
+#: service/lib/agama/storage/config_checkers/md_raid.rb:168
+#, fuzzy, perl-brace-format
+msgid ""
+"The device '%{member}' cannot be deleted because it is part of the MD RAID "
+"%{md_raid}"
+msgstr ""
+"Le périphérique '%{member}' ne peut pas être utilisé, car il s'agit d'un "
+"périphérique membre du MD RAID réutilisé %{md_raid}"
+
+#. Issue if the device member is resized.
+#.
+#. @param member_config [#search]
+#. @return [Issue, nil]
+#: service/lib/agama/storage/config_checkers/md_raid.rb:191
+#, fuzzy, perl-brace-format
+msgid ""
+"The device '%{member}' cannot be resized because it is part of the MD RAID "
+"%{md_raid}"
+msgstr ""
+"Le périphérique '%{member}' ne peut pas être utilisé, car il s'agit d'un "
+"périphérique membre du MD RAID réutilisé %{md_raid}"
+
 #. Issue if the device member is formatted.
 #.
 #. @param member_config [#search]
 #. @return [Issue, nil]
-#: service/lib/agama/storage/config_checkers/md_raid.rb:174
-#, perl-brace-format
+#: service/lib/agama/storage/config_checkers/md_raid.rb:214
+#, fuzzy, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be formatted because it is a device member of "
-"the reused MD RAID %{md_raid}"
+"The device '%{member}' cannot be formatted because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
 "Le périphérique '%{member}' ne peut pas être formaté, car il s'agit d'un "
 "périphérique membre du MD RAID réutilisé %{md_raid}"
@@ -499,11 +525,11 @@ msgstr ""
 #.
 #. @param member_config [#search]
 #. @return [Issue, nil]
-#: service/lib/agama/storage/config_checkers/md_raid.rb:197
-#, perl-brace-format
+#: service/lib/agama/storage/config_checkers/md_raid.rb:237
+#, fuzzy, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be partitioned because it is a device member "
-"of the reused MD RAID %{md_raid}"
+"The device '%{member}' cannot be partitioned because it is part of the MD "
+"RAID %{md_raid}"
 msgstr ""
 "Le périphérique '%{member}' ne peut pas être partitionné, car il s'agit d'un "
 "périphérique membre du MD RAID réutilisé %{md_raid}"
@@ -512,13 +538,26 @@ msgstr ""
 #.
 #. @param member_config [#search]
 #. @return [Issue, nil]
-#: service/lib/agama/storage/config_checkers/md_raid.rb:219
-#, perl-brace-format
+#: service/lib/agama/storage/config_checkers/md_raid.rb:259
+#, fuzzy, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be used because it is a device member of the "
-"reused MD RAID %{md_raid}"
+"The device '%{member}' cannot be used because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
 "Le périphérique '%{member}' ne peut pas être utilisé, car il s'agit d'un "
+"périphérique membre du MD RAID réutilisé %{md_raid}"
+
+#. Issue if the parent of the device member is formatted.
+#.
+#. @param device [Y2Storage::BlkDevice]
+#. @return [Issue, nil]
+#: service/lib/agama/storage/config_checkers/md_raid.rb:284
+#, fuzzy, perl-brace-format
+msgid ""
+"The device '%{device}' cannot be formatted because it is part of the MD RAID "
+"%{md_raid}"
+msgstr ""
+"Le périphérique '%{member}' ne peut pas être formaté, car il s'agit d'un "
 "périphérique membre du MD RAID réutilisé %{md_raid}"
 
 #. TRANSLATORS: 'method' is the identifier of the method to encrypt the device
@@ -683,7 +722,7 @@ msgstr "Écriture du sysconfig du chargeur d'amorçage"
 #. Issue representing the proposal is not valid.
 #.
 #. @return [Issue]
-#: service/lib/agama/storage/proposal.rb:371
+#: service/lib/agama/storage/proposal.rb:364
 msgid "Cannot calculate a valid storage setup with the current configuration"
 msgstr ""
 "Impossible de calculer une configuration de stockage valide avec la "
@@ -692,7 +731,7 @@ msgstr ""
 #. Issue to communicate a generic Y2Storage error.
 #.
 #. @return [Issue]
-#: service/lib/agama/storage/proposal.rb:382
+#: service/lib/agama/storage/proposal.rb:375
 msgid "A problem ocurred while calculating the storage setup"
 msgstr "Un problème est survenu lors du calcul de la configuration du stockage"
 
@@ -712,11 +751,11 @@ msgid "The following selected device is not found in the system: %{devices}"
 msgid_plural ""
 "The following selected devices are not found in the system: %{devices}"
 msgstr[0] ""
-"Le périphérique sélectionné suivant est introuvable dans le système : %"
-"{devices}"
+"Le périphérique sélectionné suivant est introuvable dans le système : "
+"%{devices}"
 msgstr[1] ""
-"Les périphériques sélectionnés suivants sont introuvables dans le système : %"
-"{devices}"
+"Les périphériques sélectionnés suivants sont introuvables dans le système : "
+"%{devices}"
 
 #. Recalculates the list of issues
 #: service/lib/agama/users.rb:154

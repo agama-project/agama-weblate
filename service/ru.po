@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-10 03:10+0000\n"
+"POT-Creation-Date: 2025-06-11 03:09+0000\n"
 "PO-Revision-Date: 2025-05-30 09:59+0000\n"
 "Last-Translator: Aleksey Fedorov <Aleksejfedorov963@gmail.com>\n"
 "Language-Team: Russian <https://l10n.opensuse.org/projects/agama/agama-"
@@ -411,8 +411,8 @@ msgstr "Не существует загрузочного устройства 
 msgid ""
 "No passphrase provided (required for using the method '%{crypt_method}')."
 msgstr ""
-"Не указана парольная фраза (требуется для использования метода „%"
-"{crypt_method}“)."
+"Не указана парольная фраза (требуется для использования метода "
+"„%{crypt_method}“)."
 
 #. TRANSLATORS: 'crypt_method' is the identifier of the method to encrypt the device
 #. (e.g., 'luks1', 'random_swap').
@@ -469,15 +469,41 @@ msgstr "Существует RAID-массив MD без уровня"
 msgid "At least %s devices are required for %s"
 msgstr "Требуется не менее %s устр. для %s"
 
+#. Issue if the device member is deleted.
+#.
+#. @param member_config [#search]
+#. @return [Issue, nil]
+#: service/lib/agama/storage/config_checkers/md_raid.rb:168
+#, fuzzy, perl-brace-format
+msgid ""
+"The device '%{member}' cannot be deleted because it is part of the MD RAID "
+"%{md_raid}"
+msgstr ""
+"Устройство „%{member}“ не может быть использовано, поскольку оно является "
+"членом повторно используемого MD RAID %{md_raid}"
+
+#. Issue if the device member is resized.
+#.
+#. @param member_config [#search]
+#. @return [Issue, nil]
+#: service/lib/agama/storage/config_checkers/md_raid.rb:191
+#, fuzzy, perl-brace-format
+msgid ""
+"The device '%{member}' cannot be resized because it is part of the MD RAID "
+"%{md_raid}"
+msgstr ""
+"Устройство „%{member}“ не может быть использовано, поскольку оно является "
+"членом повторно используемого MD RAID %{md_raid}"
+
 #. Issue if the device member is formatted.
 #.
 #. @param member_config [#search]
 #. @return [Issue, nil]
-#: service/lib/agama/storage/config_checkers/md_raid.rb:174
-#, perl-brace-format
+#: service/lib/agama/storage/config_checkers/md_raid.rb:214
+#, fuzzy, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be formatted because it is a device member of "
-"the reused MD RAID %{md_raid}"
+"The device '%{member}' cannot be formatted because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
 "Устройство „%{member}“ не может быть отформатировано, поскольку оно является "
 "членом повторно используемого MD RAID %{md_raid}"
@@ -486,11 +512,11 @@ msgstr ""
 #.
 #. @param member_config [#search]
 #. @return [Issue, nil]
-#: service/lib/agama/storage/config_checkers/md_raid.rb:197
-#, perl-brace-format
+#: service/lib/agama/storage/config_checkers/md_raid.rb:237
+#, fuzzy, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be partitioned because it is a device member "
-"of the reused MD RAID %{md_raid}"
+"The device '%{member}' cannot be partitioned because it is part of the MD "
+"RAID %{md_raid}"
 msgstr ""
 "Устройство „%{member}“ не может быть разбито на разделы, поскольку оно "
 "является членом повторно используемого MD RAID %{md_raid}"
@@ -499,13 +525,26 @@ msgstr ""
 #.
 #. @param member_config [#search]
 #. @return [Issue, nil]
-#: service/lib/agama/storage/config_checkers/md_raid.rb:219
-#, perl-brace-format
+#: service/lib/agama/storage/config_checkers/md_raid.rb:259
+#, fuzzy, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be used because it is a device member of the "
-"reused MD RAID %{md_raid}"
+"The device '%{member}' cannot be used because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
 "Устройство „%{member}“ не может быть использовано, поскольку оно является "
+"членом повторно используемого MD RAID %{md_raid}"
+
+#. Issue if the parent of the device member is formatted.
+#.
+#. @param device [Y2Storage::BlkDevice]
+#. @return [Issue, nil]
+#: service/lib/agama/storage/config_checkers/md_raid.rb:284
+#, fuzzy, perl-brace-format
+msgid ""
+"The device '%{device}' cannot be formatted because it is part of the MD RAID "
+"%{md_raid}"
+msgstr ""
+"Устройство „%{member}“ не может быть отформатировано, поскольку оно является "
 "членом повторно используемого MD RAID %{md_raid}"
 
 #. TRANSLATORS: 'method' is the identifier of the method to encrypt the device
@@ -669,7 +708,7 @@ msgstr "Запись системной конфигурации загрузч�
 #. Issue representing the proposal is not valid.
 #.
 #. @return [Issue]
-#: service/lib/agama/storage/proposal.rb:371
+#: service/lib/agama/storage/proposal.rb:364
 msgid "Cannot calculate a valid storage setup with the current configuration"
 msgstr ""
 "Невозможно рассчитать правильную настройку хранения с текущей конфигурацией"
@@ -677,7 +716,7 @@ msgstr ""
 #. Issue to communicate a generic Y2Storage error.
 #.
 #. @return [Issue]
-#: service/lib/agama/storage/proposal.rb:382
+#: service/lib/agama/storage/proposal.rb:375
 msgid "A problem ocurred while calculating the storage setup"
 msgstr "Возникла проблема при расчёте конфигурации накопителей"
 
