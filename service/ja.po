@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-06-12 03:07+0000\n"
-"PO-Revision-Date: 2025-05-30 06:59+0000\n"
+"PO-Revision-Date: 2025-06-12 10:59+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
-"Language-Team: Japanese <https://l10n.opensuse.org/projects/agama/agama-"
-"service-master/ja/>\n"
+"Language-Team: Japanese <https://l10n.opensuse.org/projects/agama/"
+"agama-service-master/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -476,78 +476,70 @@ msgstr "少なくとも %s 個のデバイスが必要です (%s に対して)"
 #. @param member_config [#search]
 #. @return [Issue, nil]
 #: service/lib/agama/storage/config_checkers/md_raid.rb:168
-#, fuzzy, perl-brace-format
+#, perl-brace-format
 msgid ""
 "The device '%{member}' cannot be deleted because it is part of the MD RAID %"
 "{md_raid}"
-msgstr ""
-"デバイス '%{member}' は再利用する MD RAID %{md_raid} のデバイスメンバーである"
-"ため、使用できません"
+msgstr "デバイス '%{member}' は MD RAID %{md_raid} の一部であるため、削除できません"
 
 #. Issue if the device member is resized.
 #.
 #. @param member_config [#search]
 #. @return [Issue, nil]
 #: service/lib/agama/storage/config_checkers/md_raid.rb:191
-#, fuzzy, perl-brace-format
+#, perl-brace-format
 msgid ""
 "The device '%{member}' cannot be resized because it is part of the MD RAID %"
 "{md_raid}"
-msgstr ""
-"デバイス '%{member}' は再利用する MD RAID %{md_raid} のデバイスメンバーである"
-"ため、使用できません"
+msgstr "デバイス '%{member}' は MD RAID %{md_raid} "
+"の一部であるため、サイズ変更できません"
 
 #. Issue if the device member is formatted.
 #.
 #. @param member_config [#search]
 #. @return [Issue, nil]
 #: service/lib/agama/storage/config_checkers/md_raid.rb:214
-#, fuzzy, perl-brace-format
+#, perl-brace-format
 msgid ""
 "The device '%{member}' cannot be formatted because it is part of the MD RAID "
 "%{md_raid}"
-msgstr ""
-"デバイス '%{member}' は再利用する MD RAID %{md_raid} のデバイスメンバーである"
-"ため、フォーマットできません"
+msgstr "デバイス '%{member}' は MD RAID %{md_raid} "
+"の一部であるため、フォーマットできません"
 
 #. Issue if the device member is partitioned.
 #.
 #. @param member_config [#search]
 #. @return [Issue, nil]
 #: service/lib/agama/storage/config_checkers/md_raid.rb:237
-#, fuzzy, perl-brace-format
+#, perl-brace-format
 msgid ""
 "The device '%{member}' cannot be partitioned because it is part of the MD "
 "RAID %{md_raid}"
-msgstr ""
-"デバイス '%{member}' は再利用する MD RAID %{md_raid} のデバイスメンバーである"
-"ため、パーティション設定できません"
+msgstr "デバイス '%{member}' は MD RAID %{md_raid} "
+"の一部であるため、パーティション設定できません"
 
 #. Issue if the device member is used by other device (e.g., as target for physical volumes).
 #.
 #. @param member_config [#search]
 #. @return [Issue, nil]
 #: service/lib/agama/storage/config_checkers/md_raid.rb:259
-#, fuzzy, perl-brace-format
+#, perl-brace-format
 msgid ""
 "The device '%{member}' cannot be used because it is part of the MD RAID %"
 "{md_raid}"
-msgstr ""
-"デバイス '%{member}' は再利用する MD RAID %{md_raid} のデバイスメンバーである"
-"ため、使用できません"
+msgstr "デバイス '%{member}' は MD RAID %{md_raid} の一部であるため、使用できません"
 
 #. Issue if the parent of the device member is formatted.
 #.
 #. @param device [Y2Storage::BlkDevice]
 #. @return [Issue, nil]
 #: service/lib/agama/storage/config_checkers/md_raid.rb:284
-#, fuzzy, perl-brace-format
+#, perl-brace-format
 msgid ""
 "The device '%{device}' cannot be formatted because it is part of the MD RAID "
 "%{md_raid}"
-msgstr ""
-"デバイス '%{member}' は再利用する MD RAID %{md_raid} のデバイスメンバーである"
-"ため、フォーマットできません"
+msgstr "デバイス '%{device}' は MD RAID %{md_raid} "
+"の一部であるため、フォーマットできません"
 
 #. TRANSLATORS: 'method' is the identifier of the method to encrypt the device
 #. (e.g., 'luks1').
