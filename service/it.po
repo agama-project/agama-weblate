@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-06-12 03:07+0000\n"
-"PO-Revision-Date: 2025-06-12 17:59+0000\n"
+"PO-Revision-Date: 2025-06-13 06:59+0000\n"
 "Last-Translator: Davide Aiello <davide.aiello@novilingulists.com>\n"
 "Language-Team: Italian <https://l10n.opensuse.org/projects/agama/"
 "agama-service-master/it/>\n"
@@ -608,6 +608,8 @@ msgid ""
 "The list of target devices for the volume group '%s' is mixing reused "
 "devices and new devices"
 msgstr ""
+"L'elenco dei dispositivi di destinazione per il gruppo di volumi '%s' "
+"contiene una combinazione di dispositivi riutilizzati e nuovi"
 
 #. TRANSLATORS: %s is the replaced by a device alias (e.g., "disk1").
 #: service/lib/agama/storage/config_checkers/volume_group.rb:153
@@ -622,6 +624,8 @@ msgstr ""
 msgid ""
 "The device '%s' is used several times as target device for physical volumes"
 msgstr ""
+"Il dispositivo '%s' viene utilizzato diverse volte come dispositivo di "
+"destinazione per i volumi fisici"
 
 #. Text of the reason preventing to shrink because there is no content.
 #.
@@ -632,24 +636,28 @@ msgid ""
 "case the device does contain a file system or a storage system that is not "
 "supported, resizing will most likely cause data loss."
 msgstr ""
+"Nessun file system né sistema di memorizzazione rilevato sul dispositivo. "
+"Qualora il dispositivo contenga un file system o un sistema di "
+"memorizzazione non supportato, con ogni probabilità il ridimensionamento "
+"comporterà una perdita di dati."
 
 #. Text of the reason preventing to shrink because there is no valid minimum size.
 #.
 #. @return [String, nil] nil if there is a minimum size or there is any other reasons.
 #: service/lib/agama/storage/device_shrinking.rb:162
 msgid "Shrinking is not supported by this device"
-msgstr ""
+msgstr "La riduzione non è supportata da questo dispositivo"
 
 #. Applies the target configs.
 #.
 #. @param config [ISCSI::Config]
 #: service/lib/agama/storage/iscsi/manager.rb:291
 msgid "Logout iSCSI targets"
-msgstr ""
+msgstr "Chiudi destinazioni iSCSI"
 
 #: service/lib/agama/storage/iscsi/manager.rb:292
 msgid "Login iSCSI targets"
-msgstr ""
+msgstr "Accedi a destinazioni iSCSI"
 
 #. Login issue.
 #.
@@ -658,44 +666,44 @@ msgstr ""
 #: service/lib/agama/storage/iscsi/manager.rb:346
 #, c-format
 msgid "Cannot login to iSCSI target %s"
-msgstr ""
+msgstr "Impossibile accedere a destinazione iSCSI %s"
 
 #. Underlying yast-storage-ng has own mechanism for proposing boot strategies.
 #. However, we don't always want to use BLS when it proposes so. Currently
 #. we want to use BLS only for Tumbleweed / Slowroll
 #: service/lib/agama/storage/manager.rb:131
 msgid "Activating storage devices"
-msgstr ""
+msgstr "Attivazione dei dispositivi di memorizzazione"
 
 #: service/lib/agama/storage/manager.rb:132
 msgid "Probing storage devices"
-msgstr ""
+msgstr "Rilevamento dei dispositivi di memorizzazione"
 
 #: service/lib/agama/storage/manager.rb:133
 msgid "Calculating the storage proposal"
-msgstr ""
+msgstr "Calcolo della proposta di memorizzazione"
 
 #: service/lib/agama/storage/manager.rb:136
 msgid "Selecting Linux Security Modules"
-msgstr ""
+msgstr "Selezione dei moduli di sicurezza Linux"
 
 #. Prepares the partitioning to install the system
 #: service/lib/agama/storage/manager.rb:146
 msgid "Preparing bootloader proposal"
-msgstr ""
+msgstr "Preparazione della proposta del boot loader"
 
 #. then also apply changes to that proposal
 #: service/lib/agama/storage/manager.rb:153
 msgid "Adding storage-related packages"
-msgstr ""
+msgstr "Aggiunta dei pacchetti correlati alla memorizzazione"
 
 #: service/lib/agama/storage/manager.rb:154
 msgid "Preparing the storage devices"
-msgstr ""
+msgstr "Preparazione dei dispositivi di memorizzazione"
 
 #: service/lib/agama/storage/manager.rb:155
 msgid "Writing bootloader sysconfig"
-msgstr ""
+msgstr "Scrittura di sysconfig del boot loader"
 
 #. Issue representing the proposal is not valid.
 #.
@@ -703,6 +711,8 @@ msgstr ""
 #: service/lib/agama/storage/proposal.rb:364
 msgid "Cannot calculate a valid storage setup with the current configuration"
 msgstr ""
+"Impossibile calcolare una configurazione di memorizzazione valida con "
+"l'attuale configurazione"
 
 #. Issue to communicate a generic Y2Storage error.
 #.
@@ -710,13 +720,15 @@ msgstr ""
 #: service/lib/agama/storage/proposal.rb:375
 msgid "A problem ocurred while calculating the storage setup"
 msgstr ""
+"Si è verificato un problema durante il calcolo della configurazione della "
+"memorizzazione"
 
 #. Returns an issue if there is no target device.
 #.
 #. @return [Issue, nil]
 #: service/lib/agama/storage/proposal_strategies/guided.rb:135
 msgid "No device selected for installation"
-msgstr ""
+msgstr "Nessun dispositivo selezionato per l'installazione"
 
 #. Returns an issue if any of the devices required for the proposal is not found
 #.
@@ -727,10 +739,16 @@ msgid "The following selected device is not found in the system: %{devices}"
 msgid_plural ""
 "The following selected devices are not found in the system: %{devices}"
 msgstr[0] ""
+"Non è stato trovato il seguente dispositivo selezionato nel sistema: "
+"%{devices}"
 msgstr[1] ""
+"Non sono stati trovati i seguenti dispositivi selezionati nel sistema: "
+"%{devices}"
 
 #. Recalculates the list of issues
 #: service/lib/agama/users.rb:154
 msgid ""
 "Defining a user, setting the root password or a SSH public key is required"
 msgstr ""
+"Definizione di un utente, impostazione della password root o chiave pubblica "
+"SSH obbligatoria"
