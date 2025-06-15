@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-12 03:07+0000\n"
+"POT-Creation-Date: 2025-06-15 03:15+0000\n"
 "PO-Revision-Date: 2025-06-11 19:59+0000\n"
 "Last-Translator: Eugene Krater <lachend@gmail.com>\n"
 "Language-Team: Ukrainian <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -20,7 +20,7 @@ msgstr ""
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 5.11.4\n"
 
-#: src/components/core/ChangeProductOption.tsx:46
+#: src/components/core/ChangeProductOption.tsx:45
 msgid "Change product"
 msgstr "Змінити продукт"
 
@@ -263,7 +263,7 @@ msgid "Software"
 msgstr "Програми"
 
 #: src/components/core/IssuesDrawer.tsx:52
-#: src/components/product/ProductRegistrationPage.tsx:213
+#: src/components/product/ProductRegistrationPage.tsx:204
 #: src/routes/registration.tsx:31
 msgid "Registration"
 msgstr "Реєстрація"
@@ -1022,7 +1022,7 @@ msgstr "%s було зареєстровано з наведеною нижче 
 
 #. TRANSLATORS: input field label
 #: src/components/product/ProductRegistrationPage.tsx:69
-#: src/components/product/ProductRegistrationPage.tsx:128
+#: src/components/product/ProductRegistrationPage.tsx:121
 #: src/components/product/RegistrationExtension.tsx:141
 msgid "Registration code"
 msgstr "Код реєстрації"
@@ -1038,18 +1038,18 @@ msgstr "Приховати"
 msgid "Show"
 msgstr "Показати"
 
-#: src/components/product/ProductRegistrationPage.tsx:135
+#: src/components/product/ProductRegistrationPage.tsx:128
 msgid "Provide email address"
 msgstr "Вкажіть адресу електронної пошти"
 
 #. TRANSLATORS: button label
-#: src/components/product/ProductRegistrationPage.tsx:149
+#: src/components/product/ProductRegistrationPage.tsx:142
 #: src/components/product/RegistrationExtension.tsx:158
 #: src/components/product/RegistrationExtension.tsx:173
 msgid "Register"
 msgstr "Зареєструвати"
 
-#: src/components/product/ProductRegistrationPage.tsx:165
+#: src/components/product/ProductRegistrationPage.tsx:158
 #, c-format
 msgid ""
 "You cannot change it later. Go to the %s section if you want to modify it "
@@ -1058,11 +1058,11 @@ msgstr ""
 "Ви не зможете змінити його пізніше. Перейдіть до розділу %s, якщо хочете "
 "змінити це перед тим, як продовжити реєстрацію."
 
-#: src/components/product/ProductRegistrationPage.tsx:170
+#: src/components/product/ProductRegistrationPage.tsx:163
 msgid "hostname"
 msgstr "ім'я хоста"
 
-#: src/components/product/ProductRegistrationPage.tsx:195
+#: src/components/product/ProductRegistrationPage.tsx:188
 msgid "Extensions"
 msgstr "Розширення"
 
@@ -1678,170 +1678,45 @@ msgstr "Активувати та форматувати DASD-пристрої"
 msgid "Configure DASD"
 msgstr "Налаштувати DASD"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:55
+#: src/components/storage/ConfigureDeviceMenu.tsx:57
 msgid "Already using all available disks"
 msgstr "Вже використані всі наявні диски"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:65
+#: src/components/storage/ConfigureDeviceMenu.tsx:67
 msgid "Start configuring a basic installation"
 msgstr "Почати налаштування базової інсталяції"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:67
+#: src/components/storage/ConfigureDeviceMenu.tsx:69
 msgid "Select another disk to define partitions"
 msgstr "Виберіть інший диск для створення розділів"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:68
+#: src/components/storage/ConfigureDeviceMenu.tsx:70
 msgid "Select a disk to define partitions"
 msgstr "Виберіть диск для визначення розділів"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:72
+#: src/components/storage/ConfigureDeviceMenu.tsx:74
 msgid "Add device menu"
 msgstr "Меню додавання пристроїв"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:121
+#: src/components/storage/ConfigureDeviceMenu.tsx:130
 msgid "Define a new LVM on top of one or several disks"
 msgstr "Визначення нового LVM над одним або кількома дисками"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:122
+#: src/components/storage/ConfigureDeviceMenu.tsx:131
 msgid "Define a new LVM on the disk"
 msgstr "Задати новий LVM на диску"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:127
+#: src/components/storage/ConfigureDeviceMenu.tsx:136
 msgid "Configure device menu"
 msgstr "Меню налаштування пристрою"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:143
+#: src/components/storage/ConfigureDeviceMenu.tsx:152
 msgid "Add LVM volume group"
 msgstr "Додати групу томів LVM"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:147
+#: src/components/storage/ConfigureDeviceMenu.tsx:156
 msgid "More devices"
 msgstr "Інші пристрої"
-
-#: src/components/storage/DriveDeviceMenu.tsx:150
-msgid "Selected disk (cannot be changed)"
-msgstr "Обраний диск (неможливо змінити)"
-
-#: src/components/storage/DriveDeviceMenu.tsx:154
-msgid "Select a disk to configure"
-msgstr "Виберіть диск для налаштування"
-
-#: src/components/storage/DriveDeviceMenu.tsx:158
-msgid "Select a disk to install the system"
-msgstr "Оберіть диск для встановлення системи"
-
-#. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
-#. single mount point in the singular case).
-#: src/components/storage/DriveDeviceMenu.tsx:168
-#, c-format
-msgid "Select a disk to create %s"
-msgstr "Виберіть диск для створення %s"
-
-#: src/components/storage/DriveDeviceMenu.tsx:178
-msgid "This uses existing partitions at the disk"
-msgstr "Для цього використовуються наявні розділи на диску"
-
-#: src/components/storage/DriveDeviceMenu.tsx:187
-msgid ""
-"This disk will contain the configured LVM groups and any partition needed to "
-"boot"
-msgstr ""
-"Цей диск міститиме налаштовані групи LVM і будь-який розділ, необхідний для "
-"завантаження"
-
-#: src/components/storage/DriveDeviceMenu.tsx:190
-msgid "This disk will contain the configured LVM groups"
-msgstr "Цей диск міститиме налаштовані групи LVM"
-
-#. TRANSLATORS: %s is the name of the LVM
-#: src/components/storage/DriveDeviceMenu.tsx:195
-#, c-format
-msgid ""
-"This disk will contain the LVM group '%s' and any partition needed to boot"
-msgstr ""
-"Цей диск міститиме групу LVM '%s' і будь-який розділ, необхідний для "
-"завантаження"
-
-#. TRANSLATORS: %s is the name of the LVM
-#: src/components/storage/DriveDeviceMenu.tsx:201
-#, c-format
-msgid "This disk will contain the LVM group '%s'"
-msgstr "Цей диск міститиме групу LVM '%s'"
-
-#: src/components/storage/DriveDeviceMenu.tsx:206
-msgid "This disk will contain any partition needed for booting"
-msgstr "Цей диск буде містити всі розділи, необхідні для завантаження"
-
-#. TRANSLATORS: %s is the name of the disk (eg. sda)
-#: src/components/storage/DriveDeviceMenu.tsx:215
-#, c-format
-msgid ""
-"%s will still contain the configured LVM groups and any partition needed to "
-"boot"
-msgstr ""
-"%s все ще буде містити налаштовані групи LVM і будь-який розділ, необхідний "
-"для завантаження"
-
-#. TRANSLATORS: %s is the name of the disk (eg. sda)
-#: src/components/storage/DriveDeviceMenu.tsx:221
-#, c-format
-msgid "The configured LVM groups will remain at %s"
-msgstr "Налаштовані групи LVM залишаться у %s"
-
-#. TRANSLATORS: %1$s is the name of the disk (eg. sda) and %2$s the name of the LVM
-#: src/components/storage/DriveDeviceMenu.tsx:227
-#, c-format
-msgid ""
-"%1$s will still contain the LVM group '%2$s' and any partition needed to boot"
-msgstr ""
-"%1$s, як і раніше, міститиме групу LVM '%2$s' і будь-який розділ, необхідний "
-"для завантаження"
-
-#. TRANSLATORS: %1$s is the name of the LVM and %2$s the name of the disk (eg. sda)
-#: src/components/storage/DriveDeviceMenu.tsx:235
-#, c-format
-msgid "The LVM group '%1$s' will remain at %2$s"
-msgstr "Група LVM '%1$s' залишиться на %2$s"
-
-#. TRANSLATORS: %s is the name of the disk (eg. sda)
-#: src/components/storage/DriveDeviceMenu.tsx:243
-#, c-format
-msgid "Partitions needed for booting will remain at %s"
-msgstr "Розділи, необхідні для завантаження, залишаться на %s"
-
-#: src/components/storage/DriveDeviceMenu.tsx:247
-msgid "Partitions needed for booting will also be adapted"
-msgstr "Розділи, необхідні для завантаження, також будуть адаптовані"
-
-#: src/components/storage/DriveDeviceMenu.tsx:255
-msgid "Change device menu"
-msgstr "Меню зміни пристрою"
-
-#: src/components/storage/DriveDeviceMenu.tsx:283
-msgid "The disk is used for LVM and boot"
-msgstr "Диск використовується для LVM і завантаження"
-
-#: src/components/storage/DriveDeviceMenu.tsx:285
-msgid "The disk is used for booting"
-msgstr "Диск використовують для завантаження"
-
-#: src/components/storage/DriveDeviceMenu.tsx:289
-msgid "The disk is used for LVM"
-msgstr "Диск використовують для LVM"
-
-#: src/components/storage/DriveDeviceMenu.tsx:291
-msgid "Remove the configuration for this disk"
-msgstr "Видалити конфігурацію для цього диска"
-
-#: src/components/storage/DriveDeviceMenu.tsx:303
-msgid "Do not use"
-msgstr "Не використовувати"
-
-#: src/components/storage/DriveDeviceMenu.tsx:329
-#: src/components/storage/MdRaidDeviceMenu.tsx:47
-#, c-format
-msgid "Device %s menu"
-msgstr "Меню пристрою %s"
 
 #: src/components/storage/EncryptionSection.tsx:32
 msgid "Encryption is disabled"
@@ -2139,30 +2014,30 @@ msgstr "Ярлик"
 msgid "Size"
 msgstr "Розмір"
 
-#: src/components/storage/LvmPage.tsx:77
+#: src/components/storage/LvmPage.tsx:83
 msgid "Enter a name for the volume group."
 msgstr "Введіть назву групи томів."
 
-#: src/components/storage/LvmPage.tsx:81
+#: src/components/storage/LvmPage.tsx:87
 #, c-format
 msgid "Volume group '%s' already exists. Enter a different name."
 msgstr "Група томів „%s“ вже існує. Введіть іншу назву."
 
-#: src/components/storage/LvmPage.tsx:85
+#: src/components/storage/LvmPage.tsx:91
 msgid "Select at least one disk."
 msgstr "Оберіть хоча б один диск."
 
-#: src/components/storage/LvmPage.tsx:163
+#: src/components/storage/LvmPage.tsx:169
 msgid "Configure LVM Volume Group"
 msgstr "Налаштування групи томів LVM"
 
-#: src/components/storage/LvmPage.tsx:169
+#: src/components/storage/LvmPage.tsx:175
 #: src/components/system/HostnamePage.tsx:104
 msgid "Check the following before continuing"
 msgstr "Перш ніж продовжити, перевірте наступне"
 
 #. TRANSLATORS: input field for the iSCSI initiator name
-#: src/components/storage/LvmPage.tsx:175
+#: src/components/storage/LvmPage.tsx:181
 #: src/components/storage/iscsi/InitiatorForm.tsx:75
 #: src/components/storage/iscsi/InitiatorForm.tsx:85
 #: src/components/storage/iscsi/InitiatorSection.tsx:40
@@ -2172,12 +2047,12 @@ msgstr "Перш ніж продовжити, перевірте наступн�
 msgid "Name"
 msgstr "Назва"
 
-#: src/components/storage/LvmPage.tsx:178
+#: src/components/storage/LvmPage.tsx:184
 #: src/components/storage/zfcp/ZFCPPage.tsx:131
 msgid "Disks"
 msgstr "Диски"
 
-#: src/components/storage/LvmPage.tsx:181
+#: src/components/storage/LvmPage.tsx:187
 msgid ""
 "The needed LVM physical volumes will be added as partitions on the chosen "
 "disks,                 based on the sizes of the logical volumes. If you "
@@ -2188,11 +2063,11 @@ msgstr ""
 "виходячи з розмірів логічних томів. Якщо Ви виберете кілька дисків, фізичні "
 "томи можуть бути розподілені по кількох дисках."
 
-#: src/components/storage/LvmPage.tsx:216
+#: src/components/storage/LvmPage.tsx:222
 msgid "Move mount points"
 msgstr "Перемістити точки монтування"
 
-#: src/components/storage/LvmPage.tsx:220
+#: src/components/storage/LvmPage.tsx:226
 msgid ""
 "Move the mount points currently configured at the selected disks to "
 "logical                   volumes of this volume group."
@@ -2586,6 +2461,130 @@ msgstr ""
 "%s - це незмінна система з атомарними оновленнями. Вона використовує файлову "
 "систему Btrfs, доступну тільки для читання і оновлювану за допомогою "
 "моментальних знімків."
+
+#: src/components/storage/SearchedDeviceMenu.tsx:152
+msgid "Selected disk (cannot be changed)"
+msgstr "Обраний диск (неможливо змінити)"
+
+#: src/components/storage/SearchedDeviceMenu.tsx:156
+msgid "Select a disk to configure"
+msgstr "Виберіть диск для налаштування"
+
+#: src/components/storage/SearchedDeviceMenu.tsx:160
+msgid "Select a disk to install the system"
+msgstr "Оберіть диск для встановлення системи"
+
+#. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
+#. single mount point in the singular case).
+#: src/components/storage/SearchedDeviceMenu.tsx:170
+#, c-format
+msgid "Select a disk to create %s"
+msgstr "Виберіть диск для створення %s"
+
+#: src/components/storage/SearchedDeviceMenu.tsx:180
+msgid "This uses existing partitions at the disk"
+msgstr "Для цього використовуються наявні розділи на диску"
+
+#: src/components/storage/SearchedDeviceMenu.tsx:189
+msgid ""
+"This disk will contain the configured LVM groups and any partition needed to "
+"boot"
+msgstr ""
+"Цей диск міститиме налаштовані групи LVM і будь-який розділ, необхідний для "
+"завантаження"
+
+#: src/components/storage/SearchedDeviceMenu.tsx:192
+msgid "This disk will contain the configured LVM groups"
+msgstr "Цей диск міститиме налаштовані групи LVM"
+
+#. TRANSLATORS: %s is the name of the LVM
+#: src/components/storage/SearchedDeviceMenu.tsx:197
+#, c-format
+msgid ""
+"This disk will contain the LVM group '%s' and any partition needed to boot"
+msgstr ""
+"Цей диск міститиме групу LVM '%s' і будь-який розділ, необхідний для "
+"завантаження"
+
+#. TRANSLATORS: %s is the name of the LVM
+#: src/components/storage/SearchedDeviceMenu.tsx:203
+#, c-format
+msgid "This disk will contain the LVM group '%s'"
+msgstr "Цей диск міститиме групу LVM '%s'"
+
+#: src/components/storage/SearchedDeviceMenu.tsx:208
+msgid "This disk will contain any partition needed for booting"
+msgstr "Цей диск буде містити всі розділи, необхідні для завантаження"
+
+#. TRANSLATORS: %s is the name of the disk (eg. sda)
+#: src/components/storage/SearchedDeviceMenu.tsx:217
+#, c-format
+msgid ""
+"%s will still contain the configured LVM groups and any partition needed to "
+"boot"
+msgstr ""
+"%s все ще буде містити налаштовані групи LVM і будь-який розділ, необхідний "
+"для завантаження"
+
+#. TRANSLATORS: %s is the name of the disk (eg. sda)
+#: src/components/storage/SearchedDeviceMenu.tsx:223
+#, c-format
+msgid "The configured LVM groups will remain at %s"
+msgstr "Налаштовані групи LVM залишаться у %s"
+
+#. TRANSLATORS: %1$s is the name of the disk (eg. sda) and %2$s the name of the LVM
+#: src/components/storage/SearchedDeviceMenu.tsx:229
+#, c-format
+msgid ""
+"%1$s will still contain the LVM group '%2$s' and any partition needed to boot"
+msgstr ""
+"%1$s, як і раніше, міститиме групу LVM '%2$s' і будь-який розділ, необхідний "
+"для завантаження"
+
+#. TRANSLATORS: %1$s is the name of the LVM and %2$s the name of the disk (eg. sda)
+#: src/components/storage/SearchedDeviceMenu.tsx:237
+#, c-format
+msgid "The LVM group '%1$s' will remain at %2$s"
+msgstr "Група LVM '%1$s' залишиться на %2$s"
+
+#. TRANSLATORS: %s is the name of the disk (eg. sda)
+#: src/components/storage/SearchedDeviceMenu.tsx:245
+#, c-format
+msgid "Partitions needed for booting will remain at %s"
+msgstr "Розділи, необхідні для завантаження, залишаться на %s"
+
+#: src/components/storage/SearchedDeviceMenu.tsx:249
+msgid "Partitions needed for booting will also be adapted"
+msgstr "Розділи, необхідні для завантаження, також будуть адаптовані"
+
+#: src/components/storage/SearchedDeviceMenu.tsx:257
+msgid "Change device menu"
+msgstr "Меню зміни пристрою"
+
+#: src/components/storage/SearchedDeviceMenu.tsx:302
+msgid "The disk is used for LVM and boot"
+msgstr "Диск використовується для LVM і завантаження"
+
+#: src/components/storage/SearchedDeviceMenu.tsx:304
+msgid "The disk is used for booting"
+msgstr "Диск використовують для завантаження"
+
+#: src/components/storage/SearchedDeviceMenu.tsx:308
+msgid "The disk is used for LVM"
+msgstr "Диск використовують для LVM"
+
+#: src/components/storage/SearchedDeviceMenu.tsx:310
+msgid "Remove the configuration for this disk"
+msgstr "Видалити конфігурацію для цього диска"
+
+#: src/components/storage/SearchedDeviceMenu.tsx:322
+msgid "Do not use"
+msgstr "Не використовувати"
+
+#: src/components/storage/SearchedDeviceMenu.tsx:354
+#, c-format
+msgid "Device %s menu"
+msgstr "Меню пристрою %s"
 
 #: src/components/storage/SpaceActionsTable.tsx:75
 msgid "The device will be used by the new system."
