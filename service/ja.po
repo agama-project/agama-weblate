@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-12 03:07+0000\n"
+"POT-Creation-Date: 2025-06-15 03:15+0000\n"
 "PO-Revision-Date: 2025-06-12 10:59+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
-"Language-Team: Japanese <https://l10n.opensuse.org/projects/agama/"
-"agama-service-master/ja/>\n"
+"Language-Team: Japanese <https://l10n.opensuse.org/projects/agama/agama-"
+"service-master/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -62,7 +62,7 @@ msgstr "ストレージの翻訳の読み込み"
 
 #. @param certificate [Agama::SSL::Certificate]
 #. @return [Agama::Question]
-#: service/lib/agama/registration.rb:374
+#: service/lib/agama/registration.rb:421
 msgid ""
 "Trying to import a self signed certificate. Do you want to trust it and "
 "register the product?"
@@ -145,10 +145,10 @@ msgid ""
 "be \"%{expected}\". The file has changed by accident or by an attacker since "
 "the creater signed it. Use it anyway?"
 msgstr ""
-"ファイル %{file} のチェックサムは \"%{found}\" ですが、正しくは \"%{expected}"
-"\" であるべきものです。作成者が署名したあと、何らかの事故で書き換わってしまっ"
-"たか、もしくは不正な攻撃者が書き換えた可能性があります。このファイルを使用し"
-"てよろしいですか？"
+"ファイル %{file} のチェックサムは \"%{found}\" ですが、正しくは "
+"\"%{expected}\" であるべきものです。作成者が署名したあと、何らかの事故で書き"
+"換わってしまったか、もしくは不正な攻撃者が書き換えた可能性があります。この"
+"ファイルを使用してよろしいですか？"
 
 #. DoneProvide callback
 #.
@@ -478,9 +478,10 @@ msgstr "少なくとも %s 個のデバイスが必要です (%s に対して)"
 #: service/lib/agama/storage/config_checkers/md_raid.rb:168
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be deleted because it is part of the MD RAID %"
-"{md_raid}"
-msgstr "デバイス '%{member}' は MD RAID %{md_raid} の一部であるため、削除できません"
+"The device '%{member}' cannot be deleted because it is part of the MD RAID "
+"%{md_raid}"
+msgstr ""
+"デバイス '%{member}' は MD RAID %{md_raid} の一部であるため、削除できません"
 
 #. Issue if the device member is resized.
 #.
@@ -489,10 +490,11 @@ msgstr "デバイス '%{member}' は MD RAID %{md_raid} の一部であるため
 #: service/lib/agama/storage/config_checkers/md_raid.rb:191
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be resized because it is part of the MD RAID %"
-"{md_raid}"
-msgstr "デバイス '%{member}' は MD RAID %{md_raid} "
-"の一部であるため、サイズ変更できません"
+"The device '%{member}' cannot be resized because it is part of the MD RAID "
+"%{md_raid}"
+msgstr ""
+"デバイス '%{member}' は MD RAID %{md_raid} の一部であるため、サイズ変更できま"
+"せん"
 
 #. Issue if the device member is formatted.
 #.
@@ -503,8 +505,9 @@ msgstr "デバイス '%{member}' は MD RAID %{md_raid} "
 msgid ""
 "The device '%{member}' cannot be formatted because it is part of the MD RAID "
 "%{md_raid}"
-msgstr "デバイス '%{member}' は MD RAID %{md_raid} "
-"の一部であるため、フォーマットできません"
+msgstr ""
+"デバイス '%{member}' は MD RAID %{md_raid} の一部であるため、フォーマットでき"
+"ません"
 
 #. Issue if the device member is partitioned.
 #.
@@ -515,8 +518,9 @@ msgstr "デバイス '%{member}' は MD RAID %{md_raid} "
 msgid ""
 "The device '%{member}' cannot be partitioned because it is part of the MD "
 "RAID %{md_raid}"
-msgstr "デバイス '%{member}' は MD RAID %{md_raid} "
-"の一部であるため、パーティション設定できません"
+msgstr ""
+"デバイス '%{member}' は MD RAID %{md_raid} の一部であるため、パーティション設"
+"定できません"
 
 #. Issue if the device member is used by other device (e.g., as target for physical volumes).
 #.
@@ -525,9 +529,10 @@ msgstr "デバイス '%{member}' は MD RAID %{md_raid} "
 #: service/lib/agama/storage/config_checkers/md_raid.rb:259
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be used because it is part of the MD RAID %"
-"{md_raid}"
-msgstr "デバイス '%{member}' は MD RAID %{md_raid} の一部であるため、使用できません"
+"The device '%{member}' cannot be used because it is part of the MD RAID "
+"%{md_raid}"
+msgstr ""
+"デバイス '%{member}' は MD RAID %{md_raid} の一部であるため、使用できません"
 
 #. Issue if the parent of the device member is formatted.
 #.
@@ -538,8 +543,9 @@ msgstr "デバイス '%{member}' は MD RAID %{md_raid} の一部であるため
 msgid ""
 "The device '%{device}' cannot be formatted because it is part of the MD RAID "
 "%{md_raid}"
-msgstr "デバイス '%{device}' は MD RAID %{md_raid} "
-"の一部であるため、フォーマットできません"
+msgstr ""
+"デバイス '%{device}' は MD RAID %{md_raid} の一部であるため、フォーマットでき"
+"ません"
 
 #. TRANSLATORS: 'method' is the identifier of the method to encrypt the device
 #. (e.g., 'luks1').
