@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-18 03:08+0000\n"
+"POT-Creation-Date: 2025-06-19 03:09+0000\n"
 "PO-Revision-Date: 2025-06-18 12:59+0000\n"
 "Last-Translator: Gemineo <vistatec@gemineo.de>\n"
-"Language-Team: German <https://l10n.opensuse.org/projects/agama/"
-"agama-service-master/de/>\n"
+"Language-Team: German <https://l10n.opensuse.org/projects/agama/agama-"
+"service-master/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -255,47 +255,47 @@ msgid "Trust"
 msgstr "Vertrauen"
 
 #. Should an error be raised?
-#: service/lib/agama/software/manager.rb:149
+#: service/lib/agama/software/manager.rb:150
 msgid "Refreshing repositories metadata"
 msgstr "Repositorys-Metadaten werden aktualisiert"
 
-#: service/lib/agama/software/manager.rb:150
+#: service/lib/agama/software/manager.rb:151
 #, fuzzy
 msgid "Calculating the software proposal"
 msgstr "Software-Vorschlag wird berechnet"
 
-#: service/lib/agama/software/manager.rb:154
+#: service/lib/agama/software/manager.rb:155
 #, fuzzy
 msgid "Initializing sources"
 msgstr "Quellen werden initialisiert"
 
 #. error message
-#: service/lib/agama/software/manager.rb:392
-#, c-format, fuzzy
+#: service/lib/agama/software/manager.rb:393
+#, fuzzy, c-format
 msgid "Adding service '%s' failed."
 msgstr "Fehler beim Hinzufügen des Service '%s'."
 
 #. error message
-#: service/lib/agama/software/manager.rb:397
-#, c-format, fuzzy
+#: service/lib/agama/software/manager.rb:398
+#, fuzzy, c-format
 msgid "Updating service '%s' failed."
 msgstr "Fehler beim Aktualisieren des Service '%s'."
 
 #. error message
-#: service/lib/agama/software/manager.rb:403
-#, c-format, fuzzy
+#: service/lib/agama/software/manager.rb:404
+#, fuzzy, c-format
 msgid "Saving service '%s' failed."
 msgstr "Fehler beim Speichern des Service '%s'."
 
 #. error message
-#: service/lib/agama/software/manager.rb:409
+#: service/lib/agama/software/manager.rb:410
 #, fuzzy, c-format
 msgid "Refreshing service '%s' failed."
 msgstr "Fehler beim Aktualisieren des Service '%s'."
 
 #. rubocop:enable Metrics/AbcSize
-#: service/lib/agama/software/manager.rb:418
-#, c-format, fuzzy
+#: service/lib/agama/software/manager.rb:419
+#, fuzzy, c-format
 msgid "Removing service '%s' failed."
 msgstr "Fehler beim Entfernen des Service '%s'."
 
@@ -304,15 +304,15 @@ msgstr "Fehler beim Entfernen des Service '%s'."
 #. Repositories that could not be probed are reported as errors.
 #.
 #. @return [Array<Agama::Issue>]
-#: service/lib/agama/software/manager.rb:631
-#, c-format, fuzzy
+#: service/lib/agama/software/manager.rb:664
+#, fuzzy, c-format
 msgid "Could not read repository \"%s\""
 msgstr "Das Repository \"%s\" konnte nicht gelesen werden"
 
 #. Issue when a product is missing
 #.
 #. @return [Agama::Issue]
-#: service/lib/agama/software/manager.rb:641
+#: service/lib/agama/software/manager.rb:674
 #, fuzzy
 msgid "Product not selected yet"
 msgstr "Produkt noch nicht ausgewählt"
@@ -320,7 +320,7 @@ msgstr "Produkt noch nicht ausgewählt"
 #. Issue when a product requires registration but it is not registered yet.
 #.
 #. @return [Agama::Issue]
-#: service/lib/agama/software/manager.rb:650
+#: service/lib/agama/software/manager.rb:683
 msgid "Product must be registered"
 msgstr "Produkt muss registriert sein"
 
@@ -373,7 +373,7 @@ msgstr "Organisationseinheit (OE): "
 #.
 #. @return [Issue, nil]
 #: service/lib/agama/storage/config_checkers/alias.rb:74
-#, c-format, fuzzy
+#, fuzzy, c-format
 msgid "The device with alias '%s' is used by more than one device"
 msgstr "Das Gerät mit dem Alias '%s' wird von mehreren Geräten verwendet"
 
@@ -381,7 +381,7 @@ msgstr "Das Gerät mit dem Alias '%s' wird von mehreren Geräten verwendet"
 #.
 #. @return [Issue, nil]
 #: service/lib/agama/storage/config_checkers/alias.rb:95
-#, c-format, fuzzy
+#, fuzzy, c-format
 msgid ""
 "The device with alias '%s' cannot be formatted because it is used by other "
 "device"
@@ -393,7 +393,7 @@ msgstr ""
 #.
 #. @return [Issue, nil]
 #: service/lib/agama/storage/config_checkers/alias.rb:118
-#, c-format, fuzzy
+#, fuzzy, c-format
 msgid ""
 "The device with alias '%s' cannot be partitioned because it is used by other "
 "device"
@@ -425,8 +425,8 @@ msgstr "Es gibt kein Zielgerät für physische LVM-Volumes mit dem Alias ‚%s�
 msgid ""
 "No passphrase provided (required for using the method '%{crypt_method}')."
 msgstr ""
-"Keine Passphrase angegeben (erforderlich für die Verwendung der Methode '%"
-"{crypt_method}')."
+"Keine Passphrase angegeben (erforderlich für die Verwendung der Methode "
+"'%{crypt_method}')."
 
 #. TRANSLATORS: 'crypt_method' is the identifier of the method to encrypt the device
 #. (e.g., 'luks1', 'random_swap').
@@ -460,7 +460,7 @@ msgstr "Der Dateisystemtyp ‚%{filesystem}‘ ist nicht geeignet für ‚%{path
 
 #. TRANSLATORS: %s is the replaced by a device alias (e.g., "pv1").
 #: service/lib/agama/storage/config_checkers/logical_volume.rb:82
-#, c-format, fuzzy
+#, fuzzy, c-format
 msgid "There is no LVM thin pool volume with alias '%s'"
 msgstr "Es ist kein LVM Thin Pool-Volume mit dem Alias '%s' vorhanden"
 
@@ -482,7 +482,7 @@ msgstr "Es ist ein MD-RAID ohne Level vorhanden"
 #.
 #. @return [Issue, nil]
 #: service/lib/agama/storage/config_checkers/md_raid.rb:121
-#, c-format, fuzzy
+#, fuzzy, c-format
 msgid "At least %s devices are required for %s"
 msgstr "Mindestens %s Geräte sind für %s erforderlich"
 
@@ -493,8 +493,8 @@ msgstr "Mindestens %s Geräte sind für %s erforderlich"
 #: service/lib/agama/storage/config_checkers/md_raid.rb:168
 #, fuzzy, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be deleted because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be deleted because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
 "Das Gerät '%{member}' kann nicht gelöscht werden, da es Teil des MD-RAID "
 "'%{md_raid}' ist"
@@ -506,8 +506,8 @@ msgstr ""
 #: service/lib/agama/storage/config_checkers/md_raid.rb:191
 #, fuzzy, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be resized because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be resized because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
 "Die Größe des Geräts '%{member}' kann nicht geändert werden, da es Teil des "
 "MD-RAID '%{md_raid}' ist"
@@ -545,8 +545,8 @@ msgstr ""
 #: service/lib/agama/storage/config_checkers/md_raid.rb:259
 #, fuzzy, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be used because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be used because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
 "Das Gerät '%{member}' kann nicht verwendet werden, da es Teil des MD-RAID "
 "'%{md_raid}' ist"
@@ -575,13 +575,13 @@ msgstr ""
 
 #. TRANSLATORS: %s is replaced by a device name (e.g., "/dev/vda").
 #: service/lib/agama/storage/config_checkers/search.rb:74
-#, c-format, fuzzy
+#, fuzzy, c-format
 msgid "Mandatory device %s not found"
 msgstr "Obligatorisches Gerät '%s' nicht gefunden"
 
 #. TRANSLATORS: %s is replaced by a device type (e.g., "drive").
 #: service/lib/agama/storage/config_checkers/search.rb:77
-#, c-format, fuzzy
+#, fuzzy, c-format
 msgid "Mandatory %s not found"
 msgstr "%s (obligatorisch) nicht gefunden"
 
@@ -618,13 +618,13 @@ msgstr "Es ist eine Volume-Gruppe ohne Namen vorhanden"
 
 #. TRANSLATORS: %s is the replaced by a device alias (e.g., "pv1").
 #: service/lib/agama/storage/config_checkers/volume_group.rb:106
-#, c-format, fuzzy
+#, fuzzy, c-format
 msgid "There is no LVM physical volume with alias '%s'"
 msgstr "Es ist kein physisches Volume mit dem Alias '%s' vorhanden"
 
 #. TRANSLATORS: %s is the replaced by a device alias (e.g., "pv1").
 #: service/lib/agama/storage/config_checkers/volume_group.rb:133
-#, c-format, fuzzy
+#, fuzzy, c-format
 msgid ""
 "The list of target devices for the volume group '%s' is mixing reused "
 "devices and new devices"
@@ -686,7 +686,7 @@ msgstr "iSCSI-Ziele anmelden"
 #. @param target [ISCSI::Configs::Target]
 #. @return [Issue]
 #: service/lib/agama/storage/iscsi/manager.rb:346
-#, c-format, fuzzy
+#, fuzzy, c-format
 msgid "Cannot login to iSCSI target %s"
 msgstr "Anmelden beim iSCSI-Ziel '%s' nicht möglich"
 
