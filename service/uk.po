@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-06-19 03:09+0000\n"
-"PO-Revision-Date: 2025-06-21 17:35+0000\n"
-"Last-Translator: Naparte Starrynight <neketos851@proton.me>\n"
+"PO-Revision-Date: 2025-06-21 18:59+0000\n"
+"Last-Translator: Eugene Krater <lachend@gmail.com>\n"
 "Language-Team: Ukrainian <https://l10n.opensuse.org/projects/agama/"
 "agama-service-master/uk/>\n"
 "Language: uk\n"
@@ -458,7 +458,7 @@ msgstr "Не існує пристрою-члена MD RAID з псевдоні�
 #. @return [Issue, nil]
 #: service/lib/agama/storage/config_checkers/md_raid.rb:110
 msgid "There is a MD RAID without level"
-msgstr ""
+msgstr "Існує RAID-масив MD без рівня"
 
 #. Issue if the MD RAID does not contain enough member devices.
 #.
@@ -466,72 +466,72 @@ msgstr ""
 #: service/lib/agama/storage/config_checkers/md_raid.rb:121
 #, c-format
 msgid "At least %s devices are required for %s"
-msgstr ""
+msgstr "Потрібно не менше %s пристроїв для %s"
 
 #. Issue if the device member is deleted.
 #.
 #. @param member_config [#search]
 #. @return [Issue, nil]
 #: service/lib/agama/storage/config_checkers/md_raid.rb:168
-#, fuzzy, perl-brace-format
+#, perl-brace-format
 msgid ""
 "The device '%{member}' cannot be deleted because it is part of the MD RAID %"
 "{md_raid}"
 msgstr ""
-"Пристрій із псевдонімом «%s» не може бути відформатований, оскільки він "
-"використовується іншим пристроєм"
+"Пристрій «%{member}» не може бути видалений, оскільки він є частиною MD RAID "
+"%{md_raid}"
 
 #. Issue if the device member is resized.
 #.
 #. @param member_config [#search]
 #. @return [Issue, nil]
 #: service/lib/agama/storage/config_checkers/md_raid.rb:191
-#, fuzzy, perl-brace-format
+#, perl-brace-format
 msgid ""
 "The device '%{member}' cannot be resized because it is part of the MD RAID %"
 "{md_raid}"
 msgstr ""
-"Пристрій із псевдонімом «%s» не може бути розбитий на розділи, тому що він "
-"використовується іншим пристроєм"
+"Розмір пристрою «%{member}» не може бути змінений, тому що він є частиною MD "
+"RAID %{md_raid}"
 
 #. Issue if the device member is formatted.
 #.
 #. @param member_config [#search]
 #. @return [Issue, nil]
 #: service/lib/agama/storage/config_checkers/md_raid.rb:214
-#, fuzzy, perl-brace-format
+#, perl-brace-format
 msgid ""
 "The device '%{member}' cannot be formatted because it is part of the MD RAID "
 "%{md_raid}"
 msgstr ""
-"Пристрій із псевдонімом «%s» не може бути відформатований, оскільки він "
-"використовується іншим пристроєм"
+"Пристрій «%{member}» не може бути відформатований, оскільки він є частиною "
+"MD RAID %{md_raid}"
 
 #. Issue if the device member is partitioned.
 #.
 #. @param member_config [#search]
 #. @return [Issue, nil]
 #: service/lib/agama/storage/config_checkers/md_raid.rb:237
-#, fuzzy, perl-brace-format
+#, perl-brace-format
 msgid ""
 "The device '%{member}' cannot be partitioned because it is part of the MD "
 "RAID %{md_raid}"
 msgstr ""
-"Пристрій із псевдонімом «%s» не може бути розбитий на розділи, тому що він "
-"використовується іншим пристроєм"
+"Пристрій «%{member}» не може бути розбитий на розділи, тому що він є "
+"частиною MD RAID %{md_raid}"
 
 #. Issue if the device member is used by other device (e.g., as target for physical volumes).
 #.
 #. @param member_config [#search]
 #. @return [Issue, nil]
 #: service/lib/agama/storage/config_checkers/md_raid.rb:259
-#, fuzzy, perl-brace-format
+#, perl-brace-format
 msgid ""
 "The device '%{member}' cannot be used because it is part of the MD RAID %"
 "{md_raid}"
 msgstr ""
-"Пристрій із псевдонімом «%s» не може бути відформатований, оскільки він "
-"використовується іншим пристроєм"
+"Пристрій «%{member}» не може бути використаний, оскільки він є частиною MD "
+"RAID %{md_raid}"
 
 #. Issue if the parent of the device member is formatted.
 #.
@@ -580,7 +580,7 @@ msgstr "розділ"
 
 #: service/lib/agama/storage/config_checkers/search.rb:91
 msgid "LVM logical volume"
-msgstr "логічний розділ LVM"
+msgstr "логічний том LVM"
 
 #: service/lib/agama/storage/config_checkers/search.rb:93
 msgid "device"
@@ -591,7 +591,7 @@ msgstr ""
 #. @return [Issue, nil]
 #: service/lib/agama/storage/config_checkers/volume_group.rb:76
 msgid "There is a volume group without name"
-msgstr ""
+msgstr "Існує група томів без назви"
 
 #. TRANSLATORS: %s is the replaced by a device alias (e.g., "pv1").
 #: service/lib/agama/storage/config_checkers/volume_group.rb:106
@@ -606,6 +606,8 @@ msgid ""
 "The list of target devices for the volume group '%s' is mixing reused "
 "devices and new devices"
 msgstr ""
+"У списку цільових пристроїв для групи томів «%s» змішані повторно "
+"використовувані та нові пристрої"
 
 #. TRANSLATORS: %s is the replaced by a device alias (e.g., "disk1").
 #: service/lib/agama/storage/config_checkers/volume_group.rb:153
@@ -647,11 +649,11 @@ msgstr "Цей пристрій не підтримує стискання"
 #. @param config [ISCSI::Config]
 #: service/lib/agama/storage/iscsi/manager.rb:291
 msgid "Logout iSCSI targets"
-msgstr ""
+msgstr "Вихід із iSCSI-цілей"
 
 #: service/lib/agama/storage/iscsi/manager.rb:292
 msgid "Login iSCSI targets"
-msgstr ""
+msgstr "Вхід в систему iSCSI-цілей"
 
 #. Login issue.
 #.
@@ -660,7 +662,7 @@ msgstr ""
 #: service/lib/agama/storage/iscsi/manager.rb:346
 #, c-format
 msgid "Cannot login to iSCSI target %s"
-msgstr ""
+msgstr "Неможливо увійти в систему iSCSI-цілі %s"
 
 #. Underlying yast-storage-ng has own mechanism for proposing boot strategies.
 #. However, we don't always want to use BLS when it proposes so. Currently
@@ -705,6 +707,7 @@ msgstr "Запис системної конфігурації завантаж�
 #: service/lib/agama/storage/proposal.rb:364
 msgid "Cannot calculate a valid storage setup with the current configuration"
 msgstr ""
+"Не вдається обчислити правильне налаштування сховища з поточною конфігурацією"
 
 #. Issue to communicate a generic Y2Storage error.
 #.
