@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-19 03:09+0000\n"
+"POT-Creation-Date: 2025-06-22 03:16+0000\n"
 "PO-Revision-Date: 2025-06-12 10:59+0000\n"
 "Last-Translator: Luna  Jernberg <bittin@opensuse.org>\n"
 "Language-Team: Swedish <https://l10n.opensuse.org/projects/agama/agama-"
@@ -211,8 +211,8 @@ msgid ""
 "The file %{filename} is digitally signed with the following unknown GnuPG "
 "key: %{key_id}. Use it anyway?"
 msgstr ""
-"Filen %{filename} är digitalt signerad med följande okända GnuPG-nyckel: %"
-"{key_id}. Vill du använda den ändå?"
+"Filen %{filename} är digitalt signerad med följande okända GnuPG-nyckel: "
+"%{key_id}. Vill du använda den ändå?"
 
 #. Callback to handle file verification failures
 #.
@@ -476,11 +476,11 @@ msgstr "Minst %s enheter krävs för %s"
 #: service/lib/agama/storage/config_checkers/md_raid.rb:168
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be deleted because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be deleted because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
-"Enheten '%{member}' kan inte tas bort eftersom den är en del av MD RAID %"
-"{md_raid}"
+"Enheten '%{member}' kan inte tas bort eftersom den är en del av MD RAID "
+"%{md_raid}"
 
 #. Issue if the device member is resized.
 #.
@@ -489,8 +489,8 @@ msgstr ""
 #: service/lib/agama/storage/config_checkers/md_raid.rb:191
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be resized because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be resized because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
 "Enheten '%{member}' kan inte ändras i storlek eftersom det är en del av MD "
 "RAID %{md_raid}"
@@ -505,8 +505,8 @@ msgid ""
 "The device '%{member}' cannot be formatted because it is part of the MD RAID "
 "%{md_raid}"
 msgstr ""
-"Enheten '%{member}' kan inte formateras eftersom den är en del av MD RAID %"
-"{md_raid}"
+"Enheten '%{member}' kan inte formateras eftersom den är en del av MD RAID "
+"%{md_raid}"
 
 #. Issue if the device member is partitioned.
 #.
@@ -528,11 +528,11 @@ msgstr ""
 #: service/lib/agama/storage/config_checkers/md_raid.rb:259
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be used because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be used because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
-"Enheten '%{member}' kan inte användas eftersom den är en del av MD RAID %"
-"{md_raid}"
+"Enheten '%{member}' kan inte användas eftersom den är en del av MD RAID "
+"%{md_raid}"
 
 #. Issue if the parent of the device member is formatted.
 #.
@@ -544,8 +544,8 @@ msgid ""
 "The device '%{device}' cannot be formatted because it is part of the MD RAID "
 "%{md_raid}"
 msgstr ""
-"Enheten '%{device}' kan inte formateras eftersom den är en del av MD RAID %"
-"{md_raid}"
+"Enheten '%{device}' kan inte formateras eftersom den är en del av MD RAID "
+"%{md_raid}"
 
 #. TRANSLATORS: 'method' is the identifier of the method to encrypt the device
 #. (e.g., 'luks1').
@@ -644,14 +644,76 @@ msgstr ""
 msgid "Shrinking is not supported by this device"
 msgstr "Krympning stöds inte på den här enheten"
 
+#. Copy /etc/nvme/host* to keep NVMe working after installation, bsc#1238038
+#: service/lib/agama/storage/finisher.rb:145
+#, fuzzy
+msgid "Copying important installation files to the target system"
+msgstr "Skriver förråd till målsystemet"
+
+#. Constructor
+#: service/lib/agama/storage/finisher.rb:186
+#, fuzzy
+msgid "Writing Linux Security Modules configuration"
+msgstr "Väljer Linux säkerhetsmoduler"
+
+#. Step to write the bootloader configuration
+#: service/lib/agama/storage/finisher.rb:197
+#, fuzzy
+msgid "Installing bootloader"
+msgstr "Installera programvara"
+
+#. Step to finish the Y2Storage configuration
+#: service/lib/agama/storage/finisher.rb:214
+#, fuzzy
+msgid "Adjusting storage configuration"
+msgstr "Slutför lagringskonfiguration"
+
+#. Step to finish the iSCSI configuration
+#: service/lib/agama/storage/finisher.rb:225
+#, fuzzy
+msgid "Adjusting iSCSI configuration"
+msgstr "Slutför lagringskonfiguration"
+
+#. Step to configure the file-system snapshots
+#: service/lib/agama/storage/finisher.rb:236
+#, fuzzy
+msgid "Configuring file systems snapshots"
+msgstr "Konfigurera systemet"
+
+#. Step to copy the installation logs
+#: service/lib/agama/storage/finisher.rb:249
+msgid "Copying logs"
+msgstr ""
+
+#. Executes post-installation scripts
+#: service/lib/agama/storage/finisher.rb:283
+msgid "Running user-defined scripts"
+msgstr ""
+
+#. Executes post-installation scripts
+#: service/lib/agama/storage/finisher.rb:322
+msgid "Deploying user-defined files"
+msgstr ""
+
+#. Step to unmount the target file-systems
+#: service/lib/agama/storage/finisher.rb:341
+#, fuzzy
+msgid "Unmounting storage devices"
+msgstr "Undersöker lagringsenheter"
+
+#. Step to write the mountlist file for Iguana, if needed
+#: service/lib/agama/storage/finisher.rb:357
+msgid "Configuring Iguana"
+msgstr ""
+
 #. Applies the target configs.
 #.
 #. @param config [ISCSI::Config]
-#: service/lib/agama/storage/iscsi/manager.rb:291
+#: service/lib/agama/storage/iscsi/manager.rb:300
 msgid "Logout iSCSI targets"
 msgstr "Logga ut iSCSI-mål"
 
-#: service/lib/agama/storage/iscsi/manager.rb:292
+#: service/lib/agama/storage/iscsi/manager.rb:301
 msgid "Login iSCSI targets"
 msgstr "Logga in iSCSI-mål"
 
@@ -659,7 +721,7 @@ msgstr "Logga in iSCSI-mål"
 #.
 #. @param target [ISCSI::Configs::Target]
 #. @return [Issue]
-#: service/lib/agama/storage/iscsi/manager.rb:346
+#: service/lib/agama/storage/iscsi/manager.rb:355
 #, c-format
 msgid "Cannot login to iSCSI target %s"
 msgstr "Kan inte logga in på iSCSI-mål %s"
@@ -792,12 +854,6 @@ msgstr ""
 
 #~ msgid "Writing repositories information"
 #~ msgstr "Skriver information om förråd"
-
-#~ msgid "Finishing storage configuration"
-#~ msgstr "Slutför lagringskonfiguration"
-
-#~ msgid "Writing repositories to the target system"
-#~ msgstr "Skriver förråd till målsystemet"
 
 #~ msgid "Initializing target repositories"
 #~ msgstr "Initierar målförråd"

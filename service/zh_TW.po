@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-19 03:09+0000\n"
+"POT-Creation-Date: 2025-06-22 03:16+0000\n"
 "PO-Revision-Date: 2025-06-17 02:59+0000\n"
 "Last-Translator: Grace Yu <grace.yu@excel-gits.com>\n"
 "Language-Team: Chinese (Taiwan) <https://l10n.opensuse.org/projects/agama/"
@@ -194,8 +194,8 @@ msgid ""
 "The file %{filename} from %{repo_url} is digitally signed with the following "
 "unknown GnuPG key: %{key_id}. Use it anyway?"
 msgstr ""
-"%{repo_url} 中的檔案 %{filename} 是使用以下未知 GnuPG 金鑰進行數位簽署的：%"
-"{key_id}。是否仍要使用它？"
+"%{repo_url} 中的檔案 %{filename} 是使用以下未知 GnuPG 金鑰進行數位簽署的："
+"%{key_id}。是否仍要使用它？"
 
 #: service/lib/agama/software/callbacks/signature.rb:137
 #, perl-brace-format
@@ -459,8 +459,8 @@ msgstr "至少需要 %s 部裝置 (針對 %s)"
 #: service/lib/agama/storage/config_checkers/md_raid.rb:168
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be deleted because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be deleted because it is part of the MD RAID "
+"%{md_raid}"
 msgstr "無法刪除裝置 '%{member}'，因為它是 MD RAID %{md_raid} 的一部分"
 
 #. Issue if the device member is resized.
@@ -470,8 +470,8 @@ msgstr "無法刪除裝置 '%{member}'，因為它是 MD RAID %{md_raid} 的一�
 #: service/lib/agama/storage/config_checkers/md_raid.rb:191
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be resized because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be resized because it is part of the MD RAID "
+"%{md_raid}"
 msgstr "無法調整裝置 '%{member}' 的大小，因為它是 MD RAID %{md_raid} 的一部分"
 
 #. Issue if the device member is formatted.
@@ -504,8 +504,8 @@ msgstr ""
 #: service/lib/agama/storage/config_checkers/md_raid.rb:259
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be used because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be used because it is part of the MD RAID "
+"%{md_raid}"
 msgstr "無法使用裝置 '%{member}'，因為它是 MD RAID %{md_raid} 的一部分"
 
 #. Issue if the parent of the device member is formatted.
@@ -612,14 +612,73 @@ msgstr ""
 msgid "Shrinking is not supported by this device"
 msgstr "此裝置不支援縮小操作"
 
+#. Copy /etc/nvme/host* to keep NVMe working after installation, bsc#1238038
+#: service/lib/agama/storage/finisher.rb:145
+msgid "Copying important installation files to the target system"
+msgstr ""
+
+#. Constructor
+#: service/lib/agama/storage/finisher.rb:186
+#, fuzzy
+msgid "Writing Linux Security Modules configuration"
+msgstr "正在選取 Linux 安全性模組"
+
+#. Step to write the bootloader configuration
+#: service/lib/agama/storage/finisher.rb:197
+#, fuzzy
+msgid "Installing bootloader"
+msgstr "安裝軟體"
+
+#. Step to finish the Y2Storage configuration
+#: service/lib/agama/storage/finisher.rb:214
+msgid "Adjusting storage configuration"
+msgstr ""
+
+#. Step to finish the iSCSI configuration
+#: service/lib/agama/storage/finisher.rb:225
+msgid "Adjusting iSCSI configuration"
+msgstr ""
+
+#. Step to configure the file-system snapshots
+#: service/lib/agama/storage/finisher.rb:236
+#, fuzzy
+msgid "Configuring file systems snapshots"
+msgstr "設定系統"
+
+#. Step to copy the installation logs
+#: service/lib/agama/storage/finisher.rb:249
+msgid "Copying logs"
+msgstr ""
+
+#. Executes post-installation scripts
+#: service/lib/agama/storage/finisher.rb:283
+msgid "Running user-defined scripts"
+msgstr ""
+
+#. Executes post-installation scripts
+#: service/lib/agama/storage/finisher.rb:322
+msgid "Deploying user-defined files"
+msgstr ""
+
+#. Step to unmount the target file-systems
+#: service/lib/agama/storage/finisher.rb:341
+#, fuzzy
+msgid "Unmounting storage devices"
+msgstr "正在查探儲存裝置"
+
+#. Step to write the mountlist file for Iguana, if needed
+#: service/lib/agama/storage/finisher.rb:357
+msgid "Configuring Iguana"
+msgstr ""
+
 #. Applies the target configs.
 #.
 #. @param config [ISCSI::Config]
-#: service/lib/agama/storage/iscsi/manager.rb:291
+#: service/lib/agama/storage/iscsi/manager.rb:300
 msgid "Logout iSCSI targets"
 msgstr "登出 iSCSI 目標"
 
-#: service/lib/agama/storage/iscsi/manager.rb:292
+#: service/lib/agama/storage/iscsi/manager.rb:301
 msgid "Login iSCSI targets"
 msgstr "登入 iSCSI 目標"
 
@@ -627,7 +686,7 @@ msgstr "登入 iSCSI 目標"
 #.
 #. @param target [ISCSI::Configs::Target]
 #. @return [Issue]
-#: service/lib/agama/storage/iscsi/manager.rb:346
+#: service/lib/agama/storage/iscsi/manager.rb:355
 #, c-format
 msgid "Cannot login to iSCSI target %s"
 msgstr "無法登入 iSCSI 目標 %s"

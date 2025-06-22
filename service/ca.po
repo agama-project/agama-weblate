@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-19 03:09+0000\n"
+"POT-Creation-Date: 2025-06-22 03:16+0000\n"
 "PO-Revision-Date: 2025-06-12 10:59+0000\n"
 "Last-Translator: David Medina <medipas@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.opensuse.org/projects/agama/agama-"
@@ -228,8 +228,8 @@ msgid ""
 "anyway?"
 msgstr ""
 "El fitxer %{filename} de %{repo_url} està signat digitalment amb la clau "
-"GnuPG següent, però la comprovació d'integritat ha fallat: %{key_id} (%"
-"{key_name}). Voleu usar-lo tanmateix?"
+"GnuPG següent, però la comprovació d'integritat ha fallat: %{key_id} "
+"(%{key_name}). Voleu usar-lo tanmateix?"
 
 #: service/lib/agama/software/callbacks/signature.rb:175
 #, perl-brace-format
@@ -412,8 +412,8 @@ msgstr "No hi ha cap dispositiu d'arrencada amb l'àlies %s."
 msgid ""
 "No passphrase provided (required for using the method '%{crypt_method}')."
 msgstr ""
-"No s'ha proporcionat cap frase de contrasenya (cal per usar el mètode %"
-"{crypt_method})."
+"No s'ha proporcionat cap frase de contrasenya (cal per usar el mètode "
+"%{crypt_method})."
 
 #. TRANSLATORS: 'crypt_method' is the identifier of the method to encrypt the device
 #. (e.g., 'luks1', 'random_swap').
@@ -480,11 +480,11 @@ msgstr "Calen almenys %s dispositius per a %s."
 #: service/lib/agama/storage/config_checkers/md_raid.rb:168
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be deleted because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be deleted because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
-"El dispositiu %{member} no es pot suprimir perquè forma part de la RAID MD %"
-"{md_raid}"
+"El dispositiu %{member} no es pot suprimir perquè forma part de la RAID MD "
+"%{md_raid}"
 
 #. Issue if the device member is resized.
 #.
@@ -493,8 +493,8 @@ msgstr ""
 #: service/lib/agama/storage/config_checkers/md_raid.rb:191
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be resized because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be resized because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
 "No es pot canviar la mida del dispositiu %{member} perquè forma part de la "
 "RAID MD %{md_raid}"
@@ -509,8 +509,8 @@ msgid ""
 "The device '%{member}' cannot be formatted because it is part of the MD RAID "
 "%{md_raid}"
 msgstr ""
-"El dispositiu %{member} no es pot formatar perquè forma part de la RAID MD %"
-"{md_raid}"
+"El dispositiu %{member} no es pot formatar perquè forma part de la RAID MD "
+"%{md_raid}"
 
 #. Issue if the device member is partitioned.
 #.
@@ -522,8 +522,8 @@ msgid ""
 "The device '%{member}' cannot be partitioned because it is part of the MD "
 "RAID %{md_raid}"
 msgstr ""
-"El dispositiu %{member} no es pot partir perquè forma part de la RAID MD %"
-"{md_raid}"
+"El dispositiu %{member} no es pot partir perquè forma part de la RAID MD "
+"%{md_raid}"
 
 #. Issue if the device member is used by other device (e.g., as target for physical volumes).
 #.
@@ -532,11 +532,11 @@ msgstr ""
 #: service/lib/agama/storage/config_checkers/md_raid.rb:259
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be used because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be used because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
-"El dispositiu %{member} no es pot usar perquè forma part de la RAID MD %"
-"{md_raid}"
+"El dispositiu %{member} no es pot usar perquè forma part de la RAID MD "
+"%{md_raid}"
 
 #. Issue if the parent of the device member is formatted.
 #.
@@ -548,8 +548,8 @@ msgid ""
 "The device '%{device}' cannot be formatted because it is part of the MD RAID "
 "%{md_raid}"
 msgstr ""
-"El dispositiu %{device} no es pot formatar perquè forma part de la RAID MD %"
-"{md_raid}"
+"El dispositiu %{device} no es pot formatar perquè forma part de la RAID MD "
+"%{md_raid}"
 
 #. TRANSLATORS: 'method' is the identifier of the method to encrypt the device
 #. (e.g., 'luks1').
@@ -653,14 +653,76 @@ msgstr ""
 msgid "Shrinking is not supported by this device"
 msgstr "Aquest dispositiu no admet l'encongiment."
 
+#. Copy /etc/nvme/host* to keep NVMe working after installation, bsc#1238038
+#: service/lib/agama/storage/finisher.rb:145
+#, fuzzy
+msgid "Copying important installation files to the target system"
+msgstr "Escrivint els repositoris al sistema de destinació"
+
+#. Constructor
+#: service/lib/agama/storage/finisher.rb:186
+#, fuzzy
+msgid "Writing Linux Security Modules configuration"
+msgstr "Seleccionant els mòduls de seguretat de Linux"
+
+#. Step to write the bootloader configuration
+#: service/lib/agama/storage/finisher.rb:197
+#, fuzzy
+msgid "Installing bootloader"
+msgstr "Instal·lació de programari"
+
+#. Step to finish the Y2Storage configuration
+#: service/lib/agama/storage/finisher.rb:214
+#, fuzzy
+msgid "Adjusting storage configuration"
+msgstr "Acabant la configuració de l'emmagatzematge"
+
+#. Step to finish the iSCSI configuration
+#: service/lib/agama/storage/finisher.rb:225
+#, fuzzy
+msgid "Adjusting iSCSI configuration"
+msgstr "Acabant la configuració de l'emmagatzematge"
+
+#. Step to configure the file-system snapshots
+#: service/lib/agama/storage/finisher.rb:236
+#, fuzzy
+msgid "Configuring file systems snapshots"
+msgstr "Configuració del sistema"
+
+#. Step to copy the installation logs
+#: service/lib/agama/storage/finisher.rb:249
+msgid "Copying logs"
+msgstr ""
+
+#. Executes post-installation scripts
+#: service/lib/agama/storage/finisher.rb:283
+msgid "Running user-defined scripts"
+msgstr ""
+
+#. Executes post-installation scripts
+#: service/lib/agama/storage/finisher.rb:322
+msgid "Deploying user-defined files"
+msgstr ""
+
+#. Step to unmount the target file-systems
+#: service/lib/agama/storage/finisher.rb:341
+#, fuzzy
+msgid "Unmounting storage devices"
+msgstr "Sondant els dispositius d'emmagatzematge"
+
+#. Step to write the mountlist file for Iguana, if needed
+#: service/lib/agama/storage/finisher.rb:357
+msgid "Configuring Iguana"
+msgstr ""
+
 #. Applies the target configs.
 #.
 #. @param config [ISCSI::Config]
-#: service/lib/agama/storage/iscsi/manager.rb:291
+#: service/lib/agama/storage/iscsi/manager.rb:300
 msgid "Logout iSCSI targets"
 msgstr "Surt de la sessió dels objectius iSCSI"
 
-#: service/lib/agama/storage/iscsi/manager.rb:292
+#: service/lib/agama/storage/iscsi/manager.rb:301
 msgid "Login iSCSI targets"
 msgstr "Inicia sessió als objectius iSCSI"
 
@@ -668,7 +730,7 @@ msgstr "Inicia sessió als objectius iSCSI"
 #.
 #. @param target [ISCSI::Configs::Target]
 #. @return [Issue]
-#: service/lib/agama/storage/iscsi/manager.rb:346
+#: service/lib/agama/storage/iscsi/manager.rb:355
 #, c-format
 msgid "Cannot login to iSCSI target %s"
 msgstr "No es pot iniciar sessió a l'objectiu iSCSI %s."
@@ -806,12 +868,6 @@ msgstr ""
 
 #~ msgid "Writing repositories information"
 #~ msgstr "Escrivint la informació dels repositoris"
-
-#~ msgid "Finishing storage configuration"
-#~ msgstr "Acabant la configuració de l'emmagatzematge"
-
-#~ msgid "Writing repositories to the target system"
-#~ msgstr "Escrivint els repositoris al sistema de destinació"
 
 #~ msgid "Initializing target repositories"
 #~ msgstr "Iniciant els repositoris de destinació"

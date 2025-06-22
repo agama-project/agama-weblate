@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-19 03:09+0000\n"
+"POT-Creation-Date: 2025-06-22 03:16+0000\n"
 "PO-Revision-Date: 2025-06-12 10:59+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/agama/agama-"
@@ -145,10 +145,10 @@ msgid ""
 "be \"%{expected}\". The file has changed by accident or by an attacker since "
 "the creater signed it. Use it anyway?"
 msgstr ""
-"ファイル %{file} のチェックサムは \"%{found}\" ですが、正しくは \"%{expected}"
-"\" であるべきものです。作成者が署名したあと、何らかの事故で書き換わってしまっ"
-"たか、もしくは不正な攻撃者が書き換えた可能性があります。このファイルを使用し"
-"てよろしいですか？"
+"ファイル %{file} のチェックサムは \"%{found}\" ですが、正しくは "
+"\"%{expected}\" であるべきものです。作成者が署名したあと、何らかの事故で書き"
+"換わってしまったか、もしくは不正な攻撃者が書き換えた可能性があります。この"
+"ファイルを使用してよろしいですか？"
 
 #. DoneProvide callback
 #.
@@ -478,8 +478,8 @@ msgstr "少なくとも %s 個のデバイスが必要です (%s に対して)"
 #: service/lib/agama/storage/config_checkers/md_raid.rb:168
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be deleted because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be deleted because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
 "デバイス '%{member}' は MD RAID %{md_raid} の一部であるため、削除できません"
 
@@ -490,8 +490,8 @@ msgstr ""
 #: service/lib/agama/storage/config_checkers/md_raid.rb:191
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be resized because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be resized because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
 "デバイス '%{member}' は MD RAID %{md_raid} の一部であるため、サイズ変更できま"
 "せん"
@@ -529,8 +529,8 @@ msgstr ""
 #: service/lib/agama/storage/config_checkers/md_raid.rb:259
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be used because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be used because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
 "デバイス '%{member}' は MD RAID %{md_raid} の一部であるため、使用できません"
 
@@ -643,14 +643,76 @@ msgstr ""
 msgid "Shrinking is not supported by this device"
 msgstr "このデバイスはサイズ縮小に対応していません"
 
+#. Copy /etc/nvme/host* to keep NVMe working after installation, bsc#1238038
+#: service/lib/agama/storage/finisher.rb:145
+#, fuzzy
+msgid "Copying important installation files to the target system"
+msgstr "インストール先のシステムにリポジトリ情報を書き込んでいます"
+
+#. Constructor
+#: service/lib/agama/storage/finisher.rb:186
+#, fuzzy
+msgid "Writing Linux Security Modules configuration"
+msgstr "Linux セキュリティモジュールを選択しています"
+
+#. Step to write the bootloader configuration
+#: service/lib/agama/storage/finisher.rb:197
+#, fuzzy
+msgid "Installing bootloader"
+msgstr "ソフトウエアのインストール"
+
+#. Step to finish the Y2Storage configuration
+#: service/lib/agama/storage/finisher.rb:214
+#, fuzzy
+msgid "Adjusting storage configuration"
+msgstr "ストレージ設定を完了しています"
+
+#. Step to finish the iSCSI configuration
+#: service/lib/agama/storage/finisher.rb:225
+#, fuzzy
+msgid "Adjusting iSCSI configuration"
+msgstr "ストレージ設定を完了しています"
+
+#. Step to configure the file-system snapshots
+#: service/lib/agama/storage/finisher.rb:236
+#, fuzzy
+msgid "Configuring file systems snapshots"
+msgstr "システムの設定"
+
+#. Step to copy the installation logs
+#: service/lib/agama/storage/finisher.rb:249
+msgid "Copying logs"
+msgstr ""
+
+#. Executes post-installation scripts
+#: service/lib/agama/storage/finisher.rb:283
+msgid "Running user-defined scripts"
+msgstr ""
+
+#. Executes post-installation scripts
+#: service/lib/agama/storage/finisher.rb:322
+msgid "Deploying user-defined files"
+msgstr ""
+
+#. Step to unmount the target file-systems
+#: service/lib/agama/storage/finisher.rb:341
+#, fuzzy
+msgid "Unmounting storage devices"
+msgstr "ストレージデバイスを検出しています"
+
+#. Step to write the mountlist file for Iguana, if needed
+#: service/lib/agama/storage/finisher.rb:357
+msgid "Configuring Iguana"
+msgstr ""
+
 #. Applies the target configs.
 #.
 #. @param config [ISCSI::Config]
-#: service/lib/agama/storage/iscsi/manager.rb:291
+#: service/lib/agama/storage/iscsi/manager.rb:300
 msgid "Logout iSCSI targets"
 msgstr "iSCSI ターゲットからのログアウト"
 
-#: service/lib/agama/storage/iscsi/manager.rb:292
+#: service/lib/agama/storage/iscsi/manager.rb:301
 msgid "Login iSCSI targets"
 msgstr "iSCSI ターゲットへのログイン"
 
@@ -658,7 +720,7 @@ msgstr "iSCSI ターゲットへのログイン"
 #.
 #. @param target [ISCSI::Configs::Target]
 #. @return [Issue]
-#: service/lib/agama/storage/iscsi/manager.rb:346
+#: service/lib/agama/storage/iscsi/manager.rb:355
 #, c-format
 msgid "Cannot login to iSCSI target %s"
 msgstr "iSCSI ターゲット %s にログインできません"
@@ -787,12 +849,6 @@ msgstr ""
 
 #~ msgid "Writing repositories information"
 #~ msgstr "リポジトリ情報を書き込んでいます"
-
-#~ msgid "Finishing storage configuration"
-#~ msgstr "ストレージ設定を完了しています"
-
-#~ msgid "Writing repositories to the target system"
-#~ msgstr "インストール先のシステムにリポジトリ情報を書き込んでいます"
 
 #~ msgid "Initializing target repositories"
 #~ msgstr "目的のリポジトリを準備しています"

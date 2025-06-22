@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-19 03:09+0000\n"
+"POT-Creation-Date: 2025-06-22 03:16+0000\n"
 "PO-Revision-Date: 2025-01-22 13:50+0000\n"
 "Last-Translator: Timo Jyrinki <tjyrinki@suse.com>\n"
 "Language-Team: Finnish <https://l10n.opensuse.org/projects/agama/agama-"
@@ -452,8 +452,8 @@ msgstr ""
 #: service/lib/agama/storage/config_checkers/md_raid.rb:168
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be deleted because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be deleted because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
 
 #. Issue if the device member is resized.
@@ -463,8 +463,8 @@ msgstr ""
 #: service/lib/agama/storage/config_checkers/md_raid.rb:191
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be resized because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be resized because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
 
 #. Issue if the device member is formatted.
@@ -496,8 +496,8 @@ msgstr ""
 #: service/lib/agama/storage/config_checkers/md_raid.rb:259
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be used because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be used because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
 
 #. Issue if the parent of the device member is formatted.
@@ -607,14 +607,73 @@ msgstr ""
 msgid "Shrinking is not supported by this device"
 msgstr "Tämä laite ei tue koon pienentämistä"
 
+#. Copy /etc/nvme/host* to keep NVMe working after installation, bsc#1238038
+#: service/lib/agama/storage/finisher.rb:145
+msgid "Copying important installation files to the target system"
+msgstr ""
+
+#. Constructor
+#: service/lib/agama/storage/finisher.rb:186
+#, fuzzy
+msgid "Writing Linux Security Modules configuration"
+msgstr "Valitaan Linuxin tietoturvamoduuleita (LSM)"
+
+#. Step to write the bootloader configuration
+#: service/lib/agama/storage/finisher.rb:197
+#, fuzzy
+msgid "Installing bootloader"
+msgstr "Ohjelmistojen asennus"
+
+#. Step to finish the Y2Storage configuration
+#: service/lib/agama/storage/finisher.rb:214
+msgid "Adjusting storage configuration"
+msgstr ""
+
+#. Step to finish the iSCSI configuration
+#: service/lib/agama/storage/finisher.rb:225
+msgid "Adjusting iSCSI configuration"
+msgstr ""
+
+#. Step to configure the file-system snapshots
+#: service/lib/agama/storage/finisher.rb:236
+#, fuzzy
+msgid "Configuring file systems snapshots"
+msgstr "Järjestelmän asetukset"
+
+#. Step to copy the installation logs
+#: service/lib/agama/storage/finisher.rb:249
+msgid "Copying logs"
+msgstr ""
+
+#. Executes post-installation scripts
+#: service/lib/agama/storage/finisher.rb:283
+msgid "Running user-defined scripts"
+msgstr ""
+
+#. Executes post-installation scripts
+#: service/lib/agama/storage/finisher.rb:322
+msgid "Deploying user-defined files"
+msgstr ""
+
+#. Step to unmount the target file-systems
+#: service/lib/agama/storage/finisher.rb:341
+#, fuzzy
+msgid "Unmounting storage devices"
+msgstr "Havaitaan tallennuslaitteita"
+
+#. Step to write the mountlist file for Iguana, if needed
+#: service/lib/agama/storage/finisher.rb:357
+msgid "Configuring Iguana"
+msgstr ""
+
 #. Applies the target configs.
 #.
 #. @param config [ISCSI::Config]
-#: service/lib/agama/storage/iscsi/manager.rb:291
+#: service/lib/agama/storage/iscsi/manager.rb:300
 msgid "Logout iSCSI targets"
 msgstr ""
 
-#: service/lib/agama/storage/iscsi/manager.rb:292
+#: service/lib/agama/storage/iscsi/manager.rb:301
 msgid "Login iSCSI targets"
 msgstr ""
 
@@ -622,7 +681,7 @@ msgstr ""
 #.
 #. @param target [ISCSI::Configs::Target]
 #. @return [Issue]
-#: service/lib/agama/storage/iscsi/manager.rb:346
+#: service/lib/agama/storage/iscsi/manager.rb:355
 #, c-format
 msgid "Cannot login to iSCSI target %s"
 msgstr ""
