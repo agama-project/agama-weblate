@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-15 03:15+0000\n"
+"POT-Creation-Date: 2025-06-24 03:10+0000\n"
 "PO-Revision-Date: 2024-05-09 06:43+0000\n"
 "Last-Translator: Kristijan Fremen Velkovski <me@krisfremen.com>\n"
 "Language-Team: Macedonian <https://l10n.opensuse.org/projects/agama/agama-"
@@ -48,6 +48,7 @@ msgstr "Продолжи"
 #. TRANSLATORS: button label
 #: src/components/core/InstallButton.tsx:62 src/components/core/Page.tsx:234
 #: src/components/core/Popup.tsx:140
+#: src/components/network/BindingSettingsForm.tsx:246
 #: src/components/network/IpSettingsForm.tsx:217
 #: src/components/network/WifiConnectionForm.tsx:188
 #: src/components/product/ProductSelectionPage.tsx:99
@@ -547,6 +548,58 @@ msgstr ""
 msgid "Addresses data list"
 msgstr ""
 
+#. TRANSLATORS: this simply concatenates the two sentences that describe what is going to happen
+#. with partitions. The first %s corresponds to deleted partitions and the second one to resized
+#. ones.
+#. TRANSLATORS: A label shown in a dropdown for selecting a network
+#. device. It combines the device name and MAC address, with the order
+#. determined by the component settings: some selectors will show the
+#. name first, others the MAC address. I.e. "enp1s0 - CC-7F-C8-FC-7A-A1"
+#. or "CC-7F-C8-FC-7A-A1 - enp1s0". You may change the separator, but
+#. please keep both %s placeholders.
+#: src/components/network/BindingSettingsForm.tsx:75
+#: src/components/storage/utils/drive.tsx:87
+#, c-format
+msgid "%s - %s"
+msgstr ""
+
+#. TRANSLATORS: The title of the page. %s will be replaced with the connection
+#. name. I.e., "Binding settings for 'Wired connection 1'"
+#: src/components/network/BindingSettingsForm.tsx:176
+#, c-format
+msgid "Binding settings for '%s'"
+msgstr ""
+
+#: src/components/network/BindingSettingsForm.tsx:184
+msgid ""
+"Choose how the connection should be associated with a network interface. "
+"This helps control which interface the connection uses."
+msgstr ""
+
+#: src/components/network/BindingSettingsForm.tsx:195
+msgid "Any interface"
+msgstr ""
+
+#: src/components/network/BindingSettingsForm.tsx:198
+msgid "The connection can be used by any available interface."
+msgstr ""
+
+#: src/components/network/BindingSettingsForm.tsx:207
+msgid "Bind to interface name"
+msgstr ""
+
+#: src/components/network/BindingSettingsForm.tsx:211
+msgid "Choose device to bind by name"
+msgstr ""
+
+#: src/components/network/BindingSettingsForm.tsx:226
+msgid "Bind to MAC address"
+msgstr ""
+
+#: src/components/network/BindingSettingsForm.tsx:230
+msgid "Choose device to bind by MAC"
+msgstr ""
+
 #. TRANSLATORS: input field name
 #: src/components/network/DnsDataList.tsx:90
 msgid "Server IP"
@@ -563,7 +616,7 @@ msgstr ""
 
 #: src/components/network/DnsDataList.tsx:118
 #: src/components/network/WifiConnectionDetails.tsx:138
-#: src/components/network/WiredConnectionDetails.tsx:114
+#: src/components/network/WiredConnectionDetails.tsx:122
 msgid "DNS"
 msgstr ""
 
@@ -607,7 +660,7 @@ msgstr ""
 #: src/components/network/IpSettingsForm.tsx:168
 #: src/components/network/IpSettingsForm.tsx:170
 #: src/components/network/WifiConnectionDetails.tsx:106
-#: src/components/network/WiredConnectionDetails.tsx:82
+#: src/components/network/WiredConnectionDetails.tsx:90
 msgid "Mode"
 msgstr ""
 
@@ -625,7 +678,7 @@ msgstr ""
 #: src/components/network/IpSettingsForm.tsx:188
 #: src/components/network/IpSettingsForm.tsx:191
 #: src/components/network/WifiConnectionDetails.tsx:129
-#: src/components/network/WiredConnectionDetails.tsx:95
+#: src/components/network/WiredConnectionDetails.tsx:103
 msgid "Gateway"
 msgstr ""
 
@@ -645,7 +698,7 @@ msgstr ""
 
 #: src/components/network/NetworkPage.tsx:52
 #: src/components/network/WifiConnectionDetails.tsx:45
-#: src/routes/network.tsx:37
+#: src/routes/network.tsx:38
 msgid "Network"
 msgstr ""
 
@@ -686,7 +739,7 @@ msgstr ""
 
 #: src/components/network/WifiConnectionDetails.tsx:56
 #: src/components/network/WifiConnectionDetails.tsx:79
-#: src/components/network/WiredConnectionDetails.tsx:55
+#: src/components/network/WiredConnectionDetails.tsx:63
 #: src/components/storage/dasd/DASDTable.tsx:76
 #: src/components/storage/iscsi/NodesPresenter.jsx:104
 #: src/components/storage/iscsi/NodesPresenter.jsx:125
@@ -701,7 +754,7 @@ msgid "Security"
 msgstr ""
 
 #: src/components/network/WifiConnectionDetails.tsx:72
-#: src/components/network/WiredConnectionDetails.tsx:48
+#: src/components/network/WiredConnectionDetails.tsx:49
 #: src/components/storage/ProposalResultTable.tsx:132
 #: src/components/storage/SpaceActionsTable.tsx:233
 #: src/components/storage/dasd/DASDTable.tsx:77
@@ -716,24 +769,24 @@ msgid "Connection details"
 msgstr "Сокриј детали"
 
 #: src/components/network/WifiConnectionDetails.tsx:75
-#: src/components/network/WiredConnectionDetails.tsx:51
+#: src/components/network/WiredConnectionDetails.tsx:59
 #: src/components/storage/iscsi/NodesPresenter.jsx:102
 #: src/components/storage/iscsi/NodesPresenter.jsx:123
 msgid "Interface"
 msgstr ""
 
 #: src/components/network/WifiConnectionDetails.tsx:83
-#: src/components/network/WiredConnectionDetails.tsx:59
+#: src/components/network/WiredConnectionDetails.tsx:67
 msgid "MAC"
 msgstr ""
 
 #: src/components/network/WifiConnectionDetails.tsx:96
-#: src/components/network/WiredConnectionDetails.tsx:72
+#: src/components/network/WiredConnectionDetails.tsx:80
 msgid "IP settings"
 msgstr ""
 
 #: src/components/network/WifiConnectionDetails.tsx:100
-#: src/components/network/WiredConnectionDetails.tsx:76
+#: src/components/network/WiredConnectionDetails.tsx:84
 #: src/components/storage/EncryptionSection.tsx:50
 #: src/components/storage/iscsi/NodesPresenter.jsx:75
 #: src/components/users/FirstUser.tsx:52 src/components/users/RootUser.tsx:55
@@ -741,17 +794,17 @@ msgid "Edit"
 msgstr ""
 
 #: src/components/network/WifiConnectionDetails.tsx:110
-#: src/components/network/WiredConnectionDetails.tsx:86
+#: src/components/network/WiredConnectionDetails.tsx:94
 msgid "IPv4"
 msgstr ""
 
 #: src/components/network/WifiConnectionDetails.tsx:113
-#: src/components/network/WiredConnectionDetails.tsx:89
+#: src/components/network/WiredConnectionDetails.tsx:97
 msgid "IPv6"
 msgstr ""
 
 #: src/components/network/WifiConnectionDetails.tsx:148
-#: src/components/network/WiredConnectionDetails.tsx:124
+#: src/components/network/WiredConnectionDetails.tsx:132
 msgid "Routes"
 msgstr ""
 
@@ -875,12 +928,16 @@ msgstr "Потврдете ја инсталацијата"
 msgid "No Wi-Fi networks were found"
 msgstr ""
 
-#: src/components/network/WiredConnectionDetails.tsx:49
+#: src/components/network/WiredConnectionDetails.tsx:53
+msgid "Edit binding settings"
+msgstr ""
+
+#: src/components/network/WiredConnectionDetails.tsx:57
 #, fuzzy
 msgid "Device details"
 msgstr "Сокриј детали"
 
-#: src/components/network/WiredConnectionDetails.tsx:104
+#: src/components/network/WiredConnectionDetails.tsx:112
 msgid "IP Addresses"
 msgstr ""
 
@@ -3068,14 +3125,6 @@ msgstr ""
 
 #: src/components/storage/utils/drive.tsx:62
 msgid "Some partitions may be shrunk"
-msgstr ""
-
-#. TRANSLATORS: this simply concatenates the two sentences that describe what is going to happen
-#. with partitions. The first %s corresponds to deleted partitions and the second one to resized
-#. ones.
-#: src/components/storage/utils/drive.tsx:87
-#, c-format
-msgid "%s - %s"
 msgstr ""
 
 #. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
