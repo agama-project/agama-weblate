@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-06-24 03:10+0000\n"
-"PO-Revision-Date: 2025-06-24 08:59+0000\n"
+"PO-Revision-Date: 2025-06-24 11:59+0000\n"
 "Last-Translator: Jan Papež <honyczek@centrum.cz>\n"
 "Language-Team: Czech <https://l10n.opensuse.org/projects/agama/"
 "agama-service-master/cs/>\n"
@@ -259,9 +259,9 @@ msgstr "Uložení služby '%s' se nezdařilo."
 
 #. error message
 #: service/lib/agama/software/manager.rb:410
-#, fuzzy, c-format
+#, c-format
 msgid "Refreshing service '%s' failed."
-msgstr "Obnovování metadat repozitáře"
+msgstr "Selhalo obnovení služby '%s'."
 
 #. rubocop:enable Metrics/AbcSize
 #: service/lib/agama/software/manager.rb:419
@@ -335,7 +335,7 @@ msgstr "Organizace (O): "
 #. label followed by the SSL certificate identification
 #: service/lib/agama/ssl/certificate_details.rb:50
 msgid "Organization Unit (OU): "
-msgstr ""
+msgstr "Organizační jednotka (OU): "
 
 #. Issue when the device has several users.
 #.
@@ -343,7 +343,7 @@ msgstr ""
 #: service/lib/agama/storage/config_checkers/alias.rb:74
 #, c-format
 msgid "The device with alias '%s' is used by more than one device"
-msgstr ""
+msgstr "Zařízení označené jako '%s’ momentálně používá více než jedno zařízení"
 
 #. Issue when the device has both filesystem and a user.
 #.
@@ -354,6 +354,8 @@ msgid ""
 "The device with alias '%s' cannot be formatted because it is used by other "
 "device"
 msgstr ""
+"Zařízení označené jako '%s’ nemůže být naformátováno, protože je v "
+"současnosti využívá jiné zařízení"
 
 #. Issue when the device has both partitions and a user.
 #.
@@ -364,6 +366,8 @@ msgid ""
 "The device with alias '%s' cannot be partitioned because it is used by other "
 "device"
 msgstr ""
+"Na zařízení označeném jako '%s’ není možné upravit oddíly, protože je v "
+"současnosti využívá jiné zařízení"
 
 #. Error if a boot device is required and unknown.
 #.
@@ -443,7 +447,7 @@ msgstr "Zařízení MD RAID bez úrovně"
 #: service/lib/agama/storage/config_checkers/md_raid.rb:121
 #, c-format
 msgid "At least %s devices are required for %s"
-msgstr ""
+msgstr "Nejméně %s zařízení je zapotřebí pro %s"
 
 #. Issue if the device member is deleted.
 #.
@@ -514,9 +518,9 @@ msgstr ""
 #. TRANSLATORS: 'method' is the identifier of the method to encrypt the device
 #. (e.g., 'luks1').
 #: service/lib/agama/storage/config_checkers/physical_volumes_encryption.rb:61
-#, fuzzy, perl-brace-format
+#, perl-brace-format
 msgid "'%{method}' is not a suitable method to encrypt the physical volumes."
-msgstr "'%{crypt_method}' není vhodná metoda pro šifrování fyzických svazků."
+msgstr "‘%{method}’ není vhodná metoda pro šifrování fyzických svazků."
 
 #. TRANSLATORS: %s is replaced by a device name (e.g., "/dev/vda").
 #: service/lib/agama/storage/config_checkers/search.rb:74
@@ -528,7 +532,7 @@ msgstr "Nezbytné zařízení %s nebylo nalezeno"
 #: service/lib/agama/storage/config_checkers/search.rb:77
 #, c-format
 msgid "Mandatory %s not found"
-msgstr ""
+msgstr "Nezbytné %s nebylo nalezeno"
 
 #. @return [String]
 #: service/lib/agama/storage/config_checkers/search.rb:85
