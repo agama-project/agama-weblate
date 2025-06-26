@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-25 03:11+0000\n"
+"POT-Creation-Date: 2025-06-26 03:09+0000\n"
 "PO-Revision-Date: 2025-06-24 19:59+0000\n"
 "Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
 "Language-Team: German <https://l10n.opensuse.org/projects/agama/agama-"
@@ -242,8 +242,8 @@ msgid ""
 "the integrity check failed: %{key_id} (%{key_name}). Use it anyway?"
 msgstr ""
 "Die Datei \"%{filename}\" wurde mit dem folgenden GnuPG-Schlüssel digital "
-"signiert, aber bei der Integritätsprüfung ist ein Fehler aufgetreten: %"
-"{key_id} (%{key_name}). Trotzdem verwenden?"
+"signiert, aber bei der Integritätsprüfung ist ein Fehler aufgetreten: "
+"%{key_id} (%{key_name}). Trotzdem verwenden?"
 
 #. TRANSLATORS: button label, trust the GPG key or the signature
 #: service/lib/agama/software/callbacks/signature.rb:199
@@ -251,44 +251,44 @@ msgid "Trust"
 msgstr "Vertrauen"
 
 #. Should an error be raised?
-#: service/lib/agama/software/manager.rb:150
+#: service/lib/agama/software/manager.rb:153
 msgid "Refreshing repositories metadata"
 msgstr "Repositorys-Metadaten werden aktualisiert"
 
-#: service/lib/agama/software/manager.rb:151
+#: service/lib/agama/software/manager.rb:154
 msgid "Calculating the software proposal"
 msgstr "Software-Vorschlag wird berechnet"
 
-#: service/lib/agama/software/manager.rb:155
+#: service/lib/agama/software/manager.rb:158
 msgid "Initializing sources"
 msgstr "Quellen werden initialisiert"
 
 #. error message
-#: service/lib/agama/software/manager.rb:393
+#: service/lib/agama/software/manager.rb:397
 #, c-format
 msgid "Adding service '%s' failed."
 msgstr "Fehler beim Hinzufügen des Dienstes ‚%s‘."
 
 #. error message
-#: service/lib/agama/software/manager.rb:398
+#: service/lib/agama/software/manager.rb:402
 #, c-format
 msgid "Updating service '%s' failed."
 msgstr "Fehler beim Aktualisieren des Dienstes ‚%s‘."
 
 #. error message
-#: service/lib/agama/software/manager.rb:404
+#: service/lib/agama/software/manager.rb:408
 #, c-format
 msgid "Saving service '%s' failed."
 msgstr "Fehler beim Speichern des Dienstes ‚%s‘."
 
 #. error message
-#: service/lib/agama/software/manager.rb:410
+#: service/lib/agama/software/manager.rb:414
 #, c-format
 msgid "Refreshing service '%s' failed."
 msgstr "Fehler beim Auffrischen des Dienstes ‚%s‘."
 
 #. rubocop:enable Metrics/AbcSize
-#: service/lib/agama/software/manager.rb:419
+#: service/lib/agama/software/manager.rb:423
 #, c-format
 msgid "Removing service '%s' failed."
 msgstr "Fehler beim Entfernen des Dienstes ‚%s‘."
@@ -298,7 +298,7 @@ msgstr "Fehler beim Entfernen des Dienstes ‚%s‘."
 #. Repositories that could not be probed are reported as errors.
 #.
 #. @return [Array<Agama::Issue>]
-#: service/lib/agama/software/manager.rb:664
+#: service/lib/agama/software/manager.rb:668
 #, c-format
 msgid "Could not read repository \"%s\""
 msgstr "Das Repository „%s“ konnte nicht gelesen werden"
@@ -306,21 +306,21 @@ msgstr "Das Repository „%s“ konnte nicht gelesen werden"
 #. Issue when a product is missing
 #.
 #. @return [Agama::Issue]
-#: service/lib/agama/software/manager.rb:674
+#: service/lib/agama/software/manager.rb:678
 msgid "Product not selected yet"
 msgstr "Produkt noch nicht ausgewählt"
 
 #. Issue when a product requires registration but it is not registered yet.
 #.
 #. @return [Agama::Issue]
-#: service/lib/agama/software/manager.rb:683
+#: service/lib/agama/software/manager.rb:687
 msgid "Product must be registered"
 msgstr "Produkt muss registriert sein"
 
 #. Returns solver error messages from the last attempt
 #.
 #. @return [Array<String>] Error messages
-#: service/lib/agama/software/proposal.rb:270
+#: service/lib/agama/software/proposal.rb:276
 #, c-format
 msgid "Found %s dependency issues."
 msgstr "%s Abhängigkeitsprobleme gefunden."
@@ -416,8 +416,8 @@ msgstr "Es gibt kein Bootgerät mit dem Alias ‚%s‘"
 msgid ""
 "No passphrase provided (required for using the method '%{crypt_method}')."
 msgstr ""
-"Keine Passphrase angegeben (erforderlich für die Verwendung der Methode '%"
-"{crypt_method}')."
+"Keine Passphrase angegeben (erforderlich für die Verwendung der Methode "
+"'%{crypt_method}')."
 
 #. TRANSLATORS: 'crypt_method' is the identifier of the method to encrypt the device
 #. (e.g., 'luks1', 'random_swap').
@@ -483,11 +483,11 @@ msgstr "Mindestens %s Geräte sind für %s erforderlich"
 #: service/lib/agama/storage/config_checkers/md_raid.rb:168
 #, fuzzy, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be deleted because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be deleted because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
-"Das Gerät '%{member}' kann nicht gelöscht werden, da es Teil des MD-RAID '%"
-"{md_raid}' ist"
+"Das Gerät '%{member}' kann nicht gelöscht werden, da es Teil des MD-RAID "
+"'%{md_raid}' ist"
 
 #. Issue if the device member is resized.
 #.
@@ -496,8 +496,8 @@ msgstr ""
 #: service/lib/agama/storage/config_checkers/md_raid.rb:191
 #, fuzzy, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be resized because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be resized because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
 "Die Größe des Geräts '%{member}' kann nicht geändert werden, da es Teil des "
 "MD-RAID '%{md_raid}' ist"
@@ -512,8 +512,8 @@ msgid ""
 "The device '%{member}' cannot be formatted because it is part of the MD RAID "
 "%{md_raid}"
 msgstr ""
-"Das Gerät '%{member}' kann nicht formatiert werden, da es Teil des MD-RAID '%"
-"{md_raid}' ist"
+"Das Gerät '%{member}' kann nicht formatiert werden, da es Teil des MD-RAID "
+"'%{md_raid}' ist"
 
 #. Issue if the device member is partitioned.
 #.
@@ -535,11 +535,11 @@ msgstr ""
 #: service/lib/agama/storage/config_checkers/md_raid.rb:259
 #, fuzzy, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be used because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be used because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
-"Das Gerät '%{member}' kann nicht verwendet werden, da es Teil des MD-RAID '%"
-"{md_raid}' ist"
+"Das Gerät '%{member}' kann nicht verwendet werden, da es Teil des MD-RAID "
+"'%{md_raid}' ist"
 
 #. Issue if the parent of the device member is formatted.
 #.
@@ -551,8 +551,8 @@ msgid ""
 "The device '%{device}' cannot be formatted because it is part of the MD RAID "
 "%{md_raid}"
 msgstr ""
-"Das Gerät '%{device}' kann nicht formatiert werden, da es Teil des MD-RAID '%"
-"{md_raid}' ist"
+"Das Gerät '%{device}' kann nicht formatiert werden, da es Teil des MD-RAID "
+"'%{md_raid}' ist"
 
 #. TRANSLATORS: 'method' is the identifier of the method to encrypt the device
 #. (e.g., 'luks1').

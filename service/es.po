@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-25 03:11+0000\n"
+"POT-Creation-Date: 2025-06-26 03:09+0000\n"
 "PO-Revision-Date: 2025-06-13 22:59+0000\n"
 "Last-Translator: Fran Serrador <serrador@proton.me>\n"
 "Language-Team: Spanish <https://l10n.opensuse.org/projects/agama/agama-"
@@ -231,8 +231,8 @@ msgid ""
 "anyway?"
 msgstr ""
 "El archivo %{filename} de %{repo_url} está firmado digitalmente con la "
-"siguiente clave GnuPG, pero la comprobación de integridad ha fallado: %"
-"{key_id} (%{key_name}). ¿Desea usarlo de todas formas?"
+"siguiente clave GnuPG, pero la comprobación de integridad ha fallado: "
+"%{key_id} (%{key_name}). ¿Desea usarlo de todas formas?"
 
 #: service/lib/agama/software/callbacks/signature.rb:175
 #, perl-brace-format
@@ -241,8 +241,8 @@ msgid ""
 "the integrity check failed: %{key_id} (%{key_name}). Use it anyway?"
 msgstr ""
 "El archivo %{filename} está firmado digitalmente con la siguiente clave "
-"GnuPG, pero la comprobación de integridad ha fallado: %{key_id} (%"
-"{key_name}). ¿Desea usarlo de todas formas?"
+"GnuPG, pero la comprobación de integridad ha fallado: %{key_id} "
+"(%{key_name}). ¿Desea usarlo de todas formas?"
 
 #. TRANSLATORS: button label, trust the GPG key or the signature
 #: service/lib/agama/software/callbacks/signature.rb:199
@@ -250,44 +250,44 @@ msgid "Trust"
 msgstr "Confiar"
 
 #. Should an error be raised?
-#: service/lib/agama/software/manager.rb:150
+#: service/lib/agama/software/manager.rb:153
 msgid "Refreshing repositories metadata"
 msgstr "Actualizando los metadatos del repositorios"
 
-#: service/lib/agama/software/manager.rb:151
+#: service/lib/agama/software/manager.rb:154
 msgid "Calculating the software proposal"
 msgstr "Calcular la propuesta de software"
 
-#: service/lib/agama/software/manager.rb:155
+#: service/lib/agama/software/manager.rb:158
 msgid "Initializing sources"
 msgstr "Inicializando fuentes"
 
 #. error message
-#: service/lib/agama/software/manager.rb:393
+#: service/lib/agama/software/manager.rb:397
 #, c-format
 msgid "Adding service '%s' failed."
 msgstr "Error al añadir el servicio %s."
 
 #. error message
-#: service/lib/agama/software/manager.rb:398
+#: service/lib/agama/software/manager.rb:402
 #, c-format
 msgid "Updating service '%s' failed."
 msgstr "Error al actualizar el servicio %s."
 
 #. error message
-#: service/lib/agama/software/manager.rb:404
+#: service/lib/agama/software/manager.rb:408
 #, c-format
 msgid "Saving service '%s' failed."
 msgstr "Error al guardar el servicio %s."
 
 #. error message
-#: service/lib/agama/software/manager.rb:410
+#: service/lib/agama/software/manager.rb:414
 #, c-format
 msgid "Refreshing service '%s' failed."
 msgstr "Error al renovar el servicio %s."
 
 #. rubocop:enable Metrics/AbcSize
-#: service/lib/agama/software/manager.rb:419
+#: service/lib/agama/software/manager.rb:423
 #, c-format
 msgid "Removing service '%s' failed."
 msgstr "Error al eliminar el servicio %s."
@@ -297,7 +297,7 @@ msgstr "Error al eliminar el servicio %s."
 #. Repositories that could not be probed are reported as errors.
 #.
 #. @return [Array<Agama::Issue>]
-#: service/lib/agama/software/manager.rb:664
+#: service/lib/agama/software/manager.rb:668
 #, c-format
 msgid "Could not read repository \"%s\""
 msgstr "No se pudo leer el repositorio \"%s\""
@@ -305,21 +305,21 @@ msgstr "No se pudo leer el repositorio \"%s\""
 #. Issue when a product is missing
 #.
 #. @return [Agama::Issue]
-#: service/lib/agama/software/manager.rb:674
+#: service/lib/agama/software/manager.rb:678
 msgid "Product not selected yet"
 msgstr "Producto aún no seleccionado"
 
 #. Issue when a product requires registration but it is not registered yet.
 #.
 #. @return [Agama::Issue]
-#: service/lib/agama/software/manager.rb:683
+#: service/lib/agama/software/manager.rb:687
 msgid "Product must be registered"
 msgstr "El producto debe estar registrado"
 
 #. Returns solver error messages from the last attempt
 #.
 #. @return [Array<String>] Error messages
-#: service/lib/agama/software/proposal.rb:270
+#: service/lib/agama/software/proposal.rb:276
 #, c-format
 msgid "Found %s dependency issues."
 msgstr "Se encontraron %s problemas de dependencias."
@@ -415,8 +415,8 @@ msgstr "No hay ningún dispositivo de arranque con el alias %s"
 msgid ""
 "No passphrase provided (required for using the method '%{crypt_method}')."
 msgstr ""
-"No se proporcionó ninguna contraseña (obligatoria para utilizar el método '%"
-"{crypt_method}')."
+"No se proporcionó ninguna contraseña (obligatoria para utilizar el método "
+"'%{crypt_method}')."
 
 #. TRANSLATORS: 'crypt_method' is the identifier of the method to encrypt the device
 #. (e.g., 'luks1', 'random_swap').
@@ -445,8 +445,8 @@ msgstr "Falta el tipo de sistema de archivos para '%s'"
 #, perl-brace-format
 msgid "The file system type '%{filesystem}' is not suitable for '%{path}'"
 msgstr ""
-"El tipo de sistema de archivos para '%{filesystem}' no es adecuado para '%"
-"{path}'"
+"El tipo de sistema de archivos para '%{filesystem}' no es adecuado para "
+"'%{path}'"
 
 #. TRANSLATORS: %s is the replaced by a device alias (e.g., "pv1").
 #: service/lib/agama/storage/config_checkers/logical_volume.rb:82
@@ -482,11 +482,11 @@ msgstr "Se requieren al menos %s dispositivos para %s"
 #: service/lib/agama/storage/config_checkers/md_raid.rb:168
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be deleted because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be deleted because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
-"El dispositivo %{member} no puede ser borrado porque es parte del RAID MD %"
-"{md_raid}"
+"El dispositivo %{member} no puede ser borrado porque es parte del RAID MD "
+"%{md_raid}"
 
 #. Issue if the device member is resized.
 #.
@@ -495,8 +495,8 @@ msgstr ""
 #: service/lib/agama/storage/config_checkers/md_raid.rb:191
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be resized because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be resized because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
 "El dispositivo %{member} no puede ser redimensionado porque es parte del "
 "RAID MD %{md_raid}"
@@ -511,8 +511,8 @@ msgid ""
 "The device '%{member}' cannot be formatted because it is part of the MD RAID "
 "%{md_raid}"
 msgstr ""
-"El dispositivo %{member} no se puede formatear porque es parte del RAID MD %"
-"{md_raid}"
+"El dispositivo %{member} no se puede formatear porque es parte del RAID MD "
+"%{md_raid}"
 
 #. Issue if the device member is partitioned.
 #.
@@ -534,11 +534,11 @@ msgstr ""
 #: service/lib/agama/storage/config_checkers/md_raid.rb:259
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be used because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be used because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
-"El dispositivo '%{member}' no se puede usar porque es parte del RAID MD %"
-"{md_raid}"
+"El dispositivo '%{member}' no se puede usar porque es parte del RAID MD "
+"%{md_raid}"
 
 #. Issue if the parent of the device member is formatted.
 #.
@@ -803,11 +803,11 @@ msgid "The following selected device is not found in the system: %{devices}"
 msgid_plural ""
 "The following selected devices are not found in the system: %{devices}"
 msgstr[0] ""
-"El siguiente dispositivo seleccionado no se encuentra en el sistema: %"
-"{devices}"
+"El siguiente dispositivo seleccionado no se encuentra en el sistema: "
+"%{devices}"
 msgstr[1] ""
-"Los siguientes dispositivos seleccionados no se encuentran en el sistema: %"
-"{devices}"
+"Los siguientes dispositivos seleccionados no se encuentran en el sistema: "
+"%{devices}"
 
 #. Recalculates the list of issues
 #: service/lib/agama/users.rb:154

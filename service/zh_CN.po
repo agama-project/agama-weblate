@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-25 03:11+0000\n"
+"POT-Creation-Date: 2025-06-26 03:09+0000\n"
 "PO-Revision-Date: 2025-06-17 02:59+0000\n"
 "Last-Translator: Grace Yu <grace.yu@excel-gits.com>\n"
 "Language-Team: Chinese (China) <https://l10n.opensuse.org/projects/agama/"
@@ -195,8 +195,8 @@ msgid ""
 "The file %{filename} from %{repo_url} is digitally signed with the following "
 "unknown GnuPG key: %{key_id}. Use it anyway?"
 msgstr ""
-"%{repo_url} 中的文件 %{filename} 是使用以下未知 GnuPG 密钥进行数字签名的：%"
-"{key_id}。是否仍要使用它？"
+"%{repo_url} 中的文件 %{filename} 是使用以下未知 GnuPG 密钥进行数字签名的："
+"%{key_id}。是否仍要使用它？"
 
 #: service/lib/agama/software/callbacks/signature.rb:137
 #, perl-brace-format
@@ -237,44 +237,44 @@ msgid "Trust"
 msgstr "信任"
 
 #. Should an error be raised?
-#: service/lib/agama/software/manager.rb:150
+#: service/lib/agama/software/manager.rb:153
 msgid "Refreshing repositories metadata"
 msgstr "正在刷新软件仓库元数据"
 
-#: service/lib/agama/software/manager.rb:151
+#: service/lib/agama/software/manager.rb:154
 msgid "Calculating the software proposal"
 msgstr "正在计算软件提案"
 
-#: service/lib/agama/software/manager.rb:155
+#: service/lib/agama/software/manager.rb:158
 msgid "Initializing sources"
 msgstr "正在初始化软件源"
 
 #. error message
-#: service/lib/agama/software/manager.rb:393
+#: service/lib/agama/software/manager.rb:397
 #, c-format
 msgid "Adding service '%s' failed."
 msgstr "添加服务 '%s' 失败。"
 
 #. error message
-#: service/lib/agama/software/manager.rb:398
+#: service/lib/agama/software/manager.rb:402
 #, c-format
 msgid "Updating service '%s' failed."
 msgstr "更新服务 '%s' 失败。"
 
 #. error message
-#: service/lib/agama/software/manager.rb:404
+#: service/lib/agama/software/manager.rb:408
 #, c-format
 msgid "Saving service '%s' failed."
 msgstr "保存服务 '%s' 失败。"
 
 #. error message
-#: service/lib/agama/software/manager.rb:410
+#: service/lib/agama/software/manager.rb:414
 #, c-format
 msgid "Refreshing service '%s' failed."
 msgstr "刷新服务 '%s' 失败。"
 
 #. rubocop:enable Metrics/AbcSize
-#: service/lib/agama/software/manager.rb:419
+#: service/lib/agama/software/manager.rb:423
 #, c-format
 msgid "Removing service '%s' failed."
 msgstr "去除服务 '%s' 失败。"
@@ -284,7 +284,7 @@ msgstr "去除服务 '%s' 失败。"
 #. Repositories that could not be probed are reported as errors.
 #.
 #. @return [Array<Agama::Issue>]
-#: service/lib/agama/software/manager.rb:664
+#: service/lib/agama/software/manager.rb:668
 #, c-format
 msgid "Could not read repository \"%s\""
 msgstr "无法读取仓库 “ %s”"
@@ -292,21 +292,21 @@ msgstr "无法读取仓库 “ %s”"
 #. Issue when a product is missing
 #.
 #. @return [Agama::Issue]
-#: service/lib/agama/software/manager.rb:674
+#: service/lib/agama/software/manager.rb:678
 msgid "Product not selected yet"
 msgstr "尚未选择产品"
 
 #. Issue when a product requires registration but it is not registered yet.
 #.
 #. @return [Agama::Issue]
-#: service/lib/agama/software/manager.rb:683
+#: service/lib/agama/software/manager.rb:687
 msgid "Product must be registered"
 msgstr "产品必须注册"
 
 #. Returns solver error messages from the last attempt
 #.
 #. @return [Array<String>] Error messages
-#: service/lib/agama/software/proposal.rb:270
+#: service/lib/agama/software/proposal.rb:276
 #, c-format
 msgid "Found %s dependency issues."
 msgstr "找到 %s 个依赖问题。"
@@ -460,8 +460,8 @@ msgstr "%s 至少需要 %s 个设备"
 #: service/lib/agama/storage/config_checkers/md_raid.rb:168
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be deleted because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be deleted because it is part of the MD RAID "
+"%{md_raid}"
 msgstr "无法删除设备 '%{member}'，因为它是 MD RAID %{md_raid} 的一部分"
 
 #. Issue if the device member is resized.
@@ -471,8 +471,8 @@ msgstr "无法删除设备 '%{member}'，因为它是 MD RAID %{md_raid} 的一�
 #: service/lib/agama/storage/config_checkers/md_raid.rb:191
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be resized because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be resized because it is part of the MD RAID "
+"%{md_raid}"
 msgstr "无法调整设备 '%{member}' 的大小，因为它是 MD RAID %{md_raid} 的一部分"
 
 #. Issue if the device member is formatted.
@@ -504,8 +504,8 @@ msgstr "无法对设备 '%{member}' 分区，因为它是 MD RAID %{md_raid} 的
 #: service/lib/agama/storage/config_checkers/md_raid.rb:259
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be used because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be used because it is part of the MD RAID "
+"%{md_raid}"
 msgstr "无法使用设备 '%{member}'，因为它是 MD RAID %{md_raid} 的一部分"
 
 #. Issue if the parent of the device member is formatted.
