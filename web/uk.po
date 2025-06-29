@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-25 03:11+0000\n"
+"POT-Creation-Date: 2025-06-29 03:19+0000\n"
 "PO-Revision-Date: 2025-06-28 11:59+0000\n"
 "Last-Translator: Eugene Krater <lachend@gmail.com>\n"
 "Language-Team: Ukrainian <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -319,7 +319,7 @@ msgstr "Форма входу"
 #: src/components/questions/QuestionWithPassword.tsx:64
 #: src/components/storage/iscsi/AuthFields.jsx:87
 #: src/components/storage/iscsi/AuthFields.jsx:91
-#: src/components/users/RootUser.tsx:61
+#: src/components/users/RootUser.tsx:64
 msgid "Password"
 msgstr "Пароль"
 
@@ -466,8 +466,8 @@ msgstr "Локалізація"
 #: src/components/l10n/L10nPage.tsx:84 src/components/l10n/L10nPage.tsx:98
 #: src/components/l10n/L10nPage.tsx:110
 #: src/components/storage/iscsi/InitiatorForm.tsx:89
-#: src/components/users/FirstUserForm.tsx:234
-#: src/components/users/RootUserForm.tsx:163
+#: src/components/users/FirstUserForm.tsx:235
+#: src/components/users/RootUserForm.tsx:164
 msgid "Change"
 msgstr "Змінити"
 
@@ -559,15 +559,15 @@ msgstr "Адреси"
 msgid "Addresses data list"
 msgstr "Список даних адрес"
 
+#. TRANSLATORS: this simply concatenates the two sentences that describe what is going to happen
+#. with partitions. The first %s corresponds to deleted partitions and the second one to resized
+#. ones.
 #. TRANSLATORS: A label shown in a dropdown for selecting a network
 #. device. It combines the device name and MAC address, with the order
 #. determined by the component settings: some selectors will show the
 #. name first, others the MAC address. I.e. "enp1s0 - CC-7F-C8-FC-7A-A1"
 #. or "CC-7F-C8-FC-7A-A1 - enp1s0". You may change the separator, but
 #. please keep both %s placeholders.
-#. TRANSLATORS: this simply concatenates the two sentences that describe what is going to happen
-#. with partitions. The first %s corresponds to deleted partitions and the second one to resized
-#. ones.
 #: src/components/network/BindingSettingsForm.tsx:75
 #: src/components/storage/utils/drive.tsx:87
 #, c-format
@@ -664,8 +664,8 @@ msgstr "Редагувати з'єднання %s"
 #: src/components/storage/iscsi/DiscoverForm.tsx:98
 #: src/components/storage/iscsi/LoginForm.jsx:70
 #: src/components/storage/zfcp/ZFCPDiskForm.tsx:112
-#: src/components/users/FirstUserForm.tsx:196
-#: src/components/users/RootUserForm.tsx:143
+#: src/components/users/FirstUserForm.tsx:197
+#: src/components/users/RootUserForm.tsx:144
 msgid "Something went wrong"
 msgstr "Щось пішло не так"
 
@@ -805,7 +805,7 @@ msgstr "Налаштування IP"
 #: src/components/network/WiredConnectionDetails.tsx:84
 #: src/components/storage/EncryptionSection.tsx:50
 #: src/components/storage/iscsi/NodesPresenter.jsx:75
-#: src/components/users/FirstUser.tsx:52 src/components/users/RootUser.tsx:55
+#: src/components/users/FirstUser.tsx:54 src/components/users/RootUser.tsx:57
 msgid "Edit"
 msgstr "Редагувати"
 
@@ -826,8 +826,6 @@ msgstr "Маршрути"
 
 #. TRANSLATORS: WiFi authentication mode
 #: src/components/network/WifiConnectionForm.tsx:43
-#: src/components/storage/LogicalVolumePage.tsx:625
-#: src/components/storage/PartitionPage.tsx:754
 msgid "None"
 msgstr "Відсутнє"
 
@@ -1503,107 +1501,108 @@ msgstr ""
 "розділ %1s$ розміром не менше %2$s"
 
 #: src/components/storage/AutoSizeText.tsx:167
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"The size range for %1$s will be dynamically adjusted based on the amount of "
-"RAM in the system, the usage of Btrfs snapshots and the presence of a "
-"separate file system for %2$s."
+"The size for %1$s will be dynamically adjusted based on the amount of RAM in "
+"the system, the usage of Btrfs snapshots and the presence of a separate file "
+"system for %2$s."
 msgstr ""
 "Діапазон розмірів для %1$s буде динамічно змінюватися залежно від обсягу "
 "оперативної пам'яті в системі, використання знімків Btrfs і наявності "
 "окремої файлової системи для %2$s."
 
 #: src/components/storage/AutoSizeText.tsx:178
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"The size range for %1$s will be dynamically adjusted based on the amount of "
-"RAM in the system, the usage of Btrfs snapshots and the presence of separate "
-"file systems for %2$s."
+"The size for %1$s will be dynamically adjusted based on the amount of RAM in "
+"the system, the usage of Btrfs snapshots and the presence of separate file "
+"systems for %2$s."
 msgstr ""
 "Діапазон розмірів для %1$s буде динамічно змінюватися залежно від обсягу "
 "оперативної пам'яті в системі, використання знімків Btrfs і наявності "
 "окремих файлових систем для %2$s."
 
 #: src/components/storage/AutoSizeText.tsx:188
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"The size range for %s will be dynamically adjusted based on the amount of "
-"RAM in the system and the usage of Btrfs snapshots."
+"The size for %s will be dynamically adjusted based on the amount of RAM in "
+"the system and the usage of Btrfs snapshots."
 msgstr ""
 "Діапазон розмірів для %s буде динамічно змінюватися залежно від обсягу "
 "оперативної пам'яті в системі та використання знімків Btrfs."
 
 #: src/components/storage/AutoSizeText.tsx:199
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"The size range for %1$s will be dynamically adjusted based on the amount of "
-"RAM in the system and the presence of a separate file system for %2$s."
+"The size for %1$s will be dynamically adjusted based on the amount of RAM in "
+"the system and the presence of a separate file system for %2$s."
 msgstr ""
 "Діапазон розмірів для %1$s буде динамічно змінюватися залежно від обсягу "
 "оперативної пам'яті в системі та наявності окремої файлової системи для %2$s."
 
 #: src/components/storage/AutoSizeText.tsx:209
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"The size range for %1$s will be dynamically adjusted based on the amount of "
-"RAM in the system and the presence of separate file systems for %2$s."
+"The size for %1$s will be dynamically adjusted based on the amount of RAM in "
+"the system and the presence of separate file systems for %2$s."
 msgstr ""
 "Діапазон розмірів для %1$s буде динамічно змінюватися залежно від обсягу "
 "оперативної пам'яті в системі та наявності окремих файлових систем для %2$s."
 
 #: src/components/storage/AutoSizeText.tsx:221
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"The size range for %1$s will be dynamically adjusted based on the usage of "
-"Btrfs snapshots and the presence of a separate file system for %2$s."
+"The size for %1$s will be dynamically adjusted based on the usage of Btrfs "
+"snapshots and the presence of a separate file system for %2$s."
 msgstr ""
 "Діапазон розмірів для %1$s буде динамічно змінюватися на основі використання "
 "знімків Btrfs і наявності окремої файлової системи для %2$s."
 
 #: src/components/storage/AutoSizeText.tsx:232
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"The size range for %1$s will be dynamically adjusted based on the usage of "
-"Btrfs snapshots and the presence of separate file systems for %2$s."
+"The size for %1$s will be dynamically adjusted based on the usage of Btrfs "
+"snapshots and the presence of separate file systems for %2$s."
 msgstr ""
 "Діапазон розмірів для %1$s буде динамічно змінено на основі використання "
 "знімків Btrfs та наявності окремих файлових систем для %2$s."
 
-#: src/components/storage/AutoSizeText.tsx:242
-#, c-format
+#. TRANSLATORS: %s is a mount point (eg. /)
+#: src/components/storage/AutoSizeText.tsx:241
+#, fuzzy, c-format
 msgid ""
-"The size range for %s will be dynamically adjusted based on the usage of "
-"Btrfs snapshots."
+"The size for %s will be dynamically adjusted based on the usage of Btrfs "
+"snapshots."
 msgstr ""
 "Діапазон розмірів для %s буде динамічно коригуватися на основі використання "
 "знімків Btrfs."
 
-#: src/components/storage/AutoSizeText.tsx:252
-#, c-format
+#: src/components/storage/AutoSizeText.tsx:250
+#, fuzzy, c-format
 msgid ""
-"The size range for %1$s will be dynamically adjusted based on the presence "
-"of a separate file system for %2$s."
+"The size for %1$s will be dynamically adjusted based on the presence of a "
+"separate file system for %2$s."
 msgstr ""
 "Діапазон розмірів для %1$s буде динамічно змінюватися залежно від наявності "
 "окремої файлової системи для %2$s."
 
-#: src/components/storage/AutoSizeText.tsx:262
-#, c-format
+#: src/components/storage/AutoSizeText.tsx:260
+#, fuzzy, c-format
 msgid ""
-"The size range for %1$s will be dynamically adjusted based on the presence "
-"of separate file systems for %2$s."
+"The size for %1$s will be dynamically adjusted based on the presence of "
+"separate file systems for %2$s."
 msgstr ""
 "Діапазон розмірів для %1$s буде динамічно змінюватися залежно від наявності "
 "окремих файлових систем для %2$s."
 
 #. TRANSLATORS: %1$s is a device type (eg. partition) and %2s is a size with units (eg. 10 GiB)
-#: src/components/storage/AutoSizeText.tsx:274
+#: src/components/storage/AutoSizeText.tsx:272
 #, c-format
 msgid "The current configuration will result in a %1$s of %2$s."
 msgstr "Поточна конфігурація призведе до утворення розділу %1$s розміром %2$s."
 
 #. TRANSLATORS: %1$s is a device type (eg. partition) %2$s is a min size, %3$s is the max size
-#: src/components/storage/AutoSizeText.tsx:282
+#: src/components/storage/AutoSizeText.tsx:280
 #, c-format
 msgid ""
 "The current configuration will result in a %1$s with a size between %2$s and "
@@ -1613,7 +1612,7 @@ msgstr ""
 "%3$s."
 
 #. TRANSLATORS: %1$s is a device type (eg. partition) and %2$s is a size with units (eg. 10 GiB)
-#: src/components/storage/AutoSizeText.tsx:291
+#: src/components/storage/AutoSizeText.tsx:289
 #, c-format
 msgid "The current configuration will result in a %1$s of at least %2$s."
 msgstr ""
@@ -1644,6 +1643,8 @@ msgid "Boot options"
 msgstr "Параметри завантаження"
 
 #: src/components/storage/BootSelection.tsx:174
+#: src/components/storage/SizeModeSelect.tsx:189
+#: src/components/storage/SizeModeSelect.tsx:194
 #: src/components/storage/iscsi/NodeStartupOptions.js:28
 msgid "Automatic"
 msgstr "Автоматично"
@@ -1803,7 +1804,7 @@ msgstr ""
 "даними, програмами та системними файлами."
 
 #: src/components/storage/EncryptionSettingsPage.tsx:73
-#: src/components/users/RootUserForm.tsx:103
+#: src/components/users/RootUserForm.tsx:104
 msgid "Password is empty."
 msgstr "Пароль порожній."
 
@@ -1846,233 +1847,138 @@ msgstr ""
 msgid "iSCSI"
 msgstr "iSCSI"
 
-#: src/components/storage/LogicalVolumePage.tsx:252
-#: src/components/storage/PartitionPage.tsx:315
+#: src/components/storage/LogicalVolumePage.tsx:248
+#: src/components/storage/PartitionPage.tsx:306
 msgid "Select or enter a valid mount point"
 msgstr "Виберіть або введіть дійсну точку монтування"
 
-#: src/components/storage/LogicalVolumePage.tsx:262
-#: src/components/storage/PartitionPage.tsx:325
+#: src/components/storage/LogicalVolumePage.tsx:258
+#: src/components/storage/PartitionPage.tsx:316
 msgid ""
 "Select or enter a mount point that is not already assigned to another device"
 msgstr ""
 "Виберіть або введіть точку монтування, яку ще не призначено іншому пристрою"
 
-#: src/components/storage/LogicalVolumePage.tsx:273
+#: src/components/storage/LogicalVolumePage.tsx:269
 msgid "Enter a name"
 msgstr "Введіть ім'я"
 
-#: src/components/storage/LogicalVolumePage.tsx:300
-#: src/components/storage/PartitionPage.tsx:353
+#: src/components/storage/LogicalVolumePage.tsx:296
+#: src/components/storage/PartitionPage.tsx:344
 msgid "The minimum cannot be greater than the maximum"
 msgstr "Мінімум не може бути більшим за максимум"
 
-#: src/components/storage/LogicalVolumePage.tsx:308
+#: src/components/storage/LogicalVolumePage.tsx:304
 msgid ""
 "The maximum must be a number optionally followed by a unit like GiB or GB"
 msgstr ""
 "Максимальне значення повинно бути числом, за яким може слідувати одиниця "
 "виміру, наприклад, GiB або GB"
 
-#: src/components/storage/LogicalVolumePage.tsx:316
+#: src/components/storage/LogicalVolumePage.tsx:312
 msgid ""
 "The minimum must be a number optionally followed by a unit like GiB or GB"
 msgstr ""
 "Мінімальне значення повинно бути числом, за яким може слідувати одиниця "
 "виміру, наприклад, GiB або GB"
 
-#: src/components/storage/LogicalVolumePage.tsx:323
+#: src/components/storage/LogicalVolumePage.tsx:319
 msgid ""
 "Size limits must be numbers optionally followed by a unit like GiB or GB"
 msgstr ""
 "Обмеження розміру повинні бути числами, до яких можна додати одиницю виміру, "
 "наприклад, GiB або GB"
 
-#: src/components/storage/LogicalVolumePage.tsx:442
-#: src/components/storage/LogicalVolumePage.tsx:445
+#: src/components/storage/LogicalVolumePage.tsx:438
+#: src/components/storage/LogicalVolumePage.tsx:441
 msgid "Logical volume name"
 msgstr "Назва логічного тому"
 
-#: src/components/storage/LogicalVolumePage.tsx:447
-#: src/components/storage/LogicalVolumePage.tsx:466
-#: src/components/storage/LogicalVolumePage.tsx:564
-#: src/components/storage/PartitionPage.tsx:566
-#: src/components/storage/PartitionPage.tsx:685
+#: src/components/storage/LogicalVolumePage.tsx:443
+#: src/components/storage/LogicalVolumePage.tsx:462
+#: src/components/storage/LogicalVolumePage.tsx:756
+#: src/components/storage/PartitionPage.tsx:558
+#: src/components/storage/PartitionPage.tsx:879
 msgid "Waiting for a mount point"
 msgstr "Очікуємо на точку монтування"
 
-#: src/components/storage/LogicalVolumePage.tsx:467
-#: src/components/storage/PartitionPage.tsx:570
-#: src/components/storage/utils.ts:318
+#: src/components/storage/LogicalVolumePage.tsx:463
+#: src/components/storage/PartitionPage.tsx:562
+#: src/components/storage/utils.ts:349
 msgid "Btrfs with snapshots"
 msgstr "Btrfs з моментальними знімками"
 
-#: src/components/storage/LogicalVolumePage.tsx:482
-#: src/components/storage/PartitionPage.tsx:588
+#: src/components/storage/LogicalVolumePage.tsx:478
+#: src/components/storage/PartitionPage.tsx:580
 #, c-format
 msgid "Default file system for %s"
 msgstr "Типова файлова система для %s"
 
-#: src/components/storage/LogicalVolumePage.tsx:483
+#: src/components/storage/LogicalVolumePage.tsx:479
 msgid "Default file system for generic logical volumes"
 msgstr "Типова файлова система для звичайних логічних томів"
 
-#: src/components/storage/LogicalVolumePage.tsx:485
+#: src/components/storage/LogicalVolumePage.tsx:481
 msgid "Format logical volume as"
 msgstr "Форматувати логічний том як"
 
-#: src/components/storage/LogicalVolumePage.tsx:551
-#: src/components/storage/PartitionPage.tsx:670
+#: src/components/storage/LogicalVolumePage.tsx:547
+#: src/components/storage/PartitionPage.tsx:662
 msgid "File system label"
 msgstr "Ярлик файлової системи"
 
-#: src/components/storage/LogicalVolumePage.tsx:565
-#: src/components/storage/PartitionPage.tsx:687
-msgid "Calculated automatically"
-msgstr "Розраховується автоматично"
-
-#: src/components/storage/LogicalVolumePage.tsx:566
-#: src/components/storage/PartitionPage.tsx:688
-#: src/components/storage/utils.ts:112
-msgid "Custom"
-msgstr "По-своєму"
-
-#: src/components/storage/LogicalVolumePage.tsx:577
-#: src/components/storage/PartitionPage.tsx:700
-msgid "Size options"
-msgstr "Варіанти розмірів"
-
-#: src/components/storage/LogicalVolumePage.tsx:587
-#: src/components/storage/PartitionPage.tsx:716
-msgid "Let the installer propose a sensible range of sizes"
-msgstr "Дозволити інсталятору запропонувати розумний діапазон розмірів"
-
-#: src/components/storage/LogicalVolumePage.tsx:591
-#: src/components/storage/PartitionPage.tsx:720
-msgid "Define a custom size or a range"
-msgstr "Вказати власний розмір або діапазон"
-
-#: src/components/storage/LogicalVolumePage.tsx:624
-#: src/components/storage/PartitionPage.tsx:753
-msgid "Same as minimum"
-msgstr "Те саме, що й мінімум"
-
-#: src/components/storage/LogicalVolumePage.tsx:626
-#: src/components/storage/PartitionPage.tsx:755
-msgid "Limited"
-msgstr "Обмежено"
-
-#: src/components/storage/LogicalVolumePage.tsx:634
-#: src/components/storage/PartitionPage.tsx:763
-msgid "Maximum size options"
-msgstr "Параметри максимального розміру"
-
-#: src/components/storage/LogicalVolumePage.tsx:637
-msgid "The logical volume is created exactly with the given size"
-msgstr "Логічний том буде створено точно з заданим розміром"
-
-#: src/components/storage/LogicalVolumePage.tsx:643
-msgid "The logical volume can grow until a given limit size"
-msgstr "Логічний том може збільшуватися до заданого граничного розміру"
-
-#: src/components/storage/LogicalVolumePage.tsx:649
-msgid "The logical volume can grow to use all the contiguous free space"
-msgstr ""
-"Логічний том може розростатися, щоб використовувати весь суміжний вільний "
-"простір"
-
-#: src/components/storage/LogicalVolumePage.tsx:701
-msgid "Sizes must be entered as a numbers optionally followed by a unit."
-msgstr ""
-"Розміри повинні бути введені у вигляді чисел, після чого можна вказати "
-"одиницю виміру."
-
-#: src/components/storage/LogicalVolumePage.tsx:705
-msgid ""
-"If the unit is omitted, bytes (B) will be used. Greater units can be "
-"of               the form GiB (power of 2) or GB (power of 10)."
-msgstr ""
-"Якщо одиницю виміру не вказано, буде використано байти (B). Більші одиниці "
-"можуть мати                 вигляд GiB (кратно 2) або GB (кратно 10)."
-
-#: src/components/storage/LogicalVolumePage.tsx:713
-#: src/components/storage/PartitionPage.tsx:839
-msgid "Minimum"
-msgstr "Мінімум"
-
-#: src/components/storage/LogicalVolumePage.tsx:718
-#: src/components/storage/PartitionPage.tsx:844
-msgid "Minimum size value"
-msgstr "Значення мінімального розміру"
-
-#: src/components/storage/LogicalVolumePage.tsx:724
-#: src/components/storage/PartitionPage.tsx:850
-msgid "Maximum"
-msgstr "Максимум"
-
-#: src/components/storage/LogicalVolumePage.tsx:731
-#: src/components/storage/PartitionPage.tsx:857
-msgid "Maximum size mode"
-msgstr "Режим максимального розміру"
-
-#: src/components/storage/LogicalVolumePage.tsx:740
-#: src/components/storage/PartitionPage.tsx:866
-msgid "Maximum size value"
-msgstr "Значення максимального розміру"
-
-#: src/components/storage/LogicalVolumePage.tsx:860
+#: src/components/storage/LogicalVolumePage.tsx:677
 #, c-format
 msgid "Configure LVM logical volume at %s volume group"
 msgstr "Налаштування логічного тому LVM у групі томів %s"
 
-#: src/components/storage/LogicalVolumePage.tsx:870
-#: src/components/storage/LogicalVolumePage.tsx:875
-#: src/components/storage/PartitionPage.tsx:1006
-#: src/components/storage/PartitionPage.tsx:1013
+#: src/components/storage/LogicalVolumePage.tsx:687
+#: src/components/storage/LogicalVolumePage.tsx:692
+#: src/components/storage/PartitionPage.tsx:812
+#: src/components/storage/PartitionPage.tsx:819
 msgid "Mount point"
 msgstr "Точка монтування"
 
-#: src/components/storage/LogicalVolumePage.tsx:873
-#: src/components/storage/PartitionPage.tsx:1011
+#: src/components/storage/LogicalVolumePage.tsx:690
+#: src/components/storage/PartitionPage.tsx:817
 msgid "Mount point toggle"
 msgstr "Показати точку монтування"
 
-#: src/components/storage/LogicalVolumePage.tsx:874
-#: src/components/storage/PartitionPage.tsx:1012
+#: src/components/storage/LogicalVolumePage.tsx:691
+#: src/components/storage/PartitionPage.tsx:818
 msgid "Suggested mount points"
 msgstr "Пропоновані точки монтування"
 
-#: src/components/storage/LogicalVolumePage.tsx:876
-#: src/components/storage/PartitionPage.tsx:1014
+#: src/components/storage/LogicalVolumePage.tsx:693
+#: src/components/storage/PartitionPage.tsx:820
 msgid "Clear selected mount point"
 msgstr "Видалити вибрану точку монтування"
 
-#: src/components/storage/LogicalVolumePage.tsx:879
-#: src/components/storage/PartitionPage.tsx:1017
+#: src/components/storage/LogicalVolumePage.tsx:696
+#: src/components/storage/PartitionPage.tsx:823
 msgid "Use"
 msgstr "Використати"
 
-#: src/components/storage/LogicalVolumePage.tsx:885
-#: src/components/storage/PartitionPage.tsx:1035
+#: src/components/storage/LogicalVolumePage.tsx:702
+#: src/components/storage/PartitionPage.tsx:841
 msgid "Select or enter a mount point"
 msgstr "Виберіть або введіть точку монтування"
 
-#: src/components/storage/LogicalVolumePage.tsx:910
-#: src/components/storage/PartitionPage.tsx:1044
+#: src/components/storage/LogicalVolumePage.tsx:727
+#: src/components/storage/PartitionPage.tsx:850
 msgid "File system"
 msgstr "Файлова система"
 
-#: src/components/storage/LogicalVolumePage.tsx:921
-#: src/components/storage/PartitionPage.tsx:1056
+#: src/components/storage/LogicalVolumePage.tsx:738
+#: src/components/storage/PartitionPage.tsx:862
 msgid "Label"
 msgstr "Ярлик"
 
-#: src/components/storage/LogicalVolumePage.tsx:933
-#: src/components/storage/PartitionPage.tsx:1067
-#: src/components/storage/ProposalResultTable.tsx:135
-#: src/components/storage/SpaceActionsTable.tsx:240
-msgid "Size"
-msgstr "Розмір"
+#: src/components/storage/LogicalVolumePage.tsx:751
+#: src/components/storage/PartitionPage.tsx:874
+#, fuzzy
+msgid "Size mode"
+msgstr "Режим максимального розміру"
 
 #: src/components/storage/LvmPage.tsx:83
 msgid "Enter a name for the volume group."
@@ -2147,105 +2053,78 @@ msgstr "Створити ще одну групу томів LVM на %s"
 msgid "Create LVM volume group on %s"
 msgstr "Створити групу томів LVM на %s"
 
-#: src/components/storage/PartitionPage.tsx:361
+#: src/components/storage/PartitionPage.tsx:352
 msgid "The maximum must be a number followed by a unit like GiB or GB"
 msgstr ""
 "Максимальне значення повинно бути числом, за яким слідує одиниця виміру, "
 "наприклад, GiB або GB"
 
-#: src/components/storage/PartitionPage.tsx:369
+#: src/components/storage/PartitionPage.tsx:360
 msgid "The minimum must be a number followed by a unit like GiB or GB"
 msgstr ""
 "Мінімальне значення повинно бути числом, за яким слідує одиниця виміру, "
 "наприклад, GiB або GB"
 
-#: src/components/storage/PartitionPage.tsx:376
+#: src/components/storage/PartitionPage.tsx:367
 msgid "Size limits must be numbers followed by a unit like GiB or GB"
 msgstr ""
 "Обмеження розміру повинні бути числами, до яких потрібно додати одиницю "
 "виміру, наприклад, GiB або GB"
 
 #. TRANSLATORS: %s is a disk name with its size (eg. "sda, 10 GiB"
-#: src/components/storage/PartitionPage.tsx:504
+#: src/components/storage/PartitionPage.tsx:496
 #, c-format
 msgid "As a new partition on %s"
 msgstr "Як новий розділ на %s"
 
-#: src/components/storage/PartitionPage.tsx:506
+#: src/components/storage/PartitionPage.tsx:498
 #, c-format
 msgid "Using partition %s"
 msgstr "Використовуючи розділ %s"
 
-#: src/components/storage/PartitionPage.tsx:535
+#: src/components/storage/PartitionPage.tsx:527
 msgid "Mount point options"
 msgstr "Параметри точки монтування"
 
-#: src/components/storage/PartitionPage.tsx:540
+#: src/components/storage/PartitionPage.tsx:532
 msgid "Using an existing partition"
 msgstr "Використовуючи наявний розділ"
 
-#: src/components/storage/PartitionPage.tsx:551
+#: src/components/storage/PartitionPage.tsx:543
 msgid "There are not usable partitions"
 msgstr "Існують не придатні для використання розділи"
 
 #. TRANSLATORS: %s is a device name (eg. /dev/sda3).
-#: src/components/storage/PartitionPage.tsx:569
+#: src/components/storage/PartitionPage.tsx:561
 #: src/components/storage/utils/partition.tsx:69
 #, c-format
 msgid "Current %s"
 msgstr "Поточна %s"
 
-#: src/components/storage/PartitionPage.tsx:589
+#: src/components/storage/PartitionPage.tsx:581
 msgid "Default file system for generic partitions"
 msgstr "Типова файлова система для звичайних розділів"
 
-#: src/components/storage/PartitionPage.tsx:591
+#: src/components/storage/PartitionPage.tsx:583
 msgid "Destroy current data and format partition as"
 msgstr "Знищити поточні дані і відформатувати розділ як"
 
-#: src/components/storage/PartitionPage.tsx:592
+#: src/components/storage/PartitionPage.tsx:584
 msgid "Format partition as"
 msgstr "Форматувати розділ як"
 
 #. TRANSLATORS: %s is the name of a partition, like /dev/vda2
-#: src/components/storage/PartitionPage.tsx:605
+#: src/components/storage/PartitionPage.tsx:597
 #, c-format
 msgid "Do not format %s and keep the data"
 msgstr "Не форматувати %s і зберегти дані"
 
-#. TRANSLATORS: %s is a partition name like /dev/vda2
-#: src/components/storage/PartitionPage.tsx:708
-#, c-format
-msgid "Keep size of %s"
-msgstr "Зберегти розмір %s"
-
-#: src/components/storage/PartitionPage.tsx:766
-msgid "The partition is created exactly with the given size"
-msgstr "Розділ буде створено точно з заданим розміром"
-
-#: src/components/storage/PartitionPage.tsx:772
-msgid "The partition can grow until a given limit size"
-msgstr "Розділ може збільшуватися до заданого граничного розміру"
-
-#: src/components/storage/PartitionPage.tsx:778
-msgid "The partition can grow to use all the contiguous free space"
-msgstr ""
-"Розділ може розростатися, щоб використовувати весь суміжний вільний простір"
-
-#: src/components/storage/PartitionPage.tsx:831
-msgid ""
-"Sizes must be entered as a numbers followed by a unit of               the "
-"form GiB (power of 2) or GB (power of 10)."
-msgstr ""
-"Розміри мають вводитися у вигляді чисел, за якими слідує одиниця "
-"виміру                 у вигляді GiB (кратно 2) або GB (кратно 10)."
-
-#: src/components/storage/PartitionPage.tsx:999
+#: src/components/storage/PartitionPage.tsx:805
 #, c-format
 msgid "Configure partition at %s"
 msgstr "Налаштування розділу на %s"
 
-#: src/components/storage/PartitionPage.tsx:1023
+#: src/components/storage/PartitionPage.tsx:829
 msgid "Mount point mode"
 msgstr "Режим точок монтування"
 
@@ -2508,6 +2387,12 @@ msgstr "Точка монтування"
 msgid "Details"
 msgstr "Подробиці"
 
+#: src/components/storage/ProposalResultTable.tsx:135
+#: src/components/storage/SizeModeSelect.tsx:125
+#: src/components/storage/SpaceActionsTable.tsx:240
+msgid "Size"
+msgstr "Розмір"
+
 #: src/components/storage/ProposalTransactionalInfo.tsx:43
 msgid "Transactional root file system"
 msgstr "Операційна коренева файлова система"
@@ -2645,6 +2530,66 @@ msgstr "Не використовувати"
 #, c-format
 msgid "Device %s menu"
 msgstr "Меню пристрою %s"
+
+#: src/components/storage/SizeModeSelect.tsx:75
+#, c-format
+msgid ""
+"The size is configured as a range between %s and %s, but defining a range of "
+"sizes is not supported by the UI."
+msgstr ""
+
+#: src/components/storage/SizeModeSelect.tsx:83
+#, fuzzy
+msgid "Do you want to use a supported size?"
+msgstr "Хочете її додати?"
+
+#: src/components/storage/SizeModeSelect.tsx:115
+#, fuzzy
+msgid ""
+"The size must be a number followed by a unit of the form GiB (power of 2) or "
+"GB (power of 10)."
+msgstr ""
+"Розміри мають вводитися у вигляді чисел, за якими слідує одиниця "
+"виміру                 у вигляді GiB (кратно 2) або GB (кратно 10)."
+
+#. TRANSLATORS: %s is a disk size (e.g., "10 GiB").
+#: src/components/storage/SizeModeSelect.tsx:140
+#, c-format
+msgid "approx. %s"
+msgstr ""
+
+#: src/components/storage/SizeModeSelect.tsx:157
+msgid "Allow growing"
+msgstr ""
+
+#: src/components/storage/SizeModeSelect.tsx:159
+#, fuzzy
+msgid ""
+"The final size can be bigger in order to fill the contiguous free space."
+msgstr ""
+"Логічний том може розростатися, щоб використовувати весь суміжний вільний "
+"простір"
+
+#: src/components/storage/SizeModeSelect.tsx:189
+#: src/components/storage/SizeModeSelect.tsx:197
+#: src/components/storage/utils.ts:112
+msgid "Custom"
+msgstr "По-своєму"
+
+#: src/components/storage/SizeModeSelect.tsx:192
+#, fuzzy
+msgid "Size modes"
+msgstr "Варіанти розмірів"
+
+#: src/components/storage/SizeModeSelect.tsx:193
+#, fuzzy
+msgid "Let the installer propose a sensible size"
+msgstr "Дозволити інсталятору запропонувати розумний діапазон розмірів"
+
+#: src/components/storage/SizeModeSelect.tsx:196
+#, fuzzy
+msgid "Define a custom size"
+msgstr "Вказати власний розмір або діапазон"
 
 #: src/components/storage/SpaceActionsTable.tsx:75
 msgid "The device will be used by the new system."
@@ -3202,13 +3147,13 @@ msgid "Select what to do with each partition."
 msgstr "Оберіть, що робити з кожним розділом."
 
 #. TRANSLATORS: Size range, %1$s is the min size and %2$s is the max
-#: src/components/storage/utils.ts:349
+#: src/components/storage/utils.ts:380
 #, c-format
 msgid "%1$s - %2$s"
 msgstr "%1$s - %2$s"
 
 #. TRANSLATORS: minimum device size, %s is replaced by size string, e.g. "17.5 GiB"
-#: src/components/storage/utils.ts:351
+#: src/components/storage/utils.ts:382
 #, c-format
 msgid "at least %s"
 msgstr "не менше %s"
@@ -3459,70 +3404,75 @@ msgstr ""
 msgid "Static hostname"
 msgstr "Статичне ім'я хоста"
 
-#: src/components/users/FirstUser.tsx:46
+#: src/components/users/FirstUser.tsx:48
 msgid "Define a user now"
 msgstr "Вкажіть користувача"
 
-#: src/components/users/FirstUser.tsx:54
+#: src/components/users/FirstUser.tsx:56
 msgid "Discard"
 msgstr "Відмовитись"
 
-#: src/components/users/FirstUser.tsx:66
+#: src/components/users/FirstUser.tsx:68
 msgid "No user defined yet."
 msgstr "Користувача ще не вказано."
 
-#: src/components/users/FirstUser.tsx:74
-#: src/components/users/FirstUserForm.tsx:202
+#: src/components/users/FirstUser.tsx:77
+#: src/components/users/FirstUserForm.tsx:203
 msgid "Full name"
 msgstr "Повне ім'я"
 
-#: src/components/users/FirstUser.tsx:80
-#: src/components/users/FirstUserForm.tsx:211
+#: src/components/users/FirstUser.tsx:83
+#: src/components/users/FirstUserForm.tsx:212
 msgid "Username"
 msgstr "Ім'я користувача"
 
-#: src/components/users/FirstUser.tsx:96
+#: src/components/users/FirstUser.tsx:101
 msgid "First user"
 msgstr "Перший користувач"
 
-#: src/components/users/FirstUser.tsx:98
+#: src/components/users/FirstUser.tsx:103
 msgid ""
 "Define the first user with admin (sudo) privileges for system management."
 msgstr ""
 "Визначте першого користувача з правами адміністратора (sudo) для керування "
 "системою."
 
-#: src/components/users/FirstUserForm.tsx:56
+#: src/components/users/FirstUserForm.tsx:57
 msgid "Username suggestion dropdown"
 msgstr "Спадний список із пропозицією імені користувача"
 
 #. TRANSLATORS: dropdown username suggestions
-#: src/components/users/FirstUserForm.tsx:71
+#: src/components/users/FirstUserForm.tsx:72
 msgid "Use suggested username"
 msgstr "Використайте запропоноване ім'я користувача"
 
-#: src/components/users/FirstUserForm.tsx:126
+#: src/components/users/FirstUserForm.tsx:127
 msgid "All fields are required"
 msgstr "Всі поля обов'язкові"
 
-#: src/components/users/FirstUserForm.tsx:190
+#: src/components/users/FirstUserForm.tsx:191
 msgid "Create user"
 msgstr "Створити користувача"
 
-#: src/components/users/FirstUserForm.tsx:190
+#: src/components/users/FirstUserForm.tsx:191
 msgid "Edit user"
 msgstr "Змінити користувача"
 
-#: src/components/users/FirstUserForm.tsx:232
-#: src/components/users/RootUserForm.tsx:161
+#: src/components/users/FirstUserForm.tsx:233
+#: src/components/users/RootUserForm.tsx:162
 msgid "Using a hashed password."
 msgstr "Використовуючи хешований пароль."
 
-#: src/components/users/RootUser.tsx:51
+#: src/components/users/PasswordCheck.tsx:40
+#, fuzzy
+msgid "The password is weak"
+msgstr "Пароль порожній."
+
+#: src/components/users/RootUser.tsx:53
 msgid "Root user"
 msgstr "Користувач root"
 
-#: src/components/users/RootUser.tsx:53
+#: src/components/users/RootUser.tsx:55
 msgid ""
 "Alongside defining the first user, authentication methods for the root user "
 "can be configured."
@@ -3530,51 +3480,109 @@ msgstr ""
 "Крім зазначення першого користувача, можна налаштувати методи автентифікації "
 "для root-користувача."
 
-#: src/components/users/RootUser.tsx:63
+#: src/components/users/RootUser.tsx:66
 msgid "Defined (hidden)"
 msgstr "Заданий (приховано)"
 
-#: src/components/users/RootUser.tsx:63 src/components/users/RootUser.tsx:69
+#: src/components/users/RootUser.tsx:66 src/components/users/RootUser.tsx:72
 msgid "Not defined"
 msgstr "Не заданий"
 
-#: src/components/users/RootUser.tsx:67
+#: src/components/users/RootUser.tsx:70
 msgid "Public SSH Key"
 msgstr "Відкритий SSH-ключ"
 
-#: src/components/users/RootUserForm.tsx:61
+#: src/components/users/RootUserForm.tsx:62
 msgid "Upload, paste, or drop an SSH public key"
 msgstr "Завантажте, вставте або скиньте відкритий ключ SSH"
 
 #. TRANSLATORS: push button label
-#: src/components/users/RootUserForm.tsx:63
+#: src/components/users/RootUserForm.tsx:64
 msgid "Upload"
 msgstr "Завантажити"
 
 #. TRANSLATORS: push button label, clears the related input field
-#: src/components/users/RootUserForm.tsx:65
+#: src/components/users/RootUserForm.tsx:66
 msgid "Clear"
 msgstr "Очистити"
 
-#: src/components/users/RootUserForm.tsx:108
+#: src/components/users/RootUserForm.tsx:109
 msgid "Public SSH Key is empty."
 msgstr "Відкритий ключ SSH порожній."
 
-#: src/components/users/RootUserForm.tsx:137
+#: src/components/users/RootUserForm.tsx:138
 msgid "Root authentication methods"
 msgstr "Методи автентифікації користувача root"
 
-#: src/components/users/RootUserForm.tsx:152
+#: src/components/users/RootUserForm.tsx:153
 msgid "Use password"
 msgstr "Використовувати пароль"
 
-#: src/components/users/RootUserForm.tsx:180
+#: src/components/users/RootUserForm.tsx:184
 msgid "Use public SSH Key"
 msgstr "Використати відкритий ключ SSH"
 
 #: src/routes/storage.tsx:103
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#~ msgid "Calculated automatically"
+#~ msgstr "Розраховується автоматично"
+
+#~ msgid "Same as minimum"
+#~ msgstr "Те саме, що й мінімум"
+
+#~ msgid "Limited"
+#~ msgstr "Обмежено"
+
+#~ msgid "Maximum size options"
+#~ msgstr "Параметри максимального розміру"
+
+#~ msgid "The logical volume is created exactly with the given size"
+#~ msgstr "Логічний том буде створено точно з заданим розміром"
+
+#~ msgid "The logical volume can grow until a given limit size"
+#~ msgstr "Логічний том може збільшуватися до заданого граничного розміру"
+
+#~ msgid "Sizes must be entered as a numbers optionally followed by a unit."
+#~ msgstr ""
+#~ "Розміри повинні бути введені у вигляді чисел, після чого можна вказати "
+#~ "одиницю виміру."
+
+#~ msgid ""
+#~ "If the unit is omitted, bytes (B) will be used. Greater units can be "
+#~ "of               the form GiB (power of 2) or GB (power of 10)."
+#~ msgstr ""
+#~ "Якщо одиницю виміру не вказано, буде використано байти (B). Більші "
+#~ "одиниці можуть мати                 вигляд GiB (кратно 2) або GB (кратно "
+#~ "10)."
+
+#~ msgid "Minimum"
+#~ msgstr "Мінімум"
+
+#~ msgid "Minimum size value"
+#~ msgstr "Значення мінімального розміру"
+
+#~ msgid "Maximum"
+#~ msgstr "Максимум"
+
+#~ msgid "Maximum size value"
+#~ msgstr "Значення максимального розміру"
+
+#, c-format
+#~ msgid "Keep size of %s"
+#~ msgstr "Зберегти розмір %s"
+
+#~ msgid "The partition is created exactly with the given size"
+#~ msgstr "Розділ буде створено точно з заданим розміром"
+
+#~ msgid "The partition can grow until a given limit size"
+#~ msgstr "Розділ може збільшуватися до заданого граничного розміру"
+
+#~ msgid "The partition can grow to use all the contiguous free space"
+#~ msgstr ""
+#~ "Розділ може розростатися, щоб використовувати весь суміжний вільний "
+#~ "простір"
 
 #~ msgid "Installer options"
 #~ msgstr "Параметри встановлювача"
@@ -4038,9 +4046,6 @@ msgstr "ZFCP"
 #, c-format
 #~ msgid "There is a predefined file system for %s."
 #~ msgstr "Для %s існує визначена файлова система."
-
-#~ msgid "Do you want to add it?"
-#~ msgstr "Хочете її додати?"
 
 #~ msgid ""
 #~ "The options for the file system type depends on the product and the mount "

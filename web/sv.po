@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-25 03:11+0000\n"
+"POT-Creation-Date: 2025-06-29 03:19+0000\n"
 "PO-Revision-Date: 2025-06-24 21:59+0000\n"
 "Last-Translator: Luna  Jernberg <bittin@opensuse.org>\n"
 "Language-Team: Swedish <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -321,7 +321,7 @@ msgstr "Inloggningsformulär"
 #: src/components/questions/QuestionWithPassword.tsx:64
 #: src/components/storage/iscsi/AuthFields.jsx:87
 #: src/components/storage/iscsi/AuthFields.jsx:91
-#: src/components/users/RootUser.tsx:61
+#: src/components/users/RootUser.tsx:64
 msgid "Password"
 msgstr "Lösenord"
 
@@ -469,8 +469,8 @@ msgstr "Lokalisering"
 #: src/components/l10n/L10nPage.tsx:84 src/components/l10n/L10nPage.tsx:98
 #: src/components/l10n/L10nPage.tsx:110
 #: src/components/storage/iscsi/InitiatorForm.tsx:89
-#: src/components/users/FirstUserForm.tsx:234
-#: src/components/users/RootUserForm.tsx:163
+#: src/components/users/FirstUserForm.tsx:235
+#: src/components/users/RootUserForm.tsx:164
 msgid "Change"
 msgstr "Ändra"
 
@@ -562,15 +562,15 @@ msgstr "Adresser"
 msgid "Addresses data list"
 msgstr "Adresser data lista"
 
+#. TRANSLATORS: this simply concatenates the two sentences that describe what is going to happen
+#. with partitions. The first %s corresponds to deleted partitions and the second one to resized
+#. ones.
 #. TRANSLATORS: A label shown in a dropdown for selecting a network
 #. device. It combines the device name and MAC address, with the order
 #. determined by the component settings: some selectors will show the
 #. name first, others the MAC address. I.e. "enp1s0 - CC-7F-C8-FC-7A-A1"
 #. or "CC-7F-C8-FC-7A-A1 - enp1s0". You may change the separator, but
 #. please keep both %s placeholders.
-#. TRANSLATORS: this simply concatenates the two sentences that describe what is going to happen
-#. with partitions. The first %s corresponds to deleted partitions and the second one to resized
-#. ones.
 #: src/components/network/BindingSettingsForm.tsx:75
 #: src/components/storage/utils/drive.tsx:87
 #, c-format
@@ -667,8 +667,8 @@ msgstr "Redigera anslutning %s"
 #: src/components/storage/iscsi/DiscoverForm.tsx:98
 #: src/components/storage/iscsi/LoginForm.jsx:70
 #: src/components/storage/zfcp/ZFCPDiskForm.tsx:112
-#: src/components/users/FirstUserForm.tsx:196
-#: src/components/users/RootUserForm.tsx:143
+#: src/components/users/FirstUserForm.tsx:197
+#: src/components/users/RootUserForm.tsx:144
 msgid "Something went wrong"
 msgstr "Något gick fel"
 
@@ -808,7 +808,7 @@ msgstr "IP inställningar"
 #: src/components/network/WiredConnectionDetails.tsx:84
 #: src/components/storage/EncryptionSection.tsx:50
 #: src/components/storage/iscsi/NodesPresenter.jsx:75
-#: src/components/users/FirstUser.tsx:52 src/components/users/RootUser.tsx:55
+#: src/components/users/FirstUser.tsx:54 src/components/users/RootUser.tsx:57
 msgid "Edit"
 msgstr "Redigera"
 
@@ -829,8 +829,6 @@ msgstr "Rutter"
 
 #. TRANSLATORS: WiFi authentication mode
 #: src/components/network/WifiConnectionForm.tsx:43
-#: src/components/storage/LogicalVolumePage.tsx:625
-#: src/components/storage/PartitionPage.tsx:754
 msgid "None"
 msgstr "Ingen"
 
@@ -1501,109 +1499,110 @@ msgstr ""
 "för %3$s"
 
 #: src/components/storage/AutoSizeText.tsx:167
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"The size range for %1$s will be dynamically adjusted based on the amount of "
-"RAM in the system, the usage of Btrfs snapshots and the presence of a "
-"separate file system for %2$s."
+"The size for %1$s will be dynamically adjusted based on the amount of RAM in "
+"the system, the usage of Btrfs snapshots and the presence of a separate file "
+"system for %2$s."
 msgstr ""
 "Storleksintervallet för %1$s kommer att justeras dynamiskt baserat på "
 "mängden RAM i systemet, användningen av Btrfs-ögonblicksavbilder och närvaro "
 "av ett separat filsystem för %2$s."
 
 #: src/components/storage/AutoSizeText.tsx:178
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"The size range for %1$s will be dynamically adjusted based on the amount of "
-"RAM in the system, the usage of Btrfs snapshots and the presence of separate "
-"file systems for %2$s."
+"The size for %1$s will be dynamically adjusted based on the amount of RAM in "
+"the system, the usage of Btrfs snapshots and the presence of separate file "
+"systems for %2$s."
 msgstr ""
 "Storleksintervallet för %1$s kommer att justeras dynamiskt baserat på "
 "mängden RAM i systemet, användningen av Btrfs-ögonblicksavbilder och närvaro "
 "av separata filsystem för %2$s."
 
 #: src/components/storage/AutoSizeText.tsx:188
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"The size range for %s will be dynamically adjusted based on the amount of "
-"RAM in the system and the usage of Btrfs snapshots."
+"The size for %s will be dynamically adjusted based on the amount of RAM in "
+"the system and the usage of Btrfs snapshots."
 msgstr ""
 "Storleksintervallet för %s kommer att justeras dynamiskt baserat på mängden "
 "RAM i systemet och användningen av Btrfs ögonblicksavbilder."
 
 #: src/components/storage/AutoSizeText.tsx:199
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"The size range for %1$s will be dynamically adjusted based on the amount of "
-"RAM in the system and the presence of a separate file system for %2$s."
+"The size for %1$s will be dynamically adjusted based on the amount of RAM in "
+"the system and the presence of a separate file system for %2$s."
 msgstr ""
 "Storleksintervallet för %1$s kommer att justeras dynamiskt baserat på "
 "mängden RAM i systemet och närvaro av ett separat filsystem för %2$s."
 
 #: src/components/storage/AutoSizeText.tsx:209
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"The size range for %1$s will be dynamically adjusted based on the amount of "
-"RAM in the system and the presence of separate file systems for %2$s."
+"The size for %1$s will be dynamically adjusted based on the amount of RAM in "
+"the system and the presence of separate file systems for %2$s."
 msgstr ""
 "Storleksintervallet för %1$s kommer att justeras dynamiskt baserat på "
 "mängden RAM i systemet och närvaro av separata filsystem för %2$s."
 
 #: src/components/storage/AutoSizeText.tsx:221
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"The size range for %1$s will be dynamically adjusted based on the usage of "
-"Btrfs snapshots and the presence of a separate file system for %2$s."
+"The size for %1$s will be dynamically adjusted based on the usage of Btrfs "
+"snapshots and the presence of a separate file system for %2$s."
 msgstr ""
 "Storleksintervallet för %1$s kommer att justeras dynamiskt baserat på "
 "användningen av Btrfs-ögonblicksavbilder och närvaro av ett separat "
 "filsystem för %2$s."
 
 #: src/components/storage/AutoSizeText.tsx:232
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"The size range for %1$s will be dynamically adjusted based on the usage of "
-"Btrfs snapshots and the presence of separate file systems for %2$s."
+"The size for %1$s will be dynamically adjusted based on the usage of Btrfs "
+"snapshots and the presence of separate file systems for %2$s."
 msgstr ""
 "Storleksintervallet för %1$s kommer att justeras dynamiskt baserat på "
 "användningen av Btrfs-ögonblicksavbilder och närvaro av separata filsystem "
 "för %2$s."
 
-#: src/components/storage/AutoSizeText.tsx:242
-#, c-format
+#. TRANSLATORS: %s is a mount point (eg. /)
+#: src/components/storage/AutoSizeText.tsx:241
+#, fuzzy, c-format
 msgid ""
-"The size range for %s will be dynamically adjusted based on the usage of "
-"Btrfs snapshots."
+"The size for %s will be dynamically adjusted based on the usage of Btrfs "
+"snapshots."
 msgstr ""
 "Storleksintervallet för %s kommer att justeras dynamiskt baserat på "
 "användningen av Btrfs ögonblicksavbilder."
 
-#: src/components/storage/AutoSizeText.tsx:252
-#, c-format
+#: src/components/storage/AutoSizeText.tsx:250
+#, fuzzy, c-format
 msgid ""
-"The size range for %1$s will be dynamically adjusted based on the presence "
-"of a separate file system for %2$s."
+"The size for %1$s will be dynamically adjusted based on the presence of a "
+"separate file system for %2$s."
 msgstr ""
 "Storleksintervallet för %1$s kommer att justeras dynamiskt baserat på "
 "närvaro av ett separat filsystem för %2$s."
 
-#: src/components/storage/AutoSizeText.tsx:262
-#, c-format
+#: src/components/storage/AutoSizeText.tsx:260
+#, fuzzy, c-format
 msgid ""
-"The size range for %1$s will be dynamically adjusted based on the presence "
-"of separate file systems for %2$s."
+"The size for %1$s will be dynamically adjusted based on the presence of "
+"separate file systems for %2$s."
 msgstr ""
 "Storleksintervallet för %1$s kommer att justeras dynamiskt baserat på "
 "närvaro av separata filsystem för %2$s."
 
 #. TRANSLATORS: %1$s is a device type (eg. partition) and %2s is a size with units (eg. 10 GiB)
-#: src/components/storage/AutoSizeText.tsx:274
+#: src/components/storage/AutoSizeText.tsx:272
 #, c-format
 msgid "The current configuration will result in a %1$s of %2$s."
 msgstr "Den aktuella konfigurationen kommer att resultera i en %1$s på %2$s."
 
 #. TRANSLATORS: %1$s is a device type (eg. partition) %2$s is a min size, %3$s is the max size
-#: src/components/storage/AutoSizeText.tsx:282
+#: src/components/storage/AutoSizeText.tsx:280
 #, c-format
 msgid ""
 "The current configuration will result in a %1$s with a size between %2$s and "
@@ -1613,7 +1612,7 @@ msgstr ""
 "mellan %2$s och %3$s."
 
 #. TRANSLATORS: %1$s is a device type (eg. partition) and %2$s is a size with units (eg. 10 GiB)
-#: src/components/storage/AutoSizeText.tsx:291
+#: src/components/storage/AutoSizeText.tsx:289
 #, c-format
 msgid "The current configuration will result in a %1$s of at least %2$s."
 msgstr ""
@@ -1646,6 +1645,8 @@ msgid "Boot options"
 msgstr "Uppstartsalternativ"
 
 #: src/components/storage/BootSelection.tsx:174
+#: src/components/storage/SizeModeSelect.tsx:189
+#: src/components/storage/SizeModeSelect.tsx:194
 #: src/components/storage/iscsi/NodeStartupOptions.js:28
 msgid "Automatic"
 msgstr "Automatisk"
@@ -1805,7 +1806,7 @@ msgstr ""
 "program och systemfiler."
 
 #: src/components/storage/EncryptionSettingsPage.tsx:73
-#: src/components/users/RootUserForm.tsx:103
+#: src/components/users/RootUserForm.tsx:104
 msgid "Password is empty."
 msgstr "Lösenord är tomt."
 
@@ -1847,230 +1848,138 @@ msgstr ""
 msgid "iSCSI"
 msgstr "iSCSI"
 
-#: src/components/storage/LogicalVolumePage.tsx:252
-#: src/components/storage/PartitionPage.tsx:315
+#: src/components/storage/LogicalVolumePage.tsx:248
+#: src/components/storage/PartitionPage.tsx:306
 msgid "Select or enter a valid mount point"
 msgstr "Välj eller ange en giltig monteringspunkt"
 
-#: src/components/storage/LogicalVolumePage.tsx:262
-#: src/components/storage/PartitionPage.tsx:325
+#: src/components/storage/LogicalVolumePage.tsx:258
+#: src/components/storage/PartitionPage.tsx:316
 msgid ""
 "Select or enter a mount point that is not already assigned to another device"
 msgstr ""
 "Välj eller ange en monteringspunkt som inte redan är tilldelad en annan enhet"
 
-#: src/components/storage/LogicalVolumePage.tsx:273
+#: src/components/storage/LogicalVolumePage.tsx:269
 msgid "Enter a name"
 msgstr "Ange ett namn"
 
-#: src/components/storage/LogicalVolumePage.tsx:300
-#: src/components/storage/PartitionPage.tsx:353
+#: src/components/storage/LogicalVolumePage.tsx:296
+#: src/components/storage/PartitionPage.tsx:344
 msgid "The minimum cannot be greater than the maximum"
 msgstr "Minimum kan inte vara större än maximum"
 
-#: src/components/storage/LogicalVolumePage.tsx:308
+#: src/components/storage/LogicalVolumePage.tsx:304
 msgid ""
 "The maximum must be a number optionally followed by a unit like GiB or GB"
 msgstr ""
 "Det maximala måste vara ett tal, eventuellt följt av en enhet som GiB eller "
 "GB"
 
-#: src/components/storage/LogicalVolumePage.tsx:316
+#: src/components/storage/LogicalVolumePage.tsx:312
 msgid ""
 "The minimum must be a number optionally followed by a unit like GiB or GB"
 msgstr ""
 "Det minsta måste vara ett nummer, eventuellt följt av en enhet som GiB eller "
 "GB"
 
-#: src/components/storage/LogicalVolumePage.tsx:323
+#: src/components/storage/LogicalVolumePage.tsx:319
 msgid ""
 "Size limits must be numbers optionally followed by a unit like GiB or GB"
 msgstr ""
 "Storleksgränser måste vara siffror, eventuellt följt av en enhet som GiB "
 "eller GB"
 
-#: src/components/storage/LogicalVolumePage.tsx:442
-#: src/components/storage/LogicalVolumePage.tsx:445
+#: src/components/storage/LogicalVolumePage.tsx:438
+#: src/components/storage/LogicalVolumePage.tsx:441
 msgid "Logical volume name"
 msgstr "Logisk volym namn"
 
-#: src/components/storage/LogicalVolumePage.tsx:447
-#: src/components/storage/LogicalVolumePage.tsx:466
-#: src/components/storage/LogicalVolumePage.tsx:564
-#: src/components/storage/PartitionPage.tsx:566
-#: src/components/storage/PartitionPage.tsx:685
+#: src/components/storage/LogicalVolumePage.tsx:443
+#: src/components/storage/LogicalVolumePage.tsx:462
+#: src/components/storage/LogicalVolumePage.tsx:756
+#: src/components/storage/PartitionPage.tsx:558
+#: src/components/storage/PartitionPage.tsx:879
 msgid "Waiting for a mount point"
 msgstr "Väntar på en monteringspunkt"
 
-#: src/components/storage/LogicalVolumePage.tsx:467
-#: src/components/storage/PartitionPage.tsx:570
-#: src/components/storage/utils.ts:318
+#: src/components/storage/LogicalVolumePage.tsx:463
+#: src/components/storage/PartitionPage.tsx:562
+#: src/components/storage/utils.ts:349
 msgid "Btrfs with snapshots"
 msgstr "Btrfs med ögonblicksavbilder"
 
-#: src/components/storage/LogicalVolumePage.tsx:482
-#: src/components/storage/PartitionPage.tsx:588
+#: src/components/storage/LogicalVolumePage.tsx:478
+#: src/components/storage/PartitionPage.tsx:580
 #, c-format
 msgid "Default file system for %s"
 msgstr "Standard filsystem för %s"
 
-#: src/components/storage/LogicalVolumePage.tsx:483
+#: src/components/storage/LogicalVolumePage.tsx:479
 msgid "Default file system for generic logical volumes"
 msgstr "Standardfilsystem för generiska logiska volymer"
 
-#: src/components/storage/LogicalVolumePage.tsx:485
+#: src/components/storage/LogicalVolumePage.tsx:481
 msgid "Format logical volume as"
 msgstr "Formatera logisk volym som"
 
-#: src/components/storage/LogicalVolumePage.tsx:551
-#: src/components/storage/PartitionPage.tsx:670
+#: src/components/storage/LogicalVolumePage.tsx:547
+#: src/components/storage/PartitionPage.tsx:662
 msgid "File system label"
 msgstr "Filsystem etikett"
 
-#: src/components/storage/LogicalVolumePage.tsx:565
-#: src/components/storage/PartitionPage.tsx:687
-msgid "Calculated automatically"
-msgstr "Beräknas automatiskt"
-
-#: src/components/storage/LogicalVolumePage.tsx:566
-#: src/components/storage/PartitionPage.tsx:688
-#: src/components/storage/utils.ts:112
-msgid "Custom"
-msgstr "Anpassad"
-
-#: src/components/storage/LogicalVolumePage.tsx:577
-#: src/components/storage/PartitionPage.tsx:700
-msgid "Size options"
-msgstr "Storleksalternativ"
-
-#: src/components/storage/LogicalVolumePage.tsx:587
-#: src/components/storage/PartitionPage.tsx:716
-msgid "Let the installer propose a sensible range of sizes"
-msgstr "Låt installationsprogrammet föreslå ett vettigt utbud av storlekar"
-
-#: src/components/storage/LogicalVolumePage.tsx:591
-#: src/components/storage/PartitionPage.tsx:720
-msgid "Define a custom size or a range"
-msgstr "Definiera en anpassad storlek eller ett intervall"
-
-#: src/components/storage/LogicalVolumePage.tsx:624
-#: src/components/storage/PartitionPage.tsx:753
-msgid "Same as minimum"
-msgstr "Samma som minimum"
-
-#: src/components/storage/LogicalVolumePage.tsx:626
-#: src/components/storage/PartitionPage.tsx:755
-msgid "Limited"
-msgstr "Begränsad"
-
-#: src/components/storage/LogicalVolumePage.tsx:634
-#: src/components/storage/PartitionPage.tsx:763
-msgid "Maximum size options"
-msgstr "Största storleksalternativ"
-
-#: src/components/storage/LogicalVolumePage.tsx:637
-msgid "The logical volume is created exactly with the given size"
-msgstr "Den logiska volymen skapas exakt med den givna storleken"
-
-#: src/components/storage/LogicalVolumePage.tsx:643
-msgid "The logical volume can grow until a given limit size"
-msgstr "Den logiska volymen kan växa tills en given gränsstorlek"
-
-#: src/components/storage/LogicalVolumePage.tsx:649
-msgid "The logical volume can grow to use all the contiguous free space"
-msgstr ""
-"Den logiska volymen kan växa för att använda allt angränsande ledigt utrymme"
-
-#: src/components/storage/LogicalVolumePage.tsx:701
-msgid "Sizes must be entered as a numbers optionally followed by a unit."
-msgstr "Storlekar måste anges som siffror, eventuellt följt av en enhet."
-
-#: src/components/storage/LogicalVolumePage.tsx:705
-msgid ""
-"If the unit is omitted, bytes (B) will be used. Greater units can be "
-"of               the form GiB (power of 2) or GB (power of 10)."
-msgstr ""
-"Om enheten utelämnas kommer byte (B) att användas. Större enheter kan vara "
-"av              formen av GiB (effekt av 2) eller GB (effekt av 10)."
-
-#: src/components/storage/LogicalVolumePage.tsx:713
-#: src/components/storage/PartitionPage.tsx:839
-msgid "Minimum"
-msgstr "Minst"
-
-#: src/components/storage/LogicalVolumePage.tsx:718
-#: src/components/storage/PartitionPage.tsx:844
-msgid "Minimum size value"
-msgstr "Minsta storleksvärde"
-
-#: src/components/storage/LogicalVolumePage.tsx:724
-#: src/components/storage/PartitionPage.tsx:850
-msgid "Maximum"
-msgstr "Maximal"
-
-#: src/components/storage/LogicalVolumePage.tsx:731
-#: src/components/storage/PartitionPage.tsx:857
-msgid "Maximum size mode"
-msgstr "Läget för maximal storlek"
-
-#: src/components/storage/LogicalVolumePage.tsx:740
-#: src/components/storage/PartitionPage.tsx:866
-msgid "Maximum size value"
-msgstr "Maximalt storleksvärde"
-
-#: src/components/storage/LogicalVolumePage.tsx:860
+#: src/components/storage/LogicalVolumePage.tsx:677
 #, c-format
 msgid "Configure LVM logical volume at %s volume group"
 msgstr "Konfigurera LVM logisk volym på %s volymgrupp"
 
-#: src/components/storage/LogicalVolumePage.tsx:870
-#: src/components/storage/LogicalVolumePage.tsx:875
-#: src/components/storage/PartitionPage.tsx:1006
-#: src/components/storage/PartitionPage.tsx:1013
+#: src/components/storage/LogicalVolumePage.tsx:687
+#: src/components/storage/LogicalVolumePage.tsx:692
+#: src/components/storage/PartitionPage.tsx:812
+#: src/components/storage/PartitionPage.tsx:819
 msgid "Mount point"
 msgstr "Monteringspunkt"
 
-#: src/components/storage/LogicalVolumePage.tsx:873
-#: src/components/storage/PartitionPage.tsx:1011
+#: src/components/storage/LogicalVolumePage.tsx:690
+#: src/components/storage/PartitionPage.tsx:817
 msgid "Mount point toggle"
 msgstr "Monteringspunkt växel"
 
-#: src/components/storage/LogicalVolumePage.tsx:874
-#: src/components/storage/PartitionPage.tsx:1012
+#: src/components/storage/LogicalVolumePage.tsx:691
+#: src/components/storage/PartitionPage.tsx:818
 msgid "Suggested mount points"
 msgstr "Föreslagna monteringspunkter"
 
-#: src/components/storage/LogicalVolumePage.tsx:876
-#: src/components/storage/PartitionPage.tsx:1014
+#: src/components/storage/LogicalVolumePage.tsx:693
+#: src/components/storage/PartitionPage.tsx:820
 msgid "Clear selected mount point"
 msgstr "Rensa vald monteringspunkt"
 
-#: src/components/storage/LogicalVolumePage.tsx:879
-#: src/components/storage/PartitionPage.tsx:1017
+#: src/components/storage/LogicalVolumePage.tsx:696
+#: src/components/storage/PartitionPage.tsx:823
 msgid "Use"
 msgstr "Använd"
 
-#: src/components/storage/LogicalVolumePage.tsx:885
-#: src/components/storage/PartitionPage.tsx:1035
+#: src/components/storage/LogicalVolumePage.tsx:702
+#: src/components/storage/PartitionPage.tsx:841
 msgid "Select or enter a mount point"
 msgstr "Välj eller ange en monteringspunkt"
 
-#: src/components/storage/LogicalVolumePage.tsx:910
-#: src/components/storage/PartitionPage.tsx:1044
+#: src/components/storage/LogicalVolumePage.tsx:727
+#: src/components/storage/PartitionPage.tsx:850
 msgid "File system"
 msgstr "Filsystem"
 
-#: src/components/storage/LogicalVolumePage.tsx:921
-#: src/components/storage/PartitionPage.tsx:1056
+#: src/components/storage/LogicalVolumePage.tsx:738
+#: src/components/storage/PartitionPage.tsx:862
 msgid "Label"
 msgstr "Etikett"
 
-#: src/components/storage/LogicalVolumePage.tsx:933
-#: src/components/storage/PartitionPage.tsx:1067
-#: src/components/storage/ProposalResultTable.tsx:135
-#: src/components/storage/SpaceActionsTable.tsx:240
-msgid "Size"
-msgstr "Storlek"
+#: src/components/storage/LogicalVolumePage.tsx:751
+#: src/components/storage/PartitionPage.tsx:874
+#, fuzzy
+msgid "Size mode"
+msgstr "Läget för maximal storlek"
 
 #: src/components/storage/LvmPage.tsx:83
 msgid "Enter a name for the volume group."
@@ -2146,99 +2055,73 @@ msgstr "Skapa LVM volymgrupp på %s"
 msgid "Create LVM volume group on %s"
 msgstr "Skapa LVM volymgrupp på %s"
 
-#: src/components/storage/PartitionPage.tsx:361
+#: src/components/storage/PartitionPage.tsx:352
 msgid "The maximum must be a number followed by a unit like GiB or GB"
 msgstr ""
 "Det maximala antalet måste vara ett tal följt av en enhet som GiB eller GB"
 
-#: src/components/storage/PartitionPage.tsx:369
+#: src/components/storage/PartitionPage.tsx:360
 msgid "The minimum must be a number followed by a unit like GiB or GB"
 msgstr "Det minsta måste vara ett tal följt av en enhet som GiB eller GB"
 
-#: src/components/storage/PartitionPage.tsx:376
+#: src/components/storage/PartitionPage.tsx:367
 msgid "Size limits must be numbers followed by a unit like GiB or GB"
 msgstr "Storleksgränser måste vara siffror följt av en enhet som GiB eller GB"
 
 #. TRANSLATORS: %s is a disk name with its size (eg. "sda, 10 GiB"
-#: src/components/storage/PartitionPage.tsx:504
+#: src/components/storage/PartitionPage.tsx:496
 #, c-format
 msgid "As a new partition on %s"
 msgstr "Som en ny partition på %s"
 
-#: src/components/storage/PartitionPage.tsx:506
+#: src/components/storage/PartitionPage.tsx:498
 #, c-format
 msgid "Using partition %s"
 msgstr "Använder partition %s"
 
-#: src/components/storage/PartitionPage.tsx:535
+#: src/components/storage/PartitionPage.tsx:527
 msgid "Mount point options"
 msgstr "Monteringspunktsalternativ"
 
-#: src/components/storage/PartitionPage.tsx:540
+#: src/components/storage/PartitionPage.tsx:532
 msgid "Using an existing partition"
 msgstr "Använd en befintlig partition"
 
-#: src/components/storage/PartitionPage.tsx:551
+#: src/components/storage/PartitionPage.tsx:543
 msgid "There are not usable partitions"
 msgstr "Det finns inte några användbara partitioner"
 
 #. TRANSLATORS: %s is a device name (eg. /dev/sda3).
-#: src/components/storage/PartitionPage.tsx:569
+#: src/components/storage/PartitionPage.tsx:561
 #: src/components/storage/utils/partition.tsx:69
 #, c-format
 msgid "Current %s"
 msgstr "Nuvarande %s"
 
-#: src/components/storage/PartitionPage.tsx:589
+#: src/components/storage/PartitionPage.tsx:581
 msgid "Default file system for generic partitions"
 msgstr "Standardfilsystem för generiska partitioner"
 
-#: src/components/storage/PartitionPage.tsx:591
+#: src/components/storage/PartitionPage.tsx:583
 msgid "Destroy current data and format partition as"
 msgstr "Förstör nuvarande data och formatera partition som"
 
-#: src/components/storage/PartitionPage.tsx:592
+#: src/components/storage/PartitionPage.tsx:584
 msgid "Format partition as"
 msgstr "Formatera partition som"
 
 #. TRANSLATORS: %s is the name of a partition, like /dev/vda2
-#: src/components/storage/PartitionPage.tsx:605
+#: src/components/storage/PartitionPage.tsx:597
 #, c-format
 msgid "Do not format %s and keep the data"
 msgstr "Formatera inte %s och behåll data"
 
-#. TRANSLATORS: %s is a partition name like /dev/vda2
-#: src/components/storage/PartitionPage.tsx:708
-#, c-format
-msgid "Keep size of %s"
-msgstr "Behåll storleken på %s"
-
-#: src/components/storage/PartitionPage.tsx:766
-msgid "The partition is created exactly with the given size"
-msgstr "Partitionen skapas exakt med den angivna storleken"
-
-#: src/components/storage/PartitionPage.tsx:772
-msgid "The partition can grow until a given limit size"
-msgstr "Partitionen kan växa till en given storleksgräns"
-
-#: src/components/storage/PartitionPage.tsx:778
-msgid "The partition can grow to use all the contiguous free space"
-msgstr "Partitionen kan växa för att använda allt angränsande ledigt utrymme"
-
-#: src/components/storage/PartitionPage.tsx:831
-msgid ""
-"Sizes must be entered as a numbers followed by a unit of               the "
-"form GiB (power of 2) or GB (power of 10)."
-msgstr ""
-"Storlekar måste anges som siffror följt av en enhet              formen GiB "
-"(potens av 2) eller GB (potens av 10)."
-
-#: src/components/storage/PartitionPage.tsx:999
+#: src/components/storage/PartitionPage.tsx:805
 #, c-format
 msgid "Configure partition at %s"
 msgstr "Konfigurera partition på %s"
 
-#: src/components/storage/PartitionPage.tsx:1023
+#: src/components/storage/PartitionPage.tsx:829
 msgid "Mount point mode"
 msgstr "Monteringspunkt läge"
 
@@ -2499,6 +2382,12 @@ msgstr "Monteringspunkt"
 msgid "Details"
 msgstr "Detaljer"
 
+#: src/components/storage/ProposalResultTable.tsx:135
+#: src/components/storage/SizeModeSelect.tsx:125
+#: src/components/storage/SpaceActionsTable.tsx:240
+msgid "Size"
+msgstr "Storlek"
+
 #: src/components/storage/ProposalTransactionalInfo.tsx:43
 msgid "Transactional root file system"
 msgstr "Transaktionellt root filsystem"
@@ -2636,6 +2525,66 @@ msgstr "Använd inte"
 #, c-format
 msgid "Device %s menu"
 msgstr "Enhets %s-meny"
+
+#: src/components/storage/SizeModeSelect.tsx:75
+#, c-format
+msgid ""
+"The size is configured as a range between %s and %s, but defining a range of "
+"sizes is not supported by the UI."
+msgstr ""
+
+#: src/components/storage/SizeModeSelect.tsx:83
+#, fuzzy
+msgid "Do you want to use a supported size?"
+msgstr "Vill du lägga till det?"
+
+#: src/components/storage/SizeModeSelect.tsx:115
+#, fuzzy
+msgid ""
+"The size must be a number followed by a unit of the form GiB (power of 2) or "
+"GB (power of 10)."
+msgstr ""
+"Storlekar måste anges som siffror följt av en enhet              formen GiB "
+"(potens av 2) eller GB (potens av 10)."
+
+#. TRANSLATORS: %s is a disk size (e.g., "10 GiB").
+#: src/components/storage/SizeModeSelect.tsx:140
+#, c-format
+msgid "approx. %s"
+msgstr ""
+
+#: src/components/storage/SizeModeSelect.tsx:157
+#, fuzzy
+msgid "Allow growing"
+msgstr "Tillåt storleksändring"
+
+#: src/components/storage/SizeModeSelect.tsx:159
+#, fuzzy
+msgid ""
+"The final size can be bigger in order to fill the contiguous free space."
+msgstr ""
+"Den logiska volymen kan växa för att använda allt angränsande ledigt utrymme"
+
+#: src/components/storage/SizeModeSelect.tsx:189
+#: src/components/storage/SizeModeSelect.tsx:197
+#: src/components/storage/utils.ts:112
+msgid "Custom"
+msgstr "Anpassad"
+
+#: src/components/storage/SizeModeSelect.tsx:192
+#, fuzzy
+msgid "Size modes"
+msgstr "Storleksalternativ"
+
+#: src/components/storage/SizeModeSelect.tsx:193
+#, fuzzy
+msgid "Let the installer propose a sensible size"
+msgstr "Låt installationsprogrammet föreslå ett vettigt utbud av storlekar"
+
+#: src/components/storage/SizeModeSelect.tsx:196
+#, fuzzy
+msgid "Define a custom size"
+msgstr "Definiera en anpassad storlek eller ett intervall"
 
 #: src/components/storage/SpaceActionsTable.tsx:75
 msgid "The device will be used by the new system."
@@ -3195,13 +3144,13 @@ msgid "Select what to do with each partition."
 msgstr "Välj vad som ska göras med varje partition."
 
 #. TRANSLATORS: Size range, %1$s is the min size and %2$s is the max
-#: src/components/storage/utils.ts:349
+#: src/components/storage/utils.ts:380
 #, c-format
 msgid "%1$s - %2$s"
 msgstr "%1$s - %2$s"
 
 #. TRANSLATORS: minimum device size, %s is replaced by size string, e.g. "17.5 GiB"
-#: src/components/storage/utils.ts:351
+#: src/components/storage/utils.ts:382
 #, c-format
 msgid "at least %s"
 msgstr "åtminstone %s"
@@ -3452,70 +3401,75 @@ msgstr ""
 msgid "Static hostname"
 msgstr "Statiskt värdnamn"
 
-#: src/components/users/FirstUser.tsx:46
+#: src/components/users/FirstUser.tsx:48
 msgid "Define a user now"
 msgstr "Definera en användare nu"
 
-#: src/components/users/FirstUser.tsx:54
+#: src/components/users/FirstUser.tsx:56
 msgid "Discard"
 msgstr "Kasta bort"
 
-#: src/components/users/FirstUser.tsx:66
+#: src/components/users/FirstUser.tsx:68
 msgid "No user defined yet."
 msgstr "Ingen användare definierad ännu."
 
-#: src/components/users/FirstUser.tsx:74
-#: src/components/users/FirstUserForm.tsx:202
+#: src/components/users/FirstUser.tsx:77
+#: src/components/users/FirstUserForm.tsx:203
 msgid "Full name"
 msgstr "Fullständigt namn"
 
-#: src/components/users/FirstUser.tsx:80
-#: src/components/users/FirstUserForm.tsx:211
+#: src/components/users/FirstUser.tsx:83
+#: src/components/users/FirstUserForm.tsx:212
 msgid "Username"
 msgstr "Användarnamn"
 
-#: src/components/users/FirstUser.tsx:96
+#: src/components/users/FirstUser.tsx:101
 msgid "First user"
 msgstr "Första användare"
 
-#: src/components/users/FirstUser.tsx:98
+#: src/components/users/FirstUser.tsx:103
 msgid ""
 "Define the first user with admin (sudo) privileges for system management."
 msgstr ""
 "Definiera den första användaren med admin (sudo) privilegier för "
 "systemhantering."
 
-#: src/components/users/FirstUserForm.tsx:56
+#: src/components/users/FirstUserForm.tsx:57
 msgid "Username suggestion dropdown"
 msgstr "Rullgardinsmeny för användarnamnsförslag"
 
 #. TRANSLATORS: dropdown username suggestions
-#: src/components/users/FirstUserForm.tsx:71
+#: src/components/users/FirstUserForm.tsx:72
 msgid "Use suggested username"
 msgstr "Använd föreslaget användarnamn"
 
-#: src/components/users/FirstUserForm.tsx:126
+#: src/components/users/FirstUserForm.tsx:127
 msgid "All fields are required"
 msgstr "Alla fält krävs"
 
-#: src/components/users/FirstUserForm.tsx:190
+#: src/components/users/FirstUserForm.tsx:191
 msgid "Create user"
 msgstr "Skapa användare"
 
-#: src/components/users/FirstUserForm.tsx:190
+#: src/components/users/FirstUserForm.tsx:191
 msgid "Edit user"
 msgstr "Redigera användare"
 
-#: src/components/users/FirstUserForm.tsx:232
-#: src/components/users/RootUserForm.tsx:161
+#: src/components/users/FirstUserForm.tsx:233
+#: src/components/users/RootUserForm.tsx:162
 msgid "Using a hashed password."
 msgstr "Använder ett hashat lösenord."
 
-#: src/components/users/RootUser.tsx:51
+#: src/components/users/PasswordCheck.tsx:40
+#, fuzzy
+msgid "The password is weak"
+msgstr "Lösenord är tomt."
+
+#: src/components/users/RootUser.tsx:53
 msgid "Root user"
 msgstr "Root användare"
 
-#: src/components/users/RootUser.tsx:53
+#: src/components/users/RootUser.tsx:55
 msgid ""
 "Alongside defining the first user, authentication methods for the root user "
 "can be configured."
@@ -3523,51 +3477,105 @@ msgstr ""
 "Förutom att definiera den första användaren kan autentiseringsmetoder för "
 "rootanvändaren konfigureras."
 
-#: src/components/users/RootUser.tsx:63
+#: src/components/users/RootUser.tsx:66
 msgid "Defined (hidden)"
 msgstr "Definerad (dold)"
 
-#: src/components/users/RootUser.tsx:63 src/components/users/RootUser.tsx:69
+#: src/components/users/RootUser.tsx:66 src/components/users/RootUser.tsx:72
 msgid "Not defined"
 msgstr "Inte definerad"
 
-#: src/components/users/RootUser.tsx:67
+#: src/components/users/RootUser.tsx:70
 msgid "Public SSH Key"
 msgstr "Publik SSH nyckel"
 
-#: src/components/users/RootUserForm.tsx:61
+#: src/components/users/RootUserForm.tsx:62
 msgid "Upload, paste, or drop an SSH public key"
 msgstr "Ladda upp, klistra in eller dra in och släpp en SSH publik nyckel"
 
 #. TRANSLATORS: push button label
-#: src/components/users/RootUserForm.tsx:63
+#: src/components/users/RootUserForm.tsx:64
 msgid "Upload"
 msgstr "Ladda upp"
 
 #. TRANSLATORS: push button label, clears the related input field
-#: src/components/users/RootUserForm.tsx:65
+#: src/components/users/RootUserForm.tsx:66
 msgid "Clear"
 msgstr "Rensa"
 
-#: src/components/users/RootUserForm.tsx:108
+#: src/components/users/RootUserForm.tsx:109
 msgid "Public SSH Key is empty."
 msgstr "Publik SSH nyckel är tom."
 
-#: src/components/users/RootUserForm.tsx:137
+#: src/components/users/RootUserForm.tsx:138
 msgid "Root authentication methods"
 msgstr "Rotautentiseringsmetoder"
 
-#: src/components/users/RootUserForm.tsx:152
+#: src/components/users/RootUserForm.tsx:153
 msgid "Use password"
 msgstr "Använd lösenord"
 
-#: src/components/users/RootUserForm.tsx:180
+#: src/components/users/RootUserForm.tsx:184
 msgid "Use public SSH Key"
 msgstr "Använd publik SSH nyckel"
 
 #: src/routes/storage.tsx:103
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#~ msgid "Calculated automatically"
+#~ msgstr "Beräknas automatiskt"
+
+#~ msgid "Same as minimum"
+#~ msgstr "Samma som minimum"
+
+#~ msgid "Limited"
+#~ msgstr "Begränsad"
+
+#~ msgid "Maximum size options"
+#~ msgstr "Största storleksalternativ"
+
+#~ msgid "The logical volume is created exactly with the given size"
+#~ msgstr "Den logiska volymen skapas exakt med den givna storleken"
+
+#~ msgid "The logical volume can grow until a given limit size"
+#~ msgstr "Den logiska volymen kan växa tills en given gränsstorlek"
+
+#~ msgid "Sizes must be entered as a numbers optionally followed by a unit."
+#~ msgstr "Storlekar måste anges som siffror, eventuellt följt av en enhet."
+
+#~ msgid ""
+#~ "If the unit is omitted, bytes (B) will be used. Greater units can be "
+#~ "of               the form GiB (power of 2) or GB (power of 10)."
+#~ msgstr ""
+#~ "Om enheten utelämnas kommer byte (B) att användas. Större enheter kan "
+#~ "vara av              formen av GiB (effekt av 2) eller GB (effekt av 10)."
+
+#~ msgid "Minimum"
+#~ msgstr "Minst"
+
+#~ msgid "Minimum size value"
+#~ msgstr "Minsta storleksvärde"
+
+#~ msgid "Maximum"
+#~ msgstr "Maximal"
+
+#~ msgid "Maximum size value"
+#~ msgstr "Maximalt storleksvärde"
+
+#, c-format
+#~ msgid "Keep size of %s"
+#~ msgstr "Behåll storleken på %s"
+
+#~ msgid "The partition is created exactly with the given size"
+#~ msgstr "Partitionen skapas exakt med den angivna storleken"
+
+#~ msgid "The partition can grow until a given limit size"
+#~ msgstr "Partitionen kan växa till en given storleksgräns"
+
+#~ msgid "The partition can grow to use all the contiguous free space"
+#~ msgstr ""
+#~ "Partitionen kan växa för att använda allt angränsande ledigt utrymme"
 
 #~ msgid "Installer options"
 #~ msgstr "Installationsalternativ"
@@ -4056,9 +4064,6 @@ msgstr "ZFCP"
 #~ msgid "There is a predefined file system for %s."
 #~ msgstr "Det finns ett fördefinierat filsystem för %s."
 
-#~ msgid "Do you want to add it?"
-#~ msgstr "Vill du lägga till det?"
-
 #~ msgid ""
 #~ "The options for the file system type depends on the product and the mount "
 #~ "point."
@@ -4391,9 +4396,6 @@ msgstr "ZFCP"
 #, c-format
 #~ msgid "Space action selector for %s"
 #~ msgstr "Platsåtgärdsväljare för %s"
-
-#~ msgid "Allow resize"
-#~ msgstr "Tillåt storleksändring"
 
 #~ msgid "Do not modify"
 #~ msgstr "Modifiera inte"
