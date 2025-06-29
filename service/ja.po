@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-26 03:09+0000\n"
+"POT-Creation-Date: 2025-06-29 03:19+0000\n"
 "PO-Revision-Date: 2025-06-23 03:17+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/agama/agama-"
@@ -145,10 +145,10 @@ msgid ""
 "be \"%{expected}\". The file has changed by accident or by an attacker since "
 "the creater signed it. Use it anyway?"
 msgstr ""
-"ファイル %{file} のチェックサムは \"%{found}\" ですが、正しくは \"%{expected}"
-"\" であるべきものです。作成者が署名したあと、何らかの事故で書き換わってしまっ"
-"たか、もしくは不正な攻撃者が書き換えた可能性があります。このファイルを使用し"
-"てよろしいですか？"
+"ファイル %{file} のチェックサムは \"%{found}\" ですが、正しくは "
+"\"%{expected}\" であるべきものです。作成者が署名したあと、何らかの事故で書き"
+"換わってしまったか、もしくは不正な攻撃者が書き換えた可能性があります。この"
+"ファイルを使用してよろしいですか？"
 
 #. DoneProvide callback
 #.
@@ -478,8 +478,8 @@ msgstr "少なくとも %s 個のデバイスが必要です (%s に対して)"
 #: service/lib/agama/storage/config_checkers/md_raid.rb:168
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be deleted because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be deleted because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
 "デバイス '%{member}' は MD RAID %{md_raid} の一部であるため、削除できません"
 
@@ -490,8 +490,8 @@ msgstr ""
 #: service/lib/agama/storage/config_checkers/md_raid.rb:191
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be resized because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be resized because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
 "デバイス '%{member}' は MD RAID %{md_raid} の一部であるため、サイズ変更できま"
 "せん"
@@ -529,8 +529,8 @@ msgstr ""
 #: service/lib/agama/storage/config_checkers/md_raid.rb:259
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be used because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be used because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
 "デバイス '%{member}' は MD RAID %{md_raid} の一部であるため、使用できません"
 
@@ -674,29 +674,24 @@ msgid "Configuring file systems snapshots"
 msgstr "ファイルシステムのスナップショットを設定しています"
 
 #. Step to copy the installation logs
-#: service/lib/agama/storage/finisher.rb:249
+#: service/lib/agama/storage/finisher.rb:254
 msgid "Copying logs"
 msgstr "ログをコピーしています"
 
 #. Executes post-installation scripts
-#: service/lib/agama/storage/finisher.rb:283
+#: service/lib/agama/storage/finisher.rb:288
 msgid "Running user-defined scripts"
 msgstr "ユーザ定義のスクリプトを実行しています"
 
 #. Executes post-installation scripts
-#: service/lib/agama/storage/finisher.rb:322
+#: service/lib/agama/storage/finisher.rb:327
 msgid "Deploying user-defined files"
 msgstr "ユーザ定義のファイルを配置しています"
 
 #. Step to unmount the target file-systems
-#: service/lib/agama/storage/finisher.rb:341
+#: service/lib/agama/storage/finisher.rb:346
 msgid "Unmounting storage devices"
 msgstr "ストレージデバイスのマウントを解除しています"
-
-#. Step to write the mountlist file for Iguana, if needed
-#: service/lib/agama/storage/finisher.rb:357
-msgid "Configuring Iguana"
-msgstr "Iguana を設定しています"
 
 #. Applies the target configs.
 #.
@@ -792,6 +787,9 @@ msgid ""
 "Defining a user, setting the root password or a SSH public key is required"
 msgstr ""
 "ユーザの設定、 root パスワードの設定、 SSH 公開鍵の設定のいずれかが必要です"
+
+#~ msgid "Configuring Iguana"
+#~ msgstr "Iguana を設定しています"
 
 #, perl-brace-format
 #~ msgid "The file %{filename} from repository %{repo_name} (%{repo_url})"
