@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-29 03:19+0000\n"
+"POT-Creation-Date: 2025-07-01 03:21+0000\n"
 "PO-Revision-Date: 2025-06-30 06:59+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -664,7 +664,7 @@ msgid "Edit connection %s"
 msgstr "接続 %s の編集"
 
 #: src/components/network/IpSettingsForm.tsx:157
-#: src/components/storage/EncryptionSettingsPage.tsx:109
+#: src/components/storage/EncryptionSettingsPage.tsx:110
 #: src/components/storage/iscsi/DiscoverForm.tsx:98
 #: src/components/storage/iscsi/LoginForm.jsx:70
 #: src/components/storage/zfcp/ZFCPDiskForm.tsx:112
@@ -688,6 +688,8 @@ msgstr "自動 (DHCP)"
 
 #. TRANSLATORS: manual network configuration mode with a static IP address
 #: src/components/network/IpSettingsForm.tsx:180
+#: src/components/storage/SizeModeSelect.tsx:189
+#: src/components/storage/SizeModeSelect.tsx:197
 #: src/components/storage/iscsi/NodeStartupOptions.js:26
 msgid "Manual"
 msgstr "手動"
@@ -807,7 +809,7 @@ msgstr "IP 設定"
 
 #: src/components/network/WifiConnectionDetails.tsx:100
 #: src/components/network/WiredConnectionDetails.tsx:84
-#: src/components/storage/EncryptionSection.tsx:50
+#: src/components/storage/EncryptionSection.tsx:52
 #: src/components/storage/iscsi/NodesPresenter.jsx:75
 #: src/components/users/FirstUser.tsx:54 src/components/users/RootUser.tsx:57
 msgid "Edit"
@@ -1457,42 +1459,46 @@ msgstr "新しい %2$s に対しては少なくとも %1$s を使用します"
 
 #. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
 #: src/components/storage/AutoSizeText.tsx:80
-#, c-format
-msgid "A %1$s of %2$s will be created for %3$s"
+#, fuzzy, c-format
+msgid "A %1$s of %2$s will be created for %3$s if possible"
 msgstr "%2$s の %1$s を %3$s 向けに作成します"
 
 #. TRANSLATORS: %1$s is a device type (eg. partition), %2$s and %3$s are sizes with units (10 GiB), and %4$s is a mount path (/home)
 #: src/components/storage/AutoSizeText.tsx:89
-#, c-format
-msgid "A %1$s with a size between %2$s and %3$s will be created for %4$s"
+#, fuzzy, c-format
+msgid ""
+"A %1$s with a size between %2$s and %3$s will be created for %4$s if possible"
 msgstr "%2$s から %3$s までの範囲で %1$s を %4$s 向けに作成します"
 
 #. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
 #: src/components/storage/AutoSizeText.tsx:99
-#, c-format
-msgid "A %1$s of at least %2$s will be created for %3$s"
+#, fuzzy, c-format
+msgid "A %1$s of at least %2$s will be created for %3$s if possible"
 msgstr "少なくとも %2$s の %1$s を %3$s 向けに作成します"
 
 #. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
 #: src/components/storage/AutoSizeText.tsx:117
+#, fuzzy
 msgid ""
-"Based on the amount of RAM in the system, a %1s$ of %2$s will be created for "
+"Based on the amount of RAM in the system, a %1s$ of %2$s will be planned for "
 "%3$s"
 msgstr "システムのメモリサイズに応じて、 %2$s の %1$s を %3$s 向けに作成します"
 
 #: src/components/storage/AutoSizeText.tsx:127
+#, fuzzy
 msgid ""
 "Based on the amount of RAM in the system, a %1s$ with a size between %2$s "
-"and %3$s will be created for %4$s"
+"and %3$s will be planned for %4$s"
 msgstr ""
 "システムのメモリサイズに応じて、 %2$s から %3$s までの範囲で %1$s を %4$s 向"
 "けに作成します"
 
 #. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
 #: src/components/storage/AutoSizeText.tsx:138
+#, fuzzy
 msgid ""
 "Based on the amount of RAM in the system, a %1s$ of at least %2$s will be "
-"created for %3$s"
+"planned for %3$s"
 msgstr ""
 "システムのメモリサイズに応じて、少なくとも %2$s の %1$s を %3$s 向けに作成し"
 "ます"
@@ -1504,9 +1510,8 @@ msgid ""
 "the system, the usage of Btrfs snapshots and the presence of a separate file "
 "system for %2$s."
 msgstr ""
-"システムのメモリサイズと btrfs スナップショットの使用可否、そして %2$s "
-"向けの個別ファイルシステムの存在に応じて、 %1$s "
-"向けのサイズを動的に調整します。"
+"システムのメモリサイズと btrfs スナップショットの使用可否、そして %2$s 向けの"
+"個別ファイルシステムの存在に応じて、 %1$s 向けのサイズを動的に調整します。"
 
 #: src/components/storage/AutoSizeText.tsx:178
 #, c-format
@@ -1515,51 +1520,53 @@ msgid ""
 "the system, the usage of Btrfs snapshots and the presence of separate file "
 "systems for %2$s."
 msgstr ""
-"システムのメモリサイズと btrfs スナップショットの使用可否、そして %2$s "
-"向けの個別ファイルシステムの存在に応じて、 %1$s "
-"向けのサイズを動的に調整します。"
+"システムのメモリサイズと btrfs スナップショットの使用可否、そして %2$s 向けの"
+"個別ファイルシステムの存在に応じて、 %1$s 向けのサイズを動的に調整します。"
 
 #: src/components/storage/AutoSizeText.tsx:188
 #, c-format
 msgid ""
 "The size for %s will be dynamically adjusted based on the amount of RAM in "
 "the system and the usage of Btrfs snapshots."
-msgstr "システムのメモリサイズと btrfs スナップショットの使用可否に応じて、 %s "
-"向けのサイズを動的に調整します。"
+msgstr ""
+"システムのメモリサイズと btrfs スナップショットの使用可否に応じて、 %s 向けの"
+"サイズを動的に調整します。"
 
 #: src/components/storage/AutoSizeText.tsx:199
 #, c-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the amount of RAM in "
 "the system and the presence of a separate file system for %2$s."
-msgstr "システムのメモリサイズと %2$s 向けの個別ファイルシステムの存在に応じて、 %1$"
-"s 向けのサイズを動的に調整します。"
+msgstr ""
+"システムのメモリサイズと %2$s 向けの個別ファイルシステムの存在に応じて、 "
+"%1$s 向けのサイズを動的に調整します。"
 
 #: src/components/storage/AutoSizeText.tsx:209
 #, c-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the amount of RAM in "
 "the system and the presence of separate file systems for %2$s."
-msgstr "システムのメモリサイズと %2$s 向けの個別ファイルシステムの存在に応じて、 %1$"
-"s 向けのサイズを動的に調整します。"
+msgstr ""
+"システムのメモリサイズと %2$s 向けの個別ファイルシステムの存在に応じて、 "
+"%1$s 向けのサイズを動的に調整します。"
 
 #: src/components/storage/AutoSizeText.tsx:221
 #, c-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the usage of Btrfs "
 "snapshots and the presence of a separate file system for %2$s."
-msgstr "btrfs スナップショットの使用可否と %2$s "
-"向けの個別ファイルシステムの存在に応じて、 %1$s "
-"向けのサイズを動的に調整します。"
+msgstr ""
+"btrfs スナップショットの使用可否と %2$s 向けの個別ファイルシステムの存在に応"
+"じて、 %1$s 向けのサイズを動的に調整します。"
 
 #: src/components/storage/AutoSizeText.tsx:232
 #, c-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the usage of Btrfs "
 "snapshots and the presence of separate file systems for %2$s."
-msgstr "btrfs スナップショットの使用可否と %2$s "
-"向けの個別のファイルシステムの存在に応じて、 %1$s "
-"向けのサイズを動的に調整します。"
+msgstr ""
+"btrfs スナップショットの使用可否と %2$s 向けの個別のファイルシステムの存在に"
+"応じて、 %1$s 向けのサイズを動的に調整します。"
 
 #. TRANSLATORS: %s is a mount point (eg. /)
 #: src/components/storage/AutoSizeText.tsx:241
@@ -1567,43 +1574,48 @@ msgstr "btrfs スナップショットの使用可否と %2$s "
 msgid ""
 "The size for %s will be dynamically adjusted based on the usage of Btrfs "
 "snapshots."
-msgstr "btrfs スナップショットの使用可否に応じて、 %s "
-"向けのサイズを動的に調整します。"
+msgstr ""
+"btrfs スナップショットの使用可否に応じて、 %s 向けのサイズを動的に調整しま"
+"す。"
 
 #: src/components/storage/AutoSizeText.tsx:250
 #, c-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the presence of a "
 "separate file system for %2$s."
-msgstr "%2$s 向けの個別ファイルシステムの存在に応じて、 %1$s "
-"向けのサイズを動的に調整します。"
+msgstr ""
+"%2$s 向けの個別ファイルシステムの存在に応じて、 %1$s 向けのサイズを動的に調整"
+"します。"
 
 #: src/components/storage/AutoSizeText.tsx:260
 #, c-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the presence of "
 "separate file systems for %2$s."
-msgstr "%2$s 向けの個別ファイルシステムの存在に応じて、 %1$s "
-"向けのサイズを動的に調整します。"
+msgstr ""
+"%2$s 向けの個別ファイルシステムの存在に応じて、 %1$s 向けのサイズを動的に調整"
+"します。"
 
 #. TRANSLATORS: %1$s is a device type (eg. partition) and %2s is a size with units (eg. 10 GiB)
 #: src/components/storage/AutoSizeText.tsx:272
-#, c-format
-msgid "The current configuration will result in a %1$s of %2$s."
+#, fuzzy, c-format
+msgid ""
+"The current configuration will result in an attempt to create a %1$s of %2$s."
 msgstr "現在の設定では %2$s の %1$s になります。"
 
-#. TRANSLATORS: %1$s is a device type (eg. partition) %2$s is a min size, %3$s is the max size
-#: src/components/storage/AutoSizeText.tsx:280
-#, c-format
+#: src/components/storage/AutoSizeText.tsx:281
+#, fuzzy, c-format
 msgid ""
-"The current configuration will result in a %1$s with a size between %2$s and "
-"%3$s."
+"The current configuration will result in an attempt to create a %1$s with a "
+"size between %2$s and %3$s."
 msgstr "現在の設定では %2$s から %3$s までの %1$s になります。"
 
 #. TRANSLATORS: %1$s is a device type (eg. partition) and %2$s is a size with units (eg. 10 GiB)
-#: src/components/storage/AutoSizeText.tsx:289
-#, c-format
-msgid "The current configuration will result in a %1$s of at least %2$s."
+#: src/components/storage/AutoSizeText.tsx:291
+#, fuzzy, c-format
+msgid ""
+"The current configuration will result in an attempt to create a %1$s of at "
+"least %2$s."
 msgstr "現在の設定では少なくとも %2$s の %1$sになります。"
 
 #: src/components/storage/BootSelection.tsx:127
@@ -1620,8 +1632,8 @@ msgstr "インストール先のディスク内に起動用のパーティショ
 
 #. TRANSLATORS: %s is replaced by a device name and size (e.g., "/dev/sda, 500GiB")
 #: src/components/storage/BootSelection.tsx:138
-#, c-format
-msgid "Partitions to boot will be allocated at the installation disk (%s)."
+#, fuzzy, c-format
+msgid "Partitions to boot will be allocated at the installation disk %s."
 msgstr ""
 "インストール先のディスク (%s) 内に起動用のパーティションを割り当てます。"
 
@@ -1764,23 +1776,23 @@ msgstr "新規 LVM ボリュームグループの追加"
 msgid "More devices"
 msgstr "さらなるデバイス"
 
-#: src/components/storage/EncryptionSection.tsx:32
+#: src/components/storage/EncryptionSection.tsx:33
 msgid "Encryption is disabled"
 msgstr "暗号化は無効化されています"
 
-#: src/components/storage/EncryptionSection.tsx:33
+#: src/components/storage/EncryptionSection.tsx:34
 msgid "Encryption is enabled using TPM unlocking"
 msgstr "暗号化は TPM 解錠を利用して有効化されています"
 
-#: src/components/storage/EncryptionSection.tsx:35
+#: src/components/storage/EncryptionSection.tsx:36
 msgid "Encryption is enabled"
 msgstr "暗号化は有効化されています"
 
-#: src/components/storage/EncryptionSection.tsx:44
+#: src/components/storage/EncryptionSection.tsx:46
 msgid "Encryption"
 msgstr "暗号化"
 
-#: src/components/storage/EncryptionSection.tsx:46
+#: src/components/storage/EncryptionSection.tsx:48
 msgid ""
 "Protection for the information stored at the new file systems, including "
 "data, programs, and system files."
@@ -1788,20 +1800,20 @@ msgstr ""
 "データやプログラム、システムファイルなど、新しく作成するファイルシステム内に"
 "配置される情報への保護を行います。"
 
-#: src/components/storage/EncryptionSettingsPage.tsx:73
+#: src/components/storage/EncryptionSettingsPage.tsx:74
 #: src/components/users/RootUserForm.tsx:104
 msgid "Password is empty."
 msgstr "パスワードが指定されていません。"
 
 #. TRANSLATORS: "Trusted Platform Module" is the name of the technology and TPM its abbreviation
-#: src/components/storage/EncryptionSettingsPage.tsx:89
+#: src/components/storage/EncryptionSettingsPage.tsx:90
 msgid ""
 "Use the Trusted Platform Module (TPM) to decrypt automatically on each boot"
 msgstr ""
 "毎回の起動時に Trusted Platform Module (TPM) を利用して自動的に暗号化解除しま"
 "す"
 
-#: src/components/storage/EncryptionSettingsPage.tsx:93
+#: src/components/storage/EncryptionSettingsPage.tsx:94
 msgid ""
 "The password will not be needed to boot and access the data if the TPM can "
 "verify the integrity of the system. TPM sealing requires the new system to "
@@ -1811,15 +1823,15 @@ msgstr ""
 "てパスワードが不要になります。 TPM シーリングを使用するには、新しいシステムの"
 "初回起動時に直接起動を行う必要があります。"
 
-#: src/components/storage/EncryptionSettingsPage.tsx:103
+#: src/components/storage/EncryptionSettingsPage.tsx:104
 msgid "Encryption settings"
 msgstr "暗号化の設定"
 
-#: src/components/storage/EncryptionSettingsPage.tsx:117
+#: src/components/storage/EncryptionSettingsPage.tsx:118
 msgid "Encrypt the system"
 msgstr "システムの暗号化"
 
-#: src/components/storage/EncryptionSettingsPage.tsx:119
+#: src/components/storage/EncryptionSettingsPage.tsx:120
 msgid ""
 "Full Disk Encryption (FDE) allows to protect the information stored at the "
 "new file systems, including data, programs, and system files."
@@ -1882,9 +1894,9 @@ msgstr "論理ボリューム名"
 
 #: src/components/storage/LogicalVolumePage.tsx:443
 #: src/components/storage/LogicalVolumePage.tsx:462
-#: src/components/storage/LogicalVolumePage.tsx:756
+#: src/components/storage/LogicalVolumePage.tsx:761
 #: src/components/storage/PartitionPage.tsx:558
-#: src/components/storage/PartitionPage.tsx:879
+#: src/components/storage/PartitionPage.tsx:884
 msgid "Waiting for a mount point"
 msgstr "マウントポイントを待機しています"
 
@@ -1913,55 +1925,55 @@ msgstr "下記の形式で論理ボリュームをフォーマット"
 msgid "File system label"
 msgstr "ファイルシステムのラベル"
 
-#: src/components/storage/LogicalVolumePage.tsx:677
+#: src/components/storage/LogicalVolumePage.tsx:682
 #, c-format
 msgid "Configure LVM logical volume at %s volume group"
 msgstr "ボリュームグループ %s に対する LVM 論理ボリュームの設定"
 
-#: src/components/storage/LogicalVolumePage.tsx:687
 #: src/components/storage/LogicalVolumePage.tsx:692
-#: src/components/storage/PartitionPage.tsx:812
-#: src/components/storage/PartitionPage.tsx:819
+#: src/components/storage/LogicalVolumePage.tsx:697
+#: src/components/storage/PartitionPage.tsx:817
+#: src/components/storage/PartitionPage.tsx:824
 msgid "Mount point"
 msgstr "マウントポイント"
 
-#: src/components/storage/LogicalVolumePage.tsx:690
-#: src/components/storage/PartitionPage.tsx:817
+#: src/components/storage/LogicalVolumePage.tsx:695
+#: src/components/storage/PartitionPage.tsx:822
 msgid "Mount point toggle"
 msgstr "マウントポイントの切り替え"
 
-#: src/components/storage/LogicalVolumePage.tsx:691
-#: src/components/storage/PartitionPage.tsx:818
+#: src/components/storage/LogicalVolumePage.tsx:696
+#: src/components/storage/PartitionPage.tsx:823
 msgid "Suggested mount points"
 msgstr "提案されたマウントポイント"
 
-#: src/components/storage/LogicalVolumePage.tsx:693
-#: src/components/storage/PartitionPage.tsx:820
+#: src/components/storage/LogicalVolumePage.tsx:698
+#: src/components/storage/PartitionPage.tsx:825
 msgid "Clear selected mount point"
 msgstr "マウントポイントの選択を解除"
 
-#: src/components/storage/LogicalVolumePage.tsx:696
-#: src/components/storage/PartitionPage.tsx:823
+#: src/components/storage/LogicalVolumePage.tsx:701
+#: src/components/storage/PartitionPage.tsx:828
 msgid "Use"
 msgstr "使用"
 
-#: src/components/storage/LogicalVolumePage.tsx:702
-#: src/components/storage/PartitionPage.tsx:841
+#: src/components/storage/LogicalVolumePage.tsx:707
+#: src/components/storage/PartitionPage.tsx:846
 msgid "Select or enter a mount point"
 msgstr "マウントポイントの選択または入力"
 
-#: src/components/storage/LogicalVolumePage.tsx:727
-#: src/components/storage/PartitionPage.tsx:850
+#: src/components/storage/LogicalVolumePage.tsx:732
+#: src/components/storage/PartitionPage.tsx:855
 msgid "File system"
 msgstr "ファイルシステム"
 
-#: src/components/storage/LogicalVolumePage.tsx:738
-#: src/components/storage/PartitionPage.tsx:862
+#: src/components/storage/LogicalVolumePage.tsx:743
+#: src/components/storage/PartitionPage.tsx:867
 msgid "Label"
 msgstr "ラベル"
 
-#: src/components/storage/LogicalVolumePage.tsx:751
-#: src/components/storage/PartitionPage.tsx:874
+#: src/components/storage/LogicalVolumePage.tsx:756
+#: src/components/storage/PartitionPage.tsx:879
 msgid "Size mode"
 msgstr "サイズのモード"
 
@@ -2099,12 +2111,12 @@ msgstr "下記の形式でフォーマット:"
 msgid "Do not format %s and keep the data"
 msgstr "%s をフォーマットせず既存のデータを維持"
 
-#: src/components/storage/PartitionPage.tsx:805
+#: src/components/storage/PartitionPage.tsx:810
 #, c-format
 msgid "Configure partition at %s"
 msgstr "%s でのパーティションの設定"
 
-#: src/components/storage/PartitionPage.tsx:829
+#: src/components/storage/PartitionPage.tsx:834
 msgid "Mount point mode"
 msgstr "マウントポイントのモード"
 
@@ -2500,24 +2512,25 @@ msgid "Device %s menu"
 msgstr "デバイス %s メニュー"
 
 #: src/components/storage/SizeModeSelect.tsx:75
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"The size is configured as a range between %s and %s, but defining a range of "
-"sizes is not supported by the UI."
-msgstr "サイズを %s から %s までの範囲で設定していますが、このサイズ範囲の設定は UI "
+"The size is configured as a range between %s and %s, but this interface "
+"cannot handle ranges with a given max size."
+msgstr ""
+"サイズを %s から %s までの範囲で設定していますが、このサイズ範囲の設定は UI "
 "ではサポートされていません。"
 
 #: src/components/storage/SizeModeSelect.tsx:83
-msgid "Do you want to use a supported size?"
-msgstr "サポート可能な範囲を使用しますか？"
+msgid "Discard the maximum size and continue with simplified configuration"
+msgstr ""
 
 #: src/components/storage/SizeModeSelect.tsx:115
 msgid ""
 "The size must be a number followed by a unit of the form GiB (power of 2) or "
 "GB (power of 10)."
 msgstr ""
-"サイズは、数値の後に GiB (2 のべき乗で指定する場合) や GB (10 "
-"のべき乗で指定する場合) の形式で単位を付けて入力する必要があります。"
+"サイズは、数値の後に GiB (2 のべき乗で指定する場合) や GB (10 のべき乗で指定"
+"する場合) の形式で単位を付けて入力する必要があります。"
 
 #. TRANSLATORS: %s is a disk size (e.g., "10 GiB").
 #: src/components/storage/SizeModeSelect.tsx:140
@@ -2530,15 +2543,9 @@ msgid "Allow growing"
 msgstr "サイズ拡大を許可する"
 
 #: src/components/storage/SizeModeSelect.tsx:159
-msgid ""
-"The final size can be bigger in order to fill the contiguous free space."
+#, fuzzy
+msgid "The final size can be bigger in order to fill the extra free space."
 msgstr "最終的なサイズを連続した空き領域にあわせて拡大することができます。"
-
-#: src/components/storage/SizeModeSelect.tsx:189
-#: src/components/storage/SizeModeSelect.tsx:197
-#: src/components/storage/utils.ts:112
-msgid "Custom"
-msgstr "独自設定"
 
 #: src/components/storage/SizeModeSelect.tsx:192
 msgid "Size modes"
@@ -3104,6 +3111,10 @@ msgstr ""
 "既存のデータを保持します。パーティションに割り当てられていない空き領域のみを"
 "使用します。"
 
+#: src/components/storage/utils.ts:112
+msgid "Custom"
+msgstr "独自設定"
+
 #: src/components/storage/utils.ts:113
 msgid "Select what to do with each partition."
 msgstr "パーティションの設定作業を独自に実施します。"
@@ -3485,6 +3496,9 @@ msgstr "公開 SSH 鍵の使用"
 #: src/routes/storage.tsx:103
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#~ msgid "Do you want to use a supported size?"
+#~ msgstr "サポート可能な範囲を使用しますか？"
 
 #~ msgid "Calculated automatically"
 #~ msgstr "自動計算"

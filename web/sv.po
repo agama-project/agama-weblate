@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-29 03:19+0000\n"
+"POT-Creation-Date: 2025-07-01 03:21+0000\n"
 "PO-Revision-Date: 2025-06-30 19:59+0000\n"
 "Last-Translator: Luna  Jernberg <bittin@opensuse.org>\n"
 "Language-Team: Swedish <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -663,7 +663,7 @@ msgid "Edit connection %s"
 msgstr "Redigera anslutning %s"
 
 #: src/components/network/IpSettingsForm.tsx:157
-#: src/components/storage/EncryptionSettingsPage.tsx:109
+#: src/components/storage/EncryptionSettingsPage.tsx:110
 #: src/components/storage/iscsi/DiscoverForm.tsx:98
 #: src/components/storage/iscsi/LoginForm.jsx:70
 #: src/components/storage/zfcp/ZFCPDiskForm.tsx:112
@@ -687,6 +687,8 @@ msgstr "Automatisk (DHCP)"
 
 #. TRANSLATORS: manual network configuration mode with a static IP address
 #: src/components/network/IpSettingsForm.tsx:180
+#: src/components/storage/SizeModeSelect.tsx:189
+#: src/components/storage/SizeModeSelect.tsx:197
 #: src/components/storage/iscsi/NodeStartupOptions.js:26
 msgid "Manual"
 msgstr "Manuell"
@@ -806,7 +808,7 @@ msgstr "IP inställningar"
 
 #: src/components/network/WifiConnectionDetails.tsx:100
 #: src/components/network/WiredConnectionDetails.tsx:84
-#: src/components/storage/EncryptionSection.tsx:50
+#: src/components/storage/EncryptionSection.tsx:52
 #: src/components/storage/iscsi/NodesPresenter.jsx:75
 #: src/components/users/FirstUser.tsx:54 src/components/users/RootUser.tsx:57
 msgid "Edit"
@@ -1457,43 +1459,47 @@ msgstr "En generisk minimistorlek av%1$s kommer att användas för den nya %2$s"
 
 #. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
 #: src/components/storage/AutoSizeText.tsx:80
-#, c-format
-msgid "A %1$s of %2$s will be created for %3$s"
+#, fuzzy, c-format
+msgid "A %1$s of %2$s will be created for %3$s if possible"
 msgstr "En %1$s av %2$s kommer att skapas för %3$s"
 
 #. TRANSLATORS: %1$s is a device type (eg. partition), %2$s and %3$s are sizes with units (10 GiB), and %4$s is a mount path (/home)
 #: src/components/storage/AutoSizeText.tsx:89
-#, c-format
-msgid "A %1$s with a size between %2$s and %3$s will be created for %4$s"
+#, fuzzy, c-format
+msgid ""
+"A %1$s with a size between %2$s and %3$s will be created for %4$s if possible"
 msgstr "En %1$s med en storlek mellan %2$s och %3$s kommer att skapas för %4$s"
 
 #. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
 #: src/components/storage/AutoSizeText.tsx:99
-#, c-format
-msgid "A %1$s of at least %2$s will be created for %3$s"
+#, fuzzy, c-format
+msgid "A %1$s of at least %2$s will be created for %3$s if possible"
 msgstr "En %1$s på minst %2$s kommer att skapas för %3$s"
 
 #. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
 #: src/components/storage/AutoSizeText.tsx:117
+#, fuzzy
 msgid ""
-"Based on the amount of RAM in the system, a %1s$ of %2$s will be created for "
+"Based on the amount of RAM in the system, a %1s$ of %2$s will be planned for "
 "%3$s"
 msgstr ""
 "Baserat på mängden RAM i systemet kommer en $1s$ av %2$s att skapas för %3$s"
 
 #: src/components/storage/AutoSizeText.tsx:127
+#, fuzzy
 msgid ""
 "Based on the amount of RAM in the system, a %1s$ with a size between %2$s "
-"and %3$s will be created for %4$s"
+"and %3$s will be planned for %4$s"
 msgstr ""
 "Baserat på mängden RAM i systemet kommer en %1s$ med en storlek mellan %2$s "
 "och %3$s att skapas för %4$s"
 
 #. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
 #: src/components/storage/AutoSizeText.tsx:138
+#, fuzzy
 msgid ""
 "Based on the amount of RAM in the system, a %1s$ of at least %2$s will be "
-"created for %3$s"
+"planned for %3$s"
 msgstr ""
 "Baserat på mängden RAM i systemet kommer en %1s$ på minst %2$s att skapas "
 "för %3$s"
@@ -1595,24 +1601,26 @@ msgstr ""
 
 #. TRANSLATORS: %1$s is a device type (eg. partition) and %2s is a size with units (eg. 10 GiB)
 #: src/components/storage/AutoSizeText.tsx:272
-#, c-format
-msgid "The current configuration will result in a %1$s of %2$s."
+#, fuzzy, c-format
+msgid ""
+"The current configuration will result in an attempt to create a %1$s of %2$s."
 msgstr "Den aktuella konfigurationen kommer att resultera i en %1$s på %2$s."
 
-#. TRANSLATORS: %1$s is a device type (eg. partition) %2$s is a min size, %3$s is the max size
-#: src/components/storage/AutoSizeText.tsx:280
-#, c-format
+#: src/components/storage/AutoSizeText.tsx:281
+#, fuzzy, c-format
 msgid ""
-"The current configuration will result in a %1$s with a size between %2$s and "
-"%3$s."
+"The current configuration will result in an attempt to create a %1$s with a "
+"size between %2$s and %3$s."
 msgstr ""
 "Den aktuella konfigurationen kommer att resultera i en %1$s med en storlek "
 "mellan %2$s och %3$s."
 
 #. TRANSLATORS: %1$s is a device type (eg. partition) and %2$s is a size with units (eg. 10 GiB)
-#: src/components/storage/AutoSizeText.tsx:289
-#, c-format
-msgid "The current configuration will result in a %1$s of at least %2$s."
+#: src/components/storage/AutoSizeText.tsx:291
+#, fuzzy, c-format
+msgid ""
+"The current configuration will result in an attempt to create a %1$s of at "
+"least %2$s."
 msgstr ""
 "Den aktuella konfigurationen kommer att resultera i en %1$s på minst %2$s."
 
@@ -1632,8 +1640,8 @@ msgstr ""
 
 #. TRANSLATORS: %s is replaced by a device name and size (e.g., "/dev/sda, 500GiB")
 #: src/components/storage/BootSelection.tsx:138
-#, c-format
-msgid "Partitions to boot will be allocated at the installation disk (%s)."
+#, fuzzy, c-format
+msgid "Partitions to boot will be allocated at the installation disk %s."
 msgstr ""
 "Partitioner som ska startas upp kommer att tilldelas på installationsdisken "
 "(%s)."
@@ -1779,23 +1787,23 @@ msgstr "Lägg till LVM volymgrupp"
 msgid "More devices"
 msgstr "Mer enheter"
 
-#: src/components/storage/EncryptionSection.tsx:32
+#: src/components/storage/EncryptionSection.tsx:33
 msgid "Encryption is disabled"
 msgstr "Kryptering är inaktiverat"
 
-#: src/components/storage/EncryptionSection.tsx:33
+#: src/components/storage/EncryptionSection.tsx:34
 msgid "Encryption is enabled using TPM unlocking"
 msgstr "Kryptering är aktiverad med TPM-upplåsning"
 
-#: src/components/storage/EncryptionSection.tsx:35
+#: src/components/storage/EncryptionSection.tsx:36
 msgid "Encryption is enabled"
 msgstr "Kryptering är aktiverat"
 
-#: src/components/storage/EncryptionSection.tsx:44
+#: src/components/storage/EncryptionSection.tsx:46
 msgid "Encryption"
 msgstr "Kryptering"
 
-#: src/components/storage/EncryptionSection.tsx:46
+#: src/components/storage/EncryptionSection.tsx:48
 msgid ""
 "Protection for the information stored at the new file systems, including "
 "data, programs, and system files."
@@ -1803,20 +1811,20 @@ msgstr ""
 "Skydd för informationen som lagras i de nya filsystemen, inklusive data, "
 "program och systemfiler."
 
-#: src/components/storage/EncryptionSettingsPage.tsx:73
+#: src/components/storage/EncryptionSettingsPage.tsx:74
 #: src/components/users/RootUserForm.tsx:104
 msgid "Password is empty."
 msgstr "Lösenord är tomt."
 
 #. TRANSLATORS: "Trusted Platform Module" is the name of the technology and TPM its abbreviation
-#: src/components/storage/EncryptionSettingsPage.tsx:89
+#: src/components/storage/EncryptionSettingsPage.tsx:90
 msgid ""
 "Use the Trusted Platform Module (TPM) to decrypt automatically on each boot"
 msgstr ""
 "Använd Trusted Platform Module (TPM) för att dekryptera automatiskt vid "
 "varje uppstart"
 
-#: src/components/storage/EncryptionSettingsPage.tsx:93
+#: src/components/storage/EncryptionSettingsPage.tsx:94
 msgid ""
 "The password will not be needed to boot and access the data if the TPM can "
 "verify the integrity of the system. TPM sealing requires the new system to "
@@ -1826,15 +1834,15 @@ msgstr ""
 "kan verifiera systemets integritet. TPM-försegling kräver att det nya "
 "systemet startas upp direkt vid första körningen."
 
-#: src/components/storage/EncryptionSettingsPage.tsx:103
+#: src/components/storage/EncryptionSettingsPage.tsx:104
 msgid "Encryption settings"
 msgstr "Krypteringsinställningar"
 
-#: src/components/storage/EncryptionSettingsPage.tsx:117
+#: src/components/storage/EncryptionSettingsPage.tsx:118
 msgid "Encrypt the system"
 msgstr "Kryptera systemet"
 
-#: src/components/storage/EncryptionSettingsPage.tsx:119
+#: src/components/storage/EncryptionSettingsPage.tsx:120
 msgid ""
 "Full Disk Encryption (FDE) allows to protect the information stored at the "
 "new file systems, including data, programs, and system files."
@@ -1895,9 +1903,9 @@ msgstr "Logisk volym namn"
 
 #: src/components/storage/LogicalVolumePage.tsx:443
 #: src/components/storage/LogicalVolumePage.tsx:462
-#: src/components/storage/LogicalVolumePage.tsx:756
+#: src/components/storage/LogicalVolumePage.tsx:761
 #: src/components/storage/PartitionPage.tsx:558
-#: src/components/storage/PartitionPage.tsx:879
+#: src/components/storage/PartitionPage.tsx:884
 msgid "Waiting for a mount point"
 msgstr "Väntar på en monteringspunkt"
 
@@ -1926,55 +1934,55 @@ msgstr "Formatera logisk volym som"
 msgid "File system label"
 msgstr "Filsystem etikett"
 
-#: src/components/storage/LogicalVolumePage.tsx:677
+#: src/components/storage/LogicalVolumePage.tsx:682
 #, c-format
 msgid "Configure LVM logical volume at %s volume group"
 msgstr "Konfigurera LVM logisk volym på %s volymgrupp"
 
-#: src/components/storage/LogicalVolumePage.tsx:687
 #: src/components/storage/LogicalVolumePage.tsx:692
-#: src/components/storage/PartitionPage.tsx:812
-#: src/components/storage/PartitionPage.tsx:819
+#: src/components/storage/LogicalVolumePage.tsx:697
+#: src/components/storage/PartitionPage.tsx:817
+#: src/components/storage/PartitionPage.tsx:824
 msgid "Mount point"
 msgstr "Monteringspunkt"
 
-#: src/components/storage/LogicalVolumePage.tsx:690
-#: src/components/storage/PartitionPage.tsx:817
+#: src/components/storage/LogicalVolumePage.tsx:695
+#: src/components/storage/PartitionPage.tsx:822
 msgid "Mount point toggle"
 msgstr "Monteringspunkt växel"
 
-#: src/components/storage/LogicalVolumePage.tsx:691
-#: src/components/storage/PartitionPage.tsx:818
+#: src/components/storage/LogicalVolumePage.tsx:696
+#: src/components/storage/PartitionPage.tsx:823
 msgid "Suggested mount points"
 msgstr "Föreslagna monteringspunkter"
 
-#: src/components/storage/LogicalVolumePage.tsx:693
-#: src/components/storage/PartitionPage.tsx:820
+#: src/components/storage/LogicalVolumePage.tsx:698
+#: src/components/storage/PartitionPage.tsx:825
 msgid "Clear selected mount point"
 msgstr "Rensa vald monteringspunkt"
 
-#: src/components/storage/LogicalVolumePage.tsx:696
-#: src/components/storage/PartitionPage.tsx:823
+#: src/components/storage/LogicalVolumePage.tsx:701
+#: src/components/storage/PartitionPage.tsx:828
 msgid "Use"
 msgstr "Använd"
 
-#: src/components/storage/LogicalVolumePage.tsx:702
-#: src/components/storage/PartitionPage.tsx:841
+#: src/components/storage/LogicalVolumePage.tsx:707
+#: src/components/storage/PartitionPage.tsx:846
 msgid "Select or enter a mount point"
 msgstr "Välj eller ange en monteringspunkt"
 
-#: src/components/storage/LogicalVolumePage.tsx:727
-#: src/components/storage/PartitionPage.tsx:850
+#: src/components/storage/LogicalVolumePage.tsx:732
+#: src/components/storage/PartitionPage.tsx:855
 msgid "File system"
 msgstr "Filsystem"
 
-#: src/components/storage/LogicalVolumePage.tsx:738
-#: src/components/storage/PartitionPage.tsx:862
+#: src/components/storage/LogicalVolumePage.tsx:743
+#: src/components/storage/PartitionPage.tsx:867
 msgid "Label"
 msgstr "Etikett"
 
-#: src/components/storage/LogicalVolumePage.tsx:751
-#: src/components/storage/PartitionPage.tsx:874
+#: src/components/storage/LogicalVolumePage.tsx:756
+#: src/components/storage/PartitionPage.tsx:879
 msgid "Size mode"
 msgstr "Storleksläge"
 
@@ -2113,12 +2121,12 @@ msgstr "Formatera partition som"
 msgid "Do not format %s and keep the data"
 msgstr "Formatera inte %s och behåll data"
 
-#: src/components/storage/PartitionPage.tsx:805
+#: src/components/storage/PartitionPage.tsx:810
 #, c-format
 msgid "Configure partition at %s"
 msgstr "Konfigurera partition på %s"
 
-#: src/components/storage/PartitionPage.tsx:829
+#: src/components/storage/PartitionPage.tsx:834
 msgid "Mount point mode"
 msgstr "Monteringspunkt läge"
 
@@ -2524,17 +2532,17 @@ msgid "Device %s menu"
 msgstr "Enhets %s-meny"
 
 #: src/components/storage/SizeModeSelect.tsx:75
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"The size is configured as a range between %s and %s, but defining a range of "
-"sizes is not supported by the UI."
+"The size is configured as a range between %s and %s, but this interface "
+"cannot handle ranges with a given max size."
 msgstr ""
 "Storleken är konfigurerad som ett intervall mellan %s och %s, men det finns "
 "inte stöd för att definiera ett storleksintervall i användargränssnittet."
 
 #: src/components/storage/SizeModeSelect.tsx:83
-msgid "Do you want to use a supported size?"
-msgstr "Vill du använda en storlek som stöds?"
+msgid "Discard the maximum size and continue with simplified configuration"
+msgstr ""
 
 #: src/components/storage/SizeModeSelect.tsx:115
 msgid ""
@@ -2555,17 +2563,11 @@ msgid "Allow growing"
 msgstr "Tillåt växande"
 
 #: src/components/storage/SizeModeSelect.tsx:159
-msgid ""
-"The final size can be bigger in order to fill the contiguous free space."
+#, fuzzy
+msgid "The final size can be bigger in order to fill the extra free space."
 msgstr ""
 "Den slutliga storleken kan vara större för att fylla det sammanhängande fria "
 "utrymmet."
-
-#: src/components/storage/SizeModeSelect.tsx:189
-#: src/components/storage/SizeModeSelect.tsx:197
-#: src/components/storage/utils.ts:112
-msgid "Custom"
-msgstr "Anpassad"
 
 #: src/components/storage/SizeModeSelect.tsx:192
 msgid "Size modes"
@@ -3132,6 +3134,10 @@ msgstr ""
 "Data bevaras. Endast det utrymme som inte är tilldelat någon partition "
 "kommer att användas."
 
+#: src/components/storage/utils.ts:112
+msgid "Custom"
+msgstr "Anpassad"
+
 #: src/components/storage/utils.ts:113
 msgid "Select what to do with each partition."
 msgstr "Välj vad som ska göras med varje partition."
@@ -3514,6 +3520,9 @@ msgstr "Använd publik SSH nyckel"
 #: src/routes/storage.tsx:103
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#~ msgid "Do you want to use a supported size?"
+#~ msgstr "Vill du använda en storlek som stöds?"
 
 #~ msgid "Calculated automatically"
 #~ msgstr "Beräknas automatiskt"

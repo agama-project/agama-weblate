@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-29 03:19+0000\n"
+"POT-Creation-Date: 2025-07-01 03:21+0000\n"
 "PO-Revision-Date: 2025-06-24 13:59+0000\n"
 "Last-Translator: Jan Papež <honyczek@centrum.cz>\n"
 "Language-Team: Czech <https://l10n.opensuse.org/projects/agama/agama-web/cs/"
@@ -645,7 +645,7 @@ msgid "Edit connection %s"
 msgstr "Upravit připojení %s"
 
 #: src/components/network/IpSettingsForm.tsx:157
-#: src/components/storage/EncryptionSettingsPage.tsx:109
+#: src/components/storage/EncryptionSettingsPage.tsx:110
 #: src/components/storage/iscsi/DiscoverForm.tsx:98
 #: src/components/storage/iscsi/LoginForm.jsx:70
 #: src/components/storage/zfcp/ZFCPDiskForm.tsx:112
@@ -669,6 +669,8 @@ msgstr "Automatická (DHCP)"
 
 #. TRANSLATORS: manual network configuration mode with a static IP address
 #: src/components/network/IpSettingsForm.tsx:180
+#: src/components/storage/SizeModeSelect.tsx:189
+#: src/components/storage/SizeModeSelect.tsx:197
 #: src/components/storage/iscsi/NodeStartupOptions.js:26
 msgid "Manual"
 msgstr "Ruční"
@@ -786,7 +788,7 @@ msgstr "Nastavení IP adresy"
 
 #: src/components/network/WifiConnectionDetails.tsx:100
 #: src/components/network/WiredConnectionDetails.tsx:84
-#: src/components/storage/EncryptionSection.tsx:50
+#: src/components/storage/EncryptionSection.tsx:52
 #: src/components/storage/iscsi/NodesPresenter.jsx:75
 #: src/components/users/FirstUser.tsx:54 src/components/users/RootUser.tsx:57
 msgid "Edit"
@@ -1455,39 +1457,40 @@ msgstr ""
 #. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
 #: src/components/storage/AutoSizeText.tsx:80
 #, c-format
-msgid "A %1$s of %2$s will be created for %3$s"
+msgid "A %1$s of %2$s will be created for %3$s if possible"
 msgstr ""
 
 #. TRANSLATORS: %1$s is a device type (eg. partition), %2$s and %3$s are sizes with units (10 GiB), and %4$s is a mount path (/home)
 #: src/components/storage/AutoSizeText.tsx:89
 #, c-format
-msgid "A %1$s with a size between %2$s and %3$s will be created for %4$s"
+msgid ""
+"A %1$s with a size between %2$s and %3$s will be created for %4$s if possible"
 msgstr ""
 
 #. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
 #: src/components/storage/AutoSizeText.tsx:99
 #, c-format
-msgid "A %1$s of at least %2$s will be created for %3$s"
+msgid "A %1$s of at least %2$s will be created for %3$s if possible"
 msgstr ""
 
 #. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
 #: src/components/storage/AutoSizeText.tsx:117
 msgid ""
-"Based on the amount of RAM in the system, a %1s$ of %2$s will be created for "
+"Based on the amount of RAM in the system, a %1s$ of %2$s will be planned for "
 "%3$s"
 msgstr ""
 
 #: src/components/storage/AutoSizeText.tsx:127
 msgid ""
 "Based on the amount of RAM in the system, a %1s$ with a size between %2$s "
-"and %3$s will be created for %4$s"
+"and %3$s will be planned for %4$s"
 msgstr ""
 
 #. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
 #: src/components/storage/AutoSizeText.tsx:138
 msgid ""
 "Based on the amount of RAM in the system, a %1s$ of at least %2$s will be "
-"created for %3$s"
+"planned for %3$s"
 msgstr ""
 
 #: src/components/storage/AutoSizeText.tsx:167
@@ -1566,21 +1569,23 @@ msgstr ""
 #. TRANSLATORS: %1$s is a device type (eg. partition) and %2s is a size with units (eg. 10 GiB)
 #: src/components/storage/AutoSizeText.tsx:272
 #, c-format
-msgid "The current configuration will result in a %1$s of %2$s."
+msgid ""
+"The current configuration will result in an attempt to create a %1$s of %2$s."
 msgstr ""
 
-#. TRANSLATORS: %1$s is a device type (eg. partition) %2$s is a min size, %3$s is the max size
-#: src/components/storage/AutoSizeText.tsx:280
+#: src/components/storage/AutoSizeText.tsx:281
 #, c-format
 msgid ""
-"The current configuration will result in a %1$s with a size between %2$s and "
-"%3$s."
+"The current configuration will result in an attempt to create a %1$s with a "
+"size between %2$s and %3$s."
 msgstr ""
 
 #. TRANSLATORS: %1$s is a device type (eg. partition) and %2$s is a size with units (eg. 10 GiB)
-#: src/components/storage/AutoSizeText.tsx:289
+#: src/components/storage/AutoSizeText.tsx:291
 #, c-format
-msgid "The current configuration will result in a %1$s of at least %2$s."
+msgid ""
+"The current configuration will result in an attempt to create a %1$s of at "
+"least %2$s."
 msgstr ""
 
 #: src/components/storage/BootSelection.tsx:127
@@ -1597,8 +1602,8 @@ msgstr "Oddíly pro zavádění budou přiděleny na instalačním disku."
 
 #. TRANSLATORS: %s is replaced by a device name and size (e.g., "/dev/sda, 500GiB")
 #: src/components/storage/BootSelection.tsx:138
-#, c-format
-msgid "Partitions to boot will be allocated at the installation disk (%s)."
+#, fuzzy, c-format
+msgid "Partitions to boot will be allocated at the installation disk %s."
 msgstr "Oddíly pro zavádění budou přiděleny na instalačním disku (%s)."
 
 #: src/components/storage/BootSelection.tsx:154
@@ -1758,26 +1763,26 @@ msgstr "Nová skupina svazků LVM"
 msgid "More devices"
 msgstr "Formátovat zařízení"
 
-#: src/components/storage/EncryptionSection.tsx:32
+#: src/components/storage/EncryptionSection.tsx:33
 #, fuzzy
 msgid "Encryption is disabled"
 msgstr "Heslo pro šifrování"
 
-#: src/components/storage/EncryptionSection.tsx:33
+#: src/components/storage/EncryptionSection.tsx:34
 #, fuzzy
 msgid "Encryption is enabled using TPM unlocking"
 msgstr "odemykání čipem TPM"
 
-#: src/components/storage/EncryptionSection.tsx:35
+#: src/components/storage/EncryptionSection.tsx:36
 #, fuzzy
 msgid "Encryption is enabled"
 msgstr "Heslo pro šifrování"
 
-#: src/components/storage/EncryptionSection.tsx:44
+#: src/components/storage/EncryptionSection.tsx:46
 msgid "Encryption"
 msgstr "Šifrování"
 
-#: src/components/storage/EncryptionSection.tsx:46
+#: src/components/storage/EncryptionSection.tsx:48
 #, fuzzy
 msgid ""
 "Protection for the information stored at the new file systems, including "
@@ -1786,21 +1791,21 @@ msgstr ""
 "Ochrana informací uložených v zařízení, včetně dat, programů a systémových "
 "souborů."
 
-#: src/components/storage/EncryptionSettingsPage.tsx:73
+#: src/components/storage/EncryptionSettingsPage.tsx:74
 #: src/components/users/RootUserForm.tsx:104
 #, fuzzy
 msgid "Password is empty."
 msgstr "Zadejte heslo"
 
 #. TRANSLATORS: "Trusted Platform Module" is the name of the technology and TPM its abbreviation
-#: src/components/storage/EncryptionSettingsPage.tsx:89
+#: src/components/storage/EncryptionSettingsPage.tsx:90
 msgid ""
 "Use the Trusted Platform Module (TPM) to decrypt automatically on each boot"
 msgstr ""
 "Použití modulu TPM (Trusted Platform Module) k automatickému dešifrování při "
 "každém spuštění systému"
 
-#: src/components/storage/EncryptionSettingsPage.tsx:93
+#: src/components/storage/EncryptionSettingsPage.tsx:94
 msgid ""
 "The password will not be needed to boot and access the data if the TPM can "
 "verify the integrity of the system. TPM sealing requires the new system to "
@@ -1810,16 +1815,16 @@ msgstr ""
 "systému a přístup k datům potřebné. Zapečetění TPM vyžaduje, aby byl nový "
 "systém spuštěn hned při prvním použití."
 
-#: src/components/storage/EncryptionSettingsPage.tsx:103
+#: src/components/storage/EncryptionSettingsPage.tsx:104
 #, fuzzy
 msgid "Encryption settings"
 msgstr "Šifrování"
 
-#: src/components/storage/EncryptionSettingsPage.tsx:117
+#: src/components/storage/EncryptionSettingsPage.tsx:118
 msgid "Encrypt the system"
 msgstr "Šifrování systému"
 
-#: src/components/storage/EncryptionSettingsPage.tsx:119
+#: src/components/storage/EncryptionSettingsPage.tsx:120
 #, fuzzy
 msgid ""
 "Full Disk Encryption (FDE) allows to protect the information stored at the "
@@ -1877,9 +1882,9 @@ msgstr "Logický svazek na systému LVM"
 
 #: src/components/storage/LogicalVolumePage.tsx:443
 #: src/components/storage/LogicalVolumePage.tsx:462
-#: src/components/storage/LogicalVolumePage.tsx:756
+#: src/components/storage/LogicalVolumePage.tsx:761
 #: src/components/storage/PartitionPage.tsx:558
-#: src/components/storage/PartitionPage.tsx:879
+#: src/components/storage/PartitionPage.tsx:884
 #, fuzzy
 msgid "Waiting for a mount point"
 msgstr "Čekám na zprávu o postupu"
@@ -1912,61 +1917,61 @@ msgstr "Logický svazek na systému LVM"
 msgid "File system label"
 msgstr "Typ systému souborů"
 
-#: src/components/storage/LogicalVolumePage.tsx:677
+#: src/components/storage/LogicalVolumePage.tsx:682
 #, c-format
 msgid "Configure LVM logical volume at %s volume group"
 msgstr ""
 
-#: src/components/storage/LogicalVolumePage.tsx:687
 #: src/components/storage/LogicalVolumePage.tsx:692
-#: src/components/storage/PartitionPage.tsx:812
-#: src/components/storage/PartitionPage.tsx:819
+#: src/components/storage/LogicalVolumePage.tsx:697
+#: src/components/storage/PartitionPage.tsx:817
+#: src/components/storage/PartitionPage.tsx:824
 msgid "Mount point"
 msgstr "Přípojný bod"
 
-#: src/components/storage/LogicalVolumePage.tsx:690
-#: src/components/storage/PartitionPage.tsx:817
+#: src/components/storage/LogicalVolumePage.tsx:695
+#: src/components/storage/PartitionPage.tsx:822
 #, fuzzy
 msgid "Mount point toggle"
 msgstr "Přípojný bod"
 
-#: src/components/storage/LogicalVolumePage.tsx:691
-#: src/components/storage/PartitionPage.tsx:818
+#: src/components/storage/LogicalVolumePage.tsx:696
+#: src/components/storage/PartitionPage.tsx:823
 #, fuzzy
 msgid "Suggested mount points"
 msgstr "Tabulka s přípojnými body"
 
-#: src/components/storage/LogicalVolumePage.tsx:693
-#: src/components/storage/PartitionPage.tsx:820
+#: src/components/storage/LogicalVolumePage.tsx:698
+#: src/components/storage/PartitionPage.tsx:825
 #, fuzzy
 msgid "Clear selected mount point"
 msgstr "Tabulka s přípojnými body"
 
-#: src/components/storage/LogicalVolumePage.tsx:696
-#: src/components/storage/PartitionPage.tsx:823
+#: src/components/storage/LogicalVolumePage.tsx:701
+#: src/components/storage/PartitionPage.tsx:828
 #, fuzzy
 msgid "Use"
 msgstr "Uživatelé"
 
-#: src/components/storage/LogicalVolumePage.tsx:702
-#: src/components/storage/PartitionPage.tsx:841
+#: src/components/storage/LogicalVolumePage.tsx:707
+#: src/components/storage/PartitionPage.tsx:846
 #, fuzzy
 msgid "Select or enter a mount point"
 msgstr "Tabulka s přípojnými body"
 
-#: src/components/storage/LogicalVolumePage.tsx:727
-#: src/components/storage/PartitionPage.tsx:850
+#: src/components/storage/LogicalVolumePage.tsx:732
+#: src/components/storage/PartitionPage.tsx:855
 #, fuzzy
 msgid "File system"
 msgstr "Typ systému souborů"
 
-#: src/components/storage/LogicalVolumePage.tsx:738
-#: src/components/storage/PartitionPage.tsx:862
+#: src/components/storage/LogicalVolumePage.tsx:743
+#: src/components/storage/PartitionPage.tsx:867
 msgid "Label"
 msgstr ""
 
-#: src/components/storage/LogicalVolumePage.tsx:751
-#: src/components/storage/PartitionPage.tsx:874
+#: src/components/storage/LogicalVolumePage.tsx:756
+#: src/components/storage/PartitionPage.tsx:879
 #, fuzzy
 msgid "Size mode"
 msgstr "Maximální požadovaná velikost"
@@ -2108,12 +2113,12 @@ msgstr "Zaváděcí oddíly na %s"
 msgid "Do not format %s and keep the data"
 msgstr ""
 
-#: src/components/storage/PartitionPage.tsx:805
+#: src/components/storage/PartitionPage.tsx:810
 #, fuzzy, c-format
 msgid "Configure partition at %s"
 msgstr "Oddíl na %s"
 
-#: src/components/storage/PartitionPage.tsx:829
+#: src/components/storage/PartitionPage.tsx:834
 #, fuzzy
 msgid "Mount point mode"
 msgstr "Přípojný bod"
@@ -2519,14 +2524,13 @@ msgstr "Zařízení: %s"
 #: src/components/storage/SizeModeSelect.tsx:75
 #, c-format
 msgid ""
-"The size is configured as a range between %s and %s, but defining a range of "
-"sizes is not supported by the UI."
+"The size is configured as a range between %s and %s, but this interface "
+"cannot handle ranges with a given max size."
 msgstr ""
 
 #: src/components/storage/SizeModeSelect.tsx:83
-#, fuzzy
-msgid "Do you want to use a supported size?"
-msgstr "Chcete ho přidat?"
+msgid "Discard the maximum size and continue with simplified configuration"
+msgstr ""
 
 #: src/components/storage/SizeModeSelect.tsx:115
 msgid ""
@@ -2545,15 +2549,8 @@ msgid "Allow growing"
 msgstr ""
 
 #: src/components/storage/SizeModeSelect.tsx:159
-msgid ""
-"The final size can be bigger in order to fill the contiguous free space."
+msgid "The final size can be bigger in order to fill the extra free space."
 msgstr ""
-
-#: src/components/storage/SizeModeSelect.tsx:189
-#: src/components/storage/SizeModeSelect.tsx:197
-#: src/components/storage/utils.ts:112
-msgid "Custom"
-msgstr "Vlastní"
 
 #: src/components/storage/SizeModeSelect.tsx:192
 #, fuzzy
@@ -3124,6 +3121,10 @@ msgstr ""
 "Data jsou uchována. Využije se pouze prostor, který není přiřazen žádnému "
 "oddílu."
 
+#: src/components/storage/utils.ts:112
+msgid "Custom"
+msgstr "Vlastní"
+
 #: src/components/storage/utils.ts:113
 msgid "Select what to do with each partition."
 msgstr "Vyberte, co se má s jednotlivými oddíly dělat."
@@ -3515,6 +3516,10 @@ msgstr "Veřejný klíč SSH pro roota"
 #: src/routes/storage.tsx:103
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#, fuzzy
+#~ msgid "Do you want to use a supported size?"
+#~ msgstr "Chcete ho přidat?"
 
 #, fuzzy
 #~ msgid "Maximum size options"
