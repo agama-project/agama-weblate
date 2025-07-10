@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-09 03:13+0000\n"
+"POT-Creation-Date: 2025-07-10 03:13+0000\n"
 "PO-Revision-Date: 2025-07-06 16:59+0000\n"
 "Last-Translator: yok440 <yakupyok440@gmail.com>\n"
 "Language-Team: Turkish <https://l10n.opensuse.org/projects/agama/agama-"
@@ -28,34 +28,34 @@ msgid "Found unsupported elements in the AutoYaST profile: %{keys}."
 msgstr "AutoYaST Profilinde desteklenmeyen elemanlar bulundu: %{keys}."
 
 #. Runs the config phase
-#: service/lib/agama/manager.rb:95
+#: service/lib/agama/manager.rb:96
 msgid "Analyze disks"
 msgstr "Diskleri analiz et"
 
-#: service/lib/agama/manager.rb:95
+#: service/lib/agama/manager.rb:96
 msgid "Configure software"
 msgstr "Yazılımı yapılandırın"
 
 #. Runs the install phase
 #. rubocop:disable Metrics/AbcSize, Metrics/MethodLength
-#: service/lib/agama/manager.rb:113
+#: service/lib/agama/manager.rb:115
 msgid "Prepare disks"
 msgstr "Diskleri hazırlayın"
 
-#: service/lib/agama/manager.rb:114
+#: service/lib/agama/manager.rb:116
 msgid "Install software"
 msgstr "Yazılımı yükleyin"
 
-#: service/lib/agama/manager.rb:115
+#: service/lib/agama/manager.rb:117
 msgid "Configure the system"
 msgstr "Sistemi yapılandırın"
 
 #. rubocop:enable Metrics/AbcSize, Metrics/MethodLength
-#: service/lib/agama/manager.rb:156
+#: service/lib/agama/manager.rb:158
 msgid "Load software translations"
 msgstr "Yazılım çevirilerini yükle"
 
-#: service/lib/agama/manager.rb:157
+#: service/lib/agama/manager.rb:159
 msgid "Load storage translations"
 msgstr "Depolama alanı çevirilerini yükleyin"
 
@@ -143,9 +143,9 @@ msgid ""
 "be \"%{expected}\". The file has changed by accident or by an attacker since "
 "the creater signed it. Use it anyway?"
 msgstr ""
-"%{file} dosyasının beklenen toplam kontrolü \"%{found}\" ancak \"%{expected}"
-"\" olması bekleniyordu. Dosya, oluşturucusu imzaladığından beri kazara veya "
-"bir saldırgan tarafından değiştirildi. Yine de kullanılsın mı?"
+"%{file} dosyasının beklenen toplam kontrolü \"%{found}\" ancak "
+"\"%{expected}\" olması bekleniyordu. Dosya, oluşturucusu imzaladığından beri "
+"kazara veya bir saldırgan tarafından değiştirildi. Yine de kullanılsın mı?"
 
 #. DoneProvide callback
 #.
@@ -474,8 +474,8 @@ msgstr "%s için en az %s cihaz gereklidir"
 #: service/lib/agama/storage/config_checkers/md_raid.rb:168
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be deleted because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be deleted because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
 "'%{member}' aygıtı silinemez çünkü MD RAID %{md_raid}'in bir parçasıdır"
 
@@ -486,8 +486,8 @@ msgstr ""
 #: service/lib/agama/storage/config_checkers/md_raid.rb:191
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be resized because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be resized because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
 "'%{member}' aygıtı MD RAID %{md_raid}'in bir parçası olduğu için yeniden "
 "boyutlandırılamaz"
@@ -525,8 +525,8 @@ msgstr ""
 #: service/lib/agama/storage/config_checkers/md_raid.rb:259
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be used because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be used because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
 "'%{member}' aygıtı, MD RAID %{md_raid}'in bir parçası olduğu için "
 "kullanılamaz"
@@ -731,25 +731,21 @@ msgstr "Depolama aygıtları araştırılıyor"
 msgid "Calculating the storage proposal"
 msgstr "Depolama önerisi hesaplanıyor"
 
-#: service/lib/agama/storage/manager.rb:136
-msgid "Selecting Linux Security Modules"
-msgstr "Linux Güvenlik Modüllerini Seçme"
-
 #. Prepares the partitioning to install the system
-#: service/lib/agama/storage/manager.rb:146
+#: service/lib/agama/storage/manager.rb:145
 msgid "Preparing bootloader proposal"
 msgstr "Bootloader bölümü hazırlanıyor"
 
 #. then also apply changes to that proposal
-#: service/lib/agama/storage/manager.rb:153
+#: service/lib/agama/storage/manager.rb:152
 msgid "Adding storage-related packages"
 msgstr "Depolamayla ilgili paketler ekleme"
 
-#: service/lib/agama/storage/manager.rb:154
+#: service/lib/agama/storage/manager.rb:153
 msgid "Preparing the storage devices"
 msgstr "Depolama cihazları hazırlanıyor"
 
-#: service/lib/agama/storage/manager.rb:155
+#: service/lib/agama/storage/manager.rb:154
 msgid "Writing bootloader sysconfig"
 msgstr "bootloader sysconfig yazılıyor"
 
@@ -792,6 +788,9 @@ msgid ""
 msgstr ""
 "Bir kullanıcı tanımlamak, kök parolasını veya bir SSH genel anahtarını "
 "ayarlamak gerekir"
+
+#~ msgid "Selecting Linux Security Modules"
+#~ msgstr "Linux Güvenlik Modüllerini Seçme"
 
 #, perl-brace-format
 #~ msgid "The file %{filename} from repository %{repo_name} (%{repo_url})"

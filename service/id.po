@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-09 03:13+0000\n"
+"POT-Creation-Date: 2025-07-10 03:13+0000\n"
 "PO-Revision-Date: 2025-06-23 16:59+0000\n"
 "Last-Translator: Arif Budiman <arifpedia@gmail.com>\n"
 "Language-Team: Indonesian <https://l10n.opensuse.org/projects/agama/agama-"
@@ -28,34 +28,34 @@ msgid "Found unsupported elements in the AutoYaST profile: %{keys}."
 msgstr "Menemukan elemen yang tidak didukung dalam profil AutoYaST: %{keys}."
 
 #. Runs the config phase
-#: service/lib/agama/manager.rb:95
+#: service/lib/agama/manager.rb:96
 msgid "Analyze disks"
 msgstr "Menganalisis disk"
 
-#: service/lib/agama/manager.rb:95
+#: service/lib/agama/manager.rb:96
 msgid "Configure software"
 msgstr "Mengkonfigurasi perangkat lunak"
 
 #. Runs the install phase
 #. rubocop:disable Metrics/AbcSize, Metrics/MethodLength
-#: service/lib/agama/manager.rb:113
+#: service/lib/agama/manager.rb:115
 msgid "Prepare disks"
 msgstr "Siapkan disk"
 
-#: service/lib/agama/manager.rb:114
+#: service/lib/agama/manager.rb:116
 msgid "Install software"
 msgstr "Menginstal perangkat lunak"
 
-#: service/lib/agama/manager.rb:115
+#: service/lib/agama/manager.rb:117
 msgid "Configure the system"
 msgstr "Mengkonfigurasi sistem"
 
 #. rubocop:enable Metrics/AbcSize, Metrics/MethodLength
-#: service/lib/agama/manager.rb:156
+#: service/lib/agama/manager.rb:158
 msgid "Load software translations"
 msgstr "Memuat terjemahan perangkat lunak"
 
-#: service/lib/agama/manager.rb:157
+#: service/lib/agama/manager.rb:159
 msgid "Load storage translations"
 msgstr "Memuat terjemahan penyimpanan"
 
@@ -233,8 +233,8 @@ msgid ""
 "anyway?"
 msgstr ""
 "Berkas %{filename} dari %{repo_url} telah ditandatangani secara digital "
-"menggunakan kunci GnuPG berikut, tetapi pemeriksaan integritas gagal: %"
-"{key_id} (%{key_name}). Apakah tetap ingin menggunakannya?"
+"menggunakan kunci GnuPG berikut, tetapi pemeriksaan integritas gagal: "
+"%{key_id} (%{key_name}). Apakah tetap ingin menggunakannya?"
 
 #: service/lib/agama/software/callbacks/signature.rb:175
 #, perl-brace-format
@@ -417,8 +417,8 @@ msgstr "Tidak ada perangkat boot dengan alias '%s'"
 msgid ""
 "No passphrase provided (required for using the method '%{crypt_method}')."
 msgstr ""
-"Kata sandi tidak disediakan (diperlukan untuk menggunakan metode '%"
-"{crypt_method}')."
+"Kata sandi tidak disediakan (diperlukan untuk menggunakan metode "
+"'%{crypt_method}')."
 
 #. TRANSLATORS: 'crypt_method' is the identifier of the method to encrypt the device
 #. (e.g., 'luks1', 'random_swap').
@@ -482,8 +482,8 @@ msgstr "Setidaknya %s perangkat diperlukan untuk %s"
 #: service/lib/agama/storage/config_checkers/md_raid.rb:168
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be deleted because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be deleted because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
 "Perangkat ‘%{member}’ tidak dapat dihapus karena merupakan bagian dari MD "
 "RAID %{md_raid}"
@@ -495,8 +495,8 @@ msgstr ""
 #: service/lib/agama/storage/config_checkers/md_raid.rb:191
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be resized because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be resized because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
 "Perangkat ‘%{member}’ tidak dapat diubah ukurannya karena merupakan bagian "
 "dari MD RAID %{md_raid}"
@@ -534,8 +534,8 @@ msgstr ""
 #: service/lib/agama/storage/config_checkers/md_raid.rb:259
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be used because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be used because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
 "Perangkat ‘%{member}’ tidak dapat digunakan karena merupakan bagian dari MD "
 "RAID %{md_raid}"
@@ -743,25 +743,21 @@ msgstr "Memeriksa perangkat penyimpanan"
 msgid "Calculating the storage proposal"
 msgstr "Menghitung proposal penyimpanan"
 
-#: service/lib/agama/storage/manager.rb:136
-msgid "Selecting Linux Security Modules"
-msgstr "Memilih Modul Keamanan Linux"
-
 #. Prepares the partitioning to install the system
-#: service/lib/agama/storage/manager.rb:146
+#: service/lib/agama/storage/manager.rb:145
 msgid "Preparing bootloader proposal"
 msgstr "Mempersiapkan proposal bootloader"
 
 #. then also apply changes to that proposal
-#: service/lib/agama/storage/manager.rb:153
+#: service/lib/agama/storage/manager.rb:152
 msgid "Adding storage-related packages"
 msgstr "Menambahkan paket terkait penyimpanan"
 
-#: service/lib/agama/storage/manager.rb:154
+#: service/lib/agama/storage/manager.rb:153
 msgid "Preparing the storage devices"
 msgstr "Mempersiapkan perangkat penyimpanan"
 
-#: service/lib/agama/storage/manager.rb:155
+#: service/lib/agama/storage/manager.rb:154
 msgid "Writing bootloader sysconfig"
 msgstr "Menulis sysconfig bootloader"
 
@@ -805,6 +801,9 @@ msgid ""
 "Defining a user, setting the root password or a SSH public key is required"
 msgstr ""
 "Wajib menentukan pengguna, mengatur kata sandi root atau kunci publik SSH"
+
+#~ msgid "Selecting Linux Security Modules"
+#~ msgstr "Memilih Modul Keamanan Linux"
 
 #~ msgid "Configuring Iguana"
 #~ msgstr "Konfigurasi Iguana"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-09 03:13+0000\n"
+"POT-Creation-Date: 2025-07-10 03:13+0000\n"
 "PO-Revision-Date: 2025-07-07 02:59+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/agama/agama-"
@@ -29,34 +29,34 @@ msgstr ""
 "AutoYaST プロファイル内にサポートされていない要素が見つかりました: %{keys}."
 
 #. Runs the config phase
-#: service/lib/agama/manager.rb:95
+#: service/lib/agama/manager.rb:96
 msgid "Analyze disks"
 msgstr "ディスクの分析"
 
-#: service/lib/agama/manager.rb:95
+#: service/lib/agama/manager.rb:96
 msgid "Configure software"
 msgstr "ソフトウエアの設定"
 
 #. Runs the install phase
 #. rubocop:disable Metrics/AbcSize, Metrics/MethodLength
-#: service/lib/agama/manager.rb:113
+#: service/lib/agama/manager.rb:115
 msgid "Prepare disks"
 msgstr "ディスクの準備"
 
-#: service/lib/agama/manager.rb:114
+#: service/lib/agama/manager.rb:116
 msgid "Install software"
 msgstr "ソフトウエアのインストール"
 
-#: service/lib/agama/manager.rb:115
+#: service/lib/agama/manager.rb:117
 msgid "Configure the system"
 msgstr "システムの設定"
 
 #. rubocop:enable Metrics/AbcSize, Metrics/MethodLength
-#: service/lib/agama/manager.rb:156
+#: service/lib/agama/manager.rb:158
 msgid "Load software translations"
 msgstr "ソフトウエアの翻訳の読み込み"
 
-#: service/lib/agama/manager.rb:157
+#: service/lib/agama/manager.rb:159
 msgid "Load storage translations"
 msgstr "ストレージの翻訳の読み込み"
 
@@ -145,10 +145,10 @@ msgid ""
 "be \"%{expected}\". The file has changed by accident or by an attacker since "
 "the creater signed it. Use it anyway?"
 msgstr ""
-"ファイル %{file} のチェックサムは \"%{found}\" ですが、正しくは \"%{expected}"
-"\" であるべきものです。作成者が署名したあと、何らかの事故で書き換わってしまっ"
-"たか、もしくは不正な攻撃者が書き換えた可能性があります。このファイルを使用し"
-"てよろしいですか？"
+"ファイル %{file} のチェックサムは \"%{found}\" ですが、正しくは "
+"\"%{expected}\" であるべきものです。作成者が署名したあと、何らかの事故で書き"
+"換わってしまったか、もしくは不正な攻撃者が書き換えた可能性があります。この"
+"ファイルを使用してよろしいですか？"
 
 #. DoneProvide callback
 #.
@@ -478,8 +478,8 @@ msgstr "少なくとも %s 個のデバイスが必要です (%s に対して)"
 #: service/lib/agama/storage/config_checkers/md_raid.rb:168
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be deleted because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be deleted because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
 "デバイス '%{member}' は MD RAID %{md_raid} の一部であるため、削除できません"
 
@@ -490,8 +490,8 @@ msgstr ""
 #: service/lib/agama/storage/config_checkers/md_raid.rb:191
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be resized because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be resized because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
 "デバイス '%{member}' は MD RAID %{md_raid} の一部であるため、サイズ変更できま"
 "せん"
@@ -529,8 +529,8 @@ msgstr ""
 #: service/lib/agama/storage/config_checkers/md_raid.rb:259
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be used because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be used because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
 "デバイス '%{member}' は MD RAID %{md_raid} の一部であるため、使用できません"
 
@@ -732,25 +732,21 @@ msgstr "ストレージデバイスを検出しています"
 msgid "Calculating the storage proposal"
 msgstr "ストレージの提案内容を作成しています"
 
-#: service/lib/agama/storage/manager.rb:136
-msgid "Selecting Linux Security Modules"
-msgstr "Linux セキュリティモジュールを選択しています"
-
 #. Prepares the partitioning to install the system
-#: service/lib/agama/storage/manager.rb:146
+#: service/lib/agama/storage/manager.rb:145
 msgid "Preparing bootloader proposal"
 msgstr "ブートローダの提案内容を準備しています"
 
 #. then also apply changes to that proposal
-#: service/lib/agama/storage/manager.rb:153
+#: service/lib/agama/storage/manager.rb:152
 msgid "Adding storage-related packages"
 msgstr "ストレージ関連のパッケージを追加しています"
 
-#: service/lib/agama/storage/manager.rb:154
+#: service/lib/agama/storage/manager.rb:153
 msgid "Preparing the storage devices"
 msgstr "ストレージデバイスを準備しています"
 
-#: service/lib/agama/storage/manager.rb:155
+#: service/lib/agama/storage/manager.rb:154
 msgid "Writing bootloader sysconfig"
 msgstr "ブートローダの sysconfig を書き込んでいます"
 
@@ -791,6 +787,9 @@ msgid ""
 "Defining a user, setting the root password or a SSH public key is required"
 msgstr ""
 "ユーザの設定、 root パスワードの設定、 SSH 公開鍵の設定のいずれかが必要です"
+
+#~ msgid "Selecting Linux Security Modules"
+#~ msgstr "Linux セキュリティモジュールを選択しています"
 
 #~ msgid "Configuring Iguana"
 #~ msgstr "Iguana を設定しています"
