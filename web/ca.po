@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-01 03:21+0000\n"
+"POT-Creation-Date: 2025-07-15 03:20+0000\n"
 "PO-Revision-Date: 2025-07-07 09:59+0000\n"
 "Last-Translator: David Medina <medipas@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -259,7 +259,7 @@ msgstr "Autenticació"
 
 #: src/components/core/IssuesDrawer.tsx:50
 #: src/components/overview/StorageSection.tsx:112
-#: src/components/storage/ProposalPage.tsx:250 src/routes/storage.tsx:44
+#: src/components/storage/ProposalPage.tsx:250 src/routes/storage.tsx:45
 msgid "Storage"
 msgstr "Emmagatzematge"
 
@@ -471,6 +471,8 @@ msgstr "Localització"
 
 #: src/components/l10n/L10nPage.tsx:84 src/components/l10n/L10nPage.tsx:98
 #: src/components/l10n/L10nPage.tsx:110
+#: src/components/storage/SearchedDeviceMenu.tsx:303
+#: src/components/storage/VolumeGroupEditor.tsx:113
 #: src/components/storage/iscsi/InitiatorForm.tsx:89
 #: src/components/users/FirstUserForm.tsx:235
 #: src/components/users/RootUserForm.tsx:164
@@ -575,7 +577,7 @@ msgstr "Llista de dades d'adreces"
 #. or "CC-7F-C8-FC-7A-A1 - enp1s0". You may change the separator, but
 #. please keep both %s placeholders.
 #: src/components/network/BindingSettingsForm.tsx:75
-#: src/components/storage/utils/drive.tsx:87
+#: src/components/storage/utils/drive.tsx:104
 #, c-format
 msgid "%s - %s"
 msgstr "%s - %s"
@@ -780,6 +782,7 @@ msgstr "Seguretat"
 
 #: src/components/network/WifiConnectionDetails.tsx:72
 #: src/components/network/WiredConnectionDetails.tsx:49
+#: src/components/storage/DeviceSelectorModal.tsx:83
 #: src/components/storage/ProposalResultTable.tsx:132
 #: src/components/storage/SpaceActionsTable.tsx:233
 #: src/components/storage/dasd/DASDTable.tsx:77
@@ -1439,21 +1442,21 @@ msgstr ""
 "Aquest espai inclou el sistema de base i els patrons de programari "
 "seleccionats, si n'hi ha."
 
-#: src/components/storage/AutoSizeText.tsx:33
+#: src/components/storage/AutoSizeText.tsx:34
 msgid "logical volume"
 msgstr "volum lògic"
 
-#: src/components/storage/AutoSizeText.tsx:33
+#: src/components/storage/AutoSizeText.tsx:34
 msgid "partition"
 msgstr "partició"
 
 #. TRANSLATORS: %1s$ is a size with units (eg. 3 GiB) and %1$s is a device type (eg. partition)
-#: src/components/storage/AutoSizeText.tsx:46
+#: src/components/storage/AutoSizeText.tsx:47
 msgid "A generic size of %s will be used for the new %2$s"
 msgstr "S'usarà una mida genèrica de %s per a la %2$s nova"
 
 #. TRANSLATORS: %1s$ and %2s$ are sizes with units (eg. 3 GiB) and %3$s is a device type (eg. partition)
-#: src/components/storage/AutoSizeText.tsx:54
+#: src/components/storage/AutoSizeText.tsx:55
 #, c-format
 msgid ""
 "A generic size range between %1$s and %2$s will be used for the new %3$s"
@@ -1461,19 +1464,19 @@ msgstr ""
 "S'usarà un interval de mida genèric entre %1$s i %2$s per a la %3$s nova"
 
 #. TRANSLATORS: %1s$ is a size with units (eg. 3 GiB) and %1$s is a device type (eg. partition)
-#: src/components/storage/AutoSizeText.tsx:63
+#: src/components/storage/AutoSizeText.tsx:64
 #, c-format
 msgid "A generic minimum size of %1$s will be used for the new %2$s"
 msgstr "S'usarà una mida mínima genèrica de %1$s per a la %2$s nova"
 
 #. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
-#: src/components/storage/AutoSizeText.tsx:80
+#: src/components/storage/AutoSizeText.tsx:81
 #, c-format
 msgid "A %1$s of %2$s will be created for %3$s if possible"
 msgstr "Si és possible, es crearà una %1$s de %2$s per a %3$s"
 
 #. TRANSLATORS: %1$s is a device type (eg. partition), %2$s and %3$s are sizes with units (10 GiB), and %4$s is a mount path (/home)
-#: src/components/storage/AutoSizeText.tsx:89
+#: src/components/storage/AutoSizeText.tsx:90
 #, c-format
 msgid ""
 "A %1$s with a size between %2$s and %3$s will be created for %4$s if possible"
@@ -1481,13 +1484,13 @@ msgstr ""
 "Si és possible, es crearà una %1$s amb una mida entre %2$s i %3$s per a %4$s"
 
 #. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
-#: src/components/storage/AutoSizeText.tsx:99
+#: src/components/storage/AutoSizeText.tsx:100
 #, c-format
 msgid "A %1$s of at least %2$s will be created for %3$s if possible"
 msgstr "Si és possible es crearà una %1$s de com a mínim %2$s per a %3$s"
 
 #. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
-#: src/components/storage/AutoSizeText.tsx:117
+#: src/components/storage/AutoSizeText.tsx:118
 msgid ""
 "Based on the amount of RAM in the system, a %1s$ of %2$s will be planned for "
 "%3$s"
@@ -1495,7 +1498,7 @@ msgstr ""
 "Segons la quantitat de memòria RAM del sistema, es planificarà una %1s$ de "
 "%2$s per a %3$s"
 
-#: src/components/storage/AutoSizeText.tsx:127
+#: src/components/storage/AutoSizeText.tsx:128
 msgid ""
 "Based on the amount of RAM in the system, a %1s$ with a size between %2$s "
 "and %3$s will be planned for %4$s"
@@ -1504,7 +1507,7 @@ msgstr ""
 "una mida d'entre %2$s i %3$s per a %4$s"
 
 #. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
-#: src/components/storage/AutoSizeText.tsx:138
+#: src/components/storage/AutoSizeText.tsx:139
 msgid ""
 "Based on the amount of RAM in the system, a %1s$ of at least %2$s will be "
 "planned for %3$s"
@@ -1512,7 +1515,7 @@ msgstr ""
 "Segons la quantitat de memòria RAM del sistema, es planificarà una %1s$ "
 "d'almenys %2$s per a %3$s"
 
-#: src/components/storage/AutoSizeText.tsx:167
+#: src/components/storage/AutoSizeText.tsx:168
 #, c-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the amount of RAM in "
@@ -1523,7 +1526,7 @@ msgstr ""
 "sistema, l'ús de les instantànies de Btrfs i la presència d'un sistema de "
 "fitxers separat per a %2$s."
 
-#: src/components/storage/AutoSizeText.tsx:178
+#: src/components/storage/AutoSizeText.tsx:179
 #, c-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the amount of RAM in "
@@ -1534,7 +1537,7 @@ msgstr ""
 "sistema, l'ús de les instantànies de Btrfs i la presència de sistemes de "
 "fitxers separats per a %2$s."
 
-#: src/components/storage/AutoSizeText.tsx:188
+#: src/components/storage/AutoSizeText.tsx:189
 #, c-format
 msgid ""
 "The size for %s will be dynamically adjusted based on the amount of RAM in "
@@ -1543,7 +1546,7 @@ msgstr ""
 "La mida de %s s'ajustarà dinàmicament segons la quantitat de RAM del sistema "
 "i l'ús de les instantànies de Btrfs."
 
-#: src/components/storage/AutoSizeText.tsx:199
+#: src/components/storage/AutoSizeText.tsx:200
 #, c-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the amount of RAM in "
@@ -1552,7 +1555,7 @@ msgstr ""
 "La mida de %1$s s'ajustarà dinàmicament segons la quantitat de RAM del "
 "sistema i de la presència d'un sistema de fitxers separat per a %2$s."
 
-#: src/components/storage/AutoSizeText.tsx:209
+#: src/components/storage/AutoSizeText.tsx:210
 #, c-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the amount of RAM in "
@@ -1561,7 +1564,7 @@ msgstr ""
 "La mida de %1$s s'ajustarà dinàmicament segons la quantitat de RAM del "
 "sistema i la presència de sistemes de fitxers separats per a %2$s."
 
-#: src/components/storage/AutoSizeText.tsx:221
+#: src/components/storage/AutoSizeText.tsx:222
 #, c-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the usage of Btrfs "
@@ -1570,7 +1573,7 @@ msgstr ""
 "La mida de %1$s s'ajustarà dinàmicament segons l'ús de les instantànies de "
 "Btrfs i la presència d'un sistema de fitxers separat per a %2$s."
 
-#: src/components/storage/AutoSizeText.tsx:232
+#: src/components/storage/AutoSizeText.tsx:233
 #, c-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the usage of Btrfs "
@@ -1580,7 +1583,7 @@ msgstr ""
 "Btrfs i la presència de sistemes de fitxers separats per a %2$s."
 
 #. TRANSLATORS: %s is a mount point (eg. /)
-#: src/components/storage/AutoSizeText.tsx:241
+#: src/components/storage/AutoSizeText.tsx:242
 #, c-format
 msgid ""
 "The size for %s will be dynamically adjusted based on the usage of Btrfs "
@@ -1589,7 +1592,7 @@ msgstr ""
 "La mida de %s s'ajustarà dinàmicament segons l'ús de les instantànies de "
 "Btrfs."
 
-#: src/components/storage/AutoSizeText.tsx:250
+#: src/components/storage/AutoSizeText.tsx:251
 #, c-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the presence of a "
@@ -1598,7 +1601,7 @@ msgstr ""
 "La mida de %1$s s'ajustarà dinàmicament segons la presència d'un sistema de "
 "fitxers separat per a %2$s."
 
-#: src/components/storage/AutoSizeText.tsx:260
+#: src/components/storage/AutoSizeText.tsx:261
 #, c-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the presence of "
@@ -1608,7 +1611,7 @@ msgstr ""
 "fitxers separats per a %2$s."
 
 #. TRANSLATORS: %1$s is a device type (eg. partition) and %2s is a size with units (eg. 10 GiB)
-#: src/components/storage/AutoSizeText.tsx:272
+#: src/components/storage/AutoSizeText.tsx:273
 #, c-format
 msgid ""
 "The current configuration will result in an attempt to create a %1$s of %2$s."
@@ -1616,7 +1619,7 @@ msgstr ""
 "La configuració actual tindrà com a resultat un intent de crear una %1$s de "
 "%2$s."
 
-#: src/components/storage/AutoSizeText.tsx:281
+#: src/components/storage/AutoSizeText.tsx:282
 #, c-format
 msgid ""
 "The current configuration will result in an attempt to create a %1$s with a "
@@ -1626,7 +1629,7 @@ msgstr ""
 "una mida d'entre %2$s i %3$s."
 
 #. TRANSLATORS: %1$s is a device type (eg. partition) and %2$s is a size with units (eg. 10 GiB)
-#: src/components/storage/AutoSizeText.tsx:291
+#: src/components/storage/AutoSizeText.tsx:292
 #, c-format
 msgid ""
 "The current configuration will result in an attempt to create a %1$s of at "
@@ -1688,11 +1691,11 @@ msgstr ""
 "No es configurarà automàticament cap partició per a l'arrencada. Useu-ho amb "
 "precaució."
 
-#: src/components/storage/ConfigEditor.tsx:34
+#: src/components/storage/ConfigEditor.tsx:35
 msgid "No devices configured yet"
 msgstr "Encara no s'ha configurat cap dispositiu"
 
-#: src/components/storage/ConfigEditor.tsx:37
+#: src/components/storage/ConfigEditor.tsx:38
 #, c-format
 msgid ""
 "Use actions below to set up your devices or click %s to start from scratch "
@@ -1702,9 +1705,13 @@ msgstr ""
 "començar des de zero amb la configuració predeterminada."
 
 #. TRANSLATORS: label for a button
-#: src/components/storage/ConfigEditor.tsx:48
+#: src/components/storage/ConfigEditor.tsx:49
 msgid "reset to defaults"
 msgstr "restableix els valors predeterminats"
+
+#: src/components/storage/ConfigEditor.tsx:85
+msgid "[FIXME]"
+msgstr ""
 
 #: src/components/storage/ConfigEditorMenu.tsx:57
 msgid "Other options toggle"
@@ -1755,45 +1762,186 @@ msgstr "Activa i formata dispositius DASD"
 msgid "Configure DASD"
 msgstr "Configuració de DASD"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:57
-msgid "Already using all available disks"
-msgstr "Ja s'usen tots els discs disponibles"
-
-#: src/components/storage/ConfigureDeviceMenu.tsx:67
-msgid "Start configuring a basic installation"
-msgstr "Comenceu a configurar una instal·lació bàsica"
-
-#: src/components/storage/ConfigureDeviceMenu.tsx:69
+#: src/components/storage/ConfigureDeviceMenu.tsx:46
 msgid "Select another disk to define partitions"
 msgstr "Seleccioneu un altre disc per definir-ne les particions"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:70
+#: src/components/storage/ConfigureDeviceMenu.tsx:47
 msgid "Select a disk to define partitions"
 msgstr "Seleccioneu un disc per definir-ne les particions"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:74
+#: src/components/storage/ConfigureDeviceMenu.tsx:50
+msgid "Already using all available disks"
+msgstr "Ja s'usen tots els discs disponibles"
+
+#: src/components/storage/ConfigureDeviceMenu.tsx:61
+msgid "Start configuring a basic installation"
+msgstr "Comenceu a configurar una instal·lació bàsica"
+
+#: src/components/storage/ConfigureDeviceMenu.tsx:76
 msgid "Add device menu"
 msgstr "Afegeix el menú del dispositiu"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:130
+#: src/components/storage/ConfigureDeviceMenu.tsx:119
 msgid "Define a new LVM on top of one or several disks"
 msgstr "Definiu un LVM nou en un o diversos discs"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:131
+#: src/components/storage/ConfigureDeviceMenu.tsx:120
 msgid "Define a new LVM on the disk"
 msgstr "Definiu un LVM nou al disc"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:136
+#: src/components/storage/ConfigureDeviceMenu.tsx:126
 msgid "Configure device menu"
 msgstr "Configura el menú del dispositiu"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:152
+#: src/components/storage/ConfigureDeviceMenu.tsx:141
 msgid "Add LVM volume group"
 msgstr "Afegeix un grup de volums d'LVM"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:156
+#: src/components/storage/ConfigureDeviceMenu.tsx:145
 msgid "More devices"
 msgstr "Més dispositius"
+
+#: src/components/storage/DeviceSelectorModal.tsx:84
+#: src/components/storage/ProposalResultTable.tsx:135
+#: src/components/storage/SizeModeSelect.tsx:125
+#: src/components/storage/SpaceActionsTable.tsx:240
+msgid "Size"
+msgstr "Mida"
+
+#: src/components/storage/DeviceSelectorModal.tsx:85
+#, fuzzy
+msgid "Description"
+msgstr "Encriptació"
+
+#: src/components/storage/DeviceSelectorModal.tsx:86
+#, fuzzy
+msgid "Current content"
+msgstr "Suprimeix el contingut actual"
+
+#: src/components/storage/DeviceSelectorPage.tsx:53
+#: src/components/storage/dasd/DASDTable.tsx:78
+msgid "Type"
+msgstr "Tipus"
+
+#. TRANSLATORS: input field for the iSCSI initiator name
+#: src/components/storage/DeviceSelectorPage.tsx:54
+#: src/components/storage/LvmPage.tsx:181
+#: src/components/storage/iscsi/InitiatorForm.tsx:75
+#: src/components/storage/iscsi/InitiatorForm.tsx:85
+#: src/components/storage/iscsi/InitiatorSection.tsx:40
+#: src/components/storage/iscsi/NodesPresenter.jsx:100
+#: src/components/storage/iscsi/NodesPresenter.jsx:121
+#: src/components/storage/zfcp/ZFCPDisksTable.tsx:42
+msgid "Name"
+msgstr "Nom"
+
+#: src/components/storage/DeviceSelectorPage.tsx:55
+msgid "Content"
+msgstr "Contingut"
+
+#: src/components/storage/DeviceSelectorPage.tsx:56
+#, fuzzy
+msgid "Filesystems"
+msgstr "Sistema de fitxers"
+
+#: src/components/storage/DeviceSelectorPage.tsx:75
+#, fuzzy
+msgid "Device Selection"
+msgstr "Torna a la selecció del dispositiu"
+
+#: src/components/storage/DeviceSelectorPage.tsx:80
+msgid ""
+"The modal selector offers a simplified interface designed for quick and "
+"straightforward use, without overwhelming the user."
+msgstr ""
+
+#: src/components/storage/DeviceSelectorPage.tsx:85
+msgid ""
+"For more advanced needs, users can switch to this full-page, dedicated path "
+"version that provides more space for detailed views, additional columns, "
+"filters, and extended functionality."
+msgstr ""
+
+#: src/components/storage/DeviceSelectorPage.tsx:90
+msgid ""
+"This pattern strikes a balance between clarity and efficiency: the modal "
+"keeps things lightweight for simple selections, while the full view supports "
+"deeper exploration and more complex actions, specially for users with tons "
+"of devices."
+msgstr ""
+
+#. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
+#: src/components/storage/DriveHeader.tsx:39
+#, fuzzy, c-format
+msgid "Use disk %s to install, host LVM and boot"
+msgstr "Usa %s per a la instal·lació, allotjar-hi l'LVM i per a l'arrencada"
+
+#. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
+#: src/components/storage/DriveHeader.tsx:42
+#, fuzzy, c-format
+msgid "Use disk %s to install and host LVM"
+msgstr "Usa %s per a la instal·lació i allotjar-hi l'LVM"
+
+#. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
+#: src/components/storage/DriveHeader.tsx:47
+#, fuzzy, c-format
+msgid "Use disk %s to install and boot"
+msgstr "Usa %s per a la instal·lació i l'arrencada"
+
+#. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
+#: src/components/storage/DriveHeader.tsx:50
+#, fuzzy, c-format
+msgid "Use disk %s to install"
+msgstr "Usa %s per a la instal·lació"
+
+#. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
+#: src/components/storage/DriveHeader.tsx:57
+#, fuzzy, c-format
+msgid "Use disk %s for LVM, additional partitions and booting"
+msgstr "Usa %s per a l'LVM, les particions addicionals i l'arrencada"
+
+#. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
+#: src/components/storage/DriveHeader.tsx:60
+#, fuzzy, c-format
+msgid "Use disk %s for LVM and additional partitions"
+msgstr "Usa %s per a l'LVM i les particions addicionals"
+
+#. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
+#: src/components/storage/DriveHeader.tsx:65
+#, fuzzy, c-format
+msgid "Use disk %s for additional partitions and booting"
+msgstr "Usa %s per a les particions addicionals i l'arrencada"
+
+#. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
+#: src/components/storage/DriveHeader.tsx:68
+#, fuzzy, c-format
+msgid "Use disk %s for additional partitions"
+msgstr "Usa %s per a les particions addicionals"
+
+#. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
+#: src/components/storage/DriveHeader.tsx:74
+#, fuzzy, c-format
+msgid "Use disk %s to host LVM and boot"
+msgstr "Usa %s per allotjar-hi l'LVM i per a l'arrencada"
+
+#. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
+#: src/components/storage/DriveHeader.tsx:77
+#, fuzzy, c-format
+msgid "Use disk %s to host LVM"
+msgstr "Usa %s per allotjar-hi l'LVM"
+
+#. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
+#: src/components/storage/DriveHeader.tsx:82
+#, fuzzy, c-format
+msgid "Use disk %s to configure boot partitions"
+msgstr "Usa %s per configurar les particions d'arrencada"
+
+#. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
+#: src/components/storage/DriveHeader.tsx:85
+#, fuzzy, c-format
+msgid "Use disk %s"
+msgstr "Usa %s"
 
 #: src/components/storage/EncryptionSection.tsx:33
 msgid "Encryption is disabled"
@@ -1859,7 +2007,7 @@ msgstr ""
 "emmagatzemada als sistemes de fitxers nous, incloses dades, programes i "
 "fitxers del sistema."
 
-#: src/components/storage/ISCSIPage.tsx:34 src/routes/storage.tsx:89
+#: src/components/storage/ISCSIPage.tsx:34 src/routes/storage.tsx:94
 msgid "iSCSI"
 msgstr "iSCSI"
 
@@ -1921,7 +2069,7 @@ msgstr "S'espera un punt de muntatge"
 
 #: src/components/storage/LogicalVolumePage.tsx:463
 #: src/components/storage/PartitionPage.tsx:562
-#: src/components/storage/utils.ts:349
+#: src/components/storage/utils.ts:338
 msgid "Btrfs with snapshots"
 msgstr "Btrfs amb instantànies"
 
@@ -2018,17 +2166,6 @@ msgstr "Configura un grup de volums d'LVM"
 msgid "Check the following before continuing"
 msgstr "Comproveu el següent abans de continuar:"
 
-#. TRANSLATORS: input field for the iSCSI initiator name
-#: src/components/storage/LvmPage.tsx:181
-#: src/components/storage/iscsi/InitiatorForm.tsx:75
-#: src/components/storage/iscsi/InitiatorForm.tsx:85
-#: src/components/storage/iscsi/InitiatorSection.tsx:40
-#: src/components/storage/iscsi/NodesPresenter.jsx:100
-#: src/components/storage/iscsi/NodesPresenter.jsx:121
-#: src/components/storage/zfcp/ZFCPDisksTable.tsx:42
-msgid "Name"
-msgstr "Nom"
-
 #: src/components/storage/LvmPage.tsx:184
 #: src/components/storage/zfcp/ZFCPPage.tsx:131
 msgid "Disks"
@@ -2057,6 +2194,78 @@ msgid ""
 msgstr ""
 "Mou els punts de muntatge configurats actualment als discs "
 "seleccionats                    als volums lògics d'aquest grup de volums."
+
+#. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
+#: src/components/storage/MdRaidHeader.tsx:39
+#, fuzzy, c-format
+msgid "Use RAID %s to install, host LVM and boot"
+msgstr "Usa %s per a la instal·lació, allotjar-hi l'LVM i per a l'arrencada"
+
+#. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
+#: src/components/storage/MdRaidHeader.tsx:42
+#, fuzzy, c-format
+msgid "Use RAID %s to install and host LVM"
+msgstr "Usa %s per a la instal·lació i allotjar-hi l'LVM"
+
+#. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
+#: src/components/storage/MdRaidHeader.tsx:47
+#, fuzzy, c-format
+msgid "Use RAID %s to install and boot"
+msgstr "Usa %s per a la instal·lació i l'arrencada"
+
+#. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
+#: src/components/storage/MdRaidHeader.tsx:50
+#, fuzzy, c-format
+msgid "Use RAID %s to install"
+msgstr "Usa %s per a la instal·lació"
+
+#. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
+#: src/components/storage/MdRaidHeader.tsx:57
+#, fuzzy, c-format
+msgid "Use RAID %s for LVM, additional partitions and booting"
+msgstr "Usa %s per a l'LVM, les particions addicionals i l'arrencada"
+
+#. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
+#: src/components/storage/MdRaidHeader.tsx:60
+#, fuzzy, c-format
+msgid "Use RAID %s for LVM and additional partitions"
+msgstr "Usa %s per a l'LVM i les particions addicionals"
+
+#. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
+#: src/components/storage/MdRaidHeader.tsx:65
+#, fuzzy, c-format
+msgid "Use RAID %s for additional partitions and booting"
+msgstr "Usa %s per a les particions addicionals i l'arrencada"
+
+#. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
+#: src/components/storage/MdRaidHeader.tsx:68
+#, fuzzy, c-format
+msgid "Use RAID %s for additional partitions"
+msgstr "Usa %s per a les particions addicionals"
+
+#. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
+#: src/components/storage/MdRaidHeader.tsx:74
+#, fuzzy, c-format
+msgid "Use RAID %s to host LVM and boot"
+msgstr "Usa %s per allotjar-hi l'LVM i per a l'arrencada"
+
+#. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
+#: src/components/storage/MdRaidHeader.tsx:77
+#, fuzzy, c-format
+msgid "Use RAID %s to host LVM"
+msgstr "Usa %s per allotjar-hi l'LVM"
+
+#. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
+#: src/components/storage/MdRaidHeader.tsx:82
+#, fuzzy, c-format
+msgid "Use RAID %s to configure boot partitions"
+msgstr "Usa %s per configurar les particions d'arrencada"
+
+#. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
+#: src/components/storage/MdRaidHeader.tsx:85
+#, fuzzy, c-format
+msgid "Use RAID %s"
+msgstr "Usa %s"
 
 #. TRANSLATORS: %s is the short name of a disk, like 'sda'
 #: src/components/storage/NewVgMenuOption.tsx:43
@@ -2140,96 +2349,46 @@ msgstr "Configura la partició a %s"
 msgid "Mount point mode"
 msgstr "Mode de punt de muntatge"
 
-#. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/PartitionableHeader.tsx:43
-#, c-format
-msgid "Use %s to install, host LVM and boot"
-msgstr "Usa %s per a la instal·lació, allotjar-hi l'LVM i per a l'arrencada"
+#: src/components/storage/PartitionsMenu.tsx:60
+#, fuzzy
+msgid "Moreover, the following partitions will be created or mounted"
+msgstr "Les particions configurades es crearan com a volums lògics"
 
-#. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/PartitionableHeader.tsx:46
-#, c-format
-msgid "Use %s to install and host LVM"
-msgstr "Usa %s per a la instal·lació i allotjar-hi l'LVM"
+#: src/components/storage/PartitionsMenu.tsx:77
+#, fuzzy
+msgid "The following partitions will be created or mounted"
+msgstr "Les particions configurades es crearan com a volums lògics"
 
-#. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/PartitionableHeader.tsx:51
-#, c-format
-msgid "Use %s to install and boot"
-msgstr "Usa %s per a la instal·lació i l'arrencada"
+#: src/components/storage/PartitionsMenu.tsx:129
+#, fuzzy
+msgid "Any partition needed to boot will be configured."
+msgstr "També s'adaptaran les particions necessàries per a l'arrencada"
 
-#. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/PartitionableHeader.tsx:54
-#, c-format
-msgid "Use %s to install"
-msgstr "Usa %s per a la instal·lació"
+#. TRANSLATORS: %s is the name of device, like '/dev/sda'.
+#: src/components/storage/PartitionsMenu.tsx:142
+#, fuzzy, c-format
+msgid "Details for %s"
+msgstr "Detalls"
 
-#. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/PartitionableHeader.tsx:61
-#, c-format
-msgid "Use %s for LVM, additional partitions and booting"
-msgstr "Usa %s per a l'LVM, les particions addicionals i l'arrencada"
+#: src/components/storage/PartitionsMenu.tsx:150
+#, fuzzy
+msgid "Add a new partition or mount an existing one"
+msgstr "Afegiu-hi una altra partició o munteu-ne una d'existent"
 
-#. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/PartitionableHeader.tsx:64
-#, c-format
-msgid "Use %s for LVM and additional partitions"
-msgstr "Usa %s per a l'LVM i les particions addicionals"
-
-#. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/PartitionableHeader.tsx:69
-#, c-format
-msgid "Use %s for additional partitions and booting"
-msgstr "Usa %s per a les particions addicionals i l'arrencada"
-
-#. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/PartitionableHeader.tsx:72
-#, c-format
-msgid "Use %s for additional partitions"
-msgstr "Usa %s per a les particions addicionals"
-
-#. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/PartitionableHeader.tsx:78
-#, c-format
-msgid "Use %s to host LVM and boot"
-msgstr "Usa %s per allotjar-hi l'LVM i per a l'arrencada"
-
-#. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/PartitionableHeader.tsx:81
-#, c-format
-msgid "Use %s to host LVM"
-msgstr "Usa %s per allotjar-hi l'LVM"
-
-#. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/PartitionableHeader.tsx:86
-#, c-format
-msgid "Use %s to configure boot partitions"
-msgstr "Usa %s per configurar les particions d'arrencada"
-
-#. TRANSLATORS: %s will be replaced by the device name and its size - "/dev/sda, 20 GiB"
-#: src/components/storage/PartitionableHeader.tsx:89
-#, c-format
-msgid "Use %s"
-msgstr "Usa %s"
-
-#: src/components/storage/PartitionsMenu.tsx:39
-msgid "No additional partitions will be created"
-msgstr "No es crearan particions addicionals"
-
-#: src/components/storage/PartitionsMenu.tsx:46
-#: src/components/storage/PartitionsMenu.tsx:100
+#: src/components/storage/PartitionsMenu.tsx:182
 msgid "Add another partition or mount an existing one"
 msgstr "Afegiu-hi una altra partició o munteu-ne una d'existent"
 
-#: src/components/storage/PartitionsMenu.tsx:51
-#: src/components/storage/PartitionsMenu.tsx:104
+#: src/components/storage/PartitionsMenu.tsx:185
 msgid "Add or use partition"
 msgstr "Afegiu o useu una partició"
 
-#: src/components/storage/PartitionsMenu.tsx:114
-#: src/components/storage/PartitionsMenu.tsx:117
-msgid "Partitions"
-msgstr "Particions"
+#: src/components/storage/PartitionsMenu.tsx:195
+#: src/components/storage/ProposalResultTable.tsx:134
+#: src/components/storage/SpaceActionsTable.tsx:237
+#: src/components/storage/VolumeGroupEditor.tsx:155
+msgid "Details"
+msgstr "Detalls"
 
 #: src/components/storage/ProposalActionsDialog.tsx:73
 #, c-format
@@ -2394,17 +2553,6 @@ msgstr "Abans: %s"
 msgid "Mount Point"
 msgstr "Punt de muntatge"
 
-#: src/components/storage/ProposalResultTable.tsx:134
-#: src/components/storage/SpaceActionsTable.tsx:237
-msgid "Details"
-msgstr "Detalls"
-
-#: src/components/storage/ProposalResultTable.tsx:135
-#: src/components/storage/SizeModeSelect.tsx:125
-#: src/components/storage/SpaceActionsTable.tsx:240
-msgid "Size"
-msgstr "Mida"
-
 #: src/components/storage/ProposalTransactionalInfo.tsx:43
 msgid "Transactional root file system"
 msgstr "Sistema de fitxers d'arrel transaccional"
@@ -2418,62 +2566,57 @@ msgstr ""
 "%s és un sistema immutable amb actualitzacions atòmiques. Usa un sistema de "
 "fitxers Btrfs només de lectura actualitzat a través d'instantànies."
 
-#: src/components/storage/SearchedDeviceMenu.tsx:152
-msgid "Selected disk (cannot be changed)"
+#: src/components/storage/SearchedDeviceMenu.tsx:59
+#, fuzzy
+msgid "Selected disk cannot be changed"
 msgstr "Disc seleccionat (no es pot canviar)"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:156
+#: src/components/storage/SearchedDeviceMenu.tsx:63
 msgid "Select a disk to configure"
 msgstr "Seleccioneu un disc per configurar-lo"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:160
+#: src/components/storage/SearchedDeviceMenu.tsx:67
 msgid "Select a disk to install the system"
 msgstr "Seleccioneu un disc per instal·lar-hi el sistema"
 
 #. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case).
-#: src/components/storage/SearchedDeviceMenu.tsx:170
+#: src/components/storage/SearchedDeviceMenu.tsx:77
 #, c-format
 msgid "Select a disk to create %s"
 msgstr "Seleccioneu un disc per crear-hi el punt de muntatge %s"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:180
+#: src/components/storage/SearchedDeviceMenu.tsx:94
 msgid "This uses existing partitions at the disk"
 msgstr "Això usa les particions existents al dispositiu"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:189
-msgid ""
-"This disk will contain the configured LVM groups and any partition needed to "
-"boot"
+#: src/components/storage/SearchedDeviceMenu.tsx:102
+msgid "It is chosen for booting and for some LVM groups"
 msgstr ""
-"Aquest disc contindrà els grups d'LVM configurats i qualsevol partició "
-"necessària per a arrencar"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:192
-msgid "This disk will contain the configured LVM groups"
-msgstr "Aquest disc contindrà els grups d'LVM configurats"
+#: src/components/storage/SearchedDeviceMenu.tsx:104
+msgid "It is chosen for some LVM groups"
+msgstr ""
 
 #. TRANSLATORS: %s is the name of the LVM
-#: src/components/storage/SearchedDeviceMenu.tsx:197
-#, c-format
-msgid ""
-"This disk will contain the LVM group '%s' and any partition needed to boot"
-msgstr ""
-"Aquest disc contindrà el grup d'LVM %s i qualsevol partició necessària per a "
-"arrencar"
-
-#. TRANSLATORS: %s is the name of the LVM
-#: src/components/storage/SearchedDeviceMenu.tsx:203
-#, c-format
-msgid "This disk will contain the LVM group '%s'"
+#: src/components/storage/SearchedDeviceMenu.tsx:109
+#, fuzzy, c-format
+msgid "It is chosen for booting and for the LVM group '%s'"
 msgstr "Aquest disc contindrà el grup d'LVM %s"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:208
-msgid "This disk will contain any partition needed for booting"
-msgstr "Aquest disc contindrà qualsevol partició necessària per a arrencar"
+#. TRANSLATORS: %s is the name of the LVM
+#: src/components/storage/SearchedDeviceMenu.tsx:115
+#, fuzzy, c-format
+msgid "It is chosen for the LVM group '%s'"
+msgstr "Aquest disc contindrà el grup d'LVM %s"
+
+#: src/components/storage/SearchedDeviceMenu.tsx:120
+#, fuzzy
+msgid "It is chosen for booting"
+msgstr "El disc s'usa per a l'arrencada"
 
 #. TRANSLATORS: %s is the name of the disk (eg. sda)
-#: src/components/storage/SearchedDeviceMenu.tsx:217
+#: src/components/storage/SearchedDeviceMenu.tsx:129
 #, c-format
 msgid ""
 "%s will still contain the configured LVM groups and any partition needed to "
@@ -2483,13 +2626,13 @@ msgstr ""
 "necessària per a arrencar"
 
 #. TRANSLATORS: %s is the name of the disk (eg. sda)
-#: src/components/storage/SearchedDeviceMenu.tsx:223
+#: src/components/storage/SearchedDeviceMenu.tsx:135
 #, c-format
 msgid "The configured LVM groups will remain at %s"
 msgstr "Els grups d'LVM configurats es mantindran a %s"
 
 #. TRANSLATORS: %1$s is the name of the disk (eg. sda) and %2$s the name of the LVM
-#: src/components/storage/SearchedDeviceMenu.tsx:229
+#: src/components/storage/SearchedDeviceMenu.tsx:141
 #, c-format
 msgid ""
 "%1$s will still contain the LVM group '%2$s' and any partition needed to boot"
@@ -2498,46 +2641,46 @@ msgstr ""
 "a arrencar"
 
 #. TRANSLATORS: %1$s is the name of the LVM and %2$s the name of the disk (eg. sda)
-#: src/components/storage/SearchedDeviceMenu.tsx:237
+#: src/components/storage/SearchedDeviceMenu.tsx:149
 #, c-format
 msgid "The LVM group '%1$s' will remain at %2$s"
 msgstr "El grup d'LVM %1$s es mantindrà a %2$s"
 
 #. TRANSLATORS: %s is the name of the disk (eg. sda)
-#: src/components/storage/SearchedDeviceMenu.tsx:245
+#: src/components/storage/SearchedDeviceMenu.tsx:157
 #, c-format
 msgid "Partitions needed for booting will remain at %s"
 msgstr "Les particions necessàries per a arrencar es mantindran a %s"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:249
+#: src/components/storage/SearchedDeviceMenu.tsx:161
 msgid "Partitions needed for booting will also be adapted"
 msgstr "També s'adaptaran les particions necessàries per a l'arrencada"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:257
+#: src/components/storage/SearchedDeviceMenu.tsx:177
 msgid "Change device menu"
 msgstr "Canvia el menú del dispositiu"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:302
+#: src/components/storage/SearchedDeviceMenu.tsx:227
 msgid "The disk is used for LVM and boot"
 msgstr "El disc s'usa per a l'LVM i l'arrencada"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:304
+#: src/components/storage/SearchedDeviceMenu.tsx:229
 msgid "The disk is used for booting"
 msgstr "El disc s'usa per a l'arrencada"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:308
+#: src/components/storage/SearchedDeviceMenu.tsx:233
 msgid "The disk is used for LVM"
 msgstr "El disc s'usa per a l'LVM"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:310
+#: src/components/storage/SearchedDeviceMenu.tsx:235
 msgid "Remove the configuration for this disk"
 msgstr "Suprimeix la configuració d'aquest disc"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:322
+#: src/components/storage/SearchedDeviceMenu.tsx:247
 msgid "Do not use"
 msgstr "No l'usis"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:354
+#: src/components/storage/SearchedDeviceMenu.tsx:286
 #, c-format
 msgid "Device %s menu"
 msgstr "Menú del dispositiu %s"
@@ -2628,9 +2771,10 @@ msgstr "No s'ha trobat contingut."
 msgid "Action"
 msgstr "Acció"
 
-#: src/components/storage/SpacePolicyMenu.tsx:38
-msgid "Choose what to with current content"
-msgstr "Trieu què voleu fer del contingut actual"
+#: src/components/storage/SpacePolicyMenu.tsx:72
+#, fuzzy
+msgid "Find space"
+msgstr "Aconseguir espai"
 
 #: src/components/storage/SpacePolicySelection.tsx:97
 msgid ""
@@ -2661,33 +2805,35 @@ msgstr ""
 "Podeu procedir a la instal·lació amb la configuració actual o potser voleu "
 "descartar-la i començar des de zero amb una de simple."
 
-#: src/components/storage/VolumeGroupEditor.tsx:88
+#: src/components/storage/VolumeGroupEditor.tsx:81
 msgid "Delete volume group"
 msgstr "Suprimeix el grup de volums"
 
-#: src/components/storage/VolumeGroupEditor.tsx:100
+#: src/components/storage/VolumeGroupEditor.tsx:93
 msgid "Modify settings and physical volumes"
 msgstr "Modifica la configuració i els volums físics"
 
-#: src/components/storage/VolumeGroupEditor.tsx:104
+#: src/components/storage/VolumeGroupEditor.tsx:97
 msgid "Edit volume group"
 msgstr "Edita el grup de volums"
 
-#: src/components/storage/VolumeGroupEditor.tsx:122
+#: src/components/storage/VolumeGroupEditor.tsx:121
 #, c-format
 msgid "Create LVM volume group %s"
 msgstr "Crea el grup de volums d'LVM %s"
 
-#: src/components/storage/VolumeGroupEditor.tsx:123
+#: src/components/storage/VolumeGroupEditor.tsx:122
 #, c-format
 msgid "Empty LVM volume group %s"
 msgstr "Buida el grup de volums d'LVM %s"
 
-#: src/components/storage/VolumeGroupEditor.tsx:147
-msgid "Logical volumes"
+#: src/components/storage/VolumeGroupEditor.tsx:133
+#, fuzzy, c-format
+msgid "Logical volumes for %s"
 msgstr "Volums lògics"
 
-#: src/components/storage/VolumeGroupEditor.tsx:168
+#: src/components/storage/VolumeGroupEditor.tsx:138
+#: src/components/storage/VolumeGroupEditor.tsx:193
 msgid "Add logical volume"
 msgstr "Afegeix un volum lògic"
 
@@ -2695,7 +2841,7 @@ msgstr "Afegeix un volum lògic"
 msgid "Formatting DASD devices"
 msgstr "Formatatge de dispositius DASD"
 
-#: src/components/storage/dasd/DASDPage.tsx:39 src/routes/storage.tsx:94
+#: src/components/storage/dasd/DASDPage.tsx:39 src/routes/storage.tsx:99
 msgid "DASD"
 msgstr "DASD"
 
@@ -2722,10 +2868,6 @@ msgstr "Sí"
 #: src/components/storage/zfcp/ZFCPDisksTable.tsx:43
 msgid "Channel ID"
 msgstr "Identificador del canal"
-
-#: src/components/storage/dasd/DASDTable.tsx:78
-msgid "Type"
-msgstr "Tipus"
 
 #. TRANSLATORS: table header, the column contains "Yes"/"No" values
 #. for the DIAG access mode (special disk access mode on IBM mainframes),
@@ -3014,153 +3156,118 @@ msgstr "Descobreix"
 msgid "Targets"
 msgstr "Destinacions"
 
-#: src/components/storage/utils.ts:60
+#: src/components/storage/utils.ts:58
 msgid "KiB"
 msgstr "KiB"
 
-#: src/components/storage/utils.ts:61
+#: src/components/storage/utils.ts:59
 msgid "MiB"
 msgstr "MiB"
 
-#: src/components/storage/utils.ts:62
+#: src/components/storage/utils.ts:60
 msgid "GiB"
 msgstr "GiB"
 
-#: src/components/storage/utils.ts:63
+#: src/components/storage/utils.ts:61
 msgid "TiB"
 msgstr "TiB"
 
-#: src/components/storage/utils.ts:64
+#: src/components/storage/utils.ts:62
 msgid "PiB"
 msgstr "PiB"
 
-#: src/components/storage/utils.ts:68
+#: src/components/storage/utils.ts:66
 msgid "Bcachefs"
 msgstr "Bcachefs"
 
-#: src/components/storage/utils.ts:69
+#: src/components/storage/utils.ts:67
 msgid "BitLocker"
 msgstr "BitLocker"
 
-#: src/components/storage/utils.ts:70
+#: src/components/storage/utils.ts:68
 msgid "Btrfs"
 msgstr "Btrfs"
 
-#: src/components/storage/utils.ts:71
+#: src/components/storage/utils.ts:69
 msgid "ExFAT"
 msgstr "ExFAT"
 
-#: src/components/storage/utils.ts:72
+#: src/components/storage/utils.ts:70
 msgid "Ext2"
 msgstr "Ext2"
 
-#: src/components/storage/utils.ts:73
+#: src/components/storage/utils.ts:71
 msgid "Ext3"
 msgstr "Ext3"
 
-#: src/components/storage/utils.ts:74
+#: src/components/storage/utils.ts:72
 msgid "Ext4"
 msgstr "Ext4"
 
-#: src/components/storage/utils.ts:75
+#: src/components/storage/utils.ts:73
 msgid "F2FS"
 msgstr "F2FS"
 
-#: src/components/storage/utils.ts:76
+#: src/components/storage/utils.ts:74
 msgid "JFS"
 msgstr "JFS"
 
-#: src/components/storage/utils.ts:77
+#: src/components/storage/utils.ts:75
 msgid "NFS"
 msgstr "NFS"
 
-#: src/components/storage/utils.ts:78
+#: src/components/storage/utils.ts:76
 msgid "NILFS2"
 msgstr "NILFS2"
 
-#: src/components/storage/utils.ts:79
+#: src/components/storage/utils.ts:77
 msgid "NTFS"
 msgstr "NTFS"
 
-#: src/components/storage/utils.ts:80
+#: src/components/storage/utils.ts:78
 msgid "ReiserFS"
 msgstr "ReiserFS"
 
-#: src/components/storage/utils.ts:81
+#: src/components/storage/utils.ts:79
 msgid "Swap"
 msgstr "Intercanvi"
 
-#: src/components/storage/utils.ts:82
+#: src/components/storage/utils.ts:80
 msgid "Tmpfs"
 msgstr "Tmpfs"
 
-#: src/components/storage/utils.ts:83
+#: src/components/storage/utils.ts:81
 msgid "FAT"
 msgstr "FAT"
 
-#: src/components/storage/utils.ts:84
+#: src/components/storage/utils.ts:82
 msgid "XFS"
 msgstr "XFS"
 
-#: src/components/storage/utils.ts:92
+#: src/components/storage/utils.ts:90
 msgid "Delete current content"
 msgstr "Suprimeix el contingut actual"
 
-#: src/components/storage/utils.ts:93
-msgid "All content will be deleted"
-msgstr "Se'n suprimirà tot el contingut"
-
-#: src/components/storage/utils.ts:95
-msgid ""
-"Any existing partition will be removed and all data in the disk will be lost."
-msgstr ""
-"Se suprimirà qualsevol partició existent i es perdran totes les dades del "
-"disc."
-
-#: src/components/storage/utils.ts:100
+#: src/components/storage/utils.ts:94
 msgid "Shrink existing partitions"
 msgstr "Encongeix les particions existents"
 
-#: src/components/storage/utils.ts:101
-msgid "Some existing partitions may be shrunk"
-msgstr "Algunes particions existents es poden encongir"
-
-#: src/components/storage/utils.ts:102
-msgid "The data is kept, but the current partitions will be resized as needed."
-msgstr ""
-"Les dades es conserven, però les particions actuals es canviaran de mida "
-"segons calgui."
-
-#: src/components/storage/utils.ts:106
+#: src/components/storage/utils.ts:98
 msgid "Use available space"
 msgstr "Usa l'espai disponible"
 
-#: src/components/storage/utils.ts:107
-msgid "Content will be kept"
-msgstr "El contingut es mantindrà"
-
-#: src/components/storage/utils.ts:108
-msgid ""
-"The data is kept. Only the space not assigned to any partition will be used."
-msgstr ""
-"Es conserven les dades. Només s'usarà l'espai no assignat a cap partició."
-
-#: src/components/storage/utils.ts:112
+#: src/components/storage/utils.ts:102
 msgid "Custom"
 msgstr "Personalitzat"
 
-#: src/components/storage/utils.ts:113
-msgid "Select what to do with each partition."
-msgstr "Seleccioneu què voleu fer amb cada partició."
-
 #. TRANSLATORS: Size range, %1$s is the min size and %2$s is the max
-#: src/components/storage/utils.ts:380
+#: src/components/storage/utils.ts:369
 #, c-format
 msgid "%1$s - %2$s"
 msgstr "%1$s - %2$s"
 
 #. TRANSLATORS: minimum device size, %s is replaced by size string, e.g. "17.5 GiB"
-#: src/components/storage/utils.ts:382
+#: src/components/storage/utils.ts:371
 #, c-format
 msgid "at least %s"
 msgstr "almenys %s"
@@ -3203,37 +3310,119 @@ msgstr "Disc"
 msgid "%s with %d partitions"
 msgstr "%s amb %d particions"
 
-#: src/components/storage/utils/drive.tsx:44
+#: src/components/storage/utils/drive.tsx:45
 msgid "A partition will be deleted"
 msgstr "Se suprimirà una partició"
 
-#: src/components/storage/utils/drive.tsx:45
+#: src/components/storage/utils/drive.tsx:46
 msgid "At least one partition will be deleted"
 msgstr "Se suprimirà almenys una partició"
 
-#: src/components/storage/utils/drive.tsx:46
+#: src/components/storage/utils/drive.tsx:47
 msgid "Several partitions will be deleted"
 msgstr "Se suprimiran diverses particions"
 
-#: src/components/storage/utils/drive.tsx:47
+#: src/components/storage/utils/drive.tsx:48
 msgid "A partition may be deleted"
 msgstr "Es pot suprimir una partició"
 
-#: src/components/storage/utils/drive.tsx:49
+#: src/components/storage/utils/drive.tsx:50
 msgid "Some partitions may be deleted"
 msgstr "Algunes particions es poden suprimir"
 
-#: src/components/storage/utils/drive.tsx:60
+#: src/components/storage/utils/drive.tsx:61
 msgid "A partition may be shrunk"
 msgstr "Una partició es pot encongir"
 
-#: src/components/storage/utils/drive.tsx:62
+#: src/components/storage/utils/drive.tsx:63
 msgid "Some partitions may be shrunk"
 msgstr "Algunes particions es poden encongir"
 
+#: src/components/storage/utils/drive.tsx:71
+#, fuzzy
+msgid "All content not configured to be mounted will be deleted"
+msgstr "Se'n suprimirà tot el contingut"
+
+#: src/components/storage/utils/drive.tsx:72
+msgid "All content will be deleted"
+msgstr "Se'n suprimirà tot el contingut"
+
+#: src/components/storage/utils/drive.tsx:75
+#, fuzzy
+msgid "Reused partitions will not be shrunk"
+msgstr "Algunes particions es poden encongir"
+
+#: src/components/storage/utils/drive.tsx:76
+msgid "Some existing partitions may be shrunk"
+msgstr "Algunes particions existents es poden encongir"
+
+#: src/components/storage/utils/drive.tsx:78
+#: src/components/storage/utils/drive.tsx:113
+#, fuzzy
+msgid "Current partitions will be kept"
+msgstr "Se suprimirà una partició"
+
+#: src/components/storage/utils/drive.tsx:123
+#, fuzzy
+msgid ""
+"Partitions that are not reused will be removed and that data will be lost."
+msgstr ""
+"Se suprimirà qualsevol partició existent i es perdran totes les dades del "
+"disc."
+
+#: src/components/storage/utils/drive.tsx:124
+msgid ""
+"Any existing partition will be removed and all data in the disk will be lost."
+msgstr ""
+"Se suprimirà qualsevol partició existent i es perdran totes les dades del "
+"disc."
+
+#: src/components/storage/utils/drive.tsx:128
+#, fuzzy
+msgid "Partitions that are not reused will be resized as needed."
+msgstr ""
+"Les dades es conserven, però les particions actuals es canviaran de mida "
+"segons calgui."
+
+#: src/components/storage/utils/drive.tsx:130
+msgid "Partitions that are not reused would be resized if needed."
+msgstr ""
+
+#: src/components/storage/utils/drive.tsx:132
+msgid "The data is kept, but the current partitions will be resized as needed."
+msgstr ""
+"Les dades es conserven, però les particions actuals es canviaran de mida "
+"segons calgui."
+
+#: src/components/storage/utils/drive.tsx:136
+#, fuzzy
+msgid ""
+"Only reused partitions and space not assigned to any partition will be used."
+msgstr ""
+"Es conserven les dades. Només s'usarà l'espai no assignat a cap partició."
+
+#: src/components/storage/utils/drive.tsx:138
+#, fuzzy
+msgid "Only reused partitions will be used."
+msgstr "Se suprimiran diverses particions"
+
+#: src/components/storage/utils/drive.tsx:140
+msgid ""
+"The data is kept. Only the space not assigned to any partition will be used."
+msgstr ""
+"Es conserven les dades. Només s'usarà l'espai no assignat a cap partició."
+
+#: src/components/storage/utils/drive.tsx:142
+msgid "Select what to do with each partition."
+msgstr "Seleccioneu què voleu fer amb cada partició."
+
+#: src/components/storage/utils/drive.tsx:152
+msgid "No additional partitions will be created"
+msgstr "No es crearan particions addicionals"
+
 #. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case).
-#: src/components/storage/utils/drive.tsx:141
+#: src/components/storage/utils/drive.tsx:185
 #, c-format
 msgid "Partitions will be used and created for %s"
 msgstr "Les particions s'usaran i es crearan per a %s"
@@ -3531,9 +3720,38 @@ msgstr "Usa contrasenya"
 msgid "Use public SSH Key"
 msgstr "Usa una clau pública SSH"
 
-#: src/routes/storage.tsx:103
+#: src/routes/storage.tsx:108
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#~ msgid "Partitions"
+#~ msgstr "Particions"
+
+#~ msgid ""
+#~ "This disk will contain the configured LVM groups and any partition needed "
+#~ "to boot"
+#~ msgstr ""
+#~ "Aquest disc contindrà els grups d'LVM configurats i qualsevol partició "
+#~ "necessària per a arrencar"
+
+#~ msgid "This disk will contain the configured LVM groups"
+#~ msgstr "Aquest disc contindrà els grups d'LVM configurats"
+
+#, c-format
+#~ msgid ""
+#~ "This disk will contain the LVM group '%s' and any partition needed to boot"
+#~ msgstr ""
+#~ "Aquest disc contindrà el grup d'LVM %s i qualsevol partició necessària "
+#~ "per a arrencar"
+
+#~ msgid "This disk will contain any partition needed for booting"
+#~ msgstr "Aquest disc contindrà qualsevol partició necessària per a arrencar"
+
+#~ msgid "Choose what to with current content"
+#~ msgstr "Trieu què voleu fer del contingut actual"
+
+#~ msgid "Content will be kept"
+#~ msgstr "El contingut es mantindrà"
 
 #~ msgid "Do you want to use a supported size?"
 #~ msgstr "Voleu usar una mida compatible?"
@@ -3651,9 +3869,6 @@ msgstr "ZFCP"
 
 #~ msgid "Connect to a Wi-Fi network"
 #~ msgstr "Connecteu-vos a una xarxa Wi-Fi"
-
-#~ msgid "The configured partitions will be created as logical volumes"
-#~ msgstr "Les particions configurades es crearan com a volums lògics"
 
 #~ msgid "New LVM volume group"
 #~ msgstr "Grup de volums nou d'LVM"
@@ -3867,9 +4082,6 @@ msgstr "ZFCP"
 
 #~ msgid "Modify"
 #~ msgstr "Modifica"
-
-#~ msgid "Back to device selection"
-#~ msgstr "Torna a la selecció del dispositiu"
 
 #~ msgid "File systems created at a new LVM volume group"
 #~ msgstr "Sistemes de fitxers creats en un nou grup de volums d'LVM"
@@ -4670,9 +4882,6 @@ msgstr "ZFCP"
 #~ msgid "automatically selected"
 #~ msgstr "seleccionat automàticament"
 
-#~ msgid "Content"
-#~ msgstr "Contingut"
-
 #, c-format
 #~ msgid ""
 #~ "The filesystem will be allocated as a new partition at the installation "
@@ -4730,9 +4939,6 @@ msgstr "ZFCP"
 
 #~ msgid "Waiting for information about how to find space"
 #~ msgstr "Esperant informació sobre com trobar espai"
-
-#~ msgid "Find Space"
-#~ msgstr "Aconseguir espai"
 
 #~ msgid ""
 #~ "Configuration of the system volume group. All the file systems will be "
