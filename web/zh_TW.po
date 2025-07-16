@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-15 03:20+0000\n"
+"POT-Creation-Date: 2025-07-16 03:19+0000\n"
 "PO-Revision-Date: 2025-06-17 02:59+0000\n"
 "Last-Translator: Grace Yu <grace.yu@excel-gits.com>\n"
 "Language-Team: Chinese (Taiwan) <https://l10n.opensuse.org/projects/agama/"
@@ -252,7 +252,7 @@ msgid "Software"
 msgstr "軟體"
 
 #: src/components/core/IssuesDrawer.tsx:52
-#: src/components/product/ProductRegistrationPage.tsx:204
+#: src/components/product/ProductRegistrationPage.tsx:433
 #: src/routes/registration.tsx:31
 msgid "Registration"
 msgstr "註冊"
@@ -710,11 +710,11 @@ msgstr "有線連接"
 msgid "Wi-Fi networks"
 msgstr "Wi-Fi 網路"
 
-#: src/components/network/NoPersistentConnectionsAlert.tsx:39
+#: src/components/network/NoPersistentConnectionsAlert.tsx:40
 msgid "Installed system may not have network connections"
 msgstr "安裝好的系統可能沒有網路連接"
 
-#: src/components/network/NoPersistentConnectionsAlert.tsx:41
+#: src/components/network/NoPersistentConnectionsAlert.tsx:42
 msgid ""
 "All network connections managed through this interface are currently set to "
 "be used only during installation and will not be copied to the installed "
@@ -762,7 +762,7 @@ msgstr "裝置"
 
 #: src/components/network/WifiConnectionDetails.tsx:73
 #: src/components/network/WifiNetworkPage.tsx:70
-#: src/components/network/WiredConnectionPage.tsx:68
+#: src/components/network/WiredConnectionPage.tsx:69
 msgid "Connection details"
 msgstr "連接詳細資料"
 
@@ -868,7 +868,7 @@ msgid "Network not found or lost"
 msgstr "未找到網路，或者網路中斷"
 
 #: src/components/network/WifiNetworkPage.tsx:55
-#: src/components/network/WiredConnectionPage.tsx:54
+#: src/components/network/WiredConnectionPage.tsx:55
 msgid "Go to network page"
 msgstr "前往網路頁面"
 
@@ -934,7 +934,7 @@ msgstr "裝置詳細資料"
 msgid "IP Addresses"
 msgstr "IP 位址"
 
-#: src/components/network/WiredConnectionPage.tsx:47
+#: src/components/network/WiredConnectionPage.tsx:48
 msgid "Connection not found or lost"
 msgstr "未找到連接，或者連接中斷"
 
@@ -1044,52 +1044,103 @@ msgstr "關閉"
 msgid "%s [must be registered]."
 msgstr "[必須註冊] %s。"
 
+#: src/components/product/ProductRegistrationPage.tsx:63
+#, fuzzy
+msgid "Registration server"
+msgstr "註冊代碼"
+
 #: src/components/product/ProductRegistrationPage.tsx:64
+msgid "Email"
+msgstr ""
+
+#: src/components/product/ProductRegistrationPage.tsx:65
+msgid "SUSE Customer Center (SCC)"
+msgstr ""
+
+#: src/components/product/ProductRegistrationPage.tsx:66
+#: src/components/storage/utils.ts:102
+msgid "Custom"
+msgstr "自訂"
+
+#: src/components/product/ProductRegistrationPage.tsx:77
 #, c-format
 msgid "%s has been registered with below information."
 msgstr "已註冊 %s，相關資訊如下。"
 
 #. TRANSLATORS: input field label
-#: src/components/product/ProductRegistrationPage.tsx:69
-#: src/components/product/ProductRegistrationPage.tsx:121
-#: src/components/product/RegistrationExtension.tsx:141
+#: src/components/product/ProductRegistrationPage.tsx:89
+#: src/components/product/ProductRegistrationPage.tsx:176
+#: src/components/product/RegistrationExtension.tsx:146
 msgid "Registration code"
 msgstr "註冊代碼"
 
 #. TRANSLATORS: switch for displaying or hiding the registration code
-#: src/components/product/ProductRegistrationPage.tsx:74
+#: src/components/product/ProductRegistrationPage.tsx:94
 #: src/components/product/RegistrationExtension.tsx:60
 msgid "Hide"
 msgstr "隱藏"
 
-#: src/components/product/ProductRegistrationPage.tsx:74
+#: src/components/product/ProductRegistrationPage.tsx:94
 #: src/components/product/RegistrationExtension.tsx:60
 msgid "Show"
 msgstr "顯示"
 
-#: src/components/product/ProductRegistrationPage.tsx:128
+#: src/components/product/ProductRegistrationPage.tsx:133
+#, fuzzy
+msgid "Server options"
+msgstr "其他選項"
+
+#: src/components/product/ProductRegistrationPage.tsx:134
+msgid "Register using SUSE server"
+msgstr ""
+
+#: src/components/product/ProductRegistrationPage.tsx:139
+msgid "Register using a custom registration server"
+msgstr ""
+
+#: src/components/product/ProductRegistrationPage.tsx:157
+#, fuzzy
+msgid "Server URL"
+msgstr "伺服器 IP"
+
+#: src/components/product/ProductRegistrationPage.tsx:159
+msgid "Example: https://myserver.com"
+msgstr ""
+
+#: src/components/product/ProductRegistrationPage.tsx:208
+#, fuzzy
+msgid "Provide registration code"
+msgstr "註冊代碼"
+
+#: src/components/product/ProductRegistrationPage.tsx:244
 msgid "Provide email address"
 msgstr "提供電子郵件地址"
 
+#: src/components/product/ProductRegistrationPage.tsx:341
+#: src/components/storage/LvmPage.tsx:175
+#: src/components/system/HostnamePage.tsx:104
+msgid "Check the following before continuing"
+msgstr "繼續操作前，請檢查以下內容"
+
 #. TRANSLATORS: button label
-#: src/components/product/ProductRegistrationPage.tsx:142
-#: src/components/product/RegistrationExtension.tsx:158
-#: src/components/product/RegistrationExtension.tsx:173
+#: src/components/product/ProductRegistrationPage.tsx:371
+#: src/components/product/RegistrationExtension.tsx:157
+#: src/components/product/RegistrationExtension.tsx:172
 msgid "Register"
 msgstr "註冊"
 
-#: src/components/product/ProductRegistrationPage.tsx:158
+#: src/components/product/ProductRegistrationPage.tsx:387
 #, c-format
 msgid ""
 "You cannot change it later. Go to the %s section if you want to modify it "
 "before proceeding with registration."
 msgstr "以後將無法變更此資訊。如果您要在繼續註冊前修改，請前往 %s 區段。"
 
-#: src/components/product/ProductRegistrationPage.tsx:163
+#: src/components/product/ProductRegistrationPage.tsx:392
 msgid "hostname"
 msgstr "主機名稱"
 
-#: src/components/product/ProductRegistrationPage.tsx:188
+#: src/components/product/ProductRegistrationPage.tsx:417
 msgid "Extensions"
 msgstr "延伸"
 
@@ -1126,22 +1177,22 @@ msgid "The extension has been registered with key %s."
 msgstr "已使用金鑰 %s 註冊該延伸。"
 
 #. TRANSLATORS: Beta version label
-#: src/components/product/RegistrationExtension.tsx:122
+#: src/components/product/RegistrationExtension.tsx:127
 msgid "Beta"
 msgstr "Beta 版"
 
 #. TRANSLATORS: Label for recommended extensions
-#: src/components/product/RegistrationExtension.tsx:128
+#: src/components/product/RegistrationExtension.tsx:133
 msgid "Recommended"
 msgstr "推薦"
 
 #. TRANSLATORS: warning title, the extension is not available on the server and cannot be registered
-#: src/components/product/RegistrationExtension.tsx:179
+#: src/components/product/RegistrationExtension.tsx:178
 msgid "Not available"
 msgstr "不可用"
 
 #. TRANSLATORS: warning message, the extension is not available on the server and cannot be registered
-#: src/components/product/RegistrationExtension.tsx:182
+#: src/components/product/RegistrationExtension.tsx:181
 msgid ""
 "This extension is not available on the server. Ask the server administrator "
 "to mirror the extension."
@@ -2068,11 +2119,6 @@ msgstr "請至少選取一個磁碟。"
 #: src/components/storage/LvmPage.tsx:169
 msgid "Configure LVM Volume Group"
 msgstr "設定 LVM 磁碟區群組"
-
-#: src/components/storage/LvmPage.tsx:175
-#: src/components/system/HostnamePage.tsx:104
-msgid "Check the following before continuing"
-msgstr "繼續操作前，請檢查以下內容"
 
 #: src/components/storage/LvmPage.tsx:184
 #: src/components/storage/zfcp/ZFCPPage.tsx:131
@@ -3125,10 +3171,6 @@ msgstr "縮小現有分割區"
 #: src/components/storage/utils.ts:98
 msgid "Use available space"
 msgstr "使用可用空間"
-
-#: src/components/storage/utils.ts:102
-msgid "Custom"
-msgstr "自訂"
 
 #. TRANSLATORS: Size range, %1$s is the min size and %2$s is the max
 #: src/components/storage/utils.ts:369

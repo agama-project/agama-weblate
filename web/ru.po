@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-15 03:20+0000\n"
+"POT-Creation-Date: 2025-07-16 03:19+0000\n"
 "PO-Revision-Date: 2025-07-07 12:59+0000\n"
 "Last-Translator: Aleksey Fedorov <Aleksejfedorov963@gmail.com>\n"
 "Language-Team: Russian <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -268,7 +268,7 @@ msgid "Software"
 msgstr "Программы"
 
 #: src/components/core/IssuesDrawer.tsx:52
-#: src/components/product/ProductRegistrationPage.tsx:204
+#: src/components/product/ProductRegistrationPage.tsx:433
 #: src/routes/registration.tsx:31
 msgid "Registration"
 msgstr "Регистрация"
@@ -735,11 +735,11 @@ msgstr "Проводные соединения"
 msgid "Wi-Fi networks"
 msgstr "Сети Wi-Fi"
 
-#: src/components/network/NoPersistentConnectionsAlert.tsx:39
+#: src/components/network/NoPersistentConnectionsAlert.tsx:40
 msgid "Installed system may not have network connections"
 msgstr "Установленная система может не иметь сетевых подключений"
 
-#: src/components/network/NoPersistentConnectionsAlert.tsx:41
+#: src/components/network/NoPersistentConnectionsAlert.tsx:42
 msgid ""
 "All network connections managed through this interface are currently set to "
 "be used only during installation and will not be copied to the installed "
@@ -788,7 +788,7 @@ msgstr "Устройство"
 
 #: src/components/network/WifiConnectionDetails.tsx:73
 #: src/components/network/WifiNetworkPage.tsx:70
-#: src/components/network/WiredConnectionPage.tsx:68
+#: src/components/network/WiredConnectionPage.tsx:69
 msgid "Connection details"
 msgstr "Сведения о подключении"
 
@@ -896,7 +896,7 @@ msgid "Network not found or lost"
 msgstr "Сеть не найдена или потеряна"
 
 #: src/components/network/WifiNetworkPage.tsx:55
-#: src/components/network/WiredConnectionPage.tsx:54
+#: src/components/network/WiredConnectionPage.tsx:55
 msgid "Go to network page"
 msgstr "Перейти к разделу «Сеть»"
 
@@ -961,7 +961,7 @@ msgstr "Сведения об устройстве"
 msgid "IP Addresses"
 msgstr "IP-адреса"
 
-#: src/components/network/WiredConnectionPage.tsx:47
+#: src/components/network/WiredConnectionPage.tsx:48
 msgid "Connection not found or lost"
 msgstr "Соединение не найдено или потеряно"
 
@@ -1085,41 +1085,92 @@ msgstr "Закрыть"
 msgid "%s [must be registered]."
 msgstr "%s [требуется регистрация]."
 
+#: src/components/product/ProductRegistrationPage.tsx:63
+#, fuzzy
+msgid "Registration server"
+msgstr "Код регистрации"
+
 #: src/components/product/ProductRegistrationPage.tsx:64
+msgid "Email"
+msgstr "Электронная почта"
+
+#: src/components/product/ProductRegistrationPage.tsx:65
+msgid "SUSE Customer Center (SCC)"
+msgstr ""
+
+#: src/components/product/ProductRegistrationPage.tsx:66
+#: src/components/storage/utils.ts:102
+msgid "Custom"
+msgstr "По-своему"
+
+#: src/components/product/ProductRegistrationPage.tsx:77
 #, c-format
 msgid "%s has been registered with below information."
 msgstr "Регистрация %s была выполнена с указанной ниже информацией."
 
 #. TRANSLATORS: input field label
-#: src/components/product/ProductRegistrationPage.tsx:69
-#: src/components/product/ProductRegistrationPage.tsx:121
-#: src/components/product/RegistrationExtension.tsx:141
+#: src/components/product/ProductRegistrationPage.tsx:89
+#: src/components/product/ProductRegistrationPage.tsx:176
+#: src/components/product/RegistrationExtension.tsx:146
 msgid "Registration code"
 msgstr "Код регистрации"
 
 #. TRANSLATORS: switch for displaying or hiding the registration code
-#: src/components/product/ProductRegistrationPage.tsx:74
+#: src/components/product/ProductRegistrationPage.tsx:94
 #: src/components/product/RegistrationExtension.tsx:60
 msgid "Hide"
 msgstr "Скрыть"
 
-#: src/components/product/ProductRegistrationPage.tsx:74
+#: src/components/product/ProductRegistrationPage.tsx:94
 #: src/components/product/RegistrationExtension.tsx:60
 msgid "Show"
 msgstr "Показать"
 
-#: src/components/product/ProductRegistrationPage.tsx:128
+#: src/components/product/ProductRegistrationPage.tsx:133
+#, fuzzy
+msgid "Server options"
+msgstr "Общие параметры"
+
+#: src/components/product/ProductRegistrationPage.tsx:134
+msgid "Register using SUSE server"
+msgstr ""
+
+#: src/components/product/ProductRegistrationPage.tsx:139
+msgid "Register using a custom registration server"
+msgstr ""
+
+#: src/components/product/ProductRegistrationPage.tsx:157
+#, fuzzy
+msgid "Server URL"
+msgstr "IP сервера"
+
+#: src/components/product/ProductRegistrationPage.tsx:159
+msgid "Example: https://myserver.com"
+msgstr ""
+
+#: src/components/product/ProductRegistrationPage.tsx:208
+#, fuzzy
+msgid "Provide registration code"
+msgstr "Код регистрации"
+
+#: src/components/product/ProductRegistrationPage.tsx:244
 msgid "Provide email address"
 msgstr "Укажите адрес эл. почты"
 
+#: src/components/product/ProductRegistrationPage.tsx:341
+#: src/components/storage/LvmPage.tsx:175
+#: src/components/system/HostnamePage.tsx:104
+msgid "Check the following before continuing"
+msgstr "Прежде чем продолжить, проверьте следующее"
+
 #. TRANSLATORS: button label
-#: src/components/product/ProductRegistrationPage.tsx:142
-#: src/components/product/RegistrationExtension.tsx:158
-#: src/components/product/RegistrationExtension.tsx:173
+#: src/components/product/ProductRegistrationPage.tsx:371
+#: src/components/product/RegistrationExtension.tsx:157
+#: src/components/product/RegistrationExtension.tsx:172
 msgid "Register"
 msgstr "Зарегистрировать"
 
-#: src/components/product/ProductRegistrationPage.tsx:158
+#: src/components/product/ProductRegistrationPage.tsx:387
 #, c-format
 msgid ""
 "You cannot change it later. Go to the %s section if you want to modify it "
@@ -1128,11 +1179,11 @@ msgstr ""
 "Вы не сможете изменить его позже. Перейдите в раздел «%s», если хотите "
 "изменить его перед тем, как продолжить регистрацию."
 
-#: src/components/product/ProductRegistrationPage.tsx:163
+#: src/components/product/ProductRegistrationPage.tsx:392
 msgid "hostname"
 msgstr "имя узла"
 
-#: src/components/product/ProductRegistrationPage.tsx:188
+#: src/components/product/ProductRegistrationPage.tsx:417
 msgid "Extensions"
 msgstr "Расширения"
 
@@ -1169,22 +1220,22 @@ msgid "The extension has been registered with key %s."
 msgstr "Расширение было зарегистрировано с ключом %s."
 
 #. TRANSLATORS: Beta version label
-#: src/components/product/RegistrationExtension.tsx:122
+#: src/components/product/RegistrationExtension.tsx:127
 msgid "Beta"
 msgstr "Бета-версия"
 
 #. TRANSLATORS: Label for recommended extensions
-#: src/components/product/RegistrationExtension.tsx:128
+#: src/components/product/RegistrationExtension.tsx:133
 msgid "Recommended"
 msgstr "Рекомендуется"
 
 #. TRANSLATORS: warning title, the extension is not available on the server and cannot be registered
-#: src/components/product/RegistrationExtension.tsx:179
+#: src/components/product/RegistrationExtension.tsx:178
 msgid "Not available"
 msgstr "Недоступно"
 
 #. TRANSLATORS: warning message, the extension is not available on the server and cannot be registered
-#: src/components/product/RegistrationExtension.tsx:182
+#: src/components/product/RegistrationExtension.tsx:181
 msgid ""
 "This extension is not available on the server. Ask the server administrator "
 "to mirror the extension."
@@ -2162,11 +2213,6 @@ msgstr "Выберите хотя бы один диск."
 #: src/components/storage/LvmPage.tsx:169
 msgid "Configure LVM Volume Group"
 msgstr "Настройка группы томов LVM"
-
-#: src/components/storage/LvmPage.tsx:175
-#: src/components/system/HostnamePage.tsx:104
-msgid "Check the following before continuing"
-msgstr "Прежде чем продолжить, проверьте следующее"
 
 #: src/components/storage/LvmPage.tsx:184
 #: src/components/storage/zfcp/ZFCPPage.tsx:131
@@ -3264,10 +3310,6 @@ msgstr "Уменьшение существующих разделов"
 msgid "Use available space"
 msgstr "Использовать свободное пространство"
 
-#: src/components/storage/utils.ts:102
-msgid "Custom"
-msgstr "По-своему"
-
 #. TRANSLATORS: Size range, %1$s is the min size and %2$s is the max
 #: src/components/storage/utils.ts:369
 #, c-format
@@ -3897,10 +3939,6 @@ msgstr "ZFCP"
 #, fuzzy
 #~ msgid "More options toggle"
 #~ msgstr "Показ настроек"
-
-#, fuzzy
-#~ msgid "More options"
-#~ msgstr "Общие параметры"
 
 #, fuzzy
 #~ msgid "Hostname settings"
@@ -4534,9 +4572,6 @@ msgstr "ZFCP"
 #, c-format
 #~ msgid "Register %s"
 #~ msgstr "Зарегистрировать %s"
-
-#~ msgid "Email"
-#~ msgstr "Электронная почта"
 
 #~ msgid "Please, try again."
 #~ msgstr "Попробуйте ещё раз."

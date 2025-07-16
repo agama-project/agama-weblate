@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-15 03:20+0000\n"
+"POT-Creation-Date: 2025-07-16 03:19+0000\n"
 "PO-Revision-Date: 2024-06-29 13:46+0000\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.opensuse.org/projects/agama/"
@@ -264,7 +264,7 @@ msgid "Software"
 msgstr "Programvare"
 
 #: src/components/core/IssuesDrawer.tsx:52
-#: src/components/product/ProductRegistrationPage.tsx:204
+#: src/components/product/ProductRegistrationPage.tsx:433
 #: src/routes/registration.tsx:31
 msgid "Registration"
 msgstr "Registrering"
@@ -727,11 +727,11 @@ msgstr "Kablede tilkoblinger"
 msgid "Wi-Fi networks"
 msgstr "Kablet nettverk"
 
-#: src/components/network/NoPersistentConnectionsAlert.tsx:39
+#: src/components/network/NoPersistentConnectionsAlert.tsx:40
 msgid "Installed system may not have network connections"
 msgstr ""
 
-#: src/components/network/NoPersistentConnectionsAlert.tsx:41
+#: src/components/network/NoPersistentConnectionsAlert.tsx:42
 msgid ""
 "All network connections managed through this interface are currently set to "
 "be used only during installation and will not be copied to the installed "
@@ -778,7 +778,7 @@ msgstr "Enhet"
 
 #: src/components/network/WifiConnectionDetails.tsx:73
 #: src/components/network/WifiNetworkPage.tsx:70
-#: src/components/network/WiredConnectionPage.tsx:68
+#: src/components/network/WiredConnectionPage.tsx:69
 #, fuzzy
 msgid "Connection details"
 msgstr "Kobler til"
@@ -890,7 +890,7 @@ msgid "Network not found or lost"
 msgstr ""
 
 #: src/components/network/WifiNetworkPage.tsx:55
-#: src/components/network/WiredConnectionPage.tsx:54
+#: src/components/network/WiredConnectionPage.tsx:55
 #, fuzzy
 msgid "Go to network page"
 msgstr "Glem nettverket"
@@ -963,7 +963,7 @@ msgstr "Skjul detaljer"
 msgid "IP Addresses"
 msgstr "IP addresser"
 
-#: src/components/network/WiredConnectionPage.tsx:47
+#: src/components/network/WiredConnectionPage.tsx:48
 #, fuzzy
 msgid "Connection not found or lost"
 msgstr "Kobler til"
@@ -1088,55 +1088,106 @@ msgstr "Lukk"
 msgid "%s [must be registered]."
 msgstr "%s (registrert)"
 
+#: src/components/product/ProductRegistrationPage.tsx:63
+#, fuzzy
+msgid "Registration server"
+msgstr "Registrerings kode"
+
 #: src/components/product/ProductRegistrationPage.tsx:64
+msgid "Email"
+msgstr "E-post"
+
+#: src/components/product/ProductRegistrationPage.tsx:65
+msgid "SUSE Customer Center (SCC)"
+msgstr ""
+
+#: src/components/product/ProductRegistrationPage.tsx:66
+#: src/components/storage/utils.ts:102
+msgid "Custom"
+msgstr "Tilpasset"
+
+#: src/components/product/ProductRegistrationPage.tsx:77
 #, c-format
 msgid "%s has been registered with below information."
 msgstr ""
 
 #. TRANSLATORS: input field label
-#: src/components/product/ProductRegistrationPage.tsx:69
-#: src/components/product/ProductRegistrationPage.tsx:121
-#: src/components/product/RegistrationExtension.tsx:141
+#: src/components/product/ProductRegistrationPage.tsx:89
+#: src/components/product/ProductRegistrationPage.tsx:176
+#: src/components/product/RegistrationExtension.tsx:146
 msgid "Registration code"
 msgstr "Registrerings kode"
 
 #. TRANSLATORS: switch for displaying or hiding the registration code
-#: src/components/product/ProductRegistrationPage.tsx:74
+#: src/components/product/ProductRegistrationPage.tsx:94
 #: src/components/product/RegistrationExtension.tsx:60
 msgid "Hide"
 msgstr ""
 
-#: src/components/product/ProductRegistrationPage.tsx:74
+#: src/components/product/ProductRegistrationPage.tsx:94
 #: src/components/product/RegistrationExtension.tsx:60
 #, fuzzy
 msgid "Show"
 msgstr "Vis Loggfilene"
 
-#: src/components/product/ProductRegistrationPage.tsx:128
+#: src/components/product/ProductRegistrationPage.tsx:133
+#, fuzzy
+msgid "Server options"
+msgstr "Mer om dette"
+
+#: src/components/product/ProductRegistrationPage.tsx:134
+msgid "Register using SUSE server"
+msgstr ""
+
+#: src/components/product/ProductRegistrationPage.tsx:139
+msgid "Register using a custom registration server"
+msgstr ""
+
+#: src/components/product/ProductRegistrationPage.tsx:157
+#, fuzzy
+msgid "Server URL"
+msgstr "Server IP"
+
+#: src/components/product/ProductRegistrationPage.tsx:159
+msgid "Example: https://myserver.com"
+msgstr ""
+
+#: src/components/product/ProductRegistrationPage.tsx:208
+#, fuzzy
+msgid "Provide registration code"
+msgstr "Registrerings kode"
+
+#: src/components/product/ProductRegistrationPage.tsx:244
 #, fuzzy
 msgid "Provide email address"
 msgstr "Legg til en addresse"
 
+#: src/components/product/ProductRegistrationPage.tsx:341
+#: src/components/storage/LvmPage.tsx:175
+#: src/components/system/HostnamePage.tsx:104
+msgid "Check the following before continuing"
+msgstr ""
+
 #. TRANSLATORS: button label
-#: src/components/product/ProductRegistrationPage.tsx:142
-#: src/components/product/RegistrationExtension.tsx:158
-#: src/components/product/RegistrationExtension.tsx:173
+#: src/components/product/ProductRegistrationPage.tsx:371
+#: src/components/product/RegistrationExtension.tsx:157
+#: src/components/product/RegistrationExtension.tsx:172
 msgid "Register"
 msgstr "Registrer"
 
-#: src/components/product/ProductRegistrationPage.tsx:158
+#: src/components/product/ProductRegistrationPage.tsx:387
 #, c-format
 msgid ""
 "You cannot change it later. Go to the %s section if you want to modify it "
 "before proceeding with registration."
 msgstr ""
 
-#: src/components/product/ProductRegistrationPage.tsx:163
+#: src/components/product/ProductRegistrationPage.tsx:392
 #, fuzzy
 msgid "hostname"
 msgstr "Brukernavn"
 
-#: src/components/product/ProductRegistrationPage.tsx:188
+#: src/components/product/ProductRegistrationPage.tsx:417
 msgid "Extensions"
 msgstr ""
 
@@ -1174,23 +1225,23 @@ msgid "The extension has been registered with key %s."
 msgstr ""
 
 #. TRANSLATORS: Beta version label
-#: src/components/product/RegistrationExtension.tsx:122
+#: src/components/product/RegistrationExtension.tsx:127
 msgid "Beta"
 msgstr ""
 
 #. TRANSLATORS: Label for recommended extensions
-#: src/components/product/RegistrationExtension.tsx:128
+#: src/components/product/RegistrationExtension.tsx:133
 msgid "Recommended"
 msgstr ""
 
 #. TRANSLATORS: warning title, the extension is not available on the server and cannot be registered
-#: src/components/product/RegistrationExtension.tsx:179
+#: src/components/product/RegistrationExtension.tsx:178
 #, fuzzy
 msgid "Not available"
 msgstr "Bruk tilgjengelig plass"
 
 #. TRANSLATORS: warning message, the extension is not available on the server and cannot be registered
-#: src/components/product/RegistrationExtension.tsx:182
+#: src/components/product/RegistrationExtension.tsx:181
 msgid ""
 "This extension is not available on the server. Ask the server administrator "
 "to mirror the extension."
@@ -2164,11 +2215,6 @@ msgstr "Velg en disk"
 #, fuzzy
 msgid "Configure LVM Volume Group"
 msgstr "Opprett en LVM Volumgruppe"
-
-#: src/components/storage/LvmPage.tsx:175
-#: src/components/system/HostnamePage.tsx:104
-msgid "Check the following before continuing"
-msgstr ""
 
 #: src/components/storage/LvmPage.tsx:184
 #: src/components/storage/zfcp/ZFCPPage.tsx:131
@@ -3251,10 +3297,6 @@ msgstr "Krymp eksisterende partisjoner"
 msgid "Use available space"
 msgstr "Bruk tilgjengelig plass"
 
-#: src/components/storage/utils.ts:102
-msgid "Custom"
-msgstr "Tilpasset"
-
 #. TRANSLATORS: Size range, %1$s is the min size and %2$s is the max
 #: src/components/storage/utils.ts:369
 #, fuzzy, c-format
@@ -3849,10 +3891,6 @@ msgstr ""
 
 #~ msgid "Loading installation environment, please wait."
 #~ msgstr "Laster installasjonsmiljø, vennligst vent."
-
-#, fuzzy
-#~ msgid "More options"
-#~ msgstr "Mer om dette"
 
 #, fuzzy
 #~ msgid "Hostname settings"
@@ -4481,9 +4519,6 @@ msgstr ""
 #, c-format
 #~ msgid "Register %s"
 #~ msgstr "Registrer %s"
-
-#~ msgid "Email"
-#~ msgstr "E-post"
 
 #~ msgid "Please, try again."
 #~ msgstr "Vennligst, prøv igjen."
