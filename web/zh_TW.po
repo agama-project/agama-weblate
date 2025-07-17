@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-16 03:19+0000\n"
+"POT-Creation-Date: 2025-07-17 03:18+0000\n"
 "PO-Revision-Date: 2025-06-17 02:59+0000\n"
 "Last-Translator: Grace Yu <grace.yu@excel-gits.com>\n"
 "Language-Team: Chinese (Taiwan) <https://l10n.opensuse.org/projects/agama/"
@@ -241,7 +241,7 @@ msgstr "驗證"
 
 #: src/components/core/IssuesDrawer.tsx:50
 #: src/components/overview/StorageSection.tsx:112
-#: src/components/storage/ProposalPage.tsx:250 src/routes/storage.tsx:45
+#: src/components/storage/ProposalPage.tsx:250 src/routes/storage.tsx:46
 msgid "Storage"
 msgstr "儲存"
 
@@ -446,7 +446,7 @@ msgstr "本土化"
 
 #: src/components/l10n/L10nPage.tsx:84 src/components/l10n/L10nPage.tsx:98
 #: src/components/l10n/L10nPage.tsx:110
-#: src/components/storage/SearchedDeviceMenu.tsx:303
+#: src/components/storage/SearchedDeviceMenu.tsx:325
 #: src/components/storage/VolumeGroupEditor.tsx:113
 #: src/components/storage/iscsi/InitiatorForm.tsx:89
 #: src/components/users/FirstUserForm.tsx:235
@@ -786,6 +786,7 @@ msgstr "IP 設定"
 #: src/components/network/WifiConnectionDetails.tsx:100
 #: src/components/network/WiredConnectionDetails.tsx:84
 #: src/components/storage/EncryptionSection.tsx:52
+#: src/components/storage/FilesystemMenu.tsx:93
 #: src/components/storage/iscsi/NodesPresenter.jsx:75
 #: src/components/users/FirstUser.tsx:54 src/components/users/RootUser.tsx:57
 msgid "Edit"
@@ -1117,7 +1118,7 @@ msgid "Provide email address"
 msgstr "提供電子郵件地址"
 
 #: src/components/product/ProductRegistrationPage.tsx:341
-#: src/components/storage/LvmPage.tsx:175
+#: src/components/storage/LvmPage.tsx:169
 #: src/components/system/HostnamePage.tsx:104
 msgid "Check the following before continuing"
 msgstr "繼續操作前，請檢查以下內容"
@@ -1615,51 +1616,51 @@ msgid ""
 "least %2$s."
 msgstr "目前的組態將會產生一個 %1$s (至少 %2$s)。"
 
-#: src/components/storage/BootSelection.tsx:127
+#: src/components/storage/BootSelection.tsx:135
 msgid ""
 "To ensure the new system is able to boot, the installer may need to create "
 "or configure some partitions in the appropriate disk."
 msgstr ""
 "為確保新系統能夠開機，安裝程式可能需要在適當的磁碟中建立或設定一些分割區。"
 
-#: src/components/storage/BootSelection.tsx:133
+#: src/components/storage/BootSelection.tsx:141
 msgid "Partitions to boot will be allocated at the installation disk."
 msgstr "將會在安裝磁碟上配置開機分割區。"
 
 #. TRANSLATORS: %s is replaced by a device name and size (e.g., "/dev/sda, 500GiB")
-#: src/components/storage/BootSelection.tsx:138
+#: src/components/storage/BootSelection.tsx:146
 #, fuzzy, c-format
 msgid "Partitions to boot will be allocated at the installation disk %s."
 msgstr "將會在安裝磁碟 (%s) 上配置開機分割區。"
 
-#: src/components/storage/BootSelection.tsx:154
+#: src/components/storage/BootSelection.tsx:162
 msgid "Boot options"
 msgstr "開機選項"
 
-#: src/components/storage/BootSelection.tsx:174
+#: src/components/storage/BootSelection.tsx:182
 #: src/components/storage/SizeModeSelect.tsx:189
 #: src/components/storage/SizeModeSelect.tsx:194
 #: src/components/storage/iscsi/NodeStartupOptions.js:28
 msgid "Automatic"
 msgstr "自動"
 
-#: src/components/storage/BootSelection.tsx:192
+#: src/components/storage/BootSelection.tsx:200
 msgid "Select a disk"
 msgstr "選取一個磁碟"
 
-#: src/components/storage/BootSelection.tsx:197
+#: src/components/storage/BootSelection.tsx:205
 msgid "Partitions to boot will be allocated at the following device."
 msgstr "將會在以下裝置上配置開機分割區。"
 
-#: src/components/storage/BootSelection.tsx:199
+#: src/components/storage/BootSelection.tsx:207
 msgid "Choose a disk for placing the boot loader"
 msgstr "選擇一個存放開機載入程式的磁碟"
 
-#: src/components/storage/BootSelection.tsx:222
+#: src/components/storage/BootSelection.tsx:230
 msgid "Do not configure"
 msgstr "不設定"
 
-#: src/components/storage/BootSelection.tsx:228
+#: src/components/storage/BootSelection.tsx:236
 msgid ""
 "No partitions will be automatically configured for booting. Use with caution."
 msgstr "系統將不會自動設定任何開機分割區。請謹慎使用。"
@@ -1733,43 +1734,60 @@ msgstr "啟用並格式化 DASD 裝置"
 msgid "Configure DASD"
 msgstr "設定 DASD"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:46
-msgid "Select another disk to define partitions"
-msgstr "選取另一個要定義分割區的磁碟"
-
-#: src/components/storage/ConfigureDeviceMenu.tsx:47
-msgid "Select a disk to define partitions"
+#: src/components/storage/ConfigureDeviceMenu.tsx:48
+#, fuzzy
+msgid "Select a device to define partitions or to mount"
 msgstr "選取一個要定義分割區的磁碟"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:50
+#: src/components/storage/ConfigureDeviceMenu.tsx:49
+#, fuzzy
+msgid "Select another device to define partitions or to mount"
+msgstr "選取另一個要定義分割區的磁碟"
+
+#: src/components/storage/ConfigureDeviceMenu.tsx:52
+#, fuzzy
+msgid "Select a disk to define partitions or to mount"
+msgstr "選取一個要定義分割區的磁碟"
+
+#: src/components/storage/ConfigureDeviceMenu.tsx:53
+#, fuzzy
+msgid "Select another disk to define partitions or to mount"
+msgstr "選取另一個要定義分割區的磁碟"
+
+#: src/components/storage/ConfigureDeviceMenu.tsx:58
+#, fuzzy
+msgid "Already using all available devices"
+msgstr "已使用所有可用磁碟"
+
+#: src/components/storage/ConfigureDeviceMenu.tsx:59
 msgid "Already using all available disks"
 msgstr "已使用所有可用磁碟"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:61
+#: src/components/storage/ConfigureDeviceMenu.tsx:83
 msgid "Start configuring a basic installation"
 msgstr "開始設定基本安裝"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:76
+#: src/components/storage/ConfigureDeviceMenu.tsx:99
 msgid "Add device menu"
 msgstr "新增裝置功能表"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:119
+#: src/components/storage/ConfigureDeviceMenu.tsx:143
 msgid "Define a new LVM on top of one or several disks"
 msgstr "在一或多個磁碟上定義新 LVM"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:120
+#: src/components/storage/ConfigureDeviceMenu.tsx:144
 msgid "Define a new LVM on the disk"
 msgstr "在該磁碟上定義新 LVM"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:126
+#: src/components/storage/ConfigureDeviceMenu.tsx:150
 msgid "Configure device menu"
 msgstr "設定裝置功能表"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:141
+#: src/components/storage/ConfigureDeviceMenu.tsx:166
 msgid "Add LVM volume group"
 msgstr "新增 LVM 磁碟區群組"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:145
+#: src/components/storage/ConfigureDeviceMenu.tsx:170
 msgid "More devices"
 msgstr "更多裝置"
 
@@ -1797,7 +1815,7 @@ msgstr "類型"
 
 #. TRANSLATORS: input field for the iSCSI initiator name
 #: src/components/storage/DeviceSelectorPage.tsx:54
-#: src/components/storage/LvmPage.tsx:181
+#: src/components/storage/LvmPage.tsx:175
 #: src/components/storage/iscsi/InitiatorForm.tsx:75
 #: src/components/storage/iscsi/InitiatorForm.tsx:85
 #: src/components/storage/iscsi/InitiatorSection.tsx:40
@@ -1843,74 +1861,86 @@ msgid ""
 "of devices."
 msgstr ""
 
+#. TRANSLATORS: %s will be replaced by a disk name and its size - "sda (20 GiB)"
+#: src/components/storage/DriveHeader.tsx:33
+#, fuzzy, c-format
+msgid "Mount disk %s"
+msgstr "使用 %s"
+
+#. TRANSLATORS: %s will be replaced by a disk name and its size - "sda (20 GiB)"
+#: src/components/storage/DriveHeader.tsx:35
+#, fuzzy, c-format
+msgid "Format disk %s"
+msgstr "使用 %s"
+
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:39
+#: src/components/storage/DriveHeader.tsx:46
 #, fuzzy, c-format
 msgid "Use disk %s to install, host LVM and boot"
 msgstr "使用 %s 安裝、代管 LVM 及開機"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:42
+#: src/components/storage/DriveHeader.tsx:49
 #, fuzzy, c-format
 msgid "Use disk %s to install and host LVM"
 msgstr "使用 %s 安裝及代管 LVM"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:47
+#: src/components/storage/DriveHeader.tsx:54
 #, fuzzy, c-format
 msgid "Use disk %s to install and boot"
 msgstr "使用 %s 安裝及開機"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:50
+#: src/components/storage/DriveHeader.tsx:57
 #, fuzzy, c-format
 msgid "Use disk %s to install"
 msgstr "使用 %s 安裝"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:57
+#: src/components/storage/DriveHeader.tsx:64
 #, fuzzy, c-format
 msgid "Use disk %s for LVM, additional partitions and booting"
 msgstr "將 %s 用於 LVM、其他分割區及開機"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:60
+#: src/components/storage/DriveHeader.tsx:67
 #, fuzzy, c-format
 msgid "Use disk %s for LVM and additional partitions"
 msgstr "將 %s 用於 LVM 及其他分割區"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:65
+#: src/components/storage/DriveHeader.tsx:72
 #, fuzzy, c-format
 msgid "Use disk %s for additional partitions and booting"
 msgstr "將 %s 用於其他分割區及開機"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:68
+#: src/components/storage/DriveHeader.tsx:75
 #, fuzzy, c-format
 msgid "Use disk %s for additional partitions"
 msgstr "將 %s 用於其他分割區"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:74
+#: src/components/storage/DriveHeader.tsx:81
 #, fuzzy, c-format
 msgid "Use disk %s to host LVM and boot"
 msgstr "使用 %s 代管 LVM 及開機"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:77
+#: src/components/storage/DriveHeader.tsx:84
 #, fuzzy, c-format
 msgid "Use disk %s to host LVM"
 msgstr "使用 %s 代管 LVM"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:82
+#: src/components/storage/DriveHeader.tsx:89
 #, fuzzy, c-format
 msgid "Use disk %s to configure boot partitions"
 msgstr "使用 %s 設定開機分割區"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:85
+#: src/components/storage/DriveHeader.tsx:92
 #, fuzzy, c-format
 msgid "Use disk %s"
 msgstr "使用 %s"
@@ -1973,20 +2003,182 @@ msgstr ""
 "全磁碟加密 (FDE) 可用於保護儲存在新檔案系統中的資訊，包括資料、程式以及系統檔"
 "案。"
 
-#: src/components/storage/ISCSIPage.tsx:34 src/routes/storage.tsx:94
-msgid "iSCSI"
-msgstr "iSCSI"
+#: src/components/storage/FilesystemMenu.tsx:43
+#, fuzzy
+msgid "The device will be mounted"
+msgstr "該裝置將掛接到 %s 上。"
 
+#: src/components/storage/FilesystemMenu.tsx:44
+#, fuzzy
+msgid "The device will be formatted"
+msgstr "該裝置將掛接到 %s 上。"
+
+#. TRANSLATORS: %s is a formatted mount point (eg. '"/home'").
+#: src/components/storage/FilesystemMenu.tsx:50
+#, fuzzy, c-format
+msgid "The current file system will be mounted at %s"
+msgstr "該裝置將掛接到 %s 上。"
+
+#. TRANSLATORS: %1$s is a filesystem type (eg. Btrfs), %2$s is a mount point (eg. '"/home"').
+#: src/components/storage/FilesystemMenu.tsx:53
+#, fuzzy, c-format
+msgid "The device will be formatted as %1$s and mounted at %2$s"
+msgstr "該裝置將掛接到 %s 上。"
+
+#. TRANSLATORS: %s is the name of device, like '/dev/sda'.
+#: src/components/storage/FilesystemMenu.tsx:66
+#: src/components/storage/PartitionsMenu.tsx:141
+#: src/components/storage/UnusedMenu.tsx:44
+#, fuzzy, c-format
+msgid "Details for %s"
+msgstr "詳細資料"
+
+#: src/components/storage/FilesystemMenu.tsx:74
+#: src/components/storage/PartitionsMenu.tsx:183
+#: src/components/storage/ProposalResultTable.tsx:134
+#: src/components/storage/SpaceActionsTable.tsx:237
+#: src/components/storage/UnusedMenu.tsx:55
+#: src/components/storage/VolumeGroupEditor.tsx:155
+msgid "Details"
+msgstr "詳細資料"
+
+#: src/components/storage/FilesystemMenu.tsx:90
+#, fuzzy
+msgid "Change the file system or mount point"
+msgstr "清除所選的掛接點"
+
+#: src/components/storage/FormattableDevicePage.tsx:221
 #: src/components/storage/LogicalVolumePage.tsx:248
 #: src/components/storage/PartitionPage.tsx:306
 msgid "Select or enter a valid mount point"
 msgstr "請選取或輸入有效的掛接點"
 
+#: src/components/storage/FormattableDevicePage.tsx:231
 #: src/components/storage/LogicalVolumePage.tsx:258
 #: src/components/storage/PartitionPage.tsx:316
 msgid ""
 "Select or enter a mount point that is not already assigned to another device"
 msgstr "請選取或輸入尚未指定給其他裝置的掛接點"
+
+#: src/components/storage/FormattableDevicePage.tsx:280
+#: src/components/storage/LogicalVolumePage.tsx:443
+#: src/components/storage/LogicalVolumePage.tsx:462
+#: src/components/storage/LogicalVolumePage.tsx:762
+#: src/components/storage/PartitionPage.tsx:558
+#: src/components/storage/PartitionPage.tsx:884
+msgid "Waiting for a mount point"
+msgstr "正在等待掛接點"
+
+#. TRANSLATORS: %s is a device name (eg. /dev/sda3).
+#: src/components/storage/FormattableDevicePage.tsx:283
+#: src/components/storage/PartitionPage.tsx:561
+#: src/components/storage/utils/partition.tsx:69
+#, c-format
+msgid "Current %s"
+msgstr "目前 %s"
+
+#: src/components/storage/FormattableDevicePage.tsx:284
+#: src/components/storage/LogicalVolumePage.tsx:463
+#: src/components/storage/PartitionPage.tsx:562
+#: src/components/storage/utils.ts:338
+msgid "Btrfs with snapshots"
+msgstr "含快照的 Btrfs"
+
+#: src/components/storage/FormattableDevicePage.tsx:302
+#: src/components/storage/LogicalVolumePage.tsx:479
+#: src/components/storage/PartitionPage.tsx:580
+#, c-format
+msgid "Default file system for %s"
+msgstr "%s 的預設檔案系統"
+
+#: src/components/storage/FormattableDevicePage.tsx:303
+#, fuzzy
+msgid "Default file system for generic mount paths"
+msgstr "通用分割區的預設檔案系統"
+
+#: src/components/storage/FormattableDevicePage.tsx:305
+#, fuzzy
+msgid "Destroy current data and format device as"
+msgstr "刪除目前資料並將分割區格式化為"
+
+#: src/components/storage/FormattableDevicePage.tsx:306
+#, fuzzy
+msgid "Format device as"
+msgstr "正在格式化 DASD 裝置"
+
+#. TRANSLATORS: %s is the name of a partition, like /dev/vda2
+#. TRANSLATORS: %s is the name of a device, like vda
+#: src/components/storage/FormattableDevicePage.tsx:320
+#: src/components/storage/PartitionPage.tsx:597
+#, c-format
+msgid "Do not format %s and keep the data"
+msgstr "不格式化 %s 並保留資料"
+
+#: src/components/storage/FormattableDevicePage.tsx:384
+#: src/components/storage/LogicalVolumePage.tsx:548
+#: src/components/storage/PartitionPage.tsx:662
+msgid "File system label"
+msgstr "檔案系統標籤"
+
+#: src/components/storage/FormattableDevicePage.tsx:453
+#, fuzzy, c-format
+msgid "Configure device %s"
+msgstr "設定裝置功能表"
+
+#: src/components/storage/FormattableDevicePage.tsx:460
+#: src/components/storage/FormattableDevicePage.tsx:467
+#: src/components/storage/LogicalVolumePage.tsx:693
+#: src/components/storage/LogicalVolumePage.tsx:698
+#: src/components/storage/PartitionPage.tsx:817
+#: src/components/storage/PartitionPage.tsx:824
+msgid "Mount point"
+msgstr "掛接點"
+
+#: src/components/storage/FormattableDevicePage.tsx:465
+#: src/components/storage/LogicalVolumePage.tsx:696
+#: src/components/storage/PartitionPage.tsx:822
+msgid "Mount point toggle"
+msgstr "掛接點切換鈕"
+
+#: src/components/storage/FormattableDevicePage.tsx:466
+#: src/components/storage/LogicalVolumePage.tsx:697
+#: src/components/storage/PartitionPage.tsx:823
+msgid "Suggested mount points"
+msgstr "建議的掛接點"
+
+#: src/components/storage/FormattableDevicePage.tsx:468
+#: src/components/storage/LogicalVolumePage.tsx:699
+#: src/components/storage/PartitionPage.tsx:825
+msgid "Clear selected mount point"
+msgstr "清除所選的掛接點"
+
+#: src/components/storage/FormattableDevicePage.tsx:471
+#: src/components/storage/LogicalVolumePage.tsx:702
+#: src/components/storage/PartitionPage.tsx:828
+msgid "Use"
+msgstr "使用"
+
+#: src/components/storage/FormattableDevicePage.tsx:479
+#: src/components/storage/LogicalVolumePage.tsx:708
+#: src/components/storage/PartitionPage.tsx:846
+msgid "Select or enter a mount point"
+msgstr "選取或輸入掛接點"
+
+#: src/components/storage/FormattableDevicePage.tsx:488
+#: src/components/storage/LogicalVolumePage.tsx:733
+#: src/components/storage/PartitionPage.tsx:855
+msgid "File system"
+msgstr "檔案系統"
+
+#: src/components/storage/FormattableDevicePage.tsx:499
+#: src/components/storage/LogicalVolumePage.tsx:744
+#: src/components/storage/PartitionPage.tsx:867
+msgid "Label"
+msgstr "標籤"
+
+#: src/components/storage/ISCSIPage.tsx:34 src/routes/storage.tsx:99
+msgid "iSCSI"
+msgstr "iSCSI"
 
 #: src/components/storage/LogicalVolumePage.tsx:269
 msgid "Enter a name"
@@ -2017,115 +2209,48 @@ msgstr "大小限制必須為數字，後面可跟 GiB 或 GB 等單位"
 msgid "Logical volume name"
 msgstr "邏輯磁碟區名稱"
 
-#: src/components/storage/LogicalVolumePage.tsx:443
-#: src/components/storage/LogicalVolumePage.tsx:462
-#: src/components/storage/LogicalVolumePage.tsx:761
-#: src/components/storage/PartitionPage.tsx:558
-#: src/components/storage/PartitionPage.tsx:884
-msgid "Waiting for a mount point"
-msgstr "正在等待掛接點"
-
-#: src/components/storage/LogicalVolumePage.tsx:463
-#: src/components/storage/PartitionPage.tsx:562
-#: src/components/storage/utils.ts:338
-msgid "Btrfs with snapshots"
-msgstr "含快照的 Btrfs"
-
-#: src/components/storage/LogicalVolumePage.tsx:478
-#: src/components/storage/PartitionPage.tsx:580
-#, c-format
-msgid "Default file system for %s"
-msgstr "%s 的預設檔案系統"
-
-#: src/components/storage/LogicalVolumePage.tsx:479
+#: src/components/storage/LogicalVolumePage.tsx:480
 msgid "Default file system for generic logical volumes"
 msgstr "通用邏輯磁碟區的預設檔案系統"
 
-#: src/components/storage/LogicalVolumePage.tsx:481
+#: src/components/storage/LogicalVolumePage.tsx:482
 msgid "Format logical volume as"
 msgstr "將邏輯磁碟區格式化為"
 
-#: src/components/storage/LogicalVolumePage.tsx:547
-#: src/components/storage/PartitionPage.tsx:662
-msgid "File system label"
-msgstr "檔案系統標籤"
-
-#: src/components/storage/LogicalVolumePage.tsx:682
+#: src/components/storage/LogicalVolumePage.tsx:683
 #, c-format
 msgid "Configure LVM logical volume at %s volume group"
 msgstr "在 %s 磁碟區群組上設定 LVM 邏輯磁碟區"
 
-#: src/components/storage/LogicalVolumePage.tsx:692
-#: src/components/storage/LogicalVolumePage.tsx:697
-#: src/components/storage/PartitionPage.tsx:817
-#: src/components/storage/PartitionPage.tsx:824
-msgid "Mount point"
-msgstr "掛接點"
-
-#: src/components/storage/LogicalVolumePage.tsx:695
-#: src/components/storage/PartitionPage.tsx:822
-msgid "Mount point toggle"
-msgstr "掛接點切換鈕"
-
-#: src/components/storage/LogicalVolumePage.tsx:696
-#: src/components/storage/PartitionPage.tsx:823
-msgid "Suggested mount points"
-msgstr "建議的掛接點"
-
-#: src/components/storage/LogicalVolumePage.tsx:698
-#: src/components/storage/PartitionPage.tsx:825
-msgid "Clear selected mount point"
-msgstr "清除所選的掛接點"
-
-#: src/components/storage/LogicalVolumePage.tsx:701
-#: src/components/storage/PartitionPage.tsx:828
-msgid "Use"
-msgstr "使用"
-
-#: src/components/storage/LogicalVolumePage.tsx:707
-#: src/components/storage/PartitionPage.tsx:846
-msgid "Select or enter a mount point"
-msgstr "選取或輸入掛接點"
-
-#: src/components/storage/LogicalVolumePage.tsx:732
-#: src/components/storage/PartitionPage.tsx:855
-msgid "File system"
-msgstr "檔案系統"
-
-#: src/components/storage/LogicalVolumePage.tsx:743
-#: src/components/storage/PartitionPage.tsx:867
-msgid "Label"
-msgstr "標籤"
-
-#: src/components/storage/LogicalVolumePage.tsx:756
+#: src/components/storage/LogicalVolumePage.tsx:757
 #: src/components/storage/PartitionPage.tsx:879
 #, fuzzy
 msgid "Size mode"
 msgstr "大小上限模式"
 
-#: src/components/storage/LvmPage.tsx:83
+#: src/components/storage/LvmPage.tsx:77
 msgid "Enter a name for the volume group."
 msgstr "輸入磁碟區群組的名稱。"
 
-#: src/components/storage/LvmPage.tsx:87
+#: src/components/storage/LvmPage.tsx:81
 #, c-format
 msgid "Volume group '%s' already exists. Enter a different name."
 msgstr "磁碟區群組 '%s' 已存在。請輸入其他名稱。"
 
-#: src/components/storage/LvmPage.tsx:91
+#: src/components/storage/LvmPage.tsx:85
 msgid "Select at least one disk."
 msgstr "請至少選取一個磁碟。"
 
-#: src/components/storage/LvmPage.tsx:169
+#: src/components/storage/LvmPage.tsx:163
 msgid "Configure LVM Volume Group"
 msgstr "設定 LVM 磁碟區群組"
 
-#: src/components/storage/LvmPage.tsx:184
+#: src/components/storage/LvmPage.tsx:178
 #: src/components/storage/zfcp/ZFCPPage.tsx:131
 msgid "Disks"
 msgstr "磁碟"
 
-#: src/components/storage/LvmPage.tsx:187
+#: src/components/storage/LvmPage.tsx:181
 msgid ""
 "The needed LVM physical volumes will be added as partitions on the chosen "
 "disks,                 based on the sizes of the logical volumes. If you "
@@ -2136,11 +2261,11 @@ msgstr ""
 "增至所選磁碟上。如果選取多個磁碟，                 實體磁碟區可能會分散在多個"
 "磁碟上。"
 
-#: src/components/storage/LvmPage.tsx:222
+#: src/components/storage/LvmPage.tsx:216
 msgid "Move mount points"
 msgstr "移動掛接點"
 
-#: src/components/storage/LvmPage.tsx:226
+#: src/components/storage/LvmPage.tsx:220
 msgid ""
 "Move the mount points currently configured at the selected disks to "
 "logical                   volumes of this volume group."
@@ -2148,86 +2273,98 @@ msgstr ""
 "將所選磁碟上目前設定的掛接點移動到此磁碟區群組                   的邏輯磁碟"
 "區。"
 
+#. TRANSLATORS: %s will be replaced by a RAID name and its size - "md0 (20 GiB)"
+#: src/components/storage/MdRaidHeader.tsx:33
+#, fuzzy, c-format
+msgid "Mount RAID %s"
+msgstr "使用 %s"
+
+#. TRANSLATORS: %s will be replaced by a RAID name and its size - "md0 (20 GiB)"
+#: src/components/storage/MdRaidHeader.tsx:35
+#, fuzzy, c-format
+msgid "Format RAID %s"
+msgstr "使用 %s"
+
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:39
+#: src/components/storage/MdRaidHeader.tsx:46
 #, fuzzy, c-format
 msgid "Use RAID %s to install, host LVM and boot"
 msgstr "使用 %s 安裝、代管 LVM 及開機"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:42
+#: src/components/storage/MdRaidHeader.tsx:49
 #, fuzzy, c-format
 msgid "Use RAID %s to install and host LVM"
 msgstr "使用 %s 安裝及代管 LVM"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:47
+#: src/components/storage/MdRaidHeader.tsx:54
 #, fuzzy, c-format
 msgid "Use RAID %s to install and boot"
 msgstr "使用 %s 安裝及開機"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:50
+#: src/components/storage/MdRaidHeader.tsx:57
 #, fuzzy, c-format
 msgid "Use RAID %s to install"
 msgstr "使用 %s 安裝"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:57
+#: src/components/storage/MdRaidHeader.tsx:64
 #, fuzzy, c-format
 msgid "Use RAID %s for LVM, additional partitions and booting"
 msgstr "將 %s 用於 LVM、其他分割區及開機"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:60
+#: src/components/storage/MdRaidHeader.tsx:67
 #, fuzzy, c-format
 msgid "Use RAID %s for LVM and additional partitions"
 msgstr "將 %s 用於 LVM 及其他分割區"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:65
+#: src/components/storage/MdRaidHeader.tsx:72
 #, fuzzy, c-format
 msgid "Use RAID %s for additional partitions and booting"
 msgstr "將 %s 用於其他分割區及開機"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:68
+#: src/components/storage/MdRaidHeader.tsx:75
 #, fuzzy, c-format
 msgid "Use RAID %s for additional partitions"
 msgstr "將 %s 用於其他分割區"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:74
+#: src/components/storage/MdRaidHeader.tsx:81
 #, fuzzy, c-format
 msgid "Use RAID %s to host LVM and boot"
 msgstr "使用 %s 代管 LVM 及開機"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:77
+#: src/components/storage/MdRaidHeader.tsx:84
 #, fuzzy, c-format
 msgid "Use RAID %s to host LVM"
 msgstr "使用 %s 代管 LVM"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:82
+#: src/components/storage/MdRaidHeader.tsx:89
 #, fuzzy, c-format
 msgid "Use RAID %s to configure boot partitions"
 msgstr "使用 %s 設定開機分割區"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:85
+#: src/components/storage/MdRaidHeader.tsx:92
 #, fuzzy, c-format
 msgid "Use RAID %s"
 msgstr "使用 %s"
 
 #. TRANSLATORS: %s is the short name of a disk, like 'sda'
-#: src/components/storage/NewVgMenuOption.tsx:43
+#: src/components/storage/NewVgMenuOption.tsx:46
 #, c-format
 msgid "Create another LVM volume group on %s"
 msgstr "在 %s 上建立另一個 LVM 磁碟區群組"
 
 #. TRANSLATORS: %s is the short name of a disk, like 'sda'
-#: src/components/storage/NewVgMenuOption.tsx:47
+#: src/components/storage/NewVgMenuOption.tsx:50
 #, c-format
 msgid "Create LVM volume group on %s"
 msgstr "在 %s 上建立 LVM 磁碟區群組"
@@ -2267,13 +2404,6 @@ msgstr "使用現有分割區"
 msgid "There are not usable partitions"
 msgstr "沒有可使用的分割區"
 
-#. TRANSLATORS: %s is a device name (eg. /dev/sda3).
-#: src/components/storage/PartitionPage.tsx:561
-#: src/components/storage/utils/partition.tsx:69
-#, c-format
-msgid "Current %s"
-msgstr "目前 %s"
-
 #: src/components/storage/PartitionPage.tsx:581
 msgid "Default file system for generic partitions"
 msgstr "通用分割區的預設檔案系統"
@@ -2286,12 +2416,6 @@ msgstr "刪除目前資料並將分割區格式化為"
 msgid "Format partition as"
 msgstr "將分割區格式化為"
 
-#. TRANSLATORS: %s is the name of a partition, like /dev/vda2
-#: src/components/storage/PartitionPage.tsx:597
-#, c-format
-msgid "Do not format %s and keep the data"
-msgstr "不格式化 %s 並保留資料"
-
 #: src/components/storage/PartitionPage.tsx:810
 #, c-format
 msgid "Configure partition at %s"
@@ -2301,46 +2425,29 @@ msgstr "在 %s 上設定分割區"
 msgid "Mount point mode"
 msgstr "掛接點模式"
 
-#: src/components/storage/PartitionsMenu.tsx:60
+#: src/components/storage/PartitionsMenu.tsx:59
 #, fuzzy
 msgid "Moreover, the following partitions will be created or mounted"
 msgstr "將不建立其他分割區"
 
-#: src/components/storage/PartitionsMenu.tsx:77
+#: src/components/storage/PartitionsMenu.tsx:76
 #, fuzzy
 msgid "The following partitions will be created or mounted"
 msgstr "將不建立其他分割區"
 
-#: src/components/storage/PartitionsMenu.tsx:129
+#: src/components/storage/PartitionsMenu.tsx:128
 #, fuzzy
 msgid "Any partition needed to boot will be configured."
 msgstr "開機所需的分割區也將進行調整"
 
-#. TRANSLATORS: %s is the name of device, like '/dev/sda'.
-#: src/components/storage/PartitionsMenu.tsx:142
-#, fuzzy, c-format
-msgid "Details for %s"
-msgstr "詳細資料"
-
-#: src/components/storage/PartitionsMenu.tsx:150
-#, fuzzy
-msgid "Add a new partition or mount an existing one"
-msgstr "新增另一個分割區或掛接一個現有分割區"
-
-#: src/components/storage/PartitionsMenu.tsx:182
+#: src/components/storage/PartitionsMenu.tsx:170
 msgid "Add another partition or mount an existing one"
 msgstr "新增另一個分割區或掛接一個現有分割區"
 
-#: src/components/storage/PartitionsMenu.tsx:185
+#: src/components/storage/PartitionsMenu.tsx:173
+#: src/components/storage/UnusedMenu.tsx:72
 msgid "Add or use partition"
 msgstr "新增或使用分割區"
-
-#: src/components/storage/PartitionsMenu.tsx:195
-#: src/components/storage/ProposalResultTable.tsx:134
-#: src/components/storage/SpaceActionsTable.tsx:237
-#: src/components/storage/VolumeGroupEditor.tsx:155
-msgid "Details"
-msgstr "詳細資料"
 
 #: src/components/storage/ProposalActionsDialog.tsx:73
 #, c-format
@@ -2499,57 +2606,68 @@ msgstr ""
 "%s 是具備原子更新特性的不可變系統。它使用唯讀的 Btrfs 檔案系統，而該檔案系統"
 "透過快照保持更新。"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:59
+#: src/components/storage/SearchedDeviceMenu.tsx:58
 #, fuzzy
 msgid "Selected disk cannot be changed"
 msgstr "所選磁碟 (無法變更)"
 
+#. TRANSLATORS: %s is a formatted mount point like '"/home"'
 #: src/components/storage/SearchedDeviceMenu.tsx:63
+#, fuzzy, c-format
+msgid "Select a disk to format as %s"
+msgstr "選取用於建立 %s 的磁碟"
+
+#: src/components/storage/SearchedDeviceMenu.tsx:70
 msgid "Select a disk to configure"
 msgstr "選取要設定的磁碟"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:67
+#: src/components/storage/SearchedDeviceMenu.tsx:74
 msgid "Select a disk to install the system"
 msgstr "選取用於安裝系統的磁碟"
 
 #. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case).
-#: src/components/storage/SearchedDeviceMenu.tsx:77
+#: src/components/storage/SearchedDeviceMenu.tsx:84
 #, c-format
 msgid "Select a disk to create %s"
 msgstr "選取用於建立 %s 的磁碟"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:94
+#: src/components/storage/SearchedDeviceMenu.tsx:100
+#, fuzzy
+msgid "This uses the existing file system at the disk"
+msgstr "此設定會使用磁碟上的現有分割區"
+
+#: src/components/storage/SearchedDeviceMenu.tsx:104
 msgid "This uses existing partitions at the disk"
 msgstr "此設定會使用磁碟上的現有分割區"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:102
+#: src/components/storage/SearchedDeviceMenu.tsx:112
 msgid "It is chosen for booting and for some LVM groups"
 msgstr ""
 
-#: src/components/storage/SearchedDeviceMenu.tsx:104
+#: src/components/storage/SearchedDeviceMenu.tsx:114
 msgid "It is chosen for some LVM groups"
 msgstr ""
 
 #. TRANSLATORS: %s is the name of the LVM
-#: src/components/storage/SearchedDeviceMenu.tsx:109
+#: src/components/storage/SearchedDeviceMenu.tsx:119
 #, fuzzy, c-format
 msgid "It is chosen for booting and for the LVM group '%s'"
 msgstr "此磁碟將包含 LVM 群組 '%s'"
 
 #. TRANSLATORS: %s is the name of the LVM
-#: src/components/storage/SearchedDeviceMenu.tsx:115
+#: src/components/storage/SearchedDeviceMenu.tsx:125
 #, fuzzy, c-format
 msgid "It is chosen for the LVM group '%s'"
 msgstr "此磁碟將包含 LVM 群組 '%s'"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:120
+#: src/components/storage/SearchedDeviceMenu.tsx:130
 #, fuzzy
 msgid "It is chosen for booting"
 msgstr "此磁碟用於開機"
 
 #. TRANSLATORS: %s is the name of the disk (eg. sda)
-#: src/components/storage/SearchedDeviceMenu.tsx:129
+#: src/components/storage/SearchedDeviceMenu.tsx:139
 #, c-format
 msgid ""
 "%s will still contain the configured LVM groups and any partition needed to "
@@ -2557,59 +2675,59 @@ msgid ""
 msgstr "%s 仍將包含設定的 LVM 群組和開機所需的任何分割區"
 
 #. TRANSLATORS: %s is the name of the disk (eg. sda)
-#: src/components/storage/SearchedDeviceMenu.tsx:135
+#: src/components/storage/SearchedDeviceMenu.tsx:145
 #, c-format
 msgid "The configured LVM groups will remain at %s"
 msgstr "設定的 LVM 群組將保留在 %s 中"
 
 #. TRANSLATORS: %1$s is the name of the disk (eg. sda) and %2$s the name of the LVM
-#: src/components/storage/SearchedDeviceMenu.tsx:141
+#: src/components/storage/SearchedDeviceMenu.tsx:151
 #, c-format
 msgid ""
 "%1$s will still contain the LVM group '%2$s' and any partition needed to boot"
 msgstr "%1$s 仍將包含 LVM 群組 '%2$s' 和開機所需的任何分割區"
 
 #. TRANSLATORS: %1$s is the name of the LVM and %2$s the name of the disk (eg. sda)
-#: src/components/storage/SearchedDeviceMenu.tsx:149
+#: src/components/storage/SearchedDeviceMenu.tsx:159
 #, c-format
 msgid "The LVM group '%1$s' will remain at %2$s"
 msgstr "LVM 群組 '%1$s' 將保留在 %2$s 中"
 
 #. TRANSLATORS: %s is the name of the disk (eg. sda)
-#: src/components/storage/SearchedDeviceMenu.tsx:157
+#: src/components/storage/SearchedDeviceMenu.tsx:167
 #, c-format
 msgid "Partitions needed for booting will remain at %s"
 msgstr "開機所需的分割區將保留在 %s 中"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:161
+#: src/components/storage/SearchedDeviceMenu.tsx:171
 msgid "Partitions needed for booting will also be adapted"
 msgstr "開機所需的分割區也將進行調整"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:177
+#: src/components/storage/SearchedDeviceMenu.tsx:187
 msgid "Change device menu"
 msgstr "變更裝置功能表"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:227
+#: src/components/storage/SearchedDeviceMenu.tsx:237
 msgid "The disk is used for LVM and boot"
 msgstr "此磁碟用於 LVM 和開機"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:229
+#: src/components/storage/SearchedDeviceMenu.tsx:239
 msgid "The disk is used for booting"
 msgstr "此磁碟用於開機"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:233
+#: src/components/storage/SearchedDeviceMenu.tsx:243
 msgid "The disk is used for LVM"
 msgstr "此磁碟用於 LVM"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:235
+#: src/components/storage/SearchedDeviceMenu.tsx:245
 msgid "Remove the configuration for this disk"
 msgstr "移除此磁碟的組態"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:247
+#: src/components/storage/SearchedDeviceMenu.tsx:257
 msgid "Do not use"
 msgstr "不使用"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:286
+#: src/components/storage/SearchedDeviceMenu.tsx:308
 #, c-format
 msgid "Device %s menu"
 msgstr "裝置 %s 功能表"
@@ -2703,7 +2821,7 @@ msgstr "未找到內容"
 msgid "Action"
 msgstr "動作"
 
-#: src/components/storage/SpacePolicyMenu.tsx:72
+#: src/components/storage/SpacePolicyMenu.tsx:69
 #, fuzzy
 msgid "Find space"
 msgstr "在 %s 中尋找可用空間"
@@ -2731,6 +2849,30 @@ msgid ""
 "discard the configuration and start from scratch with a simple one."
 msgstr ""
 "您可以採用目前設定繼續安裝，也可以捨棄該組態，並採用簡單的組態從頭開始。"
+
+#: src/components/storage/UnusedMenu.tsx:45
+#, fuzzy
+msgid "Not configured yet"
+msgstr "尚未設定裝置"
+
+#: src/components/storage/UnusedMenu.tsx:47
+#, fuzzy
+msgid "Use the RAID without partitions"
+msgstr "將 %s 用於其他分割區"
+
+#: src/components/storage/UnusedMenu.tsx:47
+#, fuzzy
+msgid "Use the disk without partitions"
+msgstr "將 %s 用於其他分割區"
+
+#: src/components/storage/UnusedMenu.tsx:69
+#, fuzzy
+msgid "Add a partition or mount an existing one"
+msgstr "新增另一個分割區或掛接一個現有分割區"
+
+#: src/components/storage/UnusedMenu.tsx:77
+msgid "Format the whole device or mount an existing file system"
+msgstr ""
 
 #: src/components/storage/VolumeGroupEditor.tsx:81
 msgid "Delete volume group"
@@ -2768,7 +2910,7 @@ msgstr "新增邏輯磁碟區"
 msgid "Formatting DASD devices"
 msgstr "正在格式化 DASD 裝置"
 
-#: src/components/storage/dasd/DASDPage.tsx:39 src/routes/storage.tsx:99
+#: src/components/storage/dasd/DASDPage.tsx:39 src/routes/storage.tsx:104
 msgid "DASD"
 msgstr "DASD"
 
@@ -3319,12 +3461,22 @@ msgid "Select what to do with each partition."
 msgstr "選取對每個分割區執行的動作。"
 
 #: src/components/storage/utils/drive.tsx:152
+#, fuzzy, c-format
+msgid "The whole device will be used for %s"
+msgstr "該裝置將掛接到 %s 上。"
+
+#: src/components/storage/utils/drive.tsx:156
+#, fuzzy
+msgid "A file system will be used for the whole device"
+msgstr "新 %2$s 將使用 %s 的通用大小"
+
+#: src/components/storage/utils/drive.tsx:161
 msgid "No additional partitions will be created"
 msgstr "將不建立其他分割區"
 
 #. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case).
-#: src/components/storage/utils/drive.tsx:185
+#: src/components/storage/utils/drive.tsx:194
 #, c-format
 msgid "Partitions will be used and created for %s"
 msgstr "將會為 %s 使用和建立多個分割區"
@@ -3611,7 +3763,7 @@ msgstr "使用密碼"
 msgid "Use public SSH Key"
 msgstr "使用 SSH 公用金鑰"
 
-#: src/routes/storage.tsx:108
+#: src/routes/storage.tsx:113
 msgid "ZFCP"
 msgstr "ZFCP"
 

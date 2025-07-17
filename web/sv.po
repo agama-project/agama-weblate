@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-16 03:19+0000\n"
+"POT-Creation-Date: 2025-07-17 03:18+0000\n"
 "PO-Revision-Date: 2025-07-15 07:59+0000\n"
 "Last-Translator: Luna  Jernberg <bittin@opensuse.org>\n"
 "Language-Team: Swedish <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -259,7 +259,7 @@ msgstr "Autentisering"
 
 #: src/components/core/IssuesDrawer.tsx:50
 #: src/components/overview/StorageSection.tsx:112
-#: src/components/storage/ProposalPage.tsx:250 src/routes/storage.tsx:45
+#: src/components/storage/ProposalPage.tsx:250 src/routes/storage.tsx:46
 msgid "Storage"
 msgstr "Lagring"
 
@@ -468,7 +468,7 @@ msgstr "Lokalisering"
 
 #: src/components/l10n/L10nPage.tsx:84 src/components/l10n/L10nPage.tsx:98
 #: src/components/l10n/L10nPage.tsx:110
-#: src/components/storage/SearchedDeviceMenu.tsx:303
+#: src/components/storage/SearchedDeviceMenu.tsx:325
 #: src/components/storage/VolumeGroupEditor.tsx:113
 #: src/components/storage/iscsi/InitiatorForm.tsx:89
 #: src/components/users/FirstUserForm.tsx:235
@@ -812,6 +812,7 @@ msgstr "IP inställningar"
 #: src/components/network/WifiConnectionDetails.tsx:100
 #: src/components/network/WiredConnectionDetails.tsx:84
 #: src/components/storage/EncryptionSection.tsx:52
+#: src/components/storage/FilesystemMenu.tsx:93
 #: src/components/storage/iscsi/NodesPresenter.jsx:75
 #: src/components/users/FirstUser.tsx:54 src/components/users/RootUser.tsx:57
 msgid "Edit"
@@ -1150,7 +1151,7 @@ msgid "Provide email address"
 msgstr "Ange en e-postadress"
 
 #: src/components/product/ProductRegistrationPage.tsx:341
-#: src/components/storage/LvmPage.tsx:175
+#: src/components/storage/LvmPage.tsx:169
 #: src/components/system/HostnamePage.tsx:104
 msgid "Check the following before continuing"
 msgstr "Kontrollera följande innan du fortsätter"
@@ -1681,7 +1682,7 @@ msgstr ""
 "Den nuvarande konfigurationen kommer att resultera i ett försök att skapa en "
 "%1$s på minst %2$s."
 
-#: src/components/storage/BootSelection.tsx:127
+#: src/components/storage/BootSelection.tsx:135
 msgid ""
 "To ensure the new system is able to boot, the installer may need to create "
 "or configure some partitions in the appropriate disk."
@@ -1690,45 +1691,45 @@ msgstr ""
 "installationsprogrammet behöva skapa eller konfigurera vissa partitioner på "
 "lämplig disk."
 
-#: src/components/storage/BootSelection.tsx:133
+#: src/components/storage/BootSelection.tsx:141
 msgid "Partitions to boot will be allocated at the installation disk."
 msgstr ""
 "Partitioner som ska startas upp kommer att tilldelas på installationsdisken."
 
 #. TRANSLATORS: %s is replaced by a device name and size (e.g., "/dev/sda, 500GiB")
-#: src/components/storage/BootSelection.tsx:138
+#: src/components/storage/BootSelection.tsx:146
 #, c-format
 msgid "Partitions to boot will be allocated at the installation disk %s."
 msgstr "Partitioner att starta kommer att allokeras på installationsdisken %s."
 
-#: src/components/storage/BootSelection.tsx:154
+#: src/components/storage/BootSelection.tsx:162
 msgid "Boot options"
 msgstr "Uppstartsalternativ"
 
-#: src/components/storage/BootSelection.tsx:174
+#: src/components/storage/BootSelection.tsx:182
 #: src/components/storage/SizeModeSelect.tsx:189
 #: src/components/storage/SizeModeSelect.tsx:194
 #: src/components/storage/iscsi/NodeStartupOptions.js:28
 msgid "Automatic"
 msgstr "Automatisk"
 
-#: src/components/storage/BootSelection.tsx:192
+#: src/components/storage/BootSelection.tsx:200
 msgid "Select a disk"
 msgstr "Välj en disk"
 
-#: src/components/storage/BootSelection.tsx:197
+#: src/components/storage/BootSelection.tsx:205
 msgid "Partitions to boot will be allocated at the following device."
 msgstr "Partitioner för att uppstart kommer att tilldelas på följande enhet."
 
-#: src/components/storage/BootSelection.tsx:199
+#: src/components/storage/BootSelection.tsx:207
 msgid "Choose a disk for placing the boot loader"
 msgstr "Välj en disk för att placera uppstartsladdaren"
 
-#: src/components/storage/BootSelection.tsx:222
+#: src/components/storage/BootSelection.tsx:230
 msgid "Do not configure"
 msgstr "Konfigurera inte"
 
-#: src/components/storage/BootSelection.tsx:228
+#: src/components/storage/BootSelection.tsx:236
 msgid ""
 "No partitions will be automatically configured for booting. Use with caution."
 msgstr ""
@@ -1806,43 +1807,60 @@ msgstr "Aktivera och formatera DASD-enheter"
 msgid "Configure DASD"
 msgstr "Konfigurera DASD"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:46
-msgid "Select another disk to define partitions"
-msgstr "Välj en annan disk för att definiera partitioner"
-
-#: src/components/storage/ConfigureDeviceMenu.tsx:47
-msgid "Select a disk to define partitions"
+#: src/components/storage/ConfigureDeviceMenu.tsx:48
+#, fuzzy
+msgid "Select a device to define partitions or to mount"
 msgstr "Välj en disk för att definiera partitioner"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:50
+#: src/components/storage/ConfigureDeviceMenu.tsx:49
+#, fuzzy
+msgid "Select another device to define partitions or to mount"
+msgstr "Välj en annan disk för att definiera partitioner"
+
+#: src/components/storage/ConfigureDeviceMenu.tsx:52
+#, fuzzy
+msgid "Select a disk to define partitions or to mount"
+msgstr "Välj en disk för att definiera partitioner"
+
+#: src/components/storage/ConfigureDeviceMenu.tsx:53
+#, fuzzy
+msgid "Select another disk to define partitions or to mount"
+msgstr "Välj en annan disk för att definiera partitioner"
+
+#: src/components/storage/ConfigureDeviceMenu.tsx:58
+#, fuzzy
+msgid "Already using all available devices"
+msgstr "Använder redan alla tillgängliga diskar"
+
+#: src/components/storage/ConfigureDeviceMenu.tsx:59
 msgid "Already using all available disks"
 msgstr "Använder redan alla tillgängliga diskar"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:61
+#: src/components/storage/ConfigureDeviceMenu.tsx:83
 msgid "Start configuring a basic installation"
 msgstr "Börja konfigurera en grundläggande installation"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:76
+#: src/components/storage/ConfigureDeviceMenu.tsx:99
 msgid "Add device menu"
 msgstr "Lägg till enhetsmeny"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:119
+#: src/components/storage/ConfigureDeviceMenu.tsx:143
 msgid "Define a new LVM on top of one or several disks"
 msgstr "Definiera en ny LVM ovanpå en eller flera diskar"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:120
+#: src/components/storage/ConfigureDeviceMenu.tsx:144
 msgid "Define a new LVM on the disk"
 msgstr "Definiera en ny LVM på disken"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:126
+#: src/components/storage/ConfigureDeviceMenu.tsx:150
 msgid "Configure device menu"
 msgstr "Konfigurera enhetsmeny"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:141
+#: src/components/storage/ConfigureDeviceMenu.tsx:166
 msgid "Add LVM volume group"
 msgstr "Lägg till LVM volymgrupp"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:145
+#: src/components/storage/ConfigureDeviceMenu.tsx:170
 msgid "More devices"
 msgstr "Mer enheter"
 
@@ -1868,7 +1886,7 @@ msgstr "Typ"
 
 #. TRANSLATORS: input field for the iSCSI initiator name
 #: src/components/storage/DeviceSelectorPage.tsx:54
-#: src/components/storage/LvmPage.tsx:181
+#: src/components/storage/LvmPage.tsx:175
 #: src/components/storage/iscsi/InitiatorForm.tsx:75
 #: src/components/storage/iscsi/InitiatorForm.tsx:85
 #: src/components/storage/iscsi/InitiatorSection.tsx:40
@@ -1919,74 +1937,86 @@ msgstr ""
 "gör det lätt för enkla val, medan helvyn stöder djupare utforskning och mer "
 "komplexa åtgärder, särskilt för användare med massor av enheter."
 
+#. TRANSLATORS: %s will be replaced by a disk name and its size - "sda (20 GiB)"
+#: src/components/storage/DriveHeader.tsx:33
+#, fuzzy, c-format
+msgid "Mount disk %s"
+msgstr "Använd disk %s"
+
+#. TRANSLATORS: %s will be replaced by a disk name and its size - "sda (20 GiB)"
+#: src/components/storage/DriveHeader.tsx:35
+#, fuzzy, c-format
+msgid "Format disk %s"
+msgstr "Använd disk %s"
+
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:39
+#: src/components/storage/DriveHeader.tsx:46
 #, c-format
 msgid "Use disk %s to install, host LVM and boot"
 msgstr "Använd disk %s för att installera, värd LVM och uppstart"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:42
+#: src/components/storage/DriveHeader.tsx:49
 #, c-format
 msgid "Use disk %s to install and host LVM"
 msgstr "Använd disk %s för att installera och vara värd för LVM"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:47
+#: src/components/storage/DriveHeader.tsx:54
 #, c-format
 msgid "Use disk %s to install and boot"
 msgstr "Använd disk %s för installation och uppstart"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:50
+#: src/components/storage/DriveHeader.tsx:57
 #, c-format
 msgid "Use disk %s to install"
 msgstr "Använd disk %s för att installera"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:57
+#: src/components/storage/DriveHeader.tsx:64
 #, c-format
 msgid "Use disk %s for LVM, additional partitions and booting"
 msgstr "Använd disk %s för LVM, ytterligare partitioner och uppstart"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:60
+#: src/components/storage/DriveHeader.tsx:67
 #, c-format
 msgid "Use disk %s for LVM and additional partitions"
 msgstr "Använd disk %s för LVM och ytterligare partitioner"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:65
+#: src/components/storage/DriveHeader.tsx:72
 #, c-format
 msgid "Use disk %s for additional partitions and booting"
 msgstr "Använd disk %s för ytterligare partitioner och uppstart"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:68
+#: src/components/storage/DriveHeader.tsx:75
 #, c-format
 msgid "Use disk %s for additional partitions"
 msgstr "Använd disk %s för ytterligare partitioner"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:74
+#: src/components/storage/DriveHeader.tsx:81
 #, c-format
 msgid "Use disk %s to host LVM and boot"
 msgstr "Använd disk %s för att vara värd för LVM och uppstart"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:77
+#: src/components/storage/DriveHeader.tsx:84
 #, c-format
 msgid "Use disk %s to host LVM"
 msgstr "Använd disk %s för att vara värd för LVM"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:82
+#: src/components/storage/DriveHeader.tsx:89
 #, c-format
 msgid "Use disk %s to configure boot partitions"
 msgstr "Använd disk %s för att konfigurera uppstartspartitioner"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:85
+#: src/components/storage/DriveHeader.tsx:92
 #, c-format
 msgid "Use disk %s"
 msgstr "Använd disk %s"
@@ -2054,21 +2084,183 @@ msgstr ""
 "Heldiskkryptering (FDE) gör det möjligt att skydda informationen som lagras "
 "i de nya filsystemen, inklusive data, program och systemfiler."
 
-#: src/components/storage/ISCSIPage.tsx:34 src/routes/storage.tsx:94
-msgid "iSCSI"
-msgstr "iSCSI"
+#: src/components/storage/FilesystemMenu.tsx:43
+#, fuzzy
+msgid "The device will be mounted"
+msgstr "Enheten kommer att monteras på %s."
 
+#: src/components/storage/FilesystemMenu.tsx:44
+#, fuzzy
+msgid "The device will be formatted"
+msgstr "Enheten kommer att monteras på %s."
+
+#. TRANSLATORS: %s is a formatted mount point (eg. '"/home'").
+#: src/components/storage/FilesystemMenu.tsx:50
+#, fuzzy, c-format
+msgid "The current file system will be mounted at %s"
+msgstr "Det nuvarande filsystemet på %s är valt att monteras på %s."
+
+#. TRANSLATORS: %1$s is a filesystem type (eg. Btrfs), %2$s is a mount point (eg. '"/home"').
+#: src/components/storage/FilesystemMenu.tsx:53
+#, fuzzy, c-format
+msgid "The device will be formatted as %1$s and mounted at %2$s"
+msgstr "Enheten kommer att monteras på %s."
+
+#. TRANSLATORS: %s is the name of device, like '/dev/sda'.
+#: src/components/storage/FilesystemMenu.tsx:66
+#: src/components/storage/PartitionsMenu.tsx:141
+#: src/components/storage/UnusedMenu.tsx:44
+#, c-format
+msgid "Details for %s"
+msgstr "Detaljer för %s"
+
+#: src/components/storage/FilesystemMenu.tsx:74
+#: src/components/storage/PartitionsMenu.tsx:183
+#: src/components/storage/ProposalResultTable.tsx:134
+#: src/components/storage/SpaceActionsTable.tsx:237
+#: src/components/storage/UnusedMenu.tsx:55
+#: src/components/storage/VolumeGroupEditor.tsx:155
+msgid "Details"
+msgstr "Detaljer"
+
+#: src/components/storage/FilesystemMenu.tsx:90
+#, fuzzy
+msgid "Change the file system or mount point"
+msgstr "Rensa vald monteringspunkt"
+
+#: src/components/storage/FormattableDevicePage.tsx:221
 #: src/components/storage/LogicalVolumePage.tsx:248
 #: src/components/storage/PartitionPage.tsx:306
 msgid "Select or enter a valid mount point"
 msgstr "Välj eller ange en giltig monteringspunkt"
 
+#: src/components/storage/FormattableDevicePage.tsx:231
 #: src/components/storage/LogicalVolumePage.tsx:258
 #: src/components/storage/PartitionPage.tsx:316
 msgid ""
 "Select or enter a mount point that is not already assigned to another device"
 msgstr ""
 "Välj eller ange en monteringspunkt som inte redan är tilldelad en annan enhet"
+
+#: src/components/storage/FormattableDevicePage.tsx:280
+#: src/components/storage/LogicalVolumePage.tsx:443
+#: src/components/storage/LogicalVolumePage.tsx:462
+#: src/components/storage/LogicalVolumePage.tsx:762
+#: src/components/storage/PartitionPage.tsx:558
+#: src/components/storage/PartitionPage.tsx:884
+msgid "Waiting for a mount point"
+msgstr "Väntar på en monteringspunkt"
+
+#. TRANSLATORS: %s is a device name (eg. /dev/sda3).
+#: src/components/storage/FormattableDevicePage.tsx:283
+#: src/components/storage/PartitionPage.tsx:561
+#: src/components/storage/utils/partition.tsx:69
+#, c-format
+msgid "Current %s"
+msgstr "Nuvarande %s"
+
+#: src/components/storage/FormattableDevicePage.tsx:284
+#: src/components/storage/LogicalVolumePage.tsx:463
+#: src/components/storage/PartitionPage.tsx:562
+#: src/components/storage/utils.ts:338
+msgid "Btrfs with snapshots"
+msgstr "Btrfs med ögonblicksavbilder"
+
+#: src/components/storage/FormattableDevicePage.tsx:302
+#: src/components/storage/LogicalVolumePage.tsx:479
+#: src/components/storage/PartitionPage.tsx:580
+#, c-format
+msgid "Default file system for %s"
+msgstr "Standard filsystem för %s"
+
+#: src/components/storage/FormattableDevicePage.tsx:303
+#, fuzzy
+msgid "Default file system for generic mount paths"
+msgstr "Standardfilsystem för generiska partitioner"
+
+#: src/components/storage/FormattableDevicePage.tsx:305
+#, fuzzy
+msgid "Destroy current data and format device as"
+msgstr "Förstör nuvarande data och formatera partition som"
+
+#: src/components/storage/FormattableDevicePage.tsx:306
+#, fuzzy
+msgid "Format device as"
+msgstr "Formatera enheten"
+
+#. TRANSLATORS: %s is the name of a partition, like /dev/vda2
+#. TRANSLATORS: %s is the name of a device, like vda
+#: src/components/storage/FormattableDevicePage.tsx:320
+#: src/components/storage/PartitionPage.tsx:597
+#, c-format
+msgid "Do not format %s and keep the data"
+msgstr "Formatera inte %s och behåll data"
+
+#: src/components/storage/FormattableDevicePage.tsx:384
+#: src/components/storage/LogicalVolumePage.tsx:548
+#: src/components/storage/PartitionPage.tsx:662
+msgid "File system label"
+msgstr "Filsystem etikett"
+
+#: src/components/storage/FormattableDevicePage.tsx:453
+#, fuzzy, c-format
+msgid "Configure device %s"
+msgstr "Konfigurera enhetsmeny"
+
+#: src/components/storage/FormattableDevicePage.tsx:460
+#: src/components/storage/FormattableDevicePage.tsx:467
+#: src/components/storage/LogicalVolumePage.tsx:693
+#: src/components/storage/LogicalVolumePage.tsx:698
+#: src/components/storage/PartitionPage.tsx:817
+#: src/components/storage/PartitionPage.tsx:824
+msgid "Mount point"
+msgstr "Monteringspunkt"
+
+#: src/components/storage/FormattableDevicePage.tsx:465
+#: src/components/storage/LogicalVolumePage.tsx:696
+#: src/components/storage/PartitionPage.tsx:822
+msgid "Mount point toggle"
+msgstr "Monteringspunkt växel"
+
+#: src/components/storage/FormattableDevicePage.tsx:466
+#: src/components/storage/LogicalVolumePage.tsx:697
+#: src/components/storage/PartitionPage.tsx:823
+msgid "Suggested mount points"
+msgstr "Föreslagna monteringspunkter"
+
+#: src/components/storage/FormattableDevicePage.tsx:468
+#: src/components/storage/LogicalVolumePage.tsx:699
+#: src/components/storage/PartitionPage.tsx:825
+msgid "Clear selected mount point"
+msgstr "Rensa vald monteringspunkt"
+
+#: src/components/storage/FormattableDevicePage.tsx:471
+#: src/components/storage/LogicalVolumePage.tsx:702
+#: src/components/storage/PartitionPage.tsx:828
+msgid "Use"
+msgstr "Använd"
+
+#: src/components/storage/FormattableDevicePage.tsx:479
+#: src/components/storage/LogicalVolumePage.tsx:708
+#: src/components/storage/PartitionPage.tsx:846
+msgid "Select or enter a mount point"
+msgstr "Välj eller ange en monteringspunkt"
+
+#: src/components/storage/FormattableDevicePage.tsx:488
+#: src/components/storage/LogicalVolumePage.tsx:733
+#: src/components/storage/PartitionPage.tsx:855
+msgid "File system"
+msgstr "Filsystem"
+
+#: src/components/storage/FormattableDevicePage.tsx:499
+#: src/components/storage/LogicalVolumePage.tsx:744
+#: src/components/storage/PartitionPage.tsx:867
+msgid "Label"
+msgstr "Etikett"
+
+#: src/components/storage/ISCSIPage.tsx:34 src/routes/storage.tsx:99
+msgid "iSCSI"
+msgstr "iSCSI"
 
 #: src/components/storage/LogicalVolumePage.tsx:269
 msgid "Enter a name"
@@ -2105,114 +2297,47 @@ msgstr ""
 msgid "Logical volume name"
 msgstr "Logisk volym namn"
 
-#: src/components/storage/LogicalVolumePage.tsx:443
-#: src/components/storage/LogicalVolumePage.tsx:462
-#: src/components/storage/LogicalVolumePage.tsx:761
-#: src/components/storage/PartitionPage.tsx:558
-#: src/components/storage/PartitionPage.tsx:884
-msgid "Waiting for a mount point"
-msgstr "Väntar på en monteringspunkt"
-
-#: src/components/storage/LogicalVolumePage.tsx:463
-#: src/components/storage/PartitionPage.tsx:562
-#: src/components/storage/utils.ts:338
-msgid "Btrfs with snapshots"
-msgstr "Btrfs med ögonblicksavbilder"
-
-#: src/components/storage/LogicalVolumePage.tsx:478
-#: src/components/storage/PartitionPage.tsx:580
-#, c-format
-msgid "Default file system for %s"
-msgstr "Standard filsystem för %s"
-
-#: src/components/storage/LogicalVolumePage.tsx:479
+#: src/components/storage/LogicalVolumePage.tsx:480
 msgid "Default file system for generic logical volumes"
 msgstr "Standardfilsystem för generiska logiska volymer"
 
-#: src/components/storage/LogicalVolumePage.tsx:481
+#: src/components/storage/LogicalVolumePage.tsx:482
 msgid "Format logical volume as"
 msgstr "Formatera logisk volym som"
 
-#: src/components/storage/LogicalVolumePage.tsx:547
-#: src/components/storage/PartitionPage.tsx:662
-msgid "File system label"
-msgstr "Filsystem etikett"
-
-#: src/components/storage/LogicalVolumePage.tsx:682
+#: src/components/storage/LogicalVolumePage.tsx:683
 #, c-format
 msgid "Configure LVM logical volume at %s volume group"
 msgstr "Konfigurera LVM logisk volym på %s volymgrupp"
 
-#: src/components/storage/LogicalVolumePage.tsx:692
-#: src/components/storage/LogicalVolumePage.tsx:697
-#: src/components/storage/PartitionPage.tsx:817
-#: src/components/storage/PartitionPage.tsx:824
-msgid "Mount point"
-msgstr "Monteringspunkt"
-
-#: src/components/storage/LogicalVolumePage.tsx:695
-#: src/components/storage/PartitionPage.tsx:822
-msgid "Mount point toggle"
-msgstr "Monteringspunkt växel"
-
-#: src/components/storage/LogicalVolumePage.tsx:696
-#: src/components/storage/PartitionPage.tsx:823
-msgid "Suggested mount points"
-msgstr "Föreslagna monteringspunkter"
-
-#: src/components/storage/LogicalVolumePage.tsx:698
-#: src/components/storage/PartitionPage.tsx:825
-msgid "Clear selected mount point"
-msgstr "Rensa vald monteringspunkt"
-
-#: src/components/storage/LogicalVolumePage.tsx:701
-#: src/components/storage/PartitionPage.tsx:828
-msgid "Use"
-msgstr "Använd"
-
-#: src/components/storage/LogicalVolumePage.tsx:707
-#: src/components/storage/PartitionPage.tsx:846
-msgid "Select or enter a mount point"
-msgstr "Välj eller ange en monteringspunkt"
-
-#: src/components/storage/LogicalVolumePage.tsx:732
-#: src/components/storage/PartitionPage.tsx:855
-msgid "File system"
-msgstr "Filsystem"
-
-#: src/components/storage/LogicalVolumePage.tsx:743
-#: src/components/storage/PartitionPage.tsx:867
-msgid "Label"
-msgstr "Etikett"
-
-#: src/components/storage/LogicalVolumePage.tsx:756
+#: src/components/storage/LogicalVolumePage.tsx:757
 #: src/components/storage/PartitionPage.tsx:879
 msgid "Size mode"
 msgstr "Storleksläge"
 
-#: src/components/storage/LvmPage.tsx:83
+#: src/components/storage/LvmPage.tsx:77
 msgid "Enter a name for the volume group."
 msgstr "Ange ett namn för volymgrupp."
 
-#: src/components/storage/LvmPage.tsx:87
+#: src/components/storage/LvmPage.tsx:81
 #, c-format
 msgid "Volume group '%s' already exists. Enter a different name."
 msgstr "Volymgrupp '%s' existerar redan. Ange ett annat namn."
 
-#: src/components/storage/LvmPage.tsx:91
+#: src/components/storage/LvmPage.tsx:85
 msgid "Select at least one disk."
 msgstr "Välj åtminstone en disk."
 
-#: src/components/storage/LvmPage.tsx:169
+#: src/components/storage/LvmPage.tsx:163
 msgid "Configure LVM Volume Group"
 msgstr "Konfigurera LVM volymgrupp"
 
-#: src/components/storage/LvmPage.tsx:184
+#: src/components/storage/LvmPage.tsx:178
 #: src/components/storage/zfcp/ZFCPPage.tsx:131
 msgid "Disks"
 msgstr "Diskar"
 
-#: src/components/storage/LvmPage.tsx:187
+#: src/components/storage/LvmPage.tsx:181
 msgid ""
 "The needed LVM physical volumes will be added as partitions on the chosen "
 "disks,                 based on the sizes of the logical volumes. If you "
@@ -2224,11 +2349,11 @@ msgstr ""
 "volymerna. Om du väljer mer än en disk så kan,                 fysiska "
 "volymer vara fördelade på flera diskar."
 
-#: src/components/storage/LvmPage.tsx:222
+#: src/components/storage/LvmPage.tsx:216
 msgid "Move mount points"
 msgstr "Flytta monteringspunkter"
 
-#: src/components/storage/LvmPage.tsx:226
+#: src/components/storage/LvmPage.tsx:220
 msgid ""
 "Move the mount points currently configured at the selected disks to "
 "logical                   volumes of this volume group."
@@ -2236,86 +2361,98 @@ msgstr ""
 "Flytta monteringspunkterna som för närvarande är konfigurerade på de valda "
 "diskarna till logiska                   volymer på denna volymgrupp."
 
+#. TRANSLATORS: %s will be replaced by a RAID name and its size - "md0 (20 GiB)"
+#: src/components/storage/MdRaidHeader.tsx:33
+#, fuzzy, c-format
+msgid "Mount RAID %s"
+msgstr "Använd RAID %s"
+
+#. TRANSLATORS: %s will be replaced by a RAID name and its size - "md0 (20 GiB)"
+#: src/components/storage/MdRaidHeader.tsx:35
+#, fuzzy, c-format
+msgid "Format RAID %s"
+msgstr "Använd RAID %s"
+
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:39
+#: src/components/storage/MdRaidHeader.tsx:46
 #, c-format
 msgid "Use RAID %s to install, host LVM and boot"
 msgstr "Använd RAID %s för att installera, värd LVM och uppstart"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:42
+#: src/components/storage/MdRaidHeader.tsx:49
 #, c-format
 msgid "Use RAID %s to install and host LVM"
 msgstr "Använd RAID %s för att installera och vara värd för LVM"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:47
+#: src/components/storage/MdRaidHeader.tsx:54
 #, c-format
 msgid "Use RAID %s to install and boot"
 msgstr "Använd RAID %s för installation och uppstart"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:50
+#: src/components/storage/MdRaidHeader.tsx:57
 #, c-format
 msgid "Use RAID %s to install"
 msgstr "Använd RAID %s för att installera"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:57
+#: src/components/storage/MdRaidHeader.tsx:64
 #, c-format
 msgid "Use RAID %s for LVM, additional partitions and booting"
 msgstr "Använd RAID %s för LVM, ytterligare partitioner och uppstart"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:60
+#: src/components/storage/MdRaidHeader.tsx:67
 #, c-format
 msgid "Use RAID %s for LVM and additional partitions"
 msgstr "Använd RAID %s för LVM och ytterligare partitioner"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:65
+#: src/components/storage/MdRaidHeader.tsx:72
 #, c-format
 msgid "Use RAID %s for additional partitions and booting"
 msgstr "Använd RAID %s för ytterligare partitioner och uppstart"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:68
+#: src/components/storage/MdRaidHeader.tsx:75
 #, c-format
 msgid "Use RAID %s for additional partitions"
 msgstr "Använd RAID %s för ytterligare partitioner"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:74
+#: src/components/storage/MdRaidHeader.tsx:81
 #, c-format
 msgid "Use RAID %s to host LVM and boot"
 msgstr "Använd RAID %s för att vara värd för LVM och uppstart"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:77
+#: src/components/storage/MdRaidHeader.tsx:84
 #, c-format
 msgid "Use RAID %s to host LVM"
 msgstr "Använd RAID %s för att vara värd för LVM"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:82
+#: src/components/storage/MdRaidHeader.tsx:89
 #, c-format
 msgid "Use RAID %s to configure boot partitions"
 msgstr "Använd RAID %s för att konfigurera uppstartspartitioner"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:85
+#: src/components/storage/MdRaidHeader.tsx:92
 #, c-format
 msgid "Use RAID %s"
 msgstr "Använd RAID %s"
 
 #. TRANSLATORS: %s is the short name of a disk, like 'sda'
-#: src/components/storage/NewVgMenuOption.tsx:43
+#: src/components/storage/NewVgMenuOption.tsx:46
 #, c-format
 msgid "Create another LVM volume group on %s"
 msgstr "Skapa LVM volymgrupp på %s"
 
 #. TRANSLATORS: %s is the short name of a disk, like 'sda'
-#: src/components/storage/NewVgMenuOption.tsx:47
+#: src/components/storage/NewVgMenuOption.tsx:50
 #, c-format
 msgid "Create LVM volume group on %s"
 msgstr "Skapa LVM volymgrupp på %s"
@@ -2356,13 +2493,6 @@ msgstr "Använd en befintlig partition"
 msgid "There are not usable partitions"
 msgstr "Det finns inte några användbara partitioner"
 
-#. TRANSLATORS: %s is a device name (eg. /dev/sda3).
-#: src/components/storage/PartitionPage.tsx:561
-#: src/components/storage/utils/partition.tsx:69
-#, c-format
-msgid "Current %s"
-msgstr "Nuvarande %s"
-
 #: src/components/storage/PartitionPage.tsx:581
 msgid "Default file system for generic partitions"
 msgstr "Standardfilsystem för generiska partitioner"
@@ -2375,12 +2505,6 @@ msgstr "Förstör nuvarande data och formatera partition som"
 msgid "Format partition as"
 msgstr "Formatera partition som"
 
-#. TRANSLATORS: %s is the name of a partition, like /dev/vda2
-#: src/components/storage/PartitionPage.tsx:597
-#, c-format
-msgid "Do not format %s and keep the data"
-msgstr "Formatera inte %s och behåll data"
-
 #: src/components/storage/PartitionPage.tsx:810
 #, c-format
 msgid "Configure partition at %s"
@@ -2390,42 +2514,26 @@ msgstr "Konfigurera partition på %s"
 msgid "Mount point mode"
 msgstr "Monteringspunkt läge"
 
-#: src/components/storage/PartitionsMenu.tsx:60
+#: src/components/storage/PartitionsMenu.tsx:59
 msgid "Moreover, the following partitions will be created or mounted"
 msgstr "Dessutom kommer följande partitioner att skapas eller monteras"
 
-#: src/components/storage/PartitionsMenu.tsx:77
+#: src/components/storage/PartitionsMenu.tsx:76
 msgid "The following partitions will be created or mounted"
 msgstr "Följande partitioner kommer att skapas eller monteras"
 
-#: src/components/storage/PartitionsMenu.tsx:129
+#: src/components/storage/PartitionsMenu.tsx:128
 msgid "Any partition needed to boot will be configured."
 msgstr "Alla partitioner som behövs för uppstart kommer att konfigureras."
 
-#. TRANSLATORS: %s is the name of device, like '/dev/sda'.
-#: src/components/storage/PartitionsMenu.tsx:142
-#, c-format
-msgid "Details for %s"
-msgstr "Detaljer för %s"
-
-#: src/components/storage/PartitionsMenu.tsx:150
-msgid "Add a new partition or mount an existing one"
-msgstr "Lägg till en ny partition eller montera en befintlig"
-
-#: src/components/storage/PartitionsMenu.tsx:182
+#: src/components/storage/PartitionsMenu.tsx:170
 msgid "Add another partition or mount an existing one"
 msgstr "Lägg till ytterligare en partition eller montera en befintlig"
 
-#: src/components/storage/PartitionsMenu.tsx:185
+#: src/components/storage/PartitionsMenu.tsx:173
+#: src/components/storage/UnusedMenu.tsx:72
 msgid "Add or use partition"
 msgstr "Lägg till eller använd en partition"
-
-#: src/components/storage/PartitionsMenu.tsx:195
-#: src/components/storage/ProposalResultTable.tsx:134
-#: src/components/storage/SpaceActionsTable.tsx:237
-#: src/components/storage/VolumeGroupEditor.tsx:155
-msgid "Details"
-msgstr "Detaljer"
 
 #: src/components/storage/ProposalActionsDialog.tsx:73
 #, c-format
@@ -2601,55 +2709,66 @@ msgstr ""
 "%s är ett oföränderligt system med atomära uppdateringar. Det använder ett "
 "skrivskyddat Btrfs filsystem som uppdateras via ögonblicksavbilder."
 
-#: src/components/storage/SearchedDeviceMenu.tsx:59
+#: src/components/storage/SearchedDeviceMenu.tsx:58
 msgid "Selected disk cannot be changed"
 msgstr "Vald disk kan inte ändras"
 
+#. TRANSLATORS: %s is a formatted mount point like '"/home"'
 #: src/components/storage/SearchedDeviceMenu.tsx:63
+#, fuzzy, c-format
+msgid "Select a disk to format as %s"
+msgstr "Välj en disk för att skapa %s"
+
+#: src/components/storage/SearchedDeviceMenu.tsx:70
 msgid "Select a disk to configure"
 msgstr "Välj en disk att konfigurera"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:67
+#: src/components/storage/SearchedDeviceMenu.tsx:74
 msgid "Select a disk to install the system"
 msgstr "Välj en disk för att installera systemet"
 
 #. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case).
-#: src/components/storage/SearchedDeviceMenu.tsx:77
+#: src/components/storage/SearchedDeviceMenu.tsx:84
 #, c-format
 msgid "Select a disk to create %s"
 msgstr "Välj en disk för att skapa %s"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:94
+#: src/components/storage/SearchedDeviceMenu.tsx:100
+#, fuzzy
+msgid "This uses the existing file system at the disk"
+msgstr "Detta använder befintliga partitioner på disken"
+
+#: src/components/storage/SearchedDeviceMenu.tsx:104
 msgid "This uses existing partitions at the disk"
 msgstr "Detta använder befintliga partitioner på disken"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:102
+#: src/components/storage/SearchedDeviceMenu.tsx:112
 msgid "It is chosen for booting and for some LVM groups"
 msgstr "Den är vald för uppstart och för vissa LVM-grupper"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:104
+#: src/components/storage/SearchedDeviceMenu.tsx:114
 msgid "It is chosen for some LVM groups"
 msgstr "Den är vald för vissa LVM-grupper"
 
 #. TRANSLATORS: %s is the name of the LVM
-#: src/components/storage/SearchedDeviceMenu.tsx:109
+#: src/components/storage/SearchedDeviceMenu.tsx:119
 #, c-format
 msgid "It is chosen for booting and for the LVM group '%s'"
 msgstr "Den är vald för uppstart och för LVM-gruppen '%s'"
 
 #. TRANSLATORS: %s is the name of the LVM
-#: src/components/storage/SearchedDeviceMenu.tsx:115
+#: src/components/storage/SearchedDeviceMenu.tsx:125
 #, c-format
 msgid "It is chosen for the LVM group '%s'"
 msgstr "Den är vald för LVM-gruppen '%s'"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:120
+#: src/components/storage/SearchedDeviceMenu.tsx:130
 msgid "It is chosen for booting"
 msgstr "Den är vald för uppstart"
 
 #. TRANSLATORS: %s is the name of the disk (eg. sda)
-#: src/components/storage/SearchedDeviceMenu.tsx:129
+#: src/components/storage/SearchedDeviceMenu.tsx:139
 #, c-format
 msgid ""
 "%s will still contain the configured LVM groups and any partition needed to "
@@ -2659,13 +2778,13 @@ msgstr ""
 "partitioner som behövs för att starta systemet"
 
 #. TRANSLATORS: %s is the name of the disk (eg. sda)
-#: src/components/storage/SearchedDeviceMenu.tsx:135
+#: src/components/storage/SearchedDeviceMenu.tsx:145
 #, c-format
 msgid "The configured LVM groups will remain at %s"
 msgstr "De konfigurerade LVM-grupperna kommer att finnas kvar på %s"
 
 #. TRANSLATORS: %1$s is the name of the disk (eg. sda) and %2$s the name of the LVM
-#: src/components/storage/SearchedDeviceMenu.tsx:141
+#: src/components/storage/SearchedDeviceMenu.tsx:151
 #, c-format
 msgid ""
 "%1$s will still contain the LVM group '%2$s' and any partition needed to boot"
@@ -2674,46 +2793,46 @@ msgstr ""
 "partition som behövs för att starta systemet"
 
 #. TRANSLATORS: %1$s is the name of the LVM and %2$s the name of the disk (eg. sda)
-#: src/components/storage/SearchedDeviceMenu.tsx:149
+#: src/components/storage/SearchedDeviceMenu.tsx:159
 #, c-format
 msgid "The LVM group '%1$s' will remain at %2$s"
 msgstr "LVM-gruppen '%1$s' kommer att vara kvar på %2$s"
 
 #. TRANSLATORS: %s is the name of the disk (eg. sda)
-#: src/components/storage/SearchedDeviceMenu.tsx:157
+#: src/components/storage/SearchedDeviceMenu.tsx:167
 #, c-format
 msgid "Partitions needed for booting will remain at %s"
 msgstr "Partitioner för uppstart kommer att finnas kvar på %s"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:161
+#: src/components/storage/SearchedDeviceMenu.tsx:171
 msgid "Partitions needed for booting will also be adapted"
 msgstr "Partitioner som behövs för uppstart kommer också att anpassas"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:177
+#: src/components/storage/SearchedDeviceMenu.tsx:187
 msgid "Change device menu"
 msgstr "Ändra enhetsmeny"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:227
+#: src/components/storage/SearchedDeviceMenu.tsx:237
 msgid "The disk is used for LVM and boot"
 msgstr "Disken används för LVM och uppstart"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:229
+#: src/components/storage/SearchedDeviceMenu.tsx:239
 msgid "The disk is used for booting"
 msgstr "Disken används för uppstart"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:233
+#: src/components/storage/SearchedDeviceMenu.tsx:243
 msgid "The disk is used for LVM"
 msgstr "Disken används för LVM"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:235
+#: src/components/storage/SearchedDeviceMenu.tsx:245
 msgid "Remove the configuration for this disk"
 msgstr "Ta bort konfigurationen för den här disken"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:247
+#: src/components/storage/SearchedDeviceMenu.tsx:257
 msgid "Do not use"
 msgstr "Använd inte"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:286
+#: src/components/storage/SearchedDeviceMenu.tsx:308
 #, c-format
 msgid "Device %s menu"
 msgstr "Enhets %s-meny"
@@ -2806,7 +2925,7 @@ msgstr "Inget innehåll hittades"
 msgid "Action"
 msgstr "Åtgärd"
 
-#: src/components/storage/SpacePolicyMenu.tsx:72
+#: src/components/storage/SpacePolicyMenu.tsx:69
 msgid "Find space"
 msgstr "Hitta utrymme"
 
@@ -2839,6 +2958,30 @@ msgstr ""
 "Du kan fortsätta att installera med de aktuella inställningarna eller så "
 "kanske du vill kasta konfigurationen och börja från början med en enkel "
 "konfiguration."
+
+#: src/components/storage/UnusedMenu.tsx:45
+#, fuzzy
+msgid "Not configured yet"
+msgstr "Inga enheter har konfigurerats ännu"
+
+#: src/components/storage/UnusedMenu.tsx:47
+#, fuzzy
+msgid "Use the RAID without partitions"
+msgstr "Använd RAID %s för ytterligare partitioner"
+
+#: src/components/storage/UnusedMenu.tsx:47
+#, fuzzy
+msgid "Use the disk without partitions"
+msgstr "Använd disk %s för ytterligare partitioner"
+
+#: src/components/storage/UnusedMenu.tsx:69
+#, fuzzy
+msgid "Add a partition or mount an existing one"
+msgstr "Lägg till en ny partition eller montera en befintlig"
+
+#: src/components/storage/UnusedMenu.tsx:77
+msgid "Format the whole device or mount an existing file system"
+msgstr ""
 
 #: src/components/storage/VolumeGroupEditor.tsx:81
 msgid "Delete volume group"
@@ -2876,7 +3019,7 @@ msgstr "Lägg till logisk volym"
 msgid "Formatting DASD devices"
 msgstr "Formaterar DASD-enheter"
 
-#: src/components/storage/dasd/DASDPage.tsx:39 src/routes/storage.tsx:99
+#: src/components/storage/dasd/DASDPage.tsx:39 src/routes/storage.tsx:104
 msgid "DASD"
 msgstr "DASD"
 
@@ -3437,12 +3580,22 @@ msgid "Select what to do with each partition."
 msgstr "Välj vad som ska göras med varje partition."
 
 #: src/components/storage/utils/drive.tsx:152
+#, fuzzy, c-format
+msgid "The whole device will be used for %s"
+msgstr "Enheten kommer att monteras på %s."
+
+#: src/components/storage/utils/drive.tsx:156
+#, fuzzy
+msgid "A file system will be used for the whole device"
+msgstr "Filsystemet är allokerat på enhet %s."
+
+#: src/components/storage/utils/drive.tsx:161
 msgid "No additional partitions will be created"
 msgstr "Inga ytterligare partitioner kommer att skapas"
 
 #. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case).
-#: src/components/storage/utils/drive.tsx:185
+#: src/components/storage/utils/drive.tsx:194
 #, c-format
 msgid "Partitions will be used and created for %s"
 msgstr "Partitioner kommer att användas och skapas för %s"
@@ -3737,7 +3890,7 @@ msgstr "Använd lösenord"
 msgid "Use public SSH Key"
 msgstr "Använd publik SSH nyckel"
 
-#: src/routes/storage.tsx:108
+#: src/routes/storage.tsx:113
 msgid "ZFCP"
 msgstr "ZFCP"
 
@@ -4279,16 +4432,8 @@ msgstr "ZFCP"
 #~ msgid "The type and size of the file system cannot be edited."
 #~ msgstr "Filsystemets typ och storlek kan inte redigeras."
 
-#, c-format
-#~ msgid "The current file system on %s is selected to be mounted at %s."
-#~ msgstr "Det nuvarande filsystemet på %s är valt att monteras på %s."
-
 #~ msgid "The size of the file system cannot be edited"
 #~ msgstr "Storleken på filsystemet kan inte redigeras"
-
-#, c-format
-#~ msgid "The file system is allocated at the device %s."
-#~ msgstr "Filsystemet är allokerat på enhet %s."
 
 #~ msgid "A mount point is required"
 #~ msgstr "En monteringspunkt krävs"
@@ -4404,9 +4549,6 @@ msgstr "ZFCP"
 #~ msgstr ""
 #~ "En ny volymgrupp kommer att tilldelas på den valda disken och   "
 #~ "filsystemet kommer att skapas som en logisk volym."
-
-#~ msgid "Format the device"
-#~ msgstr "Formatera enheten"
 
 #~ msgid "Mount the file system"
 #~ msgstr "Montera filsystemet"

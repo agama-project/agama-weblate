@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-16 03:19+0000\n"
+"POT-Creation-Date: 2025-07-17 03:18+0000\n"
 "PO-Revision-Date: 2025-07-17 00:59+0000\n"
 "Last-Translator: yok440 <yakupyok440@gmail.com>\n"
 "Language-Team: Turkish <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -256,7 +256,7 @@ msgstr "Kimlik doğrulama"
 
 #: src/components/core/IssuesDrawer.tsx:50
 #: src/components/overview/StorageSection.tsx:112
-#: src/components/storage/ProposalPage.tsx:250 src/routes/storage.tsx:45
+#: src/components/storage/ProposalPage.tsx:250 src/routes/storage.tsx:46
 msgid "Storage"
 msgstr "Depolama"
 
@@ -463,7 +463,7 @@ msgstr "Yerelleştirme"
 
 #: src/components/l10n/L10nPage.tsx:84 src/components/l10n/L10nPage.tsx:98
 #: src/components/l10n/L10nPage.tsx:110
-#: src/components/storage/SearchedDeviceMenu.tsx:303
+#: src/components/storage/SearchedDeviceMenu.tsx:325
 #: src/components/storage/VolumeGroupEditor.tsx:113
 #: src/components/storage/iscsi/InitiatorForm.tsx:89
 #: src/components/users/FirstUserForm.tsx:235
@@ -807,6 +807,7 @@ msgstr "IP ayarları"
 #: src/components/network/WifiConnectionDetails.tsx:100
 #: src/components/network/WiredConnectionDetails.tsx:84
 #: src/components/storage/EncryptionSection.tsx:52
+#: src/components/storage/FilesystemMenu.tsx:93
 #: src/components/storage/iscsi/NodesPresenter.jsx:75
 #: src/components/users/FirstUser.tsx:54 src/components/users/RootUser.tsx:57
 msgid "Edit"
@@ -1144,7 +1145,7 @@ msgid "Provide email address"
 msgstr "E-posta adresini belirtin"
 
 #: src/components/product/ProductRegistrationPage.tsx:341
-#: src/components/storage/LvmPage.tsx:175
+#: src/components/storage/LvmPage.tsx:169
 #: src/components/system/HostnamePage.tsx:104
 msgid "Check the following before continuing"
 msgstr "Devam etmeden önce aşağıdakileri kontrol edin"
@@ -1667,7 +1668,7 @@ msgstr ""
 "Mevcut yapılandırma en az %2$s değerinde bir %1$s oluşturma girişimine yol "
 "açacaktır."
 
-#: src/components/storage/BootSelection.tsx:127
+#: src/components/storage/BootSelection.tsx:135
 msgid ""
 "To ensure the new system is able to boot, the installer may need to create "
 "or configure some partitions in the appropriate disk."
@@ -1675,44 +1676,44 @@ msgstr ""
 "Yeni sistemin önyükleme yapabilmesini sağlamak için yükleyicinin uygun "
 "diskte bazı bölümler oluşturması veya yapılandırması gerekebilir."
 
-#: src/components/storage/BootSelection.tsx:133
+#: src/components/storage/BootSelection.tsx:141
 msgid "Partitions to boot will be allocated at the installation disk."
 msgstr "Önyükleme için gerekli bölümler kurulum diskinde tahsis edilecektir."
 
 #. TRANSLATORS: %s is replaced by a device name and size (e.g., "/dev/sda, 500GiB")
-#: src/components/storage/BootSelection.tsx:138
+#: src/components/storage/BootSelection.tsx:146
 #, c-format
 msgid "Partitions to boot will be allocated at the installation disk %s."
 msgstr "Önyükleme için bölümler kurulum diski %s'de tahsis edilecektir."
 
-#: src/components/storage/BootSelection.tsx:154
+#: src/components/storage/BootSelection.tsx:162
 msgid "Boot options"
 msgstr "Önyükleme seçenekleri"
 
-#: src/components/storage/BootSelection.tsx:174
+#: src/components/storage/BootSelection.tsx:182
 #: src/components/storage/SizeModeSelect.tsx:189
 #: src/components/storage/SizeModeSelect.tsx:194
 #: src/components/storage/iscsi/NodeStartupOptions.js:28
 msgid "Automatic"
 msgstr "Otomatik"
 
-#: src/components/storage/BootSelection.tsx:192
+#: src/components/storage/BootSelection.tsx:200
 msgid "Select a disk"
 msgstr "Bir disk seçin"
 
-#: src/components/storage/BootSelection.tsx:197
+#: src/components/storage/BootSelection.tsx:205
 msgid "Partitions to boot will be allocated at the following device."
 msgstr "Önyükleme için bölümler aşağıdaki aygıta tahsis edilecektir."
 
-#: src/components/storage/BootSelection.tsx:199
+#: src/components/storage/BootSelection.tsx:207
 msgid "Choose a disk for placing the boot loader"
 msgstr "Önyükleme yükleyicisini yerleştirmek için bir disk seçin"
 
-#: src/components/storage/BootSelection.tsx:222
+#: src/components/storage/BootSelection.tsx:230
 msgid "Do not configure"
 msgstr "Yapılandırmayın"
 
-#: src/components/storage/BootSelection.tsx:228
+#: src/components/storage/BootSelection.tsx:236
 msgid ""
 "No partitions will be automatically configured for booting. Use with caution."
 msgstr ""
@@ -1790,43 +1791,60 @@ msgstr "DASD cihazlarını etkinleştirin ve biçimlendirin"
 msgid "Configure DASD"
 msgstr "DASD'yi yapılandırın"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:46
-msgid "Select another disk to define partitions"
-msgstr "Bölümleri tanımlamak için başka bir disk seçin"
-
-#: src/components/storage/ConfigureDeviceMenu.tsx:47
-msgid "Select a disk to define partitions"
+#: src/components/storage/ConfigureDeviceMenu.tsx:48
+#, fuzzy
+msgid "Select a device to define partitions or to mount"
 msgstr "Bölümleri tanımlamak için bir disk seçin"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:50
+#: src/components/storage/ConfigureDeviceMenu.tsx:49
+#, fuzzy
+msgid "Select another device to define partitions or to mount"
+msgstr "Bölümleri tanımlamak için başka bir disk seçin"
+
+#: src/components/storage/ConfigureDeviceMenu.tsx:52
+#, fuzzy
+msgid "Select a disk to define partitions or to mount"
+msgstr "Bölümleri tanımlamak için bir disk seçin"
+
+#: src/components/storage/ConfigureDeviceMenu.tsx:53
+#, fuzzy
+msgid "Select another disk to define partitions or to mount"
+msgstr "Bölümleri tanımlamak için başka bir disk seçin"
+
+#: src/components/storage/ConfigureDeviceMenu.tsx:58
+#, fuzzy
+msgid "Already using all available devices"
+msgstr "Zaten tüm kullanılabilir diskler kullanılıyor"
+
+#: src/components/storage/ConfigureDeviceMenu.tsx:59
 msgid "Already using all available disks"
 msgstr "Zaten tüm kullanılabilir diskler kullanılıyor"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:61
+#: src/components/storage/ConfigureDeviceMenu.tsx:83
 msgid "Start configuring a basic installation"
 msgstr "Bir temel bir kurulumu yapılandırmaya başlayın"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:76
+#: src/components/storage/ConfigureDeviceMenu.tsx:99
 msgid "Add device menu"
 msgstr "Cihaz menüsü ekle"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:119
+#: src/components/storage/ConfigureDeviceMenu.tsx:143
 msgid "Define a new LVM on top of one or several disks"
 msgstr "Bir veya birkaç diskin üzerine yeni bir LVM tanımlayın"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:120
+#: src/components/storage/ConfigureDeviceMenu.tsx:144
 msgid "Define a new LVM on the disk"
 msgstr "Diskte yeni bir LVM tanımlayın"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:126
+#: src/components/storage/ConfigureDeviceMenu.tsx:150
 msgid "Configure device menu"
 msgstr "Cihaz yapılandırma menüsü"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:141
+#: src/components/storage/ConfigureDeviceMenu.tsx:166
 msgid "Add LVM volume group"
 msgstr "LVM disk grubu ekle"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:145
+#: src/components/storage/ConfigureDeviceMenu.tsx:170
 msgid "More devices"
 msgstr "Daha fazla cihaz"
 
@@ -1852,7 +1870,7 @@ msgstr "Tip"
 
 #. TRANSLATORS: input field for the iSCSI initiator name
 #: src/components/storage/DeviceSelectorPage.tsx:54
-#: src/components/storage/LvmPage.tsx:181
+#: src/components/storage/LvmPage.tsx:175
 #: src/components/storage/iscsi/InitiatorForm.tsx:75
 #: src/components/storage/iscsi/InitiatorForm.tsx:85
 #: src/components/storage/iscsi/InitiatorSection.tsx:40
@@ -1904,74 +1922,86 @@ msgstr ""
 "özellikle çok sayıda cihaza sahip kullanıcılar için daha karmaşık eylemleri "
 "destekler."
 
+#. TRANSLATORS: %s will be replaced by a disk name and its size - "sda (20 GiB)"
+#: src/components/storage/DriveHeader.tsx:33
+#, fuzzy, c-format
+msgid "Mount disk %s"
+msgstr "%s diskini kullan"
+
+#. TRANSLATORS: %s will be replaced by a disk name and its size - "sda (20 GiB)"
+#: src/components/storage/DriveHeader.tsx:35
+#, fuzzy, c-format
+msgid "Format disk %s"
+msgstr "%s diskini kullan"
+
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:39
+#: src/components/storage/DriveHeader.tsx:46
 #, c-format
 msgid "Use disk %s to install, host LVM and boot"
 msgstr "LVM'yi yüklemek, barındırmak ve önyüklemek için %s diskini kullanın"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:42
+#: src/components/storage/DriveHeader.tsx:49
 #, c-format
 msgid "Use disk %s to install and host LVM"
 msgstr "LVM'yi yüklemek ve barındırmak için %s diskini kullanın"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:47
+#: src/components/storage/DriveHeader.tsx:54
 #, c-format
 msgid "Use disk %s to install and boot"
 msgstr "Yükleme ve önyükleme için %s diskini kullanın"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:50
+#: src/components/storage/DriveHeader.tsx:57
 #, c-format
 msgid "Use disk %s to install"
 msgstr "Yüklemek için %s diskini kullanın"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:57
+#: src/components/storage/DriveHeader.tsx:64
 #, c-format
 msgid "Use disk %s for LVM, additional partitions and booting"
 msgstr "LVM, ek bölümler ve önyükleme için %s diskini kullanın"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:60
+#: src/components/storage/DriveHeader.tsx:67
 #, c-format
 msgid "Use disk %s for LVM and additional partitions"
 msgstr "LVM ve ek bölümler için %s diskini kullan"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:65
+#: src/components/storage/DriveHeader.tsx:72
 #, c-format
 msgid "Use disk %s for additional partitions and booting"
 msgstr "Ek bölümler ve önyükleme için %s diskini kullan"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:68
+#: src/components/storage/DriveHeader.tsx:75
 #, c-format
 msgid "Use disk %s for additional partitions"
 msgstr "Ek bölümler için %s diskini kullan"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:74
+#: src/components/storage/DriveHeader.tsx:81
 #, c-format
 msgid "Use disk %s to host LVM and boot"
 msgstr "LVM'yi barındırmak ve önyükleme yapmak için %s diskini kullanın"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:77
+#: src/components/storage/DriveHeader.tsx:84
 #, c-format
 msgid "Use disk %s to host LVM"
 msgstr "LVM'yi barındırmak için %s diskini kullanın"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:82
+#: src/components/storage/DriveHeader.tsx:89
 #, c-format
 msgid "Use disk %s to configure boot partitions"
 msgstr "Önyükleme bölümlerini yapılandırmak için %s diskini kullanın"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:85
+#: src/components/storage/DriveHeader.tsx:92
 #, c-format
 msgid "Use disk %s"
 msgstr "%s diskini kullan"
@@ -2040,20 +2070,183 @@ msgstr ""
 "olmak üzere yeni dosya sistemlerinde depolanan bilgilerin korunmasına olanak "
 "tanır."
 
-#: src/components/storage/ISCSIPage.tsx:34 src/routes/storage.tsx:94
-msgid "iSCSI"
-msgstr "iSCSI"
+#: src/components/storage/FilesystemMenu.tsx:43
+#, fuzzy
+msgid "The device will be mounted"
+msgstr "Cihaz %s konumuna bağlanacak."
 
+#: src/components/storage/FilesystemMenu.tsx:44
+#, fuzzy
+msgid "The device will be formatted"
+msgstr "Cihaz %s konumuna bağlanacak."
+
+#. TRANSLATORS: %s is a formatted mount point (eg. '"/home'").
+#: src/components/storage/FilesystemMenu.tsx:50
+#, fuzzy, c-format
+msgid "The current file system will be mounted at %s"
+msgstr ""
+"%s üzerindeki geçerli dosya sistemi %s konumuna bağlanmak üzere seçildi."
+
+#. TRANSLATORS: %1$s is a filesystem type (eg. Btrfs), %2$s is a mount point (eg. '"/home"').
+#: src/components/storage/FilesystemMenu.tsx:53
+#, fuzzy, c-format
+msgid "The device will be formatted as %1$s and mounted at %2$s"
+msgstr "Cihaz %s konumuna bağlanacak."
+
+#. TRANSLATORS: %s is the name of device, like '/dev/sda'.
+#: src/components/storage/FilesystemMenu.tsx:66
+#: src/components/storage/PartitionsMenu.tsx:141
+#: src/components/storage/UnusedMenu.tsx:44
+#, c-format
+msgid "Details for %s"
+msgstr "%s için ayrıntılar"
+
+#: src/components/storage/FilesystemMenu.tsx:74
+#: src/components/storage/PartitionsMenu.tsx:183
+#: src/components/storage/ProposalResultTable.tsx:134
+#: src/components/storage/SpaceActionsTable.tsx:237
+#: src/components/storage/UnusedMenu.tsx:55
+#: src/components/storage/VolumeGroupEditor.tsx:155
+msgid "Details"
+msgstr "Detaylar"
+
+#: src/components/storage/FilesystemMenu.tsx:90
+#, fuzzy
+msgid "Change the file system or mount point"
+msgstr "Seçilen bağlama noktasını temizle"
+
+#: src/components/storage/FormattableDevicePage.tsx:221
 #: src/components/storage/LogicalVolumePage.tsx:248
 #: src/components/storage/PartitionPage.tsx:306
 msgid "Select or enter a valid mount point"
 msgstr "Geçerli bir bağlama noktası seçin veya girin"
 
+#: src/components/storage/FormattableDevicePage.tsx:231
 #: src/components/storage/LogicalVolumePage.tsx:258
 #: src/components/storage/PartitionPage.tsx:316
 msgid ""
 "Select or enter a mount point that is not already assigned to another device"
 msgstr "Başka bir cihaza henüz atanmamış bir bağlama noktası seçin veya girin"
+
+#: src/components/storage/FormattableDevicePage.tsx:280
+#: src/components/storage/LogicalVolumePage.tsx:443
+#: src/components/storage/LogicalVolumePage.tsx:462
+#: src/components/storage/LogicalVolumePage.tsx:762
+#: src/components/storage/PartitionPage.tsx:558
+#: src/components/storage/PartitionPage.tsx:884
+msgid "Waiting for a mount point"
+msgstr "Bir bağlama noktası bekleniyor"
+
+#. TRANSLATORS: %s is a device name (eg. /dev/sda3).
+#: src/components/storage/FormattableDevicePage.tsx:283
+#: src/components/storage/PartitionPage.tsx:561
+#: src/components/storage/utils/partition.tsx:69
+#, c-format
+msgid "Current %s"
+msgstr "Mevcut %s"
+
+#: src/components/storage/FormattableDevicePage.tsx:284
+#: src/components/storage/LogicalVolumePage.tsx:463
+#: src/components/storage/PartitionPage.tsx:562
+#: src/components/storage/utils.ts:338
+msgid "Btrfs with snapshots"
+msgstr "Anlık imajlarla Btrfs"
+
+#: src/components/storage/FormattableDevicePage.tsx:302
+#: src/components/storage/LogicalVolumePage.tsx:479
+#: src/components/storage/PartitionPage.tsx:580
+#, c-format
+msgid "Default file system for %s"
+msgstr "%s için varsayılan dosya sistemi"
+
+#: src/components/storage/FormattableDevicePage.tsx:303
+#, fuzzy
+msgid "Default file system for generic mount paths"
+msgstr "Genel bölümler için varsayılan dosya sistemi"
+
+#: src/components/storage/FormattableDevicePage.tsx:305
+#, fuzzy
+msgid "Destroy current data and format device as"
+msgstr "Mevcut verileri yok edin ve bölümü şu şekilde biçimlendirin"
+
+#: src/components/storage/FormattableDevicePage.tsx:306
+#, fuzzy
+msgid "Format device as"
+msgstr "DASD aygıtlarının biçimlendirilmesi"
+
+#. TRANSLATORS: %s is the name of a partition, like /dev/vda2
+#. TRANSLATORS: %s is the name of a device, like vda
+#: src/components/storage/FormattableDevicePage.tsx:320
+#: src/components/storage/PartitionPage.tsx:597
+#, c-format
+msgid "Do not format %s and keep the data"
+msgstr "%s'yi biçimlendirmeyin ve verileri saklayın"
+
+#: src/components/storage/FormattableDevicePage.tsx:384
+#: src/components/storage/LogicalVolumePage.tsx:548
+#: src/components/storage/PartitionPage.tsx:662
+msgid "File system label"
+msgstr "Dosya sistemi etiketi"
+
+#: src/components/storage/FormattableDevicePage.tsx:453
+#, fuzzy, c-format
+msgid "Configure device %s"
+msgstr "Cihaz yapılandırma menüsü"
+
+#: src/components/storage/FormattableDevicePage.tsx:460
+#: src/components/storage/FormattableDevicePage.tsx:467
+#: src/components/storage/LogicalVolumePage.tsx:693
+#: src/components/storage/LogicalVolumePage.tsx:698
+#: src/components/storage/PartitionPage.tsx:817
+#: src/components/storage/PartitionPage.tsx:824
+msgid "Mount point"
+msgstr "Bağlantı noktası"
+
+#: src/components/storage/FormattableDevicePage.tsx:465
+#: src/components/storage/LogicalVolumePage.tsx:696
+#: src/components/storage/PartitionPage.tsx:822
+msgid "Mount point toggle"
+msgstr "Bağlantı noktası değişimi"
+
+#: src/components/storage/FormattableDevicePage.tsx:466
+#: src/components/storage/LogicalVolumePage.tsx:697
+#: src/components/storage/PartitionPage.tsx:823
+msgid "Suggested mount points"
+msgstr "Önerilen bağlama noktaları"
+
+#: src/components/storage/FormattableDevicePage.tsx:468
+#: src/components/storage/LogicalVolumePage.tsx:699
+#: src/components/storage/PartitionPage.tsx:825
+msgid "Clear selected mount point"
+msgstr "Seçilen bağlama noktasını temizle"
+
+#: src/components/storage/FormattableDevicePage.tsx:471
+#: src/components/storage/LogicalVolumePage.tsx:702
+#: src/components/storage/PartitionPage.tsx:828
+msgid "Use"
+msgstr "Kullan"
+
+#: src/components/storage/FormattableDevicePage.tsx:479
+#: src/components/storage/LogicalVolumePage.tsx:708
+#: src/components/storage/PartitionPage.tsx:846
+msgid "Select or enter a mount point"
+msgstr "Bir bağlama noktası seçin veya girin"
+
+#: src/components/storage/FormattableDevicePage.tsx:488
+#: src/components/storage/LogicalVolumePage.tsx:733
+#: src/components/storage/PartitionPage.tsx:855
+msgid "File system"
+msgstr "Dosya sistemi"
+
+#: src/components/storage/FormattableDevicePage.tsx:499
+#: src/components/storage/LogicalVolumePage.tsx:744
+#: src/components/storage/PartitionPage.tsx:867
+msgid "Label"
+msgstr "Etiket"
+
+#: src/components/storage/ISCSIPage.tsx:34 src/routes/storage.tsx:99
+msgid "iSCSI"
+msgstr "iSCSI"
 
 #: src/components/storage/LogicalVolumePage.tsx:269
 msgid "Enter a name"
@@ -2090,114 +2283,47 @@ msgstr ""
 msgid "Logical volume name"
 msgstr "Mantıksal birim adı"
 
-#: src/components/storage/LogicalVolumePage.tsx:443
-#: src/components/storage/LogicalVolumePage.tsx:462
-#: src/components/storage/LogicalVolumePage.tsx:761
-#: src/components/storage/PartitionPage.tsx:558
-#: src/components/storage/PartitionPage.tsx:884
-msgid "Waiting for a mount point"
-msgstr "Bir bağlama noktası bekleniyor"
-
-#: src/components/storage/LogicalVolumePage.tsx:463
-#: src/components/storage/PartitionPage.tsx:562
-#: src/components/storage/utils.ts:338
-msgid "Btrfs with snapshots"
-msgstr "Anlık imajlarla Btrfs"
-
-#: src/components/storage/LogicalVolumePage.tsx:478
-#: src/components/storage/PartitionPage.tsx:580
-#, c-format
-msgid "Default file system for %s"
-msgstr "%s için varsayılan dosya sistemi"
-
-#: src/components/storage/LogicalVolumePage.tsx:479
+#: src/components/storage/LogicalVolumePage.tsx:480
 msgid "Default file system for generic logical volumes"
 msgstr "Genel mantıksal birimler için varsayılan dosya sistemi"
 
-#: src/components/storage/LogicalVolumePage.tsx:481
+#: src/components/storage/LogicalVolumePage.tsx:482
 msgid "Format logical volume as"
 msgstr "Mantıksal birimi şu şekilde biçimlendir"
 
-#: src/components/storage/LogicalVolumePage.tsx:547
-#: src/components/storage/PartitionPage.tsx:662
-msgid "File system label"
-msgstr "Dosya sistemi etiketi"
-
-#: src/components/storage/LogicalVolumePage.tsx:682
+#: src/components/storage/LogicalVolumePage.tsx:683
 #, c-format
 msgid "Configure LVM logical volume at %s volume group"
 msgstr "LVM mantıksal birimini %s birim grubunda yapılandırın"
 
-#: src/components/storage/LogicalVolumePage.tsx:692
-#: src/components/storage/LogicalVolumePage.tsx:697
-#: src/components/storage/PartitionPage.tsx:817
-#: src/components/storage/PartitionPage.tsx:824
-msgid "Mount point"
-msgstr "Bağlantı noktası"
-
-#: src/components/storage/LogicalVolumePage.tsx:695
-#: src/components/storage/PartitionPage.tsx:822
-msgid "Mount point toggle"
-msgstr "Bağlantı noktası değişimi"
-
-#: src/components/storage/LogicalVolumePage.tsx:696
-#: src/components/storage/PartitionPage.tsx:823
-msgid "Suggested mount points"
-msgstr "Önerilen bağlama noktaları"
-
-#: src/components/storage/LogicalVolumePage.tsx:698
-#: src/components/storage/PartitionPage.tsx:825
-msgid "Clear selected mount point"
-msgstr "Seçilen bağlama noktasını temizle"
-
-#: src/components/storage/LogicalVolumePage.tsx:701
-#: src/components/storage/PartitionPage.tsx:828
-msgid "Use"
-msgstr "Kullan"
-
-#: src/components/storage/LogicalVolumePage.tsx:707
-#: src/components/storage/PartitionPage.tsx:846
-msgid "Select or enter a mount point"
-msgstr "Bir bağlama noktası seçin veya girin"
-
-#: src/components/storage/LogicalVolumePage.tsx:732
-#: src/components/storage/PartitionPage.tsx:855
-msgid "File system"
-msgstr "Dosya sistemi"
-
-#: src/components/storage/LogicalVolumePage.tsx:743
-#: src/components/storage/PartitionPage.tsx:867
-msgid "Label"
-msgstr "Etiket"
-
-#: src/components/storage/LogicalVolumePage.tsx:756
+#: src/components/storage/LogicalVolumePage.tsx:757
 #: src/components/storage/PartitionPage.tsx:879
 msgid "Size mode"
 msgstr "Boyut modu"
 
-#: src/components/storage/LvmPage.tsx:83
+#: src/components/storage/LvmPage.tsx:77
 msgid "Enter a name for the volume group."
 msgstr "Birim grubu için bir ad girin."
 
-#: src/components/storage/LvmPage.tsx:87
+#: src/components/storage/LvmPage.tsx:81
 #, c-format
 msgid "Volume group '%s' already exists. Enter a different name."
 msgstr "'%s' birim grubu zaten mevcut. Farklı bir ad girin."
 
-#: src/components/storage/LvmPage.tsx:91
+#: src/components/storage/LvmPage.tsx:85
 msgid "Select at least one disk."
 msgstr "En az bir disk seçin."
 
-#: src/components/storage/LvmPage.tsx:169
+#: src/components/storage/LvmPage.tsx:163
 msgid "Configure LVM Volume Group"
 msgstr "LVM Birim Grubunu Yapılandırın"
 
-#: src/components/storage/LvmPage.tsx:184
+#: src/components/storage/LvmPage.tsx:178
 #: src/components/storage/zfcp/ZFCPPage.tsx:131
 msgid "Disks"
 msgstr "Diskler"
 
-#: src/components/storage/LvmPage.tsx:187
+#: src/components/storage/LvmPage.tsx:181
 msgid ""
 "The needed LVM physical volumes will be added as partitions on the chosen "
 "disks,                 based on the sizes of the logical volumes. If you "
@@ -2209,11 +2335,11 @@ msgstr ""
 "fazla disk                  seçerseniz, fiziksel birimler birkaç diske "
 "dağıtılabilir."
 
-#: src/components/storage/LvmPage.tsx:222
+#: src/components/storage/LvmPage.tsx:216
 msgid "Move mount points"
 msgstr "Bağlantı noktalarını taşı"
 
-#: src/components/storage/LvmPage.tsx:226
+#: src/components/storage/LvmPage.tsx:220
 msgid ""
 "Move the mount points currently configured at the selected disks to "
 "logical                   volumes of this volume group."
@@ -2221,86 +2347,98 @@ msgstr ""
 "Seçili disklerde şu anda yapılandırılmış olan bağlama noktalarını "
 "bu                    birim grubunun mantıksal birimlerine taşıyın."
 
+#. TRANSLATORS: %s will be replaced by a RAID name and its size - "md0 (20 GiB)"
+#: src/components/storage/MdRaidHeader.tsx:33
+#, fuzzy, c-format
+msgid "Mount RAID %s"
+msgstr "RAID %s'yi kullan"
+
+#. TRANSLATORS: %s will be replaced by a RAID name and its size - "md0 (20 GiB)"
+#: src/components/storage/MdRaidHeader.tsx:35
+#, fuzzy, c-format
+msgid "Format RAID %s"
+msgstr "RAID %s'yi kullan"
+
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:39
+#: src/components/storage/MdRaidHeader.tsx:46
 #, c-format
 msgid "Use RAID %s to install, host LVM and boot"
 msgstr "LVM'yi yüklemek, barındırmak ve önyüklemek için RAID %s'yi kullanın"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:42
+#: src/components/storage/MdRaidHeader.tsx:49
 #, c-format
 msgid "Use RAID %s to install and host LVM"
 msgstr "LVM'yi yüklemek ve barındırmak için RAID %s'yi kullanın"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:47
+#: src/components/storage/MdRaidHeader.tsx:54
 #, c-format
 msgid "Use RAID %s to install and boot"
 msgstr "Yükleme ve önyükleme için RAID %s kullanın"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:50
+#: src/components/storage/MdRaidHeader.tsx:57
 #, c-format
 msgid "Use RAID %s to install"
 msgstr "Kurulum için RAID %s kullanın"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:57
+#: src/components/storage/MdRaidHeader.tsx:64
 #, c-format
 msgid "Use RAID %s for LVM, additional partitions and booting"
 msgstr "LVM, ek bölümler ve önyükleme için RAID %s kullanın"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:60
+#: src/components/storage/MdRaidHeader.tsx:67
 #, c-format
 msgid "Use RAID %s for LVM and additional partitions"
 msgstr "LVM ve ek bölümler için RAID %s kullanın"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:65
+#: src/components/storage/MdRaidHeader.tsx:72
 #, c-format
 msgid "Use RAID %s for additional partitions and booting"
 msgstr "Ek bölümler ve önyükleme için RAID %s kullanın"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:68
+#: src/components/storage/MdRaidHeader.tsx:75
 #, c-format
 msgid "Use RAID %s for additional partitions"
 msgstr "Ek bölümler için RAID %s kullanın"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:74
+#: src/components/storage/MdRaidHeader.tsx:81
 #, c-format
 msgid "Use RAID %s to host LVM and boot"
 msgstr "LVM'yi barındırmak ve önyükleme yapmak için RAID %s'yi kullanın"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:77
+#: src/components/storage/MdRaidHeader.tsx:84
 #, c-format
 msgid "Use RAID %s to host LVM"
 msgstr "LVM'yi barındırmak için RAID %s kullanın"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:82
+#: src/components/storage/MdRaidHeader.tsx:89
 #, c-format
 msgid "Use RAID %s to configure boot partitions"
 msgstr "Önyükleme bölümlerini yapılandırmak için RAID %s kullanın"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:85
+#: src/components/storage/MdRaidHeader.tsx:92
 #, c-format
 msgid "Use RAID %s"
 msgstr "RAID %s'yi kullan"
 
 #. TRANSLATORS: %s is the short name of a disk, like 'sda'
-#: src/components/storage/NewVgMenuOption.tsx:43
+#: src/components/storage/NewVgMenuOption.tsx:46
 #, c-format
 msgid "Create another LVM volume group on %s"
 msgstr "%s üzerinde başka bir LVM disk grubu oluştur"
 
 #. TRANSLATORS: %s is the short name of a disk, like 'sda'
-#: src/components/storage/NewVgMenuOption.tsx:47
+#: src/components/storage/NewVgMenuOption.tsx:50
 #, c-format
 msgid "Create LVM volume group on %s"
 msgstr "%s üzerinde LVM disk grubu oluştur"
@@ -2341,13 +2479,6 @@ msgstr "Mevcut bir bölümü kullan"
 msgid "There are not usable partitions"
 msgstr "Kullanılabilir bölüm yok"
 
-#. TRANSLATORS: %s is a device name (eg. /dev/sda3).
-#: src/components/storage/PartitionPage.tsx:561
-#: src/components/storage/utils/partition.tsx:69
-#, c-format
-msgid "Current %s"
-msgstr "Mevcut %s"
-
 #: src/components/storage/PartitionPage.tsx:581
 msgid "Default file system for generic partitions"
 msgstr "Genel bölümler için varsayılan dosya sistemi"
@@ -2360,12 +2491,6 @@ msgstr "Mevcut verileri yok edin ve bölümü şu şekilde biçimlendirin"
 msgid "Format partition as"
 msgstr "Bölümü şu şekilde biçimlendir"
 
-#. TRANSLATORS: %s is the name of a partition, like /dev/vda2
-#: src/components/storage/PartitionPage.tsx:597
-#, c-format
-msgid "Do not format %s and keep the data"
-msgstr "%s'yi biçimlendirmeyin ve verileri saklayın"
-
 #: src/components/storage/PartitionPage.tsx:810
 #, c-format
 msgid "Configure partition at %s"
@@ -2375,42 +2500,26 @@ msgstr "Bölmeyi %s konumunda yapılandır"
 msgid "Mount point mode"
 msgstr "Bağlantı noktası modu"
 
-#: src/components/storage/PartitionsMenu.tsx:60
+#: src/components/storage/PartitionsMenu.tsx:59
 msgid "Moreover, the following partitions will be created or mounted"
 msgstr "Ayrıca, aşağıdaki bölümler oluşturulacak veya bağlanacaktır"
 
-#: src/components/storage/PartitionsMenu.tsx:77
+#: src/components/storage/PartitionsMenu.tsx:76
 msgid "The following partitions will be created or mounted"
 msgstr "Aşağıdaki bölümler oluşturulacak veya bağlanacak"
 
-#: src/components/storage/PartitionsMenu.tsx:129
+#: src/components/storage/PartitionsMenu.tsx:128
 msgid "Any partition needed to boot will be configured."
 msgstr "Önyükleme için gereken herhangi bir bölüm yapılandırılacaktır."
 
-#. TRANSLATORS: %s is the name of device, like '/dev/sda'.
-#: src/components/storage/PartitionsMenu.tsx:142
-#, c-format
-msgid "Details for %s"
-msgstr "%s için ayrıntılar"
-
-#: src/components/storage/PartitionsMenu.tsx:150
-msgid "Add a new partition or mount an existing one"
-msgstr "Yeni bir bölüm ekleyin veya mevcut bir bölümü bağlayın"
-
-#: src/components/storage/PartitionsMenu.tsx:182
+#: src/components/storage/PartitionsMenu.tsx:170
 msgid "Add another partition or mount an existing one"
 msgstr "Başka bir bölüm ekleyin veya mevcut bir bölümü bağlayın"
 
-#: src/components/storage/PartitionsMenu.tsx:185
+#: src/components/storage/PartitionsMenu.tsx:173
+#: src/components/storage/UnusedMenu.tsx:72
 msgid "Add or use partition"
 msgstr "Bölüm ekle veya kullan"
-
-#: src/components/storage/PartitionsMenu.tsx:195
-#: src/components/storage/ProposalResultTable.tsx:134
-#: src/components/storage/SpaceActionsTable.tsx:237
-#: src/components/storage/VolumeGroupEditor.tsx:155
-msgid "Details"
-msgstr "Detaylar"
 
 #: src/components/storage/ProposalActionsDialog.tsx:73
 #, c-format
@@ -2585,55 +2694,66 @@ msgstr ""
 "%s atomik güncellemelere sahip değişmez bir sistemdir. Anlık imajlar "
 "aracılığıyla güncellenen salt okunur bir Btrfs dosya sistemi kullanır."
 
-#: src/components/storage/SearchedDeviceMenu.tsx:59
+#: src/components/storage/SearchedDeviceMenu.tsx:58
 msgid "Selected disk cannot be changed"
 msgstr "Seçilen disk değiştirilemez"
 
+#. TRANSLATORS: %s is a formatted mount point like '"/home"'
 #: src/components/storage/SearchedDeviceMenu.tsx:63
+#, fuzzy, c-format
+msgid "Select a disk to format as %s"
+msgstr "%s oluşturmak için bir disk seçin"
+
+#: src/components/storage/SearchedDeviceMenu.tsx:70
 msgid "Select a disk to configure"
 msgstr "Yapılandırılacak bir disk seçin"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:67
+#: src/components/storage/SearchedDeviceMenu.tsx:74
 msgid "Select a disk to install the system"
 msgstr "Sistemi kurmak için bir disk seçin"
 
 #. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case).
-#: src/components/storage/SearchedDeviceMenu.tsx:77
+#: src/components/storage/SearchedDeviceMenu.tsx:84
 #, c-format
 msgid "Select a disk to create %s"
 msgstr "%s oluşturmak için bir disk seçin"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:94
+#: src/components/storage/SearchedDeviceMenu.tsx:100
+#, fuzzy
+msgid "This uses the existing file system at the disk"
+msgstr "Bu, diskteki mevcut bölümleri kullanır"
+
+#: src/components/storage/SearchedDeviceMenu.tsx:104
 msgid "This uses existing partitions at the disk"
 msgstr "Bu, diskteki mevcut bölümleri kullanır"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:102
+#: src/components/storage/SearchedDeviceMenu.tsx:112
 msgid "It is chosen for booting and for some LVM groups"
 msgstr "Önyükleme ve bazı LVM grupları için seçilir"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:104
+#: src/components/storage/SearchedDeviceMenu.tsx:114
 msgid "It is chosen for some LVM groups"
 msgstr "Bazı LVM grupları için seçilmiştir"
 
 #. TRANSLATORS: %s is the name of the LVM
-#: src/components/storage/SearchedDeviceMenu.tsx:109
+#: src/components/storage/SearchedDeviceMenu.tsx:119
 #, c-format
 msgid "It is chosen for booting and for the LVM group '%s'"
 msgstr "Önyükleme ve '%s' LVM grubu için seçilir"
 
 #. TRANSLATORS: %s is the name of the LVM
-#: src/components/storage/SearchedDeviceMenu.tsx:115
+#: src/components/storage/SearchedDeviceMenu.tsx:125
 #, c-format
 msgid "It is chosen for the LVM group '%s'"
 msgstr "LVM grubu '%s' için seçildi"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:120
+#: src/components/storage/SearchedDeviceMenu.tsx:130
 msgid "It is chosen for booting"
 msgstr "Önyükleme için seçildi"
 
 #. TRANSLATORS: %s is the name of the disk (eg. sda)
-#: src/components/storage/SearchedDeviceMenu.tsx:129
+#: src/components/storage/SearchedDeviceMenu.tsx:139
 #, c-format
 msgid ""
 "%s will still contain the configured LVM groups and any partition needed to "
@@ -2643,13 +2763,13 @@ msgstr ""
 "bölümleri içerecektir"
 
 #. TRANSLATORS: %s is the name of the disk (eg. sda)
-#: src/components/storage/SearchedDeviceMenu.tsx:135
+#: src/components/storage/SearchedDeviceMenu.tsx:145
 #, c-format
 msgid "The configured LVM groups will remain at %s"
 msgstr "Yapılandırılan LVM grupları %s konumunda kalacaktır"
 
 #. TRANSLATORS: %1$s is the name of the disk (eg. sda) and %2$s the name of the LVM
-#: src/components/storage/SearchedDeviceMenu.tsx:141
+#: src/components/storage/SearchedDeviceMenu.tsx:151
 #, c-format
 msgid ""
 "%1$s will still contain the LVM group '%2$s' and any partition needed to boot"
@@ -2658,46 +2778,46 @@ msgstr ""
 "içerecektir"
 
 #. TRANSLATORS: %1$s is the name of the LVM and %2$s the name of the disk (eg. sda)
-#: src/components/storage/SearchedDeviceMenu.tsx:149
+#: src/components/storage/SearchedDeviceMenu.tsx:159
 #, c-format
 msgid "The LVM group '%1$s' will remain at %2$s"
 msgstr "LVM grubu '%1$s' %2$s konumunda kalacak"
 
 #. TRANSLATORS: %s is the name of the disk (eg. sda)
-#: src/components/storage/SearchedDeviceMenu.tsx:157
+#: src/components/storage/SearchedDeviceMenu.tsx:167
 #, c-format
 msgid "Partitions needed for booting will remain at %s"
 msgstr "Önyükleme için gereken bölümler %s konumunda kalacak"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:161
+#: src/components/storage/SearchedDeviceMenu.tsx:171
 msgid "Partitions needed for booting will also be adapted"
 msgstr "Önyükleme için gereken bölümler de uyarlanacak"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:177
+#: src/components/storage/SearchedDeviceMenu.tsx:187
 msgid "Change device menu"
 msgstr "Cihaz menüsünü değiştir"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:227
+#: src/components/storage/SearchedDeviceMenu.tsx:237
 msgid "The disk is used for LVM and boot"
 msgstr "Disk LVM ve önyükleme için kullanılır"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:229
+#: src/components/storage/SearchedDeviceMenu.tsx:239
 msgid "The disk is used for booting"
 msgstr "Disk önyükleme için kullanılır"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:233
+#: src/components/storage/SearchedDeviceMenu.tsx:243
 msgid "The disk is used for LVM"
 msgstr "Disk LVM için kullanılır"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:235
+#: src/components/storage/SearchedDeviceMenu.tsx:245
 msgid "Remove the configuration for this disk"
 msgstr "Bu disk için yapılandırmayı kaldırın"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:247
+#: src/components/storage/SearchedDeviceMenu.tsx:257
 msgid "Do not use"
 msgstr "Kullanma"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:286
+#: src/components/storage/SearchedDeviceMenu.tsx:308
 #, c-format
 msgid "Device %s menu"
 msgstr "Cihaz %s menüsü"
@@ -2788,7 +2908,7 @@ msgstr "İçerik bulunamadı"
 msgid "Action"
 msgstr "Eylem"
 
-#: src/components/storage/SpacePolicyMenu.tsx:72
+#: src/components/storage/SpacePolicyMenu.tsx:69
 msgid "Find space"
 msgstr "Boşluk bul"
 
@@ -2818,6 +2938,30 @@ msgid ""
 msgstr ""
 "Mevcut ayarlarla kuruluma devam edebilir veya yapılandırmayı iptal edip daha "
 "basit bir yapılandırmayla sıfırdan kuruluma başlayabilirsiniz."
+
+#: src/components/storage/UnusedMenu.tsx:45
+#, fuzzy
+msgid "Not configured yet"
+msgstr "Henüz hiçbir cihaz yapılandırılmadı"
+
+#: src/components/storage/UnusedMenu.tsx:47
+#, fuzzy
+msgid "Use the RAID without partitions"
+msgstr "Ek bölümler için RAID %s kullanın"
+
+#: src/components/storage/UnusedMenu.tsx:47
+#, fuzzy
+msgid "Use the disk without partitions"
+msgstr "Ek bölümler için %s diskini kullan"
+
+#: src/components/storage/UnusedMenu.tsx:69
+#, fuzzy
+msgid "Add a partition or mount an existing one"
+msgstr "Yeni bir bölüm ekleyin veya mevcut bir bölümü bağlayın"
+
+#: src/components/storage/UnusedMenu.tsx:77
+msgid "Format the whole device or mount an existing file system"
+msgstr ""
 
 #: src/components/storage/VolumeGroupEditor.tsx:81
 msgid "Delete volume group"
@@ -2855,7 +2999,7 @@ msgstr "Mantıksal birim ekle"
 msgid "Formatting DASD devices"
 msgstr "DASD aygıtlarının biçimlendirilmesi"
 
-#: src/components/storage/dasd/DASDPage.tsx:39 src/routes/storage.tsx:99
+#: src/components/storage/dasd/DASDPage.tsx:39 src/routes/storage.tsx:104
 msgid "DASD"
 msgstr "DASD"
 
@@ -3371,7 +3515,8 @@ msgstr "Mevcut bölümler korunacaktır"
 #: src/components/storage/utils/drive.tsx:123
 msgid ""
 "Partitions that are not reused will be removed and that data will be lost."
-msgstr "Tekrar kullanılmayan bölümler kaldırılacak ve bu veriler kaybolacaktır."
+msgstr ""
+"Tekrar kullanılmayan bölümler kaldırılacak ve bu veriler kaybolacaktır."
 
 #: src/components/storage/utils/drive.tsx:124
 msgid ""
@@ -3417,12 +3562,22 @@ msgid "Select what to do with each partition."
 msgstr "Her bölümle ne yapılacağını seçin."
 
 #: src/components/storage/utils/drive.tsx:152
+#, fuzzy, c-format
+msgid "The whole device will be used for %s"
+msgstr "Cihaz %s konumuna bağlanacak."
+
+#: src/components/storage/utils/drive.tsx:156
+#, fuzzy
+msgid "A file system will be used for the whole device"
+msgstr "Dosya sistemi %s cihazına tahsis edildi."
+
+#: src/components/storage/utils/drive.tsx:161
 msgid "No additional partitions will be created"
 msgstr "Ek bölüm oluşturulmayacak"
 
 #. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case).
-#: src/components/storage/utils/drive.tsx:185
+#: src/components/storage/utils/drive.tsx:194
 #, c-format
 msgid "Partitions will be used and created for %s"
 msgstr "Bölümler %s için kullanılacak ve oluşturulacak"
@@ -3718,7 +3873,7 @@ msgstr "Şifre kullan"
 msgid "Use public SSH Key"
 msgstr "Genel SSH Anahtarını Kullan"
 
-#: src/routes/storage.tsx:108
+#: src/routes/storage.tsx:113
 msgid "ZFCP"
 msgstr "ZFCP"
 
@@ -4198,17 +4353,8 @@ msgstr "ZFCP"
 #~ msgid "The type and size of the file system cannot be edited."
 #~ msgstr "Dosya sisteminin türü ve boyutu düzenlenemez."
 
-#, c-format
-#~ msgid "The current file system on %s is selected to be mounted at %s."
-#~ msgstr ""
-#~ "%s üzerindeki geçerli dosya sistemi %s konumuna bağlanmak üzere seçildi."
-
 #~ msgid "The size of the file system cannot be edited"
 #~ msgstr "Dosya sisteminin boyutu düzenlenemez"
-
-#, c-format
-#~ msgid "The file system is allocated at the device %s."
-#~ msgstr "Dosya sistemi %s cihazına tahsis edildi."
 
 #~ msgid "A mount point is required"
 #~ msgstr "Bir bağlama noktası gerekli"
