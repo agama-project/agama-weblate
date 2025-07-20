@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-17 03:18+0000\n"
+"POT-Creation-Date: 2025-07-20 03:27+0000\n"
 "PO-Revision-Date: 2025-06-17 02:59+0000\n"
 "Last-Translator: Grace Yu <grace.yu@excel-gits.com>\n"
 "Language-Team: Chinese (Taiwan) <https://l10n.opensuse.org/projects/agama/"
@@ -194,8 +194,8 @@ msgid ""
 "The file %{filename} from %{repo_url} is digitally signed with the following "
 "unknown GnuPG key: %{key_id}. Use it anyway?"
 msgstr ""
-"%{repo_url} 中的檔案 %{filename} 是使用以下未知 GnuPG 金鑰進行數位簽署的：%"
-"{key_id}。是否仍要使用它？"
+"%{repo_url} 中的檔案 %{filename} 是使用以下未知 GnuPG 金鑰進行數位簽署的："
+"%{key_id}。是否仍要使用它？"
 
 #: service/lib/agama/software/callbacks/signature.rb:137
 #, perl-brace-format
@@ -459,8 +459,8 @@ msgstr "至少需要 %s 部裝置 (針對 %s)"
 #: service/lib/agama/storage/config_checkers/md_raid.rb:168
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be deleted because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be deleted because it is part of the MD RAID "
+"%{md_raid}"
 msgstr "無法刪除裝置 '%{member}'，因為它是 MD RAID %{md_raid} 的一部分"
 
 #. Issue if the device member is resized.
@@ -470,8 +470,8 @@ msgstr "無法刪除裝置 '%{member}'，因為它是 MD RAID %{md_raid} 的一�
 #: service/lib/agama/storage/config_checkers/md_raid.rb:191
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be resized because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be resized because it is part of the MD RAID "
+"%{md_raid}"
 msgstr "無法調整裝置 '%{member}' 的大小，因為它是 MD RAID %{md_raid} 的一部分"
 
 #. Issue if the device member is formatted.
@@ -504,8 +504,8 @@ msgstr ""
 #: service/lib/agama/storage/config_checkers/md_raid.rb:259
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be used because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be used because it is part of the MD RAID "
+"%{md_raid}"
 msgstr "無法使用裝置 '%{member}'，因為它是 MD RAID %{md_raid} 的一部分"
 
 #. Issue if the parent of the device member is formatted.
@@ -691,36 +691,39 @@ msgstr "登入 iSCSI 目標"
 msgid "Cannot login to iSCSI target %s"
 msgstr "無法登入 iSCSI 目標 %s"
 
-#. Underlying yast-storage-ng has own mechanism for proposing boot strategies.
-#. However, we don't always want to use BLS when it proposes so. Currently
-#. we want to use BLS only for Tumbleweed / Slowroll
-#: service/lib/agama/storage/manager.rb:131
+#. Probes storage devices and performs an initial proposal
+#.
+#. @param keep_config [Boolean] Whether to use the current storage config for calculating the
+#. proposal.
+#. @param keep_activation [Boolean] Whether to keep the current activation (e.g., provided LUKS
+#. passwords).
+#: service/lib/agama/storage/manager.rb:126
 msgid "Activating storage devices"
 msgstr "正在啟用儲存裝置"
 
-#: service/lib/agama/storage/manager.rb:132
+#: service/lib/agama/storage/manager.rb:127
 msgid "Probing storage devices"
 msgstr "正在查探儲存裝置"
 
-#: service/lib/agama/storage/manager.rb:133
+#: service/lib/agama/storage/manager.rb:128
 msgid "Calculating the storage proposal"
 msgstr "正在計算儲存建議"
 
 #. Prepares the partitioning to install the system
-#: service/lib/agama/storage/manager.rb:145
+#: service/lib/agama/storage/manager.rb:151
 msgid "Preparing bootloader proposal"
 msgstr "正在準備開機載入程式建議"
 
 #. then also apply changes to that proposal
-#: service/lib/agama/storage/manager.rb:152
+#: service/lib/agama/storage/manager.rb:158
 msgid "Adding storage-related packages"
 msgstr "正在新增儲存相關套件"
 
-#: service/lib/agama/storage/manager.rb:153
+#: service/lib/agama/storage/manager.rb:159
 msgid "Preparing the storage devices"
 msgstr "正在準備儲存裝置"
 
-#: service/lib/agama/storage/manager.rb:154
+#: service/lib/agama/storage/manager.rb:160
 msgid "Writing bootloader sysconfig"
 msgstr "正在寫入開機載入程式 sysconfig"
 

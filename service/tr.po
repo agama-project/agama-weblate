@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-17 03:18+0000\n"
+"POT-Creation-Date: 2025-07-20 03:27+0000\n"
 "PO-Revision-Date: 2025-07-17 19:59+0000\n"
 "Last-Translator: yok440 <yakupyok440@gmail.com>\n"
-"Language-Team: Turkish <https://l10n.opensuse.org/projects/agama/"
-"agama-service-master/tr/>\n"
+"Language-Team: Turkish <https://l10n.opensuse.org/projects/agama/agama-"
+"service-master/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -143,9 +143,9 @@ msgid ""
 "be \"%{expected}\". The file has changed by accident or by an attacker since "
 "the creater signed it. Use it anyway?"
 msgstr ""
-"%{file} dosyasının beklenen toplam kontrolü \"%{found}\" ancak \"%{expected}"
-"\" olması bekleniyordu. Dosya, oluşturucusu imzaladığından beri kazara veya "
-"bir saldırgan tarafından değiştirildi. Yine de kullanılsın mı?"
+"%{file} dosyasının beklenen toplam kontrolü \"%{found}\" ancak "
+"\"%{expected}\" olması bekleniyordu. Dosya, oluşturucusu imzaladığından beri "
+"kazara veya bir saldırgan tarafından değiştirildi. Yine de kullanılsın mı?"
 
 #. DoneProvide callback
 #.
@@ -474,8 +474,8 @@ msgstr "%s için en az %s cihaz gereklidir"
 #: service/lib/agama/storage/config_checkers/md_raid.rb:168
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be deleted because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be deleted because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
 "'%{member}' aygıtı silinemez çünkü MD RAID %{md_raid}'in bir parçasıdır"
 
@@ -486,8 +486,8 @@ msgstr ""
 #: service/lib/agama/storage/config_checkers/md_raid.rb:191
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be resized because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be resized because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
 "'%{member}' aygıtı MD RAID %{md_raid}'in bir parçası olduğu için yeniden "
 "boyutlandırılamaz"
@@ -525,8 +525,8 @@ msgstr ""
 #: service/lib/agama/storage/config_checkers/md_raid.rb:259
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be used because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be used because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
 "'%{member}' aygıtı, MD RAID %{md_raid}'in bir parçası olduğu için "
 "kullanılamaz"
@@ -716,36 +716,39 @@ msgstr "iSCSI hedeflerine giriş"
 msgid "Cannot login to iSCSI target %s"
 msgstr "iSCSI hedefine %s giriş yapılamıyor"
 
-#. Underlying yast-storage-ng has own mechanism for proposing boot strategies.
-#. However, we don't always want to use BLS when it proposes so. Currently
-#. we want to use BLS only for Tumbleweed / Slowroll
-#: service/lib/agama/storage/manager.rb:131
+#. Probes storage devices and performs an initial proposal
+#.
+#. @param keep_config [Boolean] Whether to use the current storage config for calculating the
+#. proposal.
+#. @param keep_activation [Boolean] Whether to keep the current activation (e.g., provided LUKS
+#. passwords).
+#: service/lib/agama/storage/manager.rb:126
 msgid "Activating storage devices"
 msgstr "Depolama aygıtlarını etkinleştiriliyor"
 
-#: service/lib/agama/storage/manager.rb:132
+#: service/lib/agama/storage/manager.rb:127
 msgid "Probing storage devices"
 msgstr "Depolama aygıtları araştırılıyor"
 
-#: service/lib/agama/storage/manager.rb:133
+#: service/lib/agama/storage/manager.rb:128
 msgid "Calculating the storage proposal"
 msgstr "Depolama önerisi hesaplanıyor"
 
 #. Prepares the partitioning to install the system
-#: service/lib/agama/storage/manager.rb:145
+#: service/lib/agama/storage/manager.rb:151
 msgid "Preparing bootloader proposal"
 msgstr "Bootloader bölümü hazırlanıyor"
 
 #. then also apply changes to that proposal
-#: service/lib/agama/storage/manager.rb:152
+#: service/lib/agama/storage/manager.rb:158
 msgid "Adding storage-related packages"
 msgstr "Depolamayla ilgili paketler ekleme"
 
-#: service/lib/agama/storage/manager.rb:153
+#: service/lib/agama/storage/manager.rb:159
 msgid "Preparing the storage devices"
 msgstr "Depolama cihazları hazırlanıyor"
 
-#: service/lib/agama/storage/manager.rb:154
+#: service/lib/agama/storage/manager.rb:160
 msgid "Writing bootloader sysconfig"
 msgstr "bootloader sysconfig yazılıyor"
 

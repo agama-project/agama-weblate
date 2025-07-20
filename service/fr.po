@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-17 03:18+0000\n"
+"POT-Creation-Date: 2025-07-20 03:27+0000\n"
 "PO-Revision-Date: 2025-06-17 10:59+0000\n"
 "Last-Translator: Sophie Leroy <sophie@stoquart.com>\n"
 "Language-Team: French <https://l10n.opensuse.org/projects/agama/agama-"
@@ -233,8 +233,8 @@ msgid ""
 "anyway?"
 msgstr ""
 "Le fichier %{filename} provenant de %{repo_url} est signé numériquement avec "
-"la clé GnuPG suivante, mais le contrôle d'intégrité a échoué : %{key_id} (%"
-"{key_name}). Voulez-vous l'utiliser malgré tout ?"
+"la clé GnuPG suivante, mais le contrôle d'intégrité a échoué : %{key_id} "
+"(%{key_name}). Voulez-vous l'utiliser malgré tout ?"
 
 #: service/lib/agama/software/callbacks/signature.rb:175
 #, perl-brace-format
@@ -419,8 +419,8 @@ msgstr "Il n'existe pas de périphérique de démarrage portant l'alias '%s'"
 msgid ""
 "No passphrase provided (required for using the method '%{crypt_method}')."
 msgstr ""
-"Aucune phrase secrète fournie (nécessaire pour utiliser la méthode '%"
-"{crypt_method}')."
+"Aucune phrase secrète fournie (nécessaire pour utiliser la méthode "
+"'%{crypt_method}')."
 
 #. TRANSLATORS: 'crypt_method' is the identifier of the method to encrypt the device
 #. (e.g., 'luks1', 'random_swap').
@@ -452,8 +452,8 @@ msgstr "Type de système de fichiers manquant pour '%s'"
 #, perl-brace-format
 msgid "The file system type '%{filesystem}' is not suitable for '%{path}'"
 msgstr ""
-"Le type de système de fichiers '%{filesystem}' n'est pas adapté pour '%"
-"{path}'"
+"Le type de système de fichiers '%{filesystem}' n'est pas adapté pour "
+"'%{path}'"
 
 #. TRANSLATORS: %s is the replaced by a device alias (e.g., "pv1").
 #: service/lib/agama/storage/config_checkers/logical_volume.rb:82
@@ -489,8 +489,8 @@ msgstr "Au moins %s périphériques sont requis pour %s"
 #: service/lib/agama/storage/config_checkers/md_raid.rb:168
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be deleted because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be deleted because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
 "Le périphérique '%{member}' ne peut pas être supprimé, car il fait partie du "
 "MD RAID %{md_raid}"
@@ -502,8 +502,8 @@ msgstr ""
 #: service/lib/agama/storage/config_checkers/md_raid.rb:191
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be resized because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be resized because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
 "Le périphérique '%{member}' ne peut pas être redimensionné, car il fait "
 "partie du MD RAID %{md_raid}"
@@ -541,8 +541,8 @@ msgstr ""
 #: service/lib/agama/storage/config_checkers/md_raid.rb:259
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be used because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be used because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
 "Le périphérique '%{member}' ne peut pas être utilisé, car il fait partie du "
 "MD RAID %{md_raid}"
@@ -744,36 +744,39 @@ msgstr "Connecter les cibles iCSI"
 msgid "Cannot login to iSCSI target %s"
 msgstr "Impossible de se connecter à la cible iSCSI %s"
 
-#. Underlying yast-storage-ng has own mechanism for proposing boot strategies.
-#. However, we don't always want to use BLS when it proposes so. Currently
-#. we want to use BLS only for Tumbleweed / Slowroll
-#: service/lib/agama/storage/manager.rb:131
+#. Probes storage devices and performs an initial proposal
+#.
+#. @param keep_config [Boolean] Whether to use the current storage config for calculating the
+#. proposal.
+#. @param keep_activation [Boolean] Whether to keep the current activation (e.g., provided LUKS
+#. passwords).
+#: service/lib/agama/storage/manager.rb:126
 msgid "Activating storage devices"
 msgstr "Activation des périphériques de stockage"
 
-#: service/lib/agama/storage/manager.rb:132
+#: service/lib/agama/storage/manager.rb:127
 msgid "Probing storage devices"
 msgstr "Sonde les périphériques de stockage"
 
-#: service/lib/agama/storage/manager.rb:133
+#: service/lib/agama/storage/manager.rb:128
 msgid "Calculating the storage proposal"
 msgstr "Calcul de la proposition de stockage"
 
 #. Prepares the partitioning to install the system
-#: service/lib/agama/storage/manager.rb:145
+#: service/lib/agama/storage/manager.rb:151
 msgid "Preparing bootloader proposal"
 msgstr "Préparation du chargeur d'amorçage envisagé"
 
 #. then also apply changes to that proposal
-#: service/lib/agama/storage/manager.rb:152
+#: service/lib/agama/storage/manager.rb:158
 msgid "Adding storage-related packages"
 msgstr "Ajout des paquets relatifs au stockage"
 
-#: service/lib/agama/storage/manager.rb:153
+#: service/lib/agama/storage/manager.rb:159
 msgid "Preparing the storage devices"
 msgstr "Préparation des périphériques de stockage"
 
-#: service/lib/agama/storage/manager.rb:154
+#: service/lib/agama/storage/manager.rb:160
 msgid "Writing bootloader sysconfig"
 msgstr "Écriture du sysconfig du chargeur d'amorçage"
 
@@ -809,11 +812,11 @@ msgid "The following selected device is not found in the system: %{devices}"
 msgid_plural ""
 "The following selected devices are not found in the system: %{devices}"
 msgstr[0] ""
-"Le périphérique sélectionné suivant est introuvable dans le système : %"
-"{devices}"
+"Le périphérique sélectionné suivant est introuvable dans le système : "
+"%{devices}"
 msgstr[1] ""
-"Les périphériques sélectionnés suivants sont introuvables dans le système : %"
-"{devices}"
+"Les périphériques sélectionnés suivants sont introuvables dans le système : "
+"%{devices}"
 
 #. Recalculates the list of issues
 #: service/lib/agama/users.rb:154

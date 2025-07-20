@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-17 03:18+0000\n"
+"POT-Creation-Date: 2025-07-20 03:27+0000\n"
 "PO-Revision-Date: 2025-07-07 09:59+0000\n"
 "Last-Translator: David Medina <medipas@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.opensuse.org/projects/agama/agama-"
@@ -228,8 +228,8 @@ msgid ""
 "anyway?"
 msgstr ""
 "El fitxer %{filename} de %{repo_url} està signat digitalment amb la clau "
-"GnuPG següent, però la comprovació d'integritat ha fallat: %{key_id} (%"
-"{key_name}). Voleu usar-lo tanmateix?"
+"GnuPG següent, però la comprovació d'integritat ha fallat: %{key_id} "
+"(%{key_name}). Voleu usar-lo tanmateix?"
 
 #: service/lib/agama/software/callbacks/signature.rb:175
 #, perl-brace-format
@@ -412,8 +412,8 @@ msgstr "No hi ha cap dispositiu d'arrencada amb l'àlies %s."
 msgid ""
 "No passphrase provided (required for using the method '%{crypt_method}')."
 msgstr ""
-"No s'ha proporcionat cap frase de contrasenya (cal per usar el mètode %"
-"{crypt_method})."
+"No s'ha proporcionat cap frase de contrasenya (cal per usar el mètode "
+"%{crypt_method})."
 
 #. TRANSLATORS: 'crypt_method' is the identifier of the method to encrypt the device
 #. (e.g., 'luks1', 'random_swap').
@@ -480,11 +480,11 @@ msgstr "Calen almenys %s dispositius per a %s."
 #: service/lib/agama/storage/config_checkers/md_raid.rb:168
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be deleted because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be deleted because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
-"El dispositiu %{member} no es pot suprimir perquè forma part de la RAID MD %"
-"{md_raid}"
+"El dispositiu %{member} no es pot suprimir perquè forma part de la RAID MD "
+"%{md_raid}"
 
 #. Issue if the device member is resized.
 #.
@@ -493,8 +493,8 @@ msgstr ""
 #: service/lib/agama/storage/config_checkers/md_raid.rb:191
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be resized because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be resized because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
 "No es pot canviar la mida del dispositiu %{member} perquè forma part de la "
 "RAID MD %{md_raid}"
@@ -509,8 +509,8 @@ msgid ""
 "The device '%{member}' cannot be formatted because it is part of the MD RAID "
 "%{md_raid}"
 msgstr ""
-"El dispositiu %{member} no es pot formatar perquè forma part de la RAID MD %"
-"{md_raid}"
+"El dispositiu %{member} no es pot formatar perquè forma part de la RAID MD "
+"%{md_raid}"
 
 #. Issue if the device member is partitioned.
 #.
@@ -522,8 +522,8 @@ msgid ""
 "The device '%{member}' cannot be partitioned because it is part of the MD "
 "RAID %{md_raid}"
 msgstr ""
-"El dispositiu %{member} no es pot partir perquè forma part de la RAID MD %"
-"{md_raid}"
+"El dispositiu %{member} no es pot partir perquè forma part de la RAID MD "
+"%{md_raid}"
 
 #. Issue if the device member is used by other device (e.g., as target for physical volumes).
 #.
@@ -532,11 +532,11 @@ msgstr ""
 #: service/lib/agama/storage/config_checkers/md_raid.rb:259
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be used because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be used because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
-"El dispositiu %{member} no es pot usar perquè forma part de la RAID MD %"
-"{md_raid}"
+"El dispositiu %{member} no es pot usar perquè forma part de la RAID MD "
+"%{md_raid}"
 
 #. Issue if the parent of the device member is formatted.
 #.
@@ -548,8 +548,8 @@ msgid ""
 "The device '%{device}' cannot be formatted because it is part of the MD RAID "
 "%{md_raid}"
 msgstr ""
-"El dispositiu %{device} no es pot formatar perquè forma part de la RAID MD %"
-"{md_raid}"
+"El dispositiu %{device} no es pot formatar perquè forma part de la RAID MD "
+"%{md_raid}"
 
 #. TRANSLATORS: 'method' is the identifier of the method to encrypt the device
 #. (e.g., 'luks1').
@@ -727,36 +727,39 @@ msgstr "Inicia sessió als objectius iSCSI"
 msgid "Cannot login to iSCSI target %s"
 msgstr "No es pot iniciar sessió a l'objectiu iSCSI %s."
 
-#. Underlying yast-storage-ng has own mechanism for proposing boot strategies.
-#. However, we don't always want to use BLS when it proposes so. Currently
-#. we want to use BLS only for Tumbleweed / Slowroll
-#: service/lib/agama/storage/manager.rb:131
+#. Probes storage devices and performs an initial proposal
+#.
+#. @param keep_config [Boolean] Whether to use the current storage config for calculating the
+#. proposal.
+#. @param keep_activation [Boolean] Whether to keep the current activation (e.g., provided LUKS
+#. passwords).
+#: service/lib/agama/storage/manager.rb:126
 msgid "Activating storage devices"
 msgstr "Activant els dispositius d'emmagatzematge"
 
-#: service/lib/agama/storage/manager.rb:132
+#: service/lib/agama/storage/manager.rb:127
 msgid "Probing storage devices"
 msgstr "Sondant els dispositius d'emmagatzematge"
 
-#: service/lib/agama/storage/manager.rb:133
+#: service/lib/agama/storage/manager.rb:128
 msgid "Calculating the storage proposal"
 msgstr "Calculant la proposta d'emmagatzematge"
 
 #. Prepares the partitioning to install the system
-#: service/lib/agama/storage/manager.rb:145
+#: service/lib/agama/storage/manager.rb:151
 msgid "Preparing bootloader proposal"
 msgstr "Preparant la proposta de carregador d'arrencada"
 
 #. then also apply changes to that proposal
-#: service/lib/agama/storage/manager.rb:152
+#: service/lib/agama/storage/manager.rb:158
 msgid "Adding storage-related packages"
 msgstr "Afegint paquets relacionats amb l'emmagatzematge"
 
-#: service/lib/agama/storage/manager.rb:153
+#: service/lib/agama/storage/manager.rb:159
 msgid "Preparing the storage devices"
 msgstr "Preparant els dispositius d'emmagatzematge"
 
-#: service/lib/agama/storage/manager.rb:154
+#: service/lib/agama/storage/manager.rb:160
 msgid "Writing bootloader sysconfig"
 msgstr "Escrivint la configuració de sistema del carregador d'arrencada"
 
