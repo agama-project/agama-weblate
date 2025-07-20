@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-17 03:18+0000\n"
+"POT-Creation-Date: 2025-07-20 03:27+0000\n"
 "PO-Revision-Date: 2025-07-19 19:59+0000\n"
 "Last-Translator: Eugene Krater <lachend@gmail.com>\n"
 "Language-Team: Ukrainian <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -254,7 +254,7 @@ msgstr "Аутентифікація"
 
 #: src/components/core/IssuesDrawer.tsx:50
 #: src/components/overview/StorageSection.tsx:112
-#: src/components/storage/ProposalPage.tsx:250 src/routes/storage.tsx:46
+#: src/components/storage/ProposalPage.tsx:259 src/routes/storage.tsx:46
 msgid "Storage"
 msgstr "Сховище"
 
@@ -379,6 +379,7 @@ msgid "Loading data..."
 msgstr "Завантаження даних..."
 
 #: src/components/core/ProgressReport.tsx:57
+#: src/components/storage/Progress.tsx:56
 msgid "Pending"
 msgstr "Очікуйте"
 
@@ -387,6 +388,7 @@ msgid "In progress"
 msgstr "В процесі"
 
 #: src/components/core/ProgressReport.tsx:81
+#: src/components/storage/Progress.tsx:65
 msgid "Finished"
 msgstr "Завершено"
 
@@ -974,7 +976,7 @@ msgstr "Дротові з'єднання не знайдено"
 msgid "The system will use %s as its default language."
 msgstr "Система буде використовувати %s як типову мову."
 
-#: src/components/overview/OverviewPage.tsx:35 src/router.tsx:50
+#: src/components/overview/OverviewPage.tsx:35 src/router.tsx:51
 msgid "Overview"
 msgstr "Огляд"
 
@@ -1064,11 +1066,12 @@ msgstr "Немає доступних дисків для встановленн
 msgid "Install using an advanced configuration."
 msgstr "Встановіть за допомогою розширеної конфігурації."
 
-#: src/components/product/LicenseDialog.tsx:46
-msgid "License language"
-msgstr "Мова ліцензії"
+#: src/components/product/LicenseDialog.tsx:40
+#, c-format
+msgid "This license is not available in %s."
+msgstr ""
 
-#: src/components/product/LicenseDialog.tsx:93
+#: src/components/product/LicenseDialog.tsx:74
 #: src/components/software/SoftwareConflicts.tsx:294
 #: src/components/software/SoftwarePatternsSelection.tsx:207
 msgid "Close"
@@ -1753,54 +1756,63 @@ msgstr "скинути до типових налаштувань"
 msgid "[FIXME]"
 msgstr "[FIXME]"
 
-#: src/components/storage/ConfigEditorMenu.tsx:57
+#: src/components/storage/ConfigEditorMenu.tsx:59
 msgid "Other options toggle"
 msgstr "Показати інші налаштування"
 
-#: src/components/storage/ConfigEditorMenu.tsx:60
+#: src/components/storage/ConfigEditorMenu.tsx:62
 msgid "Other options"
 msgstr "Інші опції"
 
-#: src/components/storage/ConfigEditorMenu.tsx:68
+#: src/components/storage/ConfigEditorMenu.tsx:70
 msgid "Select the disk to configure partitions for booting"
 msgstr "Виберіть диск для налаштування розділів для завантаження"
 
-#: src/components/storage/ConfigEditorMenu.tsx:70
+#: src/components/storage/ConfigEditorMenu.tsx:72
 msgid "Change boot options"
 msgstr "Змінити параметри завантаження"
 
-#: src/components/storage/ConfigEditorMenu.tsx:75
+#: src/components/storage/ConfigEditorMenu.tsx:77
 msgid "Start from scratch with the default configuration"
 msgstr "Почати з нуля зі стандартною конфігурацією"
 
-#: src/components/storage/ConfigEditorMenu.tsx:77
+#: src/components/storage/ConfigEditorMenu.tsx:79
 msgid "Reset to defaults"
 msgstr "Скинути до типових налаштувань"
 
-#: src/components/storage/ConfigEditorMenu.tsx:83
+#: src/components/storage/ConfigEditorMenu.tsx:85
 msgid "Discover and connect to iSCSI targets"
 msgstr "Виявлення та підключення до iSCSI-об'єктів"
 
-#: src/components/storage/ConfigEditorMenu.tsx:85
+#: src/components/storage/ConfigEditorMenu.tsx:87
 msgid "Configure iSCSI"
 msgstr "Налаштувати iSCSI"
 
-#: src/components/storage/ConfigEditorMenu.tsx:91
-#: src/components/storage/ProposalPage.tsx:153
+#: src/components/storage/ConfigEditorMenu.tsx:93
+#: src/components/storage/ProposalPage.tsx:155
 msgid "Activate zFCP disks"
 msgstr "Активувати диски zFCP"
 
-#: src/components/storage/ConfigEditorMenu.tsx:93
+#: src/components/storage/ConfigEditorMenu.tsx:95
 msgid "Configure zFCP"
 msgstr "Налаштувати zFCP"
 
-#: src/components/storage/ConfigEditorMenu.tsx:100
+#: src/components/storage/ConfigEditorMenu.tsx:102
 msgid "Activate and format DASD devices"
 msgstr "Активувати та форматувати DASD-пристрої"
 
-#: src/components/storage/ConfigEditorMenu.tsx:102
+#: src/components/storage/ConfigEditorMenu.tsx:104
 msgid "Configure DASD"
 msgstr "Налаштувати DASD"
+
+#: src/components/storage/ConfigEditorMenu.tsx:110
+msgid "Update available disks and activate crypt devices"
+msgstr ""
+
+#: src/components/storage/ConfigEditorMenu.tsx:112
+#, fuzzy
+msgid "Rescan devices"
+msgstr "Прочитати пристрої zFCP"
 
 #: src/components/storage/ConfigureDeviceMenu.tsx:48
 msgid "Select a device to define partitions or to mount"
@@ -2526,6 +2538,11 @@ msgstr "Додати новий розділ або змонтувати ная�
 msgid "Add or use partition"
 msgstr "Створити або використати розділ"
 
+#: src/components/storage/Progress.tsx:117
+#, fuzzy
+msgid "Loading storage"
+msgstr "Завантаження даних..."
+
 #: src/components/storage/ProposalActionsDialog.tsx:73
 #, c-format
 msgid "Hide %d subvolume action"
@@ -2576,11 +2593,11 @@ msgstr ""
 msgid "Failed to calculate a storage layout"
 msgstr "Не вдалося розрахувати схему зберігання"
 
-#: src/components/storage/ProposalPage.tsx:68
+#: src/components/storage/ProposalPage.tsx:70
 msgid "Invalid storage settings"
 msgstr "Неправильні налаштування сховища"
 
-#: src/components/storage/ProposalPage.tsx:89
+#: src/components/storage/ProposalPage.tsx:91
 msgid ""
 "You may want to discard those settings and start from scratch with a simple "
 "configuration."
@@ -2588,24 +2605,24 @@ msgstr ""
 "Можливо, Ви захочете відкинути ці налаштування і почати з чистого аркуша з "
 "простою конфігурацією."
 
-#: src/components/storage/ProposalPage.tsx:93
-#: src/components/storage/ProposalPage.tsx:121
+#: src/components/storage/ProposalPage.tsx:95
+#: src/components/storage/ProposalPage.tsx:123
 #: src/components/storage/UnsupportedModelInfo.tsx:55
 msgid "Reset to the default configuration"
 msgstr "Скинути до типової конфігурації"
 
-#: src/components/storage/ProposalPage.tsx:105
+#: src/components/storage/ProposalPage.tsx:107
 #: src/components/storage/UnsupportedModelInfo.tsx:39
 msgid "Unable to modify the settings"
 msgstr "Не вдається змінити налаштування"
 
-#: src/components/storage/ProposalPage.tsx:111
+#: src/components/storage/ProposalPage.tsx:113
 msgid ""
 "The storage configuration uses elements not supported by this interface."
 msgstr ""
 "Конфігурація сховища використовує елементи, не підтримувані цим інтерфейсом."
 
-#: src/components/storage/ProposalPage.tsx:117
+#: src/components/storage/ProposalPage.tsx:119
 msgid ""
 "You may want to discard the current settings and start from scratch with a "
 "simple configuration."
@@ -2613,7 +2630,7 @@ msgstr ""
 "Можливо, Ви захочете відкинути поточні налаштування і почати з чистого "
 "аркуша з простою конфігурацією."
 
-#: src/components/storage/ProposalPage.tsx:133
+#: src/components/storage/ProposalPage.tsx:135
 msgid ""
 "There are not disks available for the installation. You may need to "
 "configure some device."
@@ -2621,23 +2638,23 @@ msgstr ""
 "Диски для встановлення не доступні. Можливо, вам потрібно налаштувати якийсь "
 "пристрій."
 
-#: src/components/storage/ProposalPage.tsx:138
+#: src/components/storage/ProposalPage.tsx:140
 msgid "No devices found"
 msgstr "Пристроїв не знайдено"
 
-#: src/components/storage/ProposalPage.tsx:147
+#: src/components/storage/ProposalPage.tsx:149
 msgid "Connect to iSCSI targets"
 msgstr "Підключення до об'єктів iSCSI"
 
-#: src/components/storage/ProposalPage.tsx:160
+#: src/components/storage/ProposalPage.tsx:162
 msgid "Manage DASD devices"
 msgstr "Керування DASD-пристроями"
 
-#: src/components/storage/ProposalPage.tsx:194
+#: src/components/storage/ProposalPage.tsx:196
 msgid "Installation Devices"
 msgstr "Пристрої для встановлення"
 
-#: src/components/storage/ProposalPage.tsx:196
+#: src/components/storage/ProposalPage.tsx:198
 msgid ""
 "Structure of the new system, including disks to use and additional devices "
 "like LVM volume groups."
@@ -2645,7 +2662,7 @@ msgstr ""
 "Структура нової системи, включаючи використовувані диски та додаткові "
 "пристрої, такі як групи томів LVM."
 
-#: src/components/storage/ProposalPage.tsx:253
+#: src/components/storage/ProposalPage.tsx:262
 msgid "Reloading data, please wait..."
 msgstr "Переміщення даних; будь ласка, зачекайте…"
 
@@ -3724,7 +3741,7 @@ msgstr "Не вдалося оновити ім'я хоста"
 msgid "Using transient hostname: %s"
 msgstr "Використання перехідного імені хоста: %s"
 
-#: src/components/system/HostnamePage.tsx:80 src/router.tsx:55
+#: src/components/system/HostnamePage.tsx:80 src/router.tsx:56
 msgid "Hostname"
 msgstr "Ім'я хоста"
 
@@ -3881,6 +3898,9 @@ msgstr "Використати відкритий ключ SSH"
 #: src/routes/storage.tsx:113
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#~ msgid "License language"
+#~ msgstr "Мова ліцензії"
 
 #~ msgid "Partitions"
 #~ msgstr "Розділи"

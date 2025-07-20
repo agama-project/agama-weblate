@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-17 03:18+0000\n"
+"POT-Creation-Date: 2025-07-20 03:27+0000\n"
 "PO-Revision-Date: 2025-06-13 10:59+0000\n"
 "Last-Translator: Davide Aiello <davide.aiello@novilingulists.com>\n"
 "Language-Team: Italian <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -263,7 +263,7 @@ msgstr "Autenticazione"
 
 #: src/components/core/IssuesDrawer.tsx:50
 #: src/components/overview/StorageSection.tsx:112
-#: src/components/storage/ProposalPage.tsx:250 src/routes/storage.tsx:46
+#: src/components/storage/ProposalPage.tsx:259 src/routes/storage.tsx:46
 msgid "Storage"
 msgstr "Archiviazione"
 
@@ -386,6 +386,7 @@ msgid "Loading data..."
 msgstr "Caricamento dati..."
 
 #: src/components/core/ProgressReport.tsx:57
+#: src/components/storage/Progress.tsx:56
 msgid "Pending"
 msgstr "In attesa"
 
@@ -394,6 +395,7 @@ msgid "In progress"
 msgstr "In corso"
 
 #: src/components/core/ProgressReport.tsx:81
+#: src/components/storage/Progress.tsx:65
 msgid "Finished"
 msgstr "Terminato"
 
@@ -987,7 +989,7 @@ msgstr "Nessuna connessione via cavo trovata"
 msgid "The system will use %s as its default language."
 msgstr "Il sistema userà %s come linguaggio predefinito."
 
-#: src/components/overview/OverviewPage.tsx:35 src/router.tsx:50
+#: src/components/overview/OverviewPage.tsx:35 src/router.tsx:51
 msgid "Overview"
 msgstr "Panoramica"
 
@@ -1083,11 +1085,12 @@ msgstr "Non è disponibile alcun disco per l'installazione."
 msgid "Install using an advanced configuration."
 msgstr "Esegui l'installazione con una configurazione avanzata."
 
-#: src/components/product/LicenseDialog.tsx:46
-msgid "License language"
-msgstr "Lingua del contratto di licenza"
+#: src/components/product/LicenseDialog.tsx:40
+#, c-format
+msgid "This license is not available in %s."
+msgstr ""
 
-#: src/components/product/LicenseDialog.tsx:93
+#: src/components/product/LicenseDialog.tsx:74
 #: src/components/software/SoftwareConflicts.tsx:294
 #: src/components/software/SoftwarePatternsSelection.tsx:207
 msgid "Close"
@@ -1776,54 +1779,63 @@ msgstr "ripristina le impostazioni predefinite"
 msgid "[FIXME]"
 msgstr ""
 
-#: src/components/storage/ConfigEditorMenu.tsx:57
+#: src/components/storage/ConfigEditorMenu.tsx:59
 msgid "Other options toggle"
 msgstr "Commutazione di altre opzioni"
 
-#: src/components/storage/ConfigEditorMenu.tsx:60
+#: src/components/storage/ConfigEditorMenu.tsx:62
 msgid "Other options"
 msgstr "Altre opzioni"
 
-#: src/components/storage/ConfigEditorMenu.tsx:68
+#: src/components/storage/ConfigEditorMenu.tsx:70
 msgid "Select the disk to configure partitions for booting"
 msgstr "L'installazione non provvederà a configurare le partizioni per l'avvio"
 
-#: src/components/storage/ConfigEditorMenu.tsx:70
+#: src/components/storage/ConfigEditorMenu.tsx:72
 msgid "Change boot options"
 msgstr "Cambia le opzioni di boot"
 
-#: src/components/storage/ConfigEditorMenu.tsx:75
+#: src/components/storage/ConfigEditorMenu.tsx:77
 msgid "Start from scratch with the default configuration"
 msgstr "Inizia da zero con la configurazione predefinita"
 
-#: src/components/storage/ConfigEditorMenu.tsx:77
+#: src/components/storage/ConfigEditorMenu.tsx:79
 msgid "Reset to defaults"
 msgstr "Ripristina le impostazioni predefinite"
 
-#: src/components/storage/ConfigEditorMenu.tsx:83
+#: src/components/storage/ConfigEditorMenu.tsx:85
 msgid "Discover and connect to iSCSI targets"
 msgstr "Individua e stabilisci una connessione con i target iSCSI"
 
-#: src/components/storage/ConfigEditorMenu.tsx:85
+#: src/components/storage/ConfigEditorMenu.tsx:87
 msgid "Configure iSCSI"
 msgstr "Configura iSCSI"
 
-#: src/components/storage/ConfigEditorMenu.tsx:91
-#: src/components/storage/ProposalPage.tsx:153
+#: src/components/storage/ConfigEditorMenu.tsx:93
+#: src/components/storage/ProposalPage.tsx:155
 msgid "Activate zFCP disks"
 msgstr "Attiva i dischi zFCP"
 
-#: src/components/storage/ConfigEditorMenu.tsx:93
+#: src/components/storage/ConfigEditorMenu.tsx:95
 msgid "Configure zFCP"
 msgstr "Configura zFCP"
 
-#: src/components/storage/ConfigEditorMenu.tsx:100
+#: src/components/storage/ConfigEditorMenu.tsx:102
 msgid "Activate and format DASD devices"
 msgstr "Attiva e formatta i dispositivi DASD"
 
-#: src/components/storage/ConfigEditorMenu.tsx:102
+#: src/components/storage/ConfigEditorMenu.tsx:104
 msgid "Configure DASD"
 msgstr "Configura DASD"
+
+#: src/components/storage/ConfigEditorMenu.tsx:110
+msgid "Update available disks and activate crypt devices"
+msgstr ""
+
+#: src/components/storage/ConfigEditorMenu.tsx:112
+#, fuzzy
+msgid "Rescan devices"
+msgstr "Leggi i dispositivi zFCP"
 
 #: src/components/storage/ConfigureDeviceMenu.tsx:48
 #, fuzzy
@@ -2556,6 +2568,11 @@ msgstr "Aggiungi un'altra partizione o montane una esistente"
 msgid "Add or use partition"
 msgstr "Aggiungi o usa partizione"
 
+#: src/components/storage/Progress.tsx:117
+#, fuzzy
+msgid "Loading storage"
+msgstr "Caricamento dati..."
+
 #: src/components/storage/ProposalActionsDialog.tsx:73
 #, c-format
 msgid "Hide %d subvolume action"
@@ -2604,11 +2621,11 @@ msgstr ""
 msgid "Failed to calculate a storage layout"
 msgstr "Calcolo di un layout di memorizzazione non riuscito"
 
-#: src/components/storage/ProposalPage.tsx:68
+#: src/components/storage/ProposalPage.tsx:70
 msgid "Invalid storage settings"
 msgstr "Impostazioni di memorizzazione non valide"
 
-#: src/components/storage/ProposalPage.tsx:89
+#: src/components/storage/ProposalPage.tsx:91
 msgid ""
 "You may want to discard those settings and start from scratch with a simple "
 "configuration."
@@ -2616,25 +2633,25 @@ msgstr ""
 "Se lo si desidera, è possibile ignorare tali impostazioni e iniziare da zero "
 "con una configurazione semplice."
 
-#: src/components/storage/ProposalPage.tsx:93
-#: src/components/storage/ProposalPage.tsx:121
+#: src/components/storage/ProposalPage.tsx:95
+#: src/components/storage/ProposalPage.tsx:123
 #: src/components/storage/UnsupportedModelInfo.tsx:55
 msgid "Reset to the default configuration"
 msgstr "Ripristina la configurazione predefinita"
 
-#: src/components/storage/ProposalPage.tsx:105
+#: src/components/storage/ProposalPage.tsx:107
 #: src/components/storage/UnsupportedModelInfo.tsx:39
 msgid "Unable to modify the settings"
 msgstr "Impossibile modificare le impostazioni"
 
-#: src/components/storage/ProposalPage.tsx:111
+#: src/components/storage/ProposalPage.tsx:113
 msgid ""
 "The storage configuration uses elements not supported by this interface."
 msgstr ""
 "La configurazione di memorizzazione usa elementi non supportati da questa "
 "interfaccia."
 
-#: src/components/storage/ProposalPage.tsx:117
+#: src/components/storage/ProposalPage.tsx:119
 msgid ""
 "You may want to discard the current settings and start from scratch with a "
 "simple configuration."
@@ -2642,7 +2659,7 @@ msgstr ""
 "Se lo si desidera, è possibile ignorare le impostazioni attuali e iniziare "
 "da zero con una configurazione semplice."
 
-#: src/components/storage/ProposalPage.tsx:133
+#: src/components/storage/ProposalPage.tsx:135
 msgid ""
 "There are not disks available for the installation. You may need to "
 "configure some device."
@@ -2650,23 +2667,23 @@ msgstr ""
 "Non ci sono dischi disponibili per l'installazione. Potrebbe essere "
 "necessario configurare almeno un dispositivo."
 
-#: src/components/storage/ProposalPage.tsx:138
+#: src/components/storage/ProposalPage.tsx:140
 msgid "No devices found"
 msgstr "Nessun dispositivo trovato"
 
-#: src/components/storage/ProposalPage.tsx:147
+#: src/components/storage/ProposalPage.tsx:149
 msgid "Connect to iSCSI targets"
 msgstr "Connetti a periferiche iSCSI"
 
-#: src/components/storage/ProposalPage.tsx:160
+#: src/components/storage/ProposalPage.tsx:162
 msgid "Manage DASD devices"
 msgstr "Gestisci dispositivi DASD"
 
-#: src/components/storage/ProposalPage.tsx:194
+#: src/components/storage/ProposalPage.tsx:196
 msgid "Installation Devices"
 msgstr "Dispositivi di installazione"
 
-#: src/components/storage/ProposalPage.tsx:196
+#: src/components/storage/ProposalPage.tsx:198
 msgid ""
 "Structure of the new system, including disks to use and additional devices "
 "like LVM volume groups."
@@ -2674,7 +2691,7 @@ msgstr ""
 "Struttura del nuovo sistema, compresi i dischi da utilizzare e i dispositivi "
 "aggiuntivi come i gruppi di volumi LVM."
 
-#: src/components/storage/ProposalPage.tsx:253
+#: src/components/storage/ProposalPage.tsx:262
 msgid "Reloading data, please wait..."
 msgstr "Ricaricamento dei dati in corso, attendere..."
 
@@ -3775,7 +3792,7 @@ msgstr "Impossibile aggiornare il nome host"
 msgid "Using transient hostname: %s"
 msgstr "Uso del nome host transitorio: %s"
 
-#: src/components/system/HostnamePage.tsx:80 src/router.tsx:55
+#: src/components/system/HostnamePage.tsx:80 src/router.tsx:56
 msgid "Hostname"
 msgstr "Nome host"
 
@@ -3935,6 +3952,9 @@ msgstr "Usa chiave SSH pubblica"
 #: src/routes/storage.tsx:113
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#~ msgid "License language"
+#~ msgstr "Lingua del contratto di licenza"
 
 #~ msgid "Partitions"
 #~ msgstr "Partizioni"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-17 03:18+0000\n"
+"POT-Creation-Date: 2025-07-20 03:27+0000\n"
 "PO-Revision-Date: 2025-07-17 07:59+0000\n"
 "Last-Translator: David Medina <medipas@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -259,7 +259,7 @@ msgstr "Autenticació"
 
 #: src/components/core/IssuesDrawer.tsx:50
 #: src/components/overview/StorageSection.tsx:112
-#: src/components/storage/ProposalPage.tsx:250 src/routes/storage.tsx:46
+#: src/components/storage/ProposalPage.tsx:259 src/routes/storage.tsx:46
 msgid "Storage"
 msgstr "Emmagatzematge"
 
@@ -384,6 +384,7 @@ msgid "Loading data..."
 msgstr "Carregant dades..."
 
 #: src/components/core/ProgressReport.tsx:57
+#: src/components/storage/Progress.tsx:56
 msgid "Pending"
 msgstr "Pendent"
 
@@ -392,6 +393,7 @@ msgid "In progress"
 msgstr "En curs"
 
 #: src/components/core/ProgressReport.tsx:81
+#: src/components/storage/Progress.tsx:65
 msgid "Finished"
 msgstr "Acabada"
 
@@ -981,7 +983,7 @@ msgstr "No s'ha trobat cap connexió amb fil"
 msgid "The system will use %s as its default language."
 msgstr "El sistema usarà el %s com a llengua per defecte."
 
-#: src/components/overview/OverviewPage.tsx:35 src/router.tsx:50
+#: src/components/overview/OverviewPage.tsx:35 src/router.tsx:51
 msgid "Overview"
 msgstr "Resum"
 
@@ -1072,11 +1074,12 @@ msgstr "No hi ha discs disponibles per a la instal·lació."
 msgid "Install using an advanced configuration."
 msgstr "Instal·la mitjançant una configuració avançada."
 
-#: src/components/product/LicenseDialog.tsx:46
-msgid "License language"
-msgstr "Llengua de la llicència"
+#: src/components/product/LicenseDialog.tsx:40
+#, c-format
+msgid "This license is not available in %s."
+msgstr ""
 
-#: src/components/product/LicenseDialog.tsx:93
+#: src/components/product/LicenseDialog.tsx:74
 #: src/components/software/SoftwareConflicts.tsx:294
 #: src/components/software/SoftwarePatternsSelection.tsx:207
 msgid "Close"
@@ -1761,58 +1764,68 @@ msgstr "restableix els valors predeterminats"
 msgid "[FIXME]"
 msgstr "[FIXME]"
 
-#: src/components/storage/ConfigEditorMenu.tsx:57
+#: src/components/storage/ConfigEditorMenu.tsx:59
 msgid "Other options toggle"
 msgstr "Canvi d'altres opcions"
 
-#: src/components/storage/ConfigEditorMenu.tsx:60
+#: src/components/storage/ConfigEditorMenu.tsx:62
 msgid "Other options"
 msgstr "Altres opcions"
 
-#: src/components/storage/ConfigEditorMenu.tsx:68
+#: src/components/storage/ConfigEditorMenu.tsx:70
 msgid "Select the disk to configure partitions for booting"
 msgstr "Seleccioneu el disc per configurar-hi les particions per a arrencar"
 
-#: src/components/storage/ConfigEditorMenu.tsx:70
+#: src/components/storage/ConfigEditorMenu.tsx:72
 msgid "Change boot options"
 msgstr "Canvia les opcions d'arrencada"
 
-#: src/components/storage/ConfigEditorMenu.tsx:75
+#: src/components/storage/ConfigEditorMenu.tsx:77
 msgid "Start from scratch with the default configuration"
 msgstr "Comença des de zero amb la configuració predeterminada"
 
-#: src/components/storage/ConfigEditorMenu.tsx:77
+#: src/components/storage/ConfigEditorMenu.tsx:79
 msgid "Reset to defaults"
 msgstr "Restableix els valors predeterminats"
 
-#: src/components/storage/ConfigEditorMenu.tsx:83
+#: src/components/storage/ConfigEditorMenu.tsx:85
 msgid "Discover and connect to iSCSI targets"
 msgstr "Descobriu objectius iSCSI i connecteu-vos-hi"
 
-#: src/components/storage/ConfigEditorMenu.tsx:85
+#: src/components/storage/ConfigEditorMenu.tsx:87
 msgid "Configure iSCSI"
 msgstr "Configuració d'iSCSI"
 
-#: src/components/storage/ConfigEditorMenu.tsx:91
-#: src/components/storage/ProposalPage.tsx:153
+#: src/components/storage/ConfigEditorMenu.tsx:93
+#: src/components/storage/ProposalPage.tsx:155
 msgid "Activate zFCP disks"
 msgstr "Activa els discs zFCP"
 
-#: src/components/storage/ConfigEditorMenu.tsx:93
+#: src/components/storage/ConfigEditorMenu.tsx:95
 msgid "Configure zFCP"
 msgstr "Configuració de zFCP"
 
-#: src/components/storage/ConfigEditorMenu.tsx:100
+#: src/components/storage/ConfigEditorMenu.tsx:102
 msgid "Activate and format DASD devices"
 msgstr "Activa i formata dispositius DASD"
 
-#: src/components/storage/ConfigEditorMenu.tsx:102
+#: src/components/storage/ConfigEditorMenu.tsx:104
 msgid "Configure DASD"
 msgstr "Configuració de DASD"
 
+#: src/components/storage/ConfigEditorMenu.tsx:110
+msgid "Update available disks and activate crypt devices"
+msgstr ""
+
+#: src/components/storage/ConfigEditorMenu.tsx:112
+#, fuzzy
+msgid "Rescan devices"
+msgstr "Llegeix els dispositius zFCP"
+
 #: src/components/storage/ConfigureDeviceMenu.tsx:48
 msgid "Select a device to define partitions or to mount"
-msgstr "Seleccioneu un dispositiu per definir-ne les particions o per muntar-lo"
+msgstr ""
+"Seleccioneu un dispositiu per definir-ne les particions o per muntar-lo"
 
 #: src/components/storage/ConfigureDeviceMenu.tsx:49
 msgid "Select another device to define partitions or to mount"
@@ -1825,7 +1838,8 @@ msgstr "Seleccioneu un disc per definir-ne les particions o per muntar-lo"
 
 #: src/components/storage/ConfigureDeviceMenu.tsx:53
 msgid "Select another disk to define partitions or to mount"
-msgstr "Seleccioneu un altre disc per definir-ne les particions o per muntar-lo"
+msgstr ""
+"Seleccioneu un altre disc per definir-ne les particions o per muntar-lo"
 
 #: src/components/storage/ConfigureDeviceMenu.tsx:58
 msgid "Already using all available devices"
@@ -2536,6 +2550,11 @@ msgstr "Afegiu-hi una altra partició o munteu-ne una d'existent"
 msgid "Add or use partition"
 msgstr "Afegiu o useu una partició"
 
+#: src/components/storage/Progress.tsx:117
+#, fuzzy
+msgid "Loading storage"
+msgstr "Carregant dades..."
+
 #: src/components/storage/ProposalActionsDialog.tsx:73
 #, c-format
 msgid "Hide %d subvolume action"
@@ -2585,11 +2604,11 @@ msgstr ""
 msgid "Failed to calculate a storage layout"
 msgstr "No s'ha pogut calcular un disseny d'emmagatzematge"
 
-#: src/components/storage/ProposalPage.tsx:68
+#: src/components/storage/ProposalPage.tsx:70
 msgid "Invalid storage settings"
 msgstr "Configuració d'emmagatzematge no vàlida"
 
-#: src/components/storage/ProposalPage.tsx:89
+#: src/components/storage/ProposalPage.tsx:91
 msgid ""
 "You may want to discard those settings and start from scratch with a simple "
 "configuration."
@@ -2597,25 +2616,25 @@ msgstr ""
 "És possible que vulgueu descartar aquests paràmetres i començar des de zero "
 "amb una configuració simple."
 
-#: src/components/storage/ProposalPage.tsx:93
-#: src/components/storage/ProposalPage.tsx:121
+#: src/components/storage/ProposalPage.tsx:95
+#: src/components/storage/ProposalPage.tsx:123
 #: src/components/storage/UnsupportedModelInfo.tsx:55
 msgid "Reset to the default configuration"
 msgstr "Restableix la configuració predeterminada"
 
-#: src/components/storage/ProposalPage.tsx:105
+#: src/components/storage/ProposalPage.tsx:107
 #: src/components/storage/UnsupportedModelInfo.tsx:39
 msgid "Unable to modify the settings"
 msgstr "No es pot modificar la configuració"
 
-#: src/components/storage/ProposalPage.tsx:111
+#: src/components/storage/ProposalPage.tsx:113
 msgid ""
 "The storage configuration uses elements not supported by this interface."
 msgstr ""
 "La configuració d'emmagatzematge usa elements no compatibles amb aquesta "
 "interfície."
 
-#: src/components/storage/ProposalPage.tsx:117
+#: src/components/storage/ProposalPage.tsx:119
 msgid ""
 "You may want to discard the current settings and start from scratch with a "
 "simple configuration."
@@ -2623,7 +2642,7 @@ msgstr ""
 "És possible que vulgueu descartar la configuració actual i començar des de "
 "zero amb una configuració simple."
 
-#: src/components/storage/ProposalPage.tsx:133
+#: src/components/storage/ProposalPage.tsx:135
 msgid ""
 "There are not disks available for the installation. You may need to "
 "configure some device."
@@ -2631,23 +2650,23 @@ msgstr ""
 "No hi ha discs disponibles per a la instal·lació. És possible que hàgiu de "
 "configurar algun dispositiu."
 
-#: src/components/storage/ProposalPage.tsx:138
+#: src/components/storage/ProposalPage.tsx:140
 msgid "No devices found"
 msgstr "No s'ha trobat cap dispositiu"
 
-#: src/components/storage/ProposalPage.tsx:147
+#: src/components/storage/ProposalPage.tsx:149
 msgid "Connect to iSCSI targets"
 msgstr "Connecta amb objectius iSCSI"
 
-#: src/components/storage/ProposalPage.tsx:160
+#: src/components/storage/ProposalPage.tsx:162
 msgid "Manage DASD devices"
 msgstr "Gestioneu els dispositius DASD"
 
-#: src/components/storage/ProposalPage.tsx:194
+#: src/components/storage/ProposalPage.tsx:196
 msgid "Installation Devices"
 msgstr "Dispositius d'instal·lació"
 
-#: src/components/storage/ProposalPage.tsx:196
+#: src/components/storage/ProposalPage.tsx:198
 msgid ""
 "Structure of the new system, including disks to use and additional devices "
 "like LVM volume groups."
@@ -2655,7 +2674,7 @@ msgstr ""
 "Estructura del nou sistema, inclosos els discos per usar i els dispositius "
 "addicionals com ara els grups de volums d'LVM."
 
-#: src/components/storage/ProposalPage.tsx:253
+#: src/components/storage/ProposalPage.tsx:262
 msgid "Reloading data, please wait..."
 msgstr "Tornant a carregar les dades; espereu, si us plau..."
 
@@ -3734,7 +3753,7 @@ msgstr "No s'ha pogut actualitzar el nom d'amfitrió"
 msgid "Using transient hostname: %s"
 msgstr "S'usa un nom d'amfitrió transitori: %s"
 
-#: src/components/system/HostnamePage.tsx:80 src/router.tsx:55
+#: src/components/system/HostnamePage.tsx:80 src/router.tsx:56
 msgid "Hostname"
 msgstr "Nom d'amfitrió"
 
@@ -3893,6 +3912,9 @@ msgstr "Usa una clau pública SSH"
 #: src/routes/storage.tsx:113
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#~ msgid "License language"
+#~ msgstr "Llengua de la llicència"
 
 #~ msgid "Partitions"
 #~ msgstr "Particions"

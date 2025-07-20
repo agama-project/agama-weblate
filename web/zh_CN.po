@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-17 03:18+0000\n"
+"POT-Creation-Date: 2025-07-20 03:27+0000\n"
 "PO-Revision-Date: 2025-06-17 02:59+0000\n"
 "Last-Translator: Grace Yu <grace.yu@excel-gits.com>\n"
 "Language-Team: Chinese (China) <https://l10n.opensuse.org/projects/agama/"
@@ -241,7 +241,7 @@ msgstr "身份验证"
 
 #: src/components/core/IssuesDrawer.tsx:50
 #: src/components/overview/StorageSection.tsx:112
-#: src/components/storage/ProposalPage.tsx:250 src/routes/storage.tsx:46
+#: src/components/storage/ProposalPage.tsx:259 src/routes/storage.tsx:46
 msgid "Storage"
 msgstr "存储"
 
@@ -361,6 +361,7 @@ msgid "Loading data..."
 msgstr "正在读取数据……"
 
 #: src/components/core/ProgressReport.tsx:57
+#: src/components/storage/Progress.tsx:56
 msgid "Pending"
 msgstr "等待中"
 
@@ -369,6 +370,7 @@ msgid "In progress"
 msgstr "进行中"
 
 #: src/components/core/ProgressReport.tsx:81
+#: src/components/storage/Progress.tsx:65
 msgid "Finished"
 msgstr "已完成"
 
@@ -949,7 +951,7 @@ msgstr "未找到有线连接"
 msgid "The system will use %s as its default language."
 msgstr "系统会使用 %s 作为默认语言。"
 
-#: src/components/overview/OverviewPage.tsx:35 src/router.tsx:50
+#: src/components/overview/OverviewPage.tsx:35 src/router.tsx:51
 msgid "Overview"
 msgstr "概览"
 
@@ -1028,11 +1030,12 @@ msgstr "没有可用于安装的磁盘。"
 msgid "Install using an advanced configuration."
 msgstr "使用高级配置安装。"
 
-#: src/components/product/LicenseDialog.tsx:46
-msgid "License language"
-msgstr "许可语言"
+#: src/components/product/LicenseDialog.tsx:40
+#, c-format
+msgid "This license is not available in %s."
+msgstr ""
 
-#: src/components/product/LicenseDialog.tsx:93
+#: src/components/product/LicenseDialog.tsx:74
 #: src/components/software/SoftwareConflicts.tsx:294
 #: src/components/software/SoftwarePatternsSelection.tsx:207
 msgid "Close"
@@ -1682,54 +1685,63 @@ msgstr "重置为默认值"
 msgid "[FIXME]"
 msgstr ""
 
-#: src/components/storage/ConfigEditorMenu.tsx:57
+#: src/components/storage/ConfigEditorMenu.tsx:59
 msgid "Other options toggle"
 msgstr "其他选项切换开关"
 
-#: src/components/storage/ConfigEditorMenu.tsx:60
+#: src/components/storage/ConfigEditorMenu.tsx:62
 msgid "Other options"
 msgstr "其他选项"
 
-#: src/components/storage/ConfigEditorMenu.tsx:68
+#: src/components/storage/ConfigEditorMenu.tsx:70
 msgid "Select the disk to configure partitions for booting"
 msgstr "选择要配置引导分区的磁盘"
 
-#: src/components/storage/ConfigEditorMenu.tsx:70
+#: src/components/storage/ConfigEditorMenu.tsx:72
 msgid "Change boot options"
 msgstr "更改启动选项"
 
-#: src/components/storage/ConfigEditorMenu.tsx:75
+#: src/components/storage/ConfigEditorMenu.tsx:77
 msgid "Start from scratch with the default configuration"
 msgstr "采用默认配置从头开始"
 
-#: src/components/storage/ConfigEditorMenu.tsx:77
+#: src/components/storage/ConfigEditorMenu.tsx:79
 msgid "Reset to defaults"
 msgstr "重设为默认"
 
-#: src/components/storage/ConfigEditorMenu.tsx:83
+#: src/components/storage/ConfigEditorMenu.tsx:85
 msgid "Discover and connect to iSCSI targets"
 msgstr "发现并连接到 iSCSI 目标"
 
-#: src/components/storage/ConfigEditorMenu.tsx:85
+#: src/components/storage/ConfigEditorMenu.tsx:87
 msgid "Configure iSCSI"
 msgstr "配置 iSCSI"
 
-#: src/components/storage/ConfigEditorMenu.tsx:91
-#: src/components/storage/ProposalPage.tsx:153
+#: src/components/storage/ConfigEditorMenu.tsx:93
+#: src/components/storage/ProposalPage.tsx:155
 msgid "Activate zFCP disks"
 msgstr "激活 zFCP 磁盘"
 
-#: src/components/storage/ConfigEditorMenu.tsx:93
+#: src/components/storage/ConfigEditorMenu.tsx:95
 msgid "Configure zFCP"
 msgstr "配置 zFCP"
 
-#: src/components/storage/ConfigEditorMenu.tsx:100
+#: src/components/storage/ConfigEditorMenu.tsx:102
 msgid "Activate and format DASD devices"
 msgstr "激活并格式化 DASD 设备"
 
-#: src/components/storage/ConfigEditorMenu.tsx:102
+#: src/components/storage/ConfigEditorMenu.tsx:104
 msgid "Configure DASD"
 msgstr "配置 DASD"
+
+#: src/components/storage/ConfigEditorMenu.tsx:110
+msgid "Update available disks and activate crypt devices"
+msgstr ""
+
+#: src/components/storage/ConfigEditorMenu.tsx:112
+#, fuzzy
+msgid "Rescan devices"
+msgstr "读取 zFCP 设备"
 
 #: src/components/storage/ConfigureDeviceMenu.tsx:48
 #, fuzzy
@@ -2442,6 +2454,11 @@ msgstr "添加另一个分区或挂载一个现有分区"
 msgid "Add or use partition"
 msgstr "添加或使用分区"
 
+#: src/components/storage/Progress.tsx:117
+#, fuzzy
+msgid "Loading storage"
+msgstr "正在读取数据……"
+
 #: src/components/storage/ProposalActionsDialog.tsx:73
 #, c-format
 msgid "Hide %d subvolume action"
@@ -2484,67 +2501,67 @@ msgstr "请调整下面的设置，使新系统适配可用空间。"
 msgid "Failed to calculate a storage layout"
 msgstr "无法计算存储布局"
 
-#: src/components/storage/ProposalPage.tsx:68
+#: src/components/storage/ProposalPage.tsx:70
 msgid "Invalid storage settings"
 msgstr "存储设置无效"
 
-#: src/components/storage/ProposalPage.tsx:89
+#: src/components/storage/ProposalPage.tsx:91
 msgid ""
 "You may want to discard those settings and start from scratch with a simple "
 "configuration."
 msgstr "您可能需要舍弃这些设置，并采用简单的配置从头开始。"
 
-#: src/components/storage/ProposalPage.tsx:93
-#: src/components/storage/ProposalPage.tsx:121
+#: src/components/storage/ProposalPage.tsx:95
+#: src/components/storage/ProposalPage.tsx:123
 #: src/components/storage/UnsupportedModelInfo.tsx:55
 msgid "Reset to the default configuration"
 msgstr "重置为默认配置"
 
-#: src/components/storage/ProposalPage.tsx:105
+#: src/components/storage/ProposalPage.tsx:107
 #: src/components/storage/UnsupportedModelInfo.tsx:39
 msgid "Unable to modify the settings"
 msgstr "无法修改设置"
 
-#: src/components/storage/ProposalPage.tsx:111
+#: src/components/storage/ProposalPage.tsx:113
 msgid ""
 "The storage configuration uses elements not supported by this interface."
 msgstr "存储配置使用了此界面不支持的元素。"
 
-#: src/components/storage/ProposalPage.tsx:117
+#: src/components/storage/ProposalPage.tsx:119
 msgid ""
 "You may want to discard the current settings and start from scratch with a "
 "simple configuration."
 msgstr "您可能需要舍弃当前设置，并采用简单的配置从头开始。"
 
-#: src/components/storage/ProposalPage.tsx:133
+#: src/components/storage/ProposalPage.tsx:135
 msgid ""
 "There are not disks available for the installation. You may need to "
 "configure some device."
 msgstr "没有可用于安装的磁盘。您可能需要配置某些设备。"
 
-#: src/components/storage/ProposalPage.tsx:138
+#: src/components/storage/ProposalPage.tsx:140
 msgid "No devices found"
 msgstr "未找到设备"
 
-#: src/components/storage/ProposalPage.tsx:147
+#: src/components/storage/ProposalPage.tsx:149
 msgid "Connect to iSCSI targets"
 msgstr "连接到 iSCSI 目标"
 
-#: src/components/storage/ProposalPage.tsx:160
+#: src/components/storage/ProposalPage.tsx:162
 msgid "Manage DASD devices"
 msgstr "管理 DASD 设备"
 
-#: src/components/storage/ProposalPage.tsx:194
+#: src/components/storage/ProposalPage.tsx:196
 msgid "Installation Devices"
 msgstr "安装设备"
 
-#: src/components/storage/ProposalPage.tsx:196
+#: src/components/storage/ProposalPage.tsx:198
 msgid ""
 "Structure of the new system, including disks to use and additional devices "
 "like LVM volume groups."
 msgstr "新系统的结构，包括要使用的磁盘和 LVM 卷组等附加设备。"
 
-#: src/components/storage/ProposalPage.tsx:253
+#: src/components/storage/ProposalPage.tsx:262
 msgid "Reloading data, please wait..."
 msgstr "正在重新加载数据，请稍候..."
 
@@ -3609,7 +3626,7 @@ msgstr "无法更新主机名"
 msgid "Using transient hostname: %s"
 msgstr "正在使用临时主机名 %s"
 
-#: src/components/system/HostnamePage.tsx:80 src/router.tsx:55
+#: src/components/system/HostnamePage.tsx:80 src/router.tsx:56
 msgid "Hostname"
 msgstr "主机名"
 
@@ -3760,6 +3777,9 @@ msgstr "使用 SSH 公共密钥"
 #: src/routes/storage.tsx:113
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#~ msgid "License language"
+#~ msgstr "许可语言"
 
 #~ msgid "Partitions"
 #~ msgstr "分区"

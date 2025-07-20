@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-17 03:18+0000\n"
+"POT-Creation-Date: 2025-07-20 03:27+0000\n"
 "PO-Revision-Date: 2024-06-29 13:46+0000\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.opensuse.org/projects/agama/"
@@ -253,7 +253,7 @@ msgstr "Root autentisering"
 
 #: src/components/core/IssuesDrawer.tsx:50
 #: src/components/overview/StorageSection.tsx:112
-#: src/components/storage/ProposalPage.tsx:250 src/routes/storage.tsx:46
+#: src/components/storage/ProposalPage.tsx:259 src/routes/storage.tsx:46
 msgid "Storage"
 msgstr "Lagring"
 
@@ -374,6 +374,7 @@ msgid "Loading data..."
 msgstr "Laster data..."
 
 #: src/components/core/ProgressReport.tsx:57
+#: src/components/storage/Progress.tsx:56
 msgid "Pending"
 msgstr "Avventer"
 
@@ -382,6 +383,7 @@ msgid "In progress"
 msgstr "Pågår"
 
 #: src/components/core/ProgressReport.tsx:81
+#: src/components/storage/Progress.tsx:65
 msgid "Finished"
 msgstr "Fullført"
 
@@ -981,7 +983,7 @@ msgstr "Ingen kablede tilkoblinger funnet"
 msgid "The system will use %s as its default language."
 msgstr "Systemet vil bruke %s som standardspråk."
 
-#: src/components/overview/OverviewPage.tsx:35 src/router.tsx:50
+#: src/components/overview/OverviewPage.tsx:35 src/router.tsx:51
 msgid "Overview"
 msgstr "Oversikt"
 
@@ -1073,12 +1075,12 @@ msgstr "Ingen produkter tilgjengelig for utvalg"
 msgid "Install using an advanced configuration."
 msgstr ""
 
-#: src/components/product/LicenseDialog.tsx:46
-#, fuzzy
-msgid "License language"
-msgstr "Velg språk"
+#: src/components/product/LicenseDialog.tsx:40
+#, c-format
+msgid "This license is not available in %s."
+msgstr ""
 
-#: src/components/product/LicenseDialog.tsx:93
+#: src/components/product/LicenseDialog.tsx:74
 #: src/components/software/SoftwareConflicts.tsx:294
 #: src/components/software/SoftwarePatternsSelection.tsx:207
 msgid "Close"
@@ -1737,63 +1739,72 @@ msgstr "Tilbakestill til standard"
 msgid "[FIXME]"
 msgstr ""
 
-#: src/components/storage/ConfigEditorMenu.tsx:57
+#: src/components/storage/ConfigEditorMenu.tsx:59
 #, fuzzy
 msgid "Other options toggle"
 msgstr "Monteringspunkt"
 
-#: src/components/storage/ConfigEditorMenu.tsx:60
+#: src/components/storage/ConfigEditorMenu.tsx:62
 #, fuzzy
 msgid "Other options"
 msgstr "Installasjonsalternativer"
 
-#: src/components/storage/ConfigEditorMenu.tsx:68
+#: src/components/storage/ConfigEditorMenu.tsx:70
 #, fuzzy
 msgid "Select the disk to configure partitions for booting"
 msgstr "Konfigurer ikke partisjoner for oppstart"
 
-#: src/components/storage/ConfigEditorMenu.tsx:70
+#: src/components/storage/ConfigEditorMenu.tsx:72
 msgid "Change boot options"
 msgstr "Endre oppstartalternativer"
 
-#: src/components/storage/ConfigEditorMenu.tsx:75
+#: src/components/storage/ConfigEditorMenu.tsx:77
 msgid "Start from scratch with the default configuration"
 msgstr ""
 
-#: src/components/storage/ConfigEditorMenu.tsx:77
+#: src/components/storage/ConfigEditorMenu.tsx:79
 msgid "Reset to defaults"
 msgstr "Tilbakestill til standard"
 
-#: src/components/storage/ConfigEditorMenu.tsx:83
+#: src/components/storage/ConfigEditorMenu.tsx:85
 #, fuzzy
 msgid "Discover and connect to iSCSI targets"
 msgstr "Koble til iSCSI mål"
 
-#: src/components/storage/ConfigEditorMenu.tsx:85
+#: src/components/storage/ConfigEditorMenu.tsx:87
 #, fuzzy
 msgid "Configure iSCSI"
 msgstr "Lagring iSCSI"
 
-#: src/components/storage/ConfigEditorMenu.tsx:91
-#: src/components/storage/ProposalPage.tsx:153
+#: src/components/storage/ConfigEditorMenu.tsx:93
+#: src/components/storage/ProposalPage.tsx:155
 #, fuzzy
 msgid "Activate zFCP disks"
 msgstr "Aktiver zFCP disk"
 
-#: src/components/storage/ConfigEditorMenu.tsx:93
+#: src/components/storage/ConfigEditorMenu.tsx:95
 #, fuzzy
 msgid "Configure zFCP"
 msgstr "konfigurert"
 
-#: src/components/storage/ConfigEditorMenu.tsx:100
+#: src/components/storage/ConfigEditorMenu.tsx:102
 #, fuzzy
 msgid "Activate and format DASD devices"
 msgstr "Formaterer DASD enheter"
 
-#: src/components/storage/ConfigEditorMenu.tsx:102
+#: src/components/storage/ConfigEditorMenu.tsx:104
 #, fuzzy
 msgid "Configure DASD"
 msgstr "konfigurert"
+
+#: src/components/storage/ConfigEditorMenu.tsx:110
+msgid "Update available disks and activate crypt devices"
+msgstr ""
+
+#: src/components/storage/ConfigEditorMenu.tsx:112
+#, fuzzy
+msgid "Rescan devices"
+msgstr "Les zFCP enheter"
 
 #: src/components/storage/ConfigureDeviceMenu.tsx:48
 #, fuzzy
@@ -2545,6 +2556,11 @@ msgstr ""
 msgid "Add or use partition"
 msgstr "Opprett en ny partisjon"
 
+#: src/components/storage/Progress.tsx:117
+#, fuzzy
+msgid "Loading storage"
+msgstr "Laster data..."
+
 #: src/components/storage/ProposalActionsDialog.tsx:73
 #, c-format
 msgid "Hide %d subvolume action"
@@ -2589,65 +2605,65 @@ msgstr ""
 msgid "Failed to calculate a storage layout"
 msgstr ""
 
-#: src/components/storage/ProposalPage.tsx:68
+#: src/components/storage/ProposalPage.tsx:70
 msgid "Invalid storage settings"
 msgstr ""
 
-#: src/components/storage/ProposalPage.tsx:89
+#: src/components/storage/ProposalPage.tsx:91
 msgid ""
 "You may want to discard those settings and start from scratch with a simple "
 "configuration."
 msgstr ""
 
-#: src/components/storage/ProposalPage.tsx:93
-#: src/components/storage/ProposalPage.tsx:121
+#: src/components/storage/ProposalPage.tsx:95
+#: src/components/storage/ProposalPage.tsx:123
 #: src/components/storage/UnsupportedModelInfo.tsx:55
 #, fuzzy
 msgid "Reset to the default configuration"
 msgstr "Tilbakestill til standard"
 
-#: src/components/storage/ProposalPage.tsx:105
+#: src/components/storage/ProposalPage.tsx:107
 #: src/components/storage/UnsupportedModelInfo.tsx:39
 msgid "Unable to modify the settings"
 msgstr ""
 
-#: src/components/storage/ProposalPage.tsx:111
+#: src/components/storage/ProposalPage.tsx:113
 msgid ""
 "The storage configuration uses elements not supported by this interface."
 msgstr ""
 
-#: src/components/storage/ProposalPage.tsx:117
+#: src/components/storage/ProposalPage.tsx:119
 msgid ""
 "You may want to discard the current settings and start from scratch with a "
 "simple configuration."
 msgstr ""
 
-#: src/components/storage/ProposalPage.tsx:133
+#: src/components/storage/ProposalPage.tsx:135
 msgid ""
 "There are not disks available for the installation. You may need to "
 "configure some device."
 msgstr ""
 
-#: src/components/storage/ProposalPage.tsx:138
+#: src/components/storage/ProposalPage.tsx:140
 #, fuzzy
 msgid "No devices found"
 msgstr "Ingen innhold funnet"
 
-#: src/components/storage/ProposalPage.tsx:147
+#: src/components/storage/ProposalPage.tsx:149
 msgid "Connect to iSCSI targets"
 msgstr "Koble til iSCSI mål"
 
-#: src/components/storage/ProposalPage.tsx:160
+#: src/components/storage/ProposalPage.tsx:162
 #, fuzzy
 msgid "Manage DASD devices"
 msgstr "Formaterer DASD enheter"
 
-#: src/components/storage/ProposalPage.tsx:194
+#: src/components/storage/ProposalPage.tsx:196
 #, fuzzy
 msgid "Installation Devices"
 msgstr "Installasjons enhet"
 
-#: src/components/storage/ProposalPage.tsx:196
+#: src/components/storage/ProposalPage.tsx:198
 #, fuzzy
 msgid ""
 "Structure of the new system, including disks to use and additional devices "
@@ -2656,7 +2672,7 @@ msgstr ""
 "Strukturen av det nye systemet, inkludert eventuell partisjon som trengs for "
 "oppstart,"
 
-#: src/components/storage/ProposalPage.tsx:253
+#: src/components/storage/ProposalPage.tsx:262
 #, fuzzy
 msgid "Reloading data, please wait..."
 msgstr "Laster inn data, vennligst vent et sekund..."
@@ -3759,7 +3775,7 @@ msgstr ""
 msgid "Using transient hostname: %s"
 msgstr "Krymper partisjoner"
 
-#: src/components/system/HostnamePage.tsx:80 src/router.tsx:55
+#: src/components/system/HostnamePage.tsx:80 src/router.tsx:56
 #, fuzzy
 msgid "Hostname"
 msgstr "Brukernavn"
@@ -3919,6 +3935,10 @@ msgstr "Root offentlig SSH nøkkel"
 #: src/routes/storage.tsx:113
 msgid "ZFCP"
 msgstr ""
+
+#, fuzzy
+#~ msgid "License language"
+#~ msgstr "Velg språk"
 
 #, fuzzy
 #~ msgid "Partitions"
