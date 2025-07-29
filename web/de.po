@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-22 03:19+0000\n"
+"POT-Creation-Date: 2025-07-29 03:30+0000\n"
 "PO-Revision-Date: 2025-07-26 23:59+0000\n"
 "Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
 "Language-Team: German <https://l10n.opensuse.org/projects/agama/agama-web/de/"
@@ -1561,8 +1561,8 @@ msgstr "Eine %1$s mit %2$s wird nach Möglichkeit für %3$s erstellt"
 msgid ""
 "A %1$s with a size between %2$s and %3$s will be created for %4$s if possible"
 msgstr ""
-"Ein %1$s mit einer Größe zwischen %2$s und %3$s wird nach Möglichkeit für %4$"
-"s erstellt"
+"Ein %1$s mit einer Größe zwischen %2$s und %3$s wird nach Möglichkeit für "
+"%4$s erstellt"
 
 #. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
 #: src/components/storage/AutoSizeText.tsx:100
@@ -1861,7 +1861,8 @@ msgstr "Geräte neu scannen"
 
 #: src/components/storage/ConfigureDeviceMenu.tsx:48
 msgid "Select a device to define partitions or to mount"
-msgstr "Wählen Sie ein Gerät aus, um Partitionen zu definieren oder einzuhängen"
+msgstr ""
+"Wählen Sie ein Gerät aus, um Partitionen zu definieren oder einzuhängen"
 
 #: src/components/storage/ConfigureDeviceMenu.tsx:49
 msgid "Select another device to define partitions or to mount"
@@ -3207,9 +3208,22 @@ msgstr "Filter für maximalen Kanal entfernen"
 msgid "DASDs table section"
 msgstr "DASDs-Tabellenabschnitt"
 
-#: src/components/storage/device-utils.tsx:75
+#: src/components/storage/device-utils.tsx:76
 msgid "Unused space"
 msgstr "Ungenutzter Platz"
+
+#. TRANSLATORS: %1$s is a description of the device (eg. "Encrypted XFS RAID") and %2$s is
+#. the RAID level (eg. "RAID0")
+#. TRANSLATORS: %1$s is an already formatted mount path (eg. "/"),
+#. %2$s is a size description (eg. at least 10 GiB)
+#. TRANSLATORS: %1$s is a filesystem type description (eg. "Btrfs with snapshots"),
+#. %2$s is a description of the size or the size limits (eg. "at least 10 GiB")
+#: src/components/storage/device-utils.tsx:84
+#: src/components/storage/utils/partition.tsx:41
+#: src/components/storage/utils/partition.tsx:85
+#, c-format
+msgid "%1$s (%2$s)"
+msgstr "%1$s (%2$s)"
 
 #: src/components/storage/iscsi/AuthFields.jsx:66
 msgid "Only available if authentication by target is provided"
@@ -3676,16 +3690,6 @@ msgstr "Es werden keine zusätzlichen Partitionen erstellt"
 #, c-format
 msgid "Partitions will be used and created for %s"
 msgstr "Partitionen werden für %s verwendet und erstellt"
-
-#. TRANSLATORS: %1$s is an already formatted mount path (eg. "/"),
-#. %2$s is a size description (eg. at least 10 GiB)
-#. TRANSLATORS: %1$s is a filesystem type description (eg. "Btrfs with snapshots"),
-#. %2$s is a description of the size or the size limits (eg. "at least 10 GiB")
-#: src/components/storage/utils/partition.tsx:41
-#: src/components/storage/utils/partition.tsx:85
-#, c-format
-msgid "%1$s (%2$s)"
-msgstr "%1$s (%2$s)"
 
 #. TRANSLATORS: %1$s is a filesystem type (eg. Btrfs), %2$s is a device name (eg. /dev/sda3).
 #: src/components/storage/utils/partition.tsx:66

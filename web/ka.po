@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-22 03:19+0000\n"
+"POT-Creation-Date: 2025-07-29 03:30+0000\n"
 "PO-Revision-Date: 2025-07-21 02:59+0000\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -2957,9 +2957,22 @@ msgstr "მაქს. არხის ფილტრის მოცილე�
 msgid "DASDs table section"
 msgstr "DASD-ის ცხრილის სექცია"
 
-#: src/components/storage/device-utils.tsx:75
+#: src/components/storage/device-utils.tsx:76
 msgid "Unused space"
 msgstr "გამოუყენებელი ადგილი"
+
+#. TRANSLATORS: %1$s is a description of the device (eg. "Encrypted XFS RAID") and %2$s is
+#. the RAID level (eg. "RAID0")
+#. TRANSLATORS: %1$s is an already formatted mount path (eg. "/"),
+#. %2$s is a size description (eg. at least 10 GiB)
+#. TRANSLATORS: %1$s is a filesystem type description (eg. "Btrfs with snapshots"),
+#. %2$s is a description of the size or the size limits (eg. "at least 10 GiB")
+#: src/components/storage/device-utils.tsx:84
+#: src/components/storage/utils/partition.tsx:41
+#: src/components/storage/utils/partition.tsx:85
+#, c-format
+msgid "%1$s (%2$s)"
+msgstr "%1$s (%2$s)"
 
 #: src/components/storage/iscsi/AuthFields.jsx:66
 msgid "Only available if authentication by target is provided"
@@ -3407,16 +3420,6 @@ msgstr "დამატებითი დანაყოფები არ შ
 #, c-format
 msgid "Partitions will be used and created for %s"
 msgstr "დანაყოფები, რომლებიც გამოყენებული და შექმნილი იქნება '%s'-სთვის"
-
-#. TRANSLATORS: %1$s is an already formatted mount path (eg. "/"),
-#. %2$s is a size description (eg. at least 10 GiB)
-#. TRANSLATORS: %1$s is a filesystem type description (eg. "Btrfs with snapshots"),
-#. %2$s is a description of the size or the size limits (eg. "at least 10 GiB")
-#: src/components/storage/utils/partition.tsx:41
-#: src/components/storage/utils/partition.tsx:85
-#, c-format
-msgid "%1$s (%2$s)"
-msgstr "%1$s (%2$s)"
 
 #. TRANSLATORS: %1$s is a filesystem type (eg. Btrfs), %2$s is a device name (eg. /dev/sda3).
 #: src/components/storage/utils/partition.tsx:66
