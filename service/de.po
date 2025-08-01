@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-07-31 03:23+0000\n"
-"PO-Revision-Date: 2025-08-01 09:59+0000\n"
+"PO-Revision-Date: 2025-08-01 13:59+0000\n"
 "Last-Translator: Gemineo <vistatec@gemineo.de>\n"
 "Language-Team: German <https://l10n.opensuse.org/projects/agama/"
 "agama-service-master/de/>\n"
@@ -62,7 +62,6 @@ msgstr "Übersetzungen im Speicher laden"
 #. @param certificate [Agama::SSL::Certificate]
 #. @return [Agama::Question]
 #: service/lib/agama/registration.rb:424
-#, fuzzy
 msgid ""
 "Trying to import a self signed certificate. Do you want to trust it and "
 "register the product?"
@@ -139,7 +138,7 @@ msgstr ""
 #. @param found_digest [String] found checksum
 #. @return [Boolean]
 #: service/lib/agama/software/callbacks/digest.rb:111
-#, fuzzy, perl-brace-format
+#, perl-brace-format
 msgid ""
 "The expected checksum of file %{file} is \"%{found}\" but it was expected to "
 "be \"%{expected}\". The file has changed by accident or by an attacker since "
@@ -164,7 +163,7 @@ msgstr "Es gab ein Problem bei der Ausführung eines Paketskripts."
 #. @param filename [String] File name
 #. @param repo_id [Integer] Repository ID. It might be -1 if there is not an associated repo.
 #: service/lib/agama/software/callbacks/signature.rb:66
-#, fuzzy, perl-brace-format
+#, perl-brace-format
 msgid ""
 "The file %{filename} from %{repo_url} is not digitally signed. The origin "
 "and integrity of the file cannot be verified. Use it anyway?"
@@ -174,7 +173,7 @@ msgstr ""
 "Trotzdem verwenden?"
 
 #: service/lib/agama/software/callbacks/signature.rb:72
-#, fuzzy, perl-brace-format
+#, perl-brace-format
 msgid ""
 "The file %{filename} is not digitally signed. The origin and integrity of "
 "the file cannot be verified. Use it anyway?"
@@ -201,7 +200,7 @@ msgstr ""
 #. @param key_id [String] Key ID.
 #. @param repo_id [String] Repository ID.
 #: service/lib/agama/software/callbacks/signature.rb:131
-#, fuzzy, perl-brace-format
+#, perl-brace-format
 msgid ""
 "The file %{filename} from %{repo_url} is digitally signed with the following "
 "unknown GnuPG key: %{key_id}. Use it anyway?"
@@ -210,7 +209,7 @@ msgstr ""
 "unbekannten GnuPG-Schlüssel digital signiert: %{key_id}. Trotzdem verwenden?"
 
 #: service/lib/agama/software/callbacks/signature.rb:137
-#, fuzzy, perl-brace-format
+#, perl-brace-format
 msgid ""
 "The file %{filename} is digitally signed with the following unknown GnuPG "
 "key: %{key_id}. Use it anyway?"
@@ -224,7 +223,7 @@ msgstr ""
 #. @param key [Hash] GPG key data (id, name, fingerprint, etc.)
 #. @param repo_id [Integer] Repository ID
 #: service/lib/agama/software/callbacks/signature.rb:168
-#, fuzzy, perl-brace-format
+#, perl-brace-format
 msgid ""
 "The file %{filename} from %{repo_url} is digitally signed with the following "
 "GnuPG key, but the integrity check failed: %{key_id} (%{key_name}). Use it "
@@ -235,14 +234,14 @@ msgstr ""
 "aufgetreten: %{key_id} (%{key_name}). Trotzdem verwenden?"
 
 #: service/lib/agama/software/callbacks/signature.rb:175
-#, fuzzy, perl-brace-format
+#, perl-brace-format
 msgid ""
 "The file %{filename} is digitally signed with the following GnuPG key, but "
 "the integrity check failed: %{key_id} (%{key_name}). Use it anyway?"
 msgstr ""
 "Die Datei \"%{filename}\" wurde mit dem folgenden GnuPG-Schlüssel digital "
-"signiert, aber bei der Integritätsprüfung ist ein Fehler aufgetreten: %"
-"{key_id} (%{key_name}). Trotzdem verwenden?"
+"signiert, aber bei der Integritätsprüfung ist ein Fehler aufgetreten: "
+"%{key_id} (%{key_name}). Trotzdem verwenden?"
 
 #. TRANSLATORS: button label, trust the GPG key or the signature
 #: service/lib/agama/software/callbacks/signature.rb:199
@@ -450,7 +449,7 @@ msgstr "Der Dateisystemtyp ‚%{filesystem}‘ ist nicht geeignet für ‚%{path
 
 #. TRANSLATORS: %s is the replaced by a device alias (e.g., "pv1").
 #: service/lib/agama/storage/config_checkers/logical_volume.rb:82
-#, fuzzy, c-format
+#, c-format
 msgid "There is no LVM thin pool volume with alias '%s'"
 msgstr "Es ist kein LVM Thin Pool-Volume mit dem Alias '%s' vorhanden"
 
@@ -480,20 +479,20 @@ msgstr "Mindestens %s Geräte sind für %s erforderlich"
 #. @param member_config [#search]
 #. @return [Issue, nil]
 #: service/lib/agama/storage/config_checkers/md_raid.rb:168
-#, fuzzy, perl-brace-format
+#, perl-brace-format
 msgid ""
 "The device '%{member}' cannot be deleted because it is part of the MD RAID %"
 "{md_raid}"
 msgstr ""
-"Das Gerät '%{member}' kann nicht gelöscht werden, da es Teil des MD-RAID '%"
-"{md_raid}' ist"
+"Das Gerät '%{member}' kann nicht gelöscht werden, da es Teil des MD-RAID "
+"'%{md_raid}' ist"
 
 #. Issue if the device member is resized.
 #.
 #. @param member_config [#search]
 #. @return [Issue, nil]
 #: service/lib/agama/storage/config_checkers/md_raid.rb:191
-#, fuzzy, perl-brace-format
+#, perl-brace-format
 msgid ""
 "The device '%{member}' cannot be resized because it is part of the MD RAID %"
 "{md_raid}"
@@ -506,20 +505,20 @@ msgstr ""
 #. @param member_config [#search]
 #. @return [Issue, nil]
 #: service/lib/agama/storage/config_checkers/md_raid.rb:214
-#, fuzzy, perl-brace-format
+#, perl-brace-format
 msgid ""
 "The device '%{member}' cannot be formatted because it is part of the MD RAID "
 "%{md_raid}"
 msgstr ""
-"Das Gerät '%{member}' kann nicht formatiert werden, da es Teil des MD-RAID '%"
-"{md_raid}' ist"
+"Das Gerät '%{member}' kann nicht formatiert werden, da es Teil des MD-RAID "
+"'%{md_raid}' ist"
 
 #. Issue if the device member is partitioned.
 #.
 #. @param member_config [#search]
 #. @return [Issue, nil]
 #: service/lib/agama/storage/config_checkers/md_raid.rb:237
-#, fuzzy, perl-brace-format
+#, perl-brace-format
 msgid ""
 "The device '%{member}' cannot be partitioned because it is part of the MD "
 "RAID %{md_raid}"
@@ -532,31 +531,31 @@ msgstr ""
 #. @param member_config [#search]
 #. @return [Issue, nil]
 #: service/lib/agama/storage/config_checkers/md_raid.rb:259
-#, fuzzy, perl-brace-format
+#, perl-brace-format
 msgid ""
 "The device '%{member}' cannot be used because it is part of the MD RAID %"
 "{md_raid}"
 msgstr ""
-"Das Gerät '%{member}' kann nicht verwendet werden, da es Teil des MD-RAID '%"
-"{md_raid}' ist"
+"Das Gerät '%{member}' kann nicht verwendet werden, da es Teil des MD-RAID "
+"'%{md_raid}' ist"
 
 #. Issue if the parent of the device member is formatted.
 #.
 #. @param device [Y2Storage::BlkDevice]
 #. @return [Issue, nil]
 #: service/lib/agama/storage/config_checkers/md_raid.rb:284
-#, fuzzy, perl-brace-format
+#, perl-brace-format
 msgid ""
 "The device '%{device}' cannot be formatted because it is part of the MD RAID "
 "%{md_raid}"
 msgstr ""
-"Das Gerät '%{device}' kann nicht formatiert werden, da es Teil des MD-RAID '%"
-"{md_raid}' ist"
+"Das Gerät '%{device}' kann nicht formatiert werden, da es Teil des MD-RAID "
+"'%{md_raid}' ist"
 
 #. TRANSLATORS: 'method' is the identifier of the method to encrypt the device
 #. (e.g., 'luks1').
 #: service/lib/agama/storage/config_checkers/physical_volumes_encryption.rb:61
-#, fuzzy, perl-brace-format
+#, perl-brace-format
 msgid "'%{method}' is not a suitable method to encrypt the physical volumes."
 msgstr ""
 "'%{method}' ist keine geeignete Methode zur Verschlüsselung der physischen "
@@ -580,7 +579,6 @@ msgid "drive"
 msgstr "Laufwerk"
 
 #: service/lib/agama/storage/config_checkers/search.rb:87
-#, fuzzy
 msgid "MD RAID"
 msgstr "MD-RAID"
 
@@ -589,7 +587,6 @@ msgid "partition"
 msgstr "Partition"
 
 #: service/lib/agama/storage/config_checkers/search.rb:91
-#, fuzzy
 msgid "LVM logical volume"
 msgstr "Logisches LVM-Volume"
 
@@ -601,19 +598,18 @@ msgstr "Gerät"
 #.
 #. @return [Issue, nil]
 #: service/lib/agama/storage/config_checkers/volume_group.rb:76
-#, fuzzy
 msgid "There is a volume group without name"
 msgstr "Es ist eine Volume-Gruppe ohne Namen vorhanden"
 
 #. TRANSLATORS: %s is the replaced by a device alias (e.g., "pv1").
 #: service/lib/agama/storage/config_checkers/volume_group.rb:106
-#, fuzzy, c-format
+#, c-format
 msgid "There is no LVM physical volume with alias '%s'"
 msgstr "Es ist kein physisches Volume mit dem Alias '%s' vorhanden"
 
 #. TRANSLATORS: %s is the replaced by a device alias (e.g., "pv1").
 #: service/lib/agama/storage/config_checkers/volume_group.rb:133
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "The list of target devices for the volume group '%s' is mixing reused "
 "devices and new devices"
@@ -711,17 +707,14 @@ msgstr "Speichergeräte werden ausgehängt"
 #.
 #. @param config [ISCSI::Config]
 #: service/lib/agama/storage/iscsi/manager.rb:300
-#, fuzzy
 msgid "Logout iSCSI targets"
 msgstr "iSCSI-Ziele abmelden"
 
 #: service/lib/agama/storage/iscsi/manager.rb:301
-#, fuzzy
 msgid "Discover iSCSI targets"
-msgstr "iSCSI-Ziele anmelden"
+msgstr "iSCSI-Ziele entdecken"
 
 #: service/lib/agama/storage/iscsi/manager.rb:302
-#, fuzzy
 msgid "Login iSCSI targets"
 msgstr "iSCSI-Ziele anmelden"
 
