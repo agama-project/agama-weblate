@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-06 03:25+0000\n"
+"POT-Creation-Date: 2025-08-10 03:25+0000\n"
 "PO-Revision-Date: 2025-07-07 07:59+0000\n"
 "Last-Translator: Luna  Jernberg <bittin@opensuse.org>\n"
 "Language-Team: Swedish <https://l10n.opensuse.org/projects/agama/agama-"
@@ -28,34 +28,37 @@ msgid "Found unsupported elements in the AutoYaST profile: %{keys}."
 msgstr "Hittade ostödda element i AutoYaST-profilen: %{keys}."
 
 #. Runs the config phase
-#: service/lib/agama/manager.rb:96
+#.
+#. @param reprobe [Boolean] Whether a reprobe should be done instead of a probe.
+#. @param data [Hash] Extra data provided to the D-Bus calls.
+#: service/lib/agama/manager.rb:99
 msgid "Analyze disks"
 msgstr "Analysera diskar"
 
-#: service/lib/agama/manager.rb:96
+#: service/lib/agama/manager.rb:99
 msgid "Configure software"
 msgstr "Konfigurera programvara"
 
 #. Runs the install phase
 #. rubocop:disable Metrics/AbcSize, Metrics/MethodLength
-#: service/lib/agama/manager.rb:115
+#: service/lib/agama/manager.rb:118
 msgid "Prepare disks"
 msgstr "Förbered diskar"
 
-#: service/lib/agama/manager.rb:116
+#: service/lib/agama/manager.rb:119
 msgid "Install software"
 msgstr "Installera programvara"
 
-#: service/lib/agama/manager.rb:117
+#: service/lib/agama/manager.rb:120
 msgid "Configure the system"
 msgstr "Konfigurera systemet"
 
 #. rubocop:enable Metrics/AbcSize, Metrics/MethodLength
-#: service/lib/agama/manager.rb:158
+#: service/lib/agama/manager.rb:161
 msgid "Load software translations"
 msgstr "Laddar översättningar av programvara"
 
-#: service/lib/agama/manager.rb:159
+#: service/lib/agama/manager.rb:162
 msgid "Load storage translations"
 msgstr "Laddar översättningar för lagring"
 
@@ -211,8 +214,8 @@ msgid ""
 "The file %{filename} is digitally signed with the following unknown GnuPG "
 "key: %{key_id}. Use it anyway?"
 msgstr ""
-"Filen %{filename} är digitalt signerad med följande okända GnuPG-nyckel: %"
-"{key_id}. Vill du använda den ändå?"
+"Filen %{filename} är digitalt signerad med följande okända GnuPG-nyckel: "
+"%{key_id}. Vill du använda den ändå?"
 
 #. Callback to handle file verification failures
 #.
@@ -476,11 +479,11 @@ msgstr "Minst %s enheter krävs för %s"
 #: service/lib/agama/storage/config_checkers/md_raid.rb:168
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be deleted because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be deleted because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
-"Enheten '%{member}' kan inte tas bort eftersom den är en del av MD RAID %"
-"{md_raid}"
+"Enheten '%{member}' kan inte tas bort eftersom den är en del av MD RAID "
+"%{md_raid}"
 
 #. Issue if the device member is resized.
 #.
@@ -489,8 +492,8 @@ msgstr ""
 #: service/lib/agama/storage/config_checkers/md_raid.rb:191
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be resized because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be resized because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
 "Enheten '%{member}' kan inte ändras i storlek eftersom det är en del av MD "
 "RAID %{md_raid}"
@@ -505,8 +508,8 @@ msgid ""
 "The device '%{member}' cannot be formatted because it is part of the MD RAID "
 "%{md_raid}"
 msgstr ""
-"Enheten '%{member}' kan inte formateras eftersom den är en del av MD RAID %"
-"{md_raid}"
+"Enheten '%{member}' kan inte formateras eftersom den är en del av MD RAID "
+"%{md_raid}"
 
 #. Issue if the device member is partitioned.
 #.
@@ -528,11 +531,11 @@ msgstr ""
 #: service/lib/agama/storage/config_checkers/md_raid.rb:259
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be used because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be used because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
-"Enheten '%{member}' kan inte användas eftersom den är en del av MD RAID %"
-"{md_raid}"
+"Enheten '%{member}' kan inte användas eftersom den är en del av MD RAID "
+"%{md_raid}"
 
 #. Issue if the parent of the device member is formatted.
 #.
@@ -544,8 +547,8 @@ msgid ""
 "The device '%{device}' cannot be formatted because it is part of the MD RAID "
 "%{md_raid}"
 msgstr ""
-"Enheten '%{device}' kan inte formateras eftersom den är en del av MD RAID %"
-"{md_raid}"
+"Enheten '%{device}' kan inte formateras eftersom den är en del av MD RAID "
+"%{md_raid}"
 
 #. TRANSLATORS: 'method' is the identifier of the method to encrypt the device
 #. (e.g., 'luks1').
@@ -724,40 +727,40 @@ msgstr "Kan inte logga in på iSCSI-mål %s"
 #. proposal.
 #. @param keep_activation [Boolean] Whether to keep the current activation (e.g., provided LUKS
 #. passwords).
-#: service/lib/agama/storage/manager.rb:126
+#: service/lib/agama/storage/manager.rb:133
 msgid "Activating storage devices"
 msgstr "Aktiverar lagringsenheter"
 
-#: service/lib/agama/storage/manager.rb:127
+#: service/lib/agama/storage/manager.rb:134
 msgid "Probing storage devices"
 msgstr "Undersöker lagringsenheter"
 
-#: service/lib/agama/storage/manager.rb:128
+#: service/lib/agama/storage/manager.rb:135
 msgid "Calculating the storage proposal"
 msgstr "Beräknar lagringsförslag"
 
 #. Prepares the partitioning to install the system
-#: service/lib/agama/storage/manager.rb:151
+#: service/lib/agama/storage/manager.rb:161
 msgid "Preparing bootloader proposal"
 msgstr "Förbereder starthanterare förslag"
 
 #. then also apply changes to that proposal
-#: service/lib/agama/storage/manager.rb:158
+#: service/lib/agama/storage/manager.rb:168
 msgid "Adding storage-related packages"
 msgstr "Lägger till lagrings-relaterade paket"
 
-#: service/lib/agama/storage/manager.rb:159
+#: service/lib/agama/storage/manager.rb:169
 msgid "Preparing the storage devices"
 msgstr "Förbereder lagringsenheter"
 
-#: service/lib/agama/storage/manager.rb:160
+#: service/lib/agama/storage/manager.rb:170
 msgid "Writing bootloader sysconfig"
 msgstr "Skriver starthanterarens sysconfig"
 
 #. Issue representing the proposal is not valid.
 #.
 #. @return [Issue]
-#: service/lib/agama/storage/proposal.rb:364
+#: service/lib/agama/storage/proposal.rb:345
 msgid "Cannot calculate a valid storage setup with the current configuration"
 msgstr ""
 "Det går inte att beräkna en giltig lagringsinställning med den aktuella "
@@ -766,7 +769,7 @@ msgstr ""
 #. Issue to communicate a generic Y2Storage error.
 #.
 #. @return [Issue]
-#: service/lib/agama/storage/proposal.rb:375
+#: service/lib/agama/storage/proposal.rb:356
 msgid "A problem ocurred while calculating the storage setup"
 msgstr "Ett problem uppstod vid beräkning av lagringskonfigurationen"
 

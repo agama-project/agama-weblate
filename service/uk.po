@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-06 03:25+0000\n"
+"POT-Creation-Date: 2025-08-10 03:25+0000\n"
 "PO-Revision-Date: 2025-07-10 16:59+0000\n"
 "Last-Translator: Eugene Krater <lachend@gmail.com>\n"
 "Language-Team: Ukrainian <https://l10n.opensuse.org/projects/agama/agama-"
@@ -29,34 +29,37 @@ msgid "Found unsupported elements in the AutoYaST profile: %{keys}."
 msgstr "Знайдено непідтримувані елементи у профілі AutoYaST: %{keys}."
 
 #. Runs the config phase
-#: service/lib/agama/manager.rb:96
+#.
+#. @param reprobe [Boolean] Whether a reprobe should be done instead of a probe.
+#. @param data [Hash] Extra data provided to the D-Bus calls.
+#: service/lib/agama/manager.rb:99
 msgid "Analyze disks"
 msgstr "Аналіз дисків"
 
-#: service/lib/agama/manager.rb:96
+#: service/lib/agama/manager.rb:99
 msgid "Configure software"
 msgstr "Налаштування програмного забезпечення"
 
 #. Runs the install phase
 #. rubocop:disable Metrics/AbcSize, Metrics/MethodLength
-#: service/lib/agama/manager.rb:115
+#: service/lib/agama/manager.rb:118
 msgid "Prepare disks"
 msgstr "Підготовка дисків"
 
-#: service/lib/agama/manager.rb:116
+#: service/lib/agama/manager.rb:119
 msgid "Install software"
 msgstr "Встановлення програмного забезпечення"
 
-#: service/lib/agama/manager.rb:117
+#: service/lib/agama/manager.rb:120
 msgid "Configure the system"
 msgstr "Налаштування системи"
 
 #. rubocop:enable Metrics/AbcSize, Metrics/MethodLength
-#: service/lib/agama/manager.rb:158
+#: service/lib/agama/manager.rb:161
 msgid "Load software translations"
 msgstr "Завантаження перекладів програмного забезпечення"
 
-#: service/lib/agama/manager.rb:159
+#: service/lib/agama/manager.rb:162
 msgid "Load storage translations"
 msgstr "Завантаження перекладів зі сховища"
 
@@ -212,8 +215,8 @@ msgid ""
 "The file %{filename} is digitally signed with the following unknown GnuPG "
 "key: %{key_id}. Use it anyway?"
 msgstr ""
-"Файл %{filename} підписано цифровим підписом з невідомим ключем GnuPG: %"
-"{key_id}. Використовувати його у будь-якому випадку?"
+"Файл %{filename} підписано цифровим підписом з невідомим ключем GnuPG: "
+"%{key_id}. Використовувати його у будь-якому випадку?"
 
 #. Callback to handle file verification failures
 #.
@@ -475,8 +478,8 @@ msgstr "Потрібно не менше %s пристроїв для %s"
 #: service/lib/agama/storage/config_checkers/md_raid.rb:168
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be deleted because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be deleted because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
 "Пристрій «%{member}» не може бути видалений, оскільки він є частиною MD RAID "
 "%{md_raid}"
@@ -488,8 +491,8 @@ msgstr ""
 #: service/lib/agama/storage/config_checkers/md_raid.rb:191
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be resized because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be resized because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
 "Розмір пристрою «%{member}» не може бути змінений, тому що він є частиною MD "
 "RAID %{md_raid}"
@@ -527,8 +530,8 @@ msgstr ""
 #: service/lib/agama/storage/config_checkers/md_raid.rb:259
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be used because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be used because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
 "Пристрій «%{member}» не може бути використаний, оскільки він є частиною MD "
 "RAID %{md_raid}"
@@ -724,40 +727,40 @@ msgstr "Неможливо увійти в систему iSCSI-цілі %s"
 #. proposal.
 #. @param keep_activation [Boolean] Whether to keep the current activation (e.g., provided LUKS
 #. passwords).
-#: service/lib/agama/storage/manager.rb:126
+#: service/lib/agama/storage/manager.rb:133
 msgid "Activating storage devices"
 msgstr "Активація пристроїв зберігання"
 
-#: service/lib/agama/storage/manager.rb:127
+#: service/lib/agama/storage/manager.rb:134
 msgid "Probing storage devices"
 msgstr "Пошук пристроїв зберігання"
 
-#: service/lib/agama/storage/manager.rb:128
+#: service/lib/agama/storage/manager.rb:135
 msgid "Calculating the storage proposal"
 msgstr "Розрахунок пропозиції зі зберігання"
 
 #. Prepares the partitioning to install the system
-#: service/lib/agama/storage/manager.rb:151
+#: service/lib/agama/storage/manager.rb:161
 msgid "Preparing bootloader proposal"
 msgstr "Підготовка пропозиції щодо завантажувача"
 
 #. then also apply changes to that proposal
-#: service/lib/agama/storage/manager.rb:158
+#: service/lib/agama/storage/manager.rb:168
 msgid "Adding storage-related packages"
 msgstr "Додавання пакетів, пов'язаних зі сховищем"
 
-#: service/lib/agama/storage/manager.rb:159
+#: service/lib/agama/storage/manager.rb:169
 msgid "Preparing the storage devices"
 msgstr "Підготовка пристроїв зберігання"
 
-#: service/lib/agama/storage/manager.rb:160
+#: service/lib/agama/storage/manager.rb:170
 msgid "Writing bootloader sysconfig"
 msgstr "Запис системної конфігурації завантажувача"
 
 #. Issue representing the proposal is not valid.
 #.
 #. @return [Issue]
-#: service/lib/agama/storage/proposal.rb:364
+#: service/lib/agama/storage/proposal.rb:345
 msgid "Cannot calculate a valid storage setup with the current configuration"
 msgstr ""
 "Не вдається обчислити правильне налаштування сховища з поточною конфігурацією"
@@ -765,7 +768,7 @@ msgstr ""
 #. Issue to communicate a generic Y2Storage error.
 #.
 #. @return [Issue]
-#: service/lib/agama/storage/proposal.rb:375
+#: service/lib/agama/storage/proposal.rb:356
 msgid "A problem ocurred while calculating the storage setup"
 msgstr "Виникла проблема при розрахунку конфігурації накопичувачів"
 

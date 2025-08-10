@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-06 03:25+0000\n"
+"POT-Creation-Date: 2025-08-10 03:25+0000\n"
 "PO-Revision-Date: 2025-07-07 02:59+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/agama/agama-"
@@ -29,34 +29,37 @@ msgstr ""
 "AutoYaST プロファイル内にサポートされていない要素が見つかりました: %{keys}."
 
 #. Runs the config phase
-#: service/lib/agama/manager.rb:96
+#.
+#. @param reprobe [Boolean] Whether a reprobe should be done instead of a probe.
+#. @param data [Hash] Extra data provided to the D-Bus calls.
+#: service/lib/agama/manager.rb:99
 msgid "Analyze disks"
 msgstr "ディスクの分析"
 
-#: service/lib/agama/manager.rb:96
+#: service/lib/agama/manager.rb:99
 msgid "Configure software"
 msgstr "ソフトウエアの設定"
 
 #. Runs the install phase
 #. rubocop:disable Metrics/AbcSize, Metrics/MethodLength
-#: service/lib/agama/manager.rb:115
+#: service/lib/agama/manager.rb:118
 msgid "Prepare disks"
 msgstr "ディスクの準備"
 
-#: service/lib/agama/manager.rb:116
+#: service/lib/agama/manager.rb:119
 msgid "Install software"
 msgstr "ソフトウエアのインストール"
 
-#: service/lib/agama/manager.rb:117
+#: service/lib/agama/manager.rb:120
 msgid "Configure the system"
 msgstr "システムの設定"
 
 #. rubocop:enable Metrics/AbcSize, Metrics/MethodLength
-#: service/lib/agama/manager.rb:158
+#: service/lib/agama/manager.rb:161
 msgid "Load software translations"
 msgstr "ソフトウエアの翻訳の読み込み"
 
-#: service/lib/agama/manager.rb:159
+#: service/lib/agama/manager.rb:162
 msgid "Load storage translations"
 msgstr "ストレージの翻訳の読み込み"
 
@@ -145,10 +148,10 @@ msgid ""
 "be \"%{expected}\". The file has changed by accident or by an attacker since "
 "the creater signed it. Use it anyway?"
 msgstr ""
-"ファイル %{file} のチェックサムは \"%{found}\" ですが、正しくは \"%{expected}"
-"\" であるべきものです。作成者が署名したあと、何らかの事故で書き換わってしまっ"
-"たか、もしくは不正な攻撃者が書き換えた可能性があります。このファイルを使用し"
-"てよろしいですか？"
+"ファイル %{file} のチェックサムは \"%{found}\" ですが、正しくは "
+"\"%{expected}\" であるべきものです。作成者が署名したあと、何らかの事故で書き"
+"換わってしまったか、もしくは不正な攻撃者が書き換えた可能性があります。この"
+"ファイルを使用してよろしいですか？"
 
 #. DoneProvide callback
 #.
@@ -478,8 +481,8 @@ msgstr "少なくとも %s 個のデバイスが必要です (%s に対して)"
 #: service/lib/agama/storage/config_checkers/md_raid.rb:168
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be deleted because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be deleted because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
 "デバイス '%{member}' は MD RAID %{md_raid} の一部であるため、削除できません"
 
@@ -490,8 +493,8 @@ msgstr ""
 #: service/lib/agama/storage/config_checkers/md_raid.rb:191
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be resized because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be resized because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
 "デバイス '%{member}' は MD RAID %{md_raid} の一部であるため、サイズ変更できま"
 "せん"
@@ -529,8 +532,8 @@ msgstr ""
 #: service/lib/agama/storage/config_checkers/md_raid.rb:259
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be used because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be used because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
 "デバイス '%{member}' は MD RAID %{md_raid} の一部であるため、使用できません"
 
@@ -723,47 +726,47 @@ msgstr "iSCSI ターゲット %s にログインできません"
 #. proposal.
 #. @param keep_activation [Boolean] Whether to keep the current activation (e.g., provided LUKS
 #. passwords).
-#: service/lib/agama/storage/manager.rb:126
+#: service/lib/agama/storage/manager.rb:133
 msgid "Activating storage devices"
 msgstr "ストレージデバイスを有効化しています"
 
-#: service/lib/agama/storage/manager.rb:127
+#: service/lib/agama/storage/manager.rb:134
 msgid "Probing storage devices"
 msgstr "ストレージデバイスを検出しています"
 
-#: service/lib/agama/storage/manager.rb:128
+#: service/lib/agama/storage/manager.rb:135
 msgid "Calculating the storage proposal"
 msgstr "ストレージの提案内容を作成しています"
 
 #. Prepares the partitioning to install the system
-#: service/lib/agama/storage/manager.rb:151
+#: service/lib/agama/storage/manager.rb:161
 msgid "Preparing bootloader proposal"
 msgstr "ブートローダの提案内容を準備しています"
 
 #. then also apply changes to that proposal
-#: service/lib/agama/storage/manager.rb:158
+#: service/lib/agama/storage/manager.rb:168
 msgid "Adding storage-related packages"
 msgstr "ストレージ関連のパッケージを追加しています"
 
-#: service/lib/agama/storage/manager.rb:159
+#: service/lib/agama/storage/manager.rb:169
 msgid "Preparing the storage devices"
 msgstr "ストレージデバイスを準備しています"
 
-#: service/lib/agama/storage/manager.rb:160
+#: service/lib/agama/storage/manager.rb:170
 msgid "Writing bootloader sysconfig"
 msgstr "ブートローダの sysconfig を書き込んでいます"
 
 #. Issue representing the proposal is not valid.
 #.
 #. @return [Issue]
-#: service/lib/agama/storage/proposal.rb:364
+#: service/lib/agama/storage/proposal.rb:345
 msgid "Cannot calculate a valid storage setup with the current configuration"
 msgstr "現在の設定では適切なストレージ設定を算出できません"
 
 #. Issue to communicate a generic Y2Storage error.
 #.
 #. @return [Issue]
-#: service/lib/agama/storage/proposal.rb:375
+#: service/lib/agama/storage/proposal.rb:356
 msgid "A problem ocurred while calculating the storage setup"
 msgstr "ストレージ設定を作成する際に問題が発生しました"
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-06 03:25+0000\n"
+"POT-Creation-Date: 2025-08-10 03:25+0000\n"
 "PO-Revision-Date: 2025-08-05 04:59+0000\n"
 "Last-Translator: Grace Yu <grace.yu@excel-gits.com>\n"
 "Language-Team: Chinese (Taiwan) <https://l10n.opensuse.org/projects/agama/"
@@ -28,34 +28,37 @@ msgid "Found unsupported elements in the AutoYaST profile: %{keys}."
 msgstr "在 AutoYaST 設定檔中發現不受支援的元素：%{keys}。"
 
 #. Runs the config phase
-#: service/lib/agama/manager.rb:96
+#.
+#. @param reprobe [Boolean] Whether a reprobe should be done instead of a probe.
+#. @param data [Hash] Extra data provided to the D-Bus calls.
+#: service/lib/agama/manager.rb:99
 msgid "Analyze disks"
 msgstr "分析磁碟"
 
-#: service/lib/agama/manager.rb:96
+#: service/lib/agama/manager.rb:99
 msgid "Configure software"
 msgstr "設定軟體"
 
 #. Runs the install phase
 #. rubocop:disable Metrics/AbcSize, Metrics/MethodLength
-#: service/lib/agama/manager.rb:115
+#: service/lib/agama/manager.rb:118
 msgid "Prepare disks"
 msgstr "準備磁碟"
 
-#: service/lib/agama/manager.rb:116
+#: service/lib/agama/manager.rb:119
 msgid "Install software"
 msgstr "安裝軟體"
 
-#: service/lib/agama/manager.rb:117
+#: service/lib/agama/manager.rb:120
 msgid "Configure the system"
 msgstr "設定系統"
 
 #. rubocop:enable Metrics/AbcSize, Metrics/MethodLength
-#: service/lib/agama/manager.rb:158
+#: service/lib/agama/manager.rb:161
 msgid "Load software translations"
 msgstr "載入軟體翻譯"
 
-#: service/lib/agama/manager.rb:159
+#: service/lib/agama/manager.rb:162
 msgid "Load storage translations"
 msgstr "載入儲存裝置翻譯"
 
@@ -194,8 +197,8 @@ msgid ""
 "The file %{filename} from %{repo_url} is digitally signed with the following "
 "unknown GnuPG key: %{key_id}. Use it anyway?"
 msgstr ""
-"%{repo_url} 中的檔案 %{filename} 是使用以下未知 GnuPG 金鑰進行數位簽署的：%"
-"{key_id}。是否仍要使用它？"
+"%{repo_url} 中的檔案 %{filename} 是使用以下未知 GnuPG 金鑰進行數位簽署的："
+"%{key_id}。是否仍要使用它？"
 
 #: service/lib/agama/software/callbacks/signature.rb:137
 #, perl-brace-format
@@ -459,8 +462,8 @@ msgstr "至少需要 %s 部裝置 (針對 %s)"
 #: service/lib/agama/storage/config_checkers/md_raid.rb:168
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be deleted because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be deleted because it is part of the MD RAID "
+"%{md_raid}"
 msgstr "無法刪除裝置 '%{member}'，因為它是 MD RAID %{md_raid} 的一部分"
 
 #. Issue if the device member is resized.
@@ -470,8 +473,8 @@ msgstr "無法刪除裝置 '%{member}'，因為它是 MD RAID %{md_raid} 的一�
 #: service/lib/agama/storage/config_checkers/md_raid.rb:191
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be resized because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be resized because it is part of the MD RAID "
+"%{md_raid}"
 msgstr "無法調整裝置 '%{member}' 的大小，因為它是 MD RAID %{md_raid} 的一部分"
 
 #. Issue if the device member is formatted.
@@ -504,8 +507,8 @@ msgstr ""
 #: service/lib/agama/storage/config_checkers/md_raid.rb:259
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be used because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be used because it is part of the MD RAID "
+"%{md_raid}"
 msgstr "無法使用裝置 '%{member}'，因為它是 MD RAID %{md_raid} 的一部分"
 
 #. Issue if the parent of the device member is formatted.
@@ -692,47 +695,47 @@ msgstr "無法登入 iSCSI 目標 %s"
 #. proposal.
 #. @param keep_activation [Boolean] Whether to keep the current activation (e.g., provided LUKS
 #. passwords).
-#: service/lib/agama/storage/manager.rb:126
+#: service/lib/agama/storage/manager.rb:133
 msgid "Activating storage devices"
 msgstr "正在啟用儲存裝置"
 
-#: service/lib/agama/storage/manager.rb:127
+#: service/lib/agama/storage/manager.rb:134
 msgid "Probing storage devices"
 msgstr "正在查探儲存裝置"
 
-#: service/lib/agama/storage/manager.rb:128
+#: service/lib/agama/storage/manager.rb:135
 msgid "Calculating the storage proposal"
 msgstr "正在計算儲存建議"
 
 #. Prepares the partitioning to install the system
-#: service/lib/agama/storage/manager.rb:151
+#: service/lib/agama/storage/manager.rb:161
 msgid "Preparing bootloader proposal"
 msgstr "正在準備開機載入程式建議"
 
 #. then also apply changes to that proposal
-#: service/lib/agama/storage/manager.rb:158
+#: service/lib/agama/storage/manager.rb:168
 msgid "Adding storage-related packages"
 msgstr "正在新增儲存相關套件"
 
-#: service/lib/agama/storage/manager.rb:159
+#: service/lib/agama/storage/manager.rb:169
 msgid "Preparing the storage devices"
 msgstr "正在準備儲存裝置"
 
-#: service/lib/agama/storage/manager.rb:160
+#: service/lib/agama/storage/manager.rb:170
 msgid "Writing bootloader sysconfig"
 msgstr "正在寫入開機載入程式 sysconfig"
 
 #. Issue representing the proposal is not valid.
 #.
 #. @return [Issue]
-#: service/lib/agama/storage/proposal.rb:364
+#: service/lib/agama/storage/proposal.rb:345
 msgid "Cannot calculate a valid storage setup with the current configuration"
 msgstr "無法使用目前組態計算有效的儲存設定"
 
 #. Issue to communicate a generic Y2Storage error.
 #.
 #. @return [Issue]
-#: service/lib/agama/storage/proposal.rb:375
+#: service/lib/agama/storage/proposal.rb:356
 msgid "A problem ocurred while calculating the storage setup"
 msgstr "計算儲存設定時出現問題"
 

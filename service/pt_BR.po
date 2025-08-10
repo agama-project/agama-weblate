@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-06 03:25+0000\n"
+"POT-Creation-Date: 2025-08-10 03:25+0000\n"
 "PO-Revision-Date: 2025-08-05 18:59+0000\n"
 "Last-Translator: Samanta Magalhaes <samanta_texttrans@outlook.com>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.opensuse.org/projects/agama/"
@@ -29,34 +29,37 @@ msgstr ""
 "Foram encontrados elementos não suportados no perfil do AutoYaST: %{keys}."
 
 #. Runs the config phase
-#: service/lib/agama/manager.rb:96
+#.
+#. @param reprobe [Boolean] Whether a reprobe should be done instead of a probe.
+#. @param data [Hash] Extra data provided to the D-Bus calls.
+#: service/lib/agama/manager.rb:99
 msgid "Analyze disks"
 msgstr "Analizar discos"
 
-#: service/lib/agama/manager.rb:96
+#: service/lib/agama/manager.rb:99
 msgid "Configure software"
 msgstr "Configurar software"
 
 #. Runs the install phase
 #. rubocop:disable Metrics/AbcSize, Metrics/MethodLength
-#: service/lib/agama/manager.rb:115
+#: service/lib/agama/manager.rb:118
 msgid "Prepare disks"
 msgstr "Preparar discos"
 
-#: service/lib/agama/manager.rb:116
+#: service/lib/agama/manager.rb:119
 msgid "Install software"
 msgstr "Instalar software"
 
-#: service/lib/agama/manager.rb:117
+#: service/lib/agama/manager.rb:120
 msgid "Configure the system"
 msgstr "Configurar o sistema"
 
 #. rubocop:enable Metrics/AbcSize, Metrics/MethodLength
-#: service/lib/agama/manager.rb:158
+#: service/lib/agama/manager.rb:161
 msgid "Load software translations"
 msgstr "Carregar traduções de software"
 
-#: service/lib/agama/manager.rb:159
+#: service/lib/agama/manager.rb:162
 msgid "Load storage translations"
 msgstr "Traduções de armazenamento de carga"
 
@@ -228,8 +231,8 @@ msgid ""
 "anyway?"
 msgstr ""
 "O arquivo %{filename} de %{repo_url} foi assinado digitalmente com a "
-"seguinte chave GnuPG, mas houve falha na verificação da integridade: %"
-"{key_id} (%{key_name}). Usá-lo mesmo assim?"
+"seguinte chave GnuPG, mas houve falha na verificação da integridade: "
+"%{key_id} (%{key_name}). Usá-lo mesmo assim?"
 
 #: service/lib/agama/software/callbacks/signature.rb:175
 #, perl-brace-format
@@ -479,8 +482,8 @@ msgstr "Pelo menos %s dispositivos são necessários para %s"
 #: service/lib/agama/storage/config_checkers/md_raid.rb:168
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be deleted because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be deleted because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
 "Não é possível excluir o dispositivo '%{member}' porque ele faz parte do MD "
 "RAID %{md_raid}"
@@ -492,8 +495,8 @@ msgstr ""
 #: service/lib/agama/storage/config_checkers/md_raid.rb:191
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be resized because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be resized because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
 "Não é possível redimensionar o dispositivo '%{member}' porque ele faz parte "
 "do MD RAID %{md_raid}"
@@ -531,8 +534,8 @@ msgstr ""
 #: service/lib/agama/storage/config_checkers/md_raid.rb:259
 #, perl-brace-format
 msgid ""
-"The device '%{member}' cannot be used because it is part of the MD RAID %"
-"{md_raid}"
+"The device '%{member}' cannot be used because it is part of the MD RAID "
+"%{md_raid}"
 msgstr ""
 "Não é possível usar o dispositivo '%{member}' porque ele faz parte do MD "
 "RAID %{md_raid}"
@@ -730,40 +733,40 @@ msgstr "Não é possível fazer login no destino iSCSI %s"
 #. proposal.
 #. @param keep_activation [Boolean] Whether to keep the current activation (e.g., provided LUKS
 #. passwords).
-#: service/lib/agama/storage/manager.rb:126
+#: service/lib/agama/storage/manager.rb:133
 msgid "Activating storage devices"
 msgstr "Ativando dispositivos de armazenamento"
 
-#: service/lib/agama/storage/manager.rb:127
+#: service/lib/agama/storage/manager.rb:134
 msgid "Probing storage devices"
 msgstr "Sondando dispositivos de armazenamento"
 
-#: service/lib/agama/storage/manager.rb:128
+#: service/lib/agama/storage/manager.rb:135
 msgid "Calculating the storage proposal"
 msgstr "Calculando a proposta de armazenamento"
 
 #. Prepares the partitioning to install the system
-#: service/lib/agama/storage/manager.rb:151
+#: service/lib/agama/storage/manager.rb:161
 msgid "Preparing bootloader proposal"
 msgstr "Preparando proposta de bootloader"
 
 #. then also apply changes to that proposal
-#: service/lib/agama/storage/manager.rb:158
+#: service/lib/agama/storage/manager.rb:168
 msgid "Adding storage-related packages"
 msgstr "Adicionando pacotes relacionados ao armazenamento"
 
-#: service/lib/agama/storage/manager.rb:159
+#: service/lib/agama/storage/manager.rb:169
 msgid "Preparing the storage devices"
 msgstr "Preparando os dispositivos de armazenamento"
 
-#: service/lib/agama/storage/manager.rb:160
+#: service/lib/agama/storage/manager.rb:170
 msgid "Writing bootloader sysconfig"
 msgstr "Escrevendo sysconfig do bootloader"
 
 #. Issue representing the proposal is not valid.
 #.
 #. @return [Issue]
-#: service/lib/agama/storage/proposal.rb:364
+#: service/lib/agama/storage/proposal.rb:345
 msgid "Cannot calculate a valid storage setup with the current configuration"
 msgstr ""
 "Não é possível calcular uma configuração de armazenamento válida com a "
@@ -772,7 +775,7 @@ msgstr ""
 #. Issue to communicate a generic Y2Storage error.
 #.
 #. @return [Issue]
-#: service/lib/agama/storage/proposal.rb:375
+#: service/lib/agama/storage/proposal.rb:356
 msgid "A problem ocurred while calculating the storage setup"
 msgstr "Ocorreu um problema ao calcular a configuração de armazenamento"
 
@@ -794,8 +797,8 @@ msgid_plural ""
 msgstr[0] ""
 "O seguinte dispositivo selecionado não foi encontrado no sistema: %{devices}"
 msgstr[1] ""
-"Os seguintes dispositivos selecionados não foram encontrados no sistema: %"
-"{devices}"
+"Os seguintes dispositivos selecionados não foram encontrados no sistema: "
+"%{devices}"
 
 #. Recalculates the list of issues
 #: service/lib/agama/users.rb:154
