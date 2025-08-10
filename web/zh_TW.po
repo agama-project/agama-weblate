@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-29 03:30+0000\n"
+"POT-Creation-Date: 2025-08-10 03:25+0000\n"
 "PO-Revision-Date: 2025-08-05 04:59+0000\n"
 "Last-Translator: Grace Yu <grace.yu@excel-gits.com>\n"
 "Language-Team: Chinese (Taiwan) <https://l10n.opensuse.org/projects/agama/"
@@ -18,6 +18,25 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 5.12.2\n"
+
+#: src/components/core/AlertOutOfSync.tsx:71
+#, fuzzy
+msgid "Configuration out of sync"
+msgstr "在 %s 上設定分割區"
+
+#: src/components/core/AlertOutOfSync.tsx:80
+msgid "The configuration has been updated externally."
+msgstr ""
+
+#: src/components/core/AlertOutOfSync.tsx:82
+msgid ""
+"Reloading is required to get the latest data and avoid issues or data loss."
+msgstr ""
+
+#: src/components/core/AlertOutOfSync.tsx:85
+#, fuzzy
+msgid "Reload now"
+msgstr "重新載入"
 
 #: src/components/core/ChangeProductOption.tsx:45
 msgid "Change product"
@@ -45,7 +64,7 @@ msgstr "繼續"
 #. TRANSLATORS: button label
 #: src/components/core/InstallButton.tsx:62 src/components/core/Page.tsx:234
 #: src/components/core/Popup.tsx:140
-#: src/components/network/BindingSettingsForm.tsx:246
+#: src/components/network/BindingSettingsForm.tsx:228
 #: src/components/network/IpSettingsForm.tsx:217
 #: src/components/network/WifiConnectionForm.tsx:188
 #: src/components/product/ProductSelectionPage.tsx:99
@@ -374,6 +393,15 @@ msgstr "進行中"
 msgid "Finished"
 msgstr "已完成"
 
+#: src/components/core/ResourceNotFound.tsx:42
+#, fuzzy
+msgid "Resource not found or lost"
+msgstr "未找到網路，或者網路中斷"
+
+#: src/components/core/ResourceNotFound.tsx:43
+msgid "It doesn't exist or can't be reached."
+msgstr ""
+
 #: src/components/core/RowActions.tsx:71
 msgid "Actions"
 msgstr "動作"
@@ -553,7 +581,7 @@ msgstr "位址資料清單"
 #. name first, others the MAC address. I.e. "enp1s0 - CC-7F-C8-FC-7A-A1"
 #. or "CC-7F-C8-FC-7A-A1 - enp1s0". You may change the separator, but
 #. please keep both %s placeholders.
-#: src/components/network/BindingSettingsForm.tsx:75
+#: src/components/network/BindingSettingsForm.tsx:76
 #: src/components/storage/utils/drive.tsx:104
 #, c-format
 msgid "%s - %s"
@@ -561,38 +589,41 @@ msgstr "%s - %s"
 
 #. TRANSLATORS: The title of the page. %s will be replaced with the connection
 #. name. I.e., "Binding settings for 'Wired connection 1'"
-#: src/components/network/BindingSettingsForm.tsx:176
+#: src/components/network/BindingSettingsForm.tsx:158
 #, c-format
 msgid "Binding settings for '%s'"
 msgstr "'%s' 的結合設定"
 
-#: src/components/network/BindingSettingsForm.tsx:184
+#: src/components/network/BindingSettingsForm.tsx:166
+#, fuzzy
 msgid ""
-"Choose how the connection should be associated with a network interface. "
-"This helps control which interface the connection uses."
+"Choose how the connection should be associated with a network device. This "
+"helps control which device the connection uses."
 msgstr "選取連接與網路介面關聯的方式。這有助於控制連接使用的介面。"
 
-#: src/components/network/BindingSettingsForm.tsx:195
-msgid "Any interface"
-msgstr "介面不限"
+#: src/components/network/BindingSettingsForm.tsx:177
+msgid "Unbound"
+msgstr ""
 
-#: src/components/network/BindingSettingsForm.tsx:198
-msgid "The connection can be used by any available interface."
+#: src/components/network/BindingSettingsForm.tsx:180
+#, fuzzy
+msgid "The connection can be used by any available device."
 msgstr "任何可用介面都可以使用此連接。"
 
-#: src/components/network/BindingSettingsForm.tsx:207
-msgid "Bind to interface name"
+#: src/components/network/BindingSettingsForm.tsx:189
+#, fuzzy
+msgid "Bind to device name"
 msgstr "結合至介面名稱"
 
-#: src/components/network/BindingSettingsForm.tsx:211
+#: src/components/network/BindingSettingsForm.tsx:193
 msgid "Choose device to bind by name"
 msgstr "依名稱選擇要結合的裝置"
 
-#: src/components/network/BindingSettingsForm.tsx:226
+#: src/components/network/BindingSettingsForm.tsx:208
 msgid "Bind to MAC address"
 msgstr "結合至 MAC 位址"
 
-#: src/components/network/BindingSettingsForm.tsx:230
+#: src/components/network/BindingSettingsForm.tsx:212
 msgid "Choose device to bind by MAC"
 msgstr "依 MAC 選擇要結合的裝置"
 
@@ -612,7 +643,8 @@ msgstr "新增另一個 DNS"
 
 #: src/components/network/DnsDataList.tsx:118
 #: src/components/network/WifiConnectionDetails.tsx:138
-#: src/components/network/WiredConnectionDetails.tsx:126
+#: src/components/network/WiredConnectionDetails.tsx:129
+#: src/components/network/WiredConnectionDetails.tsx:249
 msgid "DNS"
 msgstr "DNS"
 
@@ -655,7 +687,7 @@ msgstr "出了點問題"
 #: src/components/network/IpSettingsForm.tsx:168
 #: src/components/network/IpSettingsForm.tsx:170
 #: src/components/network/WifiConnectionDetails.tsx:106
-#: src/components/network/WiredConnectionDetails.tsx:94
+#: src/components/network/WiredConnectionDetails.tsx:214
 msgid "Mode"
 msgstr "模式"
 
@@ -675,7 +707,8 @@ msgstr "手動"
 #: src/components/network/IpSettingsForm.tsx:188
 #: src/components/network/IpSettingsForm.tsx:191
 #: src/components/network/WifiConnectionDetails.tsx:129
-#: src/components/network/WiredConnectionDetails.tsx:107
+#: src/components/network/WiredConnectionDetails.tsx:110
+#: src/components/network/WiredConnectionDetails.tsx:227
 msgid "Gateway"
 msgstr "閘道"
 
@@ -736,7 +769,7 @@ msgstr "訊號強度"
 
 #: src/components/network/WifiConnectionDetails.tsx:56
 #: src/components/network/WifiConnectionDetails.tsx:79
-#: src/components/network/WiredConnectionDetails.tsx:67
+#: src/components/network/WiredConnectionDetails.tsx:102
 #: src/components/storage/dasd/DASDTable.tsx:76
 #: src/components/storage/iscsi/NodesPresenter.jsx:104
 #: src/components/storage/iscsi/NodesPresenter.jsx:125
@@ -751,7 +784,6 @@ msgid "Security"
 msgstr "安全性"
 
 #: src/components/network/WifiConnectionDetails.tsx:72
-#: src/components/network/WiredConnectionDetails.tsx:49
 #: src/components/storage/DeviceSelectorModal.tsx:83
 #: src/components/storage/ProposalResultTable.tsx:132
 #: src/components/storage/SpaceActionsTable.tsx:233
@@ -766,24 +798,22 @@ msgid "Connection details"
 msgstr "連接詳細資料"
 
 #: src/components/network/WifiConnectionDetails.tsx:75
-#: src/components/network/WiredConnectionDetails.tsx:63
+#: src/components/network/WiredConnectionDetails.tsx:98
 #: src/components/storage/iscsi/NodesPresenter.jsx:102
 #: src/components/storage/iscsi/NodesPresenter.jsx:123
 msgid "Interface"
 msgstr "介面"
 
 #: src/components/network/WifiConnectionDetails.tsx:83
-#: src/components/network/WiredConnectionDetails.tsx:71
+#: src/components/network/WiredConnectionDetails.tsx:106
 msgid "MAC"
 msgstr "MAC"
 
 #: src/components/network/WifiConnectionDetails.tsx:96
-#: src/components/network/WiredConnectionDetails.tsx:84
 msgid "IP settings"
 msgstr "IP 設定"
 
 #: src/components/network/WifiConnectionDetails.tsx:100
-#: src/components/network/WiredConnectionDetails.tsx:88
 #: src/components/storage/EncryptionSection.tsx:52
 #: src/components/storage/FilesystemMenu.tsx:94
 #: src/components/storage/iscsi/NodesPresenter.jsx:75
@@ -792,17 +822,17 @@ msgid "Edit"
 msgstr "編輯"
 
 #: src/components/network/WifiConnectionDetails.tsx:110
-#: src/components/network/WiredConnectionDetails.tsx:98
+#: src/components/network/WiredConnectionDetails.tsx:218
 msgid "IPv4"
 msgstr "IPv4"
 
 #: src/components/network/WifiConnectionDetails.tsx:113
-#: src/components/network/WiredConnectionDetails.tsx:101
+#: src/components/network/WiredConnectionDetails.tsx:221
 msgid "IPv6"
 msgstr "IPv6"
 
 #: src/components/network/WifiConnectionDetails.tsx:148
-#: src/components/network/WiredConnectionDetails.tsx:136
+#: src/components/network/WiredConnectionDetails.tsx:139
 msgid "Routes"
 msgstr "路由"
 
@@ -921,17 +951,75 @@ msgstr "僅為安裝設定"
 msgid "No Wi-Fi networks were found"
 msgstr "未找到 WiFi 網路"
 
-#: src/components/network/WiredConnectionDetails.tsx:57
+#: src/components/network/WiredConnectionDetails.tsx:59
+msgid "Connection is available to all devices."
+msgstr ""
+
+#. TRANSLATORS: %s will be replaced by a network device name, like eth0 or enp1s0
+#: src/components/network/WiredConnectionDetails.tsx:62
+#, fuzzy, c-format
+msgid "Connection is bound to device %s."
+msgstr "未找到連接，或者連接中斷"
+
+#. TRANSLATORS: %s will be replaced by MAC addrss, like 7C:D7:11:28:F5:40
+#: src/components/network/WiredConnectionDetails.tsx:65
+#, fuzzy, c-format
+msgid "Connection is bound to MAC address %s."
+msgstr "未找到連接，或者連接中斷"
+
+#: src/components/network/WiredConnectionDetails.tsx:72
+#, fuzzy
+msgid "Binding"
+msgstr "待處理"
+
+#: src/components/network/WiredConnectionDetails.tsx:80
 msgid "Edit binding settings"
 msgstr "編輯結合設定"
 
-#: src/components/network/WiredConnectionDetails.tsx:61
+#: src/components/network/WiredConnectionDetails.tsx:93
 msgid "Device details"
 msgstr "裝置詳細資料"
 
-#: src/components/network/WiredConnectionDetails.tsx:116
+#: src/components/network/WiredConnectionDetails.tsx:119
+#: src/components/network/WiredConnectionDetails.tsx:237
 msgid "IP Addresses"
 msgstr "IP 位址"
+
+#: src/components/network/WiredConnectionDetails.tsx:172
+#, fuzzy
+msgid "Connected device"
+msgstr "已連接"
+
+#: src/components/network/WiredConnectionDetails.tsx:172
+#, fuzzy
+msgid "Connected devices"
+msgstr "已連接 (%s)"
+
+#: src/components/network/WiredConnectionDetails.tsx:175
+msgid "No device is currently using this connection."
+msgstr ""
+
+#: src/components/network/WiredConnectionDetails.tsx:181
+#, fuzzy
+msgid "Connected devices tabs"
+msgstr "連接詳細資料"
+
+#: src/components/network/WiredConnectionDetails.tsx:203
+#, fuzzy
+msgid "Settings"
+msgstr "IP 設定"
+
+#: src/components/network/WiredConnectionDetails.tsx:207
+#, fuzzy
+msgid "Edit connection settings"
+msgstr "編輯連接 %s"
+
+#: src/components/network/WiredConnectionDetails.tsx:231
+#: src/components/network/WiredConnectionDetails.tsx:241
+#: src/components/network/WiredConnectionDetails.tsx:253
+#, fuzzy
+msgid "None set"
+msgstr "無"
 
 #: src/components/network/WiredConnectionPage.tsx:48
 msgid "Connection not found or lost"
@@ -1492,7 +1580,8 @@ msgstr "將根據系統中的 RAM 容量規劃一個 %1s$ (%2$s)，以用於 %3$
 msgid ""
 "Based on the amount of RAM in the system, a %1s$ with a size between %2$s "
 "and %3$s will be planned for %4$s"
-msgstr "將根據系統中的 RAM 容量規劃一個 %1s$ (大小介於 %2$s 至 %3$s 之間)，以用於 "
+msgstr ""
+"將根據系統中的 RAM 容量規劃一個 %1s$ (大小介於 %2$s 至 %3$s 之間)，以用於 "
 "%4$s"
 
 #. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
@@ -1508,8 +1597,9 @@ msgid ""
 "The size for %1$s will be dynamically adjusted based on the amount of RAM in "
 "the system, the usage of Btrfs snapshots and the presence of a separate file "
 "system for %2$s."
-msgstr "%1$s 的大小將會動態調整，考量因素包括系統中的 RAM 容量、Btrfs "
-"快照的使用情況，以及 %2$s 是否存在單獨的檔案系統。"
+msgstr ""
+"%1$s 的大小將會動態調整，考量因素包括系統中的 RAM 容量、Btrfs 快照的使用情"
+"況，以及 %2$s 是否存在單獨的檔案系統。"
 
 #: src/components/storage/AutoSizeText.tsx:179
 #, c-format
@@ -1517,48 +1607,54 @@ msgid ""
 "The size for %1$s will be dynamically adjusted based on the amount of RAM in "
 "the system, the usage of Btrfs snapshots and the presence of separate file "
 "systems for %2$s."
-msgstr "%1$s 的大小將會動態調整，考量因素包括系統中的 RAM 容量、Btrfs "
-"快照的使用情況，以及 %2$s 是否存在單獨的檔案系統。"
+msgstr ""
+"%1$s 的大小將會動態調整，考量因素包括系統中的 RAM 容量、Btrfs 快照的使用情"
+"況，以及 %2$s 是否存在單獨的檔案系統。"
 
 #: src/components/storage/AutoSizeText.tsx:189
 #, c-format
 msgid ""
 "The size for %s will be dynamically adjusted based on the amount of RAM in "
 "the system and the usage of Btrfs snapshots."
-msgstr "%s 的大小將會動態調整，考量因素包括系統中的 RAM 容量以及 Btrfs "
-"快照的使用情況。"
+msgstr ""
+"%s 的大小將會動態調整，考量因素包括系統中的 RAM 容量以及 Btrfs 快照的使用情"
+"況。"
 
 #: src/components/storage/AutoSizeText.tsx:200
 #, c-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the amount of RAM in "
 "the system and the presence of a separate file system for %2$s."
-msgstr "%1$s 的大小將會動態調整，考量因素包括系統中的 RAM 容量以及 %2$s "
-"是否存在單獨的檔案系統。"
+msgstr ""
+"%1$s 的大小將會動態調整，考量因素包括系統中的 RAM 容量以及 %2$s 是否存在單獨"
+"的檔案系統。"
 
 #: src/components/storage/AutoSizeText.tsx:210
 #, c-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the amount of RAM in "
 "the system and the presence of separate file systems for %2$s."
-msgstr "%1$s 的大小將會動態調整，考量因素包括系統中的 RAM 容量以及 %2$s "
-"是否存在單獨的檔案系統。"
+msgstr ""
+"%1$s 的大小將會動態調整，考量因素包括系統中的 RAM 容量以及 %2$s 是否存在單獨"
+"的檔案系統。"
 
 #: src/components/storage/AutoSizeText.tsx:222
 #, c-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the usage of Btrfs "
 "snapshots and the presence of a separate file system for %2$s."
-msgstr "%1$s 的大小將會動態調整，考量因素包括 Btrfs 快照的使用情況以及 %2$s "
-"是否存在單獨的檔案系統。"
+msgstr ""
+"%1$s 的大小將會動態調整，考量因素包括 Btrfs 快照的使用情況以及 %2$s 是否存在"
+"單獨的檔案系統。"
 
 #: src/components/storage/AutoSizeText.tsx:233
 #, c-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the usage of Btrfs "
 "snapshots and the presence of separate file systems for %2$s."
-msgstr "%1$s 的大小將會動態調整，考量因素包括 Btrfs 快照的使用情況以及 %2$s "
-"是否存在單獨的檔案系統。"
+msgstr ""
+"%1$s 的大小將會動態調整，考量因素包括 Btrfs 快照的使用情況以及 %2$s 是否存在"
+"單獨的檔案系統。"
 
 #. TRANSLATORS: %s is a mount point (eg. /)
 #: src/components/storage/AutoSizeText.tsx:242
@@ -1837,7 +1933,8 @@ msgid ""
 "For more advanced needs, users can switch to this full-page, dedicated path "
 "version that provides more space for detailed views, additional columns, "
 "filters, and extended functionality."
-msgstr "如有更複雜的需求，使用者可切換到此顯示完整頁面的專屬路徑版本，它會提供更多空"
+msgstr ""
+"如有更複雜的需求，使用者可切換到此顯示完整頁面的專屬路徑版本，它會提供更多空"
 "間，可呈現詳細檢視、更多的欄、過濾器及延伸功能。"
 
 #: src/components/storage/DeviceSelectorPage.tsx:90
@@ -2036,13 +2133,13 @@ msgstr "變更檔案系統或掛接點"
 
 #: src/components/storage/FormattableDevicePage.tsx:221
 #: src/components/storage/LogicalVolumePage.tsx:248
-#: src/components/storage/PartitionPage.tsx:306
+#: src/components/storage/PartitionPage.tsx:308
 msgid "Select or enter a valid mount point"
 msgstr "請選取或輸入有效的掛接點"
 
 #: src/components/storage/FormattableDevicePage.tsx:231
 #: src/components/storage/LogicalVolumePage.tsx:258
-#: src/components/storage/PartitionPage.tsx:316
+#: src/components/storage/PartitionPage.tsx:318
 msgid ""
 "Select or enter a mount point that is not already assigned to another device"
 msgstr "請選取或輸入尚未指定給其他裝置的掛接點"
@@ -2051,14 +2148,14 @@ msgstr "請選取或輸入尚未指定給其他裝置的掛接點"
 #: src/components/storage/LogicalVolumePage.tsx:443
 #: src/components/storage/LogicalVolumePage.tsx:462
 #: src/components/storage/LogicalVolumePage.tsx:762
-#: src/components/storage/PartitionPage.tsx:558
-#: src/components/storage/PartitionPage.tsx:884
+#: src/components/storage/PartitionPage.tsx:560
+#: src/components/storage/PartitionPage.tsx:888
 msgid "Waiting for a mount point"
 msgstr "正在等待掛接點"
 
 #. TRANSLATORS: %s is a device name (eg. /dev/sda3).
 #: src/components/storage/FormattableDevicePage.tsx:283
-#: src/components/storage/PartitionPage.tsx:561
+#: src/components/storage/PartitionPage.tsx:563
 #: src/components/storage/utils/partition.tsx:69
 #, c-format
 msgid "Current %s"
@@ -2066,14 +2163,14 @@ msgstr "目前 %s"
 
 #: src/components/storage/FormattableDevicePage.tsx:284
 #: src/components/storage/LogicalVolumePage.tsx:463
-#: src/components/storage/PartitionPage.tsx:562
+#: src/components/storage/PartitionPage.tsx:564
 #: src/components/storage/utils.ts:338
 msgid "Btrfs with snapshots"
 msgstr "含快照的 Btrfs"
 
 #: src/components/storage/FormattableDevicePage.tsx:302
 #: src/components/storage/LogicalVolumePage.tsx:479
-#: src/components/storage/PartitionPage.tsx:580
+#: src/components/storage/PartitionPage.tsx:582
 #, c-format
 msgid "Default file system for %s"
 msgstr "%s 的預設檔案系統"
@@ -2090,17 +2187,17 @@ msgstr "損毀目前的資料並將裝置格式化為"
 msgid "Format device as"
 msgstr "將裝置格式化為"
 
-#. TRANSLATORS: %s is the name of a partition, like /dev/vda2
 #. TRANSLATORS: %s is the name of a device, like vda
+#. TRANSLATORS: %s is the name of a partition, like /dev/vda2
 #: src/components/storage/FormattableDevicePage.tsx:320
-#: src/components/storage/PartitionPage.tsx:597
+#: src/components/storage/PartitionPage.tsx:599
 #, c-format
 msgid "Do not format %s and keep the data"
 msgstr "不格式化 %s 並保留資料"
 
 #: src/components/storage/FormattableDevicePage.tsx:384
 #: src/components/storage/LogicalVolumePage.tsx:548
-#: src/components/storage/PartitionPage.tsx:662
+#: src/components/storage/PartitionPage.tsx:664
 msgid "File system label"
 msgstr "檔案系統標籤"
 
@@ -2113,50 +2210,50 @@ msgstr "設定裝置 %s"
 #: src/components/storage/FormattableDevicePage.tsx:467
 #: src/components/storage/LogicalVolumePage.tsx:693
 #: src/components/storage/LogicalVolumePage.tsx:698
-#: src/components/storage/PartitionPage.tsx:817
-#: src/components/storage/PartitionPage.tsx:824
+#: src/components/storage/PartitionPage.tsx:821
+#: src/components/storage/PartitionPage.tsx:828
 msgid "Mount point"
 msgstr "掛接點"
 
 #: src/components/storage/FormattableDevicePage.tsx:465
 #: src/components/storage/LogicalVolumePage.tsx:696
-#: src/components/storage/PartitionPage.tsx:822
+#: src/components/storage/PartitionPage.tsx:826
 msgid "Mount point toggle"
 msgstr "掛接點切換鈕"
 
 #: src/components/storage/FormattableDevicePage.tsx:466
 #: src/components/storage/LogicalVolumePage.tsx:697
-#: src/components/storage/PartitionPage.tsx:823
+#: src/components/storage/PartitionPage.tsx:827
 msgid "Suggested mount points"
 msgstr "建議的掛接點"
 
 #: src/components/storage/FormattableDevicePage.tsx:468
 #: src/components/storage/LogicalVolumePage.tsx:699
-#: src/components/storage/PartitionPage.tsx:825
+#: src/components/storage/PartitionPage.tsx:829
 msgid "Clear selected mount point"
 msgstr "清除所選的掛接點"
 
 #: src/components/storage/FormattableDevicePage.tsx:471
 #: src/components/storage/LogicalVolumePage.tsx:702
-#: src/components/storage/PartitionPage.tsx:828
+#: src/components/storage/PartitionPage.tsx:832
 msgid "Use"
 msgstr "使用"
 
 #: src/components/storage/FormattableDevicePage.tsx:479
 #: src/components/storage/LogicalVolumePage.tsx:708
-#: src/components/storage/PartitionPage.tsx:846
+#: src/components/storage/PartitionPage.tsx:850
 msgid "Select or enter a mount point"
 msgstr "選取或輸入掛接點"
 
 #: src/components/storage/FormattableDevicePage.tsx:488
 #: src/components/storage/LogicalVolumePage.tsx:733
-#: src/components/storage/PartitionPage.tsx:855
+#: src/components/storage/PartitionPage.tsx:859
 msgid "File system"
 msgstr "檔案系統"
 
 #: src/components/storage/FormattableDevicePage.tsx:499
 #: src/components/storage/LogicalVolumePage.tsx:744
-#: src/components/storage/PartitionPage.tsx:867
+#: src/components/storage/PartitionPage.tsx:871
 msgid "Label"
 msgstr "標籤"
 
@@ -2169,7 +2266,7 @@ msgid "Enter a name"
 msgstr "輸入名稱"
 
 #: src/components/storage/LogicalVolumePage.tsx:296
-#: src/components/storage/PartitionPage.tsx:344
+#: src/components/storage/PartitionPage.tsx:346
 msgid "The minimum cannot be greater than the maximum"
 msgstr "下限不能大於上限"
 
@@ -2207,7 +2304,7 @@ msgid "Configure LVM logical volume at %s volume group"
 msgstr "在 %s 磁碟區群組上設定 LVM 邏輯磁碟區"
 
 #: src/components/storage/LogicalVolumePage.tsx:757
-#: src/components/storage/PartitionPage.tsx:879
+#: src/components/storage/PartitionPage.tsx:883
 msgid "Size mode"
 msgstr "大小模式"
 
@@ -2352,61 +2449,66 @@ msgstr "在 %s 上建立另一個 LVM 磁碟區群組"
 msgid "Create LVM volume group on %s"
 msgstr "在 %s 上建立 LVM 磁碟區群組"
 
-#: src/components/storage/PartitionPage.tsx:352
+#: src/components/storage/PartitionPage.tsx:354
 msgid "The maximum must be a number followed by a unit like GiB or GB"
 msgstr "上限必須為數字且後跟單位 (如 GiB 或 GB)"
 
-#: src/components/storage/PartitionPage.tsx:360
+#: src/components/storage/PartitionPage.tsx:362
 msgid "The minimum must be a number followed by a unit like GiB or GB"
 msgstr "下限必須為數字且後跟單位 (如 GiB 或 GB)"
 
-#: src/components/storage/PartitionPage.tsx:367
+#: src/components/storage/PartitionPage.tsx:369
 msgid "Size limits must be numbers followed by a unit like GiB or GB"
 msgstr "大小限制必須為為數字且後跟單位 (如 GiB 或 GB)"
 
 #. TRANSLATORS: %s is a disk name with its size (eg. "sda, 10 GiB"
-#: src/components/storage/PartitionPage.tsx:496
+#: src/components/storage/PartitionPage.tsx:498
 #, c-format
 msgid "As a new partition on %s"
 msgstr "做為 %s 上的新分割區"
 
-#: src/components/storage/PartitionPage.tsx:498
+#: src/components/storage/PartitionPage.tsx:500
 #, c-format
 msgid "Using partition %s"
 msgstr "使用分割區 %s"
 
-#: src/components/storage/PartitionPage.tsx:527
+#: src/components/storage/PartitionPage.tsx:529
 msgid "Mount point options"
 msgstr "掛接點選項"
 
-#: src/components/storage/PartitionPage.tsx:532
+#: src/components/storage/PartitionPage.tsx:534
 msgid "Using an existing partition"
 msgstr "使用現有分割區"
 
-#: src/components/storage/PartitionPage.tsx:543
+#: src/components/storage/PartitionPage.tsx:545
 msgid "There are not usable partitions"
 msgstr "沒有可使用的分割區"
 
-#: src/components/storage/PartitionPage.tsx:581
+#: src/components/storage/PartitionPage.tsx:583
 msgid "Default file system for generic partitions"
 msgstr "通用分割區的預設檔案系統"
 
-#: src/components/storage/PartitionPage.tsx:583
+#: src/components/storage/PartitionPage.tsx:585
 msgid "Destroy current data and format partition as"
 msgstr "刪除目前資料並將分割區格式化為"
 
-#: src/components/storage/PartitionPage.tsx:584
+#: src/components/storage/PartitionPage.tsx:586
 msgid "Format partition as"
 msgstr "將分割區格式化為"
 
-#: src/components/storage/PartitionPage.tsx:810
+#: src/components/storage/PartitionPage.tsx:813
 #, c-format
 msgid "Configure partition at %s"
 msgstr "在 %s 上設定分割區"
 
-#: src/components/storage/PartitionPage.tsx:834
+#: src/components/storage/PartitionPage.tsx:838
 msgid "Mount point mode"
 msgstr "掛接點模式"
+
+#: src/components/storage/PartitionPage.tsx:918
+#, fuzzy
+msgid "Go to storage page"
+msgstr "前往網路頁面"
 
 #: src/components/storage/PartitionsMenu.tsx:63
 msgid "Moreover, the following partitions will be created or mounted"
@@ -3729,6 +3831,9 @@ msgstr "使用 SSH 公用金鑰"
 #: src/routes/storage.tsx:113
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#~ msgid "Any interface"
+#~ msgstr "介面不限"
 
 #~ msgid "License language"
 #~ msgstr "授權語言"

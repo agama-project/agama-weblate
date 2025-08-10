@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-29 03:30+0000\n"
+"POT-Creation-Date: 2025-08-10 03:25+0000\n"
 "PO-Revision-Date: 2025-07-24 09:59+0000\n"
 "Last-Translator: Eugene Krater <lachend@gmail.com>\n"
 "Language-Team: Ukrainian <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -19,6 +19,25 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 5.12.2\n"
+
+#: src/components/core/AlertOutOfSync.tsx:71
+#, fuzzy
+msgid "Configuration out of sync"
+msgstr "Налаштування розділу на %s"
+
+#: src/components/core/AlertOutOfSync.tsx:80
+msgid "The configuration has been updated externally."
+msgstr ""
+
+#: src/components/core/AlertOutOfSync.tsx:82
+msgid ""
+"Reloading is required to get the latest data and avoid issues or data loss."
+msgstr ""
+
+#: src/components/core/AlertOutOfSync.tsx:85
+#, fuzzy
+msgid "Reload now"
+msgstr "Оновити"
 
 #: src/components/core/ChangeProductOption.tsx:45
 msgid "Change product"
@@ -48,7 +67,7 @@ msgstr "Продовжити"
 #. TRANSLATORS: button label
 #: src/components/core/InstallButton.tsx:62 src/components/core/Page.tsx:234
 #: src/components/core/Popup.tsx:140
-#: src/components/network/BindingSettingsForm.tsx:246
+#: src/components/network/BindingSettingsForm.tsx:228
 #: src/components/network/IpSettingsForm.tsx:217
 #: src/components/network/WifiConnectionForm.tsx:188
 #: src/components/product/ProductSelectionPage.tsx:99
@@ -392,6 +411,15 @@ msgstr "В процесі"
 msgid "Finished"
 msgstr "Завершено"
 
+#: src/components/core/ResourceNotFound.tsx:42
+#, fuzzy
+msgid "Resource not found or lost"
+msgstr "Мережу не знайдено або втрачено"
+
+#: src/components/core/ResourceNotFound.tsx:43
+msgid "It doesn't exist or can't be reached."
+msgstr ""
+
 #: src/components/core/RowActions.tsx:71
 msgid "Actions"
 msgstr "Дії"
@@ -572,7 +600,7 @@ msgstr "Список даних адрес"
 #. name first, others the MAC address. I.e. "enp1s0 - CC-7F-C8-FC-7A-A1"
 #. or "CC-7F-C8-FC-7A-A1 - enp1s0". You may change the separator, but
 #. please keep both %s placeholders.
-#: src/components/network/BindingSettingsForm.tsx:75
+#: src/components/network/BindingSettingsForm.tsx:76
 #: src/components/storage/utils/drive.tsx:104
 #, c-format
 msgid "%s - %s"
@@ -580,40 +608,43 @@ msgstr "%s - %s"
 
 #. TRANSLATORS: The title of the page. %s will be replaced with the connection
 #. name. I.e., "Binding settings for 'Wired connection 1'"
-#: src/components/network/BindingSettingsForm.tsx:176
+#: src/components/network/BindingSettingsForm.tsx:158
 #, c-format
 msgid "Binding settings for '%s'"
 msgstr "Налаштування прив'язки для «%s»"
 
-#: src/components/network/BindingSettingsForm.tsx:184
+#: src/components/network/BindingSettingsForm.tsx:166
+#, fuzzy
 msgid ""
-"Choose how the connection should be associated with a network interface. "
-"This helps control which interface the connection uses."
+"Choose how the connection should be associated with a network device. This "
+"helps control which device the connection uses."
 msgstr ""
 "Виберіть, як це підключення має бути пов'язане з мережевим інтерфейсом. Це "
 "допоможе контролювати, який інтерфейс буде використовуватися для підключення."
 
-#: src/components/network/BindingSettingsForm.tsx:195
-msgid "Any interface"
-msgstr "Будь-який інтерфейс"
+#: src/components/network/BindingSettingsForm.tsx:177
+msgid "Unbound"
+msgstr ""
 
-#: src/components/network/BindingSettingsForm.tsx:198
-msgid "The connection can be used by any available interface."
+#: src/components/network/BindingSettingsForm.tsx:180
+#, fuzzy
+msgid "The connection can be used by any available device."
 msgstr "Це підключення може використовуватися будь-яким доступним інтерфейсом."
 
-#: src/components/network/BindingSettingsForm.tsx:207
-msgid "Bind to interface name"
+#: src/components/network/BindingSettingsForm.tsx:189
+#, fuzzy
+msgid "Bind to device name"
 msgstr "Прив'язати до назви інтерфейсу"
 
-#: src/components/network/BindingSettingsForm.tsx:211
+#: src/components/network/BindingSettingsForm.tsx:193
 msgid "Choose device to bind by name"
 msgstr "Виберіть пристрій для прив'язки за назвою"
 
-#: src/components/network/BindingSettingsForm.tsx:226
+#: src/components/network/BindingSettingsForm.tsx:208
 msgid "Bind to MAC address"
 msgstr "Прив'язати до MAC-адреси"
 
-#: src/components/network/BindingSettingsForm.tsx:230
+#: src/components/network/BindingSettingsForm.tsx:212
 msgid "Choose device to bind by MAC"
 msgstr "Виберіть пристрій для прив'язки за MAC-адресою"
 
@@ -633,7 +664,8 @@ msgstr "Додати інший DNS"
 
 #: src/components/network/DnsDataList.tsx:118
 #: src/components/network/WifiConnectionDetails.tsx:138
-#: src/components/network/WiredConnectionDetails.tsx:126
+#: src/components/network/WiredConnectionDetails.tsx:129
+#: src/components/network/WiredConnectionDetails.tsx:249
 msgid "DNS"
 msgstr "DNS"
 
@@ -678,7 +710,7 @@ msgstr "Щось пішло не так"
 #: src/components/network/IpSettingsForm.tsx:168
 #: src/components/network/IpSettingsForm.tsx:170
 #: src/components/network/WifiConnectionDetails.tsx:106
-#: src/components/network/WiredConnectionDetails.tsx:94
+#: src/components/network/WiredConnectionDetails.tsx:214
 msgid "Mode"
 msgstr "Режим"
 
@@ -698,7 +730,8 @@ msgstr "Вручну"
 #: src/components/network/IpSettingsForm.tsx:188
 #: src/components/network/IpSettingsForm.tsx:191
 #: src/components/network/WifiConnectionDetails.tsx:129
-#: src/components/network/WiredConnectionDetails.tsx:107
+#: src/components/network/WiredConnectionDetails.tsx:110
+#: src/components/network/WiredConnectionDetails.tsx:227
 msgid "Gateway"
 msgstr "Шлюз"
 
@@ -762,7 +795,7 @@ msgstr "Потужність сигналу"
 
 #: src/components/network/WifiConnectionDetails.tsx:56
 #: src/components/network/WifiConnectionDetails.tsx:79
-#: src/components/network/WiredConnectionDetails.tsx:67
+#: src/components/network/WiredConnectionDetails.tsx:102
 #: src/components/storage/dasd/DASDTable.tsx:76
 #: src/components/storage/iscsi/NodesPresenter.jsx:104
 #: src/components/storage/iscsi/NodesPresenter.jsx:125
@@ -777,7 +810,6 @@ msgid "Security"
 msgstr "Захист"
 
 #: src/components/network/WifiConnectionDetails.tsx:72
-#: src/components/network/WiredConnectionDetails.tsx:49
 #: src/components/storage/DeviceSelectorModal.tsx:83
 #: src/components/storage/ProposalResultTable.tsx:132
 #: src/components/storage/SpaceActionsTable.tsx:233
@@ -792,24 +824,22 @@ msgid "Connection details"
 msgstr "Відомості про підключення"
 
 #: src/components/network/WifiConnectionDetails.tsx:75
-#: src/components/network/WiredConnectionDetails.tsx:63
+#: src/components/network/WiredConnectionDetails.tsx:98
 #: src/components/storage/iscsi/NodesPresenter.jsx:102
 #: src/components/storage/iscsi/NodesPresenter.jsx:123
 msgid "Interface"
 msgstr "Інтерфейс"
 
 #: src/components/network/WifiConnectionDetails.tsx:83
-#: src/components/network/WiredConnectionDetails.tsx:71
+#: src/components/network/WiredConnectionDetails.tsx:106
 msgid "MAC"
 msgstr "MAC-адреса"
 
 #: src/components/network/WifiConnectionDetails.tsx:96
-#: src/components/network/WiredConnectionDetails.tsx:84
 msgid "IP settings"
 msgstr "Налаштування IP"
 
 #: src/components/network/WifiConnectionDetails.tsx:100
-#: src/components/network/WiredConnectionDetails.tsx:88
 #: src/components/storage/EncryptionSection.tsx:52
 #: src/components/storage/FilesystemMenu.tsx:94
 #: src/components/storage/iscsi/NodesPresenter.jsx:75
@@ -818,17 +848,17 @@ msgid "Edit"
 msgstr "Редагувати"
 
 #: src/components/network/WifiConnectionDetails.tsx:110
-#: src/components/network/WiredConnectionDetails.tsx:98
+#: src/components/network/WiredConnectionDetails.tsx:218
 msgid "IPv4"
 msgstr "IPv4"
 
 #: src/components/network/WifiConnectionDetails.tsx:113
-#: src/components/network/WiredConnectionDetails.tsx:101
+#: src/components/network/WiredConnectionDetails.tsx:221
 msgid "IPv6"
 msgstr "IPv6"
 
 #: src/components/network/WifiConnectionDetails.tsx:148
-#: src/components/network/WiredConnectionDetails.tsx:136
+#: src/components/network/WiredConnectionDetails.tsx:139
 msgid "Routes"
 msgstr "Маршрути"
 
@@ -949,17 +979,75 @@ msgstr "Налаштовано лише для встановлення"
 msgid "No Wi-Fi networks were found"
 msgstr "Мережі Wi-Fi не знайдені"
 
-#: src/components/network/WiredConnectionDetails.tsx:57
+#: src/components/network/WiredConnectionDetails.tsx:59
+msgid "Connection is available to all devices."
+msgstr ""
+
+#. TRANSLATORS: %s will be replaced by a network device name, like eth0 or enp1s0
+#: src/components/network/WiredConnectionDetails.tsx:62
+#, fuzzy, c-format
+msgid "Connection is bound to device %s."
+msgstr "З'єднання не знайдено або втрачено"
+
+#. TRANSLATORS: %s will be replaced by MAC addrss, like 7C:D7:11:28:F5:40
+#: src/components/network/WiredConnectionDetails.tsx:65
+#, fuzzy, c-format
+msgid "Connection is bound to MAC address %s."
+msgstr "З'єднання не знайдено або втрачено"
+
+#: src/components/network/WiredConnectionDetails.tsx:72
+#, fuzzy
+msgid "Binding"
+msgstr "Очікуйте"
+
+#: src/components/network/WiredConnectionDetails.tsx:80
 msgid "Edit binding settings"
 msgstr "Змінити налаштування прив'язки"
 
-#: src/components/network/WiredConnectionDetails.tsx:61
+#: src/components/network/WiredConnectionDetails.tsx:93
 msgid "Device details"
 msgstr "Відомості про пристрій"
 
-#: src/components/network/WiredConnectionDetails.tsx:116
+#: src/components/network/WiredConnectionDetails.tsx:119
+#: src/components/network/WiredConnectionDetails.tsx:237
 msgid "IP Addresses"
 msgstr "IP-адреси"
+
+#: src/components/network/WiredConnectionDetails.tsx:172
+#, fuzzy
+msgid "Connected device"
+msgstr "З'єднано"
+
+#: src/components/network/WiredConnectionDetails.tsx:172
+#, fuzzy
+msgid "Connected devices"
+msgstr "З'єднано (%s)"
+
+#: src/components/network/WiredConnectionDetails.tsx:175
+msgid "No device is currently using this connection."
+msgstr ""
+
+#: src/components/network/WiredConnectionDetails.tsx:181
+#, fuzzy
+msgid "Connected devices tabs"
+msgstr "Відомості про підключення"
+
+#: src/components/network/WiredConnectionDetails.tsx:203
+#, fuzzy
+msgid "Settings"
+msgstr "Налаштування IP"
+
+#: src/components/network/WiredConnectionDetails.tsx:207
+#, fuzzy
+msgid "Edit connection settings"
+msgstr "Редагувати з'єднання %s"
+
+#: src/components/network/WiredConnectionDetails.tsx:231
+#: src/components/network/WiredConnectionDetails.tsx:241
+#: src/components/network/WiredConnectionDetails.tsx:253
+#, fuzzy
+msgid "None set"
+msgstr "Відсутнє"
 
 #: src/components/network/WiredConnectionPage.tsx:48
 msgid "Connection not found or lost"
@@ -2134,13 +2222,13 @@ msgstr "Змінити файлову систему або точку монт�
 
 #: src/components/storage/FormattableDevicePage.tsx:221
 #: src/components/storage/LogicalVolumePage.tsx:248
-#: src/components/storage/PartitionPage.tsx:306
+#: src/components/storage/PartitionPage.tsx:308
 msgid "Select or enter a valid mount point"
 msgstr "Виберіть або введіть дійсну точку монтування"
 
 #: src/components/storage/FormattableDevicePage.tsx:231
 #: src/components/storage/LogicalVolumePage.tsx:258
-#: src/components/storage/PartitionPage.tsx:316
+#: src/components/storage/PartitionPage.tsx:318
 msgid ""
 "Select or enter a mount point that is not already assigned to another device"
 msgstr ""
@@ -2150,14 +2238,14 @@ msgstr ""
 #: src/components/storage/LogicalVolumePage.tsx:443
 #: src/components/storage/LogicalVolumePage.tsx:462
 #: src/components/storage/LogicalVolumePage.tsx:762
-#: src/components/storage/PartitionPage.tsx:558
-#: src/components/storage/PartitionPage.tsx:884
+#: src/components/storage/PartitionPage.tsx:560
+#: src/components/storage/PartitionPage.tsx:888
 msgid "Waiting for a mount point"
 msgstr "Очікуємо на точку монтування"
 
 #. TRANSLATORS: %s is a device name (eg. /dev/sda3).
 #: src/components/storage/FormattableDevicePage.tsx:283
-#: src/components/storage/PartitionPage.tsx:561
+#: src/components/storage/PartitionPage.tsx:563
 #: src/components/storage/utils/partition.tsx:69
 #, c-format
 msgid "Current %s"
@@ -2165,14 +2253,14 @@ msgstr "Поточна %s"
 
 #: src/components/storage/FormattableDevicePage.tsx:284
 #: src/components/storage/LogicalVolumePage.tsx:463
-#: src/components/storage/PartitionPage.tsx:562
+#: src/components/storage/PartitionPage.tsx:564
 #: src/components/storage/utils.ts:338
 msgid "Btrfs with snapshots"
 msgstr "Btrfs з моментальними знімками"
 
 #: src/components/storage/FormattableDevicePage.tsx:302
 #: src/components/storage/LogicalVolumePage.tsx:479
-#: src/components/storage/PartitionPage.tsx:580
+#: src/components/storage/PartitionPage.tsx:582
 #, c-format
 msgid "Default file system for %s"
 msgstr "Типова файлова система для %s"
@@ -2189,17 +2277,17 @@ msgstr "Знищити поточні дані і відформатувати �
 msgid "Format device as"
 msgstr "Форматувати пристрій як"
 
-#. TRANSLATORS: %s is the name of a partition, like /dev/vda2
 #. TRANSLATORS: %s is the name of a device, like vda
+#. TRANSLATORS: %s is the name of a partition, like /dev/vda2
 #: src/components/storage/FormattableDevicePage.tsx:320
-#: src/components/storage/PartitionPage.tsx:597
+#: src/components/storage/PartitionPage.tsx:599
 #, c-format
 msgid "Do not format %s and keep the data"
 msgstr "Не форматувати %s і зберегти дані"
 
 #: src/components/storage/FormattableDevicePage.tsx:384
 #: src/components/storage/LogicalVolumePage.tsx:548
-#: src/components/storage/PartitionPage.tsx:662
+#: src/components/storage/PartitionPage.tsx:664
 msgid "File system label"
 msgstr "Ярлик файлової системи"
 
@@ -2212,50 +2300,50 @@ msgstr "Налаштувати пристрій %s"
 #: src/components/storage/FormattableDevicePage.tsx:467
 #: src/components/storage/LogicalVolumePage.tsx:693
 #: src/components/storage/LogicalVolumePage.tsx:698
-#: src/components/storage/PartitionPage.tsx:817
-#: src/components/storage/PartitionPage.tsx:824
+#: src/components/storage/PartitionPage.tsx:821
+#: src/components/storage/PartitionPage.tsx:828
 msgid "Mount point"
 msgstr "Точка монтування"
 
 #: src/components/storage/FormattableDevicePage.tsx:465
 #: src/components/storage/LogicalVolumePage.tsx:696
-#: src/components/storage/PartitionPage.tsx:822
+#: src/components/storage/PartitionPage.tsx:826
 msgid "Mount point toggle"
 msgstr "Показати точку монтування"
 
 #: src/components/storage/FormattableDevicePage.tsx:466
 #: src/components/storage/LogicalVolumePage.tsx:697
-#: src/components/storage/PartitionPage.tsx:823
+#: src/components/storage/PartitionPage.tsx:827
 msgid "Suggested mount points"
 msgstr "Пропоновані точки монтування"
 
 #: src/components/storage/FormattableDevicePage.tsx:468
 #: src/components/storage/LogicalVolumePage.tsx:699
-#: src/components/storage/PartitionPage.tsx:825
+#: src/components/storage/PartitionPage.tsx:829
 msgid "Clear selected mount point"
 msgstr "Видалити вибрану точку монтування"
 
 #: src/components/storage/FormattableDevicePage.tsx:471
 #: src/components/storage/LogicalVolumePage.tsx:702
-#: src/components/storage/PartitionPage.tsx:828
+#: src/components/storage/PartitionPage.tsx:832
 msgid "Use"
 msgstr "Використати"
 
 #: src/components/storage/FormattableDevicePage.tsx:479
 #: src/components/storage/LogicalVolumePage.tsx:708
-#: src/components/storage/PartitionPage.tsx:846
+#: src/components/storage/PartitionPage.tsx:850
 msgid "Select or enter a mount point"
 msgstr "Виберіть або введіть точку монтування"
 
 #: src/components/storage/FormattableDevicePage.tsx:488
 #: src/components/storage/LogicalVolumePage.tsx:733
-#: src/components/storage/PartitionPage.tsx:855
+#: src/components/storage/PartitionPage.tsx:859
 msgid "File system"
 msgstr "Файлова система"
 
 #: src/components/storage/FormattableDevicePage.tsx:499
 #: src/components/storage/LogicalVolumePage.tsx:744
-#: src/components/storage/PartitionPage.tsx:867
+#: src/components/storage/PartitionPage.tsx:871
 msgid "Label"
 msgstr "Ярлик"
 
@@ -2268,7 +2356,7 @@ msgid "Enter a name"
 msgstr "Введіть ім'я"
 
 #: src/components/storage/LogicalVolumePage.tsx:296
-#: src/components/storage/PartitionPage.tsx:344
+#: src/components/storage/PartitionPage.tsx:346
 msgid "The minimum cannot be greater than the maximum"
 msgstr "Мінімум не може бути більшим за максимум"
 
@@ -2312,7 +2400,7 @@ msgid "Configure LVM logical volume at %s volume group"
 msgstr "Налаштування логічного тому LVM у групі томів %s"
 
 #: src/components/storage/LogicalVolumePage.tsx:757
-#: src/components/storage/PartitionPage.tsx:879
+#: src/components/storage/PartitionPage.tsx:883
 msgid "Size mode"
 msgstr "Режим розміру"
 
@@ -2458,67 +2546,72 @@ msgstr "Створити ще одну групу томів LVM на %s"
 msgid "Create LVM volume group on %s"
 msgstr "Створити групу томів LVM на %s"
 
-#: src/components/storage/PartitionPage.tsx:352
+#: src/components/storage/PartitionPage.tsx:354
 msgid "The maximum must be a number followed by a unit like GiB or GB"
 msgstr ""
 "Максимальне значення повинно бути числом, за яким слідує одиниця виміру, "
 "наприклад, GiB або GB"
 
-#: src/components/storage/PartitionPage.tsx:360
+#: src/components/storage/PartitionPage.tsx:362
 msgid "The minimum must be a number followed by a unit like GiB or GB"
 msgstr ""
 "Мінімальне значення повинно бути числом, за яким слідує одиниця виміру, "
 "наприклад, GiB або GB"
 
-#: src/components/storage/PartitionPage.tsx:367
+#: src/components/storage/PartitionPage.tsx:369
 msgid "Size limits must be numbers followed by a unit like GiB or GB"
 msgstr ""
 "Обмеження розміру повинні бути числами, до яких потрібно додати одиницю "
 "виміру, наприклад, GiB або GB"
 
 #. TRANSLATORS: %s is a disk name with its size (eg. "sda, 10 GiB"
-#: src/components/storage/PartitionPage.tsx:496
+#: src/components/storage/PartitionPage.tsx:498
 #, c-format
 msgid "As a new partition on %s"
 msgstr "Як новий розділ на %s"
 
-#: src/components/storage/PartitionPage.tsx:498
+#: src/components/storage/PartitionPage.tsx:500
 #, c-format
 msgid "Using partition %s"
 msgstr "Використовуючи розділ %s"
 
-#: src/components/storage/PartitionPage.tsx:527
+#: src/components/storage/PartitionPage.tsx:529
 msgid "Mount point options"
 msgstr "Параметри точки монтування"
 
-#: src/components/storage/PartitionPage.tsx:532
+#: src/components/storage/PartitionPage.tsx:534
 msgid "Using an existing partition"
 msgstr "Використовуючи наявний розділ"
 
-#: src/components/storage/PartitionPage.tsx:543
+#: src/components/storage/PartitionPage.tsx:545
 msgid "There are not usable partitions"
 msgstr "Існують не придатні для використання розділи"
 
-#: src/components/storage/PartitionPage.tsx:581
+#: src/components/storage/PartitionPage.tsx:583
 msgid "Default file system for generic partitions"
 msgstr "Типова файлова система для звичайних розділів"
 
-#: src/components/storage/PartitionPage.tsx:583
+#: src/components/storage/PartitionPage.tsx:585
 msgid "Destroy current data and format partition as"
 msgstr "Знищити поточні дані і відформатувати розділ як"
 
-#: src/components/storage/PartitionPage.tsx:584
+#: src/components/storage/PartitionPage.tsx:586
 msgid "Format partition as"
 msgstr "Форматувати розділ як"
 
-#: src/components/storage/PartitionPage.tsx:810
+#: src/components/storage/PartitionPage.tsx:813
 #, c-format
 msgid "Configure partition at %s"
 msgstr "Налаштування розділу на %s"
 
-#: src/components/storage/PartitionPage.tsx:834
+#: src/components/storage/PartitionPage.tsx:838
 msgid "Mount point mode"
 msgstr "Режим точок монтування"
+
+#: src/components/storage/PartitionPage.tsx:918
+#, fuzzy
+msgid "Go to storage page"
+msgstr "Перейти до розділу «Мережа»"
 
 #: src/components/storage/PartitionsMenu.tsx:63
 msgid "Moreover, the following partitions will be created or mounted"
@@ -3903,6 +3996,9 @@ msgstr "Використати відкритий ключ SSH"
 #: src/routes/storage.tsx:113
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#~ msgid "Any interface"
+#~ msgstr "Будь-який інтерфейс"
 
 #~ msgid "License language"
 #~ msgstr "Мова ліцензії"

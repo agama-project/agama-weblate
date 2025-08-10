@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-29 03:30+0000\n"
+"POT-Creation-Date: 2025-08-10 03:25+0000\n"
 "PO-Revision-Date: 2025-08-05 20:59+0000\n"
 "Last-Translator: Samanta Magalhaes <samanta_texttrans@outlook.com>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.opensuse.org/projects/agama/"
@@ -18,6 +18,25 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 5.12.2\n"
+
+#: src/components/core/AlertOutOfSync.tsx:71
+#, fuzzy
+msgid "Configuration out of sync"
+msgstr "Configurar partição em %s"
+
+#: src/components/core/AlertOutOfSync.tsx:80
+msgid "The configuration has been updated externally."
+msgstr ""
+
+#: src/components/core/AlertOutOfSync.tsx:82
+msgid ""
+"Reloading is required to get the latest data and avoid issues or data loss."
+msgstr ""
+
+#: src/components/core/AlertOutOfSync.tsx:85
+#, fuzzy
+msgid "Reload now"
+msgstr "Recarregar"
 
 #: src/components/core/ChangeProductOption.tsx:45
 msgid "Change product"
@@ -47,7 +66,7 @@ msgstr "Continuar"
 #. TRANSLATORS: button label
 #: src/components/core/InstallButton.tsx:62 src/components/core/Page.tsx:234
 #: src/components/core/Popup.tsx:140
-#: src/components/network/BindingSettingsForm.tsx:246
+#: src/components/network/BindingSettingsForm.tsx:228
 #: src/components/network/IpSettingsForm.tsx:217
 #: src/components/network/WifiConnectionForm.tsx:188
 #: src/components/product/ProductSelectionPage.tsx:99
@@ -392,6 +411,15 @@ msgstr "Em progresso"
 msgid "Finished"
 msgstr "Concluído"
 
+#: src/components/core/ResourceNotFound.tsx:42
+#, fuzzy
+msgid "Resource not found or lost"
+msgstr "Rede não encontrada ou perdida"
+
+#: src/components/core/ResourceNotFound.tsx:43
+msgid "It doesn't exist or can't be reached."
+msgstr ""
+
 #: src/components/core/RowActions.tsx:71
 msgid "Actions"
 msgstr "Ações"
@@ -573,7 +601,7 @@ msgstr "Lista de dados de endereços"
 #. name first, others the MAC address. I.e. "enp1s0 - CC-7F-C8-FC-7A-A1"
 #. or "CC-7F-C8-FC-7A-A1 - enp1s0". You may change the separator, but
 #. please keep both %s placeholders.
-#: src/components/network/BindingSettingsForm.tsx:75
+#: src/components/network/BindingSettingsForm.tsx:76
 #: src/components/storage/utils/drive.tsx:104
 #, c-format
 msgid "%s - %s"
@@ -581,40 +609,43 @@ msgstr "%s - %s"
 
 #. TRANSLATORS: The title of the page. %s will be replaced with the connection
 #. name. I.e., "Binding settings for 'Wired connection 1'"
-#: src/components/network/BindingSettingsForm.tsx:176
+#: src/components/network/BindingSettingsForm.tsx:158
 #, c-format
 msgid "Binding settings for '%s'"
 msgstr "Configurações de vinculação para '%s'"
 
-#: src/components/network/BindingSettingsForm.tsx:184
+#: src/components/network/BindingSettingsForm.tsx:166
+#, fuzzy
 msgid ""
-"Choose how the connection should be associated with a network interface. "
-"This helps control which interface the connection uses."
+"Choose how the connection should be associated with a network device. This "
+"helps control which device the connection uses."
 msgstr ""
 "Escolha como associar a conexão a uma interface de rede. Isso ajuda a "
 "controlar a interface que será usada pela conexão."
 
-#: src/components/network/BindingSettingsForm.tsx:195
-msgid "Any interface"
-msgstr "Qualquer interface"
+#: src/components/network/BindingSettingsForm.tsx:177
+msgid "Unbound"
+msgstr ""
 
-#: src/components/network/BindingSettingsForm.tsx:198
-msgid "The connection can be used by any available interface."
+#: src/components/network/BindingSettingsForm.tsx:180
+#, fuzzy
+msgid "The connection can be used by any available device."
 msgstr "Qualquer interface disponível pode usar a conexão."
 
-#: src/components/network/BindingSettingsForm.tsx:207
-msgid "Bind to interface name"
+#: src/components/network/BindingSettingsForm.tsx:189
+#, fuzzy
+msgid "Bind to device name"
 msgstr "Vincular ao nome da interface"
 
-#: src/components/network/BindingSettingsForm.tsx:211
+#: src/components/network/BindingSettingsForm.tsx:193
 msgid "Choose device to bind by name"
 msgstr "Escolher o dispositivo para vincular por nome"
 
-#: src/components/network/BindingSettingsForm.tsx:226
+#: src/components/network/BindingSettingsForm.tsx:208
 msgid "Bind to MAC address"
 msgstr "Vincular a endereço MAC"
 
-#: src/components/network/BindingSettingsForm.tsx:230
+#: src/components/network/BindingSettingsForm.tsx:212
 msgid "Choose device to bind by MAC"
 msgstr "Escolher dispositivo para vincular por MAC"
 
@@ -634,7 +665,8 @@ msgstr "Adicionar outro DNS"
 
 #: src/components/network/DnsDataList.tsx:118
 #: src/components/network/WifiConnectionDetails.tsx:138
-#: src/components/network/WiredConnectionDetails.tsx:126
+#: src/components/network/WiredConnectionDetails.tsx:129
+#: src/components/network/WiredConnectionDetails.tsx:249
 msgid "DNS"
 msgstr "DNS"
 
@@ -679,7 +711,7 @@ msgstr "Alguma coisa deu errado"
 #: src/components/network/IpSettingsForm.tsx:168
 #: src/components/network/IpSettingsForm.tsx:170
 #: src/components/network/WifiConnectionDetails.tsx:106
-#: src/components/network/WiredConnectionDetails.tsx:94
+#: src/components/network/WiredConnectionDetails.tsx:214
 msgid "Mode"
 msgstr "Modo"
 
@@ -699,7 +731,8 @@ msgstr "Manual"
 #: src/components/network/IpSettingsForm.tsx:188
 #: src/components/network/IpSettingsForm.tsx:191
 #: src/components/network/WifiConnectionDetails.tsx:129
-#: src/components/network/WiredConnectionDetails.tsx:107
+#: src/components/network/WiredConnectionDetails.tsx:110
+#: src/components/network/WiredConnectionDetails.tsx:227
 msgid "Gateway"
 msgstr "Gateway"
 
@@ -763,7 +796,7 @@ msgstr "Força do sinal"
 
 #: src/components/network/WifiConnectionDetails.tsx:56
 #: src/components/network/WifiConnectionDetails.tsx:79
-#: src/components/network/WiredConnectionDetails.tsx:67
+#: src/components/network/WiredConnectionDetails.tsx:102
 #: src/components/storage/dasd/DASDTable.tsx:76
 #: src/components/storage/iscsi/NodesPresenter.jsx:104
 #: src/components/storage/iscsi/NodesPresenter.jsx:125
@@ -778,7 +811,6 @@ msgid "Security"
 msgstr "Segurança"
 
 #: src/components/network/WifiConnectionDetails.tsx:72
-#: src/components/network/WiredConnectionDetails.tsx:49
 #: src/components/storage/DeviceSelectorModal.tsx:83
 #: src/components/storage/ProposalResultTable.tsx:132
 #: src/components/storage/SpaceActionsTable.tsx:233
@@ -793,24 +825,22 @@ msgid "Connection details"
 msgstr "Detalhes da conexão"
 
 #: src/components/network/WifiConnectionDetails.tsx:75
-#: src/components/network/WiredConnectionDetails.tsx:63
+#: src/components/network/WiredConnectionDetails.tsx:98
 #: src/components/storage/iscsi/NodesPresenter.jsx:102
 #: src/components/storage/iscsi/NodesPresenter.jsx:123
 msgid "Interface"
 msgstr "Interface"
 
 #: src/components/network/WifiConnectionDetails.tsx:83
-#: src/components/network/WiredConnectionDetails.tsx:71
+#: src/components/network/WiredConnectionDetails.tsx:106
 msgid "MAC"
 msgstr "MAC"
 
 #: src/components/network/WifiConnectionDetails.tsx:96
-#: src/components/network/WiredConnectionDetails.tsx:84
 msgid "IP settings"
 msgstr "Configurações de IP"
 
 #: src/components/network/WifiConnectionDetails.tsx:100
-#: src/components/network/WiredConnectionDetails.tsx:88
 #: src/components/storage/EncryptionSection.tsx:52
 #: src/components/storage/FilesystemMenu.tsx:94
 #: src/components/storage/iscsi/NodesPresenter.jsx:75
@@ -819,17 +849,17 @@ msgid "Edit"
 msgstr "Editar"
 
 #: src/components/network/WifiConnectionDetails.tsx:110
-#: src/components/network/WiredConnectionDetails.tsx:98
+#: src/components/network/WiredConnectionDetails.tsx:218
 msgid "IPv4"
 msgstr "IPv4"
 
 #: src/components/network/WifiConnectionDetails.tsx:113
-#: src/components/network/WiredConnectionDetails.tsx:101
+#: src/components/network/WiredConnectionDetails.tsx:221
 msgid "IPv6"
 msgstr "IPv6"
 
 #: src/components/network/WifiConnectionDetails.tsx:148
-#: src/components/network/WiredConnectionDetails.tsx:136
+#: src/components/network/WiredConnectionDetails.tsx:139
 msgid "Routes"
 msgstr "Rotas"
 
@@ -950,17 +980,75 @@ msgstr "Configurado apenas para instalação"
 msgid "No Wi-Fi networks were found"
 msgstr "Nenhuma rede Wi-Fi encontrada"
 
-#: src/components/network/WiredConnectionDetails.tsx:57
+#: src/components/network/WiredConnectionDetails.tsx:59
+msgid "Connection is available to all devices."
+msgstr ""
+
+#. TRANSLATORS: %s will be replaced by a network device name, like eth0 or enp1s0
+#: src/components/network/WiredConnectionDetails.tsx:62
+#, fuzzy, c-format
+msgid "Connection is bound to device %s."
+msgstr "Conexão não encontrada ou perdida"
+
+#. TRANSLATORS: %s will be replaced by MAC addrss, like 7C:D7:11:28:F5:40
+#: src/components/network/WiredConnectionDetails.tsx:65
+#, fuzzy, c-format
+msgid "Connection is bound to MAC address %s."
+msgstr "Conexão não encontrada ou perdida"
+
+#: src/components/network/WiredConnectionDetails.tsx:72
+#, fuzzy
+msgid "Binding"
+msgstr "Pendente"
+
+#: src/components/network/WiredConnectionDetails.tsx:80
 msgid "Edit binding settings"
 msgstr "Editar configurações de vinculação"
 
-#: src/components/network/WiredConnectionDetails.tsx:61
+#: src/components/network/WiredConnectionDetails.tsx:93
 msgid "Device details"
 msgstr "Detalhes do dispositivo"
 
-#: src/components/network/WiredConnectionDetails.tsx:116
+#: src/components/network/WiredConnectionDetails.tsx:119
+#: src/components/network/WiredConnectionDetails.tsx:237
 msgid "IP Addresses"
 msgstr "Endereços IP"
+
+#: src/components/network/WiredConnectionDetails.tsx:172
+#, fuzzy
+msgid "Connected device"
+msgstr "Conectado"
+
+#: src/components/network/WiredConnectionDetails.tsx:172
+#, fuzzy
+msgid "Connected devices"
+msgstr "Conectado (%s)"
+
+#: src/components/network/WiredConnectionDetails.tsx:175
+msgid "No device is currently using this connection."
+msgstr ""
+
+#: src/components/network/WiredConnectionDetails.tsx:181
+#, fuzzy
+msgid "Connected devices tabs"
+msgstr "Detalhes da conexão"
+
+#: src/components/network/WiredConnectionDetails.tsx:203
+#, fuzzy
+msgid "Settings"
+msgstr "Configurações de IP"
+
+#: src/components/network/WiredConnectionDetails.tsx:207
+#, fuzzy
+msgid "Edit connection settings"
+msgstr "Editar conexão %s"
+
+#: src/components/network/WiredConnectionDetails.tsx:231
+#: src/components/network/WiredConnectionDetails.tsx:241
+#: src/components/network/WiredConnectionDetails.tsx:253
+#, fuzzy
+msgid "None set"
+msgstr "Não definido"
 
 #: src/components/network/WiredConnectionPage.tsx:48
 msgid "Connection not found or lost"
@@ -2135,13 +2223,13 @@ msgstr "Alterar o sistema de arquivos ou ponto de montagem"
 
 #: src/components/storage/FormattableDevicePage.tsx:221
 #: src/components/storage/LogicalVolumePage.tsx:248
-#: src/components/storage/PartitionPage.tsx:306
+#: src/components/storage/PartitionPage.tsx:308
 msgid "Select or enter a valid mount point"
 msgstr "Selecionar ou inserir um ponto de montagem válido"
 
 #: src/components/storage/FormattableDevicePage.tsx:231
 #: src/components/storage/LogicalVolumePage.tsx:258
-#: src/components/storage/PartitionPage.tsx:316
+#: src/components/storage/PartitionPage.tsx:318
 msgid ""
 "Select or enter a mount point that is not already assigned to another device"
 msgstr ""
@@ -2152,14 +2240,14 @@ msgstr ""
 #: src/components/storage/LogicalVolumePage.tsx:443
 #: src/components/storage/LogicalVolumePage.tsx:462
 #: src/components/storage/LogicalVolumePage.tsx:762
-#: src/components/storage/PartitionPage.tsx:558
-#: src/components/storage/PartitionPage.tsx:884
+#: src/components/storage/PartitionPage.tsx:560
+#: src/components/storage/PartitionPage.tsx:888
 msgid "Waiting for a mount point"
 msgstr "Aguardando um ponto de montagem"
 
 #. TRANSLATORS: %s is a device name (eg. /dev/sda3).
 #: src/components/storage/FormattableDevicePage.tsx:283
-#: src/components/storage/PartitionPage.tsx:561
+#: src/components/storage/PartitionPage.tsx:563
 #: src/components/storage/utils/partition.tsx:69
 #, c-format
 msgid "Current %s"
@@ -2167,14 +2255,14 @@ msgstr "%s atual"
 
 #: src/components/storage/FormattableDevicePage.tsx:284
 #: src/components/storage/LogicalVolumePage.tsx:463
-#: src/components/storage/PartitionPage.tsx:562
+#: src/components/storage/PartitionPage.tsx:564
 #: src/components/storage/utils.ts:338
 msgid "Btrfs with snapshots"
 msgstr "Btrfs com instantâneos"
 
 #: src/components/storage/FormattableDevicePage.tsx:302
 #: src/components/storage/LogicalVolumePage.tsx:479
-#: src/components/storage/PartitionPage.tsx:580
+#: src/components/storage/PartitionPage.tsx:582
 #, c-format
 msgid "Default file system for %s"
 msgstr "Sistema de arquivos padrão para %s"
@@ -2191,17 +2279,17 @@ msgstr "Destruir os dados atuais e formatar o dispositivo como"
 msgid "Format device as"
 msgstr "Formatar dispositivos como"
 
-#. TRANSLATORS: %s is the name of a partition, like /dev/vda2
 #. TRANSLATORS: %s is the name of a device, like vda
+#. TRANSLATORS: %s is the name of a partition, like /dev/vda2
 #: src/components/storage/FormattableDevicePage.tsx:320
-#: src/components/storage/PartitionPage.tsx:597
+#: src/components/storage/PartitionPage.tsx:599
 #, c-format
 msgid "Do not format %s and keep the data"
 msgstr "Não formatar %s e manter os dados"
 
 #: src/components/storage/FormattableDevicePage.tsx:384
 #: src/components/storage/LogicalVolumePage.tsx:548
-#: src/components/storage/PartitionPage.tsx:662
+#: src/components/storage/PartitionPage.tsx:664
 msgid "File system label"
 msgstr "Rótulo do sistema de arquivos"
 
@@ -2214,50 +2302,50 @@ msgstr "Configurar o dispositivo %s"
 #: src/components/storage/FormattableDevicePage.tsx:467
 #: src/components/storage/LogicalVolumePage.tsx:693
 #: src/components/storage/LogicalVolumePage.tsx:698
-#: src/components/storage/PartitionPage.tsx:817
-#: src/components/storage/PartitionPage.tsx:824
+#: src/components/storage/PartitionPage.tsx:821
+#: src/components/storage/PartitionPage.tsx:828
 msgid "Mount point"
 msgstr "Ponto de montagem"
 
 #: src/components/storage/FormattableDevicePage.tsx:465
 #: src/components/storage/LogicalVolumePage.tsx:696
-#: src/components/storage/PartitionPage.tsx:822
+#: src/components/storage/PartitionPage.tsx:826
 msgid "Mount point toggle"
 msgstr "Alternância de ponto de montagem"
 
 #: src/components/storage/FormattableDevicePage.tsx:466
 #: src/components/storage/LogicalVolumePage.tsx:697
-#: src/components/storage/PartitionPage.tsx:823
+#: src/components/storage/PartitionPage.tsx:827
 msgid "Suggested mount points"
 msgstr "Pontos de montagem sugeridos"
 
 #: src/components/storage/FormattableDevicePage.tsx:468
 #: src/components/storage/LogicalVolumePage.tsx:699
-#: src/components/storage/PartitionPage.tsx:825
+#: src/components/storage/PartitionPage.tsx:829
 msgid "Clear selected mount point"
 msgstr "Limpar ponto de montagem selecionado"
 
 #: src/components/storage/FormattableDevicePage.tsx:471
 #: src/components/storage/LogicalVolumePage.tsx:702
-#: src/components/storage/PartitionPage.tsx:828
+#: src/components/storage/PartitionPage.tsx:832
 msgid "Use"
 msgstr "Usar"
 
 #: src/components/storage/FormattableDevicePage.tsx:479
 #: src/components/storage/LogicalVolumePage.tsx:708
-#: src/components/storage/PartitionPage.tsx:846
+#: src/components/storage/PartitionPage.tsx:850
 msgid "Select or enter a mount point"
 msgstr "Selecionar ou inserir um ponto de montagem"
 
 #: src/components/storage/FormattableDevicePage.tsx:488
 #: src/components/storage/LogicalVolumePage.tsx:733
-#: src/components/storage/PartitionPage.tsx:855
+#: src/components/storage/PartitionPage.tsx:859
 msgid "File system"
 msgstr "Sistema de arquivos"
 
 #: src/components/storage/FormattableDevicePage.tsx:499
 #: src/components/storage/LogicalVolumePage.tsx:744
-#: src/components/storage/PartitionPage.tsx:867
+#: src/components/storage/PartitionPage.tsx:871
 msgid "Label"
 msgstr "Rótulo"
 
@@ -2270,7 +2358,7 @@ msgid "Enter a name"
 msgstr "Inserir um nome"
 
 #: src/components/storage/LogicalVolumePage.tsx:296
-#: src/components/storage/PartitionPage.tsx:344
+#: src/components/storage/PartitionPage.tsx:346
 msgid "The minimum cannot be greater than the maximum"
 msgstr "O mínimo não pode ser maior do que o máximo"
 
@@ -2314,7 +2402,7 @@ msgid "Configure LVM logical volume at %s volume group"
 msgstr "Configurar volume lógico LVM no grupo de volumes %s"
 
 #: src/components/storage/LogicalVolumePage.tsx:757
-#: src/components/storage/PartitionPage.tsx:879
+#: src/components/storage/PartitionPage.tsx:883
 msgid "Size mode"
 msgstr "Modo de tamanho"
 
@@ -2460,63 +2548,68 @@ msgstr "Criar outro grupo de volumes LVM em %s"
 msgid "Create LVM volume group on %s"
 msgstr "Criar grupo de volumes LVM em %s"
 
-#: src/components/storage/PartitionPage.tsx:352
+#: src/components/storage/PartitionPage.tsx:354
 msgid "The maximum must be a number followed by a unit like GiB or GB"
 msgstr "O máximo deve ser um número seguido de uma unidade, como GiB ou GB"
 
-#: src/components/storage/PartitionPage.tsx:360
+#: src/components/storage/PartitionPage.tsx:362
 msgid "The minimum must be a number followed by a unit like GiB or GB"
 msgstr "O mínimo deve ser um número seguido de uma unidade, como GiB ou GB"
 
-#: src/components/storage/PartitionPage.tsx:367
+#: src/components/storage/PartitionPage.tsx:369
 msgid "Size limits must be numbers followed by a unit like GiB or GB"
 msgstr ""
 "Os limites de tamanho devem ser números seguidos de uma unidade, como GiB ou "
 "GB"
 
 #. TRANSLATORS: %s is a disk name with its size (eg. "sda, 10 GiB"
-#: src/components/storage/PartitionPage.tsx:496
+#: src/components/storage/PartitionPage.tsx:498
 #, c-format
 msgid "As a new partition on %s"
 msgstr "Como nova partição em %s"
 
-#: src/components/storage/PartitionPage.tsx:498
+#: src/components/storage/PartitionPage.tsx:500
 #, c-format
 msgid "Using partition %s"
 msgstr "Usando a partição %s"
 
-#: src/components/storage/PartitionPage.tsx:527
+#: src/components/storage/PartitionPage.tsx:529
 msgid "Mount point options"
 msgstr "Opções de ponto de montagem"
 
-#: src/components/storage/PartitionPage.tsx:532
+#: src/components/storage/PartitionPage.tsx:534
 msgid "Using an existing partition"
 msgstr "Usando uma partição existente"
 
-#: src/components/storage/PartitionPage.tsx:543
+#: src/components/storage/PartitionPage.tsx:545
 msgid "There are not usable partitions"
 msgstr "Não há partições usáveis"
 
-#: src/components/storage/PartitionPage.tsx:581
+#: src/components/storage/PartitionPage.tsx:583
 msgid "Default file system for generic partitions"
 msgstr "Sistema de arquivos padrão para partições genéricas"
 
-#: src/components/storage/PartitionPage.tsx:583
+#: src/components/storage/PartitionPage.tsx:585
 msgid "Destroy current data and format partition as"
 msgstr "Destruir os dados atuais e formatar partição como"
 
-#: src/components/storage/PartitionPage.tsx:584
+#: src/components/storage/PartitionPage.tsx:586
 msgid "Format partition as"
 msgstr "Formatar partição como"
 
-#: src/components/storage/PartitionPage.tsx:810
+#: src/components/storage/PartitionPage.tsx:813
 #, c-format
 msgid "Configure partition at %s"
 msgstr "Configurar partição em %s"
 
-#: src/components/storage/PartitionPage.tsx:834
+#: src/components/storage/PartitionPage.tsx:838
 msgid "Mount point mode"
 msgstr "Modo do ponto de montagem"
+
+#: src/components/storage/PartitionPage.tsx:918
+#, fuzzy
+msgid "Go to storage page"
+msgstr "Ir para página da rede"
 
 #: src/components/storage/PartitionsMenu.tsx:63
 msgid "Moreover, the following partitions will be created or mounted"
@@ -3900,6 +3993,9 @@ msgstr "Usar chave SSH pública"
 msgid "ZFCP"
 msgstr "ZFCP"
 
+#~ msgid "Any interface"
+#~ msgstr "Qualquer interface"
+
 #~ msgid "License language"
 #~ msgstr "Idioma da licença"
 
@@ -4565,9 +4661,6 @@ msgstr "ZFCP"
 
 #~ msgid "Already set"
 #~ msgstr "Já definido"
-
-#~ msgid "Not set"
-#~ msgstr "Não definido"
 
 #~ msgid "Set"
 #~ msgstr "Definir"
