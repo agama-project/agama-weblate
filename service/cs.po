@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-08-13 03:10+0000\n"
 "PO-Revision-Date: 2025-08-13 08:59+0000\n"
-"Last-Translator: Ondřej  Sedlák <sedlak.o@tutanota.com>\n"
+"Last-Translator: Jan Papež <honyczek@centrum.cz>\n"
 "Language-Team: Czech <https://l10n.opensuse.org/projects/agama/"
 "agama-service-master/cs/>\n"
 "Language: cs\n"
@@ -480,6 +480,7 @@ msgid ""
 "The device '%{member}' cannot be deleted because it is part of the MD RAID %"
 "{md_raid}"
 msgstr ""
+"Zařízení '%{member}’ nelze smazat, protože je součástí MD RAID %{md_raid}"
 
 #. Issue if the device member is resized.
 #.
@@ -491,6 +492,8 @@ msgid ""
 "The device '%{member}' cannot be resized because it is part of the MD RAID %"
 "{md_raid}"
 msgstr ""
+"Na zařízení '%{member}’ nelze upravit velikost, protože je součástí MD RAID "
+"%{md_raid}"
 
 #. Issue if the device member is formatted.
 #.
@@ -502,6 +505,8 @@ msgid ""
 "The device '%{member}' cannot be formatted because it is part of the MD RAID "
 "%{md_raid}"
 msgstr ""
+"Zařízení '%{member}’ nelze naformátovat, protože je součástí MD RAID "
+"%{md_raid}"
 
 #. Issue if the device member is partitioned.
 #.
@@ -513,6 +518,8 @@ msgid ""
 "The device '%{member}' cannot be partitioned because it is part of the MD "
 "RAID %{md_raid}"
 msgstr ""
+"Na zařízení '%{member}’ nelze upravit oddíly, protože je součástí MD RAID "
+"%{md_raid}"
 
 #. Issue if the device member is used by other device (e.g., as target for physical volumes).
 #.
@@ -524,6 +531,8 @@ msgid ""
 "The device '%{member}' cannot be used because it is part of the MD RAID %"
 "{md_raid}"
 msgstr ""
+"Zařízení '%{member}’ není možné použít, protože je součástí MD RAID "
+"%{md_raid}"
 
 #. Issue if the parent of the device member is formatted.
 #.
@@ -535,6 +544,8 @@ msgid ""
 "The device '%{device}' cannot be formatted because it is part of the MD RAID "
 "%{md_raid}"
 msgstr ""
+"Zařízení ‘%{device}’ nelze naformátovat, protože je součástí MD RAID "
+"%{md_raid}"
 
 #. TRANSLATORS: 'method' is the identifier of the method to encrypt the device
 #. (e.g., 'luks1').
@@ -581,7 +592,7 @@ msgstr "zařízení"
 #. @return [Issue, nil]
 #: service/lib/agama/storage/config_checkers/volume_group.rb:76
 msgid "There is a volume group without name"
-msgstr ""
+msgstr "Skupina svazků není pojmenovaná"
 
 #. TRANSLATORS: %s is the replaced by a device alias (e.g., "pv1").
 #: service/lib/agama/storage/config_checkers/volume_group.rb:106
@@ -596,6 +607,8 @@ msgid ""
 "The list of target devices for the volume group '%s' is mixing reused "
 "devices and new devices"
 msgstr ""
+"Seznam cílových zařízení pro skupinu svazků '%s’ kombinuje znovu použitá "
+"zařízení a nová zařízení"
 
 #. TRANSLATORS: %s is the replaced by a device alias (e.g., "disk1").
 #: service/lib/agama/storage/config_checkers/volume_group.rb:153
@@ -633,9 +646,8 @@ msgstr "Toto zařízení nepodporuje zmenšování"
 
 #. Copy /etc/nvme/host* to keep NVMe working after installation, bsc#1238038
 #: service/lib/agama/storage/finisher.rb:145
-#, fuzzy
 msgid "Copying important installation files to the target system"
-msgstr "Repozitáře se zapisují do cílového systému"
+msgstr "Kopírování důležitých instalačních souborů do cílového systému"
 
 #. Constructor
 #: service/lib/agama/storage/finisher.rb:186
@@ -690,9 +702,8 @@ msgid "Logout iSCSI targets"
 msgstr "Odhlásit iSCSI cíle"
 
 #: service/lib/agama/storage/iscsi/manager.rb:301
-#, fuzzy
 msgid "Discover iSCSI targets"
-msgstr "Přihlásit iSCSI cíle"
+msgstr "Objevit iSCSI cíle"
 
 #: service/lib/agama/storage/iscsi/manager.rb:302
 msgid "Login iSCSI targets"
@@ -705,7 +716,7 @@ msgstr "Přihlásit iSCSI cíle"
 #: service/lib/agama/storage/iscsi/manager.rb:366
 #, c-format
 msgid "Cannot login to iSCSI target %s"
-msgstr ""
+msgstr "Nepodařílo se přihlášení k iSCSI cíli %s"
 
 #. Probes storage devices and performs an initial proposal
 #.
@@ -749,6 +760,7 @@ msgstr "Zapisuji konfiguraci boot zavaděče v sysconfig"
 #: service/lib/agama/storage/proposal.rb:345
 msgid "Cannot calculate a valid storage setup with the current configuration"
 msgstr ""
+"Pro současnou konfiguraci není možné vypočítat platné nastavení úložiště"
 
 #. Issue to communicate a generic Y2Storage error.
 #.
