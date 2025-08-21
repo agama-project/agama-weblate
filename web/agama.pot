@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-13 15:18+0000\n"
+"POT-Creation-Date: 2025-08-20 15:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -187,7 +187,8 @@ msgstr ""
 #: src/components/core/InstallerOptions.tsx:405
 #: src/components/core/InstallerOptions.tsx:448
 #: src/components/core/Page.tsx:266
-#: src/components/storage/dasd/DASDTable.tsx:104
+#: src/components/storage/dasd/FormatActionHandler.tsx:73
+#: src/components/storage/dasd/FormatActionHandler.tsx:100
 #: src/components/system/HostnamePage.tsx:132
 msgid "Accept"
 msgstr ""
@@ -331,7 +332,7 @@ msgstr ""
 
 #: src/components/core/MenuButton.tsx:59 src/components/core/Page.tsx:255
 #: src/components/storage/ISCSIPage.tsx:48
-#: src/components/storage/dasd/DASDPage.tsx:54
+#: src/components/storage/dasd/DASDPage.tsx:49
 #: src/components/storage/zfcp/ZFCPPage.tsx:198
 msgid "Back"
 msgstr ""
@@ -368,7 +369,7 @@ msgid "Confirm"
 msgstr ""
 
 #. TRANSLATORS: progress message
-#: src/components/core/Popup.tsx:211
+#: src/components/core/Popup.tsx:227
 msgid "Loading data..."
 msgstr ""
 
@@ -400,6 +401,18 @@ msgstr ""
 
 #: src/components/core/SelectTypeaheadCreatable.tsx:70
 msgid "Add"
+msgstr ""
+
+#: src/components/core/SelectableDataTable.tsx:373
+msgid "Row expansion"
+msgstr ""
+
+#: src/components/core/SelectableDataTable.tsx:374
+msgid "Row selection"
+msgstr ""
+
+#: src/components/core/SelectableDataTable.tsx:385
+msgid "Row actions"
 msgstr ""
 
 #: src/components/core/ServerError.tsx:48
@@ -750,10 +763,12 @@ msgstr ""
 msgid "Signal strength"
 msgstr ""
 
+#. TRANSLATORS: table header for a DASD devices table
 #: src/components/network/WifiConnectionDetails.tsx:56
 #: src/components/network/WifiConnectionDetails.tsx:79
 #: src/components/network/WiredConnectionDetails.tsx:102
-#: src/components/storage/dasd/DASDTable.tsx:76
+#: src/components/storage/dasd/DASDTable.tsx:434
+#: src/components/storage/dasd/StatusFilter.tsx:78
 #: src/components/storage/iscsi/NodesPresenter.jsx:104
 #: src/components/storage/iscsi/NodesPresenter.jsx:125
 #: src/components/storage/zfcp/ZFCPControllersTable.tsx:21
@@ -766,11 +781,12 @@ msgstr ""
 msgid "Security"
 msgstr ""
 
+#. TRANSLATORS: table header for a DASD devices table
 #: src/components/network/WifiConnectionDetails.tsx:72
 #: src/components/storage/DeviceSelectorModal.tsx:83
 #: src/components/storage/ProposalResultTable.tsx:132
 #: src/components/storage/SpaceActionsTable.tsx:233
-#: src/components/storage/dasd/DASDTable.tsx:77
+#: src/components/storage/dasd/DASDTable.tsx:440
 msgid "Device"
 msgstr ""
 
@@ -1850,8 +1866,9 @@ msgstr ""
 msgid "Current content"
 msgstr ""
 
+#. TRANSLATORS: table header for a DASD devices table
 #: src/components/storage/DeviceSelectorPage.tsx:53
-#: src/components/storage/dasd/DASDTable.tsx:78
+#: src/components/storage/dasd/DASDTable.tsx:446
 msgid "Type"
 msgstr ""
 
@@ -2560,6 +2577,7 @@ msgid ""
 msgstr ""
 
 #: src/components/storage/ProposalPage.tsx:140
+#: src/components/storage/dasd/DASDTable.tsx:306
 msgid "No devices found"
 msgstr ""
 
@@ -2926,112 +2944,185 @@ msgstr ""
 msgid "DASD"
 msgstr ""
 
-#. TRANSLATORS: DASD devices selection table
-#: src/components/storage/dasd/DASDPage.tsx:44
-msgid "DASD devices selection table"
+#: src/components/storage/dasd/DASDTable.tsx:138
+#: src/components/storage/zfcp/ZFCPControllersTable.tsx:51
+msgid "Activate"
 msgstr ""
 
-#: src/components/storage/dasd/DASDTable.tsx:68
-#: src/components/storage/iscsi/NodesPresenter.jsx:103
-#: src/components/storage/zfcp/ZFCPControllersTable.tsx:36
-msgid "No"
+#: src/components/storage/dasd/DASDTable.tsx:142
+#: src/components/storage/zfcp/ZFCPDisksTable.tsx:56
+msgid "Deactivate"
 msgstr ""
 
-#: src/components/storage/dasd/DASDTable.tsx:68
-#: src/components/storage/iscsi/NodesPresenter.jsx:103
-#: src/components/storage/zfcp/ZFCPControllersTable.tsx:36
-msgid "Yes"
+#: src/components/storage/dasd/DASDTable.tsx:149
+msgid "Set DIAG on"
 msgstr ""
 
-#: src/components/storage/dasd/DASDTable.tsx:75
+#: src/components/storage/dasd/DASDTable.tsx:153
+msgid "Set DIAG off"
+msgstr ""
+
+#: src/components/storage/dasd/DASDTable.tsx:160
+msgid "Format"
+msgstr ""
+
+#: src/components/storage/dasd/DASDTable.tsx:198
+msgid "Min channel"
+msgstr ""
+
+#: src/components/storage/dasd/DASDTable.tsx:206
+msgid "Max channel"
+msgstr ""
+
+#: src/components/storage/dasd/DASDTable.tsx:254
+msgid "Select devices to enable bulk actions."
+msgstr ""
+
+#: src/components/storage/dasd/DASDTable.tsx:294
+msgid "No devices available"
+msgstr ""
+
+#: src/components/storage/dasd/DASDTable.tsx:298
+msgid "No DASD devices were found in this machine."
+msgstr ""
+
+#: src/components/storage/dasd/DASDTable.tsx:310
+msgid "Change filters and try again."
+msgstr ""
+
+#: src/components/storage/dasd/DASDTable.tsx:314
+msgid "Clear all filters"
+msgstr ""
+
+#. TRANSLATORS: table header for a DASD devices table
+#: src/components/storage/dasd/DASDTable.tsx:427
 #: src/components/storage/zfcp/ZFCPControllersTable.tsx:20
 #: src/components/storage/zfcp/ZFCPDiskForm.tsx:117
 #: src/components/storage/zfcp/ZFCPDisksTable.tsx:43
 msgid "Channel ID"
 msgstr ""
 
-#. TRANSLATORS: table header, the column contains "Yes"/"No" values
-#. for the DIAG access mode (special disk access mode on IBM mainframes),
-#. usually keep untranslated
-#: src/components/storage/dasd/DASDTable.tsx:82
+#. TRANSLATORS: table header for `DIAG access mode` on DASD devices table.
+#. It refers to an special disk access mode on IBM mainframes. Keep
+#. untranslated.
+#: src/components/storage/dasd/DASDTable.tsx:454
 msgid "DIAG"
 msgstr ""
 
-#: src/components/storage/dasd/DASDTable.tsx:83
+#: src/components/storage/dasd/DASDTable.tsx:458
+#: src/components/storage/dasd/DASDTable.tsx:466
+#: src/components/storage/iscsi/NodesPresenter.jsx:103
+#: src/components/storage/zfcp/ZFCPControllersTable.tsx:36
+msgid "No"
+msgstr ""
+
+#: src/components/storage/dasd/DASDTable.tsx:458
+#: src/components/storage/dasd/DASDTable.tsx:466
+#: src/components/storage/iscsi/NodesPresenter.jsx:103
+#: src/components/storage/zfcp/ZFCPControllersTable.tsx:36
+msgid "Yes"
+msgstr ""
+
+#. TRANSLATORS: table header for a column in a DASD devices table that
+#. usually contains "Yes" or "No"" values
+#: src/components/storage/dasd/DASDTable.tsx:465
+#: src/components/storage/dasd/FormatFilter.tsx:78
 msgid "Formatted"
 msgstr ""
 
-#: src/components/storage/dasd/DASDTable.tsx:84
+#. TRANSLATORS: table header for a DASD devices table
+#: src/components/storage/dasd/DASDTable.tsx:471
 msgid "Partition Info"
 msgstr ""
 
-#: src/components/storage/dasd/DASDTable.tsx:94
-msgid "Cannot format all selected devices"
+#: src/components/storage/dasd/DASDTable.tsx:538
+msgid "Applying changes"
 msgstr ""
 
-#: src/components/storage/dasd/DASDTable.tsx:98
-msgid ""
-"Offline devices must be activated before formatting them. Please, unselect "
-"or activate the devices listed below and try it again"
+#: src/components/storage/dasd/DASDTable.tsx:540
+msgid "This may take a moment while updates complete."
 msgstr ""
 
-#: src/components/storage/dasd/DASDTable.tsx:110
+#: src/components/storage/dasd/DASDTable.tsx:543
+msgid "This message will close automatically when everything is done."
+msgstr ""
+
+#: src/components/storage/dasd/FormatActionHandler.tsx:68
+#, c-format
+msgid "Cannot format %s"
+msgstr ""
+
+#: src/components/storage/dasd/FormatActionHandler.tsx:70
+msgid "It is offline and must be activated before formatting it."
+msgstr ""
+
+#: src/components/storage/dasd/FormatActionHandler.tsx:91
+msgid "Cannot format all the selected devices"
+msgstr ""
+
+#: src/components/storage/dasd/FormatActionHandler.tsx:94
+#, c-format
+msgid "Below %s devices are offline and cannot be formatted."
+msgstr ""
+
+#: src/components/storage/dasd/FormatActionHandler.tsx:96
+msgid "Unselect or activate them and try it again."
+msgstr ""
+
+#: src/components/storage/dasd/FormatActionHandler.tsx:115
+#, c-format
+msgid "Format device %s"
+msgstr ""
+
+#: src/components/storage/dasd/FormatActionHandler.tsx:118
+msgid "This action could destroy any data stored on the device."
+msgstr ""
+
+#: src/components/storage/dasd/FormatActionHandler.tsx:119
+#: src/components/storage/dasd/FormatActionHandler.tsx:146
+msgid "Confirm that you really want to continue."
+msgstr ""
+
+#: src/components/storage/dasd/FormatActionHandler.tsx:123
+#: src/components/storage/dasd/FormatActionHandler.tsx:150
+msgid "Format now"
+msgstr ""
+
+#: src/components/storage/dasd/FormatActionHandler.tsx:139
 msgid "Format selected devices?"
 msgstr ""
 
-#: src/components/storage/dasd/DASDTable.tsx:114
-msgid ""
-"This action could destroy any data stored on the devices listed below. "
-"Please, confirm that you really want to continue."
+#: src/components/storage/dasd/FormatActionHandler.tsx:143
+msgid "This action could destroy any data stored on the devices listed below."
 msgstr ""
 
-#. TRANSLATORS: drop down menu label
-#: src/components/storage/dasd/DASDTable.tsx:173
-msgid "Perform an action"
+#: src/components/storage/dasd/FormatFilter.tsx:43
+#: src/components/storage/dasd/StatusFilter.tsx:42
+msgid "all"
 msgstr ""
 
-#: src/components/storage/dasd/DASDTable.tsx:180
-#: src/components/storage/zfcp/ZFCPControllersTable.tsx:51
-msgid "Activate"
+#: src/components/storage/dasd/FormatFilter.tsx:44
+msgid "yes"
 msgstr ""
 
-#: src/components/storage/dasd/DASDTable.tsx:184
-#: src/components/storage/zfcp/ZFCPDisksTable.tsx:56
-msgid "Deactivate"
+#: src/components/storage/dasd/FormatFilter.tsx:45
+msgid "no"
 msgstr ""
 
-#: src/components/storage/dasd/DASDTable.tsx:189
-msgid "Set DIAG On"
+#: src/components/storage/dasd/StatusFilter.tsx:43
+msgid "active"
 msgstr ""
 
-#: src/components/storage/dasd/DASDTable.tsx:193
-msgid "Set DIAG Off"
+#: src/components/storage/dasd/StatusFilter.tsx:44
+msgid "read_only"
 msgstr ""
 
-#: src/components/storage/dasd/DASDTable.tsx:198
-msgid "Format"
+#: src/components/storage/dasd/StatusFilter.tsx:45
+msgid "offline"
 msgstr ""
 
-#: src/components/storage/dasd/DASDTable.tsx:335
-#: src/components/storage/dasd/DASDTable.tsx:336
-msgid "Filter by min channel"
-msgstr ""
-
-#: src/components/storage/dasd/DASDTable.tsx:343
-msgid "Remove min channel filter"
-msgstr ""
-
-#: src/components/storage/dasd/DASDTable.tsx:356
-#: src/components/storage/dasd/DASDTable.tsx:357
-msgid "Filter by max channel"
-msgstr ""
-
-#: src/components/storage/dasd/DASDTable.tsx:364
-msgid "Remove max channel filter"
-msgstr ""
-
-#: src/components/storage/dasd/DASDTable.tsx:382
-msgid "DASDs table section"
+#: src/components/storage/dasd/TextinputFilter.tsx:83
+msgid "Clear input"
 msgstr ""
 
 #: src/components/storage/device-utils.tsx:76
