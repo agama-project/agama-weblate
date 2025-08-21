@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-13 15:18+0000\n"
+"POT-Creation-Date: 2025-08-20 15:33+0000\n"
 "PO-Revision-Date: 2025-07-22 22:59+0000\n"
 "Last-Translator: yok440 <yakupyok440@gmail.com>\n"
 "Language-Team: Turkish <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -206,7 +206,8 @@ msgstr "Seçili ürün için aynı ayarları kullanın"
 #: src/components/core/InstallerOptions.tsx:405
 #: src/components/core/InstallerOptions.tsx:448
 #: src/components/core/Page.tsx:266
-#: src/components/storage/dasd/DASDTable.tsx:104
+#: src/components/storage/dasd/FormatActionHandler.tsx:73
+#: src/components/storage/dasd/FormatActionHandler.tsx:100
 #: src/components/system/HostnamePage.tsx:132
 msgid "Accept"
 msgstr "Kabul Et"
@@ -355,7 +356,7 @@ msgstr "Giriş Yap"
 
 #: src/components/core/MenuButton.tsx:59 src/components/core/Page.tsx:255
 #: src/components/storage/ISCSIPage.tsx:48
-#: src/components/storage/dasd/DASDPage.tsx:54
+#: src/components/storage/dasd/DASDPage.tsx:49
 #: src/components/storage/zfcp/ZFCPPage.tsx:198
 msgid "Back"
 msgstr "Geri"
@@ -392,7 +393,7 @@ msgid "Confirm"
 msgstr "Onayla"
 
 #. TRANSLATORS: progress message
-#: src/components/core/Popup.tsx:211
+#: src/components/core/Popup.tsx:227
 msgid "Loading data..."
 msgstr "Veri yükleniyor..."
 
@@ -426,6 +427,20 @@ msgstr "Eylemler"
 #: src/components/core/SelectTypeaheadCreatable.tsx:70
 msgid "Add"
 msgstr "Ekle"
+
+#: src/components/core/SelectableDataTable.tsx:373
+msgid "Row expansion"
+msgstr ""
+
+#: src/components/core/SelectableDataTable.tsx:374
+#, fuzzy
+msgid "Row selection"
+msgstr "Yazılım seçimi"
+
+#: src/components/core/SelectableDataTable.tsx:385
+#, fuzzy
+msgid "Row actions"
+msgstr "Daha fazla eylem"
 
 #: src/components/core/ServerError.tsx:48
 msgid "Cannot connect to Agama server"
@@ -791,10 +806,12 @@ msgstr "SSID"
 msgid "Signal strength"
 msgstr "Sinyal gücü"
 
+#. TRANSLATORS: table header for a DASD devices table
 #: src/components/network/WifiConnectionDetails.tsx:56
 #: src/components/network/WifiConnectionDetails.tsx:79
 #: src/components/network/WiredConnectionDetails.tsx:102
-#: src/components/storage/dasd/DASDTable.tsx:76
+#: src/components/storage/dasd/DASDTable.tsx:434
+#: src/components/storage/dasd/StatusFilter.tsx:78
 #: src/components/storage/iscsi/NodesPresenter.jsx:104
 #: src/components/storage/iscsi/NodesPresenter.jsx:125
 #: src/components/storage/zfcp/ZFCPControllersTable.tsx:21
@@ -807,11 +824,12 @@ msgstr "Durum"
 msgid "Security"
 msgstr "Güvenlik"
 
+#. TRANSLATORS: table header for a DASD devices table
 #: src/components/network/WifiConnectionDetails.tsx:72
 #: src/components/storage/DeviceSelectorModal.tsx:83
 #: src/components/storage/ProposalResultTable.tsx:132
 #: src/components/storage/SpaceActionsTable.tsx:233
-#: src/components/storage/dasd/DASDTable.tsx:77
+#: src/components/storage/dasd/DASDTable.tsx:440
 msgid "Device"
 msgstr "Cihaz"
 
@@ -1966,8 +1984,9 @@ msgstr "Açıklama"
 msgid "Current content"
 msgstr "Güncel içerik"
 
+#. TRANSLATORS: table header for a DASD devices table
 #: src/components/storage/DeviceSelectorPage.tsx:53
-#: src/components/storage/dasd/DASDTable.tsx:78
+#: src/components/storage/dasd/DASDTable.tsx:446
 msgid "Type"
 msgstr "Tip"
 
@@ -2719,6 +2738,7 @@ msgstr ""
 "gerekebilir."
 
 #: src/components/storage/ProposalPage.tsx:140
+#: src/components/storage/dasd/DASDTable.tsx:306
 msgid "No devices found"
 msgstr "Hiçbir cihaz bulunamadı"
 
@@ -3103,118 +3123,204 @@ msgstr "DASD aygıtlarının biçimlendirilmesi"
 msgid "DASD"
 msgstr "DASD"
 
-#. TRANSLATORS: DASD devices selection table
-#: src/components/storage/dasd/DASDPage.tsx:44
-msgid "DASD devices selection table"
-msgstr "DASD aygıtları seçim tablosu"
+#: src/components/storage/dasd/DASDTable.tsx:138
+#: src/components/storage/zfcp/ZFCPControllersTable.tsx:51
+msgid "Activate"
+msgstr "Etkinleştir"
 
-#: src/components/storage/dasd/DASDTable.tsx:68
-#: src/components/storage/iscsi/NodesPresenter.jsx:103
-#: src/components/storage/zfcp/ZFCPControllersTable.tsx:36
-msgid "No"
-msgstr "Hayır"
+#: src/components/storage/dasd/DASDTable.tsx:142
+#: src/components/storage/zfcp/ZFCPDisksTable.tsx:56
+msgid "Deactivate"
+msgstr "Devre dışı bırak"
 
-#: src/components/storage/dasd/DASDTable.tsx:68
-#: src/components/storage/iscsi/NodesPresenter.jsx:103
-#: src/components/storage/zfcp/ZFCPControllersTable.tsx:36
-msgid "Yes"
-msgstr "Evet"
+#: src/components/storage/dasd/DASDTable.tsx:149
+#, fuzzy
+msgid "Set DIAG on"
+msgstr "DIAG'ı Açık olarak ayarlayın"
 
-#: src/components/storage/dasd/DASDTable.tsx:75
+#: src/components/storage/dasd/DASDTable.tsx:153
+#, fuzzy
+msgid "Set DIAG off"
+msgstr "DIAG'ı Kapalı Olarak Ayarla"
+
+#: src/components/storage/dasd/DASDTable.tsx:160
+msgid "Format"
+msgstr "Biçim"
+
+#: src/components/storage/dasd/DASDTable.tsx:198
+#, fuzzy
+msgid "Min channel"
+msgstr "Minimum kanala göre filtrele"
+
+#: src/components/storage/dasd/DASDTable.tsx:206
+#, fuzzy
+msgid "Max channel"
+msgstr "Maksimum kanala göre filtrele"
+
+#: src/components/storage/dasd/DASDTable.tsx:254
+#, fuzzy
+msgid "Select devices to enable bulk actions."
+msgstr "Bölümleri tanımlamak veya bağlamak için bir aygıt seçin"
+
+#: src/components/storage/dasd/DASDTable.tsx:294
+#, fuzzy
+msgid "No devices available"
+msgstr "Müsait değil"
+
+#: src/components/storage/dasd/DASDTable.tsx:298
+msgid "No DASD devices were found in this machine."
+msgstr ""
+
+#: src/components/storage/dasd/DASDTable.tsx:310
+msgid "Change filters and try again."
+msgstr ""
+
+#: src/components/storage/dasd/DASDTable.tsx:314
+msgid "Clear all filters"
+msgstr ""
+
+#. TRANSLATORS: table header for a DASD devices table
+#: src/components/storage/dasd/DASDTable.tsx:427
 #: src/components/storage/zfcp/ZFCPControllersTable.tsx:20
 #: src/components/storage/zfcp/ZFCPDiskForm.tsx:117
 #: src/components/storage/zfcp/ZFCPDisksTable.tsx:43
 msgid "Channel ID"
 msgstr "Kanal Kimliği"
 
-#. TRANSLATORS: table header, the column contains "Yes"/"No" values
-#. for the DIAG access mode (special disk access mode on IBM mainframes),
-#. usually keep untranslated
-#: src/components/storage/dasd/DASDTable.tsx:82
+#. TRANSLATORS: table header for `DIAG access mode` on DASD devices table.
+#. It refers to an special disk access mode on IBM mainframes. Keep
+#. untranslated.
+#: src/components/storage/dasd/DASDTable.tsx:454
 msgid "DIAG"
 msgstr "DIAG"
 
-#: src/components/storage/dasd/DASDTable.tsx:83
+#: src/components/storage/dasd/DASDTable.tsx:458
+#: src/components/storage/dasd/DASDTable.tsx:466
+#: src/components/storage/iscsi/NodesPresenter.jsx:103
+#: src/components/storage/zfcp/ZFCPControllersTable.tsx:36
+msgid "No"
+msgstr "Hayır"
+
+#: src/components/storage/dasd/DASDTable.tsx:458
+#: src/components/storage/dasd/DASDTable.tsx:466
+#: src/components/storage/iscsi/NodesPresenter.jsx:103
+#: src/components/storage/zfcp/ZFCPControllersTable.tsx:36
+msgid "Yes"
+msgstr "Evet"
+
+#. TRANSLATORS: table header for a column in a DASD devices table that
+#. usually contains "Yes" or "No"" values
+#: src/components/storage/dasd/DASDTable.tsx:465
+#: src/components/storage/dasd/FormatFilter.tsx:78
 msgid "Formatted"
 msgstr "Biçimlendirilmiş"
 
-#: src/components/storage/dasd/DASDTable.tsx:84
+#. TRANSLATORS: table header for a DASD devices table
+#: src/components/storage/dasd/DASDTable.tsx:471
 msgid "Partition Info"
 msgstr "Bölüm Bilgisi"
 
-#: src/components/storage/dasd/DASDTable.tsx:94
-msgid "Cannot format all selected devices"
+#: src/components/storage/dasd/DASDTable.tsx:538
+msgid "Applying changes"
+msgstr ""
+
+#: src/components/storage/dasd/DASDTable.tsx:540
+msgid "This may take a moment while updates complete."
+msgstr ""
+
+#: src/components/storage/dasd/DASDTable.tsx:543
+msgid "This message will close automatically when everything is done."
+msgstr ""
+
+#: src/components/storage/dasd/FormatActionHandler.tsx:68
+#, fuzzy, c-format
+msgid "Cannot format %s"
+msgstr "Dosya okunamıyor"
+
+#: src/components/storage/dasd/FormatActionHandler.tsx:70
+msgid "It is offline and must be activated before formatting it."
+msgstr ""
+
+#: src/components/storage/dasd/FormatActionHandler.tsx:91
+#, fuzzy
+msgid "Cannot format all the selected devices"
 msgstr "Seçilen tüm aygıtlar biçimlendirilemiyor"
 
-#: src/components/storage/dasd/DASDTable.tsx:98
-msgid ""
-"Offline devices must be activated before formatting them. Please, unselect "
-"or activate the devices listed below and try it again"
+#: src/components/storage/dasd/FormatActionHandler.tsx:94
+#, c-format
+msgid "Below %s devices are offline and cannot be formatted."
 msgstr ""
-"Çevrimdışı cihazlar biçimlendirilmeden önce etkinleştirilmelidir. Lütfen "
-"aşağıda listelenen cihazların seçimini kaldırın veya etkinleştirin ve tekrar "
-"deneyin"
 
-#: src/components/storage/dasd/DASDTable.tsx:110
-msgid "Format selected devices?"
-msgstr "Seçili cihazlar biçimlendirilsin mi?"
+#: src/components/storage/dasd/FormatActionHandler.tsx:96
+msgid "Unselect or activate them and try it again."
+msgstr ""
 
-#: src/components/storage/dasd/DASDTable.tsx:114
-msgid ""
-"This action could destroy any data stored on the devices listed below. "
-"Please, confirm that you really want to continue."
+#: src/components/storage/dasd/FormatActionHandler.tsx:115
+#, fuzzy, c-format
+msgid "Format device %s"
+msgstr "Aygıt şu şekilde biçimlendirilecek"
+
+#: src/components/storage/dasd/FormatActionHandler.tsx:118
+#, fuzzy
+msgid "This action could destroy any data stored on the device."
 msgstr ""
 "Bu eylem aşağıda listelenen cihazlarda depolanan tüm verileri yok edebilir. "
 "Lütfen devam etmek istediğinizi onaylayın."
 
-#. TRANSLATORS: drop down menu label
-#: src/components/storage/dasd/DASDTable.tsx:173
-msgid "Perform an action"
-msgstr "Bir eylem gerçekleştir"
+#: src/components/storage/dasd/FormatActionHandler.tsx:119
+#: src/components/storage/dasd/FormatActionHandler.tsx:146
+msgid "Confirm that you really want to continue."
+msgstr ""
 
-#: src/components/storage/dasd/DASDTable.tsx:180
-#: src/components/storage/zfcp/ZFCPControllersTable.tsx:51
-msgid "Activate"
-msgstr "Etkinleştir"
-
-#: src/components/storage/dasd/DASDTable.tsx:184
-#: src/components/storage/zfcp/ZFCPDisksTable.tsx:56
-msgid "Deactivate"
-msgstr "Devre dışı bırak"
-
-#: src/components/storage/dasd/DASDTable.tsx:189
-msgid "Set DIAG On"
-msgstr "DIAG'ı Açık olarak ayarlayın"
-
-#: src/components/storage/dasd/DASDTable.tsx:193
-msgid "Set DIAG Off"
-msgstr "DIAG'ı Kapalı Olarak Ayarla"
-
-#: src/components/storage/dasd/DASDTable.tsx:198
-msgid "Format"
+#: src/components/storage/dasd/FormatActionHandler.tsx:123
+#: src/components/storage/dasd/FormatActionHandler.tsx:150
+#, fuzzy
+msgid "Format now"
 msgstr "Biçim"
 
-#: src/components/storage/dasd/DASDTable.tsx:335
-#: src/components/storage/dasd/DASDTable.tsx:336
-msgid "Filter by min channel"
-msgstr "Minimum kanala göre filtrele"
+#: src/components/storage/dasd/FormatActionHandler.tsx:139
+msgid "Format selected devices?"
+msgstr "Seçili cihazlar biçimlendirilsin mi?"
 
-#: src/components/storage/dasd/DASDTable.tsx:343
-msgid "Remove min channel filter"
-msgstr "Min kanal filtresini kaldır"
+#: src/components/storage/dasd/FormatActionHandler.tsx:143
+#, fuzzy
+msgid "This action could destroy any data stored on the devices listed below."
+msgstr ""
+"Bu eylem aşağıda listelenen cihazlarda depolanan tüm verileri yok edebilir. "
+"Lütfen devam etmek istediğinizi onaylayın."
 
-#: src/components/storage/dasd/DASDTable.tsx:356
-#: src/components/storage/dasd/DASDTable.tsx:357
-msgid "Filter by max channel"
-msgstr "Maksimum kanala göre filtrele"
+#: src/components/storage/dasd/FormatFilter.tsx:43
+#: src/components/storage/dasd/StatusFilter.tsx:42
+#, fuzzy
+msgid "all"
+msgstr "Yükle"
 
-#: src/components/storage/dasd/DASDTable.tsx:364
-msgid "Remove max channel filter"
-msgstr "Maksimum kanal filtresini kaldır"
+#: src/components/storage/dasd/FormatFilter.tsx:44
+#, fuzzy
+msgid "yes"
+msgstr "Evet"
 
-#: src/components/storage/dasd/DASDTable.tsx:382
-msgid "DASDs table section"
-msgstr "DASDs tablo bölümü"
+#: src/components/storage/dasd/FormatFilter.tsx:45
+msgid "no"
+msgstr ""
+
+#: src/components/storage/dasd/StatusFilter.tsx:43
+#, fuzzy
+msgid "active"
+msgstr "Devre dışı bırak"
+
+#: src/components/storage/dasd/StatusFilter.tsx:44
+msgid "read_only"
+msgstr ""
+
+#: src/components/storage/dasd/StatusFilter.tsx:45
+msgid "offline"
+msgstr ""
+
+#: src/components/storage/dasd/TextinputFilter.tsx:83
+#, fuzzy
+msgid "Clear input"
+msgstr "Şifre girişi"
 
 #: src/components/storage/device-utils.tsx:76
 msgid "Unused space"
@@ -3978,6 +4084,29 @@ msgstr "Genel SSH Anahtarını Kullan"
 #: src/routes/storage.tsx:113
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#~ msgid "DASD devices selection table"
+#~ msgstr "DASD aygıtları seçim tablosu"
+
+#~ msgid ""
+#~ "Offline devices must be activated before formatting them. Please, "
+#~ "unselect or activate the devices listed below and try it again"
+#~ msgstr ""
+#~ "Çevrimdışı cihazlar biçimlendirilmeden önce etkinleştirilmelidir. Lütfen "
+#~ "aşağıda listelenen cihazların seçimini kaldırın veya etkinleştirin ve "
+#~ "tekrar deneyin"
+
+#~ msgid "Perform an action"
+#~ msgstr "Bir eylem gerçekleştir"
+
+#~ msgid "Remove min channel filter"
+#~ msgstr "Min kanal filtresini kaldır"
+
+#~ msgid "Remove max channel filter"
+#~ msgstr "Maksimum kanal filtresini kaldır"
+
+#~ msgid "DASDs table section"
+#~ msgstr "DASDs tablo bölümü"
 
 #~ msgid "Any interface"
 #~ msgstr "Herhangi bir arayüz"
@@ -4747,9 +4876,6 @@ msgstr "ZFCP"
 
 #~ msgid "Reading file..."
 #~ msgstr "Dosya Okunuyor..."
-
-#~ msgid "Cannot read the file"
-#~ msgstr "Dosya okunamıyor"
 
 #, fuzzy
 #~ msgid "Create or edit the first user"

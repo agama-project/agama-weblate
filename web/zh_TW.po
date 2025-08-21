@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-13 15:18+0000\n"
+"POT-Creation-Date: 2025-08-20 15:33+0000\n"
 "PO-Revision-Date: 2025-08-05 04:59+0000\n"
 "Last-Translator: Grace Yu <grace.yu@excel-gits.com>\n"
 "Language-Team: Chinese (Taiwan) <https://l10n.opensuse.org/projects/agama/"
@@ -194,7 +194,8 @@ msgstr "對所選產品使用同樣的設定"
 #: src/components/core/InstallerOptions.tsx:405
 #: src/components/core/InstallerOptions.tsx:448
 #: src/components/core/Page.tsx:266
-#: src/components/storage/dasd/DASDTable.tsx:104
+#: src/components/storage/dasd/FormatActionHandler.tsx:73
+#: src/components/storage/dasd/FormatActionHandler.tsx:100
 #: src/components/system/HostnamePage.tsx:132
 msgid "Accept"
 msgstr "接受"
@@ -338,7 +339,7 @@ msgstr "登入"
 
 #: src/components/core/MenuButton.tsx:59 src/components/core/Page.tsx:255
 #: src/components/storage/ISCSIPage.tsx:48
-#: src/components/storage/dasd/DASDPage.tsx:54
+#: src/components/storage/dasd/DASDPage.tsx:49
 #: src/components/storage/zfcp/ZFCPPage.tsx:198
 msgid "Back"
 msgstr "後退"
@@ -375,7 +376,7 @@ msgid "Confirm"
 msgstr "確認"
 
 #. TRANSLATORS: progress message
-#: src/components/core/Popup.tsx:211
+#: src/components/core/Popup.tsx:227
 msgid "Loading data..."
 msgstr "正在載入資料..."
 
@@ -409,6 +410,20 @@ msgstr "動作"
 #: src/components/core/SelectTypeaheadCreatable.tsx:70
 msgid "Add"
 msgstr "新增"
+
+#: src/components/core/SelectableDataTable.tsx:373
+msgid "Row expansion"
+msgstr ""
+
+#: src/components/core/SelectableDataTable.tsx:374
+#, fuzzy
+msgid "Row selection"
+msgstr "軟體選擇"
+
+#: src/components/core/SelectableDataTable.tsx:385
+#, fuzzy
+msgid "Row actions"
+msgstr "更多動作"
 
 #: src/components/core/ServerError.tsx:48
 msgid "Cannot connect to Agama server"
@@ -767,10 +782,12 @@ msgstr "SSID"
 msgid "Signal strength"
 msgstr "訊號強度"
 
+#. TRANSLATORS: table header for a DASD devices table
 #: src/components/network/WifiConnectionDetails.tsx:56
 #: src/components/network/WifiConnectionDetails.tsx:79
 #: src/components/network/WiredConnectionDetails.tsx:102
-#: src/components/storage/dasd/DASDTable.tsx:76
+#: src/components/storage/dasd/DASDTable.tsx:434
+#: src/components/storage/dasd/StatusFilter.tsx:78
 #: src/components/storage/iscsi/NodesPresenter.jsx:104
 #: src/components/storage/iscsi/NodesPresenter.jsx:125
 #: src/components/storage/zfcp/ZFCPControllersTable.tsx:21
@@ -783,11 +800,12 @@ msgstr "狀態"
 msgid "Security"
 msgstr "安全性"
 
+#. TRANSLATORS: table header for a DASD devices table
 #: src/components/network/WifiConnectionDetails.tsx:72
 #: src/components/storage/DeviceSelectorModal.tsx:83
 #: src/components/storage/ProposalResultTable.tsx:132
 #: src/components/storage/SpaceActionsTable.tsx:233
-#: src/components/storage/dasd/DASDTable.tsx:77
+#: src/components/storage/dasd/DASDTable.tsx:440
 msgid "Device"
 msgstr "裝置"
 
@@ -1897,8 +1915,9 @@ msgstr "描述"
 msgid "Current content"
 msgstr "目前內容"
 
+#. TRANSLATORS: table header for a DASD devices table
 #: src/components/storage/DeviceSelectorPage.tsx:53
-#: src/components/storage/dasd/DASDTable.tsx:78
+#: src/components/storage/dasd/DASDTable.tsx:446
 msgid "Type"
 msgstr "類型"
 
@@ -2620,6 +2639,7 @@ msgid ""
 msgstr "沒有可用於安裝的磁碟。您可能需要設定一些裝置。"
 
 #: src/components/storage/ProposalPage.tsx:140
+#: src/components/storage/dasd/DASDTable.tsx:306
 msgid "No devices found"
 msgstr "未找到裝置"
 
@@ -2989,113 +3009,200 @@ msgstr "正在格式化 DASD 裝置"
 msgid "DASD"
 msgstr "DASD"
 
-#. TRANSLATORS: DASD devices selection table
-#: src/components/storage/dasd/DASDPage.tsx:44
-msgid "DASD devices selection table"
-msgstr "DASD 裝置選擇表"
+#: src/components/storage/dasd/DASDTable.tsx:138
+#: src/components/storage/zfcp/ZFCPControllersTable.tsx:51
+msgid "Activate"
+msgstr "啟用"
 
-#: src/components/storage/dasd/DASDTable.tsx:68
-#: src/components/storage/iscsi/NodesPresenter.jsx:103
-#: src/components/storage/zfcp/ZFCPControllersTable.tsx:36
-msgid "No"
-msgstr "否"
+#: src/components/storage/dasd/DASDTable.tsx:142
+#: src/components/storage/zfcp/ZFCPDisksTable.tsx:56
+msgid "Deactivate"
+msgstr "停用"
 
-#: src/components/storage/dasd/DASDTable.tsx:68
-#: src/components/storage/iscsi/NodesPresenter.jsx:103
-#: src/components/storage/zfcp/ZFCPControllersTable.tsx:36
-msgid "Yes"
-msgstr "是"
+#: src/components/storage/dasd/DASDTable.tsx:149
+#, fuzzy
+msgid "Set DIAG on"
+msgstr "開啟 DIAG"
 
-#: src/components/storage/dasd/DASDTable.tsx:75
+#: src/components/storage/dasd/DASDTable.tsx:153
+#, fuzzy
+msgid "Set DIAG off"
+msgstr "關閉 DIAG"
+
+#: src/components/storage/dasd/DASDTable.tsx:160
+msgid "Format"
+msgstr "格式化"
+
+#: src/components/storage/dasd/DASDTable.tsx:198
+#, fuzzy
+msgid "Min channel"
+msgstr "依最小通道過濾"
+
+#: src/components/storage/dasd/DASDTable.tsx:206
+#, fuzzy
+msgid "Max channel"
+msgstr "依最大通道過濾"
+
+#: src/components/storage/dasd/DASDTable.tsx:254
+#, fuzzy
+msgid "Select devices to enable bulk actions."
+msgstr "選取一個要定義分割區或要掛接的裝置"
+
+#: src/components/storage/dasd/DASDTable.tsx:294
+#, fuzzy
+msgid "No devices available"
+msgstr "不可用"
+
+#: src/components/storage/dasd/DASDTable.tsx:298
+msgid "No DASD devices were found in this machine."
+msgstr ""
+
+#: src/components/storage/dasd/DASDTable.tsx:310
+msgid "Change filters and try again."
+msgstr ""
+
+#: src/components/storage/dasd/DASDTable.tsx:314
+msgid "Clear all filters"
+msgstr ""
+
+#. TRANSLATORS: table header for a DASD devices table
+#: src/components/storage/dasd/DASDTable.tsx:427
 #: src/components/storage/zfcp/ZFCPControllersTable.tsx:20
 #: src/components/storage/zfcp/ZFCPDiskForm.tsx:117
 #: src/components/storage/zfcp/ZFCPDisksTable.tsx:43
 msgid "Channel ID"
 msgstr "通道 ID"
 
-#. TRANSLATORS: table header, the column contains "Yes"/"No" values
-#. for the DIAG access mode (special disk access mode on IBM mainframes),
-#. usually keep untranslated
-#: src/components/storage/dasd/DASDTable.tsx:82
+#. TRANSLATORS: table header for `DIAG access mode` on DASD devices table.
+#. It refers to an special disk access mode on IBM mainframes. Keep
+#. untranslated.
+#: src/components/storage/dasd/DASDTable.tsx:454
 msgid "DIAG"
 msgstr "DIAG"
 
-#: src/components/storage/dasd/DASDTable.tsx:83
+#: src/components/storage/dasd/DASDTable.tsx:458
+#: src/components/storage/dasd/DASDTable.tsx:466
+#: src/components/storage/iscsi/NodesPresenter.jsx:103
+#: src/components/storage/zfcp/ZFCPControllersTable.tsx:36
+msgid "No"
+msgstr "否"
+
+#: src/components/storage/dasd/DASDTable.tsx:458
+#: src/components/storage/dasd/DASDTable.tsx:466
+#: src/components/storage/iscsi/NodesPresenter.jsx:103
+#: src/components/storage/zfcp/ZFCPControllersTable.tsx:36
+msgid "Yes"
+msgstr "是"
+
+#. TRANSLATORS: table header for a column in a DASD devices table that
+#. usually contains "Yes" or "No"" values
+#: src/components/storage/dasd/DASDTable.tsx:465
+#: src/components/storage/dasd/FormatFilter.tsx:78
 msgid "Formatted"
 msgstr "已格式化"
 
-#: src/components/storage/dasd/DASDTable.tsx:84
+#. TRANSLATORS: table header for a DASD devices table
+#: src/components/storage/dasd/DASDTable.tsx:471
 msgid "Partition Info"
 msgstr "分割區資訊"
 
-#: src/components/storage/dasd/DASDTable.tsx:94
-msgid "Cannot format all selected devices"
+#: src/components/storage/dasd/DASDTable.tsx:538
+msgid "Applying changes"
+msgstr ""
+
+#: src/components/storage/dasd/DASDTable.tsx:540
+msgid "This may take a moment while updates complete."
+msgstr ""
+
+#: src/components/storage/dasd/DASDTable.tsx:543
+msgid "This message will close automatically when everything is done."
+msgstr ""
+
+#: src/components/storage/dasd/FormatActionHandler.tsx:68
+#, fuzzy, c-format
+msgid "Cannot format %s"
 msgstr "無法格式化全部所選裝置"
 
-#: src/components/storage/dasd/DASDTable.tsx:98
-msgid ""
-"Offline devices must be activated before formatting them. Please, unselect "
-"or activate the devices listed below and try it again"
-msgstr "格式化前必須啟用離線裝置。請先取消選取或啟用下列裝置，然後再試"
+#: src/components/storage/dasd/FormatActionHandler.tsx:70
+msgid "It is offline and must be activated before formatting it."
+msgstr ""
 
-#: src/components/storage/dasd/DASDTable.tsx:110
+#: src/components/storage/dasd/FormatActionHandler.tsx:91
+#, fuzzy
+msgid "Cannot format all the selected devices"
+msgstr "無法格式化全部所選裝置"
+
+#: src/components/storage/dasd/FormatActionHandler.tsx:94
+#, c-format
+msgid "Below %s devices are offline and cannot be formatted."
+msgstr ""
+
+#: src/components/storage/dasd/FormatActionHandler.tsx:96
+msgid "Unselect or activate them and try it again."
+msgstr ""
+
+#: src/components/storage/dasd/FormatActionHandler.tsx:115
+#, fuzzy, c-format
+msgid "Format device %s"
+msgstr "將裝置格式化為"
+
+#: src/components/storage/dasd/FormatActionHandler.tsx:118
+#, fuzzy
+msgid "This action could destroy any data stored on the device."
+msgstr "此動作無法刪除下列裝置上儲存的任何資料。請確認您確定要繼續。"
+
+#: src/components/storage/dasd/FormatActionHandler.tsx:119
+#: src/components/storage/dasd/FormatActionHandler.tsx:146
+msgid "Confirm that you really want to continue."
+msgstr ""
+
+#: src/components/storage/dasd/FormatActionHandler.tsx:123
+#: src/components/storage/dasd/FormatActionHandler.tsx:150
+#, fuzzy
+msgid "Format now"
+msgstr "格式化"
+
+#: src/components/storage/dasd/FormatActionHandler.tsx:139
 msgid "Format selected devices?"
 msgstr "要格式化所選裝置？"
 
-#: src/components/storage/dasd/DASDTable.tsx:114
-msgid ""
-"This action could destroy any data stored on the devices listed below. "
-"Please, confirm that you really want to continue."
+#: src/components/storage/dasd/FormatActionHandler.tsx:143
+#, fuzzy
+msgid "This action could destroy any data stored on the devices listed below."
 msgstr "此動作無法刪除下列裝置上儲存的任何資料。請確認您確定要繼續。"
 
-#. TRANSLATORS: drop down menu label
-#: src/components/storage/dasd/DASDTable.tsx:173
-msgid "Perform an action"
-msgstr "執行動作"
+#: src/components/storage/dasd/FormatFilter.tsx:43
+#: src/components/storage/dasd/StatusFilter.tsx:42
+#, fuzzy
+msgid "all"
+msgstr "安裝"
 
-#: src/components/storage/dasd/DASDTable.tsx:180
-#: src/components/storage/zfcp/ZFCPControllersTable.tsx:51
-msgid "Activate"
-msgstr "啟用"
+#: src/components/storage/dasd/FormatFilter.tsx:44
+#, fuzzy
+msgid "yes"
+msgstr "是"
 
-#: src/components/storage/dasd/DASDTable.tsx:184
-#: src/components/storage/zfcp/ZFCPDisksTable.tsx:56
-msgid "Deactivate"
+#: src/components/storage/dasd/FormatFilter.tsx:45
+msgid "no"
+msgstr ""
+
+#: src/components/storage/dasd/StatusFilter.tsx:43
+#, fuzzy
+msgid "active"
 msgstr "停用"
 
-#: src/components/storage/dasd/DASDTable.tsx:189
-msgid "Set DIAG On"
-msgstr "開啟 DIAG"
+#: src/components/storage/dasd/StatusFilter.tsx:44
+msgid "read_only"
+msgstr ""
 
-#: src/components/storage/dasd/DASDTable.tsx:193
-msgid "Set DIAG Off"
-msgstr "關閉 DIAG"
+#: src/components/storage/dasd/StatusFilter.tsx:45
+msgid "offline"
+msgstr ""
 
-#: src/components/storage/dasd/DASDTable.tsx:198
-msgid "Format"
-msgstr "格式化"
-
-#: src/components/storage/dasd/DASDTable.tsx:335
-#: src/components/storage/dasd/DASDTable.tsx:336
-msgid "Filter by min channel"
-msgstr "依最小通道過濾"
-
-#: src/components/storage/dasd/DASDTable.tsx:343
-msgid "Remove min channel filter"
-msgstr "移除最小通道過濾器"
-
-#: src/components/storage/dasd/DASDTable.tsx:356
-#: src/components/storage/dasd/DASDTable.tsx:357
-msgid "Filter by max channel"
-msgstr "依最大通道過濾"
-
-#: src/components/storage/dasd/DASDTable.tsx:364
-msgid "Remove max channel filter"
-msgstr "移除最大通道過濾器"
-
-#: src/components/storage/dasd/DASDTable.tsx:382
-msgid "DASDs table section"
-msgstr "DASD 表區段"
+#: src/components/storage/dasd/TextinputFilter.tsx:83
+#, fuzzy
+msgid "Clear input"
+msgstr "密碼輸入"
 
 #: src/components/storage/device-utils.tsx:76
 msgid "Unused space"
@@ -3835,6 +3942,26 @@ msgstr "使用 SSH 公用金鑰"
 #: src/routes/storage.tsx:113
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#~ msgid "DASD devices selection table"
+#~ msgstr "DASD 裝置選擇表"
+
+#~ msgid ""
+#~ "Offline devices must be activated before formatting them. Please, "
+#~ "unselect or activate the devices listed below and try it again"
+#~ msgstr "格式化前必須啟用離線裝置。請先取消選取或啟用下列裝置，然後再試"
+
+#~ msgid "Perform an action"
+#~ msgstr "執行動作"
+
+#~ msgid "Remove min channel filter"
+#~ msgstr "移除最小通道過濾器"
+
+#~ msgid "Remove max channel filter"
+#~ msgstr "移除最大通道過濾器"
+
+#~ msgid "DASDs table section"
+#~ msgstr "DASD 表區段"
 
 #~ msgid "Any interface"
 #~ msgstr "介面不限"
