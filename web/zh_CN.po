@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-27 09:25+0000\n"
+"POT-Creation-Date: 2025-09-02 15:47+0000\n"
 "PO-Revision-Date: 2025-08-05 04:59+0000\n"
 "Last-Translator: Grace Yu <grace.yu@excel-gits.com>\n"
 "Language-Team: Chinese (China) <https://l10n.opensuse.org/projects/agama/"
@@ -65,7 +65,7 @@ msgstr "继续"
 #: src/components/core/InstallButton.tsx:62 src/components/core/Page.tsx:234
 #: src/components/core/Popup.tsx:140
 #: src/components/network/BindingSettingsForm.tsx:228
-#: src/components/network/IpSettingsForm.tsx:219
+#: src/components/network/IpSettingsForm.tsx:217
 #: src/components/network/WifiConnectionForm.tsx:188
 #: src/components/product/ProductSelectionPage.tsx:99
 msgid "Cancel"
@@ -681,12 +681,12 @@ msgstr "IP 前缀或网络掩码"
 msgid "At least one address must be provided for selected mode"
 msgstr "所选模式要求至少提供一个地址"
 
-#: src/components/network/IpSettingsForm.tsx:154
+#: src/components/network/IpSettingsForm.tsx:152
 #, c-format
 msgid "Edit connection %s"
 msgstr "编辑连接 %s"
 
-#: src/components/network/IpSettingsForm.tsx:159
+#: src/components/network/IpSettingsForm.tsx:157
 #: src/components/storage/EncryptionSettingsPage.tsx:110
 #: src/components/storage/iscsi/DiscoverForm.tsx:98
 #: src/components/storage/iscsi/LoginForm.jsx:70
@@ -697,36 +697,36 @@ msgid "Something went wrong"
 msgstr "出了点问题"
 
 #. TRANSLATORS: network connection mode (automatic via DHCP or manual with static IP)
-#: src/components/network/IpSettingsForm.tsx:165
+#: src/components/network/IpSettingsForm.tsx:163
+#: src/components/network/IpSettingsForm.tsx:168
 #: src/components/network/IpSettingsForm.tsx:170
-#: src/components/network/IpSettingsForm.tsx:172
 #: src/components/network/WifiConnectionDetails.tsx:106
 #: src/components/network/WiredConnectionDetails.tsx:214
 msgid "Mode"
 msgstr "模式"
 
-#: src/components/network/IpSettingsForm.tsx:179
+#: src/components/network/IpSettingsForm.tsx:177
 msgid "Automatic (DHCP)"
 msgstr "自动（DHCP）"
 
 #. TRANSLATORS: manual network configuration mode with a static IP address
-#: src/components/network/IpSettingsForm.tsx:182
-#: src/components/storage/SizeModeSelect.tsx:191
-#: src/components/storage/SizeModeSelect.tsx:199
+#: src/components/network/IpSettingsForm.tsx:180
+#: src/components/storage/SizeModeSelect.tsx:189
+#: src/components/storage/SizeModeSelect.tsx:197
 #: src/components/storage/iscsi/NodeStartupOptions.js:26
 msgid "Manual"
 msgstr "手动"
 
 #. TRANSLATORS: network gateway configuration
-#: src/components/network/IpSettingsForm.tsx:190
-#: src/components/network/IpSettingsForm.tsx:193
+#: src/components/network/IpSettingsForm.tsx:188
+#: src/components/network/IpSettingsForm.tsx:191
 #: src/components/network/WifiConnectionDetails.tsx:129
 #: src/components/network/WiredConnectionDetails.tsx:110
 #: src/components/network/WiredConnectionDetails.tsx:227
 msgid "Gateway"
 msgstr "网关"
 
-#: src/components/network/IpSettingsForm.tsx:202
+#: src/components/network/IpSettingsForm.tsx:200
 msgid "Gateway can be defined only in 'Manual' mode"
 msgstr "网关只能在“手动”模式下配置"
 
@@ -1307,6 +1307,11 @@ msgstr "无法在该服务器上使用此扩展。您可以请求服务器管理
 msgid "Question"
 msgstr "问题"
 
+#: src/components/questions/LoadConfigRetryQuestion.tsx:51
+#, fuzzy
+msgid "Configuration unreachable or invalid"
+msgstr "在 %s 上配置分区"
+
 #. TRANSLATORS: error message, user entered a wrong password
 #: src/components/questions/LuksActivationQuestion.tsx:37
 msgid "The encryption password did not work"
@@ -1741,8 +1746,8 @@ msgid "Boot options"
 msgstr "引导选项"
 
 #: src/components/storage/BootSelection.tsx:182
-#: src/components/storage/SizeModeSelect.tsx:191
-#: src/components/storage/SizeModeSelect.tsx:196
+#: src/components/storage/SizeModeSelect.tsx:189
+#: src/components/storage/SizeModeSelect.tsx:194
 #: src/components/storage/iscsi/NodeStartupOptions.js:28
 msgid "Automatic"
 msgstr "自动"
@@ -1868,6 +1873,18 @@ msgstr "已在使用所有可用设备"
 #: src/components/storage/ConfigureDeviceMenu.tsx:59
 msgid "Already using all available disks"
 msgstr "已使用所有可用磁盘"
+
+#: src/components/storage/ConfigureDeviceMenu.tsx:66
+#, c-format
+msgid "Extend the installation beyond the currently selected device"
+msgid_plural "Extend the installation beyond the current %d devices"
+msgstr[0] ""
+
+#: src/components/storage/ConfigureDeviceMenu.tsx:75
+#, c-format
+msgid "Extend the installation beyond the currently selected disk"
+msgid_plural "Extend the installation beyond the current %d disks"
+msgstr[0] ""
 
 #: src/components/storage/ConfigureDeviceMenu.tsx:83
 msgid "Start configuring a basic installation"
@@ -2151,6 +2168,13 @@ msgstr "细节"
 msgid "Change the file system or mount point"
 msgstr "更改文件系统或挂载点"
 
+#: src/components/storage/FixableConfigInfo.tsx:48
+#, fuzzy
+msgid "The configuration must be adapted to address the following issue:"
+msgid_plural ""
+"The configuration must be adapted to address the following issues:"
+msgstr[0] "在开始安装前，您需要解决下列问题："
+
 #: src/components/storage/FormattableDevicePage.tsx:221
 #: src/components/storage/LogicalVolumePage.tsx:248
 #: src/components/storage/PartitionPage.tsx:308
@@ -2166,10 +2190,10 @@ msgstr "请选择或输入尚未分配给其他设备的挂载点"
 
 #: src/components/storage/FormattableDevicePage.tsx:280
 #: src/components/storage/LogicalVolumePage.tsx:443
-#: src/components/storage/LogicalVolumePage.tsx:466
-#: src/components/storage/LogicalVolumePage.tsx:769
+#: src/components/storage/LogicalVolumePage.tsx:462
+#: src/components/storage/LogicalVolumePage.tsx:762
 #: src/components/storage/PartitionPage.tsx:560
-#: src/components/storage/PartitionPage.tsx:891
+#: src/components/storage/PartitionPage.tsx:888
 msgid "Waiting for a mount point"
 msgstr "正在等待挂载点"
 
@@ -2182,14 +2206,14 @@ msgid "Current %s"
 msgstr "当前 %s"
 
 #: src/components/storage/FormattableDevicePage.tsx:284
-#: src/components/storage/LogicalVolumePage.tsx:467
+#: src/components/storage/LogicalVolumePage.tsx:463
 #: src/components/storage/PartitionPage.tsx:564
 #: src/components/storage/utils.ts:338
 msgid "Btrfs with snapshots"
 msgstr "带快照的 Btrfs"
 
 #: src/components/storage/FormattableDevicePage.tsx:302
-#: src/components/storage/LogicalVolumePage.tsx:483
+#: src/components/storage/LogicalVolumePage.tsx:479
 #: src/components/storage/PartitionPage.tsx:582
 #, c-format
 msgid "Default file system for %s"
@@ -2216,7 +2240,7 @@ msgid "Do not format %s and keep the data"
 msgstr "不格式化 %s 并保留数据"
 
 #: src/components/storage/FormattableDevicePage.tsx:384
-#: src/components/storage/LogicalVolumePage.tsx:552
+#: src/components/storage/LogicalVolumePage.tsx:548
 #: src/components/storage/PartitionPage.tsx:664
 msgid "File system label"
 msgstr "文件系统标签"
@@ -2228,52 +2252,52 @@ msgstr "配置设备 %s"
 
 #: src/components/storage/FormattableDevicePage.tsx:460
 #: src/components/storage/FormattableDevicePage.tsx:467
-#: src/components/storage/LogicalVolumePage.tsx:697
-#: src/components/storage/LogicalVolumePage.tsx:702
+#: src/components/storage/LogicalVolumePage.tsx:693
+#: src/components/storage/LogicalVolumePage.tsx:698
 #: src/components/storage/PartitionPage.tsx:821
 #: src/components/storage/PartitionPage.tsx:828
 msgid "Mount point"
 msgstr "挂载点"
 
 #: src/components/storage/FormattableDevicePage.tsx:465
-#: src/components/storage/LogicalVolumePage.tsx:700
+#: src/components/storage/LogicalVolumePage.tsx:696
 #: src/components/storage/PartitionPage.tsx:826
 msgid "Mount point toggle"
 msgstr "挂载点切换开关"
 
 #: src/components/storage/FormattableDevicePage.tsx:466
-#: src/components/storage/LogicalVolumePage.tsx:701
+#: src/components/storage/LogicalVolumePage.tsx:697
 #: src/components/storage/PartitionPage.tsx:827
 msgid "Suggested mount points"
 msgstr "建议的挂载点"
 
 #: src/components/storage/FormattableDevicePage.tsx:468
-#: src/components/storage/LogicalVolumePage.tsx:703
+#: src/components/storage/LogicalVolumePage.tsx:699
 #: src/components/storage/PartitionPage.tsx:829
 msgid "Clear selected mount point"
 msgstr "清除所选的挂载点"
 
 #: src/components/storage/FormattableDevicePage.tsx:471
-#: src/components/storage/LogicalVolumePage.tsx:706
+#: src/components/storage/LogicalVolumePage.tsx:702
 #: src/components/storage/PartitionPage.tsx:832
 msgid "Use"
 msgstr "使用"
 
-#: src/components/storage/FormattableDevicePage.tsx:482
-#: src/components/storage/LogicalVolumePage.tsx:715
-#: src/components/storage/PartitionPage.tsx:853
+#: src/components/storage/FormattableDevicePage.tsx:479
+#: src/components/storage/LogicalVolumePage.tsx:708
+#: src/components/storage/PartitionPage.tsx:850
 msgid "Select or enter a mount point"
 msgstr "选择或输入挂载点"
 
-#: src/components/storage/FormattableDevicePage.tsx:491
-#: src/components/storage/LogicalVolumePage.tsx:740
-#: src/components/storage/PartitionPage.tsx:862
+#: src/components/storage/FormattableDevicePage.tsx:488
+#: src/components/storage/LogicalVolumePage.tsx:733
+#: src/components/storage/PartitionPage.tsx:859
 msgid "File system"
 msgstr "文件系统"
 
-#: src/components/storage/FormattableDevicePage.tsx:502
-#: src/components/storage/LogicalVolumePage.tsx:751
-#: src/components/storage/PartitionPage.tsx:874
+#: src/components/storage/FormattableDevicePage.tsx:499
+#: src/components/storage/LogicalVolumePage.tsx:744
+#: src/components/storage/PartitionPage.tsx:871
 msgid "Label"
 msgstr "标签"
 
@@ -2310,21 +2334,21 @@ msgstr "大小限制必须为数字，可选择性附带 GiB 或 GB 等单位"
 msgid "Logical volume name"
 msgstr "逻辑卷名称"
 
-#: src/components/storage/LogicalVolumePage.tsx:484
+#: src/components/storage/LogicalVolumePage.tsx:480
 msgid "Default file system for generic logical volumes"
 msgstr "通用逻辑卷的默认文件系统"
 
-#: src/components/storage/LogicalVolumePage.tsx:486
+#: src/components/storage/LogicalVolumePage.tsx:482
 msgid "Format logical volume as"
 msgstr "将逻辑卷格式化为"
 
-#: src/components/storage/LogicalVolumePage.tsx:687
+#: src/components/storage/LogicalVolumePage.tsx:683
 #, c-format
 msgid "Configure LVM logical volume at %s volume group"
 msgstr "在 %s 卷组上配置 LVM 逻辑卷"
 
-#: src/components/storage/LogicalVolumePage.tsx:764
-#: src/components/storage/PartitionPage.tsx:886
+#: src/components/storage/LogicalVolumePage.tsx:757
+#: src/components/storage/PartitionPage.tsx:883
 msgid "Size mode"
 msgstr "大小模式"
 
@@ -2466,6 +2490,14 @@ msgstr "在 %s 上创建另一个 LVM 卷组"
 msgid "Create LVM volume group on %s"
 msgstr "在 %s 上创建 LVM 卷组"
 
+#. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
+#. single mount point in the singular case).
+#: src/components/storage/NewVgMenuOption.tsx:59
+#, c-format
+msgid "%s will be created as a logical volume"
+msgid_plural "%s will be created as logical volumes"
+msgstr[0] ""
+
 #: src/components/storage/PartitionPage.tsx:354
 msgid "The maximum must be a number followed by a unit like GiB or GB"
 msgstr "上限必须为带单位（如 GiB 或 GB）的数字"
@@ -2522,7 +2554,7 @@ msgstr "在 %s 上配置分区"
 msgid "Mount point mode"
 msgstr "挂载点模式"
 
-#: src/components/storage/PartitionPage.tsx:921
+#: src/components/storage/PartitionPage.tsx:918
 #, fuzzy
 msgid "Go to storage page"
 msgstr "前往网络页面"
@@ -2531,9 +2563,33 @@ msgstr "前往网络页面"
 msgid "Moreover, the following partitions will be created or mounted"
 msgstr "此外，将会创建或挂载以下分区"
 
+#: src/components/storage/PartitionsMenu.tsx:67
+#, fuzzy
+msgid "Moreover, the following partition will be created."
+msgid_plural "Moreover, the following partitions will be created."
+msgstr[0] "此外，将会创建或挂载以下分区"
+
+#: src/components/storage/PartitionsMenu.tsx:73
+#, fuzzy
+msgid "Moreover, the following partition will be mounted."
+msgid_plural "Moreover, the following partitions will be mounted."
+msgstr[0] "此外，将会创建或挂载以下分区"
+
 #: src/components/storage/PartitionsMenu.tsx:80
 msgid "The following partitions will be created or mounted"
 msgstr "将会创建或挂载以下分区"
+
+#: src/components/storage/PartitionsMenu.tsx:84
+#, fuzzy
+msgid "The following partition will be created."
+msgid_plural "The following partitions will be created."
+msgstr[0] "将会创建或挂载以下分区"
+
+#: src/components/storage/PartitionsMenu.tsx:90
+#, fuzzy
+msgid "The following partition will be mounted."
+msgid_plural "The following partitions will be mounted."
+msgstr[0] "将会创建或挂载以下分区"
 
 #: src/components/storage/PartitionsMenu.tsx:132
 msgid "Any partition needed to boot will be configured."
@@ -2597,6 +2653,11 @@ msgstr "无法计算存储布局"
 #: src/components/storage/ProposalPage.tsx:70
 msgid "Invalid storage settings"
 msgstr "存储设置无效"
+
+#: src/components/storage/ProposalPage.tsx:77
+msgid "The current storage configuration has the following issue:"
+msgid_plural "The current storage configuration has the following issues:"
+msgstr[0] ""
 
 #: src/components/storage/ProposalPage.tsx:91
 msgid ""
@@ -2662,6 +2723,18 @@ msgstr "正在重新加载数据，请稍候..."
 #: src/components/storage/ProposalResultSection.tsx:39
 msgid "Waiting for information about storage configuration"
 msgstr "正在等待存储配置信息"
+
+#: src/components/storage/ProposalResultSection.tsx:64
+#, fuzzy, c-format
+msgid "There is %d destructive action planned affecting %s"
+msgid_plural "There are %d destructive actions planned affecting %s"
+msgstr[0] "已计划执行 %d 个具有破坏性的操作"
+
+#: src/components/storage/ProposalResultSection.tsx:75
+#, c-format
+msgid "There is %d destructive action planned"
+msgid_plural "There are %d destructive actions planned"
+msgstr[0] "已计划执行 %d 个具有破坏性的操作"
 
 #: src/components/storage/ProposalResultSection.tsx:94
 msgid "Collapse the list of planned actions"
@@ -2856,23 +2929,23 @@ msgstr "大小必须为数字，附带 GiB（2 的幂次）或 GB（10 的幂次
 msgid "approx. %s"
 msgstr "大约为 %s"
 
-#: src/components/storage/SizeModeSelect.tsx:159
+#: src/components/storage/SizeModeSelect.tsx:157
 msgid "Allow growing"
 msgstr "允许增长"
 
-#: src/components/storage/SizeModeSelect.tsx:161
+#: src/components/storage/SizeModeSelect.tsx:159
 msgid "The final size can be bigger in order to fill the extra free space."
 msgstr "最终大小可增大，以便使用额外的可用空间。"
 
-#: src/components/storage/SizeModeSelect.tsx:194
+#: src/components/storage/SizeModeSelect.tsx:192
 msgid "Size modes"
 msgstr "大小模式"
 
-#: src/components/storage/SizeModeSelect.tsx:195
+#: src/components/storage/SizeModeSelect.tsx:193
 msgid "Let the installer propose a sensible size"
 msgstr "让安装程序建议适当的大小"
 
-#: src/components/storage/SizeModeSelect.tsx:198
+#: src/components/storage/SizeModeSelect.tsx:196
 msgid "Define a custom size"
 msgstr "指定自定义大小"
 
@@ -2963,6 +3036,20 @@ msgstr "添加一个分区或挂载一个现有分区"
 msgid "Format the whole device or mount an existing file system"
 msgstr "格式化整个设备或挂载现有文件系统"
 
+#. TRANSLATORS: %1$s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
+#. single mount point in the singular case). %2$s is a disk name like sda.
+#: src/components/storage/VolumeGroupEditor.tsx:58
+#, fuzzy, c-format
+msgid "%1$s will be created as a partition at %2$s"
+msgid_plural "%1$s will be created as partitions at %2$s"
+msgstr[0] "%1$s 根分区 (%2$s)"
+
+#: src/components/storage/VolumeGroupEditor.tsx:67
+#, fuzzy
+msgid "The logical volume will also be deleted"
+msgid_plural "The logical volumes will also be deleted"
+msgstr[0] "逻辑卷可扩展至给定的限制大小"
+
 #: src/components/storage/VolumeGroupEditor.tsx:82
 msgid "Delete volume group"
 msgstr "删除卷组"
@@ -2994,6 +3081,12 @@ msgstr "%s 的逻辑卷"
 #: src/components/storage/VolumeGroupEditor.tsx:194
 msgid "Add logical volume"
 msgstr "添加逻辑卷"
+
+#: src/components/storage/VolumeGroupEditor.tsx:148
+#, fuzzy
+msgid "The following logical volume will be created"
+msgid_plural "The following logical volumes will be created"
+msgstr[0] "将会创建或挂载以下分区"
 
 #: src/components/storage/dasd/DASDFormatProgress.tsx:49
 msgid "Formatting DASD devices"
@@ -3036,6 +3129,14 @@ msgstr "按最小通道过滤"
 #, fuzzy
 msgid "Max channel"
 msgstr "按最大通道过滤"
+
+#. TRANSLATORS: message shown in bulk action toolbar when just one device
+#. is selected
+#: src/components/storage/dasd/DASDTable.tsx:227
+#, fuzzy, c-format
+msgid "Apply to the selected device"
+msgid_plural "Apply to the %s selected devices"
+msgstr[0] "要格式化所选设备？"
 
 #: src/components/storage/dasd/DASDTable.tsx:254
 #, fuzzy
@@ -3655,6 +3756,18 @@ msgstr "一个文件系统将用于整个设备"
 msgid "No additional partitions will be created"
 msgstr "将不创建附加分区"
 
+#: src/components/storage/utils/drive.tsx:169
+#, fuzzy, c-format
+msgid "An existing partition will be used for %s"
+msgid_plural "Existing partitions will be used for %s"
+msgstr[0] "将会仅使用重复使用的分区。"
+
+#: src/components/storage/utils/drive.tsx:183
+#, fuzzy, c-format
+msgid "A new partition will be created for %s"
+msgid_plural "New partitions will be created for %s"
+msgstr[0] "将会为 %s 使用和创建多个分区"
+
 #. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case).
 #: src/components/storage/utils/drive.tsx:194
@@ -3677,6 +3790,12 @@ msgstr "%1$s（%2$s 上）"
 #: src/components/storage/utils/volume-group.tsx:29
 msgid "No logical volumes are defined yet"
 msgstr "尚未定义逻辑卷"
+
+#: src/components/storage/utils/volume-group.tsx:36
+#, fuzzy, c-format
+msgid "A new volume will be created for %s"
+msgid_plural "New volumes will be created for %s"
+msgstr[0] "整个设备将用于 %s"
 
 #: src/components/storage/zfcp/ZFCPControllersTable.tsx:22
 msgid "Auto LUNs Scan"
@@ -4007,9 +4126,6 @@ msgstr "ZFCP"
 #~ msgid "The logical volume is created exactly with the given size"
 #~ msgstr "逻辑卷将严格按给定大小创建"
 
-#~ msgid "The logical volume can grow until a given limit size"
-#~ msgstr "逻辑卷可扩展至给定的限制大小"
-
 #~ msgid "Sizes must be entered as a numbers optionally followed by a unit."
 #~ msgstr "输入的大小必须为数字，可选择性附带单位。"
 
@@ -4298,10 +4414,6 @@ msgstr "ZFCP"
 #, c-format
 #~ msgid "%1$s root volume (%2$s)"
 #~ msgstr "%1$s 根卷 (%2$s)"
-
-#, c-format
-#~ msgid "%1$s root partition (%2$s)"
-#~ msgstr "%1$s 根分区 (%2$s)"
 
 #, c-format
 #~ msgid "%1$s %2$s at %3$s (%4$s)"
@@ -4721,11 +4833,6 @@ msgstr "ZFCP"
 
 #~ msgid "Loading available products, please wait..."
 #~ msgstr "正在载入可用产品，请稍候……"
-
-#, c-format
-#~ msgid "There is %d destructive action planned"
-#~ msgid_plural "There are %d destructive actions planned"
-#~ msgstr[0] "已计划执行 %d 个具有破坏性的操作"
 
 #, c-format
 #~ msgid "Space action selector for %s"

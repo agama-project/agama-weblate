@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-27 09:25+0000\n"
+"POT-Creation-Date: 2025-09-02 15:47+0000\n"
 "PO-Revision-Date: 2025-08-30 19:59+0000\n"
 "Last-Translator: Eugene Krater <lachend@gmail.com>\n"
 "Language-Team: Ukrainian <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -68,7 +68,7 @@ msgstr "Продовжити"
 #: src/components/core/InstallButton.tsx:62 src/components/core/Page.tsx:234
 #: src/components/core/Popup.tsx:140
 #: src/components/network/BindingSettingsForm.tsx:228
-#: src/components/network/IpSettingsForm.tsx:219
+#: src/components/network/IpSettingsForm.tsx:217
 #: src/components/network/WifiConnectionForm.tsx:188
 #: src/components/product/ProductSelectionPage.tsx:99
 msgid "Cancel"
@@ -699,12 +699,12 @@ msgstr "Ip префікс або маска мережі"
 msgid "At least one address must be provided for selected mode"
 msgstr "Для обраного режиму має бути вказана принаймні одна адреса"
 
-#: src/components/network/IpSettingsForm.tsx:154
+#: src/components/network/IpSettingsForm.tsx:152
 #, c-format
 msgid "Edit connection %s"
 msgstr "Редагувати з'єднання %s"
 
-#: src/components/network/IpSettingsForm.tsx:159
+#: src/components/network/IpSettingsForm.tsx:157
 #: src/components/storage/EncryptionSettingsPage.tsx:110
 #: src/components/storage/iscsi/DiscoverForm.tsx:98
 #: src/components/storage/iscsi/LoginForm.jsx:70
@@ -715,36 +715,36 @@ msgid "Something went wrong"
 msgstr "Щось пішло не так"
 
 #. TRANSLATORS: network connection mode (automatic via DHCP or manual with static IP)
-#: src/components/network/IpSettingsForm.tsx:165
+#: src/components/network/IpSettingsForm.tsx:163
+#: src/components/network/IpSettingsForm.tsx:168
 #: src/components/network/IpSettingsForm.tsx:170
-#: src/components/network/IpSettingsForm.tsx:172
 #: src/components/network/WifiConnectionDetails.tsx:106
 #: src/components/network/WiredConnectionDetails.tsx:214
 msgid "Mode"
 msgstr "Режим"
 
-#: src/components/network/IpSettingsForm.tsx:179
+#: src/components/network/IpSettingsForm.tsx:177
 msgid "Automatic (DHCP)"
 msgstr "Автоматично (DHCP)"
 
 #. TRANSLATORS: manual network configuration mode with a static IP address
-#: src/components/network/IpSettingsForm.tsx:182
-#: src/components/storage/SizeModeSelect.tsx:191
-#: src/components/storage/SizeModeSelect.tsx:199
+#: src/components/network/IpSettingsForm.tsx:180
+#: src/components/storage/SizeModeSelect.tsx:189
+#: src/components/storage/SizeModeSelect.tsx:197
 #: src/components/storage/iscsi/NodeStartupOptions.js:26
 msgid "Manual"
 msgstr "Вручну"
 
 #. TRANSLATORS: network gateway configuration
-#: src/components/network/IpSettingsForm.tsx:190
-#: src/components/network/IpSettingsForm.tsx:193
+#: src/components/network/IpSettingsForm.tsx:188
+#: src/components/network/IpSettingsForm.tsx:191
 #: src/components/network/WifiConnectionDetails.tsx:129
 #: src/components/network/WiredConnectionDetails.tsx:110
 #: src/components/network/WiredConnectionDetails.tsx:227
 msgid "Gateway"
 msgstr "Шлюз"
 
-#: src/components/network/IpSettingsForm.tsx:202
+#: src/components/network/IpSettingsForm.tsx:200
 msgid "Gateway can be defined only in 'Manual' mode"
 msgstr "Шлюз можна вказати тільки в ручному режимі"
 
@@ -1338,6 +1338,11 @@ msgstr ""
 msgid "Question"
 msgstr "Питання"
 
+#: src/components/questions/LoadConfigRetryQuestion.tsx:51
+#, fuzzy
+msgid "Configuration unreachable or invalid"
+msgstr "Конфігурація не синхронізована"
+
 #. TRANSLATORS: error message, user entered a wrong password
 #: src/components/questions/LuksActivationQuestion.tsx:37
 msgid "The encryption password did not work"
@@ -1806,8 +1811,8 @@ msgid "Boot options"
 msgstr "Параметри завантаження"
 
 #: src/components/storage/BootSelection.tsx:182
-#: src/components/storage/SizeModeSelect.tsx:191
-#: src/components/storage/SizeModeSelect.tsx:196
+#: src/components/storage/SizeModeSelect.tsx:189
+#: src/components/storage/SizeModeSelect.tsx:194
 #: src/components/storage/iscsi/NodeStartupOptions.js:28
 msgid "Automatic"
 msgstr "Автоматично"
@@ -1937,6 +1942,22 @@ msgstr "Вже використані всі наявні пристрої"
 #: src/components/storage/ConfigureDeviceMenu.tsx:59
 msgid "Already using all available disks"
 msgstr "Вже використані всі наявні диски"
+
+#: src/components/storage/ConfigureDeviceMenu.tsx:66
+#, c-format
+msgid "Extend the installation beyond the currently selected device"
+msgid_plural "Extend the installation beyond the current %d devices"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: src/components/storage/ConfigureDeviceMenu.tsx:75
+#, c-format
+msgid "Extend the installation beyond the currently selected disk"
+msgid_plural "Extend the installation beyond the current %d disks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
 
 #: src/components/storage/ConfigureDeviceMenu.tsx:83
 msgid "Start configuring a basic installation"
@@ -2230,6 +2251,15 @@ msgstr "Подробиці"
 msgid "Change the file system or mount point"
 msgstr "Змінити файлову систему або точку монтування"
 
+#: src/components/storage/FixableConfigInfo.tsx:48
+#, fuzzy
+msgid "The configuration must be adapted to address the following issue:"
+msgid_plural ""
+"The configuration must be adapted to address the following issues:"
+msgstr[0] "До початку встановлення потрібно усунути такі проблеми:"
+msgstr[1] "До початку встановлення потрібно усунути такі проблеми:"
+msgstr[2] "До початку встановлення потрібно усунути такі проблеми:"
+
 #: src/components/storage/FormattableDevicePage.tsx:221
 #: src/components/storage/LogicalVolumePage.tsx:248
 #: src/components/storage/PartitionPage.tsx:308
@@ -2246,10 +2276,10 @@ msgstr ""
 
 #: src/components/storage/FormattableDevicePage.tsx:280
 #: src/components/storage/LogicalVolumePage.tsx:443
-#: src/components/storage/LogicalVolumePage.tsx:466
-#: src/components/storage/LogicalVolumePage.tsx:769
+#: src/components/storage/LogicalVolumePage.tsx:462
+#: src/components/storage/LogicalVolumePage.tsx:762
 #: src/components/storage/PartitionPage.tsx:560
-#: src/components/storage/PartitionPage.tsx:891
+#: src/components/storage/PartitionPage.tsx:888
 msgid "Waiting for a mount point"
 msgstr "Очікуємо на точку монтування"
 
@@ -2262,14 +2292,14 @@ msgid "Current %s"
 msgstr "Поточна %s"
 
 #: src/components/storage/FormattableDevicePage.tsx:284
-#: src/components/storage/LogicalVolumePage.tsx:467
+#: src/components/storage/LogicalVolumePage.tsx:463
 #: src/components/storage/PartitionPage.tsx:564
 #: src/components/storage/utils.ts:338
 msgid "Btrfs with snapshots"
 msgstr "Btrfs з моментальними знімками"
 
 #: src/components/storage/FormattableDevicePage.tsx:302
-#: src/components/storage/LogicalVolumePage.tsx:483
+#: src/components/storage/LogicalVolumePage.tsx:479
 #: src/components/storage/PartitionPage.tsx:582
 #, c-format
 msgid "Default file system for %s"
@@ -2296,7 +2326,7 @@ msgid "Do not format %s and keep the data"
 msgstr "Не форматувати %s і зберегти дані"
 
 #: src/components/storage/FormattableDevicePage.tsx:384
-#: src/components/storage/LogicalVolumePage.tsx:552
+#: src/components/storage/LogicalVolumePage.tsx:548
 #: src/components/storage/PartitionPage.tsx:664
 msgid "File system label"
 msgstr "Ярлик файлової системи"
@@ -2308,52 +2338,52 @@ msgstr "Налаштувати пристрій %s"
 
 #: src/components/storage/FormattableDevicePage.tsx:460
 #: src/components/storage/FormattableDevicePage.tsx:467
-#: src/components/storage/LogicalVolumePage.tsx:697
-#: src/components/storage/LogicalVolumePage.tsx:702
+#: src/components/storage/LogicalVolumePage.tsx:693
+#: src/components/storage/LogicalVolumePage.tsx:698
 #: src/components/storage/PartitionPage.tsx:821
 #: src/components/storage/PartitionPage.tsx:828
 msgid "Mount point"
 msgstr "Точка монтування"
 
 #: src/components/storage/FormattableDevicePage.tsx:465
-#: src/components/storage/LogicalVolumePage.tsx:700
+#: src/components/storage/LogicalVolumePage.tsx:696
 #: src/components/storage/PartitionPage.tsx:826
 msgid "Mount point toggle"
 msgstr "Показати точку монтування"
 
 #: src/components/storage/FormattableDevicePage.tsx:466
-#: src/components/storage/LogicalVolumePage.tsx:701
+#: src/components/storage/LogicalVolumePage.tsx:697
 #: src/components/storage/PartitionPage.tsx:827
 msgid "Suggested mount points"
 msgstr "Пропоновані точки монтування"
 
 #: src/components/storage/FormattableDevicePage.tsx:468
-#: src/components/storage/LogicalVolumePage.tsx:703
+#: src/components/storage/LogicalVolumePage.tsx:699
 #: src/components/storage/PartitionPage.tsx:829
 msgid "Clear selected mount point"
 msgstr "Видалити вибрану точку монтування"
 
 #: src/components/storage/FormattableDevicePage.tsx:471
-#: src/components/storage/LogicalVolumePage.tsx:706
+#: src/components/storage/LogicalVolumePage.tsx:702
 #: src/components/storage/PartitionPage.tsx:832
 msgid "Use"
 msgstr "Використати"
 
-#: src/components/storage/FormattableDevicePage.tsx:482
-#: src/components/storage/LogicalVolumePage.tsx:715
-#: src/components/storage/PartitionPage.tsx:853
+#: src/components/storage/FormattableDevicePage.tsx:479
+#: src/components/storage/LogicalVolumePage.tsx:708
+#: src/components/storage/PartitionPage.tsx:850
 msgid "Select or enter a mount point"
 msgstr "Виберіть або введіть точку монтування"
 
-#: src/components/storage/FormattableDevicePage.tsx:491
-#: src/components/storage/LogicalVolumePage.tsx:740
-#: src/components/storage/PartitionPage.tsx:862
+#: src/components/storage/FormattableDevicePage.tsx:488
+#: src/components/storage/LogicalVolumePage.tsx:733
+#: src/components/storage/PartitionPage.tsx:859
 msgid "File system"
 msgstr "Файлова система"
 
-#: src/components/storage/FormattableDevicePage.tsx:502
-#: src/components/storage/LogicalVolumePage.tsx:751
-#: src/components/storage/PartitionPage.tsx:874
+#: src/components/storage/FormattableDevicePage.tsx:499
+#: src/components/storage/LogicalVolumePage.tsx:744
+#: src/components/storage/PartitionPage.tsx:871
 msgid "Label"
 msgstr "Ярлик"
 
@@ -2396,21 +2426,21 @@ msgstr ""
 msgid "Logical volume name"
 msgstr "Назва логічного тому"
 
-#: src/components/storage/LogicalVolumePage.tsx:484
+#: src/components/storage/LogicalVolumePage.tsx:480
 msgid "Default file system for generic logical volumes"
 msgstr "Типова файлова система для звичайних логічних томів"
 
-#: src/components/storage/LogicalVolumePage.tsx:486
+#: src/components/storage/LogicalVolumePage.tsx:482
 msgid "Format logical volume as"
 msgstr "Форматувати логічний том як"
 
-#: src/components/storage/LogicalVolumePage.tsx:687
+#: src/components/storage/LogicalVolumePage.tsx:683
 #, c-format
 msgid "Configure LVM logical volume at %s volume group"
 msgstr "Налаштування логічного тому LVM у групі томів %s"
 
-#: src/components/storage/LogicalVolumePage.tsx:764
-#: src/components/storage/PartitionPage.tsx:886
+#: src/components/storage/LogicalVolumePage.tsx:757
+#: src/components/storage/PartitionPage.tsx:883
 msgid "Size mode"
 msgstr "Режим розміру"
 
@@ -2556,6 +2586,16 @@ msgstr "Створити ще одну групу томів LVM на %s"
 msgid "Create LVM volume group on %s"
 msgstr "Створити групу томів LVM на %s"
 
+#. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
+#. single mount point in the singular case).
+#: src/components/storage/NewVgMenuOption.tsx:59
+#, c-format
+msgid "%s will be created as a logical volume"
+msgid_plural "%s will be created as logical volumes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
 #: src/components/storage/PartitionPage.tsx:354
 msgid "The maximum must be a number followed by a unit like GiB or GB"
 msgstr ""
@@ -2618,7 +2658,7 @@ msgstr "Налаштування розділу на %s"
 msgid "Mount point mode"
 msgstr "Режим точок монтування"
 
-#: src/components/storage/PartitionPage.tsx:921
+#: src/components/storage/PartitionPage.tsx:918
 msgid "Go to storage page"
 msgstr "Перейти до розділу «Сховище»"
 
@@ -2626,9 +2666,41 @@ msgstr "Перейти до розділу «Сховище»"
 msgid "Moreover, the following partitions will be created or mounted"
 msgstr "Крім того, буде створено або змонтовано такі розділи"
 
+#: src/components/storage/PartitionsMenu.tsx:67
+#, fuzzy
+msgid "Moreover, the following partition will be created."
+msgid_plural "Moreover, the following partitions will be created."
+msgstr[0] "Крім того, буде створено або змонтовано такі розділи"
+msgstr[1] "Крім того, буде створено або змонтовано такі розділи"
+msgstr[2] "Крім того, буде створено або змонтовано такі розділи"
+
+#: src/components/storage/PartitionsMenu.tsx:73
+#, fuzzy
+msgid "Moreover, the following partition will be mounted."
+msgid_plural "Moreover, the following partitions will be mounted."
+msgstr[0] "Крім того, буде створено або змонтовано такі розділи"
+msgstr[1] "Крім того, буде створено або змонтовано такі розділи"
+msgstr[2] "Крім того, буде створено або змонтовано такі розділи"
+
 #: src/components/storage/PartitionsMenu.tsx:80
 msgid "The following partitions will be created or mounted"
 msgstr "Будуть створені або змонтовані такі розділи"
+
+#: src/components/storage/PartitionsMenu.tsx:84
+#, fuzzy
+msgid "The following partition will be created."
+msgid_plural "The following partitions will be created."
+msgstr[0] "Будуть створені або змонтовані такі розділи"
+msgstr[1] "Будуть створені або змонтовані такі розділи"
+msgstr[2] "Будуть створені або змонтовані такі розділи"
+
+#: src/components/storage/PartitionsMenu.tsx:90
+#, fuzzy
+msgid "The following partition will be mounted."
+msgid_plural "The following partitions will be mounted."
+msgstr[0] "Будуть створені або змонтовані такі розділи"
+msgstr[1] "Будуть створені або змонтовані такі розділи"
+msgstr[2] "Будуть створені або змонтовані такі розділи"
 
 #: src/components/storage/PartitionsMenu.tsx:132
 msgid "Any partition needed to boot will be configured."
@@ -2700,6 +2772,13 @@ msgstr "Не вдалося розрахувати схему зберіганн
 #: src/components/storage/ProposalPage.tsx:70
 msgid "Invalid storage settings"
 msgstr "Неправильні налаштування сховища"
+
+#: src/components/storage/ProposalPage.tsx:77
+msgid "The current storage configuration has the following issue:"
+msgid_plural "The current storage configuration has the following issues:"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
 
 #: src/components/storage/ProposalPage.tsx:91
 msgid ""
@@ -2774,6 +2853,22 @@ msgstr "Переміщення даних; будь ласка, зачекайт
 #: src/components/storage/ProposalResultSection.tsx:39
 msgid "Waiting for information about storage configuration"
 msgstr "Очікування інформації про конфігурацію сховища"
+
+#: src/components/storage/ProposalResultSection.tsx:64
+#, c-format
+msgid "There is %d destructive action planned affecting %s"
+msgid_plural "There are %d destructive actions planned affecting %s"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: src/components/storage/ProposalResultSection.tsx:75
+#, fuzzy, c-format
+msgid "There is %d destructive action planned"
+msgid_plural "There are %d destructive actions planned"
+msgstr[0] "Руйнівні дії дозволені"
+msgstr[1] "Руйнівні дії дозволені"
+msgstr[2] "Руйнівні дії дозволені"
 
 #: src/components/storage/ProposalResultSection.tsx:94
 msgid "Collapse the list of planned actions"
@@ -2981,23 +3076,23 @@ msgstr ""
 msgid "approx. %s"
 msgstr "прибл. %s"
 
-#: src/components/storage/SizeModeSelect.tsx:159
+#: src/components/storage/SizeModeSelect.tsx:157
 msgid "Allow growing"
 msgstr "Дозволити зростання"
 
-#: src/components/storage/SizeModeSelect.tsx:161
+#: src/components/storage/SizeModeSelect.tsx:159
 msgid "The final size can be bigger in order to fill the extra free space."
 msgstr "Кінцевий розмір може бути більшим, щоб заповнити вільний простір."
 
-#: src/components/storage/SizeModeSelect.tsx:194
+#: src/components/storage/SizeModeSelect.tsx:192
 msgid "Size modes"
 msgstr "Режими розміру"
 
-#: src/components/storage/SizeModeSelect.tsx:195
+#: src/components/storage/SizeModeSelect.tsx:193
 msgid "Let the installer propose a sensible size"
 msgstr "Дозволити інсталятору запропонувати розумний розмір"
 
-#: src/components/storage/SizeModeSelect.tsx:198
+#: src/components/storage/SizeModeSelect.tsx:196
 msgid "Define a custom size"
 msgstr "Вказати власний розмір"
 
@@ -3093,6 +3188,24 @@ msgstr "Додати розділ або змонтувати наявний"
 msgid "Format the whole device or mount an existing file system"
 msgstr "Відформатувати весь пристрій або змонтувати наявну файлову систему"
 
+#. TRANSLATORS: %1$s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
+#. single mount point in the singular case). %2$s is a disk name like sda.
+#: src/components/storage/VolumeGroupEditor.tsx:58
+#, fuzzy, c-format
+msgid "%1$s will be created as a partition at %2$s"
+msgid_plural "%1$s will be created as partitions at %2$s"
+msgstr[0] "Кореневий розділ %1$s (%2$s)"
+msgstr[1] "Кореневий розділ %1$s (%2$s)"
+msgstr[2] "Кореневий розділ %1$s (%2$s)"
+
+#: src/components/storage/VolumeGroupEditor.tsx:67
+#, fuzzy
+msgid "The logical volume will also be deleted"
+msgid_plural "The logical volumes will also be deleted"
+msgstr[0] "Логічний том може збільшуватися до заданого граничного розміру"
+msgstr[1] "Логічний том може збільшуватися до заданого граничного розміру"
+msgstr[2] "Логічний том може збільшуватися до заданого граничного розміру"
+
 #: src/components/storage/VolumeGroupEditor.tsx:82
 msgid "Delete volume group"
 msgstr "Видалити групу томів"
@@ -3124,6 +3237,14 @@ msgstr "Логічні томи для %s"
 #: src/components/storage/VolumeGroupEditor.tsx:194
 msgid "Add logical volume"
 msgstr "Додати логічний том"
+
+#: src/components/storage/VolumeGroupEditor.tsx:148
+#, fuzzy
+msgid "The following logical volume will be created"
+msgid_plural "The following logical volumes will be created"
+msgstr[0] "Будуть створені або змонтовані такі розділи"
+msgstr[1] "Будуть створені або змонтовані такі розділи"
+msgstr[2] "Будуть створені або змонтовані такі розділи"
 
 #: src/components/storage/dasd/DASDFormatProgress.tsx:49
 msgid "Formatting DASD devices"
@@ -3162,6 +3283,16 @@ msgstr "Мін. канал"
 #: src/components/storage/dasd/DASDTable.tsx:206
 msgid "Max channel"
 msgstr "Макс. канал"
+
+#. TRANSLATORS: message shown in bulk action toolbar when just one device
+#. is selected
+#: src/components/storage/dasd/DASDTable.tsx:227
+#, fuzzy, c-format
+msgid "Apply to the selected device"
+msgid_plural "Apply to the %s selected devices"
+msgstr[0] "Відформатувати обрані пристрої?"
+msgstr[1] "Відформатувати обрані пристрої?"
+msgstr[2] "Відформатувати обрані пристрої?"
 
 #: src/components/storage/dasd/DASDTable.tsx:254
 msgid "Select devices to enable bulk actions."
@@ -3788,6 +3919,22 @@ msgstr "Файлову систему буде використано для в�
 msgid "No additional partitions will be created"
 msgstr "Додаткові розділи не створюватимуться"
 
+#: src/components/storage/utils/drive.tsx:169
+#, fuzzy, c-format
+msgid "An existing partition will be used for %s"
+msgid_plural "Existing partitions will be used for %s"
+msgstr[0] "Буде використано лише повторно використовувані розділи."
+msgstr[1] "Буде використано лише повторно використовувані розділи."
+msgstr[2] "Буде використано лише повторно використовувані розділи."
+
+#: src/components/storage/utils/drive.tsx:183
+#, fuzzy, c-format
+msgid "A new partition will be created for %s"
+msgid_plural "New partitions will be created for %s"
+msgstr[0] "Буде використано та створено розділи для %s"
+msgstr[1] "Буде використано та створено розділи для %s"
+msgstr[2] "Буде використано та створено розділи для %s"
+
 #. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case).
 #: src/components/storage/utils/drive.tsx:194
@@ -3810,6 +3957,14 @@ msgstr "%1$s на %2$s"
 #: src/components/storage/utils/volume-group.tsx:29
 msgid "No logical volumes are defined yet"
 msgstr "Логічні томи ще не задано"
+
+#: src/components/storage/utils/volume-group.tsx:36
+#, fuzzy, c-format
+msgid "A new volume will be created for %s"
+msgid_plural "New volumes will be created for %s"
+msgstr[0] "Весь пристрій буде використано для %s"
+msgstr[1] "Весь пристрій буде використано для %s"
+msgstr[2] "Весь пристрій буде використано для %s"
 
 #: src/components/storage/zfcp/ZFCPControllersTable.tsx:22
 msgid "Auto LUNs Scan"
@@ -4156,9 +4311,6 @@ msgstr "ZFCP"
 #~ msgid "The logical volume is created exactly with the given size"
 #~ msgstr "Логічний том буде створено точно з заданим розміром"
 
-#~ msgid "The logical volume can grow until a given limit size"
-#~ msgstr "Логічний том може збільшуватися до заданого граничного розміру"
-
 #~ msgid "Sizes must be entered as a numbers optionally followed by a unit."
 #~ msgstr ""
 #~ "Розміри повинні бути введені у вигляді чисел, після чого можна вказати "
@@ -4488,10 +4640,6 @@ msgstr "ZFCP"
 #~ msgstr "Кореневий том %1$s (%2$s)"
 
 #, c-format
-#~ msgid "%1$s root partition (%2$s)"
-#~ msgstr "Кореневий розділ %1$s (%2$s)"
-
-#, c-format
 #~ msgid "%1$s %2$s at %3$s (%4$s)"
 #~ msgstr "%1$s %2$s на %3$s (%4$s)"
 
@@ -4556,9 +4704,6 @@ msgstr "ZFCP"
 
 #~ msgid "Destructive actions are not allowed"
 #~ msgstr "Руйнівні дії заборонені"
-
-#~ msgid "Destructive actions are allowed"
-#~ msgstr "Руйнівні дії дозволені"
 
 #~ msgid "affecting"
 #~ msgstr "що впливають на"

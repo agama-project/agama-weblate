@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-27 09:25+0000\n"
+"POT-Creation-Date: 2025-09-02 15:47+0000\n"
 "PO-Revision-Date: 2025-08-23 18:59+0000\n"
 "Last-Translator: Luna  Jernberg <bittin@opensuse.org>\n"
 "Language-Team: Swedish <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -67,7 +67,7 @@ msgstr "Fortsätt"
 #: src/components/core/InstallButton.tsx:62 src/components/core/Page.tsx:234
 #: src/components/core/Popup.tsx:140
 #: src/components/network/BindingSettingsForm.tsx:228
-#: src/components/network/IpSettingsForm.tsx:219
+#: src/components/network/IpSettingsForm.tsx:217
 #: src/components/network/WifiConnectionForm.tsx:188
 #: src/components/product/ProductSelectionPage.tsx:99
 msgid "Cancel"
@@ -702,12 +702,12 @@ msgstr "IP prefix eller nätmask"
 msgid "At least one address must be provided for selected mode"
 msgstr "Minst en adress måste tillhandahållas för valt läge"
 
-#: src/components/network/IpSettingsForm.tsx:154
+#: src/components/network/IpSettingsForm.tsx:152
 #, c-format
 msgid "Edit connection %s"
 msgstr "Redigera anslutning %s"
 
-#: src/components/network/IpSettingsForm.tsx:159
+#: src/components/network/IpSettingsForm.tsx:157
 #: src/components/storage/EncryptionSettingsPage.tsx:110
 #: src/components/storage/iscsi/DiscoverForm.tsx:98
 #: src/components/storage/iscsi/LoginForm.jsx:70
@@ -718,36 +718,36 @@ msgid "Something went wrong"
 msgstr "Något gick fel"
 
 #. TRANSLATORS: network connection mode (automatic via DHCP or manual with static IP)
-#: src/components/network/IpSettingsForm.tsx:165
+#: src/components/network/IpSettingsForm.tsx:163
+#: src/components/network/IpSettingsForm.tsx:168
 #: src/components/network/IpSettingsForm.tsx:170
-#: src/components/network/IpSettingsForm.tsx:172
 #: src/components/network/WifiConnectionDetails.tsx:106
 #: src/components/network/WiredConnectionDetails.tsx:214
 msgid "Mode"
 msgstr "Läge"
 
-#: src/components/network/IpSettingsForm.tsx:179
+#: src/components/network/IpSettingsForm.tsx:177
 msgid "Automatic (DHCP)"
 msgstr "Automatisk (DHCP)"
 
 #. TRANSLATORS: manual network configuration mode with a static IP address
-#: src/components/network/IpSettingsForm.tsx:182
-#: src/components/storage/SizeModeSelect.tsx:191
-#: src/components/storage/SizeModeSelect.tsx:199
+#: src/components/network/IpSettingsForm.tsx:180
+#: src/components/storage/SizeModeSelect.tsx:189
+#: src/components/storage/SizeModeSelect.tsx:197
 #: src/components/storage/iscsi/NodeStartupOptions.js:26
 msgid "Manual"
 msgstr "Manuell"
 
 #. TRANSLATORS: network gateway configuration
-#: src/components/network/IpSettingsForm.tsx:190
-#: src/components/network/IpSettingsForm.tsx:193
+#: src/components/network/IpSettingsForm.tsx:188
+#: src/components/network/IpSettingsForm.tsx:191
 #: src/components/network/WifiConnectionDetails.tsx:129
 #: src/components/network/WiredConnectionDetails.tsx:110
 #: src/components/network/WiredConnectionDetails.tsx:227
 msgid "Gateway"
 msgstr "Gateway"
 
-#: src/components/network/IpSettingsForm.tsx:202
+#: src/components/network/IpSettingsForm.tsx:200
 msgid "Gateway can be defined only in 'Manual' mode"
 msgstr "Gateway kan endast definieras i \"Manuellt\" läge"
 
@@ -1337,6 +1337,11 @@ msgstr ""
 msgid "Question"
 msgstr "Fråga"
 
+#: src/components/questions/LoadConfigRetryQuestion.tsx:51
+#, fuzzy
+msgid "Configuration unreachable or invalid"
+msgstr "Konfigurationen är inte synkroniserad"
+
 #. TRANSLATORS: error message, user entered a wrong password
 #: src/components/questions/LuksActivationQuestion.tsx:37
 msgid "The encryption password did not work"
@@ -1807,8 +1812,8 @@ msgid "Boot options"
 msgstr "Uppstartsalternativ"
 
 #: src/components/storage/BootSelection.tsx:182
-#: src/components/storage/SizeModeSelect.tsx:191
-#: src/components/storage/SizeModeSelect.tsx:196
+#: src/components/storage/SizeModeSelect.tsx:189
+#: src/components/storage/SizeModeSelect.tsx:194
 #: src/components/storage/iscsi/NodeStartupOptions.js:28
 msgid "Automatic"
 msgstr "Automatisk"
@@ -1939,6 +1944,20 @@ msgstr "Använder redan alla tillgängliga enheter"
 #: src/components/storage/ConfigureDeviceMenu.tsx:59
 msgid "Already using all available disks"
 msgstr "Använder redan alla tillgängliga diskar"
+
+#: src/components/storage/ConfigureDeviceMenu.tsx:66
+#, c-format
+msgid "Extend the installation beyond the currently selected device"
+msgid_plural "Extend the installation beyond the current %d devices"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/components/storage/ConfigureDeviceMenu.tsx:75
+#, c-format
+msgid "Extend the installation beyond the currently selected disk"
+msgid_plural "Extend the installation beyond the current %d disks"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/components/storage/ConfigureDeviceMenu.tsx:83
 msgid "Start configuring a basic installation"
@@ -2230,6 +2249,14 @@ msgstr "Detaljer"
 msgid "Change the file system or mount point"
 msgstr "Ändra filsystemet eller monteringspunkten"
 
+#: src/components/storage/FixableConfigInfo.tsx:48
+#, fuzzy
+msgid "The configuration must be adapted to address the following issue:"
+msgid_plural ""
+"The configuration must be adapted to address the following issues:"
+msgstr[0] "Innan du startar installationen måste du åtgärda följande problem:"
+msgstr[1] "Innan du startar installationen måste du åtgärda följande problem:"
+
 #: src/components/storage/FormattableDevicePage.tsx:221
 #: src/components/storage/LogicalVolumePage.tsx:248
 #: src/components/storage/PartitionPage.tsx:308
@@ -2246,10 +2273,10 @@ msgstr ""
 
 #: src/components/storage/FormattableDevicePage.tsx:280
 #: src/components/storage/LogicalVolumePage.tsx:443
-#: src/components/storage/LogicalVolumePage.tsx:466
-#: src/components/storage/LogicalVolumePage.tsx:769
+#: src/components/storage/LogicalVolumePage.tsx:462
+#: src/components/storage/LogicalVolumePage.tsx:762
 #: src/components/storage/PartitionPage.tsx:560
-#: src/components/storage/PartitionPage.tsx:891
+#: src/components/storage/PartitionPage.tsx:888
 msgid "Waiting for a mount point"
 msgstr "Väntar på en monteringspunkt"
 
@@ -2262,14 +2289,14 @@ msgid "Current %s"
 msgstr "Nuvarande %s"
 
 #: src/components/storage/FormattableDevicePage.tsx:284
-#: src/components/storage/LogicalVolumePage.tsx:467
+#: src/components/storage/LogicalVolumePage.tsx:463
 #: src/components/storage/PartitionPage.tsx:564
 #: src/components/storage/utils.ts:338
 msgid "Btrfs with snapshots"
 msgstr "Btrfs med ögonblicksavbilder"
 
 #: src/components/storage/FormattableDevicePage.tsx:302
-#: src/components/storage/LogicalVolumePage.tsx:483
+#: src/components/storage/LogicalVolumePage.tsx:479
 #: src/components/storage/PartitionPage.tsx:582
 #, c-format
 msgid "Default file system for %s"
@@ -2296,7 +2323,7 @@ msgid "Do not format %s and keep the data"
 msgstr "Formatera inte %s och behåll data"
 
 #: src/components/storage/FormattableDevicePage.tsx:384
-#: src/components/storage/LogicalVolumePage.tsx:552
+#: src/components/storage/LogicalVolumePage.tsx:548
 #: src/components/storage/PartitionPage.tsx:664
 msgid "File system label"
 msgstr "Filsystem etikett"
@@ -2308,52 +2335,52 @@ msgstr "Konfigurera enhet %s"
 
 #: src/components/storage/FormattableDevicePage.tsx:460
 #: src/components/storage/FormattableDevicePage.tsx:467
-#: src/components/storage/LogicalVolumePage.tsx:697
-#: src/components/storage/LogicalVolumePage.tsx:702
+#: src/components/storage/LogicalVolumePage.tsx:693
+#: src/components/storage/LogicalVolumePage.tsx:698
 #: src/components/storage/PartitionPage.tsx:821
 #: src/components/storage/PartitionPage.tsx:828
 msgid "Mount point"
 msgstr "Monteringspunkt"
 
 #: src/components/storage/FormattableDevicePage.tsx:465
-#: src/components/storage/LogicalVolumePage.tsx:700
+#: src/components/storage/LogicalVolumePage.tsx:696
 #: src/components/storage/PartitionPage.tsx:826
 msgid "Mount point toggle"
 msgstr "Monteringspunkt växel"
 
 #: src/components/storage/FormattableDevicePage.tsx:466
-#: src/components/storage/LogicalVolumePage.tsx:701
+#: src/components/storage/LogicalVolumePage.tsx:697
 #: src/components/storage/PartitionPage.tsx:827
 msgid "Suggested mount points"
 msgstr "Föreslagna monteringspunkter"
 
 #: src/components/storage/FormattableDevicePage.tsx:468
-#: src/components/storage/LogicalVolumePage.tsx:703
+#: src/components/storage/LogicalVolumePage.tsx:699
 #: src/components/storage/PartitionPage.tsx:829
 msgid "Clear selected mount point"
 msgstr "Rensa vald monteringspunkt"
 
 #: src/components/storage/FormattableDevicePage.tsx:471
-#: src/components/storage/LogicalVolumePage.tsx:706
+#: src/components/storage/LogicalVolumePage.tsx:702
 #: src/components/storage/PartitionPage.tsx:832
 msgid "Use"
 msgstr "Använd"
 
-#: src/components/storage/FormattableDevicePage.tsx:482
-#: src/components/storage/LogicalVolumePage.tsx:715
-#: src/components/storage/PartitionPage.tsx:853
+#: src/components/storage/FormattableDevicePage.tsx:479
+#: src/components/storage/LogicalVolumePage.tsx:708
+#: src/components/storage/PartitionPage.tsx:850
 msgid "Select or enter a mount point"
 msgstr "Välj eller ange en monteringspunkt"
 
-#: src/components/storage/FormattableDevicePage.tsx:491
-#: src/components/storage/LogicalVolumePage.tsx:740
-#: src/components/storage/PartitionPage.tsx:862
+#: src/components/storage/FormattableDevicePage.tsx:488
+#: src/components/storage/LogicalVolumePage.tsx:733
+#: src/components/storage/PartitionPage.tsx:859
 msgid "File system"
 msgstr "Filsystem"
 
-#: src/components/storage/FormattableDevicePage.tsx:502
-#: src/components/storage/LogicalVolumePage.tsx:751
-#: src/components/storage/PartitionPage.tsx:874
+#: src/components/storage/FormattableDevicePage.tsx:499
+#: src/components/storage/LogicalVolumePage.tsx:744
+#: src/components/storage/PartitionPage.tsx:871
 msgid "Label"
 msgstr "Etikett"
 
@@ -2396,21 +2423,21 @@ msgstr ""
 msgid "Logical volume name"
 msgstr "Logisk volym namn"
 
-#: src/components/storage/LogicalVolumePage.tsx:484
+#: src/components/storage/LogicalVolumePage.tsx:480
 msgid "Default file system for generic logical volumes"
 msgstr "Standardfilsystem för generiska logiska volymer"
 
-#: src/components/storage/LogicalVolumePage.tsx:486
+#: src/components/storage/LogicalVolumePage.tsx:482
 msgid "Format logical volume as"
 msgstr "Formatera logisk volym som"
 
-#: src/components/storage/LogicalVolumePage.tsx:687
+#: src/components/storage/LogicalVolumePage.tsx:683
 #, c-format
 msgid "Configure LVM logical volume at %s volume group"
 msgstr "Konfigurera LVM logisk volym på %s volymgrupp"
 
-#: src/components/storage/LogicalVolumePage.tsx:764
-#: src/components/storage/PartitionPage.tsx:886
+#: src/components/storage/LogicalVolumePage.tsx:757
+#: src/components/storage/PartitionPage.tsx:883
 msgid "Size mode"
 msgstr "Storleksläge"
 
@@ -2556,6 +2583,15 @@ msgstr "Skapa LVM volymgrupp på %s"
 msgid "Create LVM volume group on %s"
 msgstr "Skapa LVM volymgrupp på %s"
 
+#. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
+#. single mount point in the singular case).
+#: src/components/storage/NewVgMenuOption.tsx:59
+#, c-format
+msgid "%s will be created as a logical volume"
+msgid_plural "%s will be created as logical volumes"
+msgstr[0] ""
+msgstr[1] ""
+
 #: src/components/storage/PartitionPage.tsx:354
 msgid "The maximum must be a number followed by a unit like GiB or GB"
 msgstr ""
@@ -2613,7 +2649,7 @@ msgstr "Konfigurera partition på %s"
 msgid "Mount point mode"
 msgstr "Monteringspunkt läge"
 
-#: src/components/storage/PartitionPage.tsx:921
+#: src/components/storage/PartitionPage.tsx:918
 msgid "Go to storage page"
 msgstr "Gå till lagringssidan"
 
@@ -2621,9 +2657,37 @@ msgstr "Gå till lagringssidan"
 msgid "Moreover, the following partitions will be created or mounted"
 msgstr "Dessutom kommer följande partitioner att skapas eller monteras"
 
+#: src/components/storage/PartitionsMenu.tsx:67
+#, fuzzy
+msgid "Moreover, the following partition will be created."
+msgid_plural "Moreover, the following partitions will be created."
+msgstr[0] "Dessutom kommer följande partitioner att skapas eller monteras"
+msgstr[1] "Dessutom kommer följande partitioner att skapas eller monteras"
+
+#: src/components/storage/PartitionsMenu.tsx:73
+#, fuzzy
+msgid "Moreover, the following partition will be mounted."
+msgid_plural "Moreover, the following partitions will be mounted."
+msgstr[0] "Dessutom kommer följande partitioner att skapas eller monteras"
+msgstr[1] "Dessutom kommer följande partitioner att skapas eller monteras"
+
 #: src/components/storage/PartitionsMenu.tsx:80
 msgid "The following partitions will be created or mounted"
 msgstr "Följande partitioner kommer att skapas eller monteras"
+
+#: src/components/storage/PartitionsMenu.tsx:84
+#, fuzzy
+msgid "The following partition will be created."
+msgid_plural "The following partitions will be created."
+msgstr[0] "Följande partitioner kommer att skapas eller monteras"
+msgstr[1] "Följande partitioner kommer att skapas eller monteras"
+
+#: src/components/storage/PartitionsMenu.tsx:90
+#, fuzzy
+msgid "The following partition will be mounted."
+msgid_plural "The following partitions will be mounted."
+msgstr[0] "Följande partitioner kommer att skapas eller monteras"
+msgstr[1] "Följande partitioner kommer att skapas eller monteras"
 
 #: src/components/storage/PartitionsMenu.tsx:132
 msgid "Any partition needed to boot will be configured."
@@ -2693,6 +2757,12 @@ msgstr "Misslyckades att beräkna en lagringslayout"
 #: src/components/storage/ProposalPage.tsx:70
 msgid "Invalid storage settings"
 msgstr "Ogiltiga lagringsinställningar"
+
+#: src/components/storage/ProposalPage.tsx:77
+msgid "The current storage configuration has the following issue:"
+msgid_plural "The current storage configuration has the following issues:"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/components/storage/ProposalPage.tsx:91
 msgid ""
@@ -2767,6 +2837,20 @@ msgstr "Laddar om data, vänligen vänta..."
 #: src/components/storage/ProposalResultSection.tsx:39
 msgid "Waiting for information about storage configuration"
 msgstr "Väntar på information om lagringskonfiguration"
+
+#: src/components/storage/ProposalResultSection.tsx:64
+#, fuzzy, c-format
+msgid "There is %d destructive action planned affecting %s"
+msgid_plural "There are %d destructive actions planned affecting %s"
+msgstr[0] "Det finns en %d destruktiv åtgärd planerad"
+msgstr[1] "Det finns flera %d destruktiva åtgärder planerade"
+
+#: src/components/storage/ProposalResultSection.tsx:75
+#, c-format
+msgid "There is %d destructive action planned"
+msgid_plural "There are %d destructive actions planned"
+msgstr[0] "Det finns en %d destruktiv åtgärd planerad"
+msgstr[1] "Det finns flera %d destruktiva åtgärder planerade"
 
 #: src/components/storage/ProposalResultSection.tsx:94
 msgid "Collapse the list of planned actions"
@@ -2972,24 +3056,24 @@ msgstr ""
 msgid "approx. %s"
 msgstr "cirka. %s"
 
-#: src/components/storage/SizeModeSelect.tsx:159
+#: src/components/storage/SizeModeSelect.tsx:157
 msgid "Allow growing"
 msgstr "Tillåt växande"
 
-#: src/components/storage/SizeModeSelect.tsx:161
+#: src/components/storage/SizeModeSelect.tsx:159
 msgid "The final size can be bigger in order to fill the extra free space."
 msgstr ""
 "Den slutliga storleken kan bli större för att fylla det extra fria utrymmet."
 
-#: src/components/storage/SizeModeSelect.tsx:194
+#: src/components/storage/SizeModeSelect.tsx:192
 msgid "Size modes"
 msgstr "Storlekslägen"
 
-#: src/components/storage/SizeModeSelect.tsx:195
+#: src/components/storage/SizeModeSelect.tsx:193
 msgid "Let the installer propose a sensible size"
 msgstr "Låt installationsprogrammet föreslå en vettig storlek"
 
-#: src/components/storage/SizeModeSelect.tsx:198
+#: src/components/storage/SizeModeSelect.tsx:196
 msgid "Define a custom size"
 msgstr "Definiera en anpassad storlek"
 
@@ -3086,6 +3170,22 @@ msgstr "Lägg till en partition eller montera en befintlig"
 msgid "Format the whole device or mount an existing file system"
 msgstr "Formatera hela enheten eller montera ett befintligt filsystem"
 
+#. TRANSLATORS: %1$s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
+#. single mount point in the singular case). %2$s is a disk name like sda.
+#: src/components/storage/VolumeGroupEditor.tsx:58
+#, fuzzy, c-format
+msgid "%1$s will be created as a partition at %2$s"
+msgid_plural "%1$s will be created as partitions at %2$s"
+msgstr[0] "%1$s root partition (%2$s)"
+msgstr[1] "%1$s root partition (%2$s)"
+
+#: src/components/storage/VolumeGroupEditor.tsx:67
+#, fuzzy
+msgid "The logical volume will also be deleted"
+msgid_plural "The logical volumes will also be deleted"
+msgstr[0] "Den logiska volymen kan växa tills en given gränsstorlek"
+msgstr[1] "Den logiska volymen kan växa tills en given gränsstorlek"
+
 #: src/components/storage/VolumeGroupEditor.tsx:82
 msgid "Delete volume group"
 msgstr "Ta bort volymgrupp"
@@ -3117,6 +3217,13 @@ msgstr "Logiska volymer för %s"
 #: src/components/storage/VolumeGroupEditor.tsx:194
 msgid "Add logical volume"
 msgstr "Lägg till logisk volym"
+
+#: src/components/storage/VolumeGroupEditor.tsx:148
+#, fuzzy
+msgid "The following logical volume will be created"
+msgid_plural "The following logical volumes will be created"
+msgstr[0] "Följande partitioner kommer att skapas eller monteras"
+msgstr[1] "Följande partitioner kommer att skapas eller monteras"
 
 #: src/components/storage/dasd/DASDFormatProgress.tsx:49
 msgid "Formatting DASD devices"
@@ -3155,6 +3262,15 @@ msgstr "Minimum kanal"
 #: src/components/storage/dasd/DASDTable.tsx:206
 msgid "Max channel"
 msgstr "Maximal kanal"
+
+#. TRANSLATORS: message shown in bulk action toolbar when just one device
+#. is selected
+#: src/components/storage/dasd/DASDTable.tsx:227
+#, fuzzy, c-format
+msgid "Apply to the selected device"
+msgid_plural "Apply to the %s selected devices"
+msgstr[0] "Formatera valda enheter?"
+msgstr[1] "Formatera valda enheter?"
 
 #: src/components/storage/dasd/DASDTable.tsx:254
 msgid "Select devices to enable bulk actions."
@@ -3778,6 +3894,20 @@ msgstr "Ett filsystem kommer att användas för hela enheten"
 msgid "No additional partitions will be created"
 msgstr "Inga ytterligare partitioner kommer att skapas"
 
+#: src/components/storage/utils/drive.tsx:169
+#, fuzzy, c-format
+msgid "An existing partition will be used for %s"
+msgid_plural "Existing partitions will be used for %s"
+msgstr[0] "Endast återanvända partitioner kommer att användas."
+msgstr[1] "Endast återanvända partitioner kommer att användas."
+
+#: src/components/storage/utils/drive.tsx:183
+#, fuzzy, c-format
+msgid "A new partition will be created for %s"
+msgid_plural "New partitions will be created for %s"
+msgstr[0] "Partitioner kommer att användas och skapas för %s"
+msgstr[1] "Partitioner kommer att användas och skapas för %s"
+
 #. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case).
 #: src/components/storage/utils/drive.tsx:194
@@ -3800,6 +3930,13 @@ msgstr "%1$s på %2$s"
 #: src/components/storage/utils/volume-group.tsx:29
 msgid "No logical volumes are defined yet"
 msgstr "Inga logiska volymer är definierade ännu"
+
+#: src/components/storage/utils/volume-group.tsx:36
+#, fuzzy, c-format
+msgid "A new volume will be created for %s"
+msgid_plural "New volumes will be created for %s"
+msgstr[0] "Hela enheten kommer att användas för %s"
+msgstr[1] "Hela enheten kommer att användas för %s"
 
 #: src/components/storage/zfcp/ZFCPControllersTable.tsx:22
 msgid "Auto LUNs Scan"
@@ -4146,9 +4283,6 @@ msgstr "ZFCP"
 #~ msgid "The logical volume is created exactly with the given size"
 #~ msgstr "Den logiska volymen skapas exakt med den givna storleken"
 
-#~ msgid "The logical volume can grow until a given limit size"
-#~ msgstr "Den logiska volymen kan växa tills en given gränsstorlek"
-
 #~ msgid "Sizes must be entered as a numbers optionally followed by a unit."
 #~ msgstr "Storlekar måste anges som siffror, eventuellt följt av en enhet."
 
@@ -4489,10 +4623,6 @@ msgstr "ZFCP"
 #, c-format
 #~ msgid "%1$s root volume (%2$s)"
 #~ msgstr "%1$s root volym (%2$s)"
-
-#, c-format
-#~ msgid "%1$s root partition (%2$s)"
-#~ msgstr "%1$s root partition (%2$s)"
 
 #, c-format
 #~ msgid "%1$s %2$s at %3$s (%4$s)"
@@ -4964,12 +5094,6 @@ msgstr "ZFCP"
 
 #~ msgid "Loading available products, please wait..."
 #~ msgstr "Laddar tillgängliga produkter, vänligen vänta..."
-
-#, c-format
-#~ msgid "There is %d destructive action planned"
-#~ msgid_plural "There are %d destructive actions planned"
-#~ msgstr[0] "Det finns en %d destruktiv åtgärd planerad"
-#~ msgstr[1] "Det finns flera %d destruktiva åtgärder planerade"
 
 #, c-format
 #~ msgid "Space action selector for %s"
