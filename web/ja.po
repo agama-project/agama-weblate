@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-09-02 14:20+0000\n"
-"PO-Revision-Date: 2025-08-22 04:59+0000\n"
+"PO-Revision-Date: 2025-09-03 04:59+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/agama/agama-web/"
 "ja/>\n"
@@ -1339,9 +1339,8 @@ msgid "Question"
 msgstr "質問"
 
 #: src/components/questions/LoadConfigRetryQuestion.tsx:51
-#, fuzzy
 msgid "Configuration unreachable or invalid"
-msgstr "設定が同期できていません"
+msgstr "設定に到達できないか、正しくありません"
 
 #. TRANSLATORS: error message, user entered a wrong password
 #: src/components/questions/LuksActivationQuestion.tsx:37
@@ -1933,13 +1932,13 @@ msgstr "既に利用可能な全てのディスクを使用しています"
 #, c-format
 msgid "Extend the installation beyond the currently selected device"
 msgid_plural "Extend the installation beyond the current %d devices"
-msgstr[0] ""
+msgstr[0] "現在選択されている %d 個のデバイスからさらにインストールを拡張する"
 
 #: src/components/storage/ConfigureDeviceMenu.tsx:75
 #, c-format
 msgid "Extend the installation beyond the currently selected disk"
 msgid_plural "Extend the installation beyond the current %d disks"
-msgstr[0] ""
+msgstr[0] "現在選択されている %d 個のディスクからさらにインストールを拡張する"
 
 #: src/components/storage/ConfigureDeviceMenu.tsx:83
 msgid "Start configuring a basic installation"
@@ -2234,11 +2233,10 @@ msgid "Change the file system or mount point"
 msgstr "ファイルシステムまたはマウントポイントの変更"
 
 #: src/components/storage/FixableConfigInfo.tsx:48
-#, fuzzy
 msgid "The configuration must be adapted to address the following issue:"
 msgid_plural ""
 "The configuration must be adapted to address the following issues:"
-msgstr[0] "インストールを開始する前に、下記の問題に対応する必要があります:"
+msgstr[0] "下記の問題に対応するため、何らかの設定調整を行わなければなりません:"
 
 #: src/components/storage/FormattableDevicePage.tsx:221
 #: src/components/storage/LogicalVolumePage.tsx:248
@@ -2573,7 +2571,7 @@ msgstr "%s 内に LVM ボリュームグループを作成"
 #, c-format
 msgid "%s will be created as a logical volume"
 msgid_plural "%s will be created as logical volumes"
-msgstr[0] ""
+msgstr[0] "%s を論理ボリューム内に作成します"
 
 #: src/components/storage/PartitionPage.tsx:354
 msgid "The maximum must be a number followed by a unit like GiB or GB"
@@ -2640,32 +2638,28 @@ msgid "Moreover, the following partitions will be created or mounted"
 msgstr "このほか、下記のパーティションを作成またはマウントします"
 
 #: src/components/storage/PartitionsMenu.tsx:67
-#, fuzzy
 msgid "Moreover, the following partition will be created."
 msgid_plural "Moreover, the following partitions will be created."
-msgstr[0] "このほか、下記のパーティションを作成またはマウントします"
+msgstr[0] "このほか、下記のパーティションを作成します。"
 
 #: src/components/storage/PartitionsMenu.tsx:73
-#, fuzzy
 msgid "Moreover, the following partition will be mounted."
 msgid_plural "Moreover, the following partitions will be mounted."
-msgstr[0] "このほか、下記のパーティションを作成またはマウントします"
+msgstr[0] "このほか、下記のパーティションをマウントします。"
 
 #: src/components/storage/PartitionsMenu.tsx:80
 msgid "The following partitions will be created or mounted"
 msgstr "下記のパーティションを作成またはマウントします"
 
 #: src/components/storage/PartitionsMenu.tsx:84
-#, fuzzy
 msgid "The following partition will be created."
 msgid_plural "The following partitions will be created."
-msgstr[0] "下記のパーティションを作成またはマウントします"
+msgstr[0] "下記のパーティションを作成します。"
 
 #: src/components/storage/PartitionsMenu.tsx:90
-#, fuzzy
 msgid "The following partition will be mounted."
 msgid_plural "The following partitions will be mounted."
-msgstr[0] "下記のパーティションを作成またはマウントします"
+msgstr[0] "下記のパーティションをマウントします。"
 
 #: src/components/storage/PartitionsMenu.tsx:132
 msgid "Any partition needed to boot will be configured."
@@ -2735,7 +2729,7 @@ msgstr "正しくないストレージ設定です"
 #: src/components/storage/ProposalPage.tsx:77
 msgid "The current storage configuration has the following issue:"
 msgid_plural "The current storage configuration has the following issues:"
-msgstr[0] ""
+msgstr[0] "現在のストレージ設定には下記の問題があります:"
 
 #: src/components/storage/ProposalPage.tsx:91
 msgid ""
@@ -2809,10 +2803,10 @@ msgid "Waiting for information about storage configuration"
 msgstr "ストレージ設定に関する情報を待機しています"
 
 #: src/components/storage/ProposalResultSection.tsx:64
-#, fuzzy, c-format
+#, c-format
 msgid "There is %d destructive action planned affecting %s"
 msgid_plural "There are %d destructive actions planned affecting %s"
-msgstr[0] "%d 個の破壊的な処理が提案されています"
+msgstr[0] "%d 個の破壊的な処理 (%s に影響) が予定されています"
 
 #: src/components/storage/ProposalResultSection.tsx:75
 #, c-format
@@ -3137,16 +3131,15 @@ msgstr "デバイス全体のフォーマットまたは既存のファイルシ
 #. TRANSLATORS: %1$s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case). %2$s is a disk name like sda.
 #: src/components/storage/VolumeGroupEditor.tsx:58
-#, fuzzy, c-format
+#, c-format
 msgid "%1$s will be created as a partition at %2$s"
 msgid_plural "%1$s will be created as partitions at %2$s"
-msgstr[0] "%1$s ルートパーティション (%2$s)"
+msgstr[0] "%1$s を %2$s 内のパーティションとして作成します"
 
 #: src/components/storage/VolumeGroupEditor.tsx:67
-#, fuzzy
 msgid "The logical volume will also be deleted"
 msgid_plural "The logical volumes will also be deleted"
-msgstr[0] "指定した上限サイズまで論理ボリュームを拡大できます"
+msgstr[0] "論理ボリュームについても削除します"
 
 #: src/components/storage/VolumeGroupEditor.tsx:82
 msgid "Delete volume group"
@@ -3181,10 +3174,9 @@ msgid "Add logical volume"
 msgstr "論理ボリュームの追加"
 
 #: src/components/storage/VolumeGroupEditor.tsx:148
-#, fuzzy
 msgid "The following logical volume will be created"
 msgid_plural "The following logical volumes will be created"
-msgstr[0] "下記のパーティションを作成またはマウントします"
+msgstr[0] "下記の論理ボリュームを作成します"
 
 #: src/components/storage/dasd/DASDFormatProgress.tsx:49
 msgid "Formatting DASD devices"
@@ -3227,10 +3219,10 @@ msgstr "最大チャネル"
 #. TRANSLATORS: message shown in bulk action toolbar when just one device
 #. is selected
 #: src/components/storage/dasd/DASDTable.tsx:225
-#, fuzzy, c-format
+#, c-format
 msgid "Apply to the selected device"
 msgid_plural "Apply to the %s selected devices"
-msgstr[0] "選択したデバイスをフォーマットしますか？"
+msgstr[0] "選択した %s 個のデバイスに適用"
 
 #: src/components/storage/dasd/DASDTable.tsx:252
 msgid "Select devices to enable bulk actions."
@@ -3860,16 +3852,16 @@ msgid "No additional partitions will be created"
 msgstr "追加パーティションは作成しません"
 
 #: src/components/storage/utils/drive.tsx:169
-#, fuzzy, c-format
+#, c-format
 msgid "An existing partition will be used for %s"
 msgid_plural "Existing partitions will be used for %s"
-msgstr[0] "再利用するよう設定したパーティションのみを使用します。"
+msgstr[0] "%s に対しては既存のパーティションを使用します"
 
 #: src/components/storage/utils/drive.tsx:183
-#, fuzzy, c-format
+#, c-format
 msgid "A new partition will be created for %s"
 msgid_plural "New partitions will be created for %s"
-msgstr[0] "パーティションを使用し、 %s 向けに作成します"
+msgstr[0] "%s に対しては新しいパーティションを作成します"
 
 #. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case).
@@ -3895,10 +3887,10 @@ msgid "No logical volumes are defined yet"
 msgstr "何も論理ボリュームを設定していません"
 
 #: src/components/storage/utils/volume-group.tsx:36
-#, fuzzy, c-format
+#, c-format
 msgid "A new volume will be created for %s"
 msgid_plural "New volumes will be created for %s"
-msgstr[0] "デバイス全体を %s 向けに使用します"
+msgstr[0] "%s に対しては新しいボリュームを作成します"
 
 #: src/components/storage/zfcp/ZFCPControllersTable.tsx:22
 msgid "Auto LUNs Scan"
