@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-27 09:25+0000\n"
+"POT-Creation-Date: 2025-09-02 14:20+0000\n"
 "PO-Revision-Date: 2025-08-22 04:59+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -810,7 +810,7 @@ msgstr "信号強度"
 #: src/components/network/WifiConnectionDetails.tsx:56
 #: src/components/network/WifiConnectionDetails.tsx:79
 #: src/components/network/WiredConnectionDetails.tsx:102
-#: src/components/storage/dasd/DASDTable.tsx:434
+#: src/components/storage/dasd/DASDTable.tsx:432
 #: src/components/storage/dasd/StatusFilter.tsx:78
 #: src/components/storage/iscsi/NodesPresenter.jsx:104
 #: src/components/storage/iscsi/NodesPresenter.jsx:125
@@ -826,10 +826,10 @@ msgstr "セキュリティ"
 
 #. TRANSLATORS: table header for a DASD devices table
 #: src/components/network/WifiConnectionDetails.tsx:72
-#: src/components/storage/DeviceSelectorModal.tsx:83
+#: src/components/storage/DeviceSelectorModal.tsx:85
 #: src/components/storage/ProposalResultTable.tsx:132
 #: src/components/storage/SpaceActionsTable.tsx:233
-#: src/components/storage/dasd/DASDTable.tsx:440
+#: src/components/storage/dasd/DASDTable.tsx:438
 msgid "Device"
 msgstr "デバイス"
 
@@ -1337,6 +1337,11 @@ msgstr ""
 #: src/components/questions/LuksActivationQuestion.tsx:69
 msgid "Question"
 msgstr "質問"
+
+#: src/components/questions/LoadConfigRetryQuestion.tsx:51
+#, fuzzy
+msgid "Configuration unreachable or invalid"
+msgstr "設定が同期できていません"
 
 #. TRANSLATORS: error message, user entered a wrong password
 #: src/components/questions/LuksActivationQuestion.tsx:37
@@ -1924,6 +1929,18 @@ msgstr "既に利用可能な全てのデバイスを使用しています"
 msgid "Already using all available disks"
 msgstr "既に利用可能な全てのディスクを使用しています"
 
+#: src/components/storage/ConfigureDeviceMenu.tsx:66
+#, c-format
+msgid "Extend the installation beyond the currently selected device"
+msgid_plural "Extend the installation beyond the current %d devices"
+msgstr[0] ""
+
+#: src/components/storage/ConfigureDeviceMenu.tsx:75
+#, c-format
+msgid "Extend the installation beyond the currently selected disk"
+msgid_plural "Extend the installation beyond the current %d disks"
+msgstr[0] ""
+
 #: src/components/storage/ConfigureDeviceMenu.tsx:83
 msgid "Start configuring a basic installation"
 msgstr "基本的なインストールの設定を開始する"
@@ -1952,24 +1969,24 @@ msgstr "新規 LVM ボリュームグループの追加"
 msgid "More devices"
 msgstr "さらなるデバイス"
 
-#: src/components/storage/DeviceSelectorModal.tsx:84
+#: src/components/storage/DeviceSelectorModal.tsx:87
 #: src/components/storage/ProposalResultTable.tsx:135
 #: src/components/storage/SizeModeSelect.tsx:125
 #: src/components/storage/SpaceActionsTable.tsx:240
 msgid "Size"
 msgstr "サイズ"
 
-#: src/components/storage/DeviceSelectorModal.tsx:85
+#: src/components/storage/DeviceSelectorModal.tsx:92
 msgid "Description"
 msgstr "説明"
 
-#: src/components/storage/DeviceSelectorModal.tsx:86
+#: src/components/storage/DeviceSelectorModal.tsx:93
 msgid "Current content"
 msgstr "現在の内容"
 
 #. TRANSLATORS: table header for a DASD devices table
 #: src/components/storage/DeviceSelectorPage.tsx:53
-#: src/components/storage/dasd/DASDTable.tsx:446
+#: src/components/storage/dasd/DASDTable.tsx:444
 msgid "Type"
 msgstr "種類"
 
@@ -2215,6 +2232,13 @@ msgstr "詳細"
 #: src/components/storage/FilesystemMenu.tsx:91
 msgid "Change the file system or mount point"
 msgstr "ファイルシステムまたはマウントポイントの変更"
+
+#: src/components/storage/FixableConfigInfo.tsx:48
+#, fuzzy
+msgid "The configuration must be adapted to address the following issue:"
+msgid_plural ""
+"The configuration must be adapted to address the following issues:"
+msgstr[0] "インストールを開始する前に、下記の問題に対応する必要があります:"
 
 #: src/components/storage/FormattableDevicePage.tsx:221
 #: src/components/storage/LogicalVolumePage.tsx:248
@@ -2543,6 +2567,14 @@ msgstr "%s 内に他の LVM ボリュームグループを作成"
 msgid "Create LVM volume group on %s"
 msgstr "%s 内に LVM ボリュームグループを作成"
 
+#. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
+#. single mount point in the singular case).
+#: src/components/storage/NewVgMenuOption.tsx:59
+#, c-format
+msgid "%s will be created as a logical volume"
+msgid_plural "%s will be created as logical volumes"
+msgstr[0] ""
+
 #: src/components/storage/PartitionPage.tsx:354
 msgid "The maximum must be a number followed by a unit like GiB or GB"
 msgstr "最大値は GiB や GB のような単位を付けた数値でなければなりません"
@@ -2607,9 +2639,33 @@ msgstr "ストレージページに移動"
 msgid "Moreover, the following partitions will be created or mounted"
 msgstr "このほか、下記のパーティションを作成またはマウントします"
 
+#: src/components/storage/PartitionsMenu.tsx:67
+#, fuzzy
+msgid "Moreover, the following partition will be created."
+msgid_plural "Moreover, the following partitions will be created."
+msgstr[0] "このほか、下記のパーティションを作成またはマウントします"
+
+#: src/components/storage/PartitionsMenu.tsx:73
+#, fuzzy
+msgid "Moreover, the following partition will be mounted."
+msgid_plural "Moreover, the following partitions will be mounted."
+msgstr[0] "このほか、下記のパーティションを作成またはマウントします"
+
 #: src/components/storage/PartitionsMenu.tsx:80
 msgid "The following partitions will be created or mounted"
 msgstr "下記のパーティションを作成またはマウントします"
+
+#: src/components/storage/PartitionsMenu.tsx:84
+#, fuzzy
+msgid "The following partition will be created."
+msgid_plural "The following partitions will be created."
+msgstr[0] "下記のパーティションを作成またはマウントします"
+
+#: src/components/storage/PartitionsMenu.tsx:90
+#, fuzzy
+msgid "The following partition will be mounted."
+msgid_plural "The following partitions will be mounted."
+msgstr[0] "下記のパーティションを作成またはマウントします"
 
 #: src/components/storage/PartitionsMenu.tsx:132
 msgid "Any partition needed to boot will be configured."
@@ -2676,6 +2732,11 @@ msgstr "ストレージ配置の算出に失敗しました"
 msgid "Invalid storage settings"
 msgstr "正しくないストレージ設定です"
 
+#: src/components/storage/ProposalPage.tsx:77
+msgid "The current storage configuration has the following issue:"
+msgid_plural "The current storage configuration has the following issues:"
+msgstr[0] ""
+
 #: src/components/storage/ProposalPage.tsx:91
 msgid ""
 "You may want to discard those settings and start from scratch with a simple "
@@ -2715,7 +2776,7 @@ msgstr ""
 "かもしれません。"
 
 #: src/components/storage/ProposalPage.tsx:140
-#: src/components/storage/dasd/DASDTable.tsx:306
+#: src/components/storage/dasd/DASDTable.tsx:304
 msgid "No devices found"
 msgstr "デバイスが見つかりませんでした"
 
@@ -2746,6 +2807,18 @@ msgstr "データを再読み込みしています。しばらくお待ちくだ
 #: src/components/storage/ProposalResultSection.tsx:39
 msgid "Waiting for information about storage configuration"
 msgstr "ストレージ設定に関する情報を待機しています"
+
+#: src/components/storage/ProposalResultSection.tsx:64
+#, fuzzy, c-format
+msgid "There is %d destructive action planned affecting %s"
+msgid_plural "There are %d destructive actions planned affecting %s"
+msgstr[0] "%d 個の破壊的な処理が提案されています"
+
+#: src/components/storage/ProposalResultSection.tsx:75
+#, c-format
+msgid "There is %d destructive action planned"
+msgid_plural "There are %d destructive actions planned"
+msgstr[0] "%d 個の破壊的な処理が提案されています"
 
 #: src/components/storage/ProposalResultSection.tsx:94
 msgid "Collapse the list of planned actions"
@@ -3061,6 +3134,20 @@ msgstr "パーティションの追加または既存のパーティションの
 msgid "Format the whole device or mount an existing file system"
 msgstr "デバイス全体のフォーマットまたは既存のファイルシステムのマウント"
 
+#. TRANSLATORS: %1$s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
+#. single mount point in the singular case). %2$s is a disk name like sda.
+#: src/components/storage/VolumeGroupEditor.tsx:58
+#, fuzzy, c-format
+msgid "%1$s will be created as a partition at %2$s"
+msgid_plural "%1$s will be created as partitions at %2$s"
+msgstr[0] "%1$s ルートパーティション (%2$s)"
+
+#: src/components/storage/VolumeGroupEditor.tsx:67
+#, fuzzy
+msgid "The logical volume will also be deleted"
+msgid_plural "The logical volumes will also be deleted"
+msgstr[0] "指定した上限サイズまで論理ボリュームを拡大できます"
+
 #: src/components/storage/VolumeGroupEditor.tsx:82
 msgid "Delete volume group"
 msgstr "ボリュームグループの削除"
@@ -3093,6 +3180,12 @@ msgstr "%s に対する論理ボリューム"
 msgid "Add logical volume"
 msgstr "論理ボリュームの追加"
 
+#: src/components/storage/VolumeGroupEditor.tsx:148
+#, fuzzy
+msgid "The following logical volume will be created"
+msgid_plural "The following logical volumes will be created"
+msgstr[0] "下記のパーティションを作成またはマウントします"
+
 #: src/components/storage/dasd/DASDFormatProgress.tsx:49
 msgid "Formatting DASD devices"
 msgstr "DASD デバイスをフォーマットしています"
@@ -3101,58 +3194,66 @@ msgstr "DASD デバイスをフォーマットしています"
 msgid "DASD"
 msgstr "DASD"
 
-#: src/components/storage/dasd/DASDTable.tsx:138
+#: src/components/storage/dasd/DASDTable.tsx:136
 #: src/components/storage/zfcp/ZFCPControllersTable.tsx:51
 msgid "Activate"
 msgstr "有効化"
 
-#: src/components/storage/dasd/DASDTable.tsx:142
+#: src/components/storage/dasd/DASDTable.tsx:140
 #: src/components/storage/zfcp/ZFCPDisksTable.tsx:56
 msgid "Deactivate"
 msgstr "無効化"
 
-#: src/components/storage/dasd/DASDTable.tsx:149
+#: src/components/storage/dasd/DASDTable.tsx:147
 msgid "Set DIAG on"
 msgstr "DIAG を有効にする"
 
-#: src/components/storage/dasd/DASDTable.tsx:153
+#: src/components/storage/dasd/DASDTable.tsx:151
 msgid "Set DIAG off"
 msgstr "DIAG を無効にする"
 
-#: src/components/storage/dasd/DASDTable.tsx:160
+#: src/components/storage/dasd/DASDTable.tsx:158
 msgid "Format"
 msgstr "フォーマット"
 
-#: src/components/storage/dasd/DASDTable.tsx:198
+#: src/components/storage/dasd/DASDTable.tsx:196
 msgid "Min channel"
 msgstr "最小チャネル"
 
-#: src/components/storage/dasd/DASDTable.tsx:206
+#: src/components/storage/dasd/DASDTable.tsx:204
 msgid "Max channel"
 msgstr "最大チャネル"
 
-#: src/components/storage/dasd/DASDTable.tsx:254
+#. TRANSLATORS: message shown in bulk action toolbar when just one device
+#. is selected
+#: src/components/storage/dasd/DASDTable.tsx:225
+#, fuzzy, c-format
+msgid "Apply to the selected device"
+msgid_plural "Apply to the %s selected devices"
+msgstr[0] "選択したデバイスをフォーマットしますか？"
+
+#: src/components/storage/dasd/DASDTable.tsx:252
 msgid "Select devices to enable bulk actions."
 msgstr "一括処理を有効にするデバイスを選択してください。"
 
-#: src/components/storage/dasd/DASDTable.tsx:294
+#: src/components/storage/dasd/DASDTable.tsx:292
 msgid "No devices available"
 msgstr "デバイスがありません"
 
-#: src/components/storage/dasd/DASDTable.tsx:298
+#: src/components/storage/dasd/DASDTable.tsx:296
 msgid "No DASD devices were found in this machine."
 msgstr "このマシンには DASD デバイスが見つかりませんでした。"
 
-#: src/components/storage/dasd/DASDTable.tsx:310
+#: src/components/storage/dasd/DASDTable.tsx:308
 msgid "Change filters and try again."
 msgstr "フィルタを変更してやり直してください。"
 
-#: src/components/storage/dasd/DASDTable.tsx:314
+#: src/components/storage/dasd/DASDTable.tsx:312
 msgid "Clear all filters"
 msgstr "全てのフィルタを消去"
 
 #. TRANSLATORS: table header for a DASD devices table
-#: src/components/storage/dasd/DASDTable.tsx:427
+#: src/components/storage/dasd/DASDTable.tsx:425
 #: src/components/storage/zfcp/ZFCPControllersTable.tsx:20
 #: src/components/storage/zfcp/ZFCPDiskForm.tsx:117
 #: src/components/storage/zfcp/ZFCPDisksTable.tsx:43
@@ -3162,19 +3263,19 @@ msgstr "チャネル ID"
 #. TRANSLATORS: table header for `DIAG access mode` on DASD devices table.
 #. It refers to an special disk access mode on IBM mainframes. Keep
 #. untranslated.
-#: src/components/storage/dasd/DASDTable.tsx:454
+#: src/components/storage/dasd/DASDTable.tsx:452
 msgid "DIAG"
 msgstr "DIAG"
 
-#: src/components/storage/dasd/DASDTable.tsx:458
-#: src/components/storage/dasd/DASDTable.tsx:466
+#: src/components/storage/dasd/DASDTable.tsx:456
+#: src/components/storage/dasd/DASDTable.tsx:464
 #: src/components/storage/iscsi/NodesPresenter.jsx:103
 #: src/components/storage/zfcp/ZFCPControllersTable.tsx:36
 msgid "No"
 msgstr "いいえ"
 
-#: src/components/storage/dasd/DASDTable.tsx:458
-#: src/components/storage/dasd/DASDTable.tsx:466
+#: src/components/storage/dasd/DASDTable.tsx:456
+#: src/components/storage/dasd/DASDTable.tsx:464
 #: src/components/storage/iscsi/NodesPresenter.jsx:103
 #: src/components/storage/zfcp/ZFCPControllersTable.tsx:36
 msgid "Yes"
@@ -3182,25 +3283,25 @@ msgstr "はい"
 
 #. TRANSLATORS: table header for a column in a DASD devices table that
 #. usually contains "Yes" or "No"" values
-#: src/components/storage/dasd/DASDTable.tsx:465
+#: src/components/storage/dasd/DASDTable.tsx:463
 #: src/components/storage/dasd/FormatFilter.tsx:78
 msgid "Formatted"
 msgstr "フォーマット済み"
 
 #. TRANSLATORS: table header for a DASD devices table
-#: src/components/storage/dasd/DASDTable.tsx:471
+#: src/components/storage/dasd/DASDTable.tsx:469
 msgid "Partition Info"
 msgstr "パーティション情報"
 
-#: src/components/storage/dasd/DASDTable.tsx:538
+#: src/components/storage/dasd/DASDTable.tsx:534
 msgid "Applying changes"
 msgstr "変更を適用しています"
 
-#: src/components/storage/dasd/DASDTable.tsx:540
+#: src/components/storage/dasd/DASDTable.tsx:536
 msgid "This may take a moment while updates complete."
 msgstr "更新が完了するまでしばらくお待ちください。"
 
-#: src/components/storage/dasd/DASDTable.tsx:543
+#: src/components/storage/dasd/DASDTable.tsx:539
 msgid "This message will close automatically when everything is done."
 msgstr "全ての処理が完了すると、このメッセージは自動的に閉じます。"
 
@@ -3758,6 +3859,18 @@ msgstr "ファイルシステムはデバイス全体を使用します"
 msgid "No additional partitions will be created"
 msgstr "追加パーティションは作成しません"
 
+#: src/components/storage/utils/drive.tsx:169
+#, fuzzy, c-format
+msgid "An existing partition will be used for %s"
+msgid_plural "Existing partitions will be used for %s"
+msgstr[0] "再利用するよう設定したパーティションのみを使用します。"
+
+#: src/components/storage/utils/drive.tsx:183
+#, fuzzy, c-format
+msgid "A new partition will be created for %s"
+msgid_plural "New partitions will be created for %s"
+msgstr[0] "パーティションを使用し、 %s 向けに作成します"
+
 #. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case).
 #: src/components/storage/utils/drive.tsx:194
@@ -3780,6 +3893,12 @@ msgstr "%2$s にある %1$s"
 #: src/components/storage/utils/volume-group.tsx:29
 msgid "No logical volumes are defined yet"
 msgstr "何も論理ボリュームを設定していません"
+
+#: src/components/storage/utils/volume-group.tsx:36
+#, fuzzy, c-format
+msgid "A new volume will be created for %s"
+msgid_plural "New volumes will be created for %s"
+msgstr[0] "デバイス全体を %s 向けに使用します"
 
 #: src/components/storage/zfcp/ZFCPControllersTable.tsx:22
 msgid "Auto LUNs Scan"
@@ -4123,9 +4242,6 @@ msgstr "ZFCP"
 #~ msgid "The logical volume is created exactly with the given size"
 #~ msgstr "指定したサイズで論理ボリュームを作成します"
 
-#~ msgid "The logical volume can grow until a given limit size"
-#~ msgstr "指定した上限サイズまで論理ボリュームを拡大できます"
-
 #~ msgid "Sizes must be entered as a numbers optionally followed by a unit."
 #~ msgstr ""
 #~ "サイズには単位付きもしくは単位無しの数値を入力しなければなりません。"
@@ -4467,10 +4583,6 @@ msgstr "ZFCP"
 #, c-format
 #~ msgid "%1$s root volume (%2$s)"
 #~ msgstr "%1$s ルートボリューム (%2$s)"
-
-#, c-format
-#~ msgid "%1$s root partition (%2$s)"
-#~ msgstr "%1$s ルートパーティション (%2$s)"
 
 #, c-format
 #~ msgid "%1$s %2$s at %3$s (%4$s)"
@@ -4938,11 +5050,6 @@ msgstr "ZFCP"
 
 #~ msgid "Loading available products, please wait..."
 #~ msgstr "利用可能な製品を読み込んでいます。しばらくお待ちください..."
-
-#, c-format
-#~ msgid "There is %d destructive action planned"
-#~ msgid_plural "There are %d destructive actions planned"
-#~ msgstr[0] "%d 個の破壊的な処理が提案されています"
 
 #, c-format
 #~ msgid "Space action selector for %s"

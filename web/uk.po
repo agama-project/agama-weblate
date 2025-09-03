@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-27 09:25+0000\n"
+"POT-Creation-Date: 2025-09-02 14:20+0000\n"
 "PO-Revision-Date: 2025-08-30 19:59+0000\n"
 "Last-Translator: Eugene Krater <lachend@gmail.com>\n"
 "Language-Team: Ukrainian <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -806,7 +806,7 @@ msgstr "Потужність сигналу"
 #: src/components/network/WifiConnectionDetails.tsx:56
 #: src/components/network/WifiConnectionDetails.tsx:79
 #: src/components/network/WiredConnectionDetails.tsx:102
-#: src/components/storage/dasd/DASDTable.tsx:434
+#: src/components/storage/dasd/DASDTable.tsx:432
 #: src/components/storage/dasd/StatusFilter.tsx:78
 #: src/components/storage/iscsi/NodesPresenter.jsx:104
 #: src/components/storage/iscsi/NodesPresenter.jsx:125
@@ -822,10 +822,10 @@ msgstr "Захист"
 
 #. TRANSLATORS: table header for a DASD devices table
 #: src/components/network/WifiConnectionDetails.tsx:72
-#: src/components/storage/DeviceSelectorModal.tsx:83
+#: src/components/storage/DeviceSelectorModal.tsx:85
 #: src/components/storage/ProposalResultTable.tsx:132
 #: src/components/storage/SpaceActionsTable.tsx:233
-#: src/components/storage/dasd/DASDTable.tsx:440
+#: src/components/storage/dasd/DASDTable.tsx:438
 msgid "Device"
 msgstr "Пристрій"
 
@@ -1337,6 +1337,11 @@ msgstr ""
 #: src/components/questions/LuksActivationQuestion.tsx:69
 msgid "Question"
 msgstr "Питання"
+
+#: src/components/questions/LoadConfigRetryQuestion.tsx:51
+#, fuzzy
+msgid "Configuration unreachable or invalid"
+msgstr "Конфігурація не синхронізована"
 
 #. TRANSLATORS: error message, user entered a wrong password
 #: src/components/questions/LuksActivationQuestion.tsx:37
@@ -1938,6 +1943,22 @@ msgstr "Вже використані всі наявні пристрої"
 msgid "Already using all available disks"
 msgstr "Вже використані всі наявні диски"
 
+#: src/components/storage/ConfigureDeviceMenu.tsx:66
+#, c-format
+msgid "Extend the installation beyond the currently selected device"
+msgid_plural "Extend the installation beyond the current %d devices"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: src/components/storage/ConfigureDeviceMenu.tsx:75
+#, c-format
+msgid "Extend the installation beyond the currently selected disk"
+msgid_plural "Extend the installation beyond the current %d disks"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
 #: src/components/storage/ConfigureDeviceMenu.tsx:83
 msgid "Start configuring a basic installation"
 msgstr "Почати налаштування базової інсталяції"
@@ -1966,24 +1987,24 @@ msgstr "Додати групу томів LVM"
 msgid "More devices"
 msgstr "Інші пристрої"
 
-#: src/components/storage/DeviceSelectorModal.tsx:84
+#: src/components/storage/DeviceSelectorModal.tsx:87
 #: src/components/storage/ProposalResultTable.tsx:135
 #: src/components/storage/SizeModeSelect.tsx:125
 #: src/components/storage/SpaceActionsTable.tsx:240
 msgid "Size"
 msgstr "Розмір"
 
-#: src/components/storage/DeviceSelectorModal.tsx:85
+#: src/components/storage/DeviceSelectorModal.tsx:92
 msgid "Description"
 msgstr "Опис"
 
-#: src/components/storage/DeviceSelectorModal.tsx:86
+#: src/components/storage/DeviceSelectorModal.tsx:93
 msgid "Current content"
 msgstr "Поточний вміст"
 
 #. TRANSLATORS: table header for a DASD devices table
 #: src/components/storage/DeviceSelectorPage.tsx:53
-#: src/components/storage/dasd/DASDTable.tsx:446
+#: src/components/storage/dasd/DASDTable.tsx:444
 msgid "Type"
 msgstr "Тип"
 
@@ -2229,6 +2250,15 @@ msgstr "Подробиці"
 #: src/components/storage/FilesystemMenu.tsx:91
 msgid "Change the file system or mount point"
 msgstr "Змінити файлову систему або точку монтування"
+
+#: src/components/storage/FixableConfigInfo.tsx:48
+#, fuzzy
+msgid "The configuration must be adapted to address the following issue:"
+msgid_plural ""
+"The configuration must be adapted to address the following issues:"
+msgstr[0] "До початку встановлення потрібно усунути такі проблеми:"
+msgstr[1] "До початку встановлення потрібно усунути такі проблеми:"
+msgstr[2] "До початку встановлення потрібно усунути такі проблеми:"
 
 #: src/components/storage/FormattableDevicePage.tsx:221
 #: src/components/storage/LogicalVolumePage.tsx:248
@@ -2556,6 +2586,16 @@ msgstr "Створити ще одну групу томів LVM на %s"
 msgid "Create LVM volume group on %s"
 msgstr "Створити групу томів LVM на %s"
 
+#. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
+#. single mount point in the singular case).
+#: src/components/storage/NewVgMenuOption.tsx:59
+#, c-format
+msgid "%s will be created as a logical volume"
+msgid_plural "%s will be created as logical volumes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
 #: src/components/storage/PartitionPage.tsx:354
 msgid "The maximum must be a number followed by a unit like GiB or GB"
 msgstr ""
@@ -2626,9 +2666,41 @@ msgstr "Перейти до розділу «Сховище»"
 msgid "Moreover, the following partitions will be created or mounted"
 msgstr "Крім того, буде створено або змонтовано такі розділи"
 
+#: src/components/storage/PartitionsMenu.tsx:67
+#, fuzzy
+msgid "Moreover, the following partition will be created."
+msgid_plural "Moreover, the following partitions will be created."
+msgstr[0] "Крім того, буде створено або змонтовано такі розділи"
+msgstr[1] "Крім того, буде створено або змонтовано такі розділи"
+msgstr[2] "Крім того, буде створено або змонтовано такі розділи"
+
+#: src/components/storage/PartitionsMenu.tsx:73
+#, fuzzy
+msgid "Moreover, the following partition will be mounted."
+msgid_plural "Moreover, the following partitions will be mounted."
+msgstr[0] "Крім того, буде створено або змонтовано такі розділи"
+msgstr[1] "Крім того, буде створено або змонтовано такі розділи"
+msgstr[2] "Крім того, буде створено або змонтовано такі розділи"
+
 #: src/components/storage/PartitionsMenu.tsx:80
 msgid "The following partitions will be created or mounted"
 msgstr "Будуть створені або змонтовані такі розділи"
+
+#: src/components/storage/PartitionsMenu.tsx:84
+#, fuzzy
+msgid "The following partition will be created."
+msgid_plural "The following partitions will be created."
+msgstr[0] "Будуть створені або змонтовані такі розділи"
+msgstr[1] "Будуть створені або змонтовані такі розділи"
+msgstr[2] "Будуть створені або змонтовані такі розділи"
+
+#: src/components/storage/PartitionsMenu.tsx:90
+#, fuzzy
+msgid "The following partition will be mounted."
+msgid_plural "The following partitions will be mounted."
+msgstr[0] "Будуть створені або змонтовані такі розділи"
+msgstr[1] "Будуть створені або змонтовані такі розділи"
+msgstr[2] "Будуть створені або змонтовані такі розділи"
 
 #: src/components/storage/PartitionsMenu.tsx:132
 msgid "Any partition needed to boot will be configured."
@@ -2701,6 +2773,13 @@ msgstr "Не вдалося розрахувати схему зберіганн
 msgid "Invalid storage settings"
 msgstr "Неправильні налаштування сховища"
 
+#: src/components/storage/ProposalPage.tsx:77
+msgid "The current storage configuration has the following issue:"
+msgid_plural "The current storage configuration has the following issues:"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
 #: src/components/storage/ProposalPage.tsx:91
 msgid ""
 "You may want to discard those settings and start from scratch with a simple "
@@ -2743,7 +2822,7 @@ msgstr ""
 "пристрій."
 
 #: src/components/storage/ProposalPage.tsx:140
-#: src/components/storage/dasd/DASDTable.tsx:306
+#: src/components/storage/dasd/DASDTable.tsx:304
 msgid "No devices found"
 msgstr "Пристроїв не знайдено"
 
@@ -2774,6 +2853,22 @@ msgstr "Переміщення даних; будь ласка, зачекайт
 #: src/components/storage/ProposalResultSection.tsx:39
 msgid "Waiting for information about storage configuration"
 msgstr "Очікування інформації про конфігурацію сховища"
+
+#: src/components/storage/ProposalResultSection.tsx:64
+#, c-format
+msgid "There is %d destructive action planned affecting %s"
+msgid_plural "There are %d destructive actions planned affecting %s"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: src/components/storage/ProposalResultSection.tsx:75
+#, fuzzy, c-format
+msgid "There is %d destructive action planned"
+msgid_plural "There are %d destructive actions planned"
+msgstr[0] "Руйнівні дії дозволені"
+msgstr[1] "Руйнівні дії дозволені"
+msgstr[2] "Руйнівні дії дозволені"
 
 #: src/components/storage/ProposalResultSection.tsx:94
 msgid "Collapse the list of planned actions"
@@ -3093,6 +3188,24 @@ msgstr "Додати розділ або змонтувати наявний"
 msgid "Format the whole device or mount an existing file system"
 msgstr "Відформатувати весь пристрій або змонтувати наявну файлову систему"
 
+#. TRANSLATORS: %1$s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
+#. single mount point in the singular case). %2$s is a disk name like sda.
+#: src/components/storage/VolumeGroupEditor.tsx:58
+#, fuzzy, c-format
+msgid "%1$s will be created as a partition at %2$s"
+msgid_plural "%1$s will be created as partitions at %2$s"
+msgstr[0] "Кореневий розділ %1$s (%2$s)"
+msgstr[1] "Кореневий розділ %1$s (%2$s)"
+msgstr[2] "Кореневий розділ %1$s (%2$s)"
+
+#: src/components/storage/VolumeGroupEditor.tsx:67
+#, fuzzy
+msgid "The logical volume will also be deleted"
+msgid_plural "The logical volumes will also be deleted"
+msgstr[0] "Логічний том може збільшуватися до заданого граничного розміру"
+msgstr[1] "Логічний том може збільшуватися до заданого граничного розміру"
+msgstr[2] "Логічний том може збільшуватися до заданого граничного розміру"
+
 #: src/components/storage/VolumeGroupEditor.tsx:82
 msgid "Delete volume group"
 msgstr "Видалити групу томів"
@@ -3125,6 +3238,14 @@ msgstr "Логічні томи для %s"
 msgid "Add logical volume"
 msgstr "Додати логічний том"
 
+#: src/components/storage/VolumeGroupEditor.tsx:148
+#, fuzzy
+msgid "The following logical volume will be created"
+msgid_plural "The following logical volumes will be created"
+msgstr[0] "Будуть створені або змонтовані такі розділи"
+msgstr[1] "Будуть створені або змонтовані такі розділи"
+msgstr[2] "Будуть створені або змонтовані такі розділи"
+
 #: src/components/storage/dasd/DASDFormatProgress.tsx:49
 msgid "Formatting DASD devices"
 msgstr "Форматування DASD-пристроїв"
@@ -3133,58 +3254,68 @@ msgstr "Форматування DASD-пристроїв"
 msgid "DASD"
 msgstr "DASD"
 
-#: src/components/storage/dasd/DASDTable.tsx:138
+#: src/components/storage/dasd/DASDTable.tsx:136
 #: src/components/storage/zfcp/ZFCPControllersTable.tsx:51
 msgid "Activate"
 msgstr "Активувати"
 
-#: src/components/storage/dasd/DASDTable.tsx:142
+#: src/components/storage/dasd/DASDTable.tsx:140
 #: src/components/storage/zfcp/ZFCPDisksTable.tsx:56
 msgid "Deactivate"
 msgstr "Деактивувати"
 
-#: src/components/storage/dasd/DASDTable.tsx:149
+#: src/components/storage/dasd/DASDTable.tsx:147
 msgid "Set DIAG on"
 msgstr "Увімкнути DIAG"
 
-#: src/components/storage/dasd/DASDTable.tsx:153
+#: src/components/storage/dasd/DASDTable.tsx:151
 msgid "Set DIAG off"
 msgstr "Вимкнути DIAG"
 
-#: src/components/storage/dasd/DASDTable.tsx:160
+#: src/components/storage/dasd/DASDTable.tsx:158
 msgid "Format"
 msgstr "Формат"
 
-#: src/components/storage/dasd/DASDTable.tsx:198
+#: src/components/storage/dasd/DASDTable.tsx:196
 msgid "Min channel"
 msgstr "Мін. канал"
 
-#: src/components/storage/dasd/DASDTable.tsx:206
+#: src/components/storage/dasd/DASDTable.tsx:204
 msgid "Max channel"
 msgstr "Макс. канал"
 
-#: src/components/storage/dasd/DASDTable.tsx:254
+#. TRANSLATORS: message shown in bulk action toolbar when just one device
+#. is selected
+#: src/components/storage/dasd/DASDTable.tsx:225
+#, fuzzy, c-format
+msgid "Apply to the selected device"
+msgid_plural "Apply to the %s selected devices"
+msgstr[0] "Відформатувати обрані пристрої?"
+msgstr[1] "Відформатувати обрані пристрої?"
+msgstr[2] "Відформатувати обрані пристрої?"
+
+#: src/components/storage/dasd/DASDTable.tsx:252
 msgid "Select devices to enable bulk actions."
 msgstr "Виберіть пристрої для виконання масових дій."
 
-#: src/components/storage/dasd/DASDTable.tsx:294
+#: src/components/storage/dasd/DASDTable.tsx:292
 msgid "No devices available"
 msgstr "Нема доступних пристроїв"
 
-#: src/components/storage/dasd/DASDTable.tsx:298
+#: src/components/storage/dasd/DASDTable.tsx:296
 msgid "No DASD devices were found in this machine."
 msgstr "На цій машині не виявлено жодних пристроїв DASD."
 
-#: src/components/storage/dasd/DASDTable.tsx:310
+#: src/components/storage/dasd/DASDTable.tsx:308
 msgid "Change filters and try again."
 msgstr "Змініть фільтри та спробуйте ще раз."
 
-#: src/components/storage/dasd/DASDTable.tsx:314
+#: src/components/storage/dasd/DASDTable.tsx:312
 msgid "Clear all filters"
 msgstr "Очистити всі фільтри"
 
 #. TRANSLATORS: table header for a DASD devices table
-#: src/components/storage/dasd/DASDTable.tsx:427
+#: src/components/storage/dasd/DASDTable.tsx:425
 #: src/components/storage/zfcp/ZFCPControllersTable.tsx:20
 #: src/components/storage/zfcp/ZFCPDiskForm.tsx:117
 #: src/components/storage/zfcp/ZFCPDisksTable.tsx:43
@@ -3194,19 +3325,19 @@ msgstr "Ідентифікатор каналу"
 #. TRANSLATORS: table header for `DIAG access mode` on DASD devices table.
 #. It refers to an special disk access mode on IBM mainframes. Keep
 #. untranslated.
-#: src/components/storage/dasd/DASDTable.tsx:454
+#: src/components/storage/dasd/DASDTable.tsx:452
 msgid "DIAG"
 msgstr "Режим DIAG"
 
-#: src/components/storage/dasd/DASDTable.tsx:458
-#: src/components/storage/dasd/DASDTable.tsx:466
+#: src/components/storage/dasd/DASDTable.tsx:456
+#: src/components/storage/dasd/DASDTable.tsx:464
 #: src/components/storage/iscsi/NodesPresenter.jsx:103
 #: src/components/storage/zfcp/ZFCPControllersTable.tsx:36
 msgid "No"
 msgstr "Ні"
 
-#: src/components/storage/dasd/DASDTable.tsx:458
-#: src/components/storage/dasd/DASDTable.tsx:466
+#: src/components/storage/dasd/DASDTable.tsx:456
+#: src/components/storage/dasd/DASDTable.tsx:464
 #: src/components/storage/iscsi/NodesPresenter.jsx:103
 #: src/components/storage/zfcp/ZFCPControllersTable.tsx:36
 msgid "Yes"
@@ -3214,25 +3345,25 @@ msgstr "Так"
 
 #. TRANSLATORS: table header for a column in a DASD devices table that
 #. usually contains "Yes" or "No"" values
-#: src/components/storage/dasd/DASDTable.tsx:465
+#: src/components/storage/dasd/DASDTable.tsx:463
 #: src/components/storage/dasd/FormatFilter.tsx:78
 msgid "Formatted"
 msgstr "Відформатовано"
 
 #. TRANSLATORS: table header for a DASD devices table
-#: src/components/storage/dasd/DASDTable.tsx:471
+#: src/components/storage/dasd/DASDTable.tsx:469
 msgid "Partition Info"
 msgstr "Інформація про розділ"
 
-#: src/components/storage/dasd/DASDTable.tsx:538
+#: src/components/storage/dasd/DASDTable.tsx:534
 msgid "Applying changes"
 msgstr "Застосування змін"
 
-#: src/components/storage/dasd/DASDTable.tsx:540
+#: src/components/storage/dasd/DASDTable.tsx:536
 msgid "This may take a moment while updates complete."
 msgstr "Це може зайняти деякий час, поки оновлення завершиться."
 
-#: src/components/storage/dasd/DASDTable.tsx:543
+#: src/components/storage/dasd/DASDTable.tsx:539
 msgid "This message will close automatically when everything is done."
 msgstr "Це повідомлення закриється автоматично, коли все буде готово."
 
@@ -3788,6 +3919,22 @@ msgstr "Файлову систему буде використано для в�
 msgid "No additional partitions will be created"
 msgstr "Додаткові розділи не створюватимуться"
 
+#: src/components/storage/utils/drive.tsx:169
+#, fuzzy, c-format
+msgid "An existing partition will be used for %s"
+msgid_plural "Existing partitions will be used for %s"
+msgstr[0] "Буде використано лише повторно використовувані розділи."
+msgstr[1] "Буде використано лише повторно використовувані розділи."
+msgstr[2] "Буде використано лише повторно використовувані розділи."
+
+#: src/components/storage/utils/drive.tsx:183
+#, fuzzy, c-format
+msgid "A new partition will be created for %s"
+msgid_plural "New partitions will be created for %s"
+msgstr[0] "Буде використано та створено розділи для %s"
+msgstr[1] "Буде використано та створено розділи для %s"
+msgstr[2] "Буде використано та створено розділи для %s"
+
 #. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case).
 #: src/components/storage/utils/drive.tsx:194
@@ -3810,6 +3957,14 @@ msgstr "%1$s на %2$s"
 #: src/components/storage/utils/volume-group.tsx:29
 msgid "No logical volumes are defined yet"
 msgstr "Логічні томи ще не задано"
+
+#: src/components/storage/utils/volume-group.tsx:36
+#, fuzzy, c-format
+msgid "A new volume will be created for %s"
+msgid_plural "New volumes will be created for %s"
+msgstr[0] "Весь пристрій буде використано для %s"
+msgstr[1] "Весь пристрій буде використано для %s"
+msgstr[2] "Весь пристрій буде використано для %s"
 
 #: src/components/storage/zfcp/ZFCPControllersTable.tsx:22
 msgid "Auto LUNs Scan"
@@ -4156,9 +4311,6 @@ msgstr "ZFCP"
 #~ msgid "The logical volume is created exactly with the given size"
 #~ msgstr "Логічний том буде створено точно з заданим розміром"
 
-#~ msgid "The logical volume can grow until a given limit size"
-#~ msgstr "Логічний том може збільшуватися до заданого граничного розміру"
-
 #~ msgid "Sizes must be entered as a numbers optionally followed by a unit."
 #~ msgstr ""
 #~ "Розміри повинні бути введені у вигляді чисел, після чого можна вказати "
@@ -4488,10 +4640,6 @@ msgstr "ZFCP"
 #~ msgstr "Кореневий том %1$s (%2$s)"
 
 #, c-format
-#~ msgid "%1$s root partition (%2$s)"
-#~ msgstr "Кореневий розділ %1$s (%2$s)"
-
-#, c-format
 #~ msgid "%1$s %2$s at %3$s (%4$s)"
 #~ msgstr "%1$s %2$s на %3$s (%4$s)"
 
@@ -4556,9 +4704,6 @@ msgstr "ZFCP"
 
 #~ msgid "Destructive actions are not allowed"
 #~ msgstr "Руйнівні дії заборонені"
-
-#~ msgid "Destructive actions are allowed"
-#~ msgstr "Руйнівні дії дозволені"
 
 #~ msgid "affecting"
 #~ msgstr "що впливають на"

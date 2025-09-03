@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-27 09:25+0000\n"
+"POT-Creation-Date: 2025-09-02 14:20+0000\n"
 "PO-Revision-Date: 2025-08-23 18:59+0000\n"
 "Last-Translator: Luna  Jernberg <bittin@opensuse.org>\n"
 "Language-Team: Swedish <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -809,7 +809,7 @@ msgstr "Signalstyrka"
 #: src/components/network/WifiConnectionDetails.tsx:56
 #: src/components/network/WifiConnectionDetails.tsx:79
 #: src/components/network/WiredConnectionDetails.tsx:102
-#: src/components/storage/dasd/DASDTable.tsx:434
+#: src/components/storage/dasd/DASDTable.tsx:432
 #: src/components/storage/dasd/StatusFilter.tsx:78
 #: src/components/storage/iscsi/NodesPresenter.jsx:104
 #: src/components/storage/iscsi/NodesPresenter.jsx:125
@@ -825,10 +825,10 @@ msgstr "Säkerhet"
 
 #. TRANSLATORS: table header for a DASD devices table
 #: src/components/network/WifiConnectionDetails.tsx:72
-#: src/components/storage/DeviceSelectorModal.tsx:83
+#: src/components/storage/DeviceSelectorModal.tsx:85
 #: src/components/storage/ProposalResultTable.tsx:132
 #: src/components/storage/SpaceActionsTable.tsx:233
-#: src/components/storage/dasd/DASDTable.tsx:440
+#: src/components/storage/dasd/DASDTable.tsx:438
 msgid "Device"
 msgstr "Enhet"
 
@@ -1336,6 +1336,11 @@ msgstr ""
 #: src/components/questions/LuksActivationQuestion.tsx:69
 msgid "Question"
 msgstr "Fråga"
+
+#: src/components/questions/LoadConfigRetryQuestion.tsx:51
+#, fuzzy
+msgid "Configuration unreachable or invalid"
+msgstr "Konfigurationen är inte synkroniserad"
 
 #. TRANSLATORS: error message, user entered a wrong password
 #: src/components/questions/LuksActivationQuestion.tsx:37
@@ -1940,6 +1945,20 @@ msgstr "Använder redan alla tillgängliga enheter"
 msgid "Already using all available disks"
 msgstr "Använder redan alla tillgängliga diskar"
 
+#: src/components/storage/ConfigureDeviceMenu.tsx:66
+#, c-format
+msgid "Extend the installation beyond the currently selected device"
+msgid_plural "Extend the installation beyond the current %d devices"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/components/storage/ConfigureDeviceMenu.tsx:75
+#, c-format
+msgid "Extend the installation beyond the currently selected disk"
+msgid_plural "Extend the installation beyond the current %d disks"
+msgstr[0] ""
+msgstr[1] ""
+
 #: src/components/storage/ConfigureDeviceMenu.tsx:83
 msgid "Start configuring a basic installation"
 msgstr "Börja konfigurera en grundläggande installation"
@@ -1968,24 +1987,24 @@ msgstr "Lägg till LVM volymgrupp"
 msgid "More devices"
 msgstr "Mer enheter"
 
-#: src/components/storage/DeviceSelectorModal.tsx:84
+#: src/components/storage/DeviceSelectorModal.tsx:87
 #: src/components/storage/ProposalResultTable.tsx:135
 #: src/components/storage/SizeModeSelect.tsx:125
 #: src/components/storage/SpaceActionsTable.tsx:240
 msgid "Size"
 msgstr "Storlek"
 
-#: src/components/storage/DeviceSelectorModal.tsx:85
+#: src/components/storage/DeviceSelectorModal.tsx:92
 msgid "Description"
 msgstr "Beskrivning"
 
-#: src/components/storage/DeviceSelectorModal.tsx:86
+#: src/components/storage/DeviceSelectorModal.tsx:93
 msgid "Current content"
 msgstr "Nuvarande innehåll"
 
 #. TRANSLATORS: table header for a DASD devices table
 #: src/components/storage/DeviceSelectorPage.tsx:53
-#: src/components/storage/dasd/DASDTable.tsx:446
+#: src/components/storage/dasd/DASDTable.tsx:444
 msgid "Type"
 msgstr "Typ"
 
@@ -2229,6 +2248,14 @@ msgstr "Detaljer"
 #: src/components/storage/FilesystemMenu.tsx:91
 msgid "Change the file system or mount point"
 msgstr "Ändra filsystemet eller monteringspunkten"
+
+#: src/components/storage/FixableConfigInfo.tsx:48
+#, fuzzy
+msgid "The configuration must be adapted to address the following issue:"
+msgid_plural ""
+"The configuration must be adapted to address the following issues:"
+msgstr[0] "Innan du startar installationen måste du åtgärda följande problem:"
+msgstr[1] "Innan du startar installationen måste du åtgärda följande problem:"
 
 #: src/components/storage/FormattableDevicePage.tsx:221
 #: src/components/storage/LogicalVolumePage.tsx:248
@@ -2556,6 +2583,15 @@ msgstr "Skapa LVM volymgrupp på %s"
 msgid "Create LVM volume group on %s"
 msgstr "Skapa LVM volymgrupp på %s"
 
+#. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
+#. single mount point in the singular case).
+#: src/components/storage/NewVgMenuOption.tsx:59
+#, c-format
+msgid "%s will be created as a logical volume"
+msgid_plural "%s will be created as logical volumes"
+msgstr[0] ""
+msgstr[1] ""
+
 #: src/components/storage/PartitionPage.tsx:354
 msgid "The maximum must be a number followed by a unit like GiB or GB"
 msgstr ""
@@ -2621,9 +2657,37 @@ msgstr "Gå till lagringssidan"
 msgid "Moreover, the following partitions will be created or mounted"
 msgstr "Dessutom kommer följande partitioner att skapas eller monteras"
 
+#: src/components/storage/PartitionsMenu.tsx:67
+#, fuzzy
+msgid "Moreover, the following partition will be created."
+msgid_plural "Moreover, the following partitions will be created."
+msgstr[0] "Dessutom kommer följande partitioner att skapas eller monteras"
+msgstr[1] "Dessutom kommer följande partitioner att skapas eller monteras"
+
+#: src/components/storage/PartitionsMenu.tsx:73
+#, fuzzy
+msgid "Moreover, the following partition will be mounted."
+msgid_plural "Moreover, the following partitions will be mounted."
+msgstr[0] "Dessutom kommer följande partitioner att skapas eller monteras"
+msgstr[1] "Dessutom kommer följande partitioner att skapas eller monteras"
+
 #: src/components/storage/PartitionsMenu.tsx:80
 msgid "The following partitions will be created or mounted"
 msgstr "Följande partitioner kommer att skapas eller monteras"
+
+#: src/components/storage/PartitionsMenu.tsx:84
+#, fuzzy
+msgid "The following partition will be created."
+msgid_plural "The following partitions will be created."
+msgstr[0] "Följande partitioner kommer att skapas eller monteras"
+msgstr[1] "Följande partitioner kommer att skapas eller monteras"
+
+#: src/components/storage/PartitionsMenu.tsx:90
+#, fuzzy
+msgid "The following partition will be mounted."
+msgid_plural "The following partitions will be mounted."
+msgstr[0] "Följande partitioner kommer att skapas eller monteras"
+msgstr[1] "Följande partitioner kommer att skapas eller monteras"
 
 #: src/components/storage/PartitionsMenu.tsx:132
 msgid "Any partition needed to boot will be configured."
@@ -2694,6 +2758,12 @@ msgstr "Misslyckades att beräkna en lagringslayout"
 msgid "Invalid storage settings"
 msgstr "Ogiltiga lagringsinställningar"
 
+#: src/components/storage/ProposalPage.tsx:77
+msgid "The current storage configuration has the following issue:"
+msgid_plural "The current storage configuration has the following issues:"
+msgstr[0] ""
+msgstr[1] ""
+
 #: src/components/storage/ProposalPage.tsx:91
 msgid ""
 "You may want to discard those settings and start from scratch with a simple "
@@ -2736,7 +2806,7 @@ msgstr ""
 "konfigurera någon enhet."
 
 #: src/components/storage/ProposalPage.tsx:140
-#: src/components/storage/dasd/DASDTable.tsx:306
+#: src/components/storage/dasd/DASDTable.tsx:304
 msgid "No devices found"
 msgstr "Inga enheter hittades"
 
@@ -2767,6 +2837,20 @@ msgstr "Laddar om data, vänligen vänta..."
 #: src/components/storage/ProposalResultSection.tsx:39
 msgid "Waiting for information about storage configuration"
 msgstr "Väntar på information om lagringskonfiguration"
+
+#: src/components/storage/ProposalResultSection.tsx:64
+#, fuzzy, c-format
+msgid "There is %d destructive action planned affecting %s"
+msgid_plural "There are %d destructive actions planned affecting %s"
+msgstr[0] "Det finns en %d destruktiv åtgärd planerad"
+msgstr[1] "Det finns flera %d destruktiva åtgärder planerade"
+
+#: src/components/storage/ProposalResultSection.tsx:75
+#, c-format
+msgid "There is %d destructive action planned"
+msgid_plural "There are %d destructive actions planned"
+msgstr[0] "Det finns en %d destruktiv åtgärd planerad"
+msgstr[1] "Det finns flera %d destruktiva åtgärder planerade"
 
 #: src/components/storage/ProposalResultSection.tsx:94
 msgid "Collapse the list of planned actions"
@@ -3086,6 +3170,22 @@ msgstr "Lägg till en partition eller montera en befintlig"
 msgid "Format the whole device or mount an existing file system"
 msgstr "Formatera hela enheten eller montera ett befintligt filsystem"
 
+#. TRANSLATORS: %1$s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
+#. single mount point in the singular case). %2$s is a disk name like sda.
+#: src/components/storage/VolumeGroupEditor.tsx:58
+#, fuzzy, c-format
+msgid "%1$s will be created as a partition at %2$s"
+msgid_plural "%1$s will be created as partitions at %2$s"
+msgstr[0] "%1$s root partition (%2$s)"
+msgstr[1] "%1$s root partition (%2$s)"
+
+#: src/components/storage/VolumeGroupEditor.tsx:67
+#, fuzzy
+msgid "The logical volume will also be deleted"
+msgid_plural "The logical volumes will also be deleted"
+msgstr[0] "Den logiska volymen kan växa tills en given gränsstorlek"
+msgstr[1] "Den logiska volymen kan växa tills en given gränsstorlek"
+
 #: src/components/storage/VolumeGroupEditor.tsx:82
 msgid "Delete volume group"
 msgstr "Ta bort volymgrupp"
@@ -3118,6 +3218,13 @@ msgstr "Logiska volymer för %s"
 msgid "Add logical volume"
 msgstr "Lägg till logisk volym"
 
+#: src/components/storage/VolumeGroupEditor.tsx:148
+#, fuzzy
+msgid "The following logical volume will be created"
+msgid_plural "The following logical volumes will be created"
+msgstr[0] "Följande partitioner kommer att skapas eller monteras"
+msgstr[1] "Följande partitioner kommer att skapas eller monteras"
+
 #: src/components/storage/dasd/DASDFormatProgress.tsx:49
 msgid "Formatting DASD devices"
 msgstr "Formaterar DASD-enheter"
@@ -3126,58 +3233,67 @@ msgstr "Formaterar DASD-enheter"
 msgid "DASD"
 msgstr "DASD"
 
-#: src/components/storage/dasd/DASDTable.tsx:138
+#: src/components/storage/dasd/DASDTable.tsx:136
 #: src/components/storage/zfcp/ZFCPControllersTable.tsx:51
 msgid "Activate"
 msgstr "Aktivera"
 
-#: src/components/storage/dasd/DASDTable.tsx:142
+#: src/components/storage/dasd/DASDTable.tsx:140
 #: src/components/storage/zfcp/ZFCPDisksTable.tsx:56
 msgid "Deactivate"
 msgstr "Inaktivera"
 
-#: src/components/storage/dasd/DASDTable.tsx:149
+#: src/components/storage/dasd/DASDTable.tsx:147
 msgid "Set DIAG on"
 msgstr "Sätt DIAGNOS på"
 
-#: src/components/storage/dasd/DASDTable.tsx:153
+#: src/components/storage/dasd/DASDTable.tsx:151
 msgid "Set DIAG off"
 msgstr "Sätt DIAGNOS av"
 
-#: src/components/storage/dasd/DASDTable.tsx:160
+#: src/components/storage/dasd/DASDTable.tsx:158
 msgid "Format"
 msgstr "Formatera"
 
-#: src/components/storage/dasd/DASDTable.tsx:198
+#: src/components/storage/dasd/DASDTable.tsx:196
 msgid "Min channel"
 msgstr "Minimum kanal"
 
-#: src/components/storage/dasd/DASDTable.tsx:206
+#: src/components/storage/dasd/DASDTable.tsx:204
 msgid "Max channel"
 msgstr "Maximal kanal"
 
-#: src/components/storage/dasd/DASDTable.tsx:254
+#. TRANSLATORS: message shown in bulk action toolbar when just one device
+#. is selected
+#: src/components/storage/dasd/DASDTable.tsx:225
+#, fuzzy, c-format
+msgid "Apply to the selected device"
+msgid_plural "Apply to the %s selected devices"
+msgstr[0] "Formatera valda enheter?"
+msgstr[1] "Formatera valda enheter?"
+
+#: src/components/storage/dasd/DASDTable.tsx:252
 msgid "Select devices to enable bulk actions."
 msgstr "Välj enheter för att aktivera massåtgärder."
 
-#: src/components/storage/dasd/DASDTable.tsx:294
+#: src/components/storage/dasd/DASDTable.tsx:292
 msgid "No devices available"
 msgstr "Inga enheter tillgängliga"
 
-#: src/components/storage/dasd/DASDTable.tsx:298
+#: src/components/storage/dasd/DASDTable.tsx:296
 msgid "No DASD devices were found in this machine."
 msgstr "Inga DASD-enheter hittades i den här maskinen."
 
-#: src/components/storage/dasd/DASDTable.tsx:310
+#: src/components/storage/dasd/DASDTable.tsx:308
 msgid "Change filters and try again."
 msgstr "Ändra filter och försök igen."
 
-#: src/components/storage/dasd/DASDTable.tsx:314
+#: src/components/storage/dasd/DASDTable.tsx:312
 msgid "Clear all filters"
 msgstr "Rensa alla filter"
 
 #. TRANSLATORS: table header for a DASD devices table
-#: src/components/storage/dasd/DASDTable.tsx:427
+#: src/components/storage/dasd/DASDTable.tsx:425
 #: src/components/storage/zfcp/ZFCPControllersTable.tsx:20
 #: src/components/storage/zfcp/ZFCPDiskForm.tsx:117
 #: src/components/storage/zfcp/ZFCPDisksTable.tsx:43
@@ -3187,19 +3303,19 @@ msgstr "Kanal-ID"
 #. TRANSLATORS: table header for `DIAG access mode` on DASD devices table.
 #. It refers to an special disk access mode on IBM mainframes. Keep
 #. untranslated.
-#: src/components/storage/dasd/DASDTable.tsx:454
+#: src/components/storage/dasd/DASDTable.tsx:452
 msgid "DIAG"
 msgstr "DIAG"
 
-#: src/components/storage/dasd/DASDTable.tsx:458
-#: src/components/storage/dasd/DASDTable.tsx:466
+#: src/components/storage/dasd/DASDTable.tsx:456
+#: src/components/storage/dasd/DASDTable.tsx:464
 #: src/components/storage/iscsi/NodesPresenter.jsx:103
 #: src/components/storage/zfcp/ZFCPControllersTable.tsx:36
 msgid "No"
 msgstr "Nej"
 
-#: src/components/storage/dasd/DASDTable.tsx:458
-#: src/components/storage/dasd/DASDTable.tsx:466
+#: src/components/storage/dasd/DASDTable.tsx:456
+#: src/components/storage/dasd/DASDTable.tsx:464
 #: src/components/storage/iscsi/NodesPresenter.jsx:103
 #: src/components/storage/zfcp/ZFCPControllersTable.tsx:36
 msgid "Yes"
@@ -3207,25 +3323,25 @@ msgstr "Ja"
 
 #. TRANSLATORS: table header for a column in a DASD devices table that
 #. usually contains "Yes" or "No"" values
-#: src/components/storage/dasd/DASDTable.tsx:465
+#: src/components/storage/dasd/DASDTable.tsx:463
 #: src/components/storage/dasd/FormatFilter.tsx:78
 msgid "Formatted"
 msgstr "Formaterad"
 
 #. TRANSLATORS: table header for a DASD devices table
-#: src/components/storage/dasd/DASDTable.tsx:471
+#: src/components/storage/dasd/DASDTable.tsx:469
 msgid "Partition Info"
 msgstr "Partitionsinformation"
 
-#: src/components/storage/dasd/DASDTable.tsx:538
+#: src/components/storage/dasd/DASDTable.tsx:534
 msgid "Applying changes"
 msgstr "Tillämpar ändringar"
 
-#: src/components/storage/dasd/DASDTable.tsx:540
+#: src/components/storage/dasd/DASDTable.tsx:536
 msgid "This may take a moment while updates complete."
 msgstr "Detta kan ta en stund medan uppdateringarna slutförs."
 
-#: src/components/storage/dasd/DASDTable.tsx:543
+#: src/components/storage/dasd/DASDTable.tsx:539
 msgid "This message will close automatically when everything is done."
 msgstr "Detta meddelande kommer att stängas automatiskt när allt är klart."
 
@@ -3778,6 +3894,20 @@ msgstr "Ett filsystem kommer att användas för hela enheten"
 msgid "No additional partitions will be created"
 msgstr "Inga ytterligare partitioner kommer att skapas"
 
+#: src/components/storage/utils/drive.tsx:169
+#, fuzzy, c-format
+msgid "An existing partition will be used for %s"
+msgid_plural "Existing partitions will be used for %s"
+msgstr[0] "Endast återanvända partitioner kommer att användas."
+msgstr[1] "Endast återanvända partitioner kommer att användas."
+
+#: src/components/storage/utils/drive.tsx:183
+#, fuzzy, c-format
+msgid "A new partition will be created for %s"
+msgid_plural "New partitions will be created for %s"
+msgstr[0] "Partitioner kommer att användas och skapas för %s"
+msgstr[1] "Partitioner kommer att användas och skapas för %s"
+
 #. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case).
 #: src/components/storage/utils/drive.tsx:194
@@ -3800,6 +3930,13 @@ msgstr "%1$s på %2$s"
 #: src/components/storage/utils/volume-group.tsx:29
 msgid "No logical volumes are defined yet"
 msgstr "Inga logiska volymer är definierade ännu"
+
+#: src/components/storage/utils/volume-group.tsx:36
+#, fuzzy, c-format
+msgid "A new volume will be created for %s"
+msgid_plural "New volumes will be created for %s"
+msgstr[0] "Hela enheten kommer att användas för %s"
+msgstr[1] "Hela enheten kommer att användas för %s"
 
 #: src/components/storage/zfcp/ZFCPControllersTable.tsx:22
 msgid "Auto LUNs Scan"
@@ -4146,9 +4283,6 @@ msgstr "ZFCP"
 #~ msgid "The logical volume is created exactly with the given size"
 #~ msgstr "Den logiska volymen skapas exakt med den givna storleken"
 
-#~ msgid "The logical volume can grow until a given limit size"
-#~ msgstr "Den logiska volymen kan växa tills en given gränsstorlek"
-
 #~ msgid "Sizes must be entered as a numbers optionally followed by a unit."
 #~ msgstr "Storlekar måste anges som siffror, eventuellt följt av en enhet."
 
@@ -4489,10 +4623,6 @@ msgstr "ZFCP"
 #, c-format
 #~ msgid "%1$s root volume (%2$s)"
 #~ msgstr "%1$s root volym (%2$s)"
-
-#, c-format
-#~ msgid "%1$s root partition (%2$s)"
-#~ msgstr "%1$s root partition (%2$s)"
 
 #, c-format
 #~ msgid "%1$s %2$s at %3$s (%4$s)"
@@ -4964,12 +5094,6 @@ msgstr "ZFCP"
 
 #~ msgid "Loading available products, please wait..."
 #~ msgstr "Laddar tillgängliga produkter, vänligen vänta..."
-
-#, c-format
-#~ msgid "There is %d destructive action planned"
-#~ msgid_plural "There are %d destructive actions planned"
-#~ msgstr[0] "Det finns en %d destruktiv åtgärd planerad"
-#~ msgstr[1] "Det finns flera %d destruktiva åtgärder planerade"
 
 #, c-format
 #~ msgid "Space action selector for %s"
