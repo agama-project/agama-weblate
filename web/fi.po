@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-09-02 15:47+0000\n"
-"PO-Revision-Date: 2025-09-10 19:52+0000\n"
+"PO-Revision-Date: 2025-09-11 08:59+0000\n"
 "Last-Translator: Timo Jyrinki <tjyrinki@suse.com>\n"
 "Language-Team: Finnish <https://l10n.opensuse.org/projects/agama/"
 "agama-web-sle-16/fi/>\n"
@@ -25,12 +25,14 @@ msgstr "Asetukset eivät ajan tasalla"
 
 #: src/components/core/AlertOutOfSync.tsx:80
 msgid "The configuration has been updated externally."
-msgstr ""
+msgstr "Asetuksia on muutettu ulkoisesti."
 
 #: src/components/core/AlertOutOfSync.tsx:82
 msgid ""
 "Reloading is required to get the latest data and avoid issues or data loss."
 msgstr ""
+"Uusimpien tietojen saamiseksi sekä ongelmien tai tietojen menettämisen "
+"välttämiseksi tiedot tulee ladata uudelleen."
 
 #: src/components/core/AlertOutOfSync.tsx:85
 msgid "Reload now"
@@ -120,6 +122,10 @@ msgid ""
 "of the new system. For that to work, the machine needs to boot directly to "
 "the new boot loader."
 msgstr ""
+"Viimeinen kohta on tehdä Trusted Platform Module (TPM) -asetukset, jotta "
+"salattujen laitteiden aukaisu automaattisesti tapahtuu uuteen järjestelmään "
+"ensimmäistä kertaa käytettäessä. Jotta tämä toimisi, laite tulee käynnistää "
+"suoraan uudeen käynnistyslataimeen."
 
 #: src/components/core/InstallationFinished.tsx:124
 msgid "Congratulations!"
@@ -164,7 +170,7 @@ msgstr "Näppäimistön asettelu"
 #: src/components/core/InstallerOptions.tsx:97
 #: src/components/core/InstallerOptions.tsx:403
 msgid "Cannot be changed in remote installation"
-msgstr ""
+msgstr "Ei voi muuttaa etäasennuksessa"
 
 #: src/components/core/InstallerOptions.tsx:260
 msgid ""
@@ -172,6 +178,8 @@ msgid ""
 "installed. You can adjust the product’s localization later in the "
 "Localization settings page."
 msgstr ""
+"Tämä vaikuttaa vain asennusohjelman käyttöliittymään, ei asennettavaan "
+"tuotteeseen. Voit muuttaa tuotteen kotoistamisesta myöhemmin asetussivulta."
 
 #. TRANSLATORS: Explains where users can find more language and keymap
 #. options for the product to install. Keep the text in square brackets []
@@ -181,6 +189,8 @@ msgid ""
 "More language and keyboard layout options for the selected product may be "
 "available in [Localization] page."
 msgstr ""
+"Lisää kieli- ja näppäimistöasetteluvaihtoehtoja valitulle tuotteelle saattaa "
+"olla tarjolla [Localization]-sivulla."
 
 #: src/components/core/InstallerOptions.tsx:315
 msgid "Language and keyboard"
@@ -188,7 +198,7 @@ msgstr "Kieli ja näppäimistö"
 
 #: src/components/core/InstallerOptions.tsx:323
 msgid "Use these same settings for the selected product"
-msgstr ""
+msgstr "Käytä näitä samoja asetuksia valitulle tuotteelle"
 
 #: src/components/core/InstallerOptions.tsx:345
 #: src/components/core/InstallerOptions.tsx:391
@@ -209,6 +219,8 @@ msgid ""
 "More languages might be available for the selected product at [Localization] "
 "page"
 msgstr ""
+"Lisää kieliä valitulle tuotteelle saattaa olla tarjolla [Localization]"
+"-sivulla"
 
 #: src/components/core/InstallerOptions.tsx:362
 msgid "Change Language"
@@ -217,7 +229,7 @@ msgstr "Vaihda kieltä"
 #: src/components/core/InstallerOptions.tsx:369
 #: src/components/core/InstallerOptions.tsx:426
 msgid "Use for the selected product too"
-msgstr ""
+msgstr "Käytä myös valitulle tuotteelle"
 
 #: src/components/core/InstallerOptions.tsx:402
 #: src/components/core/InstallerOptions.tsx:419
@@ -232,6 +244,8 @@ msgid ""
 "More keymap layout might be available for the selected product at "
 "[Localization] page"
 msgstr ""
+"Lisää näppäimistöasetteluvaihtoehtoja valitulle tuotteelle saattaa olla "
+"tarjolla [Localization]-sivulla"
 
 #: src/components/core/InstallerOptions.tsx:474
 msgid "Change display language"
@@ -249,6 +263,7 @@ msgstr "Vaihda näyttökieltä ja näppäimistön asettelua"
 msgid ""
 "Before starting the installation, you need to address the following problems:"
 msgstr ""
+"Ennen asennuksen käynnistämistä sinun tulee ratkaista seuraavat ongelmat:"
 
 #. TRANSLATORS: Clickable link to show and resolve package dependency conflicts
 #: src/components/core/IssuesAlert.tsx:46
@@ -287,6 +302,8 @@ msgid ""
 "Before installing, you have to make some decisions. Click on each section to "
 "review the settings."
 msgstr ""
+"Joitain valintoja tulee tehdä ennen asennusta. Käy läpi jokainen osio "
+"tarkistaaksesi asetukset."
 
 #: src/components/core/ListSearch.tsx:58
 msgid "Search"
@@ -294,11 +311,11 @@ msgstr "Hae"
 
 #: src/components/core/LoginPage.tsx:62
 msgid "Could not log in. Please, make sure that the password is correct."
-msgstr ""
+msgstr "Kirjautuminen ei onnistunut. Tarkista, että salasana on oikea."
 
 #: src/components/core/LoginPage.tsx:64
 msgid "Could not authenticate against the server, please check it."
-msgstr ""
+msgstr "Palvelimelle ei voitu tunnistautua, ole hyvä ja tarkista."
 
 #. TRANSLATORS: Title for a form to provide the password for the root user. %s
 #. will be replaced by "root"
@@ -332,7 +349,7 @@ msgstr "Salasanan syöttö"
 
 #: src/components/core/LoginPage.tsx:122
 msgid "Please, provide its password to log in to the system."
-msgstr ""
+msgstr "Kirjoita salasana jota käytetään järjestelmään kirjautumiseen."
 
 #: src/components/core/LoginPage.tsx:130
 msgid "Log in"
@@ -347,11 +364,11 @@ msgstr "Takaisin"
 
 #: src/components/core/PasswordAndConfirmationInput.tsx:72
 msgid "Passwords do not match"
-msgstr ""
+msgstr "Salasanat eivät täsmää"
 
 #: src/components/core/PasswordAndConfirmationInput.tsx:107
 msgid "Password confirmation"
-msgstr ""
+msgstr "Salasanan vahvistus"
 
 #. TRANSLATORS: Message to inform users which keyboard layout is active. %s
 #. will be replaced with the layout name (e.g., "de", "cn", "cz"). Keep
@@ -360,13 +377,13 @@ msgstr ""
 #: src/components/core/PasswordInput.tsx:69
 #, c-format
 msgid "Using [%s] keyboard"
-msgstr ""
+msgstr "Käytetään [%s]-näppämistöä"
 
 #. TRANSLATORS: Warns users that CAPS LOCK is on.
 #. Keep square brackets to apply special formatting in the UI.
 #: src/components/core/PasswordInput.tsx:90
 msgid "[CAPS LOCK] is on"
-msgstr ""
+msgstr "[CAPS LOCK] on päällä"
 
 #: src/components/core/PasswordInput.tsx:144
 msgid "Password visibility button"
@@ -393,7 +410,7 @@ msgstr "Käynnissä"
 #: src/components/core/ProgressReport.tsx:77
 #: src/components/storage/Progress.tsx:65
 msgid "Finished"
-msgstr "Valmis"
+msgstr "Valmistunut"
 
 #: src/components/core/ResourceNotFound.tsx:42
 msgid "Resource not found or lost"
@@ -627,11 +644,11 @@ msgstr ""
 
 #: src/components/network/BindingSettingsForm.tsx:208
 msgid "Bind to MAC address"
-msgstr ""
+msgstr "Sido MAC-osoitteeseen"
 
 #: src/components/network/BindingSettingsForm.tsx:212
 msgid "Choose device to bind by MAC"
-msgstr ""
+msgstr "Valitse laite joka sidotaan MAC-osoitteeseen"
 
 #. TRANSLATORS: input field name
 #: src/components/network/DnsDataList.tsx:90
@@ -695,7 +712,7 @@ msgstr ""
 #: src/components/network/WifiConnectionDetails.tsx:106
 #: src/components/network/WiredConnectionDetails.tsx:214
 msgid "Mode"
-msgstr "Tila"
+msgstr "Tapa"
 
 #: src/components/network/IpSettingsForm.tsx:177
 msgid "Automatic (DHCP)"
@@ -3403,7 +3420,7 @@ msgstr "Yhdistetty (%s)"
 
 #: src/components/storage/iscsi/NodesPresenter.jsx:79
 msgid "Delete"
-msgstr "Poista"
+msgstr "Poisto"
 
 #: src/components/storage/iscsi/NodesPresenter.jsx:84
 msgid "Login"
