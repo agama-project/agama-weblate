@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-09-10 15:44+0000\n"
-"PO-Revision-Date: 2025-09-10 19:52+0000\n"
+"PO-Revision-Date: 2025-09-11 08:59+0000\n"
 "Last-Translator: Timo Jyrinki <tjyrinki@suse.com>\n"
 "Language-Team: Finnish <https://l10n.opensuse.org/projects/agama/"
 "agama-service-sle-16/fi/>\n"
@@ -25,7 +25,7 @@ msgstr ""
 #: service/lib/agama/autoyast/profile_reporter.rb:51
 #, perl-brace-format
 msgid "Found unsupported elements in the AutoYaST profile: %{keys}."
-msgstr "Löydettiin tukemattomia kohtia AutoYaST-profiilissa: %{keys}."
+msgstr "AutoYaST-profiilissa löydettiin tukemattomia kohita: %{keys}."
 
 #. Runs the config phase
 #.
@@ -113,6 +113,10 @@ msgid ""
 "that although the file is part of the signed repository, the list of "
 "checksums does not mention this file. Use it anyway?"
 msgstr ""
+"Tarkistussummaa tiedostolle %{file} ei löydy ohjelmalähteestä. Tämä "
+"tarkoittaa että vaikka tiedosto on osa allekirjoitettua ohjelmalähdettä, "
+"tarkistussummien luettelossa ei ole mainintaa tästä tiedostosta. Käytetäänkö "
+"sitä tästä huolimatta?"
 
 #. Callback to accept an unknown digest
 #.
@@ -126,6 +130,9 @@ msgid ""
 "is unknown. This means that the origin and integrity of the file cannot be "
 "verified. Use it anyway?"
 msgstr ""
+"Tarkistussumma tiedostolle %{file} on \"%{digest}\" mutta odotettua "
+"tarkistussummaa ei tiedetä. Tämä tarkoittaa että tiedoston alkuperää ja "
+"eheyttä ei voida vahvistaa. Käytetäänkö sitä tästä huolimatta?"
 
 #. Callback to accept wrong digest
 #.
@@ -140,6 +147,9 @@ msgid ""
 "be \"%{expected}\". The file has changed by accident or by an attacker since "
 "the creater signed it. Use it anyway?"
 msgstr ""
+"Tarkistussumma tiedostolle %{file} on \"%{found}\" mutta sen odotettiin "
+"olevan \"%{expected}\". Tiedosto on muuttunut vahingossa tai hyökkääjän "
+"toimesta sen luomisen jälkeen. Käytetäänkö sitä tästä huolimatta?"
 
 #. DoneProvide callback
 #.
@@ -160,6 +170,9 @@ msgid ""
 "The file %{filename} from %{repo_url} is not digitally signed. The origin "
 "and integrity of the file cannot be verified. Use it anyway?"
 msgstr ""
+"Tiedostoa %{filename} lähteestä %{repo_url} ei ole allekirjoitettu "
+"digitaalisesti. Tiedoston alkuperää ja eheyttä ei voida vahvistaa. "
+"Käytetäänkö sitä tästä huolimatta?"
 
 #: service/lib/agama/software/callbacks/signature.rb:72
 #, perl-brace-format
@@ -167,6 +180,8 @@ msgid ""
 "The file %{filename} is not digitally signed. The origin and integrity of "
 "the file cannot be verified. Use it anyway?"
 msgstr ""
+"Tiedostoa %{filename} ei ole allekirjoitettu digitaalisesti. Tiedoston "
+"alkuperää ja eheyttä ei voida vahvistaa. Käytetäänkö sitä tästä huolimatta?"
 
 #. Callback to handle signature verification failures
 #.
@@ -192,6 +207,9 @@ msgid ""
 "The file %{filename} from %{repo_url} is digitally signed with the following "
 "unknown GnuPG key: %{key_id}. Use it anyway?"
 msgstr ""
+"Tiedosto %{filename} lähteestä %{repo_url} on allekirjoitettu digitaalisesti "
+"seuraavalla tuntemattomalla GnuPG-avaimella: %{key_id}. Tiedoston alkuperää "
+"ja eheyttä ei voida vahvistaa. Käytetäänkö sitä tästä huolimatta?"
 
 #: service/lib/agama/software/callbacks/signature.rb:137
 #, perl-brace-format
@@ -199,6 +217,9 @@ msgid ""
 "The file %{filename} is digitally signed with the following unknown GnuPG "
 "key: %{key_id}. Use it anyway?"
 msgstr ""
+"Tiedosto %{filename} on allekirjoitettu digitaalisesti seuraavalla "
+"tuntemattomalla GnuPG-avaimella: %{key_id}. Tiedoston alkuperää ja eheyttä "
+"ei voida vahvistaa. Käytetäänkö sitä tästä huolimatta?"
 
 #. Callback to handle file verification failures
 #.
@@ -212,6 +233,9 @@ msgid ""
 "GnuPG key, but the integrity check failed: %{key_id} (%{key_name}). Use it "
 "anyway?"
 msgstr ""
+"Tiedosto %{filename} lähteestä %{repo_url} on allekirjoitettu digitaalisesti "
+"seuraavalla GnuPG-avaimella mutta eheyden varmistaminen epäonnistui: "
+"%{key_id} (%{key_name}). Käytetäänkö sitä tästä huolimatta?"
 
 #: service/lib/agama/software/callbacks/signature.rb:175
 #, perl-brace-format
@@ -219,6 +243,9 @@ msgid ""
 "The file %{filename} is digitally signed with the following GnuPG key, but "
 "the integrity check failed: %{key_id} (%{key_name}). Use it anyway?"
 msgstr ""
+"Tiedosto %{filename} on allekirjoitettu digitaalisesti seuraavalla GnuPG-"
+"avaimella mutta eheyden varmistaminen epäonnistui: %{key_id} (%{key_name}). "
+"Käytetäänkö sitä tästä huolimatta?"
 
 #. TRANSLATORS: button label, trust the GPG key or the signature
 #: service/lib/agama/software/callbacks/signature.rb:199
@@ -353,6 +380,7 @@ msgid ""
 "The device with alias '%s' cannot be formatted because it is used by other "
 "device"
 msgstr ""
+"Laitetta aliaksella ”%s” ei voi alustaa koska se on toisen laitteen käytössä"
 
 #. Issue when the device has both partitions and a user.
 #.
@@ -363,6 +391,7 @@ msgid ""
 "The device with alias '%s' cannot be partitioned because it is used by other "
 "device"
 msgstr ""
+"Laitetta aliaksella ”%s” ei voi osioida koska se on toisen laitteen käytössä"
 
 #. Error if a boot device is required and unknown.
 #.
@@ -372,13 +401,13 @@ msgstr ""
 #. @return [Issue, nil]
 #: service/lib/agama/storage/config_checkers/boot.rb:75
 msgid "The boot device cannot be automatically selected"
-msgstr ""
+msgstr "Käynnistyslaitetta ei voi valita automaattisesti"
 
 #. TRANSLATORS: %s is replaced by a device alias (e.g., "boot").
 #: service/lib/agama/storage/config_checkers/boot.rb:86
 #, c-format
 msgid "There is no boot device with alias '%s'"
-msgstr ""
+msgstr "Käynnistyslaitetta aliaksella ”%s” ei ole"
 
 #. TRANSLATORS: 'crypt_method' is the identifier of the method to encrypt the device
 #. (e.g., 'luks1', 'random_swap').
@@ -421,20 +450,20 @@ msgstr ""
 #: service/lib/agama/storage/config_checkers/logical_volume.rb:82
 #, c-format
 msgid "There is no LVM thin pool volume with alias '%s'"
-msgstr ""
+msgstr "LVM-ohutvarantotaltiota aliaksella ”%s” ei ole"
 
 #. TRANSLATORS: %s is the replaced by a device alias (e.g., "md1").
 #: service/lib/agama/storage/config_checkers/md_raid.rb:98
 #, c-format
 msgid "There is no MD RAID member device with alias '%s'"
-msgstr ""
+msgstr "MD RAID -jäsenlaitetta aliaksella ”%s” ei ole"
 
 #. Issue if the MD RAID level is missing and the device is not reused.
 #.
 #. @return [Issue, nil]
 #: service/lib/agama/storage/config_checkers/md_raid.rb:110
 msgid "There is a MD RAID without level"
-msgstr ""
+msgstr "MD RAID ilman määritettyä tasoa havaittu"
 
 #. Issue if the MD RAID does not contain enough member devices.
 #.
@@ -442,7 +471,7 @@ msgstr ""
 #: service/lib/agama/storage/config_checkers/md_raid.rb:121
 #, c-format
 msgid "At least %s devices are required for %s"
-msgstr ""
+msgstr "Ainakin %s laitetta vaaditaan kohteelle %s"
 
 #. Issue if the device member is deleted.
 #.
@@ -454,6 +483,7 @@ msgid ""
 "The device '%{member}' cannot be deleted because it is part of the MD RAID %"
 "{md_raid}"
 msgstr ""
+"Laitetta ”%{member}” ei voi poistaa koska se on osa MD_RAIDia %{md_raid}"
 
 #. Issue if the device member is resized.
 #.
@@ -465,6 +495,8 @@ msgid ""
 "The device '%{member}' cannot be resized because it is part of the MD RAID %"
 "{md_raid}"
 msgstr ""
+"Laitteen ”%{member}” kokoa ei voi muuttaa koska se on osa MD_RAIDia "
+"%{md_raid}"
 
 #. Issue if the device member is formatted.
 #.
@@ -476,6 +508,7 @@ msgid ""
 "The device '%{member}' cannot be formatted because it is part of the MD RAID "
 "%{md_raid}"
 msgstr ""
+"Laitetta ”%{member}” ei voi alustaa koska se on osa MD_RAIDia %{md_raid}"
 
 #. Issue if the device member is partitioned.
 #.
@@ -487,6 +520,7 @@ msgid ""
 "The device '%{member}' cannot be partitioned because it is part of the MD "
 "RAID %{md_raid}"
 msgstr ""
+"Laitetta ”%{member}” ei voi osioida koska se on osa MD_RAIDia %{md_raid}"
 
 #. Issue if the device member is used by other device (e.g., as target for physical volumes).
 #.
@@ -498,6 +532,7 @@ msgid ""
 "The device '%{member}' cannot be used because it is part of the MD RAID %"
 "{md_raid}"
 msgstr ""
+"Laitetta ”%{member}” ei voi käyttää koska se on osa MD_RAIDia %{md_raid}"
 
 #. Issue if the parent of the device member is formatted.
 #.
@@ -509,6 +544,7 @@ msgid ""
 "The device '%{device}' cannot be formatted because it is part of the MD RAID "
 "%{md_raid}"
 msgstr ""
+"Laitetta ”%{device}” ei voi alustaa koska se on osa MD_RAIDia %{md_raid}"
 
 #. TRANSLATORS: 'method' is the identifier of the method to encrypt the device
 #. (e.g., 'luks1').
@@ -570,12 +606,14 @@ msgid ""
 "The list of target devices for the volume group '%s' is mixing reused "
 "devices and new devices"
 msgstr ""
+"Taltioryhmän ”%s” luettelo kohdelaitteista sekoittaa uudelleenkäytettyjä "
+"laitteita ja uusia laitteita"
 
 #. TRANSLATORS: %s is the replaced by a device alias (e.g., "disk1").
 #: service/lib/agama/storage/config_checkers/volume_group.rb:153
 #, c-format
 msgid "There is no target device for LVM physical volumes with alias '%s'"
-msgstr ""
+msgstr "Fyysisille LVM-taltioillle aliaksella ”%s” ei ole kohdelaitetta"
 
 #. TRANSLATORS: %s is the replaced by a device alias (e.g., "disk1").
 #: service/lib/agama/storage/config_checkers/volume_groups.rb:66
