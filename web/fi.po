@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-09-02 15:47+0000\n"
-"PO-Revision-Date: 2025-09-12 05:59+0000\n"
+"PO-Revision-Date: 2025-09-12 07:59+0000\n"
 "Last-Translator: Timo Jyrinki <tjyrinki@suse.com>\n"
 "Language-Team: Finnish <https://l10n.opensuse.org/projects/agama/"
 "agama-web-sle-16/fi/>\n"
@@ -1666,7 +1666,7 @@ msgid ""
 "system for %2$s."
 msgstr ""
 "Kohteen %1$s koko määritellään dynaamisesti järjestelmä RAM-muistin, Btrfs-"
-"vedosten ja kohteen %2$s erillisen tiedostojärjestelmän olemassa olon "
+"vedosten käytön ja kohteen %2$s erillisen tiedostojärjestelmän olemassa olon "
 "perusteella."
 
 #: src/components/storage/AutoSizeText.tsx:179
@@ -1677,8 +1677,8 @@ msgid ""
 "systems for %2$s."
 msgstr ""
 "Kohteen %1$s koko määritellään dynaamisesti järjestelmä RAM-muistin, Btrfs-"
-"vedosten ja kohteen %2$s erillisten tiedostojärjestelmien olemassa olon "
-"perusteella."
+"vedosten käytön ja kohteen %2$s erillisten tiedostojärjestelmien olemassa "
+"olon perusteella."
 
 #: src/components/storage/AutoSizeText.tsx:189
 #, c-format
@@ -1686,8 +1686,8 @@ msgid ""
 "The size for %s will be dynamically adjusted based on the amount of RAM in "
 "the system and the usage of Btrfs snapshots."
 msgstr ""
-"Kohteen %1$s koko määritellään dynaamisesti järjestelmä RAM-muistinja Btrfs-"
-"vedosten perusteella."
+"Kohteen %s koko määritellään dynaamisesti järjestelmä RAM-muistinja Btrfs-"
+"vedosten käytön perusteella."
 
 #: src/components/storage/AutoSizeText.tsx:200
 #, c-format
@@ -1713,8 +1713,8 @@ msgid ""
 "The size for %1$s will be dynamically adjusted based on the usage of Btrfs "
 "snapshots and the presence of a separate file system for %2$s."
 msgstr ""
-"Kohteen %1$s koko määritellään dynaamisesti Btrfs-vedosten ja kohteen %2$s "
-"erillisten tiedostojärjestelmien olemassa olon perusteella."
+"Kohteen %1$s koko määritellään dynaamisesti Btrfs-vedosten käytön ja kohteen "
+"%2$s erillisen tiedostojärjestelmän olemassa olon perusteella."
 
 #: src/components/storage/AutoSizeText.tsx:233
 #, c-format
@@ -1722,6 +1722,8 @@ msgid ""
 "The size for %1$s will be dynamically adjusted based on the usage of Btrfs "
 "snapshots and the presence of separate file systems for %2$s."
 msgstr ""
+"Kohteen %1$s koko määritellään dynaamisesti Btrfs-vedosten käytön ja kohteen "
+"%2$s erillisten tiedostojärjestelmien olemassa olon perusteella."
 
 #. TRANSLATORS: %s is a mount point (eg. /)
 #: src/components/storage/AutoSizeText.tsx:242
@@ -1730,6 +1732,7 @@ msgid ""
 "The size for %s will be dynamically adjusted based on the usage of Btrfs "
 "snapshots."
 msgstr ""
+"Kohteen %s koko määritellään dynaamisesti Btrfs-vedosten käytön perusteella."
 
 #: src/components/storage/AutoSizeText.tsx:251
 #, c-format
@@ -1737,6 +1740,8 @@ msgid ""
 "The size for %1$s will be dynamically adjusted based on the presence of a "
 "separate file system for %2$s."
 msgstr ""
+"Kohteen %1$s koko määritellään dynaamisesti kohteen %2$s erillisen "
+"tiedostojärjestelmän olemassa olon perusteella."
 
 #: src/components/storage/AutoSizeText.tsx:261
 #, c-format
@@ -1744,13 +1749,15 @@ msgid ""
 "The size for %1$s will be dynamically adjusted based on the presence of "
 "separate file systems for %2$s."
 msgstr ""
+"Kohteen %1$s koko määritellään dynaamisesti kohteen %2$s erillisten "
+"tiedostojärjestelmien olemassa olon perusteella."
 
 #. TRANSLATORS: %1$s is a device type (eg. partition) and %2$s is a size with units (eg. 10 GiB)
 #: src/components/storage/AutoSizeText.tsx:273
 #, c-format
 msgid ""
 "The current configuration will result in an attempt to create a %1$s of %2$s."
-msgstr ""
+msgstr "Nykyisillä asetuksilla %1$s / %2$s tullaan yrittämään luoda."
 
 #: src/components/storage/AutoSizeText.tsx:282
 #, c-format
@@ -1758,6 +1765,8 @@ msgid ""
 "The current configuration will result in an attempt to create a %1$s with a "
 "size between %2$s and %3$s."
 msgstr ""
+"Nykyisillä asetuksilla %1$s kooltaan väliltä %2$s - %3$s tullaan yrittämään "
+"luoda."
 
 #. TRANSLATORS: %1$s is a device type (eg. partition) and %2$s is a size with units (eg. 10 GiB)
 #: src/components/storage/AutoSizeText.tsx:292
@@ -1766,22 +1775,25 @@ msgid ""
 "The current configuration will result in an attempt to create a %1$s of at "
 "least %2$s."
 msgstr ""
+"Nykyisillä asetuksilla %1$s kooltaan vähintään %2$s tullaan yrittämään luoda."
 
 #: src/components/storage/BootSelection.tsx:135
 msgid ""
 "To ensure the new system is able to boot, the installer may need to create "
 "or configure some partitions in the appropriate disk."
 msgstr ""
+"Jotta järjestelmä käynnistyisi, asennusohjelman saattaa täytyä luoda tai "
+"tehdä osioiden asetusmuutoksia soveltuvalla levyllä."
 
 #: src/components/storage/BootSelection.tsx:141
 msgid "Partitions to boot will be allocated at the installation disk."
-msgstr ""
+msgstr "Käynnistämiseen tarvittavat osiot otetaan käyttöön asennuslevyltä."
 
 #. TRANSLATORS: %s is replaced by a device name and size (e.g., "/dev/sda, 500GiB")
 #: src/components/storage/BootSelection.tsx:146
 #, c-format
 msgid "Partitions to boot will be allocated at the installation disk %s."
-msgstr ""
+msgstr "Käynnistämiseen tarvittavat osiot otetaan käyttöön asennuslevyltä %s."
 
 #: src/components/storage/BootSelection.tsx:162
 msgid "Boot options"
@@ -1801,10 +1813,11 @@ msgstr "Valitse levy"
 #: src/components/storage/BootSelection.tsx:205
 msgid "Partitions to boot will be allocated at the following device."
 msgstr ""
+"Käynnistämiseen tarvittavat osiot otetaan käyttöön seuraavalta laitteelta."
 
 #: src/components/storage/BootSelection.tsx:207
 msgid "Choose a disk for placing the boot loader"
-msgstr ""
+msgstr "Valitse levy jolle käynnistyslatain asennetaan"
 
 #: src/components/storage/BootSelection.tsx:230
 msgid "Do not configure"
@@ -1814,10 +1827,12 @@ msgstr "Älä tee asetuksia"
 msgid ""
 "No partitions will be automatically configured for booting. Use with caution."
 msgstr ""
+"Käynnistämiseen käytettäviä osioita ei ole automaattisesti otettu käyttöön. "
+"Käytä tällaisia asetuksia varoen."
 
 #: src/components/storage/ConfigEditor.tsx:35
 msgid "No devices configured yet"
-msgstr ""
+msgstr "Laitteiden asetuksia ei ole tehty"
 
 #: src/components/storage/ConfigEditor.tsx:38
 #, c-format
@@ -1825,6 +1840,8 @@ msgid ""
 "Use actions below to set up your devices or click %s to start from scratch "
 "with the default configuration."
 msgstr ""
+"Käytä alle olevia toimintoja laitteiden asetusten tekemiseen tai napsauta %s "
+"lähteäksesi liikkeelle tyhjältä pöydältä oletuasetuksilla."
 
 #. TRANSLATORS: label for a button
 #: src/components/storage/ConfigEditor.tsx:49
@@ -1837,7 +1854,7 @@ msgstr ""
 
 #: src/components/storage/ConfigEditorMenu.tsx:59
 msgid "Other options toggle"
-msgstr ""
+msgstr "Muiden valintojen tila"
 
 #: src/components/storage/ConfigEditorMenu.tsx:62
 msgid "Other options"
@@ -1845,7 +1862,7 @@ msgstr "Muut valinnat"
 
 #: src/components/storage/ConfigEditorMenu.tsx:70
 msgid "Select the disk to configure partitions for booting"
-msgstr ""
+msgstr "Valitse levy käynnistysosioiden määrittämiseksi"
 
 #: src/components/storage/ConfigEditorMenu.tsx:72
 msgid "Change boot options"
@@ -1853,7 +1870,7 @@ msgstr "Muuta käynnistysvalintoja"
 
 #: src/components/storage/ConfigEditorMenu.tsx:77
 msgid "Start from scratch with the default configuration"
-msgstr ""
+msgstr "Lähde liikkeelle tyhjältä pöydältä oletusetuksilla"
 
 #: src/components/storage/ConfigEditorMenu.tsx:79
 msgid "Reset to defaults"
@@ -1861,24 +1878,24 @@ msgstr "Palauta oletuksiin"
 
 #: src/components/storage/ConfigEditorMenu.tsx:85
 msgid "Discover and connect to iSCSI targets"
-msgstr ""
+msgstr "Löydä ja yhdistä iSCSI-kohteita"
 
 #: src/components/storage/ConfigEditorMenu.tsx:87
 msgid "Configure iSCSI"
-msgstr ""
+msgstr "Tee iSCSI-asetukset"
 
 #: src/components/storage/ConfigEditorMenu.tsx:93
 #: src/components/storage/ProposalPage.tsx:155
 msgid "Activate zFCP disks"
-msgstr ""
+msgstr "Aktivoi zFCP-levyt"
 
 #: src/components/storage/ConfigEditorMenu.tsx:95
 msgid "Configure zFCP"
-msgstr ""
+msgstr "Tee zFCP-asetukset"
 
 #: src/components/storage/ConfigEditorMenu.tsx:102
 msgid "Activate and format DASD devices"
-msgstr ""
+msgstr "Aktivoi ja alusta DASD-laitteita"
 
 #: src/components/storage/ConfigEditorMenu.tsx:104
 msgid "Configure DASD"
@@ -1886,7 +1903,7 @@ msgstr "Tee DASD-asetukset"
 
 #: src/components/storage/ConfigEditorMenu.tsx:110
 msgid "Update available disks and activate crypt devices"
-msgstr ""
+msgstr "Päivitä saatavilla olevia laitteita ja aktivoi salatut laitteet"
 
 #: src/components/storage/ConfigEditorMenu.tsx:112
 msgid "Rescan devices"
@@ -1894,41 +1911,41 @@ msgstr "Tutki laitteet uudelleen"
 
 #: src/components/storage/ConfigureDeviceMenu.tsx:48
 msgid "Select a device to define partitions or to mount"
-msgstr ""
+msgstr "Valitse laite osioiden määrittämiseen tai liittämiseen"
 
 #: src/components/storage/ConfigureDeviceMenu.tsx:49
 msgid "Select another device to define partitions or to mount"
-msgstr ""
+msgstr "Valitse toinen laite osioiden määrittämiseen tai liittämiseen"
 
 #: src/components/storage/ConfigureDeviceMenu.tsx:52
 msgid "Select a disk to define partitions or to mount"
-msgstr ""
+msgstr "Valitse levy osioiden määrittämiseen tai liittämiseen"
 
 #: src/components/storage/ConfigureDeviceMenu.tsx:53
 msgid "Select another disk to define partitions or to mount"
-msgstr ""
+msgstr "Valitse toinen levy osioiden määrittämiseen tai liittämiseen"
 
 #: src/components/storage/ConfigureDeviceMenu.tsx:58
 msgid "Already using all available devices"
-msgstr ""
+msgstr "Kaikki saatavilla olevat laitteet ovat jo käytössä"
 
 #: src/components/storage/ConfigureDeviceMenu.tsx:59
 msgid "Already using all available disks"
-msgstr ""
+msgstr "Kaikki saatavilla olevat levyt ovat jo käytössä"
 
 #: src/components/storage/ConfigureDeviceMenu.tsx:66
 #, c-format
 msgid "Extend the installation beyond the currently selected device"
 msgid_plural "Extend the installation beyond the current %d devices"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Laajenna asennusta käyttämään muutakin kuin nykyistä laitetta"
+msgstr[1] "Laajenna asennusta käyttämään muutakin kuin nykyisiä %d laitteita"
 
 #: src/components/storage/ConfigureDeviceMenu.tsx:75
 #, c-format
 msgid "Extend the installation beyond the currently selected disk"
 msgid_plural "Extend the installation beyond the current %d disks"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Laajenna asennusta käyttämään muutakin kuin nykyistä levyä"
+msgstr[1] "Laajenna asennusta käyttämään muutakin kuin nykyisiä %d levyjä"
 
 #: src/components/storage/ConfigureDeviceMenu.tsx:83
 msgid "Start configuring a basic installation"
@@ -1940,19 +1957,19 @@ msgstr "Lisää laitevalikko"
 
 #: src/components/storage/ConfigureDeviceMenu.tsx:143
 msgid "Define a new LVM on top of one or several disks"
-msgstr ""
+msgstr "Määritä uusi LVM yhdelle tai usemmalle levylle"
 
 #: src/components/storage/ConfigureDeviceMenu.tsx:144
 msgid "Define a new LVM on the disk"
-msgstr ""
+msgstr "Määritä uusi LVM levylle"
 
 #: src/components/storage/ConfigureDeviceMenu.tsx:150
 msgid "Configure device menu"
-msgstr ""
+msgstr "Laitteen asetusvalikko"
 
 #: src/components/storage/ConfigureDeviceMenu.tsx:166
 msgid "Add LVM volume group"
-msgstr ""
+msgstr "Lisää LVM-taltioryhmä"
 
 #: src/components/storage/ConfigureDeviceMenu.tsx:170
 msgid "More devices"
@@ -2008,6 +2025,8 @@ msgid ""
 "The modal selector offers a simplified interface designed for quick and "
 "straightforward use, without overwhelming the user."
 msgstr ""
+"Valitsin tarjoaa yksinkertaistetun käyttöliittymän nopeaan ja "
+"suoraviivaiseen käyttöön kuormittamatta käyttäjää liikaa."
 
 #: src/components/storage/DeviceSelectorPage.tsx:85
 msgid ""
@@ -2015,6 +2034,9 @@ msgid ""
 "version that provides more space for detailed views, additional columns, "
 "filters, and extended functionality."
 msgstr ""
+"Edistyneempiin tarpeisiin voidaan vaihtaa koko sivun kokoinen versio "
+"käyttöön, joka tarjoaa enemmän tilaa tiedoille, lisäsarakkeita, suodattimia "
+"ja lisätoimintoja."
 
 #: src/components/storage/DeviceSelectorPage.tsx:90
 msgid ""
@@ -2023,6 +2045,10 @@ msgid ""
 "deeper exploration and more complex actions, specially for users with tons "
 "of devices."
 msgstr ""
+"Tämä valinta on selkeyden ja tehokkuuden väliltä: yksinkertaiset valinnat on "
+"helppo tehdä, kun taas täysi näkymä tukee syvempää paneutumista valintoihin "
+"ja monimutkaisempia toimintoja erityisesti runsaiden laitemäärien "
+"käyttäjille."
 
 #. TRANSLATORS: %s will be replaced by a disk name and its size - "sda (20 GiB)"
 #: src/components/storage/DriveHeader.tsx:33
@@ -2040,13 +2066,13 @@ msgstr "Alusta levy %s"
 #: src/components/storage/DriveHeader.tsx:46
 #, c-format
 msgid "Use disk %s to install, host LVM and boot"
-msgstr ""
+msgstr "Käytä levyä %s asennukseen, LVM:n käyttöön ja käynnistymiseen"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
 #: src/components/storage/DriveHeader.tsx:49
 #, c-format
 msgid "Use disk %s to install and host LVM"
-msgstr ""
+msgstr "Käytä levyä %s asennukseen ja LVM:n käyttöön"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
 #: src/components/storage/DriveHeader.tsx:54
@@ -2058,49 +2084,49 @@ msgstr "Käytä levyä %s asennukseen ja käynnistämiseen"
 #: src/components/storage/DriveHeader.tsx:57
 #, c-format
 msgid "Use disk %s to install"
-msgstr ""
+msgstr "Käytä levyä %s asennukseen"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
 #: src/components/storage/DriveHeader.tsx:64
 #, c-format
 msgid "Use disk %s for LVM, additional partitions and booting"
-msgstr ""
+msgstr "Käytä levyä %s LVM:n käyttöön, lisäosioihin ja käynnistymiseen"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
 #: src/components/storage/DriveHeader.tsx:67
 #, c-format
 msgid "Use disk %s for LVM and additional partitions"
-msgstr ""
+msgstr "Käytä levyä %s LVM:n käyttöön ja lisäosioihin"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
 #: src/components/storage/DriveHeader.tsx:72
 #, c-format
 msgid "Use disk %s for additional partitions and booting"
-msgstr ""
+msgstr "Käytä levyä %s lisäosioihin ja käynnistymiseen"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
 #: src/components/storage/DriveHeader.tsx:75
 #, c-format
 msgid "Use disk %s for additional partitions"
-msgstr ""
+msgstr "Käytä levyä %s llisäosioihin"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
 #: src/components/storage/DriveHeader.tsx:81
 #, c-format
 msgid "Use disk %s to host LVM and boot"
-msgstr ""
+msgstr "Käytä levyä %s LVM:n käyttöön ja käynnistymiseen"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
 #: src/components/storage/DriveHeader.tsx:84
 #, c-format
 msgid "Use disk %s to host LVM"
-msgstr ""
+msgstr "Käytä levyä %s LVM:n käyttöön"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
 #: src/components/storage/DriveHeader.tsx:89
 #, c-format
 msgid "Use disk %s to configure boot partitions"
-msgstr ""
+msgstr "Käytä levyä %s käynnistymisosioiden määrittämiseen"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
 #: src/components/storage/DriveHeader.tsx:92
@@ -2129,17 +2155,21 @@ msgid ""
 "Protection for the information stored at the new file systems, including "
 "data, programs, and system files."
 msgstr ""
+"Uusien tiedostojärjestelmien tietojen turvaaminen, mukaanlukien data, "
+"ohjelmistot ja järjestelmätiedostot."
 
 #: src/components/storage/EncryptionSettingsPage.tsx:74
 #: src/components/users/RootUserForm.tsx:104
 msgid "Password is empty."
-msgstr ""
+msgstr "Salasana on tyhjä."
 
 #. TRANSLATORS: "Trusted Platform Module" is the name of the technology and TPM its abbreviation
 #: src/components/storage/EncryptionSettingsPage.tsx:90
 msgid ""
 "Use the Trusted Platform Module (TPM) to decrypt automatically on each boot"
 msgstr ""
+"Käytä Trusted Platform Module (TPM) -ominaisuutta salauksen purkamiseen "
+"automaattisesti jokaisessa käynnistyksessä"
 
 #: src/components/storage/EncryptionSettingsPage.tsx:94
 msgid ""
@@ -2147,6 +2177,9 @@ msgid ""
 "verify the integrity of the system. TPM sealing requires the new system to "
 "be booted directly on its first run."
 msgstr ""
+"Salasanaa ei tarvita käynnistämiseen ja tietoihin pääsyyn, jos TPM onnistuu "
+"varmistamaan järjestelmän eheyden. TPM-sinetöinti vaatii, että uuteen "
+"järjestelmään käynnistetään suoraan ensimmäisellä kerralla."
 
 #: src/components/storage/EncryptionSettingsPage.tsx:104
 msgid "Encryption settings"
@@ -2161,26 +2194,29 @@ msgid ""
 "Full Disk Encryption (FDE) allows to protect the information stored at the "
 "new file systems, including data, programs, and system files."
 msgstr ""
+"Koko levyn salaus (FDE) mahdollistaa uusien tiedostojärjestelmien tietojen, "
+"kuten datan, ohjelmistojen ja järjestelmätiedostojen, turvaamisen."
 
 #: src/components/storage/FilesystemMenu.tsx:44
 msgid "The device will be mounted"
-msgstr ""
+msgstr "Laite liitetään"
 
 #: src/components/storage/FilesystemMenu.tsx:45
 msgid "The device will be formatted"
-msgstr ""
+msgstr "Laite alustetaan"
 
 #. TRANSLATORS: %s is a formatted mount point (eg. '"/home'").
 #: src/components/storage/FilesystemMenu.tsx:51
 #, c-format
 msgid "The current file system will be mounted at %s"
-msgstr ""
+msgstr "Nykyinen tiedostojärjestelmä liitetään kohteeseen %s"
 
 #. TRANSLATORS: %1$s is a filesystem type (eg. Btrfs), %2$s is a mount point (eg. '"/home"').
 #: src/components/storage/FilesystemMenu.tsx:54
 #, c-format
 msgid "The device will be formatted as %1$s and mounted at %2$s"
 msgstr ""
+"Laite alustetaan tiedostojärjestelmällä %1$s ja liitetään kohteeseen %2$s"
 
 #. TRANSLATORS: %s is the name of device, like '/dev/sda'.
 #: src/components/storage/FilesystemMenu.tsx:67
@@ -2188,7 +2224,7 @@ msgstr ""
 #: src/components/storage/UnusedMenu.tsx:45
 #, c-format
 msgid "Details for %s"
-msgstr ""
+msgstr "Tiedot kohteelle %s"
 
 #: src/components/storage/FilesystemMenu.tsx:75
 #: src/components/storage/PartitionsMenu.tsx:187
@@ -2197,24 +2233,24 @@ msgstr ""
 #: src/components/storage/UnusedMenu.tsx:56
 #: src/components/storage/VolumeGroupEditor.tsx:156
 msgid "Details"
-msgstr ""
+msgstr "Tiedot"
 
 #: src/components/storage/FilesystemMenu.tsx:91
 msgid "Change the file system or mount point"
-msgstr ""
+msgstr "Vaihda tiedostojärjestelmää tai liitoskohtaa"
 
 #: src/components/storage/FixableConfigInfo.tsx:48
 msgid "The configuration must be adapted to address the following issue:"
 msgid_plural ""
 "The configuration must be adapted to address the following issues:"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Asetuksia tulee muuttaa seuraavan ongelman ratkaisemiseksi:"
+msgstr[1] "Asetuksia tulee muuttaa seuraavien ongelmien ratkaisemiseksi:"
 
 #: src/components/storage/FormattableDevicePage.tsx:221
 #: src/components/storage/LogicalVolumePage.tsx:248
 #: src/components/storage/PartitionPage.tsx:308
 msgid "Select or enter a valid mount point"
-msgstr ""
+msgstr "Valitse tai syötä kelvollinen liitoskohtaa"
 
 #: src/components/storage/FormattableDevicePage.tsx:231
 #: src/components/storage/LogicalVolumePage.tsx:258
@@ -2222,6 +2258,8 @@ msgstr ""
 msgid ""
 "Select or enter a mount point that is not already assigned to another device"
 msgstr ""
+"Valitse tai syötä kelvollinen liitoskohtaa joka ei ole jo toisen laitteen "
+"käytössä"
 
 #: src/components/storage/FormattableDevicePage.tsx:280
 #: src/components/storage/LogicalVolumePage.tsx:443
@@ -2230,7 +2268,7 @@ msgstr ""
 #: src/components/storage/PartitionPage.tsx:560
 #: src/components/storage/PartitionPage.tsx:888
 msgid "Waiting for a mount point"
-msgstr ""
+msgstr "Odotetaan liitoskohtaa"
 
 #. TRANSLATORS: %s is a device name (eg. /dev/sda3).
 #: src/components/storage/FormattableDevicePage.tsx:283
@@ -2245,7 +2283,7 @@ msgstr "Tämänhetkinen %s"
 #: src/components/storage/PartitionPage.tsx:564
 #: src/components/storage/utils.ts:338
 msgid "Btrfs with snapshots"
-msgstr ""
+msgstr "Btrfs tilannevedoksilla"
 
 #: src/components/storage/FormattableDevicePage.tsx:302
 #: src/components/storage/LogicalVolumePage.tsx:479
@@ -2256,15 +2294,15 @@ msgstr "Oletustiedostojärjestelmä kohteelle %s"
 
 #: src/components/storage/FormattableDevicePage.tsx:303
 msgid "Default file system for generic mount paths"
-msgstr ""
+msgstr "Oletustiedostojärjestelmä yleiseille liitospoluille"
 
 #: src/components/storage/FormattableDevicePage.tsx:305
 msgid "Destroy current data and format device as"
-msgstr ""
+msgstr "Tuhoa nykyiset tiedot ja alusta laite tiedostojärjestelmällä"
 
 #: src/components/storage/FormattableDevicePage.tsx:306
 msgid "Format device as"
-msgstr ""
+msgstr "Alusta laite tiedostojärjestelmällä"
 
 #. TRANSLATORS: %s is the name of a partition, like /dev/vda2
 #. TRANSLATORS: %s is the name of a device, like vda
@@ -2272,18 +2310,18 @@ msgstr ""
 #: src/components/storage/PartitionPage.tsx:599
 #, c-format
 msgid "Do not format %s and keep the data"
-msgstr ""
+msgstr "Älä alusta kohdetta %s ja säilytä tiedot"
 
 #: src/components/storage/FormattableDevicePage.tsx:384
 #: src/components/storage/LogicalVolumePage.tsx:548
 #: src/components/storage/PartitionPage.tsx:664
 msgid "File system label"
-msgstr ""
+msgstr "Tiedostojärjestelmän nimike"
 
 #: src/components/storage/FormattableDevicePage.tsx:453
 #, c-format
 msgid "Configure device %s"
-msgstr ""
+msgstr "Tee laitteen %s asetukset"
 
 #: src/components/storage/FormattableDevicePage.tsx:460
 #: src/components/storage/FormattableDevicePage.tsx:467
@@ -2292,25 +2330,25 @@ msgstr ""
 #: src/components/storage/PartitionPage.tsx:821
 #: src/components/storage/PartitionPage.tsx:828
 msgid "Mount point"
-msgstr ""
+msgstr "Liitoskohta"
 
 #: src/components/storage/FormattableDevicePage.tsx:465
 #: src/components/storage/LogicalVolumePage.tsx:696
 #: src/components/storage/PartitionPage.tsx:826
 msgid "Mount point toggle"
-msgstr ""
+msgstr "Liitoskohdan tila"
 
 #: src/components/storage/FormattableDevicePage.tsx:466
 #: src/components/storage/LogicalVolumePage.tsx:697
 #: src/components/storage/PartitionPage.tsx:827
 msgid "Suggested mount points"
-msgstr ""
+msgstr "Ehdotetut liitoskohdat"
 
 #: src/components/storage/FormattableDevicePage.tsx:468
 #: src/components/storage/LogicalVolumePage.tsx:699
 #: src/components/storage/PartitionPage.tsx:829
 msgid "Clear selected mount point"
-msgstr ""
+msgstr "Tyhjennä valittu liitoskohta"
 
 #: src/components/storage/FormattableDevicePage.tsx:471
 #: src/components/storage/LogicalVolumePage.tsx:702
@@ -2322,7 +2360,7 @@ msgstr "Käytä"
 #: src/components/storage/LogicalVolumePage.tsx:708
 #: src/components/storage/PartitionPage.tsx:850
 msgid "Select or enter a mount point"
-msgstr ""
+msgstr "Valitse tai syötä liitoskohta"
 
 #: src/components/storage/FormattableDevicePage.tsx:488
 #: src/components/storage/LogicalVolumePage.tsx:733
@@ -2347,62 +2385,63 @@ msgstr "Syötä nimi"
 #: src/components/storage/LogicalVolumePage.tsx:296
 #: src/components/storage/PartitionPage.tsx:346
 msgid "The minimum cannot be greater than the maximum"
-msgstr ""
+msgstr "Minimi ei voi olla isompi kuin maksimi"
 
 #: src/components/storage/LogicalVolumePage.tsx:304
 msgid ""
 "The maximum must be a number optionally followed by a unit like GiB or GB"
-msgstr ""
+msgstr "Maisimin tulee olla luku jota voi seurata yksikkö kuten GiB tai GB"
 
 #: src/components/storage/LogicalVolumePage.tsx:312
 msgid ""
 "The minimum must be a number optionally followed by a unit like GiB or GB"
-msgstr ""
+msgstr "Minimin tulee olla luku jota voi seurata yksikkö kuten GiB tai GB"
 
 #: src/components/storage/LogicalVolumePage.tsx:319
 msgid ""
 "Size limits must be numbers optionally followed by a unit like GiB or GB"
 msgstr ""
+"Kokorajojen tulee olla lukuja joita voi seurata yksikkö kuten GiB tai GB"
 
 #: src/components/storage/LogicalVolumePage.tsx:438
 #: src/components/storage/LogicalVolumePage.tsx:441
 msgid "Logical volume name"
-msgstr ""
+msgstr "Loogisen taltion nimi"
 
 #: src/components/storage/LogicalVolumePage.tsx:480
 msgid "Default file system for generic logical volumes"
-msgstr ""
+msgstr "Oletustiedostojärjestelmä loogisille taltioille"
 
 #: src/components/storage/LogicalVolumePage.tsx:482
 msgid "Format logical volume as"
-msgstr ""
+msgstr "Alusta looginen taltio tiedostojärjestelmällä"
 
 #: src/components/storage/LogicalVolumePage.tsx:683
 #, c-format
 msgid "Configure LVM logical volume at %s volume group"
-msgstr ""
+msgstr "Tee asetukset loogiselle LVM-taltiolle taltioryhmässä %s"
 
 #: src/components/storage/LogicalVolumePage.tsx:757
 #: src/components/storage/PartitionPage.tsx:883
 msgid "Size mode"
-msgstr ""
+msgstr "Koon tila"
 
 #: src/components/storage/LvmPage.tsx:77
 msgid "Enter a name for the volume group."
-msgstr ""
+msgstr "Syötä taltioryhmän nimi."
 
 #: src/components/storage/LvmPage.tsx:81
 #, c-format
 msgid "Volume group '%s' already exists. Enter a different name."
-msgstr ""
+msgstr "Taltioryhmä ”%s” on jo olemassa, syötä toinen nimi."
 
 #: src/components/storage/LvmPage.tsx:85
 msgid "Select at least one disk."
-msgstr ""
+msgstr "Valitse vähintään yksi levy."
 
 #: src/components/storage/LvmPage.tsx:163
 msgid "Configure LVM Volume Group"
-msgstr ""
+msgstr "Tee LVM-taltioryhmän asetukset"
 
 #: src/components/storage/LvmPage.tsx:178
 #: src/components/storage/zfcp/ZFCPPage.tsx:131
@@ -2416,40 +2455,46 @@ msgid ""
 "select more than one disk, the                 physical volumes may be "
 "distributed along several disks."
 msgstr ""
+"Vaaditut fyysiset LVM-taltiot lisätään osioina valituille "
+"levyille,                 perustuen loogisten taltioiden kokoihin. Jos "
+"valitse useamman kuin yhden levyn                 fyysiset taltiot saatetaan "
+"jakaa usean levyn välille."
 
 #: src/components/storage/LvmPage.tsx:216
 msgid "Move mount points"
-msgstr ""
+msgstr "Siirrä liitoskohtia"
 
 #: src/components/storage/LvmPage.tsx:220
 msgid ""
 "Move the mount points currently configured at the selected disks to "
 "logical                   volumes of this volume group."
 msgstr ""
+"Siirrä nykyisten valittujen levyjen asetettuja liitoskohtia "
+"tämän                   taltioryhmän loogisille taltioille."
 
 #. TRANSLATORS: %s will be replaced by a RAID name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:33
 #, c-format
 msgid "Mount RAID %s"
-msgstr ""
+msgstr "Liitäs RAID %s"
 
 #. TRANSLATORS: %s will be replaced by a RAID name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:35
 #, c-format
 msgid "Format RAID %s"
-msgstr ""
+msgstr "Alusta RAID %s"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:46
 #, c-format
 msgid "Use RAID %s to install, host LVM and boot"
-msgstr ""
+msgstr "Käytä kohdetta RAID %s asennukseen, LVM-taltioihin ja käynnistämiseen"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:49
 #, c-format
 msgid "Use RAID %s to install and host LVM"
-msgstr ""
+msgstr "Käytä kohdetta RAID %s asennukseen ja LVM-taltioihin"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:54
@@ -2461,67 +2506,67 @@ msgstr "Käytä RAID-kohdetta %s asennukseen ja käynnistämiseen"
 #: src/components/storage/MdRaidHeader.tsx:57
 #, c-format
 msgid "Use RAID %s to install"
-msgstr ""
+msgstr "Käytä kohdetta RAID %s asennukseen"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:64
 #, c-format
 msgid "Use RAID %s for LVM, additional partitions and booting"
-msgstr ""
+msgstr "Käytä kohdetta RAID %s asennukseen, lisäosioihin ja käynnistämiseen"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:67
 #, c-format
 msgid "Use RAID %s for LVM and additional partitions"
-msgstr ""
+msgstr "Käytä kohdetta RAID %s LVM-taltioihin ja lisäosioihin"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:72
 #, c-format
 msgid "Use RAID %s for additional partitions and booting"
-msgstr ""
+msgstr "Käytä kohdetta RAID %s lisäosioihin ja käynnistämiseen"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:75
 #, c-format
 msgid "Use RAID %s for additional partitions"
-msgstr ""
+msgstr "Käytä kohdetta RAID %s lisäosioihin"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:81
 #, c-format
 msgid "Use RAID %s to host LVM and boot"
-msgstr ""
+msgstr "Käytä kohdetta RAID %s LVM-taltioihin ja käynnistämiseen"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:84
 #, c-format
 msgid "Use RAID %s to host LVM"
-msgstr ""
+msgstr "Käytä kohdetta RAID %s LVM-taltioihin"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:89
 #, c-format
 msgid "Use RAID %s to configure boot partitions"
-msgstr ""
+msgstr "Käytä kohdetta RAID %s käynnistysosioiden asettamiseen"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:92
 #, c-format
 msgid "Use RAID %s"
-msgstr ""
+msgstr "Käytä kohdetta RAID %s"
 
 #. TRANSLATORS: %s is the short name of a disk, like 'sda'
 #: src/components/storage/NewVgMenuOption.tsx:46
 #, c-format
 msgid "Create another LVM volume group on %s"
-msgstr ""
+msgstr "Luo ylimääräinen LVM-taltioryhmä kohteelle %s"
 
 #. TRANSLATORS: %s is the short name of a disk, like 'sda'
 #: src/components/storage/NewVgMenuOption.tsx:50
 #, c-format
 msgid "Create LVM volume group on %s"
-msgstr ""
+msgstr "Luo LVM-taltioryhmä kohteelle %s"
 
 #. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case).
@@ -2529,64 +2574,64 @@ msgstr ""
 #, c-format
 msgid "%s will be created as a logical volume"
 msgid_plural "%s will be created as logical volumes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%s luodaan loogisena taltiona"
+msgstr[1] "%s luodaan loogisina taltioina"
 
 #: src/components/storage/PartitionPage.tsx:354
 msgid "The maximum must be a number followed by a unit like GiB or GB"
-msgstr ""
+msgstr "Maksimimäärän tulee olla luku jota seuraa yksikkö kuten GiB tai GB"
 
 #: src/components/storage/PartitionPage.tsx:362
 msgid "The minimum must be a number followed by a unit like GiB or GB"
-msgstr ""
+msgstr "Minimin tulee olla luku jota seuraa yksikkö kuten GiB tai GB"
 
 #: src/components/storage/PartitionPage.tsx:369
 msgid "Size limits must be numbers followed by a unit like GiB or GB"
-msgstr ""
+msgstr "Kokorajojen tulee olla lukuja joita seuraa yksikkö kuten GiB tai GB"
 
 #. TRANSLATORS: %s is a disk name with its size (eg. "sda, 10 GiB"
 #: src/components/storage/PartitionPage.tsx:498
 #, c-format
 msgid "As a new partition on %s"
-msgstr ""
+msgstr "Uutena osiona kohteelle %s"
 
 #: src/components/storage/PartitionPage.tsx:500
 #, c-format
 msgid "Using partition %s"
-msgstr ""
+msgstr "Käytetään osiota %s"
 
 #: src/components/storage/PartitionPage.tsx:529
 msgid "Mount point options"
-msgstr ""
+msgstr "Liitoskohdan valinnat"
 
 #: src/components/storage/PartitionPage.tsx:534
 msgid "Using an existing partition"
-msgstr ""
+msgstr "Käytä olemassa olevaa osioita"
 
 #: src/components/storage/PartitionPage.tsx:545
 msgid "There are not usable partitions"
-msgstr ""
+msgstr "Käytettävissä olevia osioita ei ole"
 
 #: src/components/storage/PartitionPage.tsx:583
 msgid "Default file system for generic partitions"
-msgstr ""
+msgstr "Oletustiedostojärjestelmä yleisille osioille"
 
 #: src/components/storage/PartitionPage.tsx:585
 msgid "Destroy current data and format partition as"
-msgstr ""
+msgstr "Tuhoa nykyiset tiedot ja alusta osio tiedostojärjestelmällä"
 
 #: src/components/storage/PartitionPage.tsx:586
 msgid "Format partition as"
-msgstr ""
+msgstr "Alusta osio tiedostojärjestelmällä"
 
 #: src/components/storage/PartitionPage.tsx:813
 #, c-format
 msgid "Configure partition at %s"
-msgstr ""
+msgstr "Teen osion %s asetukset"
 
 #: src/components/storage/PartitionPage.tsx:838
 msgid "Mount point mode"
-msgstr ""
+msgstr "Liitoskohdan tilavalinta"
 
 #: src/components/storage/PartitionPage.tsx:918
 msgid "Go to storage page"
@@ -2594,48 +2639,48 @@ msgstr "Mene tallennustilasivulle"
 
 #: src/components/storage/PartitionsMenu.tsx:63
 msgid "Moreover, the following partitions will be created or mounted"
-msgstr ""
+msgstr "Lisäksi seuravat osiot luodaan tai liitetään"
 
 #: src/components/storage/PartitionsMenu.tsx:67
 msgid "Moreover, the following partition will be created."
 msgid_plural "Moreover, the following partitions will be created."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Lisäksi seuraava osio luodaan."
+msgstr[1] "Lisäksi seuraavat osiot luodaan."
 
 #: src/components/storage/PartitionsMenu.tsx:73
 msgid "Moreover, the following partition will be mounted."
 msgid_plural "Moreover, the following partitions will be mounted."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Lisäksi seuraava osio liitetään."
+msgstr[1] "Lisäksi seuraavat osiot liitetään."
 
 #: src/components/storage/PartitionsMenu.tsx:80
 msgid "The following partitions will be created or mounted"
-msgstr ""
+msgstr "Seuraavat osiot luodaan tai liitetään"
 
 #: src/components/storage/PartitionsMenu.tsx:84
 msgid "The following partition will be created."
 msgid_plural "The following partitions will be created."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Seuraavat osio luodaan."
+msgstr[1] "Seuraavat osiot luodaan."
 
 #: src/components/storage/PartitionsMenu.tsx:90
 msgid "The following partition will be mounted."
 msgid_plural "The following partitions will be mounted."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Seuraava osio liitetään."
+msgstr[1] "Seuraavat osiot liitetään."
 
 #: src/components/storage/PartitionsMenu.tsx:132
 msgid "Any partition needed to boot will be configured."
-msgstr ""
+msgstr "Kaikkien käynnistämiseen käytettävien osioiden asetukset tehdään."
 
 #: src/components/storage/PartitionsMenu.tsx:174
 msgid "Add another partition or mount an existing one"
-msgstr ""
+msgstr "Lisää ylimääräinen osio tai liitä olemassa oleva"
 
 #: src/components/storage/PartitionsMenu.tsx:177
 #: src/components/storage/UnusedMenu.tsx:73
 msgid "Add or use partition"
-msgstr ""
+msgstr "Lisää tai käytä osiota"
 
 #: src/components/storage/Progress.tsx:117
 msgid "Loading storage"
@@ -2645,98 +2690,107 @@ msgstr "Ladataan tallennustilaa"
 #, c-format
 msgid "Hide %d subvolume action"
 msgid_plural "Hide %d subvolume actions"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Piilota %d alitaltion toiminto"
+msgstr[1] "Piilota %d alitaltion toimintoa"
 
 #: src/components/storage/ProposalActionsDialog.tsx:78
 #, c-format
 msgid "Show %d subvolume action"
 msgid_plural "Show %d subvolume actions"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Näytä %d alitaltion toiminto"
+msgstr[1] "Näytä %d alitaltion toimintoa"
 
 #: src/components/storage/ProposalFailedInfo.tsx:54
 msgid ""
 "It is not possible to install the system with the current configuration. "
 "Adjust the settings below."
 msgstr ""
+"Järjestelmää ei voi asentaa nykyisillä asetuksilla. Muuta asetuksia alta."
 
 #. TRANSLATORS: %s is a list of formatted mount points with a partition size like
 #. '"/" (at least 10 GiB), "/var" (20 GiB) and "swap" (2 GiB)'
 #: src/components/storage/ProposalFailedInfo.tsx:67
 #, c-format
 msgid "It is not possible to allocate space for the boot partition and for %s."
-msgstr ""
+msgstr "Käynnistysosiolle ja kohteelle %s ei ole mahdollista varata tilaa."
 
 #. TRANSLATORS: %s is a list of formatted mount points with a partition size like
 #. '"/" (at least 10 GiB), "/var" (20 GiB) and "swap" (2 GiB)'
 #: src/components/storage/ProposalFailedInfo.tsx:70
 #, c-format
 msgid "It is not possible to allocate space for %s."
-msgstr ""
+msgstr "Kohteelle %s ei ole mahdollista varata tilaa."
 
 #: src/components/storage/ProposalFailedInfo.tsx:75
 msgid ""
 "Adjust the settings below to make the new system fit into the available "
 "space."
 msgstr ""
+"Muuta alla olevia asetuksia mahdollistaaksesi riittävän tilan löytymisen "
+"uudelle järjestelmälle."
 
 #: src/components/storage/ProposalFailedInfo.tsx:98
 msgid "Failed to calculate a storage layout"
-msgstr ""
+msgstr "Tallennustilan määritysten laskeminen ei onnistunut"
 
 #: src/components/storage/ProposalPage.tsx:70
 msgid "Invalid storage settings"
-msgstr ""
+msgstr "Virheelliset tallennustilan asetukset"
 
 #: src/components/storage/ProposalPage.tsx:77
 msgid "The current storage configuration has the following issue:"
 msgid_plural "The current storage configuration has the following issues:"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Nykyisissä tallennustilan asetuksissa on seuraava ongelma:"
+msgstr[1] "Nykyisissä tallennustilan asetuksissa on seuraavat ongelmat:"
 
 #: src/components/storage/ProposalPage.tsx:91
 msgid ""
 "You may want to discard those settings and start from scratch with a simple "
 "configuration."
 msgstr ""
+"Saatat haluta hylätä nykyiset asetukset ja aloittaa alusta yksinkertaisilla "
+"asetuksilla."
 
 #: src/components/storage/ProposalPage.tsx:95
 #: src/components/storage/ProposalPage.tsx:123
 #: src/components/storage/UnsupportedModelInfo.tsx:55
 msgid "Reset to the default configuration"
-msgstr ""
+msgstr "Palauta oletusasetukset"
 
 #: src/components/storage/ProposalPage.tsx:107
 #: src/components/storage/UnsupportedModelInfo.tsx:39
 msgid "Unable to modify the settings"
-msgstr ""
+msgstr "Asetusten muuttaminen ei onnistu"
 
 #: src/components/storage/ProposalPage.tsx:113
 msgid ""
 "The storage configuration uses elements not supported by this interface."
-msgstr ""
+msgstr "Tämä liitäntä ei tue tallennustilan käyttämäiä elementtejä."
 
 #: src/components/storage/ProposalPage.tsx:119
 msgid ""
 "You may want to discard the current settings and start from scratch with a "
 "simple configuration."
 msgstr ""
+"Saatat haluta hylätä nykyiset asetukset ja aloittaa tyhjältä pöydältä "
+"yksinkertaisilla asetuksilla."
 
 #: src/components/storage/ProposalPage.tsx:135
 msgid ""
 "There are not disks available for the installation. You may need to "
 "configure some device."
 msgstr ""
+"Asennukseen ei ole käytettävissä levyjä. Jonkin laitteen asetukset tulee "
+"tehdä."
 
 #: src/components/storage/ProposalPage.tsx:140
 #: src/components/storage/dasd/DASDTable.tsx:306
 msgid "No devices found"
-msgstr ""
+msgstr "Laitteita ei löydy"
 
 #: src/components/storage/ProposalPage.tsx:149
 msgid "Connect to iSCSI targets"
-msgstr ""
+msgstr "Yhdistä iSCSI-kohteisiin"
 
 #: src/components/storage/ProposalPage.tsx:162
 msgid "Manage DASD devices"
@@ -2751,14 +2805,16 @@ msgid ""
 "Structure of the new system, including disks to use and additional devices "
 "like LVM volume groups."
 msgstr ""
+"Uuden järjestelmän rakenne, mukaan lukien käytettävät levyt ja lisälaitteet "
+"kuten LVM-taltioryhmät."
 
 #: src/components/storage/ProposalPage.tsx:262
 msgid "Reloading data, please wait..."
-msgstr ""
+msgstr "Ladataan tietoja uudelleen, odota..."
 
 #: src/components/storage/ProposalResultSection.tsx:39
 msgid "Waiting for information about storage configuration"
-msgstr ""
+msgstr "Odotetaan tietoja tallennustilan asetuksista"
 
 #: src/components/storage/ProposalResultSection.tsx:64
 #, c-format
@@ -2806,7 +2862,7 @@ msgstr "Ennen %s"
 
 #: src/components/storage/ProposalResultTable.tsx:133
 msgid "Mount Point"
-msgstr "Liitospiste"
+msgstr "Liitoskohta"
 
 #: src/components/storage/ProposalTransactionalInfo.tsx:43
 msgid "Transactional root file system"
