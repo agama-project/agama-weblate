@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-22 12:48+0000\n"
+"POT-Creation-Date: 2025-10-28 17:13+0000\n"
 "PO-Revision-Date: 2025-09-11 13:42+0000\n"
 "Last-Translator: Antonio Simón <antonio@trans-mission.com>\n"
 "Language-Team: Spanish <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -64,7 +64,7 @@ msgid "Continue"
 msgstr "Continuar"
 
 #. TRANSLATORS: button label
-#: src/components/core/InstallButton.tsx:62 src/components/core/Page.tsx:234
+#: src/components/core/InstallButton.tsx:62 src/components/core/Page.tsx:247
 #: src/components/core/Popup.tsx:140
 #: src/components/network/BindingSettingsForm.tsx:228
 #: src/components/network/IpSettingsForm.tsx:219
@@ -206,7 +206,7 @@ msgstr "Utilizar los mismos ajustes para el producto seleccionado"
 #: src/components/core/InstallerOptions.tsx:391
 #: src/components/core/InstallerOptions.tsx:405
 #: src/components/core/InstallerOptions.tsx:448
-#: src/components/core/Page.tsx:266
+#: src/components/core/Page.tsx:279
 #: src/components/storage/dasd/FormatActionHandler.tsx:73
 #: src/components/storage/dasd/FormatActionHandler.tsx:100
 #: src/components/system/HostnamePage.tsx:132
@@ -279,7 +279,7 @@ msgstr "Autenticación"
 
 #: src/components/core/IssuesDrawer.tsx:50
 #: src/components/overview/StorageSection.tsx:112
-#: src/components/storage/ProposalPage.tsx:259 src/routes/storage.tsx:46
+#: src/components/storage/ProposalPage.tsx:353 src/routes/storage.tsx:46
 msgid "Storage"
 msgstr "Almacenamiento"
 
@@ -360,7 +360,7 @@ msgstr ""
 msgid "Log in"
 msgstr "Iniciar sesión"
 
-#: src/components/core/MenuButton.tsx:59 src/components/core/Page.tsx:255
+#: src/components/core/MenuButton.tsx:78 src/components/core/Page.tsx:268
 #: src/components/storage/ISCSIPage.tsx:48
 #: src/components/storage/dasd/DASDPage.tsx:49
 #: src/components/storage/zfcp/ZFCPPage.tsx:198
@@ -426,6 +426,7 @@ msgid "It doesn't exist or can't be reached."
 msgstr "No existe o no se puede alcanzar."
 
 #: src/components/core/RowActions.tsx:71
+#: src/components/storage/ProposalResultSection.tsx:134
 msgid "Actions"
 msgstr "Acciones"
 
@@ -513,8 +514,8 @@ msgstr "Ubicación"
 
 #: src/components/l10n/L10nPage.tsx:84 src/components/l10n/L10nPage.tsx:98
 #: src/components/l10n/L10nPage.tsx:110
-#: src/components/storage/SearchedDeviceMenu.tsx:325
-#: src/components/storage/VolumeGroupEditor.tsx:114
+#: src/components/storage/BootSection.tsx:94
+#: src/components/storage/EncryptionSection.tsx:59
 #: src/components/storage/iscsi/InitiatorForm.tsx:89
 #: src/components/users/FirstUserForm.tsx:235
 #: src/components/users/RootUserForm.tsx:164
@@ -711,7 +712,7 @@ msgid "Edit connection %s"
 msgstr "Editar conexión %s"
 
 #: src/components/network/IpSettingsForm.tsx:159
-#: src/components/storage/EncryptionSettingsPage.tsx:110
+#: src/components/storage/EncryptionSettingsPage.tsx:111
 #: src/components/storage/iscsi/DiscoverForm.tsx:98
 #: src/components/storage/iscsi/LoginForm.jsx:70
 #: src/components/storage/zfcp/ZFCPDiskForm.tsx:112
@@ -858,8 +859,9 @@ msgid "IP settings"
 msgstr "Ajustes de IP"
 
 #: src/components/network/WifiConnectionDetails.tsx:100
-#: src/components/storage/EncryptionSection.tsx:52
-#: src/components/storage/FilesystemMenu.tsx:94
+#: src/components/storage/FilesystemMenu.tsx:103
+#: src/components/storage/PartitionsSection.tsx:172
+#: src/components/storage/VolumeGroupEditor.tsx:163
 #: src/components/storage/iscsi/NodesPresenter.jsx:75
 #: src/components/users/FirstUser.tsx:54 src/components/users/RootUser.tsx:57
 msgid "Edit"
@@ -1049,6 +1051,7 @@ msgid "Connected devices tabs"
 msgstr "Pestañas de dispositivos conectados"
 
 #: src/components/network/WiredConnectionDetails.tsx:203
+#: src/components/storage/ProposalPage.tsx:226
 msgid "Settings"
 msgstr "Ajustes"
 
@@ -1796,7 +1799,45 @@ msgstr ""
 "La configuración actual dará lugar a un intento de crear una %1$s de al "
 "menos %2$s."
 
-#: src/components/storage/BootSelection.tsx:135
+#: src/components/storage/BootSection.tsx:41
+#, fuzzy, c-format
+msgid ""
+"Partitions to boot will be set up if needed at the installation "
+"disk,         based on the location of the %s file system."
+msgstr ""
+"Las particiones de arranque se asignarán en el disco de instalación %s."
+
+#: src/components/storage/BootSection.tsx:52
+#, c-format
+msgid ""
+"Partitions to boot will be set up if needed at the installation disk.       "
+"Currently %1$s, based on the location of the %2$s file system."
+msgstr ""
+
+#: src/components/storage/BootSection.tsx:65
+#, fuzzy
+msgid "No partitions will be automatically configured for booting."
+msgstr ""
+"No se configurarán automáticamente particiones para el arranque. Úselo con "
+"precaución."
+
+#. TRANSLATORS: %s is replaced by a disk name and size (eg. "sda (500GiB)")
+#: src/components/storage/BootSection.tsx:69
+#, fuzzy, c-format
+msgid "Partitions to boot will be set up if needed at %s."
+msgstr "Las particiones para arrancar se asignarán en el disco de instalación."
+
+#: src/components/storage/BootSection.tsx:84
+#, fuzzy
+msgid ""
+"To ensure the new system is able to boot, the installer may need to create "
+"or configure some           partitions in the appropriate disk."
+msgstr ""
+"Para garantizar que el nuevo sistema pueda arrancar, es posible que el "
+"instalador tenga que crear o configurar algunas particiones en el disco "
+"correspondiente."
+
+#: src/components/storage/BootSelection.tsx:136
 msgid ""
 "To ensure the new system is able to boot, the installer may need to create "
 "or configure some partitions in the appropriate disk."
@@ -1805,56 +1846,62 @@ msgstr ""
 "instalador tenga que crear o configurar algunas particiones en el disco "
 "correspondiente."
 
-#: src/components/storage/BootSelection.tsx:141
-msgid "Partitions to boot will be allocated at the installation disk."
-msgstr "Las particiones para arrancar se asignarán en el disco de instalación."
-
-#. TRANSLATORS: %s is replaced by a device name and size (e.g., "/dev/sda, 500GiB")
-#: src/components/storage/BootSelection.tsx:146
-#, c-format
-msgid "Partitions to boot will be allocated at the installation disk %s."
+#: src/components/storage/BootSelection.tsx:145
+#, fuzzy, c-format
+msgid ""
+"Partitions to boot will be set up if needed at the installation "
+"disk,           based on the location of the %s file system."
 msgstr ""
 "Las particiones de arranque se asignarán en el disco de instalación %s."
 
-#: src/components/storage/BootSelection.tsx:162
+#: src/components/storage/BootSelection.tsx:156
+#, c-format
+msgid ""
+"Partitions to boot will be set up if needed at the installation "
+"disk.         Currently %1$s, based on the location of the %2$s file system."
+msgstr ""
+
+#: src/components/storage/BootSelection.tsx:175
+#: src/components/storage/ProposalPage.tsx:287
 msgid "Boot options"
 msgstr "Opciones de arranque"
 
-#: src/components/storage/BootSelection.tsx:182
+#: src/components/storage/BootSelection.tsx:195
 #: src/components/storage/SizeModeSelect.tsx:191
 #: src/components/storage/SizeModeSelect.tsx:196
 #: src/components/storage/iscsi/NodeStartupOptions.js:28
 msgid "Automatic"
 msgstr "Automático"
 
-#: src/components/storage/BootSelection.tsx:200
+#: src/components/storage/BootSelection.tsx:213
 msgid "Select a disk"
 msgstr "Seleccione un disco"
 
-#: src/components/storage/BootSelection.tsx:205
-msgid "Partitions to boot will be allocated at the following device."
+#: src/components/storage/BootSelection.tsx:218
+#, fuzzy
+msgid "Partitions to boot will be set up if needed at the following device."
 msgstr "Las particiones de arranque se asignarán en el siguiente dispositivo."
 
-#: src/components/storage/BootSelection.tsx:207
+#: src/components/storage/BootSelection.tsx:220
 msgid "Choose a disk for placing the boot loader"
 msgstr "Escoge un disco para poner el cargador de arranque"
 
-#: src/components/storage/BootSelection.tsx:230
+#: src/components/storage/BootSelection.tsx:243
 msgid "Do not configure"
 msgstr "No configurar"
 
-#: src/components/storage/BootSelection.tsx:236
+#: src/components/storage/BootSelection.tsx:249
 msgid ""
 "No partitions will be automatically configured for booting. Use with caution."
 msgstr ""
 "No se configurarán automáticamente particiones para el arranque. Úselo con "
 "precaución."
 
-#: src/components/storage/ConfigEditor.tsx:35
+#: src/components/storage/ConfigEditor.tsx:36
 msgid "No devices configured yet"
 msgstr "Aún no hay dispositivos configurados"
 
-#: src/components/storage/ConfigEditor.tsx:38
+#: src/components/storage/ConfigEditor.tsx:39
 #, c-format
 msgid ""
 "Use actions below to set up your devices or click %s to start from scratch "
@@ -1864,97 +1911,39 @@ msgstr ""
 "clic en %s para empezar desde cero con la configuración predeterminada."
 
 #. TRANSLATORS: label for a button
-#: src/components/storage/ConfigEditor.tsx:49
+#: src/components/storage/ConfigEditor.tsx:50
 msgid "reset to defaults"
 msgstr "restablecer valores predeterminados"
 
-#: src/components/storage/ConfigEditor.tsx:85
+#: src/components/storage/ConfigEditor.tsx:87
 msgid "[FIXME]"
 msgstr "[FIXME]"
 
-#: src/components/storage/ConfigEditorMenu.tsx:59
-msgid "Other options toggle"
-msgstr "Mostrar/ocultar otras opciones"
-
-#: src/components/storage/ConfigEditorMenu.tsx:62
-msgid "Other options"
-msgstr "Otras opciones"
-
-#: src/components/storage/ConfigEditorMenu.tsx:70
-msgid "Select the disk to configure partitions for booting"
-msgstr "Seleccione el disco para configurar particiones de arranque"
-
-#: src/components/storage/ConfigEditorMenu.tsx:72
-msgid "Change boot options"
-msgstr "Cambiar opciones de arranque"
-
-#: src/components/storage/ConfigEditorMenu.tsx:77
-msgid "Start from scratch with the default configuration"
-msgstr "Empiece desde cero con la configuración predeterminada"
-
-#: src/components/storage/ConfigEditorMenu.tsx:79
-msgid "Reset to defaults"
-msgstr "Restablecer los valores predeterminados"
-
-#: src/components/storage/ConfigEditorMenu.tsx:85
-msgid "Discover and connect to iSCSI targets"
-msgstr "Descubra y conéctese a destinos iSCSI"
-
-#: src/components/storage/ConfigEditorMenu.tsx:87
-msgid "Configure iSCSI"
-msgstr "Configurar iSCSI"
-
-#: src/components/storage/ConfigEditorMenu.tsx:93
-#: src/components/storage/ProposalPage.tsx:155
-msgid "Activate zFCP disks"
-msgstr "Activar discos zFCP"
-
-#: src/components/storage/ConfigEditorMenu.tsx:95
-msgid "Configure zFCP"
-msgstr "Configurar zFCP"
-
-#: src/components/storage/ConfigEditorMenu.tsx:102
-msgid "Activate and format DASD devices"
-msgstr "Active y dé formato a dispositivos DASD"
-
-#: src/components/storage/ConfigEditorMenu.tsx:104
-msgid "Configure DASD"
-msgstr "Configurar DASD"
-
-#: src/components/storage/ConfigEditorMenu.tsx:110
-msgid "Update available disks and activate crypt devices"
-msgstr ""
-"Actualizar los discos disponibles y activar los dispositivos de cifrado"
-
-#: src/components/storage/ConfigEditorMenu.tsx:112
-msgid "Rescan devices"
-msgstr "Volver a buscar dispositivos"
-
-#: src/components/storage/ConfigureDeviceMenu.tsx:48
+#: src/components/storage/ConfigureDeviceMenu.tsx:49
 msgid "Select a device to define partitions or to mount"
 msgstr "Seleccione un dispositivo para definir particiones o para montarlo"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:49
+#: src/components/storage/ConfigureDeviceMenu.tsx:50
 msgid "Select another device to define partitions or to mount"
 msgstr "Seleccione otro dispositivo para definir particiones o para montarlo"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:52
+#: src/components/storage/ConfigureDeviceMenu.tsx:53
 msgid "Select a disk to define partitions or to mount"
 msgstr "Seleccione un disco para definir particiones o para montarlo"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:53
+#: src/components/storage/ConfigureDeviceMenu.tsx:54
 msgid "Select another disk to define partitions or to mount"
 msgstr "Seleccione otro disco para definir particiones o para montarlo"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:58
+#: src/components/storage/ConfigureDeviceMenu.tsx:59
 msgid "Already using all available devices"
 msgstr "Ya se están utilizando todos los dispositivos disponibles"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:59
+#: src/components/storage/ConfigureDeviceMenu.tsx:60
 msgid "Already using all available disks"
 msgstr "Ya se están utilizando todos los discos disponibles"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:66
+#: src/components/storage/ConfigureDeviceMenu.tsx:67
 #, c-format
 msgid "Extend the installation beyond the currently selected device"
 msgid_plural "Extend the installation beyond the current %d devices"
@@ -1962,40 +1951,80 @@ msgstr[0] ""
 "Ampliar la instalación más allá del dispositivo seleccionado actualmente"
 msgstr[1] "Ampliar la instalación más allá de los %d dispositivos actuales"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:75
+#: src/components/storage/ConfigureDeviceMenu.tsx:76
 #, c-format
 msgid "Extend the installation beyond the currently selected disk"
 msgid_plural "Extend the installation beyond the current %d disks"
 msgstr[0] "Ampliar la instalación más allá del disco seleccionado actualmente"
 msgstr[1] "Ampliar la instalación más allá de los %d discos actuales"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:83
+#: src/components/storage/ConfigureDeviceMenu.tsx:84
 msgid "Start configuring a basic installation"
 msgstr "Comience configurando una instalación básica"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:99
+#: src/components/storage/ConfigureDeviceMenu.tsx:100
 msgid "Add device menu"
 msgstr "Añadir menú de dispositivo"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:143
+#: src/components/storage/ConfigureDeviceMenu.tsx:144
 msgid "Define a new LVM on top of one or several disks"
 msgstr "Definir un nuevo LVM sobre uno o varios discos"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:144
+#: src/components/storage/ConfigureDeviceMenu.tsx:145
 msgid "Define a new LVM on the disk"
 msgstr "Defina un LVM nuevo en el disco"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:150
+#: src/components/storage/ConfigureDeviceMenu.tsx:151
 msgid "Configure device menu"
 msgstr "Configurar menú de dispositivo"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:166
+#: src/components/storage/ConfigureDeviceMenu.tsx:171
 msgid "Add LVM volume group"
 msgstr "Añadir grupo de volúmenes LVM"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:170
+#: src/components/storage/ConfigureDeviceMenu.tsx:177
 msgid "More devices"
 msgstr "Más dispositivos"
+
+#. TRANSLATORS: this is an ARIA (accesibility) description of an UI element
+#: src/components/storage/ConnectedDevicesMenu.tsx:51
+#, fuzzy
+msgid "More storage options"
+msgstr "Más acciones"
+
+#: src/components/storage/ConnectedDevicesMenu.tsx:57
+msgid "Discover and connect to iSCSI targets"
+msgstr "Descubra y conéctese a destinos iSCSI"
+
+#: src/components/storage/ConnectedDevicesMenu.tsx:59
+msgid "Configure iSCSI"
+msgstr "Configurar iSCSI"
+
+#: src/components/storage/ConnectedDevicesMenu.tsx:65
+#: src/components/storage/ProposalPage.tsx:165
+msgid "Activate zFCP disks"
+msgstr "Activar discos zFCP"
+
+#: src/components/storage/ConnectedDevicesMenu.tsx:67
+msgid "Configure zFCP"
+msgstr "Configurar zFCP"
+
+#: src/components/storage/ConnectedDevicesMenu.tsx:74
+msgid "Activate and format DASD devices"
+msgstr "Active y dé formato a dispositivos DASD"
+
+#: src/components/storage/ConnectedDevicesMenu.tsx:76
+msgid "Configure DASD"
+msgstr "Configurar DASD"
+
+#: src/components/storage/ConnectedDevicesMenu.tsx:82
+msgid "Update available disks and activate crypt devices"
+msgstr ""
+"Actualizar los discos disponibles y activar los dispositivos de cifrado"
+
+#: src/components/storage/ConnectedDevicesMenu.tsx:84
+msgid "Rescan devices"
+msgstr "Volver a buscar dispositivos"
 
 #: src/components/storage/DeviceSelectorModal.tsx:87
 #: src/components/storage/ProposalResultTable.tsx:135
@@ -2156,44 +2185,41 @@ msgstr "Utilizar el disco %s para configurar particiones de arranque"
 msgid "Use disk %s"
 msgstr "Utilizar el disco %s"
 
-#: src/components/storage/EncryptionSection.tsx:33
+#: src/components/storage/EncryptionSection.tsx:35
 msgid "Encryption is disabled"
 msgstr "El cifrado está deshabilitado"
 
-#: src/components/storage/EncryptionSection.tsx:34
+#: src/components/storage/EncryptionSection.tsx:36
 msgid "Encryption is enabled using TPM unlocking"
 msgstr "El cifrado se activa utilizando el desbloqueo TPM"
 
-#: src/components/storage/EncryptionSection.tsx:36
+#: src/components/storage/EncryptionSection.tsx:38
 msgid "Encryption is enabled"
 msgstr "El cifrado está habilitado"
 
-#: src/components/storage/EncryptionSection.tsx:46
-msgid "Encryption"
-msgstr "Cifrado"
-
-#: src/components/storage/EncryptionSection.tsx:48
+#: src/components/storage/EncryptionSection.tsx:50
+#, fuzzy
 msgid ""
-"Protection for the information stored at the new file systems, including "
-"data, programs, and system files."
+"Protection for the information stored at           the new file systems, "
+"including data, programs, and system files."
 msgstr ""
 "Protección de la información almacenada en los nuevos sistemas de archivo, "
 "incluyendo datos, programas y archivos del sistema."
 
-#: src/components/storage/EncryptionSettingsPage.tsx:74
+#: src/components/storage/EncryptionSettingsPage.tsx:75
 #: src/components/users/RootUserForm.tsx:104
 msgid "Password is empty."
 msgstr "La contraseña está vacía."
 
 #. TRANSLATORS: "Trusted Platform Module" is the name of the technology and TPM its abbreviation
-#: src/components/storage/EncryptionSettingsPage.tsx:90
+#: src/components/storage/EncryptionSettingsPage.tsx:91
 msgid ""
 "Use the Trusted Platform Module (TPM) to decrypt automatically on each boot"
 msgstr ""
 "Utilizar Trusted Platform Module (TPM) para descifrar automáticamente en "
 "cada arranque"
 
-#: src/components/storage/EncryptionSettingsPage.tsx:94
+#: src/components/storage/EncryptionSettingsPage.tsx:95
 msgid ""
 "The password will not be needed to boot and access the data if the TPM can "
 "verify the integrity of the system. TPM sealing requires the new system to "
@@ -2203,15 +2229,15 @@ msgstr ""
 "puede verificar la integridad del sistema. El sellado TPM requiere que el "
 "nuevo sistema se arranque directamente en su primera ejecución."
 
-#: src/components/storage/EncryptionSettingsPage.tsx:104
+#: src/components/storage/EncryptionSettingsPage.tsx:105
 msgid "Encryption settings"
 msgstr "Ajustes de cifrado"
 
-#: src/components/storage/EncryptionSettingsPage.tsx:118
+#: src/components/storage/EncryptionSettingsPage.tsx:119
 msgid "Encrypt the system"
 msgstr "Cifrar el sistema"
 
-#: src/components/storage/EncryptionSettingsPage.tsx:120
+#: src/components/storage/EncryptionSettingsPage.tsx:121
 msgid ""
 "Full Disk Encryption (FDE) allows to protect the information stored at the "
 "new file systems, including data, programs, and system files."
@@ -2240,24 +2266,7 @@ msgstr "El sistema de archivos actual se montará en %s"
 msgid "The device will be formatted as %1$s and mounted at %2$s"
 msgstr "El dispositivo se formateará como %1$s y se montará en %2$s"
 
-#. TRANSLATORS: %s is the name of device, like '/dev/sda'.
-#: src/components/storage/FilesystemMenu.tsx:67
-#: src/components/storage/PartitionsMenu.tsx:145
-#: src/components/storage/UnusedMenu.tsx:45
-#, c-format
-msgid "Details for %s"
-msgstr "Detalles de %s"
-
-#: src/components/storage/FilesystemMenu.tsx:75
-#: src/components/storage/PartitionsMenu.tsx:187
-#: src/components/storage/ProposalResultTable.tsx:134
-#: src/components/storage/SpaceActionsTable.tsx:237
-#: src/components/storage/UnusedMenu.tsx:56
-#: src/components/storage/VolumeGroupEditor.tsx:156
-msgid "Details"
-msgstr "Detalles"
-
-#: src/components/storage/FilesystemMenu.tsx:91
+#: src/components/storage/FilesystemMenu.tsx:100
 msgid "Change the file system or mount point"
 msgstr "Cambiar el sistema de archivos o el punto de montaje"
 
@@ -2290,7 +2299,7 @@ msgstr ""
 #: src/components/storage/LogicalVolumePage.tsx:466
 #: src/components/storage/LogicalVolumePage.tsx:769
 #: src/components/storage/PartitionPage.tsx:560
-#: src/components/storage/PartitionPage.tsx:891
+#: src/components/storage/PartitionPage.tsx:892
 msgid "Waiting for a mount point"
 msgstr "Esperando un punto de montaje"
 
@@ -2351,50 +2360,50 @@ msgstr "Configurar dispositivo %s"
 #: src/components/storage/FormattableDevicePage.tsx:467
 #: src/components/storage/LogicalVolumePage.tsx:697
 #: src/components/storage/LogicalVolumePage.tsx:702
-#: src/components/storage/PartitionPage.tsx:821
-#: src/components/storage/PartitionPage.tsx:828
+#: src/components/storage/PartitionPage.tsx:822
+#: src/components/storage/PartitionPage.tsx:829
 msgid "Mount point"
 msgstr "Punto de montaje"
 
 #: src/components/storage/FormattableDevicePage.tsx:465
 #: src/components/storage/LogicalVolumePage.tsx:700
-#: src/components/storage/PartitionPage.tsx:826
+#: src/components/storage/PartitionPage.tsx:827
 msgid "Mount point toggle"
 msgstr "Activar/desactivar punto de montaje"
 
 #: src/components/storage/FormattableDevicePage.tsx:466
 #: src/components/storage/LogicalVolumePage.tsx:701
-#: src/components/storage/PartitionPage.tsx:827
+#: src/components/storage/PartitionPage.tsx:828
 msgid "Suggested mount points"
 msgstr "Puntos de montaje sugeridos"
 
 #: src/components/storage/FormattableDevicePage.tsx:468
 #: src/components/storage/LogicalVolumePage.tsx:703
-#: src/components/storage/PartitionPage.tsx:829
+#: src/components/storage/PartitionPage.tsx:830
 msgid "Clear selected mount point"
 msgstr "Quitar punto de montaje seleccionado"
 
 #: src/components/storage/FormattableDevicePage.tsx:471
 #: src/components/storage/LogicalVolumePage.tsx:706
-#: src/components/storage/PartitionPage.tsx:832
+#: src/components/storage/PartitionPage.tsx:833
 msgid "Use"
 msgstr "Emplear"
 
 #: src/components/storage/FormattableDevicePage.tsx:482
 #: src/components/storage/LogicalVolumePage.tsx:715
-#: src/components/storage/PartitionPage.tsx:853
+#: src/components/storage/PartitionPage.tsx:854
 msgid "Select or enter a mount point"
 msgstr "Seleccionar o introducir un punto de montaje"
 
 #: src/components/storage/FormattableDevicePage.tsx:491
 #: src/components/storage/LogicalVolumePage.tsx:740
-#: src/components/storage/PartitionPage.tsx:862
+#: src/components/storage/PartitionPage.tsx:863
 msgid "File system"
 msgstr "Sistema de archivos"
 
 #: src/components/storage/FormattableDevicePage.tsx:502
 #: src/components/storage/LogicalVolumePage.tsx:751
-#: src/components/storage/PartitionPage.tsx:874
+#: src/components/storage/PartitionPage.tsx:875
 msgid "Label"
 msgstr "Etiqueta"
 
@@ -2451,7 +2460,7 @@ msgid "Configure LVM logical volume at %s volume group"
 msgstr "Configurar volumen lógico LVM en grupo de volúmenes %s"
 
 #: src/components/storage/LogicalVolumePage.tsx:764
-#: src/components/storage/PartitionPage.tsx:886
+#: src/components/storage/PartitionPage.tsx:887
 msgid "Size mode"
 msgstr "Modo de tamaño"
 
@@ -2655,61 +2664,79 @@ msgstr "Destruye datos actuales y da formato de partición como"
 msgid "Format partition as"
 msgstr "Formatear partición como"
 
-#: src/components/storage/PartitionPage.tsx:813
+#: src/components/storage/PartitionPage.tsx:814
 #, c-format
 msgid "Configure partition at %s"
 msgstr "Configurar partición en %s"
 
-#: src/components/storage/PartitionPage.tsx:838
+#: src/components/storage/PartitionPage.tsx:839
 msgid "Mount point mode"
 msgstr "Modo de punto de montaje"
 
-#: src/components/storage/PartitionPage.tsx:921
+#: src/components/storage/PartitionPage.tsx:922
 msgid "Go to storage page"
 msgstr "Ir a la página de almacenamiento"
 
-#: src/components/storage/PartitionsMenu.tsx:63
+#: src/components/storage/PartitionsSection.tsx:80
 msgid "Moreover, the following partitions will be created or mounted"
 msgstr "Además, se crearán o se montarán las siguientes particiones"
 
-#: src/components/storage/PartitionsMenu.tsx:67
+#: src/components/storage/PartitionsSection.tsx:84
 msgid "Moreover, the following partition will be created."
 msgid_plural "Moreover, the following partitions will be created."
 msgstr[0] "Además, se creará la partición siguiente."
 msgstr[1] "Además, se crearán las particiones siguientes."
 
-#: src/components/storage/PartitionsMenu.tsx:73
+#: src/components/storage/PartitionsSection.tsx:90
 msgid "Moreover, the following partition will be mounted."
 msgid_plural "Moreover, the following partitions will be mounted."
 msgstr[0] "Además, se montará la partición siguiente."
 msgstr[1] "Además, se montarán las particiones siguientes."
 
-#: src/components/storage/PartitionsMenu.tsx:80
+#: src/components/storage/PartitionsSection.tsx:97
 msgid "The following partitions will be created or mounted"
 msgstr "Las siguientes particiones se crearán o se montarán"
 
-#: src/components/storage/PartitionsMenu.tsx:84
+#: src/components/storage/PartitionsSection.tsx:101
 msgid "The following partition will be created."
 msgid_plural "The following partitions will be created."
 msgstr[0] "Se creará la partición siguiente."
 msgstr[1] "Se crearán las particiones siguientes."
 
-#: src/components/storage/PartitionsMenu.tsx:90
+#: src/components/storage/PartitionsSection.tsx:107
 msgid "The following partition will be mounted."
 msgid_plural "The following partitions will be mounted."
 msgstr[0] "Se montará la partición siguiente."
 msgstr[1] "Se montarán las particiones siguientes."
 
-#: src/components/storage/PartitionsMenu.tsx:132
+#: src/components/storage/PartitionsSection.tsx:117
 msgid "Any partition needed to boot will be configured."
 msgstr "Se configurará cualquier partición necesaria para el arranque."
 
-#: src/components/storage/PartitionsMenu.tsx:174
-msgid "Add another partition or mount an existing one"
-msgstr "Añada otra partición o monte una existente"
+#. TRANSLATORS: ARIA (accesibility) description of an UI element. %s is a mount path.
+#: src/components/storage/PartitionsSection.tsx:151
+#, fuzzy, c-format
+msgid "Partition %s"
+msgstr "Particiones"
 
-#: src/components/storage/PartitionsMenu.tsx:177
-#: src/components/storage/UnusedMenu.tsx:73
+#. TRANSLATORS: ARIA (accesibility) description of an button. %s is a mount path.
+#: src/components/storage/PartitionsSection.tsx:163
+#, fuzzy, c-format
+msgid "Options for partition %s"
+msgstr "Utilizando partición %s"
+
+#: src/components/storage/PartitionsSection.tsx:180
+#: src/components/storage/VolumeGroupEditor.tsx:171
+#: src/components/storage/iscsi/NodesPresenter.jsx:79
+msgid "Delete"
+msgstr "Eliminar"
+
+#: src/components/storage/PartitionsSection.tsx:264
+msgid "Partitions"
+msgstr "Particiones"
+
+#: src/components/storage/PartitionsSection.tsx:277
+#: src/components/storage/UnusedMenu.tsx:75
 msgid "Add or use partition"
 msgstr "Añadir o utilizar partición"
 
@@ -2765,11 +2792,11 @@ msgstr ""
 msgid "Failed to calculate a storage layout"
 msgstr "Error al calcular una disposición de almacenamiento"
 
-#: src/components/storage/ProposalPage.tsx:70
+#: src/components/storage/ProposalPage.tsx:80
 msgid "Invalid storage settings"
 msgstr "Configuración de almacenamiento no válida"
 
-#: src/components/storage/ProposalPage.tsx:77
+#: src/components/storage/ProposalPage.tsx:87
 msgid "The current storage configuration has the following issue:"
 msgid_plural "The current storage configuration has the following issues:"
 msgstr[0] ""
@@ -2777,7 +2804,7 @@ msgstr[0] ""
 msgstr[1] ""
 "La configuración de almacenamiento actual tiene los problemas siguientes:"
 
-#: src/components/storage/ProposalPage.tsx:91
+#: src/components/storage/ProposalPage.tsx:101
 msgid ""
 "You may want to discard those settings and start from scratch with a simple "
 "configuration."
@@ -2785,25 +2812,25 @@ msgstr ""
 "Quizá quiera descartar tales ajustes y empezar desde cero con una "
 "configuración sencilla."
 
-#: src/components/storage/ProposalPage.tsx:95
-#: src/components/storage/ProposalPage.tsx:123
+#: src/components/storage/ProposalPage.tsx:105
+#: src/components/storage/ProposalPage.tsx:133
 #: src/components/storage/UnsupportedModelInfo.tsx:55
 msgid "Reset to the default configuration"
 msgstr "Restablecer la configuración predeterminada"
 
-#: src/components/storage/ProposalPage.tsx:107
+#: src/components/storage/ProposalPage.tsx:117
 #: src/components/storage/UnsupportedModelInfo.tsx:39
 msgid "Unable to modify the settings"
 msgstr "No es posible modificar los ajustes"
 
-#: src/components/storage/ProposalPage.tsx:113
+#: src/components/storage/ProposalPage.tsx:123
 msgid ""
 "The storage configuration uses elements not supported by this interface."
 msgstr ""
 "La configuración de almacenamiento utiliza elementos que no son compatibles "
 "con esta interfaz."
 
-#: src/components/storage/ProposalPage.tsx:119
+#: src/components/storage/ProposalPage.tsx:129
 msgid ""
 "You may want to discard the current settings and start from scratch with a "
 "simple configuration."
@@ -2811,7 +2838,7 @@ msgstr ""
 "Quizá quiera descartar los ajustes actuales y empezar desde cero con una "
 "configuración sencilla."
 
-#: src/components/storage/ProposalPage.tsx:135
+#: src/components/storage/ProposalPage.tsx:145
 msgid ""
 "There are not disks available for the installation. You may need to "
 "configure some device."
@@ -2819,24 +2846,38 @@ msgstr ""
 "No hay discos disponibles para la instalación. Es posible que necesite "
 "configurar algún dispositivo."
 
-#: src/components/storage/ProposalPage.tsx:140
+#: src/components/storage/ProposalPage.tsx:150
 #: src/components/storage/dasd/DASDTable.tsx:304
 msgid "No devices found"
 msgstr "No se ha encontrado ningún dispositivo"
 
-#: src/components/storage/ProposalPage.tsx:149
+#: src/components/storage/ProposalPage.tsx:159
 msgid "Connect to iSCSI targets"
 msgstr "Conectarse a destinos iSCSI"
 
-#: src/components/storage/ProposalPage.tsx:162
+#: src/components/storage/ProposalPage.tsx:172
 msgid "Manage DASD devices"
 msgstr "Gestionar dispositivos DASD"
 
-#: src/components/storage/ProposalPage.tsx:196
-msgid "Installation Devices"
+#: src/components/storage/ProposalPage.tsx:244
+msgid "Start from scratch with the default configuration"
+msgstr "Empiece desde cero con la configuración predeterminada"
+
+#: src/components/storage/ProposalPage.tsx:246
+msgid "Reset to defaults"
+msgstr "Restablecer los valores predeterminados"
+
+#: src/components/storage/ProposalPage.tsx:255
+msgid ""
+"Changes in these settings will immediately update the 'Result' section below."
+msgstr ""
+
+#: src/components/storage/ProposalPage.tsx:262
+#, fuzzy
+msgid "Installation devices"
 msgstr "Dispositivos de instalación"
 
-#: src/components/storage/ProposalPage.tsx:198
+#: src/components/storage/ProposalPage.tsx:268
 msgid ""
 "Structure of the new system, including disks to use and additional devices "
 "like LVM volume groups."
@@ -2844,48 +2885,58 @@ msgstr ""
 "Estructura del nuevo sistema, incluyendo discos a utilizar y dispositivos "
 "adicionales como los grupos de volúmenes LVM."
 
-#: src/components/storage/ProposalPage.tsx:262
+#: src/components/storage/ProposalPage.tsx:278
+msgid "Encryption"
+msgstr "Cifrado"
+
+#: src/components/storage/ProposalPage.tsx:362
 msgid "Reloading data, please wait..."
 msgstr "Cargando datos, por favor espere…"
 
-#: src/components/storage/ProposalResultSection.tsx:39
+#: src/components/storage/ProposalResultSection.tsx:42
 msgid "Waiting for information about storage configuration"
 msgstr "Esperando información sobre la configuración de almacenamiento"
 
-#: src/components/storage/ProposalResultSection.tsx:64
+#: src/components/storage/ProposalResultSection.tsx:67
 #, c-format
 msgid "There is %d destructive action planned affecting %s"
 msgid_plural "There are %d destructive actions planned affecting %s"
 msgstr[0] "Hay %d acción destructiva planeada que afecta a %s"
 msgstr[1] "Hay %d acciones destructivas planeadas que afectan a %s"
 
-#: src/components/storage/ProposalResultSection.tsx:75
+#: src/components/storage/ProposalResultSection.tsx:78
 #, c-format
 msgid "There is %d destructive action planned"
 msgid_plural "There are %d destructive actions planned"
 msgstr[0] "Hay %d acción destructiva planeada"
 msgstr[1] "Hay %d acciones destructivas planeadas"
 
-#: src/components/storage/ProposalResultSection.tsx:94
-msgid "Collapse the list of planned actions"
-msgstr "Contraer la lista de acciones planificadas"
-
-#: src/components/storage/ProposalResultSection.tsx:95
-#, c-format
-msgid "Check the %d planned actions"
-msgstr "Revise las %d acciones planificadas"
-
-#: src/components/storage/ProposalResultSection.tsx:126
+#: src/components/storage/ProposalResultSection.tsx:128
 msgid "Result"
 msgstr "Resultado"
 
-#: src/components/storage/ProposalResultSection.tsx:128
+#: src/components/storage/ProposalResultSection.tsx:130
 msgid ""
-"During installation, several actions will be performed to setup the layout "
-"shown at the table below."
+"Result of applying the configuration described at the 'Settings' section "
+"above."
 msgstr ""
-"Durante la instalación, se realizarán varias acciones para establecer la "
-"estructura de particiones que se muestra en la siguiente tabla."
+
+#: src/components/storage/ProposalResultSection.tsx:138
+#, fuzzy
+msgid ""
+"The following actions will be performed in the system during installation."
+msgstr ""
+"Los siguientes patrones de software están seleccionados para su instalación:"
+
+#: src/components/storage/ProposalResultSection.tsx:144
+msgid "Final layout"
+msgstr "Diseño final"
+
+#: src/components/storage/ProposalResultSection.tsx:148
+#, fuzzy
+msgid "Final structure of the system after installation."
+msgstr ""
+"No se pueden acomodar los sistemas de archivos necesarios para la instalación"
 
 #: src/components/storage/ProposalResultTable.tsx:77
 msgid "New"
@@ -2902,6 +2953,11 @@ msgstr "Antes de %s"
 msgid "Mount Point"
 msgstr "Punto de montaje"
 
+#: src/components/storage/ProposalResultTable.tsx:134
+#: src/components/storage/SpaceActionsTable.tsx:237
+msgid "Details"
+msgstr "Detalles"
+
 #: src/components/storage/ProposalTransactionalInfo.tsx:43
 msgid "Transactional root file system"
 msgstr "Sistema transaccional de archivos de raíz"
@@ -2915,65 +2971,67 @@ msgstr ""
 "%s es un sistema inmutable con actualizaciones atómicas. Utiliza un sistema "
 "de archivos Btrfs de solo lectura actualizado mediante instantáneas."
 
-#: src/components/storage/SearchedDeviceMenu.tsx:58
+#: src/components/storage/SearchedDeviceMenu.tsx:57
 msgid "Selected disk cannot be changed"
 msgstr "El disco seleccionado no se puede cambiar"
 
 #. TRANSLATORS: %s is a formatted mount point like '"/home"'
-#: src/components/storage/SearchedDeviceMenu.tsx:63
-#, c-format
-msgid "Select a disk to format as %s"
+#: src/components/storage/SearchedDeviceMenu.tsx:62
+#, fuzzy, c-format
+msgid "Change the disk to format as %s"
 msgstr "Seleccione un disco para formatear como %s"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:70
-msgid "Select a disk to configure"
+#: src/components/storage/SearchedDeviceMenu.tsx:69
+#, fuzzy
+msgid "Change the disk to configure"
 msgstr "Seleccione un disco para configurarlo"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:74
-msgid "Select a disk to install the system"
+#: src/components/storage/SearchedDeviceMenu.tsx:73
+#, fuzzy
+msgid "Change the disk to install the system"
 msgstr "Seleccione un disco para instalar el sistema"
 
 #. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case).
-#: src/components/storage/SearchedDeviceMenu.tsx:84
-#, c-format
-msgid "Select a disk to create %s"
+#: src/components/storage/SearchedDeviceMenu.tsx:83
+#, fuzzy, c-format
+msgid "Change the disk to create %s"
 msgstr "Seleccione un disco para crear %s"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:100
+#: src/components/storage/SearchedDeviceMenu.tsx:99
 msgid "This uses the existing file system at the disk"
 msgstr "Esto usa el sistema de archivos existente en el disco"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:104
+#: src/components/storage/SearchedDeviceMenu.tsx:103
 msgid "This uses existing partitions at the disk"
 msgstr "Esto utiliza particiones existentes en el disco"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:112
+#: src/components/storage/SearchedDeviceMenu.tsx:111
 msgid "It is chosen for booting and for some LVM groups"
 msgstr "Se ha elegido para el arranque y para algunos grupos de LVM"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:114
+#: src/components/storage/SearchedDeviceMenu.tsx:113
 msgid "It is chosen for some LVM groups"
 msgstr "Se ha elegido para algunos grupos de LVM"
 
 #. TRANSLATORS: %s is the name of the LVM
-#: src/components/storage/SearchedDeviceMenu.tsx:119
+#: src/components/storage/SearchedDeviceMenu.tsx:118
 #, c-format
 msgid "It is chosen for booting and for the LVM group '%s'"
 msgstr "Se ha elegido para arrancar y para algunos grupos de LVM %s"
 
 #. TRANSLATORS: %s is the name of the LVM
-#: src/components/storage/SearchedDeviceMenu.tsx:125
+#: src/components/storage/SearchedDeviceMenu.tsx:124
 #, c-format
 msgid "It is chosen for the LVM group '%s'"
 msgstr "Se ha elegido para el grupo de LVM %s"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:130
+#: src/components/storage/SearchedDeviceMenu.tsx:129
 msgid "It is chosen for booting"
 msgstr "Se ha elegido para arrancar"
 
 #. TRANSLATORS: %s is the name of the disk (eg. sda)
-#: src/components/storage/SearchedDeviceMenu.tsx:139
+#: src/components/storage/SearchedDeviceMenu.tsx:138
 #, c-format
 msgid ""
 "%s will still contain the configured LVM groups and any partition needed to "
@@ -2983,13 +3041,13 @@ msgstr ""
 "necesaria para arrancar"
 
 #. TRANSLATORS: %s is the name of the disk (eg. sda)
-#: src/components/storage/SearchedDeviceMenu.tsx:145
+#: src/components/storage/SearchedDeviceMenu.tsx:144
 #, c-format
 msgid "The configured LVM groups will remain at %s"
 msgstr "Los grupos de LVM configurados permanecerán en %s"
 
 #. TRANSLATORS: %1$s is the name of the disk (eg. sda) and %2$s the name of the LVM
-#: src/components/storage/SearchedDeviceMenu.tsx:151
+#: src/components/storage/SearchedDeviceMenu.tsx:150
 #, c-format
 msgid ""
 "%1$s will still contain the LVM group '%2$s' and any partition needed to boot"
@@ -2998,46 +3056,46 @@ msgstr ""
 "para arrancar"
 
 #. TRANSLATORS: %1$s is the name of the LVM and %2$s the name of the disk (eg. sda)
-#: src/components/storage/SearchedDeviceMenu.tsx:159
+#: src/components/storage/SearchedDeviceMenu.tsx:158
 #, c-format
 msgid "The LVM group '%1$s' will remain at %2$s"
 msgstr "El grupo de LVM '%1$s' permanecerá en %2$s"
 
 #. TRANSLATORS: %s is the name of the disk (eg. sda)
-#: src/components/storage/SearchedDeviceMenu.tsx:167
+#: src/components/storage/SearchedDeviceMenu.tsx:166
 #, c-format
 msgid "Partitions needed for booting will remain at %s"
 msgstr "Las particiones necesarias para el arranque permanecerán en %s"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:171
+#: src/components/storage/SearchedDeviceMenu.tsx:170
 msgid "Partitions needed for booting will also be adapted"
 msgstr "Las particiones necesarias para el arranque también se adaptarán"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:187
+#: src/components/storage/SearchedDeviceMenu.tsx:186
 msgid "Change device menu"
 msgstr "Cambiar el menú del dispositivos"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:237
+#: src/components/storage/SearchedDeviceMenu.tsx:236
 msgid "The disk is used for LVM and boot"
 msgstr "El disco es utilizado para LVM y para arrancar"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:239
+#: src/components/storage/SearchedDeviceMenu.tsx:238
 msgid "The disk is used for booting"
 msgstr "Este disco se utiliza para arrancar"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:243
+#: src/components/storage/SearchedDeviceMenu.tsx:242
 msgid "The disk is used for LVM"
 msgstr "Este disco se utiliza para LVM"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:245
+#: src/components/storage/SearchedDeviceMenu.tsx:244
 msgid "Remove the configuration for this disk"
 msgstr "Eliminar la configuración de este disco"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:257
+#: src/components/storage/SearchedDeviceMenu.tsx:256
 msgid "Do not use"
 msgstr "No utilizar"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:308
+#: src/components/storage/SearchedDeviceMenu.tsx:309
 #, c-format
 msgid "Device %s menu"
 msgstr "Menú del dispositivo %s"
@@ -3131,10 +3189,6 @@ msgstr "No se encontró contenido"
 msgid "Action"
 msgstr "Acción"
 
-#: src/components/storage/SpacePolicyMenu.tsx:70
-msgid "Find space"
-msgstr "Buscar espacio"
-
 #: src/components/storage/SpacePolicySelection.tsx:97
 msgid ""
 "Select what to do with each partition in order to find space for allocating "
@@ -3165,74 +3219,79 @@ msgstr ""
 "prefiere, descartar la configuración y empezar desde cero con una "
 "configuración sencilla."
 
-#: src/components/storage/UnusedMenu.tsx:46
+#: src/components/storage/UnusedMenu.tsx:36
 msgid "Not configured yet"
 msgstr "Aún no está configurado"
 
-#: src/components/storage/UnusedMenu.tsx:48
+#: src/components/storage/UnusedMenu.tsx:61
 msgid "Use the RAID without partitions"
 msgstr "Usar RAID sin particiones"
 
-#: src/components/storage/UnusedMenu.tsx:48
+#: src/components/storage/UnusedMenu.tsx:61
 msgid "Use the disk without partitions"
 msgstr "Usar el disco sin particiones"
 
-#: src/components/storage/UnusedMenu.tsx:70
+#: src/components/storage/UnusedMenu.tsx:72
 msgid "Add a partition or mount an existing one"
 msgstr "Añada una partición o monte una existente"
 
-#: src/components/storage/UnusedMenu.tsx:78
+#: src/components/storage/UnusedMenu.tsx:80
 msgid "Format the whole device or mount an existing file system"
 msgstr "Formatee todo el dispositivo o monte un sistema de archivos existente"
 
 #. TRANSLATORS: %1$s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case). %2$s is a disk name like sda.
-#: src/components/storage/VolumeGroupEditor.tsx:58
+#: src/components/storage/VolumeGroupEditor.tsx:74
 #, c-format
 msgid "%1$s will be created as a partition at %2$s"
 msgid_plural "%1$s will be created as partitions at %2$s"
 msgstr[0] "%1$s se creará como partición en %2$s"
 msgstr[1] "%1$s se crearán como particiones en %2$s"
 
-#: src/components/storage/VolumeGroupEditor.tsx:67
+#: src/components/storage/VolumeGroupEditor.tsx:83
 msgid "The logical volume will also be deleted"
 msgid_plural "The logical volumes will also be deleted"
 msgstr[0] "El volumen lógico también se eliminará"
 msgstr[1] "Los volúmenes lógicos también se eliminarán"
 
-#: src/components/storage/VolumeGroupEditor.tsx:82
+#: src/components/storage/VolumeGroupEditor.tsx:98
 msgid "Delete volume group"
 msgstr "Eliminar grupo de volúmenes"
 
-#: src/components/storage/VolumeGroupEditor.tsx:94
+#: src/components/storage/VolumeGroupEditor.tsx:110
 msgid "Modify settings and physical volumes"
 msgstr "Modificar la configuración y los volúmenes físicos"
 
-#: src/components/storage/VolumeGroupEditor.tsx:98
+#: src/components/storage/VolumeGroupEditor.tsx:114
 msgid "Edit volume group"
 msgstr "Editar grupo de volúmenes"
 
-#: src/components/storage/VolumeGroupEditor.tsx:122
+#. TRANSLATORS: ARIA (accesibility) description of an UI element. %s is a mount path.
+#: src/components/storage/VolumeGroupEditor.tsx:145
+#, fuzzy, c-format
+msgid "Volume group %s"
+msgstr "Grupo de volúmenes LVM %s vacío"
+
+#: src/components/storage/VolumeGroupEditor.tsx:185
 #, c-format
 msgid "Create LVM volume group %s"
 msgstr "Crear grupo de volúmenes LVM %s"
 
-#: src/components/storage/VolumeGroupEditor.tsx:123
+#: src/components/storage/VolumeGroupEditor.tsx:186
 #, c-format
 msgid "Empty LVM volume group %s"
 msgstr "Grupo de volúmenes LVM %s vacío"
 
-#: src/components/storage/VolumeGroupEditor.tsx:134
+#: src/components/storage/VolumeGroupEditor.tsx:241
+msgid "Add logical volume"
+msgstr "Añadir volumen lógico"
+
+#: src/components/storage/VolumeGroupEditor.tsx:251
 #, c-format
 msgid "Logical volumes for %s"
 msgstr "Volúmenes lógicos para %s"
 
-#: src/components/storage/VolumeGroupEditor.tsx:139
-#: src/components/storage/VolumeGroupEditor.tsx:194
-msgid "Add logical volume"
-msgstr "Añadir volumen lógico"
-
-#: src/components/storage/VolumeGroupEditor.tsx:148
+#: src/components/storage/VolumeGroupEditor.tsx:266
 msgid "The following logical volume will be created"
 msgid_plural "The following logical volumes will be created"
 msgstr[0] "Se creará el volumen lógico siguiente"
@@ -3603,10 +3662,6 @@ msgstr "Desconectado"
 #, c-format
 msgid "Connected (%s)"
 msgstr "Conectado (%s)"
-
-#: src/components/storage/iscsi/NodesPresenter.jsx:79
-msgid "Delete"
-msgstr "Eliminar"
 
 #: src/components/storage/iscsi/NodesPresenter.jsx:84
 msgid "Login"
@@ -4226,6 +4281,42 @@ msgstr "Utilizar clave pública SSH"
 msgid "ZFCP"
 msgstr "ZFCP"
 
+#~ msgid "Other options toggle"
+#~ msgstr "Mostrar/ocultar otras opciones"
+
+#~ msgid "Other options"
+#~ msgstr "Otras opciones"
+
+#~ msgid "Select the disk to configure partitions for booting"
+#~ msgstr "Seleccione el disco para configurar particiones de arranque"
+
+#~ msgid "Change boot options"
+#~ msgstr "Cambiar opciones de arranque"
+
+#, c-format
+#~ msgid "Details for %s"
+#~ msgstr "Detalles de %s"
+
+#~ msgid "Add another partition or mount an existing one"
+#~ msgstr "Añada otra partición o monte una existente"
+
+#~ msgid "Collapse the list of planned actions"
+#~ msgstr "Contraer la lista de acciones planificadas"
+
+#, c-format
+#~ msgid "Check the %d planned actions"
+#~ msgstr "Revise las %d acciones planificadas"
+
+#~ msgid ""
+#~ "During installation, several actions will be performed to setup the "
+#~ "layout shown at the table below."
+#~ msgstr ""
+#~ "Durante la instalación, se realizarán varias acciones para establecer la "
+#~ "estructura de particiones que se muestra en la siguiente tabla."
+
+#~ msgid "Find space"
+#~ msgstr "Buscar espacio"
+
 #~ msgid "DASD devices selection table"
 #~ msgstr "Tabla de selección de dispositivos DASD"
 
@@ -4254,9 +4345,6 @@ msgstr "ZFCP"
 
 #~ msgid "License language"
 #~ msgstr "Idioma de la licencia"
-
-#~ msgid "Partitions"
-#~ msgstr "Particiones"
 
 #~ msgid ""
 #~ "This disk will contain the configured LVM groups and any partition needed "
@@ -4717,11 +4805,6 @@ msgstr "ZFCP"
 #~ msgid "Shrinking some partitions is allowed but not needed"
 #~ msgstr "Se permite reducir algunas particiones, pero no es necesario"
 
-#~ msgid "Cannot accommodate the required file systems for installation"
-#~ msgstr ""
-#~ "No se pueden acomodar los sistemas de archivos necesarios para la "
-#~ "instalación"
-
 #~ msgid "Waiting for actions information..."
 #~ msgstr "Esperando información de acciones..."
 
@@ -4736,9 +4819,6 @@ msgstr "ZFCP"
 
 #~ msgid "Planned Actions"
 #~ msgstr "Acciones planeadas"
-
-#~ msgid "Final layout"
-#~ msgstr "Diseño final"
 
 #~ msgid "The systems will be configured as displayed below."
 #~ msgstr "Los sistemas se configurarán como se muestra a continuación."

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-22 12:48+0000\n"
+"POT-Creation-Date: 2025-10-28 17:13+0000\n"
 "PO-Revision-Date: 2025-09-23 19:59+0000\n"
 "Last-Translator: Eugene Krater <lachend@gmail.com>\n"
 "Language-Team: Ukrainian <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -65,7 +65,7 @@ msgid "Continue"
 msgstr "Продовжити"
 
 #. TRANSLATORS: button label
-#: src/components/core/InstallButton.tsx:62 src/components/core/Page.tsx:234
+#: src/components/core/InstallButton.tsx:62 src/components/core/Page.tsx:247
 #: src/components/core/Popup.tsx:140
 #: src/components/network/BindingSettingsForm.tsx:228
 #: src/components/network/IpSettingsForm.tsx:219
@@ -205,7 +205,7 @@ msgstr "Використовувати ці ж налаштування для �
 #: src/components/core/InstallerOptions.tsx:391
 #: src/components/core/InstallerOptions.tsx:405
 #: src/components/core/InstallerOptions.tsx:448
-#: src/components/core/Page.tsx:266
+#: src/components/core/Page.tsx:279
 #: src/components/storage/dasd/FormatActionHandler.tsx:73
 #: src/components/storage/dasd/FormatActionHandler.tsx:100
 #: src/components/system/HostnamePage.tsx:132
@@ -274,7 +274,7 @@ msgstr "Аутентифікація"
 
 #: src/components/core/IssuesDrawer.tsx:50
 #: src/components/overview/StorageSection.tsx:112
-#: src/components/storage/ProposalPage.tsx:259 src/routes/storage.tsx:46
+#: src/components/storage/ProposalPage.tsx:353 src/routes/storage.tsx:46
 msgid "Storage"
 msgstr "Сховище"
 
@@ -355,7 +355,7 @@ msgstr "Будь ласка, вкажіть його пароль для вхо�
 msgid "Log in"
 msgstr "Вхід"
 
-#: src/components/core/MenuButton.tsx:59 src/components/core/Page.tsx:255
+#: src/components/core/MenuButton.tsx:78 src/components/core/Page.tsx:268
 #: src/components/storage/ISCSIPage.tsx:48
 #: src/components/storage/dasd/DASDPage.tsx:49
 #: src/components/storage/zfcp/ZFCPPage.tsx:198
@@ -421,6 +421,7 @@ msgid "It doesn't exist or can't be reached."
 msgstr "Він не існує або недоступний."
 
 #: src/components/core/RowActions.tsx:71
+#: src/components/storage/ProposalResultSection.tsx:134
 msgid "Actions"
 msgstr "Дії"
 
@@ -507,8 +508,8 @@ msgstr "Локалізація"
 
 #: src/components/l10n/L10nPage.tsx:84 src/components/l10n/L10nPage.tsx:98
 #: src/components/l10n/L10nPage.tsx:110
-#: src/components/storage/SearchedDeviceMenu.tsx:325
-#: src/components/storage/VolumeGroupEditor.tsx:114
+#: src/components/storage/BootSection.tsx:94
+#: src/components/storage/EncryptionSection.tsx:59
 #: src/components/storage/iscsi/InitiatorForm.tsx:89
 #: src/components/users/FirstUserForm.tsx:235
 #: src/components/users/RootUserForm.tsx:164
@@ -705,7 +706,7 @@ msgid "Edit connection %s"
 msgstr "Редагувати з'єднання %s"
 
 #: src/components/network/IpSettingsForm.tsx:159
-#: src/components/storage/EncryptionSettingsPage.tsx:110
+#: src/components/storage/EncryptionSettingsPage.tsx:111
 #: src/components/storage/iscsi/DiscoverForm.tsx:98
 #: src/components/storage/iscsi/LoginForm.jsx:70
 #: src/components/storage/zfcp/ZFCPDiskForm.tsx:112
@@ -852,8 +853,9 @@ msgid "IP settings"
 msgstr "Налаштування IP"
 
 #: src/components/network/WifiConnectionDetails.tsx:100
-#: src/components/storage/EncryptionSection.tsx:52
-#: src/components/storage/FilesystemMenu.tsx:94
+#: src/components/storage/FilesystemMenu.tsx:103
+#: src/components/storage/PartitionsSection.tsx:172
+#: src/components/storage/VolumeGroupEditor.tsx:163
 #: src/components/storage/iscsi/NodesPresenter.jsx:75
 #: src/components/users/FirstUser.tsx:54 src/components/users/RootUser.tsx:57
 msgid "Edit"
@@ -1041,6 +1043,7 @@ msgid "Connected devices tabs"
 msgstr "Вкладки підключених пристроїв"
 
 #: src/components/network/WiredConnectionDetails.tsx:203
+#: src/components/storage/ProposalPage.tsx:226
 msgid "Settings"
 msgstr "Налаштування"
 
@@ -1786,7 +1789,44 @@ msgstr ""
 "Поточна конфігурація призведе до спроби утворення розділу %1$s розміром "
 "щонайменше %2$s."
 
-#: src/components/storage/BootSelection.tsx:135
+#: src/components/storage/BootSection.tsx:41
+#, fuzzy, c-format
+msgid ""
+"Partitions to boot will be set up if needed at the installation "
+"disk,         based on the location of the %s file system."
+msgstr "Розділи для завантаження буде виділено на інсталяційному диску %s."
+
+#: src/components/storage/BootSection.tsx:52
+#, c-format
+msgid ""
+"Partitions to boot will be set up if needed at the installation disk.       "
+"Currently %1$s, based on the location of the %2$s file system."
+msgstr ""
+
+#: src/components/storage/BootSection.tsx:65
+#, fuzzy
+msgid "No partitions will be automatically configured for booting."
+msgstr ""
+"Жоден розділ не буде автоматично налаштовано для завантаження. "
+"Використовуйте з обережністю."
+
+#. TRANSLATORS: %s is replaced by a disk name and size (eg. "sda (500GiB)")
+#: src/components/storage/BootSection.tsx:69
+#, fuzzy, c-format
+msgid "Partitions to boot will be set up if needed at %s."
+msgstr "Розділи для завантаження буде виділено на інсталяційному диску."
+
+#: src/components/storage/BootSection.tsx:84
+#, fuzzy
+msgid ""
+"To ensure the new system is able to boot, the installer may need to create "
+"or configure some           partitions in the appropriate disk."
+msgstr ""
+"Щоб забезпечити можливість завантаження нової системи, програмі встановлення "
+"може знадобитися створити або налаштувати деякі розділи на відповідному "
+"диску."
+
+#: src/components/storage/BootSelection.tsx:136
 msgid ""
 "To ensure the new system is able to boot, the installer may need to create "
 "or configure some partitions in the appropriate disk."
@@ -1795,55 +1835,61 @@ msgstr ""
 "може знадобитися створити або налаштувати деякі розділи на відповідному "
 "диску."
 
-#: src/components/storage/BootSelection.tsx:141
-msgid "Partitions to boot will be allocated at the installation disk."
-msgstr "Розділи для завантаження буде виділено на інсталяційному диску."
-
-#. TRANSLATORS: %s is replaced by a device name and size (e.g., "/dev/sda, 500GiB")
-#: src/components/storage/BootSelection.tsx:146
-#, c-format
-msgid "Partitions to boot will be allocated at the installation disk %s."
+#: src/components/storage/BootSelection.tsx:145
+#, fuzzy, c-format
+msgid ""
+"Partitions to boot will be set up if needed at the installation "
+"disk,           based on the location of the %s file system."
 msgstr "Розділи для завантаження буде виділено на інсталяційному диску %s."
 
-#: src/components/storage/BootSelection.tsx:162
+#: src/components/storage/BootSelection.tsx:156
+#, c-format
+msgid ""
+"Partitions to boot will be set up if needed at the installation "
+"disk.         Currently %1$s, based on the location of the %2$s file system."
+msgstr ""
+
+#: src/components/storage/BootSelection.tsx:175
+#: src/components/storage/ProposalPage.tsx:287
 msgid "Boot options"
 msgstr "Параметри завантаження"
 
-#: src/components/storage/BootSelection.tsx:182
+#: src/components/storage/BootSelection.tsx:195
 #: src/components/storage/SizeModeSelect.tsx:191
 #: src/components/storage/SizeModeSelect.tsx:196
 #: src/components/storage/iscsi/NodeStartupOptions.js:28
 msgid "Automatic"
 msgstr "Автоматично"
 
-#: src/components/storage/BootSelection.tsx:200
+#: src/components/storage/BootSelection.tsx:213
 msgid "Select a disk"
 msgstr "Оберіть диск"
 
-#: src/components/storage/BootSelection.tsx:205
-msgid "Partitions to boot will be allocated at the following device."
+#: src/components/storage/BootSelection.tsx:218
+#, fuzzy
+msgid "Partitions to boot will be set up if needed at the following device."
 msgstr "Розділи для завантаження буде виділено на наступному пристрої."
 
-#: src/components/storage/BootSelection.tsx:207
+#: src/components/storage/BootSelection.tsx:220
 msgid "Choose a disk for placing the boot loader"
 msgstr "Оберіть диск для розміщення завантажувача"
 
-#: src/components/storage/BootSelection.tsx:230
+#: src/components/storage/BootSelection.tsx:243
 msgid "Do not configure"
 msgstr "Не налаштовувати"
 
-#: src/components/storage/BootSelection.tsx:236
+#: src/components/storage/BootSelection.tsx:249
 msgid ""
 "No partitions will be automatically configured for booting. Use with caution."
 msgstr ""
 "Жоден розділ не буде автоматично налаштовано для завантаження. "
 "Використовуйте з обережністю."
 
-#: src/components/storage/ConfigEditor.tsx:35
+#: src/components/storage/ConfigEditor.tsx:36
 msgid "No devices configured yet"
 msgstr "Пристрої ще не налаштовані"
 
-#: src/components/storage/ConfigEditor.tsx:38
+#: src/components/storage/ConfigEditor.tsx:39
 #, c-format
 msgid ""
 "Use actions below to set up your devices or click %s to start from scratch "
@@ -1853,96 +1899,39 @@ msgstr ""
 "%s, щоб почати з нуля з типовою конфігурацією."
 
 #. TRANSLATORS: label for a button
-#: src/components/storage/ConfigEditor.tsx:49
+#: src/components/storage/ConfigEditor.tsx:50
 msgid "reset to defaults"
 msgstr "скинути до типових налаштувань"
 
-#: src/components/storage/ConfigEditor.tsx:85
+#: src/components/storage/ConfigEditor.tsx:87
 msgid "[FIXME]"
 msgstr "[FIXME]"
 
-#: src/components/storage/ConfigEditorMenu.tsx:59
-msgid "Other options toggle"
-msgstr "Показати інші налаштування"
-
-#: src/components/storage/ConfigEditorMenu.tsx:62
-msgid "Other options"
-msgstr "Інші опції"
-
-#: src/components/storage/ConfigEditorMenu.tsx:70
-msgid "Select the disk to configure partitions for booting"
-msgstr "Виберіть диск для налаштування розділів для завантаження"
-
-#: src/components/storage/ConfigEditorMenu.tsx:72
-msgid "Change boot options"
-msgstr "Змінити параметри завантаження"
-
-#: src/components/storage/ConfigEditorMenu.tsx:77
-msgid "Start from scratch with the default configuration"
-msgstr "Почати з нуля зі стандартною конфігурацією"
-
-#: src/components/storage/ConfigEditorMenu.tsx:79
-msgid "Reset to defaults"
-msgstr "Скинути до типових налаштувань"
-
-#: src/components/storage/ConfigEditorMenu.tsx:85
-msgid "Discover and connect to iSCSI targets"
-msgstr "Виявлення та підключення до iSCSI-об'єктів"
-
-#: src/components/storage/ConfigEditorMenu.tsx:87
-msgid "Configure iSCSI"
-msgstr "Налаштувати iSCSI"
-
-#: src/components/storage/ConfigEditorMenu.tsx:93
-#: src/components/storage/ProposalPage.tsx:155
-msgid "Activate zFCP disks"
-msgstr "Активувати диски zFCP"
-
-#: src/components/storage/ConfigEditorMenu.tsx:95
-msgid "Configure zFCP"
-msgstr "Налаштувати zFCP"
-
-#: src/components/storage/ConfigEditorMenu.tsx:102
-msgid "Activate and format DASD devices"
-msgstr "Активувати та форматувати DASD-пристрої"
-
-#: src/components/storage/ConfigEditorMenu.tsx:104
-msgid "Configure DASD"
-msgstr "Налаштувати DASD"
-
-#: src/components/storage/ConfigEditorMenu.tsx:110
-msgid "Update available disks and activate crypt devices"
-msgstr "Оновлення доступних дисків і активація криптопристроїв"
-
-#: src/components/storage/ConfigEditorMenu.tsx:112
-msgid "Rescan devices"
-msgstr "Пересканувати пристрої"
-
-#: src/components/storage/ConfigureDeviceMenu.tsx:48
+#: src/components/storage/ConfigureDeviceMenu.tsx:49
 msgid "Select a device to define partitions or to mount"
 msgstr "Виберіть пристрій для визначення розділів або монтування"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:49
+#: src/components/storage/ConfigureDeviceMenu.tsx:50
 msgid "Select another device to define partitions or to mount"
 msgstr "Виберіть інший пристрій для створення розділів або монтування"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:52
+#: src/components/storage/ConfigureDeviceMenu.tsx:53
 msgid "Select a disk to define partitions or to mount"
 msgstr "Виберіть диск для визначення розділів або монтування"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:53
+#: src/components/storage/ConfigureDeviceMenu.tsx:54
 msgid "Select another disk to define partitions or to mount"
 msgstr "Виберіть інший диск для створення розділів або монтування"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:58
+#: src/components/storage/ConfigureDeviceMenu.tsx:59
 msgid "Already using all available devices"
 msgstr "Вже використані всі наявні пристрої"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:59
+#: src/components/storage/ConfigureDeviceMenu.tsx:60
 msgid "Already using all available disks"
 msgstr "Вже використані всі наявні диски"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:66
+#: src/components/storage/ConfigureDeviceMenu.tsx:67
 #, c-format
 msgid "Extend the installation beyond the currently selected device"
 msgid_plural "Extend the installation beyond the current %d devices"
@@ -1950,7 +1939,7 @@ msgstr[0] "Розширення встановлення за межі пото�
 msgstr[1] "Розширення встановлення за межі поточних %d пристроїв"
 msgstr[2] "Розширення встановлення за межі поточних %d пристроїв"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:75
+#: src/components/storage/ConfigureDeviceMenu.tsx:76
 #, c-format
 msgid "Extend the installation beyond the currently selected disk"
 msgid_plural "Extend the installation beyond the current %d disks"
@@ -1958,33 +1947,72 @@ msgstr[0] "Розширення встановлення за межі пото�
 msgstr[1] "Розширення встановлення за межі поточних %d дисків"
 msgstr[2] "Розширення встановлення за межі поточних %d дисків"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:83
+#: src/components/storage/ConfigureDeviceMenu.tsx:84
 msgid "Start configuring a basic installation"
 msgstr "Почати налаштування базової інсталяції"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:99
+#: src/components/storage/ConfigureDeviceMenu.tsx:100
 msgid "Add device menu"
 msgstr "Меню додавання пристроїв"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:143
+#: src/components/storage/ConfigureDeviceMenu.tsx:144
 msgid "Define a new LVM on top of one or several disks"
 msgstr "Визначення нового LVM над одним або кількома дисками"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:144
+#: src/components/storage/ConfigureDeviceMenu.tsx:145
 msgid "Define a new LVM on the disk"
 msgstr "Задати новий LVM на диску"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:150
+#: src/components/storage/ConfigureDeviceMenu.tsx:151
 msgid "Configure device menu"
 msgstr "Меню налаштування пристрою"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:166
+#: src/components/storage/ConfigureDeviceMenu.tsx:171
 msgid "Add LVM volume group"
 msgstr "Додати групу томів LVM"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:170
+#: src/components/storage/ConfigureDeviceMenu.tsx:177
 msgid "More devices"
 msgstr "Інші пристрої"
+
+#. TRANSLATORS: this is an ARIA (accesibility) description of an UI element
+#: src/components/storage/ConnectedDevicesMenu.tsx:51
+#, fuzzy
+msgid "More storage options"
+msgstr "Більше дій"
+
+#: src/components/storage/ConnectedDevicesMenu.tsx:57
+msgid "Discover and connect to iSCSI targets"
+msgstr "Виявлення та підключення до iSCSI-об'єктів"
+
+#: src/components/storage/ConnectedDevicesMenu.tsx:59
+msgid "Configure iSCSI"
+msgstr "Налаштувати iSCSI"
+
+#: src/components/storage/ConnectedDevicesMenu.tsx:65
+#: src/components/storage/ProposalPage.tsx:165
+msgid "Activate zFCP disks"
+msgstr "Активувати диски zFCP"
+
+#: src/components/storage/ConnectedDevicesMenu.tsx:67
+msgid "Configure zFCP"
+msgstr "Налаштувати zFCP"
+
+#: src/components/storage/ConnectedDevicesMenu.tsx:74
+msgid "Activate and format DASD devices"
+msgstr "Активувати та форматувати DASD-пристрої"
+
+#: src/components/storage/ConnectedDevicesMenu.tsx:76
+msgid "Configure DASD"
+msgstr "Налаштувати DASD"
+
+#: src/components/storage/ConnectedDevicesMenu.tsx:82
+msgid "Update available disks and activate crypt devices"
+msgstr "Оновлення доступних дисків і активація криптопристроїв"
+
+#: src/components/storage/ConnectedDevicesMenu.tsx:84
+msgid "Rescan devices"
+msgstr "Пересканувати пристрої"
 
 #: src/components/storage/DeviceSelectorModal.tsx:87
 #: src/components/storage/ProposalResultTable.tsx:135
@@ -2145,44 +2173,41 @@ msgstr "Використати диск %s для налаштування за�
 msgid "Use disk %s"
 msgstr "Використати диск %s"
 
-#: src/components/storage/EncryptionSection.tsx:33
+#: src/components/storage/EncryptionSection.tsx:35
 msgid "Encryption is disabled"
 msgstr "Шифрування вимкнено"
 
-#: src/components/storage/EncryptionSection.tsx:34
+#: src/components/storage/EncryptionSection.tsx:36
 msgid "Encryption is enabled using TPM unlocking"
 msgstr "Шифрування увімкнено за допомогою розблокування TPM"
 
-#: src/components/storage/EncryptionSection.tsx:36
+#: src/components/storage/EncryptionSection.tsx:38
 msgid "Encryption is enabled"
 msgstr "Шифрування увімкнено"
 
-#: src/components/storage/EncryptionSection.tsx:46
-msgid "Encryption"
-msgstr "Шифрування"
-
-#: src/components/storage/EncryptionSection.tsx:48
+#: src/components/storage/EncryptionSection.tsx:50
+#, fuzzy
 msgid ""
-"Protection for the information stored at the new file systems, including "
-"data, programs, and system files."
+"Protection for the information stored at           the new file systems, "
+"including data, programs, and system files."
 msgstr ""
 "Захист інформації, що зберігається на нових файлових системах, включно з "
 "даними, програмами та системними файлами."
 
-#: src/components/storage/EncryptionSettingsPage.tsx:74
+#: src/components/storage/EncryptionSettingsPage.tsx:75
 #: src/components/users/RootUserForm.tsx:104
 msgid "Password is empty."
 msgstr "Пароль порожній."
 
 #. TRANSLATORS: "Trusted Platform Module" is the name of the technology and TPM its abbreviation
-#: src/components/storage/EncryptionSettingsPage.tsx:90
+#: src/components/storage/EncryptionSettingsPage.tsx:91
 msgid ""
 "Use the Trusted Platform Module (TPM) to decrypt automatically on each boot"
 msgstr ""
 "Використовуйте довірений платформний модуль (TPM) для автоматичного "
 "розшифрування під час кожного завантаження"
 
-#: src/components/storage/EncryptionSettingsPage.tsx:94
+#: src/components/storage/EncryptionSettingsPage.tsx:95
 msgid ""
 "The password will not be needed to boot and access the data if the TPM can "
 "verify the integrity of the system. TPM sealing requires the new system to "
@@ -2192,15 +2217,15 @@ msgstr ""
 "перевірити цілісність системи. Запечатування TPM вимагає, щоб нова система "
 "завантажувалася безпосередньо під час першого запуску."
 
-#: src/components/storage/EncryptionSettingsPage.tsx:104
+#: src/components/storage/EncryptionSettingsPage.tsx:105
 msgid "Encryption settings"
 msgstr "Налаштування шифрування"
 
-#: src/components/storage/EncryptionSettingsPage.tsx:118
+#: src/components/storage/EncryptionSettingsPage.tsx:119
 msgid "Encrypt the system"
 msgstr "Зашифрувати систему"
 
-#: src/components/storage/EncryptionSettingsPage.tsx:120
+#: src/components/storage/EncryptionSettingsPage.tsx:121
 msgid ""
 "Full Disk Encryption (FDE) allows to protect the information stored at the "
 "new file systems, including data, programs, and system files."
@@ -2229,24 +2254,7 @@ msgstr "Поточна файлова система буде змонтован
 msgid "The device will be formatted as %1$s and mounted at %2$s"
 msgstr "Пристрій буде відформатовано як %1$s та змонтовано за шляхом %2$s"
 
-#. TRANSLATORS: %s is the name of device, like '/dev/sda'.
-#: src/components/storage/FilesystemMenu.tsx:67
-#: src/components/storage/PartitionsMenu.tsx:145
-#: src/components/storage/UnusedMenu.tsx:45
-#, c-format
-msgid "Details for %s"
-msgstr "Подробиці для %s"
-
-#: src/components/storage/FilesystemMenu.tsx:75
-#: src/components/storage/PartitionsMenu.tsx:187
-#: src/components/storage/ProposalResultTable.tsx:134
-#: src/components/storage/SpaceActionsTable.tsx:237
-#: src/components/storage/UnusedMenu.tsx:56
-#: src/components/storage/VolumeGroupEditor.tsx:156
-msgid "Details"
-msgstr "Подробиці"
-
-#: src/components/storage/FilesystemMenu.tsx:91
+#: src/components/storage/FilesystemMenu.tsx:100
 msgid "Change the file system or mount point"
 msgstr "Змінити файлову систему або точку монтування"
 
@@ -2279,7 +2287,7 @@ msgstr ""
 #: src/components/storage/LogicalVolumePage.tsx:466
 #: src/components/storage/LogicalVolumePage.tsx:769
 #: src/components/storage/PartitionPage.tsx:560
-#: src/components/storage/PartitionPage.tsx:891
+#: src/components/storage/PartitionPage.tsx:892
 msgid "Waiting for a mount point"
 msgstr "Очікуємо на точку монтування"
 
@@ -2340,50 +2348,50 @@ msgstr "Налаштувати пристрій %s"
 #: src/components/storage/FormattableDevicePage.tsx:467
 #: src/components/storage/LogicalVolumePage.tsx:697
 #: src/components/storage/LogicalVolumePage.tsx:702
-#: src/components/storage/PartitionPage.tsx:821
-#: src/components/storage/PartitionPage.tsx:828
+#: src/components/storage/PartitionPage.tsx:822
+#: src/components/storage/PartitionPage.tsx:829
 msgid "Mount point"
 msgstr "Точка монтування"
 
 #: src/components/storage/FormattableDevicePage.tsx:465
 #: src/components/storage/LogicalVolumePage.tsx:700
-#: src/components/storage/PartitionPage.tsx:826
+#: src/components/storage/PartitionPage.tsx:827
 msgid "Mount point toggle"
 msgstr "Показати точку монтування"
 
 #: src/components/storage/FormattableDevicePage.tsx:466
 #: src/components/storage/LogicalVolumePage.tsx:701
-#: src/components/storage/PartitionPage.tsx:827
+#: src/components/storage/PartitionPage.tsx:828
 msgid "Suggested mount points"
 msgstr "Пропоновані точки монтування"
 
 #: src/components/storage/FormattableDevicePage.tsx:468
 #: src/components/storage/LogicalVolumePage.tsx:703
-#: src/components/storage/PartitionPage.tsx:829
+#: src/components/storage/PartitionPage.tsx:830
 msgid "Clear selected mount point"
 msgstr "Видалити вибрану точку монтування"
 
 #: src/components/storage/FormattableDevicePage.tsx:471
 #: src/components/storage/LogicalVolumePage.tsx:706
-#: src/components/storage/PartitionPage.tsx:832
+#: src/components/storage/PartitionPage.tsx:833
 msgid "Use"
 msgstr "Використати"
 
 #: src/components/storage/FormattableDevicePage.tsx:482
 #: src/components/storage/LogicalVolumePage.tsx:715
-#: src/components/storage/PartitionPage.tsx:853
+#: src/components/storage/PartitionPage.tsx:854
 msgid "Select or enter a mount point"
 msgstr "Виберіть або введіть точку монтування"
 
 #: src/components/storage/FormattableDevicePage.tsx:491
 #: src/components/storage/LogicalVolumePage.tsx:740
-#: src/components/storage/PartitionPage.tsx:862
+#: src/components/storage/PartitionPage.tsx:863
 msgid "File system"
 msgstr "Файлова система"
 
 #: src/components/storage/FormattableDevicePage.tsx:502
 #: src/components/storage/LogicalVolumePage.tsx:751
-#: src/components/storage/PartitionPage.tsx:874
+#: src/components/storage/PartitionPage.tsx:875
 msgid "Label"
 msgstr "Ярлик"
 
@@ -2440,7 +2448,7 @@ msgid "Configure LVM logical volume at %s volume group"
 msgstr "Налаштування логічного тому LVM у групі томів %s"
 
 #: src/components/storage/LogicalVolumePage.tsx:764
-#: src/components/storage/PartitionPage.tsx:886
+#: src/components/storage/PartitionPage.tsx:887
 msgid "Size mode"
 msgstr "Режим розміру"
 
@@ -2649,65 +2657,83 @@ msgstr "Знищити поточні дані і відформатувати �
 msgid "Format partition as"
 msgstr "Форматувати розділ як"
 
-#: src/components/storage/PartitionPage.tsx:813
+#: src/components/storage/PartitionPage.tsx:814
 #, c-format
 msgid "Configure partition at %s"
 msgstr "Налаштування розділу на %s"
 
-#: src/components/storage/PartitionPage.tsx:838
+#: src/components/storage/PartitionPage.tsx:839
 msgid "Mount point mode"
 msgstr "Режим точок монтування"
 
-#: src/components/storage/PartitionPage.tsx:921
+#: src/components/storage/PartitionPage.tsx:922
 msgid "Go to storage page"
 msgstr "Перейти до розділу «Сховище»"
 
-#: src/components/storage/PartitionsMenu.tsx:63
+#: src/components/storage/PartitionsSection.tsx:80
 msgid "Moreover, the following partitions will be created or mounted"
 msgstr "Крім того, буде створено або змонтовано такі розділи"
 
-#: src/components/storage/PartitionsMenu.tsx:67
+#: src/components/storage/PartitionsSection.tsx:84
 msgid "Moreover, the following partition will be created."
 msgid_plural "Moreover, the following partitions will be created."
 msgstr[0] "Крім того, буде створено такий розділ."
 msgstr[1] "Крім того, буде створено такі розділи."
 msgstr[2] "Крім того, буде створено такі розділи."
 
-#: src/components/storage/PartitionsMenu.tsx:73
+#: src/components/storage/PartitionsSection.tsx:90
 msgid "Moreover, the following partition will be mounted."
 msgid_plural "Moreover, the following partitions will be mounted."
 msgstr[0] "Крім того, буде змонтовано такий розділ."
 msgstr[1] "Крім того, буде змонтовано такі розділи."
 msgstr[2] "Крім того, буде змонтовано такі розділи."
 
-#: src/components/storage/PartitionsMenu.tsx:80
+#: src/components/storage/PartitionsSection.tsx:97
 msgid "The following partitions will be created or mounted"
 msgstr "Будуть створені або змонтовані такі розділи"
 
-#: src/components/storage/PartitionsMenu.tsx:84
+#: src/components/storage/PartitionsSection.tsx:101
 msgid "The following partition will be created."
 msgid_plural "The following partitions will be created."
 msgstr[0] "Буде створено такий розділ."
 msgstr[1] "Будуть створені такі розділи."
 msgstr[2] "Будуть створені такі розділи."
 
-#: src/components/storage/PartitionsMenu.tsx:90
+#: src/components/storage/PartitionsSection.tsx:107
 msgid "The following partition will be mounted."
 msgid_plural "The following partitions will be mounted."
 msgstr[0] "Буде змонтовано такий розділ."
 msgstr[1] "Будуть змонтовані такі розділи."
 msgstr[2] "Будуть змонтовані такі розділи."
 
-#: src/components/storage/PartitionsMenu.tsx:132
+#: src/components/storage/PartitionsSection.tsx:117
 msgid "Any partition needed to boot will be configured."
 msgstr "Усі розділи, необхідні для завантаження, буде налаштовано."
 
-#: src/components/storage/PartitionsMenu.tsx:174
-msgid "Add another partition or mount an existing one"
-msgstr "Додати новий розділ або змонтувати наявний"
+#. TRANSLATORS: ARIA (accesibility) description of an UI element. %s is a mount path.
+#: src/components/storage/PartitionsSection.tsx:151
+#, fuzzy, c-format
+msgid "Partition %s"
+msgstr "Розділи"
 
-#: src/components/storage/PartitionsMenu.tsx:177
-#: src/components/storage/UnusedMenu.tsx:73
+#. TRANSLATORS: ARIA (accesibility) description of an button. %s is a mount path.
+#: src/components/storage/PartitionsSection.tsx:163
+#, fuzzy, c-format
+msgid "Options for partition %s"
+msgstr "Використовуючи розділ %s"
+
+#: src/components/storage/PartitionsSection.tsx:180
+#: src/components/storage/VolumeGroupEditor.tsx:171
+#: src/components/storage/iscsi/NodesPresenter.jsx:79
+msgid "Delete"
+msgstr "Вилучити"
+
+#: src/components/storage/PartitionsSection.tsx:264
+msgid "Partitions"
+msgstr "Розділи"
+
+#: src/components/storage/PartitionsSection.tsx:277
+#: src/components/storage/UnusedMenu.tsx:75
 msgid "Add or use partition"
 msgstr "Створити або використати розділ"
 
@@ -2765,18 +2791,18 @@ msgstr ""
 msgid "Failed to calculate a storage layout"
 msgstr "Не вдалося розрахувати схему зберігання"
 
-#: src/components/storage/ProposalPage.tsx:70
+#: src/components/storage/ProposalPage.tsx:80
 msgid "Invalid storage settings"
 msgstr "Неправильні налаштування сховища"
 
-#: src/components/storage/ProposalPage.tsx:77
+#: src/components/storage/ProposalPage.tsx:87
 msgid "The current storage configuration has the following issue:"
 msgid_plural "The current storage configuration has the following issues:"
 msgstr[0] "Поточна конфігурація сховища має таку проблему:"
 msgstr[1] "Поточна конфігурація сховища має такі проблеми:"
 msgstr[2] "Поточна конфігурація сховища має такі проблеми:"
 
-#: src/components/storage/ProposalPage.tsx:91
+#: src/components/storage/ProposalPage.tsx:101
 msgid ""
 "You may want to discard those settings and start from scratch with a simple "
 "configuration."
@@ -2784,24 +2810,24 @@ msgstr ""
 "Можливо, Ви захочете відкинути ці налаштування і почати з чистого аркуша з "
 "простою конфігурацією."
 
-#: src/components/storage/ProposalPage.tsx:95
-#: src/components/storage/ProposalPage.tsx:123
+#: src/components/storage/ProposalPage.tsx:105
+#: src/components/storage/ProposalPage.tsx:133
 #: src/components/storage/UnsupportedModelInfo.tsx:55
 msgid "Reset to the default configuration"
 msgstr "Скинути до типової конфігурації"
 
-#: src/components/storage/ProposalPage.tsx:107
+#: src/components/storage/ProposalPage.tsx:117
 #: src/components/storage/UnsupportedModelInfo.tsx:39
 msgid "Unable to modify the settings"
 msgstr "Не вдається змінити налаштування"
 
-#: src/components/storage/ProposalPage.tsx:113
+#: src/components/storage/ProposalPage.tsx:123
 msgid ""
 "The storage configuration uses elements not supported by this interface."
 msgstr ""
 "Конфігурація сховища використовує елементи, не підтримувані цим інтерфейсом."
 
-#: src/components/storage/ProposalPage.tsx:119
+#: src/components/storage/ProposalPage.tsx:129
 msgid ""
 "You may want to discard the current settings and start from scratch with a "
 "simple configuration."
@@ -2809,7 +2835,7 @@ msgstr ""
 "Можливо, Ви захочете відкинути поточні налаштування і почати з чистого "
 "аркуша з простою конфігурацією."
 
-#: src/components/storage/ProposalPage.tsx:135
+#: src/components/storage/ProposalPage.tsx:145
 msgid ""
 "There are not disks available for the installation. You may need to "
 "configure some device."
@@ -2817,24 +2843,38 @@ msgstr ""
 "Диски для встановлення не доступні. Можливо, вам потрібно налаштувати якийсь "
 "пристрій."
 
-#: src/components/storage/ProposalPage.tsx:140
+#: src/components/storage/ProposalPage.tsx:150
 #: src/components/storage/dasd/DASDTable.tsx:304
 msgid "No devices found"
 msgstr "Пристроїв не знайдено"
 
-#: src/components/storage/ProposalPage.tsx:149
+#: src/components/storage/ProposalPage.tsx:159
 msgid "Connect to iSCSI targets"
 msgstr "Підключення до об'єктів iSCSI"
 
-#: src/components/storage/ProposalPage.tsx:162
+#: src/components/storage/ProposalPage.tsx:172
 msgid "Manage DASD devices"
 msgstr "Керування DASD-пристроями"
 
-#: src/components/storage/ProposalPage.tsx:196
-msgid "Installation Devices"
+#: src/components/storage/ProposalPage.tsx:244
+msgid "Start from scratch with the default configuration"
+msgstr "Почати з нуля зі стандартною конфігурацією"
+
+#: src/components/storage/ProposalPage.tsx:246
+msgid "Reset to defaults"
+msgstr "Скинути до типових налаштувань"
+
+#: src/components/storage/ProposalPage.tsx:255
+msgid ""
+"Changes in these settings will immediately update the 'Result' section below."
+msgstr ""
+
+#: src/components/storage/ProposalPage.tsx:262
+#, fuzzy
+msgid "Installation devices"
 msgstr "Пристрої для встановлення"
 
-#: src/components/storage/ProposalPage.tsx:198
+#: src/components/storage/ProposalPage.tsx:268
 msgid ""
 "Structure of the new system, including disks to use and additional devices "
 "like LVM volume groups."
@@ -2842,15 +2882,19 @@ msgstr ""
 "Структура нової системи, включаючи використовувані диски та додаткові "
 "пристрої, такі як групи томів LVM."
 
-#: src/components/storage/ProposalPage.tsx:262
+#: src/components/storage/ProposalPage.tsx:278
+msgid "Encryption"
+msgstr "Шифрування"
+
+#: src/components/storage/ProposalPage.tsx:362
 msgid "Reloading data, please wait..."
 msgstr "Переміщення даних; будь ласка, зачекайте…"
 
-#: src/components/storage/ProposalResultSection.tsx:39
+#: src/components/storage/ProposalResultSection.tsx:42
 msgid "Waiting for information about storage configuration"
 msgstr "Очікування інформації про конфігурацію сховища"
 
-#: src/components/storage/ProposalResultSection.tsx:64
+#: src/components/storage/ProposalResultSection.tsx:67
 #, c-format
 msgid "There is %d destructive action planned affecting %s"
 msgid_plural "There are %d destructive actions planned affecting %s"
@@ -2858,7 +2902,7 @@ msgstr[0] "Планується %d руйнівна дія, що вплине н
 msgstr[1] "Планується %d руйнівні дії, що вплине на %s"
 msgstr[2] "Планується %d руйнівних дій, що вплине на %s"
 
-#: src/components/storage/ProposalResultSection.tsx:75
+#: src/components/storage/ProposalResultSection.tsx:78
 #, c-format
 msgid "There is %d destructive action planned"
 msgid_plural "There are %d destructive actions planned"
@@ -2866,26 +2910,30 @@ msgstr[0] "Запланована %d руйнівна дія"
 msgstr[1] "Заплановано %d руйнівні дії"
 msgstr[2] "Заплановано %d руйнівних дій"
 
-#: src/components/storage/ProposalResultSection.tsx:94
-msgid "Collapse the list of planned actions"
-msgstr "Згорнути список запланованих дій"
-
-#: src/components/storage/ProposalResultSection.tsx:95
-#, c-format
-msgid "Check the %d planned actions"
-msgstr "Перевірити %d заплановані дії"
-
-#: src/components/storage/ProposalResultSection.tsx:126
+#: src/components/storage/ProposalResultSection.tsx:128
 msgid "Result"
 msgstr "Результат"
 
-#: src/components/storage/ProposalResultSection.tsx:128
+#: src/components/storage/ProposalResultSection.tsx:130
 msgid ""
-"During installation, several actions will be performed to setup the layout "
-"shown at the table below."
+"Result of applying the configuration described at the 'Settings' section "
+"above."
 msgstr ""
-"Під час інсталяції буде виконано кілька дій, щоб налаштувати схему, як "
-"показано в таблиці нижче."
+
+#: src/components/storage/ProposalResultSection.tsx:138
+#, fuzzy
+msgid ""
+"The following actions will be performed in the system during installation."
+msgstr "Для інсталяції обрано наступні шаблони програмного забезпечення:"
+
+#: src/components/storage/ProposalResultSection.tsx:144
+msgid "Final layout"
+msgstr "Кінцевий варіант"
+
+#: src/components/storage/ProposalResultSection.tsx:148
+#, fuzzy
+msgid "Final structure of the system after installation."
+msgstr "Неможливо розмістити необхідні файлові системи для інсталяції"
 
 #: src/components/storage/ProposalResultTable.tsx:77
 msgid "New"
@@ -2902,6 +2950,11 @@ msgstr "До %s"
 msgid "Mount Point"
 msgstr "Точка монтування"
 
+#: src/components/storage/ProposalResultTable.tsx:134
+#: src/components/storage/SpaceActionsTable.tsx:237
+msgid "Details"
+msgstr "Подробиці"
+
 #: src/components/storage/ProposalTransactionalInfo.tsx:43
 msgid "Transactional root file system"
 msgstr "Операційна коренева файлова система"
@@ -2916,65 +2969,67 @@ msgstr ""
 "систему Btrfs, доступну тільки для читання і оновлювану за допомогою "
 "моментальних знімків."
 
-#: src/components/storage/SearchedDeviceMenu.tsx:58
+#: src/components/storage/SearchedDeviceMenu.tsx:57
 msgid "Selected disk cannot be changed"
 msgstr "Обраний диск неможливо змінити"
 
 #. TRANSLATORS: %s is a formatted mount point like '"/home"'
-#: src/components/storage/SearchedDeviceMenu.tsx:63
-#, c-format
-msgid "Select a disk to format as %s"
+#: src/components/storage/SearchedDeviceMenu.tsx:62
+#, fuzzy, c-format
+msgid "Change the disk to format as %s"
 msgstr "Виберіть диск для форматування як %s"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:70
-msgid "Select a disk to configure"
+#: src/components/storage/SearchedDeviceMenu.tsx:69
+#, fuzzy
+msgid "Change the disk to configure"
 msgstr "Виберіть диск для налаштування"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:74
-msgid "Select a disk to install the system"
+#: src/components/storage/SearchedDeviceMenu.tsx:73
+#, fuzzy
+msgid "Change the disk to install the system"
 msgstr "Оберіть диск для встановлення системи"
 
 #. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case).
-#: src/components/storage/SearchedDeviceMenu.tsx:84
-#, c-format
-msgid "Select a disk to create %s"
+#: src/components/storage/SearchedDeviceMenu.tsx:83
+#, fuzzy, c-format
+msgid "Change the disk to create %s"
 msgstr "Виберіть диск для створення %s"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:100
+#: src/components/storage/SearchedDeviceMenu.tsx:99
 msgid "This uses the existing file system at the disk"
 msgstr "Для цього використовується наявна файлова система на диску"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:104
+#: src/components/storage/SearchedDeviceMenu.tsx:103
 msgid "This uses existing partitions at the disk"
 msgstr "Для цього використовуються наявні розділи на диску"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:112
+#: src/components/storage/SearchedDeviceMenu.tsx:111
 msgid "It is chosen for booting and for some LVM groups"
 msgstr "Його обрано для завантаження та для деяких груп LVM"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:114
+#: src/components/storage/SearchedDeviceMenu.tsx:113
 msgid "It is chosen for some LVM groups"
 msgstr "Його обрано для деяких груп LVM"
 
 #. TRANSLATORS: %s is the name of the LVM
-#: src/components/storage/SearchedDeviceMenu.tsx:119
+#: src/components/storage/SearchedDeviceMenu.tsx:118
 #, c-format
 msgid "It is chosen for booting and for the LVM group '%s'"
 msgstr "Його обрано для завантаження і для групи LVM «%s»"
 
 #. TRANSLATORS: %s is the name of the LVM
-#: src/components/storage/SearchedDeviceMenu.tsx:125
+#: src/components/storage/SearchedDeviceMenu.tsx:124
 #, c-format
 msgid "It is chosen for the LVM group '%s'"
 msgstr "Його обрано для групи LVM '%s'"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:130
+#: src/components/storage/SearchedDeviceMenu.tsx:129
 msgid "It is chosen for booting"
 msgstr "Його обрано для завантаження"
 
 #. TRANSLATORS: %s is the name of the disk (eg. sda)
-#: src/components/storage/SearchedDeviceMenu.tsx:139
+#: src/components/storage/SearchedDeviceMenu.tsx:138
 #, c-format
 msgid ""
 "%s will still contain the configured LVM groups and any partition needed to "
@@ -2984,13 +3039,13 @@ msgstr ""
 "для завантаження"
 
 #. TRANSLATORS: %s is the name of the disk (eg. sda)
-#: src/components/storage/SearchedDeviceMenu.tsx:145
+#: src/components/storage/SearchedDeviceMenu.tsx:144
 #, c-format
 msgid "The configured LVM groups will remain at %s"
 msgstr "Налаштовані групи LVM залишаться у %s"
 
 #. TRANSLATORS: %1$s is the name of the disk (eg. sda) and %2$s the name of the LVM
-#: src/components/storage/SearchedDeviceMenu.tsx:151
+#: src/components/storage/SearchedDeviceMenu.tsx:150
 #, c-format
 msgid ""
 "%1$s will still contain the LVM group '%2$s' and any partition needed to boot"
@@ -2999,46 +3054,46 @@ msgstr ""
 "для завантаження"
 
 #. TRANSLATORS: %1$s is the name of the LVM and %2$s the name of the disk (eg. sda)
-#: src/components/storage/SearchedDeviceMenu.tsx:159
+#: src/components/storage/SearchedDeviceMenu.tsx:158
 #, c-format
 msgid "The LVM group '%1$s' will remain at %2$s"
 msgstr "Група LVM '%1$s' залишиться на %2$s"
 
 #. TRANSLATORS: %s is the name of the disk (eg. sda)
-#: src/components/storage/SearchedDeviceMenu.tsx:167
+#: src/components/storage/SearchedDeviceMenu.tsx:166
 #, c-format
 msgid "Partitions needed for booting will remain at %s"
 msgstr "Розділи, необхідні для завантаження, залишаться на %s"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:171
+#: src/components/storage/SearchedDeviceMenu.tsx:170
 msgid "Partitions needed for booting will also be adapted"
 msgstr "Розділи, необхідні для завантаження, також будуть адаптовані"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:187
+#: src/components/storage/SearchedDeviceMenu.tsx:186
 msgid "Change device menu"
 msgstr "Меню зміни пристрою"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:237
+#: src/components/storage/SearchedDeviceMenu.tsx:236
 msgid "The disk is used for LVM and boot"
 msgstr "Диск використовується для LVM і завантаження"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:239
+#: src/components/storage/SearchedDeviceMenu.tsx:238
 msgid "The disk is used for booting"
 msgstr "Диск використовують для завантаження"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:243
+#: src/components/storage/SearchedDeviceMenu.tsx:242
 msgid "The disk is used for LVM"
 msgstr "Диск використовують для LVM"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:245
+#: src/components/storage/SearchedDeviceMenu.tsx:244
 msgid "Remove the configuration for this disk"
 msgstr "Видалити конфігурацію для цього диска"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:257
+#: src/components/storage/SearchedDeviceMenu.tsx:256
 msgid "Do not use"
 msgstr "Не використовувати"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:308
+#: src/components/storage/SearchedDeviceMenu.tsx:309
 #, c-format
 msgid "Device %s menu"
 msgstr "Меню пристрою %s"
@@ -3131,10 +3186,6 @@ msgstr "Вміст не знайдено"
 msgid "Action"
 msgstr "Дія"
 
-#: src/components/storage/SpacePolicyMenu.tsx:70
-msgid "Find space"
-msgstr "Знайти місце"
-
 #: src/components/storage/SpacePolicySelection.tsx:97
 msgid ""
 "Select what to do with each partition in order to find space for allocating "
@@ -3164,29 +3215,29 @@ msgstr ""
 "Ви можете продовжити інсталяцію з поточними налаштуваннями або відкинути "
 "конфігурацію і почати з чистого аркуша."
 
-#: src/components/storage/UnusedMenu.tsx:46
+#: src/components/storage/UnusedMenu.tsx:36
 msgid "Not configured yet"
 msgstr "Ще не налаштовано"
 
-#: src/components/storage/UnusedMenu.tsx:48
+#: src/components/storage/UnusedMenu.tsx:61
 msgid "Use the RAID without partitions"
 msgstr "Використати RAID-масив без розділів"
 
-#: src/components/storage/UnusedMenu.tsx:48
+#: src/components/storage/UnusedMenu.tsx:61
 msgid "Use the disk without partitions"
 msgstr "Використати диск без розділів"
 
-#: src/components/storage/UnusedMenu.tsx:70
+#: src/components/storage/UnusedMenu.tsx:72
 msgid "Add a partition or mount an existing one"
 msgstr "Додати розділ або змонтувати наявний"
 
-#: src/components/storage/UnusedMenu.tsx:78
+#: src/components/storage/UnusedMenu.tsx:80
 msgid "Format the whole device or mount an existing file system"
 msgstr "Відформатувати весь пристрій або змонтувати наявну файлову систему"
 
 #. TRANSLATORS: %1$s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case). %2$s is a disk name like sda.
-#: src/components/storage/VolumeGroupEditor.tsx:58
+#: src/components/storage/VolumeGroupEditor.tsx:74
 #, c-format
 msgid "%1$s will be created as a partition at %2$s"
 msgid_plural "%1$s will be created as partitions at %2$s"
@@ -3194,46 +3245,51 @@ msgstr[0] "%1$s буде створений як розділ на %2$s"
 msgstr[1] "%1$s будуть створені як розділи на %2$s"
 msgstr[2] "%1$s будуть створені як розділи на %2$s"
 
-#: src/components/storage/VolumeGroupEditor.tsx:67
+#: src/components/storage/VolumeGroupEditor.tsx:83
 msgid "The logical volume will also be deleted"
 msgid_plural "The logical volumes will also be deleted"
 msgstr[0] "Логічний том також буде видалений"
 msgstr[1] "Логічні томи також будуть видалені"
 msgstr[2] "Логічні томи також будуть видалені"
 
-#: src/components/storage/VolumeGroupEditor.tsx:82
+#: src/components/storage/VolumeGroupEditor.tsx:98
 msgid "Delete volume group"
 msgstr "Видалити групу томів"
 
-#: src/components/storage/VolumeGroupEditor.tsx:94
+#: src/components/storage/VolumeGroupEditor.tsx:110
 msgid "Modify settings and physical volumes"
 msgstr "Зміна налаштувань та фізичних томів"
 
-#: src/components/storage/VolumeGroupEditor.tsx:98
+#: src/components/storage/VolumeGroupEditor.tsx:114
 msgid "Edit volume group"
 msgstr "Змінити групу томів"
 
-#: src/components/storage/VolumeGroupEditor.tsx:122
+#. TRANSLATORS: ARIA (accesibility) description of an UI element. %s is a mount path.
+#: src/components/storage/VolumeGroupEditor.tsx:145
+#, fuzzy, c-format
+msgid "Volume group %s"
+msgstr "Очистити групу томів LVM %s"
+
+#: src/components/storage/VolumeGroupEditor.tsx:185
 #, c-format
 msgid "Create LVM volume group %s"
 msgstr "Створити групу томів LVM %s"
 
-#: src/components/storage/VolumeGroupEditor.tsx:123
+#: src/components/storage/VolumeGroupEditor.tsx:186
 #, c-format
 msgid "Empty LVM volume group %s"
 msgstr "Очистити групу томів LVM %s"
 
-#: src/components/storage/VolumeGroupEditor.tsx:134
+#: src/components/storage/VolumeGroupEditor.tsx:241
+msgid "Add logical volume"
+msgstr "Додати логічний том"
+
+#: src/components/storage/VolumeGroupEditor.tsx:251
 #, c-format
 msgid "Logical volumes for %s"
 msgstr "Логічні томи для %s"
 
-#: src/components/storage/VolumeGroupEditor.tsx:139
-#: src/components/storage/VolumeGroupEditor.tsx:194
-msgid "Add logical volume"
-msgstr "Додати логічний том"
-
-#: src/components/storage/VolumeGroupEditor.tsx:148
+#: src/components/storage/VolumeGroupEditor.tsx:266
 msgid "The following logical volume will be created"
 msgid_plural "The following logical volumes will be created"
 msgstr[0] "Буде створено такий логічний том"
@@ -3604,10 +3660,6 @@ msgstr "Роз'єднано"
 #, c-format
 msgid "Connected (%s)"
 msgstr "З'єднано (%s)"
-
-#: src/components/storage/iscsi/NodesPresenter.jsx:79
-msgid "Delete"
-msgstr "Вилучити"
 
 #: src/components/storage/iscsi/NodesPresenter.jsx:84
 msgid "Login"
@@ -4228,6 +4280,42 @@ msgstr "Використати відкритий ключ SSH"
 msgid "ZFCP"
 msgstr "ZFCP"
 
+#~ msgid "Other options toggle"
+#~ msgstr "Показати інші налаштування"
+
+#~ msgid "Other options"
+#~ msgstr "Інші опції"
+
+#~ msgid "Select the disk to configure partitions for booting"
+#~ msgstr "Виберіть диск для налаштування розділів для завантаження"
+
+#~ msgid "Change boot options"
+#~ msgstr "Змінити параметри завантаження"
+
+#, c-format
+#~ msgid "Details for %s"
+#~ msgstr "Подробиці для %s"
+
+#~ msgid "Add another partition or mount an existing one"
+#~ msgstr "Додати новий розділ або змонтувати наявний"
+
+#~ msgid "Collapse the list of planned actions"
+#~ msgstr "Згорнути список запланованих дій"
+
+#, c-format
+#~ msgid "Check the %d planned actions"
+#~ msgstr "Перевірити %d заплановані дії"
+
+#~ msgid ""
+#~ "During installation, several actions will be performed to setup the "
+#~ "layout shown at the table below."
+#~ msgstr ""
+#~ "Під час інсталяції буде виконано кілька дій, щоб налаштувати схему, як "
+#~ "показано в таблиці нижче."
+
+#~ msgid "Find space"
+#~ msgstr "Знайти місце"
+
 #~ msgid "DASD devices selection table"
 #~ msgstr "Таблиця вибору пристроїв DASD"
 
@@ -4256,9 +4344,6 @@ msgstr "ZFCP"
 
 #~ msgid "License language"
 #~ msgstr "Мова ліцензії"
-
-#~ msgid "Partitions"
-#~ msgstr "Розділи"
 
 #~ msgid ""
 #~ "This disk will contain the configured LVM groups and any partition needed "
@@ -4711,9 +4796,6 @@ msgstr "ZFCP"
 #~ msgid "Shrinking some partitions is allowed but not needed"
 #~ msgstr "Зменшення розміру деяких розділів допускається, але не потрібне"
 
-#~ msgid "Cannot accommodate the required file systems for installation"
-#~ msgstr "Неможливо розмістити необхідні файлові системи для інсталяції"
-
 #~ msgid ""
 #~ "The system layout was set up using a advanced configuration that cannot "
 #~ "be modified with the current version of this visual interface. This "
@@ -4725,9 +4807,6 @@ msgstr "ZFCP"
 
 #~ msgid "Planned Actions"
 #~ msgstr "Плановані дії"
-
-#~ msgid "Final layout"
-#~ msgstr "Кінцевий варіант"
 
 #~ msgid "The systems will be configured as displayed below."
 #~ msgstr "Системи будуть налаштовані, як показано нижче."
