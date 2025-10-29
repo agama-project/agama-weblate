@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-17 12:49+0000\n"
+"POT-Creation-Date: 2025-10-29 11:58+0000\n"
 "PO-Revision-Date: 2025-10-29 09:59+0000\n"
 "Last-Translator: Arif Budiman <arifpedia@gmail.com>\n"
-"Language-Team: Indonesian <https://l10n.opensuse.org/projects/agama/"
-"agama-web-sle-16/id/>\n"
+"Language-Team: Indonesian <https://l10n.opensuse.org/projects/agama/agama-"
+"web-sle-16/id/>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -292,7 +292,7 @@ msgid "Software"
 msgstr "Perangkat lunak"
 
 #: src/components/core/IssuesDrawer.tsx:52
-#: src/components/product/ProductRegistrationPage.tsx:448
+#: src/components/product/ProductRegistrationPage.tsx:450
 #: src/routes/registration.tsx:31
 msgid "Registration"
 msgstr "Pendaftaran"
@@ -324,7 +324,7 @@ msgstr "Tidak dapat mengautentikasi server, silakan periksa."
 #. TRANSLATORS: Title for a form to provide the password for the root user. %s
 #. will be replaced by "root"
 #: src/components/core/LoginPage.tsx:72
-#, c-format
+#, javascript-format
 msgid "Log in as %s"
 msgstr "Masuk sebagai %s"
 
@@ -379,7 +379,7 @@ msgstr "Konfirmasi kata sandi"
 #. square brackets around %s to apply special formatting in
 #. the UI.
 #: src/components/core/PasswordInput.tsx:69
-#, c-format
+#, javascript-format
 msgid "Using [%s] keyboard"
 msgstr "Menggunakan keyboard [%s]"
 
@@ -619,14 +619,14 @@ msgstr "Daftar data alamat"
 #. ones.
 #: src/components/network/BindingSettingsForm.tsx:76
 #: src/components/storage/utils/drive.tsx:104
-#, c-format
+#, javascript-format
 msgid "%s - %s"
 msgstr "%s - %s"
 
 #. TRANSLATORS: The title of the page. %s will be replaced with the connection
 #. name. I.e., "Binding settings for 'Wired connection 1'"
 #: src/components/network/BindingSettingsForm.tsx:158
-#, c-format
+#, javascript-format
 msgid "Binding settings for '%s'"
 msgstr "Pengaturan pengikatan untuk '%s'"
 
@@ -705,7 +705,7 @@ msgid "At least one address must be provided for selected mode"
 msgstr "Setidaknya satu alamat harus disediakan untuk mode yang dipilih"
 
 #: src/components/network/IpSettingsForm.tsx:152
-#, c-format
+#, javascript-format
 msgid "Edit connection %s"
 msgstr "Edit koneksi %s"
 
@@ -915,7 +915,7 @@ msgstr "Rincian akan ditampilkan setelah koneksi berhasil terhubung."
 
 #. TRANSLATORS: %s will be replaced by network ssid.
 #: src/components/network/WifiConnectionForm.tsx:81
-#, c-format
+#, javascript-format
 msgid "Could not connect to %s"
 msgstr "Tidak dapat terhubung ke %s"
 
@@ -938,6 +938,14 @@ msgstr "Kata Sandi WPA"
 msgid "Connect"
 msgstr "Sambungkan"
 
+#. TRANSLATORS: %s will be replaced with the network ssid
+#. TRANSLATORS: %s will be replaced with connection id
+#: src/components/network/WifiNetworkPage.tsx:44
+#: src/components/network/WiredConnectionPage.tsx:43
+#, javascript-format
+msgid "\"%s\" does not exist or is no longer available."
+msgstr ""
+
 #: src/components/network/WifiNetworkPage.tsx:47
 msgid "Network not found or lost"
 msgstr "Jaringan tidak ditemukan atau terputus"
@@ -948,7 +956,7 @@ msgid "Go to network page"
 msgstr "Buka halaman jaringan"
 
 #: src/components/network/WifiNetworkPage.tsx:70
-#, c-format
+#, javascript-format
 msgid "Connect to %s"
 msgstr "Hubungkan ke %s"
 
@@ -974,7 +982,7 @@ msgstr "Jaringan publik"
 
 #. TRANSLATORS: %s will be replaced by Wi-Fi network SSID
 #: src/components/network/WifiNetworksList.tsx:98
-#, c-format
+#, javascript-format
 msgid "Connecting to %s"
 msgstr "Menghubungkan ke %s"
 
@@ -1002,13 +1010,13 @@ msgstr "Koneksi tersedia untuk semua perangkat."
 
 #. TRANSLATORS: %s will be replaced by a network device name, like eth0 or enp1s0
 #: src/components/network/WiredConnectionDetails.tsx:62
-#, c-format
+#, javascript-format
 msgid "Connection is bound to device %s."
 msgstr "Koneksi terhubung ke perangkat %s."
 
 #. TRANSLATORS: %s will be replaced by MAC addrss, like 7C:D7:11:28:F5:40
 #: src/components/network/WiredConnectionDetails.tsx:65
-#, c-format
+#, javascript-format
 msgid "Connection is bound to MAC address %s."
 msgstr "Koneksi terikat pada alamat MAC %s."
 
@@ -1070,7 +1078,7 @@ msgstr "Tidak ditemukan koneksi kabel"
 #. TRANSLATORS: %s will be replaced by a language name and territory, example:
 #. "English (United States)".
 #: src/components/overview/L10nSection.tsx:33
-#, c-format
+#, javascript-format
 msgid "The system will use %s as its default language."
 msgstr "Sistem akan menggunakan %s sebagai bahasa default."
 
@@ -1092,7 +1100,7 @@ msgstr "Instalasi akan memakan waktu"
 
 #. TRANSLATORS: %s will be replaced with the installation size, example: "5GiB".
 #: src/components/overview/SoftwareSection.tsx:48
-#, c-format
+#, javascript-format
 msgid "The installation will take %s including:"
 msgstr "Instalasi akan memakan waktu %s termasuk:"
 
@@ -1103,7 +1111,7 @@ msgstr "Belum ada perangkat yang dipilih"
 #. TRANSLATORS: %s will be replaced by the device name and its size,
 #. example: "/dev/sda, 20 GiB"
 #: src/components/overview/StorageSection.tsx:45
-#, c-format
+#, javascript-format
 msgid "Install using device %s shrinking existing partitions as needed."
 msgstr ""
 "Instal menggunakan perangkat %s mengecilkan partisi yang ada sesuai "
@@ -1112,21 +1120,21 @@ msgstr ""
 #. TRANSLATORS: %s will be replaced by the device name and its size,
 #. example: "/dev/sda, 20 GiB"
 #: src/components/overview/StorageSection.tsx:48
-#, c-format
+#, javascript-format
 msgid "Install using device %s without modifying existing partitions."
 msgstr "Menginstal menggunakan perangkat %s tanpa mengubah partisi yang ada."
 
 #. TRANSLATORS: %s will be replaced by the device name and its size,
 #. example: "/dev/sda, 20 GiB"
 #: src/components/overview/StorageSection.tsx:51
-#, c-format
+#, javascript-format
 msgid "Install using device %s and deleting all its content."
 msgstr "Menginstal menggunakan perangkat %s dan menghapus semua isinya."
 
 #. TRANSLATORS: %s will be replaced by the device name and its size,
 #. example: "/dev/sda, 20 GiB"
 #: src/components/overview/StorageSection.tsx:54
-#, c-format
+#, javascript-format
 msgid ""
 "Install using device %s with a custom strategy to find the needed space."
 msgstr ""
@@ -1164,7 +1172,7 @@ msgid "Install using an advanced configuration."
 msgstr "Instal menggunakan konfigurasi lanjutan."
 
 #: src/components/product/LicenseDialog.tsx:40
-#, c-format
+#, javascript-format
 msgid "This license is not available in %s."
 msgstr "Lisensi ini tidak tersedia di %s."
 
@@ -1175,7 +1183,7 @@ msgid "Close"
 msgstr "Tutup"
 
 #: src/components/product/ProductRegistrationAlert.tsx:56
-#, c-format
+#, javascript-format
 msgid "%s [must be registered]."
 msgstr "%s [harus terdaftar]."
 
@@ -1196,72 +1204,80 @@ msgstr "SUSE Customer Center (SCC)"
 msgid "Custom"
 msgstr "Khusus"
 
-#: src/components/product/ProductRegistrationPage.tsx:78
-#, c-format
+#: src/components/product/ProductRegistrationPage.tsx:79
+#, javascript-format
 msgid "%s has been registered with below information."
 msgstr "%s telah terdaftar dengan informasi di bawah ini."
 
 #. TRANSLATORS: input field label
-#: src/components/product/ProductRegistrationPage.tsx:91
-#: src/components/product/ProductRegistrationPage.tsx:186
+#: src/components/product/ProductRegistrationPage.tsx:92
+#: src/components/product/ProductRegistrationPage.tsx:188
 #: src/components/product/RegistrationExtension.tsx:150
 msgid "Registration code"
 msgstr "Kode pendaftaran"
 
 #. TRANSLATORS: switch for displaying or hiding the registration code
-#: src/components/product/ProductRegistrationPage.tsx:96
+#: src/components/product/ProductRegistrationPage.tsx:97
 #: src/components/product/RegistrationExtension.tsx:64
 msgid "Hide"
 msgstr "Sembunyikan"
 
-#: src/components/product/ProductRegistrationPage.tsx:96
+#: src/components/product/ProductRegistrationPage.tsx:97
 #: src/components/product/RegistrationExtension.tsx:64
 msgid "Show"
 msgstr "Tampilkan"
 
-#: src/components/product/ProductRegistrationPage.tsx:141
+#: src/components/product/ProductRegistrationPage.tsx:142
 msgid "Server options"
 msgstr "Opsi server"
 
-#: src/components/product/ProductRegistrationPage.tsx:142
+#: src/components/product/ProductRegistrationPage.tsx:143
 msgid "Register using SUSE server"
 msgstr "Daftar menggunakan server SUSE"
 
-#: src/components/product/ProductRegistrationPage.tsx:148
+#: src/components/product/ProductRegistrationPage.tsx:149
 msgid "Register using a custom registration server"
 msgstr "Daftar menggunakan server pendaftaran kustom"
 
-#: src/components/product/ProductRegistrationPage.tsx:167
+#: src/components/product/ProductRegistrationPage.tsx:168
 msgid "Server URL"
 msgstr "URL Server"
 
-#: src/components/product/ProductRegistrationPage.tsx:169
-msgid "Example: https://myserver.com"
-msgstr "Contoh: https://myserver.com"
+#. TRANSLATORS: %s is replaced by an example URL like https://example.com
+#: src/components/product/ProductRegistrationPage.tsx:171
+#, javascript-format
+msgid "Example: %s"
+msgstr ""
 
-#: src/components/product/ProductRegistrationPage.tsx:218
+#: src/components/product/ProductRegistrationPage.tsx:220
 msgid "Provide registration code"
 msgstr "Berikan kode pendaftaran"
 
-#: src/components/product/ProductRegistrationPage.tsx:254
+#: src/components/product/ProductRegistrationPage.tsx:256
 msgid "Provide email address"
 msgstr "Berikan alamat email"
 
-#: src/components/product/ProductRegistrationPage.tsx:351
+#: src/components/product/ProductRegistrationPage.tsx:353
 #: src/components/storage/LvmPage.tsx:169
 #: src/components/system/HostnamePage.tsx:104
 msgid "Check the following before continuing"
 msgstr "Periksa hal-hal berikut sebelum melanjutkan"
 
 #. TRANSLATORS: button label
-#: src/components/product/ProductRegistrationPage.tsx:381
+#: src/components/product/ProductRegistrationPage.tsx:383
 #: src/components/product/RegistrationExtension.tsx:161
 #: src/components/product/RegistrationExtension.tsx:176
 msgid "Register"
 msgstr "Mendaftar"
 
-#: src/components/product/ProductRegistrationPage.tsx:397
-#, c-format
+#. TRANSLATORS: %s will be replaced with the hostname value
+#: src/components/product/ProductRegistrationPage.tsx:395
+#, javascript-format
+msgid "The product will be registered with \"%s\" hostname"
+msgstr ""
+
+#: src/components/product/ProductRegistrationPage.tsx:399
+#, javascript-format
 msgid ""
 "You cannot change it later. Go to the %s section if you want to modify it "
 "before proceeding with registration."
@@ -1269,17 +1285,17 @@ msgstr ""
 "Anda tidak dapat mengubahnya nanti. Pergi ke bagian %s jika Anda ingin "
 "mengubahnya sebelum melanjutkan proses pendaftaran."
 
-#: src/components/product/ProductRegistrationPage.tsx:402
+#: src/components/product/ProductRegistrationPage.tsx:404
 msgid "hostname"
 msgstr "hostname"
 
-#: src/components/product/ProductRegistrationPage.tsx:428
+#: src/components/product/ProductRegistrationPage.tsx:430
 msgid "Extensions"
 msgstr "Ekstensi"
 
 #. TRANSLATORS: %s will be replaced by a product name. E.g., "openSUSE Tumbleweed"
 #: src/components/product/ProductSelectionPage.tsx:62
-#, c-format
+#, javascript-format
 msgid "%s logo"
 msgstr "logo %s"
 
@@ -1287,7 +1303,7 @@ msgstr "logo %s"
 #. replaced with the product name and the text in the square brackets [] is
 #. used for the link to show the license, please keep the brackets.
 #: src/components/product/ProductSelectionPage.tsx:139
-#, c-format
+#, javascript-format
 msgid "I have read and accept the [license] for %s"
 msgstr "Saya telah membaca dan menerima [lisensi] untuk %s"
 
@@ -1305,7 +1321,7 @@ msgstr "Mengkonfigurasi produk, harap tunggu ..."
 
 #. TRANSLATORS: %s will be replaced by the registration key.
 #: src/components/product/RegistrationExtension.tsx:50
-#, c-format
+#, javascript-format
 msgid "The extension has been registered with key %s."
 msgstr "Ekstensi telah terdaftar dengan kunci %s."
 
@@ -1423,7 +1439,7 @@ msgstr "Beberapa elemen dalam profil AutoYaST Anda tidak didukung."
 
 #. TRANSLATORS: %s is replaced by the quantity of not implemented elements
 #: src/components/questions/UnsupportedAutoYaST.tsx:89
-#, c-format
+#, javascript-format
 msgid "Not implemented yet (%s)"
 msgstr "Belum diimplementasikan (%s)"
 
@@ -1433,13 +1449,19 @@ msgstr "Akan didukung pada versi mendatang."
 
 #. TRANSLATORS: %s is replaced by the quantity of not supported elements
 #: src/components/questions/UnsupportedAutoYaST.tsx:97
-#, c-format
+#, javascript-format
 msgid "Not supported (%s)"
 msgstr "Tidak didukung (%s)"
 
 #: src/components/questions/UnsupportedAutoYaST.tsx:99
 msgid "No support is planned."
 msgstr "Tidak ada dukungan yang direncanakan."
+
+#: src/components/questions/UnsupportedAutoYaST.tsx:106
+msgid ""
+"If you want to disable this check, please specify \"inst.ay_check=0\" at "
+"kernel's command-line"
+msgstr ""
 
 #: src/components/software/SoftwareConflicts.tsx:100
 msgid "Show less actions"
@@ -1475,7 +1497,7 @@ msgstr "Lewati ke sebelumnya"
 #. first %d will be replaced with the current item number, the
 #. second %d with the total number of items.
 #: src/components/software/SoftwareConflicts.tsx:202
-#, c-format
+#, javascript-format
 msgid "%d of %d"
 msgstr "%d dari %d"
 
@@ -1578,7 +1600,7 @@ msgstr "Memfilter berdasarkan judul atau deskripsi pola"
 #. TRANSLATORS: %s will be replaced by the estimated installation size,
 #. example: "728.8 MiB"
 #: src/components/software/UsedSize.tsx:33
-#, c-format
+#, javascript-format
 msgid "Installation will take %s."
 msgstr "Penginstalan akan memakan waktu %s."
 
@@ -1600,13 +1622,13 @@ msgstr "partisi"
 
 #. TRANSLATORS: %1$s is a size with units (eg. 3 GiB) and %2$s is a device type (eg. partition)
 #: src/components/storage/AutoSizeText.tsx:47
-#, c-format
+#, javascript-format
 msgid "A generic size of %1$s will be used for the new %2$s"
 msgstr "Ukuran standar %1$s akan digunakan untuk %2$s yang baru"
 
 #. TRANSLATORS: %1$s and %2$s are sizes with units (eg. 3 GiB) and %3$s is a device type (eg. partition)
 #: src/components/storage/AutoSizeText.tsx:55
-#, c-format
+#, javascript-format
 msgid ""
 "A generic size range between %1$s and %2$s will be used for the new %3$s"
 msgstr ""
@@ -1614,19 +1636,19 @@ msgstr ""
 
 #. TRANSLATORS: %1$s is a size with units (eg. 3 GiB) and %1$s is a device type (eg. partition)
 #: src/components/storage/AutoSizeText.tsx:64
-#, c-format
+#, javascript-format
 msgid "A generic minimum size of %1$s will be used for the new %2$s"
 msgstr "Ukuran minimum standar %1$s akan digunakan untuk %2$s yang baru"
 
 #. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
 #: src/components/storage/AutoSizeText.tsx:81
-#, c-format
+#, javascript-format
 msgid "A %1$s of %2$s will be created for %3$s if possible"
 msgstr "%1$s dari %2$s akan dibuat untuk %3$s jika memungkinkan"
 
 #. TRANSLATORS: %1$s is a device type (eg. partition), %2$s and %3$s are sizes with units (10 GiB), and %4$s is a mount path (/home)
 #: src/components/storage/AutoSizeText.tsx:90
-#, c-format
+#, javascript-format
 msgid ""
 "A %1$s with a size between %2$s and %3$s will be created for %4$s if possible"
 msgstr ""
@@ -1635,13 +1657,13 @@ msgstr ""
 
 #. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
 #: src/components/storage/AutoSizeText.tsx:100
-#, c-format
+#, javascript-format
 msgid "A %1$s of at least %2$s will be created for %3$s if possible"
 msgstr "%1$s dengan minimal %2$s akan dibuat untuk %3$s jika memungkinkan"
 
 #. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
 #: src/components/storage/AutoSizeText.tsx:118
-#, c-format
+#, javascript-format
 msgid ""
 "Based on the amount of RAM in the system, a %1$s of %2$s will be planned for "
 "%3$s"
@@ -1650,7 +1672,7 @@ msgstr ""
 "dialokasikan untuk %3$s"
 
 #: src/components/storage/AutoSizeText.tsx:128
-#, c-format
+#, javascript-format
 msgid ""
 "Based on the amount of RAM in the system, a %1$s with a size between %2$s "
 "and %3$s will be planned for %4$s"
@@ -1660,7 +1682,7 @@ msgstr ""
 
 #. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
 #: src/components/storage/AutoSizeText.tsx:139
-#, c-format
+#, javascript-format
 msgid ""
 "Based on the amount of RAM in the system, a %1$s of at least %2$s will be "
 "planned for %3$s"
@@ -1669,7 +1691,7 @@ msgstr ""
 "akan dialokasikan untuk %3$s"
 
 #: src/components/storage/AutoSizeText.tsx:168
-#, c-format
+#, javascript-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the amount of RAM in "
 "the system, the usage of Btrfs snapshots and the presence of a separate file "
@@ -1680,7 +1702,7 @@ msgstr ""
 "terpisah untuk %2$s."
 
 #: src/components/storage/AutoSizeText.tsx:179
-#, c-format
+#, javascript-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the amount of RAM in "
 "the system, the usage of Btrfs snapshots and the presence of separate file "
@@ -1691,7 +1713,7 @@ msgstr ""
 "terpisah untuk %2$s."
 
 #: src/components/storage/AutoSizeText.tsx:189
-#, c-format
+#, javascript-format
 msgid ""
 "The size for %s will be dynamically adjusted based on the amount of RAM in "
 "the system and the usage of Btrfs snapshots."
@@ -1700,7 +1722,7 @@ msgstr ""
 "tersedia di sistem dan penggunaan snapshot Btrfs."
 
 #: src/components/storage/AutoSizeText.tsx:200
-#, c-format
+#, javascript-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the amount of RAM in "
 "the system and the presence of a separate file system for %2$s."
@@ -1709,7 +1731,7 @@ msgstr ""
 "dalam sistem dan keberadaan sistem berkas yang terpisah untuk %2$s."
 
 #: src/components/storage/AutoSizeText.tsx:210
-#, c-format
+#, javascript-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the amount of RAM in "
 "the system and the presence of separate file systems for %2$s."
@@ -1718,7 +1740,7 @@ msgstr ""
 "dalam sistem dan keberadaan sistem berkas yang terpisah untuk %2$s."
 
 #: src/components/storage/AutoSizeText.tsx:222
-#, c-format
+#, javascript-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the usage of Btrfs "
 "snapshots and the presence of a separate file system for %2$s."
@@ -1727,7 +1749,7 @@ msgstr ""
 "snapshot Btrfs dan keberadaan sistem berkas yang terpisah untuk %2$s."
 
 #: src/components/storage/AutoSizeText.tsx:233
-#, c-format
+#, javascript-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the usage of Btrfs "
 "snapshots and the presence of separate file systems for %2$s."
@@ -1737,7 +1759,7 @@ msgstr ""
 
 #. TRANSLATORS: %s is a mount point (eg. /)
 #: src/components/storage/AutoSizeText.tsx:242
-#, c-format
+#, javascript-format
 msgid ""
 "The size for %s will be dynamically adjusted based on the usage of Btrfs "
 "snapshots."
@@ -1746,7 +1768,7 @@ msgstr ""
 "snapshot Btrfs."
 
 #: src/components/storage/AutoSizeText.tsx:251
-#, c-format
+#, javascript-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the presence of a "
 "separate file system for %2$s."
@@ -1755,7 +1777,7 @@ msgstr ""
 "sistem berkas terpisah untuk %2$s."
 
 #: src/components/storage/AutoSizeText.tsx:261
-#, c-format
+#, javascript-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the presence of "
 "separate file systems for %2$s."
@@ -1765,14 +1787,14 @@ msgstr ""
 
 #. TRANSLATORS: %1$s is a device type (eg. partition) and %2$s is a size with units (eg. 10 GiB)
 #: src/components/storage/AutoSizeText.tsx:273
-#, c-format
+#, javascript-format
 msgid ""
 "The current configuration will result in an attempt to create a %1$s of %2$s."
 msgstr ""
 "Konfigurasi saat ini akan mengakibatkan upaya untuk membuat %1$s dari %2$s."
 
 #: src/components/storage/AutoSizeText.tsx:282
-#, c-format
+#, javascript-format
 msgid ""
 "The current configuration will result in an attempt to create a %1$s with a "
 "size between %2$s and %3$s."
@@ -1782,7 +1804,7 @@ msgstr ""
 
 #. TRANSLATORS: %1$s is a device type (eg. partition) and %2$s is a size with units (eg. 10 GiB)
 #: src/components/storage/AutoSizeText.tsx:292
-#, c-format
+#, javascript-format
 msgid ""
 "The current configuration will result in an attempt to create a %1$s of at "
 "least %2$s."
@@ -1804,7 +1826,7 @@ msgstr "Partisi untuk boot akan dialokasikan pada disk instalasi."
 
 #. TRANSLATORS: %s is replaced by a device name and size (e.g., "/dev/sda, 500GiB")
 #: src/components/storage/BootSelection.tsx:146
-#, c-format
+#, javascript-format
 msgid "Partitions to boot will be allocated at the installation disk %s."
 msgstr "Partisi untuk boot akan dialokasikan pada disk instalasi %s."
 
@@ -1847,7 +1869,7 @@ msgid "No devices configured yet"
 msgstr "Belum ada perangkat yang dikonfigurasi"
 
 #: src/components/storage/ConfigEditor.tsx:38
-#, c-format
+#, javascript-format
 msgid ""
 "Use actions below to set up your devices or click %s to start from scratch "
 "with the default configuration."
@@ -1946,13 +1968,13 @@ msgid "Already using all available disks"
 msgstr "Sudah menggunakan semua disk yang tersedia"
 
 #: src/components/storage/ConfigureDeviceMenu.tsx:66
-#, c-format
+#, javascript-format
 msgid "Extend the installation beyond the currently selected device"
 msgid_plural "Extend the installation beyond the current %d devices"
 msgstr[0] "Perluas instalasi melampaui perangkat %d yang saat ini dipilih"
 
 #: src/components/storage/ConfigureDeviceMenu.tsx:75
-#, c-format
+#, javascript-format
 msgid "Extend the installation beyond the currently selected disk"
 msgid_plural "Extend the installation beyond the current %d disks"
 msgstr[0] "Perluas instalasi melampaui disk %d yang saat ini dipilih"
@@ -2062,85 +2084,85 @@ msgstr ""
 
 #. TRANSLATORS: %s will be replaced by a disk name and its size - "sda (20 GiB)"
 #: src/components/storage/DriveHeader.tsx:33
-#, c-format
+#, javascript-format
 msgid "Mount disk %s"
 msgstr "Mount disk %s"
 
 #. TRANSLATORS: %s will be replaced by a disk name and its size - "sda (20 GiB)"
 #: src/components/storage/DriveHeader.tsx:35
-#, c-format
+#, javascript-format
 msgid "Format disk %s"
 msgstr "Format disk %s"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
 #: src/components/storage/DriveHeader.tsx:46
-#, c-format
+#, javascript-format
 msgid "Use disk %s to install, host LVM and boot"
 msgstr "Gunakan disk %s untuk memasang, meng-host LVM, dan mem-boot"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
 #: src/components/storage/DriveHeader.tsx:49
-#, c-format
+#, javascript-format
 msgid "Use disk %s to install and host LVM"
 msgstr "Gunakan disk %s untuk menginstal dan menghosting LVM"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
 #: src/components/storage/DriveHeader.tsx:54
-#, c-format
+#, javascript-format
 msgid "Use disk %s to install and boot"
 msgstr "Gunakan disk %s untuk menginstal dan mem-boot"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
 #: src/components/storage/DriveHeader.tsx:57
-#, c-format
+#, javascript-format
 msgid "Use disk %s to install"
 msgstr "Gunakan disk %s untuk memasang"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
 #: src/components/storage/DriveHeader.tsx:64
-#, c-format
+#, javascript-format
 msgid "Use disk %s for LVM, additional partitions and booting"
 msgstr "Gunakan disk %s untuk LVM, partisi tambahan, dan booting"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
 #: src/components/storage/DriveHeader.tsx:67
-#, c-format
+#, javascript-format
 msgid "Use disk %s for LVM and additional partitions"
 msgstr "Gunakan disk %s untuk LVM dan partisi tambahan"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
 #: src/components/storage/DriveHeader.tsx:72
-#, c-format
+#, javascript-format
 msgid "Use disk %s for additional partitions and booting"
 msgstr "Gunakan disk %s untuk partisi tambahan dan booting"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
 #: src/components/storage/DriveHeader.tsx:75
-#, c-format
+#, javascript-format
 msgid "Use disk %s for additional partitions"
 msgstr "Gunakan disk %s untuk partisi tambahan"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
 #: src/components/storage/DriveHeader.tsx:81
-#, c-format
+#, javascript-format
 msgid "Use disk %s to host LVM and boot"
 msgstr "Gunakan disk %s untuk meng-host LVM dan boot"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
 #: src/components/storage/DriveHeader.tsx:84
-#, c-format
+#, javascript-format
 msgid "Use disk %s to host LVM"
 msgstr "Gunakan disk %s untuk meng-host LVM"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
 #: src/components/storage/DriveHeader.tsx:89
-#, c-format
+#, javascript-format
 msgid "Use disk %s to configure boot partitions"
 msgstr "Gunakan disk %s untuk mengonfigurasi partisi boot"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
 #: src/components/storage/DriveHeader.tsx:92
-#, c-format
+#, javascript-format
 msgid "Use disk %s"
 msgstr "Gunakan disk %s"
 
@@ -2217,13 +2239,13 @@ msgstr "Perangkat akan diformat"
 
 #. TRANSLATORS: %s is a formatted mount point (eg. '"/home'").
 #: src/components/storage/FilesystemMenu.tsx:51
-#, c-format
+#, javascript-format
 msgid "The current file system will be mounted at %s"
 msgstr "Sistem berkas saat ini akan di-mount di %s"
 
 #. TRANSLATORS: %1$s is a filesystem type (eg. Btrfs), %2$s is a mount point (eg. '"/home"').
 #: src/components/storage/FilesystemMenu.tsx:54
-#, c-format
+#, javascript-format
 msgid "The device will be formatted as %1$s and mounted at %2$s"
 msgstr "Perangkat akan diformat sebagai %1$s dan di-mount di %2$s"
 
@@ -2231,7 +2253,7 @@ msgstr "Perangkat akan diformat sebagai %1$s dan di-mount di %2$s"
 #: src/components/storage/FilesystemMenu.tsx:67
 #: src/components/storage/PartitionsMenu.tsx:145
 #: src/components/storage/UnusedMenu.tsx:45
-#, c-format
+#, javascript-format
 msgid "Details for %s"
 msgstr "Rincian untuk %s"
 
@@ -2281,7 +2303,7 @@ msgstr "Menunggu titik mount"
 #: src/components/storage/FormattableDevicePage.tsx:283
 #: src/components/storage/PartitionPage.tsx:563
 #: src/components/storage/utils/partition.tsx:69
-#, c-format
+#, javascript-format
 msgid "Current %s"
 msgstr "Saat ini %s"
 
@@ -2295,7 +2317,7 @@ msgstr "Btrfs dengan snapshot"
 #: src/components/storage/FormattableDevicePage.tsx:302
 #: src/components/storage/LogicalVolumePage.tsx:479
 #: src/components/storage/PartitionPage.tsx:582
-#, c-format
+#, javascript-format
 msgid "Default file system for %s"
 msgstr "Sistem berkas default untuk %s"
 
@@ -2311,11 +2333,11 @@ msgstr "Hapus data saat ini dan format perangkat sebagai"
 msgid "Format device as"
 msgstr "Format perangkat sebagai"
 
-#. TRANSLATORS: %s is the name of a partition, like /dev/vda2
 #. TRANSLATORS: %s is the name of a device, like vda
+#. TRANSLATORS: %s is the name of a partition, like /dev/vda2
 #: src/components/storage/FormattableDevicePage.tsx:320
 #: src/components/storage/PartitionPage.tsx:599
-#, c-format
+#, javascript-format
 msgid "Do not format %s and keep the data"
 msgstr "Jangan memformat %s dan pertahankan data"
 
@@ -2326,7 +2348,7 @@ msgid "File system label"
 msgstr "Label sistem berkas"
 
 #: src/components/storage/FormattableDevicePage.tsx:453
-#, c-format
+#, javascript-format
 msgid "Configure device %s"
 msgstr "Konfigurasikan perangkat %s"
 
@@ -2429,7 +2451,7 @@ msgid "Format logical volume as"
 msgstr "Format volume logis sebagai"
 
 #: src/components/storage/LogicalVolumePage.tsx:683
-#, c-format
+#, javascript-format
 msgid "Configure LVM logical volume at %s volume group"
 msgstr "Konfigurasikan volume logis LVM di grup volume %s"
 
@@ -2443,7 +2465,7 @@ msgid "Enter a name for the volume group."
 msgstr "Masukkan nama untuk grup volume."
 
 #: src/components/storage/LvmPage.tsx:81
-#, c-format
+#, javascript-format
 msgid "Volume group '%s' already exists. Enter a different name."
 msgstr "Grup volume ‘%s’ sudah ada. Masukkan nama yang berbeda."
 
@@ -2486,104 +2508,104 @@ msgstr ""
 
 #. TRANSLATORS: %s will be replaced by a RAID name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:33
-#, c-format
+#, javascript-format
 msgid "Mount RAID %s"
 msgstr "Mount RAID %s"
 
 #. TRANSLATORS: %s will be replaced by a RAID name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:35
-#, c-format
+#, javascript-format
 msgid "Format RAID %s"
 msgstr "Format RAID %s"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:46
-#, c-format
+#, javascript-format
 msgid "Use RAID %s to install, host LVM and boot"
 msgstr "Gunakan RAID %s untuk memasang, meng-host LVM, dan mem-boot"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:49
-#, c-format
+#, javascript-format
 msgid "Use RAID %s to install and host LVM"
 msgstr "Gunakan RAID %s untuk memasang dan meng-host LVM"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:54
-#, c-format
+#, javascript-format
 msgid "Use RAID %s to install and boot"
 msgstr "Gunakan RAID %s untuk menginstal dan mem-boot"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:57
-#, c-format
+#, javascript-format
 msgid "Use RAID %s to install"
 msgstr "Gunakan RAID %s untuk memasang"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:64
-#, c-format
+#, javascript-format
 msgid "Use RAID %s for LVM, additional partitions and booting"
 msgstr "Gunakan RAID %s untuk menginstal dan mem-boot"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:67
-#, c-format
+#, javascript-format
 msgid "Use RAID %s for LVM and additional partitions"
 msgstr "Gunakan RAID %s untuk LVM dan partisi tambahan"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:72
-#, c-format
+#, javascript-format
 msgid "Use RAID %s for additional partitions and booting"
 msgstr "Gunakan RAID %s untuk partisi tambahan dan booting"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:75
-#, c-format
+#, javascript-format
 msgid "Use RAID %s for additional partitions"
 msgstr "Gunakan RAID %s untuk partisi tambahan"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:81
-#, c-format
+#, javascript-format
 msgid "Use RAID %s to host LVM and boot"
 msgstr "Gunakan RAID %s untuk meng-host LVM dan boot"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:84
-#, c-format
+#, javascript-format
 msgid "Use RAID %s to host LVM"
 msgstr "Gunakan RAID %s untuk meng-host LVM"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:89
-#, c-format
+#, javascript-format
 msgid "Use RAID %s to configure boot partitions"
 msgstr "Gunakan RAID %s untuk mengonfigurasi partisi boot"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:92
-#, c-format
+#, javascript-format
 msgid "Use RAID %s"
 msgstr "Gunakan RAID %s"
 
 #. TRANSLATORS: %s is the short name of a disk, like 'sda'
 #: src/components/storage/NewVgMenuOption.tsx:46
-#, c-format
+#, javascript-format
 msgid "Create another LVM volume group on %s"
 msgstr "Buat grup volume LVM lain di %s"
 
 #. TRANSLATORS: %s is the short name of a disk, like 'sda'
 #: src/components/storage/NewVgMenuOption.tsx:50
-#, c-format
+#, javascript-format
 msgid "Create LVM volume group on %s"
 msgstr "Buat grup volume LVM di %s"
 
 #. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case).
 #: src/components/storage/NewVgMenuOption.tsx:59
-#, c-format
+#, javascript-format
 msgid "%s will be created as a logical volume"
 msgid_plural "%s will be created as logical volumes"
 msgstr[0] "%s akan dibuat sebagai volume logis"
@@ -2607,12 +2629,12 @@ msgstr ""
 
 #. TRANSLATORS: %s is a disk name with its size (eg. "sda, 10 GiB"
 #: src/components/storage/PartitionPage.tsx:498
-#, c-format
+#, javascript-format
 msgid "As a new partition on %s"
 msgstr "Sebagai partisi baru di %s"
 
 #: src/components/storage/PartitionPage.tsx:500
-#, c-format
+#, javascript-format
 msgid "Using partition %s"
 msgstr "Menggunakan partisi %s"
 
@@ -2641,7 +2663,7 @@ msgid "Format partition as"
 msgstr "Format partisi sebagai"
 
 #: src/components/storage/PartitionPage.tsx:813
-#, c-format
+#, javascript-format
 msgid "Configure partition at %s"
 msgstr "Konfigurasikan partisi di %s"
 
@@ -2685,6 +2707,12 @@ msgstr[0] "Partisi berikut akan di-mount."
 msgid "Any partition needed to boot will be configured."
 msgstr "Partisi apa pun yang diperlukan untuk booting akan dikonfigurasi."
 
+#: src/components/storage/PartitionsMenu.tsx:133
+#, fuzzy
+msgid "Partitions to host \"system\" will be created if needed."
+msgstr ""
+"Partisi yang tidak digunakan kembali akan diubah ukurannya sesuai kebutuhan."
+
 #: src/components/storage/PartitionsMenu.tsx:174
 msgid "Add another partition or mount an existing one"
 msgstr "Tambahkan partisi lain atau pasang partisi yang sudah ada"
@@ -2699,13 +2727,13 @@ msgid "Loading storage"
 msgstr "Memuat penyimpanan"
 
 #: src/components/storage/ProposalActionsDialog.tsx:73
-#, c-format
+#, javascript-format
 msgid "Hide %d subvolume action"
 msgid_plural "Hide %d subvolume actions"
 msgstr[0] "Menyembunyikan tindakan subvolume %d"
 
 #: src/components/storage/ProposalActionsDialog.tsx:78
-#, c-format
+#, javascript-format
 msgid "Show %d subvolume action"
 msgid_plural "Show %d subvolume actions"
 msgstr[0] "Tampilkan tindakan subvolume %d"
@@ -2721,14 +2749,14 @@ msgstr ""
 #. TRANSLATORS: %s is a list of formatted mount points with a partition size like
 #. '"/" (at least 10 GiB), "/var" (20 GiB) and "swap" (2 GiB)'
 #: src/components/storage/ProposalFailedInfo.tsx:67
-#, c-format
+#, javascript-format
 msgid "It is not possible to allocate space for the boot partition and for %s."
 msgstr "Tidak mungkin mengalokasikan ruang untuk partisi boot dan untuk %s."
 
 #. TRANSLATORS: %s is a list of formatted mount points with a partition size like
 #. '"/" (at least 10 GiB), "/var" (20 GiB) and "swap" (2 GiB)'
 #: src/components/storage/ProposalFailedInfo.tsx:70
-#, c-format
+#, javascript-format
 msgid "It is not possible to allocate space for %s."
 msgstr "Tidak mungkin mengalokasikan ruang untuk %s."
 
@@ -2829,14 +2857,14 @@ msgid "Waiting for information about storage configuration"
 msgstr "Menunggu informasi tentang konfigurasi penyimpanan"
 
 #: src/components/storage/ProposalResultSection.tsx:64
-#, c-format
+#, javascript-format
 msgid "There is %d destructive action planned affecting %s"
 msgid_plural "There are %d destructive actions planned affecting %s"
 msgstr[0] ""
 "Ada %d tindakan destruktif yang direncanakan yang akan mempengaruhi %s"
 
 #: src/components/storage/ProposalResultSection.tsx:75
-#, c-format
+#, javascript-format
 msgid "There is %d destructive action planned"
 msgid_plural "There are %d destructive actions planned"
 msgstr[0] "Ada %d tindakan destruktif yang direncanakan"
@@ -2846,7 +2874,7 @@ msgid "Collapse the list of planned actions"
 msgstr "Lipat daftar tindakan yang direncanakan"
 
 #: src/components/storage/ProposalResultSection.tsx:95
-#, c-format
+#, javascript-format
 msgid "Check the %d planned actions"
 msgstr "Periksa %d tindakan yang direncanakan"
 
@@ -2869,7 +2897,7 @@ msgstr "Baru"
 #. TRANSLATORS: Label to indicate the device size before resizing, where %s is
 #. replaced by the original size (e.g., 3.00 GiB).
 #: src/components/storage/ProposalResultTable.tsx:106
-#, c-format
+#, javascript-format
 msgid "Before %s"
 msgstr "Sebelum %s"
 
@@ -2882,7 +2910,7 @@ msgid "Transactional root file system"
 msgstr "Sistem file root transaksional"
 
 #: src/components/storage/ProposalTransactionalInfo.tsx:47
-#, c-format
+#, javascript-format
 msgid ""
 "%s is an immutable system with atomic updates. It uses a read-only Btrfs "
 "file system updated via snapshots."
@@ -2897,7 +2925,7 @@ msgstr "Disk yang dipilih tidak dapat diubah"
 
 #. TRANSLATORS: %s is a formatted mount point like '"/home"'
 #: src/components/storage/SearchedDeviceMenu.tsx:63
-#, c-format
+#, javascript-format
 msgid "Select a disk to format as %s"
 msgstr "Pilih disk yang akan diformat sebagai %s"
 
@@ -2912,7 +2940,7 @@ msgstr "Pilih disk untuk memasang sistem"
 #. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case).
 #: src/components/storage/SearchedDeviceMenu.tsx:84
-#, c-format
+#, javascript-format
 msgid "Select a disk to create %s"
 msgstr "Pilih disk untuk membuat %s"
 
@@ -2934,13 +2962,13 @@ msgstr "Ini dipilih untuk beberapa grup LVM"
 
 #. TRANSLATORS: %s is the name of the LVM
 #: src/components/storage/SearchedDeviceMenu.tsx:119
-#, c-format
+#, javascript-format
 msgid "It is chosen for booting and for the LVM group '%s'"
 msgstr "Ini dipilih untuk booting dan untuk grup LVM '%s'"
 
 #. TRANSLATORS: %s is the name of the LVM
 #: src/components/storage/SearchedDeviceMenu.tsx:125
-#, c-format
+#, javascript-format
 msgid "It is chosen for the LVM group '%s'"
 msgstr "Ini dipilih untuk grup LVM '%s'"
 
@@ -2950,7 +2978,7 @@ msgstr "Ini dipilih untuk booting"
 
 #. TRANSLATORS: %s is the name of the disk (eg. sda)
 #: src/components/storage/SearchedDeviceMenu.tsx:139
-#, c-format
+#, javascript-format
 msgid ""
 "%s will still contain the configured LVM groups and any partition needed to "
 "boot"
@@ -2960,13 +2988,13 @@ msgstr ""
 
 #. TRANSLATORS: %s is the name of the disk (eg. sda)
 #: src/components/storage/SearchedDeviceMenu.tsx:145
-#, c-format
+#, javascript-format
 msgid "The configured LVM groups will remain at %s"
 msgstr "Grup LVM yang telah dikonfigurasi akan tetap berada di %s"
 
 #. TRANSLATORS: %1$s is the name of the disk (eg. sda) and %2$s the name of the LVM
 #: src/components/storage/SearchedDeviceMenu.tsx:151
-#, c-format
+#, javascript-format
 msgid ""
 "%1$s will still contain the LVM group '%2$s' and any partition needed to boot"
 msgstr ""
@@ -2975,13 +3003,13 @@ msgstr ""
 
 #. TRANSLATORS: %1$s is the name of the LVM and %2$s the name of the disk (eg. sda)
 #: src/components/storage/SearchedDeviceMenu.tsx:159
-#, c-format
+#, javascript-format
 msgid "The LVM group '%1$s' will remain at %2$s"
 msgstr "Grup LVM ‘%1$s’ akan tetap berada di %2$s"
 
 #. TRANSLATORS: %s is the name of the disk (eg. sda)
 #: src/components/storage/SearchedDeviceMenu.tsx:167
-#, c-format
+#, javascript-format
 msgid "Partitions needed for booting will remain at %s"
 msgstr "Partisi yang diperlukan untuk booting akan tetap berada di %s"
 
@@ -3014,12 +3042,12 @@ msgid "Do not use"
 msgstr "Jangan gunakan"
 
 #: src/components/storage/SearchedDeviceMenu.tsx:308
-#, c-format
+#, javascript-format
 msgid "Device %s menu"
 msgstr "Menu Perangkat %s"
 
 #: src/components/storage/SizeModeSelect.tsx:75
-#, c-format
+#, javascript-format
 msgid ""
 "The size is configured as a range between %s and %s, but this interface "
 "cannot handle ranges with a given max size."
@@ -3041,7 +3069,7 @@ msgstr ""
 
 #. TRANSLATORS: %s is a disk size (e.g., "10 GiB").
 #: src/components/storage/SizeModeSelect.tsx:140
-#, c-format
+#, javascript-format
 msgid "approx. %s"
 msgstr "sekitar %s"
 
@@ -3073,12 +3101,12 @@ msgstr "Perangkat tersebut akan digunakan oleh sistem baru."
 
 #. TRANSLATORS: %s is a mount path like "/home".
 #: src/components/storage/SpaceActionsTable.tsx:78
-#, c-format
+#, javascript-format
 msgid "The device will be mounted at %s."
 msgstr "Perangkat akan dipasang di %s."
 
 #: src/components/storage/SpaceActionsTable.tsx:84
-#, c-format
+#, javascript-format
 msgid "Up to %s can be recovered by shrinking the device."
 msgstr "Hingga %s dapat dipulihkan dengan mengecilkan perangkat."
 
@@ -3087,7 +3115,7 @@ msgid "The device cannot be shrunk:"
 msgstr "Perangkat tidak dapat dikecilkan:"
 
 #: src/components/storage/SpaceActionsTable.tsx:114
-#, c-format
+#, javascript-format
 msgid "Show information about %s"
 msgstr "Menampilkan informasi tentang %s"
 
@@ -3119,7 +3147,7 @@ msgstr ""
 "yang cukup untuk mengalokasikan sistem baru."
 
 #: src/components/storage/SpacePolicySelection.tsx:103
-#, c-format
+#, javascript-format
 msgid "Find space in %s"
 msgstr "Temukan ruang di %s"
 
@@ -3163,7 +3191,7 @@ msgstr "Memformat seluruh perangkat atau mount sistem berkas yang ada"
 #. TRANSLATORS: %1$s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case). %2$s is a disk name like sda.
 #: src/components/storage/VolumeGroupEditor.tsx:58
-#, c-format
+#, javascript-format
 msgid "%1$s will be created as a partition at %2$s"
 msgid_plural "%1$s will be created as partitions at %2$s"
 msgstr[0] "%1$s akan dibuat sebagai partisi di %2$s"
@@ -3186,17 +3214,17 @@ msgid "Edit volume group"
 msgstr "Edit grup volume"
 
 #: src/components/storage/VolumeGroupEditor.tsx:122
-#, c-format
+#, javascript-format
 msgid "Create LVM volume group %s"
 msgstr "Buat grup volume LVM %s"
 
 #: src/components/storage/VolumeGroupEditor.tsx:123
-#, c-format
+#, javascript-format
 msgid "Empty LVM volume group %s"
 msgstr "Kosongkan volume grup LVM %s"
 
 #: src/components/storage/VolumeGroupEditor.tsx:134
-#, c-format
+#, javascript-format
 msgid "Logical volumes for %s"
 msgstr "Volume logis untuk %s"
 
@@ -3251,7 +3279,7 @@ msgstr "Saluran maks"
 #. TRANSLATORS: message shown in bulk action toolbar when just one device
 #. is selected
 #: src/components/storage/dasd/DASDTable.tsx:227
-#, c-format
+#, javascript-format
 msgid "Apply to the selected device"
 msgid_plural "Apply to the %s selected devices"
 msgstr[0] "Terapkan ke perangkat %s yang dipilih"
@@ -3330,7 +3358,7 @@ msgid "This message will close automatically when everything is done."
 msgstr "Pesan ini akan ditutup secara otomatis setelah semuanya selesai."
 
 #: src/components/storage/dasd/FormatActionHandler.tsx:68
-#, c-format
+#, javascript-format
 msgid "Cannot format %s"
 msgstr "Tidak dapat memformat %s"
 
@@ -3345,7 +3373,7 @@ msgid "Cannot format all the selected devices"
 msgstr "Tidak dapat memformat semua perangkat yang dipilih"
 
 #: src/components/storage/dasd/FormatActionHandler.tsx:94
-#, c-format
+#, javascript-format
 msgid "Below %s devices are offline and cannot be formatted."
 msgstr ""
 "Di bawah ini, %s perangkat dalam keadaan luring dan tidak dapat diformat."
@@ -3355,7 +3383,7 @@ msgid "Unselect or activate them and try it again."
 msgstr "Batalkan pilihan atau aktifkan, lalu coba lagi."
 
 #: src/components/storage/dasd/FormatActionHandler.tsx:115
-#, c-format
+#, javascript-format
 msgid "Format device %s"
 msgstr "Format perangkat %s"
 
@@ -3416,16 +3444,16 @@ msgstr "Bersihkan input"
 msgid "Unused space"
 msgstr "Ruang tidak terpakai"
 
+#. TRANSLATORS: %1$s is a description of the device (eg. "Encrypted XFS RAID") and %2$s is
+#. the RAID level (eg. "RAID0")
 #. TRANSLATORS: %1$s is an already formatted mount path (eg. "/"),
 #. %2$s is a size description (eg. at least 10 GiB)
 #. TRANSLATORS: %1$s is a filesystem type description (eg. "Btrfs with snapshots"),
 #. %2$s is a description of the size or the size limits (eg. "at least 10 GiB")
-#. TRANSLATORS: %1$s is a description of the device (eg. "Encrypted XFS RAID") and %2$s is
-#. the RAID level (eg. "RAID0")
 #: src/components/storage/device-utils.tsx:84
 #: src/components/storage/utils/partition.tsx:41
 #: src/components/storage/utils/partition.tsx:85
-#, c-format
+#, javascript-format
 msgid "%1$s (%2$s)"
 msgstr "%1$s (%2$s)"
 
@@ -3501,7 +3529,7 @@ msgstr "Port salah"
 
 #. TRANSLATORS: %s is replaced by the iSCSI target node name
 #: src/components/storage/iscsi/EditNodeForm.tsx:49
-#, c-format
+#, javascript-format
 msgid "Edit %s"
 msgstr "Edit %s"
 
@@ -3549,7 +3577,7 @@ msgstr "Inisiator"
 
 #. TRANSLATORS: %s is replaced by the iSCSI target name
 #: src/components/storage/iscsi/LoginForm.jsx:67
-#, c-format
+#, javascript-format
 msgid "Login %s"
 msgstr "Login %s"
 
@@ -3570,7 +3598,7 @@ msgstr "Terputus"
 
 #. TRANSLATORS: iSCSI connection status, %s is replaced by node label
 #: src/components/storage/iscsi/NodesPresenter.jsx:69
-#, c-format
+#, javascript-format
 msgid "Connected (%s)"
 msgstr "Tersambung (%s)"
 
@@ -3719,15 +3747,23 @@ msgstr "Perkecil partisi yang ada"
 msgid "Use available space"
 msgstr "Gunakan ruang yang tersedia"
 
+#. TRANSLATORS: sub-string used to represent a path like "/" or "/var". %s is replaced by the path
+#. itself, the rest of the string (quotation marks in the English case) is used to encapsulate the
+#. path in a bigger sentence like 'Create partitions for "/" and "/var"'.
+#: src/components/storage/utils.ts:358
+#, javascript-format
+msgid "\"%s\""
+msgstr ""
+
 #. TRANSLATORS: Size range, %1$s is the min size and %2$s is the max
 #: src/components/storage/utils.ts:369
-#, c-format
+#, javascript-format
 msgid "%1$s - %2$s"
 msgstr "%1$s - %2$s"
 
 #. TRANSLATORS: minimum device size, %s is replaced by size string, e.g. "17.5 GiB"
 #: src/components/storage/utils.ts:371
-#, c-format
+#, javascript-format
 msgid "at least %s"
 msgstr "setidaknya %s"
 
@@ -3738,13 +3774,13 @@ msgstr "Multipath"
 
 #. TRANSLATORS: %s is replaced by the device bus ID
 #: src/components/storage/utils/device.tsx:44
-#, c-format
+#, javascript-format
 msgid "DASD %s"
 msgstr "DASD %s"
 
 #. TRANSLATORS: software RAID device, %s is replaced by the RAID level, e.g. RAID-1
 #: src/components/storage/utils/device.tsx:49
-#, c-format
+#, javascript-format
 msgid "Software %s"
 msgstr "Perangkat Lunak %s"
 
@@ -3754,7 +3790,7 @@ msgstr "Kartu SD"
 
 #. TRANSLATORS: %s is substituted by the type of disk like "iSCSI" or "SATA"
 #: src/components/storage/utils/device.tsx:59
-#, c-format
+#, javascript-format
 msgid "%s disk"
 msgstr "%s diska"
 
@@ -3765,7 +3801,7 @@ msgstr "Disk"
 #. TRANSLATORS: disk partition info, %s is replaced by partition table
 #. type (MS-DOS or GPT), %d is the number of the partitions
 #: src/components/storage/utils/device.tsx:81
-#, c-format
+#, javascript-format
 msgid "%s with %d partitions"
 msgstr "%s dengan partisi %d"
 
@@ -3870,7 +3906,7 @@ msgid "Select what to do with each partition."
 msgstr "Pilih apa yang akan dilakukan dengan setiap partisi."
 
 #: src/components/storage/utils/drive.tsx:152
-#, c-format
+#, javascript-format
 msgid "The whole device will be used for %s"
 msgstr "Seluruh perangkat akan digunakan untuk %s"
 
@@ -3883,13 +3919,13 @@ msgid "No additional partitions will be created"
 msgstr "Tidak akan dibuat partisi tambahan"
 
 #: src/components/storage/utils/drive.tsx:169
-#, c-format
+#, javascript-format
 msgid "An existing partition will be used for %s"
 msgid_plural "Existing partitions will be used for %s"
 msgstr[0] "Partisi yang sudah ada akan digunakan untuk %s"
 
 #: src/components/storage/utils/drive.tsx:183
-#, c-format
+#, javascript-format
 msgid "A new partition will be created for %s"
 msgid_plural "New partitions will be created for %s"
 msgstr[0] "Partisi baru akan dibuat untuk %s"
@@ -3897,19 +3933,19 @@ msgstr[0] "Partisi baru akan dibuat untuk %s"
 #. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case).
 #: src/components/storage/utils/drive.tsx:194
-#, c-format
+#, javascript-format
 msgid "Partitions will be used and created for %s"
 msgstr "Partisi akan digunakan dan dibuat untuk %s"
 
 #. TRANSLATORS: %1$s is a filesystem type (eg. Btrfs), %2$s is a device name (eg. /dev/sda3).
 #: src/components/storage/utils/partition.tsx:66
-#, c-format
+#, javascript-format
 msgid "Current %1$s at %2$s"
 msgstr "Saat ini %1$s di %2$s"
 
 #. TRANSLATORS: %1$s is a filesystem type (eg. Btrfs), %2$s is a device name (eg. /dev/sda3).
 #: src/components/storage/utils/partition.tsx:73
-#, c-format
+#, javascript-format
 msgid "%1$s at %2$s"
 msgstr "%1$s di %2$s"
 
@@ -3918,7 +3954,7 @@ msgid "No logical volumes are defined yet"
 msgstr "Belum ada volume logis yang didefinisikan"
 
 #: src/components/storage/utils/volume-group.tsx:36
-#, c-format
+#, javascript-format
 msgid "A new volume will be created for %s"
 msgid_plural "New volumes will be created for %s"
 msgstr[0] "Volume baru akan dibuat untuk %s"
@@ -4029,7 +4065,7 @@ msgstr "Nama host tidak dapat diperbarui"
 #. has not been set. "transient" refers to the hostname mode, and %s will be
 #. replaced with the current hostname value.
 #: src/components/system/HostnamePage.tsx:75
-#, c-format
+#, javascript-format
 msgid "Using transient hostname: %s"
 msgstr "Menggunakan nama host sementara: %s"
 
@@ -4191,6 +4227,9 @@ msgstr "Gunakan Kunci SSH Publik"
 #: src/routes/storage.tsx:113
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#~ msgid "Example: https://myserver.com"
+#~ msgstr "Contoh: https://myserver.com"
 
 #~ msgid "DASD devices selection table"
 #~ msgstr "Tabel pemilihan perangkat DASD"

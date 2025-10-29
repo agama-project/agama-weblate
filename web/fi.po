@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-17 12:49+0000\n"
+"POT-Creation-Date: 2025-10-29 11:58+0000\n"
 "PO-Revision-Date: 2025-10-01 09:59+0000\n"
 "Last-Translator: Timo Jyrinki <tjyrinki@suse.com>\n"
 "Language-Team: Finnish <https://l10n.opensuse.org/projects/agama/agama-web-"
@@ -288,7 +288,7 @@ msgid "Software"
 msgstr "Ohjelmistot"
 
 #: src/components/core/IssuesDrawer.tsx:52
-#: src/components/product/ProductRegistrationPage.tsx:448
+#: src/components/product/ProductRegistrationPage.tsx:450
 #: src/routes/registration.tsx:31
 msgid "Registration"
 msgstr "Rekisteröinti"
@@ -320,7 +320,7 @@ msgstr "Palvelimelle ei voitu tunnistautua, ole hyvä ja tarkista."
 #. TRANSLATORS: Title for a form to provide the password for the root user. %s
 #. will be replaced by "root"
 #: src/components/core/LoginPage.tsx:72
-#, c-format
+#, javascript-format
 msgid "Log in as %s"
 msgstr "Kirjaudu käyttäjänä %s"
 
@@ -375,7 +375,7 @@ msgstr "Salasanan vahvistus"
 #. square brackets around %s to apply special formatting in
 #. the UI.
 #: src/components/core/PasswordInput.tsx:69
-#, c-format
+#, javascript-format
 msgid "Using [%s] keyboard"
 msgstr "Käytetään [%s]-näppämistöä"
 
@@ -613,14 +613,14 @@ msgstr "Osoitteiden tietoluettelo"
 #. ones.
 #: src/components/network/BindingSettingsForm.tsx:76
 #: src/components/storage/utils/drive.tsx:104
-#, c-format
+#, javascript-format
 msgid "%s - %s"
 msgstr "%s - %s"
 
 #. TRANSLATORS: The title of the page. %s will be replaced with the connection
 #. name. I.e., "Binding settings for 'Wired connection 1'"
 #: src/components/network/BindingSettingsForm.tsx:158
-#, c-format
+#, javascript-format
 msgid "Binding settings for '%s'"
 msgstr "Sidotaan setuksia kohteelle ”%s”"
 
@@ -699,7 +699,7 @@ msgid "At least one address must be provided for selected mode"
 msgstr "Ainakin yksi osoite tulee antaa valitussa tilassa"
 
 #: src/components/network/IpSettingsForm.tsx:152
-#, c-format
+#, javascript-format
 msgid "Edit connection %s"
 msgstr "Muokkaa yhteyttä %s"
 
@@ -909,7 +909,7 @@ msgstr "Kun yhteys on muodostettu, näet lisätietoja."
 
 #. TRANSLATORS: %s will be replaced by network ssid.
 #: src/components/network/WifiConnectionForm.tsx:81
-#, c-format
+#, javascript-format
 msgid "Could not connect to %s"
 msgstr "Kohteeseen %s ei voi yhdistää"
 
@@ -932,6 +932,14 @@ msgstr "WPA-salasana"
 msgid "Connect"
 msgstr "Yhdistä"
 
+#. TRANSLATORS: %s will be replaced with the network ssid
+#. TRANSLATORS: %s will be replaced with connection id
+#: src/components/network/WifiNetworkPage.tsx:44
+#: src/components/network/WiredConnectionPage.tsx:43
+#, javascript-format
+msgid "\"%s\" does not exist or is no longer available."
+msgstr ""
+
 #: src/components/network/WifiNetworkPage.tsx:47
 msgid "Network not found or lost"
 msgstr "Verkkoa ei ole tai se on hävinnyt"
@@ -942,7 +950,7 @@ msgid "Go to network page"
 msgstr "Mene verkko-sivulle"
 
 #: src/components/network/WifiNetworkPage.tsx:70
-#, c-format
+#, javascript-format
 msgid "Connect to %s"
 msgstr "Yhdistä verkkoon %s"
 
@@ -968,7 +976,7 @@ msgstr "Julkinen verkko"
 
 #. TRANSLATORS: %s will be replaced by Wi-Fi network SSID
 #: src/components/network/WifiNetworksList.tsx:98
-#, c-format
+#, javascript-format
 msgid "Connecting to %s"
 msgstr "Yhdistetään verkkoon %s"
 
@@ -996,13 +1004,13 @@ msgstr "Yhteys on saatavilla kaikille laitteille."
 
 #. TRANSLATORS: %s will be replaced by a network device name, like eth0 or enp1s0
 #: src/components/network/WiredConnectionDetails.tsx:62
-#, c-format
+#, javascript-format
 msgid "Connection is bound to device %s."
 msgstr "Yhteys on sidottu laitteeseen %s."
 
 #. TRANSLATORS: %s will be replaced by MAC addrss, like 7C:D7:11:28:F5:40
 #: src/components/network/WiredConnectionDetails.tsx:65
-#, c-format
+#, javascript-format
 msgid "Connection is bound to MAC address %s."
 msgstr "Yhteys on sidottu MAC-osoitteseen %s."
 
@@ -1064,7 +1072,7 @@ msgstr "Kiinteitä yhteyksiä ei löydy"
 #. TRANSLATORS: %s will be replaced by a language name and territory, example:
 #. "English (United States)".
 #: src/components/overview/L10nSection.tsx:33
-#, c-format
+#, javascript-format
 msgid "The system will use %s as its default language."
 msgstr "Järjestelmä käyttää kieltä %s oletuskielenä."
 
@@ -1086,7 +1094,7 @@ msgstr "Asennuksessa tulee kestämään"
 
 #. TRANSLATORS: %s will be replaced with the installation size, example: "5GiB".
 #: src/components/overview/SoftwareSection.tsx:48
-#, c-format
+#, javascript-format
 msgid "The installation will take %s including:"
 msgstr "Asennuksessa tulee kestämään %s, mukaan lukien:"
 
@@ -1097,7 +1105,7 @@ msgstr "Laitetta ei ole vielä valittu"
 #. TRANSLATORS: %s will be replaced by the device name and its size,
 #. example: "/dev/sda, 20 GiB"
 #: src/components/overview/StorageSection.tsx:45
-#, c-format
+#, javascript-format
 msgid "Install using device %s shrinking existing partitions as needed."
 msgstr ""
 "Asenna käyttäen laitetta %s, pienentäen olemassa olevia osioita tarvittaessa."
@@ -1105,21 +1113,21 @@ msgstr ""
 #. TRANSLATORS: %s will be replaced by the device name and its size,
 #. example: "/dev/sda, 20 GiB"
 #: src/components/overview/StorageSection.tsx:48
-#, c-format
+#, javascript-format
 msgid "Install using device %s without modifying existing partitions."
 msgstr "Asenna käyttäen laitetta %s, muuttamatta olevia osioita."
 
 #. TRANSLATORS: %s will be replaced by the device name and its size,
 #. example: "/dev/sda, 20 GiB"
 #: src/components/overview/StorageSection.tsx:51
-#, c-format
+#, javascript-format
 msgid "Install using device %s and deleting all its content."
 msgstr "Asenna käyttäen laitetta %s, poistaen kaiken sen nykyisen sisällön."
 
 #. TRANSLATORS: %s will be replaced by the device name and its size,
 #. example: "/dev/sda, 20 GiB"
 #: src/components/overview/StorageSection.tsx:54
-#, c-format
+#, javascript-format
 msgid ""
 "Install using device %s with a custom strategy to find the needed space."
 msgstr ""
@@ -1156,7 +1164,7 @@ msgid "Install using an advanced configuration."
 msgstr "Asenna käyttäen edistyneitä asetuksia."
 
 #: src/components/product/LicenseDialog.tsx:40
-#, c-format
+#, javascript-format
 msgid "This license is not available in %s."
 msgstr "Lisenssiä ei ole saatavilla tuotteelle %s."
 
@@ -1167,7 +1175,7 @@ msgid "Close"
 msgstr "Sulje"
 
 #: src/components/product/ProductRegistrationAlert.tsx:56
-#, c-format
+#, javascript-format
 msgid "%s [must be registered]."
 msgstr "%s [tulee olla rekisteröity]."
 
@@ -1188,72 +1196,80 @@ msgstr "SUSE-asiakaskeskus (SUSE Customer Center, SCC)"
 msgid "Custom"
 msgstr "Mukautettu"
 
-#: src/components/product/ProductRegistrationPage.tsx:78
-#, c-format
+#: src/components/product/ProductRegistrationPage.tsx:79
+#, javascript-format
 msgid "%s has been registered with below information."
 msgstr "%s on rekisteröity alla olevilla tiedoilla."
 
 #. TRANSLATORS: input field label
-#: src/components/product/ProductRegistrationPage.tsx:91
-#: src/components/product/ProductRegistrationPage.tsx:186
+#: src/components/product/ProductRegistrationPage.tsx:92
+#: src/components/product/ProductRegistrationPage.tsx:188
 #: src/components/product/RegistrationExtension.tsx:150
 msgid "Registration code"
 msgstr "Rekisteröintikoodi"
 
 #. TRANSLATORS: switch for displaying or hiding the registration code
-#: src/components/product/ProductRegistrationPage.tsx:96
+#: src/components/product/ProductRegistrationPage.tsx:97
 #: src/components/product/RegistrationExtension.tsx:64
 msgid "Hide"
 msgstr "Piilota"
 
-#: src/components/product/ProductRegistrationPage.tsx:96
+#: src/components/product/ProductRegistrationPage.tsx:97
 #: src/components/product/RegistrationExtension.tsx:64
 msgid "Show"
 msgstr "Näytä"
 
-#: src/components/product/ProductRegistrationPage.tsx:141
+#: src/components/product/ProductRegistrationPage.tsx:142
 msgid "Server options"
 msgstr "Palvelinvalinnat"
 
-#: src/components/product/ProductRegistrationPage.tsx:142
+#: src/components/product/ProductRegistrationPage.tsx:143
 msgid "Register using SUSE server"
 msgstr "Rekisteröi SUSE-palvelinta käyttämällä"
 
-#: src/components/product/ProductRegistrationPage.tsx:148
+#: src/components/product/ProductRegistrationPage.tsx:149
 msgid "Register using a custom registration server"
 msgstr "Rekisteröi käyttäen mukautettua rekisteröintipalvelinta"
 
-#: src/components/product/ProductRegistrationPage.tsx:167
+#: src/components/product/ProductRegistrationPage.tsx:168
 msgid "Server URL"
 msgstr "Palvelimen URL"
 
-#: src/components/product/ProductRegistrationPage.tsx:169
-msgid "Example: https://myserver.com"
-msgstr "Esimerkki: https://minunpalvelin.fi"
+#. TRANSLATORS: %s is replaced by an example URL like https://example.com
+#: src/components/product/ProductRegistrationPage.tsx:171
+#, javascript-format
+msgid "Example: %s"
+msgstr ""
 
-#: src/components/product/ProductRegistrationPage.tsx:218
+#: src/components/product/ProductRegistrationPage.tsx:220
 msgid "Provide registration code"
 msgstr "Kirjoita rekisteröintikoodi"
 
-#: src/components/product/ProductRegistrationPage.tsx:254
+#: src/components/product/ProductRegistrationPage.tsx:256
 msgid "Provide email address"
 msgstr "Kirjoita sähköpostiosoite"
 
-#: src/components/product/ProductRegistrationPage.tsx:351
+#: src/components/product/ProductRegistrationPage.tsx:353
 #: src/components/storage/LvmPage.tsx:169
 #: src/components/system/HostnamePage.tsx:104
 msgid "Check the following before continuing"
 msgstr "Tarkista seuraavat ennen jatkamista"
 
 #. TRANSLATORS: button label
-#: src/components/product/ProductRegistrationPage.tsx:381
+#: src/components/product/ProductRegistrationPage.tsx:383
 #: src/components/product/RegistrationExtension.tsx:161
 #: src/components/product/RegistrationExtension.tsx:176
 msgid "Register"
 msgstr "Rekisteröi"
 
-#: src/components/product/ProductRegistrationPage.tsx:397
-#, c-format
+#. TRANSLATORS: %s will be replaced with the hostname value
+#: src/components/product/ProductRegistrationPage.tsx:395
+#, javascript-format
+msgid "The product will be registered with \"%s\" hostname"
+msgstr ""
+
+#: src/components/product/ProductRegistrationPage.tsx:399
+#, javascript-format
 msgid ""
 "You cannot change it later. Go to the %s section if you want to modify it "
 "before proceeding with registration."
@@ -1261,17 +1277,17 @@ msgstr ""
 "Et voi muuttaa sitä myöhemmin. Mene %s-osioon, jos haluat muokata sitä ennen "
 "rekisteröinnin jatkamista."
 
-#: src/components/product/ProductRegistrationPage.tsx:402
+#: src/components/product/ProductRegistrationPage.tsx:404
 msgid "hostname"
 msgstr "isäntänimi"
 
-#: src/components/product/ProductRegistrationPage.tsx:428
+#: src/components/product/ProductRegistrationPage.tsx:430
 msgid "Extensions"
 msgstr "Laajennukset"
 
 #. TRANSLATORS: %s will be replaced by a product name. E.g., "openSUSE Tumbleweed"
 #: src/components/product/ProductSelectionPage.tsx:62
-#, c-format
+#, javascript-format
 msgid "%s logo"
 msgstr "%s -logo"
 
@@ -1279,7 +1295,7 @@ msgstr "%s -logo"
 #. replaced with the product name and the text in the square brackets [] is
 #. used for the link to show the license, please keep the brackets.
 #: src/components/product/ProductSelectionPage.tsx:139
-#, c-format
+#, javascript-format
 msgid "I have read and accept the [license] for %s"
 msgstr "Olen lukenut ja hyväksyn [lisenssin] tuotteelle %s"
 
@@ -1297,7 +1313,7 @@ msgstr "Tehdään tuotteen asetuksia, odota hetki ..."
 
 #. TRANSLATORS: %s will be replaced by the registration key.
 #: src/components/product/RegistrationExtension.tsx:50
-#, c-format
+#, javascript-format
 msgid "The extension has been registered with key %s."
 msgstr "Laajennus on rekisteröity avaimella %s."
 
@@ -1415,7 +1431,7 @@ msgstr "Joitain AutoYaST-profiilin elementeistä ei ole tuettu."
 
 #. TRANSLATORS: %s is replaced by the quantity of not implemented elements
 #: src/components/questions/UnsupportedAutoYaST.tsx:89
-#, c-format
+#, javascript-format
 msgid "Not implemented yet (%s)"
 msgstr "Ei vielä toteutettu (%s)"
 
@@ -1425,13 +1441,19 @@ msgstr "Tullaan tukemaan tulevassa versiossa."
 
 #. TRANSLATORS: %s is replaced by the quantity of not supported elements
 #: src/components/questions/UnsupportedAutoYaST.tsx:97
-#, c-format
+#, javascript-format
 msgid "Not supported (%s)"
 msgstr "Ei tuettu (%s)"
 
 #: src/components/questions/UnsupportedAutoYaST.tsx:99
 msgid "No support is planned."
 msgstr "Tukea ei ole suunniteltu."
+
+#: src/components/questions/UnsupportedAutoYaST.tsx:106
+msgid ""
+"If you want to disable this check, please specify \"inst.ay_check=0\" at "
+"kernel's command-line"
+msgstr ""
 
 #: src/components/software/SoftwareConflicts.tsx:100
 msgid "Show less actions"
@@ -1466,7 +1488,7 @@ msgstr "Siirry edelliseen"
 #. first %d will be replaced with the current item number, the
 #. second %d with the total number of items.
 #: src/components/software/SoftwareConflicts.tsx:202
-#, c-format
+#, javascript-format
 msgid "%d of %d"
 msgstr "%d / %d"
 
@@ -1568,7 +1590,7 @@ msgstr "Suodata ohjelmistoryhmän nimen tai kuvauksen perusteella"
 #. TRANSLATORS: %s will be replaced by the estimated installation size,
 #. example: "728.8 MiB"
 #: src/components/software/UsedSize.tsx:33
-#, c-format
+#, javascript-format
 msgid "Installation will take %s."
 msgstr "Asennus vie tilaa %s."
 
@@ -1589,13 +1611,13 @@ msgstr "osio"
 
 #. TRANSLATORS: %1$s is a size with units (eg. 3 GiB) and %2$s is a device type (eg. partition)
 #: src/components/storage/AutoSizeText.tsx:47
-#, c-format
+#, javascript-format
 msgid "A generic size of %1$s will be used for the new %2$s"
 msgstr "Yleistä kokoa %1$s tullaan käyttämään uudelle laitteelle %2$s"
 
 #. TRANSLATORS: %1$s and %2$s are sizes with units (eg. 3 GiB) and %3$s is a device type (eg. partition)
 #: src/components/storage/AutoSizeText.tsx:55
-#, c-format
+#, javascript-format
 msgid ""
 "A generic size range between %1$s and %2$s will be used for the new %3$s"
 msgstr ""
@@ -1603,19 +1625,19 @@ msgstr ""
 
 #. TRANSLATORS: %1$s is a size with units (eg. 3 GiB) and %1$s is a device type (eg. partition)
 #: src/components/storage/AutoSizeText.tsx:64
-#, c-format
+#, javascript-format
 msgid "A generic minimum size of %1$s will be used for the new %2$s"
 msgstr "Yleistä minimikokoa %1$s tullaan käyttämään uudelle laitteelle %2$s"
 
 #. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
 #: src/components/storage/AutoSizeText.tsx:81
-#, c-format
+#, javascript-format
 msgid "A %1$s of %2$s will be created for %3$s if possible"
 msgstr "%1$s / %2$s tullaan luomaan kohteelle %3$s jos mahdollista"
 
 #. TRANSLATORS: %1$s is a device type (eg. partition), %2$s and %3$s are sizes with units (10 GiB), and %4$s is a mount path (/home)
 #: src/components/storage/AutoSizeText.tsx:90
-#, c-format
+#, javascript-format
 msgid ""
 "A %1$s with a size between %2$s and %3$s will be created for %4$s if possible"
 msgstr ""
@@ -1624,14 +1646,14 @@ msgstr ""
 
 #. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
 #: src/components/storage/AutoSizeText.tsx:100
-#, c-format
+#, javascript-format
 msgid "A %1$s of at least %2$s will be created for %3$s if possible"
 msgstr ""
 "%1$s, kooltaan vähintään %2$s, tullaan luomaan kohteelle %3$s jos mahdollista"
 
 #. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
 #: src/components/storage/AutoSizeText.tsx:118
-#, c-format
+#, javascript-format
 msgid ""
 "Based on the amount of RAM in the system, a %1$s of %2$s will be planned for "
 "%3$s"
@@ -1640,7 +1662,7 @@ msgstr ""
 "kohteelle %3$s"
 
 #: src/components/storage/AutoSizeText.tsx:128
-#, c-format
+#, javascript-format
 msgid ""
 "Based on the amount of RAM in the system, a %1$s with a size between %2$s "
 "and %3$s will be planned for %4$s"
@@ -1650,7 +1672,7 @@ msgstr ""
 
 #. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
 #: src/components/storage/AutoSizeText.tsx:139
-#, c-format
+#, javascript-format
 msgid ""
 "Based on the amount of RAM in the system, a %1$s of at least %2$s will be "
 "planned for %3$s"
@@ -1659,7 +1681,7 @@ msgstr ""
 "suunniteltu kohteelle %3$s"
 
 #: src/components/storage/AutoSizeText.tsx:168
-#, c-format
+#, javascript-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the amount of RAM in "
 "the system, the usage of Btrfs snapshots and the presence of a separate file "
@@ -1670,7 +1692,7 @@ msgstr ""
 "perusteella."
 
 #: src/components/storage/AutoSizeText.tsx:179
-#, c-format
+#, javascript-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the amount of RAM in "
 "the system, the usage of Btrfs snapshots and the presence of separate file "
@@ -1681,7 +1703,7 @@ msgstr ""
 "olon perusteella."
 
 #: src/components/storage/AutoSizeText.tsx:189
-#, c-format
+#, javascript-format
 msgid ""
 "The size for %s will be dynamically adjusted based on the amount of RAM in "
 "the system and the usage of Btrfs snapshots."
@@ -1690,7 +1712,7 @@ msgstr ""
 "vedosten käytön perusteella."
 
 #: src/components/storage/AutoSizeText.tsx:200
-#, c-format
+#, javascript-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the amount of RAM in "
 "the system and the presence of a separate file system for %2$s."
@@ -1699,7 +1721,7 @@ msgstr ""
 "kohteen %2$s erillisen tiedostojärjestelmän olemassa olon perusteella."
 
 #: src/components/storage/AutoSizeText.tsx:210
-#, c-format
+#, javascript-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the amount of RAM in "
 "the system and the presence of separate file systems for %2$s."
@@ -1708,7 +1730,7 @@ msgstr ""
 "kohteen %2$s erillisten tiedostojärjestelmien olemassa olon perusteella."
 
 #: src/components/storage/AutoSizeText.tsx:222
-#, c-format
+#, javascript-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the usage of Btrfs "
 "snapshots and the presence of a separate file system for %2$s."
@@ -1717,7 +1739,7 @@ msgstr ""
 "%2$s erillisen tiedostojärjestelmän olemassa olon perusteella."
 
 #: src/components/storage/AutoSizeText.tsx:233
-#, c-format
+#, javascript-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the usage of Btrfs "
 "snapshots and the presence of separate file systems for %2$s."
@@ -1727,7 +1749,7 @@ msgstr ""
 
 #. TRANSLATORS: %s is a mount point (eg. /)
 #: src/components/storage/AutoSizeText.tsx:242
-#, c-format
+#, javascript-format
 msgid ""
 "The size for %s will be dynamically adjusted based on the usage of Btrfs "
 "snapshots."
@@ -1735,7 +1757,7 @@ msgstr ""
 "Kohteen %s koko määritellään dynaamisesti Btrfs-vedosten käytön perusteella."
 
 #: src/components/storage/AutoSizeText.tsx:251
-#, c-format
+#, javascript-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the presence of a "
 "separate file system for %2$s."
@@ -1744,7 +1766,7 @@ msgstr ""
 "tiedostojärjestelmän olemassa olon perusteella."
 
 #: src/components/storage/AutoSizeText.tsx:261
-#, c-format
+#, javascript-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the presence of "
 "separate file systems for %2$s."
@@ -1754,13 +1776,13 @@ msgstr ""
 
 #. TRANSLATORS: %1$s is a device type (eg. partition) and %2$s is a size with units (eg. 10 GiB)
 #: src/components/storage/AutoSizeText.tsx:273
-#, c-format
+#, javascript-format
 msgid ""
 "The current configuration will result in an attempt to create a %1$s of %2$s."
 msgstr "Nykyisillä asetuksilla %1$s / %2$s tullaan yrittämään luoda."
 
 #: src/components/storage/AutoSizeText.tsx:282
-#, c-format
+#, javascript-format
 msgid ""
 "The current configuration will result in an attempt to create a %1$s with a "
 "size between %2$s and %3$s."
@@ -1770,7 +1792,7 @@ msgstr ""
 
 #. TRANSLATORS: %1$s is a device type (eg. partition) and %2$s is a size with units (eg. 10 GiB)
 #: src/components/storage/AutoSizeText.tsx:292
-#, c-format
+#, javascript-format
 msgid ""
 "The current configuration will result in an attempt to create a %1$s of at "
 "least %2$s."
@@ -1791,7 +1813,7 @@ msgstr "Käynnistämiseen tarvittavat osiot otetaan käyttöön asennuslevyltä.
 
 #. TRANSLATORS: %s is replaced by a device name and size (e.g., "/dev/sda, 500GiB")
 #: src/components/storage/BootSelection.tsx:146
-#, c-format
+#, javascript-format
 msgid "Partitions to boot will be allocated at the installation disk %s."
 msgstr "Käynnistämiseen tarvittavat osiot otetaan käyttöön asennuslevyltä %s."
 
@@ -1835,7 +1857,7 @@ msgid "No devices configured yet"
 msgstr "Laitteiden asetuksia ei ole tehty"
 
 #: src/components/storage/ConfigEditor.tsx:38
-#, c-format
+#, javascript-format
 msgid ""
 "Use actions below to set up your devices or click %s to start from scratch "
 "with the default configuration."
@@ -1934,14 +1956,14 @@ msgid "Already using all available disks"
 msgstr "Kaikki saatavilla olevat levyt ovat jo käytössä"
 
 #: src/components/storage/ConfigureDeviceMenu.tsx:66
-#, c-format
+#, javascript-format
 msgid "Extend the installation beyond the currently selected device"
 msgid_plural "Extend the installation beyond the current %d devices"
 msgstr[0] "Laajenna asennusta käyttämään muutakin kuin nykyistä laitetta"
 msgstr[1] "Laajenna asennusta käyttämään muutakin kuin nykyisiä %d laitteita"
 
 #: src/components/storage/ConfigureDeviceMenu.tsx:75
-#, c-format
+#, javascript-format
 msgid "Extend the installation beyond the currently selected disk"
 msgid_plural "Extend the installation beyond the current %d disks"
 msgstr[0] "Laajenna asennusta käyttämään muutakin kuin nykyistä levyä"
@@ -2052,85 +2074,85 @@ msgstr ""
 
 #. TRANSLATORS: %s will be replaced by a disk name and its size - "sda (20 GiB)"
 #: src/components/storage/DriveHeader.tsx:33
-#, c-format
+#, javascript-format
 msgid "Mount disk %s"
 msgstr "Liitä levy %s"
 
 #. TRANSLATORS: %s will be replaced by a disk name and its size - "sda (20 GiB)"
 #: src/components/storage/DriveHeader.tsx:35
-#, c-format
+#, javascript-format
 msgid "Format disk %s"
 msgstr "Alusta levy %s"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
 #: src/components/storage/DriveHeader.tsx:46
-#, c-format
+#, javascript-format
 msgid "Use disk %s to install, host LVM and boot"
 msgstr "Käytä levyä %s asennukseen, LVM:n käyttöön ja käynnistymiseen"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
 #: src/components/storage/DriveHeader.tsx:49
-#, c-format
+#, javascript-format
 msgid "Use disk %s to install and host LVM"
 msgstr "Käytä levyä %s asennukseen ja LVM:n käyttöön"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
 #: src/components/storage/DriveHeader.tsx:54
-#, c-format
+#, javascript-format
 msgid "Use disk %s to install and boot"
 msgstr "Käytä levyä %s asennukseen ja käynnistämiseen"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
 #: src/components/storage/DriveHeader.tsx:57
-#, c-format
+#, javascript-format
 msgid "Use disk %s to install"
 msgstr "Käytä levyä %s asennukseen"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
 #: src/components/storage/DriveHeader.tsx:64
-#, c-format
+#, javascript-format
 msgid "Use disk %s for LVM, additional partitions and booting"
 msgstr "Käytä levyä %s LVM:n käyttöön, lisäosioihin ja käynnistymiseen"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
 #: src/components/storage/DriveHeader.tsx:67
-#, c-format
+#, javascript-format
 msgid "Use disk %s for LVM and additional partitions"
 msgstr "Käytä levyä %s LVM:n käyttöön ja lisäosioihin"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
 #: src/components/storage/DriveHeader.tsx:72
-#, c-format
+#, javascript-format
 msgid "Use disk %s for additional partitions and booting"
 msgstr "Käytä levyä %s lisäosioihin ja käynnistymiseen"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
 #: src/components/storage/DriveHeader.tsx:75
-#, c-format
+#, javascript-format
 msgid "Use disk %s for additional partitions"
 msgstr "Käytä levyä %s llisäosioihin"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
 #: src/components/storage/DriveHeader.tsx:81
-#, c-format
+#, javascript-format
 msgid "Use disk %s to host LVM and boot"
 msgstr "Käytä levyä %s LVM:n käyttöön ja käynnistymiseen"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
 #: src/components/storage/DriveHeader.tsx:84
-#, c-format
+#, javascript-format
 msgid "Use disk %s to host LVM"
 msgstr "Käytä levyä %s LVM:n käyttöön"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
 #: src/components/storage/DriveHeader.tsx:89
-#, c-format
+#, javascript-format
 msgid "Use disk %s to configure boot partitions"
 msgstr "Käytä levyä %s käynnistymisosioiden määrittämiseen"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
 #: src/components/storage/DriveHeader.tsx:92
-#, c-format
+#, javascript-format
 msgid "Use disk %s"
 msgstr "Käytä levyä %s"
 
@@ -2207,13 +2229,13 @@ msgstr "Laite alustetaan"
 
 #. TRANSLATORS: %s is a formatted mount point (eg. '"/home'").
 #: src/components/storage/FilesystemMenu.tsx:51
-#, c-format
+#, javascript-format
 msgid "The current file system will be mounted at %s"
 msgstr "Nykyinen tiedostojärjestelmä liitetään kohteeseen %s"
 
 #. TRANSLATORS: %1$s is a filesystem type (eg. Btrfs), %2$s is a mount point (eg. '"/home"').
 #: src/components/storage/FilesystemMenu.tsx:54
-#, c-format
+#, javascript-format
 msgid "The device will be formatted as %1$s and mounted at %2$s"
 msgstr ""
 "Laite alustetaan tiedostojärjestelmällä %1$s ja liitetään kohteeseen %2$s"
@@ -2222,7 +2244,7 @@ msgstr ""
 #: src/components/storage/FilesystemMenu.tsx:67
 #: src/components/storage/PartitionsMenu.tsx:145
 #: src/components/storage/UnusedMenu.tsx:45
-#, c-format
+#, javascript-format
 msgid "Details for %s"
 msgstr "Tiedot kohteelle %s"
 
@@ -2274,7 +2296,7 @@ msgstr "Odotetaan liitoskohtaa"
 #: src/components/storage/FormattableDevicePage.tsx:283
 #: src/components/storage/PartitionPage.tsx:563
 #: src/components/storage/utils/partition.tsx:69
-#, c-format
+#, javascript-format
 msgid "Current %s"
 msgstr "Tämänhetkinen %s"
 
@@ -2288,7 +2310,7 @@ msgstr "Btrfs tilannevedoksilla"
 #: src/components/storage/FormattableDevicePage.tsx:302
 #: src/components/storage/LogicalVolumePage.tsx:479
 #: src/components/storage/PartitionPage.tsx:582
-#, c-format
+#, javascript-format
 msgid "Default file system for %s"
 msgstr "Oletustiedostojärjestelmä kohteelle %s"
 
@@ -2304,11 +2326,11 @@ msgstr "Tuhoa nykyiset tiedot ja alusta laite tiedostojärjestelmällä"
 msgid "Format device as"
 msgstr "Alusta laite tiedostojärjestelmällä"
 
-#. TRANSLATORS: %s is the name of a partition, like /dev/vda2
 #. TRANSLATORS: %s is the name of a device, like vda
+#. TRANSLATORS: %s is the name of a partition, like /dev/vda2
 #: src/components/storage/FormattableDevicePage.tsx:320
 #: src/components/storage/PartitionPage.tsx:599
-#, c-format
+#, javascript-format
 msgid "Do not format %s and keep the data"
 msgstr "Älä alusta kohdetta %s ja säilytä tiedot"
 
@@ -2319,7 +2341,7 @@ msgid "File system label"
 msgstr "Tiedostojärjestelmän nimike"
 
 #: src/components/storage/FormattableDevicePage.tsx:453
-#, c-format
+#, javascript-format
 msgid "Configure device %s"
 msgstr "Tee laitteen %s asetukset"
 
@@ -2417,7 +2439,7 @@ msgid "Format logical volume as"
 msgstr "Alusta looginen taltio tiedostojärjestelmällä"
 
 #: src/components/storage/LogicalVolumePage.tsx:683
-#, c-format
+#, javascript-format
 msgid "Configure LVM logical volume at %s volume group"
 msgstr "Tee asetukset loogiselle LVM-taltiolle taltioryhmässä %s"
 
@@ -2431,7 +2453,7 @@ msgid "Enter a name for the volume group."
 msgstr "Syötä taltioryhmän nimi."
 
 #: src/components/storage/LvmPage.tsx:81
-#, c-format
+#, javascript-format
 msgid "Volume group '%s' already exists. Enter a different name."
 msgstr "Taltioryhmä ”%s” on jo olemassa, syötä toinen nimi."
 
@@ -2474,104 +2496,104 @@ msgstr ""
 
 #. TRANSLATORS: %s will be replaced by a RAID name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:33
-#, c-format
+#, javascript-format
 msgid "Mount RAID %s"
 msgstr "Liitäs RAID %s"
 
 #. TRANSLATORS: %s will be replaced by a RAID name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:35
-#, c-format
+#, javascript-format
 msgid "Format RAID %s"
 msgstr "Alusta RAID %s"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:46
-#, c-format
+#, javascript-format
 msgid "Use RAID %s to install, host LVM and boot"
 msgstr "Käytä kohdetta RAID %s asennukseen, LVM-taltioihin ja käynnistämiseen"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:49
-#, c-format
+#, javascript-format
 msgid "Use RAID %s to install and host LVM"
 msgstr "Käytä kohdetta RAID %s asennukseen ja LVM-taltioihin"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:54
-#, c-format
+#, javascript-format
 msgid "Use RAID %s to install and boot"
 msgstr "Käytä RAID-kohdetta %s asennukseen ja käynnistämiseen"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:57
-#, c-format
+#, javascript-format
 msgid "Use RAID %s to install"
 msgstr "Käytä kohdetta RAID %s asennukseen"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:64
-#, c-format
+#, javascript-format
 msgid "Use RAID %s for LVM, additional partitions and booting"
 msgstr "Käytä kohdetta RAID %s asennukseen, lisäosioihin ja käynnistämiseen"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:67
-#, c-format
+#, javascript-format
 msgid "Use RAID %s for LVM and additional partitions"
 msgstr "Käytä kohdetta RAID %s LVM-taltioihin ja lisäosioihin"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:72
-#, c-format
+#, javascript-format
 msgid "Use RAID %s for additional partitions and booting"
 msgstr "Käytä kohdetta RAID %s lisäosioihin ja käynnistämiseen"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:75
-#, c-format
+#, javascript-format
 msgid "Use RAID %s for additional partitions"
 msgstr "Käytä kohdetta RAID %s lisäosioihin"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:81
-#, c-format
+#, javascript-format
 msgid "Use RAID %s to host LVM and boot"
 msgstr "Käytä kohdetta RAID %s LVM-taltioihin ja käynnistämiseen"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:84
-#, c-format
+#, javascript-format
 msgid "Use RAID %s to host LVM"
 msgstr "Käytä kohdetta RAID %s LVM-taltioihin"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:89
-#, c-format
+#, javascript-format
 msgid "Use RAID %s to configure boot partitions"
 msgstr "Käytä kohdetta RAID %s käynnistysosioiden asettamiseen"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:92
-#, c-format
+#, javascript-format
 msgid "Use RAID %s"
 msgstr "Käytä kohdetta RAID %s"
 
 #. TRANSLATORS: %s is the short name of a disk, like 'sda'
 #: src/components/storage/NewVgMenuOption.tsx:46
-#, c-format
+#, javascript-format
 msgid "Create another LVM volume group on %s"
 msgstr "Luo ylimääräinen LVM-taltioryhmä kohteelle %s"
 
 #. TRANSLATORS: %s is the short name of a disk, like 'sda'
 #: src/components/storage/NewVgMenuOption.tsx:50
-#, c-format
+#, javascript-format
 msgid "Create LVM volume group on %s"
 msgstr "Luo LVM-taltioryhmä kohteelle %s"
 
 #. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case).
 #: src/components/storage/NewVgMenuOption.tsx:59
-#, c-format
+#, javascript-format
 msgid "%s will be created as a logical volume"
 msgid_plural "%s will be created as logical volumes"
 msgstr[0] "%s luodaan loogisena taltiona"
@@ -2591,12 +2613,12 @@ msgstr "Kokorajojen tulee olla lukuja joita seuraa yksikkö kuten GiB tai GB"
 
 #. TRANSLATORS: %s is a disk name with its size (eg. "sda, 10 GiB"
 #: src/components/storage/PartitionPage.tsx:498
-#, c-format
+#, javascript-format
 msgid "As a new partition on %s"
 msgstr "Uutena osiona kohteelle %s"
 
 #: src/components/storage/PartitionPage.tsx:500
-#, c-format
+#, javascript-format
 msgid "Using partition %s"
 msgstr "Käytetään osiota %s"
 
@@ -2625,7 +2647,7 @@ msgid "Format partition as"
 msgstr "Alusta osio tiedostojärjestelmällä"
 
 #: src/components/storage/PartitionPage.tsx:813
-#, c-format
+#, javascript-format
 msgid "Configure partition at %s"
 msgstr "Teen osion %s asetukset"
 
@@ -2673,6 +2695,13 @@ msgstr[1] "Seuraavat osiot liitetään."
 msgid "Any partition needed to boot will be configured."
 msgstr "Kaikkien käynnistämiseen käytettävien osioiden asetukset tehdään."
 
+#: src/components/storage/PartitionsMenu.tsx:133
+#, fuzzy
+msgid "Partitions to host \"system\" will be created if needed."
+msgstr ""
+"Osioiden, joita ei uudelleenkäytetä, kokoja tullaan muuttamaan tarpeen "
+"mukaan."
+
 #: src/components/storage/PartitionsMenu.tsx:174
 msgid "Add another partition or mount an existing one"
 msgstr "Lisää ylimääräinen osio tai liitä olemassa oleva"
@@ -2687,14 +2716,14 @@ msgid "Loading storage"
 msgstr "Ladataan tallennustilaa"
 
 #: src/components/storage/ProposalActionsDialog.tsx:73
-#, c-format
+#, javascript-format
 msgid "Hide %d subvolume action"
 msgid_plural "Hide %d subvolume actions"
 msgstr[0] "Piilota %d alitaltion toiminto"
 msgstr[1] "Piilota %d alitaltion toimintoa"
 
 #: src/components/storage/ProposalActionsDialog.tsx:78
-#, c-format
+#, javascript-format
 msgid "Show %d subvolume action"
 msgid_plural "Show %d subvolume actions"
 msgstr[0] "Näytä %d alitaltion toiminto"
@@ -2710,14 +2739,14 @@ msgstr ""
 #. TRANSLATORS: %s is a list of formatted mount points with a partition size like
 #. '"/" (at least 10 GiB), "/var" (20 GiB) and "swap" (2 GiB)'
 #: src/components/storage/ProposalFailedInfo.tsx:67
-#, c-format
+#, javascript-format
 msgid "It is not possible to allocate space for the boot partition and for %s."
 msgstr "Käynnistysosiolle ja kohteelle %s ei ole mahdollista varata tilaa."
 
 #. TRANSLATORS: %s is a list of formatted mount points with a partition size like
 #. '"/" (at least 10 GiB), "/var" (20 GiB) and "swap" (2 GiB)'
 #: src/components/storage/ProposalFailedInfo.tsx:70
-#, c-format
+#, javascript-format
 msgid "It is not possible to allocate space for %s."
 msgstr "Kohteelle %s ei ole mahdollista varata tilaa."
 
@@ -2817,14 +2846,14 @@ msgid "Waiting for information about storage configuration"
 msgstr "Odotetaan tietoja tallennustilan asetuksista"
 
 #: src/components/storage/ProposalResultSection.tsx:64
-#, c-format
+#, javascript-format
 msgid "There is %d destructive action planned affecting %s"
 msgid_plural "There are %d destructive actions planned affecting %s"
 msgstr[0] "%d tietoja tuhoava toiminto suunniteltu kohteeseen %s"
 msgstr[1] "%d tietoja tuhoavaa toimintoa suunniteltu kohteeseen %s"
 
 #: src/components/storage/ProposalResultSection.tsx:75
-#, c-format
+#, javascript-format
 msgid "There is %d destructive action planned"
 msgid_plural "There are %d destructive actions planned"
 msgstr[0] "%d tietoja tuhoava toiminto suunniteltu"
@@ -2835,7 +2864,7 @@ msgid "Collapse the list of planned actions"
 msgstr "Supista suunniteltujen toimintojen luettelo"
 
 #: src/components/storage/ProposalResultSection.tsx:95
-#, c-format
+#, javascript-format
 msgid "Check the %d planned actions"
 msgstr "Tarkista %d suunniteltua toimintoa"
 
@@ -2858,7 +2887,7 @@ msgstr "Uusi"
 #. TRANSLATORS: Label to indicate the device size before resizing, where %s is
 #. replaced by the original size (e.g., 3.00 GiB).
 #: src/components/storage/ProposalResultTable.tsx:106
-#, c-format
+#, javascript-format
 msgid "Before %s"
 msgstr "Ennen %s"
 
@@ -2871,7 +2900,7 @@ msgid "Transactional root file system"
 msgstr "Transaktionaalinen juuritiedostojärjestelmä"
 
 #: src/components/storage/ProposalTransactionalInfo.tsx:47
-#, c-format
+#, javascript-format
 msgid ""
 "%s is an immutable system with atomic updates. It uses a read-only Btrfs "
 "file system updated via snapshots."
@@ -2886,7 +2915,7 @@ msgstr "Valittua levyä ei voi muuttaa"
 
 #. TRANSLATORS: %s is a formatted mount point like '"/home"'
 #: src/components/storage/SearchedDeviceMenu.tsx:63
-#, c-format
+#, javascript-format
 msgid "Select a disk to format as %s"
 msgstr "Valitse levy joka alustetaan liitoskohtaan %s"
 
@@ -2901,7 +2930,7 @@ msgstr "Valitse levy jolle järjestelmä asennetaan"
 #. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case).
 #: src/components/storage/SearchedDeviceMenu.tsx:84
-#, c-format
+#, javascript-format
 msgid "Select a disk to create %s"
 msgstr "Valitse levy jolle luodaan liitoskohta %s"
 
@@ -2923,13 +2952,13 @@ msgstr "Se on valittu LVM-ryhmiä varten"
 
 #. TRANSLATORS: %s is the name of the LVM
 #: src/components/storage/SearchedDeviceMenu.tsx:119
-#, c-format
+#, javascript-format
 msgid "It is chosen for booting and for the LVM group '%s'"
 msgstr "Se on valittu käynnistämiseenja LVM-ryhmää ”%s” varten"
 
 #. TRANSLATORS: %s is the name of the LVM
 #: src/components/storage/SearchedDeviceMenu.tsx:125
-#, c-format
+#, javascript-format
 msgid "It is chosen for the LVM group '%s'"
 msgstr "Se on LVM-ryhmää ”%s” varten"
 
@@ -2939,7 +2968,7 @@ msgstr "Se on valittu käynnistämiseen"
 
 #. TRANSLATORS: %s is the name of the disk (eg. sda)
 #: src/components/storage/SearchedDeviceMenu.tsx:139
-#, c-format
+#, javascript-format
 msgid ""
 "%s will still contain the configured LVM groups and any partition needed to "
 "boot"
@@ -2949,13 +2978,13 @@ msgstr ""
 
 #. TRANSLATORS: %s is the name of the disk (eg. sda)
 #: src/components/storage/SearchedDeviceMenu.tsx:145
-#, c-format
+#, javascript-format
 msgid "The configured LVM groups will remain at %s"
 msgstr "Määritellyt LVM-ryhmät säilyvät levyllä %s"
 
 #. TRANSLATORS: %1$s is the name of the disk (eg. sda) and %2$s the name of the LVM
 #: src/components/storage/SearchedDeviceMenu.tsx:151
-#, c-format
+#, javascript-format
 msgid ""
 "%1$s will still contain the LVM group '%2$s' and any partition needed to boot"
 msgstr ""
@@ -2964,13 +2993,13 @@ msgstr ""
 
 #. TRANSLATORS: %1$s is the name of the LVM and %2$s the name of the disk (eg. sda)
 #: src/components/storage/SearchedDeviceMenu.tsx:159
-#, c-format
+#, javascript-format
 msgid "The LVM group '%1$s' will remain at %2$s"
 msgstr "LVM-ryhmä ”%1$s” säilyy levyllä %2$s"
 
 #. TRANSLATORS: %s is the name of the disk (eg. sda)
 #: src/components/storage/SearchedDeviceMenu.tsx:167
-#, c-format
+#, javascript-format
 msgid "Partitions needed for booting will remain at %s"
 msgstr "Käynnistämiseen tarvittavat osiot säilyvät levyllä %s"
 
@@ -3003,12 +3032,12 @@ msgid "Do not use"
 msgstr "Älä käytä"
 
 #: src/components/storage/SearchedDeviceMenu.tsx:308
-#, c-format
+#, javascript-format
 msgid "Device %s menu"
 msgstr "Laitteen %s valikko"
 
 #: src/components/storage/SizeModeSelect.tsx:75
-#, c-format
+#, javascript-format
 msgid ""
 "The size is configured as a range between %s and %s, but this interface "
 "cannot handle ranges with a given max size."
@@ -3030,7 +3059,7 @@ msgstr ""
 
 #. TRANSLATORS: %s is a disk size (e.g., "10 GiB").
 #: src/components/storage/SizeModeSelect.tsx:140
-#, c-format
+#, javascript-format
 msgid "approx. %s"
 msgstr "noin %s"
 
@@ -3061,12 +3090,12 @@ msgstr "Uusi järjestelmä käyttää tätä laitetta."
 
 #. TRANSLATORS: %s is a mount path like "/home".
 #: src/components/storage/SpaceActionsTable.tsx:78
-#, c-format
+#, javascript-format
 msgid "The device will be mounted at %s."
 msgstr "Laite tullaan liittämään liitoskohtaan %s."
 
 #: src/components/storage/SpaceActionsTable.tsx:84
-#, c-format
+#, javascript-format
 msgid "Up to %s can be recovered by shrinking the device."
 msgstr "Enimmillään %s voidaan vapauttaa pienentämällä laitetta."
 
@@ -3075,7 +3104,7 @@ msgid "The device cannot be shrunk:"
 msgstr "Laitetta ei voi pienentää:"
 
 #: src/components/storage/SpaceActionsTable.tsx:114
-#, c-format
+#, javascript-format
 msgid "Show information about %s"
 msgstr "Näytä tietoja kohteesta %s"
 
@@ -3107,7 +3136,7 @@ msgstr ""
 "vapautuisi tilaa."
 
 #: src/components/storage/SpacePolicySelection.tsx:103
-#, c-format
+#, javascript-format
 msgid "Find space in %s"
 msgstr "Vapauta tilaa kohteessa %s"
 
@@ -3150,7 +3179,7 @@ msgstr "Alusta koko laite tai liitä olemassa oleva tiedostojärjestelmä"
 #. TRANSLATORS: %1$s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case). %2$s is a disk name like sda.
 #: src/components/storage/VolumeGroupEditor.tsx:58
-#, c-format
+#, javascript-format
 msgid "%1$s will be created as a partition at %2$s"
 msgid_plural "%1$s will be created as partitions at %2$s"
 msgstr[0] "%1$s luodaan osiona levylle %2$s"
@@ -3175,17 +3204,17 @@ msgid "Edit volume group"
 msgstr "Muokkaa taltioryhmiä"
 
 #: src/components/storage/VolumeGroupEditor.tsx:122
-#, c-format
+#, javascript-format
 msgid "Create LVM volume group %s"
 msgstr "Luo LVM-taltioryhmä %s"
 
 #: src/components/storage/VolumeGroupEditor.tsx:123
-#, c-format
+#, javascript-format
 msgid "Empty LVM volume group %s"
 msgstr "Tyhjennä LVM-taltioryhmä %s"
 
 #: src/components/storage/VolumeGroupEditor.tsx:134
-#, c-format
+#, javascript-format
 msgid "Logical volumes for %s"
 msgstr "Loogiset taltiot kohteelle %s"
 
@@ -3241,7 +3270,7 @@ msgstr "Maksimikanava"
 #. TRANSLATORS: message shown in bulk action toolbar when just one device
 #. is selected
 #: src/components/storage/dasd/DASDTable.tsx:227
-#, c-format
+#, javascript-format
 msgid "Apply to the selected device"
 msgid_plural "Apply to the %s selected devices"
 msgstr[0] "Toteuta valitulle laitteelle"
@@ -3321,7 +3350,7 @@ msgid "This message will close automatically when everything is done."
 msgstr "Tämä viesti sulkeutuu automaattisesti kun kaikki on valmista."
 
 #: src/components/storage/dasd/FormatActionHandler.tsx:68
-#, c-format
+#, javascript-format
 msgid "Cannot format %s"
 msgstr "%s ei voida alustaa"
 
@@ -3334,7 +3363,7 @@ msgid "Cannot format all the selected devices"
 msgstr "Kaikkia valittuja laitteita ei voi alustaa"
 
 #: src/components/storage/dasd/FormatActionHandler.tsx:94
-#, c-format
+#, javascript-format
 msgid "Below %s devices are offline and cannot be formatted."
 msgstr "Alla olevat %s laitteet eivät ole kytketty ja niitä ei voi alustaa."
 
@@ -3343,7 +3372,7 @@ msgid "Unselect or activate them and try it again."
 msgstr "Poista valintoja tai aktivoi laitteita, yritä sitten uudelleen."
 
 #: src/components/storage/dasd/FormatActionHandler.tsx:115
-#, c-format
+#, javascript-format
 msgid "Format device %s"
 msgstr "Alusta laite %s"
 
@@ -3404,16 +3433,16 @@ msgstr "Tyhjennä syöte"
 msgid "Unused space"
 msgstr "Käyttämätöntä tilaa"
 
+#. TRANSLATORS: %1$s is a description of the device (eg. "Encrypted XFS RAID") and %2$s is
+#. the RAID level (eg. "RAID0")
 #. TRANSLATORS: %1$s is an already formatted mount path (eg. "/"),
 #. %2$s is a size description (eg. at least 10 GiB)
 #. TRANSLATORS: %1$s is a filesystem type description (eg. "Btrfs with snapshots"),
 #. %2$s is a description of the size or the size limits (eg. "at least 10 GiB")
-#. TRANSLATORS: %1$s is a description of the device (eg. "Encrypted XFS RAID") and %2$s is
-#. the RAID level (eg. "RAID0")
 #: src/components/storage/device-utils.tsx:84
 #: src/components/storage/utils/partition.tsx:41
 #: src/components/storage/utils/partition.tsx:85
-#, c-format
+#, javascript-format
 msgid "%1$s (%2$s)"
 msgstr "%1$s (koko %2$s)"
 
@@ -3489,7 +3518,7 @@ msgstr "Virheellinen portti"
 
 #. TRANSLATORS: %s is replaced by the iSCSI target node name
 #: src/components/storage/iscsi/EditNodeForm.tsx:49
-#, c-format
+#, javascript-format
 msgid "Edit %s"
 msgstr "Muokkaa kohdetta %s"
 
@@ -3537,7 +3566,7 @@ msgstr "Alullepanija (initiator)"
 
 #. TRANSLATORS: %s is replaced by the iSCSI target name
 #: src/components/storage/iscsi/LoginForm.jsx:67
-#, c-format
+#, javascript-format
 msgid "Login %s"
 msgstr "Kirjautuminen %s"
 
@@ -3558,7 +3587,7 @@ msgstr "Yhteys katkaistu"
 
 #. TRANSLATORS: iSCSI connection status, %s is replaced by node label
 #: src/components/storage/iscsi/NodesPresenter.jsx:69
-#, c-format
+#, javascript-format
 msgid "Connected (%s)"
 msgstr "Yhdistetty (%s)"
 
@@ -3709,15 +3738,23 @@ msgstr "Pienennä olevmassa olevia osioita"
 msgid "Use available space"
 msgstr "Käytä käytettävissä olevaa tilaa"
 
+#. TRANSLATORS: sub-string used to represent a path like "/" or "/var". %s is replaced by the path
+#. itself, the rest of the string (quotation marks in the English case) is used to encapsulate the
+#. path in a bigger sentence like 'Create partitions for "/" and "/var"'.
+#: src/components/storage/utils.ts:358
+#, javascript-format
+msgid "\"%s\""
+msgstr ""
+
 #. TRANSLATORS: Size range, %1$s is the min size and %2$s is the max
 #: src/components/storage/utils.ts:369
-#, c-format
+#, javascript-format
 msgid "%1$s - %2$s"
 msgstr "%1$s - %2$s"
 
 #. TRANSLATORS: minimum device size, %s is replaced by size string, e.g. "17.5 GiB"
 #: src/components/storage/utils.ts:371
-#, c-format
+#, javascript-format
 msgid "at least %s"
 msgstr "vähintään %s"
 
@@ -3728,13 +3765,13 @@ msgstr "Multipath"
 
 #. TRANSLATORS: %s is replaced by the device bus ID
 #: src/components/storage/utils/device.tsx:44
-#, c-format
+#, javascript-format
 msgid "DASD %s"
 msgstr "DASD %s"
 
 #. TRANSLATORS: software RAID device, %s is replaced by the RAID level, e.g. RAID-1
 #: src/components/storage/utils/device.tsx:49
-#, c-format
+#, javascript-format
 msgid "Software %s"
 msgstr "Ohjelmisto-%s"
 
@@ -3744,7 +3781,7 @@ msgstr "SD-kortti"
 
 #. TRANSLATORS: %s is substituted by the type of disk like "iSCSI" or "SATA"
 #: src/components/storage/utils/device.tsx:59
-#, c-format
+#, javascript-format
 msgid "%s disk"
 msgstr "%s-levy"
 
@@ -3755,7 +3792,7 @@ msgstr "Levy"
 #. TRANSLATORS: disk partition info, %s is replaced by partition table
 #. type (MS-DOS or GPT), %d is the number of the partitions
 #: src/components/storage/utils/device.tsx:81
-#, c-format
+#, javascript-format
 msgid "%s with %d partitions"
 msgstr "%s-osiotaulu, %d osiota"
 
@@ -3860,7 +3897,7 @@ msgid "Select what to do with each partition."
 msgstr "Valitse mitä kullekin osiolle tehdään."
 
 #: src/components/storage/utils/drive.tsx:152
-#, c-format
+#, javascript-format
 msgid "The whole device will be used for %s"
 msgstr "Koko laitetta tullaan käyttämään kohteelle %s"
 
@@ -3873,14 +3910,14 @@ msgid "No additional partitions will be created"
 msgstr "Ylimääräisiä osioita ei luoda"
 
 #: src/components/storage/utils/drive.tsx:169
-#, c-format
+#, javascript-format
 msgid "An existing partition will be used for %s"
 msgid_plural "Existing partitions will be used for %s"
 msgstr[0] "Olemassa olevaa osiota käytetään kohteelle %s"
 msgstr[1] "Olemassa olevia osioita käytetään kohteelle %s"
 
 #: src/components/storage/utils/drive.tsx:183
-#, c-format
+#, javascript-format
 msgid "A new partition will be created for %s"
 msgid_plural "New partitions will be created for %s"
 msgstr[0] "Uusi osio luodaan kohteelle %s"
@@ -3889,19 +3926,19 @@ msgstr[1] "Uusia osioita luodaan kohteelle %s"
 #. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case).
 #: src/components/storage/utils/drive.tsx:194
-#, c-format
+#, javascript-format
 msgid "Partitions will be used and created for %s"
 msgstr "Osioita tullaan luomaan ja käyttämään liitoskohdalle %s"
 
 #. TRANSLATORS: %1$s is a filesystem type (eg. Btrfs), %2$s is a device name (eg. /dev/sda3).
 #: src/components/storage/utils/partition.tsx:66
-#, c-format
+#, javascript-format
 msgid "Current %1$s at %2$s"
 msgstr "Nykyinen %1$s laitteella %2$s"
 
 #. TRANSLATORS: %1$s is a filesystem type (eg. Btrfs), %2$s is a device name (eg. /dev/sda3).
 #: src/components/storage/utils/partition.tsx:73
-#, c-format
+#, javascript-format
 msgid "%1$s at %2$s"
 msgstr "%1$s laitteella %2$s"
 
@@ -3910,7 +3947,7 @@ msgid "No logical volumes are defined yet"
 msgstr "Loogisia taltioita ei ole vielä määritetty"
 
 #: src/components/storage/utils/volume-group.tsx:36
-#, c-format
+#, javascript-format
 msgid "A new volume will be created for %s"
 msgid_plural "New volumes will be created for %s"
 msgstr[0] "Uusi taltio tullaan luomaan kohteelle %s"
@@ -4023,7 +4060,7 @@ msgstr "Verkkonimeä ei voi päivittää"
 #. has not been set. "transient" refers to the hostname mode, and %s will be
 #. replaced with the current hostname value.
 #: src/components/system/HostnamePage.tsx:75
-#, c-format
+#, javascript-format
 msgid "Using transient hostname: %s"
 msgstr "Käytetään tilapäistä verkkonimeä: %s"
 
@@ -4184,3 +4221,6 @@ msgstr "Käytä julkista SSH-avainta"
 #: src/routes/storage.tsx:113
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#~ msgid "Example: https://myserver.com"
+#~ msgstr "Esimerkki: https://minunpalvelin.fi"
