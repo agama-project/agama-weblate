@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-10-28 17:13+0000\n"
-"PO-Revision-Date: 2025-09-03 04:59+0000\n"
+"PO-Revision-Date: 2025-10-30 02:59+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/agama/agama-web/"
 "ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.13\n"
+"X-Generator: Weblate 5.13.3\n"
 
 #: src/components/core/AlertOutOfSync.tsx:71
 msgid "Configuration out of sync"
@@ -1779,11 +1779,12 @@ msgid ""
 msgstr "現在の設定では少なくとも %2$s の %1$s を作成する予定になります。"
 
 #: src/components/storage/BootSection.tsx:41
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Partitions to boot will be set up if needed at the installation "
 "disk,         based on the location of the %s file system."
-msgstr "インストール先のディスク %s 内で起動用のパーティションを割り当てます。"
+msgstr "ファイルシステム %s の配置場所に応じて、         必要であればインストール先の"
+"ディスク内に起動用のパーティションを割り当てます。"
 
 #: src/components/storage/BootSection.tsx:52
 #, c-format
@@ -1791,26 +1792,26 @@ msgid ""
 "Partitions to boot will be set up if needed at the installation disk.       "
 "Currently %1$s, based on the location of the %2$s file system."
 msgstr ""
+"ファイルシステム %2$s の配置場所に応じて (現時点では %1$s) 、         必要で"
+"あればインストール先のディスク内に起動用のパーティションを割り当てます。"
 
 #: src/components/storage/BootSection.tsx:65
-#, fuzzy
 msgid "No partitions will be automatically configured for booting."
-msgstr "起動用のパーティションを自動設定しません。注意してお使いください。"
+msgstr "起動用のパーティションを自動設定しません。"
 
 #. TRANSLATORS: %s is replaced by a disk name and size (eg. "sda (500GiB)")
 #: src/components/storage/BootSection.tsx:69
-#, fuzzy, c-format
+#, c-format
 msgid "Partitions to boot will be set up if needed at %s."
-msgstr "インストール先のディスク内に起動用のパーティションを割り当てます。"
+msgstr "%s 内に起動用のパーティションを設定します。"
 
 #: src/components/storage/BootSection.tsx:84
-#, fuzzy
 msgid ""
 "To ensure the new system is able to boot, the installer may need to create "
 "or configure some           partitions in the appropriate disk."
 msgstr ""
-"システムを起動できるようにするため、インストーラはディスク内にいくつかの追加"
-"パーティションを作成もしくは設定する必要があるかもしれません。"
+"システムを起動できるようにするため、インストーラは適切なディスク内にいくつか"
+"の追加パーティションを作成もしくは設定する必要があるかもしれません。"
 
 #: src/components/storage/BootSelection.tsx:136
 msgid ""
@@ -1821,11 +1822,12 @@ msgstr ""
 "パーティションを作成もしくは設定する必要があるかもしれません。"
 
 #: src/components/storage/BootSelection.tsx:145
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Partitions to boot will be set up if needed at the installation "
 "disk,           based on the location of the %s file system."
-msgstr "インストール先のディスク %s 内で起動用のパーティションを割り当てます。"
+msgstr "ファイルシステム %s の配置場所に応じて 、         必要であればインストール先"
+"のディスク内に起動用のパーティションを割り当てます。"
 
 #: src/components/storage/BootSelection.tsx:156
 #, c-format
@@ -1833,6 +1835,8 @@ msgid ""
 "Partitions to boot will be set up if needed at the installation "
 "disk.         Currently %1$s, based on the location of the %2$s file system."
 msgstr ""
+"ファイルシステム %2$s の配置場所に応じて (現時点では %1$s) 、         必要で"
+"あればインストール先のディスク内に起動用のパーティションを割り当てます。"
 
 #: src/components/storage/BootSelection.tsx:175
 #: src/components/storage/ProposalPage.tsx:287
@@ -1851,9 +1855,8 @@ msgid "Select a disk"
 msgstr "ディスクの選択"
 
 #: src/components/storage/BootSelection.tsx:218
-#, fuzzy
 msgid "Partitions to boot will be set up if needed at the following device."
-msgstr "下記のデバイス内に起動用パーティションを割り当てます。"
+msgstr "下記のデバイス内に必要に応じて起動用のパーティションを割り当てます。"
 
 #: src/components/storage/BootSelection.tsx:220
 msgid "Choose a disk for placing the boot loader"
@@ -1956,9 +1959,8 @@ msgstr "さらなるデバイス"
 
 #. TRANSLATORS: this is an ARIA (accesibility) description of an UI element
 #: src/components/storage/ConnectedDevicesMenu.tsx:51
-#, fuzzy
 msgid "More storage options"
-msgstr "さらなる処理"
+msgstr "さらなるストレージオプション"
 
 #: src/components/storage/ConnectedDevicesMenu.tsx:57
 msgid "Discover and connect to iSCSI targets"
@@ -2165,13 +2167,11 @@ msgid "Encryption is enabled"
 msgstr "暗号化は有効化されています"
 
 #: src/components/storage/EncryptionSection.tsx:50
-#, fuzzy
 msgid ""
 "Protection for the information stored at           the new file systems, "
 "including data, programs, and system files."
-msgstr ""
-"データやプログラム、システムファイルなど、新しく作成するファイルシステム内に"
-"配置される情報への保護を行います。"
+msgstr "データやプログラム、システムファイルなど、           新しく作成するファイルシ"
+"ステム内に配置される情報への保護を行います。"
 
 #: src/components/storage/EncryptionSettingsPage.tsx:75
 #: src/components/users/RootUserForm.tsx:104
@@ -2672,15 +2672,15 @@ msgstr "起動に必要なパーティションについても設定を行いま
 
 #. TRANSLATORS: ARIA (accesibility) description of an UI element. %s is a mount path.
 #: src/components/storage/PartitionsSection.tsx:151
-#, fuzzy, c-format
+#, c-format
 msgid "Partition %s"
-msgstr "パーティション"
+msgstr "パーティション %s"
 
 #. TRANSLATORS: ARIA (accesibility) description of an button. %s is a mount path.
 #: src/components/storage/PartitionsSection.tsx:163
-#, fuzzy, c-format
+#, c-format
 msgid "Options for partition %s"
-msgstr "パーティション %s の使用"
+msgstr "パーティション %s のオプション"
 
 #: src/components/storage/PartitionsSection.tsx:180
 #: src/components/storage/VolumeGroupEditor.tsx:171
@@ -2816,10 +2816,9 @@ msgstr "既定値に戻す"
 #: src/components/storage/ProposalPage.tsx:255
 msgid ""
 "Changes in these settings will immediately update the 'Result' section below."
-msgstr ""
+msgstr "これらの設定を変更すると、下記の '結果' セクションに即時に反映されます。"
 
 #: src/components/storage/ProposalPage.tsx:262
-#, fuzzy
 msgid "Installation devices"
 msgstr "インストール先のデバイス"
 
@@ -2863,22 +2862,20 @@ msgstr "結果"
 msgid ""
 "Result of applying the configuration described at the 'Settings' section "
 "above."
-msgstr ""
+msgstr "上記の '設定' セクションに示された設定を適用した結果です。"
 
 #: src/components/storage/ProposalResultSection.tsx:138
-#, fuzzy
 msgid ""
 "The following actions will be performed in the system during installation."
-msgstr "下記のソフトウエアパターンをインストールするよう選択しています:"
+msgstr "インストールの際に、システムに対して下記の処理が実施されます。"
 
 #: src/components/storage/ProposalResultSection.tsx:144
 msgid "Final layout"
 msgstr "最終形態"
 
 #: src/components/storage/ProposalResultSection.tsx:148
-#, fuzzy
 msgid "Final structure of the system after installation."
-msgstr "インストールに必要なファイルシステムを調整できません"
+msgstr "インストール後のシステムの最終形です。"
 
 #: src/components/storage/ProposalResultTable.tsx:77
 msgid "New"
@@ -2919,26 +2916,24 @@ msgstr "選択済みのディスクは変更できません"
 
 #. TRANSLATORS: %s is a formatted mount point like '"/home"'
 #: src/components/storage/SearchedDeviceMenu.tsx:62
-#, fuzzy, c-format
+#, c-format
 msgid "Change the disk to format as %s"
-msgstr "%s としてフォーマットするディスクの選択"
+msgstr "%s としてフォーマットするディスクの変更"
 
 #: src/components/storage/SearchedDeviceMenu.tsx:69
-#, fuzzy
 msgid "Change the disk to configure"
-msgstr "設定したいディスクの選択"
+msgstr "設定したいディスクの変更"
 
 #: src/components/storage/SearchedDeviceMenu.tsx:73
-#, fuzzy
 msgid "Change the disk to install the system"
-msgstr "システムのインストール先となるディスクの選択"
+msgstr "システムのインストール先となるディスクの変更"
 
 #. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case).
 #: src/components/storage/SearchedDeviceMenu.tsx:83
-#, fuzzy, c-format
+#, c-format
 msgid "Change the disk to create %s"
-msgstr "%s を作成するディスクの選択"
+msgstr "%s を作成するディスクの変更"
 
 #: src/components/storage/SearchedDeviceMenu.tsx:99
 msgid "This uses the existing file system at the disk"
@@ -3203,9 +3198,9 @@ msgstr "ボリュームグループの編集"
 
 #. TRANSLATORS: ARIA (accesibility) description of an UI element. %s is a mount path.
 #: src/components/storage/VolumeGroupEditor.tsx:145
-#, fuzzy, c-format
+#, c-format
 msgid "Volume group %s"
-msgstr "空の LVM ボリュームグループ %s"
+msgstr "ボリュームグループ %s"
 
 #: src/components/storage/VolumeGroupEditor.tsx:185
 #, c-format
