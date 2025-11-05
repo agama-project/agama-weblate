@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-10-28 17:13+0000\n"
-"PO-Revision-Date: 2025-09-03 12:59+0000\n"
+"PO-Revision-Date: 2025-11-05 11:04+0000\n"
 "Last-Translator: Luna  Jernberg <bittin@opensuse.org>\n"
 "Language-Team: Swedish <https://l10n.opensuse.org/projects/agama/agama-web/"
 "sv/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.13\n"
+"X-Generator: Weblate 5.14\n"
 
 #: src/components/core/AlertOutOfSync.tsx:71
 msgid "Configuration out of sync"
@@ -1790,11 +1790,13 @@ msgstr ""
 "%1$s på minst %2$s."
 
 #: src/components/storage/BootSection.tsx:41
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Partitions to boot will be set up if needed at the installation "
 "disk,         based on the location of the %s file system."
-msgstr "Partitioner att starta kommer att allokeras på installationsdisken %s."
+msgstr ""
+"Partitioner att starta från kommer att konfigureras vid behov på "
+"installationsdisken, baserat på platsen för filsystemet %s."
 
 #: src/components/storage/BootSection.tsx:52
 #, c-format
@@ -1802,29 +1804,27 @@ msgid ""
 "Partitions to boot will be set up if needed at the installation disk.       "
 "Currently %1$s, based on the location of the %2$s file system."
 msgstr ""
+"Partitioner att starta från kommer att konfigureras vid behov på "
+"installationsdisken. För närvarande %1$s, baserat på platsen för filsystemet "
+"%2$s."
 
 #: src/components/storage/BootSection.tsx:65
-#, fuzzy
 msgid "No partitions will be automatically configured for booting."
-msgstr ""
-"Inga partitioner kommer att konfigureras automatiskt för uppstart. Använd "
-"med försiktighet."
+msgstr "Inga partitioner kommer att konfigureras automatiskt för uppstart."
 
 #. TRANSLATORS: %s is replaced by a disk name and size (eg. "sda (500GiB)")
 #: src/components/storage/BootSection.tsx:69
-#, fuzzy, c-format
+#, c-format
 msgid "Partitions to boot will be set up if needed at %s."
-msgstr ""
-"Partitioner som ska startas upp kommer att tilldelas på installationsdisken."
+msgstr "Partitioner att starta kommer att konfigureras vid behov på %s."
 
 #: src/components/storage/BootSection.tsx:84
-#, fuzzy
 msgid ""
 "To ensure the new system is able to boot, the installer may need to create "
 "or configure some           partitions in the appropriate disk."
 msgstr ""
 "För att säkerställa att det nya systemet kan starta kan "
-"installationsprogrammet behöva skapa eller konfigurera vissa partitioner på "
+"installationsprogrammet behöva skapa eller konfigurera några partitioner på "
 "lämplig disk."
 
 #: src/components/storage/BootSelection.tsx:136
@@ -1837,11 +1837,13 @@ msgstr ""
 "lämplig disk."
 
 #: src/components/storage/BootSelection.tsx:145
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "Partitions to boot will be set up if needed at the installation "
 "disk,           based on the location of the %s file system."
-msgstr "Partitioner att starta kommer att allokeras på installationsdisken %s."
+msgstr ""
+"Partitioner att starta från kommer att konfigureras vid behov på "
+"installationsdisken, baserat på platsen för filsystemet %s."
 
 #: src/components/storage/BootSelection.tsx:156
 #, c-format
@@ -1849,6 +1851,9 @@ msgid ""
 "Partitions to boot will be set up if needed at the installation "
 "disk.         Currently %1$s, based on the location of the %2$s file system."
 msgstr ""
+"Partitioner att starta från kommer att konfigureras vid behov på "
+"installationsdisken. För närvarande %1$s, baserat på platsen för filsystemet "
+"%2$s."
 
 #: src/components/storage/BootSelection.tsx:175
 #: src/components/storage/ProposalPage.tsx:287
@@ -1867,9 +1872,10 @@ msgid "Select a disk"
 msgstr "Välj en disk"
 
 #: src/components/storage/BootSelection.tsx:218
-#, fuzzy
 msgid "Partitions to boot will be set up if needed at the following device."
-msgstr "Partitioner för att uppstart kommer att tilldelas på följande enhet."
+msgstr ""
+"Partitioner att starta från kommer att konfigureras om det behövs på "
+"följande enhet."
 
 #: src/components/storage/BootSelection.tsx:220
 msgid "Choose a disk for placing the boot loader"
@@ -1977,9 +1983,8 @@ msgstr "Mer enheter"
 
 #. TRANSLATORS: this is an ARIA (accesibility) description of an UI element
 #: src/components/storage/ConnectedDevicesMenu.tsx:51
-#, fuzzy
 msgid "More storage options"
-msgstr "Mer åtgärder"
+msgstr "Mer lagringsalternativ"
 
 #: src/components/storage/ConnectedDevicesMenu.tsx:57
 msgid "Discover and connect to iSCSI targets"
@@ -2185,7 +2190,6 @@ msgid "Encryption is enabled"
 msgstr "Kryptering är aktiverat"
 
 #: src/components/storage/EncryptionSection.tsx:50
-#, fuzzy
 msgid ""
 "Protection for the information stored at           the new file systems, "
 "including data, programs, and system files."
@@ -2698,15 +2702,15 @@ msgstr "Alla partitioner som behövs för uppstart kommer att konfigureras."
 
 #. TRANSLATORS: ARIA (accesibility) description of an UI element. %s is a mount path.
 #: src/components/storage/PartitionsSection.tsx:151
-#, fuzzy, c-format
+#, c-format
 msgid "Partition %s"
-msgstr "Partitioner"
+msgstr "Partition %s"
 
 #. TRANSLATORS: ARIA (accesibility) description of an button. %s is a mount path.
 #: src/components/storage/PartitionsSection.tsx:163
-#, fuzzy, c-format
+#, c-format
 msgid "Options for partition %s"
-msgstr "Använder partition %s"
+msgstr "Alternativ för partition %s"
 
 #: src/components/storage/PartitionsSection.tsx:180
 #: src/components/storage/VolumeGroupEditor.tsx:171
@@ -2851,11 +2855,12 @@ msgstr "Återställ till standard"
 msgid ""
 "Changes in these settings will immediately update the 'Result' section below."
 msgstr ""
+"Ändringar i dessa inställningar kommer omedelbart att uppdatera avsnittet "
+"\"Resultat\" nedan."
 
 #: src/components/storage/ProposalPage.tsx:262
-#, fuzzy
 msgid "Installation devices"
-msgstr "Installationsenheter"
+msgstr "Installations enheter"
 
 #: src/components/storage/ProposalPage.tsx:268
 msgid ""
@@ -2900,21 +2905,21 @@ msgid ""
 "Result of applying the configuration described at the 'Settings' section "
 "above."
 msgstr ""
+"Resultat av att tillämpa konfigurationen som beskrivs i avsnittet "
+"\"Inställningar\" ovan."
 
 #: src/components/storage/ProposalResultSection.tsx:138
-#, fuzzy
 msgid ""
 "The following actions will be performed in the system during installation."
-msgstr "Följande programvarumönster är valda för installation:"
+msgstr "Följande åtgärder kommer att utföras i systemet under installationen."
 
 #: src/components/storage/ProposalResultSection.tsx:144
 msgid "Final layout"
 msgstr "Slutgiltig layout"
 
 #: src/components/storage/ProposalResultSection.tsx:148
-#, fuzzy
 msgid "Final structure of the system after installation."
-msgstr "Kan inte ta emot de filsystem som krävs för installation"
+msgstr "Systemets slutgiltiga struktur efter installation."
 
 #: src/components/storage/ProposalResultTable.tsx:77
 msgid "New"
@@ -2955,26 +2960,24 @@ msgstr "Vald disk kan inte ändras"
 
 #. TRANSLATORS: %s is a formatted mount point like '"/home"'
 #: src/components/storage/SearchedDeviceMenu.tsx:62
-#, fuzzy, c-format
+#, c-format
 msgid "Change the disk to format as %s"
-msgstr "Välj en disk att formatera som %s"
+msgstr "Ändra disken till att formateras som %s"
 
 #: src/components/storage/SearchedDeviceMenu.tsx:69
-#, fuzzy
 msgid "Change the disk to configure"
-msgstr "Välj en disk att konfigurera"
+msgstr "Ändra disken som ska konfigureras"
 
 #: src/components/storage/SearchedDeviceMenu.tsx:73
-#, fuzzy
 msgid "Change the disk to install the system"
-msgstr "Välj en disk för att installera systemet"
+msgstr "Ändra disk för att installera systemet"
 
 #. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case).
 #: src/components/storage/SearchedDeviceMenu.tsx:83
-#, fuzzy, c-format
+#, c-format
 msgid "Change the disk to create %s"
-msgstr "Välj en disk för att skapa %s"
+msgstr "Ändra disk för att skapa %s"
 
 #: src/components/storage/SearchedDeviceMenu.tsx:99
 msgid "This uses the existing file system at the disk"
@@ -3245,9 +3248,9 @@ msgstr "Redigera volymgrupp"
 
 #. TRANSLATORS: ARIA (accesibility) description of an UI element. %s is a mount path.
 #: src/components/storage/VolumeGroupEditor.tsx:145
-#, fuzzy, c-format
+#, c-format
 msgid "Volume group %s"
-msgstr "Tom LVM volymgrupp %s"
+msgstr "Volymgrupp %s"
 
 #: src/components/storage/VolumeGroupEditor.tsx:185
 #, c-format
