@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-10-28 17:13+0000\n"
-"PO-Revision-Date: 2025-10-01 09:59+0000\n"
+"PO-Revision-Date: 2025-11-05 06:04+0000\n"
 "Last-Translator: Timo Jyrinki <tjyrinki@suse.com>\n"
 "Language-Team: Finnish <https://l10n.opensuse.org/projects/agama/agama-web/"
 "fi/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.13.3\n"
+"X-Generator: Weblate 5.14\n"
 
 #: src/components/core/AlertOutOfSync.tsx:71
 msgid "Configuration out of sync"
@@ -1803,9 +1803,10 @@ msgstr ""
 
 #. TRANSLATORS: %s is replaced by a disk name and size (eg. "sda (500GiB)")
 #: src/components/storage/BootSection.tsx:69
-#, fuzzy, c-format
+#, c-format
 msgid "Partitions to boot will be set up if needed at %s."
-msgstr "Käynnistämiseen tarvittavat osiot otetaan käyttöön asennuslevyltä."
+msgstr ""
+"Käynnistämiseen tarvittavat osiot otetaan käyttöön tarvittaessa kohteessa %s."
 
 #: src/components/storage/BootSection.tsx:84
 #, fuzzy
@@ -1965,9 +1966,8 @@ msgstr "Lisää laitteita"
 
 #. TRANSLATORS: this is an ARIA (accesibility) description of an UI element
 #: src/components/storage/ConnectedDevicesMenu.tsx:51
-#, fuzzy
 msgid "More storage options"
-msgstr "Lisää toimintoja"
+msgstr "Lisää tallenustilavalintoja"
 
 #: src/components/storage/ConnectedDevicesMenu.tsx:57
 msgid "Discover and connect to iSCSI targets"
@@ -2682,15 +2682,15 @@ msgstr "Kaikkien käynnistämiseen käytettävien osioiden asetukset tehdään."
 
 #. TRANSLATORS: ARIA (accesibility) description of an UI element. %s is a mount path.
 #: src/components/storage/PartitionsSection.tsx:151
-#, fuzzy, c-format
+#, c-format
 msgid "Partition %s"
-msgstr "Osion tiedot"
+msgstr "Osio %s"
 
 #. TRANSLATORS: ARIA (accesibility) description of an button. %s is a mount path.
 #: src/components/storage/PartitionsSection.tsx:163
-#, fuzzy, c-format
+#, c-format
 msgid "Options for partition %s"
-msgstr "Käytetään osiota %s"
+msgstr "Osion %s valinnat"
 
 #: src/components/storage/PartitionsSection.tsx:180
 #: src/components/storage/VolumeGroupEditor.tsx:171
@@ -2699,9 +2699,8 @@ msgid "Delete"
 msgstr "Poisto"
 
 #: src/components/storage/PartitionsSection.tsx:264
-#, fuzzy
 msgid "Partitions"
-msgstr "osio"
+msgstr "Osiot"
 
 #: src/components/storage/PartitionsSection.tsx:277
 #: src/components/storage/UnusedMenu.tsx:75
@@ -2836,7 +2835,6 @@ msgid ""
 msgstr ""
 
 #: src/components/storage/ProposalPage.tsx:262
-#, fuzzy
 msgid "Installation devices"
 msgstr "Asennuslaitteet"
 
@@ -2885,18 +2883,17 @@ msgid ""
 msgstr ""
 
 #: src/components/storage/ProposalResultSection.tsx:138
-#, fuzzy
 msgid ""
 "The following actions will be performed in the system during installation."
-msgstr "Seuraavat ohjelmistoryhmät on valittu asennukseen:"
+msgstr "Seuraavat toiminnot tehdään järjestelmään asennuksen aikana."
 
 #: src/components/storage/ProposalResultSection.tsx:144
 msgid "Final layout"
-msgstr ""
+msgstr "Lopullinen asettelu"
 
 #: src/components/storage/ProposalResultSection.tsx:148
 msgid "Final structure of the system after installation."
-msgstr ""
+msgstr "Järjestelmän lopullinen rakenne asennuksen jälkeen."
 
 #: src/components/storage/ProposalResultTable.tsx:77
 msgid "New"
@@ -2938,26 +2935,24 @@ msgstr "Valittua levyä ei voi muuttaa"
 
 #. TRANSLATORS: %s is a formatted mount point like '"/home"'
 #: src/components/storage/SearchedDeviceMenu.tsx:62
-#, fuzzy, c-format
+#, c-format
 msgid "Change the disk to format as %s"
-msgstr "Valitse levy joka alustetaan liitoskohtaan %s"
+msgstr "Valitse levy joka alustetaan liitoskohtaan ”%s”"
 
 #: src/components/storage/SearchedDeviceMenu.tsx:69
-#, fuzzy
 msgid "Change the disk to configure"
-msgstr "Valitse levy jonka asetukset tehdään"
+msgstr "Valitse levy jolle tehdään asetukset"
 
 #: src/components/storage/SearchedDeviceMenu.tsx:73
-#, fuzzy
 msgid "Change the disk to install the system"
-msgstr "Valitse levy jolle järjestelmä asennetaan"
+msgstr "Valitse levy jolle järjestelmän asennus tehdään"
 
 #. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case).
 #: src/components/storage/SearchedDeviceMenu.tsx:83
-#, fuzzy, c-format
+#, c-format
 msgid "Change the disk to create %s"
-msgstr "Valitse levy jolle luodaan liitoskohta %s"
+msgstr "Valitse levy jolle luodaan \"%s\""
 
 #: src/components/storage/SearchedDeviceMenu.tsx:99
 msgid "This uses the existing file system at the disk"
@@ -3226,9 +3221,9 @@ msgstr "Muokkaa taltioryhmiä"
 
 #. TRANSLATORS: ARIA (accesibility) description of an UI element. %s is a mount path.
 #: src/components/storage/VolumeGroupEditor.tsx:145
-#, fuzzy, c-format
+#, c-format
 msgid "Volume group %s"
-msgstr "Tyhjennä LVM-taltioryhmä %s"
+msgstr "Taltioryhmä %s"
 
 #: src/components/storage/VolumeGroupEditor.tsx:185
 #, c-format
