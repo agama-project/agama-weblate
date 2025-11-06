@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-28 17:13+0000\n"
+"POT-Creation-Date: 2025-11-05 14:18+0000\n"
 "PO-Revision-Date: 2025-11-05 22:04+0000\n"
 "Last-Translator: Aleksey Fedorov <Aleksejfedorov963@gmail.com>\n"
 "Language-Team: Russian <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -288,7 +288,7 @@ msgid "Software"
 msgstr "Программы"
 
 #: src/components/core/IssuesDrawer.tsx:52
-#: src/components/product/ProductRegistrationPage.tsx:448
+#: src/components/product/ProductRegistrationPage.tsx:450
 #: src/routes/registration.tsx:31
 msgid "Registration"
 msgstr "Регистрация"
@@ -323,7 +323,7 @@ msgstr ""
 #. TRANSLATORS: Title for a form to provide the password for the root user. %s
 #. will be replaced by "root"
 #: src/components/core/LoginPage.tsx:72
-#, c-format
+#, javascript-format
 msgid "Log in as %s"
 msgstr "Вход как %s"
 
@@ -378,7 +378,7 @@ msgstr "Подтверждение пароля"
 #. square brackets around %s to apply special formatting in
 #. the UI.
 #: src/components/core/PasswordInput.tsx:69
-#, c-format
+#, javascript-format
 msgid "Using [%s] keyboard"
 msgstr "Раскладка клавиатуры: [%s]"
 
@@ -618,14 +618,14 @@ msgstr "Список данных адресов"
 #. ones.
 #: src/components/network/BindingSettingsForm.tsx:76
 #: src/components/storage/utils/drive.tsx:104
-#, c-format
+#, javascript-format
 msgid "%s - %s"
 msgstr "%s - %s"
 
 #. TRANSLATORS: The title of the page. %s will be replaced with the connection
 #. name. I.e., "Binding settings for 'Wired connection 1'"
 #: src/components/network/BindingSettingsForm.tsx:158
-#, c-format
+#, javascript-format
 msgid "Binding settings for '%s'"
 msgstr "Настройки привязки для «%s»"
 
@@ -704,7 +704,7 @@ msgid "At least one address must be provided for selected mode"
 msgstr "Для выбранного режима необходимо предоставить не менее одного адреса"
 
 #: src/components/network/IpSettingsForm.tsx:154
-#, c-format
+#, javascript-format
 msgid "Edit connection %s"
 msgstr "Редактировать подключение %s"
 
@@ -915,7 +915,7 @@ msgstr "После успешной установки подключения п
 
 #. TRANSLATORS: %s will be replaced by network ssid.
 #: src/components/network/WifiConnectionForm.tsx:81
-#, c-format
+#, javascript-format
 msgid "Could not connect to %s"
 msgstr "Не удалось подключиться к сети %s"
 
@@ -938,6 +938,14 @@ msgstr "Пароль WPA"
 msgid "Connect"
 msgstr "Подключиться"
 
+#. TRANSLATORS: %s will be replaced with the network ssid
+#. TRANSLATORS: %s will be replaced with connection id
+#: src/components/network/WifiNetworkPage.tsx:44
+#: src/components/network/WiredConnectionPage.tsx:43
+#, javascript-format
+msgid "\"%s\" does not exist or is no longer available."
+msgstr ""
+
 #: src/components/network/WifiNetworkPage.tsx:47
 msgid "Network not found or lost"
 msgstr "Сеть не найдена или потеряна"
@@ -948,7 +956,7 @@ msgid "Go to network page"
 msgstr "Перейти к разделу «Сеть»"
 
 #: src/components/network/WifiNetworkPage.tsx:70
-#, c-format
+#, javascript-format
 msgid "Connect to %s"
 msgstr "Подключиться к %s"
 
@@ -974,7 +982,7 @@ msgstr "Общедоступная сеть"
 
 #. TRANSLATORS: %s will be replaced by Wi-Fi network SSID
 #: src/components/network/WifiNetworksList.tsx:98
-#, c-format
+#, javascript-format
 msgid "Connecting to %s"
 msgstr "Подключение к сети %s"
 
@@ -1002,13 +1010,13 @@ msgstr "Подключение доступно для всех устройст
 
 #. TRANSLATORS: %s will be replaced by a network device name, like eth0 or enp1s0
 #: src/components/network/WiredConnectionDetails.tsx:62
-#, c-format
+#, javascript-format
 msgid "Connection is bound to device %s."
 msgstr "Подключение привязано к устройству %s."
 
 #. TRANSLATORS: %s will be replaced by MAC addrss, like 7C:D7:11:28:F5:40
 #: src/components/network/WiredConnectionDetails.tsx:65
-#, c-format
+#, javascript-format
 msgid "Connection is bound to MAC address %s."
 msgstr "Подключение привязано к MAC-адресу %s."
 
@@ -1071,7 +1079,7 @@ msgstr "Проводные соединения не обнаружены"
 #. TRANSLATORS: %s will be replaced by a language name and territory, example:
 #. "English (United States)".
 #: src/components/overview/L10nSection.tsx:33
-#, c-format
+#, javascript-format
 msgid "The system will use %s as its default language."
 msgstr "Система будет использовать %s в качестве языка по умолчанию."
 
@@ -1093,7 +1101,7 @@ msgstr "Установка займёт"
 
 #. TRANSLATORS: %s will be replaced with the installation size, example: "5GiB".
 #: src/components/overview/SoftwareSection.tsx:48
-#, c-format
+#, javascript-format
 msgid "The installation will take %s including:"
 msgstr "Установка займёт %s, в том числе:"
 
@@ -1104,7 +1112,7 @@ msgstr "Устройство ещё не выбрано"
 #. TRANSLATORS: %s will be replaced by the device name and its size,
 #. example: "/dev/sda, 20 GiB"
 #: src/components/overview/StorageSection.tsx:45
-#, c-format
+#, javascript-format
 msgid "Install using device %s shrinking existing partitions as needed."
 msgstr ""
 "Установка с использованием устройства %s с уменьшением существующих разделов "
@@ -1113,7 +1121,7 @@ msgstr ""
 #. TRANSLATORS: %s will be replaced by the device name and its size,
 #. example: "/dev/sda, 20 GiB"
 #: src/components/overview/StorageSection.tsx:48
-#, c-format
+#, javascript-format
 msgid "Install using device %s without modifying existing partitions."
 msgstr ""
 "Установка с использованием устройства %s без изменения существующих разделов."
@@ -1121,14 +1129,14 @@ msgstr ""
 #. TRANSLATORS: %s will be replaced by the device name and its size,
 #. example: "/dev/sda, 20 GiB"
 #: src/components/overview/StorageSection.tsx:51
-#, c-format
+#, javascript-format
 msgid "Install using device %s and deleting all its content."
 msgstr "Установить с использованием устройства %s и удалением его содержимого."
 
 #. TRANSLATORS: %s will be replaced by the device name and its size,
 #. example: "/dev/sda, 20 GiB"
 #: src/components/overview/StorageSection.tsx:54
-#, c-format
+#, javascript-format
 msgid ""
 "Install using device %s with a custom strategy to find the needed space."
 msgstr ""
@@ -1170,7 +1178,7 @@ msgid "Install using an advanced configuration."
 msgstr "Установка с помощью расширенной конфигурации."
 
 #: src/components/product/LicenseDialog.tsx:40
-#, c-format
+#, javascript-format
 msgid "This license is not available in %s."
 msgstr "Лицензия недоступна на этом языке: %s."
 
@@ -1181,7 +1189,7 @@ msgid "Close"
 msgstr "Закрыть"
 
 #: src/components/product/ProductRegistrationAlert.tsx:56
-#, c-format
+#, javascript-format
 msgid "%s [must be registered]."
 msgstr "%s [требуется регистрация]."
 
@@ -1202,72 +1210,80 @@ msgstr "Центр обслуживания клиентов SUSE (SCC)"
 msgid "Custom"
 msgstr "По-своему"
 
-#: src/components/product/ProductRegistrationPage.tsx:78
-#, c-format
+#: src/components/product/ProductRegistrationPage.tsx:79
+#, javascript-format
 msgid "%s has been registered with below information."
 msgstr "Регистрация %s была выполнена с указанной ниже информацией."
 
 #. TRANSLATORS: input field label
-#: src/components/product/ProductRegistrationPage.tsx:91
-#: src/components/product/ProductRegistrationPage.tsx:186
+#: src/components/product/ProductRegistrationPage.tsx:92
+#: src/components/product/ProductRegistrationPage.tsx:188
 #: src/components/product/RegistrationExtension.tsx:150
 msgid "Registration code"
 msgstr "Код регистрации"
 
 #. TRANSLATORS: switch for displaying or hiding the registration code
-#: src/components/product/ProductRegistrationPage.tsx:96
+#: src/components/product/ProductRegistrationPage.tsx:97
 #: src/components/product/RegistrationExtension.tsx:64
 msgid "Hide"
 msgstr "Скрыть"
 
-#: src/components/product/ProductRegistrationPage.tsx:96
+#: src/components/product/ProductRegistrationPage.tsx:97
 #: src/components/product/RegistrationExtension.tsx:64
 msgid "Show"
 msgstr "Показать"
 
-#: src/components/product/ProductRegistrationPage.tsx:141
+#: src/components/product/ProductRegistrationPage.tsx:142
 msgid "Server options"
 msgstr "Опции серверов"
 
-#: src/components/product/ProductRegistrationPage.tsx:142
+#: src/components/product/ProductRegistrationPage.tsx:143
 msgid "Register using SUSE server"
 msgstr "Регистрация с помощью сервера SUSE"
 
-#: src/components/product/ProductRegistrationPage.tsx:148
+#: src/components/product/ProductRegistrationPage.tsx:149
 msgid "Register using a custom registration server"
 msgstr "Регистрация с помощью пользовательского сервера регистрации"
 
-#: src/components/product/ProductRegistrationPage.tsx:167
+#: src/components/product/ProductRegistrationPage.tsx:168
 msgid "Server URL"
 msgstr "URL сервера"
 
-#: src/components/product/ProductRegistrationPage.tsx:169
+#. TRANSLATORS: %s is replaced by an example URL like https://example.com
+#: src/components/product/ProductRegistrationPage.tsx:171
+#, javascript-format
 msgid "Example: %s"
 msgstr "Пример: %s"
 
-#: src/components/product/ProductRegistrationPage.tsx:218
+#: src/components/product/ProductRegistrationPage.tsx:220
 msgid "Provide registration code"
 msgstr "Укажите код регистрации"
 
-#: src/components/product/ProductRegistrationPage.tsx:254
+#: src/components/product/ProductRegistrationPage.tsx:256
 msgid "Provide email address"
 msgstr "Укажите адрес эл. почты"
 
-#: src/components/product/ProductRegistrationPage.tsx:351
+#: src/components/product/ProductRegistrationPage.tsx:353
 #: src/components/storage/LvmPage.tsx:169
 #: src/components/system/HostnamePage.tsx:104
 msgid "Check the following before continuing"
 msgstr "Прежде чем продолжить, проверьте следующее"
 
 #. TRANSLATORS: button label
-#: src/components/product/ProductRegistrationPage.tsx:381
+#: src/components/product/ProductRegistrationPage.tsx:383
 #: src/components/product/RegistrationExtension.tsx:161
 #: src/components/product/RegistrationExtension.tsx:176
 msgid "Register"
 msgstr "Зарегистрировать"
 
-#: src/components/product/ProductRegistrationPage.tsx:397
-#, c-format
+#. TRANSLATORS: %s will be replaced with the hostname value
+#: src/components/product/ProductRegistrationPage.tsx:395
+#, javascript-format
+msgid "The product will be registered with \"%s\" hostname"
+msgstr ""
+
+#: src/components/product/ProductRegistrationPage.tsx:399
+#, javascript-format
 msgid ""
 "You cannot change it later. Go to the %s section if you want to modify it "
 "before proceeding with registration."
@@ -1275,17 +1291,17 @@ msgstr ""
 "Вы не сможете изменить его позже. Перейдите в раздел «%s», если хотите "
 "изменить его перед тем, как продолжить регистрацию."
 
-#: src/components/product/ProductRegistrationPage.tsx:402
+#: src/components/product/ProductRegistrationPage.tsx:404
 msgid "hostname"
 msgstr "имя узла"
 
-#: src/components/product/ProductRegistrationPage.tsx:428
+#: src/components/product/ProductRegistrationPage.tsx:430
 msgid "Extensions"
 msgstr "Расширения"
 
 #. TRANSLATORS: %s will be replaced by a product name. E.g., "openSUSE Tumbleweed"
 #: src/components/product/ProductSelectionPage.tsx:62
-#, c-format
+#, javascript-format
 msgid "%s logo"
 msgstr "Логотип %s"
 
@@ -1293,7 +1309,7 @@ msgstr "Логотип %s"
 #. replaced with the product name and the text in the square brackets [] is
 #. used for the link to show the license, please keep the brackets.
 #: src/components/product/ProductSelectionPage.tsx:139
-#, c-format
+#, javascript-format
 msgid "I have read and accept the [license] for %s"
 msgstr "Я прочитал(-а) и принимаю [лицензию] для %s"
 
@@ -1311,7 +1327,7 @@ msgstr "Настройка продукта, пожалуйста, подожд�
 
 #. TRANSLATORS: %s will be replaced by the registration key.
 #: src/components/product/RegistrationExtension.tsx:50
-#, c-format
+#, javascript-format
 msgid "The extension has been registered with key %s."
 msgstr "Расширение было зарегистрировано с ключом %s."
 
@@ -1429,7 +1445,7 @@ msgstr "Некоторые элементы в профиле AutoYaST не по
 
 #. TRANSLATORS: %s is replaced by the quantity of not implemented elements
 #: src/components/questions/UnsupportedAutoYaST.tsx:89
-#, c-format
+#, javascript-format
 msgid "Not implemented yet (%s)"
 msgstr "Ещё не реализовано (%s)"
 
@@ -1439,13 +1455,19 @@ msgstr "Будет поддерживаться в будущих версиях
 
 #. TRANSLATORS: %s is replaced by the quantity of not supported elements
 #: src/components/questions/UnsupportedAutoYaST.tsx:97
-#, c-format
+#, javascript-format
 msgid "Not supported (%s)"
 msgstr "Не поддерживается (%s)"
 
 #: src/components/questions/UnsupportedAutoYaST.tsx:99
 msgid "No support is planned."
 msgstr "Поддержка не планируется."
+
+#: src/components/questions/UnsupportedAutoYaST.tsx:106
+msgid ""
+"If you want to disable this check, please specify \"inst.ay_check=0\" at "
+"kernel's command-line"
+msgstr ""
 
 #: src/components/software/SoftwareConflicts.tsx:100
 msgid "Show less actions"
@@ -1480,7 +1502,7 @@ msgstr "Перейти к предыдущему"
 #. first %d will be replaced with the current item number, the
 #. second %d with the total number of items.
 #: src/components/software/SoftwareConflicts.tsx:202
-#, c-format
+#, javascript-format
 msgid "%d of %d"
 msgstr "%d из %d"
 
@@ -1583,7 +1605,7 @@ msgstr "Фильтр по названию или описанию шаблон�
 #. TRANSLATORS: %s will be replaced by the estimated installation size,
 #. example: "728.8 MiB"
 #: src/components/software/UsedSize.tsx:33
-#, c-format
+#, javascript-format
 msgid "Installation will take %s."
 msgstr "Установка займёт %s."
 
@@ -1605,13 +1627,13 @@ msgstr "раздел"
 
 #. TRANSLATORS: %1$s is a size with units (eg. 3 GiB) and %2$s is a device type (eg. partition)
 #: src/components/storage/AutoSizeText.tsx:47
-#, c-format
+#, javascript-format
 msgid "A generic size of %1$s will be used for the new %2$s"
 msgstr "Для нового раздела %2$s будет использовано %1$s"
 
 #. TRANSLATORS: %1$s and %2$s are sizes with units (eg. 3 GiB) and %3$s is a device type (eg. partition)
 #: src/components/storage/AutoSizeText.tsx:55
-#, c-format
+#, javascript-format
 msgid ""
 "A generic size range between %1$s and %2$s will be used for the new %3$s"
 msgstr ""
@@ -1620,19 +1642,19 @@ msgstr ""
 
 #. TRANSLATORS: %1$s is a size with units (eg. 3 GiB) and %1$s is a device type (eg. partition)
 #: src/components/storage/AutoSizeText.tsx:64
-#, c-format
+#, javascript-format
 msgid "A generic minimum size of %1$s will be used for the new %2$s"
 msgstr "Для нового раздела %2$s будет использоваться минимум %1$s"
 
 #. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
 #: src/components/storage/AutoSizeText.tsx:81
-#, c-format
+#, javascript-format
 msgid "A %1$s of %2$s will be created for %3$s if possible"
 msgstr "Для %3$s будет создан раздел %1$s размером %2$s, если это возможно"
 
 #. TRANSLATORS: %1$s is a device type (eg. partition), %2$s and %3$s are sizes with units (10 GiB), and %4$s is a mount path (/home)
 #: src/components/storage/AutoSizeText.tsx:90
-#, c-format
+#, javascript-format
 msgid ""
 "A %1$s with a size between %2$s and %3$s will be created for %4$s if possible"
 msgstr ""
@@ -1641,14 +1663,14 @@ msgstr ""
 
 #. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
 #: src/components/storage/AutoSizeText.tsx:100
-#, c-format
+#, javascript-format
 msgid "A %1$s of at least %2$s will be created for %3$s if possible"
 msgstr ""
 "Для %3$s будет создан раздел %1$s с размером не менее %2$s, если это возможно"
 
 #. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
 #: src/components/storage/AutoSizeText.tsx:118
-#, c-format
+#, javascript-format
 msgid ""
 "Based on the amount of RAM in the system, a %1$s of %2$s will be planned for "
 "%3$s"
@@ -1657,7 +1679,7 @@ msgstr ""
 "раздел %1$s размером %2$s"
 
 #: src/components/storage/AutoSizeText.tsx:128
-#, c-format
+#, javascript-format
 msgid ""
 "Based on the amount of RAM in the system, a %1$s with a size between %2$s "
 "and %3$s will be planned for %4$s"
@@ -1667,7 +1689,7 @@ msgstr ""
 
 #. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
 #: src/components/storage/AutoSizeText.tsx:139
-#, c-format
+#, javascript-format
 msgid ""
 "Based on the amount of RAM in the system, a %1$s of at least %2$s will be "
 "planned for %3$s"
@@ -1676,7 +1698,7 @@ msgstr ""
 "раздел %1$s размером не менее %2$s"
 
 #: src/components/storage/AutoSizeText.tsx:168
-#, c-format
+#, javascript-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the amount of RAM in "
 "the system, the usage of Btrfs snapshots and the presence of a separate file "
@@ -1687,7 +1709,7 @@ msgstr ""
 "наличия отдельной файловой системы для %2$s."
 
 #: src/components/storage/AutoSizeText.tsx:179
-#, c-format
+#, javascript-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the amount of RAM in "
 "the system, the usage of Btrfs snapshots and the presence of separate file "
@@ -1698,7 +1720,7 @@ msgstr ""
 "наличия отдельных файловых систем для %2$s."
 
 #: src/components/storage/AutoSizeText.tsx:189
-#, c-format
+#, javascript-format
 msgid ""
 "The size for %s will be dynamically adjusted based on the amount of RAM in "
 "the system and the usage of Btrfs snapshots."
@@ -1707,7 +1729,7 @@ msgstr ""
 "оперативной памяти в системе и использования моментальных снимков Btrfs."
 
 #: src/components/storage/AutoSizeText.tsx:200
-#, c-format
+#, javascript-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the amount of RAM in "
 "the system and the presence of a separate file system for %2$s."
@@ -1716,7 +1738,7 @@ msgstr ""
 "оперативной памяти в системе и наличия отдельной файловой системы для %2$s."
 
 #: src/components/storage/AutoSizeText.tsx:210
-#, c-format
+#, javascript-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the amount of RAM in "
 "the system and the presence of separate file systems for %2$s."
@@ -1725,7 +1747,7 @@ msgstr ""
 "оперативной памяти в системе и наличия отдельных файловых систем для %2$s."
 
 #: src/components/storage/AutoSizeText.tsx:222
-#, c-format
+#, javascript-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the usage of Btrfs "
 "snapshots and the presence of a separate file system for %2$s."
@@ -1735,7 +1757,7 @@ msgstr ""
 "системы для %2$s."
 
 #: src/components/storage/AutoSizeText.tsx:233
-#, c-format
+#, javascript-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the usage of Btrfs "
 "snapshots and the presence of separate file systems for %2$s."
@@ -1746,7 +1768,7 @@ msgstr ""
 
 #. TRANSLATORS: %s is a mount point (eg. /)
 #: src/components/storage/AutoSizeText.tsx:242
-#, c-format
+#, javascript-format
 msgid ""
 "The size for %s will be dynamically adjusted based on the usage of Btrfs "
 "snapshots."
@@ -1755,7 +1777,7 @@ msgstr ""
 "использования моментальных снимков Btrfs."
 
 #: src/components/storage/AutoSizeText.tsx:251
-#, c-format
+#, javascript-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the presence of a "
 "separate file system for %2$s."
@@ -1764,7 +1786,7 @@ msgstr ""
 "отдельной файловой системы для %2$s."
 
 #: src/components/storage/AutoSizeText.tsx:261
-#, c-format
+#, javascript-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the presence of "
 "separate file systems for %2$s."
@@ -1774,14 +1796,14 @@ msgstr ""
 
 #. TRANSLATORS: %1$s is a device type (eg. partition) and %2$s is a size with units (eg. 10 GiB)
 #: src/components/storage/AutoSizeText.tsx:273
-#, c-format
+#, javascript-format
 msgid ""
 "The current configuration will result in an attempt to create a %1$s of %2$s."
 msgstr ""
 "Текущая конфигурация приведет к попытке создания раздела %1$s размером %2$s."
 
 #: src/components/storage/AutoSizeText.tsx:282
-#, c-format
+#, javascript-format
 msgid ""
 "The current configuration will result in an attempt to create a %1$s with a "
 "size between %2$s and %3$s."
@@ -1791,7 +1813,7 @@ msgstr ""
 
 #. TRANSLATORS: %1$s is a device type (eg. partition) and %2$s is a size with units (eg. 10 GiB)
 #: src/components/storage/AutoSizeText.tsx:292
-#, c-format
+#, javascript-format
 msgid ""
 "The current configuration will result in an attempt to create a %1$s of at "
 "least %2$s."
@@ -1800,7 +1822,7 @@ msgstr ""
 "менее %2$s."
 
 #: src/components/storage/BootSection.tsx:41
-#, c-format
+#, javascript-format
 msgid ""
 "Partitions to boot will be set up if needed at the installation "
 "disk,         based on the location of the %s file system."
@@ -1809,7 +1831,7 @@ msgstr ""
 "диске,         исходя из расположения файловой системы %s."
 
 #: src/components/storage/BootSection.tsx:52
-#, c-format
+#, javascript-format
 msgid ""
 "Partitions to boot will be set up if needed at the installation disk.       "
 "Currently %1$s, based on the location of the %2$s file system."
@@ -1824,7 +1846,7 @@ msgstr "Ни один раздел не будет автоматически н
 
 #. TRANSLATORS: %s is replaced by a disk name and size (eg. "sda (500GiB)")
 #: src/components/storage/BootSection.tsx:69
-#, c-format
+#, javascript-format
 msgid "Partitions to boot will be set up if needed at %s."
 msgstr "Разделы для загрузки будут настроены при необходимости на %s."
 
@@ -1847,7 +1869,7 @@ msgstr ""
 "диске."
 
 #: src/components/storage/BootSelection.tsx:145
-#, c-format
+#, javascript-format
 msgid ""
 "Partitions to boot will be set up if needed at the installation "
 "disk,           based on the location of the %s file system."
@@ -1856,7 +1878,7 @@ msgstr ""
 "зависимости от расположения файловой системы %s."
 
 #: src/components/storage/BootSelection.tsx:156
-#, c-format
+#, javascript-format
 msgid ""
 "Partitions to boot will be set up if needed at the installation "
 "disk.         Currently %1$s, based on the location of the %2$s file system."
@@ -1906,7 +1928,7 @@ msgid "No devices configured yet"
 msgstr "Устройства ещё не настроены"
 
 #: src/components/storage/ConfigEditor.tsx:39
-#, c-format
+#, javascript-format
 msgid ""
 "Use actions below to set up your devices or click %s to start from scratch "
 "with the default configuration."
@@ -1948,7 +1970,7 @@ msgid "Already using all available disks"
 msgstr "Уже используются все доступные диски"
 
 #: src/components/storage/ConfigureDeviceMenu.tsx:67
-#, c-format
+#, javascript-format
 msgid "Extend the installation beyond the currently selected device"
 msgid_plural "Extend the installation beyond the current %d devices"
 msgstr[0] "Расширение установки за пределы текущего %d устройства"
@@ -1956,7 +1978,7 @@ msgstr[1] "Расширение установки за пределы теку�
 msgstr[2] "Расширение установки за пределы текущих %d устройств"
 
 #: src/components/storage/ConfigureDeviceMenu.tsx:76
-#, c-format
+#, javascript-format
 msgid "Extend the installation beyond the currently selected disk"
 msgid_plural "Extend the installation beyond the current %d disks"
 msgstr[0] "Расширение установки за пределы текущего %d диска"
@@ -2107,85 +2129,85 @@ msgstr ""
 
 #. TRANSLATORS: %s will be replaced by a disk name and its size - "sda (20 GiB)"
 #: src/components/storage/DriveHeader.tsx:33
-#, c-format
+#, javascript-format
 msgid "Mount disk %s"
 msgstr "Монтировать диск %s"
 
 #. TRANSLATORS: %s will be replaced by a disk name and its size - "sda (20 GiB)"
 #: src/components/storage/DriveHeader.tsx:35
-#, c-format
+#, javascript-format
 msgid "Format disk %s"
 msgstr "Форматировать диск %s"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
 #: src/components/storage/DriveHeader.tsx:46
-#, c-format
+#, javascript-format
 msgid "Use disk %s to install, host LVM and boot"
 msgstr "Исп. диск %s для установки, размещения LVM и загрузки"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
 #: src/components/storage/DriveHeader.tsx:49
-#, c-format
+#, javascript-format
 msgid "Use disk %s to install and host LVM"
 msgstr "Исп. диск %s для установки и размещения LVM"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
 #: src/components/storage/DriveHeader.tsx:54
-#, c-format
+#, javascript-format
 msgid "Use disk %s to install and boot"
 msgstr "Исп. диск %s для установки и загрузки"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
 #: src/components/storage/DriveHeader.tsx:57
-#, c-format
+#, javascript-format
 msgid "Use disk %s to install"
 msgstr "Исп. диск %s для установки"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
 #: src/components/storage/DriveHeader.tsx:64
-#, c-format
+#, javascript-format
 msgid "Use disk %s for LVM, additional partitions and booting"
 msgstr "Исп. диск %s для LVM, дополнительных разделов и загрузки"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
 #: src/components/storage/DriveHeader.tsx:67
-#, c-format
+#, javascript-format
 msgid "Use disk %s for LVM and additional partitions"
 msgstr "Исп. диск %s для LVM и дополнительных разделов"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
 #: src/components/storage/DriveHeader.tsx:72
-#, c-format
+#, javascript-format
 msgid "Use disk %s for additional partitions and booting"
 msgstr "Исп. диск %s для дополнительных разделов и загрузки"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
 #: src/components/storage/DriveHeader.tsx:75
-#, c-format
+#, javascript-format
 msgid "Use disk %s for additional partitions"
 msgstr "Исп. диск %s для дополнительных разделов"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
 #: src/components/storage/DriveHeader.tsx:81
-#, c-format
+#, javascript-format
 msgid "Use disk %s to host LVM and boot"
 msgstr "Исп. диск %s для размещения LVM и загрузки"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
 #: src/components/storage/DriveHeader.tsx:84
-#, c-format
+#, javascript-format
 msgid "Use disk %s to host LVM"
 msgstr "Исп. диск %s для размещения LVM"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
 #: src/components/storage/DriveHeader.tsx:89
-#, c-format
+#, javascript-format
 msgid "Use disk %s to configure boot partitions"
 msgstr "Исп. диск %s для настройки загрузочных разделов"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
 #: src/components/storage/DriveHeader.tsx:92
-#, c-format
+#, javascript-format
 msgid "Use disk %s"
 msgstr "Использовать диск %s"
 
@@ -2258,13 +2280,13 @@ msgstr "Устройство будет отформатировано"
 
 #. TRANSLATORS: %s is a formatted mount point (eg. '"/home'").
 #: src/components/storage/FilesystemMenu.tsx:51
-#, c-format
+#, javascript-format
 msgid "The current file system will be mounted at %s"
 msgstr "Текущая файловая система будет смонтирована по пути %s"
 
 #. TRANSLATORS: %1$s is a filesystem type (eg. Btrfs), %2$s is a mount point (eg. '"/home"').
 #: src/components/storage/FilesystemMenu.tsx:54
-#, c-format
+#, javascript-format
 msgid "The device will be formatted as %1$s and mounted at %2$s"
 msgstr "Устройство будет отформатировано как %1$s и смонтировано по пути %2$s"
 
@@ -2311,7 +2333,7 @@ msgstr "Ожидание точки монтирования"
 #: src/components/storage/FormattableDevicePage.tsx:283
 #: src/components/storage/PartitionPage.tsx:563
 #: src/components/storage/utils/partition.tsx:69
-#, c-format
+#, javascript-format
 msgid "Current %s"
 msgstr "Текущий %s"
 
@@ -2325,7 +2347,7 @@ msgstr "Btrfs с моментальными снимками"
 #: src/components/storage/FormattableDevicePage.tsx:302
 #: src/components/storage/LogicalVolumePage.tsx:483
 #: src/components/storage/PartitionPage.tsx:582
-#, c-format
+#, javascript-format
 msgid "Default file system for %s"
 msgstr "Файловая система по умолчанию для %s"
 
@@ -2345,7 +2367,7 @@ msgstr "Отформатировать устройство как"
 #. TRANSLATORS: %s is the name of a partition, like /dev/vda2
 #: src/components/storage/FormattableDevicePage.tsx:320
 #: src/components/storage/PartitionPage.tsx:599
-#, c-format
+#, javascript-format
 msgid "Do not format %s and keep the data"
 msgstr "Не форматировать %s и сохранить данные"
 
@@ -2356,7 +2378,7 @@ msgid "File system label"
 msgstr "Метка файловой системы"
 
 #: src/components/storage/FormattableDevicePage.tsx:453
-#, c-format
+#, javascript-format
 msgid "Configure device %s"
 msgstr "Настроить устройство %s"
 
@@ -2459,7 +2481,7 @@ msgid "Format logical volume as"
 msgstr "Форматировать логический том как"
 
 #: src/components/storage/LogicalVolumePage.tsx:687
-#, c-format
+#, javascript-format
 msgid "Configure LVM logical volume at %s volume group"
 msgstr "Настройка логического тома LVM в группе томов %s"
 
@@ -2473,7 +2495,7 @@ msgid "Enter a name for the volume group."
 msgstr "Введите имя для группы томов."
 
 #: src/components/storage/LvmPage.tsx:81
-#, c-format
+#, javascript-format
 msgid "Volume group '%s' already exists. Enter a different name."
 msgstr "Группа томов „%s“ уже существует. Введите другое имя."
 
@@ -2516,104 +2538,104 @@ msgstr ""
 
 #. TRANSLATORS: %s will be replaced by a RAID name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:33
-#, c-format
+#, javascript-format
 msgid "Mount RAID %s"
 msgstr "Монтировать RAID-массив %s"
 
 #. TRANSLATORS: %s will be replaced by a RAID name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:35
-#, c-format
+#, javascript-format
 msgid "Format RAID %s"
 msgstr "Отформатировать RAID-массив %s"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:46
-#, c-format
+#, javascript-format
 msgid "Use RAID %s to install, host LVM and boot"
 msgstr "Исп. RAID-массив %s для установки, размещения LVM и загрузки"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:49
-#, c-format
+#, javascript-format
 msgid "Use RAID %s to install and host LVM"
 msgstr "Исп. RAID-массив %s для установки и размещения LVM"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:54
-#, c-format
+#, javascript-format
 msgid "Use RAID %s to install and boot"
 msgstr "Исп. RAID-массив %s для установки и загрузки"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:57
-#, c-format
+#, javascript-format
 msgid "Use RAID %s to install"
 msgstr "Исп. RAID-массив %s для установки"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:64
-#, c-format
+#, javascript-format
 msgid "Use RAID %s for LVM, additional partitions and booting"
 msgstr "Исп. RAID-массив %s для LVM, дополнительных разделов и загрузки"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:67
-#, c-format
+#, javascript-format
 msgid "Use RAID %s for LVM and additional partitions"
 msgstr "Исп. RAID-массив %s для LVM и дополнительных разделов"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:72
-#, c-format
+#, javascript-format
 msgid "Use RAID %s for additional partitions and booting"
 msgstr "Исп. RAID-массив %s для дополнительных разделов и загрузки"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:75
-#, c-format
+#, javascript-format
 msgid "Use RAID %s for additional partitions"
 msgstr "Исп. RAID-массив %s для дополнительных разделов"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:81
-#, c-format
+#, javascript-format
 msgid "Use RAID %s to host LVM and boot"
 msgstr "Исп. RAID-массив %s для размещения LVM и загрузки"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:84
-#, c-format
+#, javascript-format
 msgid "Use RAID %s to host LVM"
 msgstr "Исп. RAID-массив %s для размещения LVM"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:89
-#, c-format
+#, javascript-format
 msgid "Use RAID %s to configure boot partitions"
 msgstr "Исп. RAID-массив %s для настройки загрузочных разделов"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:92
-#, c-format
+#, javascript-format
 msgid "Use RAID %s"
 msgstr "Использовать RAID-массив %s"
 
 #. TRANSLATORS: %s is the short name of a disk, like 'sda'
 #: src/components/storage/NewVgMenuOption.tsx:46
-#, c-format
+#, javascript-format
 msgid "Create another LVM volume group on %s"
 msgstr "Создать еще одну группу томов LVM на %s"
 
 #. TRANSLATORS: %s is the short name of a disk, like 'sda'
 #: src/components/storage/NewVgMenuOption.tsx:50
-#, c-format
+#, javascript-format
 msgid "Create LVM volume group on %s"
 msgstr "Создать группу томов LVM на %s"
 
 #. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case).
 #: src/components/storage/NewVgMenuOption.tsx:59
-#, c-format
+#, javascript-format
 msgid "%s will be created as a logical volume"
 msgid_plural "%s will be created as logical volumes"
 msgstr[0] "%s будет создан как логический том"
@@ -2640,12 +2662,12 @@ msgstr ""
 
 #. TRANSLATORS: %s is a disk name with its size (eg. "sda, 10 GiB"
 #: src/components/storage/PartitionPage.tsx:498
-#, c-format
+#, javascript-format
 msgid "As a new partition on %s"
 msgstr "Как новый раздел на %s"
 
 #: src/components/storage/PartitionPage.tsx:500
-#, c-format
+#, javascript-format
 msgid "Using partition %s"
 msgstr "Используя раздел %s"
 
@@ -2674,7 +2696,7 @@ msgid "Format partition as"
 msgstr "Отформатировать раздел как"
 
 #: src/components/storage/PartitionPage.tsx:814
-#, c-format
+#, javascript-format
 msgid "Configure partition at %s"
 msgstr "Настройка раздела в %s"
 
@@ -2726,15 +2748,20 @@ msgstr[2] "Будут смонтированы следующие разделы
 msgid "Any partition needed to boot will be configured."
 msgstr "Все разделы, необходимые для загрузки, будут настроены."
 
+#: src/components/storage/PartitionsSection.tsx:118
+#, fuzzy
+msgid "Partitions to host \"system\" will be created if needed."
+msgstr "Разделы для загрузки будут настроены при необходимости на %s."
+
 #. TRANSLATORS: ARIA (accesibility) description of an UI element. %s is a mount path.
 #: src/components/storage/PartitionsSection.tsx:151
-#, c-format
+#, javascript-format
 msgid "Partition %s"
 msgstr "Раздел %s"
 
 #. TRANSLATORS: ARIA (accesibility) description of an button. %s is a mount path.
 #: src/components/storage/PartitionsSection.tsx:163
-#, c-format
+#, javascript-format
 msgid "Options for partition %s"
 msgstr "Параметры для раздела %s"
 
@@ -2758,7 +2785,7 @@ msgid "Loading storage"
 msgstr "Загрузка хранилища"
 
 #: src/components/storage/ProposalActionsDialog.tsx:73
-#, c-format
+#, javascript-format
 msgid "Hide %d subvolume action"
 msgid_plural "Hide %d subvolume actions"
 msgstr[0] "Скрыть %d действие подтома"
@@ -2766,7 +2793,7 @@ msgstr[1] "Скрыть %d действия подтома"
 msgstr[2] "Скрыть %d действий подтома"
 
 #: src/components/storage/ProposalActionsDialog.tsx:78
-#, c-format
+#, javascript-format
 msgid "Show %d subvolume action"
 msgid_plural "Show %d subvolume actions"
 msgstr[0] "Показать %d действие подтома"
@@ -2784,14 +2811,14 @@ msgstr ""
 #. TRANSLATORS: %s is a list of formatted mount points with a partition size like
 #. '"/" (at least 10 GiB), "/var" (20 GiB) and "swap" (2 GiB)'
 #: src/components/storage/ProposalFailedInfo.tsx:67
-#, c-format
+#, javascript-format
 msgid "It is not possible to allocate space for the boot partition and for %s."
 msgstr "Невозможно выделить пространство для загрузочного раздела и для %s."
 
 #. TRANSLATORS: %s is a list of formatted mount points with a partition size like
 #. '"/" (at least 10 GiB), "/var" (20 GiB) and "swap" (2 GiB)'
 #: src/components/storage/ProposalFailedInfo.tsx:70
-#, c-format
+#, javascript-format
 msgid "It is not possible to allocate space for %s."
 msgstr "Невозможно выделить пространство для %s."
 
@@ -2911,7 +2938,7 @@ msgid "Waiting for information about storage configuration"
 msgstr "Ожидание информации о конфигурации хранилища"
 
 #: src/components/storage/ProposalResultSection.tsx:67
-#, c-format
+#, javascript-format
 msgid "There is %d destructive action planned affecting %s"
 msgid_plural "There are %d destructive actions planned affecting %s"
 msgstr[0] "Планируется %d разрушительное действие, затрагивающие %s"
@@ -2919,7 +2946,7 @@ msgstr[1] "Планируется %d разрушительных действи
 msgstr[2] "Планируется %d разрушительных действий, затрагивающих %s"
 
 #: src/components/storage/ProposalResultSection.tsx:78
-#, c-format
+#, javascript-format
 msgid "There is %d destructive action planned"
 msgid_plural "There are %d destructive actions planned"
 msgstr[0] "Планируется %d разрушительное действие"
@@ -2934,7 +2961,8 @@ msgstr "Результат"
 msgid ""
 "Result of applying the configuration described at the 'Settings' section "
 "above."
-msgstr "Результат применения конфигурации, описанной в секции «Настройки» выше."
+msgstr ""
+"Результат применения конфигурации, описанной в секции «Настройки» выше."
 
 #: src/components/storage/ProposalResultSection.tsx:138
 msgid ""
@@ -2956,7 +2984,7 @@ msgstr "Новый"
 #. TRANSLATORS: Label to indicate the device size before resizing, where %s is
 #. replaced by the original size (e.g., 3.00 GiB).
 #: src/components/storage/ProposalResultTable.tsx:106
-#, c-format
+#, javascript-format
 msgid "Before %s"
 msgstr "До %s"
 
@@ -2974,7 +3002,7 @@ msgid "Transactional root file system"
 msgstr "Транзакционная корневая файловая система"
 
 #: src/components/storage/ProposalTransactionalInfo.tsx:47
-#, c-format
+#, javascript-format
 msgid ""
 "%s is an immutable system with atomic updates. It uses a read-only Btrfs "
 "file system updated via snapshots."
@@ -2989,7 +3017,7 @@ msgstr "Выбранный диск не может быть изменен"
 
 #. TRANSLATORS: %s is a formatted mount point like '"/home"'
 #: src/components/storage/SearchedDeviceMenu.tsx:62
-#, c-format
+#, javascript-format
 msgid "Change the disk to format as %s"
 msgstr "Измените диск для форматирования как %s"
 
@@ -3004,7 +3032,7 @@ msgstr "Измените диск для установки системы"
 #. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case).
 #: src/components/storage/SearchedDeviceMenu.tsx:83
-#, c-format
+#, javascript-format
 msgid "Change the disk to create %s"
 msgstr "Измените диск для создания %s"
 
@@ -3026,13 +3054,13 @@ msgstr "Он выбран для некоторых групп LVM"
 
 #. TRANSLATORS: %s is the name of the LVM
 #: src/components/storage/SearchedDeviceMenu.tsx:118
-#, c-format
+#, javascript-format
 msgid "It is chosen for booting and for the LVM group '%s'"
 msgstr "Он выбран для загрузки и для группы LVM «%s»"
 
 #. TRANSLATORS: %s is the name of the LVM
 #: src/components/storage/SearchedDeviceMenu.tsx:124
-#, c-format
+#, javascript-format
 msgid "It is chosen for the LVM group '%s'"
 msgstr "Он выбран для группы LVM «%s»"
 
@@ -3042,7 +3070,7 @@ msgstr "Он выбран для загрузки"
 
 #. TRANSLATORS: %s is the name of the disk (eg. sda)
 #: src/components/storage/SearchedDeviceMenu.tsx:138
-#, c-format
+#, javascript-format
 msgid ""
 "%s will still contain the configured LVM groups and any partition needed to "
 "boot"
@@ -3052,13 +3080,13 @@ msgstr ""
 
 #. TRANSLATORS: %s is the name of the disk (eg. sda)
 #: src/components/storage/SearchedDeviceMenu.tsx:144
-#, c-format
+#, javascript-format
 msgid "The configured LVM groups will remain at %s"
 msgstr "Настроенные группы LVM останутся на диске %s"
 
 #. TRANSLATORS: %1$s is the name of the disk (eg. sda) and %2$s the name of the LVM
 #: src/components/storage/SearchedDeviceMenu.tsx:150
-#, c-format
+#, javascript-format
 msgid ""
 "%1$s will still contain the LVM group '%2$s' and any partition needed to boot"
 msgstr ""
@@ -3067,13 +3095,13 @@ msgstr ""
 
 #. TRANSLATORS: %1$s is the name of the LVM and %2$s the name of the disk (eg. sda)
 #: src/components/storage/SearchedDeviceMenu.tsx:158
-#, c-format
+#, javascript-format
 msgid "The LVM group '%1$s' will remain at %2$s"
 msgstr "Группа LVM „%1$s“ останется на диске %2$s"
 
 #. TRANSLATORS: %s is the name of the disk (eg. sda)
 #: src/components/storage/SearchedDeviceMenu.tsx:166
-#, c-format
+#, javascript-format
 msgid "Partitions needed for booting will remain at %s"
 msgstr "Разделы, необходимые для загрузки, останутся в %s"
 
@@ -3106,12 +3134,12 @@ msgid "Do not use"
 msgstr "Не использовать"
 
 #: src/components/storage/SearchedDeviceMenu.tsx:309
-#, c-format
+#, javascript-format
 msgid "Device %s menu"
 msgstr "Меню устройства %s"
 
 #: src/components/storage/SizeModeSelect.tsx:75
-#, c-format
+#, javascript-format
 msgid ""
 "The size is configured as a range between %s and %s, but this interface "
 "cannot handle ranges with a given max size."
@@ -3135,7 +3163,7 @@ msgstr ""
 
 #. TRANSLATORS: %s is a disk size (e.g., "10 GiB").
 #: src/components/storage/SizeModeSelect.tsx:140
-#, c-format
+#, javascript-format
 msgid "approx. %s"
 msgstr "прибл. %s"
 
@@ -3166,12 +3194,12 @@ msgstr "Это устройство будет использоваться но
 
 #. TRANSLATORS: %s is a mount path like "/home".
 #: src/components/storage/SpaceActionsTable.tsx:78
-#, c-format
+#, javascript-format
 msgid "The device will be mounted at %s."
 msgstr "Устройство будет смонтировано как %s."
 
 #: src/components/storage/SpaceActionsTable.tsx:84
-#, c-format
+#, javascript-format
 msgid "Up to %s can be recovered by shrinking the device."
 msgstr "До %s можно освободить, сократив устройство."
 
@@ -3180,7 +3208,7 @@ msgid "The device cannot be shrunk:"
 msgstr "Устройство не может быть сокращено:"
 
 #: src/components/storage/SpaceActionsTable.tsx:114
-#, c-format
+#, javascript-format
 msgid "Show information about %s"
 msgstr "Показать сведения о %s"
 
@@ -3208,7 +3236,7 @@ msgstr ""
 "размещения новой системы."
 
 #: src/components/storage/SpacePolicySelection.tsx:103
-#, c-format
+#, javascript-format
 msgid "Find space in %s"
 msgstr "Найти пространство в %s"
 
@@ -3252,7 +3280,7 @@ msgstr ""
 #. TRANSLATORS: %1$s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case). %2$s is a disk name like sda.
 #: src/components/storage/VolumeGroupEditor.tsx:74
-#, c-format
+#, javascript-format
 msgid "%1$s will be created as a partition at %2$s"
 msgid_plural "%1$s will be created as partitions at %2$s"
 msgstr[0] "%1$s будет создан как раздел на %2$s"
@@ -3280,17 +3308,17 @@ msgstr "Изменить группу томов"
 
 #. TRANSLATORS: ARIA (accesibility) description of an UI element. %s is a mount path.
 #: src/components/storage/VolumeGroupEditor.tsx:145
-#, c-format
+#, javascript-format
 msgid "Volume group %s"
 msgstr "Группа томов %s"
 
 #: src/components/storage/VolumeGroupEditor.tsx:185
-#, c-format
+#, javascript-format
 msgid "Create LVM volume group %s"
 msgstr "Создать группу томов LVM %s"
 
 #: src/components/storage/VolumeGroupEditor.tsx:186
-#, c-format
+#, javascript-format
 msgid "Empty LVM volume group %s"
 msgstr "Очистить группу томов LVM %s"
 
@@ -3299,7 +3327,7 @@ msgid "Add logical volume"
 msgstr "Добавить логический том"
 
 #: src/components/storage/VolumeGroupEditor.tsx:251
-#, c-format
+#, javascript-format
 msgid "Logical volumes for %s"
 msgstr "Логические тома для %s"
 
@@ -3351,7 +3379,7 @@ msgstr "Макс. канал"
 #. TRANSLATORS: message shown in bulk action toolbar when just one device
 #. is selected
 #: src/components/storage/dasd/DASDTable.tsx:225
-#, c-format
+#, javascript-format
 msgid "Apply to the selected device"
 msgid_plural "Apply to the %s selected devices"
 msgstr[0] "Применить к %s выбранному устройству"
@@ -3432,7 +3460,7 @@ msgid "This message will close automatically when everything is done."
 msgstr "Это сообщение закроется автоматически, когда все будет готово."
 
 #: src/components/storage/dasd/FormatActionHandler.tsx:68
-#, c-format
+#, javascript-format
 msgid "Cannot format %s"
 msgstr "Невозможно отформатировать %s"
 
@@ -3445,7 +3473,7 @@ msgid "Cannot format all the selected devices"
 msgstr "Невозможно отформатировать все выбранные устройства"
 
 #: src/components/storage/dasd/FormatActionHandler.tsx:94
-#, c-format
+#, javascript-format
 msgid "Below %s devices are offline and cannot be formatted."
 msgstr "%s устр. находятся в офлайн-режиме и не могут быть отформатированы."
 
@@ -3454,7 +3482,7 @@ msgid "Unselect or activate them and try it again."
 msgstr "Отмените выбор или активируйте их, а затем попробуйте снова."
 
 #: src/components/storage/dasd/FormatActionHandler.tsx:115
-#, c-format
+#, javascript-format
 msgid "Format device %s"
 msgstr "Отформатировать устройство %s"
 
@@ -3525,7 +3553,7 @@ msgstr "Неиспользуемое пространство"
 #: src/components/storage/device-utils.tsx:84
 #: src/components/storage/utils/partition.tsx:41
 #: src/components/storage/utils/partition.tsx:85
-#, c-format
+#, javascript-format
 msgid "%1$s (%2$s)"
 msgstr "%1$s (%2$s)"
 
@@ -3601,7 +3629,7 @@ msgstr "Некорректный порт"
 
 #. TRANSLATORS: %s is replaced by the iSCSI target node name
 #: src/components/storage/iscsi/EditNodeForm.tsx:49
-#, c-format
+#, javascript-format
 msgid "Edit %s"
 msgstr "Изменить %s"
 
@@ -3649,7 +3677,7 @@ msgstr "Инициатор"
 
 #. TRANSLATORS: %s is replaced by the iSCSI target name
 #: src/components/storage/iscsi/LoginForm.jsx:67
-#, c-format
+#, javascript-format
 msgid "Login %s"
 msgstr "Логин %s"
 
@@ -3670,7 +3698,7 @@ msgstr "Отключено"
 
 #. TRANSLATORS: iSCSI connection status, %s is replaced by node label
 #: src/components/storage/iscsi/NodesPresenter.jsx:69
-#, c-format
+#, javascript-format
 msgid "Connected (%s)"
 msgstr "Подключено (%s)"
 
@@ -3815,15 +3843,23 @@ msgstr "Уменьшение существующих разделов"
 msgid "Use available space"
 msgstr "Использовать свободное пространство"
 
+#. TRANSLATORS: sub-string used to represent a path like "/" or "/var". %s is replaced by the path
+#. itself, the rest of the string (quotation marks in the English case) is used to encapsulate the
+#. path in a bigger sentence like 'Create partitions for "/" and "/var"'.
+#: src/components/storage/utils.ts:358
+#, javascript-format
+msgid "\"%s\""
+msgstr ""
+
 #. TRANSLATORS: Size range, %1$s is the min size and %2$s is the max
 #: src/components/storage/utils.ts:369
-#, c-format
+#, javascript-format
 msgid "%1$s - %2$s"
 msgstr "%1$s - %2$s"
 
 #. TRANSLATORS: minimum device size, %s is replaced by size string, e.g. "17.5 GiB"
 #: src/components/storage/utils.ts:371
-#, c-format
+#, javascript-format
 msgid "at least %s"
 msgstr "не менее %s"
 
@@ -3834,13 +3870,13 @@ msgstr "Многопутевое"
 
 #. TRANSLATORS: %s is replaced by the device bus ID
 #: src/components/storage/utils/device.tsx:44
-#, c-format
+#, javascript-format
 msgid "DASD %s"
 msgstr "DASD %s"
 
 #. TRANSLATORS: software RAID device, %s is replaced by the RAID level, e.g. RAID-1
 #: src/components/storage/utils/device.tsx:49
-#, c-format
+#, javascript-format
 msgid "Software %s"
 msgstr "Программное обеспечение %s"
 
@@ -3850,7 +3886,7 @@ msgstr "SD-карта"
 
 #. TRANSLATORS: %s is substituted by the type of disk like "iSCSI" or "SATA"
 #: src/components/storage/utils/device.tsx:59
-#, c-format
+#, javascript-format
 msgid "%s disk"
 msgstr "Диск %s"
 
@@ -3861,7 +3897,7 @@ msgstr "Диск"
 #. TRANSLATORS: disk partition info, %s is replaced by partition table
 #. type (MS-DOS or GPT), %d is the number of the partitions
 #: src/components/storage/utils/device.tsx:81
-#, c-format
+#, javascript-format
 msgid "%s with %d partitions"
 msgstr "%s с %d разделами"
 
@@ -3967,7 +4003,7 @@ msgid "Select what to do with each partition."
 msgstr "Выберите, что делать с каждым разделом."
 
 #: src/components/storage/utils/drive.tsx:152
-#, c-format
+#, javascript-format
 msgid "The whole device will be used for %s"
 msgstr "Всё устройство будет использовано для %s"
 
@@ -3980,7 +4016,7 @@ msgid "No additional partitions will be created"
 msgstr "Дополнительные разделы не будут созданы"
 
 #: src/components/storage/utils/drive.tsx:169
-#, c-format
+#, javascript-format
 msgid "An existing partition will be used for %s"
 msgid_plural "Existing partitions will be used for %s"
 msgstr[0] "Для %s будет использован существующий раздел"
@@ -3988,7 +4024,7 @@ msgstr[1] "Для %s будут использованы существующи�
 msgstr[2] "Для %s будут использованы существующие разделы"
 
 #: src/components/storage/utils/drive.tsx:183
-#, c-format
+#, javascript-format
 msgid "A new partition will be created for %s"
 msgid_plural "New partitions will be created for %s"
 msgstr[0] "Для %s будет создан новый раздел"
@@ -3998,19 +4034,19 @@ msgstr[2] "Для %s будут созданы новые разделы"
 #. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case).
 #: src/components/storage/utils/drive.tsx:194
-#, c-format
+#, javascript-format
 msgid "Partitions will be used and created for %s"
 msgstr "Разделы будут использоваться и создаваться для %s"
 
 #. TRANSLATORS: %1$s is a filesystem type (eg. Btrfs), %2$s is a device name (eg. /dev/sda3).
 #: src/components/storage/utils/partition.tsx:66
-#, c-format
+#, javascript-format
 msgid "Current %1$s at %2$s"
 msgstr "Текущий %1$s на %2$s"
 
 #. TRANSLATORS: %1$s is a filesystem type (eg. Btrfs), %2$s is a device name (eg. /dev/sda3).
 #: src/components/storage/utils/partition.tsx:73
-#, c-format
+#, javascript-format
 msgid "%1$s at %2$s"
 msgstr "%1$s на %2$s"
 
@@ -4019,7 +4055,7 @@ msgid "No logical volumes are defined yet"
 msgstr "Логические тома еще не определены"
 
 #: src/components/storage/utils/volume-group.tsx:36
-#, c-format
+#, javascript-format
 msgid "A new volume will be created for %s"
 msgid_plural "New volumes will be created for %s"
 msgstr[0] "Для %s будет создан новый том"
@@ -4132,7 +4168,7 @@ msgstr "Не удалось обновить имя узла"
 #. has not been set. "transient" refers to the hostname mode, and %s will be
 #. replaced with the current hostname value.
 #: src/components/system/HostnamePage.tsx:75
-#, c-format
+#, javascript-format
 msgid "Using transient hostname: %s"
 msgstr "Использование переходного имени узла: %s"
 
