@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-11-05 14:18+0000\n"
-"PO-Revision-Date: 2025-09-11 13:42+0000\n"
-"Last-Translator: Antonio Simón <antonio@trans-mission.com>\n"
+"PO-Revision-Date: 2025-11-19 16:04+0000\n"
+"Last-Translator: Victor hck <victorhck@opensuse.org>\n"
 "Language-Team: Spanish <https://l10n.opensuse.org/projects/agama/agama-web/"
 "es/>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.13.1\n"
+"X-Generator: Weblate 5.14.3\n"
 
 #: src/components/core/AlertOutOfSync.tsx:71
 msgid "Configuration out of sync"
@@ -949,7 +949,7 @@ msgstr "Conectarse"
 #: src/components/network/WiredConnectionPage.tsx:43
 #, javascript-format
 msgid "\"%s\" does not exist or is no longer available."
-msgstr ""
+msgstr "\"%s\" no existe o ya no está disponible."
 
 #: src/components/network/WifiNetworkPage.tsx:47
 msgid "Network not found or lost"
@@ -1285,7 +1285,7 @@ msgstr "Registrar"
 #: src/components/product/ProductRegistrationPage.tsx:395
 #, javascript-format
 msgid "The product will be registered with \"%s\" hostname"
-msgstr ""
+msgstr "El producto se registrará con el nombre de host \"%s\""
 
 #: src/components/product/ProductRegistrationPage.tsx:399
 #, javascript-format
@@ -1473,6 +1473,8 @@ msgid ""
 "If you want to disable this check, please specify \"inst.ay_check=0\" at "
 "kernel's command-line"
 msgstr ""
+"Si desea desactivar esta comprobación, especifique \"inst.ay_check=0\" en la "
+"línea de comandos del kernel"
 
 #: src/components/software/SoftwareConflicts.tsx:100
 msgid "Show less actions"
@@ -1822,12 +1824,13 @@ msgstr ""
 "menos %2$s."
 
 #: src/components/storage/BootSection.tsx:41
-#, fuzzy, javascript-format
+#, javascript-format
 msgid ""
 "Partitions to boot will be set up if needed at the installation "
 "disk,         based on the location of the %s file system."
 msgstr ""
-"Las particiones de arranque se asignarán en el disco de instalación %s."
+"Las particiones para arrancar se configurarán si es necesario en el disco de "
+"instalación, según la ubicación del sistema de archivos %s."
 
 #: src/components/storage/BootSection.tsx:52
 #, javascript-format
@@ -1835,29 +1838,27 @@ msgid ""
 "Partitions to boot will be set up if needed at the installation disk.       "
 "Currently %1$s, based on the location of the %2$s file system."
 msgstr ""
+"Las particiones para arrancar se configurarán si es necesario en el disco de "
+"instalación. Actualmente %1$s, según la ubicación del sistema de archivos "
+"%2$s."
 
 #: src/components/storage/BootSection.tsx:65
-#, fuzzy
 msgid "No partitions will be automatically configured for booting."
-msgstr ""
-"No se configurarán automáticamente particiones para el arranque. Úselo con "
-"precaución."
+msgstr "No se configurarán automáticamente particiones para el arranque."
 
 #. TRANSLATORS: %s is replaced by a disk name and size (eg. "sda (500GiB)")
 #: src/components/storage/BootSection.tsx:69
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "Partitions to boot will be set up if needed at %s."
-msgstr "Las particiones para arrancar se asignarán en el disco de instalación."
+msgstr "Las particiones para arrancar se configurarán si es necesario en %s."
 
 #: src/components/storage/BootSection.tsx:84
-#, fuzzy
 msgid ""
 "To ensure the new system is able to boot, the installer may need to create "
 "or configure some           partitions in the appropriate disk."
 msgstr ""
-"Para garantizar que el nuevo sistema pueda arrancar, es posible que el "
-"instalador tenga que crear o configurar algunas particiones en el disco "
-"correspondiente."
+"Para garantizar que el nuevo sistema pueda iniciarse, es posible que el "
+"instalador deba crear o configurar algunas particiones en el disco apropiado."
 
 #: src/components/storage/BootSelection.tsx:136
 msgid ""
@@ -1869,12 +1870,13 @@ msgstr ""
 "correspondiente."
 
 #: src/components/storage/BootSelection.tsx:145
-#, fuzzy, javascript-format
+#, javascript-format
 msgid ""
 "Partitions to boot will be set up if needed at the installation "
 "disk,           based on the location of the %s file system."
 msgstr ""
-"Las particiones de arranque se asignarán en el disco de instalación %s."
+"Las particiones para arrancar se configurarán si es necesario en el disco de "
+"instalación, según la ubicación del sistema de archivos %s."
 
 #: src/components/storage/BootSelection.tsx:156
 #, javascript-format
@@ -1882,6 +1884,9 @@ msgid ""
 "Partitions to boot will be set up if needed at the installation "
 "disk.         Currently %1$s, based on the location of the %2$s file system."
 msgstr ""
+"Las particiones para arrancar se configurarán si es necesario en el disco de "
+"instalación. Actualmente %1$s, según la ubicación del sistema de archivos "
+"%2$s."
 
 #: src/components/storage/BootSelection.tsx:175
 #: src/components/storage/ProposalPage.tsx:287
@@ -1900,9 +1905,10 @@ msgid "Select a disk"
 msgstr "Seleccione un disco"
 
 #: src/components/storage/BootSelection.tsx:218
-#, fuzzy
 msgid "Partitions to boot will be set up if needed at the following device."
-msgstr "Las particiones de arranque se asignarán en el siguiente dispositivo."
+msgstr ""
+"Las particiones para arrancar se configurarán si es necesario en el "
+"siguiente dispositivo."
 
 #: src/components/storage/BootSelection.tsx:220
 msgid "Choose a disk for placing the boot loader"
@@ -2010,9 +2016,8 @@ msgstr "Más dispositivos"
 
 #. TRANSLATORS: this is an ARIA (accesibility) description of an UI element
 #: src/components/storage/ConnectedDevicesMenu.tsx:51
-#, fuzzy
 msgid "More storage options"
-msgstr "Más acciones"
+msgstr "Más opciones de almacenamiento"
 
 #: src/components/storage/ConnectedDevicesMenu.tsx:57
 msgid "Discover and connect to iSCSI targets"
@@ -2220,13 +2225,12 @@ msgid "Encryption is enabled"
 msgstr "El cifrado está habilitado"
 
 #: src/components/storage/EncryptionSection.tsx:50
-#, fuzzy
 msgid ""
 "Protection for the information stored at           the new file systems, "
 "including data, programs, and system files."
 msgstr ""
-"Protección de la información almacenada en los nuevos sistemas de archivo, "
-"incluyendo datos, programas y archivos del sistema."
+"Protección de la información almacenada en los nuevos sistemas de archivos, "
+"incluidos datos, programas y archivos del sistema."
 
 #: src/components/storage/EncryptionSettingsPage.tsx:75
 #: src/components/users/RootUserForm.tsx:104
@@ -2736,21 +2740,20 @@ msgid "Any partition needed to boot will be configured."
 msgstr "Se configurará cualquier partición necesaria para el arranque."
 
 #: src/components/storage/PartitionsSection.tsx:118
-#, fuzzy
 msgid "Partitions to host \"system\" will be created if needed."
-msgstr "Las particiones para arrancar se asignarán en el disco de instalación."
+msgstr "Si es necesario, se crearán particiones para alojar el \"sistema\"."
 
 #. TRANSLATORS: ARIA (accesibility) description of an UI element. %s is a mount path.
 #: src/components/storage/PartitionsSection.tsx:151
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "Partition %s"
-msgstr "Particiones"
+msgstr "Particiones %s"
 
 #. TRANSLATORS: ARIA (accesibility) description of an button. %s is a mount path.
 #: src/components/storage/PartitionsSection.tsx:163
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "Options for partition %s"
-msgstr "Utilizando partición %s"
+msgstr "Opciones para la partición %s"
 
 #: src/components/storage/PartitionsSection.tsx:180
 #: src/components/storage/VolumeGroupEditor.tsx:171
@@ -2898,9 +2901,10 @@ msgstr "Restablecer los valores predeterminados"
 msgid ""
 "Changes in these settings will immediately update the 'Result' section below."
 msgstr ""
+"Los cambios en esta configuración actualizarán inmediatamente la siguiente "
+"sección \"Resultado\"."
 
 #: src/components/storage/ProposalPage.tsx:262
-#, fuzzy
 msgid "Installation devices"
 msgstr "Dispositivos de instalación"
 
@@ -2947,23 +2951,22 @@ msgid ""
 "Result of applying the configuration described at the 'Settings' section "
 "above."
 msgstr ""
+"Resultado de aplicar la configuración descrita en la sección 'Configuración' "
+"anterior."
 
 #: src/components/storage/ProposalResultSection.tsx:138
-#, fuzzy
 msgid ""
 "The following actions will be performed in the system during installation."
 msgstr ""
-"Los siguientes patrones de software están seleccionados para su instalación:"
+"Las siguientes acciones se realizarán en el sistema durante la instalación."
 
 #: src/components/storage/ProposalResultSection.tsx:144
 msgid "Final layout"
 msgstr "Diseño final"
 
 #: src/components/storage/ProposalResultSection.tsx:148
-#, fuzzy
 msgid "Final structure of the system after installation."
-msgstr ""
-"No se pueden acomodar los sistemas de archivos necesarios para la instalación"
+msgstr "Estructura final del sistema después de la instalación."
 
 #: src/components/storage/ProposalResultTable.tsx:77
 msgid "New"
@@ -3004,26 +3007,24 @@ msgstr "El disco seleccionado no se puede cambiar"
 
 #. TRANSLATORS: %s is a formatted mount point like '"/home"'
 #: src/components/storage/SearchedDeviceMenu.tsx:62
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "Change the disk to format as %s"
-msgstr "Seleccione un disco para formatear como %s"
+msgstr "Cambie el disco para formatear como %s"
 
 #: src/components/storage/SearchedDeviceMenu.tsx:69
-#, fuzzy
 msgid "Change the disk to configure"
-msgstr "Seleccione un disco para configurarlo"
+msgstr "Cambiar el disco a configurar"
 
 #: src/components/storage/SearchedDeviceMenu.tsx:73
-#, fuzzy
 msgid "Change the disk to install the system"
-msgstr "Seleccione un disco para instalar el sistema"
+msgstr "Cambiar el disco para instalar el sistema"
 
 #. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case).
 #: src/components/storage/SearchedDeviceMenu.tsx:83
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "Change the disk to create %s"
-msgstr "Seleccione un disco para crear %s"
+msgstr "Cambiar el disco para crear %s"
 
 #: src/components/storage/SearchedDeviceMenu.tsx:99
 msgid "This uses the existing file system at the disk"
@@ -3295,9 +3296,9 @@ msgstr "Editar grupo de volúmenes"
 
 #. TRANSLATORS: ARIA (accesibility) description of an UI element. %s is a mount path.
 #: src/components/storage/VolumeGroupEditor.tsx:145
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "Volume group %s"
-msgstr "Grupo de volúmenes LVM %s vacío"
+msgstr "Grupo de volumen %s"
 
 #: src/components/storage/VolumeGroupEditor.tsx:185
 #, javascript-format
@@ -3837,7 +3838,7 @@ msgstr "Utilizar el espacio disponible"
 #: src/components/storage/utils.ts:358
 #, javascript-format
 msgid "\"%s\""
-msgstr ""
+msgstr "\"%s\""
 
 #. TRANSLATORS: Size range, %1$s is the min size and %2$s is the max
 #: src/components/storage/utils.ts:369
