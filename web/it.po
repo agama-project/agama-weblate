@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-24 16:20+0000\n"
+"POT-Creation-Date: 2025-12-02 10:56+0000\n"
 "PO-Revision-Date: 2025-09-11 14:01+0000\n"
 "Last-Translator: Davide Aiello <davide.aiello@novilingulists.com>\n"
 "Language-Team: Italian <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -1829,7 +1829,17 @@ msgstr ""
 "La configurazione attuale porterà a un tentativo di creazione di una %1$s di "
 "almeno %2$s."
 
+#: src/components/storage/BootSection.tsx:41
+#: src/components/storage/BootSelection.tsx:145
+#, fuzzy, javascript-format
+msgid ""
+"Partitions to boot will be set up if needed at the installation disk, based "
+"on the location of the %s file system."
+msgstr ""
+"Le partizioni di avvio verranno allocate nel disco di installazione %s."
+
 #: src/components/storage/BootSection.tsx:52
+#: src/components/storage/BootSelection.tsx:156
 #, javascript-format
 msgid ""
 "Partitions to boot will be set up if needed at the installation disk. "
@@ -1849,6 +1859,7 @@ msgstr ""
 msgid "Partitions to boot will be set up if needed at %s."
 msgstr "Le partizioni di avvio verranno allocate sul disco di installazione."
 
+#: src/components/storage/BootSection.tsx:84
 #: src/components/storage/BootSelection.tsx:136
 msgid ""
 "To ensure the new system is able to boot, the installer may need to create "
@@ -1856,14 +1867,6 @@ msgid ""
 msgstr ""
 "Affinché il nuovo sistema possa avviarsi, l'installatore potrebbe dover "
 "creare o configurare delle partizioni nel disco appropriato."
-
-#: src/components/storage/BootSelection.tsx:145
-#, fuzzy, javascript-format
-msgid ""
-"Partitions to boot will be set up if needed at the installation "
-"disk, based on the location of the %s file system."
-msgstr ""
-"Le partizioni di avvio verranno allocate nel disco di installazione %s."
 
 #: src/components/storage/BootSelection.tsx:175
 #: src/components/storage/ProposalPage.tsx:287
@@ -2203,8 +2206,8 @@ msgstr "Cifratura abilitata"
 #: src/components/storage/EncryptionSection.tsx:50
 #, fuzzy
 msgid ""
-"Protection for the information stored at the new file systems, "
-"including data, programs, and system files."
+"Protection for the information stored at the new file systems, including "
+"data, programs, and system files."
 msgstr ""
 "Protezione per le informazoini memorizzate nei nuovi file system, tra cui "
 "dati, programmi e file di sistema."
@@ -2491,14 +2494,12 @@ msgstr "Dischi"
 #: src/components/storage/LvmPage.tsx:181
 msgid ""
 "The needed LVM physical volumes will be added as partitions on the chosen "
-"disks, based on the sizes of the logical volumes. If you "
-"select more than one disk, the physical volumes may be "
-"distributed along several disks."
+"disks, based on the sizes of the logical volumes. If you select more than "
+"one disk, the physical volumes may be distributed along several disks."
 msgstr ""
 "I volumi fisici LVM necessari saranno aggiunti come partizioni sui dischi "
-"selezionati, in base alle dimensioni dei volumi logici. Se "
-"si selezionano più dischi, i volumi fisici potrebbero essere "
-"distribuiti in diveresi dischi."
+"selezionati, in base alle dimensioni dei volumi logici. Se si selezionano "
+"più dischi, i volumi fisici potrebbero essere distribuiti in diveresi dischi."
 
 #: src/components/storage/LvmPage.tsx:216
 msgid "Move mount points"
@@ -2506,8 +2507,8 @@ msgstr "Sposta punti di montaggio"
 
 #: src/components/storage/LvmPage.tsx:220
 msgid ""
-"Move the mount points currently configured at the selected disks to "
-"logical volumes of this volume group."
+"Move the mount points currently configured at the selected disks to logical "
+"volumes of this volume group."
 msgstr ""
 "Spostare i punti di montaggio attualmente configurati nei dischi selezionati "
 "nei volumi logici di questo gruppo di volumi."
@@ -4065,17 +4066,17 @@ msgstr "LUN"
 
 #: src/components/storage/zfcp/ZFCPPage.tsx:53
 msgid ""
-"Automatic LUN scan is [enabled]. Activating a controller which is "
-"running in NPIV mode will automatically configures all its LUNs."
+"Automatic LUN scan is [enabled]. Activating a controller which is running in "
+"NPIV mode will automatically configures all its LUNs."
 msgstr ""
-"La scansione LUN automatica è [abilitata]. L'attivazione di un controller "
-"in esecuzione in modalità NPIV configurerà automaticamente tutte le "
-"rispettive LUN."
+"La scansione LUN automatica è [abilitata]. L'attivazione di un controller in "
+"esecuzione in modalità NPIV configurerà automaticamente tutte le rispettive "
+"LUN."
 
 #: src/components/storage/zfcp/ZFCPPage.tsx:58
 msgid ""
-"Automatic LUN scan is [disabled]. LUNs have to be manually configured "
-"after activating a controller."
+"Automatic LUN scan is [disabled]. LUNs have to be manually configured after "
+"activating a controller."
 msgstr ""
 "La scansione LUN automatica è [disabilitata]. È necessario configurare "
 "manualmente le LUN dopo aver attivato un controller."
@@ -4408,12 +4409,11 @@ msgstr "ZFCP"
 #~ "Immettere le dimensioni come numeri facoltativamente seguiti da un'unità."
 
 #~ msgid ""
-#~ "If the unit is omitted, bytes (B) will be used. Greater units can be "
-#~ "of the form GiB (power of 2) or GB (power of 10)."
+#~ "If the unit is omitted, bytes (B) will be used. Greater units can be of "
+#~ "the form GiB (power of 2) or GB (power of 10)."
 #~ msgstr ""
 #~ "Se si omette l'unità, verranno utilizzati i byte (B). Le unità più grandi "
-#~ "possono presentarsi nella forma GiB (potenza di 2) o GB "
-#~ "(potenza di 10)."
+#~ "possono presentarsi nella forma GiB (potenza di 2) o GB (potenza di 10)."
 
 #~ msgid "Minimum"
 #~ msgstr "Minimo"

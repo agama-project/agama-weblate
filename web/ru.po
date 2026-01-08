@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-24 16:20+0000\n"
+"POT-Creation-Date: 2025-12-02 10:56+0000\n"
 "PO-Revision-Date: 2025-12-11 16:04+0000\n"
 "Last-Translator: Aleksey Fedorov <Aleksejfedorov963@gmail.com>\n"
 "Language-Team: Russian <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -1823,15 +1823,25 @@ msgstr ""
 "Текущая конфигурация приведет к попытке создания раздела %1$s размером не "
 "менее %2$s."
 
+#: src/components/storage/BootSection.tsx:41
+#: src/components/storage/BootSelection.tsx:145
+#, javascript-format
+msgid ""
+"Partitions to boot will be set up if needed at the installation disk, based "
+"on the location of the %s file system."
+msgstr ""
+"При необходимости на установочном диске будут созданы разделы для загрузки в "
+"зависимости от расположения файловой системы %s."
+
 #: src/components/storage/BootSection.tsx:52
+#: src/components/storage/BootSelection.tsx:156
 #, javascript-format
 msgid ""
 "Partitions to boot will be set up if needed at the installation disk. "
 "Currently %1$s, based on the location of the %2$s file system."
 msgstr ""
 "Разделы для загрузки будут настроены при необходимости на установочном "
-"диске. В настоящее время %1$s, исходя из расположения файловой системы "
-"%2$s."
+"диске. В настоящее время %1$s, исходя из расположения файловой системы %2$s."
 
 #: src/components/storage/BootSection.tsx:65
 msgid "No partitions will be automatically configured for booting."
@@ -1843,6 +1853,7 @@ msgstr "Ни один раздел не будет автоматически н
 msgid "Partitions to boot will be set up if needed at %s."
 msgstr "Разделы для загрузки будут настроены при необходимости на %s."
 
+#: src/components/storage/BootSection.tsx:84
 #: src/components/storage/BootSelection.tsx:136
 msgid ""
 "To ensure the new system is able to boot, the installer may need to create "
@@ -1851,15 +1862,6 @@ msgstr ""
 "Чтобы обеспечить загрузку новой системы, программе установки может "
 "потребоваться создать или настроить некоторые разделы на соответствующем "
 "диске."
-
-#: src/components/storage/BootSelection.tsx:145
-#, javascript-format
-msgid ""
-"Partitions to boot will be set up if needed at the installation "
-"disk, based on the location of the %s file system."
-msgstr ""
-"При необходимости на установочном диске будут созданы разделы для загрузки в "
-"зависимости от расположения файловой системы %s."
 
 #: src/components/storage/BootSelection.tsx:175
 #: src/components/storage/ProposalPage.tsx:287
@@ -2199,8 +2201,8 @@ msgstr "Шифрование включено"
 
 #: src/components/storage/EncryptionSection.tsx:50
 msgid ""
-"Protection for the information stored at the new file systems, "
-"including data, programs, and system files."
+"Protection for the information stored at the new file systems, including "
+"data, programs, and system files."
 msgstr ""
 "Защита информации, хранящейся в новых файловых системах, включая данные, "
 "программы и системные файлы."
@@ -2489,9 +2491,8 @@ msgstr "Диски"
 #: src/components/storage/LvmPage.tsx:181
 msgid ""
 "The needed LVM physical volumes will be added as partitions on the chosen "
-"disks, based on the sizes of the logical volumes. If you "
-"select more than one disk, the physical volumes may be "
-"distributed along several disks."
+"disks, based on the sizes of the logical volumes. If you select more than "
+"one disk, the physical volumes may be distributed along several disks."
 msgstr ""
 "Необходимые физические тома LVM будут добавлены в качестве разделов на "
 "выбранных дисках, исходя из размеров логических томов. Если вы выберете "
@@ -2504,8 +2505,8 @@ msgstr "Переместить точки монтирования"
 
 #: src/components/storage/LvmPage.tsx:220
 msgid ""
-"Move the mount points currently configured at the selected disks to "
-"logical volumes of this volume group."
+"Move the mount points currently configured at the selected disks to logical "
+"volumes of this volume group."
 msgstr ""
 "Переместите точки монтирования, настроенные на выбранных дисках, на "
 "логические тома этой группы томов."
@@ -4075,16 +4076,16 @@ msgstr "LUN"
 
 #: src/components/storage/zfcp/ZFCPPage.tsx:53
 msgid ""
-"Automatic LUN scan is [enabled]. Activating a controller which is "
-"running in NPIV mode will automatically configures all its LUNs."
+"Automatic LUN scan is [enabled]. Activating a controller which is running in "
+"NPIV mode will automatically configures all its LUNs."
 msgstr ""
 "Автоматическое сканирование LUN [включено]. Активация контроллера, "
 "работающего в режиме NPIV, автоматически сконфигурирует все его LUNы."
 
 #: src/components/storage/zfcp/ZFCPPage.tsx:58
 msgid ""
-"Automatic LUN scan is [disabled]. LUNs have to be manually configured "
-"after activating a controller."
+"Automatic LUN scan is [disabled]. LUNs have to be manually configured after "
+"activating a controller."
 msgstr ""
 "Автоматическое сканирование LUN [отключено]. LUN должны быть настроены "
 "вручную после активации контроллера."
@@ -4420,12 +4421,11 @@ msgstr "ZFCP"
 #~ "следовать единица измерения."
 
 #~ msgid ""
-#~ "If the unit is omitted, bytes (B) will be used. Greater units can be "
-#~ "of the form GiB (power of 2) or GB (power of 10)."
+#~ "If the unit is omitted, bytes (B) will be used. Greater units can be of "
+#~ "the form GiB (power of 2) or GB (power of 10)."
 #~ msgstr ""
 #~ "Если единица измерения не указана, будут использоваться байты (B). Более "
-#~ "крупные единицы могут иметь вид GiB (степень 2) или GB "
-#~ "(степень 10)."
+#~ "крупные единицы могут иметь вид GiB (степень 2) или GB (степень 10)."
 
 #~ msgid "Minimum"
 #~ msgstr "Минимум"
@@ -4953,8 +4953,7 @@ msgstr "ZFCP"
 #~ msgstr "Выберите способ выделения файловой системы"
 
 #~ msgid ""
-#~ "The file system will be allocated as a new partition at the selected "
-#~ "disk."
+#~ "The file system will be allocated as a new partition at the selected disk."
 #~ msgstr ""
 #~ "Файловая система будет выделена в качестве нового раздела на выбранном "
 #~ "диске."
@@ -4963,8 +4962,8 @@ msgstr "ZFCP"
 #~ "A new volume group will be allocated in the selected disk and the file "
 #~ "system will be created as a logical volume."
 #~ msgstr ""
-#~ "На выбранном диске будет выделена новая группа томов, а файловая "
-#~ "система будет создана как логический том."
+#~ "На выбранном диске будет выделена новая группа томов, а файловая система "
+#~ "будет создана как логический том."
 
 #~ msgid "Mount the file system"
 #~ msgstr "Смонтировать файловую систему"

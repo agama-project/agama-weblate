@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-24 16:20+0000\n"
+"POT-Creation-Date: 2025-12-02 10:56+0000\n"
 "PO-Revision-Date: 2025-11-16 01:04+0000\n"
 "Last-Translator: \"James \\\"Jim\\\" Ed Randson\" <jimedrand@disroot.org>\n"
 "Language-Team: Indonesian <https://l10n.opensuse.org/projects/agama/agama-"
@@ -1817,14 +1817,25 @@ msgstr ""
 "Konfigurasi saat ini akan mengakibatkan upaya untuk membuat %1$s dengan "
 "jumlah minimal %2$s."
 
+#: src/components/storage/BootSection.tsx:41
+#: src/components/storage/BootSelection.tsx:145
+#, javascript-format
+msgid ""
+"Partitions to boot will be set up if needed at the installation disk, based "
+"on the location of the %s file system."
+msgstr ""
+"Partisi untuk booting akan dibuat jika diperlukan pada disk instalasi, "
+"berdasarkan lokasi sistem berkas %s."
+
 #: src/components/storage/BootSection.tsx:52
+#: src/components/storage/BootSelection.tsx:156
 #, javascript-format
 msgid ""
 "Partitions to boot will be set up if needed at the installation disk. "
 "Currently %1$s, based on the location of the %2$s file system."
 msgstr ""
-"Partisi untuk booting akan dibuat jika diperlukan pada disk instalasi. "
-"Saat ini %1$s, berdasarkan lokasi sistem berkas %2$s."
+"Partisi untuk booting akan dibuat jika diperlukan pada disk instalasi. Saat "
+"ini %1$s, berdasarkan lokasi sistem berkas %2$s."
 
 #: src/components/storage/BootSection.tsx:65
 msgid "No partitions will be automatically configured for booting."
@@ -1836,6 +1847,7 @@ msgstr "Partisi tidak akan dikonfigurasi secara otomatis untuk booting."
 msgid "Partitions to boot will be set up if needed at %s."
 msgstr "Partisi untuk booting akan disiapkan jika diperlukan di %s."
 
+#: src/components/storage/BootSection.tsx:84
 #: src/components/storage/BootSelection.tsx:136
 msgid ""
 "To ensure the new system is able to boot, the installer may need to create "
@@ -1843,15 +1855,6 @@ msgid ""
 msgstr ""
 "Untuk memastikan sistem baru dapat melakukan booting, penginstal mungkin "
 "perlu membuat atau mengonfigurasi beberapa partisi di disk yang sesuai."
-
-#: src/components/storage/BootSelection.tsx:145
-#, javascript-format
-msgid ""
-"Partitions to boot will be set up if needed at the installation "
-"disk, based on the location of the %s file system."
-msgstr ""
-"Partisi untuk booting akan dibuat jika diperlukan pada disk "
-"instalasi, berdasarkan lokasi sistem berkas %s."
 
 #: src/components/storage/BootSelection.tsx:175
 #: src/components/storage/ProposalPage.tsx:287
@@ -2186,8 +2189,8 @@ msgstr "Enkripsi diaktifkan"
 
 #: src/components/storage/EncryptionSection.tsx:50
 msgid ""
-"Protection for the information stored at the new file systems, "
-"including data, programs, and system files."
+"Protection for the information stored at the new file systems, including "
+"data, programs, and system files."
 msgstr ""
 "Pemeliharaan keamanan informasi yang disimpan pada sistem berkas baru, "
 "termasuk data, program, dan berkas sistem."
@@ -2470,14 +2473,12 @@ msgstr "Disk"
 #: src/components/storage/LvmPage.tsx:181
 msgid ""
 "The needed LVM physical volumes will be added as partitions on the chosen "
-"disks, based on the sizes of the logical volumes. If you "
-"select more than one disk, the physical volumes may be "
-"distributed along several disks."
+"disks, based on the sizes of the logical volumes. If you select more than "
+"one disk, the physical volumes may be distributed along several disks."
 msgstr ""
 "Volume fisik LVM yang diperlukan akan ditambahkan sebagai partisi pada disk "
-"yang dipilih, berdasarkan ukuran volume logis. Jika Anda "
-"memilih lebih dari satu disk, volume fisik mungkin "
-"didistribusikan ke beberapa disk."
+"yang dipilih, berdasarkan ukuran volume logis. Jika Anda memilih lebih dari "
+"satu disk, volume fisik mungkin didistribusikan ke beberapa disk."
 
 #: src/components/storage/LvmPage.tsx:216
 msgid "Move mount points"
@@ -2485,8 +2486,8 @@ msgstr "Pindahkan titik mount"
 
 #: src/components/storage/LvmPage.tsx:220
 msgid ""
-"Move the mount points currently configured at the selected disks to "
-"logical volumes of this volume group."
+"Move the mount points currently configured at the selected disks to logical "
+"volumes of this volume group."
 msgstr ""
 "Pindahkan titik mount yang saat ini dikonfigurasi pada disk yang dipilih ke "
 "volume logis dari grup volume ini."
@@ -4024,16 +4025,16 @@ msgstr "LUN"
 
 #: src/components/storage/zfcp/ZFCPPage.tsx:53
 msgid ""
-"Automatic LUN scan is [enabled]. Activating a controller which is "
-"running in NPIV mode will automatically configures all its LUNs."
+"Automatic LUN scan is [enabled]. Activating a controller which is running in "
+"NPIV mode will automatically configures all its LUNs."
 msgstr ""
 "Pemindaian LUN otomatis [diaktifkan]. Mengaktifkan pengontrol yang berjalan "
 "dalam mode NPIV akan secara otomatis mengonfigurasi semua LUN."
 
 #: src/components/storage/zfcp/ZFCPPage.tsx:58
 msgid ""
-"Automatic LUN scan is [disabled]. LUNs have to be manually configured "
-"after activating a controller."
+"Automatic LUN scan is [disabled]. LUNs have to be manually configured after "
+"activating a controller."
 msgstr ""
 "Pemindaian LUN otomatis [dinonaktifkan]. LUN harus dikonfigurasi secara "
 "manual setelah mengaktifkan pengontrol."
@@ -4880,8 +4881,7 @@ msgstr "ZFCP"
 #~ msgstr "Pilih cara mengalokasikan sistem file"
 
 #~ msgid ""
-#~ "The file system will be allocated as a new partition at the selected "
-#~ "disk."
+#~ "The file system will be allocated as a new partition at the selected disk."
 #~ msgstr ""
 #~ "Sistem file akan dialokasikan sebagai partisi baru pada disk yang dipilih."
 

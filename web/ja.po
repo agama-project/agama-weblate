@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-24 16:20+0000\n"
+"POT-Creation-Date: 2025-12-02 10:56+0000\n"
 "PO-Revision-Date: 2025-12-03 03:04+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -1801,14 +1801,25 @@ msgid ""
 "least %2$s."
 msgstr "現在の設定では少なくとも %2$s の %1$s を作成する予定になります。"
 
+#: src/components/storage/BootSection.tsx:41
+#: src/components/storage/BootSelection.tsx:145
+#, javascript-format
+msgid ""
+"Partitions to boot will be set up if needed at the installation disk, based "
+"on the location of the %s file system."
+msgstr ""
+"ファイルシステム %s の配置場所に応じて 、 必要であればインストール先のディス"
+"ク内に起動用のパーティションを割り当てます。"
+
 #: src/components/storage/BootSection.tsx:52
+#: src/components/storage/BootSelection.tsx:156
 #, javascript-format
 msgid ""
 "Partitions to boot will be set up if needed at the installation disk. "
 "Currently %1$s, based on the location of the %2$s file system."
 msgstr ""
-"ファイルシステム %2$s の配置場所に応じて (現時点では %1$s) 、 必要で"
-"あればインストール先のディスク内に起動用のパーティションを割り当てます。"
+"ファイルシステム %2$s の配置場所に応じて (現時点では %1$s) 、 必要であればイ"
+"ンストール先のディスク内に起動用のパーティションを割り当てます。"
 
 #: src/components/storage/BootSection.tsx:65
 msgid "No partitions will be automatically configured for booting."
@@ -1820,6 +1831,7 @@ msgstr "起動用のパーティションを自動設定しません。"
 msgid "Partitions to boot will be set up if needed at %s."
 msgstr "%s 内に起動用のパーティションを設定します。"
 
+#: src/components/storage/BootSection.tsx:84
 #: src/components/storage/BootSelection.tsx:136
 msgid ""
 "To ensure the new system is able to boot, the installer may need to create "
@@ -1827,15 +1839,6 @@ msgid ""
 msgstr ""
 "システムを起動できるようにするため、インストーラはディスク内にいくつかの追加"
 "パーティションを作成もしくは設定する必要があるかもしれません。"
-
-#: src/components/storage/BootSelection.tsx:145
-#, javascript-format
-msgid ""
-"Partitions to boot will be set up if needed at the installation "
-"disk, based on the location of the %s file system."
-msgstr ""
-"ファイルシステム %s の配置場所に応じて 、 必要であればインストール先"
-"のディスク内に起動用のパーティションを割り当てます。"
 
 #: src/components/storage/BootSelection.tsx:175
 #: src/components/storage/ProposalPage.tsx:287
@@ -2167,9 +2170,10 @@ msgstr "暗号化は有効化されています"
 
 #: src/components/storage/EncryptionSection.tsx:50
 msgid ""
-"Protection for the information stored at the new file systems, "
-"including data, programs, and system files."
-msgstr "データやプログラム、システムファイルなど、新しく作成するファイルシステム内に"
+"Protection for the information stored at the new file systems, including "
+"data, programs, and system files."
+msgstr ""
+"データやプログラム、システムファイルなど、新しく作成するファイルシステム内に"
 "配置される情報への保護を行います。"
 
 #: src/components/storage/EncryptionSettingsPage.tsx:75
@@ -2453,9 +2457,8 @@ msgstr "ディスク"
 #: src/components/storage/LvmPage.tsx:181
 msgid ""
 "The needed LVM physical volumes will be added as partitions on the chosen "
-"disks, based on the sizes of the logical volumes. If you "
-"select more than one disk, the physical volumes may be "
-"distributed along several disks."
+"disks, based on the sizes of the logical volumes. If you select more than "
+"one disk, the physical volumes may be distributed along several disks."
 msgstr ""
 "必要な LVM 物理ボリュームは、論理ボリュームのサイズを元に、選択したディスク内"
 "のパーティションとして追加されます。複数のディスクを選択した場合、物理ボ"
@@ -2467,8 +2470,8 @@ msgstr "マウントポイントの移動"
 
 #: src/components/storage/LvmPage.tsx:220
 msgid ""
-"Move the mount points currently configured at the selected disks to "
-"logical volumes of this volume group."
+"Move the mount points currently configured at the selected disks to logical "
+"volumes of this volume group."
 msgstr ""
 "選択したディスク内に設定されたマウントポイントを、このボリュームグループの論"
 "理ボリュームに移動します。"
@@ -3989,16 +3992,16 @@ msgstr "LUN"
 
 #: src/components/storage/zfcp/ZFCPPage.tsx:53
 msgid ""
-"Automatic LUN scan is [enabled]. Activating a controller which is "
-"running in NPIV mode will automatically configures all its LUNs."
+"Automatic LUN scan is [enabled]. Activating a controller which is running in "
+"NPIV mode will automatically configures all its LUNs."
 msgstr ""
 "自動 LUN スキャンが [有効化] されています。 NPIV モードで動作しているコント"
 "ローラを有効化した場合、その LUN は全て自動的に設定されます。"
 
 #: src/components/storage/zfcp/ZFCPPage.tsx:58
 msgid ""
-"Automatic LUN scan is [disabled]. LUNs have to be manually configured "
-"after activating a controller."
+"Automatic LUN scan is [disabled]. LUNs have to be manually configured after "
+"activating a controller."
 msgstr ""
 "自動 LUN スキャンが [無効化] されています。 LUN はコントローラの有効化後、手"
 "作業で設定しなければなりません。"
@@ -4330,8 +4333,8 @@ msgstr "ZFCP"
 #~ "サイズには単位付きもしくは単位無しの数値を入力しなければなりません。"
 
 #~ msgid ""
-#~ "If the unit is omitted, bytes (B) will be used. Greater units can be "
-#~ "of the form GiB (power of 2) or GB (power of 10)."
+#~ "If the unit is omitted, bytes (B) will be used. Greater units can be of "
+#~ "the form GiB (power of 2) or GB (power of 10)."
 #~ msgstr ""
 #~ "単位を省略した場合はバイト (B) 単位であるものとみなされます。なお、単位は "
 #~ "GiB のように 2 のべき乗のほか、 GB のように 10 のべき乗でも指定することが"
@@ -4907,8 +4910,7 @@ msgstr "ZFCP"
 #~ msgstr "ファイルシステムの割り当て方法を選択してください"
 
 #~ msgid ""
-#~ "The file system will be allocated as a new partition at the selected "
-#~ "disk."
+#~ "The file system will be allocated as a new partition at the selected disk."
 #~ msgstr ""
 #~ "ファイルシステムは選択したディスク内の新規パーティションとして割り当てま"
 #~ "す。"

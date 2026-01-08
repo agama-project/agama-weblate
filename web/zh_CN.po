@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-24 16:20+0000\n"
+"POT-Creation-Date: 2025-12-02 10:56+0000\n"
 "PO-Revision-Date: 2025-09-11 02:59+0000\n"
 "Last-Translator: Grace Yu <grace.yu@excel-gits.com>\n"
 "Language-Team: Chinese (China) <https://l10n.opensuse.org/projects/agama/"
@@ -1734,7 +1734,16 @@ msgid ""
 "least %2$s."
 msgstr "当前配置将会导致尝试创建一个 %1$s（至少 %2$s）。"
 
+#: src/components/storage/BootSection.tsx:41
+#: src/components/storage/BootSelection.tsx:145
+#, fuzzy, javascript-format
+msgid ""
+"Partitions to boot will be set up if needed at the installation disk, based "
+"on the location of the %s file system."
+msgstr "引导分区将在安装磁盘 %s 上进行分配。"
+
 #: src/components/storage/BootSection.tsx:52
+#: src/components/storage/BootSelection.tsx:156
 #, javascript-format
 msgid ""
 "Partitions to boot will be set up if needed at the installation disk. "
@@ -1752,18 +1761,12 @@ msgstr "不会自动配置任何用于启动的分区。请谨慎使用。"
 msgid "Partitions to boot will be set up if needed at %s."
 msgstr "引导分区将会分配在安装磁盘上。"
 
+#: src/components/storage/BootSection.tsx:84
 #: src/components/storage/BootSelection.tsx:136
 msgid ""
 "To ensure the new system is able to boot, the installer may need to create "
 "or configure some partitions in the appropriate disk."
 msgstr "为确保新系统能够启动，安装程序将需要在适当的磁盘中创建或配置一些分区。"
-
-#: src/components/storage/BootSelection.tsx:145
-#, fuzzy, javascript-format
-msgid ""
-"Partitions to boot will be set up if needed at the installation "
-"disk, based on the location of the %s file system."
-msgstr "引导分区将在安装磁盘 %s 上进行分配。"
 
 #: src/components/storage/BootSelection.tsx:175
 #: src/components/storage/ProposalPage.tsx:287
@@ -2092,8 +2095,8 @@ msgstr "已启用加密功能"
 #: src/components/storage/EncryptionSection.tsx:50
 #, fuzzy
 msgid ""
-"Protection for the information stored at the new file systems, "
-"including data, programs, and system files."
+"Protection for the information stored at the new file systems, including "
+"data, programs, and system files."
 msgstr "用于保护存储在新文件系统中的信息（包括数据、程序以及系统文件）的机制。"
 
 #: src/components/storage/EncryptionSettingsPage.tsx:75
@@ -2364,12 +2367,11 @@ msgstr "磁盘"
 #: src/components/storage/LvmPage.tsx:181
 msgid ""
 "The needed LVM physical volumes will be added as partitions on the chosen "
-"disks, based on the sizes of the logical volumes. If you "
-"select more than one disk, the physical volumes may be "
-"distributed along several disks."
+"disks, based on the sizes of the logical volumes. If you select more than "
+"one disk, the physical volumes may be distributed along several disks."
 msgstr ""
-"所需的 LVM 物理卷将根据逻辑卷的大小，作为分区 添加到所选磁盘"
-"上。如果选择多个磁盘， 物理卷可能会分布在多个磁盘上。"
+"所需的 LVM 物理卷将根据逻辑卷的大小，作为分区 添加到所选磁盘上。如果选择多个"
+"磁盘， 物理卷可能会分布在多个磁盘上。"
 
 #: src/components/storage/LvmPage.tsx:216
 msgid "Move mount points"
@@ -2377,8 +2379,8 @@ msgstr "移动挂载点"
 
 #: src/components/storage/LvmPage.tsx:220
 msgid ""
-"Move the mount points currently configured at the selected disks to "
-"logical volumes of this volume group."
+"Move the mount points currently configured at the selected disks to logical "
+"volumes of this volume group."
 msgstr "将所选磁盘上当前配置的挂载点移动到此卷组的逻辑卷。"
 
 #. TRANSLATORS: %s will be replaced by a RAID name and its size - "md0 (20 GiB)"
@@ -3862,16 +3864,16 @@ msgstr "LUN"
 
 #: src/components/storage/zfcp/ZFCPPage.tsx:53
 msgid ""
-"Automatic LUN scan is [enabled]. Activating a controller which is "
-"running in NPIV mode will automatically configures all its LUNs."
+"Automatic LUN scan is [enabled]. Activating a controller which is running in "
+"NPIV mode will automatically configures all its LUNs."
 msgstr ""
-"自动扫描 LUN 功能[已启用]。如果激活在 NPIV 模式下 运行的控制器，将自动"
-"配置其所有 LUN。"
+"自动扫描 LUN 功能[已启用]。如果激活在 NPIV 模式下 运行的控制器，将自动配置其"
+"所有 LUN。"
 
 #: src/components/storage/zfcp/ZFCPPage.tsx:58
 msgid ""
-"Automatic LUN scan is [disabled]. LUNs have to be manually configured "
-"after activating a controller."
+"Automatic LUN scan is [disabled]. LUNs have to be manually configured after "
+"activating a controller."
 msgstr "自动扫描 LUN 功能[已停用]。激活控制器后必须手动配置 LUN。"
 
 #: src/components/storage/zfcp/ZFCPPage.tsx:79
@@ -4187,11 +4189,11 @@ msgstr "ZFCP"
 #~ msgstr "输入的大小必须为数字，可选择性附带单位。"
 
 #~ msgid ""
-#~ "If the unit is omitted, bytes (B) will be used. Greater units can be "
-#~ "of the form GiB (power of 2) or GB (power of 10)."
+#~ "If the unit is omitted, bytes (B) will be used. Greater units can be of "
+#~ "the form GiB (power of 2) or GB (power of 10)."
 #~ msgstr ""
-#~ "如果未指定单位，则使用字节 (B)。更大的单位可以采用 GiB（2 的"
-#~ "幂次）或 GB（10 的幂次）的形式。"
+#~ "如果未指定单位，则使用字节 (B)。更大的单位可以采用 GiB（2 的幂次）或 GB"
+#~ "（10 的幂次）的形式。"
 
 #~ msgid "Minimum"
 #~ msgstr "最小"
@@ -4696,8 +4698,7 @@ msgstr "ZFCP"
 #~ msgstr "选择如何分配文件系统"
 
 #~ msgid ""
-#~ "The file system will be allocated as a new partition at the selected "
-#~ "disk."
+#~ "The file system will be allocated as a new partition at the selected disk."
 #~ msgstr "文件系统将被分配为所选 磁盘上的新分区。"
 
 #~ msgid ""

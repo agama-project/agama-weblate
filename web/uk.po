@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-24 16:20+0000\n"
+"POT-Creation-Date: 2025-12-02 10:56+0000\n"
 "PO-Revision-Date: 2025-12-08 17:04+0000\n"
 "Last-Translator: Eugene Krater <lachend@gmail.com>\n"
 "Language-Team: Ukrainian <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -1813,15 +1813,26 @@ msgstr ""
 "Поточна конфігурація призведе до спроби утворення розділу %1$s розміром "
 "щонайменше %2$s."
 
+#: src/components/storage/BootSection.tsx:41
+#: src/components/storage/BootSelection.tsx:145
+#, javascript-format
+msgid ""
+"Partitions to boot will be set up if needed at the installation disk, based "
+"on the location of the %s file system."
+msgstr ""
+"Розділи для завантаження будуть налаштовані за необхідності на "
+"інсталяційному диску, виходячи з розташування файлової системи %s."
+
 #: src/components/storage/BootSection.tsx:52
+#: src/components/storage/BootSelection.tsx:156
 #, javascript-format
 msgid ""
 "Partitions to boot will be set up if needed at the installation disk. "
 "Currently %1$s, based on the location of the %2$s file system."
 msgstr ""
 "Розділи для завантаження будуть налаштовані за необхідності на "
-"інсталяційному диску. Наразі %1$s, виходячи з розташування файлової "
-"системи %2$s."
+"інсталяційному диску. Наразі %1$s, виходячи з розташування файлової системи "
+"%2$s."
 
 #: src/components/storage/BootSection.tsx:65
 msgid "No partitions will be automatically configured for booting."
@@ -1833,6 +1844,7 @@ msgstr "Для завантаження автоматично не буде н�
 msgid "Partitions to boot will be set up if needed at %s."
 msgstr "Розділи для завантаження будуть налаштовані за необхідності в %s."
 
+#: src/components/storage/BootSection.tsx:84
 #: src/components/storage/BootSelection.tsx:136
 msgid ""
 "To ensure the new system is able to boot, the installer may need to create "
@@ -1841,15 +1853,6 @@ msgstr ""
 "Щоб забезпечити можливість завантаження нової системи, програмі встановлення "
 "може знадобитися створити або налаштувати деякі розділи на відповідному "
 "диску."
-
-#: src/components/storage/BootSelection.tsx:145
-#, javascript-format
-msgid ""
-"Partitions to boot will be set up if needed at the installation "
-"disk, based on the location of the %s file system."
-msgstr ""
-"Розділи для завантаження будуть налаштовані за необхідності на "
-"інсталяційному диску, виходячи з розташування файлової системи %s."
 
 #: src/components/storage/BootSelection.tsx:175
 #: src/components/storage/ProposalPage.tsx:287
@@ -2189,8 +2192,8 @@ msgstr "Шифрування увімкнено"
 
 #: src/components/storage/EncryptionSection.tsx:50
 msgid ""
-"Protection for the information stored at the new file systems, "
-"including data, programs, and system files."
+"Protection for the information stored at the new file systems, including "
+"data, programs, and system files."
 msgstr ""
 "Захист інформації, що зберігається на нових файлових системах, включно з "
 "даними, програмами та системними файлами."
@@ -2478,9 +2481,8 @@ msgstr "Диски"
 #: src/components/storage/LvmPage.tsx:181
 msgid ""
 "The needed LVM physical volumes will be added as partitions on the chosen "
-"disks, based on the sizes of the logical volumes. If you "
-"select more than one disk, the physical volumes may be "
-"distributed along several disks."
+"disks, based on the sizes of the logical volumes. If you select more than "
+"one disk, the physical volumes may be distributed along several disks."
 msgstr ""
 "Необхідні фізичні томи LVM будуть додані як розділи на обраних дисках, "
 "виходячи з розмірів логічних томів. Якщо Ви виберете кілька дисків, фізичні "
@@ -2492,11 +2494,11 @@ msgstr "Перемістити точки монтування"
 
 #: src/components/storage/LvmPage.tsx:220
 msgid ""
-"Move the mount points currently configured at the selected disks to "
-"logical volumes of this volume group."
+"Move the mount points currently configured at the selected disks to logical "
+"volumes of this volume group."
 msgstr ""
-"Перемістіть точки монтування, налаштовані на вибраних "
-"дисках, на логічні томи цієї групи томів."
+"Перемістіть точки монтування, налаштовані на вибраних дисках, на логічні "
+"томи цієї групи томів."
 
 #. TRANSLATORS: %s will be replaced by a RAID name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:33
@@ -4061,19 +4063,19 @@ msgstr "LUN"
 
 #: src/components/storage/zfcp/ZFCPPage.tsx:53
 msgid ""
-"Automatic LUN scan is [enabled]. Activating a controller which is "
-"running in NPIV mode will automatically configures all its LUNs."
+"Automatic LUN scan is [enabled]. Activating a controller which is running in "
+"NPIV mode will automatically configures all its LUNs."
 msgstr ""
-"Автоматичне сканування LUN [увімкнено]. Активація контролера, що "
-"працює в режимі NPIV, автоматично сконфігурує всі його LUNи."
+"Автоматичне сканування LUN [увімкнено]. Активація контролера, що працює в "
+"режимі NPIV, автоматично сконфігурує всі його LUNи."
 
 #: src/components/storage/zfcp/ZFCPPage.tsx:58
 msgid ""
-"Automatic LUN scan is [disabled]. LUNs have to be manually configured "
-"after activating a controller."
+"Automatic LUN scan is [disabled]. LUNs have to be manually configured after "
+"activating a controller."
 msgstr ""
-"Автоматичне сканування LUN [вимкнено]. LUN мають бути налаштовані "
-"вручну після активації контролера."
+"Автоматичне сканування LUN [вимкнено]. LUN мають бути налаштовані вручну "
+"після активації контролера."
 
 #: src/components/storage/zfcp/ZFCPPage.tsx:79
 msgid "Please, try to activate a zFCP disk."
@@ -4406,12 +4408,11 @@ msgstr "ZFCP"
 #~ "одиницю виміру."
 
 #~ msgid ""
-#~ "If the unit is omitted, bytes (B) will be used. Greater units can be "
-#~ "of the form GiB (power of 2) or GB (power of 10)."
+#~ "If the unit is omitted, bytes (B) will be used. Greater units can be of "
+#~ "the form GiB (power of 2) or GB (power of 10)."
 #~ msgstr ""
 #~ "Якщо одиницю виміру не вказано, буде використано байти (B). Більші "
-#~ "одиниці можуть мати вигляд GiB (кратно 2) або GB (кратно "
-#~ "10)."
+#~ "одиниці можуть мати вигляд GiB (кратно 2) або GB (кратно 10)."
 
 #~ msgid "Minimum"
 #~ msgstr "Мінімум"
@@ -4957,18 +4958,16 @@ msgstr "ZFCP"
 #~ msgstr "Виберіть спосіб розподілу файлової системи"
 
 #~ msgid ""
-#~ "The file system will be allocated as a new partition at the selected "
-#~ "disk."
+#~ "The file system will be allocated as a new partition at the selected disk."
 #~ msgstr ""
-#~ "Файлову систему буде виділено у вигляді нового розділу на вибраному "
-#~ "диску."
+#~ "Файлову систему буде виділено у вигляді нового розділу на вибраному диску."
 
 #~ msgid ""
 #~ "A new volume group will be allocated in the selected disk and the file "
 #~ "system will be created as a logical volume."
 #~ msgstr ""
-#~ "На обраному диску буде виділено нову групу томів, а файлову систему "
-#~ "буде створено як логічний том."
+#~ "На обраному диску буде виділено нову групу томів, а файлову систему буде "
+#~ "створено як логічний том."
 
 #~ msgid "Mount the file system"
 #~ msgstr "Змонтувати файлову систему"

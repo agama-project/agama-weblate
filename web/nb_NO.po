@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-24 16:20+0000\n"
+"POT-Creation-Date: 2025-12-02 10:56+0000\n"
 "PO-Revision-Date: 2024-06-29 13:46+0000\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.opensuse.org/projects/agama/"
@@ -1803,7 +1803,16 @@ msgid ""
 "least %2$s."
 msgstr ""
 
+#: src/components/storage/BootSection.tsx:41
+#: src/components/storage/BootSelection.tsx:145
+#, fuzzy, javascript-format
+msgid ""
+"Partitions to boot will be set up if needed at the installation disk, based "
+"on the location of the %s file system."
+msgstr "Partisjoner for oppstart vil bli tildelt på installasjonsdisken (%s)."
+
 #: src/components/storage/BootSection.tsx:52
+#: src/components/storage/BootSelection.tsx:156
 #, javascript-format
 msgid ""
 "Partitions to boot will be set up if needed at the installation disk. "
@@ -1823,6 +1832,7 @@ msgstr ""
 msgid "Partitions to boot will be set up if needed at %s."
 msgstr "Partisjoner for oppstart vil bli tildelt på installasjonsdisken."
 
+#: src/components/storage/BootSection.tsx:84
 #: src/components/storage/BootSelection.tsx:136
 msgid ""
 "To ensure the new system is able to boot, the installer may need to create "
@@ -1831,13 +1841,6 @@ msgstr ""
 "For å sikre at det nye systemet er i stand til oppstart, så må kanskje "
 "installasjonsprogrammet opprette eller konfigurere noen partisjoner på "
 "riktig disk."
-
-#: src/components/storage/BootSelection.tsx:145
-#, fuzzy, javascript-format
-msgid ""
-"Partitions to boot will be set up if needed at the installation "
-"disk, based on the location of the %s file system."
-msgstr "Partisjoner for oppstart vil bli tildelt på installasjonsdisken (%s)."
 
 #: src/components/storage/BootSelection.tsx:175
 #: src/components/storage/ProposalPage.tsx:287
@@ -2192,8 +2195,8 @@ msgstr "Krypteringspassord"
 #: src/components/storage/EncryptionSection.tsx:50
 #, fuzzy
 msgid ""
-"Protection for the information stored at the new file systems, "
-"including data, programs, and system files."
+"Protection for the information stored at the new file systems, including "
+"data, programs, and system files."
 msgstr ""
 "Beskyttelse for informasjonen lagret på enheten, inkludert data, programmer, "
 "og systemfiler."
@@ -2497,9 +2500,8 @@ msgstr "Disker"
 #: src/components/storage/LvmPage.tsx:181
 msgid ""
 "The needed LVM physical volumes will be added as partitions on the chosen "
-"disks, based on the sizes of the logical volumes. If you "
-"select more than one disk, the physical volumes may be "
-"distributed along several disks."
+"disks, based on the sizes of the logical volumes. If you select more than "
+"one disk, the physical volumes may be distributed along several disks."
 msgstr ""
 
 #: src/components/storage/LvmPage.tsx:216
@@ -2509,8 +2511,8 @@ msgstr "Monteringspunkt"
 
 #: src/components/storage/LvmPage.tsx:220
 msgid ""
-"Move the mount points currently configured at the selected disks to "
-"logical volumes of this volume group."
+"Move the mount points currently configured at the selected disks to logical "
+"volumes of this volume group."
 msgstr ""
 
 #. TRANSLATORS: %s will be replaced by a RAID name and its size - "md0 (20 GiB)"
@@ -4097,8 +4099,8 @@ msgstr "LUN"
 #: src/components/storage/zfcp/ZFCPPage.tsx:53
 #, fuzzy
 msgid ""
-"Automatic LUN scan is [enabled]. Activating a controller which is "
-"running in NPIV mode will automatically configures all its LUNs."
+"Automatic LUN scan is [enabled]. Activating a controller which is running in "
+"NPIV mode will automatically configures all its LUNs."
 msgstr ""
 "Automatisk LUN skanning er [aktivert]. Aktivering av en kontroller som "
 "kjører i NPIV modus vil automatisk konfigurere alle dens LUNs."
@@ -4106,8 +4108,8 @@ msgstr ""
 #: src/components/storage/zfcp/ZFCPPage.tsx:58
 #, fuzzy
 msgid ""
-"Automatic LUN scan is [disabled]. LUNs have to be manually configured "
-"after activating a controller."
+"Automatic LUN scan is [disabled]. LUNs have to be manually configured after "
+"activating a controller."
 msgstr ""
 "Automatisk LUN skanning er [deaktivert]. LUN's må være manuelt konfigurert "
 "etter å ha aktivert en kontroller."
@@ -4933,8 +4935,7 @@ msgstr ""
 #~ msgstr "Velg hvordan filsystemet skal allokeres"
 
 #~ msgid ""
-#~ "The file system will be allocated as a new partition at the selected "
-#~ "disk."
+#~ "The file system will be allocated as a new partition at the selected disk."
 #~ msgstr ""
 #~ "Filsystemet vil bli allokert som en ny partisjon på den valgte disken."
 

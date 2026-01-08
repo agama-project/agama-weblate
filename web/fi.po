@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-24 16:20+0000\n"
+"POT-Creation-Date: 2025-12-02 10:56+0000\n"
 "PO-Revision-Date: 2025-11-24 15:04+0000\n"
 "Last-Translator: Timo Jyrinki <tjyrinki@suse.com>\n"
 "Language-Team: Finnish <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -1804,7 +1804,18 @@ msgid ""
 msgstr ""
 "Nykyisillä asetuksilla %1$s kooltaan vähintään %2$s tullaan yrittämään luoda."
 
+#: src/components/storage/BootSection.tsx:41
+#: src/components/storage/BootSelection.tsx:145
+#, javascript-format
+msgid ""
+"Partitions to boot will be set up if needed at the installation disk, based "
+"on the location of the %s file system."
+msgstr ""
+"Käynnistämiseen tarvittavat osiot otetaan käyttöön tarvittaessa "
+"asennuslevyltä, perustuen %s-tiedostojärjestelmän sijaintiin."
+
 #: src/components/storage/BootSection.tsx:52
+#: src/components/storage/BootSelection.tsx:156
 #, javascript-format
 msgid ""
 "Partitions to boot will be set up if needed at the installation disk. "
@@ -1826,6 +1837,7 @@ msgid "Partitions to boot will be set up if needed at %s."
 msgstr ""
 "Käynnistämiseen tarvittavat osiot otetaan käyttöön tarvittaessa kohteessa %s."
 
+#: src/components/storage/BootSection.tsx:84
 #: src/components/storage/BootSelection.tsx:136
 msgid ""
 "To ensure the new system is able to boot, the installer may need to create "
@@ -1833,15 +1845,6 @@ msgid ""
 msgstr ""
 "Jotta järjestelmä käynnistyisi, asennusohjelman saattaa täytyä luoda tai "
 "tehdä osioiden asetusmuutoksia soveltuvalla levyllä."
-
-#: src/components/storage/BootSelection.tsx:145
-#, javascript-format
-msgid ""
-"Partitions to boot will be set up if needed at the installation "
-"disk, based on the location of the %s file system."
-msgstr ""
-"Käynnistämiseen tarvittavat osiot otetaan käyttöön tarvittaessa "
-"asennuslevyltä, perustuen %s-tiedostojärjestelmän sijaintiin."
 
 #: src/components/storage/BootSelection.tsx:175
 #: src/components/storage/ProposalPage.tsx:287
@@ -2179,11 +2182,11 @@ msgstr "Salaus on käytössä"
 
 #: src/components/storage/EncryptionSection.tsx:50
 msgid ""
-"Protection for the information stored at the new file systems, "
-"including data, programs, and system files."
+"Protection for the information stored at the new file systems, including "
+"data, programs, and system files."
 msgstr ""
-"Uusien tiedostojärjestelmien tietojen turvaaminen, mukaanlukien "
-"data, ohjelmistot ja järjestelmätiedostot."
+"Uusien tiedostojärjestelmien tietojen turvaaminen, mukaanlukien data, "
+"ohjelmistot ja järjestelmätiedostot."
 
 #: src/components/storage/EncryptionSettingsPage.tsx:75
 #: src/components/users/RootUserForm.tsx:104
@@ -2461,14 +2464,12 @@ msgstr "Levyt"
 #: src/components/storage/LvmPage.tsx:181
 msgid ""
 "The needed LVM physical volumes will be added as partitions on the chosen "
-"disks, based on the sizes of the logical volumes. If you "
-"select more than one disk, the physical volumes may be "
-"distributed along several disks."
+"disks, based on the sizes of the logical volumes. If you select more than "
+"one disk, the physical volumes may be distributed along several disks."
 msgstr ""
-"Vaaditut fyysiset LVM-taltiot lisätään osioina valituille "
-"levyille, perustuen loogisten taltioiden kokoihin. Jos "
-"valitse useamman kuin yhden levyn fyysiset taltiot saatetaan "
-"jakaa usean levyn välille."
+"Vaaditut fyysiset LVM-taltiot lisätään osioina valituille levyille, "
+"perustuen loogisten taltioiden kokoihin. Jos valitse useamman kuin yhden "
+"levyn fyysiset taltiot saatetaan jakaa usean levyn välille."
 
 #: src/components/storage/LvmPage.tsx:216
 msgid "Move mount points"
@@ -2476,11 +2477,11 @@ msgstr "Siirrä liitoskohtia"
 
 #: src/components/storage/LvmPage.tsx:220
 msgid ""
-"Move the mount points currently configured at the selected disks to "
-"logical volumes of this volume group."
+"Move the mount points currently configured at the selected disks to logical "
+"volumes of this volume group."
 msgstr ""
-"Siirrä nykyisten valittujen levyjen asetettuja liitoskohtia "
-"tämän taltioryhmän loogisille taltioille."
+"Siirrä nykyisten valittujen levyjen asetettuja liitoskohtia tämän "
+"taltioryhmän loogisille taltioille."
 
 #. TRANSLATORS: %s will be replaced by a RAID name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:33
@@ -4021,17 +4022,16 @@ msgstr "LUN"
 
 #: src/components/storage/zfcp/ZFCPPage.tsx:53
 msgid ""
-"Automatic LUN scan is [enabled]. Activating a controller which is "
-"running in NPIV mode will automatically configures all its LUNs."
+"Automatic LUN scan is [enabled]. Activating a controller which is running in "
+"NPIV mode will automatically configures all its LUNs."
 msgstr ""
-"Automaattinen LUN-skannaus on [käytössä]. NPIV-tilassa toimivan "
-"ohjaimen aktivoiminen määrittää automaattisesti kaikkien LUNien "
-"asetukset."
+"Automaattinen LUN-skannaus on [käytössä]. NPIV-tilassa toimivan ohjaimen "
+"aktivoiminen määrittää automaattisesti kaikkien LUNien asetukset."
 
 #: src/components/storage/zfcp/ZFCPPage.tsx:58
 msgid ""
-"Automatic LUN scan is [disabled]. LUNs have to be manually configured "
-"after activating a controller."
+"Automatic LUN scan is [disabled]. LUNs have to be manually configured after "
+"activating a controller."
 msgstr ""
 "Automaattinen LUN-skannaus on [pois käytöstä]. LUNien asetukset tulee "
 "määrittää käsin ohjaimen aktivoinnin jälkeen."

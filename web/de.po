@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-24 16:20+0000\n"
+"POT-Creation-Date: 2025-12-02 10:56+0000\n"
 "PO-Revision-Date: 2025-12-24 00:04+0000\n"
 "Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
-"Language-Team: German <https://l10n.opensuse.org/projects/agama/agama-web/"
-"de/>\n"
+"Language-Team: German <https://l10n.opensuse.org/projects/agama/agama-web/de/"
+">\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1840,7 +1840,18 @@ msgstr ""
 "Die aktuelle Konfiguration führt zu einem Versuch, eine %1$s mit mindestens "
 "%2$s zu erstellen."
 
+#: src/components/storage/BootSection.tsx:41
+#: src/components/storage/BootSelection.tsx:145
+#, javascript-format
+msgid ""
+"Partitions to boot will be set up if needed at the installation disk, based "
+"on the location of the %s file system."
+msgstr ""
+"Partitionen zum Booten werden bei Bedarf auf der Installationsfestplatte "
+"eingerichtet, basierend auf dem Speicherort des Dateisystems %s."
+
 #: src/components/storage/BootSection.tsx:52
+#: src/components/storage/BootSelection.tsx:156
 #, javascript-format
 msgid ""
 "Partitions to boot will be set up if needed at the installation disk. "
@@ -1857,6 +1868,7 @@ msgstr "Es werden keine Partitionen automatisch für das Booten konfiguriert."
 msgid "Partitions to boot will be set up if needed at %s."
 msgstr "Partitionen zum Booten werden bei Bedarf unter %s eingerichtet."
 
+#: src/components/storage/BootSection.tsx:84
 #: src/components/storage/BootSelection.tsx:136
 msgid ""
 "To ensure the new system is able to boot, the installer may need to create "
@@ -1865,15 +1877,6 @@ msgstr ""
 "Um sicherzustellen, dass das neue System starten kann, muss das "
 "Installationsprogramm möglicherweise einige Partitionen auf der "
 "entsprechenden Festplatte erstellen oder konfigurieren."
-
-#: src/components/storage/BootSelection.tsx:145
-#, javascript-format
-msgid ""
-"Partitions to boot will be set up if needed at the installation "
-"disk, based on the location of the %s file system."
-msgstr ""
-"Partitionen zum Booten werden bei Bedarf auf der Installationsfestplatte "
-"eingerichtet, basierend auf dem Speicherort des Dateisystems %s."
 
 #: src/components/storage/BootSelection.tsx:175
 #: src/components/storage/ProposalPage.tsx:287
@@ -2222,8 +2225,8 @@ msgstr "Verschlüsselung ist aktiviert"
 
 #: src/components/storage/EncryptionSection.tsx:50
 msgid ""
-"Protection for the information stored at the new file systems, "
-"including data, programs, and system files."
+"Protection for the information stored at the new file systems, including "
+"data, programs, and system files."
 msgstr ""
 "Schutz für die in den neuen Dateisystemen gespeicherten Informationen, "
 "einschließlich Daten, Programme und Systemdateien."
@@ -2514,9 +2517,8 @@ msgstr "Festplatten"
 #: src/components/storage/LvmPage.tsx:181
 msgid ""
 "The needed LVM physical volumes will be added as partitions on the chosen "
-"disks, based on the sizes of the logical volumes. If you "
-"select more than one disk, the physical volumes may be "
-"distributed along several disks."
+"disks, based on the sizes of the logical volumes. If you select more than "
+"one disk, the physical volumes may be distributed along several disks."
 msgstr ""
 "Die benötigten physikalischen LVM-Volumes werden als Partitionen auf den "
 "ausgewählten Festplatten hinzugefügt, basierend auf den Größen der logischen "
@@ -2529,8 +2531,8 @@ msgstr "Einhängepunkte verschieben"
 
 #: src/components/storage/LvmPage.tsx:220
 msgid ""
-"Move the mount points currently configured at the selected disks to "
-"logical volumes of this volume group."
+"Move the mount points currently configured at the selected disks to logical "
+"volumes of this volume group."
 msgstr ""
 "Verschieben Sie die derzeit auf den ausgewählten Festplatten konfigurierten "
 "Einhängepunkte auf logische Volumes dieser Volume-Gruppe."
@@ -4095,8 +4097,8 @@ msgstr "LUN"
 
 #: src/components/storage/zfcp/ZFCPPage.tsx:53
 msgid ""
-"Automatic LUN scan is [enabled]. Activating a controller which is "
-"running in NPIV mode will automatically configures all its LUNs."
+"Automatic LUN scan is [enabled]. Activating a controller which is running in "
+"NPIV mode will automatically configures all its LUNs."
 msgstr ""
 "Der automatische LUN-Scan ist [aktiviert]. Wenn Sie einen Controller "
 "aktivieren, der im NPIV-Modus ausgeführt wird, werden alle seine LUNs "
@@ -4104,8 +4106,8 @@ msgstr ""
 
 #: src/components/storage/zfcp/ZFCPPage.tsx:58
 msgid ""
-"Automatic LUN scan is [disabled]. LUNs have to be manually configured "
-"after activating a controller."
+"Automatic LUN scan is [disabled]. LUNs have to be manually configured after "
+"activating a controller."
 msgstr ""
 "Der automatische LUN-Scan ist [deaktiviert]. LUNs müssen manuell "
 "konfiguriert werden, nachdem ein Controller aktiviert wurde."
@@ -4444,8 +4446,8 @@ msgstr "ZFCP"
 #~ "Einheit."
 
 #~ msgid ""
-#~ "If the unit is omitted, bytes (B) will be used. Greater units can be "
-#~ "of the form GiB (power of 2) or GB (power of 10)."
+#~ "If the unit is omitted, bytes (B) will be used. Greater units can be of "
+#~ "the form GiB (power of 2) or GB (power of 10)."
 #~ msgstr ""
 #~ "Wenn die Einheit weggelassen wird, werden Bytes (B) verwendet. Größere "
 #~ "Einheiten können in der Form GiB (Potenz von 2) oder GB (Potenz von 10) "
@@ -5034,8 +5036,7 @@ msgstr "ZFCP"
 
 #, fuzzy
 #~ msgid ""
-#~ "The file system will be allocated as a new partition at the selected "
-#~ "disk."
+#~ "The file system will be allocated as a new partition at the selected disk."
 #~ msgstr ""
 #~ "Das Dateisystem wird als neue Partition auf der ausgewählten Festplatte "
 #~ "zugewiesen."
@@ -5055,8 +5056,8 @@ msgstr "ZFCP"
 #~ "The current file system on the selected device will be mounted without "
 #~ "formatting the device."
 #~ msgstr ""
-#~ "Das aktuelle Dateisystem auf dem ausgewählten Gerät wird eingehängt, "
-#~ "ohne das Gerät zu formatieren."
+#~ "Das aktuelle Dateisystem auf dem ausgewählten Gerät wird eingehängt, ohne "
+#~ "das Gerät zu formatieren."
 
 #, fuzzy
 #~ msgid "Usage"

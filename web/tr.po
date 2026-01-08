@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-24 16:20+0000\n"
+"POT-Creation-Date: 2025-12-02 10:56+0000\n"
 "PO-Revision-Date: 2025-10-05 22:59+0000\n"
 "Last-Translator: Emin Tufan Çetin <cetin@users.noreply.l10n.opensuse.org>\n"
 "Language-Team: Turkish <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -1800,7 +1800,16 @@ msgstr ""
 "Mevcut yapılandırma en az %2$s değerinde bir %1$s oluşturma girişimine yol "
 "açacaktır."
 
+#: src/components/storage/BootSection.tsx:41
+#: src/components/storage/BootSelection.tsx:145
+#, fuzzy, javascript-format
+msgid ""
+"Partitions to boot will be set up if needed at the installation disk, based "
+"on the location of the %s file system."
+msgstr "Önyükleme için bölümler kurulum diski %s'de ayrılacaktır."
+
 #: src/components/storage/BootSection.tsx:52
+#: src/components/storage/BootSelection.tsx:156
 #, javascript-format
 msgid ""
 "Partitions to boot will be set up if needed at the installation disk. "
@@ -1820,6 +1829,7 @@ msgstr ""
 msgid "Partitions to boot will be set up if needed at %s."
 msgstr "Önyükleme için gerekli bölümler kurulum diskinde ayrılacaktır."
 
+#: src/components/storage/BootSection.tsx:84
 #: src/components/storage/BootSelection.tsx:136
 msgid ""
 "To ensure the new system is able to boot, the installer may need to create "
@@ -1827,13 +1837,6 @@ msgid ""
 msgstr ""
 "Yeni sistemin önyükleme yapabilmesini sağlamak için yükleyicinin uygun "
 "diskte bazı bölümler oluşturması veya yapılandırması gerekebilir."
-
-#: src/components/storage/BootSelection.tsx:145
-#, fuzzy, javascript-format
-msgid ""
-"Partitions to boot will be set up if needed at the installation "
-"disk, based on the location of the %s file system."
-msgstr "Önyükleme için bölümler kurulum diski %s'de ayrılacaktır."
 
 #: src/components/storage/BootSelection.tsx:175
 #: src/components/storage/ProposalPage.tsx:287
@@ -2173,8 +2176,8 @@ msgstr "Şifreleme etkinleştirildi"
 #: src/components/storage/EncryptionSection.tsx:50
 #, fuzzy
 msgid ""
-"Protection for the information stored at the new file systems, "
-"including data, programs, and system files."
+"Protection for the information stored at the new file systems, including "
+"data, programs, and system files."
 msgstr ""
 "Yeni dosya sistemlerinde depolanan veri, program ve sistem dosyaları gibi "
 "bilgilerin korunması."
@@ -2458,14 +2461,12 @@ msgstr "Diskler"
 #: src/components/storage/LvmPage.tsx:181
 msgid ""
 "The needed LVM physical volumes will be added as partitions on the chosen "
-"disks, based on the sizes of the logical volumes. If you "
-"select more than one disk, the physical volumes may be "
-"distributed along several disks."
+"disks, based on the sizes of the logical volumes. If you select more than "
+"one disk, the physical volumes may be distributed along several disks."
 msgstr ""
 "Gerekli LVM fiziksel birimleri, mantıksal birimlerin boyutlarına göre "
-"seçilen disklere bölümler halinde eklenecektir. Birden "
-"fazla disk seçerseniz, fiziksel birimler birkaç diske "
-"dağıtılabilir."
+"seçilen disklere bölümler halinde eklenecektir. Birden fazla disk "
+"seçerseniz, fiziksel birimler birkaç diske dağıtılabilir."
 
 #: src/components/storage/LvmPage.tsx:216
 msgid "Move mount points"
@@ -2473,11 +2474,11 @@ msgstr "Bağlantı noktalarını taşı"
 
 #: src/components/storage/LvmPage.tsx:220
 msgid ""
-"Move the mount points currently configured at the selected disks to "
-"logical volumes of this volume group."
+"Move the mount points currently configured at the selected disks to logical "
+"volumes of this volume group."
 msgstr ""
-"Seçili disklerde şu anda yapılandırılmış olan bağlama noktalarını "
-"bu birim grubunun mantıksal birimlerine taşıyın."
+"Seçili disklerde şu anda yapılandırılmış olan bağlama noktalarını bu birim "
+"grubunun mantıksal birimlerine taşıyın."
 
 #. TRANSLATORS: %s will be replaced by a RAID name and its size - "md0 (20 GiB)"
 #: src/components/storage/MdRaidHeader.tsx:33
@@ -4016,16 +4017,16 @@ msgstr "LUN"
 
 #: src/components/storage/zfcp/ZFCPPage.tsx:53
 msgid ""
-"Automatic LUN scan is [enabled]. Activating a controller which is "
-"running in NPIV mode will automatically configures all its LUNs."
+"Automatic LUN scan is [enabled]. Activating a controller which is running in "
+"NPIV mode will automatically configures all its LUNs."
 msgstr ""
-"Otomatik LUN taraması [etkin]. Bir denetleyiciyi etkinleştirme NPIV "
-"modunda çalıştırıldığında tüm LUN'lar otomatik olarak yapılandırılır."
+"Otomatik LUN taraması [etkin]. Bir denetleyiciyi etkinleştirme NPIV modunda "
+"çalıştırıldığında tüm LUN'lar otomatik olarak yapılandırılır."
 
 #: src/components/storage/zfcp/ZFCPPage.tsx:58
 msgid ""
-"Automatic LUN scan is [disabled]. LUNs have to be manually configured "
-"after activating a controller."
+"Automatic LUN scan is [disabled]. LUNs have to be manually configured after "
+"activating a controller."
 msgstr ""
 "Otomatik LUN taraması [devre dışı]. LUN'ların manuel olarak taranması "
 "gerekir Bir kontrol cihazı etkinleştirildikten sonra yapılandırılır."
@@ -4361,12 +4362,11 @@ msgstr "ZFCP"
 #~ "Boyutlar sayı olarak girilmeli, isteğe bağlı olarak birim eklenmelidir."
 
 #~ msgid ""
-#~ "If the unit is omitted, bytes (B) will be used. Greater units can be "
-#~ "of the form GiB (power of 2) or GB (power of 10)."
+#~ "If the unit is omitted, bytes (B) will be used. Greater units can be of "
+#~ "the form GiB (power of 2) or GB (power of 10)."
 #~ msgstr ""
-#~ "Birim atlanırsa, bayt (B) kullanılacaktır. Daha büyük birimler "
-#~ "GiB (2'nin kuvveti) veya GB (10'un kuvveti) biçiminde "
-#~ "olabilir."
+#~ "Birim atlanırsa, bayt (B) kullanılacaktır. Daha büyük birimler GiB (2'nin "
+#~ "kuvveti) veya GB (10'un kuvveti) biçiminde olabilir."
 
 #~ msgid "Minimum"
 #~ msgstr "Minimum"
@@ -4871,8 +4871,7 @@ msgstr "ZFCP"
 #~ msgstr "Dosya sisteminin nasıl tahsis edileceğini seçin"
 
 #~ msgid ""
-#~ "The file system will be allocated as a new partition at the selected "
-#~ "disk."
+#~ "The file system will be allocated as a new partition at the selected disk."
 #~ msgstr ""
 #~ "Seçilen diskte dosya sistemi yeni bir bölüm olarak tahsis edilecektir."
 
