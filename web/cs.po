@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-24 16:20+0000\n"
+"POT-Creation-Date: 2025-12-02 10:56+0000\n"
 "PO-Revision-Date: 2025-10-01 20:40+0000\n"
 "Last-Translator: Ladislav Slezák <lslezak@suse.com>\n"
 "Language-Team: Czech <https://l10n.opensuse.org/projects/agama/agama-web/cs/"
@@ -1799,7 +1799,16 @@ msgid ""
 msgstr ""
 "Současná konfigurace povede k pokusu vytvořit %1$s o velikosti alespoň %2$s."
 
+#: src/components/storage/BootSection.tsx:41
+#: src/components/storage/BootSelection.tsx:145
+#, fuzzy, javascript-format
+msgid ""
+"Partitions to boot will be set up if needed at the installation disk, based "
+"on the location of the %s file system."
+msgstr "Oddíly pro zavádění budou přiděleny na instalačním disku (%s)."
+
 #: src/components/storage/BootSection.tsx:52
+#: src/components/storage/BootSelection.tsx:156
 #, javascript-format
 msgid ""
 "Partitions to boot will be set up if needed at the installation disk. "
@@ -1819,6 +1828,7 @@ msgstr ""
 msgid "Partitions to boot will be set up if needed at %s."
 msgstr "Oddíly pro zavádění budou přiděleny na instalačním disku."
 
+#: src/components/storage/BootSection.tsx:84
 #: src/components/storage/BootSelection.tsx:136
 msgid ""
 "To ensure the new system is able to boot, the installer may need to create "
@@ -1826,13 +1836,6 @@ msgid ""
 msgstr ""
 "Aby bylo možné nový systém spustit, může být nutné, aby instalační program "
 "vytvořil nebo nakonfiguroval některé oddíly na příslušném disku."
-
-#: src/components/storage/BootSelection.tsx:145
-#, fuzzy, javascript-format
-msgid ""
-"Partitions to boot will be set up if needed at the installation "
-"disk, based on the location of the %s file system."
-msgstr "Oddíly pro zavádění budou přiděleny na instalačním disku (%s)."
 
 #: src/components/storage/BootSelection.tsx:175
 #: src/components/storage/ProposalPage.tsx:287
@@ -2184,8 +2187,8 @@ msgstr "Šifrování je zapnuto"
 #: src/components/storage/EncryptionSection.tsx:50
 #, fuzzy
 msgid ""
-"Protection for the information stored at the new file systems, "
-"including data, programs, and system files."
+"Protection for the information stored at the new file systems, including "
+"data, programs, and system files."
 msgstr ""
 "Ochrana informací uložených na nových souborových systémech, včetně dat, "
 "programů a systémových souborů."
@@ -2480,14 +2483,12 @@ msgstr "Disky"
 #: src/components/storage/LvmPage.tsx:181
 msgid ""
 "The needed LVM physical volumes will be added as partitions on the chosen "
-"disks, based on the sizes of the logical volumes. If you "
-"select more than one disk, the physical volumes may be "
-"distributed along several disks."
+"disks, based on the sizes of the logical volumes. If you select more than "
+"one disk, the physical volumes may be distributed along several disks."
 msgstr ""
-"Požadované fyzické LVM svazky budou přidány jako oddíly vybraných "
-"disku, na základě velikosti logických svazků. Pokud vyberete "
-"více než jeden disk, fyzické svazky mohou být rozloženy mezi "
-"několik disků."
+"Požadované fyzické LVM svazky budou přidány jako oddíly vybraných disku, na "
+"základě velikosti logických svazků. Pokud vyberete více než jeden disk, "
+"fyzické svazky mohou být rozloženy mezi několik disků."
 
 #: src/components/storage/LvmPage.tsx:216
 msgid "Move mount points"
@@ -2495,8 +2496,8 @@ msgstr "Přesunout přípojné body"
 
 #: src/components/storage/LvmPage.tsx:220
 msgid ""
-"Move the mount points currently configured at the selected disks to "
-"logical volumes of this volume group."
+"Move the mount points currently configured at the selected disks to logical "
+"volumes of this volume group."
 msgstr ""
 "Přesun přípojných bodů je v současnosti nastaven na vybrané disky do "
 "logických svazků této skupiny svazků."
@@ -4130,19 +4131,19 @@ msgstr "LUN"
 
 #: src/components/storage/zfcp/ZFCPPage.tsx:53
 msgid ""
-"Automatic LUN scan is [enabled]. Activating a controller which is "
-"running in NPIV mode will automatically configures all its LUNs."
+"Automatic LUN scan is [enabled]. Activating a controller which is running in "
+"NPIV mode will automatically configures all its LUNs."
 msgstr ""
-"Automatické skenování LUN je [povoleno]. Aktivací řadiče, běžícího v "
-"režimu NPIV, se automaticky zkonfigurují všechny jeho LUN."
+"Automatické skenování LUN je [povoleno]. Aktivací řadiče, běžícího v režimu "
+"NPIV, se automaticky zkonfigurují všechny jeho LUN."
 
 #: src/components/storage/zfcp/ZFCPPage.tsx:58
 msgid ""
-"Automatic LUN scan is [disabled]. LUNs have to be manually configured "
-"after activating a controller."
+"Automatic LUN scan is [disabled]. LUNs have to be manually configured after "
+"activating a controller."
 msgstr ""
-"Automatické skenování LUN je [zakázáno]. Po aktivaci řadiče je třeba "
-"LUNy konfigurovat ručně."
+"Automatické skenování LUN je [zakázáno]. Po aktivaci řadiče je třeba LUNy "
+"konfigurovat ručně."
 
 #: src/components/storage/zfcp/ZFCPPage.tsx:79
 msgid "Please, try to activate a zFCP disk."
@@ -4952,8 +4953,7 @@ msgstr "ZFCP"
 #~ msgstr "Zvolte způsob vytvoření souborového systému"
 
 #~ msgid ""
-#~ "The file system will be allocated as a new partition at the selected "
-#~ "disk."
+#~ "The file system will be allocated as a new partition at the selected disk."
 #~ msgstr "Souborový systém bude přidělen jako nový oddíl na vybraném disku."
 
 #~ msgid ""
