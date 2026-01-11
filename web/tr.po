@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-02 10:56+0000\n"
+"POT-Creation-Date: 2026-01-10 17:02+0000\n"
 "PO-Revision-Date: 2025-10-05 22:59+0000\n"
 "Last-Translator: Emin Tufan Çetin <cetin@users.noreply.l10n.opensuse.org>\n"
 "Language-Team: Turkish <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -19,67 +19,48 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.13.3\n"
 
-#: src/components/core/AlertOutOfSync.tsx:71
-msgid "Configuration out of sync"
-msgstr "Yapılandırma senkronize değil"
-
-#: src/components/core/AlertOutOfSync.tsx:80
-msgid "The configuration has been updated externally."
-msgstr "Yapılandırma dışardan güncellendi."
-
-#: src/components/core/AlertOutOfSync.tsx:82
-msgid ""
-"Reloading is required to get the latest data and avoid issues or data loss."
-msgstr ""
-"En güncel verilere ulaşmak ve sorun veya veri kaybını önlemek için yeniden "
-"yükleme yapılması gerekir."
-
-#: src/components/core/AlertOutOfSync.tsx:85
-msgid "Reload now"
-msgstr "Şimdi yeniden yükle"
-
-#: src/components/core/ChangeProductOption.tsx:45
+#: src/components/core/ChangeProductOption.tsx:46
 msgid "Change product"
 msgstr "Ürünü değiştir"
 
-#: src/components/core/InstallButton.tsx:45
-msgid "Confirm Installation"
-msgstr "Kurulumu Onayla"
+#. TRANSLATORS: title shown in the confirmation page before
+#. starting the installation. %s will be replaced with the product name.
+#: src/components/core/ConfirmPage.tsx:52
+#, fuzzy, javascript-format
+msgid "Start %s installation?"
+msgstr "Bir temel bir kurulumu yapılandırmaya başlayın"
 
-#: src/components/core/InstallButton.tsx:49
+#: src/components/core/ConfirmPage.tsx:72
 msgid ""
-"If you continue, partitions on your hard disk will be modified according to "
-"the provided installation settings."
+"Review the summary below. If anything seems incorrect or you have doubts, go "
+"back and adjust the settings before proceeding."
 msgstr ""
-"Devam ederseniz sabit diskinizdeki bölümler, sağlanan kurulum ayarlarına "
-"göre değiştirilecektir."
 
-#: src/components/core/InstallButton.tsx:53
-msgid "Please, cancel and check the settings if you are unsure."
-msgstr "Emin değilseniz lütfen iptal edin ve ayarları kontrol edin."
+#: src/components/core/ConfirmPage.tsx:93
+msgid "Install now with potential data loss"
+msgstr ""
 
-#. TRANSLATORS: button label
-#: src/components/core/InstallButton.tsx:58
-msgid "Continue"
-msgstr "Devam et"
+#: src/components/core/ConfirmPage.tsx:94
+#, fuzzy
+msgid "Install now"
+msgstr "Yükle"
 
-#. TRANSLATORS: button label
-#: src/components/core/InstallButton.tsx:62 src/components/core/Page.tsx:247
-#: src/components/core/Popup.tsx:140
-#: src/components/network/BindingSettingsForm.tsx:228
-#: src/components/network/IpSettingsForm.tsx:219
-#: src/components/network/WifiConnectionForm.tsx:189
-#: src/components/product/ProductSelectionPage.tsx:99
-msgid "Cancel"
-msgstr "İptal"
+#: src/components/core/ConfirmPage.tsx:97
+msgid "Go back"
+msgstr ""
+
+#: src/components/core/Details.tsx:92
+#, fuzzy
+msgid "Waiting for proposal"
+msgstr "Bir bağlama noktası bekleniyor"
 
 #. TRANSLATORS: The install button label
-#: src/components/core/InstallButton.tsx:97
+#: src/components/core/InstallButton.tsx:56
 msgid "Install"
 msgstr "Yükle"
 
 #. TRANSLATORS: Text included with the install button when there are issues
-#: src/components/core/InstallButton.tsx:99
+#: src/components/core/InstallButton.tsx:58
 msgid "Not possible with the current setup. Click to know more."
 msgstr "Şu anki kurulum olanaksız. Daha çoğunu öğrenmek için tıklayın."
 
@@ -108,6 +89,7 @@ msgstr ""
 "önyüklemeden önce bunu kaldırın."
 
 #: src/components/core/InstallationFinished.tsx:61
+#: src/components/storage/PotentialDataLossAlert.tsx:52
 msgid "Hide details"
 msgstr "Ayrıntıları gizle"
 
@@ -127,28 +109,28 @@ msgstr ""
 "gerçekleştirilecektir. Bunun çalışması için makine doğrudan yeni "
 "önyükleyiciye önyüklemelidir."
 
-#: src/components/core/InstallationFinished.tsx:124
+#: src/components/core/InstallationFinished.tsx:123
 msgid "Congratulations!"
 msgstr "Tebrikler!"
 
-#: src/components/core/InstallationFinished.tsx:130
+#: src/components/core/InstallationFinished.tsx:129
 msgid "The installation on your machine is complete."
 msgstr "Makinenize kurulum tamamlanmıştır."
 
-#: src/components/core/InstallationFinished.tsx:134
+#: src/components/core/InstallationFinished.tsx:133
 msgid "At this point you can power off the machine."
 msgstr "Bu noktada makineyi kapatabilirsiniz."
 
-#: src/components/core/InstallationFinished.tsx:135
+#: src/components/core/InstallationFinished.tsx:134
 msgid "At this point you can reboot the machine to log in to the new system."
 msgstr ""
 "Bu noktada yeni sisteme giriş yapmak için makineyi yeniden başlatabilirsiniz."
 
-#: src/components/core/InstallationFinished.tsx:142
+#: src/components/core/InstallationFinished.tsx:141
 msgid "Finish"
 msgstr "Bitti"
 
-#: src/components/core/InstallationFinished.tsx:142
+#: src/components/core/InstallationFinished.tsx:141
 msgid "Reboot"
 msgstr "Yeniden Başlat"
 
@@ -156,8 +138,8 @@ msgstr "Yeniden Başlat"
 msgid "Installing the system, please wait..."
 msgstr "Sistem kuruluyor, lütfen bekleyin..."
 
-#: src/components/core/InstallerOptions.tsx:74
-#: src/components/l10n/L10nPage.tsx:81
+#: src/components/core/InstallerOptions.tsx:73
+#: src/components/l10n/L10nPage.tsx:90
 msgid "Language"
 msgstr "Dil"
 
@@ -205,10 +187,10 @@ msgstr "Seçili ürün için aynı ayarları kullan"
 #: src/components/core/InstallerOptions.tsx:391
 #: src/components/core/InstallerOptions.tsx:405
 #: src/components/core/InstallerOptions.tsx:448
-#: src/components/core/Page.tsx:279
+#: src/components/core/Page.tsx:281
 #: src/components/storage/dasd/FormatActionHandler.tsx:73
 #: src/components/storage/dasd/FormatActionHandler.tsx:100
-#: src/components/system/HostnamePage.tsx:132
+#: src/components/system/HostnamePage.tsx:130
 msgid "Accept"
 msgstr "Kabul Et"
 
@@ -268,28 +250,41 @@ msgstr "Kuruluma başlamadan önce aşağıdaki sorunları gidermeniz gerekmekte
 msgid "Review and fix"
 msgstr "Gözden geçir ve düzelt"
 
-#: src/components/core/IssuesDrawer.tsx:49
+#: src/components/core/IssuesDrawer.tsx:47
 #: src/components/users/UsersPage.tsx:36 src/routes/users.tsx:34
 msgid "Authentication"
 msgstr "Kimlik doğrulama"
 
-#: src/components/core/IssuesDrawer.tsx:50
-#: src/components/overview/StorageSection.tsx:112
-#: src/components/storage/ProposalPage.tsx:353 src/routes/storage.tsx:46
+#: src/components/core/IssuesDrawer.tsx:48
+#: src/components/core/ProgressStatusMonitor.tsx:41
+#: src/components/storage/ProposalPage.tsx:335
+#: src/components/storage/StorageDetailsItem.tsx:142 src/routes/storage.tsx:46
 msgid "Storage"
 msgstr "Depolama"
 
-#: src/components/core/IssuesDrawer.tsx:51
-#: src/components/overview/SoftwareSection.tsx:69
-#: src/components/software/SoftwarePage.tsx:160 src/routes/software.tsx:34
+#: src/components/core/IssuesDrawer.tsx:49
+#: src/components/core/ProgressStatusMonitor.tsx:40
+#: src/components/software/SoftwareDetailsItem.tsx:76
+#: src/components/software/SoftwarePage.tsx:169 src/routes/software.tsx:34
 msgid "Software"
 msgstr "Yazılım"
 
-#: src/components/core/IssuesDrawer.tsx:52
-#: src/components/product/ProductRegistrationPage.tsx:441
+#: src/components/core/IssuesDrawer.tsx:50
+#: src/components/product/ProductRegistrationPage.tsx:440
 #: src/routes/registration.tsx:31
 msgid "Registration"
 msgstr "Kayıt"
+
+#: src/components/core/IssuesDrawer.tsx:51
+#: src/components/core/ProgressStatusMonitor.tsx:43
+#: src/components/l10n/L10nPage.tsx:83 src/routes/l10n.tsx:32
+msgid "Localization"
+msgstr "Yerelleştirme"
+
+#: src/components/core/IssuesDrawer.tsx:52
+#: src/components/storage/ISCSIPage.tsx:34 src/routes/storage.tsx:99
+msgid "iSCSI"
+msgstr "iSCSI"
 
 #: src/components/core/IssuesDrawer.tsx:59
 msgid "Pre-installation checks"
@@ -333,8 +328,8 @@ msgstr "Giriş Formu"
 #. TRANSLATORS: field label
 #: src/components/core/LoginPage.tsx:107
 #: src/components/core/PasswordAndConfirmationInput.tsx:96
-#: src/components/network/WifiConnectionForm.tsx:178
-#: src/components/questions/QuestionWithPassword.tsx:64
+#: src/components/network/WifiConnectionForm.tsx:177
+#: src/components/questions/QuestionWithPassword.tsx:63
 #: src/components/storage/iscsi/AuthFields.jsx:87
 #: src/components/storage/iscsi/AuthFields.jsx:91
 #: src/components/users/RootUser.tsx:64
@@ -353,12 +348,20 @@ msgstr "Lütfen sisteme giriş yapabilmek için şifrenizi giriniz."
 msgid "Log in"
 msgstr "Giriş Yap"
 
-#: src/components/core/MenuButton.tsx:78 src/components/core/Page.tsx:268
+#: src/components/core/MenuButton.tsx:78 src/components/core/Page.tsx:270
 #: src/components/storage/ISCSIPage.tsx:48
 #: src/components/storage/dasd/DASDPage.tsx:49
 #: src/components/storage/zfcp/ZFCPPage.tsx:198
 msgid "Back"
 msgstr "Geri"
+
+#: src/components/core/Page.tsx:249 src/components/core/Popup.tsx:140
+#: src/components/network/BindingSettingsForm.tsx:230
+#: src/components/network/IpSettingsForm.tsx:219
+#: src/components/network/WifiConnectionForm.tsx:188
+#: src/components/product/ProductSelectionPage.tsx:107
+msgid "Cancel"
+msgstr "İptal"
 
 #: src/components/core/PasswordAndConfirmationInput.tsx:72
 msgid "Passwords do not match"
@@ -396,6 +399,17 @@ msgstr "Onayla"
 msgid "Loading data..."
 msgstr "Veri yükleniyor..."
 
+#: src/components/core/ProgressBackdrop.tsx:112
+#: src/components/core/ProgressStatusMonitor.tsx:73
+#, fuzzy, javascript-format
+msgid "(step %s of %s)"
+msgstr "%s boyutunu koru"
+
+#: src/components/core/ProgressBackdrop.tsx:115
+#, fuzzy
+msgid "Refreshing data..."
+msgstr "Veri yükleniyor..."
+
 #: src/components/core/ProgressReport.tsx:56
 #: src/components/storage/Progress.tsx:56
 msgid "Pending"
@@ -410,6 +424,21 @@ msgstr "Devam ediyor"
 msgid "Finished"
 msgstr "Bitti"
 
+#: src/components/core/ProgressStatusMonitor.tsx:42
+#: src/components/network/NetworkDetailsItem.tsx:146
+#: src/components/network/NetworkPage.tsx:52
+#: src/components/network/WifiConnectionDetails.tsx:45
+#: src/routes/network.tsx:38
+msgid "Network"
+msgstr "Ağ"
+
+#: src/components/core/ProgressStatusMonitor.tsx:52
+#, fuzzy, javascript-format
+msgid "%s task active"
+msgid_plural "%s tasks active"
+msgstr[0] "aktif et"
+msgstr[1] "aktif et"
+
 #: src/components/core/ResourceNotFound.tsx:42
 msgid "Resource not found or lost"
 msgstr "Kaynak bulunamadı veya kayboldu"
@@ -419,7 +448,7 @@ msgid "It doesn't exist or can't be reached."
 msgstr "Yok veya ulaşılamaz."
 
 #: src/components/core/RowActions.tsx:71
-#: src/components/storage/ProposalResultSection.tsx:134
+#: src/components/storage/ProposalResultSection.tsx:138
 msgid "Actions"
 msgstr "Eylemler"
 
@@ -427,15 +456,15 @@ msgstr "Eylemler"
 msgid "Add"
 msgstr "Ekle"
 
-#: src/components/core/SelectableDataTable.tsx:373
+#: src/components/core/SelectableDataTable.tsx:372
 msgid "Row expansion"
 msgstr "Satır genişletme"
 
-#: src/components/core/SelectableDataTable.tsx:374
+#: src/components/core/SelectableDataTable.tsx:373
 msgid "Row selection"
 msgstr "Satır seçimi"
 
-#: src/components/core/SelectableDataTable.tsx:385
+#: src/components/core/SelectableDataTable.tsx:384
 msgid "Row actions"
 msgstr "Satır eylemleri"
 
@@ -459,29 +488,59 @@ msgstr "İçeriğe geç"
 msgid "More actions"
 msgstr "Daha çok eylem"
 
-#: src/components/l10n/KeyboardSelection.tsx:41
+#: src/components/l10n/KeyboardSelection.tsx:45
 msgid "Filter by description or keymap code"
 msgstr "Açıklamaya veya tuş haritası koduna göre filtreleyin"
 
-#: src/components/l10n/KeyboardSelection.tsx:69
+#: src/components/l10n/KeyboardSelection.tsx:74
 msgid "None of the keymaps match the filter."
 msgstr "Hiçbir tuş haritası filtreye uymuyor."
 
-#: src/components/l10n/KeyboardSelection.tsx:75
+#: src/components/l10n/KeyboardSelection.tsx:80
 msgid "Keyboard selection"
 msgstr "Klavye seçimi"
 
-#: src/components/l10n/KeyboardSelection.tsx:86
-#: src/components/l10n/L10nPage.tsx:84 src/components/l10n/L10nPage.tsx:98
-#: src/components/l10n/L10nPage.tsx:110
-#: src/components/l10n/LocaleSelection.tsx:86
-#: src/components/l10n/TimezoneSelection.tsx:134
-#: src/components/product/ProductSelectionPage.tsx:204
-#: src/components/software/SoftwarePatternsSelection.tsx:168
+#: src/components/l10n/KeyboardSelection.tsx:91
+#: src/components/l10n/L10nPage.tsx:93 src/components/l10n/L10nPage.tsx:107
+#: src/components/l10n/L10nPage.tsx:119
+#: src/components/l10n/LocaleSelection.tsx:88
+#: src/components/l10n/TimezoneSelection.tsx:136
+#: src/components/product/ProductSelectionPage.tsx:222
+#: src/components/software/SoftwarePatternsSelection.tsx:176
 msgid "Select"
 msgstr "Seç"
 
-#: src/components/l10n/L10nPage.tsx:37
+#. TRANSLATORS: %1$s is a description of the device (eg. "Encrypted XFS RAID") and %2$s is
+#. the RAID level (eg. "RAID0")
+#. TRANSLATORS: %1$s is an already formatted mount path (eg. "/"),
+#. %2$s is a size description (eg. at least 10 GiB)
+#. TRANSLATORS: %1$s is a filesystem type description (eg. "Btrfs with snapshots"),
+#. %2$s is a description of the size or the size limits (eg. "at least 10 GiB")
+#. TRANSLATORS: Summary of the selected language and territory.
+#. %1$s is the language name (e.g. "Spanish").
+#. %2$s is the territory/region name (e.g. "Spain").
+#: src/components/l10n/L10nDetailsItem.tsx:45
+#: src/components/storage/device-utils.tsx:94
+#: src/components/storage/utils/partition.tsx:41
+#: src/components/storage/utils/partition.tsx:85
+#, javascript-format
+msgid "%1$s (%2$s)"
+msgstr "%1$s (%2$s)"
+
+#: src/components/l10n/L10nDetailsItem.tsx:49
+#, fuzzy
+msgid "Language and region"
+msgstr "Dil ve klavye"
+
+#. TRANSLATORS: Additional details shown under the language selection.
+#. %1$s is the keyboard layout name (e.g. "Spanish").
+#. %2$s is the time zone identifier (e.g. "Atlantic/Canary").
+#: src/components/l10n/L10nDetailsItem.tsx:63
+#, javascript-format
+msgid "%1$s keyboard - %2$s timezone"
+msgstr ""
+
+#: src/components/l10n/L10nPage.tsx:38
 msgid ""
 "These are the settings for the product to install. The installer language "
 "and keyboard layout can be adjusted via the [settings panel] accessible from "
@@ -490,7 +549,7 @@ msgstr ""
 "Bunlar, ürünün kurulacağı ayarlardır. Yükleyici dili ve klavye düzeni, üst "
 "çubuktan erişilebilen [ayarlar paneli] aracılığıyla ayarlanabilir."
 
-#: src/components/l10n/L10nPage.tsx:43
+#: src/components/l10n/L10nPage.tsx:44
 msgid ""
 "These are the settings for the product to install. The installer language "
 "can be adjusted via the [settings panel] accessible from the top bar."
@@ -498,67 +557,63 @@ msgstr ""
 "Bunlar, yüklenecek ürün için ayarlardır. Yükleyici dili, üst çubuktan "
 "erişilebilen [ayarlar paneli] aracılığıyla ayarlanabilir."
 
-#: src/components/l10n/L10nPage.tsx:74
-#: src/components/overview/L10nSection.tsx:37 src/routes/l10n.tsx:32
-msgid "Localization"
-msgstr "Yerelleştirme"
-
-#: src/components/l10n/L10nPage.tsx:84 src/components/l10n/L10nPage.tsx:98
-#: src/components/l10n/L10nPage.tsx:110
-#: src/components/storage/BootSection.tsx:94
-#: src/components/storage/EncryptionSection.tsx:59
+#: src/components/l10n/L10nPage.tsx:93 src/components/l10n/L10nPage.tsx:107
+#: src/components/l10n/L10nPage.tsx:119
+#: src/components/storage/BootSection.tsx:97
+#: src/components/storage/EncryptionSection.tsx:60
 #: src/components/storage/iscsi/InitiatorForm.tsx:89
 #: src/components/users/FirstUserForm.tsx:235
 #: src/components/users/RootUserForm.tsx:164
 msgid "Change"
 msgstr "Değiştir"
 
-#: src/components/l10n/L10nPage.tsx:89 src/components/l10n/L10nPage.tsx:102
-#: src/components/l10n/L10nPage.tsx:115
-msgid "Not selected yet"
-msgstr "Henüz seçilmedi"
+#: src/components/l10n/L10nPage.tsx:98 src/components/l10n/L10nPage.tsx:111
+#: src/components/l10n/L10nPage.tsx:124
+#, fuzzy
+msgid "Wrong selection"
+msgstr "Satır seçimi"
 
-#: src/components/l10n/L10nPage.tsx:95
+#: src/components/l10n/L10nPage.tsx:104
 msgid "Keyboard"
 msgstr "Klavye"
 
-#: src/components/l10n/L10nPage.tsx:107
+#: src/components/l10n/L10nPage.tsx:116
 msgid "Time zone"
 msgstr "Saat dilimi"
 
-#: src/components/l10n/LocaleSelection.tsx:40
+#: src/components/l10n/LocaleSelection.tsx:42
 msgid "Filter by language, territory or locale code"
 msgstr "Dile, bölgeye veya yerel ayar koduna göre filtreleyin"
 
-#: src/components/l10n/LocaleSelection.tsx:69
+#: src/components/l10n/LocaleSelection.tsx:71
 msgid "None of the locales match the filter."
 msgstr "Hiçbir yerel ayar filtreye uymuyor."
 
-#: src/components/l10n/LocaleSelection.tsx:75
+#: src/components/l10n/LocaleSelection.tsx:77
 msgid "Locale selection"
 msgstr "Yerelleştirme seçimi"
 
-#: src/components/l10n/TimezoneSelection.tsx:75
+#: src/components/l10n/TimezoneSelection.tsx:77
 msgid "Filter by territory, time zone code or UTC offset"
 msgstr "Bölgeye, saat dilimi koduna veya UTC farkına göre filtreleyin"
 
-#: src/components/l10n/TimezoneSelection.tsx:113
+#: src/components/l10n/TimezoneSelection.tsx:115
 msgid "None of the time zones match the filter."
 msgstr "Hiçbir zaman dilimi filtreye uymuyor."
 
-#: src/components/l10n/TimezoneSelection.tsx:119
+#: src/components/l10n/TimezoneSelection.tsx:121
 msgid " Timezone selection"
 msgstr " Zaman dilimi seçimi"
 
-#: src/components/layout/Header.tsx:80
+#: src/components/layout/Header.tsx:81
 msgid "Options toggle"
 msgstr "Seçenekler geçişi"
 
-#: src/components/layout/Header.tsx:92
+#: src/components/layout/Header.tsx:93
 msgid "Download logs"
 msgstr "Günlükleri indir"
 
-#: src/components/layout/Header.tsx:131
+#: src/components/layout/Header.tsx:132
 msgid "Main navigation"
 msgstr "Ana gezinme"
 
@@ -610,20 +665,20 @@ msgstr "Adres veri listesi"
 #. TRANSLATORS: this simply concatenates the two sentences that describe what is going to happen
 #. with partitions. The first %s corresponds to deleted partitions and the second one to resized
 #. ones.
-#: src/components/network/BindingSettingsForm.tsx:76
-#: src/components/storage/utils/drive.tsx:104
+#: src/components/network/BindingSettingsForm.tsx:78
+#: src/components/storage/utils/drive.tsx:110
 #, javascript-format
 msgid "%s - %s"
 msgstr "%s - %s"
 
 #. TRANSLATORS: The title of the page. %s will be replaced with the connection
 #. name. I.e., "Binding settings for 'Wired connection 1'"
-#: src/components/network/BindingSettingsForm.tsx:158
+#: src/components/network/BindingSettingsForm.tsx:160
 #, javascript-format
 msgid "Binding settings for '%s'"
 msgstr "'%s' için bağlama ayarları"
 
-#: src/components/network/BindingSettingsForm.tsx:166
+#: src/components/network/BindingSettingsForm.tsx:168
 msgid ""
 "Choose how the connection should be associated with a network device. This "
 "helps control which device the connection uses."
@@ -631,27 +686,27 @@ msgstr ""
 "Bağlantının bir ağ cihazıyla nasıl ilişkilendirileceğini seçin. Bu, "
 "bağlantının hangi cihazı kullanacağını kontrol etmenize yardımcı olur."
 
-#: src/components/network/BindingSettingsForm.tsx:177
+#: src/components/network/BindingSettingsForm.tsx:179
 msgid "Unbound"
 msgstr "Bağlanmamış"
 
-#: src/components/network/BindingSettingsForm.tsx:180
+#: src/components/network/BindingSettingsForm.tsx:182
 msgid "The connection can be used by any available device."
 msgstr "Bağlantıyı herhangi bir mevcut cihazdan kullanabilirsiniz."
 
-#: src/components/network/BindingSettingsForm.tsx:189
+#: src/components/network/BindingSettingsForm.tsx:191
 msgid "Bind to device name"
 msgstr "Aygıt adına bağlan"
 
-#: src/components/network/BindingSettingsForm.tsx:193
+#: src/components/network/BindingSettingsForm.tsx:195
 msgid "Choose device to bind by name"
 msgstr "Adına göre bağlanacak cihazı seçin"
 
-#: src/components/network/BindingSettingsForm.tsx:208
+#: src/components/network/BindingSettingsForm.tsx:210
 msgid "Bind to MAC address"
 msgstr "MAC adresine bağlan"
 
-#: src/components/network/BindingSettingsForm.tsx:212
+#: src/components/network/BindingSettingsForm.tsx:214
 msgid "Choose device to bind by MAC"
 msgstr "Bağlanacak cihazı MAC ile seçin"
 
@@ -676,11 +731,39 @@ msgstr "Başka bir DNS ekle"
 msgid "DNS"
 msgstr "DNS"
 
-#: src/components/network/InstallationOnlySwitch.tsx:47
+#. TRANSLATORS: Displays both IPv4 and IPv6 addresses with count of
+#. additional IPs (e.g., "192.168.122.237, fe80::5054:ff:fe46:2af9 and 1
+#. more"). %1$s is the IPv4 address, %2$s is the IPv6 address, and %3$d
+#. is the number of remaining IPs. The text wrapped in square brackets []
+#. is displayed as a link. Keep the brackets to ensure the link works
+#. correctly.
+#: src/components/network/FormattedIpsList.tsx:74
+#, fuzzy, javascript-format
+msgid "%1$s, %2$s and [%3$d more]"
+msgstr "%1$s %2$s %3$s'de (%4$s)"
+
+#. TRANSLATORS: Displays a single IP address (either IPv4 or IPv6) with
+#. count of additional IPs (e.g., "192.168.122.237 and [2 more]"). %1$s is
+#. the IP address and %2$d is the number of remaining IPs. The text
+#. wrapped in square brackets [] is displayed as a link. Keep the brackets
+#. to ensure the link works correctly.
+#: src/components/network/FormattedIpsList.tsx:82
+#, fuzzy, javascript-format
+msgid "%1$s and [%2$d more]"
+msgstr "%1$s %2$s'de"
+
+#. TRANSLATORS: Displays first IPv4 and IPv6 when both are present.
+#. %1$s is the first IPv4 and %2$s is the first IPv6.
+#: src/components/network/FormattedIpsList.tsx:102
+#, fuzzy, javascript-format
+msgid "%1$s and %2$s"
+msgstr "%1$s %2$s'de"
+
+#: src/components/network/InstallationOnlySwitch.tsx:53
 msgid "Use for installation only"
 msgstr "Yalnızca kurulum için kullan"
 
-#: src/components/network/InstallationOnlySwitch.tsx:49
+#: src/components/network/InstallationOnlySwitch.tsx:55
 msgid ""
 "The connection will be used only during installation and not available in "
 "the installed system."
@@ -693,7 +776,7 @@ msgid "Ip prefix or netmask"
 msgstr "IP öneki veya ağ maskesi"
 
 #. TRANSLATORS: error message
-#: src/components/network/IpSettingsForm.tsx:105
+#: src/components/network/IpSettingsForm.tsx:106
 msgid "At least one address must be provided for selected mode"
 msgstr "Seçilen mod için en az bir adres sağlanmalıdır"
 
@@ -703,7 +786,7 @@ msgid "Edit connection %s"
 msgstr "Bağlantıyı düzenle %s"
 
 #: src/components/network/IpSettingsForm.tsx:159
-#: src/components/storage/EncryptionSettingsPage.tsx:111
+#: src/components/storage/EncryptionSettingsPage.tsx:112
 #: src/components/storage/iscsi/DiscoverForm.tsx:98
 #: src/components/storage/iscsi/LoginForm.jsx:71
 #: src/components/storage/zfcp/ZFCPDiskForm.tsx:112
@@ -726,7 +809,9 @@ msgid "Automatic (DHCP)"
 msgstr "Kendiliğinden (DHCP)"
 
 #. TRANSLATORS: manual network configuration mode with a static IP address
+#. TRANSLATORS: Network summary title when using manual/static IP configuration
 #: src/components/network/IpSettingsForm.tsx:182
+#: src/components/network/NetworkDetailsItem.tsx:128
 #: src/components/storage/SizeModeSelect.tsx:191
 #: src/components/storage/SizeModeSelect.tsx:199
 #: src/components/storage/iscsi/NodeStartupOptions.js:26
@@ -746,6 +831,85 @@ msgstr "Ağ Geçidi"
 msgid "Gateway can be defined only in 'Manual' mode"
 msgstr "Ağ geçidi yalnızca 'Manuel' modda tanımlanabilir"
 
+#. TRANSLATORS: Displays two IP addresses. E.g., "192.168.1.1 and 192.168.1.2"
+#. %s will be replaced by IP addresses
+#: src/components/network/NetworkDetailsItem.tsx:61
+#, fuzzy, javascript-format
+msgid "%s and %s"
+msgstr " ve "
+
+#. TRANSLATORS: IPs summary when there are more than 2 static IP addresses.
+#. E.g., "192.168.1.1 and 2 others"
+#. %s is replaced by an IP address (e.g., "192.168.1.1")
+#. %d is replaced by the count of remaining IPs (e.g., "2")
+#: src/components/network/NetworkDetailsItem.tsx:66
+#, javascript-format
+msgid "%s and %d others"
+msgstr ""
+
+#. TRANSLATORS: Description shown when network connections are configured
+#. only for installation and won't be available in the installed system
+#: src/components/network/NetworkDetailsItem.tsx:75
+#, fuzzy
+msgid "System will have no network connections"
+msgstr "Kurulu sistemde ağ bağlantıları olmayabilir"
+
+#. TRANSLATORS: Summary for multiple manual network connections. E.g.,
+#. "Using 3 connections with 192.168.1.1 and 2 others"
+#. %d is replaced by the number of connections (e.g., "3")
+#. %s is replaced by IP address summary (e.g., "192.168.1.1 and 2 others")
+#. TRANSLATORS: Summary for multiple connections mixing automatic
+#. (DHCP) and manual configuration. E.g., "Using 2 connections with DHCP
+#. and 192.168.1.1"
+#. %d is replaced by the number of connections (e.g., "2")
+#. %s is replaced by configuration summary (e.g., "DHCP and 192.168.1.1")
+#. Full example:
+#: src/components/network/NetworkDetailsItem.tsx:83
+#: src/components/network/NetworkDetailsItem.tsx:99
+#, fuzzy, javascript-format
+msgid "Using %d connections with %s"
+msgstr "Bağlantıyı düzenle %s"
+
+#: src/components/network/NetworkDetailsItem.tsx:90
+#, fuzzy, javascript-format
+msgid "DHCP and %s"
+msgstr " ve "
+
+#: src/components/network/NetworkDetailsItem.tsx:90
+#, javascript-format
+msgid "DHCP, %s"
+msgstr ""
+
+#: src/components/network/NetworkDetailsItem.tsx:105
+#, fuzzy, javascript-format
+msgid "Configured with %d connection"
+msgid_plural "Configured with %d connections"
+msgstr[0] "Kablolu bağlantılar"
+msgstr[1] "Kablolu bağlantılar"
+
+#. TRANSLATORS: Network summary title when no network has been configured
+#: src/components/network/NetworkDetailsItem.tsx:118
+#, fuzzy
+msgid "Not configured"
+msgstr "Henüz yapılandırılmadı"
+
+#. TRANSLATORS: Network summary title when connections are set up only for
+#. installation and won't persist in the installed system
+#: src/components/network/NetworkDetailsItem.tsx:121
+#, fuzzy
+msgid "Installation only"
+msgstr "Kurulum"
+
+#. TRANSLATORS: Network summary title when using both automatic (DHCP) and manual configuration
+#: src/components/network/NetworkDetailsItem.tsx:124
+msgid "Auto and manual"
+msgstr ""
+
+#. TRANSLATORS: Network summary title when using automatic configuration (DHCP)
+#: src/components/network/NetworkDetailsItem.tsx:126
+msgid "Auto"
+msgstr "Otomatik"
+
 #: src/components/network/NetworkPage.tsx:34
 msgid "Wi-Fi not supported"
 msgstr "Wi-Fi desteklenmiyor"
@@ -757,12 +921,6 @@ msgid ""
 msgstr ""
 "Sistem muhtemelen eksik veya devre dışı donanım nedeniyle Wi-Fi "
 "bağlantılarını desteklemiyor."
-
-#: src/components/network/NetworkPage.tsx:52
-#: src/components/network/WifiConnectionDetails.tsx:45
-#: src/routes/network.tsx:38
-msgid "Network"
-msgstr "Ağ"
 
 #: src/components/network/NetworkPage.tsx:60
 #: src/components/network/NetworkPage.tsx:61
@@ -813,23 +971,22 @@ msgid "Status"
 msgstr "Durum"
 
 #: src/components/network/WifiConnectionDetails.tsx:60
-#: src/components/network/WifiConnectionForm.tsx:154
-#: src/components/network/WifiConnectionForm.tsx:157
+#: src/components/network/WifiConnectionForm.tsx:153
+#: src/components/network/WifiConnectionForm.tsx:156
 msgid "Security"
 msgstr "Güvenlik"
 
 #. TRANSLATORS: table header for a DASD devices table
 #: src/components/network/WifiConnectionDetails.tsx:72
-#: src/components/storage/DeviceSelectorModal.tsx:85
-#: src/components/storage/ProposalResultTable.tsx:132
-#: src/components/storage/SpaceActionsTable.tsx:233
+#: src/components/storage/DeviceSelectorModal.tsx:87
+#: src/components/storage/ProposalResultTable.tsx:134
 #: src/components/storage/dasd/DASDTable.tsx:449
 msgid "Device"
 msgstr "Cihaz"
 
 #: src/components/network/WifiConnectionDetails.tsx:73
 #: src/components/network/WifiNetworkPage.tsx:70
-#: src/components/network/WiredConnectionPage.tsx:69
+#: src/components/network/WiredConnectionPage.tsx:68
 msgid "Connection details"
 msgstr "Bağlantı ayrıntıları"
 
@@ -850,9 +1007,9 @@ msgid "IP settings"
 msgstr "IP ayarları"
 
 #: src/components/network/WifiConnectionDetails.tsx:100
-#: src/components/storage/FilesystemMenu.tsx:103
-#: src/components/storage/PartitionsSection.tsx:172
-#: src/components/storage/VolumeGroupEditor.tsx:163
+#: src/components/storage/FilesystemMenu.tsx:109
+#: src/components/storage/PartitionsSection.tsx:183
+#: src/components/storage/VolumeGroupEditor.tsx:168
 #: src/components/storage/iscsi/NodesPresenter.jsx:80
 #: src/components/users/FirstUser.tsx:54 src/components/users/RootUser.tsx:57
 msgid "Edit"
@@ -874,20 +1031,20 @@ msgid "Routes"
 msgstr "Rotalar"
 
 #. TRANSLATORS: WiFi authentication mode
-#: src/components/network/WifiConnectionForm.tsx:43
+#: src/components/network/WifiConnectionForm.tsx:44
 msgid "None"
 msgstr "Yok"
 
 #. TRANSLATORS: WiFi authentication mode
-#: src/components/network/WifiConnectionForm.tsx:45
+#: src/components/network/WifiConnectionForm.tsx:46
 msgid "WPA & WPA2 Personal"
 msgstr "WPA ve WPA2 Kişisel"
 
-#: src/components/network/WifiConnectionForm.tsx:56
+#: src/components/network/WifiConnectionForm.tsx:57
 msgid "Not protected network"
 msgstr "Korunmayan ağ"
 
-#: src/components/network/WifiConnectionForm.tsx:58
+#: src/components/network/WifiConnectionForm.tsx:59
 msgid ""
 "You will connect to a public network without encryption. Your data may not "
 "be secure."
@@ -895,40 +1052,40 @@ msgstr ""
 "Şifreleme olmadan halka açık bir ağa bağlanacaksınız. Verileriniz güvenli "
 "olmayabilir."
 
-#: src/components/network/WifiConnectionForm.tsx:69
+#: src/components/network/WifiConnectionForm.tsx:70
 msgid "Setting up connection"
 msgstr "Bağlantı kuruluyor"
 
-#: src/components/network/WifiConnectionForm.tsx:71
+#: src/components/network/WifiConnectionForm.tsx:72
 msgid "It may take some time."
 msgstr "Biraz zaman alabilir."
 
-#: src/components/network/WifiConnectionForm.tsx:73
+#: src/components/network/WifiConnectionForm.tsx:74
 msgid "Details will appear after the connection is successfully established."
 msgstr "Bağlantı başarıyla kurulduktan sonra ayrıntılar görünecektir."
 
 #. TRANSLATORS: %s will be replaced by network ssid.
-#: src/components/network/WifiConnectionForm.tsx:81
+#: src/components/network/WifiConnectionForm.tsx:82
 #, javascript-format
 msgid "Could not connect to %s"
 msgstr "%s'ye bağlanılamadı"
 
-#: src/components/network/WifiConnectionForm.tsx:85
+#: src/components/network/WifiConnectionForm.tsx:86
 msgid "Check the authentication parameters."
 msgstr "Kimlik doğrulama parametrelerini kontrol edin."
 
 #. TRANSLATORS: accessible name for the WiFi connection form
-#: src/components/network/WifiConnectionForm.tsx:149
+#: src/components/network/WifiConnectionForm.tsx:148
 msgid "Wi-Fi connection form"
 msgstr "Wi-Fi bağlantı formu"
 
 #. TRANSLATORS: WiFi password
-#: src/components/network/WifiConnectionForm.tsx:174
+#: src/components/network/WifiConnectionForm.tsx:173
 msgid "WPA Password"
 msgstr "WPA Şifresi"
 
 #. TRANSLATORS: button label, connect to a Wi-Fi network
-#: src/components/network/WifiConnectionForm.tsx:187
+#: src/components/network/WifiConnectionForm.tsx:186
 msgid "Connect"
 msgstr "Bağlan"
 
@@ -1048,7 +1205,7 @@ msgid "Connected devices tabs"
 msgstr "Bağlı cihazlar sekmeleri"
 
 #: src/components/network/WiredConnectionDetails.tsx:203
-#: src/components/storage/ProposalPage.tsx:226
+#: src/components/storage/ProposalPage.tsx:205
 msgid "Settings"
 msgstr "Ayarlar"
 
@@ -1070,101 +1227,36 @@ msgstr "Bağlantı bulunamadı veya kayboldu"
 msgid "No wired connections were found"
 msgstr "Kablolu bağlantı bulunamadı"
 
-#. TRANSLATORS: %s will be replaced by a language name and territory, example:
-#. "English (United States)".
-#: src/components/overview/L10nSection.tsx:33
-#, javascript-format
-msgid "The system will use %s as its default language."
-msgstr "Sistem öntanımlı olarak %s dilini kullanacaktır."
+#: src/components/overview/InstallationSummarySection.tsx:36
+#, fuzzy
+msgid "Installation summary"
+msgstr "Kurulum"
 
-#: src/components/overview/OverviewPage.tsx:35 src/router.tsx:51
+#: src/components/overview/OverviewPage.tsx:43 src/router.tsx:52
 msgid "Overview"
 msgstr "Genel bakış"
 
-#: src/components/overview/OverviewPage.tsx:44
-msgid ""
-"These are the most relevant installation settings. Feel free to browse the "
-"sections in the menu for further details."
+#: src/components/overview/SystemInformationSection.tsx:14
+#, fuzzy
+msgid "System information"
+msgstr "%s hakkında bilgi göster"
+
+#: src/components/overview/SystemInformationSection.tsx:17
+#, fuzzy
+msgid "Model"
+msgstr "Mod"
+
+#: src/components/overview/SystemInformationSection.tsx:18
+msgid "CPU"
 msgstr ""
-"Bunlar belirgin kurulum ayarlarıdır. Daha çok ayrıntı için menüdeki "
-"bölümlere göz atmaktan çekinmeyin."
 
-#: src/components/overview/SoftwareSection.tsx:41
-msgid "The installation will take"
-msgstr "Kurulum yapılacak"
-
-#. TRANSLATORS: %s will be replaced with the installation size, example: "5GiB".
-#: src/components/overview/SoftwareSection.tsx:48
-#, javascript-format
-msgid "The installation will take %s including:"
-msgstr "Kurulum %s kadar olacaktır ve şunları içerecektir:"
-
-#: src/components/overview/StorageSection.tsx:37
-msgid "No device selected yet"
-msgstr "Henüz hiçbir cihaz seçilmedi"
-
-#. TRANSLATORS: %s will be replaced by the device name and its size,
-#. example: "/dev/sda, 20 GiB"
-#: src/components/overview/StorageSection.tsx:45
-#, javascript-format
-msgid "Install using device %s shrinking existing partitions as needed."
+#: src/components/overview/SystemInformationSection.tsx:19
+msgid "Memory"
 msgstr ""
-"%s aygıtını kullanarak kurulum yapın ve gerektiğinde mevcut bölümleri "
-"küçültün."
 
-#. TRANSLATORS: %s will be replaced by the device name and its size,
-#. example: "/dev/sda, 20 GiB"
-#: src/components/overview/StorageSection.tsx:48
-#, javascript-format
-msgid "Install using device %s without modifying existing partitions."
-msgstr "Mevcut bölümleri değiştirmeden, %s cihazını kullanarak yükleyin."
-
-#. TRANSLATORS: %s will be replaced by the device name and its size,
-#. example: "/dev/sda, 20 GiB"
-#: src/components/overview/StorageSection.tsx:51
-#, javascript-format
-msgid "Install using device %s and deleting all its content."
-msgstr "%s aygıtını kullanarak yükleyin ve tüm içeriğini silin."
-
-#. TRANSLATORS: %s will be replaced by the device name and its size,
-#. example: "/dev/sda, 20 GiB"
-#: src/components/overview/StorageSection.tsx:54
-#, javascript-format
-msgid ""
-"Install using device %s with a custom strategy to find the needed space."
+#: src/components/overview/SystemInformationSection.tsx:22
+msgid "IPs"
 msgstr ""
-"Gerekli alanı bulmak için özel bir stratejiyle %s cihazını kullanarak "
-"yükleyin."
-
-#: src/components/overview/StorageSection.tsx:70
-msgid "Install using several devices shrinking existing partitions as needed."
-msgstr ""
-"%s aygıtını kullanarak kurulum yapın ve gerektiğinde mevcut bölümleri "
-"küçültün."
-
-#: src/components/overview/StorageSection.tsx:71
-msgid "Install using several devices without modifying existing partitions."
-msgstr "Mevcut bölümleri değiştirmeden %s aygıtını kullanarak yükleyin."
-
-#: src/components/overview/StorageSection.tsx:72
-msgid "Install using several devices and deleting all its content."
-msgstr "%s aygıtını kullanarak yükleyin ve tüm içeriğini silin."
-
-#: src/components/overview/StorageSection.tsx:73
-msgid ""
-"Install using several devices with a custom strategy to find the needed "
-"space."
-msgstr ""
-"İhtiyaç duyduğunuz alanı bulmak için özel bir stratejiyle birden fazla cihaz "
-"kullanarak kurulum yapın."
-
-#: src/components/overview/StorageSection.tsx:100
-msgid "There are no disks available for the installation."
-msgstr "Kurulum için kullanılabilir bir disk yok."
-
-#: src/components/overview/StorageSection.tsx:101
-msgid "Install using an advanced configuration."
-msgstr "Gelişmiş seçenekler ile kurulum yapın."
 
 #: src/components/product/LicenseDialog.tsx:40
 #, javascript-format
@@ -1173,105 +1265,105 @@ msgstr "Bu lisans %s'de mevcut değil."
 
 #: src/components/product/LicenseDialog.tsx:74
 #: src/components/software/SoftwareConflicts.tsx:294
-#: src/components/software/SoftwarePatternsSelection.tsx:207
+#: src/components/software/SoftwarePatternsSelection.tsx:215
 msgid "Close"
 msgstr "Kapat"
 
-#: src/components/product/ProductRegistrationAlert.tsx:56
+#: src/components/product/ProductRegistrationAlert.tsx:57
 #, javascript-format
 msgid "%s [must be registered]."
 msgstr "%s [kayıtlı olmalı]."
 
-#: src/components/product/ProductRegistrationPage.tsx:64
+#: src/components/product/ProductRegistrationPage.tsx:67
 msgid "Registration server"
 msgstr "Kayıt sunucusu"
 
-#: src/components/product/ProductRegistrationPage.tsx:65
+#: src/components/product/ProductRegistrationPage.tsx:68
 msgid "Email"
 msgstr "E-posta"
 
-#: src/components/product/ProductRegistrationPage.tsx:66
+#: src/components/product/ProductRegistrationPage.tsx:69
 msgid "SUSE Customer Center (SCC)"
 msgstr "SUSE Müşteri Merkezi (SMM)"
 
-#: src/components/product/ProductRegistrationPage.tsx:67
-#: src/components/storage/utils.ts:102
+#: src/components/product/ProductRegistrationPage.tsx:70
+#: src/components/storage/utils.ts:104
 msgid "Custom"
 msgstr "Özel"
 
-#: src/components/product/ProductRegistrationPage.tsx:79
+#: src/components/product/ProductRegistrationPage.tsx:82
 #, javascript-format
 msgid "%s has been registered with below information."
 msgstr "%s aşağıdaki bilgilerle kayıt edildi."
 
 #. TRANSLATORS: input field label
-#: src/components/product/ProductRegistrationPage.tsx:91
-#: src/components/product/ProductRegistrationPage.tsx:179
+#: src/components/product/ProductRegistrationPage.tsx:94
+#: src/components/product/ProductRegistrationPage.tsx:182
 #: src/components/product/RegistrationExtension.tsx:150
 msgid "Registration code"
 msgstr "Kayıt kodu"
 
 #. TRANSLATORS: switch for displaying or hiding the registration code
-#: src/components/product/ProductRegistrationPage.tsx:96
+#: src/components/product/ProductRegistrationPage.tsx:99
 #: src/components/product/RegistrationExtension.tsx:64
 msgid "Hide"
 msgstr "Gizle"
 
-#: src/components/product/ProductRegistrationPage.tsx:96
+#: src/components/product/ProductRegistrationPage.tsx:99
 #: src/components/product/RegistrationExtension.tsx:64
 msgid "Show"
 msgstr "Göster"
 
-#: src/components/product/ProductRegistrationPage.tsx:135
+#: src/components/product/ProductRegistrationPage.tsx:138
 msgid "Server options"
 msgstr "Sunucu seçenekleri"
 
-#: src/components/product/ProductRegistrationPage.tsx:136
+#: src/components/product/ProductRegistrationPage.tsx:139
 msgid "Register using SUSE server"
 msgstr "SUSE sunucusunu kullanarak kaydol"
 
-#: src/components/product/ProductRegistrationPage.tsx:141
+#: src/components/product/ProductRegistrationPage.tsx:144
 msgid "Register using a custom registration server"
 msgstr "Özel bir kayıt sunucusu kullanarak kaydol"
 
-#: src/components/product/ProductRegistrationPage.tsx:159
+#: src/components/product/ProductRegistrationPage.tsx:162
 msgid "Server URL"
 msgstr "Sunucu URL'si"
 
 #. TRANSLATORS: %s is replaced by an example URL like https://example.com
-#: src/components/product/ProductRegistrationPage.tsx:162
+#: src/components/product/ProductRegistrationPage.tsx:165
 #, javascript-format
 msgid "Example: %s"
 msgstr "Örnek: %s"
 
-#: src/components/product/ProductRegistrationPage.tsx:211
+#: src/components/product/ProductRegistrationPage.tsx:214
 msgid "Provide registration code"
 msgstr "Kayıt kodunu sağlayın"
 
-#: src/components/product/ProductRegistrationPage.tsx:247
+#: src/components/product/ProductRegistrationPage.tsx:250
 msgid "Provide email address"
 msgstr "E-posta adresini belirtin"
 
-#: src/components/product/ProductRegistrationPage.tsx:344
-#: src/components/storage/LvmPage.tsx:169
-#: src/components/system/HostnamePage.tsx:104
+#: src/components/product/ProductRegistrationPage.tsx:339
+#: src/components/storage/LvmPage.tsx:176
+#: src/components/system/HostnamePage.tsx:102
 msgid "Check the following before continuing"
 msgstr "Devam etmeden önce aşağıdakileri kontrol edin"
 
 #. TRANSLATORS: button label
-#: src/components/product/ProductRegistrationPage.tsx:374
+#: src/components/product/ProductRegistrationPage.tsx:369
 #: src/components/product/RegistrationExtension.tsx:161
 #: src/components/product/RegistrationExtension.tsx:176
 msgid "Register"
 msgstr "Kaydol"
 
 #. TRANSLATORS: %s will be replaced with the hostname value
-#: src/components/product/ProductRegistrationPage.tsx:386
+#: src/components/product/ProductRegistrationPage.tsx:382
 #, javascript-format
 msgid "The product will be registered with \"%s\" hostname"
 msgstr ""
 
-#: src/components/product/ProductRegistrationPage.tsx:390
+#: src/components/product/ProductRegistrationPage.tsx:386
 #, javascript-format
 msgid ""
 "You cannot change it later. Go to the %s section if you want to modify it "
@@ -1280,16 +1372,12 @@ msgstr ""
 "Daha sonra değiştiremezsiniz. Kayıt işlemine devam etmeden önce değiştirmek "
 "istiyorsanız %s bölümüne gidin."
 
-#: src/components/product/ProductRegistrationPage.tsx:395
+#: src/components/product/ProductRegistrationPage.tsx:391
 msgid "hostname"
 msgstr "ana bilgisayar adı"
 
-#: src/components/product/ProductRegistrationPage.tsx:421
-msgid "Extensions"
-msgstr "Uzantılar"
-
 #. TRANSLATORS: %s will be replaced by a product name. E.g., "openSUSE Tumbleweed"
-#: src/components/product/ProductSelectionPage.tsx:62
+#: src/components/product/ProductSelectionPage.tsx:70
 #, javascript-format
 msgid "%s logo"
 msgstr "%s logosu"
@@ -1297,16 +1385,16 @@ msgstr "%s logosu"
 #. TRANSLATORS: Text used for the license acceptance checkbox. %s will be
 #. replaced with the product name and the text in the square brackets [] is
 #. used for the link to show the license, please keep the brackets.
-#: src/components/product/ProductSelectionPage.tsx:139
+#: src/components/product/ProductSelectionPage.tsx:156
 #, javascript-format
 msgid "I have read and accept the [license] for %s"
 msgstr "%s için [lisansı] okudum ve kabul ediyorum"
 
-#: src/components/product/ProductSelectionPage.tsx:150
+#: src/components/product/ProductSelectionPage.tsx:167
 msgid "Select a product"
 msgstr "Bir ürün seçin"
 
-#: src/components/product/ProductSelectionPage.tsx:151
+#: src/components/product/ProductSelectionPage.tsx:168
 msgid "Available products"
 msgstr "Mevcut ürünler"
 
@@ -1392,7 +1480,7 @@ msgstr ""
 msgid "Package installation failed"
 msgstr "Paket kurulumu başarısız oldu"
 
-#: src/components/questions/QuestionWithPassword.tsx:56
+#: src/components/questions/QuestionWithPassword.tsx:55
 msgid "Password Required"
 msgstr "Parola Gerekli"
 
@@ -1455,7 +1543,7 @@ msgstr "Herhangi bir destek planlanmamaktadır."
 #: src/components/questions/UnsupportedAutoYaST.tsx:106
 msgid ""
 "If you want to disable this check, please specify \"inst.ay_check=0\" at "
-"kernel's command-line"
+"kernels command-line"
 msgstr ""
 
 #: src/components/software/SoftwareConflicts.tsx:100
@@ -1515,24 +1603,43 @@ msgstr ""
 msgid "Software conflicts resolution"
 msgstr "Yazılım çatışmalarının çözümü"
 
-#: src/components/software/SoftwarePage.tsx:58
+#: src/components/software/SoftwareDetailsItem.tsx:43
+msgid "Required packages"
+msgstr ""
+
+#. TRANSLATORS: %s will be replaced with amount of selected patterns.
+#: src/components/software/SoftwareDetailsItem.tsx:48
+#, javascript-format
+msgid "Required packages and %s pattern"
+msgid_plural "Required packages and %s patterns"
+msgstr[0] ""
+msgstr[1] ""
+
+#. TRANSLATORS: %s will be replaced with a human-readable installation size
+#. (e.g. 5.95 GiB).
+#: src/components/software/SoftwareDetailsItem.tsx:64
+#, javascript-format
+msgid "Needs about %s"
+msgstr ""
+
+#: src/components/software/SoftwarePage.tsx:62
 msgid "No additional software was selected."
 msgstr "Hiçbir ek yazılım seçilmedi."
 
-#: src/components/software/SoftwarePage.tsx:63
+#: src/components/software/SoftwarePage.tsx:67
 msgid "The following software patterns are selected for installation:"
 msgstr "Kurulum için aşağıdaki yazılım desenleri seçilmiştir:"
 
-#: src/components/software/SoftwarePage.tsx:78
-#: src/components/software/SoftwarePage.tsx:90
+#: src/components/software/SoftwarePage.tsx:82
+#: src/components/software/SoftwarePage.tsx:94
 msgid "Selected patterns"
 msgstr "Seçilmiş desenler"
 
-#: src/components/software/SoftwarePage.tsx:81
+#: src/components/software/SoftwarePage.tsx:85
 msgid "Change selection"
 msgstr "Seçimi değiştir"
 
-#: src/components/software/SoftwarePage.tsx:93
+#: src/components/software/SoftwarePage.tsx:97
 msgid ""
 "This product does not allow to select software patterns during installation. "
 "However, you can add additional software once the installation is finished."
@@ -1541,50 +1648,50 @@ msgstr ""
 "Ancak kurulum tamamlandıktan sonra ek yazılım ekleyebilirsiniz."
 
 #. TRANSLATORS: error details followed by a "Try again" link
-#: src/components/software/SoftwarePage.tsx:101
+#: src/components/software/SoftwarePage.tsx:105
 msgid ""
 "Some installation repositories could not be loaded. The system cannot be "
 "installed without them."
 msgstr "Bazı kurulum depoları yüklenemedi. Sistem bunlar olmadan yüklenemez."
 
 #. TRANSLATORS: title for an error message box, at least one repository could not be loaded
-#: src/components/software/SoftwarePage.tsx:114
+#: src/components/software/SoftwarePage.tsx:118
 msgid "Repository load failed"
 msgstr "Depo yüklemesi başarısız oldu"
 
 #. TRANSLATORS: progress message
-#: src/components/software/SoftwarePage.tsx:118
+#: src/components/software/SoftwarePage.tsx:122
 msgid "Loading the installation repositories..."
 msgstr "Kurulum depoları yükleniyor..."
 
 #. TRANSLATORS: link for retrying failed repository load
-#: src/components/software/SoftwarePage.tsx:125
+#: src/components/software/SoftwarePage.tsx:129
 msgid "Try again"
 msgstr "Tekrar deneyin"
 
-#: src/components/software/SoftwarePage.tsx:176
+#: src/components/software/SoftwarePage.tsx:189
 msgid "Used space"
 msgstr "Kullanılan alan"
 
-#: src/components/software/SoftwarePatternsSelection.tsx:99
+#: src/components/software/SoftwarePatternsSelection.tsx:102
 msgid "None of the patterns match the filter."
 msgstr "Desenlerin hiçbiri filtreyle eşleşmiyor."
 
-#: src/components/software/SoftwarePatternsSelection.tsx:164
+#: src/components/software/SoftwarePatternsSelection.tsx:172
 msgid "auto selected"
 msgstr "kendiliğinden seçildi"
 
-#: src/components/software/SoftwarePatternsSelection.tsx:168
+#: src/components/software/SoftwarePatternsSelection.tsx:176
 msgid "Unselect"
 msgstr "Seçimi kaldır"
 
-#: src/components/software/SoftwarePatternsSelection.tsx:188
+#: src/components/software/SoftwarePatternsSelection.tsx:196
 msgid "Software selection"
 msgstr "Yazılım seçimi"
 
 #. TRANSLATORS: search field placeholder text
-#: src/components/software/SoftwarePatternsSelection.tsx:191
-#: src/components/software/SoftwarePatternsSelection.tsx:192
+#: src/components/software/SoftwarePatternsSelection.tsx:199
+#: src/components/software/SoftwarePatternsSelection.tsx:200
 msgid "Filter by pattern title or description"
 msgstr "Desen başlığına veya açıklamasına göre filtrele"
 
@@ -1601,22 +1708,22 @@ msgid ""
 "any."
 msgstr "Bu alan, varsa temel sistemi ve seçili yazılım desenlerini içerir."
 
-#: src/components/storage/AutoSizeText.tsx:34
+#: src/components/storage/AutoSizeText.tsx:35
 msgid "logical volume"
 msgstr "mantıksal alan"
 
-#: src/components/storage/AutoSizeText.tsx:34
+#: src/components/storage/AutoSizeText.tsx:35
 msgid "partition"
 msgstr "bölüm"
 
 #. TRANSLATORS: %1$s is a size with units (eg. 3 GiB) and %2$s is a device type (eg. partition)
-#: src/components/storage/AutoSizeText.tsx:47
+#: src/components/storage/AutoSizeText.tsx:48
 #, javascript-format
 msgid "A generic size of %1$s will be used for the new %2$s"
 msgstr "Yeni %2$s için %1$s genel boyutu kullanılacak"
 
 #. TRANSLATORS: %1$s and %2$s are sizes with units (eg. 3 GiB) and %3$s is a device type (eg. partition)
-#: src/components/storage/AutoSizeText.tsx:55
+#: src/components/storage/AutoSizeText.tsx:56
 #, javascript-format
 msgid ""
 "A generic size range between %1$s and %2$s will be used for the new %3$s"
@@ -1624,19 +1731,19 @@ msgstr ""
 "Yeni %3$s için %1$s ile %2$s arasında genel bir boyut aralığı kullanılacak"
 
 #. TRANSLATORS: %1$s is a size with units (eg. 3 GiB) and %1$s is a device type (eg. partition)
-#: src/components/storage/AutoSizeText.tsx:64
+#: src/components/storage/AutoSizeText.tsx:65
 #, javascript-format
 msgid "A generic minimum size of %1$s will be used for the new %2$s"
 msgstr "Yeni %2$s için genel bir asgari %1$s boyutu kullanılacak"
 
 #. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
-#: src/components/storage/AutoSizeText.tsx:81
+#: src/components/storage/AutoSizeText.tsx:82
 #, javascript-format
 msgid "A %1$s of %2$s will be created for %3$s if possible"
 msgstr "Mümkünse %3$s için %2$s'den %1$s oluşturulacak"
 
 #. TRANSLATORS: %1$s is a device type (eg. partition), %2$s and %3$s are sizes with units (10 GiB), and %4$s is a mount path (/home)
-#: src/components/storage/AutoSizeText.tsx:90
+#: src/components/storage/AutoSizeText.tsx:91
 #, javascript-format
 msgid ""
 "A %1$s with a size between %2$s and %3$s will be created for %4$s if possible"
@@ -1644,13 +1751,13 @@ msgstr ""
 "Mümkünse %4$s için %2$s ile %3$s arasında bir boyuta sahip %1$s oluşturulacak"
 
 #. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
-#: src/components/storage/AutoSizeText.tsx:100
+#: src/components/storage/AutoSizeText.tsx:101
 #, javascript-format
 msgid "A %1$s of at least %2$s will be created for %3$s if possible"
 msgstr "Mümkünse %3$s için en az %2$s'lik bir %1$s oluşturulacak"
 
 #. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
-#: src/components/storage/AutoSizeText.tsx:118
+#: src/components/storage/AutoSizeText.tsx:119
 #, javascript-format
 msgid ""
 "Based on the amount of RAM in the system, a %1$s of %2$s will be planned for "
@@ -1659,7 +1766,7 @@ msgstr ""
 "Sistemdeki RAM miktarına bağlı olarak, %3$s için %1$s veya %2$s "
 "planlanacaktır"
 
-#: src/components/storage/AutoSizeText.tsx:128
+#: src/components/storage/AutoSizeText.tsx:129
 #, javascript-format
 msgid ""
 "Based on the amount of RAM in the system, a %1$s with a size between %2$s "
@@ -1669,7 +1776,7 @@ msgstr ""
 "boyuta sahip %1$s planlanacaktır."
 
 #. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
-#: src/components/storage/AutoSizeText.tsx:139
+#: src/components/storage/AutoSizeText.tsx:140
 #, javascript-format
 msgid ""
 "Based on the amount of RAM in the system, a %1$s of at least %2$s will be "
@@ -1678,7 +1785,7 @@ msgstr ""
 "Sistemdeki RAM miktarına bağlı olarak, %3$s için en az %2$s'lik bir %1$s "
 "planlanacaktır"
 
-#: src/components/storage/AutoSizeText.tsx:168
+#: src/components/storage/AutoSizeText.tsx:169
 #, javascript-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the amount of RAM in "
@@ -1689,7 +1796,7 @@ msgstr ""
 "kullanımına ve %2$s için ayrı bir dosya sisteminin varlığına bağlı olarak "
 "dinamik olarak ayarlanacaktır."
 
-#: src/components/storage/AutoSizeText.tsx:179
+#: src/components/storage/AutoSizeText.tsx:180
 #, javascript-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the amount of RAM in "
@@ -1700,7 +1807,7 @@ msgstr ""
 "kullanımına ve %2$s için ayrı dosya sistemlerinin varlığına bağlı olarak "
 "dinamik olarak ayarlanacaktır."
 
-#: src/components/storage/AutoSizeText.tsx:189
+#: src/components/storage/AutoSizeText.tsx:190
 #, javascript-format
 msgid ""
 "The size for %s will be dynamically adjusted based on the amount of RAM in "
@@ -1709,7 +1816,7 @@ msgstr ""
 "%s boyutu, sistemdeki RAM miktarına ve Btrfs anlık görüntülerinin "
 "kullanımına bağlı olarak dinamik olarak ayarlanacaktır."
 
-#: src/components/storage/AutoSizeText.tsx:200
+#: src/components/storage/AutoSizeText.tsx:201
 #, javascript-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the amount of RAM in "
@@ -1718,7 +1825,7 @@ msgstr ""
 "%1$s için boyut, sistemdeki RAM miktarına ve %2$s için ayrı bir dosya "
 "sisteminin varlığına bağlı olarak dinamik olarak ayarlanacaktır."
 
-#: src/components/storage/AutoSizeText.tsx:210
+#: src/components/storage/AutoSizeText.tsx:211
 #, javascript-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the amount of RAM in "
@@ -1727,7 +1834,7 @@ msgstr ""
 "%1$s için boyut, sistemdeki RAM miktarına ve %2$s için ayrı dosya "
 "sistemlerinin varlığına bağlı olarak dinamik olarak ayarlanacaktır."
 
-#: src/components/storage/AutoSizeText.tsx:222
+#: src/components/storage/AutoSizeText.tsx:223
 #, javascript-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the usage of Btrfs "
@@ -1736,7 +1843,7 @@ msgstr ""
 "%1$s için boyut, Btrfs anlık görüntülerinin kullanımına ve %2$s için ayrı "
 "bir dosya sisteminin varlığına bağlı olarak dinamik olarak ayarlanacaktır."
 
-#: src/components/storage/AutoSizeText.tsx:233
+#: src/components/storage/AutoSizeText.tsx:234
 #, javascript-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the usage of Btrfs "
@@ -1746,7 +1853,7 @@ msgstr ""
 "dosya sistemlerinin varlığına bağlı olarak dinamik olarak ayarlanacaktır."
 
 #. TRANSLATORS: %s is a mount point (eg. /)
-#: src/components/storage/AutoSizeText.tsx:242
+#: src/components/storage/AutoSizeText.tsx:243
 #, javascript-format
 msgid ""
 "The size for %s will be dynamically adjusted based on the usage of Btrfs "
@@ -1755,7 +1862,7 @@ msgstr ""
 "%s boyutu, Btrfs anlık görüntülerinin kullanımına bağlı olarak dinamik "
 "olarak ayarlanacaktır."
 
-#: src/components/storage/AutoSizeText.tsx:251
+#: src/components/storage/AutoSizeText.tsx:252
 #, javascript-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the presence of a "
@@ -1764,7 +1871,7 @@ msgstr ""
 "%1$s için boyut, %2$s için ayrı bir dosya sisteminin varlığına bağlı olarak "
 "dinamik olarak ayarlanacaktır."
 
-#: src/components/storage/AutoSizeText.tsx:261
+#: src/components/storage/AutoSizeText.tsx:262
 #, javascript-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the presence of "
@@ -1774,14 +1881,14 @@ msgstr ""
 "dinamik olarak ayarlanacaktır."
 
 #. TRANSLATORS: %1$s is a device type (eg. partition) and %2$s is a size with units (eg. 10 GiB)
-#: src/components/storage/AutoSizeText.tsx:273
+#: src/components/storage/AutoSizeText.tsx:274
 #, javascript-format
 msgid ""
 "The current configuration will result in an attempt to create a %1$s of %2$s."
 msgstr ""
 "Mevcut yapılandırma %2$s'nin %1$s'sini oluşturma girişimiyle sonuçlanacaktır."
 
-#: src/components/storage/AutoSizeText.tsx:282
+#: src/components/storage/AutoSizeText.tsx:283
 #, javascript-format
 msgid ""
 "The current configuration will result in an attempt to create a %1$s with a "
@@ -1791,7 +1898,7 @@ msgstr ""
 "girişimine yol açacaktır."
 
 #. TRANSLATORS: %1$s is a device type (eg. partition) and %2$s is a size with units (eg. 10 GiB)
-#: src/components/storage/AutoSizeText.tsx:292
+#: src/components/storage/AutoSizeText.tsx:293
 #, javascript-format
 msgid ""
 "The current configuration will result in an attempt to create a %1$s of at "
@@ -1800,23 +1907,23 @@ msgstr ""
 "Mevcut yapılandırma en az %2$s değerinde bir %1$s oluşturma girişimine yol "
 "açacaktır."
 
-#: src/components/storage/BootSection.tsx:41
-#: src/components/storage/BootSelection.tsx:145
+#: src/components/storage/BootSection.tsx:42
+#: src/components/storage/BootSelection.tsx:154
 #, fuzzy, javascript-format
 msgid ""
 "Partitions to boot will be set up if needed at the installation disk, based "
 "on the location of the %s file system."
 msgstr "Önyükleme için bölümler kurulum diski %s'de ayrılacaktır."
 
-#: src/components/storage/BootSection.tsx:52
-#: src/components/storage/BootSelection.tsx:156
+#: src/components/storage/BootSection.tsx:53
+#: src/components/storage/BootSelection.tsx:165
 #, javascript-format
 msgid ""
 "Partitions to boot will be set up if needed at the installation disk. "
 "Currently %1$s, based on the location of the %2$s file system."
 msgstr ""
 
-#: src/components/storage/BootSection.tsx:65
+#: src/components/storage/BootSection.tsx:66
 #, fuzzy
 msgid "No partitions will be automatically configured for booting."
 msgstr ""
@@ -1824,13 +1931,13 @@ msgstr ""
 "kullanın."
 
 #. TRANSLATORS: %s is replaced by a disk name and size (eg. "sda (500GiB)")
-#: src/components/storage/BootSection.tsx:69
+#: src/components/storage/BootSection.tsx:70
 #, fuzzy, javascript-format
 msgid "Partitions to boot will be set up if needed at %s."
 msgstr "Önyükleme için gerekli bölümler kurulum diskinde ayrılacaktır."
 
-#: src/components/storage/BootSection.tsx:84
-#: src/components/storage/BootSelection.tsx:136
+#: src/components/storage/BootSection.tsx:87
+#: src/components/storage/BootSelection.tsx:145
 msgid ""
 "To ensure the new system is able to boot, the installer may need to create "
 "or configure some partitions in the appropriate disk."
@@ -1838,36 +1945,36 @@ msgstr ""
 "Yeni sistemin önyükleme yapabilmesini sağlamak için yükleyicinin uygun "
 "diskte bazı bölümler oluşturması veya yapılandırması gerekebilir."
 
-#: src/components/storage/BootSelection.tsx:175
-#: src/components/storage/ProposalPage.tsx:287
+#: src/components/storage/BootSelection.tsx:184
+#: src/components/storage/ProposalPage.tsx:259
 msgid "Boot options"
 msgstr "Önyükleme seçenekleri"
 
-#: src/components/storage/BootSelection.tsx:195
+#: src/components/storage/BootSelection.tsx:204
 #: src/components/storage/SizeModeSelect.tsx:191
 #: src/components/storage/SizeModeSelect.tsx:196
 #: src/components/storage/iscsi/NodeStartupOptions.js:28
 msgid "Automatic"
 msgstr "Kendiliğinden"
 
-#: src/components/storage/BootSelection.tsx:213
+#: src/components/storage/BootSelection.tsx:222
 msgid "Select a disk"
 msgstr "Bir disk seçin"
 
-#: src/components/storage/BootSelection.tsx:218
+#: src/components/storage/BootSelection.tsx:227
 #, fuzzy
 msgid "Partitions to boot will be set up if needed at the following device."
 msgstr "Önyükleme için bölümler aşağıdaki aygıtta ayrılacaktır."
 
-#: src/components/storage/BootSelection.tsx:220
+#: src/components/storage/BootSelection.tsx:229
 msgid "Choose a disk for placing the boot loader"
 msgstr "Önyükleyiciyi yerleştirmek için disk seç"
 
-#: src/components/storage/BootSelection.tsx:243
+#: src/components/storage/BootSelection.tsx:252
 msgid "Do not configure"
 msgstr "Yapılandırmayın"
 
-#: src/components/storage/BootSelection.tsx:249
+#: src/components/storage/BootSelection.tsx:258
 msgid ""
 "No partitions will be automatically configured for booting. Use with caution."
 msgstr ""
@@ -1892,128 +1999,128 @@ msgstr ""
 msgid "reset to defaults"
 msgstr "öntanımlılara sıfırla"
 
-#: src/components/storage/ConfigEditor.tsx:87
+#: src/components/storage/ConfigEditor.tsx:71
 msgid "[FIXME]"
 msgstr "[FIXME]"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:49
+#: src/components/storage/ConfigureDeviceMenu.tsx:48
 msgid "Select a device to define partitions or to mount"
 msgstr "Bölümleri tanımlamak veya bağlamak için bir aygıt seçin"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:50
+#: src/components/storage/ConfigureDeviceMenu.tsx:49
 msgid "Select another device to define partitions or to mount"
 msgstr "Bölümleri tanımlamak veya bağlamak için başka bir cihaz seçin"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:53
+#: src/components/storage/ConfigureDeviceMenu.tsx:52
 msgid "Select a disk to define partitions or to mount"
 msgstr "Bölümleri tanımlamak veya bağlamak için disk seç"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:54
+#: src/components/storage/ConfigureDeviceMenu.tsx:53
 msgid "Select another disk to define partitions or to mount"
 msgstr "Bölümleri tanımlamak veya bağlamak için başka disk seç"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:59
+#: src/components/storage/ConfigureDeviceMenu.tsx:58
 msgid "Already using all available devices"
 msgstr "Zaten uygun tüm aygıtlar kullanılıyor"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:60
+#: src/components/storage/ConfigureDeviceMenu.tsx:59
 msgid "Already using all available disks"
 msgstr "Zaten tüm kullanılabilir diskler kullanılıyor"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:67
+#: src/components/storage/ConfigureDeviceMenu.tsx:66
 #, javascript-format
 msgid "Extend the installation beyond the currently selected device"
 msgid_plural "Extend the installation beyond the current %d devices"
 msgstr[0] "Kurulumu şu anda seçili olan cihazın ötesine genişletin"
 msgstr[1] "Kurulumu şu anda seçili olan %d aygıtın ötesine genişlet"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:76
+#: src/components/storage/ConfigureDeviceMenu.tsx:75
 #, javascript-format
 msgid "Extend the installation beyond the currently selected disk"
 msgid_plural "Extend the installation beyond the current %d disks"
 msgstr[0] "Kurulumu şu anda seçili olan diskin ötesine geçirin"
 msgstr[1] "Kurulumu şu anda seçili olan %d disklerin ötesine geçirin"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:84
+#: src/components/storage/ConfigureDeviceMenu.tsx:83
 msgid "Start configuring a basic installation"
 msgstr "Bir temel bir kurulumu yapılandırmaya başlayın"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:100
+#: src/components/storage/ConfigureDeviceMenu.tsx:99
 msgid "Add device menu"
 msgstr "Cihaz menüsü ekle"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:144
+#: src/components/storage/ConfigureDeviceMenu.tsx:143
 msgid "Define a new LVM on top of one or several disks"
 msgstr "Bir veya birkaç diskin üzerine yeni bir LVM tanımlayın"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:145
+#: src/components/storage/ConfigureDeviceMenu.tsx:144
 msgid "Define a new LVM on the disk"
 msgstr "Diskte yeni bir LVM tanımlayın"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:151
+#: src/components/storage/ConfigureDeviceMenu.tsx:150
 msgid "Configure device menu"
 msgstr "Cihaz yapılandırma menüsü"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:171
+#: src/components/storage/ConfigureDeviceMenu.tsx:170
 msgid "Add LVM volume group"
 msgstr "LVM disk grubu ekle"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:177
+#: src/components/storage/ConfigureDeviceMenu.tsx:176
 msgid "More devices"
 msgstr "Daha çok aygıt"
 
 #. TRANSLATORS: this is an ARIA (accesibility) description of an UI element
-#: src/components/storage/ConnectedDevicesMenu.tsx:51
+#: src/components/storage/ConnectedDevicesMenu.tsx:48
 #, fuzzy
 msgid "More storage options"
 msgstr "Daha çok eylem"
 
-#: src/components/storage/ConnectedDevicesMenu.tsx:57
+#: src/components/storage/ConnectedDevicesMenu.tsx:54
 msgid "Discover and connect to iSCSI targets"
 msgstr "iSCSI hedeflerini keşfedin ve onlara bağlanın"
 
-#: src/components/storage/ConnectedDevicesMenu.tsx:59
+#: src/components/storage/ConnectedDevicesMenu.tsx:56
 msgid "Configure iSCSI"
 msgstr "iSCSI'yi yapılandırın"
 
-#: src/components/storage/ConnectedDevicesMenu.tsx:65
-#: src/components/storage/ProposalPage.tsx:165
+#: src/components/storage/ConnectedDevicesMenu.tsx:62
+#: src/components/storage/ProposalPage.tsx:164
 msgid "Activate zFCP disks"
 msgstr "zFCP disklerini etkinleştirin"
 
-#: src/components/storage/ConnectedDevicesMenu.tsx:67
+#: src/components/storage/ConnectedDevicesMenu.tsx:64
 msgid "Configure zFCP"
 msgstr "zFCP'yi yapılandırın"
 
-#: src/components/storage/ConnectedDevicesMenu.tsx:74
+#: src/components/storage/ConnectedDevicesMenu.tsx:71
 msgid "Activate and format DASD devices"
 msgstr "DASD aygıtlarını etkinleştir ve biçimlendir"
 
-#: src/components/storage/ConnectedDevicesMenu.tsx:76
+#: src/components/storage/ConnectedDevicesMenu.tsx:73
 msgid "Configure DASD"
 msgstr "DASD'yi yapılandırın"
 
-#: src/components/storage/ConnectedDevicesMenu.tsx:82
+#: src/components/storage/ConnectedDevicesMenu.tsx:79
 msgid "Update available disks and activate crypt devices"
 msgstr ""
 "Kullanılabilir diskleri güncelleyin ve şifreleme aygıtlarını etkinleştirin"
 
-#: src/components/storage/ConnectedDevicesMenu.tsx:84
+#: src/components/storage/ConnectedDevicesMenu.tsx:81
 msgid "Rescan devices"
 msgstr "Aygıtları yeniden tara"
 
-#: src/components/storage/DeviceSelectorModal.tsx:87
-#: src/components/storage/ProposalResultTable.tsx:135
+#: src/components/storage/DeviceSelectorModal.tsx:89
+#: src/components/storage/ProposalResultTable.tsx:137
 #: src/components/storage/SizeModeSelect.tsx:125
-#: src/components/storage/SpaceActionsTable.tsx:240
+#: src/components/storage/SpaceActionsTable.tsx:234
 msgid "Size"
 msgstr "Boyut"
 
-#: src/components/storage/DeviceSelectorModal.tsx:92
+#: src/components/storage/DeviceSelectorModal.tsx:94
 msgid "Description"
 msgstr "Açıklama"
 
-#: src/components/storage/DeviceSelectorModal.tsx:93
+#: src/components/storage/DeviceSelectorModal.tsx:95
 msgid "Current content"
 msgstr "Güncel içerik"
 
@@ -2025,7 +2132,7 @@ msgstr "Tip"
 
 #. TRANSLATORS: input field for the iSCSI initiator name
 #: src/components/storage/DeviceSelectorPage.tsx:54
-#: src/components/storage/LvmPage.tsx:175
+#: src/components/storage/LvmPage.tsx:182
 #: src/components/storage/iscsi/InitiatorForm.tsx:75
 #: src/components/storage/iscsi/InitiatorForm.tsx:85
 #: src/components/storage/iscsi/InitiatorSection.tsx:40
@@ -2078,85 +2185,85 @@ msgstr ""
 "destekler."
 
 #. TRANSLATORS: %s will be replaced by a disk name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:33
+#: src/components/storage/DriveHeader.tsx:38
 #, javascript-format
 msgid "Mount disk %s"
 msgstr "%s diski bağla"
 
 #. TRANSLATORS: %s will be replaced by a disk name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:35
+#: src/components/storage/DriveHeader.tsx:40
 #, javascript-format
 msgid "Format disk %s"
 msgstr "%s diski biçimlendir"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:46
+#: src/components/storage/DriveHeader.tsx:52
 #, javascript-format
 msgid "Use disk %s to install, host LVM and boot"
 msgstr "Kurulum, LVM'yi barındırma ve önyükleme %s diskini kullan"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:49
+#: src/components/storage/DriveHeader.tsx:55
 #, javascript-format
 msgid "Use disk %s to install and host LVM"
 msgstr "Kurulum ve LVM'yi barındırma için %s diskini kullan"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:54
+#: src/components/storage/DriveHeader.tsx:60
 #, javascript-format
 msgid "Use disk %s to install and boot"
 msgstr "Kurulum ve önyükleme için %s diskini kullan"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:57
+#: src/components/storage/DriveHeader.tsx:63
 #, javascript-format
 msgid "Use disk %s to install"
 msgstr "Kurulum için %s diskini kullan"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:64
+#: src/components/storage/DriveHeader.tsx:70
 #, javascript-format
 msgid "Use disk %s for LVM, additional partitions and booting"
 msgstr "LVM, ek bölümler ve önyükleme için %s diskini kullan"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:67
+#: src/components/storage/DriveHeader.tsx:73
 #, javascript-format
 msgid "Use disk %s for LVM and additional partitions"
 msgstr "LVM ve ek bölümler için %s diskini kullan"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:72
+#: src/components/storage/DriveHeader.tsx:78
 #, javascript-format
 msgid "Use disk %s for additional partitions and booting"
 msgstr "Ek bölümler ve önyükleme için %s diskini kullan"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:75
+#: src/components/storage/DriveHeader.tsx:81
 #, javascript-format
 msgid "Use disk %s for additional partitions"
 msgstr "Ek bölümler için %s diskini kullan"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:81
+#: src/components/storage/DriveHeader.tsx:87
 #, javascript-format
 msgid "Use disk %s to host LVM and boot"
 msgstr "LVM'yi barındırmak ve önyükleme için %s diskini kullan"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:84
+#: src/components/storage/DriveHeader.tsx:90
 #, javascript-format
 msgid "Use disk %s to host LVM"
 msgstr "LVM'yi barındırmak için %s diskini kullan"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:89
+#: src/components/storage/DriveHeader.tsx:95
 #, javascript-format
 msgid "Use disk %s to configure boot partitions"
 msgstr "Önyükleme bölümlerini yapılandırmak için %s diskini kullan"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:92
+#: src/components/storage/DriveHeader.tsx:98
 #, javascript-format
 msgid "Use disk %s"
 msgstr "%s diskini kullan"
@@ -2173,7 +2280,7 @@ msgstr "Şifreleme, TPM kilidini açma kullanılarak etkinleştirildi"
 msgid "Encryption is enabled"
 msgstr "Şifreleme etkinleştirildi"
 
-#: src/components/storage/EncryptionSection.tsx:50
+#: src/components/storage/EncryptionSection.tsx:51
 #, fuzzy
 msgid ""
 "Protection for the information stored at the new file systems, including "
@@ -2182,20 +2289,20 @@ msgstr ""
 "Yeni dosya sistemlerinde depolanan veri, program ve sistem dosyaları gibi "
 "bilgilerin korunması."
 
-#: src/components/storage/EncryptionSettingsPage.tsx:75
+#: src/components/storage/EncryptionSettingsPage.tsx:76
 #: src/components/users/RootUserForm.tsx:104
 msgid "Password is empty."
 msgstr "Şifre boş."
 
 #. TRANSLATORS: "Trusted Platform Module" is the name of the technology and TPM its abbreviation
-#: src/components/storage/EncryptionSettingsPage.tsx:91
+#: src/components/storage/EncryptionSettingsPage.tsx:92
 msgid ""
 "Use the Trusted Platform Module (TPM) to decrypt automatically on each boot"
 msgstr ""
 "Her önyüklemede kendiliğinden şifre çözümü için Güvenilir Platform Modülünü "
 "(TPM) kullan"
 
-#: src/components/storage/EncryptionSettingsPage.tsx:95
+#: src/components/storage/EncryptionSettingsPage.tsx:96
 msgid ""
 "The password will not be needed to boot and access the data if the TPM can "
 "verify the integrity of the system. TPM sealing requires the new system to "
@@ -2205,15 +2312,15 @@ msgstr ""
 "için parolaya gerek kalmayacaktır. TPM yalıtımı, yeni sistemin ilk "
 "çalıştırmada doğrudan başlatılmasını gerektirir."
 
-#: src/components/storage/EncryptionSettingsPage.tsx:105
+#: src/components/storage/EncryptionSettingsPage.tsx:106
 msgid "Encryption settings"
 msgstr "Şifreleme ayarları"
 
-#: src/components/storage/EncryptionSettingsPage.tsx:119
+#: src/components/storage/EncryptionSettingsPage.tsx:120
 msgid "Encrypt the system"
 msgstr "Sistemi şifrele"
 
-#: src/components/storage/EncryptionSettingsPage.tsx:121
+#: src/components/storage/EncryptionSettingsPage.tsx:122
 msgid ""
 "Full Disk Encryption (FDE) allows to protect the information stored at the "
 "new file systems, including data, programs, and system files."
@@ -2221,27 +2328,27 @@ msgstr ""
 "Tam Disk Şifrelemesi (FDE) yeni dosya sistemlerinde depolanan veri, program "
 "ve sistem dosyaları gibi bilgilerin korunmasını sağlar."
 
-#: src/components/storage/FilesystemMenu.tsx:44
+#: src/components/storage/FilesystemMenu.tsx:42
 msgid "The device will be mounted"
 msgstr "Cihaz bağlanacak"
 
-#: src/components/storage/FilesystemMenu.tsx:45
+#: src/components/storage/FilesystemMenu.tsx:43
 msgid "The device will be formatted"
 msgstr "Cihaz biçimlendirilecek"
 
 #. TRANSLATORS: %s is a formatted mount point (eg. '"/home'").
-#: src/components/storage/FilesystemMenu.tsx:51
+#: src/components/storage/FilesystemMenu.tsx:49
 #, javascript-format
 msgid "The current file system will be mounted at %s"
 msgstr "Mevcut dosya sistemi %s konumuna bağlanacak"
 
 #. TRANSLATORS: %1$s is a filesystem type (eg. Btrfs), %2$s is a mount point (eg. '"/home"').
-#: src/components/storage/FilesystemMenu.tsx:54
+#: src/components/storage/FilesystemMenu.tsx:52
 #, javascript-format
 msgid "The device will be formatted as %1$s and mounted at %2$s"
 msgstr "Aygıt %1$s olarak biçimlendirilecek ve %2$s'ye bağlanacak"
 
-#: src/components/storage/FilesystemMenu.tsx:100
+#: src/components/storage/FilesystemMenu.tsx:106
 msgid "Change the file system or mount point"
 msgstr "Dosya sistemini veya bağlama noktasını değiştirin"
 
@@ -2253,212 +2360,208 @@ msgstr[0] "Kuruluma başlamadan önce aşağıdaki sorunu gidermeniz gerekmekted
 msgstr[1] ""
 "Kuruluma başlamadan önce aşağıdaki sorunları gidermeniz gerekmektedir:"
 
-#: src/components/storage/FormattableDevicePage.tsx:221
-#: src/components/storage/LogicalVolumePage.tsx:248
-#: src/components/storage/PartitionPage.tsx:308
+#: src/components/storage/FormattableDevicePage.tsx:230
+#: src/components/storage/LogicalVolumePage.tsx:250
+#: src/components/storage/PartitionPage.tsx:316
 msgid "Select or enter a valid mount point"
 msgstr "Geçerli bir bağlama noktası seçin veya girin"
 
-#: src/components/storage/FormattableDevicePage.tsx:231
-#: src/components/storage/LogicalVolumePage.tsx:258
-#: src/components/storage/PartitionPage.tsx:318
+#: src/components/storage/FormattableDevicePage.tsx:240
+#: src/components/storage/LogicalVolumePage.tsx:260
+#: src/components/storage/PartitionPage.tsx:326
 msgid ""
 "Select or enter a mount point that is not already assigned to another device"
 msgstr "Başka bir cihaza henüz atanmamış bir bağlama noktası seçin veya girin"
 
-#: src/components/storage/FormattableDevicePage.tsx:280
-#: src/components/storage/LogicalVolumePage.tsx:443
-#: src/components/storage/LogicalVolumePage.tsx:466
-#: src/components/storage/LogicalVolumePage.tsx:769
-#: src/components/storage/PartitionPage.tsx:560
-#: src/components/storage/PartitionPage.tsx:892
+#: src/components/storage/FormattableDevicePage.tsx:289
+#: src/components/storage/LogicalVolumePage.tsx:445
+#: src/components/storage/LogicalVolumePage.tsx:468
+#: src/components/storage/LogicalVolumePage.tsx:771
+#: src/components/storage/PartitionPage.tsx:576
+#: src/components/storage/PartitionPage.tsx:916
 msgid "Waiting for a mount point"
 msgstr "Bir bağlama noktası bekleniyor"
 
 #. TRANSLATORS: %s is a device name (eg. /dev/sda3).
-#: src/components/storage/FormattableDevicePage.tsx:283
-#: src/components/storage/PartitionPage.tsx:563
+#: src/components/storage/FormattableDevicePage.tsx:292
+#: src/components/storage/PartitionPage.tsx:579
 #: src/components/storage/utils/partition.tsx:69
 #, javascript-format
 msgid "Current %s"
 msgstr "Mevcut %s"
 
-#: src/components/storage/FormattableDevicePage.tsx:284
-#: src/components/storage/LogicalVolumePage.tsx:467
-#: src/components/storage/PartitionPage.tsx:564
-#: src/components/storage/utils.ts:338
+#: src/components/storage/FormattableDevicePage.tsx:293
+#: src/components/storage/LogicalVolumePage.tsx:469
+#: src/components/storage/PartitionPage.tsx:580
+#: src/components/storage/utils.ts:326
 msgid "Btrfs with snapshots"
 msgstr "Anlık imajlarla Btrfs"
 
-#: src/components/storage/FormattableDevicePage.tsx:302
-#: src/components/storage/LogicalVolumePage.tsx:483
-#: src/components/storage/PartitionPage.tsx:582
+#: src/components/storage/FormattableDevicePage.tsx:311
+#: src/components/storage/LogicalVolumePage.tsx:485
+#: src/components/storage/PartitionPage.tsx:598
 #, javascript-format
 msgid "Default file system for %s"
 msgstr "%s için öntanımlı dosya sistemi"
 
-#: src/components/storage/FormattableDevicePage.tsx:303
+#: src/components/storage/FormattableDevicePage.tsx:312
 msgid "Default file system for generic mount paths"
 msgstr "Genel bağlama yolları için öntanımlı dosya sistemi"
 
-#: src/components/storage/FormattableDevicePage.tsx:305
+#: src/components/storage/FormattableDevicePage.tsx:314
 msgid "Destroy current data and format device as"
 msgstr "Mevcut veriler silinecek ve cihaz şu şekilde biçimlendirilecek"
 
-#: src/components/storage/FormattableDevicePage.tsx:306
+#: src/components/storage/FormattableDevicePage.tsx:315
 msgid "Format device as"
 msgstr "Aygıt şu şekilde biçimlendirilecek"
 
 #. TRANSLATORS: %s is the name of a device, like vda
 #. TRANSLATORS: %s is the name of a partition, like /dev/vda2
-#: src/components/storage/FormattableDevicePage.tsx:320
-#: src/components/storage/PartitionPage.tsx:599
+#: src/components/storage/FormattableDevicePage.tsx:329
+#: src/components/storage/PartitionPage.tsx:615
 #, javascript-format
 msgid "Do not format %s and keep the data"
 msgstr "%s'yi biçimlendirmeyin ve verileri saklayın"
 
-#: src/components/storage/FormattableDevicePage.tsx:384
-#: src/components/storage/LogicalVolumePage.tsx:552
-#: src/components/storage/PartitionPage.tsx:664
+#: src/components/storage/FormattableDevicePage.tsx:393
+#: src/components/storage/LogicalVolumePage.tsx:554
+#: src/components/storage/PartitionPage.tsx:680
 msgid "File system label"
 msgstr "Dosya sistemi etiketi"
 
-#: src/components/storage/FormattableDevicePage.tsx:453
+#: src/components/storage/FormattableDevicePage.tsx:465
 #, javascript-format
 msgid "Configure device %s"
 msgstr "%s aygıtını yapılandır"
 
-#: src/components/storage/FormattableDevicePage.tsx:460
-#: src/components/storage/FormattableDevicePage.tsx:467
-#: src/components/storage/LogicalVolumePage.tsx:697
-#: src/components/storage/LogicalVolumePage.tsx:702
-#: src/components/storage/PartitionPage.tsx:822
-#: src/components/storage/PartitionPage.tsx:829
+#: src/components/storage/FormattableDevicePage.tsx:472
+#: src/components/storage/FormattableDevicePage.tsx:479
+#: src/components/storage/LogicalVolumePage.tsx:699
+#: src/components/storage/LogicalVolumePage.tsx:704
+#: src/components/storage/PartitionPage.tsx:846
+#: src/components/storage/PartitionPage.tsx:853
 msgid "Mount point"
 msgstr "Bağlantı noktası"
 
-#: src/components/storage/FormattableDevicePage.tsx:465
-#: src/components/storage/LogicalVolumePage.tsx:700
-#: src/components/storage/PartitionPage.tsx:827
+#: src/components/storage/FormattableDevicePage.tsx:477
+#: src/components/storage/LogicalVolumePage.tsx:702
+#: src/components/storage/PartitionPage.tsx:851
 msgid "Mount point toggle"
 msgstr "Bağlantı noktası değişimi"
 
-#: src/components/storage/FormattableDevicePage.tsx:466
-#: src/components/storage/LogicalVolumePage.tsx:701
-#: src/components/storage/PartitionPage.tsx:828
+#: src/components/storage/FormattableDevicePage.tsx:478
+#: src/components/storage/LogicalVolumePage.tsx:703
+#: src/components/storage/PartitionPage.tsx:852
 msgid "Suggested mount points"
 msgstr "Önerilen bağlama noktaları"
 
-#: src/components/storage/FormattableDevicePage.tsx:468
-#: src/components/storage/LogicalVolumePage.tsx:703
-#: src/components/storage/PartitionPage.tsx:830
+#: src/components/storage/FormattableDevicePage.tsx:480
+#: src/components/storage/LogicalVolumePage.tsx:705
+#: src/components/storage/PartitionPage.tsx:854
 msgid "Clear selected mount point"
 msgstr "Seçilen bağlama noktasını temizle"
 
-#: src/components/storage/FormattableDevicePage.tsx:471
-#: src/components/storage/LogicalVolumePage.tsx:706
-#: src/components/storage/PartitionPage.tsx:833
+#: src/components/storage/FormattableDevicePage.tsx:483
+#: src/components/storage/LogicalVolumePage.tsx:708
+#: src/components/storage/PartitionPage.tsx:857
 msgid "Use"
 msgstr "Kullan"
 
-#: src/components/storage/FormattableDevicePage.tsx:482
-#: src/components/storage/LogicalVolumePage.tsx:715
-#: src/components/storage/PartitionPage.tsx:854
+#: src/components/storage/FormattableDevicePage.tsx:494
+#: src/components/storage/LogicalVolumePage.tsx:717
+#: src/components/storage/PartitionPage.tsx:878
 msgid "Select or enter a mount point"
 msgstr "Bir bağlama noktası seçin veya girin"
 
-#: src/components/storage/FormattableDevicePage.tsx:491
-#: src/components/storage/LogicalVolumePage.tsx:740
-#: src/components/storage/PartitionPage.tsx:863
+#: src/components/storage/FormattableDevicePage.tsx:503
+#: src/components/storage/LogicalVolumePage.tsx:742
+#: src/components/storage/PartitionPage.tsx:887
 msgid "File system"
 msgstr "Dosya sistemi"
 
-#: src/components/storage/FormattableDevicePage.tsx:502
-#: src/components/storage/LogicalVolumePage.tsx:751
-#: src/components/storage/PartitionPage.tsx:875
+#: src/components/storage/FormattableDevicePage.tsx:514
+#: src/components/storage/LogicalVolumePage.tsx:753
+#: src/components/storage/PartitionPage.tsx:899
 msgid "Label"
 msgstr "Etiket"
 
-#: src/components/storage/ISCSIPage.tsx:34 src/routes/storage.tsx:99
-msgid "iSCSI"
-msgstr "iSCSI"
-
-#: src/components/storage/LogicalVolumePage.tsx:269
+#: src/components/storage/LogicalVolumePage.tsx:271
 msgid "Enter a name"
 msgstr "Bir isim girin"
 
-#: src/components/storage/LogicalVolumePage.tsx:296
-#: src/components/storage/PartitionPage.tsx:346
+#: src/components/storage/LogicalVolumePage.tsx:298
+#: src/components/storage/PartitionPage.tsx:354
 msgid "The minimum cannot be greater than the maximum"
 msgstr "Minimum, maksimumdan büyük olamaz"
 
-#: src/components/storage/LogicalVolumePage.tsx:304
+#: src/components/storage/LogicalVolumePage.tsx:306
 msgid ""
 "The maximum must be a number optionally followed by a unit like GiB or GB"
 msgstr ""
 "Maksimum, isteğe bağlı olarak GiB veya GB gibi bir birim tarafından takip "
 "edilen bir sayı olmalıdır"
 
-#: src/components/storage/LogicalVolumePage.tsx:312
+#: src/components/storage/LogicalVolumePage.tsx:314
 msgid ""
 "The minimum must be a number optionally followed by a unit like GiB or GB"
 msgstr ""
 "Minimum, isteğe bağlı olarak GiB veya GB gibi bir birimin izlediği bir sayı "
 "olmalıdır"
 
-#: src/components/storage/LogicalVolumePage.tsx:319
+#: src/components/storage/LogicalVolumePage.tsx:321
 msgid ""
 "Size limits must be numbers optionally followed by a unit like GiB or GB"
 msgstr ""
 "Boyut sınırları, isteğe bağlı olarak GiB veya GB gibi bir birimin takip "
 "ettiği sayılar olmalıdır"
 
-#: src/components/storage/LogicalVolumePage.tsx:438
-#: src/components/storage/LogicalVolumePage.tsx:441
+#: src/components/storage/LogicalVolumePage.tsx:440
+#: src/components/storage/LogicalVolumePage.tsx:443
 msgid "Logical volume name"
 msgstr "Mantıksal birim adı"
 
-#: src/components/storage/LogicalVolumePage.tsx:484
+#: src/components/storage/LogicalVolumePage.tsx:486
 msgid "Default file system for generic logical volumes"
 msgstr "Genel mantıksal birimler için öntanımlı dosya sistemi"
 
-#: src/components/storage/LogicalVolumePage.tsx:486
+#: src/components/storage/LogicalVolumePage.tsx:488
 msgid "Format logical volume as"
 msgstr "Mantıksal birimi şu şekilde biçimlendir"
 
-#: src/components/storage/LogicalVolumePage.tsx:687
+#: src/components/storage/LogicalVolumePage.tsx:689
 #, javascript-format
 msgid "Configure LVM logical volume at %s volume group"
 msgstr "LVM mantıksal birimini %s birim grubunda yapılandırın"
 
-#: src/components/storage/LogicalVolumePage.tsx:764
-#: src/components/storage/PartitionPage.tsx:887
+#: src/components/storage/LogicalVolumePage.tsx:766
+#: src/components/storage/PartitionPage.tsx:911
 msgid "Size mode"
 msgstr "Boyut modu"
 
-#: src/components/storage/LvmPage.tsx:77
+#: src/components/storage/LvmPage.tsx:80
 msgid "Enter a name for the volume group."
 msgstr "Birim grubu için bir ad girin."
 
-#: src/components/storage/LvmPage.tsx:81
+#: src/components/storage/LvmPage.tsx:84
 #, javascript-format
 msgid "Volume group '%s' already exists. Enter a different name."
 msgstr "'%s' birim grubu zaten mevcut. Farklı bir ad girin."
 
-#: src/components/storage/LvmPage.tsx:85
+#: src/components/storage/LvmPage.tsx:88
 msgid "Select at least one disk."
 msgstr "En az bir disk seç."
 
-#: src/components/storage/LvmPage.tsx:163
+#: src/components/storage/LvmPage.tsx:170
 msgid "Configure LVM Volume Group"
 msgstr "LVM Birim Grubunu Yapılandırın"
 
-#: src/components/storage/LvmPage.tsx:178
+#: src/components/storage/LvmPage.tsx:185
 #: src/components/storage/zfcp/ZFCPPage.tsx:131
 msgid "Disks"
 msgstr "Diskler"
 
-#: src/components/storage/LvmPage.tsx:181
+#: src/components/storage/LvmPage.tsx:188
 msgid ""
 "The needed LVM physical volumes will be added as partitions on the chosen "
 "disks, based on the sizes of the logical volumes. If you select more than "
@@ -2468,11 +2571,11 @@ msgstr ""
 "seçilen disklere bölümler halinde eklenecektir. Birden fazla disk "
 "seçerseniz, fiziksel birimler birkaç diske dağıtılabilir."
 
-#: src/components/storage/LvmPage.tsx:216
+#: src/components/storage/LvmPage.tsx:223
 msgid "Move mount points"
 msgstr "Bağlantı noktalarını taşı"
 
-#: src/components/storage/LvmPage.tsx:220
+#: src/components/storage/LvmPage.tsx:227
 msgid ""
 "Move the mount points currently configured at the selected disks to logical "
 "volumes of this volume group."
@@ -2481,258 +2584,274 @@ msgstr ""
 "grubunun mantıksal birimlerine taşıyın."
 
 #. TRANSLATORS: %s will be replaced by a RAID name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:33
+#: src/components/storage/MdRaidHeader.tsx:38
 #, javascript-format
 msgid "Mount RAID %s"
 msgstr "RAID %s'yi Bağla"
 
 #. TRANSLATORS: %s will be replaced by a RAID name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:35
+#: src/components/storage/MdRaidHeader.tsx:40
 #, javascript-format
 msgid "Format RAID %s"
 msgstr "RAID %s'yi biçimlendir"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:46
+#: src/components/storage/MdRaidHeader.tsx:52
 #, javascript-format
 msgid "Use RAID %s to install, host LVM and boot"
 msgstr "Kurulum, LVM'yi barındırmak ve önyüklemek için RAID %s'yi kullan"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:49
+#: src/components/storage/MdRaidHeader.tsx:55
 #, javascript-format
 msgid "Use RAID %s to install and host LVM"
 msgstr "Kurulum ve LVM'yi barındırmak için RAID %s'yi kullan"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:54
+#: src/components/storage/MdRaidHeader.tsx:60
 #, javascript-format
 msgid "Use RAID %s to install and boot"
 msgstr "Kurulum ve önyükleme için RAID %s kullan"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:57
+#: src/components/storage/MdRaidHeader.tsx:63
 #, javascript-format
 msgid "Use RAID %s to install"
 msgstr "Kurulum için RAID %s kullan"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:64
+#: src/components/storage/MdRaidHeader.tsx:70
 #, javascript-format
 msgid "Use RAID %s for LVM, additional partitions and booting"
 msgstr "LVM, ek bölümler ve önyükleme için RAID %s kullan"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:67
+#: src/components/storage/MdRaidHeader.tsx:73
 #, javascript-format
 msgid "Use RAID %s for LVM and additional partitions"
 msgstr "LVM ve ek bölümler için RAID %s kullan"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:72
+#: src/components/storage/MdRaidHeader.tsx:78
 #, javascript-format
 msgid "Use RAID %s for additional partitions and booting"
 msgstr "Ek bölümler ve önyükleme için RAID %s kullan"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:75
+#: src/components/storage/MdRaidHeader.tsx:81
 #, javascript-format
 msgid "Use RAID %s for additional partitions"
 msgstr "Ek bölümler için RAID %s kullan"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:81
+#: src/components/storage/MdRaidHeader.tsx:87
 #, javascript-format
 msgid "Use RAID %s to host LVM and boot"
 msgstr "LVM'yi barındırma ve önyükleme için RAID %s'yi kullan"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:84
+#: src/components/storage/MdRaidHeader.tsx:90
 #, javascript-format
 msgid "Use RAID %s to host LVM"
 msgstr "LVM'yi barındırma için RAID %s kullan"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:89
+#: src/components/storage/MdRaidHeader.tsx:95
 #, javascript-format
 msgid "Use RAID %s to configure boot partitions"
 msgstr "Önyükleme bölümlerini yapılandırmak için RAID %s kullan"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:92
+#: src/components/storage/MdRaidHeader.tsx:98
 #, javascript-format
 msgid "Use RAID %s"
 msgstr "RAID %s'yi kullan"
 
 #. TRANSLATORS: %s is the short name of a disk, like 'sda'
-#: src/components/storage/NewVgMenuOption.tsx:46
+#: src/components/storage/NewVgMenuOption.tsx:51
 #, javascript-format
 msgid "Create another LVM volume group on %s"
 msgstr "%s üzerinde başka bir LVM disk grubu oluştur"
 
 #. TRANSLATORS: %s is the short name of a disk, like 'sda'
-#: src/components/storage/NewVgMenuOption.tsx:50
+#: src/components/storage/NewVgMenuOption.tsx:55
 #, javascript-format
 msgid "Create LVM volume group on %s"
 msgstr "%s üzerinde LVM disk grubu oluştur"
 
 #. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case).
-#: src/components/storage/NewVgMenuOption.tsx:59
+#: src/components/storage/NewVgMenuOption.tsx:64
 #, javascript-format
 msgid "%s will be created as a logical volume"
 msgid_plural "%s will be created as logical volumes"
 msgstr[0] "%s mantıksal bir birim olarak oluşturulacak"
 msgstr[1] "%s mantıksal bir birimler olarak oluşturulacak"
 
-#: src/components/storage/PartitionPage.tsx:354
+#: src/components/storage/PartitionPage.tsx:362
 msgid "The maximum must be a number followed by a unit like GiB or GB"
 msgstr "Maksimum, GiB veya GB gibi bir birimin izlediği bir sayı olmalıdır"
 
-#: src/components/storage/PartitionPage.tsx:362
+#: src/components/storage/PartitionPage.tsx:370
 msgid "The minimum must be a number followed by a unit like GiB or GB"
 msgstr "Minimum, GiB veya GB gibi bir birimin izlediği bir sayı olmalıdır"
 
-#: src/components/storage/PartitionPage.tsx:369
+#: src/components/storage/PartitionPage.tsx:377
 msgid "Size limits must be numbers followed by a unit like GiB or GB"
 msgstr ""
 "Boyut sınırları GiB veya GB gibi bir birimin ardından gelen sayılar olmalıdır"
 
 #. TRANSLATORS: %s is a disk name with its size (eg. "sda, 10 GiB"
-#: src/components/storage/PartitionPage.tsx:498
+#: src/components/storage/PartitionPage.tsx:514
 #, javascript-format
 msgid "As a new partition on %s"
 msgstr "%s üzerinde yeni bir bölüm olarak"
 
-#: src/components/storage/PartitionPage.tsx:500
+#: src/components/storage/PartitionPage.tsx:516
 #, javascript-format
 msgid "Using partition %s"
 msgstr "%s bölümü kullanılıyor"
 
-#: src/components/storage/PartitionPage.tsx:529
+#: src/components/storage/PartitionPage.tsx:545
 msgid "Mount point options"
 msgstr "Bağlantı noktası seçenekleri"
 
-#: src/components/storage/PartitionPage.tsx:534
+#: src/components/storage/PartitionPage.tsx:550
 msgid "Using an existing partition"
 msgstr "Mevcut bir bölümü kullan"
 
-#: src/components/storage/PartitionPage.tsx:545
+#: src/components/storage/PartitionPage.tsx:561
 msgid "There are not usable partitions"
 msgstr "Kullanılabilir bölüm yok"
 
-#: src/components/storage/PartitionPage.tsx:583
+#: src/components/storage/PartitionPage.tsx:599
 msgid "Default file system for generic partitions"
 msgstr "Genel bölümler için öntanımlı dosya sistemi"
 
-#: src/components/storage/PartitionPage.tsx:585
+#: src/components/storage/PartitionPage.tsx:601
 msgid "Destroy current data and format partition as"
 msgstr "Mevcut verileri yok edin ve bölümü şu şekilde biçimlendirin"
 
-#: src/components/storage/PartitionPage.tsx:586
+#: src/components/storage/PartitionPage.tsx:602
 msgid "Format partition as"
 msgstr "Bölümü şu şekilde biçimlendir"
 
-#: src/components/storage/PartitionPage.tsx:814
+#: src/components/storage/PartitionPage.tsx:839
 #, javascript-format
 msgid "Configure partition at %s"
 msgstr "Bölmeyi %s konumunda yapılandır"
 
-#: src/components/storage/PartitionPage.tsx:839
+#: src/components/storage/PartitionPage.tsx:863
 msgid "Mount point mode"
 msgstr "Bağlantı noktası modu"
 
-#: src/components/storage/PartitionPage.tsx:922
+#: src/components/storage/PartitionPage.tsx:946
 msgid "Go to storage page"
 msgstr "Depolama sayfasına git"
 
-#: src/components/storage/PartitionsSection.tsx:80
+#: src/components/storage/PartitionsSection.tsx:87
 msgid "Moreover, the following partitions will be created or mounted"
 msgstr "Ayrıca, aşağıdaki bölümler oluşturulacak veya bağlanacaktır"
 
-#: src/components/storage/PartitionsSection.tsx:84
+#: src/components/storage/PartitionsSection.tsx:91
 msgid "Moreover, the following partition will be created."
 msgid_plural "Moreover, the following partitions will be created."
 msgstr[0] "Ayrıca, aşağıdaki bölüm oluşturulacak veya bağlanacaktır."
 msgstr[1] "Ayrıca, aşağıdaki bölümler oluşturulacak veya bağlanacaktır."
 
-#: src/components/storage/PartitionsSection.tsx:90
+#: src/components/storage/PartitionsSection.tsx:97
 msgid "Moreover, the following partition will be mounted."
 msgid_plural "Moreover, the following partitions will be mounted."
 msgstr[0] "Ayrıca, aşağıdaki bölüm oluşturulacak veya bağlanacaktır."
 msgstr[1] "Ayrıca, aşağıdaki bölümler oluşturulacak veya bağlanacaktır."
 
-#: src/components/storage/PartitionsSection.tsx:97
+#: src/components/storage/PartitionsSection.tsx:104
 msgid "The following partitions will be created or mounted"
 msgstr "Aşağıdaki bölümler oluşturulacak veya bağlanacak"
 
-#: src/components/storage/PartitionsSection.tsx:101
+#: src/components/storage/PartitionsSection.tsx:108
 msgid "The following partition will be created."
 msgid_plural "The following partitions will be created."
 msgstr[0] "Aşağıdaki bölüm oluşturulacak veya bağlanacak."
 msgstr[1] "Aşağıdaki bölümler oluşturulacak veya bağlanacak."
 
-#: src/components/storage/PartitionsSection.tsx:107
+#: src/components/storage/PartitionsSection.tsx:114
 msgid "The following partition will be mounted."
 msgid_plural "The following partitions will be mounted."
 msgstr[0] "Aşağıdaki bölüm bağlanacak."
 msgstr[1] "Aşağıdaki bölümler bağlanacak."
 
-#: src/components/storage/PartitionsSection.tsx:117
+#: src/components/storage/PartitionsSection.tsx:124
 msgid "Any partition needed to boot will be configured."
 msgstr "Önyükleme için gereken herhangi bir bölüm yapılandırılacaktır."
 
-#: src/components/storage/PartitionsSection.tsx:118
+#: src/components/storage/PartitionsSection.tsx:125
 #, fuzzy
 msgid "Partitions to host \"system\" will be created if needed."
 msgstr "Önyükleme için gerekli bölümler kurulum diskinde ayrılacaktır."
 
 #. TRANSLATORS: ARIA (accesibility) description of an UI element. %s is a mount path.
-#: src/components/storage/PartitionsSection.tsx:151
+#: src/components/storage/PartitionsSection.tsx:162
 #, fuzzy, javascript-format
 msgid "Partition %s"
 msgstr "Bölümler"
 
 #. TRANSLATORS: ARIA (accesibility) description of an button. %s is a mount path.
-#: src/components/storage/PartitionsSection.tsx:163
+#: src/components/storage/PartitionsSection.tsx:174
 #, fuzzy, javascript-format
 msgid "Options for partition %s"
 msgstr "%s bölümü kullanılıyor"
 
-#: src/components/storage/PartitionsSection.tsx:180
-#: src/components/storage/VolumeGroupEditor.tsx:171
+#: src/components/storage/PartitionsSection.tsx:191
+#: src/components/storage/VolumeGroupEditor.tsx:176
 #: src/components/storage/iscsi/NodesPresenter.jsx:84
 msgid "Delete"
 msgstr "Sil"
 
-#: src/components/storage/PartitionsSection.tsx:264
+#: src/components/storage/PartitionsSection.tsx:288
 msgid "Partitions"
 msgstr "Bölümler"
 
-#: src/components/storage/PartitionsSection.tsx:277
-#: src/components/storage/UnusedMenu.tsx:75
+#: src/components/storage/PartitionsSection.tsx:308
+#: src/components/storage/UnusedMenu.tsx:78
 msgid "Add or use partition"
 msgstr "Bölüm ekle veya kullan"
+
+#. TRANSLATORS: %s will be replaced by a formatted list of affected
+#. systems like "Windows and openSUSE Tumbleweed".
+#: src/components/storage/PotentialDataLossAlert.tsx:41
+#, javascript-format
+msgid "Proceeding may result in data loss affecting at least %s"
+msgstr ""
+
+#: src/components/storage/PotentialDataLossAlert.tsx:45
+msgid "Proceeding may result in data loss"
+msgstr ""
+
+#: src/components/storage/PotentialDataLossAlert.tsx:51
+#, fuzzy
+msgid "View details"
+msgstr "Ayrıntıları gizle"
 
 #: src/components/storage/Progress.tsx:117
 msgid "Loading storage"
 msgstr "Depolama yükleniyor"
 
-#: src/components/storage/ProposalActionsDialog.tsx:73
+#: src/components/storage/ProposalActions.tsx:66
 #, javascript-format
 msgid "Hide %d subvolume action"
 msgid_plural "Hide %d subvolume actions"
 msgstr[0] "%d alt birim eylemini gizle"
 msgstr[1] "%d alt birim eylemlerini gizle"
 
-#: src/components/storage/ProposalActionsDialog.tsx:78
+#: src/components/storage/ProposalActions.tsx:71
 #, javascript-format
 msgid "Show %d subvolume action"
 msgid_plural "Show %d subvolume actions"
 msgstr[0] "%d alt birim eylemini göster"
 msgstr[1] "%d alt birim eylemlerini göster"
 
-#: src/components/storage/ProposalFailedInfo.tsx:54
+#: src/components/storage/ProposalFailedInfo.tsx:52
 msgid ""
 "It is not possible to install the system with the current configuration. "
 "Adjust the settings below."
@@ -2742,39 +2861,40 @@ msgstr ""
 
 #. TRANSLATORS: %s is a list of formatted mount points with a partition size like
 #. '"/" (at least 10 GiB), "/var" (20 GiB) and "swap" (2 GiB)'
-#: src/components/storage/ProposalFailedInfo.tsx:67
+#: src/components/storage/ProposalFailedInfo.tsx:65
 #, javascript-format
 msgid "It is not possible to allocate space for the boot partition and for %s."
 msgstr "Önyükleme bölümü ve %s için alan ayırmak olanaksız."
 
 #. TRANSLATORS: %s is a list of formatted mount points with a partition size like
 #. '"/" (at least 10 GiB), "/var" (20 GiB) and "swap" (2 GiB)'
-#: src/components/storage/ProposalFailedInfo.tsx:70
+#: src/components/storage/ProposalFailedInfo.tsx:68
 #, javascript-format
 msgid "It is not possible to allocate space for %s."
 msgstr "%s için alan ayırmak olanaksız."
 
-#: src/components/storage/ProposalFailedInfo.tsx:75
+#: src/components/storage/ProposalFailedInfo.tsx:73
 msgid ""
 "Adjust the settings below to make the new system fit into the available "
 "space."
 msgstr "Yeni sistemin mevcut alana sığması için aşağıdaki ayarları düzenleyin."
 
-#: src/components/storage/ProposalFailedInfo.tsx:98
+#: src/components/storage/ProposalFailedInfo.tsx:85
+#: src/components/storage/StorageDetailsItem.tsx:109
 msgid "Failed to calculate a storage layout"
 msgstr "Depolama düzeni hesaplanamadı"
 
-#: src/components/storage/ProposalPage.tsx:80
+#: src/components/storage/ProposalPage.tsx:79
 msgid "Invalid storage settings"
 msgstr "Geçersiz depolama ayarları"
 
-#: src/components/storage/ProposalPage.tsx:87
+#: src/components/storage/ProposalPage.tsx:86
 msgid "The current storage configuration has the following issue:"
 msgid_plural "The current storage configuration has the following issues:"
 msgstr[0] "Mevcut depolama konfigürasyonunda şu sorun var:"
 msgstr[1] "Mevcut depolama konfigürasyonunda şu sorunlar var:"
 
-#: src/components/storage/ProposalPage.tsx:101
+#: src/components/storage/ProposalPage.tsx:100
 msgid ""
 "You may want to discard those settings and start from scratch with a simple "
 "configuration."
@@ -2782,25 +2902,25 @@ msgstr ""
 "Bu ayarları atıp, basit bir yapılandırmayla sıfırdan başlamak "
 "isteyebilirsiniz."
 
-#: src/components/storage/ProposalPage.tsx:105
-#: src/components/storage/ProposalPage.tsx:133
+#: src/components/storage/ProposalPage.tsx:104
+#: src/components/storage/ProposalPage.tsx:132
 #: src/components/storage/UnsupportedModelInfo.tsx:55
 msgid "Reset to the default configuration"
 msgstr "Öntanımlı yapılandırmaya sıfırla"
 
-#: src/components/storage/ProposalPage.tsx:117
+#: src/components/storage/ProposalPage.tsx:116
 #: src/components/storage/UnsupportedModelInfo.tsx:39
 msgid "Unable to modify the settings"
 msgstr "Ayarlar değiştirilemiyor"
 
-#: src/components/storage/ProposalPage.tsx:123
+#: src/components/storage/ProposalPage.tsx:122
 msgid ""
 "The storage configuration uses elements not supported by this interface."
 msgstr ""
 "Depolama yapılandırması bu arayüz tarafından desteklenmeyen öğeler "
 "kullanıyor."
 
-#: src/components/storage/ProposalPage.tsx:129
+#: src/components/storage/ProposalPage.tsx:128
 msgid ""
 "You may want to discard the current settings and start from scratch with a "
 "simple configuration."
@@ -2808,7 +2928,7 @@ msgstr ""
 "Mevcut ayarları atıp, basit bir yapılandırmayla sıfırdan başlamak "
 "isteyebilirsiniz."
 
-#: src/components/storage/ProposalPage.tsx:145
+#: src/components/storage/ProposalPage.tsx:144
 msgid ""
 "There are not disks available for the installation. You may need to "
 "configure some device."
@@ -2816,38 +2936,38 @@ msgstr ""
 "Kurulum için kullanılabilir disk yok. Bazı aygıtları yapılandırmanız "
 "gerekebilir."
 
-#: src/components/storage/ProposalPage.tsx:150
+#: src/components/storage/ProposalPage.tsx:149
 #: src/components/storage/dasd/DASDTable.tsx:304
 msgid "No devices found"
 msgstr "Hiçbir cihaz bulunamadı"
 
-#: src/components/storage/ProposalPage.tsx:159
+#: src/components/storage/ProposalPage.tsx:158
 msgid "Connect to iSCSI targets"
 msgstr "iSCSI hedeflerine bağlanın"
 
-#: src/components/storage/ProposalPage.tsx:172
+#: src/components/storage/ProposalPage.tsx:171
 msgid "Manage DASD devices"
 msgstr "DASD aygıtlarını yönet"
 
-#: src/components/storage/ProposalPage.tsx:244
+#: src/components/storage/ProposalPage.tsx:223
 msgid "Start from scratch with the default configuration"
 msgstr "Öntanımlı yapılandırmayla sıfırdan başla"
 
-#: src/components/storage/ProposalPage.tsx:246
+#: src/components/storage/ProposalPage.tsx:225
 msgid "Reset to defaults"
 msgstr "Öntanımlılara sıfırla"
 
-#: src/components/storage/ProposalPage.tsx:255
+#: src/components/storage/ProposalPage.tsx:234
 msgid ""
 "Changes in these settings will immediately update the 'Result' section below."
 msgstr ""
 
-#: src/components/storage/ProposalPage.tsx:262
+#: src/components/storage/ProposalPage.tsx:241
 #, fuzzy
 msgid "Installation devices"
 msgstr "Kurulum Aygıtları"
 
-#: src/components/storage/ProposalPage.tsx:268
+#: src/components/storage/ProposalPage.tsx:247
 msgid ""
 "Structure of the new system, including disks to use and additional devices "
 "like LVM volume groups."
@@ -2855,53 +2975,49 @@ msgstr ""
 "Kullanılacak diskler ve LVM birim grupları gibi ek aygıtlar da olmak üzere "
 "yeni sistemin yapısı."
 
-#: src/components/storage/ProposalPage.tsx:278
+#: src/components/storage/ProposalPage.tsx:254
 msgid "Encryption"
 msgstr "Şifreleme"
 
-#: src/components/storage/ProposalPage.tsx:362
-msgid "Reloading data, please wait..."
-msgstr "Veriler yeniden yükleniyor, lütfen bekleyin..."
-
-#: src/components/storage/ProposalResultSection.tsx:42
+#: src/components/storage/ProposalResultSection.tsx:46
 msgid "Waiting for information about storage configuration"
 msgstr "Depolama yapılandırması hakkında bilgi bekleniyor"
 
-#: src/components/storage/ProposalResultSection.tsx:67
+#: src/components/storage/ProposalResultSection.tsx:71
 #, javascript-format
 msgid "There is %d destructive action planned affecting %s"
 msgid_plural "There are %d destructive actions planned affecting %s"
 msgstr[0] "%d planlanan yıkım askiyonu %s'i etkiliyor"
 msgstr[1] "%d planlanan yıkım askiyonları %s'i etkiliyor"
 
-#: src/components/storage/ProposalResultSection.tsx:78
+#: src/components/storage/ProposalResultSection.tsx:82
 #, javascript-format
 msgid "There is %d destructive action planned"
 msgid_plural "There are %d destructive actions planned"
 msgstr[0] "yıkıcı %d eylemi planlandı"
 msgstr[1] "yıkıcı %d eylemleri planlandı"
 
-#: src/components/storage/ProposalResultSection.tsx:128
+#: src/components/storage/ProposalResultSection.tsx:132
 msgid "Result"
 msgstr "Sonuç"
 
-#: src/components/storage/ProposalResultSection.tsx:130
+#: src/components/storage/ProposalResultSection.tsx:134
 msgid ""
 "Result of applying the configuration described at the 'Settings' section "
 "above."
 msgstr ""
 
-#: src/components/storage/ProposalResultSection.tsx:138
+#: src/components/storage/ProposalResultSection.tsx:142
 #, fuzzy
 msgid ""
 "The following actions will be performed in the system during installation."
 msgstr "Kurulum için aşağıdaki yazılım desenleri seçilmiştir:"
 
-#: src/components/storage/ProposalResultSection.tsx:144
+#: src/components/storage/ProposalResultSection.tsx:148
 msgid "Final layout"
 msgstr "Son düzen"
 
-#: src/components/storage/ProposalResultSection.tsx:148
+#: src/components/storage/ProposalResultSection.tsx:152
 #, fuzzy
 msgid "Final structure of the system after installation."
 msgstr "Kurulum için gerekli dosya sistemlerine yer verilemiyor"
@@ -2912,17 +3028,17 @@ msgstr "Yeni"
 
 #. TRANSLATORS: Label to indicate the device size before resizing, where %s is
 #. replaced by the original size (e.g., 3.00 GiB).
-#: src/components/storage/ProposalResultTable.tsx:106
+#: src/components/storage/ProposalResultTable.tsx:108
 #, javascript-format
 msgid "Before %s"
 msgstr "Önce %s"
 
-#: src/components/storage/ProposalResultTable.tsx:133
+#: src/components/storage/ProposalResultTable.tsx:135
 msgid "Mount Point"
 msgstr "Bağlantı Noktası"
 
-#: src/components/storage/ProposalResultTable.tsx:134
-#: src/components/storage/SpaceActionsTable.tsx:237
+#: src/components/storage/ProposalResultTable.tsx:136
+#: src/components/storage/SpaceActionsTable.tsx:230
 msgid "Details"
 msgstr "Ayrıntılar"
 
@@ -2939,67 +3055,67 @@ msgstr ""
 "%s atomik güncellemelere sahip değişmez bir sistemdir. Anlık imajlar "
 "aracılığıyla güncellenen salt okunur bir Btrfs dosya sistemi kullanır."
 
-#: src/components/storage/SearchedDeviceMenu.tsx:57
+#: src/components/storage/SearchedDeviceMenu.tsx:69
 msgid "Selected disk cannot be changed"
 msgstr "Seçilen disk değiştirilemez"
 
 #. TRANSLATORS: %s is a formatted mount point like '"/home"'
-#: src/components/storage/SearchedDeviceMenu.tsx:62
+#: src/components/storage/SearchedDeviceMenu.tsx:74
 #, fuzzy, javascript-format
 msgid "Change the disk to format as %s"
 msgstr "%s olarak biçimlendirilecek disk seç"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:69
+#: src/components/storage/SearchedDeviceMenu.tsx:81
 #, fuzzy
 msgid "Change the disk to configure"
 msgstr "Yapılandırılacak disk seç"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:73
+#: src/components/storage/SearchedDeviceMenu.tsx:85
 #, fuzzy
 msgid "Change the disk to install the system"
 msgstr "Sistemi kurmak için disk seç"
 
 #. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case).
-#: src/components/storage/SearchedDeviceMenu.tsx:83
+#: src/components/storage/SearchedDeviceMenu.tsx:95
 #, fuzzy, javascript-format
 msgid "Change the disk to create %s"
 msgstr "%s oluşturmak için disk seç"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:99
+#: src/components/storage/SearchedDeviceMenu.tsx:118
 msgid "This uses the existing file system at the disk"
 msgstr "Bu, diskteki mevcut dosya sistemini kullanır"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:103
+#: src/components/storage/SearchedDeviceMenu.tsx:122
 msgid "This uses existing partitions at the disk"
 msgstr "Bu, diskteki mevcut bölümleri kullanır"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:111
+#: src/components/storage/SearchedDeviceMenu.tsx:130
 msgid "It is chosen for booting and for some LVM groups"
 msgstr "Önyükleme ve bazı LVM grupları için seçilir"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:113
+#: src/components/storage/SearchedDeviceMenu.tsx:132
 msgid "It is chosen for some LVM groups"
 msgstr "Bazı LVM grupları için seçilmiştir"
 
 #. TRANSLATORS: %s is the name of the LVM
-#: src/components/storage/SearchedDeviceMenu.tsx:118
+#: src/components/storage/SearchedDeviceMenu.tsx:137
 #, javascript-format
 msgid "It is chosen for booting and for the LVM group '%s'"
 msgstr "Önyükleme ve '%s' LVM grubu için seçilir"
 
 #. TRANSLATORS: %s is the name of the LVM
-#: src/components/storage/SearchedDeviceMenu.tsx:124
+#: src/components/storage/SearchedDeviceMenu.tsx:143
 #, javascript-format
 msgid "It is chosen for the LVM group '%s'"
 msgstr "LVM grubu '%s' için seçildi"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:129
+#: src/components/storage/SearchedDeviceMenu.tsx:148
 msgid "It is chosen for booting"
 msgstr "Önyükleme için seçildi"
 
 #. TRANSLATORS: %s is the name of the disk (eg. sda)
-#: src/components/storage/SearchedDeviceMenu.tsx:138
+#: src/components/storage/SearchedDeviceMenu.tsx:157
 #, javascript-format
 msgid ""
 "%s will still contain the configured LVM groups and any partition needed to "
@@ -3009,13 +3125,13 @@ msgstr ""
 "bölümleri içerecektir"
 
 #. TRANSLATORS: %s is the name of the disk (eg. sda)
-#: src/components/storage/SearchedDeviceMenu.tsx:144
+#: src/components/storage/SearchedDeviceMenu.tsx:163
 #, javascript-format
 msgid "The configured LVM groups will remain at %s"
 msgstr "Yapılandırılan LVM grupları %s konumunda kalacaktır"
 
 #. TRANSLATORS: %1$s is the name of the disk (eg. sda) and %2$s the name of the LVM
-#: src/components/storage/SearchedDeviceMenu.tsx:150
+#: src/components/storage/SearchedDeviceMenu.tsx:169
 #, javascript-format
 msgid ""
 "%1$s will still contain the LVM group '%2$s' and any partition needed to boot"
@@ -3024,46 +3140,46 @@ msgstr ""
 "içerecektir"
 
 #. TRANSLATORS: %1$s is the name of the LVM and %2$s the name of the disk (eg. sda)
-#: src/components/storage/SearchedDeviceMenu.tsx:158
+#: src/components/storage/SearchedDeviceMenu.tsx:177
 #, javascript-format
 msgid "The LVM group '%1$s' will remain at %2$s"
 msgstr "LVM grubu '%1$s' %2$s konumunda kalacak"
 
 #. TRANSLATORS: %s is the name of the disk (eg. sda)
-#: src/components/storage/SearchedDeviceMenu.tsx:166
+#: src/components/storage/SearchedDeviceMenu.tsx:185
 #, javascript-format
 msgid "Partitions needed for booting will remain at %s"
 msgstr "Önyükleme için gereken bölümler %s konumunda kalacak"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:170
+#: src/components/storage/SearchedDeviceMenu.tsx:189
 msgid "Partitions needed for booting will also be adapted"
 msgstr "Önyükleme için gereken bölümler de uyarlanacak"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:186
+#: src/components/storage/SearchedDeviceMenu.tsx:211
 msgid "Change device menu"
 msgstr "Cihaz menüsünü değiştir"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:236
+#: src/components/storage/SearchedDeviceMenu.tsx:265
 msgid "The disk is used for LVM and boot"
 msgstr "Disk LVM ve önyükleme için kullanılır"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:238
+#: src/components/storage/SearchedDeviceMenu.tsx:267
 msgid "The disk is used for booting"
 msgstr "Disk önyükleme için kullanılır"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:242
+#: src/components/storage/SearchedDeviceMenu.tsx:271
 msgid "The disk is used for LVM"
 msgstr "Disk LVM için kullanılır"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:244
+#: src/components/storage/SearchedDeviceMenu.tsx:273
 msgid "Remove the configuration for this disk"
 msgstr "Bu disk için yapılandırmayı kaldırın"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:256
+#: src/components/storage/SearchedDeviceMenu.tsx:285
 msgid "Do not use"
 msgstr "Kullanma"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:309
+#: src/components/storage/SearchedDeviceMenu.tsx:344
 #, javascript-format
 msgid "Device %s menu"
 msgstr "Cihaz %s menüsü"
@@ -3115,55 +3231,94 @@ msgstr "Kurulumcunun makul bir boyut önermesine izin verin"
 msgid "Define a custom size"
 msgstr "Özel bir boyut tanımlayın"
 
-#: src/components/storage/SpaceActionsTable.tsx:75
+#: src/components/storage/SpaceActionsTable.tsx:76
 msgid "The device will be used by the new system."
 msgstr "Cihaz yeni sistemde kullanılacak."
 
 #. TRANSLATORS: %s is a mount path like "/home".
-#: src/components/storage/SpaceActionsTable.tsx:78
+#: src/components/storage/SpaceActionsTable.tsx:79
 #, javascript-format
 msgid "The device will be mounted at %s."
 msgstr "Cihaz %s konumuna bağlanacak."
 
-#: src/components/storage/SpaceActionsTable.tsx:84
+#: src/components/storage/SpaceActionsTable.tsx:85
 #, javascript-format
 msgid "Up to %s can be recovered by shrinking the device."
 msgstr "Cihazın küçültülmesiyle %s'ye kadar geri kazanılabilir."
 
-#: src/components/storage/SpaceActionsTable.tsx:93
+#: src/components/storage/SpaceActionsTable.tsx:94
 msgid "The device cannot be shrunk:"
 msgstr "Cihaz daraltılamaz:"
 
-#: src/components/storage/SpaceActionsTable.tsx:114
+#: src/components/storage/SpaceActionsTable.tsx:115
 #, javascript-format
 msgid "Show information about %s"
 msgstr "%s hakkında bilgi göster"
 
-#: src/components/storage/SpaceActionsTable.tsx:208
-msgid "The content may be deleted"
-msgstr "İçerik silinmiş olabilir"
+#: src/components/storage/SpaceActionsTable.tsx:226
+msgid "proposal.Device"
+msgstr ""
 
-#. TRANSLATORS: status message, no existing content was found on the disk,
-#. i.e. the disk is completely empty
-#: src/components/storage/SpaceActionsTable.tsx:211
-#: src/components/storage/utils/device.tsx:87
-msgid "No content found"
-msgstr "İçerik bulunamadı"
-
-#: src/components/storage/SpaceActionsTable.tsx:242
+#: src/components/storage/SpaceActionsTable.tsx:238
 msgid "Action"
 msgstr "Eylem"
 
-#: src/components/storage/SpacePolicySelection.tsx:97
+#: src/components/storage/SpacePolicySelection.tsx:106
 msgid ""
 "Select what to do with each partition in order to find space for allocating "
 "the new system."
 msgstr "Yeni sisteme yer açmak için her bölümle ne yapılacağını seçin."
 
-#: src/components/storage/SpacePolicySelection.tsx:103
+#: src/components/storage/SpacePolicySelection.tsx:112
 #, javascript-format
 msgid "Find space in %s"
 msgstr "%s'de boşluk bul"
+
+#: src/components/storage/StorageDetailsItem.tsx:52
+msgid "No device selected yet"
+msgstr "Henüz hiçbir cihaz seçilmedi"
+
+#. TRANSLATORS: %s will be replaced by the device name and its size,
+#. example: "/dev/sda, 20 GiB"
+#: src/components/storage/StorageDetailsItem.tsx:59
+#, fuzzy, javascript-format
+msgid "Use device %s"
+msgstr "%s diskini kullan"
+
+#: src/components/storage/StorageDetailsItem.tsx:83
+#, fuzzy
+msgid "Use several devices"
+msgstr "Aygıtları yeniden tara"
+
+#: src/components/storage/StorageDetailsItem.tsx:93
+#, fuzzy
+msgid "There are no disks available for the installation"
+msgstr "Kurulum için kullanılabilir bir disk yok."
+
+#: src/components/storage/StorageDetailsItem.tsx:94
+#, fuzzy
+msgid "Invalid settings"
+msgstr "Geçersiz depolama ayarları"
+
+#: src/components/storage/StorageDetailsItem.tsx:95
+#, fuzzy
+msgid "Using an advanced storage configuration"
+msgstr "Gelişmiş seçenekler ile kurulum yapın."
+
+#: src/components/storage/StorageDetailsItem.tsx:112
+msgid "No data loss is expected"
+msgstr ""
+
+#. TRANSLATORS: %s will be replaced by a formatted list of affected systems
+#. like "Windows and openSUSE Tumbleweed".
+#: src/components/storage/StorageDetailsItem.tsx:119
+#, javascript-format
+msgid "Potential data loss affecting at least %s"
+msgstr ""
+
+#: src/components/storage/StorageDetailsItem.tsx:124
+msgid "Potential data loss"
+msgstr ""
 
 #: src/components/storage/UnsupportedModelInfo.tsx:44
 msgid ""
@@ -3181,79 +3336,79 @@ msgstr ""
 "Mevcut ayarlarla kuruluma devam edebilir veya yapılandırmayı iptal edip daha "
 "basit bir yapılandırmayla sıfırdan kuruluma başlayabilirsiniz."
 
-#: src/components/storage/UnusedMenu.tsx:36
+#: src/components/storage/UnusedMenu.tsx:33
 msgid "Not configured yet"
 msgstr "Henüz yapılandırılmadı"
 
-#: src/components/storage/UnusedMenu.tsx:61
-msgid "Use the RAID without partitions"
-msgstr "RAID'i bölümler olmadan kullan"
-
-#: src/components/storage/UnusedMenu.tsx:61
+#: src/components/storage/UnusedMenu.tsx:63
 msgid "Use the disk without partitions"
 msgstr "Bölümlendirme olmadan diski kullan"
 
-#: src/components/storage/UnusedMenu.tsx:72
+#: src/components/storage/UnusedMenu.tsx:64
+msgid "Use the RAID without partitions"
+msgstr "RAID'i bölümler olmadan kullan"
+
+#: src/components/storage/UnusedMenu.tsx:75
 msgid "Add a partition or mount an existing one"
 msgstr "Bir bölüm ekleyin veya mevcut bir bölümü bağlayın"
 
-#: src/components/storage/UnusedMenu.tsx:80
+#: src/components/storage/UnusedMenu.tsx:83
 msgid "Format the whole device or mount an existing file system"
 msgstr "Tüm cihazı biçimlendirin veya mevcut bir dosya sistemini bağlayın"
 
 #. TRANSLATORS: %1$s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case). %2$s is a disk name like sda.
-#: src/components/storage/VolumeGroupEditor.tsx:74
+#: src/components/storage/VolumeGroupEditor.tsx:79
 #, javascript-format
 msgid "%1$s will be created as a partition at %2$s"
 msgid_plural "%1$s will be created as partitions at %2$s"
 msgstr[0] "%1$s bölümü (%2$s) olarak oluşturulacak"
 msgstr[1] "%1$s bölümleri (%2$s) olarak oluşturulacak"
 
-#: src/components/storage/VolumeGroupEditor.tsx:83
+#: src/components/storage/VolumeGroupEditor.tsx:88
 msgid "The logical volume will also be deleted"
 msgid_plural "The logical volumes will also be deleted"
 msgstr[0] "Mantıksal birimde silinecek"
 msgstr[1] "Mantıksal birimlerdede silinecek"
 
-#: src/components/storage/VolumeGroupEditor.tsx:98
+#: src/components/storage/VolumeGroupEditor.tsx:103
 msgid "Delete volume group"
 msgstr "Birim grubunu sil"
 
-#: src/components/storage/VolumeGroupEditor.tsx:110
+#: src/components/storage/VolumeGroupEditor.tsx:115
 msgid "Modify settings and physical volumes"
 msgstr "Ayarları ve fiziksel birimleri değiştirin"
 
-#: src/components/storage/VolumeGroupEditor.tsx:114
+#: src/components/storage/VolumeGroupEditor.tsx:119
 msgid "Edit volume group"
 msgstr "Birim grubunu düzenle"
 
 #. TRANSLATORS: ARIA (accesibility) description of an UI element. %s is a mount path.
-#: src/components/storage/VolumeGroupEditor.tsx:145
+#: src/components/storage/VolumeGroupEditor.tsx:150
 #, fuzzy, javascript-format
 msgid "Volume group %s"
 msgstr "Boş LVM birim grubu %s"
 
-#: src/components/storage/VolumeGroupEditor.tsx:185
+#: src/components/storage/VolumeGroupEditor.tsx:190
 #, javascript-format
 msgid "Create LVM volume group %s"
 msgstr "LVM birim grubu %s'yi oluştur"
 
-#: src/components/storage/VolumeGroupEditor.tsx:186
+#: src/components/storage/VolumeGroupEditor.tsx:191
 #, javascript-format
 msgid "Empty LVM volume group %s"
 msgstr "Boş LVM birim grubu %s"
 
-#: src/components/storage/VolumeGroupEditor.tsx:241
+#: src/components/storage/VolumeGroupEditor.tsx:246
 msgid "Add logical volume"
 msgstr "Mantıksal birim ekle"
 
-#: src/components/storage/VolumeGroupEditor.tsx:251
+#: src/components/storage/VolumeGroupEditor.tsx:256
 #, javascript-format
 msgid "Logical volumes for %s"
 msgstr "%s için mantıksal birimler"
 
-#: src/components/storage/VolumeGroupEditor.tsx:266
+#: src/components/storage/VolumeGroupEditor.tsx:271
 msgid "The following logical volume will be created"
 msgid_plural "The following logical volumes will be created"
 msgstr[0] "Aşağıdaki mantıksal birim oluşturulacak"
@@ -3458,22 +3613,9 @@ msgstr "çevrimdışı"
 msgid "Clear input"
 msgstr "Girişi temizle"
 
-#: src/components/storage/device-utils.tsx:76
+#: src/components/storage/device-utils.tsx:85
 msgid "Unused space"
 msgstr "Kullanılmayan alan"
-
-#. TRANSLATORS: %1$s is a description of the device (eg. "Encrypted XFS RAID") and %2$s is
-#. the RAID level (eg. "RAID0")
-#. TRANSLATORS: %1$s is an already formatted mount path (eg. "/"),
-#. %2$s is a size description (eg. at least 10 GiB)
-#. TRANSLATORS: %1$s is a filesystem type description (eg. "Btrfs with snapshots"),
-#. %2$s is a description of the size or the size limits (eg. "at least 10 GiB")
-#: src/components/storage/device-utils.tsx:84
-#: src/components/storage/utils/partition.tsx:41
-#: src/components/storage/utils/partition.tsx:85
-#, javascript-format
-msgid "%1$s (%2$s)"
-msgstr "%1$s (%2$s)"
 
 #: src/components/storage/iscsi/AuthFields.jsx:66
 msgid "Only available if authentication by target is provided"
@@ -3665,283 +3807,289 @@ msgstr "Keşfet"
 msgid "Targets"
 msgstr "Hedefler"
 
-#: src/components/storage/utils.ts:58
+#: src/components/storage/utils.ts:60
 msgid "KiB"
 msgstr "KB"
 
-#: src/components/storage/utils.ts:59
+#: src/components/storage/utils.ts:61
 msgid "MiB"
 msgstr "MB"
 
-#: src/components/storage/utils.ts:60
+#: src/components/storage/utils.ts:62
 msgid "GiB"
 msgstr "GB"
 
-#: src/components/storage/utils.ts:61
+#: src/components/storage/utils.ts:63
 msgid "TiB"
 msgstr "TB"
 
-#: src/components/storage/utils.ts:62
+#: src/components/storage/utils.ts:64
 msgid "PiB"
 msgstr "PB"
 
-#: src/components/storage/utils.ts:66
+#: src/components/storage/utils.ts:68
 msgid "Bcachefs"
 msgstr "Bcachefs"
 
-#: src/components/storage/utils.ts:67
+#: src/components/storage/utils.ts:69
 msgid "BitLocker"
 msgstr "BitLocker"
 
-#: src/components/storage/utils.ts:68
+#: src/components/storage/utils.ts:70
 msgid "Btrfs"
 msgstr "Btrfs"
 
-#: src/components/storage/utils.ts:69
+#: src/components/storage/utils.ts:71
 msgid "ExFAT"
 msgstr "ExFAT"
 
-#: src/components/storage/utils.ts:70
+#: src/components/storage/utils.ts:72
 msgid "Ext2"
 msgstr "Ext2"
 
-#: src/components/storage/utils.ts:71
+#: src/components/storage/utils.ts:73
 msgid "Ext3"
 msgstr "Ext3"
 
-#: src/components/storage/utils.ts:72
+#: src/components/storage/utils.ts:74
 msgid "Ext4"
 msgstr "Ext4"
 
-#: src/components/storage/utils.ts:73
+#: src/components/storage/utils.ts:75
 msgid "F2FS"
 msgstr "F2FS"
 
-#: src/components/storage/utils.ts:74
+#: src/components/storage/utils.ts:76
 msgid "JFS"
 msgstr "JFS"
 
-#: src/components/storage/utils.ts:75
+#: src/components/storage/utils.ts:77
 msgid "NFS"
 msgstr "NFS"
 
-#: src/components/storage/utils.ts:76
+#: src/components/storage/utils.ts:78
 msgid "NILFS2"
 msgstr "NILFS2"
 
-#: src/components/storage/utils.ts:77
+#: src/components/storage/utils.ts:79
 msgid "NTFS"
 msgstr "NTFS"
 
-#: src/components/storage/utils.ts:78
+#: src/components/storage/utils.ts:80
 msgid "ReiserFS"
 msgstr "ReiserFS"
 
-#: src/components/storage/utils.ts:79
+#: src/components/storage/utils.ts:81
 msgid "Swap"
 msgstr "Swap"
 
-#: src/components/storage/utils.ts:80
+#: src/components/storage/utils.ts:82
 msgid "Tmpfs"
 msgstr "Tmpfs"
 
-#: src/components/storage/utils.ts:81
+#: src/components/storage/utils.ts:83
 msgid "FAT"
 msgstr "FAT"
 
-#: src/components/storage/utils.ts:82
+#: src/components/storage/utils.ts:84
 msgid "XFS"
 msgstr "XFS"
 
-#: src/components/storage/utils.ts:90
+#: src/components/storage/utils.ts:92
 msgid "Delete current content"
 msgstr "Mevcut içeriği sil"
 
-#: src/components/storage/utils.ts:94
+#: src/components/storage/utils.ts:96
 msgid "Shrink existing partitions"
 msgstr "Mevcut bölümleri küçült"
 
-#: src/components/storage/utils.ts:98
+#: src/components/storage/utils.ts:100
 msgid "Use available space"
 msgstr "Mevcut alanı kullan"
 
 #. TRANSLATORS: sub-string used to represent a path like "/" or "/var". %s is replaced by the path
 #. itself, the rest of the string (quotation marks in the English case) is used to encapsulate the
 #. path in a bigger sentence like 'Create partitions for "/" and "/var"'.
-#: src/components/storage/utils.ts:358
+#: src/components/storage/utils.ts:346
 #, javascript-format
 msgid "\"%s\""
 msgstr ""
 
 #. TRANSLATORS: Size range, %1$s is the min size and %2$s is the max
-#: src/components/storage/utils.ts:369
+#: src/components/storage/utils.ts:357
 #, javascript-format
 msgid "%1$s - %2$s"
 msgstr "%1$s - %2$s"
 
 #. TRANSLATORS: minimum device size, %s is replaced by size string, e.g. "17.5 GiB"
-#: src/components/storage/utils.ts:371
+#: src/components/storage/utils.ts:359
 #, javascript-format
 msgid "at least %s"
 msgstr "en az %s"
 
 #. TRANSLATORS: multipath device type
-#: src/components/storage/utils/device.tsx:39
+#: src/components/storage/utils/device.tsx:31
 msgid "Multipath"
 msgstr "Çoklu yol"
 
 #. TRANSLATORS: %s is replaced by the device bus ID
-#: src/components/storage/utils/device.tsx:44
+#: src/components/storage/utils/device.tsx:36
 #, javascript-format
 msgid "DASD %s"
 msgstr "DASD %s"
 
-#. TRANSLATORS: software RAID device, %s is replaced by the RAID level, e.g. RAID-1
-#: src/components/storage/utils/device.tsx:49
-#, javascript-format
-msgid "Software %s"
-msgstr "Yazılım %s"
-
-#: src/components/storage/utils/device.tsx:54
+#: src/components/storage/utils/device.tsx:40
 msgid "SD Card"
 msgstr "SD Kart"
 
 #. TRANSLATORS: %s is substituted by the type of disk like "iSCSI" or "SATA"
-#: src/components/storage/utils/device.tsx:59
+#: src/components/storage/utils/device.tsx:46
 #, javascript-format
 msgid "%s disk"
 msgstr "disk %s"
 
-#: src/components/storage/utils/device.tsx:60
+#: src/components/storage/utils/device.tsx:47
 msgid "Disk"
 msgstr "Disk"
 
+#. TRANSLATORS: software RAID device, %s is replaced by the RAID level, e.g. RAID-1
+#: src/components/storage/utils/device.tsx:59
+#, javascript-format
+msgid "Software %s"
+msgstr "Yazılım %s"
+
 #. TRANSLATORS: disk partition info, %s is replaced by partition table
 #. type (MS-DOS or GPT), %d is the number of the partitions
-#: src/components/storage/utils/device.tsx:81
+#: src/components/storage/utils/device.tsx:83
 #, javascript-format
 msgid "%s with %d partitions"
 msgstr "%s ile %d bölümler"
 
-#: src/components/storage/utils/drive.tsx:45
+#. TRANSLATORS: status message, no existing content was found on the disk,
+#. i.e. the disk is completely empty
+#: src/components/storage/utils/device.tsx:90
+msgid "No content found"
+msgstr "İçerik bulunamadı"
+
+#: src/components/storage/utils/drive.tsx:46
 msgid "A partition will be deleted"
 msgstr "Bir bölüm silinecek"
 
-#: src/components/storage/utils/drive.tsx:46
+#: src/components/storage/utils/drive.tsx:47
 msgid "At least one partition will be deleted"
 msgstr "En az bir bölüm silinecek"
 
-#: src/components/storage/utils/drive.tsx:47
+#: src/components/storage/utils/drive.tsx:48
 msgid "Several partitions will be deleted"
 msgstr "Birkaç bölüm silinecek"
 
-#: src/components/storage/utils/drive.tsx:48
+#: src/components/storage/utils/drive.tsx:49
 msgid "A partition may be deleted"
 msgstr "Bir bölüm silinebilir"
 
-#: src/components/storage/utils/drive.tsx:50
+#: src/components/storage/utils/drive.tsx:51
 msgid "Some partitions may be deleted"
 msgstr "Bazı bölümler silinebilir"
 
-#: src/components/storage/utils/drive.tsx:61
+#: src/components/storage/utils/drive.tsx:62
 msgid "A partition may be shrunk"
 msgstr "Bir bölüm küçültülebilir"
 
-#: src/components/storage/utils/drive.tsx:63
+#: src/components/storage/utils/drive.tsx:64
 msgid "Some partitions may be shrunk"
 msgstr "Bazı bölümler küçültülebilir"
 
-#: src/components/storage/utils/drive.tsx:71
+#: src/components/storage/utils/drive.tsx:77
 msgid "All content not configured to be mounted will be deleted"
 msgstr "Bağlanmak üzere yapılandırılmayan tüm içerikler silinecektir"
 
-#: src/components/storage/utils/drive.tsx:72
+#: src/components/storage/utils/drive.tsx:78
 msgid "All content will be deleted"
 msgstr "Tüm içerik silinecek"
 
-#: src/components/storage/utils/drive.tsx:75
+#: src/components/storage/utils/drive.tsx:81
 msgid "Reused partitions will not be shrunk"
 msgstr "Yeniden kullanılan bölümler küçültülmeyecektir"
 
-#: src/components/storage/utils/drive.tsx:76
+#: src/components/storage/utils/drive.tsx:82
 msgid "Some existing partitions may be shrunk"
 msgstr "Mevcut bazı bölümler küçültülebilir"
 
-#: src/components/storage/utils/drive.tsx:78
-#: src/components/storage/utils/drive.tsx:113
+#: src/components/storage/utils/drive.tsx:84
+#: src/components/storage/utils/drive.tsx:119
 msgid "Current partitions will be kept"
 msgstr "Mevcut bölümler korunacaktır"
 
-#: src/components/storage/utils/drive.tsx:123
+#: src/components/storage/utils/drive.tsx:137
 msgid ""
 "Partitions that are not reused will be removed and that data will be lost."
 msgstr ""
 "Tekrar kullanılmayan bölümler kaldırılacak ve bu veriler kaybolacaktır."
 
-#: src/components/storage/utils/drive.tsx:124
+#: src/components/storage/utils/drive.tsx:138
 msgid ""
 "Any existing partition will be removed and all data in the disk will be lost."
 msgstr ""
 "Mevcut herhangi bir bölüm kaldırılacak ve diskteki tüm veriler kaybolacaktır."
 
-#: src/components/storage/utils/drive.tsx:128
+#: src/components/storage/utils/drive.tsx:142
 msgid "Partitions that are not reused will be resized as needed."
 msgstr ""
 "Tekrar kullanılmayan bölümler ihtiyaç halinde yeniden boyutlandırılacaktır."
 
-#: src/components/storage/utils/drive.tsx:130
+#: src/components/storage/utils/drive.tsx:144
 msgid "Partitions that are not reused would be resized if needed."
 msgstr ""
 "Tekrar kullanılmayan bölümler gerektiğinde yeniden boyutlandırılacaktır."
 
-#: src/components/storage/utils/drive.tsx:132
+#: src/components/storage/utils/drive.tsx:146
 msgid "The data is kept, but the current partitions will be resized as needed."
 msgstr ""
 "Veriler tutulacak, ancak mevcut bölümler ihtiyaç halinde yeniden "
 "boyutlandırılacak."
 
-#: src/components/storage/utils/drive.tsx:136
+#: src/components/storage/utils/drive.tsx:150
 msgid ""
 "Only reused partitions and space not assigned to any partition will be used."
 msgstr ""
 "Sadece yeniden kullanılan bölümler ve herhangi bir bölüme atanmamış alanlar "
 "kullanılacaktır."
 
-#: src/components/storage/utils/drive.tsx:138
+#: src/components/storage/utils/drive.tsx:152
 msgid "Only reused partitions will be used."
 msgstr "Sadece yeniden kullanılan bölümler kullanılacaktır."
 
-#: src/components/storage/utils/drive.tsx:140
+#: src/components/storage/utils/drive.tsx:154
 msgid ""
 "The data is kept. Only the space not assigned to any partition will be used."
 msgstr ""
 "Veriler tutulur. Sadece herhangi bir bölüme atanmamış alan kullanılacaktır."
 
-#: src/components/storage/utils/drive.tsx:142
+#: src/components/storage/utils/drive.tsx:156
 msgid "Select what to do with each partition."
 msgstr "Her bölümle ne yapılacağını seçin."
 
-#: src/components/storage/utils/drive.tsx:152
+#: src/components/storage/utils/drive.tsx:166
 #, javascript-format
 msgid "The whole device will be used for %s"
 msgstr "Tüm cihaz %s için kullanılacak"
 
-#: src/components/storage/utils/drive.tsx:156
+#: src/components/storage/utils/drive.tsx:170
 msgid "A file system will be used for the whole device"
 msgstr "Tüm cihaz için bir dosya sistemi kullanılacak"
 
-#: src/components/storage/utils/drive.tsx:161
+#: src/components/storage/utils/drive.tsx:175
 msgid "No additional partitions will be created"
 msgstr "Ek bölüm oluşturulmayacak"
 
-#: src/components/storage/utils/drive.tsx:169
+#: src/components/storage/utils/drive.tsx:183
 #, javascript-format
 msgid "An existing partition will be used for %s"
 msgid_plural "Existing partitions will be used for %s"
 msgstr[0] "Mevcut bölüm %s için kullanılacak"
 msgstr[1] "Mevcut bölümler %s için kullanılacak"
 
-#: src/components/storage/utils/drive.tsx:183
+#: src/components/storage/utils/drive.tsx:197
 #, javascript-format
 msgid "A new partition will be created for %s"
 msgid_plural "New partitions will be created for %s"
@@ -3950,7 +4098,7 @@ msgstr[1] "Yeni bölümler %s için oluşturulacak"
 
 #. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case).
-#: src/components/storage/utils/drive.tsx:194
+#: src/components/storage/utils/drive.tsx:208
 #, javascript-format
 msgid "Partitions will be used and created for %s"
 msgstr "Bölümler %s için kullanılacak ve oluşturulacak"
@@ -4068,6 +4216,15 @@ msgstr "zFCP aygıtlarını oku"
 msgid "zFCP"
 msgstr "zFCP"
 
+#: src/components/system/HostnameDetailsItem.tsx:42
+#: src/components/system/HostnamePage.tsx:80 src/router.tsx:57
+msgid "Hostname"
+msgstr "Ana bilgisayar adı"
+
+#: src/components/system/HostnameDetailsItem.tsx:56
+msgid "Temporary name that may change after reboot or network changes"
+msgstr ""
+
 #: src/components/system/HostnamePage.tsx:63
 msgid "Enter a hostname."
 msgstr "Bir ana bilgisayar adı girin."
@@ -4088,10 +4245,6 @@ msgstr "Ana bilgisayar adı güncellenemedi"
 msgid "Using transient hostname: %s"
 msgstr "Geçici ana bilgisayar adı kullanılıyor: %s"
 
-#: src/components/system/HostnamePage.tsx:80 src/router.tsx:56
-msgid "Hostname"
-msgstr "Ana bilgisayar adı"
-
 #: src/components/system/HostnamePage.tsx:85
 msgid "Product is already registered"
 msgstr "Ürün zaten kayıtlı"
@@ -4104,7 +4257,7 @@ msgstr ""
 "Ana bilgisayar adını şimdi veya daha sonra güncellemeniz, şu anda kayıtlı "
 "olan ana bilgisayar adını değiştirmeyecektir."
 
-#: src/components/system/HostnamePage.tsx:95
+#: src/components/system/HostnamePage.tsx:94
 msgid ""
 "This hostname is dynamic and may change after a reboot or network update, as "
 "configured by the local network administrator."
@@ -4113,16 +4266,16 @@ msgstr ""
 "güncellemesinden sonra yerel ağ yöneticisince yapılandırıldığı biçimde "
 "değişebilir."
 
-#: src/components/system/HostnamePage.tsx:111
+#: src/components/system/HostnamePage.tsx:109
 msgid "Use static hostname"
 msgstr "Durağan ana bilgisayar adı kullan"
 
-#: src/components/system/HostnamePage.tsx:112
+#: src/components/system/HostnamePage.tsx:110
 msgid "Set a permanent hostname that won’t change with network updates."
 msgstr ""
 "Ağ güncellemeleriyle değişmeyecek kalıcı bir ana bilgisayar adı ayarlayın."
 
-#: src/components/system/HostnamePage.tsx:122
+#: src/components/system/HostnamePage.tsx:120
 msgid "Static hostname"
 msgstr "Durağan ana bilgisayar adı"
 
@@ -4246,6 +4399,108 @@ msgstr "Genel SSH Anahtarını Kullan"
 #: src/routes/storage.tsx:113
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#~ msgid "Configuration out of sync"
+#~ msgstr "Yapılandırma senkronize değil"
+
+#~ msgid "The configuration has been updated externally."
+#~ msgstr "Yapılandırma dışardan güncellendi."
+
+#~ msgid ""
+#~ "Reloading is required to get the latest data and avoid issues or data "
+#~ "loss."
+#~ msgstr ""
+#~ "En güncel verilere ulaşmak ve sorun veya veri kaybını önlemek için "
+#~ "yeniden yükleme yapılması gerekir."
+
+#~ msgid "Reload now"
+#~ msgstr "Şimdi yeniden yükle"
+
+#~ msgid "Confirm Installation"
+#~ msgstr "Kurulumu Onayla"
+
+#~ msgid ""
+#~ "If you continue, partitions on your hard disk will be modified according "
+#~ "to the provided installation settings."
+#~ msgstr ""
+#~ "Devam ederseniz sabit diskinizdeki bölümler, sağlanan kurulum ayarlarına "
+#~ "göre değiştirilecektir."
+
+#~ msgid "Please, cancel and check the settings if you are unsure."
+#~ msgstr "Emin değilseniz lütfen iptal edin ve ayarları kontrol edin."
+
+#~ msgid "Continue"
+#~ msgstr "Devam et"
+
+#~ msgid "Not selected yet"
+#~ msgstr "Henüz seçilmedi"
+
+#, javascript-format
+#~ msgid "The system will use %s as its default language."
+#~ msgstr "Sistem öntanımlı olarak %s dilini kullanacaktır."
+
+#~ msgid ""
+#~ "These are the most relevant installation settings. Feel free to browse "
+#~ "the sections in the menu for further details."
+#~ msgstr ""
+#~ "Bunlar belirgin kurulum ayarlarıdır. Daha çok ayrıntı için menüdeki "
+#~ "bölümlere göz atmaktan çekinmeyin."
+
+#~ msgid "The installation will take"
+#~ msgstr "Kurulum yapılacak"
+
+#, javascript-format
+#~ msgid "The installation will take %s including:"
+#~ msgstr "Kurulum %s kadar olacaktır ve şunları içerecektir:"
+
+#, javascript-format
+#~ msgid "Install using device %s shrinking existing partitions as needed."
+#~ msgstr ""
+#~ "%s aygıtını kullanarak kurulum yapın ve gerektiğinde mevcut bölümleri "
+#~ "küçültün."
+
+#, javascript-format
+#~ msgid "Install using device %s without modifying existing partitions."
+#~ msgstr "Mevcut bölümleri değiştirmeden, %s cihazını kullanarak yükleyin."
+
+#, javascript-format
+#~ msgid "Install using device %s and deleting all its content."
+#~ msgstr "%s aygıtını kullanarak yükleyin ve tüm içeriğini silin."
+
+#, javascript-format
+#~ msgid ""
+#~ "Install using device %s with a custom strategy to find the needed space."
+#~ msgstr ""
+#~ "Gerekli alanı bulmak için özel bir stratejiyle %s cihazını kullanarak "
+#~ "yükleyin."
+
+#~ msgid ""
+#~ "Install using several devices shrinking existing partitions as needed."
+#~ msgstr ""
+#~ "%s aygıtını kullanarak kurulum yapın ve gerektiğinde mevcut bölümleri "
+#~ "küçültün."
+
+#~ msgid "Install using several devices without modifying existing partitions."
+#~ msgstr "Mevcut bölümleri değiştirmeden %s aygıtını kullanarak yükleyin."
+
+#~ msgid "Install using several devices and deleting all its content."
+#~ msgstr "%s aygıtını kullanarak yükleyin ve tüm içeriğini silin."
+
+#~ msgid ""
+#~ "Install using several devices with a custom strategy to find the needed "
+#~ "space."
+#~ msgstr ""
+#~ "İhtiyaç duyduğunuz alanı bulmak için özel bir stratejiyle birden fazla "
+#~ "cihaz kullanarak kurulum yapın."
+
+#~ msgid "Extensions"
+#~ msgstr "Uzantılar"
+
+#~ msgid "Reloading data, please wait..."
+#~ msgstr "Veriler yeniden yükleniyor, lütfen bekleyin..."
+
+#~ msgid "The content may be deleted"
+#~ msgstr "İçerik silinmiş olabilir"
 
 #~ msgid "Other options toggle"
 #~ msgstr "Diğer seçenekler arasında geçiş"
@@ -4379,10 +4634,6 @@ msgstr "ZFCP"
 
 #~ msgid "Maximum size value"
 #~ msgstr "Maksimum boyut değeri"
-
-#, c-format
-#~ msgid "Keep size of %s"
-#~ msgstr "%s boyutunu koru"
 
 #~ msgid "The partition is created exactly with the given size"
 #~ msgstr "Bölüm tam olarak belirtilen boyutta oluşturulur"
@@ -4649,10 +4900,6 @@ msgstr "ZFCP"
 #~ msgstr "%1$s kök diski (%2$s)"
 
 #, c-format
-#~ msgid "%1$s %2$s at %3$s (%4$s)"
-#~ msgstr "%1$s %2$s %3$s'de (%4$s)"
-
-#, c-format
 #~ msgid "%1$s %2$s volume (%3$s)"
 #~ msgstr "%1$s %2$s disk (%3$s)"
 
@@ -4811,9 +5058,6 @@ msgstr "ZFCP"
 #~ msgid "The final size depends on %s."
 #~ msgstr "Son boyut %s'ye bağlıdır."
 
-#~ msgid " and "
-#~ msgstr " ve "
-
 #~ msgid "Automatically calculated size according to the selected product."
 #~ msgstr "Seçilen ürüne göre otomatik olarak boyut hesaplanır."
 
@@ -4843,9 +5087,6 @@ msgstr "ZFCP"
 
 #~ msgid "Unit for the maximum size"
 #~ msgstr "Maksimum boyut için birim"
-
-#~ msgid "Auto"
-#~ msgstr "Otomatik"
 
 #~ msgid "Fixed"
 #~ msgstr "Düzeltildi"
@@ -5037,9 +5278,6 @@ msgstr "ZFCP"
 
 #~ msgid "Something went wrong while collecting logs. Please, try again."
 #~ msgstr "Günlükler toplanırken bir şeyler ters gitti. Lütfen tekrar deneyin."
-
-#~ msgid "Installation"
-#~ msgstr "Kurulum"
 
 #~ msgid "Please, try to read the zFCP devices again."
 #~ msgstr "Lütfen zFCP cihazlarını tekrar okumayı deneyin."

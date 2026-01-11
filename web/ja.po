@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-02 10:56+0000\n"
+"POT-Creation-Date: 2026-01-10 17:02+0000\n"
 "PO-Revision-Date: 2025-12-03 03:04+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -19,68 +19,48 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 5.14.3\n"
 
-#: src/components/core/AlertOutOfSync.tsx:71
-msgid "Configuration out of sync"
-msgstr "設定が同期できていません"
-
-#: src/components/core/AlertOutOfSync.tsx:80
-msgid "The configuration has been updated externally."
-msgstr "設定が外部から書き換えられています。"
-
-#: src/components/core/AlertOutOfSync.tsx:82
-msgid ""
-"Reloading is required to get the latest data and avoid issues or data loss."
-msgstr ""
-"最新のデータを取得してデータ損失などの問題を回避するには、再読み込みが必要で"
-"す。"
-
-#: src/components/core/AlertOutOfSync.tsx:85
-msgid "Reload now"
-msgstr "今すぐ読み込み"
-
-#: src/components/core/ChangeProductOption.tsx:45
+#: src/components/core/ChangeProductOption.tsx:46
 msgid "Change product"
 msgstr "製品の変更"
 
-#: src/components/core/InstallButton.tsx:45
-msgid "Confirm Installation"
-msgstr "インストールの確認"
+#. TRANSLATORS: title shown in the confirmation page before
+#. starting the installation. %s will be replaced with the product name.
+#: src/components/core/ConfirmPage.tsx:52
+#, fuzzy, javascript-format
+msgid "Start %s installation?"
+msgstr "基本的なインストールの設定を開始する"
 
-#: src/components/core/InstallButton.tsx:49
+#: src/components/core/ConfirmPage.tsx:72
 msgid ""
-"If you continue, partitions on your hard disk will be modified according to "
-"the provided installation settings."
+"Review the summary below. If anything seems incorrect or you have doubts, go "
+"back and adjust the settings before proceeding."
 msgstr ""
-"続行すると、お使いのコンピュータのハードディスクにあるパーティションは、ここ"
-"までのダイアログで設定したとおりに変更されます。"
 
-#: src/components/core/InstallButton.tsx:53
-msgid "Please, cancel and check the settings if you are unsure."
+#: src/components/core/ConfirmPage.tsx:93
+msgid "Install now with potential data loss"
 msgstr ""
-"何か不安な点があれば、キャンセルして設定を確認しておくことをお勧めします。"
 
-#. TRANSLATORS: button label
-#: src/components/core/InstallButton.tsx:58
-msgid "Continue"
-msgstr "続行"
+#: src/components/core/ConfirmPage.tsx:94
+#, fuzzy
+msgid "Install now"
+msgstr "インストール"
 
-#. TRANSLATORS: button label
-#: src/components/core/InstallButton.tsx:62 src/components/core/Page.tsx:247
-#: src/components/core/Popup.tsx:140
-#: src/components/network/BindingSettingsForm.tsx:228
-#: src/components/network/IpSettingsForm.tsx:219
-#: src/components/network/WifiConnectionForm.tsx:189
-#: src/components/product/ProductSelectionPage.tsx:99
-msgid "Cancel"
-msgstr "キャンセル"
+#: src/components/core/ConfirmPage.tsx:97
+msgid "Go back"
+msgstr ""
+
+#: src/components/core/Details.tsx:92
+#, fuzzy
+msgid "Waiting for proposal"
+msgstr "進捗状態を待機しています..."
 
 #. TRANSLATORS: The install button label
-#: src/components/core/InstallButton.tsx:97
+#: src/components/core/InstallButton.tsx:56
 msgid "Install"
 msgstr "インストール"
 
 #. TRANSLATORS: Text included with the install button when there are issues
-#: src/components/core/InstallButton.tsx:99
+#: src/components/core/InstallButton.tsx:58
 msgid "Not possible with the current setup. Click to know more."
 msgstr ""
 "現在の設定ではインストールできません。詳しく表示したい場合は、ここを押してく"
@@ -111,6 +91,7 @@ msgstr ""
 "起動までの間にメディアを取り出しておいてください。"
 
 #: src/components/core/InstallationFinished.tsx:61
+#: src/components/storage/PotentialDataLossAlert.tsx:52
 msgid "Hide details"
 msgstr "詳細を隠す"
 
@@ -130,27 +111,27 @@ msgstr ""
 "は、マシンが新しいブートローダを直接起動するように設定しておく必要がありま"
 "す。"
 
-#: src/components/core/InstallationFinished.tsx:124
+#: src/components/core/InstallationFinished.tsx:123
 msgid "Congratulations!"
 msgstr "おめでとうございます！"
 
-#: src/components/core/InstallationFinished.tsx:130
+#: src/components/core/InstallationFinished.tsx:129
 msgid "The installation on your machine is complete."
 msgstr "お使いのマシンへのインストールが完了しました。"
 
-#: src/components/core/InstallationFinished.tsx:134
+#: src/components/core/InstallationFinished.tsx:133
 msgid "At this point you can power off the machine."
 msgstr "マシンの電源を切って問題ありません。"
 
-#: src/components/core/InstallationFinished.tsx:135
+#: src/components/core/InstallationFinished.tsx:134
 msgid "At this point you can reboot the machine to log in to the new system."
 msgstr "あとはマシンを再起動して新しいシステムにログインするだけです。"
 
-#: src/components/core/InstallationFinished.tsx:142
+#: src/components/core/InstallationFinished.tsx:141
 msgid "Finish"
 msgstr "完了"
 
-#: src/components/core/InstallationFinished.tsx:142
+#: src/components/core/InstallationFinished.tsx:141
 msgid "Reboot"
 msgstr "再起動"
 
@@ -158,8 +139,8 @@ msgstr "再起動"
 msgid "Installing the system, please wait..."
 msgstr "システムをインストールしています。しばらくお待ちください..."
 
-#: src/components/core/InstallerOptions.tsx:74
-#: src/components/l10n/L10nPage.tsx:81
+#: src/components/core/InstallerOptions.tsx:73
+#: src/components/l10n/L10nPage.tsx:90
 msgid "Language"
 msgstr "言語"
 
@@ -207,10 +188,10 @@ msgstr "選択した製品に対しても同じ設定を使用する"
 #: src/components/core/InstallerOptions.tsx:391
 #: src/components/core/InstallerOptions.tsx:405
 #: src/components/core/InstallerOptions.tsx:448
-#: src/components/core/Page.tsx:279
+#: src/components/core/Page.tsx:281
 #: src/components/storage/dasd/FormatActionHandler.tsx:73
 #: src/components/storage/dasd/FormatActionHandler.tsx:100
-#: src/components/system/HostnamePage.tsx:132
+#: src/components/system/HostnamePage.tsx:130
 msgid "Accept"
 msgstr "受け入れる"
 
@@ -272,28 +253,41 @@ msgstr "インストールを開始する前に、下記の問題に対応する
 msgid "Review and fix"
 msgstr "確認と修正"
 
-#: src/components/core/IssuesDrawer.tsx:49
+#: src/components/core/IssuesDrawer.tsx:47
 #: src/components/users/UsersPage.tsx:36 src/routes/users.tsx:34
 msgid "Authentication"
 msgstr "認証"
 
-#: src/components/core/IssuesDrawer.tsx:50
-#: src/components/overview/StorageSection.tsx:112
-#: src/components/storage/ProposalPage.tsx:353 src/routes/storage.tsx:46
+#: src/components/core/IssuesDrawer.tsx:48
+#: src/components/core/ProgressStatusMonitor.tsx:41
+#: src/components/storage/ProposalPage.tsx:335
+#: src/components/storage/StorageDetailsItem.tsx:142 src/routes/storage.tsx:46
 msgid "Storage"
 msgstr "ストレージ"
 
-#: src/components/core/IssuesDrawer.tsx:51
-#: src/components/overview/SoftwareSection.tsx:69
-#: src/components/software/SoftwarePage.tsx:160 src/routes/software.tsx:34
+#: src/components/core/IssuesDrawer.tsx:49
+#: src/components/core/ProgressStatusMonitor.tsx:40
+#: src/components/software/SoftwareDetailsItem.tsx:76
+#: src/components/software/SoftwarePage.tsx:169 src/routes/software.tsx:34
 msgid "Software"
 msgstr "ソフトウエア"
 
-#: src/components/core/IssuesDrawer.tsx:52
-#: src/components/product/ProductRegistrationPage.tsx:441
+#: src/components/core/IssuesDrawer.tsx:50
+#: src/components/product/ProductRegistrationPage.tsx:440
 #: src/routes/registration.tsx:31
 msgid "Registration"
 msgstr "登録"
+
+#: src/components/core/IssuesDrawer.tsx:51
+#: src/components/core/ProgressStatusMonitor.tsx:43
+#: src/components/l10n/L10nPage.tsx:83 src/routes/l10n.tsx:32
+msgid "Localization"
+msgstr "ローカライゼーション"
+
+#: src/components/core/IssuesDrawer.tsx:52
+#: src/components/storage/ISCSIPage.tsx:34 src/routes/storage.tsx:99
+msgid "iSCSI"
+msgstr "iSCSI"
 
 #: src/components/core/IssuesDrawer.tsx:59
 msgid "Pre-installation checks"
@@ -339,8 +333,8 @@ msgstr "ログインフォーム"
 #. TRANSLATORS: field label
 #: src/components/core/LoginPage.tsx:107
 #: src/components/core/PasswordAndConfirmationInput.tsx:96
-#: src/components/network/WifiConnectionForm.tsx:178
-#: src/components/questions/QuestionWithPassword.tsx:64
+#: src/components/network/WifiConnectionForm.tsx:177
+#: src/components/questions/QuestionWithPassword.tsx:63
 #: src/components/storage/iscsi/AuthFields.jsx:87
 #: src/components/storage/iscsi/AuthFields.jsx:91
 #: src/components/users/RootUser.tsx:64
@@ -359,12 +353,20 @@ msgstr "システムにログインするためのパスワードを入力して
 msgid "Log in"
 msgstr "ログイン"
 
-#: src/components/core/MenuButton.tsx:78 src/components/core/Page.tsx:268
+#: src/components/core/MenuButton.tsx:78 src/components/core/Page.tsx:270
 #: src/components/storage/ISCSIPage.tsx:48
 #: src/components/storage/dasd/DASDPage.tsx:49
 #: src/components/storage/zfcp/ZFCPPage.tsx:198
 msgid "Back"
 msgstr "戻る"
+
+#: src/components/core/Page.tsx:249 src/components/core/Popup.tsx:140
+#: src/components/network/BindingSettingsForm.tsx:230
+#: src/components/network/IpSettingsForm.tsx:219
+#: src/components/network/WifiConnectionForm.tsx:188
+#: src/components/product/ProductSelectionPage.tsx:107
+msgid "Cancel"
+msgstr "キャンセル"
 
 #: src/components/core/PasswordAndConfirmationInput.tsx:72
 msgid "Passwords do not match"
@@ -402,6 +404,17 @@ msgstr "確認"
 msgid "Loading data..."
 msgstr "データを読み込んでいます..."
 
+#: src/components/core/ProgressBackdrop.tsx:112
+#: src/components/core/ProgressStatusMonitor.tsx:73
+#, fuzzy, javascript-format
+msgid "(step %s of %s)"
+msgstr "%s のサイズを維持"
+
+#: src/components/core/ProgressBackdrop.tsx:115
+#, fuzzy
+msgid "Refreshing data..."
+msgstr "データを読み込んでいます..."
+
 #: src/components/core/ProgressReport.tsx:56
 #: src/components/storage/Progress.tsx:56
 msgid "Pending"
@@ -416,6 +429,20 @@ msgstr "処理中"
 msgid "Finished"
 msgstr "完了"
 
+#: src/components/core/ProgressStatusMonitor.tsx:42
+#: src/components/network/NetworkDetailsItem.tsx:146
+#: src/components/network/NetworkPage.tsx:52
+#: src/components/network/WifiConnectionDetails.tsx:45
+#: src/routes/network.tsx:38
+msgid "Network"
+msgstr "ネットワーク"
+
+#: src/components/core/ProgressStatusMonitor.tsx:52
+#, fuzzy, javascript-format
+msgid "%s task active"
+msgid_plural "%s tasks active"
+msgstr[0] "有効"
+
 #: src/components/core/ResourceNotFound.tsx:42
 msgid "Resource not found or lost"
 msgstr "リソースが見つからないか失われています"
@@ -425,7 +452,7 @@ msgid "It doesn't exist or can't be reached."
 msgstr "対象が存在していないか、到達不可能です。"
 
 #: src/components/core/RowActions.tsx:71
-#: src/components/storage/ProposalResultSection.tsx:134
+#: src/components/storage/ProposalResultSection.tsx:138
 msgid "Actions"
 msgstr "処理"
 
@@ -433,15 +460,15 @@ msgstr "処理"
 msgid "Add"
 msgstr "追加"
 
-#: src/components/core/SelectableDataTable.tsx:373
+#: src/components/core/SelectableDataTable.tsx:372
 msgid "Row expansion"
 msgstr "行を展開"
 
-#: src/components/core/SelectableDataTable.tsx:374
+#: src/components/core/SelectableDataTable.tsx:373
 msgid "Row selection"
 msgstr "行の選択"
 
-#: src/components/core/SelectableDataTable.tsx:385
+#: src/components/core/SelectableDataTable.tsx:384
 msgid "Row actions"
 msgstr "行の処理"
 
@@ -465,29 +492,59 @@ msgstr "コンテンツに移動"
 msgid "More actions"
 msgstr "さらなる処理"
 
-#: src/components/l10n/KeyboardSelection.tsx:41
+#: src/components/l10n/KeyboardSelection.tsx:45
 msgid "Filter by description or keymap code"
 msgstr "説明またはキーマップコードでフィルタ"
 
-#: src/components/l10n/KeyboardSelection.tsx:69
+#: src/components/l10n/KeyboardSelection.tsx:74
 msgid "None of the keymaps match the filter."
 msgstr "フィルタに該当するキーマップがありません。"
 
-#: src/components/l10n/KeyboardSelection.tsx:75
+#: src/components/l10n/KeyboardSelection.tsx:80
 msgid "Keyboard selection"
 msgstr "キーボードの選択"
 
-#: src/components/l10n/KeyboardSelection.tsx:86
-#: src/components/l10n/L10nPage.tsx:84 src/components/l10n/L10nPage.tsx:98
-#: src/components/l10n/L10nPage.tsx:110
-#: src/components/l10n/LocaleSelection.tsx:86
-#: src/components/l10n/TimezoneSelection.tsx:134
-#: src/components/product/ProductSelectionPage.tsx:204
-#: src/components/software/SoftwarePatternsSelection.tsx:168
+#: src/components/l10n/KeyboardSelection.tsx:91
+#: src/components/l10n/L10nPage.tsx:93 src/components/l10n/L10nPage.tsx:107
+#: src/components/l10n/L10nPage.tsx:119
+#: src/components/l10n/LocaleSelection.tsx:88
+#: src/components/l10n/TimezoneSelection.tsx:136
+#: src/components/product/ProductSelectionPage.tsx:222
+#: src/components/software/SoftwarePatternsSelection.tsx:176
 msgid "Select"
 msgstr "選択"
 
-#: src/components/l10n/L10nPage.tsx:37
+#. TRANSLATORS: %1$s is a description of the device (eg. "Encrypted XFS RAID") and %2$s is
+#. the RAID level (eg. "RAID0")
+#. TRANSLATORS: %1$s is an already formatted mount path (eg. "/"),
+#. %2$s is a size description (eg. at least 10 GiB)
+#. TRANSLATORS: %1$s is a filesystem type description (eg. "Btrfs with snapshots"),
+#. %2$s is a description of the size or the size limits (eg. "at least 10 GiB")
+#. TRANSLATORS: Summary of the selected language and territory.
+#. %1$s is the language name (e.g. "Spanish").
+#. %2$s is the territory/region name (e.g. "Spain").
+#: src/components/l10n/L10nDetailsItem.tsx:45
+#: src/components/storage/device-utils.tsx:94
+#: src/components/storage/utils/partition.tsx:41
+#: src/components/storage/utils/partition.tsx:85
+#, javascript-format
+msgid "%1$s (%2$s)"
+msgstr "%1$s (%2$s)"
+
+#: src/components/l10n/L10nDetailsItem.tsx:49
+#, fuzzy
+msgid "Language and region"
+msgstr "言語とキーボード"
+
+#. TRANSLATORS: Additional details shown under the language selection.
+#. %1$s is the keyboard layout name (e.g. "Spanish").
+#. %2$s is the time zone identifier (e.g. "Atlantic/Canary").
+#: src/components/l10n/L10nDetailsItem.tsx:63
+#, javascript-format
+msgid "%1$s keyboard - %2$s timezone"
+msgstr ""
+
+#: src/components/l10n/L10nPage.tsx:38
 msgid ""
 "These are the settings for the product to install. The installer language "
 "and keyboard layout can be adjusted via the [settings panel] accessible from "
@@ -496,7 +553,7 @@ msgstr ""
 "こちらはインストールする製品に対する設定です。インストーラの言語やキーボード"
 "レイアウトの設定は、上部バーの [設定パネル] から変更できます。"
 
-#: src/components/l10n/L10nPage.tsx:43
+#: src/components/l10n/L10nPage.tsx:44
 msgid ""
 "These are the settings for the product to install. The installer language "
 "can be adjusted via the [settings panel] accessible from the top bar."
@@ -504,67 +561,63 @@ msgstr ""
 "こちらはインストールする製品に対する設定です。インストーラの言語の設定は、上"
 "部バーの [設定パネル] から変更できます。"
 
-#: src/components/l10n/L10nPage.tsx:74
-#: src/components/overview/L10nSection.tsx:37 src/routes/l10n.tsx:32
-msgid "Localization"
-msgstr "ローカライゼーション"
-
-#: src/components/l10n/L10nPage.tsx:84 src/components/l10n/L10nPage.tsx:98
-#: src/components/l10n/L10nPage.tsx:110
-#: src/components/storage/BootSection.tsx:94
-#: src/components/storage/EncryptionSection.tsx:59
+#: src/components/l10n/L10nPage.tsx:93 src/components/l10n/L10nPage.tsx:107
+#: src/components/l10n/L10nPage.tsx:119
+#: src/components/storage/BootSection.tsx:97
+#: src/components/storage/EncryptionSection.tsx:60
 #: src/components/storage/iscsi/InitiatorForm.tsx:89
 #: src/components/users/FirstUserForm.tsx:235
 #: src/components/users/RootUserForm.tsx:164
 msgid "Change"
 msgstr "変更"
 
-#: src/components/l10n/L10nPage.tsx:89 src/components/l10n/L10nPage.tsx:102
-#: src/components/l10n/L10nPage.tsx:115
-msgid "Not selected yet"
-msgstr "まだ何も選択していません"
+#: src/components/l10n/L10nPage.tsx:98 src/components/l10n/L10nPage.tsx:111
+#: src/components/l10n/L10nPage.tsx:124
+#, fuzzy
+msgid "Wrong selection"
+msgstr "行の選択"
 
-#: src/components/l10n/L10nPage.tsx:95
+#: src/components/l10n/L10nPage.tsx:104
 msgid "Keyboard"
 msgstr "キーボード"
 
-#: src/components/l10n/L10nPage.tsx:107
+#: src/components/l10n/L10nPage.tsx:116
 msgid "Time zone"
 msgstr "タイムゾーン"
 
-#: src/components/l10n/LocaleSelection.tsx:40
+#: src/components/l10n/LocaleSelection.tsx:42
 msgid "Filter by language, territory or locale code"
 msgstr "言語／地域／ロケールコードでフィルタ"
 
-#: src/components/l10n/LocaleSelection.tsx:69
+#: src/components/l10n/LocaleSelection.tsx:71
 msgid "None of the locales match the filter."
 msgstr "フィルタに該当するロケールがありません。"
 
-#: src/components/l10n/LocaleSelection.tsx:75
+#: src/components/l10n/LocaleSelection.tsx:77
 msgid "Locale selection"
 msgstr "ロケールの選択"
 
-#: src/components/l10n/TimezoneSelection.tsx:75
+#: src/components/l10n/TimezoneSelection.tsx:77
 msgid "Filter by territory, time zone code or UTC offset"
 msgstr "地域／タイムゾーンコード／UTC オフセット値でフィルタ"
 
-#: src/components/l10n/TimezoneSelection.tsx:113
+#: src/components/l10n/TimezoneSelection.tsx:115
 msgid "None of the time zones match the filter."
 msgstr "フィルタに該当するタイムゾーンがありません。"
 
-#: src/components/l10n/TimezoneSelection.tsx:119
+#: src/components/l10n/TimezoneSelection.tsx:121
 msgid " Timezone selection"
 msgstr " タイムゾーンの選択"
 
-#: src/components/layout/Header.tsx:80
+#: src/components/layout/Header.tsx:81
 msgid "Options toggle"
 msgstr "オプションの切り替え"
 
-#: src/components/layout/Header.tsx:92
+#: src/components/layout/Header.tsx:93
 msgid "Download logs"
 msgstr "ログのダウンロード"
 
-#: src/components/layout/Header.tsx:131
+#: src/components/layout/Header.tsx:132
 msgid "Main navigation"
 msgstr "メインナビゲーション"
 
@@ -616,20 +669,20 @@ msgstr "アドレスデータの一覧"
 #. TRANSLATORS: this simply concatenates the two sentences that describe what is going to happen
 #. with partitions. The first %s corresponds to deleted partitions and the second one to resized
 #. ones.
-#: src/components/network/BindingSettingsForm.tsx:76
-#: src/components/storage/utils/drive.tsx:104
+#: src/components/network/BindingSettingsForm.tsx:78
+#: src/components/storage/utils/drive.tsx:110
 #, javascript-format
 msgid "%s - %s"
 msgstr "%s - %s"
 
 #. TRANSLATORS: The title of the page. %s will be replaced with the connection
 #. name. I.e., "Binding settings for 'Wired connection 1'"
-#: src/components/network/BindingSettingsForm.tsx:158
+#: src/components/network/BindingSettingsForm.tsx:160
 #, javascript-format
 msgid "Binding settings for '%s'"
 msgstr "'%s' に対するバインディング設定"
 
-#: src/components/network/BindingSettingsForm.tsx:166
+#: src/components/network/BindingSettingsForm.tsx:168
 msgid ""
 "Choose how the connection should be associated with a network device. This "
 "helps control which device the connection uses."
@@ -637,27 +690,27 @@ msgstr ""
 "接続とネットワークデバイスとの関連づけ方式を指定してください。これにより、接"
 "続が使用するデバイスを制御することができます。"
 
-#: src/components/network/BindingSettingsForm.tsx:177
+#: src/components/network/BindingSettingsForm.tsx:179
 msgid "Unbound"
 msgstr "特に指定しない"
 
-#: src/components/network/BindingSettingsForm.tsx:180
+#: src/components/network/BindingSettingsForm.tsx:182
 msgid "The connection can be used by any available device."
 msgstr "接続時に利用可能な任意のデバイスを使用するようにします。"
 
-#: src/components/network/BindingSettingsForm.tsx:189
+#: src/components/network/BindingSettingsForm.tsx:191
 msgid "Bind to device name"
 msgstr "デバイス名に結びつける"
 
-#: src/components/network/BindingSettingsForm.tsx:193
+#: src/components/network/BindingSettingsForm.tsx:195
 msgid "Choose device to bind by name"
 msgstr "名前でデバイスを識別します"
 
-#: src/components/network/BindingSettingsForm.tsx:208
+#: src/components/network/BindingSettingsForm.tsx:210
 msgid "Bind to MAC address"
 msgstr "MAC アドレスに結びつける"
 
-#: src/components/network/BindingSettingsForm.tsx:212
+#: src/components/network/BindingSettingsForm.tsx:214
 msgid "Choose device to bind by MAC"
 msgstr "MAC アドレスでデバイスを識別します"
 
@@ -682,11 +735,39 @@ msgstr "その他の DNS の追加"
 msgid "DNS"
 msgstr "DNS"
 
-#: src/components/network/InstallationOnlySwitch.tsx:47
+#. TRANSLATORS: Displays both IPv4 and IPv6 addresses with count of
+#. additional IPs (e.g., "192.168.122.237, fe80::5054:ff:fe46:2af9 and 1
+#. more"). %1$s is the IPv4 address, %2$s is the IPv6 address, and %3$d
+#. is the number of remaining IPs. The text wrapped in square brackets []
+#. is displayed as a link. Keep the brackets to ensure the link works
+#. correctly.
+#: src/components/network/FormattedIpsList.tsx:74
+#, fuzzy, javascript-format
+msgid "%1$s, %2$s and [%3$d more]"
+msgstr "%3$s (%4$s) に %1$s %2$s を配置"
+
+#. TRANSLATORS: Displays a single IP address (either IPv4 or IPv6) with
+#. count of additional IPs (e.g., "192.168.122.237 and [2 more]"). %1$s is
+#. the IP address and %2$d is the number of remaining IPs. The text
+#. wrapped in square brackets [] is displayed as a link. Keep the brackets
+#. to ensure the link works correctly.
+#: src/components/network/FormattedIpsList.tsx:82
+#, fuzzy, javascript-format
+msgid "%1$s and [%2$d more]"
+msgstr "%2$s にある %1$s"
+
+#. TRANSLATORS: Displays first IPv4 and IPv6 when both are present.
+#. %1$s is the first IPv4 and %2$s is the first IPv6.
+#: src/components/network/FormattedIpsList.tsx:102
+#, fuzzy, javascript-format
+msgid "%1$s and %2$s"
+msgstr "%2$s にある %1$s"
+
+#: src/components/network/InstallationOnlySwitch.tsx:53
 msgid "Use for installation only"
 msgstr "インストールのみに使用"
 
-#: src/components/network/InstallationOnlySwitch.tsx:49
+#: src/components/network/InstallationOnlySwitch.tsx:55
 msgid ""
 "The connection will be used only during installation and not available in "
 "the installed system."
@@ -698,7 +779,7 @@ msgid "Ip prefix or netmask"
 msgstr "IP プレフィクスもしくはネットマスク"
 
 #. TRANSLATORS: error message
-#: src/components/network/IpSettingsForm.tsx:105
+#: src/components/network/IpSettingsForm.tsx:106
 msgid "At least one address must be provided for selected mode"
 msgstr ""
 "選択しているモードの場合、 1 つ以上のアドレスを設定しなければなりません"
@@ -709,7 +790,7 @@ msgid "Edit connection %s"
 msgstr "接続 %s の編集"
 
 #: src/components/network/IpSettingsForm.tsx:159
-#: src/components/storage/EncryptionSettingsPage.tsx:111
+#: src/components/storage/EncryptionSettingsPage.tsx:112
 #: src/components/storage/iscsi/DiscoverForm.tsx:98
 #: src/components/storage/iscsi/LoginForm.jsx:71
 #: src/components/storage/zfcp/ZFCPDiskForm.tsx:112
@@ -732,7 +813,9 @@ msgid "Automatic (DHCP)"
 msgstr "自動 (DHCP)"
 
 #. TRANSLATORS: manual network configuration mode with a static IP address
+#. TRANSLATORS: Network summary title when using manual/static IP configuration
 #: src/components/network/IpSettingsForm.tsx:182
+#: src/components/network/NetworkDetailsItem.tsx:128
 #: src/components/storage/SizeModeSelect.tsx:191
 #: src/components/storage/SizeModeSelect.tsx:199
 #: src/components/storage/iscsi/NodeStartupOptions.js:26
@@ -752,6 +835,84 @@ msgstr "ゲートウエイ"
 msgid "Gateway can be defined only in 'Manual' mode"
 msgstr "'手動' モードの場合にのみゲートウエイを設定できます"
 
+#. TRANSLATORS: Displays two IP addresses. E.g., "192.168.1.1 and 192.168.1.2"
+#. %s will be replaced by IP addresses
+#: src/components/network/NetworkDetailsItem.tsx:61
+#, fuzzy, javascript-format
+msgid "%s and %s"
+msgstr " および "
+
+#. TRANSLATORS: IPs summary when there are more than 2 static IP addresses.
+#. E.g., "192.168.1.1 and 2 others"
+#. %s is replaced by an IP address (e.g., "192.168.1.1")
+#. %d is replaced by the count of remaining IPs (e.g., "2")
+#: src/components/network/NetworkDetailsItem.tsx:66
+#, javascript-format
+msgid "%s and %d others"
+msgstr ""
+
+#. TRANSLATORS: Description shown when network connections are configured
+#. only for installation and won't be available in the installed system
+#: src/components/network/NetworkDetailsItem.tsx:75
+#, fuzzy
+msgid "System will have no network connections"
+msgstr "インストールされたシステムにはネットワーク接続がない可能性があります"
+
+#. TRANSLATORS: Summary for multiple manual network connections. E.g.,
+#. "Using 3 connections with 192.168.1.1 and 2 others"
+#. %d is replaced by the number of connections (e.g., "3")
+#. %s is replaced by IP address summary (e.g., "192.168.1.1 and 2 others")
+#. TRANSLATORS: Summary for multiple connections mixing automatic
+#. (DHCP) and manual configuration. E.g., "Using 2 connections with DHCP
+#. and 192.168.1.1"
+#. %d is replaced by the number of connections (e.g., "2")
+#. %s is replaced by configuration summary (e.g., "DHCP and 192.168.1.1")
+#. Full example:
+#: src/components/network/NetworkDetailsItem.tsx:83
+#: src/components/network/NetworkDetailsItem.tsx:99
+#, fuzzy, javascript-format
+msgid "Using %d connections with %s"
+msgstr "%d 個の接続が設定されています:"
+
+#: src/components/network/NetworkDetailsItem.tsx:90
+#, fuzzy, javascript-format
+msgid "DHCP and %s"
+msgstr " および "
+
+#: src/components/network/NetworkDetailsItem.tsx:90
+#, javascript-format
+msgid "DHCP, %s"
+msgstr ""
+
+#: src/components/network/NetworkDetailsItem.tsx:105
+#, fuzzy, javascript-format
+msgid "Configured with %d connection"
+msgid_plural "Configured with %d connections"
+msgstr[0] "LVM 設定"
+
+#. TRANSLATORS: Network summary title when no network has been configured
+#: src/components/network/NetworkDetailsItem.tsx:118
+#, fuzzy
+msgid "Not configured"
+msgstr "まだ設定していません"
+
+#. TRANSLATORS: Network summary title when connections are set up only for
+#. installation and won't persist in the installed system
+#: src/components/network/NetworkDetailsItem.tsx:121
+#, fuzzy
+msgid "Installation only"
+msgstr "インストール"
+
+#. TRANSLATORS: Network summary title when using both automatic (DHCP) and manual configuration
+#: src/components/network/NetworkDetailsItem.tsx:124
+msgid "Auto and manual"
+msgstr ""
+
+#. TRANSLATORS: Network summary title when using automatic configuration (DHCP)
+#: src/components/network/NetworkDetailsItem.tsx:126
+msgid "Auto"
+msgstr "自動"
+
 #: src/components/network/NetworkPage.tsx:34
 msgid "Wi-Fi not supported"
 msgstr "Wi-Fi に対応していません"
@@ -763,12 +924,6 @@ msgid ""
 msgstr ""
 "このシステムは WiFi 接続には対応していません。無線ハードウエアが存在していな"
 "いか、無効化されているものと思われます。"
-
-#: src/components/network/NetworkPage.tsx:52
-#: src/components/network/WifiConnectionDetails.tsx:45
-#: src/routes/network.tsx:38
-msgid "Network"
-msgstr "ネットワーク"
 
 #: src/components/network/NetworkPage.tsx:60
 #: src/components/network/NetworkPage.tsx:61
@@ -819,23 +974,22 @@ msgid "Status"
 msgstr "状態"
 
 #: src/components/network/WifiConnectionDetails.tsx:60
-#: src/components/network/WifiConnectionForm.tsx:154
-#: src/components/network/WifiConnectionForm.tsx:157
+#: src/components/network/WifiConnectionForm.tsx:153
+#: src/components/network/WifiConnectionForm.tsx:156
 msgid "Security"
 msgstr "セキュリティ"
 
 #. TRANSLATORS: table header for a DASD devices table
 #: src/components/network/WifiConnectionDetails.tsx:72
-#: src/components/storage/DeviceSelectorModal.tsx:85
-#: src/components/storage/ProposalResultTable.tsx:132
-#: src/components/storage/SpaceActionsTable.tsx:233
+#: src/components/storage/DeviceSelectorModal.tsx:87
+#: src/components/storage/ProposalResultTable.tsx:134
 #: src/components/storage/dasd/DASDTable.tsx:449
 msgid "Device"
 msgstr "デバイス"
 
 #: src/components/network/WifiConnectionDetails.tsx:73
 #: src/components/network/WifiNetworkPage.tsx:70
-#: src/components/network/WiredConnectionPage.tsx:69
+#: src/components/network/WiredConnectionPage.tsx:68
 msgid "Connection details"
 msgstr "接続の詳細"
 
@@ -856,9 +1010,9 @@ msgid "IP settings"
 msgstr "IP 設定"
 
 #: src/components/network/WifiConnectionDetails.tsx:100
-#: src/components/storage/FilesystemMenu.tsx:103
-#: src/components/storage/PartitionsSection.tsx:172
-#: src/components/storage/VolumeGroupEditor.tsx:163
+#: src/components/storage/FilesystemMenu.tsx:109
+#: src/components/storage/PartitionsSection.tsx:183
+#: src/components/storage/VolumeGroupEditor.tsx:168
 #: src/components/storage/iscsi/NodesPresenter.jsx:80
 #: src/components/users/FirstUser.tsx:54 src/components/users/RootUser.tsx:57
 msgid "Edit"
@@ -880,20 +1034,20 @@ msgid "Routes"
 msgstr "ルート"
 
 #. TRANSLATORS: WiFi authentication mode
-#: src/components/network/WifiConnectionForm.tsx:43
+#: src/components/network/WifiConnectionForm.tsx:44
 msgid "None"
 msgstr "無し"
 
 #. TRANSLATORS: WiFi authentication mode
-#: src/components/network/WifiConnectionForm.tsx:45
+#: src/components/network/WifiConnectionForm.tsx:46
 msgid "WPA & WPA2 Personal"
 msgstr "WPA および WPA2 Personal"
 
-#: src/components/network/WifiConnectionForm.tsx:56
+#: src/components/network/WifiConnectionForm.tsx:57
 msgid "Not protected network"
 msgstr "保護されていないネットワーク"
 
-#: src/components/network/WifiConnectionForm.tsx:58
+#: src/components/network/WifiConnectionForm.tsx:59
 msgid ""
 "You will connect to a public network without encryption. Your data may not "
 "be secure."
@@ -901,40 +1055,40 @@ msgstr ""
 "暗号化されていない公衆ネットワークに接続しようとしています。通信の安全性が保"
 "てないかもしれません。"
 
-#: src/components/network/WifiConnectionForm.tsx:69
+#: src/components/network/WifiConnectionForm.tsx:70
 msgid "Setting up connection"
 msgstr "接続の設定"
 
-#: src/components/network/WifiConnectionForm.tsx:71
+#: src/components/network/WifiConnectionForm.tsx:72
 msgid "It may take some time."
 msgstr "しばらくお待ちください。"
 
-#: src/components/network/WifiConnectionForm.tsx:73
+#: src/components/network/WifiConnectionForm.tsx:74
 msgid "Details will appear after the connection is successfully established."
 msgstr "詳細は接続成功後に表示されます。"
 
 #. TRANSLATORS: %s will be replaced by network ssid.
-#: src/components/network/WifiConnectionForm.tsx:81
+#: src/components/network/WifiConnectionForm.tsx:82
 #, javascript-format
 msgid "Could not connect to %s"
 msgstr "%s に接続できませんでした"
 
-#: src/components/network/WifiConnectionForm.tsx:85
+#: src/components/network/WifiConnectionForm.tsx:86
 msgid "Check the authentication parameters."
 msgstr "認証パラメータをご確認ください。"
 
 #. TRANSLATORS: accessible name for the WiFi connection form
-#: src/components/network/WifiConnectionForm.tsx:149
+#: src/components/network/WifiConnectionForm.tsx:148
 msgid "Wi-Fi connection form"
 msgstr "WiFi 接続フォーム"
 
 #. TRANSLATORS: WiFi password
-#: src/components/network/WifiConnectionForm.tsx:174
+#: src/components/network/WifiConnectionForm.tsx:173
 msgid "WPA Password"
 msgstr "WPA パスワード"
 
 #. TRANSLATORS: button label, connect to a Wi-Fi network
-#: src/components/network/WifiConnectionForm.tsx:187
+#: src/components/network/WifiConnectionForm.tsx:186
 msgid "Connect"
 msgstr "接続"
 
@@ -1054,7 +1208,7 @@ msgid "Connected devices tabs"
 msgstr "接続済みデバイスのタブ"
 
 #: src/components/network/WiredConnectionDetails.tsx:203
-#: src/components/storage/ProposalPage.tsx:226
+#: src/components/storage/ProposalPage.tsx:205
 msgid "Settings"
 msgstr "設定"
 
@@ -1076,98 +1230,36 @@ msgstr "接続が見つからないか、接続が失われています"
 msgid "No wired connections were found"
 msgstr "有線接続が見つかりませんでした"
 
-#. TRANSLATORS: %s will be replaced by a language name and territory, example:
-#. "English (United States)".
-#: src/components/overview/L10nSection.tsx:33
-#, javascript-format
-msgid "The system will use %s as its default language."
-msgstr "システムは %s を既定の言語として使用します。"
+#: src/components/overview/InstallationSummarySection.tsx:36
+#, fuzzy
+msgid "Installation summary"
+msgstr "インストールの概要"
 
-#: src/components/overview/OverviewPage.tsx:35 src/router.tsx:51
+#: src/components/overview/OverviewPage.tsx:43 src/router.tsx:52
 msgid "Overview"
 msgstr "概要"
 
-#: src/components/overview/OverviewPage.tsx:44
-msgid ""
-"These are the most relevant installation settings. Feel free to browse the "
-"sections in the menu for further details."
+#: src/components/overview/SystemInformationSection.tsx:14
+#, fuzzy
+msgid "System information"
+msgstr "%s に関する情報を表示"
+
+#: src/components/overview/SystemInformationSection.tsx:17
+#, fuzzy
+msgid "Model"
+msgstr "モード"
+
+#: src/components/overview/SystemInformationSection.tsx:18
+msgid "CPU"
 msgstr ""
-"インストールにあたっての主要な項目のみを表示しています。さらに詳しい設定を確"
-"認したい場合は、それぞれのセクションを開いてください。"
 
-#: src/components/overview/SoftwareSection.tsx:41
-msgid "The installation will take"
-msgstr "インストールで占有する容量は"
-
-#. TRANSLATORS: %s will be replaced with the installation size, example: "5GiB".
-#: src/components/overview/SoftwareSection.tsx:48
-#, javascript-format
-msgid "The installation will take %s including:"
-msgstr "下記の構成をインストールするには %s が必要です:"
-
-#: src/components/overview/StorageSection.tsx:37
-msgid "No device selected yet"
-msgstr "まだ何もデバイスを選択していません"
-
-#. TRANSLATORS: %s will be replaced by the device name and its size,
-#. example: "/dev/sda, 20 GiB"
-#: src/components/overview/StorageSection.tsx:45
-#, javascript-format
-msgid "Install using device %s shrinking existing partitions as needed."
+#: src/components/overview/SystemInformationSection.tsx:19
+msgid "Memory"
 msgstr ""
-"デバイス %s の既存パーティションを必要に応じて縮小してインストールします。"
 
-#. TRANSLATORS: %s will be replaced by the device name and its size,
-#. example: "/dev/sda, 20 GiB"
-#: src/components/overview/StorageSection.tsx:48
-#, javascript-format
-msgid "Install using device %s without modifying existing partitions."
-msgstr "デバイス %s の既存パーティションを変更せずにインストールします。"
-
-#. TRANSLATORS: %s will be replaced by the device name and its size,
-#. example: "/dev/sda, 20 GiB"
-#: src/components/overview/StorageSection.tsx:51
-#, javascript-format
-msgid "Install using device %s and deleting all its content."
-msgstr "デバイス %s の内容を全て削除してインストールします。"
-
-#. TRANSLATORS: %s will be replaced by the device name and its size,
-#. example: "/dev/sda, 20 GiB"
-#: src/components/overview/StorageSection.tsx:54
-#, javascript-format
-msgid ""
-"Install using device %s with a custom strategy to find the needed space."
+#: src/components/overview/SystemInformationSection.tsx:22
+msgid "IPs"
 msgstr ""
-"必要な領域検出に際して独自の方式を利用してデバイス %s にインストールします。"
-
-#: src/components/overview/StorageSection.tsx:70
-msgid "Install using several devices shrinking existing partitions as needed."
-msgstr ""
-"複数のデバイスの既存パーティションを必要に応じて縮小してインストールします。"
-
-#: src/components/overview/StorageSection.tsx:71
-msgid "Install using several devices without modifying existing partitions."
-msgstr "複数のデバイスの既存パーティションを変更せずにインストールします。"
-
-#: src/components/overview/StorageSection.tsx:72
-msgid "Install using several devices and deleting all its content."
-msgstr "複数のデバイスの内容を全て削除してインストールします。"
-
-#: src/components/overview/StorageSection.tsx:73
-msgid ""
-"Install using several devices with a custom strategy to find the needed "
-"space."
-msgstr ""
-"必要な領域検出に際して独自の方式を利用して複数のデバイスにインストールしま"
-"す。"
-
-#: src/components/overview/StorageSection.tsx:100
-msgid "There are no disks available for the installation."
-msgstr "インストール可能なディスクが見つかりません。"
-
-#: src/components/overview/StorageSection.tsx:101
-msgid "Install using an advanced configuration."
-msgstr "高度な設定項目を利用してインストールします。"
 
 #: src/components/product/LicenseDialog.tsx:40
 #, javascript-format
@@ -1176,105 +1268,105 @@ msgstr "このライセンスは %s では提供されていません。"
 
 #: src/components/product/LicenseDialog.tsx:74
 #: src/components/software/SoftwareConflicts.tsx:294
-#: src/components/software/SoftwarePatternsSelection.tsx:207
+#: src/components/software/SoftwarePatternsSelection.tsx:215
 msgid "Close"
 msgstr "閉じる"
 
-#: src/components/product/ProductRegistrationAlert.tsx:56
+#: src/components/product/ProductRegistrationAlert.tsx:57
 #, javascript-format
 msgid "%s [must be registered]."
 msgstr "%s [登録しなければなりません] 。"
 
-#: src/components/product/ProductRegistrationPage.tsx:64
+#: src/components/product/ProductRegistrationPage.tsx:67
 msgid "Registration server"
 msgstr "登録サーバ"
 
-#: src/components/product/ProductRegistrationPage.tsx:65
+#: src/components/product/ProductRegistrationPage.tsx:68
 msgid "Email"
 msgstr "電子メール"
 
-#: src/components/product/ProductRegistrationPage.tsx:66
+#: src/components/product/ProductRegistrationPage.tsx:69
 msgid "SUSE Customer Center (SCC)"
 msgstr "SUSE Customer Center (SCC)"
 
-#: src/components/product/ProductRegistrationPage.tsx:67
-#: src/components/storage/utils.ts:102
+#: src/components/product/ProductRegistrationPage.tsx:70
+#: src/components/storage/utils.ts:104
 msgid "Custom"
 msgstr "独自設定"
 
-#: src/components/product/ProductRegistrationPage.tsx:79
+#: src/components/product/ProductRegistrationPage.tsx:82
 #, javascript-format
 msgid "%s has been registered with below information."
 msgstr "%s を下記の情報で登録しました。"
 
 #. TRANSLATORS: input field label
-#: src/components/product/ProductRegistrationPage.tsx:91
-#: src/components/product/ProductRegistrationPage.tsx:179
+#: src/components/product/ProductRegistrationPage.tsx:94
+#: src/components/product/ProductRegistrationPage.tsx:182
 #: src/components/product/RegistrationExtension.tsx:150
 msgid "Registration code"
 msgstr "登録コード"
 
 #. TRANSLATORS: switch for displaying or hiding the registration code
-#: src/components/product/ProductRegistrationPage.tsx:96
+#: src/components/product/ProductRegistrationPage.tsx:99
 #: src/components/product/RegistrationExtension.tsx:64
 msgid "Hide"
 msgstr "隠す"
 
-#: src/components/product/ProductRegistrationPage.tsx:96
+#: src/components/product/ProductRegistrationPage.tsx:99
 #: src/components/product/RegistrationExtension.tsx:64
 msgid "Show"
 msgstr "表示"
 
-#: src/components/product/ProductRegistrationPage.tsx:135
+#: src/components/product/ProductRegistrationPage.tsx:138
 msgid "Server options"
 msgstr "サーバオプション"
 
-#: src/components/product/ProductRegistrationPage.tsx:136
+#: src/components/product/ProductRegistrationPage.tsx:139
 msgid "Register using SUSE server"
 msgstr "SUSE サーバを利用して登録"
 
-#: src/components/product/ProductRegistrationPage.tsx:141
+#: src/components/product/ProductRegistrationPage.tsx:144
 msgid "Register using a custom registration server"
 msgstr "独自の登録サーバを利用して登録"
 
-#: src/components/product/ProductRegistrationPage.tsx:159
+#: src/components/product/ProductRegistrationPage.tsx:162
 msgid "Server URL"
 msgstr "サーバ URL"
 
 #. TRANSLATORS: %s is replaced by an example URL like https://example.com
-#: src/components/product/ProductRegistrationPage.tsx:162
+#: src/components/product/ProductRegistrationPage.tsx:165
 #, javascript-format
 msgid "Example: %s"
 msgstr "例: %s"
 
-#: src/components/product/ProductRegistrationPage.tsx:211
+#: src/components/product/ProductRegistrationPage.tsx:214
 msgid "Provide registration code"
 msgstr "登録コードを入力する"
 
-#: src/components/product/ProductRegistrationPage.tsx:247
+#: src/components/product/ProductRegistrationPage.tsx:250
 msgid "Provide email address"
 msgstr "電子メールアドレスを入力する"
 
-#: src/components/product/ProductRegistrationPage.tsx:344
-#: src/components/storage/LvmPage.tsx:169
-#: src/components/system/HostnamePage.tsx:104
+#: src/components/product/ProductRegistrationPage.tsx:339
+#: src/components/storage/LvmPage.tsx:176
+#: src/components/system/HostnamePage.tsx:102
 msgid "Check the following before continuing"
 msgstr "続行する前に下記をご確認ください"
 
 #. TRANSLATORS: button label
-#: src/components/product/ProductRegistrationPage.tsx:374
+#: src/components/product/ProductRegistrationPage.tsx:369
 #: src/components/product/RegistrationExtension.tsx:161
 #: src/components/product/RegistrationExtension.tsx:176
 msgid "Register"
 msgstr "登録"
 
 #. TRANSLATORS: %s will be replaced with the hostname value
-#: src/components/product/ProductRegistrationPage.tsx:386
+#: src/components/product/ProductRegistrationPage.tsx:382
 #, javascript-format
 msgid "The product will be registered with \"%s\" hostname"
 msgstr "製品をホスト名 \"%s\" で登録します"
 
-#: src/components/product/ProductRegistrationPage.tsx:390
+#: src/components/product/ProductRegistrationPage.tsx:386
 #, javascript-format
 msgid ""
 "You cannot change it later. Go to the %s section if you want to modify it "
@@ -1283,16 +1375,12 @@ msgstr ""
 "登録内容は後から変更することができません。登録に際して変更しておきたい項目が"
 "ある場合は、 %s セクションに移動してください。"
 
-#: src/components/product/ProductRegistrationPage.tsx:395
+#: src/components/product/ProductRegistrationPage.tsx:391
 msgid "hostname"
 msgstr "ホスト名"
 
-#: src/components/product/ProductRegistrationPage.tsx:421
-msgid "Extensions"
-msgstr "拡張"
-
 #. TRANSLATORS: %s will be replaced by a product name. E.g., "openSUSE Tumbleweed"
-#: src/components/product/ProductSelectionPage.tsx:62
+#: src/components/product/ProductSelectionPage.tsx:70
 #, javascript-format
 msgid "%s logo"
 msgstr "%s ロゴ"
@@ -1300,16 +1388,16 @@ msgstr "%s ロゴ"
 #. TRANSLATORS: Text used for the license acceptance checkbox. %s will be
 #. replaced with the product name and the text in the square brackets [] is
 #. used for the link to show the license, please keep the brackets.
-#: src/components/product/ProductSelectionPage.tsx:139
+#: src/components/product/ProductSelectionPage.tsx:156
 #, javascript-format
 msgid "I have read and accept the [license] for %s"
 msgstr "%s に対する [ライセンス] を受け入れます"
 
-#: src/components/product/ProductSelectionPage.tsx:150
+#: src/components/product/ProductSelectionPage.tsx:167
 msgid "Select a product"
 msgstr "製品の選択"
 
-#: src/components/product/ProductSelectionPage.tsx:151
+#: src/components/product/ProductSelectionPage.tsx:168
 msgid "Available products"
 msgstr "利用可能な製品"
 
@@ -1395,7 +1483,7 @@ msgstr ""
 msgid "Package installation failed"
 msgstr "インストールのインストール失敗"
 
-#: src/components/questions/QuestionWithPassword.tsx:56
+#: src/components/questions/QuestionWithPassword.tsx:55
 msgid "Password Required"
 msgstr "パスワードが必要です"
 
@@ -1458,9 +1546,10 @@ msgid "No support is planned."
 msgstr "サポートを提供する計画はありません。"
 
 #: src/components/questions/UnsupportedAutoYaST.tsx:106
+#, fuzzy
 msgid ""
 "If you want to disable this check, please specify \"inst.ay_check=0\" at "
-"kernel's command-line"
+"kernels command-line"
 msgstr ""
 "このチェックを無効化したい場合は、カーネルのコマンドラインに "
 "\"inst.ay_check=0\" を指定してください"
@@ -1522,24 +1611,42 @@ msgstr ""
 msgid "Software conflicts resolution"
 msgstr "ソフトウエアの競合の解決"
 
-#: src/components/software/SoftwarePage.tsx:58
+#: src/components/software/SoftwareDetailsItem.tsx:43
+msgid "Required packages"
+msgstr ""
+
+#. TRANSLATORS: %s will be replaced with amount of selected patterns.
+#: src/components/software/SoftwareDetailsItem.tsx:48
+#, javascript-format
+msgid "Required packages and %s pattern"
+msgid_plural "Required packages and %s patterns"
+msgstr[0] ""
+
+#. TRANSLATORS: %s will be replaced with a human-readable installation size
+#. (e.g. 5.95 GiB).
+#: src/components/software/SoftwareDetailsItem.tsx:64
+#, fuzzy, javascript-format
+msgid "Needs about %s"
+msgstr "こちらについて詳しく"
+
+#: src/components/software/SoftwarePage.tsx:62
 msgid "No additional software was selected."
 msgstr "追加のソフトウエアは何も選択していません。"
 
-#: src/components/software/SoftwarePage.tsx:63
+#: src/components/software/SoftwarePage.tsx:67
 msgid "The following software patterns are selected for installation:"
 msgstr "下記のソフトウエアパターンをインストールするよう選択しています:"
 
-#: src/components/software/SoftwarePage.tsx:78
-#: src/components/software/SoftwarePage.tsx:90
+#: src/components/software/SoftwarePage.tsx:82
+#: src/components/software/SoftwarePage.tsx:94
 msgid "Selected patterns"
 msgstr "パターンの選択"
 
-#: src/components/software/SoftwarePage.tsx:81
+#: src/components/software/SoftwarePage.tsx:85
 msgid "Change selection"
 msgstr "選択の変更"
 
-#: src/components/software/SoftwarePage.tsx:93
+#: src/components/software/SoftwarePage.tsx:97
 msgid ""
 "This product does not allow to select software patterns during installation. "
 "However, you can add additional software once the installation is finished."
@@ -1548,7 +1655,7 @@ msgstr ""
 "完了後に必要なソフトウエアを追加できます。"
 
 #. TRANSLATORS: error details followed by a "Try again" link
-#: src/components/software/SoftwarePage.tsx:101
+#: src/components/software/SoftwarePage.tsx:105
 msgid ""
 "Some installation repositories could not be loaded. The system cannot be "
 "installed without them."
@@ -1557,43 +1664,43 @@ msgstr ""
 "ジトリ無しにはシステムをインストールできません。"
 
 #. TRANSLATORS: title for an error message box, at least one repository could not be loaded
-#: src/components/software/SoftwarePage.tsx:114
+#: src/components/software/SoftwarePage.tsx:118
 msgid "Repository load failed"
 msgstr "リポジトリ読み込み失敗"
 
 #. TRANSLATORS: progress message
-#: src/components/software/SoftwarePage.tsx:118
+#: src/components/software/SoftwarePage.tsx:122
 msgid "Loading the installation repositories..."
 msgstr "インストール用リポジトリを読み込んでいます..."
 
 #. TRANSLATORS: link for retrying failed repository load
-#: src/components/software/SoftwarePage.tsx:125
+#: src/components/software/SoftwarePage.tsx:129
 msgid "Try again"
 msgstr "再試行"
 
-#: src/components/software/SoftwarePage.tsx:176
+#: src/components/software/SoftwarePage.tsx:189
 msgid "Used space"
 msgstr "使用済み領域"
 
-#: src/components/software/SoftwarePatternsSelection.tsx:99
+#: src/components/software/SoftwarePatternsSelection.tsx:102
 msgid "None of the patterns match the filter."
 msgstr "フィルタに該当するパターンがありません。"
 
-#: src/components/software/SoftwarePatternsSelection.tsx:164
+#: src/components/software/SoftwarePatternsSelection.tsx:172
 msgid "auto selected"
 msgstr "自動選択済み"
 
-#: src/components/software/SoftwarePatternsSelection.tsx:168
+#: src/components/software/SoftwarePatternsSelection.tsx:176
 msgid "Unselect"
 msgstr "未選択"
 
-#: src/components/software/SoftwarePatternsSelection.tsx:188
+#: src/components/software/SoftwarePatternsSelection.tsx:196
 msgid "Software selection"
 msgstr "ソフトウエア選択"
 
 #. TRANSLATORS: search field placeholder text
-#: src/components/software/SoftwarePatternsSelection.tsx:191
-#: src/components/software/SoftwarePatternsSelection.tsx:192
+#: src/components/software/SoftwarePatternsSelection.tsx:199
+#: src/components/software/SoftwarePatternsSelection.tsx:200
 msgid "Filter by pattern title or description"
 msgstr "パターンタイトルまたは説明でフィルタ"
 
@@ -1612,41 +1719,41 @@ msgstr ""
 "この容量にはシステムの基本部分のほか、選択したソフトウエアパターンが含まれま"
 "す。"
 
-#: src/components/storage/AutoSizeText.tsx:34
+#: src/components/storage/AutoSizeText.tsx:35
 msgid "logical volume"
 msgstr "論理ボリューム"
 
-#: src/components/storage/AutoSizeText.tsx:34
+#: src/components/storage/AutoSizeText.tsx:35
 msgid "partition"
 msgstr "パーティション"
 
 #. TRANSLATORS: %1$s is a size with units (eg. 3 GiB) and %2$s is a device type (eg. partition)
-#: src/components/storage/AutoSizeText.tsx:47
+#: src/components/storage/AutoSizeText.tsx:48
 #, javascript-format
 msgid "A generic size of %1$s will be used for the new %2$s"
 msgstr "新しい %2$s に対しては一般的なサイズ %1$s を使用します"
 
 #. TRANSLATORS: %1$s and %2$s are sizes with units (eg. 3 GiB) and %3$s is a device type (eg. partition)
-#: src/components/storage/AutoSizeText.tsx:55
+#: src/components/storage/AutoSizeText.tsx:56
 #, javascript-format
 msgid ""
 "A generic size range between %1$s and %2$s will be used for the new %3$s"
 msgstr "新しい %3$s に対しては一般的なサイズ %1$s から %2$s の範囲を使用します"
 
 #. TRANSLATORS: %1$s is a size with units (eg. 3 GiB) and %1$s is a device type (eg. partition)
-#: src/components/storage/AutoSizeText.tsx:64
+#: src/components/storage/AutoSizeText.tsx:65
 #, javascript-format
 msgid "A generic minimum size of %1$s will be used for the new %2$s"
 msgstr "新しい %2$s に対しては少なくとも %1$s を使用します"
 
 #. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
-#: src/components/storage/AutoSizeText.tsx:81
+#: src/components/storage/AutoSizeText.tsx:82
 #, javascript-format
 msgid "A %1$s of %2$s will be created for %3$s if possible"
 msgstr "可能であれば、 %2$s の %1$s を %3$s 向けに作成します"
 
 #. TRANSLATORS: %1$s is a device type (eg. partition), %2$s and %3$s are sizes with units (10 GiB), and %4$s is a mount path (/home)
-#: src/components/storage/AutoSizeText.tsx:90
+#: src/components/storage/AutoSizeText.tsx:91
 #, javascript-format
 msgid ""
 "A %1$s with a size between %2$s and %3$s will be created for %4$s if possible"
@@ -1654,20 +1761,20 @@ msgstr ""
 "可能であれば、 %2$s から %3$s までの範囲で %1$s を %4$s 向けに作成します"
 
 #. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
-#: src/components/storage/AutoSizeText.tsx:100
+#: src/components/storage/AutoSizeText.tsx:101
 #, javascript-format
 msgid "A %1$s of at least %2$s will be created for %3$s if possible"
 msgstr "可能であれば、少なくとも %2$s の %1$s を %3$s 向けに作成します"
 
 #. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
-#: src/components/storage/AutoSizeText.tsx:118
+#: src/components/storage/AutoSizeText.tsx:119
 #, javascript-format
 msgid ""
 "Based on the amount of RAM in the system, a %1$s of %2$s will be planned for "
 "%3$s"
 msgstr "システムのメモリサイズに応じて、 %2$s の %1$s を %3$s 向けに計画します"
 
-#: src/components/storage/AutoSizeText.tsx:128
+#: src/components/storage/AutoSizeText.tsx:129
 #, javascript-format
 msgid ""
 "Based on the amount of RAM in the system, a %1$s with a size between %2$s "
@@ -1677,7 +1784,7 @@ msgstr ""
 "けに計画します"
 
 #. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
-#: src/components/storage/AutoSizeText.tsx:139
+#: src/components/storage/AutoSizeText.tsx:140
 #, javascript-format
 msgid ""
 "Based on the amount of RAM in the system, a %1$s of at least %2$s will be "
@@ -1686,7 +1793,7 @@ msgstr ""
 "システムのメモリサイズに応じて、少なくとも %2$s の %1$s を %3$s 向けに計画し"
 "ます"
 
-#: src/components/storage/AutoSizeText.tsx:168
+#: src/components/storage/AutoSizeText.tsx:169
 #, javascript-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the amount of RAM in "
@@ -1696,7 +1803,7 @@ msgstr ""
 "システムのメモリサイズと btrfs スナップショットの使用可否、そして %2$s 向けの"
 "個別ファイルシステムの存在に応じて、 %1$s 向けのサイズを動的に調整します。"
 
-#: src/components/storage/AutoSizeText.tsx:179
+#: src/components/storage/AutoSizeText.tsx:180
 #, javascript-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the amount of RAM in "
@@ -1706,7 +1813,7 @@ msgstr ""
 "システムのメモリサイズと btrfs スナップショットの使用可否、そして %2$s 向けの"
 "個別ファイルシステムの存在に応じて、 %1$s 向けのサイズを動的に調整します。"
 
-#: src/components/storage/AutoSizeText.tsx:189
+#: src/components/storage/AutoSizeText.tsx:190
 #, javascript-format
 msgid ""
 "The size for %s will be dynamically adjusted based on the amount of RAM in "
@@ -1715,7 +1822,7 @@ msgstr ""
 "システムのメモリサイズと btrfs スナップショットの使用可否に応じて、 %s 向けの"
 "サイズを動的に調整します。"
 
-#: src/components/storage/AutoSizeText.tsx:200
+#: src/components/storage/AutoSizeText.tsx:201
 #, javascript-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the amount of RAM in "
@@ -1724,7 +1831,7 @@ msgstr ""
 "システムのメモリサイズと %2$s 向けの個別ファイルシステムの存在に応じて、 "
 "%1$s 向けのサイズを動的に調整します。"
 
-#: src/components/storage/AutoSizeText.tsx:210
+#: src/components/storage/AutoSizeText.tsx:211
 #, javascript-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the amount of RAM in "
@@ -1733,7 +1840,7 @@ msgstr ""
 "システムのメモリサイズと %2$s 向けの個別ファイルシステムの存在に応じて、 "
 "%1$s 向けのサイズを動的に調整します。"
 
-#: src/components/storage/AutoSizeText.tsx:222
+#: src/components/storage/AutoSizeText.tsx:223
 #, javascript-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the usage of Btrfs "
@@ -1742,7 +1849,7 @@ msgstr ""
 "btrfs スナップショットの使用可否と %2$s 向けの個別ファイルシステムの存在に応"
 "じて、 %1$s 向けのサイズを動的に調整します。"
 
-#: src/components/storage/AutoSizeText.tsx:233
+#: src/components/storage/AutoSizeText.tsx:234
 #, javascript-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the usage of Btrfs "
@@ -1752,7 +1859,7 @@ msgstr ""
 "応じて、 %1$s 向けのサイズを動的に調整します。"
 
 #. TRANSLATORS: %s is a mount point (eg. /)
-#: src/components/storage/AutoSizeText.tsx:242
+#: src/components/storage/AutoSizeText.tsx:243
 #, javascript-format
 msgid ""
 "The size for %s will be dynamically adjusted based on the usage of Btrfs "
@@ -1761,7 +1868,7 @@ msgstr ""
 "btrfs スナップショットの使用可否に応じて、 %s 向けのサイズを動的に調整しま"
 "す。"
 
-#: src/components/storage/AutoSizeText.tsx:251
+#: src/components/storage/AutoSizeText.tsx:252
 #, javascript-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the presence of a "
@@ -1770,7 +1877,7 @@ msgstr ""
 "%2$s 向けの個別ファイルシステムの存在に応じて、 %1$s 向けのサイズを動的に調整"
 "します。"
 
-#: src/components/storage/AutoSizeText.tsx:261
+#: src/components/storage/AutoSizeText.tsx:262
 #, javascript-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the presence of "
@@ -1780,13 +1887,13 @@ msgstr ""
 "します。"
 
 #. TRANSLATORS: %1$s is a device type (eg. partition) and %2$s is a size with units (eg. 10 GiB)
-#: src/components/storage/AutoSizeText.tsx:273
+#: src/components/storage/AutoSizeText.tsx:274
 #, javascript-format
 msgid ""
 "The current configuration will result in an attempt to create a %1$s of %2$s."
 msgstr "現在の設定では %2$s の %1$s を作成する予定になります。"
 
-#: src/components/storage/AutoSizeText.tsx:282
+#: src/components/storage/AutoSizeText.tsx:283
 #, javascript-format
 msgid ""
 "The current configuration will result in an attempt to create a %1$s with a "
@@ -1794,15 +1901,15 @@ msgid ""
 msgstr "現在の設定では %2$s から %3$s までの %1$s を作成する予定になります。"
 
 #. TRANSLATORS: %1$s is a device type (eg. partition) and %2$s is a size with units (eg. 10 GiB)
-#: src/components/storage/AutoSizeText.tsx:292
+#: src/components/storage/AutoSizeText.tsx:293
 #, javascript-format
 msgid ""
 "The current configuration will result in an attempt to create a %1$s of at "
 "least %2$s."
 msgstr "現在の設定では少なくとも %2$s の %1$s を作成する予定になります。"
 
-#: src/components/storage/BootSection.tsx:41
-#: src/components/storage/BootSelection.tsx:145
+#: src/components/storage/BootSection.tsx:42
+#: src/components/storage/BootSelection.tsx:154
 #, javascript-format
 msgid ""
 "Partitions to boot will be set up if needed at the installation disk, based "
@@ -1811,8 +1918,8 @@ msgstr ""
 "ファイルシステム %s の配置場所に応じて 、 必要であればインストール先のディス"
 "ク内に起動用のパーティションを割り当てます。"
 
-#: src/components/storage/BootSection.tsx:52
-#: src/components/storage/BootSelection.tsx:156
+#: src/components/storage/BootSection.tsx:53
+#: src/components/storage/BootSelection.tsx:165
 #, javascript-format
 msgid ""
 "Partitions to boot will be set up if needed at the installation disk. "
@@ -1821,18 +1928,18 @@ msgstr ""
 "ファイルシステム %2$s の配置場所に応じて (現時点では %1$s) 、 必要であればイ"
 "ンストール先のディスク内に起動用のパーティションを割り当てます。"
 
-#: src/components/storage/BootSection.tsx:65
+#: src/components/storage/BootSection.tsx:66
 msgid "No partitions will be automatically configured for booting."
 msgstr "起動用のパーティションを自動設定しません。"
 
 #. TRANSLATORS: %s is replaced by a disk name and size (eg. "sda (500GiB)")
-#: src/components/storage/BootSection.tsx:69
+#: src/components/storage/BootSection.tsx:70
 #, javascript-format
 msgid "Partitions to boot will be set up if needed at %s."
 msgstr "%s 内に起動用のパーティションを設定します。"
 
-#: src/components/storage/BootSection.tsx:84
-#: src/components/storage/BootSelection.tsx:136
+#: src/components/storage/BootSection.tsx:87
+#: src/components/storage/BootSelection.tsx:145
 msgid ""
 "To ensure the new system is able to boot, the installer may need to create "
 "or configure some partitions in the appropriate disk."
@@ -1840,35 +1947,35 @@ msgstr ""
 "システムを起動できるようにするため、インストーラはディスク内にいくつかの追加"
 "パーティションを作成もしくは設定する必要があるかもしれません。"
 
-#: src/components/storage/BootSelection.tsx:175
-#: src/components/storage/ProposalPage.tsx:287
+#: src/components/storage/BootSelection.tsx:184
+#: src/components/storage/ProposalPage.tsx:259
 msgid "Boot options"
 msgstr "起動オプション"
 
-#: src/components/storage/BootSelection.tsx:195
+#: src/components/storage/BootSelection.tsx:204
 #: src/components/storage/SizeModeSelect.tsx:191
 #: src/components/storage/SizeModeSelect.tsx:196
 #: src/components/storage/iscsi/NodeStartupOptions.js:28
 msgid "Automatic"
 msgstr "自動"
 
-#: src/components/storage/BootSelection.tsx:213
+#: src/components/storage/BootSelection.tsx:222
 msgid "Select a disk"
 msgstr "ディスクの選択"
 
-#: src/components/storage/BootSelection.tsx:218
+#: src/components/storage/BootSelection.tsx:227
 msgid "Partitions to boot will be set up if needed at the following device."
 msgstr "下記のデバイス内に必要に応じて起動用のパーティションを割り当てます。"
 
-#: src/components/storage/BootSelection.tsx:220
+#: src/components/storage/BootSelection.tsx:229
 msgid "Choose a disk for placing the boot loader"
 msgstr "ブートローダを配置するディスクを選択してください"
 
-#: src/components/storage/BootSelection.tsx:243
+#: src/components/storage/BootSelection.tsx:252
 msgid "Do not configure"
 msgstr "設定しない"
 
-#: src/components/storage/BootSelection.tsx:249
+#: src/components/storage/BootSelection.tsx:258
 msgid ""
 "No partitions will be automatically configured for booting. Use with caution."
 msgstr "起動用のパーティションを自動設定しません。注意してお使いください。"
@@ -1891,124 +1998,124 @@ msgstr ""
 msgid "reset to defaults"
 msgstr "既定値に戻す"
 
-#: src/components/storage/ConfigEditor.tsx:87
+#: src/components/storage/ConfigEditor.tsx:71
 msgid "[FIXME]"
 msgstr "[FIXME]"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:49
+#: src/components/storage/ConfigureDeviceMenu.tsx:48
 msgid "Select a device to define partitions or to mount"
 msgstr "パーティションの設定またはマウントを行うデバイスを選択してください"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:50
+#: src/components/storage/ConfigureDeviceMenu.tsx:49
 msgid "Select another device to define partitions or to mount"
 msgstr "パーティションの設定またはマウントを行う他のデバイスを選択してください"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:53
+#: src/components/storage/ConfigureDeviceMenu.tsx:52
 msgid "Select a disk to define partitions or to mount"
 msgstr "パーティションの設定またはマウントを行うディスクを選択してください"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:54
+#: src/components/storage/ConfigureDeviceMenu.tsx:53
 msgid "Select another disk to define partitions or to mount"
 msgstr "パーティションの設定またはマウントを行う他のディスクを選択してください"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:59
+#: src/components/storage/ConfigureDeviceMenu.tsx:58
 msgid "Already using all available devices"
 msgstr "既に利用可能な全てのデバイスを使用しています"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:60
+#: src/components/storage/ConfigureDeviceMenu.tsx:59
 msgid "Already using all available disks"
 msgstr "既に利用可能な全てのディスクを使用しています"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:67
+#: src/components/storage/ConfigureDeviceMenu.tsx:66
 #, javascript-format
 msgid "Extend the installation beyond the currently selected device"
 msgid_plural "Extend the installation beyond the current %d devices"
 msgstr[0] "現在選択されている %d 個のデバイスからさらにインストールを拡張する"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:76
+#: src/components/storage/ConfigureDeviceMenu.tsx:75
 #, javascript-format
 msgid "Extend the installation beyond the currently selected disk"
 msgid_plural "Extend the installation beyond the current %d disks"
 msgstr[0] "現在選択されている %d 個のディスクからさらにインストールを拡張する"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:84
+#: src/components/storage/ConfigureDeviceMenu.tsx:83
 msgid "Start configuring a basic installation"
 msgstr "基本的なインストールの設定を開始する"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:100
+#: src/components/storage/ConfigureDeviceMenu.tsx:99
 msgid "Add device menu"
 msgstr "デバイスメニューの追加"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:144
+#: src/components/storage/ConfigureDeviceMenu.tsx:143
 msgid "Define a new LVM on top of one or several disks"
 msgstr "1 つもしくは複数のディスクに対して新しい LVM を設定する"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:145
+#: src/components/storage/ConfigureDeviceMenu.tsx:144
 msgid "Define a new LVM on the disk"
 msgstr "ディスクに対して新しい LVM を設定する"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:151
+#: src/components/storage/ConfigureDeviceMenu.tsx:150
 msgid "Configure device menu"
 msgstr "デバイスメニューの設定"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:171
+#: src/components/storage/ConfigureDeviceMenu.tsx:170
 msgid "Add LVM volume group"
 msgstr "新規 LVM ボリュームグループの追加"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:177
+#: src/components/storage/ConfigureDeviceMenu.tsx:176
 msgid "More devices"
 msgstr "さらなるデバイス"
 
 #. TRANSLATORS: this is an ARIA (accesibility) description of an UI element
-#: src/components/storage/ConnectedDevicesMenu.tsx:51
+#: src/components/storage/ConnectedDevicesMenu.tsx:48
 msgid "More storage options"
 msgstr "さらなるストレージオプション"
 
-#: src/components/storage/ConnectedDevicesMenu.tsx:57
+#: src/components/storage/ConnectedDevicesMenu.tsx:54
 msgid "Discover and connect to iSCSI targets"
 msgstr "iSCSI ターゲットの検出と接続"
 
-#: src/components/storage/ConnectedDevicesMenu.tsx:59
+#: src/components/storage/ConnectedDevicesMenu.tsx:56
 msgid "Configure iSCSI"
 msgstr "iSCSI の設定"
 
-#: src/components/storage/ConnectedDevicesMenu.tsx:65
-#: src/components/storage/ProposalPage.tsx:165
+#: src/components/storage/ConnectedDevicesMenu.tsx:62
+#: src/components/storage/ProposalPage.tsx:164
 msgid "Activate zFCP disks"
 msgstr "zFCP ディスクの有効化"
 
-#: src/components/storage/ConnectedDevicesMenu.tsx:67
+#: src/components/storage/ConnectedDevicesMenu.tsx:64
 msgid "Configure zFCP"
 msgstr "zFCP の設定"
 
-#: src/components/storage/ConnectedDevicesMenu.tsx:74
+#: src/components/storage/ConnectedDevicesMenu.tsx:71
 msgid "Activate and format DASD devices"
 msgstr "DASD デバイスの有効化とフォーマット"
 
-#: src/components/storage/ConnectedDevicesMenu.tsx:76
+#: src/components/storage/ConnectedDevicesMenu.tsx:73
 msgid "Configure DASD"
 msgstr "DASD の設定"
 
-#: src/components/storage/ConnectedDevicesMenu.tsx:82
+#: src/components/storage/ConnectedDevicesMenu.tsx:79
 msgid "Update available disks and activate crypt devices"
 msgstr "利用可能なディスクの更新と暗号化デバイスの有効化"
 
-#: src/components/storage/ConnectedDevicesMenu.tsx:84
+#: src/components/storage/ConnectedDevicesMenu.tsx:81
 msgid "Rescan devices"
 msgstr "デバイスの再検出"
 
-#: src/components/storage/DeviceSelectorModal.tsx:87
-#: src/components/storage/ProposalResultTable.tsx:135
+#: src/components/storage/DeviceSelectorModal.tsx:89
+#: src/components/storage/ProposalResultTable.tsx:137
 #: src/components/storage/SizeModeSelect.tsx:125
-#: src/components/storage/SpaceActionsTable.tsx:240
+#: src/components/storage/SpaceActionsTable.tsx:234
 msgid "Size"
 msgstr "サイズ"
 
-#: src/components/storage/DeviceSelectorModal.tsx:92
+#: src/components/storage/DeviceSelectorModal.tsx:94
 msgid "Description"
 msgstr "説明"
 
-#: src/components/storage/DeviceSelectorModal.tsx:93
+#: src/components/storage/DeviceSelectorModal.tsx:95
 msgid "Current content"
 msgstr "現在の内容"
 
@@ -2020,7 +2127,7 @@ msgstr "種類"
 
 #. TRANSLATORS: input field for the iSCSI initiator name
 #: src/components/storage/DeviceSelectorPage.tsx:54
-#: src/components/storage/LvmPage.tsx:175
+#: src/components/storage/LvmPage.tsx:182
 #: src/components/storage/iscsi/InitiatorForm.tsx:75
 #: src/components/storage/iscsi/InitiatorForm.tsx:85
 #: src/components/storage/iscsi/InitiatorSection.tsx:40
@@ -2073,85 +2180,85 @@ msgstr ""
 "要がある場合に有用です。"
 
 #. TRANSLATORS: %s will be replaced by a disk name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:33
+#: src/components/storage/DriveHeader.tsx:38
 #, javascript-format
 msgid "Mount disk %s"
 msgstr "ディスク %s をマウントする"
 
 #. TRANSLATORS: %s will be replaced by a disk name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:35
+#: src/components/storage/DriveHeader.tsx:40
 #, javascript-format
 msgid "Format disk %s"
 msgstr "ディスク %s をフォーマットする"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:46
+#: src/components/storage/DriveHeader.tsx:52
 #, javascript-format
 msgid "Use disk %s to install, host LVM and boot"
 msgstr "インストール／ LVM の配置／起動用にディスク %s を使用する"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:49
+#: src/components/storage/DriveHeader.tsx:55
 #, javascript-format
 msgid "Use disk %s to install and host LVM"
 msgstr "インストールと LVM の配置用にディスク %s を使用する"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:54
+#: src/components/storage/DriveHeader.tsx:60
 #, javascript-format
 msgid "Use disk %s to install and boot"
 msgstr "インストールと起動用にディスク %s を使用する"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:57
+#: src/components/storage/DriveHeader.tsx:63
 #, javascript-format
 msgid "Use disk %s to install"
 msgstr "インストール用にディスク %s を使用する"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:64
+#: src/components/storage/DriveHeader.tsx:70
 #, javascript-format
 msgid "Use disk %s for LVM, additional partitions and booting"
 msgstr "LVM ／追加パーティション／起動用にディスク %s を使用する"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:67
+#: src/components/storage/DriveHeader.tsx:73
 #, javascript-format
 msgid "Use disk %s for LVM and additional partitions"
 msgstr "LVM と追加パーティション用にディスク %s を使用する"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:72
+#: src/components/storage/DriveHeader.tsx:78
 #, javascript-format
 msgid "Use disk %s for additional partitions and booting"
 msgstr "追加パーティションと起動用にディスク %s を使用する"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:75
+#: src/components/storage/DriveHeader.tsx:81
 #, javascript-format
 msgid "Use disk %s for additional partitions"
 msgstr "追加パーティション用にディスク %s を使用する"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:81
+#: src/components/storage/DriveHeader.tsx:87
 #, javascript-format
 msgid "Use disk %s to host LVM and boot"
 msgstr "LVM の配置と起動用にディスク %s を使用する"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:84
+#: src/components/storage/DriveHeader.tsx:90
 #, javascript-format
 msgid "Use disk %s to host LVM"
 msgstr "LVM の配置用にディスク %s を使用する"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:89
+#: src/components/storage/DriveHeader.tsx:95
 #, javascript-format
 msgid "Use disk %s to configure boot partitions"
 msgstr "起動パーティションの設定用にディスク %s を使用する"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:92
+#: src/components/storage/DriveHeader.tsx:98
 #, javascript-format
 msgid "Use disk %s"
 msgstr "ディスク %s を使用する"
@@ -2168,7 +2275,7 @@ msgstr "暗号化は TPM 解錠を利用して有効化されています"
 msgid "Encryption is enabled"
 msgstr "暗号化は有効化されています"
 
-#: src/components/storage/EncryptionSection.tsx:50
+#: src/components/storage/EncryptionSection.tsx:51
 msgid ""
 "Protection for the information stored at the new file systems, including "
 "data, programs, and system files."
@@ -2176,20 +2283,20 @@ msgstr ""
 "データやプログラム、システムファイルなど、新しく作成するファイルシステム内に"
 "配置される情報への保護を行います。"
 
-#: src/components/storage/EncryptionSettingsPage.tsx:75
+#: src/components/storage/EncryptionSettingsPage.tsx:76
 #: src/components/users/RootUserForm.tsx:104
 msgid "Password is empty."
 msgstr "パスワードが指定されていません。"
 
 #. TRANSLATORS: "Trusted Platform Module" is the name of the technology and TPM its abbreviation
-#: src/components/storage/EncryptionSettingsPage.tsx:91
+#: src/components/storage/EncryptionSettingsPage.tsx:92
 msgid ""
 "Use the Trusted Platform Module (TPM) to decrypt automatically on each boot"
 msgstr ""
 "毎回の起動時に Trusted Platform Module (TPM) を利用して自動的に暗号化解除しま"
 "す"
 
-#: src/components/storage/EncryptionSettingsPage.tsx:95
+#: src/components/storage/EncryptionSettingsPage.tsx:96
 msgid ""
 "The password will not be needed to boot and access the data if the TPM can "
 "verify the integrity of the system. TPM sealing requires the new system to "
@@ -2199,15 +2306,15 @@ msgstr ""
 "てパスワードが不要になります。 TPM シーリングを使用するには、新しいシステムの"
 "初回起動時に直接起動を行う必要があります。"
 
-#: src/components/storage/EncryptionSettingsPage.tsx:105
+#: src/components/storage/EncryptionSettingsPage.tsx:106
 msgid "Encryption settings"
 msgstr "暗号化の設定"
 
-#: src/components/storage/EncryptionSettingsPage.tsx:119
+#: src/components/storage/EncryptionSettingsPage.tsx:120
 msgid "Encrypt the system"
 msgstr "システムの暗号化"
 
-#: src/components/storage/EncryptionSettingsPage.tsx:121
+#: src/components/storage/EncryptionSettingsPage.tsx:122
 msgid ""
 "Full Disk Encryption (FDE) allows to protect the information stored at the "
 "new file systems, including data, programs, and system files."
@@ -2216,27 +2323,27 @@ msgstr ""
 "グラム、システムファイルなど、新しく作成するファイルシステム内に配置される情"
 "報への保護を行います。"
 
-#: src/components/storage/FilesystemMenu.tsx:44
+#: src/components/storage/FilesystemMenu.tsx:42
 msgid "The device will be mounted"
 msgstr "デバイスをマウントします"
 
-#: src/components/storage/FilesystemMenu.tsx:45
+#: src/components/storage/FilesystemMenu.tsx:43
 msgid "The device will be formatted"
 msgstr "デバイスをフォーマットします"
 
 #. TRANSLATORS: %s is a formatted mount point (eg. '"/home'").
-#: src/components/storage/FilesystemMenu.tsx:51
+#: src/components/storage/FilesystemMenu.tsx:49
 #, javascript-format
 msgid "The current file system will be mounted at %s"
 msgstr "現在のファイルシステムを %s にマウントします"
 
 #. TRANSLATORS: %1$s is a filesystem type (eg. Btrfs), %2$s is a mount point (eg. '"/home"').
-#: src/components/storage/FilesystemMenu.tsx:54
+#: src/components/storage/FilesystemMenu.tsx:52
 #, javascript-format
 msgid "The device will be formatted as %1$s and mounted at %2$s"
 msgstr "デバイスを %1$s でフォーマットし、 %2$s にマウントします"
 
-#: src/components/storage/FilesystemMenu.tsx:100
+#: src/components/storage/FilesystemMenu.tsx:106
 msgid "Change the file system or mount point"
 msgstr "ファイルシステムまたはマウントポイントの変更"
 
@@ -2246,215 +2353,211 @@ msgid_plural ""
 "The configuration must be adapted to address the following issues:"
 msgstr[0] "下記の問題に対応するため、何らかの設定調整を行わなければなりません:"
 
-#: src/components/storage/FormattableDevicePage.tsx:221
-#: src/components/storage/LogicalVolumePage.tsx:248
-#: src/components/storage/PartitionPage.tsx:308
+#: src/components/storage/FormattableDevicePage.tsx:230
+#: src/components/storage/LogicalVolumePage.tsx:250
+#: src/components/storage/PartitionPage.tsx:316
 msgid "Select or enter a valid mount point"
 msgstr "正しいマウントポイントを選択または入力してください"
 
-#: src/components/storage/FormattableDevicePage.tsx:231
-#: src/components/storage/LogicalVolumePage.tsx:258
-#: src/components/storage/PartitionPage.tsx:318
+#: src/components/storage/FormattableDevicePage.tsx:240
+#: src/components/storage/LogicalVolumePage.tsx:260
+#: src/components/storage/PartitionPage.tsx:326
 msgid ""
 "Select or enter a mount point that is not already assigned to another device"
 msgstr ""
 "他のデバイスには割り当てられていないマウントポイントを選択または入力してくだ"
 "さい"
 
-#: src/components/storage/FormattableDevicePage.tsx:280
-#: src/components/storage/LogicalVolumePage.tsx:443
-#: src/components/storage/LogicalVolumePage.tsx:466
-#: src/components/storage/LogicalVolumePage.tsx:769
-#: src/components/storage/PartitionPage.tsx:560
-#: src/components/storage/PartitionPage.tsx:892
+#: src/components/storage/FormattableDevicePage.tsx:289
+#: src/components/storage/LogicalVolumePage.tsx:445
+#: src/components/storage/LogicalVolumePage.tsx:468
+#: src/components/storage/LogicalVolumePage.tsx:771
+#: src/components/storage/PartitionPage.tsx:576
+#: src/components/storage/PartitionPage.tsx:916
 msgid "Waiting for a mount point"
 msgstr "マウントポイントを待機しています"
 
 #. TRANSLATORS: %s is a device name (eg. /dev/sda3).
-#: src/components/storage/FormattableDevicePage.tsx:283
-#: src/components/storage/PartitionPage.tsx:563
+#: src/components/storage/FormattableDevicePage.tsx:292
+#: src/components/storage/PartitionPage.tsx:579
 #: src/components/storage/utils/partition.tsx:69
 #, javascript-format
 msgid "Current %s"
 msgstr "現在の %s"
 
-#: src/components/storage/FormattableDevicePage.tsx:284
-#: src/components/storage/LogicalVolumePage.tsx:467
-#: src/components/storage/PartitionPage.tsx:564
-#: src/components/storage/utils.ts:338
+#: src/components/storage/FormattableDevicePage.tsx:293
+#: src/components/storage/LogicalVolumePage.tsx:469
+#: src/components/storage/PartitionPage.tsx:580
+#: src/components/storage/utils.ts:326
 msgid "Btrfs with snapshots"
 msgstr "スナップショット有りの btrfs"
 
-#: src/components/storage/FormattableDevicePage.tsx:302
-#: src/components/storage/LogicalVolumePage.tsx:483
-#: src/components/storage/PartitionPage.tsx:582
+#: src/components/storage/FormattableDevicePage.tsx:311
+#: src/components/storage/LogicalVolumePage.tsx:485
+#: src/components/storage/PartitionPage.tsx:598
 #, javascript-format
 msgid "Default file system for %s"
 msgstr "%s に対する既定のファイルシステム"
 
-#: src/components/storage/FormattableDevicePage.tsx:303
+#: src/components/storage/FormattableDevicePage.tsx:312
 msgid "Default file system for generic mount paths"
 msgstr "一般的なマウント先の場合に使用する既定のファイルシステム"
 
-#: src/components/storage/FormattableDevicePage.tsx:305
+#: src/components/storage/FormattableDevicePage.tsx:314
 msgid "Destroy current data and format device as"
 msgstr "現在のデータを消去して下記の形式でデバイスをフォーマット:"
 
-#: src/components/storage/FormattableDevicePage.tsx:306
+#: src/components/storage/FormattableDevicePage.tsx:315
 msgid "Format device as"
 msgstr "下記の形式でフォーマット:"
 
 #. TRANSLATORS: %s is the name of a device, like vda
 #. TRANSLATORS: %s is the name of a partition, like /dev/vda2
-#: src/components/storage/FormattableDevicePage.tsx:320
-#: src/components/storage/PartitionPage.tsx:599
+#: src/components/storage/FormattableDevicePage.tsx:329
+#: src/components/storage/PartitionPage.tsx:615
 #, javascript-format
 msgid "Do not format %s and keep the data"
 msgstr "%s をフォーマットせず既存のデータを維持"
 
-#: src/components/storage/FormattableDevicePage.tsx:384
-#: src/components/storage/LogicalVolumePage.tsx:552
-#: src/components/storage/PartitionPage.tsx:664
+#: src/components/storage/FormattableDevicePage.tsx:393
+#: src/components/storage/LogicalVolumePage.tsx:554
+#: src/components/storage/PartitionPage.tsx:680
 msgid "File system label"
 msgstr "ファイルシステムのラベル"
 
-#: src/components/storage/FormattableDevicePage.tsx:453
+#: src/components/storage/FormattableDevicePage.tsx:465
 #, javascript-format
 msgid "Configure device %s"
 msgstr "デバイス %s の設定"
 
-#: src/components/storage/FormattableDevicePage.tsx:460
-#: src/components/storage/FormattableDevicePage.tsx:467
-#: src/components/storage/LogicalVolumePage.tsx:697
-#: src/components/storage/LogicalVolumePage.tsx:702
-#: src/components/storage/PartitionPage.tsx:822
-#: src/components/storage/PartitionPage.tsx:829
+#: src/components/storage/FormattableDevicePage.tsx:472
+#: src/components/storage/FormattableDevicePage.tsx:479
+#: src/components/storage/LogicalVolumePage.tsx:699
+#: src/components/storage/LogicalVolumePage.tsx:704
+#: src/components/storage/PartitionPage.tsx:846
+#: src/components/storage/PartitionPage.tsx:853
 msgid "Mount point"
 msgstr "マウントポイント"
 
-#: src/components/storage/FormattableDevicePage.tsx:465
-#: src/components/storage/LogicalVolumePage.tsx:700
-#: src/components/storage/PartitionPage.tsx:827
+#: src/components/storage/FormattableDevicePage.tsx:477
+#: src/components/storage/LogicalVolumePage.tsx:702
+#: src/components/storage/PartitionPage.tsx:851
 msgid "Mount point toggle"
 msgstr "マウントポイントの切り替え"
 
-#: src/components/storage/FormattableDevicePage.tsx:466
-#: src/components/storage/LogicalVolumePage.tsx:701
-#: src/components/storage/PartitionPage.tsx:828
+#: src/components/storage/FormattableDevicePage.tsx:478
+#: src/components/storage/LogicalVolumePage.tsx:703
+#: src/components/storage/PartitionPage.tsx:852
 msgid "Suggested mount points"
 msgstr "提案されたマウントポイント"
 
-#: src/components/storage/FormattableDevicePage.tsx:468
-#: src/components/storage/LogicalVolumePage.tsx:703
-#: src/components/storage/PartitionPage.tsx:830
+#: src/components/storage/FormattableDevicePage.tsx:480
+#: src/components/storage/LogicalVolumePage.tsx:705
+#: src/components/storage/PartitionPage.tsx:854
 msgid "Clear selected mount point"
 msgstr "マウントポイントの選択を解除"
 
-#: src/components/storage/FormattableDevicePage.tsx:471
-#: src/components/storage/LogicalVolumePage.tsx:706
-#: src/components/storage/PartitionPage.tsx:833
+#: src/components/storage/FormattableDevicePage.tsx:483
+#: src/components/storage/LogicalVolumePage.tsx:708
+#: src/components/storage/PartitionPage.tsx:857
 msgid "Use"
 msgstr "使用"
 
-#: src/components/storage/FormattableDevicePage.tsx:482
-#: src/components/storage/LogicalVolumePage.tsx:715
-#: src/components/storage/PartitionPage.tsx:854
+#: src/components/storage/FormattableDevicePage.tsx:494
+#: src/components/storage/LogicalVolumePage.tsx:717
+#: src/components/storage/PartitionPage.tsx:878
 msgid "Select or enter a mount point"
 msgstr "マウントポイントの選択または入力"
 
-#: src/components/storage/FormattableDevicePage.tsx:491
-#: src/components/storage/LogicalVolumePage.tsx:740
-#: src/components/storage/PartitionPage.tsx:863
+#: src/components/storage/FormattableDevicePage.tsx:503
+#: src/components/storage/LogicalVolumePage.tsx:742
+#: src/components/storage/PartitionPage.tsx:887
 msgid "File system"
 msgstr "ファイルシステム"
 
-#: src/components/storage/FormattableDevicePage.tsx:502
-#: src/components/storage/LogicalVolumePage.tsx:751
-#: src/components/storage/PartitionPage.tsx:875
+#: src/components/storage/FormattableDevicePage.tsx:514
+#: src/components/storage/LogicalVolumePage.tsx:753
+#: src/components/storage/PartitionPage.tsx:899
 msgid "Label"
 msgstr "ラベル"
 
-#: src/components/storage/ISCSIPage.tsx:34 src/routes/storage.tsx:99
-msgid "iSCSI"
-msgstr "iSCSI"
-
-#: src/components/storage/LogicalVolumePage.tsx:269
+#: src/components/storage/LogicalVolumePage.tsx:271
 msgid "Enter a name"
 msgstr "名前を入力してください"
 
-#: src/components/storage/LogicalVolumePage.tsx:296
-#: src/components/storage/PartitionPage.tsx:346
+#: src/components/storage/LogicalVolumePage.tsx:298
+#: src/components/storage/PartitionPage.tsx:354
 msgid "The minimum cannot be greater than the maximum"
 msgstr "最小サイズは最大サイズより小さくなければいけません"
 
-#: src/components/storage/LogicalVolumePage.tsx:304
+#: src/components/storage/LogicalVolumePage.tsx:306
 msgid ""
 "The maximum must be a number optionally followed by a unit like GiB or GB"
 msgstr ""
 "最大サイズは数値でなければいけません。なお、 GiB や GB のように単位を付けるこ"
 "ともできます"
 
-#: src/components/storage/LogicalVolumePage.tsx:312
+#: src/components/storage/LogicalVolumePage.tsx:314
 msgid ""
 "The minimum must be a number optionally followed by a unit like GiB or GB"
 msgstr ""
 "最小サイズは数値でなければいけません。なお、 GiB や GB のように単位を付けるこ"
 "ともできます"
 
-#: src/components/storage/LogicalVolumePage.tsx:319
+#: src/components/storage/LogicalVolumePage.tsx:321
 msgid ""
 "Size limits must be numbers optionally followed by a unit like GiB or GB"
 msgstr ""
 "サイズ制限は数値でなければいけません。なお、 GiB や GB のように単位を付けるこ"
 "ともできます"
 
-#: src/components/storage/LogicalVolumePage.tsx:438
-#: src/components/storage/LogicalVolumePage.tsx:441
+#: src/components/storage/LogicalVolumePage.tsx:440
+#: src/components/storage/LogicalVolumePage.tsx:443
 msgid "Logical volume name"
 msgstr "論理ボリューム名"
 
-#: src/components/storage/LogicalVolumePage.tsx:484
+#: src/components/storage/LogicalVolumePage.tsx:486
 msgid "Default file system for generic logical volumes"
 msgstr "汎用パーティションに対する既定のファイルシステム"
 
-#: src/components/storage/LogicalVolumePage.tsx:486
+#: src/components/storage/LogicalVolumePage.tsx:488
 msgid "Format logical volume as"
 msgstr "下記の形式で論理ボリュームをフォーマット"
 
-#: src/components/storage/LogicalVolumePage.tsx:687
+#: src/components/storage/LogicalVolumePage.tsx:689
 #, javascript-format
 msgid "Configure LVM logical volume at %s volume group"
 msgstr "ボリュームグループ %s に対する LVM 論理ボリュームの設定"
 
-#: src/components/storage/LogicalVolumePage.tsx:764
-#: src/components/storage/PartitionPage.tsx:887
+#: src/components/storage/LogicalVolumePage.tsx:766
+#: src/components/storage/PartitionPage.tsx:911
 msgid "Size mode"
 msgstr "サイズのモード"
 
-#: src/components/storage/LvmPage.tsx:77
+#: src/components/storage/LvmPage.tsx:80
 msgid "Enter a name for the volume group."
 msgstr "ボリュームグループに対する名前を入力してください。"
 
-#: src/components/storage/LvmPage.tsx:81
+#: src/components/storage/LvmPage.tsx:84
 #, javascript-format
 msgid "Volume group '%s' already exists. Enter a different name."
 msgstr ""
 "ボリュームグループ '%s' は既に存在しています。別の名前を入力してください。"
 
-#: src/components/storage/LvmPage.tsx:85
+#: src/components/storage/LvmPage.tsx:88
 msgid "Select at least one disk."
 msgstr "少なくとも 1 つのディスクを選択してください。"
 
-#: src/components/storage/LvmPage.tsx:163
+#: src/components/storage/LvmPage.tsx:170
 msgid "Configure LVM Volume Group"
 msgstr "LVM ボリュームグループの設定"
 
-#: src/components/storage/LvmPage.tsx:178
+#: src/components/storage/LvmPage.tsx:185
 #: src/components/storage/zfcp/ZFCPPage.tsx:131
 msgid "Disks"
 msgstr "ディスク"
 
-#: src/components/storage/LvmPage.tsx:181
+#: src/components/storage/LvmPage.tsx:188
 msgid ""
 "The needed LVM physical volumes will be added as partitions on the chosen "
 "disks, based on the sizes of the logical volumes. If you select more than "
@@ -2464,11 +2567,11 @@ msgstr ""
 "のパーティションとして追加されます。複数のディスクを選択した場合、物理ボ"
 "リュームはそれらのディスクに分散して配置されます。"
 
-#: src/components/storage/LvmPage.tsx:216
+#: src/components/storage/LvmPage.tsx:223
 msgid "Move mount points"
 msgstr "マウントポイントの移動"
 
-#: src/components/storage/LvmPage.tsx:220
+#: src/components/storage/LvmPage.tsx:227
 msgid ""
 "Move the mount points currently configured at the selected disks to logical "
 "volumes of this volume group."
@@ -2477,250 +2580,266 @@ msgstr ""
 "理ボリュームに移動します。"
 
 #. TRANSLATORS: %s will be replaced by a RAID name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:33
+#: src/components/storage/MdRaidHeader.tsx:38
 #, javascript-format
 msgid "Mount RAID %s"
 msgstr "RAID %s のマウント"
 
 #. TRANSLATORS: %s will be replaced by a RAID name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:35
+#: src/components/storage/MdRaidHeader.tsx:40
 #, javascript-format
 msgid "Format RAID %s"
 msgstr "RAID %s のフォーマット"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:46
+#: src/components/storage/MdRaidHeader.tsx:52
 #, javascript-format
 msgid "Use RAID %s to install, host LVM and boot"
 msgstr "インストール／ LVM の配置／起動用に RAID %s を使用する"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:49
+#: src/components/storage/MdRaidHeader.tsx:55
 #, javascript-format
 msgid "Use RAID %s to install and host LVM"
 msgstr "インストールと LVM の配置用に RAID %s を使用する"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:54
+#: src/components/storage/MdRaidHeader.tsx:60
 #, javascript-format
 msgid "Use RAID %s to install and boot"
 msgstr "インストールと起動用に RAID %s を使用する"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:57
+#: src/components/storage/MdRaidHeader.tsx:63
 #, javascript-format
 msgid "Use RAID %s to install"
 msgstr "インストールに RAID %s を使用する"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:64
+#: src/components/storage/MdRaidHeader.tsx:70
 #, javascript-format
 msgid "Use RAID %s for LVM, additional partitions and booting"
 msgstr "LVM ／追加パーティション／起動用に RAID %s を使用する"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:67
+#: src/components/storage/MdRaidHeader.tsx:73
 #, javascript-format
 msgid "Use RAID %s for LVM and additional partitions"
 msgstr "LVM と追加パーティション用に RAID %s を使用する"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:72
+#: src/components/storage/MdRaidHeader.tsx:78
 #, javascript-format
 msgid "Use RAID %s for additional partitions and booting"
 msgstr "追加パーティションと起動用に RAID %s を使用する"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:75
+#: src/components/storage/MdRaidHeader.tsx:81
 #, javascript-format
 msgid "Use RAID %s for additional partitions"
 msgstr "追加パーティション用に RAID %s を使用する"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:81
+#: src/components/storage/MdRaidHeader.tsx:87
 #, javascript-format
 msgid "Use RAID %s to host LVM and boot"
 msgstr "LVM の配置と起動用に RAID %s を使用する"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:84
+#: src/components/storage/MdRaidHeader.tsx:90
 #, javascript-format
 msgid "Use RAID %s to host LVM"
 msgstr "LVM の配置用に RAID %s を使用する"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:89
+#: src/components/storage/MdRaidHeader.tsx:95
 #, javascript-format
 msgid "Use RAID %s to configure boot partitions"
 msgstr "起動パーティション設定用に RAID %s を使用する"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:92
+#: src/components/storage/MdRaidHeader.tsx:98
 #, javascript-format
 msgid "Use RAID %s"
 msgstr "RAID %s を使用する"
 
 #. TRANSLATORS: %s is the short name of a disk, like 'sda'
-#: src/components/storage/NewVgMenuOption.tsx:46
+#: src/components/storage/NewVgMenuOption.tsx:51
 #, javascript-format
 msgid "Create another LVM volume group on %s"
 msgstr "%s 内に他の LVM ボリュームグループを作成"
 
 #. TRANSLATORS: %s is the short name of a disk, like 'sda'
-#: src/components/storage/NewVgMenuOption.tsx:50
+#: src/components/storage/NewVgMenuOption.tsx:55
 #, javascript-format
 msgid "Create LVM volume group on %s"
 msgstr "%s 内に LVM ボリュームグループを作成"
 
 #. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case).
-#: src/components/storage/NewVgMenuOption.tsx:59
+#: src/components/storage/NewVgMenuOption.tsx:64
 #, javascript-format
 msgid "%s will be created as a logical volume"
 msgid_plural "%s will be created as logical volumes"
 msgstr[0] "%s を論理ボリューム内に作成します"
 
-#: src/components/storage/PartitionPage.tsx:354
+#: src/components/storage/PartitionPage.tsx:362
 msgid "The maximum must be a number followed by a unit like GiB or GB"
 msgstr "最大値は GiB や GB のような単位を付けた数値でなければなりません"
 
-#: src/components/storage/PartitionPage.tsx:362
+#: src/components/storage/PartitionPage.tsx:370
 msgid "The minimum must be a number followed by a unit like GiB or GB"
 msgstr "最小値は GiB や GB のような単位を付けた数値でなければなりません"
 
-#: src/components/storage/PartitionPage.tsx:369
+#: src/components/storage/PartitionPage.tsx:377
 msgid "Size limits must be numbers followed by a unit like GiB or GB"
 msgstr "サイズ制限は GiB や GB のような単位を付けた数値でなければなりません"
 
 #. TRANSLATORS: %s is a disk name with its size (eg. "sda, 10 GiB"
-#: src/components/storage/PartitionPage.tsx:498
+#: src/components/storage/PartitionPage.tsx:514
 #, javascript-format
 msgid "As a new partition on %s"
 msgstr "%s に新しいパーティションとして"
 
-#: src/components/storage/PartitionPage.tsx:500
+#: src/components/storage/PartitionPage.tsx:516
 #, javascript-format
 msgid "Using partition %s"
 msgstr "パーティション %s の使用"
 
-#: src/components/storage/PartitionPage.tsx:529
+#: src/components/storage/PartitionPage.tsx:545
 msgid "Mount point options"
 msgstr "マウントポイントのオプション"
 
-#: src/components/storage/PartitionPage.tsx:534
+#: src/components/storage/PartitionPage.tsx:550
 msgid "Using an existing partition"
 msgstr "既存パーティションの使用"
 
-#: src/components/storage/PartitionPage.tsx:545
+#: src/components/storage/PartitionPage.tsx:561
 msgid "There are not usable partitions"
 msgstr "利用可能なパーティションがありません"
 
-#: src/components/storage/PartitionPage.tsx:583
+#: src/components/storage/PartitionPage.tsx:599
 msgid "Default file system for generic partitions"
 msgstr "汎用パーティションに対する既定のファイルシステム"
 
-#: src/components/storage/PartitionPage.tsx:585
+#: src/components/storage/PartitionPage.tsx:601
 msgid "Destroy current data and format partition as"
 msgstr "現在のデータを消去して下記の形式でパーティションをフォーマット:"
 
-#: src/components/storage/PartitionPage.tsx:586
+#: src/components/storage/PartitionPage.tsx:602
 msgid "Format partition as"
 msgstr "下記の形式でフォーマット:"
 
-#: src/components/storage/PartitionPage.tsx:814
+#: src/components/storage/PartitionPage.tsx:839
 #, javascript-format
 msgid "Configure partition at %s"
 msgstr "%s でのパーティションの設定"
 
-#: src/components/storage/PartitionPage.tsx:839
+#: src/components/storage/PartitionPage.tsx:863
 msgid "Mount point mode"
 msgstr "マウントポイントのモード"
 
-#: src/components/storage/PartitionPage.tsx:922
+#: src/components/storage/PartitionPage.tsx:946
 msgid "Go to storage page"
 msgstr "ストレージページに移動"
 
-#: src/components/storage/PartitionsSection.tsx:80
+#: src/components/storage/PartitionsSection.tsx:87
 msgid "Moreover, the following partitions will be created or mounted"
 msgstr "このほか、下記のパーティションを作成またはマウントします"
 
-#: src/components/storage/PartitionsSection.tsx:84
+#: src/components/storage/PartitionsSection.tsx:91
 msgid "Moreover, the following partition will be created."
 msgid_plural "Moreover, the following partitions will be created."
 msgstr[0] "このほか、下記のパーティションを作成します。"
 
-#: src/components/storage/PartitionsSection.tsx:90
+#: src/components/storage/PartitionsSection.tsx:97
 msgid "Moreover, the following partition will be mounted."
 msgid_plural "Moreover, the following partitions will be mounted."
 msgstr[0] "このほか、下記のパーティションをマウントします。"
 
-#: src/components/storage/PartitionsSection.tsx:97
+#: src/components/storage/PartitionsSection.tsx:104
 msgid "The following partitions will be created or mounted"
 msgstr "下記のパーティションを作成またはマウントします"
 
-#: src/components/storage/PartitionsSection.tsx:101
+#: src/components/storage/PartitionsSection.tsx:108
 msgid "The following partition will be created."
 msgid_plural "The following partitions will be created."
 msgstr[0] "下記のパーティションを作成します。"
 
-#: src/components/storage/PartitionsSection.tsx:107
+#: src/components/storage/PartitionsSection.tsx:114
 msgid "The following partition will be mounted."
 msgid_plural "The following partitions will be mounted."
 msgstr[0] "下記のパーティションをマウントします。"
 
-#: src/components/storage/PartitionsSection.tsx:117
+#: src/components/storage/PartitionsSection.tsx:124
 msgid "Any partition needed to boot will be configured."
 msgstr "起動に必要なパーティションについても設定を行います。"
 
-#: src/components/storage/PartitionsSection.tsx:118
+#: src/components/storage/PartitionsSection.tsx:125
 msgid "Partitions to host \"system\" will be created if needed."
 msgstr ""
 "必要に応じて、 \"システム\" を保持するためのパーティションを作成します。"
 
 #. TRANSLATORS: ARIA (accesibility) description of an UI element. %s is a mount path.
-#: src/components/storage/PartitionsSection.tsx:151
+#: src/components/storage/PartitionsSection.tsx:162
 #, javascript-format
 msgid "Partition %s"
 msgstr "パーティション %s"
 
 #. TRANSLATORS: ARIA (accesibility) description of an button. %s is a mount path.
-#: src/components/storage/PartitionsSection.tsx:163
+#: src/components/storage/PartitionsSection.tsx:174
 #, javascript-format
 msgid "Options for partition %s"
 msgstr "パーティション %s のオプション"
 
-#: src/components/storage/PartitionsSection.tsx:180
-#: src/components/storage/VolumeGroupEditor.tsx:171
+#: src/components/storage/PartitionsSection.tsx:191
+#: src/components/storage/VolumeGroupEditor.tsx:176
 #: src/components/storage/iscsi/NodesPresenter.jsx:84
 msgid "Delete"
 msgstr "削除"
 
-#: src/components/storage/PartitionsSection.tsx:264
+#: src/components/storage/PartitionsSection.tsx:288
 msgid "Partitions"
 msgstr "パーティション"
 
-#: src/components/storage/PartitionsSection.tsx:277
-#: src/components/storage/UnusedMenu.tsx:75
+#: src/components/storage/PartitionsSection.tsx:308
+#: src/components/storage/UnusedMenu.tsx:78
 msgid "Add or use partition"
 msgstr "パーティションの追加または使用"
+
+#. TRANSLATORS: %s will be replaced by a formatted list of affected
+#. systems like "Windows and openSUSE Tumbleweed".
+#: src/components/storage/PotentialDataLossAlert.tsx:41
+#, javascript-format
+msgid "Proceeding may result in data loss affecting at least %s"
+msgstr ""
+
+#: src/components/storage/PotentialDataLossAlert.tsx:45
+msgid "Proceeding may result in data loss"
+msgstr ""
+
+#: src/components/storage/PotentialDataLossAlert.tsx:51
+#, fuzzy
+msgid "View details"
+msgstr "詳細を隠す"
 
 #: src/components/storage/Progress.tsx:117
 msgid "Loading storage"
 msgstr "ストレージを読み込んでいます"
 
-#: src/components/storage/ProposalActionsDialog.tsx:73
+#: src/components/storage/ProposalActions.tsx:66
 #, javascript-format
 msgid "Hide %d subvolume action"
 msgid_plural "Hide %d subvolume actions"
 msgstr[0] "%d 個のサブボリューム処理を隠す"
 
-#: src/components/storage/ProposalActionsDialog.tsx:78
+#: src/components/storage/ProposalActions.tsx:71
 #, javascript-format
 msgid "Show %d subvolume action"
 msgid_plural "Show %d subvolume actions"
 msgstr[0] "%d 個のサブボリューム処理を表示"
 
-#: src/components/storage/ProposalFailedInfo.tsx:54
+#: src/components/storage/ProposalFailedInfo.tsx:52
 msgid ""
 "It is not possible to install the system with the current configuration. "
 "Adjust the settings below."
@@ -2730,68 +2849,69 @@ msgstr ""
 
 #. TRANSLATORS: %s is a list of formatted mount points with a partition size like
 #. '"/" (at least 10 GiB), "/var" (20 GiB) and "swap" (2 GiB)'
-#: src/components/storage/ProposalFailedInfo.tsx:67
+#: src/components/storage/ProposalFailedInfo.tsx:65
 #, javascript-format
 msgid "It is not possible to allocate space for the boot partition and for %s."
 msgstr "起動パーティションと %s に対して領域を割り当てることができません。"
 
 #. TRANSLATORS: %s is a list of formatted mount points with a partition size like
 #. '"/" (at least 10 GiB), "/var" (20 GiB) and "swap" (2 GiB)'
-#: src/components/storage/ProposalFailedInfo.tsx:70
+#: src/components/storage/ProposalFailedInfo.tsx:68
 #, javascript-format
 msgid "It is not possible to allocate space for %s."
 msgstr "%s に対して領域を割り当てることができません。"
 
-#: src/components/storage/ProposalFailedInfo.tsx:75
+#: src/components/storage/ProposalFailedInfo.tsx:73
 msgid ""
 "Adjust the settings below to make the new system fit into the available "
 "space."
 msgstr "新しいシステムが利用可能な領域内に収まるように設定を調整してください。"
 
-#: src/components/storage/ProposalFailedInfo.tsx:98
+#: src/components/storage/ProposalFailedInfo.tsx:85
+#: src/components/storage/StorageDetailsItem.tsx:109
 msgid "Failed to calculate a storage layout"
 msgstr "ストレージ配置の算出に失敗しました"
 
-#: src/components/storage/ProposalPage.tsx:80
+#: src/components/storage/ProposalPage.tsx:79
 msgid "Invalid storage settings"
 msgstr "正しくないストレージ設定です"
 
-#: src/components/storage/ProposalPage.tsx:87
+#: src/components/storage/ProposalPage.tsx:86
 msgid "The current storage configuration has the following issue:"
 msgid_plural "The current storage configuration has the following issues:"
 msgstr[0] "現在のストレージ設定には下記の問題があります:"
 
-#: src/components/storage/ProposalPage.tsx:101
+#: src/components/storage/ProposalPage.tsx:100
 msgid ""
 "You may want to discard those settings and start from scratch with a simple "
 "configuration."
 msgstr "これらの設定を破棄してシンプルな設定からやり直すこともできます。"
 
-#: src/components/storage/ProposalPage.tsx:105
-#: src/components/storage/ProposalPage.tsx:133
+#: src/components/storage/ProposalPage.tsx:104
+#: src/components/storage/ProposalPage.tsx:132
 #: src/components/storage/UnsupportedModelInfo.tsx:55
 msgid "Reset to the default configuration"
 msgstr "既定の設定に戻す"
 
-#: src/components/storage/ProposalPage.tsx:117
+#: src/components/storage/ProposalPage.tsx:116
 #: src/components/storage/UnsupportedModelInfo.tsx:39
 msgid "Unable to modify the settings"
 msgstr "設定を変更できませんでした"
 
-#: src/components/storage/ProposalPage.tsx:123
+#: src/components/storage/ProposalPage.tsx:122
 msgid ""
 "The storage configuration uses elements not supported by this interface."
 msgstr ""
 "現在のインターフェイスでは未サポートの要素がストレージ設定で使用されていま"
 "す。"
 
-#: src/components/storage/ProposalPage.tsx:129
+#: src/components/storage/ProposalPage.tsx:128
 msgid ""
 "You may want to discard the current settings and start from scratch with a "
 "simple configuration."
 msgstr "現在の設定を破棄してシンプルな設定からやり直すこともできます。"
 
-#: src/components/storage/ProposalPage.tsx:145
+#: src/components/storage/ProposalPage.tsx:144
 msgid ""
 "There are not disks available for the installation. You may need to "
 "configure some device."
@@ -2799,38 +2919,38 @@ msgstr ""
 "インストールに利用できるディスクがありません。デバイスの設定を行う必要がある"
 "かもしれません。"
 
-#: src/components/storage/ProposalPage.tsx:150
+#: src/components/storage/ProposalPage.tsx:149
 #: src/components/storage/dasd/DASDTable.tsx:304
 msgid "No devices found"
 msgstr "デバイスが見つかりませんでした"
 
-#: src/components/storage/ProposalPage.tsx:159
+#: src/components/storage/ProposalPage.tsx:158
 msgid "Connect to iSCSI targets"
 msgstr "iSCSI ターゲットへの接続"
 
-#: src/components/storage/ProposalPage.tsx:172
+#: src/components/storage/ProposalPage.tsx:171
 msgid "Manage DASD devices"
 msgstr "DASD デバイスの管理"
 
-#: src/components/storage/ProposalPage.tsx:244
+#: src/components/storage/ProposalPage.tsx:223
 msgid "Start from scratch with the default configuration"
 msgstr "既定の設定で最初から実施する"
 
-#: src/components/storage/ProposalPage.tsx:246
+#: src/components/storage/ProposalPage.tsx:225
 msgid "Reset to defaults"
 msgstr "既定値に戻す"
 
-#: src/components/storage/ProposalPage.tsx:255
+#: src/components/storage/ProposalPage.tsx:234
 msgid ""
 "Changes in these settings will immediately update the 'Result' section below."
 msgstr ""
 "これらの設定を変更すると、下記の '結果' セクションに即時に反映されます。"
 
-#: src/components/storage/ProposalPage.tsx:262
+#: src/components/storage/ProposalPage.tsx:241
 msgid "Installation devices"
 msgstr "インストール先のデバイス"
 
-#: src/components/storage/ProposalPage.tsx:268
+#: src/components/storage/ProposalPage.tsx:247
 msgid ""
 "Structure of the new system, including disks to use and additional devices "
 "like LVM volume groups."
@@ -2838,50 +2958,46 @@ msgstr ""
 "使用するディスクのほか、 LVM ボリュームグループなどの追加デバイス設定を含む新"
 "しいシステムの構造です。"
 
-#: src/components/storage/ProposalPage.tsx:278
+#: src/components/storage/ProposalPage.tsx:254
 msgid "Encryption"
 msgstr "暗号化"
 
-#: src/components/storage/ProposalPage.tsx:362
-msgid "Reloading data, please wait..."
-msgstr "データを再読み込みしています。しばらくお待ちください..."
-
-#: src/components/storage/ProposalResultSection.tsx:42
+#: src/components/storage/ProposalResultSection.tsx:46
 msgid "Waiting for information about storage configuration"
 msgstr "ストレージ設定に関する情報を待機しています"
 
-#: src/components/storage/ProposalResultSection.tsx:67
+#: src/components/storage/ProposalResultSection.tsx:71
 #, javascript-format
 msgid "There is %d destructive action planned affecting %s"
 msgid_plural "There are %d destructive actions planned affecting %s"
 msgstr[0] "%d 個の破壊的な処理 (%s に影響) が予定されています"
 
-#: src/components/storage/ProposalResultSection.tsx:78
+#: src/components/storage/ProposalResultSection.tsx:82
 #, javascript-format
 msgid "There is %d destructive action planned"
 msgid_plural "There are %d destructive actions planned"
 msgstr[0] "%d 個の破壊的な処理が提案されています"
 
-#: src/components/storage/ProposalResultSection.tsx:128
+#: src/components/storage/ProposalResultSection.tsx:132
 msgid "Result"
 msgstr "結果"
 
-#: src/components/storage/ProposalResultSection.tsx:130
+#: src/components/storage/ProposalResultSection.tsx:134
 msgid ""
 "Result of applying the configuration described at the 'Settings' section "
 "above."
 msgstr "上記の '設定' セクションに示された設定を適用した結果です。"
 
-#: src/components/storage/ProposalResultSection.tsx:138
+#: src/components/storage/ProposalResultSection.tsx:142
 msgid ""
 "The following actions will be performed in the system during installation."
 msgstr "インストールの際に、システムに対して下記の処理が実施されます。"
 
-#: src/components/storage/ProposalResultSection.tsx:144
+#: src/components/storage/ProposalResultSection.tsx:148
 msgid "Final layout"
 msgstr "最終形態"
 
-#: src/components/storage/ProposalResultSection.tsx:148
+#: src/components/storage/ProposalResultSection.tsx:152
 msgid "Final structure of the system after installation."
 msgstr "インストール後のシステムの最終形です。"
 
@@ -2891,17 +3007,17 @@ msgstr "新規"
 
 #. TRANSLATORS: Label to indicate the device size before resizing, where %s is
 #. replaced by the original size (e.g., 3.00 GiB).
-#: src/components/storage/ProposalResultTable.tsx:106
+#: src/components/storage/ProposalResultTable.tsx:108
 #, javascript-format
 msgid "Before %s"
 msgstr "変更前: %s"
 
-#: src/components/storage/ProposalResultTable.tsx:133
+#: src/components/storage/ProposalResultTable.tsx:135
 msgid "Mount Point"
 msgstr "マウントポイント"
 
-#: src/components/storage/ProposalResultTable.tsx:134
-#: src/components/storage/SpaceActionsTable.tsx:237
+#: src/components/storage/ProposalResultTable.tsx:136
+#: src/components/storage/SpaceActionsTable.tsx:230
 msgid "Details"
 msgstr "詳細"
 
@@ -2918,65 +3034,65 @@ msgstr ""
 "%s は一括更新のできる不可変なシステムです。読み込み専用の btrfs ルートファイ"
 "ルシステムを利用して更新を適用します。"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:57
+#: src/components/storage/SearchedDeviceMenu.tsx:69
 msgid "Selected disk cannot be changed"
 msgstr "選択済みのディスクは変更できません"
 
 #. TRANSLATORS: %s is a formatted mount point like '"/home"'
-#: src/components/storage/SearchedDeviceMenu.tsx:62
+#: src/components/storage/SearchedDeviceMenu.tsx:74
 #, javascript-format
 msgid "Change the disk to format as %s"
 msgstr "%s としてフォーマットするディスクの変更"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:69
+#: src/components/storage/SearchedDeviceMenu.tsx:81
 msgid "Change the disk to configure"
 msgstr "設定したいディスクの変更"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:73
+#: src/components/storage/SearchedDeviceMenu.tsx:85
 msgid "Change the disk to install the system"
 msgstr "システムのインストール先となるディスクの変更"
 
 #. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case).
-#: src/components/storage/SearchedDeviceMenu.tsx:83
+#: src/components/storage/SearchedDeviceMenu.tsx:95
 #, javascript-format
 msgid "Change the disk to create %s"
 msgstr "%s を作成するディスクの変更"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:99
+#: src/components/storage/SearchedDeviceMenu.tsx:118
 msgid "This uses the existing file system at the disk"
 msgstr "これはディスク内の既存ファイルシステムを使用します"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:103
+#: src/components/storage/SearchedDeviceMenu.tsx:122
 msgid "This uses existing partitions at the disk"
 msgstr "これはディスク内の既存パーティションを使用します"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:111
+#: src/components/storage/SearchedDeviceMenu.tsx:130
 msgid "It is chosen for booting and for some LVM groups"
 msgstr "起動用といくつかの LVM グループ向けに選択済み"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:113
+#: src/components/storage/SearchedDeviceMenu.tsx:132
 msgid "It is chosen for some LVM groups"
 msgstr "いくつかの LVM グループ向けに選択済み"
 
 #. TRANSLATORS: %s is the name of the LVM
-#: src/components/storage/SearchedDeviceMenu.tsx:118
+#: src/components/storage/SearchedDeviceMenu.tsx:137
 #, javascript-format
 msgid "It is chosen for booting and for the LVM group '%s'"
 msgstr "起動用と LVM グループ '%s' 向けに選択済み"
 
 #. TRANSLATORS: %s is the name of the LVM
-#: src/components/storage/SearchedDeviceMenu.tsx:124
+#: src/components/storage/SearchedDeviceMenu.tsx:143
 #, javascript-format
 msgid "It is chosen for the LVM group '%s'"
 msgstr "LVM グループ '%s' 向けに選択済み"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:129
+#: src/components/storage/SearchedDeviceMenu.tsx:148
 msgid "It is chosen for booting"
 msgstr "起動用に選択済み"
 
 #. TRANSLATORS: %s is the name of the disk (eg. sda)
-#: src/components/storage/SearchedDeviceMenu.tsx:138
+#: src/components/storage/SearchedDeviceMenu.tsx:157
 #, javascript-format
 msgid ""
 "%s will still contain the configured LVM groups and any partition needed to "
@@ -2984,13 +3100,13 @@ msgid ""
 msgstr "%s には起動に必要な LVM グループとパーティションが含まれています"
 
 #. TRANSLATORS: %s is the name of the disk (eg. sda)
-#: src/components/storage/SearchedDeviceMenu.tsx:144
+#: src/components/storage/SearchedDeviceMenu.tsx:163
 #, javascript-format
 msgid "The configured LVM groups will remain at %s"
 msgstr "設定済みの LVM グループが %s に残されます"
 
 #. TRANSLATORS: %1$s is the name of the disk (eg. sda) and %2$s the name of the LVM
-#: src/components/storage/SearchedDeviceMenu.tsx:150
+#: src/components/storage/SearchedDeviceMenu.tsx:169
 #, javascript-format
 msgid ""
 "%1$s will still contain the LVM group '%2$s' and any partition needed to boot"
@@ -2999,46 +3115,46 @@ msgstr ""
 "います"
 
 #. TRANSLATORS: %1$s is the name of the LVM and %2$s the name of the disk (eg. sda)
-#: src/components/storage/SearchedDeviceMenu.tsx:158
+#: src/components/storage/SearchedDeviceMenu.tsx:177
 #, javascript-format
 msgid "The LVM group '%1$s' will remain at %2$s"
 msgstr "LVM グループ '%1$s' が %2$s に残されます"
 
 #. TRANSLATORS: %s is the name of the disk (eg. sda)
-#: src/components/storage/SearchedDeviceMenu.tsx:166
+#: src/components/storage/SearchedDeviceMenu.tsx:185
 #, javascript-format
 msgid "Partitions needed for booting will remain at %s"
 msgstr "起動に必要なパーティションが %s に残されます"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:170
+#: src/components/storage/SearchedDeviceMenu.tsx:189
 msgid "Partitions needed for booting will also be adapted"
 msgstr "起動に必要なパーティションについても調整を行います"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:186
+#: src/components/storage/SearchedDeviceMenu.tsx:211
 msgid "Change device menu"
 msgstr "デバイスメニューの変更"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:236
+#: src/components/storage/SearchedDeviceMenu.tsx:265
 msgid "The disk is used for LVM and boot"
 msgstr "このディスクは LVM の配置と起動用に使用されます"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:238
+#: src/components/storage/SearchedDeviceMenu.tsx:267
 msgid "The disk is used for booting"
 msgstr "このディスクは起動用に使用されます"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:242
+#: src/components/storage/SearchedDeviceMenu.tsx:271
 msgid "The disk is used for LVM"
 msgstr "このディスクは LVM 用に使用されます"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:244
+#: src/components/storage/SearchedDeviceMenu.tsx:273
 msgid "Remove the configuration for this disk"
 msgstr "このディスクに対する設定を削除"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:256
+#: src/components/storage/SearchedDeviceMenu.tsx:285
 msgid "Do not use"
 msgstr "使用しない"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:309
+#: src/components/storage/SearchedDeviceMenu.tsx:344
 #, javascript-format
 msgid "Device %s menu"
 msgstr "デバイス %s メニュー"
@@ -3091,46 +3207,40 @@ msgstr "インストーラに適切なサイズを提案させる"
 msgid "Define a custom size"
 msgstr "独自のサイズを指定する"
 
-#: src/components/storage/SpaceActionsTable.tsx:75
+#: src/components/storage/SpaceActionsTable.tsx:76
 msgid "The device will be used by the new system."
 msgstr "デバイスは新しいシステムで使用されます。"
 
 #. TRANSLATORS: %s is a mount path like "/home".
-#: src/components/storage/SpaceActionsTable.tsx:78
+#: src/components/storage/SpaceActionsTable.tsx:79
 #, javascript-format
 msgid "The device will be mounted at %s."
 msgstr "デバイスは %s にマウントされます。"
 
-#: src/components/storage/SpaceActionsTable.tsx:84
+#: src/components/storage/SpaceActionsTable.tsx:85
 #, javascript-format
 msgid "Up to %s can be recovered by shrinking the device."
 msgstr "デバイスの縮小により、最大で %s が確保できます。"
 
-#: src/components/storage/SpaceActionsTable.tsx:93
+#: src/components/storage/SpaceActionsTable.tsx:94
 msgid "The device cannot be shrunk:"
 msgstr "デバイスは縮小できません:"
 
-#: src/components/storage/SpaceActionsTable.tsx:114
+#: src/components/storage/SpaceActionsTable.tsx:115
 #, javascript-format
 msgid "Show information about %s"
 msgstr "%s に関する情報を表示"
 
-#: src/components/storage/SpaceActionsTable.tsx:208
-msgid "The content may be deleted"
-msgstr "内容が削除されるかもしれません"
+#: src/components/storage/SpaceActionsTable.tsx:226
+#, fuzzy
+msgid "proposal.Device"
+msgstr "提案"
 
-#. TRANSLATORS: status message, no existing content was found on the disk,
-#. i.e. the disk is completely empty
-#: src/components/storage/SpaceActionsTable.tsx:211
-#: src/components/storage/utils/device.tsx:87
-msgid "No content found"
-msgstr "ストレージには何も記録されていないようです"
-
-#: src/components/storage/SpaceActionsTable.tsx:242
+#: src/components/storage/SpaceActionsTable.tsx:238
 msgid "Action"
 msgstr "処理"
 
-#: src/components/storage/SpacePolicySelection.tsx:97
+#: src/components/storage/SpacePolicySelection.tsx:106
 msgid ""
 "Select what to do with each partition in order to find space for allocating "
 "the new system."
@@ -3138,10 +3248,56 @@ msgstr ""
 "新しいシステムのインストール先となる領域を確保するため、各パーティションに対"
 "してすべきことを選択します。"
 
-#: src/components/storage/SpacePolicySelection.tsx:103
+#: src/components/storage/SpacePolicySelection.tsx:112
 #, javascript-format
 msgid "Find space in %s"
 msgstr "%s 内での領域検出"
+
+#: src/components/storage/StorageDetailsItem.tsx:52
+msgid "No device selected yet"
+msgstr "まだ何もデバイスを選択していません"
+
+#. TRANSLATORS: %s will be replaced by the device name and its size,
+#. example: "/dev/sda, 20 GiB"
+#: src/components/storage/StorageDetailsItem.tsx:59
+#, fuzzy, javascript-format
+msgid "Use device %s"
+msgstr "ディスク %s を使用する"
+
+#: src/components/storage/StorageDetailsItem.tsx:83
+#, fuzzy
+msgid "Use several devices"
+msgstr "デバイスの再検出"
+
+#: src/components/storage/StorageDetailsItem.tsx:93
+#, fuzzy
+msgid "There are no disks available for the installation"
+msgstr "インストール可能なディスクが見つかりません。"
+
+#: src/components/storage/StorageDetailsItem.tsx:94
+#, fuzzy
+msgid "Invalid settings"
+msgstr "正しくないストレージ設定です"
+
+#: src/components/storage/StorageDetailsItem.tsx:95
+#, fuzzy
+msgid "Using an advanced storage configuration"
+msgstr "高度な設定項目を利用してインストールします。"
+
+#: src/components/storage/StorageDetailsItem.tsx:112
+msgid "No data loss is expected"
+msgstr ""
+
+#. TRANSLATORS: %s will be replaced by a formatted list of affected systems
+#. like "Windows and openSUSE Tumbleweed".
+#: src/components/storage/StorageDetailsItem.tsx:119
+#, javascript-format
+msgid "Potential data loss affecting at least %s"
+msgstr ""
+
+#: src/components/storage/StorageDetailsItem.tsx:124
+msgid "Potential data loss"
+msgstr ""
 
 #: src/components/storage/UnsupportedModelInfo.tsx:44
 msgid ""
@@ -3159,77 +3315,77 @@ msgstr ""
 "現在の設定のまま進めることもできますし、設定を破棄してシンプルな設定で最初か"
 "らやり直すこともできます。"
 
-#: src/components/storage/UnusedMenu.tsx:36
+#: src/components/storage/UnusedMenu.tsx:33
 msgid "Not configured yet"
 msgstr "まだ設定していません"
 
-#: src/components/storage/UnusedMenu.tsx:61
-msgid "Use the RAID without partitions"
-msgstr "パーティション無しで RAID を使用する"
-
-#: src/components/storage/UnusedMenu.tsx:61
+#: src/components/storage/UnusedMenu.tsx:63
 msgid "Use the disk without partitions"
 msgstr "パーティション無しでディスクを使用する"
 
-#: src/components/storage/UnusedMenu.tsx:72
+#: src/components/storage/UnusedMenu.tsx:64
+msgid "Use the RAID without partitions"
+msgstr "パーティション無しで RAID を使用する"
+
+#: src/components/storage/UnusedMenu.tsx:75
 msgid "Add a partition or mount an existing one"
 msgstr "パーティションの追加または既存のパーティションのマウント"
 
-#: src/components/storage/UnusedMenu.tsx:80
+#: src/components/storage/UnusedMenu.tsx:83
 msgid "Format the whole device or mount an existing file system"
 msgstr "デバイス全体のフォーマットまたは既存のファイルシステムのマウント"
 
 #. TRANSLATORS: %1$s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case). %2$s is a disk name like sda.
-#: src/components/storage/VolumeGroupEditor.tsx:74
+#: src/components/storage/VolumeGroupEditor.tsx:79
 #, javascript-format
 msgid "%1$s will be created as a partition at %2$s"
 msgid_plural "%1$s will be created as partitions at %2$s"
 msgstr[0] "%1$s を %2$s 内のパーティションとして作成します"
 
-#: src/components/storage/VolumeGroupEditor.tsx:83
+#: src/components/storage/VolumeGroupEditor.tsx:88
 msgid "The logical volume will also be deleted"
 msgid_plural "The logical volumes will also be deleted"
 msgstr[0] "論理ボリュームについても削除します"
 
-#: src/components/storage/VolumeGroupEditor.tsx:98
+#: src/components/storage/VolumeGroupEditor.tsx:103
 msgid "Delete volume group"
 msgstr "ボリュームグループの削除"
 
-#: src/components/storage/VolumeGroupEditor.tsx:110
+#: src/components/storage/VolumeGroupEditor.tsx:115
 msgid "Modify settings and physical volumes"
 msgstr "設定と物理ボリュームの変更"
 
-#: src/components/storage/VolumeGroupEditor.tsx:114
+#: src/components/storage/VolumeGroupEditor.tsx:119
 msgid "Edit volume group"
 msgstr "ボリュームグループの編集"
 
 #. TRANSLATORS: ARIA (accesibility) description of an UI element. %s is a mount path.
-#: src/components/storage/VolumeGroupEditor.tsx:145
+#: src/components/storage/VolumeGroupEditor.tsx:150
 #, javascript-format
 msgid "Volume group %s"
 msgstr "ボリュームグループ %s"
 
-#: src/components/storage/VolumeGroupEditor.tsx:185
+#: src/components/storage/VolumeGroupEditor.tsx:190
 #, javascript-format
 msgid "Create LVM volume group %s"
 msgstr "LVM ボリュームグループ %s の作成"
 
-#: src/components/storage/VolumeGroupEditor.tsx:186
+#: src/components/storage/VolumeGroupEditor.tsx:191
 #, javascript-format
 msgid "Empty LVM volume group %s"
 msgstr "空の LVM ボリュームグループ %s"
 
-#: src/components/storage/VolumeGroupEditor.tsx:241
+#: src/components/storage/VolumeGroupEditor.tsx:246
 msgid "Add logical volume"
 msgstr "論理ボリュームの追加"
 
-#: src/components/storage/VolumeGroupEditor.tsx:251
+#: src/components/storage/VolumeGroupEditor.tsx:256
 #, javascript-format
 msgid "Logical volumes for %s"
 msgstr "%s に対する論理ボリューム"
 
-#: src/components/storage/VolumeGroupEditor.tsx:266
+#: src/components/storage/VolumeGroupEditor.tsx:271
 msgid "The following logical volume will be created"
 msgid_plural "The following logical volumes will be created"
 msgstr[0] "下記の論理ボリュームを作成します"
@@ -3435,22 +3591,9 @@ msgstr "オフライン"
 msgid "Clear input"
 msgstr "入力を消去"
 
-#: src/components/storage/device-utils.tsx:76
+#: src/components/storage/device-utils.tsx:85
 msgid "Unused space"
 msgstr "未使用の領域"
-
-#. TRANSLATORS: %1$s is a description of the device (eg. "Encrypted XFS RAID") and %2$s is
-#. the RAID level (eg. "RAID0")
-#. TRANSLATORS: %1$s is an already formatted mount path (eg. "/"),
-#. %2$s is a size description (eg. at least 10 GiB)
-#. TRANSLATORS: %1$s is a filesystem type description (eg. "Btrfs with snapshots"),
-#. %2$s is a description of the size or the size limits (eg. "at least 10 GiB")
-#: src/components/storage/device-utils.tsx:84
-#: src/components/storage/utils/partition.tsx:41
-#: src/components/storage/utils/partition.tsx:85
-#, javascript-format
-msgid "%1$s (%2$s)"
-msgstr "%1$s (%2$s)"
 
 #: src/components/storage/iscsi/AuthFields.jsx:66
 msgid "Only available if authentication by target is provided"
@@ -3640,285 +3783,291 @@ msgstr "検索"
 msgid "Targets"
 msgstr "ターゲット"
 
-#: src/components/storage/utils.ts:58
+#: src/components/storage/utils.ts:60
 msgid "KiB"
 msgstr "KiB"
 
-#: src/components/storage/utils.ts:59
+#: src/components/storage/utils.ts:61
 msgid "MiB"
 msgstr "MiB"
 
-#: src/components/storage/utils.ts:60
+#: src/components/storage/utils.ts:62
 msgid "GiB"
 msgstr "GiB"
 
-#: src/components/storage/utils.ts:61
+#: src/components/storage/utils.ts:63
 msgid "TiB"
 msgstr "TiB"
 
-#: src/components/storage/utils.ts:62
+#: src/components/storage/utils.ts:64
 msgid "PiB"
 msgstr "PiB"
 
-#: src/components/storage/utils.ts:66
+#: src/components/storage/utils.ts:68
 msgid "Bcachefs"
 msgstr "bcachefs"
 
-#: src/components/storage/utils.ts:67
+#: src/components/storage/utils.ts:69
 msgid "BitLocker"
 msgstr "BitLocker"
 
-#: src/components/storage/utils.ts:68
+#: src/components/storage/utils.ts:70
 msgid "Btrfs"
 msgstr "btrfs"
 
-#: src/components/storage/utils.ts:69
+#: src/components/storage/utils.ts:71
 msgid "ExFAT"
 msgstr "ExFAT"
 
-#: src/components/storage/utils.ts:70
+#: src/components/storage/utils.ts:72
 msgid "Ext2"
 msgstr "ext2"
 
-#: src/components/storage/utils.ts:71
+#: src/components/storage/utils.ts:73
 msgid "Ext3"
 msgstr "ext3"
 
-#: src/components/storage/utils.ts:72
+#: src/components/storage/utils.ts:74
 msgid "Ext4"
 msgstr "ext4"
 
-#: src/components/storage/utils.ts:73
+#: src/components/storage/utils.ts:75
 msgid "F2FS"
 msgstr "f2fs"
 
-#: src/components/storage/utils.ts:74
+#: src/components/storage/utils.ts:76
 msgid "JFS"
 msgstr "JFS"
 
-#: src/components/storage/utils.ts:75
+#: src/components/storage/utils.ts:77
 msgid "NFS"
 msgstr "NFS"
 
-#: src/components/storage/utils.ts:76
+#: src/components/storage/utils.ts:78
 msgid "NILFS2"
 msgstr "NILFS2"
 
-#: src/components/storage/utils.ts:77
+#: src/components/storage/utils.ts:79
 msgid "NTFS"
 msgstr "NTFS"
 
-#: src/components/storage/utils.ts:78
+#: src/components/storage/utils.ts:80
 msgid "ReiserFS"
 msgstr "ReiserFS"
 
-#: src/components/storage/utils.ts:79
+#: src/components/storage/utils.ts:81
 msgid "Swap"
 msgstr "スワップ"
 
-#: src/components/storage/utils.ts:80
+#: src/components/storage/utils.ts:82
 msgid "Tmpfs"
 msgstr "tmpfs"
 
-#: src/components/storage/utils.ts:81
+#: src/components/storage/utils.ts:83
 msgid "FAT"
 msgstr "FAT"
 
-#: src/components/storage/utils.ts:82
+#: src/components/storage/utils.ts:84
 msgid "XFS"
 msgstr "XFS"
 
-#: src/components/storage/utils.ts:90
+#: src/components/storage/utils.ts:92
 msgid "Delete current content"
 msgstr "現在の内容を全て削除する"
 
-#: src/components/storage/utils.ts:94
+#: src/components/storage/utils.ts:96
 msgid "Shrink existing partitions"
 msgstr "既存のパーティションを縮小する"
 
-#: src/components/storage/utils.ts:98
+#: src/components/storage/utils.ts:100
 msgid "Use available space"
 msgstr "利用可能な領域を使用する"
 
 #. TRANSLATORS: sub-string used to represent a path like "/" or "/var". %s is replaced by the path
 #. itself, the rest of the string (quotation marks in the English case) is used to encapsulate the
 #. path in a bigger sentence like 'Create partitions for "/" and "/var"'.
-#: src/components/storage/utils.ts:358
+#: src/components/storage/utils.ts:346
 #, javascript-format
 msgid "\"%s\""
 msgstr "\"%s\""
 
 #. TRANSLATORS: Size range, %1$s is the min size and %2$s is the max
-#: src/components/storage/utils.ts:369
+#: src/components/storage/utils.ts:357
 #, javascript-format
 msgid "%1$s - %2$s"
 msgstr "%1$s - %2$s"
 
 #. TRANSLATORS: minimum device size, %s is replaced by size string, e.g. "17.5 GiB"
-#: src/components/storage/utils.ts:371
+#: src/components/storage/utils.ts:359
 #, javascript-format
 msgid "at least %s"
 msgstr "少なくとも %s"
 
 #. TRANSLATORS: multipath device type
-#: src/components/storage/utils/device.tsx:39
+#: src/components/storage/utils/device.tsx:31
 msgid "Multipath"
 msgstr "マルチパス"
 
 #. TRANSLATORS: %s is replaced by the device bus ID
-#: src/components/storage/utils/device.tsx:44
+#: src/components/storage/utils/device.tsx:36
 #, javascript-format
 msgid "DASD %s"
 msgstr "DASD %s"
 
-#. TRANSLATORS: software RAID device, %s is replaced by the RAID level, e.g. RAID-1
-#: src/components/storage/utils/device.tsx:49
-#, javascript-format
-msgid "Software %s"
-msgstr "ソフトウエア %s"
-
-#: src/components/storage/utils/device.tsx:54
+#: src/components/storage/utils/device.tsx:40
 msgid "SD Card"
 msgstr "SD カード"
 
 #. TRANSLATORS: %s is substituted by the type of disk like "iSCSI" or "SATA"
-#: src/components/storage/utils/device.tsx:59
+#: src/components/storage/utils/device.tsx:46
 #, javascript-format
 msgid "%s disk"
 msgstr "%s ディスク"
 
-#: src/components/storage/utils/device.tsx:60
+#: src/components/storage/utils/device.tsx:47
 msgid "Disk"
 msgstr "ディスク"
 
+#. TRANSLATORS: software RAID device, %s is replaced by the RAID level, e.g. RAID-1
+#: src/components/storage/utils/device.tsx:59
+#, javascript-format
+msgid "Software %s"
+msgstr "ソフトウエア %s"
+
 #. TRANSLATORS: disk partition info, %s is replaced by partition table
 #. type (MS-DOS or GPT), %d is the number of the partitions
-#: src/components/storage/utils/device.tsx:81
+#: src/components/storage/utils/device.tsx:83
 #, javascript-format
 msgid "%s with %d partitions"
 msgstr "%s (%d 個のパーティション)"
 
-#: src/components/storage/utils/drive.tsx:45
+#. TRANSLATORS: status message, no existing content was found on the disk,
+#. i.e. the disk is completely empty
+#: src/components/storage/utils/device.tsx:90
+msgid "No content found"
+msgstr "ストレージには何も記録されていないようです"
+
+#: src/components/storage/utils/drive.tsx:46
 msgid "A partition will be deleted"
 msgstr "パーティションを削除する"
 
-#: src/components/storage/utils/drive.tsx:46
+#: src/components/storage/utils/drive.tsx:47
 msgid "At least one partition will be deleted"
 msgstr "少なくとも 1 つのパーティションを削除する"
 
-#: src/components/storage/utils/drive.tsx:47
+#: src/components/storage/utils/drive.tsx:48
 msgid "Several partitions will be deleted"
 msgstr "いくつかのパーティションを削除する"
 
-#: src/components/storage/utils/drive.tsx:48
+#: src/components/storage/utils/drive.tsx:49
 msgid "A partition may be deleted"
 msgstr "パーティションを削除するかもしれません"
 
-#: src/components/storage/utils/drive.tsx:50
+#: src/components/storage/utils/drive.tsx:51
 msgid "Some partitions may be deleted"
 msgstr "いくつかのパーティションを削除するかもしれません"
 
-#: src/components/storage/utils/drive.tsx:61
+#: src/components/storage/utils/drive.tsx:62
 msgid "A partition may be shrunk"
 msgstr "パーティションを縮小するかもしれません"
 
-#: src/components/storage/utils/drive.tsx:63
+#: src/components/storage/utils/drive.tsx:64
 msgid "Some partitions may be shrunk"
 msgstr "いくつかのパーティションを縮小するかもしれません"
 
-#: src/components/storage/utils/drive.tsx:71
+#: src/components/storage/utils/drive.tsx:77
 msgid "All content not configured to be mounted will be deleted"
 msgstr "マウントするように設定していない全ての内容を削除する"
 
-#: src/components/storage/utils/drive.tsx:72
+#: src/components/storage/utils/drive.tsx:78
 msgid "All content will be deleted"
 msgstr "全ての内容を削除する"
 
-#: src/components/storage/utils/drive.tsx:75
+#: src/components/storage/utils/drive.tsx:81
 msgid "Reused partitions will not be shrunk"
 msgstr "再利用したパーティションは縮小しない"
 
-#: src/components/storage/utils/drive.tsx:76
+#: src/components/storage/utils/drive.tsx:82
 msgid "Some existing partitions may be shrunk"
 msgstr "いくつかの既存パーティションを縮小する"
 
-#: src/components/storage/utils/drive.tsx:78
-#: src/components/storage/utils/drive.tsx:113
+#: src/components/storage/utils/drive.tsx:84
+#: src/components/storage/utils/drive.tsx:119
 msgid "Current partitions will be kept"
 msgstr "現在のパーティションを維持する"
 
-#: src/components/storage/utils/drive.tsx:123
+#: src/components/storage/utils/drive.tsx:137
 msgid ""
 "Partitions that are not reused will be removed and that data will be lost."
 msgstr ""
 "再利用するように設定していないパーティションは削除され、データは失われます。"
 
-#: src/components/storage/utils/drive.tsx:124
+#: src/components/storage/utils/drive.tsx:138
 msgid ""
 "Any existing partition will be removed and all data in the disk will be lost."
 msgstr ""
 "全てのパーティションを削除し、ディスク内に存在するデータを全て消去します。"
 
-#: src/components/storage/utils/drive.tsx:128
+#: src/components/storage/utils/drive.tsx:142
 msgid "Partitions that are not reused will be resized as needed."
 msgstr ""
 "再利用するように設定していないパーティションは、必要に応じてサイズ変更されま"
 "す。"
 
-#: src/components/storage/utils/drive.tsx:130
+#: src/components/storage/utils/drive.tsx:144
 msgid "Partitions that are not reused would be resized if needed."
 msgstr ""
 "再利用するように設定していないパーティションは、必要に応じてサイズ変更されま"
 "す。"
 
-#: src/components/storage/utils/drive.tsx:132
+#: src/components/storage/utils/drive.tsx:146
 msgid "The data is kept, but the current partitions will be resized as needed."
 msgstr ""
 "既存のデータは保持しますが、必要に応じて既存のパーティションのサイズ変更を行"
 "います。"
 
-#: src/components/storage/utils/drive.tsx:136
+#: src/components/storage/utils/drive.tsx:150
 msgid ""
 "Only reused partitions and space not assigned to any partition will be used."
 msgstr ""
 "再利用するよう設定したパーティションと、パーティションの設定されていない領域"
 "のみを使用します。"
 
-#: src/components/storage/utils/drive.tsx:138
+#: src/components/storage/utils/drive.tsx:152
 msgid "Only reused partitions will be used."
 msgstr "再利用するよう設定したパーティションのみを使用します。"
 
-#: src/components/storage/utils/drive.tsx:140
+#: src/components/storage/utils/drive.tsx:154
 msgid ""
 "The data is kept. Only the space not assigned to any partition will be used."
 msgstr ""
 "既存のデータを保持します。パーティションに割り当てられていない空き領域のみを"
 "使用します。"
 
-#: src/components/storage/utils/drive.tsx:142
+#: src/components/storage/utils/drive.tsx:156
 msgid "Select what to do with each partition."
 msgstr "パーティションの設定作業を独自に実施します。"
 
-#: src/components/storage/utils/drive.tsx:152
+#: src/components/storage/utils/drive.tsx:166
 #, javascript-format
 msgid "The whole device will be used for %s"
 msgstr "デバイス全体を %s 向けに使用する"
 
-#: src/components/storage/utils/drive.tsx:156
+#: src/components/storage/utils/drive.tsx:170
 msgid "A file system will be used for the whole device"
 msgstr "ファイルシステムはデバイス全体を使用する"
 
-#: src/components/storage/utils/drive.tsx:161
+#: src/components/storage/utils/drive.tsx:175
 msgid "No additional partitions will be created"
 msgstr "追加パーティションは作成しない"
 
-#: src/components/storage/utils/drive.tsx:169
+#: src/components/storage/utils/drive.tsx:183
 #, javascript-format
 msgid "An existing partition will be used for %s"
 msgid_plural "Existing partitions will be used for %s"
 msgstr[0] "%s に対して既存のパーティションを使用する"
 
-#: src/components/storage/utils/drive.tsx:183
+#: src/components/storage/utils/drive.tsx:197
 #, javascript-format
 msgid "A new partition will be created for %s"
 msgid_plural "New partitions will be created for %s"
@@ -3926,7 +4075,7 @@ msgstr[0] "%s に対して新しいパーティションを作成する"
 
 #. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case).
-#: src/components/storage/utils/drive.tsx:194
+#: src/components/storage/utils/drive.tsx:208
 #, javascript-format
 msgid "Partitions will be used and created for %s"
 msgstr "%s 向けにパーティションを使用して作成する"
@@ -4043,6 +4192,15 @@ msgstr "zFCP デバイスの読み込み"
 msgid "zFCP"
 msgstr "zFCP"
 
+#: src/components/system/HostnameDetailsItem.tsx:42
+#: src/components/system/HostnamePage.tsx:80 src/router.tsx:57
+msgid "Hostname"
+msgstr "ホスト名"
+
+#: src/components/system/HostnameDetailsItem.tsx:56
+msgid "Temporary name that may change after reboot or network changes"
+msgstr ""
+
 #: src/components/system/HostnamePage.tsx:63
 msgid "Enter a hostname."
 msgstr "ホスト名を入力してください。"
@@ -4063,10 +4221,6 @@ msgstr "ホスト名を更新できませんでした"
 msgid "Using transient hostname: %s"
 msgstr "暫定的なホスト名を使用しています: %s"
 
-#: src/components/system/HostnamePage.tsx:80 src/router.tsx:56
-msgid "Hostname"
-msgstr "ホスト名"
-
 #: src/components/system/HostnamePage.tsx:85
 msgid "Product is already registered"
 msgstr "製品は既に登録済みです"
@@ -4079,7 +4233,7 @@ msgstr ""
 "ここでホスト名を変更した場合も後から変更した場合も、登録済みのホスト名は変更"
 "されないことに注意してください。"
 
-#: src/components/system/HostnamePage.tsx:95
+#: src/components/system/HostnamePage.tsx:94
 msgid ""
 "This hostname is dynamic and may change after a reboot or network update, as "
 "configured by the local network administrator."
@@ -4087,16 +4241,16 @@ msgstr ""
 "ホスト名は動的なものとなります。ご利用のネットワークの設定に依存しますが、再"
 "起動やネットワーク側の変更によって変わってしまう場合があります。"
 
-#: src/components/system/HostnamePage.tsx:111
+#: src/components/system/HostnamePage.tsx:109
 msgid "Use static hostname"
 msgstr "固定のホスト名を使用する"
 
-#: src/components/system/HostnamePage.tsx:112
+#: src/components/system/HostnamePage.tsx:110
 msgid "Set a permanent hostname that won’t change with network updates."
 msgstr ""
 "ネットワーク側から指定された場合でも変化しない、固定のホスト名を設定します。"
 
-#: src/components/system/HostnamePage.tsx:122
+#: src/components/system/HostnamePage.tsx:120
 msgid "Static hostname"
 msgstr "固定のホスト名"
 
@@ -4219,6 +4373,108 @@ msgstr "公開 SSH 鍵の使用"
 #: src/routes/storage.tsx:113
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#~ msgid "Configuration out of sync"
+#~ msgstr "設定が同期できていません"
+
+#~ msgid "The configuration has been updated externally."
+#~ msgstr "設定が外部から書き換えられています。"
+
+#~ msgid ""
+#~ "Reloading is required to get the latest data and avoid issues or data "
+#~ "loss."
+#~ msgstr ""
+#~ "最新のデータを取得してデータ損失などの問題を回避するには、再読み込みが必要"
+#~ "です。"
+
+#~ msgid "Reload now"
+#~ msgstr "今すぐ読み込み"
+
+#~ msgid "Confirm Installation"
+#~ msgstr "インストールの確認"
+
+#~ msgid ""
+#~ "If you continue, partitions on your hard disk will be modified according "
+#~ "to the provided installation settings."
+#~ msgstr ""
+#~ "続行すると、お使いのコンピュータのハードディスクにあるパーティションは、こ"
+#~ "こまでのダイアログで設定したとおりに変更されます。"
+
+#~ msgid "Please, cancel and check the settings if you are unsure."
+#~ msgstr ""
+#~ "何か不安な点があれば、キャンセルして設定を確認しておくことをお勧めします。"
+
+#~ msgid "Continue"
+#~ msgstr "続行"
+
+#~ msgid "Not selected yet"
+#~ msgstr "まだ何も選択していません"
+
+#, javascript-format
+#~ msgid "The system will use %s as its default language."
+#~ msgstr "システムは %s を既定の言語として使用します。"
+
+#~ msgid ""
+#~ "These are the most relevant installation settings. Feel free to browse "
+#~ "the sections in the menu for further details."
+#~ msgstr ""
+#~ "インストールにあたっての主要な項目のみを表示しています。さらに詳しい設定を"
+#~ "確認したい場合は、それぞれのセクションを開いてください。"
+
+#~ msgid "The installation will take"
+#~ msgstr "インストールで占有する容量は"
+
+#, javascript-format
+#~ msgid "The installation will take %s including:"
+#~ msgstr "下記の構成をインストールするには %s が必要です:"
+
+#, javascript-format
+#~ msgid "Install using device %s shrinking existing partitions as needed."
+#~ msgstr ""
+#~ "デバイス %s の既存パーティションを必要に応じて縮小してインストールします。"
+
+#, javascript-format
+#~ msgid "Install using device %s without modifying existing partitions."
+#~ msgstr "デバイス %s の既存パーティションを変更せずにインストールします。"
+
+#, javascript-format
+#~ msgid "Install using device %s and deleting all its content."
+#~ msgstr "デバイス %s の内容を全て削除してインストールします。"
+
+#, javascript-format
+#~ msgid ""
+#~ "Install using device %s with a custom strategy to find the needed space."
+#~ msgstr ""
+#~ "必要な領域検出に際して独自の方式を利用してデバイス %s にインストールしま"
+#~ "す。"
+
+#~ msgid ""
+#~ "Install using several devices shrinking existing partitions as needed."
+#~ msgstr ""
+#~ "複数のデバイスの既存パーティションを必要に応じて縮小してインストールしま"
+#~ "す。"
+
+#~ msgid "Install using several devices without modifying existing partitions."
+#~ msgstr "複数のデバイスの既存パーティションを変更せずにインストールします。"
+
+#~ msgid "Install using several devices and deleting all its content."
+#~ msgstr "複数のデバイスの内容を全て削除してインストールします。"
+
+#~ msgid ""
+#~ "Install using several devices with a custom strategy to find the needed "
+#~ "space."
+#~ msgstr ""
+#~ "必要な領域検出に際して独自の方式を利用して複数のデバイスにインストールしま"
+#~ "す。"
+
+#~ msgid "Extensions"
+#~ msgstr "拡張"
+
+#~ msgid "Reloading data, please wait..."
+#~ msgstr "データを再読み込みしています。しばらくお待ちください..."
+
+#~ msgid "The content may be deleted"
+#~ msgstr "内容が削除されるかもしれません"
 
 #~ msgid "Other options toggle"
 #~ msgstr "その他のオプションの切り替え"
@@ -4351,10 +4607,6 @@ msgstr "ZFCP"
 
 #~ msgid "Maximum size value"
 #~ msgstr "最大サイズの値"
-
-#, c-format
-#~ msgid "Keep size of %s"
-#~ msgstr "%s のサイズを維持"
 
 #~ msgid "The partition is created exactly with the given size"
 #~ msgstr "指定したサイズでパーティションを作成します"
@@ -4671,10 +4923,6 @@ msgstr "ZFCP"
 #~ msgstr "%1$s ルートボリューム (%2$s)"
 
 #, c-format
-#~ msgid "%1$s %2$s at %3$s (%4$s)"
-#~ msgstr "%3$s (%4$s) に %1$s %2$s を配置"
-
-#, c-format
 #~ msgid "%1$s %2$s volume (%3$s)"
 #~ msgstr "%1$s %2$s ボリューム (%3$s)"
 
@@ -4847,9 +5095,6 @@ msgstr "ZFCP"
 #~ msgid "The final size depends on %s."
 #~ msgstr "最終的なサイズは %s に依存します。"
 
-#~ msgid " and "
-#~ msgstr " および "
-
 #~ msgid "Automatically calculated size according to the selected product."
 #~ msgstr "選択した製品に合わせてサイズを自動計算します。"
 
@@ -4879,9 +5124,6 @@ msgstr "ZFCP"
 
 #~ msgid "Unit for the maximum size"
 #~ msgstr "最大サイズの単位"
-
-#~ msgid "Auto"
-#~ msgstr "自動"
 
 #~ msgid "Fixed"
 #~ msgstr "固定値"
@@ -5077,9 +5319,6 @@ msgstr "ZFCP"
 #~ msgid "Show installer options"
 #~ msgstr "インストーラのオプションを表示"
 
-#~ msgid "More about this"
-#~ msgstr "こちらについて詳しく"
-
 #~ msgid "Collecting logs..."
 #~ msgstr "ログを収集しています..."
 
@@ -5093,9 +5332,6 @@ msgstr "ZFCP"
 #~ msgid "Something went wrong while collecting logs. Please, try again."
 #~ msgstr "ログの収集時に何らかの問題が発生しました。再試行してみてください。"
 
-#~ msgid "Installation"
-#~ msgstr "インストール"
-
 #~ msgid "Please, try to read the zFCP devices again."
 #~ msgstr "zFCP デバイスの再読み込みを試してみてください。"
 
@@ -5107,12 +5343,6 @@ msgstr "ZFCP"
 
 #~ msgid "Agama"
 #~ msgstr "Agama"
-
-#~ msgid "Waiting for progress status..."
-#~ msgstr "進捗状態を待機しています..."
-
-#~ msgid "Proposal"
-#~ msgstr "提案"
 
 #, c-format
 #~ msgid "Register %s"
@@ -5278,9 +5508,6 @@ msgstr "ZFCP"
 #~ msgid "No network devices detected"
 #~ msgstr "ネットワークデバイスが見つかりませんでした"
 
-#~ msgid "Installation Summary"
-#~ msgstr "インストールの概要"
-
 #~ msgid "Product"
 #~ msgstr "製品"
 
@@ -5376,11 +5603,6 @@ msgstr "ZFCP"
 #~ msgid "Cockpit server"
 #~ msgstr "Cockpit サーバ"
 
-#, c-format
-#~ msgid "%d connection set:"
-#~ msgid_plural "%d connections set:"
-#~ msgstr[0] "%d 個の接続が設定されています:"
-
 #~ msgid "automatically selected"
 #~ msgstr "自動選択済み"
 
@@ -5446,9 +5668,6 @@ msgstr "ZFCP"
 #~ msgstr ""
 #~ "システムのボリュームグループ向けの設定です。全てのファイルシステムは、シス"
 #~ "テムのボリュームグループにある論理ボリューム内に作成されます。"
-
-#~ msgid "Configure the LVM settings"
-#~ msgstr "LVM 設定"
 
 #~ msgid "encrypted"
 #~ msgstr "暗号化"

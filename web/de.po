@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-02 10:56+0000\n"
+"POT-Creation-Date: 2026-01-10 17:02+0000\n"
 "PO-Revision-Date: 2026-01-10 23:04+0000\n"
 "Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
-"Language-Team: German <https://l10n.opensuse.org/projects/agama/agama-web/"
-"de/>\n"
+"Language-Team: German <https://l10n.opensuse.org/projects/agama/agama-web/de/"
+">\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,69 +19,48 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.15.1\n"
 
-#: src/components/core/AlertOutOfSync.tsx:71
-msgid "Configuration out of sync"
-msgstr "Konfiguration nicht synchronisiert"
-
-#: src/components/core/AlertOutOfSync.tsx:80
-msgid "The configuration has been updated externally."
-msgstr "Die Konfiguration wurde extern aktualisiert."
-
-#: src/components/core/AlertOutOfSync.tsx:82
-msgid ""
-"Reloading is required to get the latest data and avoid issues or data loss."
-msgstr ""
-"Ein Neuladen ist erforderlich, um die neuesten Daten abzurufen und Probleme "
-"oder Datenverluste zu vermeiden."
-
-#: src/components/core/AlertOutOfSync.tsx:85
-msgid "Reload now"
-msgstr "Jetzt neu laden"
-
-#: src/components/core/ChangeProductOption.tsx:45
+#: src/components/core/ChangeProductOption.tsx:46
 msgid "Change product"
 msgstr "Produkt ändern"
 
-#: src/components/core/InstallButton.tsx:45
-msgid "Confirm Installation"
-msgstr "Installation bestätigen"
+#. TRANSLATORS: title shown in the confirmation page before
+#. starting the installation. %s will be replaced with the product name.
+#: src/components/core/ConfirmPage.tsx:52
+#, fuzzy, javascript-format
+msgid "Start %s installation?"
+msgstr "Konfiguration einer Basisinstallation beginnen"
 
-#: src/components/core/InstallButton.tsx:49
+#: src/components/core/ConfirmPage.tsx:72
 msgid ""
-"If you continue, partitions on your hard disk will be modified according to "
-"the provided installation settings."
+"Review the summary below. If anything seems incorrect or you have doubts, go "
+"back and adjust the settings before proceeding."
 msgstr ""
-"Wenn Sie fortfahren, werden die Partitionen auf Ihrer Festplatte "
-"entsprechend den vorgegebenen Installationseinstellungen geändert."
 
-#: src/components/core/InstallButton.tsx:53
-msgid "Please, cancel and check the settings if you are unsure."
+#: src/components/core/ConfirmPage.tsx:93
+msgid "Install now with potential data loss"
 msgstr ""
-"Falls Sie unsicher sind, brechen Sie den Vorgang ab und überprüfen Sie die "
-"Einstellungen."
 
-#. TRANSLATORS: button label
-#: src/components/core/InstallButton.tsx:58
-msgid "Continue"
-msgstr "Fortsetzen"
+#: src/components/core/ConfirmPage.tsx:94
+#, fuzzy
+msgid "Install now"
+msgstr "Installieren"
 
-#. TRANSLATORS: button label
-#: src/components/core/InstallButton.tsx:62 src/components/core/Page.tsx:247
-#: src/components/core/Popup.tsx:140
-#: src/components/network/BindingSettingsForm.tsx:228
-#: src/components/network/IpSettingsForm.tsx:219
-#: src/components/network/WifiConnectionForm.tsx:189
-#: src/components/product/ProductSelectionPage.tsx:99
-msgid "Cancel"
-msgstr "Abbrechen"
+#: src/components/core/ConfirmPage.tsx:97
+msgid "Go back"
+msgstr ""
+
+#: src/components/core/Details.tsx:92
+#, fuzzy
+msgid "Waiting for proposal"
+msgstr "Warten auf den Fortschrittsstatus ..."
 
 #. TRANSLATORS: The install button label
-#: src/components/core/InstallButton.tsx:97
+#: src/components/core/InstallButton.tsx:56
 msgid "Install"
 msgstr "Installieren"
 
 #. TRANSLATORS: Text included with the install button when there are issues
-#: src/components/core/InstallButton.tsx:99
+#: src/components/core/InstallButton.tsx:58
 msgid "Not possible with the current setup. Click to know more."
 msgstr ""
 "Mit dem derzeitigen System ist das nicht möglich. Klicken Sie, um mehr zu "
@@ -112,6 +91,7 @@ msgstr ""
 "verwendet wurde, entfernen Sie es vor dem nächsten Start."
 
 #: src/components/core/InstallationFinished.tsx:61
+#: src/components/storage/PotentialDataLossAlert.tsx:52
 msgid "Hide details"
 msgstr "Details ausblenden"
 
@@ -131,29 +111,29 @@ msgstr ""
 "neuen Systems. Damit dies funktioniert, muss der Rechner direkt mit dem "
 "neuen Bootloader booten."
 
-#: src/components/core/InstallationFinished.tsx:124
+#: src/components/core/InstallationFinished.tsx:123
 msgid "Congratulations!"
 msgstr "Gratulation!"
 
-#: src/components/core/InstallationFinished.tsx:130
+#: src/components/core/InstallationFinished.tsx:129
 msgid "The installation on your machine is complete."
 msgstr "Die Installation auf Ihrem Rechner ist abgeschlossen."
 
-#: src/components/core/InstallationFinished.tsx:134
+#: src/components/core/InstallationFinished.tsx:133
 msgid "At this point you can power off the machine."
 msgstr "Sie können den Rechner jetzt ausschalten."
 
-#: src/components/core/InstallationFinished.tsx:135
+#: src/components/core/InstallationFinished.tsx:134
 msgid "At this point you can reboot the machine to log in to the new system."
 msgstr ""
 "Sie können den Rechner jetzt neu starten, um sich bei dem neuen System "
 "anzumelden."
 
-#: src/components/core/InstallationFinished.tsx:142
+#: src/components/core/InstallationFinished.tsx:141
 msgid "Finish"
 msgstr "Fertigstellen"
 
-#: src/components/core/InstallationFinished.tsx:142
+#: src/components/core/InstallationFinished.tsx:141
 msgid "Reboot"
 msgstr "Neustart"
 
@@ -161,8 +141,8 @@ msgstr "Neustart"
 msgid "Installing the system, please wait..."
 msgstr "Das System wird installiert, bitte warten ..."
 
-#: src/components/core/InstallerOptions.tsx:74
-#: src/components/l10n/L10nPage.tsx:81
+#: src/components/core/InstallerOptions.tsx:73
+#: src/components/l10n/L10nPage.tsx:90
 msgid "Language"
 msgstr "Sprache"
 
@@ -210,10 +190,10 @@ msgstr "Dieselben Einstellungen für das ausgewählte Produkt verwenden"
 #: src/components/core/InstallerOptions.tsx:391
 #: src/components/core/InstallerOptions.tsx:405
 #: src/components/core/InstallerOptions.tsx:448
-#: src/components/core/Page.tsx:279
+#: src/components/core/Page.tsx:281
 #: src/components/storage/dasd/FormatActionHandler.tsx:73
 #: src/components/storage/dasd/FormatActionHandler.tsx:100
-#: src/components/system/HostnamePage.tsx:132
+#: src/components/system/HostnamePage.tsx:130
 msgid "Accept"
 msgstr "Annehmen"
 
@@ -277,28 +257,41 @@ msgstr ""
 msgid "Review and fix"
 msgstr "Überprüfen und korrigieren"
 
-#: src/components/core/IssuesDrawer.tsx:49
+#: src/components/core/IssuesDrawer.tsx:47
 #: src/components/users/UsersPage.tsx:36 src/routes/users.tsx:34
 msgid "Authentication"
 msgstr "Authentifizierung"
 
-#: src/components/core/IssuesDrawer.tsx:50
-#: src/components/overview/StorageSection.tsx:112
-#: src/components/storage/ProposalPage.tsx:353 src/routes/storage.tsx:46
+#: src/components/core/IssuesDrawer.tsx:48
+#: src/components/core/ProgressStatusMonitor.tsx:41
+#: src/components/storage/ProposalPage.tsx:335
+#: src/components/storage/StorageDetailsItem.tsx:142 src/routes/storage.tsx:46
 msgid "Storage"
 msgstr "Speicherung"
 
-#: src/components/core/IssuesDrawer.tsx:51
-#: src/components/overview/SoftwareSection.tsx:69
-#: src/components/software/SoftwarePage.tsx:160 src/routes/software.tsx:34
+#: src/components/core/IssuesDrawer.tsx:49
+#: src/components/core/ProgressStatusMonitor.tsx:40
+#: src/components/software/SoftwareDetailsItem.tsx:76
+#: src/components/software/SoftwarePage.tsx:169 src/routes/software.tsx:34
 msgid "Software"
 msgstr "Software"
 
-#: src/components/core/IssuesDrawer.tsx:52
-#: src/components/product/ProductRegistrationPage.tsx:441
+#: src/components/core/IssuesDrawer.tsx:50
+#: src/components/product/ProductRegistrationPage.tsx:440
 #: src/routes/registration.tsx:31
 msgid "Registration"
 msgstr "Registrierung"
+
+#: src/components/core/IssuesDrawer.tsx:51
+#: src/components/core/ProgressStatusMonitor.tsx:43
+#: src/components/l10n/L10nPage.tsx:83 src/routes/l10n.tsx:32
+msgid "Localization"
+msgstr "Lokalisierung"
+
+#: src/components/core/IssuesDrawer.tsx:52
+#: src/components/storage/ISCSIPage.tsx:34 src/routes/storage.tsx:99
+msgid "iSCSI"
+msgstr "iSCSI"
 
 #: src/components/core/IssuesDrawer.tsx:59
 msgid "Pre-installation checks"
@@ -345,8 +338,8 @@ msgstr "Anmeldeformular"
 #. TRANSLATORS: field label
 #: src/components/core/LoginPage.tsx:107
 #: src/components/core/PasswordAndConfirmationInput.tsx:96
-#: src/components/network/WifiConnectionForm.tsx:178
-#: src/components/questions/QuestionWithPassword.tsx:64
+#: src/components/network/WifiConnectionForm.tsx:177
+#: src/components/questions/QuestionWithPassword.tsx:63
 #: src/components/storage/iscsi/AuthFields.jsx:87
 #: src/components/storage/iscsi/AuthFields.jsx:91
 #: src/components/users/RootUser.tsx:64
@@ -365,12 +358,20 @@ msgstr "Bitte geben Sie das Passwort für die Anmeldung am System an."
 msgid "Log in"
 msgstr "Anmelden"
 
-#: src/components/core/MenuButton.tsx:78 src/components/core/Page.tsx:268
+#: src/components/core/MenuButton.tsx:78 src/components/core/Page.tsx:270
 #: src/components/storage/ISCSIPage.tsx:48
 #: src/components/storage/dasd/DASDPage.tsx:49
 #: src/components/storage/zfcp/ZFCPPage.tsx:198
 msgid "Back"
 msgstr "Zurück"
+
+#: src/components/core/Page.tsx:249 src/components/core/Popup.tsx:140
+#: src/components/network/BindingSettingsForm.tsx:230
+#: src/components/network/IpSettingsForm.tsx:219
+#: src/components/network/WifiConnectionForm.tsx:188
+#: src/components/product/ProductSelectionPage.tsx:107
+msgid "Cancel"
+msgstr "Abbrechen"
 
 #: src/components/core/PasswordAndConfirmationInput.tsx:72
 msgid "Passwords do not match"
@@ -408,6 +409,17 @@ msgstr "Bestätigen"
 msgid "Loading data..."
 msgstr "Daten werden gelesen ..."
 
+#: src/components/core/ProgressBackdrop.tsx:112
+#: src/components/core/ProgressStatusMonitor.tsx:73
+#, fuzzy, javascript-format
+msgid "(step %s of %s)"
+msgstr "Größe von %s beibehalten"
+
+#: src/components/core/ProgressBackdrop.tsx:115
+#, fuzzy
+msgid "Refreshing data..."
+msgstr "Daten werden gelesen ..."
+
 #: src/components/core/ProgressReport.tsx:56
 #: src/components/storage/Progress.tsx:56
 msgid "Pending"
@@ -422,6 +434,21 @@ msgstr "In Bearbeitung"
 msgid "Finished"
 msgstr "Fertiggestellt"
 
+#: src/components/core/ProgressStatusMonitor.tsx:42
+#: src/components/network/NetworkDetailsItem.tsx:146
+#: src/components/network/NetworkPage.tsx:52
+#: src/components/network/WifiConnectionDetails.tsx:45
+#: src/routes/network.tsx:38
+msgid "Network"
+msgstr "Netzwerk"
+
+#: src/components/core/ProgressStatusMonitor.tsx:52
+#, fuzzy, javascript-format
+msgid "%s task active"
+msgid_plural "%s tasks active"
+msgstr[0] "aktiv"
+msgstr[1] "aktiv"
+
 #: src/components/core/ResourceNotFound.tsx:42
 msgid "Resource not found or lost"
 msgstr "Ressource nicht gefunden oder verloren"
@@ -431,7 +458,7 @@ msgid "It doesn't exist or can't be reached."
 msgstr "Sie existiert nicht oder ist nicht erreichbar."
 
 #: src/components/core/RowActions.tsx:71
-#: src/components/storage/ProposalResultSection.tsx:134
+#: src/components/storage/ProposalResultSection.tsx:138
 msgid "Actions"
 msgstr "Aktionen"
 
@@ -439,15 +466,15 @@ msgstr "Aktionen"
 msgid "Add"
 msgstr "Hinzufügen"
 
-#: src/components/core/SelectableDataTable.tsx:373
+#: src/components/core/SelectableDataTable.tsx:372
 msgid "Row expansion"
 msgstr "Zeilenausdehnung"
 
-#: src/components/core/SelectableDataTable.tsx:374
+#: src/components/core/SelectableDataTable.tsx:373
 msgid "Row selection"
 msgstr "Zeilenauswahl"
 
-#: src/components/core/SelectableDataTable.tsx:385
+#: src/components/core/SelectableDataTable.tsx:384
 msgid "Row actions"
 msgstr "Zeilenaktionen"
 
@@ -471,29 +498,59 @@ msgstr "Zum Inhalt springen"
 msgid "More actions"
 msgstr "Weitere Aktionen"
 
-#: src/components/l10n/KeyboardSelection.tsx:41
+#: src/components/l10n/KeyboardSelection.tsx:45
 msgid "Filter by description or keymap code"
 msgstr "Nach Beschreibung oder Tastenzuordnungscode filtern"
 
-#: src/components/l10n/KeyboardSelection.tsx:69
+#: src/components/l10n/KeyboardSelection.tsx:74
 msgid "None of the keymaps match the filter."
 msgstr "Keine der Tastenzuordnungen entspricht dem Filter."
 
-#: src/components/l10n/KeyboardSelection.tsx:75
+#: src/components/l10n/KeyboardSelection.tsx:80
 msgid "Keyboard selection"
 msgstr "Tastaturauswahl"
 
-#: src/components/l10n/KeyboardSelection.tsx:86
-#: src/components/l10n/L10nPage.tsx:84 src/components/l10n/L10nPage.tsx:98
-#: src/components/l10n/L10nPage.tsx:110
-#: src/components/l10n/LocaleSelection.tsx:86
-#: src/components/l10n/TimezoneSelection.tsx:134
-#: src/components/product/ProductSelectionPage.tsx:204
-#: src/components/software/SoftwarePatternsSelection.tsx:168
+#: src/components/l10n/KeyboardSelection.tsx:91
+#: src/components/l10n/L10nPage.tsx:93 src/components/l10n/L10nPage.tsx:107
+#: src/components/l10n/L10nPage.tsx:119
+#: src/components/l10n/LocaleSelection.tsx:88
+#: src/components/l10n/TimezoneSelection.tsx:136
+#: src/components/product/ProductSelectionPage.tsx:222
+#: src/components/software/SoftwarePatternsSelection.tsx:176
 msgid "Select"
 msgstr "Auswählen"
 
-#: src/components/l10n/L10nPage.tsx:37
+#. TRANSLATORS: %1$s is a description of the device (eg. "Encrypted XFS RAID") and %2$s is
+#. the RAID level (eg. "RAID0")
+#. TRANSLATORS: %1$s is an already formatted mount path (eg. "/"),
+#. %2$s is a size description (eg. at least 10 GiB)
+#. TRANSLATORS: %1$s is a filesystem type description (eg. "Btrfs with snapshots"),
+#. %2$s is a description of the size or the size limits (eg. "at least 10 GiB")
+#. TRANSLATORS: Summary of the selected language and territory.
+#. %1$s is the language name (e.g. "Spanish").
+#. %2$s is the territory/region name (e.g. "Spain").
+#: src/components/l10n/L10nDetailsItem.tsx:45
+#: src/components/storage/device-utils.tsx:94
+#: src/components/storage/utils/partition.tsx:41
+#: src/components/storage/utils/partition.tsx:85
+#, javascript-format
+msgid "%1$s (%2$s)"
+msgstr "%1$s (%2$s)"
+
+#: src/components/l10n/L10nDetailsItem.tsx:49
+#, fuzzy
+msgid "Language and region"
+msgstr "Sprache und Tastatur"
+
+#. TRANSLATORS: Additional details shown under the language selection.
+#. %1$s is the keyboard layout name (e.g. "Spanish").
+#. %2$s is the time zone identifier (e.g. "Atlantic/Canary").
+#: src/components/l10n/L10nDetailsItem.tsx:63
+#, javascript-format
+msgid "%1$s keyboard - %2$s timezone"
+msgstr ""
+
+#: src/components/l10n/L10nPage.tsx:38
 msgid ""
 "These are the settings for the product to install. The installer language "
 "and keyboard layout can be adjusted via the [settings panel] accessible from "
@@ -503,7 +560,7 @@ msgstr ""
 "des Installationsprogramms und die Tastaturbelegung können über das "
 "[settings panel] in der oberen Leiste angepasst werden."
 
-#: src/components/l10n/L10nPage.tsx:43
+#: src/components/l10n/L10nPage.tsx:44
 msgid ""
 "These are the settings for the product to install. The installer language "
 "can be adjusted via the [settings panel] accessible from the top bar."
@@ -512,67 +569,63 @@ msgstr ""
 "des Installationsprogramms kann über das [settings panel] in der oberen "
 "Leiste angepasst werden."
 
-#: src/components/l10n/L10nPage.tsx:74
-#: src/components/overview/L10nSection.tsx:37 src/routes/l10n.tsx:32
-msgid "Localization"
-msgstr "Lokalisierung"
-
-#: src/components/l10n/L10nPage.tsx:84 src/components/l10n/L10nPage.tsx:98
-#: src/components/l10n/L10nPage.tsx:110
-#: src/components/storage/BootSection.tsx:94
-#: src/components/storage/EncryptionSection.tsx:59
+#: src/components/l10n/L10nPage.tsx:93 src/components/l10n/L10nPage.tsx:107
+#: src/components/l10n/L10nPage.tsx:119
+#: src/components/storage/BootSection.tsx:97
+#: src/components/storage/EncryptionSection.tsx:60
 #: src/components/storage/iscsi/InitiatorForm.tsx:89
 #: src/components/users/FirstUserForm.tsx:235
 #: src/components/users/RootUserForm.tsx:164
 msgid "Change"
 msgstr "Ändern"
 
-#: src/components/l10n/L10nPage.tsx:89 src/components/l10n/L10nPage.tsx:102
-#: src/components/l10n/L10nPage.tsx:115
-msgid "Not selected yet"
-msgstr "Noch nicht ausgewählt"
+#: src/components/l10n/L10nPage.tsx:98 src/components/l10n/L10nPage.tsx:111
+#: src/components/l10n/L10nPage.tsx:124
+#, fuzzy
+msgid "Wrong selection"
+msgstr "Zeilenauswahl"
 
-#: src/components/l10n/L10nPage.tsx:95
+#: src/components/l10n/L10nPage.tsx:104
 msgid "Keyboard"
 msgstr "Tastatur"
 
-#: src/components/l10n/L10nPage.tsx:107
+#: src/components/l10n/L10nPage.tsx:116
 msgid "Time zone"
 msgstr "Zeitzone"
 
-#: src/components/l10n/LocaleSelection.tsx:40
+#: src/components/l10n/LocaleSelection.tsx:42
 msgid "Filter by language, territory or locale code"
 msgstr "Nach Sprache, Gebiet oder Sprachumgebungscode filtern"
 
-#: src/components/l10n/LocaleSelection.tsx:69
+#: src/components/l10n/LocaleSelection.tsx:71
 msgid "None of the locales match the filter."
 msgstr "Keines der Gebietsschemata entspricht dem Filter."
 
-#: src/components/l10n/LocaleSelection.tsx:75
+#: src/components/l10n/LocaleSelection.tsx:77
 msgid "Locale selection"
 msgstr "Gebietsschema-Auswahl"
 
-#: src/components/l10n/TimezoneSelection.tsx:75
+#: src/components/l10n/TimezoneSelection.tsx:77
 msgid "Filter by territory, time zone code or UTC offset"
 msgstr "Nach Gebiet, Zeitzonencode oder UTC-Abweichung filtern"
 
-#: src/components/l10n/TimezoneSelection.tsx:113
+#: src/components/l10n/TimezoneSelection.tsx:115
 msgid "None of the time zones match the filter."
 msgstr "Keine der Zeitzonen entspricht dem Filter."
 
-#: src/components/l10n/TimezoneSelection.tsx:119
+#: src/components/l10n/TimezoneSelection.tsx:121
 msgid " Timezone selection"
 msgstr " Zeitzonenauswahl"
 
-#: src/components/layout/Header.tsx:80
+#: src/components/layout/Header.tsx:81
 msgid "Options toggle"
 msgstr "Optionen umschalten"
 
-#: src/components/layout/Header.tsx:92
+#: src/components/layout/Header.tsx:93
 msgid "Download logs"
 msgstr "Protokolle herunterladen"
 
-#: src/components/layout/Header.tsx:131
+#: src/components/layout/Header.tsx:132
 msgid "Main navigation"
 msgstr "Hauptnavigation"
 
@@ -624,20 +677,20 @@ msgstr "Adressdatenliste"
 #. TRANSLATORS: this simply concatenates the two sentences that describe what is going to happen
 #. with partitions. The first %s corresponds to deleted partitions and the second one to resized
 #. ones.
-#: src/components/network/BindingSettingsForm.tsx:76
-#: src/components/storage/utils/drive.tsx:104
+#: src/components/network/BindingSettingsForm.tsx:78
+#: src/components/storage/utils/drive.tsx:110
 #, javascript-format
 msgid "%s - %s"
 msgstr "%s - %s"
 
 #. TRANSLATORS: The title of the page. %s will be replaced with the connection
 #. name. I.e., "Binding settings for 'Wired connection 1'"
-#: src/components/network/BindingSettingsForm.tsx:158
+#: src/components/network/BindingSettingsForm.tsx:160
 #, javascript-format
 msgid "Binding settings for '%s'"
 msgstr "Verknüpfungseinstellungen für ‚%s‘"
 
-#: src/components/network/BindingSettingsForm.tsx:166
+#: src/components/network/BindingSettingsForm.tsx:168
 msgid ""
 "Choose how the connection should be associated with a network device. This "
 "helps control which device the connection uses."
@@ -645,27 +698,27 @@ msgstr ""
 "Wählen Sie aus, wie die Verbindung mit einem Netzwerkgerät verknüpft werden "
 "soll. Damit lässt sich steuern, welches Gerät die Verbindung verwendet."
 
-#: src/components/network/BindingSettingsForm.tsx:177
+#: src/components/network/BindingSettingsForm.tsx:179
 msgid "Unbound"
 msgstr "Ungebunden"
 
-#: src/components/network/BindingSettingsForm.tsx:180
+#: src/components/network/BindingSettingsForm.tsx:182
 msgid "The connection can be used by any available device."
 msgstr "Die Verbindung kann von jedem verfügbaren Gerät genutzt werden."
 
-#: src/components/network/BindingSettingsForm.tsx:189
+#: src/components/network/BindingSettingsForm.tsx:191
 msgid "Bind to device name"
 msgstr "Mit Gerätenamen verknüpfen"
 
-#: src/components/network/BindingSettingsForm.tsx:193
+#: src/components/network/BindingSettingsForm.tsx:195
 msgid "Choose device to bind by name"
 msgstr "Zu verknüpfendes Gerät nach Namen auswählen"
 
-#: src/components/network/BindingSettingsForm.tsx:208
+#: src/components/network/BindingSettingsForm.tsx:210
 msgid "Bind to MAC address"
 msgstr "Mit MAC-Adresse verknüpfen"
 
-#: src/components/network/BindingSettingsForm.tsx:212
+#: src/components/network/BindingSettingsForm.tsx:214
 msgid "Choose device to bind by MAC"
 msgstr "Zu verknüpfendes Gerät nach MAC auswählen"
 
@@ -690,11 +743,39 @@ msgstr "Weiteren DNS hinzufügen"
 msgid "DNS"
 msgstr "DNS"
 
-#: src/components/network/InstallationOnlySwitch.tsx:47
+#. TRANSLATORS: Displays both IPv4 and IPv6 addresses with count of
+#. additional IPs (e.g., "192.168.122.237, fe80::5054:ff:fe46:2af9 and 1
+#. more"). %1$s is the IPv4 address, %2$s is the IPv6 address, and %3$d
+#. is the number of remaining IPs. The text wrapped in square brackets []
+#. is displayed as a link. Keep the brackets to ensure the link works
+#. correctly.
+#: src/components/network/FormattedIpsList.tsx:74
+#, fuzzy, javascript-format
+msgid "%1$s, %2$s and [%3$d more]"
+msgstr "%1$s %2$s unter %3$s (%4$s)"
+
+#. TRANSLATORS: Displays a single IP address (either IPv4 or IPv6) with
+#. count of additional IPs (e.g., "192.168.122.237 and [2 more]"). %1$s is
+#. the IP address and %2$d is the number of remaining IPs. The text
+#. wrapped in square brackets [] is displayed as a link. Keep the brackets
+#. to ensure the link works correctly.
+#: src/components/network/FormattedIpsList.tsx:82
+#, fuzzy, javascript-format
+msgid "%1$s and [%2$d more]"
+msgstr "%1$s bei %2$s"
+
+#. TRANSLATORS: Displays first IPv4 and IPv6 when both are present.
+#. %1$s is the first IPv4 and %2$s is the first IPv6.
+#: src/components/network/FormattedIpsList.tsx:102
+#, fuzzy, javascript-format
+msgid "%1$s and %2$s"
+msgstr "%1$s bei %2$s"
+
+#: src/components/network/InstallationOnlySwitch.tsx:53
 msgid "Use for installation only"
 msgstr "Nur für die Installation verwenden"
 
-#: src/components/network/InstallationOnlySwitch.tsx:49
+#: src/components/network/InstallationOnlySwitch.tsx:55
 msgid ""
 "The connection will be used only during installation and not available in "
 "the installed system."
@@ -707,7 +788,7 @@ msgid "Ip prefix or netmask"
 msgstr "IP-Präfix oder Netzmaske"
 
 #. TRANSLATORS: error message
-#: src/components/network/IpSettingsForm.tsx:105
+#: src/components/network/IpSettingsForm.tsx:106
 msgid "At least one address must be provided for selected mode"
 msgstr ""
 "Für den ausgewählten Modus muss mindestens eine Adresse angegeben werden"
@@ -718,7 +799,7 @@ msgid "Edit connection %s"
 msgstr "Verbindung %s bearbeiten"
 
 #: src/components/network/IpSettingsForm.tsx:159
-#: src/components/storage/EncryptionSettingsPage.tsx:111
+#: src/components/storage/EncryptionSettingsPage.tsx:112
 #: src/components/storage/iscsi/DiscoverForm.tsx:98
 #: src/components/storage/iscsi/LoginForm.jsx:71
 #: src/components/storage/zfcp/ZFCPDiskForm.tsx:112
@@ -741,7 +822,9 @@ msgid "Automatic (DHCP)"
 msgstr "Automatisch (DHCP)"
 
 #. TRANSLATORS: manual network configuration mode with a static IP address
+#. TRANSLATORS: Network summary title when using manual/static IP configuration
 #: src/components/network/IpSettingsForm.tsx:182
+#: src/components/network/NetworkDetailsItem.tsx:128
 #: src/components/storage/SizeModeSelect.tsx:191
 #: src/components/storage/SizeModeSelect.tsx:199
 #: src/components/storage/iscsi/NodeStartupOptions.js:26
@@ -761,6 +844,87 @@ msgstr "Gateway"
 msgid "Gateway can be defined only in 'Manual' mode"
 msgstr "Gateway kann nur im Modus ‚Manuell‘ definiert werden"
 
+#. TRANSLATORS: Displays two IP addresses. E.g., "192.168.1.1 and 192.168.1.2"
+#. %s will be replaced by IP addresses
+#: src/components/network/NetworkDetailsItem.tsx:61
+#, fuzzy, javascript-format
+msgid "%s and %s"
+msgstr " und "
+
+#. TRANSLATORS: IPs summary when there are more than 2 static IP addresses.
+#. E.g., "192.168.1.1 and 2 others"
+#. %s is replaced by an IP address (e.g., "192.168.1.1")
+#. %d is replaced by the count of remaining IPs (e.g., "2")
+#: src/components/network/NetworkDetailsItem.tsx:66
+#, javascript-format
+msgid "%s and %d others"
+msgstr ""
+
+#. TRANSLATORS: Description shown when network connections are configured
+#. only for installation and won't be available in the installed system
+#: src/components/network/NetworkDetailsItem.tsx:75
+#, fuzzy
+msgid "System will have no network connections"
+msgstr ""
+"Das installierte System verfügt möglicherweise nicht über "
+"Netzwerkverbindungen"
+
+#. TRANSLATORS: Summary for multiple manual network connections. E.g.,
+#. "Using 3 connections with 192.168.1.1 and 2 others"
+#. %d is replaced by the number of connections (e.g., "3")
+#. %s is replaced by IP address summary (e.g., "192.168.1.1 and 2 others")
+#. TRANSLATORS: Summary for multiple connections mixing automatic
+#. (DHCP) and manual configuration. E.g., "Using 2 connections with DHCP
+#. and 192.168.1.1"
+#. %d is replaced by the number of connections (e.g., "2")
+#. %s is replaced by configuration summary (e.g., "DHCP and 192.168.1.1")
+#. Full example:
+#: src/components/network/NetworkDetailsItem.tsx:83
+#: src/components/network/NetworkDetailsItem.tsx:99
+#, fuzzy, javascript-format
+msgid "Using %d connections with %s"
+msgstr "%d Verbindung festgelegt:"
+
+#: src/components/network/NetworkDetailsItem.tsx:90
+#, fuzzy, javascript-format
+msgid "DHCP and %s"
+msgstr " und "
+
+#: src/components/network/NetworkDetailsItem.tsx:90
+#, javascript-format
+msgid "DHCP, %s"
+msgstr ""
+
+#: src/components/network/NetworkDetailsItem.tsx:105
+#, fuzzy, javascript-format
+msgid "Configured with %d connection"
+msgid_plural "Configured with %d connections"
+msgstr[0] "LVM-Einstellungen konfigurieren"
+msgstr[1] "LVM-Einstellungen konfigurieren"
+
+#. TRANSLATORS: Network summary title when no network has been configured
+#: src/components/network/NetworkDetailsItem.tsx:118
+#, fuzzy
+msgid "Not configured"
+msgstr "Noch nicht konfiguriert"
+
+#. TRANSLATORS: Network summary title when connections are set up only for
+#. installation and won't persist in the installed system
+#: src/components/network/NetworkDetailsItem.tsx:121
+#, fuzzy
+msgid "Installation only"
+msgstr "Installation"
+
+#. TRANSLATORS: Network summary title when using both automatic (DHCP) and manual configuration
+#: src/components/network/NetworkDetailsItem.tsx:124
+msgid "Auto and manual"
+msgstr ""
+
+#. TRANSLATORS: Network summary title when using automatic configuration (DHCP)
+#: src/components/network/NetworkDetailsItem.tsx:126
+msgid "Auto"
+msgstr "Automatisch"
+
 #: src/components/network/NetworkPage.tsx:34
 msgid "Wi-Fi not supported"
 msgstr "Kein Wi-Fi unterstützt"
@@ -772,12 +936,6 @@ msgid ""
 msgstr ""
 "Das System unterstützt keine WiFi-Verbindungen, wahrscheinlich wegen "
 "fehlender oder deaktivierter Hardware."
-
-#: src/components/network/NetworkPage.tsx:52
-#: src/components/network/WifiConnectionDetails.tsx:45
-#: src/routes/network.tsx:38
-msgid "Network"
-msgstr "Netzwerk"
 
 #: src/components/network/NetworkPage.tsx:60
 #: src/components/network/NetworkPage.tsx:61
@@ -830,23 +988,22 @@ msgid "Status"
 msgstr "Status"
 
 #: src/components/network/WifiConnectionDetails.tsx:60
-#: src/components/network/WifiConnectionForm.tsx:154
-#: src/components/network/WifiConnectionForm.tsx:157
+#: src/components/network/WifiConnectionForm.tsx:153
+#: src/components/network/WifiConnectionForm.tsx:156
 msgid "Security"
 msgstr "Sicherheit"
 
 #. TRANSLATORS: table header for a DASD devices table
 #: src/components/network/WifiConnectionDetails.tsx:72
-#: src/components/storage/DeviceSelectorModal.tsx:85
-#: src/components/storage/ProposalResultTable.tsx:132
-#: src/components/storage/SpaceActionsTable.tsx:233
+#: src/components/storage/DeviceSelectorModal.tsx:87
+#: src/components/storage/ProposalResultTable.tsx:134
 #: src/components/storage/dasd/DASDTable.tsx:449
 msgid "Device"
 msgstr "Gerät"
 
 #: src/components/network/WifiConnectionDetails.tsx:73
 #: src/components/network/WifiNetworkPage.tsx:70
-#: src/components/network/WiredConnectionPage.tsx:69
+#: src/components/network/WiredConnectionPage.tsx:68
 msgid "Connection details"
 msgstr "Verbindungsdetails"
 
@@ -867,9 +1024,9 @@ msgid "IP settings"
 msgstr "IP-Einstellungen"
 
 #: src/components/network/WifiConnectionDetails.tsx:100
-#: src/components/storage/FilesystemMenu.tsx:103
-#: src/components/storage/PartitionsSection.tsx:172
-#: src/components/storage/VolumeGroupEditor.tsx:163
+#: src/components/storage/FilesystemMenu.tsx:109
+#: src/components/storage/PartitionsSection.tsx:183
+#: src/components/storage/VolumeGroupEditor.tsx:168
 #: src/components/storage/iscsi/NodesPresenter.jsx:80
 #: src/components/users/FirstUser.tsx:54 src/components/users/RootUser.tsx:57
 msgid "Edit"
@@ -891,20 +1048,20 @@ msgid "Routes"
 msgstr "Routen"
 
 #. TRANSLATORS: WiFi authentication mode
-#: src/components/network/WifiConnectionForm.tsx:43
+#: src/components/network/WifiConnectionForm.tsx:44
 msgid "None"
 msgstr "Kein"
 
 #. TRANSLATORS: WiFi authentication mode
-#: src/components/network/WifiConnectionForm.tsx:45
+#: src/components/network/WifiConnectionForm.tsx:46
 msgid "WPA & WPA2 Personal"
 msgstr "WPA & WPA2 Personal"
 
-#: src/components/network/WifiConnectionForm.tsx:56
+#: src/components/network/WifiConnectionForm.tsx:57
 msgid "Not protected network"
 msgstr "Nicht geschütztes Netzwerk"
 
-#: src/components/network/WifiConnectionForm.tsx:58
+#: src/components/network/WifiConnectionForm.tsx:59
 msgid ""
 "You will connect to a public network without encryption. Your data may not "
 "be secure."
@@ -912,42 +1069,42 @@ msgstr ""
 "Sie stellen eine Verbindung zu einem öffentlichen Netzwerk ohne "
 "Verschlüsselung her. Ihre Daten sind möglicherweise nicht sicher."
 
-#: src/components/network/WifiConnectionForm.tsx:69
+#: src/components/network/WifiConnectionForm.tsx:70
 msgid "Setting up connection"
 msgstr "Verbindung herstellen"
 
-#: src/components/network/WifiConnectionForm.tsx:71
+#: src/components/network/WifiConnectionForm.tsx:72
 msgid "It may take some time."
 msgstr "Es könnte einige Zeit dauern."
 
-#: src/components/network/WifiConnectionForm.tsx:73
+#: src/components/network/WifiConnectionForm.tsx:74
 msgid "Details will appear after the connection is successfully established."
 msgstr ""
 "Nachdem die Verbindung erfolgreich hergestellt wurde, werden Details "
 "angezeigt."
 
 #. TRANSLATORS: %s will be replaced by network ssid.
-#: src/components/network/WifiConnectionForm.tsx:81
+#: src/components/network/WifiConnectionForm.tsx:82
 #, javascript-format
 msgid "Could not connect to %s"
 msgstr "Konnte keine Verbindung zu %s herstellen"
 
-#: src/components/network/WifiConnectionForm.tsx:85
+#: src/components/network/WifiConnectionForm.tsx:86
 msgid "Check the authentication parameters."
 msgstr "Überprüfen Sie die Authentifizierungsparameter."
 
 #. TRANSLATORS: accessible name for the WiFi connection form
-#: src/components/network/WifiConnectionForm.tsx:149
+#: src/components/network/WifiConnectionForm.tsx:148
 msgid "Wi-Fi connection form"
 msgstr "Formular für die WiFi-Verbindung"
 
 #. TRANSLATORS: WiFi password
-#: src/components/network/WifiConnectionForm.tsx:174
+#: src/components/network/WifiConnectionForm.tsx:173
 msgid "WPA Password"
 msgstr "WPA-Passwort"
 
 #. TRANSLATORS: button label, connect to a Wi-Fi network
-#: src/components/network/WifiConnectionForm.tsx:187
+#: src/components/network/WifiConnectionForm.tsx:186
 msgid "Connect"
 msgstr "Verbinden"
 
@@ -1067,7 +1224,7 @@ msgid "Connected devices tabs"
 msgstr "Tabs für verbundene Geräte"
 
 #: src/components/network/WiredConnectionDetails.tsx:203
-#: src/components/storage/ProposalPage.tsx:226
+#: src/components/storage/ProposalPage.tsx:205
 msgid "Settings"
 msgstr "Einstellungen"
 
@@ -1089,109 +1246,36 @@ msgstr "Verbindung nicht gefunden oder verloren"
 msgid "No wired connections were found"
 msgstr "Keine kabelgebundenen Verbindungen gefunden"
 
-#. TRANSLATORS: %s will be replaced by a language name and territory, example:
-#. "English (United States)".
-#: src/components/overview/L10nSection.tsx:33
-#, javascript-format
-msgid "The system will use %s as its default language."
-msgstr "Das System wird %s als Standardsprache verwenden."
+#: src/components/overview/InstallationSummarySection.tsx:36
+#, fuzzy
+msgid "Installation summary"
+msgstr "Zusammenfassung der Installation"
 
-#: src/components/overview/OverviewPage.tsx:35 src/router.tsx:51
+#: src/components/overview/OverviewPage.tsx:43 src/router.tsx:52
 msgid "Overview"
 msgstr "Übersicht"
 
-#: src/components/overview/OverviewPage.tsx:44
-msgid ""
-"These are the most relevant installation settings. Feel free to browse the "
-"sections in the menu for further details."
+#: src/components/overview/SystemInformationSection.tsx:14
+#, fuzzy
+msgid "System information"
+msgstr "Informationen über %s anzeigen"
+
+#: src/components/overview/SystemInformationSection.tsx:17
+#, fuzzy
+msgid "Model"
+msgstr "Modus"
+
+#: src/components/overview/SystemInformationSection.tsx:18
+msgid "CPU"
 msgstr ""
-"Dies sind die wichtigsten Installationseinstellungen. Weitere Einzelheiten "
-"finden Sie in den Abschnitten des Menüs."
 
-#: src/components/overview/SoftwareSection.tsx:41
-msgid "The installation will take"
-msgstr "Die Installation benötigt"
-
-#. TRANSLATORS: %s will be replaced with the installation size, example: "5GiB".
-#: src/components/overview/SoftwareSection.tsx:48
-#, javascript-format
-msgid "The installation will take %s including:"
-msgstr "Die Installation benötigt %s einschließlich:"
-
-#: src/components/overview/StorageSection.tsx:37
-msgid "No device selected yet"
-msgstr "Noch kein Gerät ausgewählt"
-
-#. TRANSLATORS: %s will be replaced by the device name and its size,
-#. example: "/dev/sda, 20 GiB"
-#: src/components/overview/StorageSection.tsx:45
-#, javascript-format
-msgid "Install using device %s shrinking existing partitions as needed."
+#: src/components/overview/SystemInformationSection.tsx:19
+msgid "Memory"
 msgstr ""
-"Installieren unter Verwendung des Geräts %s und Verkleinern vorhandener "
-"Partitionen nach Bedarf."
 
-#. TRANSLATORS: %s will be replaced by the device name and its size,
-#. example: "/dev/sda, 20 GiB"
-#: src/components/overview/StorageSection.tsx:48
-#, javascript-format
-msgid "Install using device %s without modifying existing partitions."
+#: src/components/overview/SystemInformationSection.tsx:22
+msgid "IPs"
 msgstr ""
-"Installieren unter Verwendung des Geräts %s ohne Änderung der vorhandenen "
-"Partitionen."
-
-#. TRANSLATORS: %s will be replaced by the device name and its size,
-#. example: "/dev/sda, 20 GiB"
-#: src/components/overview/StorageSection.tsx:51
-#, javascript-format
-msgid "Install using device %s and deleting all its content."
-msgstr ""
-"Installieren unter Verwendung des Geräts %s und Löschen seines gesamten "
-"Inhalts."
-
-#. TRANSLATORS: %s will be replaced by the device name and its size,
-#. example: "/dev/sda, 20 GiB"
-#: src/components/overview/StorageSection.tsx:54
-#, javascript-format
-msgid ""
-"Install using device %s with a custom strategy to find the needed space."
-msgstr ""
-"Installieren unter Verwendung des Geräts %s mit einer benutzerdefinierten "
-"Strategie, um den benötigten Platz zu finden."
-
-#: src/components/overview/StorageSection.tsx:70
-msgid "Install using several devices shrinking existing partitions as needed."
-msgstr ""
-"Installieren unter Verwendung mehrerer Geräte und Verkleinern vorhandener "
-"Partitionen nach Bedarf."
-
-#: src/components/overview/StorageSection.tsx:71
-msgid "Install using several devices without modifying existing partitions."
-msgstr ""
-"Installieren unter Verwendung mehrerer Geräte ohne Änderung der vorhandenen "
-"Partitionen."
-
-#: src/components/overview/StorageSection.tsx:72
-msgid "Install using several devices and deleting all its content."
-msgstr ""
-"Installieren unter Verwendung mehrerer Geräte und Löschen des gesamten "
-"Inhalts."
-
-#: src/components/overview/StorageSection.tsx:73
-msgid ""
-"Install using several devices with a custom strategy to find the needed "
-"space."
-msgstr ""
-"Installieren unter Verwendung mehrerer Geräte mit einer benutzerdefinierten "
-"Strategie, um den benötigten Platz zu finden."
-
-#: src/components/overview/StorageSection.tsx:100
-msgid "There are no disks available for the installation."
-msgstr "Für die Installation sind keine Festplatten verfügbar."
-
-#: src/components/overview/StorageSection.tsx:101
-msgid "Install using an advanced configuration."
-msgstr "Installieren mit einer erweiterten Konfiguration."
 
 #: src/components/product/LicenseDialog.tsx:40
 #, javascript-format
@@ -1200,105 +1284,105 @@ msgstr "Diese Lizenz ist in %s nicht verfügbar."
 
 #: src/components/product/LicenseDialog.tsx:74
 #: src/components/software/SoftwareConflicts.tsx:294
-#: src/components/software/SoftwarePatternsSelection.tsx:207
+#: src/components/software/SoftwarePatternsSelection.tsx:215
 msgid "Close"
 msgstr "Schließen"
 
-#: src/components/product/ProductRegistrationAlert.tsx:56
+#: src/components/product/ProductRegistrationAlert.tsx:57
 #, javascript-format
 msgid "%s [must be registered]."
 msgstr "%s [muss registriert sein]."
 
-#: src/components/product/ProductRegistrationPage.tsx:64
+#: src/components/product/ProductRegistrationPage.tsx:67
 msgid "Registration server"
 msgstr "Registrierungsserver"
 
-#: src/components/product/ProductRegistrationPage.tsx:65
+#: src/components/product/ProductRegistrationPage.tsx:68
 msgid "Email"
 msgstr "E-Mail"
 
-#: src/components/product/ProductRegistrationPage.tsx:66
+#: src/components/product/ProductRegistrationPage.tsx:69
 msgid "SUSE Customer Center (SCC)"
 msgstr "SUSE Customer Center (SCC)"
 
-#: src/components/product/ProductRegistrationPage.tsx:67
-#: src/components/storage/utils.ts:102
+#: src/components/product/ProductRegistrationPage.tsx:70
+#: src/components/storage/utils.ts:104
 msgid "Custom"
 msgstr "Benutzerdefiniert"
 
-#: src/components/product/ProductRegistrationPage.tsx:79
+#: src/components/product/ProductRegistrationPage.tsx:82
 #, javascript-format
 msgid "%s has been registered with below information."
 msgstr "%s wurde mit den folgenden Informationen registriert."
 
 #. TRANSLATORS: input field label
-#: src/components/product/ProductRegistrationPage.tsx:91
-#: src/components/product/ProductRegistrationPage.tsx:179
+#: src/components/product/ProductRegistrationPage.tsx:94
+#: src/components/product/ProductRegistrationPage.tsx:182
 #: src/components/product/RegistrationExtension.tsx:150
 msgid "Registration code"
 msgstr "Registrierungscode"
 
 #. TRANSLATORS: switch for displaying or hiding the registration code
-#: src/components/product/ProductRegistrationPage.tsx:96
+#: src/components/product/ProductRegistrationPage.tsx:99
 #: src/components/product/RegistrationExtension.tsx:64
 msgid "Hide"
 msgstr "Ausblenden"
 
-#: src/components/product/ProductRegistrationPage.tsx:96
+#: src/components/product/ProductRegistrationPage.tsx:99
 #: src/components/product/RegistrationExtension.tsx:64
 msgid "Show"
 msgstr "Anzeigen"
 
-#: src/components/product/ProductRegistrationPage.tsx:135
+#: src/components/product/ProductRegistrationPage.tsx:138
 msgid "Server options"
 msgstr "Serveroptionen"
 
-#: src/components/product/ProductRegistrationPage.tsx:136
+#: src/components/product/ProductRegistrationPage.tsx:139
 msgid "Register using SUSE server"
 msgstr "Mittels SUSE Server registrieren"
 
-#: src/components/product/ProductRegistrationPage.tsx:141
+#: src/components/product/ProductRegistrationPage.tsx:144
 msgid "Register using a custom registration server"
 msgstr "Mittels eines benutzerdefinierten Registrierungsservers registrieren"
 
-#: src/components/product/ProductRegistrationPage.tsx:159
+#: src/components/product/ProductRegistrationPage.tsx:162
 msgid "Server URL"
 msgstr "Server-URL"
 
 #. TRANSLATORS: %s is replaced by an example URL like https://example.com
-#: src/components/product/ProductRegistrationPage.tsx:162
+#: src/components/product/ProductRegistrationPage.tsx:165
 #, javascript-format
 msgid "Example: %s"
 msgstr "Beispiel: %s"
 
-#: src/components/product/ProductRegistrationPage.tsx:211
+#: src/components/product/ProductRegistrationPage.tsx:214
 msgid "Provide registration code"
 msgstr "Registrierungscode angeben"
 
-#: src/components/product/ProductRegistrationPage.tsx:247
+#: src/components/product/ProductRegistrationPage.tsx:250
 msgid "Provide email address"
 msgstr "E-Mail-Adresse angeben"
 
-#: src/components/product/ProductRegistrationPage.tsx:344
-#: src/components/storage/LvmPage.tsx:169
-#: src/components/system/HostnamePage.tsx:104
+#: src/components/product/ProductRegistrationPage.tsx:339
+#: src/components/storage/LvmPage.tsx:176
+#: src/components/system/HostnamePage.tsx:102
 msgid "Check the following before continuing"
 msgstr "Überprüfen Sie Folgendes, bevor Sie fortfahren"
 
 #. TRANSLATORS: button label
-#: src/components/product/ProductRegistrationPage.tsx:374
+#: src/components/product/ProductRegistrationPage.tsx:369
 #: src/components/product/RegistrationExtension.tsx:161
 #: src/components/product/RegistrationExtension.tsx:176
 msgid "Register"
 msgstr "Registrieren"
 
 #. TRANSLATORS: %s will be replaced with the hostname value
-#: src/components/product/ProductRegistrationPage.tsx:386
+#: src/components/product/ProductRegistrationPage.tsx:382
 #, javascript-format
 msgid "The product will be registered with \"%s\" hostname"
 msgstr "Das Produkt wird unter dem Hostnamen „%s“ registriert"
 
-#: src/components/product/ProductRegistrationPage.tsx:390
+#: src/components/product/ProductRegistrationPage.tsx:386
 #, javascript-format
 msgid ""
 "You cannot change it later. Go to the %s section if you want to modify it "
@@ -1307,16 +1391,12 @@ msgstr ""
 "Sie können ihn später nicht mehr ändern. Gehen Sie zum Abschnitt %s, wenn "
 "Sie ihn vor der Registrierung ändern möchten."
 
-#: src/components/product/ProductRegistrationPage.tsx:395
+#: src/components/product/ProductRegistrationPage.tsx:391
 msgid "hostname"
 msgstr "Hostname"
 
-#: src/components/product/ProductRegistrationPage.tsx:421
-msgid "Extensions"
-msgstr "Erweiterungen"
-
 #. TRANSLATORS: %s will be replaced by a product name. E.g., "openSUSE Tumbleweed"
-#: src/components/product/ProductSelectionPage.tsx:62
+#: src/components/product/ProductSelectionPage.tsx:70
 #, javascript-format
 msgid "%s logo"
 msgstr "%s-Logo"
@@ -1324,16 +1404,16 @@ msgstr "%s-Logo"
 #. TRANSLATORS: Text used for the license acceptance checkbox. %s will be
 #. replaced with the product name and the text in the square brackets [] is
 #. used for the link to show the license, please keep the brackets.
-#: src/components/product/ProductSelectionPage.tsx:139
+#: src/components/product/ProductSelectionPage.tsx:156
 #, javascript-format
 msgid "I have read and accept the [license] for %s"
 msgstr "Ich habe die [Lizenz] für %s gelesen und akzeptiere sie"
 
-#: src/components/product/ProductSelectionPage.tsx:150
+#: src/components/product/ProductSelectionPage.tsx:167
 msgid "Select a product"
 msgstr "Wählen Sie ein Produkt aus"
 
-#: src/components/product/ProductSelectionPage.tsx:151
+#: src/components/product/ProductSelectionPage.tsx:168
 msgid "Available products"
 msgstr "Verfügbare Produkte"
 
@@ -1420,7 +1500,7 @@ msgstr ""
 msgid "Package installation failed"
 msgstr "Paketinstallation fehlgeschlagen"
 
-#: src/components/questions/QuestionWithPassword.tsx:56
+#: src/components/questions/QuestionWithPassword.tsx:55
 msgid "Password Required"
 msgstr "Passwort erforderlich"
 
@@ -1481,9 +1561,10 @@ msgid "No support is planned."
 msgstr "Es ist keine Unterstützung geplant."
 
 #: src/components/questions/UnsupportedAutoYaST.tsx:106
+#, fuzzy
 msgid ""
 "If you want to disable this check, please specify \"inst.ay_check=0\" at "
-"kernel's command-line"
+"kernels command-line"
 msgstr ""
 "Wenn Sie diese Überprüfung deaktivieren möchten, geben Sie bitte "
 "„inst.ay_check=0” in der Befehlszeile des Kernels an"
@@ -1545,24 +1626,43 @@ msgstr ""
 msgid "Software conflicts resolution"
 msgstr "Lösung von Softwarekonflikten"
 
-#: src/components/software/SoftwarePage.tsx:58
+#: src/components/software/SoftwareDetailsItem.tsx:43
+msgid "Required packages"
+msgstr ""
+
+#. TRANSLATORS: %s will be replaced with amount of selected patterns.
+#: src/components/software/SoftwareDetailsItem.tsx:48
+#, javascript-format
+msgid "Required packages and %s pattern"
+msgid_plural "Required packages and %s patterns"
+msgstr[0] ""
+msgstr[1] ""
+
+#. TRANSLATORS: %s will be replaced with a human-readable installation size
+#. (e.g. 5.95 GiB).
+#: src/components/software/SoftwareDetailsItem.tsx:64
+#, javascript-format
+msgid "Needs about %s"
+msgstr ""
+
+#: src/components/software/SoftwarePage.tsx:62
 msgid "No additional software was selected."
 msgstr "Es wurde keine zusätzliche Software ausgewählt."
 
-#: src/components/software/SoftwarePage.tsx:63
+#: src/components/software/SoftwarePage.tsx:67
 msgid "The following software patterns are selected for installation:"
 msgstr "Die folgenden Softwaremuster werden für die Installation ausgewählt:"
 
-#: src/components/software/SoftwarePage.tsx:78
-#: src/components/software/SoftwarePage.tsx:90
+#: src/components/software/SoftwarePage.tsx:82
+#: src/components/software/SoftwarePage.tsx:94
 msgid "Selected patterns"
 msgstr "Ausgewählte Muster"
 
-#: src/components/software/SoftwarePage.tsx:81
+#: src/components/software/SoftwarePage.tsx:85
 msgid "Change selection"
 msgstr "Auswahl ändern"
 
-#: src/components/software/SoftwarePage.tsx:93
+#: src/components/software/SoftwarePage.tsx:97
 msgid ""
 "This product does not allow to select software patterns during installation. "
 "However, you can add additional software once the installation is finished."
@@ -1572,7 +1672,7 @@ msgstr ""
 "hinzufügen, sobald die Installation abgeschlossen ist."
 
 #. TRANSLATORS: error details followed by a "Try again" link
-#: src/components/software/SoftwarePage.tsx:101
+#: src/components/software/SoftwarePage.tsx:105
 msgid ""
 "Some installation repositories could not be loaded. The system cannot be "
 "installed without them."
@@ -1581,43 +1681,43 @@ msgstr ""
 "kann ohne sie nicht installiert werden."
 
 #. TRANSLATORS: title for an error message box, at least one repository could not be loaded
-#: src/components/software/SoftwarePage.tsx:114
+#: src/components/software/SoftwarePage.tsx:118
 msgid "Repository load failed"
 msgstr "Laden des Repositoriums ist fehlgeschlagen"
 
 #. TRANSLATORS: progress message
-#: src/components/software/SoftwarePage.tsx:118
+#: src/components/software/SoftwarePage.tsx:122
 msgid "Loading the installation repositories..."
 msgstr "Installations-Repositorien werden geladen ..."
 
 #. TRANSLATORS: link for retrying failed repository load
-#: src/components/software/SoftwarePage.tsx:125
+#: src/components/software/SoftwarePage.tsx:129
 msgid "Try again"
 msgstr "Erneut versuchen"
 
-#: src/components/software/SoftwarePage.tsx:176
+#: src/components/software/SoftwarePage.tsx:189
 msgid "Used space"
 msgstr "Belegter Speicherplatz"
 
-#: src/components/software/SoftwarePatternsSelection.tsx:99
+#: src/components/software/SoftwarePatternsSelection.tsx:102
 msgid "None of the patterns match the filter."
 msgstr "Keines der Muster entspricht dem Filter."
 
-#: src/components/software/SoftwarePatternsSelection.tsx:164
+#: src/components/software/SoftwarePatternsSelection.tsx:172
 msgid "auto selected"
 msgstr "automatisch ausgewählt"
 
-#: src/components/software/SoftwarePatternsSelection.tsx:168
+#: src/components/software/SoftwarePatternsSelection.tsx:176
 msgid "Unselect"
 msgstr "Abwählen"
 
-#: src/components/software/SoftwarePatternsSelection.tsx:188
+#: src/components/software/SoftwarePatternsSelection.tsx:196
 msgid "Software selection"
 msgstr "Softwareauswahl"
 
 #. TRANSLATORS: search field placeholder text
-#: src/components/software/SoftwarePatternsSelection.tsx:191
-#: src/components/software/SoftwarePatternsSelection.tsx:192
+#: src/components/software/SoftwarePatternsSelection.tsx:199
+#: src/components/software/SoftwarePatternsSelection.tsx:200
 msgid "Filter by pattern title or description"
 msgstr "Nach Mustertitel oder Beschreibung filtern"
 
@@ -1636,22 +1736,22 @@ msgstr ""
 "Dieser Bereich umfasst das Basissystem und die ausgewählten Softwaremuster, "
 "falls vorhanden."
 
-#: src/components/storage/AutoSizeText.tsx:34
+#: src/components/storage/AutoSizeText.tsx:35
 msgid "logical volume"
 msgstr "logisches Volume"
 
-#: src/components/storage/AutoSizeText.tsx:34
+#: src/components/storage/AutoSizeText.tsx:35
 msgid "partition"
 msgstr "Partition"
 
 #. TRANSLATORS: %1$s is a size with units (eg. 3 GiB) and %2$s is a device type (eg. partition)
-#: src/components/storage/AutoSizeText.tsx:47
+#: src/components/storage/AutoSizeText.tsx:48
 #, javascript-format
 msgid "A generic size of %1$s will be used for the new %2$s"
 msgstr "Für die neue %2$s wird eine generische Größe von %1$s verwendet"
 
 #. TRANSLATORS: %1$s and %2$s are sizes with units (eg. 3 GiB) and %3$s is a device type (eg. partition)
-#: src/components/storage/AutoSizeText.tsx:55
+#: src/components/storage/AutoSizeText.tsx:56
 #, javascript-format
 msgid ""
 "A generic size range between %1$s and %2$s will be used for the new %3$s"
@@ -1660,19 +1760,19 @@ msgstr ""
 "verwendet"
 
 #. TRANSLATORS: %1$s is a size with units (eg. 3 GiB) and %1$s is a device type (eg. partition)
-#: src/components/storage/AutoSizeText.tsx:64
+#: src/components/storage/AutoSizeText.tsx:65
 #, javascript-format
 msgid "A generic minimum size of %1$s will be used for the new %2$s"
 msgstr "Eine generische Mindestgröße von %1$s wird für die neue %2$s verwendet"
 
 #. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
-#: src/components/storage/AutoSizeText.tsx:81
+#: src/components/storage/AutoSizeText.tsx:82
 #, javascript-format
 msgid "A %1$s of %2$s will be created for %3$s if possible"
 msgstr "Eine %1$s mit %2$s wird nach Möglichkeit für %3$s erstellt"
 
 #. TRANSLATORS: %1$s is a device type (eg. partition), %2$s and %3$s are sizes with units (10 GiB), and %4$s is a mount path (/home)
-#: src/components/storage/AutoSizeText.tsx:90
+#: src/components/storage/AutoSizeText.tsx:91
 #, javascript-format
 msgid ""
 "A %1$s with a size between %2$s and %3$s will be created for %4$s if possible"
@@ -1681,13 +1781,13 @@ msgstr ""
 "%4$s erstellt"
 
 #. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
-#: src/components/storage/AutoSizeText.tsx:100
+#: src/components/storage/AutoSizeText.tsx:101
 #, javascript-format
 msgid "A %1$s of at least %2$s will be created for %3$s if possible"
 msgstr "Eine %1$s mit mindestens %2$s wird nach Möglichkeit für %3$s erstellt"
 
 #. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
-#: src/components/storage/AutoSizeText.tsx:118
+#: src/components/storage/AutoSizeText.tsx:119
 #, javascript-format
 msgid ""
 "Based on the amount of RAM in the system, a %1$s of %2$s will be planned for "
@@ -1696,7 +1796,7 @@ msgstr ""
 "Basierend auf der Menge an RAM im System wird ein %1$s von %2$s für %3$s "
 "geplant"
 
-#: src/components/storage/AutoSizeText.tsx:128
+#: src/components/storage/AutoSizeText.tsx:129
 #, javascript-format
 msgid ""
 "Based on the amount of RAM in the system, a %1$s with a size between %2$s "
@@ -1706,7 +1806,7 @@ msgstr ""
 "zwischen %2$s und %3$s für %4$s geplant"
 
 #. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
-#: src/components/storage/AutoSizeText.tsx:139
+#: src/components/storage/AutoSizeText.tsx:140
 #, javascript-format
 msgid ""
 "Based on the amount of RAM in the system, a %1$s of at least %2$s will be "
@@ -1715,7 +1815,7 @@ msgstr ""
 "Basierend auf der Menge an RAM im System wird ein %1$s mit mindestens %2$s "
 "für %3$s geplant"
 
-#: src/components/storage/AutoSizeText.tsx:168
+#: src/components/storage/AutoSizeText.tsx:169
 #, javascript-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the amount of RAM in "
@@ -1726,7 +1826,7 @@ msgstr ""
 "im System, der Verwendung von Btrfs-Schnappschüssen und dem Vorhandensein "
 "eines separaten Dateisystems für %2$s."
 
-#: src/components/storage/AutoSizeText.tsx:179
+#: src/components/storage/AutoSizeText.tsx:180
 #, javascript-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the amount of RAM in "
@@ -1737,7 +1837,7 @@ msgstr ""
 "im System, der Verwendung von Btrfs-Schnappschüssen und dem Vorhandensein "
 "von separaten Dateisystemen für %2$s."
 
-#: src/components/storage/AutoSizeText.tsx:189
+#: src/components/storage/AutoSizeText.tsx:190
 #, javascript-format
 msgid ""
 "The size for %s will be dynamically adjusted based on the amount of RAM in "
@@ -1746,7 +1846,7 @@ msgstr ""
 "Die Größe für %s wird dynamisch angepasst, basierend auf der Menge an RAM im "
 "System und der Verwendung von Btrfs-Schnappschüssen."
 
-#: src/components/storage/AutoSizeText.tsx:200
+#: src/components/storage/AutoSizeText.tsx:201
 #, javascript-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the amount of RAM in "
@@ -1755,7 +1855,7 @@ msgstr ""
 "Die Größe für %1$s wird dynamisch angepasst, basierend auf der Menge an RAM "
 "im System und dem Vorhandensein eines separaten Dateisystems für %2$s."
 
-#: src/components/storage/AutoSizeText.tsx:210
+#: src/components/storage/AutoSizeText.tsx:211
 #, javascript-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the amount of RAM in "
@@ -1764,7 +1864,7 @@ msgstr ""
 "Die Größe für %1$s wird dynamisch angepasst, basierend auf der Menge an RAM "
 "im System und dem Vorhandensein von separaten Dateisystemen für %2$s."
 
-#: src/components/storage/AutoSizeText.tsx:222
+#: src/components/storage/AutoSizeText.tsx:223
 #, javascript-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the usage of Btrfs "
@@ -1774,7 +1874,7 @@ msgstr ""
 "von Btrfs-Schnappschüssen und dem Vorhandensein eines separaten Dateisystems "
 "für %2$s."
 
-#: src/components/storage/AutoSizeText.tsx:233
+#: src/components/storage/AutoSizeText.tsx:234
 #, javascript-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the usage of Btrfs "
@@ -1785,7 +1885,7 @@ msgstr ""
 "für %2$s."
 
 #. TRANSLATORS: %s is a mount point (eg. /)
-#: src/components/storage/AutoSizeText.tsx:242
+#: src/components/storage/AutoSizeText.tsx:243
 #, javascript-format
 msgid ""
 "The size for %s will be dynamically adjusted based on the usage of Btrfs "
@@ -1794,7 +1894,7 @@ msgstr ""
 "Die Größe für %s wird dynamisch angepasst, basierend auf der Verwendung von "
 "Btrfs-Schnappschüssen."
 
-#: src/components/storage/AutoSizeText.tsx:251
+#: src/components/storage/AutoSizeText.tsx:252
 #, javascript-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the presence of a "
@@ -1803,7 +1903,7 @@ msgstr ""
 "Die Größe für %1$s wird dynamisch angepasst, basierend auf dem Vorhandensein "
 "eines separaten Dateisystems für %2$s."
 
-#: src/components/storage/AutoSizeText.tsx:261
+#: src/components/storage/AutoSizeText.tsx:262
 #, javascript-format
 msgid ""
 "The size for %1$s will be dynamically adjusted based on the presence of "
@@ -1813,7 +1913,7 @@ msgstr ""
 "von separaten Dateisystemen für %2$s."
 
 #. TRANSLATORS: %1$s is a device type (eg. partition) and %2$s is a size with units (eg. 10 GiB)
-#: src/components/storage/AutoSizeText.tsx:273
+#: src/components/storage/AutoSizeText.tsx:274
 #, javascript-format
 msgid ""
 "The current configuration will result in an attempt to create a %1$s of %2$s."
@@ -1821,7 +1921,7 @@ msgstr ""
 "Die aktuelle Konfiguration führt zu einem Versuch, ein %1$s von %2$s zu "
 "erstellen."
 
-#: src/components/storage/AutoSizeText.tsx:282
+#: src/components/storage/AutoSizeText.tsx:283
 #, javascript-format
 msgid ""
 "The current configuration will result in an attempt to create a %1$s with a "
@@ -1831,7 +1931,7 @@ msgstr ""
 "zwischen %2$s und %3$s zu erstellen."
 
 #. TRANSLATORS: %1$s is a device type (eg. partition) and %2$s is a size with units (eg. 10 GiB)
-#: src/components/storage/AutoSizeText.tsx:292
+#: src/components/storage/AutoSizeText.tsx:293
 #, javascript-format
 msgid ""
 "The current configuration will result in an attempt to create a %1$s of at "
@@ -1840,8 +1940,8 @@ msgstr ""
 "Die aktuelle Konfiguration führt zu einem Versuch, eine %1$s mit mindestens "
 "%2$s zu erstellen."
 
-#: src/components/storage/BootSection.tsx:41
-#: src/components/storage/BootSelection.tsx:145
+#: src/components/storage/BootSection.tsx:42
+#: src/components/storage/BootSelection.tsx:154
 #, javascript-format
 msgid ""
 "Partitions to boot will be set up if needed at the installation disk, based "
@@ -1850,8 +1950,8 @@ msgstr ""
 "Partitionen zum Booten werden bei Bedarf auf der Installationsfestplatte "
 "eingerichtet, basierend auf dem Speicherort des Dateisystems %s."
 
-#: src/components/storage/BootSection.tsx:52
-#: src/components/storage/BootSelection.tsx:156
+#: src/components/storage/BootSection.tsx:53
+#: src/components/storage/BootSelection.tsx:165
 #, javascript-format
 msgid ""
 "Partitions to boot will be set up if needed at the installation disk. "
@@ -1861,18 +1961,18 @@ msgstr ""
 "eingerichtet. Derzeit %1$s, basierend auf dem Speicherort des Dateisystems "
 "%2$s."
 
-#: src/components/storage/BootSection.tsx:65
+#: src/components/storage/BootSection.tsx:66
 msgid "No partitions will be automatically configured for booting."
 msgstr "Es werden keine Partitionen automatisch für das Booten konfiguriert."
 
 #. TRANSLATORS: %s is replaced by a disk name and size (eg. "sda (500GiB)")
-#: src/components/storage/BootSection.tsx:69
+#: src/components/storage/BootSection.tsx:70
 #, javascript-format
 msgid "Partitions to boot will be set up if needed at %s."
 msgstr "Partitionen zum Booten werden bei Bedarf unter %s eingerichtet."
 
-#: src/components/storage/BootSection.tsx:84
-#: src/components/storage/BootSelection.tsx:136
+#: src/components/storage/BootSection.tsx:87
+#: src/components/storage/BootSelection.tsx:145
 msgid ""
 "To ensure the new system is able to boot, the installer may need to create "
 "or configure some partitions in the appropriate disk."
@@ -1881,37 +1981,37 @@ msgstr ""
 "Installationsprogramm möglicherweise einige Partitionen auf der "
 "entsprechenden Festplatte erstellen oder konfigurieren."
 
-#: src/components/storage/BootSelection.tsx:175
-#: src/components/storage/ProposalPage.tsx:287
+#: src/components/storage/BootSelection.tsx:184
+#: src/components/storage/ProposalPage.tsx:259
 msgid "Boot options"
 msgstr "Boot-Optionen"
 
-#: src/components/storage/BootSelection.tsx:195
+#: src/components/storage/BootSelection.tsx:204
 #: src/components/storage/SizeModeSelect.tsx:191
 #: src/components/storage/SizeModeSelect.tsx:196
 #: src/components/storage/iscsi/NodeStartupOptions.js:28
 msgid "Automatic"
 msgstr "Automatisch"
 
-#: src/components/storage/BootSelection.tsx:213
+#: src/components/storage/BootSelection.tsx:222
 msgid "Select a disk"
 msgstr "Festplatte auswählen"
 
-#: src/components/storage/BootSelection.tsx:218
+#: src/components/storage/BootSelection.tsx:227
 msgid "Partitions to boot will be set up if needed at the following device."
 msgstr ""
 "Partitionen zum Booten werden bei Bedarf auf dem folgenden Gerät "
 "eingerichtet."
 
-#: src/components/storage/BootSelection.tsx:220
+#: src/components/storage/BootSelection.tsx:229
 msgid "Choose a disk for placing the boot loader"
 msgstr "Wählen Sie eine Festplatte für den Bootloader aus"
 
-#: src/components/storage/BootSelection.tsx:243
+#: src/components/storage/BootSelection.tsx:252
 msgid "Do not configure"
 msgstr "Nicht konfigurieren"
 
-#: src/components/storage/BootSelection.tsx:249
+#: src/components/storage/BootSelection.tsx:258
 msgid ""
 "No partitions will be automatically configured for booting. Use with caution."
 msgstr ""
@@ -1936,41 +2036,41 @@ msgstr ""
 msgid "reset to defaults"
 msgstr "Auf Standardeinstellungen zurücksetzen"
 
-#: src/components/storage/ConfigEditor.tsx:87
+#: src/components/storage/ConfigEditor.tsx:71
 msgid "[FIXME]"
 msgstr "[REPARIERMICH]"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:49
+#: src/components/storage/ConfigureDeviceMenu.tsx:48
 msgid "Select a device to define partitions or to mount"
 msgstr ""
 "Wählen Sie ein Gerät aus, um Partitionen zu definieren oder einzuhängen"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:50
+#: src/components/storage/ConfigureDeviceMenu.tsx:49
 msgid "Select another device to define partitions or to mount"
 msgstr ""
 "Wählen Sie ein anderes Gerät aus, um Partitionen zu definieren oder "
 "einzuhängen"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:53
+#: src/components/storage/ConfigureDeviceMenu.tsx:52
 msgid "Select a disk to define partitions or to mount"
 msgstr ""
 "Wählen Sie eine Festplatte aus, um Partitionen zu definieren oder einzuhängen"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:54
+#: src/components/storage/ConfigureDeviceMenu.tsx:53
 msgid "Select another disk to define partitions or to mount"
 msgstr ""
 "Wählen Sie eine andere Festplatte aus, um Partitionen zu definieren oder "
 "einzuhängen"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:59
+#: src/components/storage/ConfigureDeviceMenu.tsx:58
 msgid "Already using all available devices"
 msgstr "Alle verfügbaren Geräte werden bereits verwendet"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:60
+#: src/components/storage/ConfigureDeviceMenu.tsx:59
 msgid "Already using all available disks"
 msgstr "Alle verfügbaren Festplatten werden bereits verwendet"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:67
+#: src/components/storage/ConfigureDeviceMenu.tsx:66
 #, javascript-format
 msgid "Extend the installation beyond the currently selected device"
 msgid_plural "Extend the installation beyond the current %d devices"
@@ -1978,7 +2078,7 @@ msgstr[0] ""
 "Die Installation über das aktuell ausgewählte Gerät hinaus erweitern"
 msgstr[1] "Die Installation über die aktuellen %d Geräte hinaus erweitern"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:76
+#: src/components/storage/ConfigureDeviceMenu.tsx:75
 #, javascript-format
 msgid "Extend the installation beyond the currently selected disk"
 msgid_plural "Extend the installation beyond the current %d disks"
@@ -1986,84 +2086,84 @@ msgstr[0] ""
 "Die Installation über die aktuell ausgewählte Festplatte hinaus erweitern"
 msgstr[1] "Die Installation über die aktuellen %d Festplatten hinaus erweitern"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:84
+#: src/components/storage/ConfigureDeviceMenu.tsx:83
 msgid "Start configuring a basic installation"
 msgstr "Konfiguration einer Basisinstallation beginnen"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:100
+#: src/components/storage/ConfigureDeviceMenu.tsx:99
 msgid "Add device menu"
 msgstr "Gerätemenü hinzufügen"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:144
+#: src/components/storage/ConfigureDeviceMenu.tsx:143
 msgid "Define a new LVM on top of one or several disks"
 msgstr "Einen neuen LVM auf einer oder mehreren Festplatten definieren"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:145
+#: src/components/storage/ConfigureDeviceMenu.tsx:144
 msgid "Define a new LVM on the disk"
 msgstr "Einen neuen LVM auf der Festplatte definieren"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:151
+#: src/components/storage/ConfigureDeviceMenu.tsx:150
 msgid "Configure device menu"
 msgstr "Gerätemenü konfigurieren"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:171
+#: src/components/storage/ConfigureDeviceMenu.tsx:170
 msgid "Add LVM volume group"
 msgstr "LVM-Volume-Gruppe hinzufügen"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:177
+#: src/components/storage/ConfigureDeviceMenu.tsx:176
 msgid "More devices"
 msgstr "Weitere Geräte"
 
 #. TRANSLATORS: this is an ARIA (accesibility) description of an UI element
-#: src/components/storage/ConnectedDevicesMenu.tsx:51
+#: src/components/storage/ConnectedDevicesMenu.tsx:48
 msgid "More storage options"
 msgstr "Weitere Speicherungsoptionen"
 
-#: src/components/storage/ConnectedDevicesMenu.tsx:57
+#: src/components/storage/ConnectedDevicesMenu.tsx:54
 msgid "Discover and connect to iSCSI targets"
 msgstr "iSCSI-Ziele erkennen und mit ihnen verbinden"
 
-#: src/components/storage/ConnectedDevicesMenu.tsx:59
+#: src/components/storage/ConnectedDevicesMenu.tsx:56
 msgid "Configure iSCSI"
 msgstr "iSCSI konfigurieren"
 
-#: src/components/storage/ConnectedDevicesMenu.tsx:65
-#: src/components/storage/ProposalPage.tsx:165
+#: src/components/storage/ConnectedDevicesMenu.tsx:62
+#: src/components/storage/ProposalPage.tsx:164
 msgid "Activate zFCP disks"
 msgstr "zFCP-Festplatten aktivieren"
 
-#: src/components/storage/ConnectedDevicesMenu.tsx:67
+#: src/components/storage/ConnectedDevicesMenu.tsx:64
 msgid "Configure zFCP"
 msgstr "zFCP konfigurieren"
 
-#: src/components/storage/ConnectedDevicesMenu.tsx:74
+#: src/components/storage/ConnectedDevicesMenu.tsx:71
 msgid "Activate and format DASD devices"
 msgstr "DASD-Geräte aktivieren und formatieren"
 
-#: src/components/storage/ConnectedDevicesMenu.tsx:76
+#: src/components/storage/ConnectedDevicesMenu.tsx:73
 msgid "Configure DASD"
 msgstr "DASD konfigurieren"
 
-#: src/components/storage/ConnectedDevicesMenu.tsx:82
+#: src/components/storage/ConnectedDevicesMenu.tsx:79
 msgid "Update available disks and activate crypt devices"
 msgstr "Verfügbare Festplatten aktualisieren und Kryptogeräte aktivieren"
 
-#: src/components/storage/ConnectedDevicesMenu.tsx:84
+#: src/components/storage/ConnectedDevicesMenu.tsx:81
 msgid "Rescan devices"
 msgstr "Geräte neu scannen"
 
-#: src/components/storage/DeviceSelectorModal.tsx:87
-#: src/components/storage/ProposalResultTable.tsx:135
+#: src/components/storage/DeviceSelectorModal.tsx:89
+#: src/components/storage/ProposalResultTable.tsx:137
 #: src/components/storage/SizeModeSelect.tsx:125
-#: src/components/storage/SpaceActionsTable.tsx:240
+#: src/components/storage/SpaceActionsTable.tsx:234
 msgid "Size"
 msgstr "Größe"
 
-#: src/components/storage/DeviceSelectorModal.tsx:92
+#: src/components/storage/DeviceSelectorModal.tsx:94
 msgid "Description"
 msgstr "Beschreibung"
 
-#: src/components/storage/DeviceSelectorModal.tsx:93
+#: src/components/storage/DeviceSelectorModal.tsx:95
 msgid "Current content"
 msgstr "Aktueller Inhalt"
 
@@ -2075,7 +2175,7 @@ msgstr "Art"
 
 #. TRANSLATORS: input field for the iSCSI initiator name
 #: src/components/storage/DeviceSelectorPage.tsx:54
-#: src/components/storage/LvmPage.tsx:175
+#: src/components/storage/LvmPage.tsx:182
 #: src/components/storage/iscsi/InitiatorForm.tsx:75
 #: src/components/storage/iscsi/InitiatorForm.tsx:85
 #: src/components/storage/iscsi/InitiatorSection.tsx:40
@@ -2129,87 +2229,87 @@ msgstr ""
 "Nutzer mit vielen Geräten."
 
 #. TRANSLATORS: %s will be replaced by a disk name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:33
+#: src/components/storage/DriveHeader.tsx:38
 #, javascript-format
 msgid "Mount disk %s"
 msgstr "Laufwerk %s einhängen"
 
 #. TRANSLATORS: %s will be replaced by a disk name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:35
+#: src/components/storage/DriveHeader.tsx:40
 #, javascript-format
 msgid "Format disk %s"
 msgstr "Laufwerk %s formatieren"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:46
+#: src/components/storage/DriveHeader.tsx:52
 #, javascript-format
 msgid "Use disk %s to install, host LVM and boot"
 msgstr ""
 "Laufwerk %s zur Installation, zum Hosten von LVM und zum Booten verwenden"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:49
+#: src/components/storage/DriveHeader.tsx:55
 #, javascript-format
 msgid "Use disk %s to install and host LVM"
 msgstr "Laufwerk %s zum Installieren und Hosten von LVM verwenden"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:54
+#: src/components/storage/DriveHeader.tsx:60
 #, javascript-format
 msgid "Use disk %s to install and boot"
 msgstr "Laufwerk %s zum Installieren und Booten verwenden"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:57
+#: src/components/storage/DriveHeader.tsx:63
 #, javascript-format
 msgid "Use disk %s to install"
 msgstr "Laufwerk %s zum Installieren verwenden"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:64
+#: src/components/storage/DriveHeader.tsx:70
 #, javascript-format
 msgid "Use disk %s for LVM, additional partitions and booting"
 msgstr ""
 "Laufwerk %s für den LVM, zusätzliche Partitionen und zum Booten verwenden"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:67
+#: src/components/storage/DriveHeader.tsx:73
 #, javascript-format
 msgid "Use disk %s for LVM and additional partitions"
 msgstr "Laufwerk %s für den LVM und zusätzliche Partitionen verwenden"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:72
+#: src/components/storage/DriveHeader.tsx:78
 #, javascript-format
 msgid "Use disk %s for additional partitions and booting"
 msgstr "Laufwerk %s für zusätzliche Partitionen und zum Booten verwenden"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:75
+#: src/components/storage/DriveHeader.tsx:81
 #, javascript-format
 msgid "Use disk %s for additional partitions"
 msgstr "Laufwerk %s für zusätzliche Partitionen verwenden"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:81
+#: src/components/storage/DriveHeader.tsx:87
 #, javascript-format
 msgid "Use disk %s to host LVM and boot"
 msgstr "Laufwerk %s zum Hosten des LVM und Booten verwenden"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:84
+#: src/components/storage/DriveHeader.tsx:90
 #, javascript-format
 msgid "Use disk %s to host LVM"
 msgstr "Laufwerk %s zum Hosten des LVM verwenden"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:89
+#: src/components/storage/DriveHeader.tsx:95
 #, javascript-format
 msgid "Use disk %s to configure boot partitions"
 msgstr "Laufwerk %s zur Konfiguration von Bootpartitionen verwenden"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "sda (20 GiB)"
-#: src/components/storage/DriveHeader.tsx:92
+#: src/components/storage/DriveHeader.tsx:98
 #, javascript-format
 msgid "Use disk %s"
 msgstr "Laufwerk %s verwenden"
@@ -2226,7 +2326,7 @@ msgstr "Verschlüsselung ist aktiviert unter Verwendung der TPM-Entsperrung"
 msgid "Encryption is enabled"
 msgstr "Verschlüsselung ist aktiviert"
 
-#: src/components/storage/EncryptionSection.tsx:50
+#: src/components/storage/EncryptionSection.tsx:51
 msgid ""
 "Protection for the information stored at the new file systems, including "
 "data, programs, and system files."
@@ -2234,20 +2334,20 @@ msgstr ""
 "Schutz für die in den neuen Dateisystemen gespeicherten Informationen, "
 "einschließlich Daten, Programme und Systemdateien."
 
-#: src/components/storage/EncryptionSettingsPage.tsx:75
+#: src/components/storage/EncryptionSettingsPage.tsx:76
 #: src/components/users/RootUserForm.tsx:104
 msgid "Password is empty."
 msgstr "Passwort ist leer."
 
 #. TRANSLATORS: "Trusted Platform Module" is the name of the technology and TPM its abbreviation
-#: src/components/storage/EncryptionSettingsPage.tsx:91
+#: src/components/storage/EncryptionSettingsPage.tsx:92
 msgid ""
 "Use the Trusted Platform Module (TPM) to decrypt automatically on each boot"
 msgstr ""
 "Das Trusted Platform Module (TPM) zur automatischen Entschlüsselung bei "
 "jedem Bootvorgang verwenden"
 
-#: src/components/storage/EncryptionSettingsPage.tsx:95
+#: src/components/storage/EncryptionSettingsPage.tsx:96
 msgid ""
 "The password will not be needed to boot and access the data if the TPM can "
 "verify the integrity of the system. TPM sealing requires the new system to "
@@ -2258,15 +2358,15 @@ msgstr ""
 "TPM-Versiegelung erfordert, dass das neue System bei seinem ersten Start "
 "direkt gebootet wird."
 
-#: src/components/storage/EncryptionSettingsPage.tsx:105
+#: src/components/storage/EncryptionSettingsPage.tsx:106
 msgid "Encryption settings"
 msgstr "Verschlüsselungseinstellungen"
 
-#: src/components/storage/EncryptionSettingsPage.tsx:119
+#: src/components/storage/EncryptionSettingsPage.tsx:120
 msgid "Encrypt the system"
 msgstr "System verschlüsseln"
 
-#: src/components/storage/EncryptionSettingsPage.tsx:121
+#: src/components/storage/EncryptionSettingsPage.tsx:122
 msgid ""
 "Full Disk Encryption (FDE) allows to protect the information stored at the "
 "new file systems, including data, programs, and system files."
@@ -2275,27 +2375,27 @@ msgstr ""
 "in den neuen Dateisystemen gespeicherten Informationen, einschließlich "
 "Daten, Programmen und Systemdateien."
 
-#: src/components/storage/FilesystemMenu.tsx:44
+#: src/components/storage/FilesystemMenu.tsx:42
 msgid "The device will be mounted"
 msgstr "Das Gerät wird eingehängt"
 
-#: src/components/storage/FilesystemMenu.tsx:45
+#: src/components/storage/FilesystemMenu.tsx:43
 msgid "The device will be formatted"
 msgstr "Das Gerät wird formatiert"
 
 #. TRANSLATORS: %s is a formatted mount point (eg. '"/home'").
-#: src/components/storage/FilesystemMenu.tsx:51
+#: src/components/storage/FilesystemMenu.tsx:49
 #, javascript-format
 msgid "The current file system will be mounted at %s"
 msgstr "Das aktuelle Dateisystem wird unter %s eingehängt"
 
 #. TRANSLATORS: %1$s is a filesystem type (eg. Btrfs), %2$s is a mount point (eg. '"/home"').
-#: src/components/storage/FilesystemMenu.tsx:54
+#: src/components/storage/FilesystemMenu.tsx:52
 #, javascript-format
 msgid "The device will be formatted as %1$s and mounted at %2$s"
 msgstr "Das Gerät wird als %1$s formatiert und unter %2$s eingehängt"
 
-#: src/components/storage/FilesystemMenu.tsx:100
+#: src/components/storage/FilesystemMenu.tsx:106
 msgid "Change the file system or mount point"
 msgstr "Dateisystem oder Einhängepunkt ändern"
 
@@ -2309,215 +2409,211 @@ msgstr[1] ""
 "Die Konfiguration muss angepasst werden, um die folgenden Probleme zu "
 "beheben:"
 
-#: src/components/storage/FormattableDevicePage.tsx:221
-#: src/components/storage/LogicalVolumePage.tsx:248
-#: src/components/storage/PartitionPage.tsx:308
+#: src/components/storage/FormattableDevicePage.tsx:230
+#: src/components/storage/LogicalVolumePage.tsx:250
+#: src/components/storage/PartitionPage.tsx:316
 msgid "Select or enter a valid mount point"
 msgstr "Gültigen Einhängepunkt auswählen oder eingeben"
 
-#: src/components/storage/FormattableDevicePage.tsx:231
-#: src/components/storage/LogicalVolumePage.tsx:258
-#: src/components/storage/PartitionPage.tsx:318
+#: src/components/storage/FormattableDevicePage.tsx:240
+#: src/components/storage/LogicalVolumePage.tsx:260
+#: src/components/storage/PartitionPage.tsx:326
 msgid ""
 "Select or enter a mount point that is not already assigned to another device"
 msgstr ""
 "Wählen oder geben Sie einen Einhängepunkt ein, der nicht bereits einem "
 "anderen Gerät zugewiesen ist"
 
-#: src/components/storage/FormattableDevicePage.tsx:280
-#: src/components/storage/LogicalVolumePage.tsx:443
-#: src/components/storage/LogicalVolumePage.tsx:466
-#: src/components/storage/LogicalVolumePage.tsx:769
-#: src/components/storage/PartitionPage.tsx:560
-#: src/components/storage/PartitionPage.tsx:892
+#: src/components/storage/FormattableDevicePage.tsx:289
+#: src/components/storage/LogicalVolumePage.tsx:445
+#: src/components/storage/LogicalVolumePage.tsx:468
+#: src/components/storage/LogicalVolumePage.tsx:771
+#: src/components/storage/PartitionPage.tsx:576
+#: src/components/storage/PartitionPage.tsx:916
 msgid "Waiting for a mount point"
 msgstr "Warten auf einen Einhängepunkt"
 
 #. TRANSLATORS: %s is a device name (eg. /dev/sda3).
-#: src/components/storage/FormattableDevicePage.tsx:283
-#: src/components/storage/PartitionPage.tsx:563
+#: src/components/storage/FormattableDevicePage.tsx:292
+#: src/components/storage/PartitionPage.tsx:579
 #: src/components/storage/utils/partition.tsx:69
 #, javascript-format
 msgid "Current %s"
 msgstr "Aktuell %s"
 
-#: src/components/storage/FormattableDevicePage.tsx:284
-#: src/components/storage/LogicalVolumePage.tsx:467
-#: src/components/storage/PartitionPage.tsx:564
-#: src/components/storage/utils.ts:338
+#: src/components/storage/FormattableDevicePage.tsx:293
+#: src/components/storage/LogicalVolumePage.tsx:469
+#: src/components/storage/PartitionPage.tsx:580
+#: src/components/storage/utils.ts:326
 msgid "Btrfs with snapshots"
 msgstr "Btrfs mit Schnappschüssen"
 
-#: src/components/storage/FormattableDevicePage.tsx:302
-#: src/components/storage/LogicalVolumePage.tsx:483
-#: src/components/storage/PartitionPage.tsx:582
+#: src/components/storage/FormattableDevicePage.tsx:311
+#: src/components/storage/LogicalVolumePage.tsx:485
+#: src/components/storage/PartitionPage.tsx:598
 #, javascript-format
 msgid "Default file system for %s"
 msgstr "Standard-Dateisystem für %s"
 
-#: src/components/storage/FormattableDevicePage.tsx:303
+#: src/components/storage/FormattableDevicePage.tsx:312
 msgid "Default file system for generic mount paths"
 msgstr "Standard-Dateisystem für generische Einhängepfade"
 
-#: src/components/storage/FormattableDevicePage.tsx:305
+#: src/components/storage/FormattableDevicePage.tsx:314
 msgid "Destroy current data and format device as"
 msgstr "Aktuelle Daten zerstören und Gerät formatieren als"
 
-#: src/components/storage/FormattableDevicePage.tsx:306
+#: src/components/storage/FormattableDevicePage.tsx:315
 msgid "Format device as"
 msgstr "Gerät formatieren als"
 
 #. TRANSLATORS: %s is the name of a device, like vda
 #. TRANSLATORS: %s is the name of a partition, like /dev/vda2
-#: src/components/storage/FormattableDevicePage.tsx:320
-#: src/components/storage/PartitionPage.tsx:599
+#: src/components/storage/FormattableDevicePage.tsx:329
+#: src/components/storage/PartitionPage.tsx:615
 #, javascript-format
 msgid "Do not format %s and keep the data"
 msgstr "%s nicht formatieren und die Daten behalten"
 
-#: src/components/storage/FormattableDevicePage.tsx:384
-#: src/components/storage/LogicalVolumePage.tsx:552
-#: src/components/storage/PartitionPage.tsx:664
+#: src/components/storage/FormattableDevicePage.tsx:393
+#: src/components/storage/LogicalVolumePage.tsx:554
+#: src/components/storage/PartitionPage.tsx:680
 msgid "File system label"
 msgstr "Dateisystem-Bezeichnung"
 
-#: src/components/storage/FormattableDevicePage.tsx:453
+#: src/components/storage/FormattableDevicePage.tsx:465
 #, javascript-format
 msgid "Configure device %s"
 msgstr "Gerät %s konfigurieren"
 
-#: src/components/storage/FormattableDevicePage.tsx:460
-#: src/components/storage/FormattableDevicePage.tsx:467
-#: src/components/storage/LogicalVolumePage.tsx:697
-#: src/components/storage/LogicalVolumePage.tsx:702
-#: src/components/storage/PartitionPage.tsx:822
-#: src/components/storage/PartitionPage.tsx:829
+#: src/components/storage/FormattableDevicePage.tsx:472
+#: src/components/storage/FormattableDevicePage.tsx:479
+#: src/components/storage/LogicalVolumePage.tsx:699
+#: src/components/storage/LogicalVolumePage.tsx:704
+#: src/components/storage/PartitionPage.tsx:846
+#: src/components/storage/PartitionPage.tsx:853
 msgid "Mount point"
 msgstr "Einhängepunkt"
 
-#: src/components/storage/FormattableDevicePage.tsx:465
-#: src/components/storage/LogicalVolumePage.tsx:700
-#: src/components/storage/PartitionPage.tsx:827
+#: src/components/storage/FormattableDevicePage.tsx:477
+#: src/components/storage/LogicalVolumePage.tsx:702
+#: src/components/storage/PartitionPage.tsx:851
 msgid "Mount point toggle"
 msgstr "Einhängepunktumschalter"
 
-#: src/components/storage/FormattableDevicePage.tsx:466
-#: src/components/storage/LogicalVolumePage.tsx:701
-#: src/components/storage/PartitionPage.tsx:828
+#: src/components/storage/FormattableDevicePage.tsx:478
+#: src/components/storage/LogicalVolumePage.tsx:703
+#: src/components/storage/PartitionPage.tsx:852
 msgid "Suggested mount points"
 msgstr "Vorgeschlagene Einhängepunkte"
 
-#: src/components/storage/FormattableDevicePage.tsx:468
-#: src/components/storage/LogicalVolumePage.tsx:703
-#: src/components/storage/PartitionPage.tsx:830
+#: src/components/storage/FormattableDevicePage.tsx:480
+#: src/components/storage/LogicalVolumePage.tsx:705
+#: src/components/storage/PartitionPage.tsx:854
 msgid "Clear selected mount point"
 msgstr "Ausgewählten Einhängepunkt löschen"
 
-#: src/components/storage/FormattableDevicePage.tsx:471
-#: src/components/storage/LogicalVolumePage.tsx:706
-#: src/components/storage/PartitionPage.tsx:833
+#: src/components/storage/FormattableDevicePage.tsx:483
+#: src/components/storage/LogicalVolumePage.tsx:708
+#: src/components/storage/PartitionPage.tsx:857
 msgid "Use"
 msgstr "Verwenden"
 
-#: src/components/storage/FormattableDevicePage.tsx:482
-#: src/components/storage/LogicalVolumePage.tsx:715
-#: src/components/storage/PartitionPage.tsx:854
+#: src/components/storage/FormattableDevicePage.tsx:494
+#: src/components/storage/LogicalVolumePage.tsx:717
+#: src/components/storage/PartitionPage.tsx:878
 msgid "Select or enter a mount point"
 msgstr "Einhängepunkt auswählen oder eingeben"
 
-#: src/components/storage/FormattableDevicePage.tsx:491
-#: src/components/storage/LogicalVolumePage.tsx:740
-#: src/components/storage/PartitionPage.tsx:863
+#: src/components/storage/FormattableDevicePage.tsx:503
+#: src/components/storage/LogicalVolumePage.tsx:742
+#: src/components/storage/PartitionPage.tsx:887
 msgid "File system"
 msgstr "Dateisystem"
 
-#: src/components/storage/FormattableDevicePage.tsx:502
-#: src/components/storage/LogicalVolumePage.tsx:751
-#: src/components/storage/PartitionPage.tsx:875
+#: src/components/storage/FormattableDevicePage.tsx:514
+#: src/components/storage/LogicalVolumePage.tsx:753
+#: src/components/storage/PartitionPage.tsx:899
 msgid "Label"
 msgstr "Bezeichnung"
 
-#: src/components/storage/ISCSIPage.tsx:34 src/routes/storage.tsx:99
-msgid "iSCSI"
-msgstr "iSCSI"
-
-#: src/components/storage/LogicalVolumePage.tsx:269
+#: src/components/storage/LogicalVolumePage.tsx:271
 msgid "Enter a name"
 msgstr "Name eingeben"
 
-#: src/components/storage/LogicalVolumePage.tsx:296
-#: src/components/storage/PartitionPage.tsx:346
+#: src/components/storage/LogicalVolumePage.tsx:298
+#: src/components/storage/PartitionPage.tsx:354
 msgid "The minimum cannot be greater than the maximum"
 msgstr "Das Minimum darf nicht größer sein als das Maximum"
 
-#: src/components/storage/LogicalVolumePage.tsx:304
+#: src/components/storage/LogicalVolumePage.tsx:306
 msgid ""
 "The maximum must be a number optionally followed by a unit like GiB or GB"
 msgstr ""
 "Das Maximum muss eine Zahl sein, optional gefolgt von einer Einheit wie GiB "
 "oder GB"
 
-#: src/components/storage/LogicalVolumePage.tsx:312
+#: src/components/storage/LogicalVolumePage.tsx:314
 msgid ""
 "The minimum must be a number optionally followed by a unit like GiB or GB"
 msgstr ""
 "Das Minimum muss eine Zahl sein, optional gefolgt von einer Einheit wie GiB "
 "oder GB"
 
-#: src/components/storage/LogicalVolumePage.tsx:319
+#: src/components/storage/LogicalVolumePage.tsx:321
 msgid ""
 "Size limits must be numbers optionally followed by a unit like GiB or GB"
 msgstr ""
 "Größenbeschränkungen müssen Zahlen sein, optional gefolgt von einer Einheit "
 "wie GiB oder GB"
 
-#: src/components/storage/LogicalVolumePage.tsx:438
-#: src/components/storage/LogicalVolumePage.tsx:441
+#: src/components/storage/LogicalVolumePage.tsx:440
+#: src/components/storage/LogicalVolumePage.tsx:443
 msgid "Logical volume name"
 msgstr "Name des logischen Volumes"
 
-#: src/components/storage/LogicalVolumePage.tsx:484
+#: src/components/storage/LogicalVolumePage.tsx:486
 msgid "Default file system for generic logical volumes"
 msgstr "Standard-Dateisystem für generische logische Volumes"
 
-#: src/components/storage/LogicalVolumePage.tsx:486
+#: src/components/storage/LogicalVolumePage.tsx:488
 msgid "Format logical volume as"
 msgstr "Logisches Volume formatieren als"
 
-#: src/components/storage/LogicalVolumePage.tsx:687
+#: src/components/storage/LogicalVolumePage.tsx:689
 #, javascript-format
 msgid "Configure LVM logical volume at %s volume group"
 msgstr "Logisches LVM-Volume bei Volume-Gruppe '%s' konfigurieren"
 
-#: src/components/storage/LogicalVolumePage.tsx:764
-#: src/components/storage/PartitionPage.tsx:887
+#: src/components/storage/LogicalVolumePage.tsx:766
+#: src/components/storage/PartitionPage.tsx:911
 msgid "Size mode"
 msgstr "Größenmodus"
 
-#: src/components/storage/LvmPage.tsx:77
+#: src/components/storage/LvmPage.tsx:80
 msgid "Enter a name for the volume group."
 msgstr "Name für die Volume-Gruppe eingeben."
 
-#: src/components/storage/LvmPage.tsx:81
+#: src/components/storage/LvmPage.tsx:84
 #, javascript-format
 msgid "Volume group '%s' already exists. Enter a different name."
 msgstr ""
 "Volume-Gruppe ‚%s‘ existiert bereits. Geben Sie einen anderen Namen ein."
 
-#: src/components/storage/LvmPage.tsx:85
+#: src/components/storage/LvmPage.tsx:88
 msgid "Select at least one disk."
 msgstr "Wählen Sie mindestens eine Festplatte aus."
 
-#: src/components/storage/LvmPage.tsx:163
+#: src/components/storage/LvmPage.tsx:170
 msgid "Configure LVM Volume Group"
 msgstr "LVM-Volume-Gruppe konfigurieren"
 
-#: src/components/storage/LvmPage.tsx:178
+#: src/components/storage/LvmPage.tsx:185
 #: src/components/storage/zfcp/ZFCPPage.tsx:131
 msgid "Disks"
 msgstr "Festplatten"
 
-#: src/components/storage/LvmPage.tsx:181
+#: src/components/storage/LvmPage.tsx:188
 msgid ""
 "The needed LVM physical volumes will be added as partitions on the chosen "
 "disks, based on the sizes of the logical volumes. If you select more than "
@@ -2528,11 +2624,11 @@ msgstr ""
 "Volumes. Wenn Sie mehr als eine Festplatte auswählen, können die "
 "physikalischen Volumes auf mehrere Festplatten verteilt werden."
 
-#: src/components/storage/LvmPage.tsx:216
+#: src/components/storage/LvmPage.tsx:223
 msgid "Move mount points"
 msgstr "Einhängepunkte verschieben"
 
-#: src/components/storage/LvmPage.tsx:220
+#: src/components/storage/LvmPage.tsx:227
 msgid ""
 "Move the mount points currently configured at the selected disks to logical "
 "volumes of this volume group."
@@ -2541,260 +2637,276 @@ msgstr ""
 "Einhängepunkte auf logische Volumes dieser Volume-Gruppe."
 
 #. TRANSLATORS: %s will be replaced by a RAID name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:33
+#: src/components/storage/MdRaidHeader.tsx:38
 #, javascript-format
 msgid "Mount RAID %s"
 msgstr "RAID %s einhängen"
 
 #. TRANSLATORS: %s will be replaced by a RAID name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:35
+#: src/components/storage/MdRaidHeader.tsx:40
 #, javascript-format
 msgid "Format RAID %s"
 msgstr "RAID %s formatieren"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:46
+#: src/components/storage/MdRaidHeader.tsx:52
 #, javascript-format
 msgid "Use RAID %s to install, host LVM and boot"
 msgstr "RAID %s zum Installieren, Hosten des LVM und Booten verwenden"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:49
+#: src/components/storage/MdRaidHeader.tsx:55
 #, javascript-format
 msgid "Use RAID %s to install and host LVM"
 msgstr "RAID %s zum Installieren und Hosten des LVM verwenden"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:54
+#: src/components/storage/MdRaidHeader.tsx:60
 #, javascript-format
 msgid "Use RAID %s to install and boot"
 msgstr "RAID %s zum Installieren und Booten verwenden"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:57
+#: src/components/storage/MdRaidHeader.tsx:63
 #, javascript-format
 msgid "Use RAID %s to install"
 msgstr "RAID %s zum Installieren verwenden"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:64
+#: src/components/storage/MdRaidHeader.tsx:70
 #, javascript-format
 msgid "Use RAID %s for LVM, additional partitions and booting"
 msgstr "RAID %s für den LVM, zusätzliche Partitionen und zum Booten verwenden"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:67
+#: src/components/storage/MdRaidHeader.tsx:73
 #, javascript-format
 msgid "Use RAID %s for LVM and additional partitions"
 msgstr "RAID %s für den LVM und zusätzliche Partitionen verwenden"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:72
+#: src/components/storage/MdRaidHeader.tsx:78
 #, javascript-format
 msgid "Use RAID %s for additional partitions and booting"
 msgstr "RAID %s für zusätzliche Partitionen und zum Booten verwenden"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:75
+#: src/components/storage/MdRaidHeader.tsx:81
 #, javascript-format
 msgid "Use RAID %s for additional partitions"
 msgstr "RAID %s für zusätzliche Partitionen verwenden"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:81
+#: src/components/storage/MdRaidHeader.tsx:87
 #, javascript-format
 msgid "Use RAID %s to host LVM and boot"
 msgstr "RAID %s zum Hosten des LVM und zum Booten verwenden"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:84
+#: src/components/storage/MdRaidHeader.tsx:90
 #, javascript-format
 msgid "Use RAID %s to host LVM"
 msgstr "RAID %s zum Hosten des LVM verwenden"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:89
+#: src/components/storage/MdRaidHeader.tsx:95
 #, javascript-format
 msgid "Use RAID %s to configure boot partitions"
 msgstr "RAID %s zum Konfigurieren von Bootpartitionen verwenden"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size - "md0 (20 GiB)"
-#: src/components/storage/MdRaidHeader.tsx:92
+#: src/components/storage/MdRaidHeader.tsx:98
 #, javascript-format
 msgid "Use RAID %s"
 msgstr "RAID %s verwenden"
 
 #. TRANSLATORS: %s is the short name of a disk, like 'sda'
-#: src/components/storage/NewVgMenuOption.tsx:46
+#: src/components/storage/NewVgMenuOption.tsx:51
 #, javascript-format
 msgid "Create another LVM volume group on %s"
 msgstr "Weitere LVM-Volume-Gruppe auf %s erstellen"
 
 #. TRANSLATORS: %s is the short name of a disk, like 'sda'
-#: src/components/storage/NewVgMenuOption.tsx:50
+#: src/components/storage/NewVgMenuOption.tsx:55
 #, javascript-format
 msgid "Create LVM volume group on %s"
 msgstr "LVM-Volume-Gruppe auf %s erstellen"
 
 #. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case).
-#: src/components/storage/NewVgMenuOption.tsx:59
+#: src/components/storage/NewVgMenuOption.tsx:64
 #, javascript-format
 msgid "%s will be created as a logical volume"
 msgid_plural "%s will be created as logical volumes"
 msgstr[0] "%s wird als logisches Volume erstellt"
 msgstr[1] "%s wird als logische Volumes erstellt"
 
-#: src/components/storage/PartitionPage.tsx:354
+#: src/components/storage/PartitionPage.tsx:362
 msgid "The maximum must be a number followed by a unit like GiB or GB"
 msgstr ""
 "Das Maximum muss eine Zahl sein, gefolgt von einer Einheit wie GiB oder GB"
 
-#: src/components/storage/PartitionPage.tsx:362
+#: src/components/storage/PartitionPage.tsx:370
 msgid "The minimum must be a number followed by a unit like GiB or GB"
 msgstr ""
 "Das Minimum muss eine Zahl sein, gefolgt von einer Einheit wie GiB oder GB"
 
-#: src/components/storage/PartitionPage.tsx:369
+#: src/components/storage/PartitionPage.tsx:377
 msgid "Size limits must be numbers followed by a unit like GiB or GB"
 msgstr ""
 "Größenbeschränkungen müssen Zahlen sein, gefolgt von einer Einheit wie GiB "
 "oder GB"
 
 #. TRANSLATORS: %s is a disk name with its size (eg. "sda, 10 GiB"
-#: src/components/storage/PartitionPage.tsx:498
+#: src/components/storage/PartitionPage.tsx:514
 #, javascript-format
 msgid "As a new partition on %s"
 msgstr "Als eine neue Partition auf %s"
 
-#: src/components/storage/PartitionPage.tsx:500
+#: src/components/storage/PartitionPage.tsx:516
 #, javascript-format
 msgid "Using partition %s"
 msgstr "Partition %s wird verwendet"
 
-#: src/components/storage/PartitionPage.tsx:529
+#: src/components/storage/PartitionPage.tsx:545
 msgid "Mount point options"
 msgstr "Einhängepunktoptionen"
 
-#: src/components/storage/PartitionPage.tsx:534
+#: src/components/storage/PartitionPage.tsx:550
 msgid "Using an existing partition"
 msgstr "Vorhandene Partition verwenden"
 
-#: src/components/storage/PartitionPage.tsx:545
+#: src/components/storage/PartitionPage.tsx:561
 msgid "There are not usable partitions"
 msgstr "Es sind keine nutzbaren Partitionen vorhanden"
 
-#: src/components/storage/PartitionPage.tsx:583
+#: src/components/storage/PartitionPage.tsx:599
 msgid "Default file system for generic partitions"
 msgstr "Standard-Dateisystem für generische Partitionen"
 
-#: src/components/storage/PartitionPage.tsx:585
+#: src/components/storage/PartitionPage.tsx:601
 msgid "Destroy current data and format partition as"
 msgstr "Aktuelle Daten zerstören und Partition formatieren als"
 
-#: src/components/storage/PartitionPage.tsx:586
+#: src/components/storage/PartitionPage.tsx:602
 msgid "Format partition as"
 msgstr "Partition formatieren als"
 
-#: src/components/storage/PartitionPage.tsx:814
+#: src/components/storage/PartitionPage.tsx:839
 #, javascript-format
 msgid "Configure partition at %s"
 msgstr "Partition bei %s konfigurieren"
 
-#: src/components/storage/PartitionPage.tsx:839
+#: src/components/storage/PartitionPage.tsx:863
 msgid "Mount point mode"
 msgstr "Einhängepunktmodus"
 
-#: src/components/storage/PartitionPage.tsx:922
+#: src/components/storage/PartitionPage.tsx:946
 msgid "Go to storage page"
 msgstr "Zur Speicherungsseite gehen"
 
-#: src/components/storage/PartitionsSection.tsx:80
+#: src/components/storage/PartitionsSection.tsx:87
 msgid "Moreover, the following partitions will be created or mounted"
 msgstr "Zudem werden die folgenden Partitionen erstellt oder eingehängt"
 
-#: src/components/storage/PartitionsSection.tsx:84
+#: src/components/storage/PartitionsSection.tsx:91
 msgid "Moreover, the following partition will be created."
 msgid_plural "Moreover, the following partitions will be created."
 msgstr[0] "Zudem wird die folgende Partition erstellt."
 msgstr[1] "Zudem werden die folgenden Partitionen erstellt."
 
-#: src/components/storage/PartitionsSection.tsx:90
+#: src/components/storage/PartitionsSection.tsx:97
 msgid "Moreover, the following partition will be mounted."
 msgid_plural "Moreover, the following partitions will be mounted."
 msgstr[0] "Zudem wird die folgende Partition eingehängt."
 msgstr[1] "Zudem werden die folgenden Partitionen eingehängt."
 
-#: src/components/storage/PartitionsSection.tsx:97
+#: src/components/storage/PartitionsSection.tsx:104
 msgid "The following partitions will be created or mounted"
 msgstr "Die folgenden Partitionen werden erstellt oder eingehängt"
 
-#: src/components/storage/PartitionsSection.tsx:101
+#: src/components/storage/PartitionsSection.tsx:108
 msgid "The following partition will be created."
 msgid_plural "The following partitions will be created."
 msgstr[0] "Die folgende Partition wird erstellt."
 msgstr[1] "Die folgenden Partitionen werden erstellt."
 
-#: src/components/storage/PartitionsSection.tsx:107
+#: src/components/storage/PartitionsSection.tsx:114
 msgid "The following partition will be mounted."
 msgid_plural "The following partitions will be mounted."
 msgstr[0] "Die folgende Partition wird eingehängt."
 msgstr[1] "Die folgenden Partitionen werden eingehängt."
 
-#: src/components/storage/PartitionsSection.tsx:117
+#: src/components/storage/PartitionsSection.tsx:124
 msgid "Any partition needed to boot will be configured."
 msgstr "Jede Partition, die zum Booten benötigt wird, wird konfiguriert."
 
-#: src/components/storage/PartitionsSection.tsx:118
+#: src/components/storage/PartitionsSection.tsx:125
 msgid "Partitions to host \"system\" will be created if needed."
 msgstr "Partitionen für den Host „system“ werden bei Bedarf erstellt."
 
 #. TRANSLATORS: ARIA (accesibility) description of an UI element. %s is a mount path.
-#: src/components/storage/PartitionsSection.tsx:151
+#: src/components/storage/PartitionsSection.tsx:162
 #, javascript-format
 msgid "Partition %s"
 msgstr "Partition %s"
 
 #. TRANSLATORS: ARIA (accesibility) description of an button. %s is a mount path.
-#: src/components/storage/PartitionsSection.tsx:163
+#: src/components/storage/PartitionsSection.tsx:174
 #, javascript-format
 msgid "Options for partition %s"
 msgstr "Optionen für Partition %s"
 
-#: src/components/storage/PartitionsSection.tsx:180
-#: src/components/storage/VolumeGroupEditor.tsx:171
+#: src/components/storage/PartitionsSection.tsx:191
+#: src/components/storage/VolumeGroupEditor.tsx:176
 #: src/components/storage/iscsi/NodesPresenter.jsx:84
 msgid "Delete"
 msgstr "Löschen"
 
-#: src/components/storage/PartitionsSection.tsx:264
+#: src/components/storage/PartitionsSection.tsx:288
 msgid "Partitions"
 msgstr "Partitionen"
 
-#: src/components/storage/PartitionsSection.tsx:277
-#: src/components/storage/UnusedMenu.tsx:75
+#: src/components/storage/PartitionsSection.tsx:308
+#: src/components/storage/UnusedMenu.tsx:78
 msgid "Add or use partition"
 msgstr "Partition hinzufügen oder verwenden"
+
+#. TRANSLATORS: %s will be replaced by a formatted list of affected
+#. systems like "Windows and openSUSE Tumbleweed".
+#: src/components/storage/PotentialDataLossAlert.tsx:41
+#, javascript-format
+msgid "Proceeding may result in data loss affecting at least %s"
+msgstr ""
+
+#: src/components/storage/PotentialDataLossAlert.tsx:45
+msgid "Proceeding may result in data loss"
+msgstr ""
+
+#: src/components/storage/PotentialDataLossAlert.tsx:51
+#, fuzzy
+msgid "View details"
+msgstr "Details ausblenden"
 
 #: src/components/storage/Progress.tsx:117
 msgid "Loading storage"
 msgstr "Datenspeicher wird geladen"
 
-#: src/components/storage/ProposalActionsDialog.tsx:73
+#: src/components/storage/ProposalActions.tsx:66
 #, javascript-format
 msgid "Hide %d subvolume action"
 msgid_plural "Hide %d subvolume actions"
 msgstr[0] "%d Subvolume-Aktion ausblenden"
 msgstr[1] "%d Subvolume-Aktionen ausblenden"
 
-#: src/components/storage/ProposalActionsDialog.tsx:78
+#: src/components/storage/ProposalActions.tsx:71
 #, javascript-format
 msgid "Show %d subvolume action"
 msgid_plural "Show %d subvolume actions"
 msgstr[0] "%d Subvolume-Aktion anzeigen"
 msgstr[1] "%d Subvolume-Aktionen anzeigen"
 
-#: src/components/storage/ProposalFailedInfo.tsx:54
+#: src/components/storage/ProposalFailedInfo.tsx:52
 msgid ""
 "It is not possible to install the system with the current configuration. "
 "Adjust the settings below."
@@ -2804,7 +2916,7 @@ msgstr ""
 
 #. TRANSLATORS: %s is a list of formatted mount points with a partition size like
 #. '"/" (at least 10 GiB), "/var" (20 GiB) and "swap" (2 GiB)'
-#: src/components/storage/ProposalFailedInfo.tsx:67
+#: src/components/storage/ProposalFailedInfo.tsx:65
 #, javascript-format
 msgid "It is not possible to allocate space for the boot partition and for %s."
 msgstr ""
@@ -2812,12 +2924,12 @@ msgstr ""
 
 #. TRANSLATORS: %s is a list of formatted mount points with a partition size like
 #. '"/" (at least 10 GiB), "/var" (20 GiB) and "swap" (2 GiB)'
-#: src/components/storage/ProposalFailedInfo.tsx:70
+#: src/components/storage/ProposalFailedInfo.tsx:68
 #, javascript-format
 msgid "It is not possible to allocate space for %s."
 msgstr "Es ist nicht möglich, Platz für %s zuzuweisen."
 
-#: src/components/storage/ProposalFailedInfo.tsx:75
+#: src/components/storage/ProposalFailedInfo.tsx:73
 msgid ""
 "Adjust the settings below to make the new system fit into the available "
 "space."
@@ -2825,21 +2937,22 @@ msgstr ""
 "Passen Sie die Einstellungen unten an, damit das neue System in den "
 "verfügbaren Speicherplatz passt."
 
-#: src/components/storage/ProposalFailedInfo.tsx:98
+#: src/components/storage/ProposalFailedInfo.tsx:85
+#: src/components/storage/StorageDetailsItem.tsx:109
 msgid "Failed to calculate a storage layout"
 msgstr "Berechnung einer Speicherungsanordnung ist fehlgeschlagen"
 
-#: src/components/storage/ProposalPage.tsx:80
+#: src/components/storage/ProposalPage.tsx:79
 msgid "Invalid storage settings"
 msgstr "Ungültige Einstellungen für die Speicherung"
 
-#: src/components/storage/ProposalPage.tsx:87
+#: src/components/storage/ProposalPage.tsx:86
 msgid "The current storage configuration has the following issue:"
 msgid_plural "The current storage configuration has the following issues:"
 msgstr[0] "Die aktuelle Speicherungskonfiguration weist folgendes Problem auf:"
 msgstr[1] "Die aktuelle Speicherungskonfiguration weist folgende Probleme auf:"
 
-#: src/components/storage/ProposalPage.tsx:101
+#: src/components/storage/ProposalPage.tsx:100
 msgid ""
 "You may want to discard those settings and start from scratch with a simple "
 "configuration."
@@ -2847,25 +2960,25 @@ msgstr ""
 "Möglicherweise möchten Sie diese Einstellungen verwerfen und mit einer "
 "einfachen Konfiguration neu beginnen."
 
-#: src/components/storage/ProposalPage.tsx:105
-#: src/components/storage/ProposalPage.tsx:133
+#: src/components/storage/ProposalPage.tsx:104
+#: src/components/storage/ProposalPage.tsx:132
 #: src/components/storage/UnsupportedModelInfo.tsx:55
 msgid "Reset to the default configuration"
 msgstr "Auf die Standardkonfiguration zurücksetzen"
 
-#: src/components/storage/ProposalPage.tsx:117
+#: src/components/storage/ProposalPage.tsx:116
 #: src/components/storage/UnsupportedModelInfo.tsx:39
 msgid "Unable to modify the settings"
 msgstr "Einstellungen können nicht geändert werden"
 
-#: src/components/storage/ProposalPage.tsx:123
+#: src/components/storage/ProposalPage.tsx:122
 msgid ""
 "The storage configuration uses elements not supported by this interface."
 msgstr ""
 "Die Speicherungskonfiguration verwendet Elemente, die von dieser "
 "Schnittstelle nicht unterstützt werden."
 
-#: src/components/storage/ProposalPage.tsx:129
+#: src/components/storage/ProposalPage.tsx:128
 msgid ""
 "You may want to discard the current settings and start from scratch with a "
 "simple configuration."
@@ -2873,7 +2986,7 @@ msgstr ""
 "Möglicherweise möchten Sie die aktuellen Einstellungen verwerfen und mit "
 "einer einfachen Konfiguration neu beginnen."
 
-#: src/components/storage/ProposalPage.tsx:145
+#: src/components/storage/ProposalPage.tsx:144
 msgid ""
 "There are not disks available for the installation. You may need to "
 "configure some device."
@@ -2881,39 +2994,39 @@ msgstr ""
 "Es sind keine Festplatten für die Installation verfügbar. Möglicherweise "
 "müssen Sie ein Gerät konfigurieren."
 
-#: src/components/storage/ProposalPage.tsx:150
+#: src/components/storage/ProposalPage.tsx:149
 #: src/components/storage/dasd/DASDTable.tsx:304
 msgid "No devices found"
 msgstr "Keine Geräte gefunden"
 
-#: src/components/storage/ProposalPage.tsx:159
+#: src/components/storage/ProposalPage.tsx:158
 msgid "Connect to iSCSI targets"
 msgstr "Mit iSCSI-Zielen verbinden"
 
-#: src/components/storage/ProposalPage.tsx:172
+#: src/components/storage/ProposalPage.tsx:171
 msgid "Manage DASD devices"
 msgstr "DASD-Geräte verwalten"
 
-#: src/components/storage/ProposalPage.tsx:244
+#: src/components/storage/ProposalPage.tsx:223
 msgid "Start from scratch with the default configuration"
 msgstr "Mit der Standardkonfiguration neu beginnen"
 
-#: src/components/storage/ProposalPage.tsx:246
+#: src/components/storage/ProposalPage.tsx:225
 msgid "Reset to defaults"
 msgstr "Auf Standardeinstellungen zurücksetzen"
 
-#: src/components/storage/ProposalPage.tsx:255
+#: src/components/storage/ProposalPage.tsx:234
 msgid ""
 "Changes in these settings will immediately update the 'Result' section below."
 msgstr ""
 "Änderungen an diesen Einstellungen werden sofort im Abschnitt ‚Ergebnis‘ "
 "unten aktualisiert."
 
-#: src/components/storage/ProposalPage.tsx:262
+#: src/components/storage/ProposalPage.tsx:241
 msgid "Installation devices"
 msgstr "Installationsgeräte"
 
-#: src/components/storage/ProposalPage.tsx:268
+#: src/components/storage/ProposalPage.tsx:247
 msgid ""
 "Structure of the new system, including disks to use and additional devices "
 "like LVM volume groups."
@@ -2921,37 +3034,33 @@ msgstr ""
 "Struktur des neuen Systems, einschließlich der zu verwendenden Festplatten "
 "und zusätzlichen Geräte wie LVM-Volume-Gruppen."
 
-#: src/components/storage/ProposalPage.tsx:278
+#: src/components/storage/ProposalPage.tsx:254
 msgid "Encryption"
 msgstr "Verschlüsselung"
 
-#: src/components/storage/ProposalPage.tsx:362
-msgid "Reloading data, please wait..."
-msgstr "Daten werden neu geladen, bitte warten ..."
-
-#: src/components/storage/ProposalResultSection.tsx:42
+#: src/components/storage/ProposalResultSection.tsx:46
 msgid "Waiting for information about storage configuration"
 msgstr "Warten auf Informationen zur Speicherkonfiguration"
 
-#: src/components/storage/ProposalResultSection.tsx:67
+#: src/components/storage/ProposalResultSection.tsx:71
 #, javascript-format
 msgid "There is %d destructive action planned affecting %s"
 msgid_plural "There are %d destructive actions planned affecting %s"
 msgstr[0] "Es ist %d zerstörerische Aktion geplant, die %s betrifft"
 msgstr[1] "Es sind %d zerstörerische Aktionen geplant, die %s betreffen"
 
-#: src/components/storage/ProposalResultSection.tsx:78
+#: src/components/storage/ProposalResultSection.tsx:82
 #, javascript-format
 msgid "There is %d destructive action planned"
 msgid_plural "There are %d destructive actions planned"
 msgstr[0] "Es ist %d zerstörerische Aktion geplant"
 msgstr[1] "Es sind %d zerstörerische Aktionen geplant"
 
-#: src/components/storage/ProposalResultSection.tsx:128
+#: src/components/storage/ProposalResultSection.tsx:132
 msgid "Result"
 msgstr "Ergebnis"
 
-#: src/components/storage/ProposalResultSection.tsx:130
+#: src/components/storage/ProposalResultSection.tsx:134
 msgid ""
 "Result of applying the configuration described at the 'Settings' section "
 "above."
@@ -2959,18 +3068,18 @@ msgstr ""
 "Ergebnis der Anwendung der im Abschnitt ‚Einstellungen‘ oben beschriebenen "
 "Konfiguration."
 
-#: src/components/storage/ProposalResultSection.tsx:138
+#: src/components/storage/ProposalResultSection.tsx:142
 msgid ""
 "The following actions will be performed in the system during installation."
 msgstr ""
 "Die folgenden Aktionen werden während der Installation im System "
 "durchgeführt."
 
-#: src/components/storage/ProposalResultSection.tsx:144
+#: src/components/storage/ProposalResultSection.tsx:148
 msgid "Final layout"
 msgstr "Endgültige Anordnung"
 
-#: src/components/storage/ProposalResultSection.tsx:148
+#: src/components/storage/ProposalResultSection.tsx:152
 msgid "Final structure of the system after installation."
 msgstr "Endgültige Struktur des Systems nach der Installation."
 
@@ -2980,17 +3089,17 @@ msgstr "Neu"
 
 #. TRANSLATORS: Label to indicate the device size before resizing, where %s is
 #. replaced by the original size (e.g., 3.00 GiB).
-#: src/components/storage/ProposalResultTable.tsx:106
+#: src/components/storage/ProposalResultTable.tsx:108
 #, javascript-format
 msgid "Before %s"
 msgstr "Vor %s"
 
-#: src/components/storage/ProposalResultTable.tsx:133
+#: src/components/storage/ProposalResultTable.tsx:135
 msgid "Mount Point"
 msgstr "Einhängepunkt"
 
-#: src/components/storage/ProposalResultTable.tsx:134
-#: src/components/storage/SpaceActionsTable.tsx:237
+#: src/components/storage/ProposalResultTable.tsx:136
+#: src/components/storage/SpaceActionsTable.tsx:230
 msgid "Details"
 msgstr "Details"
 
@@ -3008,65 +3117,65 @@ msgstr ""
 "verwendet ein schreibgeschütztes Btrfs-Dateisystem, das über Schnappschüsse "
 "aktualisiert wird."
 
-#: src/components/storage/SearchedDeviceMenu.tsx:57
+#: src/components/storage/SearchedDeviceMenu.tsx:69
 msgid "Selected disk cannot be changed"
 msgstr "Ausgewählte Festplatte kann nicht geändert werden"
 
 #. TRANSLATORS: %s is a formatted mount point like '"/home"'
-#: src/components/storage/SearchedDeviceMenu.tsx:62
+#: src/components/storage/SearchedDeviceMenu.tsx:74
 #, javascript-format
 msgid "Change the disk to format as %s"
 msgstr "Festplatte ändern, um als %s zu formatieren"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:69
+#: src/components/storage/SearchedDeviceMenu.tsx:81
 msgid "Change the disk to configure"
 msgstr "Festplatte ändern, um zu konfigurieren"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:73
+#: src/components/storage/SearchedDeviceMenu.tsx:85
 msgid "Change the disk to install the system"
 msgstr "Festplatte für die Installation des Systems ändern"
 
 #. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case).
-#: src/components/storage/SearchedDeviceMenu.tsx:83
+#: src/components/storage/SearchedDeviceMenu.tsx:95
 #, javascript-format
 msgid "Change the disk to create %s"
 msgstr "Festplatte zum Erstellen von %s ändern"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:99
+#: src/components/storage/SearchedDeviceMenu.tsx:118
 msgid "This uses the existing file system at the disk"
 msgstr "Dies verwendet das vorhandene Dateisystem auf der Festplatte"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:103
+#: src/components/storage/SearchedDeviceMenu.tsx:122
 msgid "This uses existing partitions at the disk"
 msgstr "Dies verwendet vorhandene Partitionen auf der Festplatte"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:111
+#: src/components/storage/SearchedDeviceMenu.tsx:130
 msgid "It is chosen for booting and for some LVM groups"
 msgstr "Es wird zum Booten und für einige LVM-Gruppen ausgewählt"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:113
+#: src/components/storage/SearchedDeviceMenu.tsx:132
 msgid "It is chosen for some LVM groups"
 msgstr "Es wird für einige LVM-Gruppen ausgewählt"
 
 #. TRANSLATORS: %s is the name of the LVM
-#: src/components/storage/SearchedDeviceMenu.tsx:118
+#: src/components/storage/SearchedDeviceMenu.tsx:137
 #, javascript-format
 msgid "It is chosen for booting and for the LVM group '%s'"
 msgstr "Es wird zum Booten und für die LVM-Gruppe ‚%s‘ ausgewählt"
 
 #. TRANSLATORS: %s is the name of the LVM
-#: src/components/storage/SearchedDeviceMenu.tsx:124
+#: src/components/storage/SearchedDeviceMenu.tsx:143
 #, javascript-format
 msgid "It is chosen for the LVM group '%s'"
 msgstr "Es wird für die LVM-Gruppe ‚%s‘ ausgewählt"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:129
+#: src/components/storage/SearchedDeviceMenu.tsx:148
 msgid "It is chosen for booting"
 msgstr "Es wird zum Booten ausgewählt"
 
 #. TRANSLATORS: %s is the name of the disk (eg. sda)
-#: src/components/storage/SearchedDeviceMenu.tsx:138
+#: src/components/storage/SearchedDeviceMenu.tsx:157
 #, javascript-format
 msgid ""
 "%s will still contain the configured LVM groups and any partition needed to "
@@ -3076,13 +3185,13 @@ msgstr ""
 "benötigten Partitionen enthalten"
 
 #. TRANSLATORS: %s is the name of the disk (eg. sda)
-#: src/components/storage/SearchedDeviceMenu.tsx:144
+#: src/components/storage/SearchedDeviceMenu.tsx:163
 #, javascript-format
 msgid "The configured LVM groups will remain at %s"
 msgstr "Die konfigurierten LVM-Gruppen bleiben bei %s"
 
 #. TRANSLATORS: %1$s is the name of the disk (eg. sda) and %2$s the name of the LVM
-#: src/components/storage/SearchedDeviceMenu.tsx:150
+#: src/components/storage/SearchedDeviceMenu.tsx:169
 #, javascript-format
 msgid ""
 "%1$s will still contain the LVM group '%2$s' and any partition needed to boot"
@@ -3091,46 +3200,46 @@ msgstr ""
 "Partitionen enthalten"
 
 #. TRANSLATORS: %1$s is the name of the LVM and %2$s the name of the disk (eg. sda)
-#: src/components/storage/SearchedDeviceMenu.tsx:158
+#: src/components/storage/SearchedDeviceMenu.tsx:177
 #, javascript-format
 msgid "The LVM group '%1$s' will remain at %2$s"
 msgstr "Die LVM-Gruppe ‚%1$s‘ wird bei %2$s bleiben"
 
 #. TRANSLATORS: %s is the name of the disk (eg. sda)
-#: src/components/storage/SearchedDeviceMenu.tsx:166
+#: src/components/storage/SearchedDeviceMenu.tsx:185
 #, javascript-format
 msgid "Partitions needed for booting will remain at %s"
 msgstr "Zum Booten benötigte Partitionen bleiben bei %s"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:170
+#: src/components/storage/SearchedDeviceMenu.tsx:189
 msgid "Partitions needed for booting will also be adapted"
 msgstr "Zum Booten benötigte Partitionen werden ebenfalls angepasst"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:186
+#: src/components/storage/SearchedDeviceMenu.tsx:211
 msgid "Change device menu"
 msgstr "Gerätemenü ändern"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:236
+#: src/components/storage/SearchedDeviceMenu.tsx:265
 msgid "The disk is used for LVM and boot"
 msgstr "Die Festplatte wird für LVM und Boot verwendet"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:238
+#: src/components/storage/SearchedDeviceMenu.tsx:267
 msgid "The disk is used for booting"
 msgstr "Die Festplatte wird zum Booten verwendet"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:242
+#: src/components/storage/SearchedDeviceMenu.tsx:271
 msgid "The disk is used for LVM"
 msgstr "Die Festplatte wird für LVM verwendet"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:244
+#: src/components/storage/SearchedDeviceMenu.tsx:273
 msgid "Remove the configuration for this disk"
 msgstr "Konfiguration für diese Festplatte entfernen"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:256
+#: src/components/storage/SearchedDeviceMenu.tsx:285
 msgid "Do not use"
 msgstr "Nicht verwenden"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:309
+#: src/components/storage/SearchedDeviceMenu.tsx:344
 #, javascript-format
 msgid "Device %s menu"
 msgstr "Menü von Gerät %s"
@@ -3188,46 +3297,40 @@ msgstr ""
 msgid "Define a custom size"
 msgstr "Benutzerdefinierte Größe definieren"
 
-#: src/components/storage/SpaceActionsTable.tsx:75
+#: src/components/storage/SpaceActionsTable.tsx:76
 msgid "The device will be used by the new system."
 msgstr "Das Gerät wird von dem neuen System verwendet."
 
 #. TRANSLATORS: %s is a mount path like "/home".
-#: src/components/storage/SpaceActionsTable.tsx:78
+#: src/components/storage/SpaceActionsTable.tsx:79
 #, javascript-format
 msgid "The device will be mounted at %s."
 msgstr "Das Gerät wird unter %s eingehängt."
 
-#: src/components/storage/SpaceActionsTable.tsx:84
+#: src/components/storage/SpaceActionsTable.tsx:85
 #, javascript-format
 msgid "Up to %s can be recovered by shrinking the device."
 msgstr "Bis zu %s können durch Verkleinern des Geräts zurückgewonnen werden."
 
-#: src/components/storage/SpaceActionsTable.tsx:93
+#: src/components/storage/SpaceActionsTable.tsx:94
 msgid "The device cannot be shrunk:"
 msgstr "Das Gerät kann nicht verkleinert werden:"
 
-#: src/components/storage/SpaceActionsTable.tsx:114
+#: src/components/storage/SpaceActionsTable.tsx:115
 #, javascript-format
 msgid "Show information about %s"
 msgstr "Informationen über %s anzeigen"
 
-#: src/components/storage/SpaceActionsTable.tsx:208
-msgid "The content may be deleted"
-msgstr "Der Inhalt kann gelöscht werden"
+#: src/components/storage/SpaceActionsTable.tsx:226
+#, fuzzy
+msgid "proposal.Device"
+msgstr "Vorschlag"
 
-#. TRANSLATORS: status message, no existing content was found on the disk,
-#. i.e. the disk is completely empty
-#: src/components/storage/SpaceActionsTable.tsx:211
-#: src/components/storage/utils/device.tsx:87
-msgid "No content found"
-msgstr "Kein Inhalt gefunden"
-
-#: src/components/storage/SpaceActionsTable.tsx:242
+#: src/components/storage/SpaceActionsTable.tsx:238
 msgid "Action"
 msgstr "Aktion"
 
-#: src/components/storage/SpacePolicySelection.tsx:97
+#: src/components/storage/SpacePolicySelection.tsx:106
 msgid ""
 "Select what to do with each partition in order to find space for allocating "
 "the new system."
@@ -3235,10 +3338,56 @@ msgstr ""
 "Wählen Sie aus, was mit jeder Partition geschehen soll, um Platz für das "
 "neue System zu finden."
 
-#: src/components/storage/SpacePolicySelection.tsx:103
+#: src/components/storage/SpacePolicySelection.tsx:112
 #, javascript-format
 msgid "Find space in %s"
 msgstr "Speicherplatz in %s finden"
+
+#: src/components/storage/StorageDetailsItem.tsx:52
+msgid "No device selected yet"
+msgstr "Noch kein Gerät ausgewählt"
+
+#. TRANSLATORS: %s will be replaced by the device name and its size,
+#. example: "/dev/sda, 20 GiB"
+#: src/components/storage/StorageDetailsItem.tsx:59
+#, fuzzy, javascript-format
+msgid "Use device %s"
+msgstr "Laufwerk %s verwenden"
+
+#: src/components/storage/StorageDetailsItem.tsx:83
+#, fuzzy
+msgid "Use several devices"
+msgstr "Geräte neu scannen"
+
+#: src/components/storage/StorageDetailsItem.tsx:93
+#, fuzzy
+msgid "There are no disks available for the installation"
+msgstr "Für die Installation sind keine Festplatten verfügbar."
+
+#: src/components/storage/StorageDetailsItem.tsx:94
+#, fuzzy
+msgid "Invalid settings"
+msgstr "Ungültige Einstellungen für die Speicherung"
+
+#: src/components/storage/StorageDetailsItem.tsx:95
+#, fuzzy
+msgid "Using an advanced storage configuration"
+msgstr "Installieren mit einer erweiterten Konfiguration."
+
+#: src/components/storage/StorageDetailsItem.tsx:112
+msgid "No data loss is expected"
+msgstr ""
+
+#. TRANSLATORS: %s will be replaced by a formatted list of affected systems
+#. like "Windows and openSUSE Tumbleweed".
+#: src/components/storage/StorageDetailsItem.tsx:119
+#, javascript-format
+msgid "Potential data loss affecting at least %s"
+msgstr ""
+
+#: src/components/storage/StorageDetailsItem.tsx:124
+msgid "Potential data loss"
+msgstr ""
 
 #: src/components/storage/UnsupportedModelInfo.tsx:44
 msgid ""
@@ -3257,79 +3406,79 @@ msgstr ""
 "Sie können die Konfiguration verwerfen und mit einer einfachen Konfiguration "
 "neu beginnen."
 
-#: src/components/storage/UnusedMenu.tsx:36
+#: src/components/storage/UnusedMenu.tsx:33
 msgid "Not configured yet"
 msgstr "Noch nicht konfiguriert"
 
-#: src/components/storage/UnusedMenu.tsx:61
-msgid "Use the RAID without partitions"
-msgstr "RAID ohne Partitionen verwenden"
-
-#: src/components/storage/UnusedMenu.tsx:61
+#: src/components/storage/UnusedMenu.tsx:63
 msgid "Use the disk without partitions"
 msgstr "Festplatte ohne Partitionen verwenden"
 
-#: src/components/storage/UnusedMenu.tsx:72
+#: src/components/storage/UnusedMenu.tsx:64
+msgid "Use the RAID without partitions"
+msgstr "RAID ohne Partitionen verwenden"
+
+#: src/components/storage/UnusedMenu.tsx:75
 msgid "Add a partition or mount an existing one"
 msgstr "Eine Partition hinzufügen oder eine vorhandene Partition einhängen"
 
-#: src/components/storage/UnusedMenu.tsx:80
+#: src/components/storage/UnusedMenu.tsx:83
 msgid "Format the whole device or mount an existing file system"
 msgstr "Gesamtes Gerät formatieren oder ein vorhandenes Dateisystem einhängen"
 
 #. TRANSLATORS: %1$s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case). %2$s is a disk name like sda.
-#: src/components/storage/VolumeGroupEditor.tsx:74
+#: src/components/storage/VolumeGroupEditor.tsx:79
 #, javascript-format
 msgid "%1$s will be created as a partition at %2$s"
 msgid_plural "%1$s will be created as partitions at %2$s"
 msgstr[0] "%1$s wird als Partition unter %2$s erstellt"
 msgstr[1] "%1$s werden als Partitionen unter %2$s erstellt"
 
-#: src/components/storage/VolumeGroupEditor.tsx:83
+#: src/components/storage/VolumeGroupEditor.tsx:88
 msgid "The logical volume will also be deleted"
 msgid_plural "The logical volumes will also be deleted"
 msgstr[0] "Das logische Volume wird ebenfalls gelöscht"
 msgstr[1] "Die logischen Volumes werden ebenfalls gelöscht"
 
-#: src/components/storage/VolumeGroupEditor.tsx:98
+#: src/components/storage/VolumeGroupEditor.tsx:103
 msgid "Delete volume group"
 msgstr "Volume-Gruppe löschen"
 
-#: src/components/storage/VolumeGroupEditor.tsx:110
+#: src/components/storage/VolumeGroupEditor.tsx:115
 msgid "Modify settings and physical volumes"
 msgstr "Einstellungen und physikalische Volumes ändern"
 
-#: src/components/storage/VolumeGroupEditor.tsx:114
+#: src/components/storage/VolumeGroupEditor.tsx:119
 msgid "Edit volume group"
 msgstr "Volume-Gruppe bearbeiten"
 
 #. TRANSLATORS: ARIA (accesibility) description of an UI element. %s is a mount path.
-#: src/components/storage/VolumeGroupEditor.tsx:145
+#: src/components/storage/VolumeGroupEditor.tsx:150
 #, javascript-format
 msgid "Volume group %s"
 msgstr "Volume-Gruppe %s"
 
-#: src/components/storage/VolumeGroupEditor.tsx:185
+#: src/components/storage/VolumeGroupEditor.tsx:190
 #, javascript-format
 msgid "Create LVM volume group %s"
 msgstr "LVM-Volume-Gruppe %s erstellen"
 
-#: src/components/storage/VolumeGroupEditor.tsx:186
+#: src/components/storage/VolumeGroupEditor.tsx:191
 #, javascript-format
 msgid "Empty LVM volume group %s"
 msgstr "LVM-Volume-Gruppe %s löschen"
 
-#: src/components/storage/VolumeGroupEditor.tsx:241
+#: src/components/storage/VolumeGroupEditor.tsx:246
 msgid "Add logical volume"
 msgstr "Logisches Volume hinzufügen"
 
-#: src/components/storage/VolumeGroupEditor.tsx:251
+#: src/components/storage/VolumeGroupEditor.tsx:256
 #, javascript-format
 msgid "Logical volumes for %s"
 msgstr "Logische Volumes für %s"
 
-#: src/components/storage/VolumeGroupEditor.tsx:266
+#: src/components/storage/VolumeGroupEditor.tsx:271
 msgid "The following logical volume will be created"
 msgid_plural "The following logical volumes will be created"
 msgstr[0] "Das folgende logische Volume wird erstellt"
@@ -3537,22 +3686,9 @@ msgstr "offline"
 msgid "Clear input"
 msgstr "Eingabe löschen"
 
-#: src/components/storage/device-utils.tsx:76
+#: src/components/storage/device-utils.tsx:85
 msgid "Unused space"
 msgstr "Ungenutzter Platz"
-
-#. TRANSLATORS: %1$s is a description of the device (eg. "Encrypted XFS RAID") and %2$s is
-#. the RAID level (eg. "RAID0")
-#. TRANSLATORS: %1$s is an already formatted mount path (eg. "/"),
-#. %2$s is a size description (eg. at least 10 GiB)
-#. TRANSLATORS: %1$s is a filesystem type description (eg. "Btrfs with snapshots"),
-#. %2$s is a description of the size or the size limits (eg. "at least 10 GiB")
-#: src/components/storage/device-utils.tsx:84
-#: src/components/storage/utils/partition.tsx:41
-#: src/components/storage/utils/partition.tsx:85
-#, javascript-format
-msgid "%1$s (%2$s)"
-msgstr "%1$s (%2$s)"
 
 #: src/components/storage/iscsi/AuthFields.jsx:66
 msgid "Only available if authentication by target is provided"
@@ -3743,288 +3879,294 @@ msgstr "Erkennen"
 msgid "Targets"
 msgstr "Ziele"
 
-#: src/components/storage/utils.ts:58
+#: src/components/storage/utils.ts:60
 msgid "KiB"
 msgstr "KiB"
 
-#: src/components/storage/utils.ts:59
+#: src/components/storage/utils.ts:61
 msgid "MiB"
 msgstr "MiB"
 
-#: src/components/storage/utils.ts:60
+#: src/components/storage/utils.ts:62
 msgid "GiB"
 msgstr "GiB"
 
-#: src/components/storage/utils.ts:61
+#: src/components/storage/utils.ts:63
 msgid "TiB"
 msgstr "TiB"
 
-#: src/components/storage/utils.ts:62
+#: src/components/storage/utils.ts:64
 msgid "PiB"
 msgstr "PiB"
 
-#: src/components/storage/utils.ts:66
+#: src/components/storage/utils.ts:68
 msgid "Bcachefs"
 msgstr "Bcachefs"
 
-#: src/components/storage/utils.ts:67
+#: src/components/storage/utils.ts:69
 msgid "BitLocker"
 msgstr "BitLocker"
 
-#: src/components/storage/utils.ts:68
+#: src/components/storage/utils.ts:70
 msgid "Btrfs"
 msgstr "Btrfs"
 
-#: src/components/storage/utils.ts:69
+#: src/components/storage/utils.ts:71
 msgid "ExFAT"
 msgstr "ExFAT"
 
-#: src/components/storage/utils.ts:70
+#: src/components/storage/utils.ts:72
 msgid "Ext2"
 msgstr "Ext2"
 
-#: src/components/storage/utils.ts:71
+#: src/components/storage/utils.ts:73
 msgid "Ext3"
 msgstr "Ext3"
 
-#: src/components/storage/utils.ts:72
+#: src/components/storage/utils.ts:74
 msgid "Ext4"
 msgstr "Ext4"
 
-#: src/components/storage/utils.ts:73
+#: src/components/storage/utils.ts:75
 msgid "F2FS"
 msgstr "F2FS"
 
-#: src/components/storage/utils.ts:74
+#: src/components/storage/utils.ts:76
 msgid "JFS"
 msgstr "JFS"
 
-#: src/components/storage/utils.ts:75
+#: src/components/storage/utils.ts:77
 msgid "NFS"
 msgstr "NFS"
 
-#: src/components/storage/utils.ts:76
+#: src/components/storage/utils.ts:78
 msgid "NILFS2"
 msgstr "NILFS2"
 
-#: src/components/storage/utils.ts:77
+#: src/components/storage/utils.ts:79
 msgid "NTFS"
 msgstr "NTFS"
 
-#: src/components/storage/utils.ts:78
+#: src/components/storage/utils.ts:80
 msgid "ReiserFS"
 msgstr "ReiserFS"
 
-#: src/components/storage/utils.ts:79
+#: src/components/storage/utils.ts:81
 msgid "Swap"
 msgstr "Auslagerung"
 
-#: src/components/storage/utils.ts:80
+#: src/components/storage/utils.ts:82
 msgid "Tmpfs"
 msgstr "Tmpfs"
 
-#: src/components/storage/utils.ts:81
+#: src/components/storage/utils.ts:83
 msgid "FAT"
 msgstr "FAT"
 
-#: src/components/storage/utils.ts:82
+#: src/components/storage/utils.ts:84
 msgid "XFS"
 msgstr "XFS"
 
-#: src/components/storage/utils.ts:90
+#: src/components/storage/utils.ts:92
 msgid "Delete current content"
 msgstr "Aktuellen Inhalt löschen"
 
-#: src/components/storage/utils.ts:94
+#: src/components/storage/utils.ts:96
 msgid "Shrink existing partitions"
 msgstr "Vorhandene Partitionen verkleinern"
 
-#: src/components/storage/utils.ts:98
+#: src/components/storage/utils.ts:100
 msgid "Use available space"
 msgstr "Verfügbaren Speicherplatz verwenden"
 
 #. TRANSLATORS: sub-string used to represent a path like "/" or "/var". %s is replaced by the path
 #. itself, the rest of the string (quotation marks in the English case) is used to encapsulate the
 #. path in a bigger sentence like 'Create partitions for "/" and "/var"'.
-#: src/components/storage/utils.ts:358
+#: src/components/storage/utils.ts:346
 #, javascript-format
 msgid "\"%s\""
 msgstr "„%s“"
 
 #. TRANSLATORS: Size range, %1$s is the min size and %2$s is the max
-#: src/components/storage/utils.ts:369
+#: src/components/storage/utils.ts:357
 #, javascript-format
 msgid "%1$s - %2$s"
 msgstr "%1$s - %2$s"
 
 #. TRANSLATORS: minimum device size, %s is replaced by size string, e.g. "17.5 GiB"
-#: src/components/storage/utils.ts:371
+#: src/components/storage/utils.ts:359
 #, javascript-format
 msgid "at least %s"
 msgstr "mindestens %s"
 
 #. TRANSLATORS: multipath device type
-#: src/components/storage/utils/device.tsx:39
+#: src/components/storage/utils/device.tsx:31
 msgid "Multipath"
 msgstr "Multipfad"
 
 #. TRANSLATORS: %s is replaced by the device bus ID
-#: src/components/storage/utils/device.tsx:44
+#: src/components/storage/utils/device.tsx:36
 #, javascript-format
 msgid "DASD %s"
 msgstr "DASD %s"
 
-#. TRANSLATORS: software RAID device, %s is replaced by the RAID level, e.g. RAID-1
-#: src/components/storage/utils/device.tsx:49
-#, javascript-format
-msgid "Software %s"
-msgstr "Software %s"
-
-#: src/components/storage/utils/device.tsx:54
+#: src/components/storage/utils/device.tsx:40
 msgid "SD Card"
 msgstr "SD-Karte"
 
 #. TRANSLATORS: %s is substituted by the type of disk like "iSCSI" or "SATA"
-#: src/components/storage/utils/device.tsx:59
+#: src/components/storage/utils/device.tsx:46
 #, javascript-format
 msgid "%s disk"
 msgstr "Festplatte %s"
 
-#: src/components/storage/utils/device.tsx:60
+#: src/components/storage/utils/device.tsx:47
 msgid "Disk"
 msgstr "Festplatte"
 
+#. TRANSLATORS: software RAID device, %s is replaced by the RAID level, e.g. RAID-1
+#: src/components/storage/utils/device.tsx:59
+#, javascript-format
+msgid "Software %s"
+msgstr "Software %s"
+
 #. TRANSLATORS: disk partition info, %s is replaced by partition table
 #. type (MS-DOS or GPT), %d is the number of the partitions
-#: src/components/storage/utils/device.tsx:81
+#: src/components/storage/utils/device.tsx:83
 #, javascript-format
 msgid "%s with %d partitions"
 msgstr "%s mit %d Partitionen"
 
-#: src/components/storage/utils/drive.tsx:45
+#. TRANSLATORS: status message, no existing content was found on the disk,
+#. i.e. the disk is completely empty
+#: src/components/storage/utils/device.tsx:90
+msgid "No content found"
+msgstr "Kein Inhalt gefunden"
+
+#: src/components/storage/utils/drive.tsx:46
 msgid "A partition will be deleted"
 msgstr "Eine Partition wird gelöscht"
 
-#: src/components/storage/utils/drive.tsx:46
+#: src/components/storage/utils/drive.tsx:47
 msgid "At least one partition will be deleted"
 msgstr "Mindestens eine Partition wird gelöscht"
 
-#: src/components/storage/utils/drive.tsx:47
+#: src/components/storage/utils/drive.tsx:48
 msgid "Several partitions will be deleted"
 msgstr "Mehrere Partitionen werden gelöscht"
 
-#: src/components/storage/utils/drive.tsx:48
+#: src/components/storage/utils/drive.tsx:49
 msgid "A partition may be deleted"
 msgstr "Eine Partition kann gelöscht werden"
 
-#: src/components/storage/utils/drive.tsx:50
+#: src/components/storage/utils/drive.tsx:51
 msgid "Some partitions may be deleted"
 msgstr "Einige Partitionen können gelöscht werden"
 
-#: src/components/storage/utils/drive.tsx:61
+#: src/components/storage/utils/drive.tsx:62
 msgid "A partition may be shrunk"
 msgstr "Eine Partition kann verkleinert werden"
 
-#: src/components/storage/utils/drive.tsx:63
+#: src/components/storage/utils/drive.tsx:64
 msgid "Some partitions may be shrunk"
 msgstr "Einige Partitionen können verkleinert werden"
 
-#: src/components/storage/utils/drive.tsx:71
+#: src/components/storage/utils/drive.tsx:77
 msgid "All content not configured to be mounted will be deleted"
 msgstr "Jeder Inhalt, der nicht zum Einhängen konfiguriert ist, wird gelöscht"
 
-#: src/components/storage/utils/drive.tsx:72
+#: src/components/storage/utils/drive.tsx:78
 msgid "All content will be deleted"
 msgstr "Der gesamte Inhalt wird gelöscht"
 
-#: src/components/storage/utils/drive.tsx:75
+#: src/components/storage/utils/drive.tsx:81
 msgid "Reused partitions will not be shrunk"
 msgstr "Wiederverwendete Partitionen werden nicht verkleinert"
 
-#: src/components/storage/utils/drive.tsx:76
+#: src/components/storage/utils/drive.tsx:82
 msgid "Some existing partitions may be shrunk"
 msgstr "Einige vorhandene Partitionen können verkleinert werden"
 
-#: src/components/storage/utils/drive.tsx:78
-#: src/components/storage/utils/drive.tsx:113
+#: src/components/storage/utils/drive.tsx:84
+#: src/components/storage/utils/drive.tsx:119
 msgid "Current partitions will be kept"
 msgstr "Aktuelle Partitionen werden beibehalten"
 
-#: src/components/storage/utils/drive.tsx:123
+#: src/components/storage/utils/drive.tsx:137
 msgid ""
 "Partitions that are not reused will be removed and that data will be lost."
 msgstr ""
 "Partitionen, die nicht wiederverwendet werden, werden entfernt und deren "
 "Daten gehen verloren."
 
-#: src/components/storage/utils/drive.tsx:124
+#: src/components/storage/utils/drive.tsx:138
 msgid ""
 "Any existing partition will be removed and all data in the disk will be lost."
 msgstr ""
 "Alle vorhandenen Partitionen werden entfernt und alle Daten auf der "
 "Festplatte gehen verloren."
 
-#: src/components/storage/utils/drive.tsx:128
+#: src/components/storage/utils/drive.tsx:142
 msgid "Partitions that are not reused will be resized as needed."
 msgstr ""
 "Die Größe von Partitionen, die nicht wiederverwendet werden, wird nach "
 "Bedarf geändert."
 
-#: src/components/storage/utils/drive.tsx:130
+#: src/components/storage/utils/drive.tsx:144
 msgid "Partitions that are not reused would be resized if needed."
 msgstr ""
 "Die Größe von Partitionen, die nicht wiederverwendet werden, wird bei Bedarf "
 "angepasst."
 
-#: src/components/storage/utils/drive.tsx:132
+#: src/components/storage/utils/drive.tsx:146
 msgid "The data is kept, but the current partitions will be resized as needed."
 msgstr ""
 "Die Daten bleiben erhalten, aber die Größe der aktuellen Partitionen wird "
 "nach Bedarf geändert."
 
-#: src/components/storage/utils/drive.tsx:136
+#: src/components/storage/utils/drive.tsx:150
 msgid ""
 "Only reused partitions and space not assigned to any partition will be used."
 msgstr ""
 "Es werden nur wiederverwendete Partitionen und Speicherplatz, der keiner "
 "Partition zugewiesen ist, verwendet."
 
-#: src/components/storage/utils/drive.tsx:138
+#: src/components/storage/utils/drive.tsx:152
 msgid "Only reused partitions will be used."
 msgstr "Es werden nur wiederverwendete Partitionen verwendet."
 
-#: src/components/storage/utils/drive.tsx:140
+#: src/components/storage/utils/drive.tsx:154
 msgid ""
 "The data is kept. Only the space not assigned to any partition will be used."
 msgstr ""
 "Die Daten werden beibehalten. Nur der Speicherplatz, der keiner Partition "
 "zugewiesen ist, wird verwendet."
 
-#: src/components/storage/utils/drive.tsx:142
+#: src/components/storage/utils/drive.tsx:156
 msgid "Select what to do with each partition."
 msgstr "Wählen Sie aus, was mit jeder Partition gemacht werden soll."
 
-#: src/components/storage/utils/drive.tsx:152
+#: src/components/storage/utils/drive.tsx:166
 #, javascript-format
 msgid "The whole device will be used for %s"
 msgstr "Das gesamte Gerät wird für %s verwendet"
 
-#: src/components/storage/utils/drive.tsx:156
+#: src/components/storage/utils/drive.tsx:170
 msgid "A file system will be used for the whole device"
 msgstr "Es wird ein Dateisystem für das gesamte Gerät verwendet"
 
-#: src/components/storage/utils/drive.tsx:161
+#: src/components/storage/utils/drive.tsx:175
 msgid "No additional partitions will be created"
 msgstr "Es werden keine zusätzlichen Partitionen erstellt"
 
-#: src/components/storage/utils/drive.tsx:169
+#: src/components/storage/utils/drive.tsx:183
 #, javascript-format
 msgid "An existing partition will be used for %s"
 msgid_plural "Existing partitions will be used for %s"
 msgstr[0] "Eine vorhandene Partition wird für %s verwendet"
 msgstr[1] "Vorhandene Partitionen werden für %s verwendet"
 
-#: src/components/storage/utils/drive.tsx:183
+#: src/components/storage/utils/drive.tsx:197
 #, javascript-format
 msgid "A new partition will be created for %s"
 msgid_plural "New partitions will be created for %s"
@@ -4033,7 +4175,7 @@ msgstr[1] "Für %s werden neue Partitionen erstellt"
 
 #. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case).
-#: src/components/storage/utils/drive.tsx:194
+#: src/components/storage/utils/drive.tsx:208
 #, javascript-format
 msgid "Partitions will be used and created for %s"
 msgstr "Partitionen werden für %s verwendet und erstellt"
@@ -4152,6 +4294,15 @@ msgstr "zFCP-Geräte lesen"
 msgid "zFCP"
 msgstr "zFCP"
 
+#: src/components/system/HostnameDetailsItem.tsx:42
+#: src/components/system/HostnamePage.tsx:80 src/router.tsx:57
+msgid "Hostname"
+msgstr "Hostname"
+
+#: src/components/system/HostnameDetailsItem.tsx:56
+msgid "Temporary name that may change after reboot or network changes"
+msgstr ""
+
 #: src/components/system/HostnamePage.tsx:63
 msgid "Enter a hostname."
 msgstr "Geben Sie einen Hostnamen ein."
@@ -4172,10 +4323,6 @@ msgstr "Hostname konnte nicht aktualisiert werden"
 msgid "Using transient hostname: %s"
 msgstr "Transienter Hostname wird verwendet: %s"
 
-#: src/components/system/HostnamePage.tsx:80 src/router.tsx:56
-msgid "Hostname"
-msgstr "Hostname"
-
 #: src/components/system/HostnamePage.tsx:85
 msgid "Product is already registered"
 msgstr "Produkt ist bereits registriert"
@@ -4188,7 +4335,7 @@ msgstr ""
 "Wenn Sie den Hostnamen jetzt oder später aktualisieren, wird der aktuell "
 "registrierte Hostname nicht geändert."
 
-#: src/components/system/HostnamePage.tsx:95
+#: src/components/system/HostnamePage.tsx:94
 msgid ""
 "This hostname is dynamic and may change after a reboot or network update, as "
 "configured by the local network administrator."
@@ -4197,17 +4344,17 @@ msgstr ""
 "Netzwerkaktualisierung ändern, wie vom lokalen Netzwerkadministrator "
 "konfiguriert."
 
-#: src/components/system/HostnamePage.tsx:111
+#: src/components/system/HostnamePage.tsx:109
 msgid "Use static hostname"
 msgstr "Statischen Hostnamen verwenden"
 
-#: src/components/system/HostnamePage.tsx:112
+#: src/components/system/HostnamePage.tsx:110
 msgid "Set a permanent hostname that won’t change with network updates."
 msgstr ""
 "Legen Sie einen permanenten Hostnamen fest, der sich bei "
 "Netzwerkaktualisierungen nicht ändert."
 
-#: src/components/system/HostnamePage.tsx:122
+#: src/components/system/HostnamePage.tsx:120
 msgid "Static hostname"
 msgstr "Statischer Hostname"
 
@@ -4331,6 +4478,118 @@ msgstr "Öffentlichen SSH-Schlüssel verwenden"
 #: src/routes/storage.tsx:113
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#~ msgid "Configuration out of sync"
+#~ msgstr "Konfiguration nicht synchronisiert"
+
+#~ msgid "The configuration has been updated externally."
+#~ msgstr "Die Konfiguration wurde extern aktualisiert."
+
+#~ msgid ""
+#~ "Reloading is required to get the latest data and avoid issues or data "
+#~ "loss."
+#~ msgstr ""
+#~ "Ein Neuladen ist erforderlich, um die neuesten Daten abzurufen und "
+#~ "Probleme oder Datenverluste zu vermeiden."
+
+#~ msgid "Reload now"
+#~ msgstr "Jetzt neu laden"
+
+#~ msgid "Confirm Installation"
+#~ msgstr "Installation bestätigen"
+
+#~ msgid ""
+#~ "If you continue, partitions on your hard disk will be modified according "
+#~ "to the provided installation settings."
+#~ msgstr ""
+#~ "Wenn Sie fortfahren, werden die Partitionen auf Ihrer Festplatte "
+#~ "entsprechend den vorgegebenen Installationseinstellungen geändert."
+
+#~ msgid "Please, cancel and check the settings if you are unsure."
+#~ msgstr ""
+#~ "Falls Sie unsicher sind, brechen Sie den Vorgang ab und überprüfen Sie "
+#~ "die Einstellungen."
+
+#~ msgid "Continue"
+#~ msgstr "Fortsetzen"
+
+#~ msgid "Not selected yet"
+#~ msgstr "Noch nicht ausgewählt"
+
+#, javascript-format
+#~ msgid "The system will use %s as its default language."
+#~ msgstr "Das System wird %s als Standardsprache verwenden."
+
+#~ msgid ""
+#~ "These are the most relevant installation settings. Feel free to browse "
+#~ "the sections in the menu for further details."
+#~ msgstr ""
+#~ "Dies sind die wichtigsten Installationseinstellungen. Weitere "
+#~ "Einzelheiten finden Sie in den Abschnitten des Menüs."
+
+#~ msgid "The installation will take"
+#~ msgstr "Die Installation benötigt"
+
+#, javascript-format
+#~ msgid "The installation will take %s including:"
+#~ msgstr "Die Installation benötigt %s einschließlich:"
+
+#, javascript-format
+#~ msgid "Install using device %s shrinking existing partitions as needed."
+#~ msgstr ""
+#~ "Installieren unter Verwendung des Geräts %s und Verkleinern vorhandener "
+#~ "Partitionen nach Bedarf."
+
+#, javascript-format
+#~ msgid "Install using device %s without modifying existing partitions."
+#~ msgstr ""
+#~ "Installieren unter Verwendung des Geräts %s ohne Änderung der vorhandenen "
+#~ "Partitionen."
+
+#, javascript-format
+#~ msgid "Install using device %s and deleting all its content."
+#~ msgstr ""
+#~ "Installieren unter Verwendung des Geräts %s und Löschen seines gesamten "
+#~ "Inhalts."
+
+#, javascript-format
+#~ msgid ""
+#~ "Install using device %s with a custom strategy to find the needed space."
+#~ msgstr ""
+#~ "Installieren unter Verwendung des Geräts %s mit einer benutzerdefinierten "
+#~ "Strategie, um den benötigten Platz zu finden."
+
+#~ msgid ""
+#~ "Install using several devices shrinking existing partitions as needed."
+#~ msgstr ""
+#~ "Installieren unter Verwendung mehrerer Geräte und Verkleinern vorhandener "
+#~ "Partitionen nach Bedarf."
+
+#~ msgid "Install using several devices without modifying existing partitions."
+#~ msgstr ""
+#~ "Installieren unter Verwendung mehrerer Geräte ohne Änderung der "
+#~ "vorhandenen Partitionen."
+
+#~ msgid "Install using several devices and deleting all its content."
+#~ msgstr ""
+#~ "Installieren unter Verwendung mehrerer Geräte und Löschen des gesamten "
+#~ "Inhalts."
+
+#~ msgid ""
+#~ "Install using several devices with a custom strategy to find the needed "
+#~ "space."
+#~ msgstr ""
+#~ "Installieren unter Verwendung mehrerer Geräte mit einer "
+#~ "benutzerdefinierten Strategie, um den benötigten Platz zu finden."
+
+#~ msgid "Extensions"
+#~ msgstr "Erweiterungen"
+
+#~ msgid "Reloading data, please wait..."
+#~ msgstr "Daten werden neu geladen, bitte warten ..."
+
+#~ msgid "The content may be deleted"
+#~ msgstr "Der Inhalt kann gelöscht werden"
 
 #~ msgid "Other options toggle"
 #~ msgstr "Umschalter für andere Optionen"
@@ -4467,10 +4726,6 @@ msgstr "ZFCP"
 
 #~ msgid "Maximum size value"
 #~ msgstr "Wert der Maximalgröße"
-
-#, c-format
-#~ msgid "Keep size of %s"
-#~ msgstr "Größe von %s beibehalten"
 
 #~ msgid "The partition is created exactly with the given size"
 #~ msgstr "Die Partition wird genau mit der angegebenen Größe erstellt"
@@ -4806,10 +5061,6 @@ msgstr "ZFCP"
 #~ msgid "%1$s root volume (%2$s)"
 #~ msgstr "Wurzel-Volume von %1$s (%2$s)"
 
-#, c-format
-#~ msgid "%1$s %2$s at %3$s (%4$s)"
-#~ msgstr "%1$s %2$s unter %3$s (%4$s)"
-
 #, fuzzy, c-format
 #~ msgid "%1$s %2$s volume (%3$s)"
 #~ msgstr "Volume %1$s %2$s (%3$s)"
@@ -4977,9 +5228,6 @@ msgstr "ZFCP"
 #~ msgid "The final size depends on %s."
 #~ msgstr "Die endgültige Größe hängt von %s ab."
 
-#~ msgid " and "
-#~ msgstr " und "
-
 #~ msgid "Automatically calculated size according to the selected product."
 #~ msgstr "Automatisch berechnete Größe entsprechend dem ausgewählten Produkt."
 
@@ -5009,9 +5257,6 @@ msgstr "ZFCP"
 
 #~ msgid "Unit for the maximum size"
 #~ msgstr "Einheit für die Maximalgröße"
-
-#~ msgid "Auto"
-#~ msgstr "Automatisch"
 
 #~ msgid "Fixed"
 #~ msgstr "Unveränderbar"
@@ -5214,9 +5459,6 @@ msgstr "ZFCP"
 #~ "Beim Sammeln der Protokolle ist etwas schiefgelaufen. Bitte versuchen Sie "
 #~ "es erneut."
 
-#~ msgid "Installation"
-#~ msgstr "Installation"
-
 #~ msgid "Please, try to read the zFCP devices again."
 #~ msgstr "Bitte versuchen Sie, die zFCP-Geräte erneut einzulesen."
 
@@ -5229,12 +5471,6 @@ msgstr "ZFCP"
 
 #~ msgid "Agama"
 #~ msgstr "Agama"
-
-#~ msgid "Waiting for progress status..."
-#~ msgstr "Warten auf den Fortschrittsstatus ..."
-
-#~ msgid "Proposal"
-#~ msgstr "Vorschlag"
 
 #, c-format
 #~ msgid "Register %s"
@@ -5404,9 +5640,6 @@ msgstr "ZFCP"
 #~ msgid "No network devices detected"
 #~ msgstr "Keine Netzwerkverbindungen erkannt"
 
-#~ msgid "Installation Summary"
-#~ msgstr "Zusammenfassung der Installation"
-
 #~ msgid "Product"
 #~ msgstr "Produkt"
 
@@ -5501,12 +5734,6 @@ msgstr "ZFCP"
 #~ msgid "Cockpit server"
 #~ msgstr "Cockpit-Server"
 
-#, c-format
-#~ msgid "%d connection set:"
-#~ msgid_plural "%d connections set:"
-#~ msgstr[0] "%d Verbindung festgelegt:"
-#~ msgstr[1] "%d Verbindungen festgelegt:"
-
 #~ msgid "automatically selected"
 #~ msgstr "automatisch ausgewählt"
 
@@ -5554,9 +5781,6 @@ msgstr "ZFCP"
 #, c-format
 #~ msgid "%s unused"
 #~ msgstr "%s nicht verwendet"
-
-#~ msgid "Configure the LVM settings"
-#~ msgstr "LVM-Einstellungen konfigurieren"
 
 #~ msgid "encrypted"
 #~ msgstr "verschlüsselt"
