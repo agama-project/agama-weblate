@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-01-10 17:02+0000\n"
-"PO-Revision-Date: 2025-11-24 15:04+0000\n"
-"Last-Translator: Timo Jyrinki <tjyrinki@suse.com>\n"
+"PO-Revision-Date: 2026-01-12 16:04+0000\n"
+"Last-Translator: Tommi Nieminen <software@legisign.org>\n"
 "Language-Team: Finnish <https://l10n.opensuse.org/projects/agama/agama-web/"
 "fi/>\n"
 "Language: fi\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.14.3\n"
+"X-Generator: Weblate 5.15.1\n"
 
 #: src/components/core/ChangeProductOption.tsx:46
 msgid "Change product"
@@ -26,33 +26,33 @@ msgstr "Vaihda tuotetta"
 #. TRANSLATORS: title shown in the confirmation page before
 #. starting the installation. %s will be replaced with the product name.
 #: src/components/core/ConfirmPage.tsx:52
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "Start %s installation?"
-msgstr "Ala perusasennuksen asetusten teko"
+msgstr "Aloitetaanko asennus: %s?"
 
 #: src/components/core/ConfirmPage.tsx:72
 msgid ""
 "Review the summary below. If anything seems incorrect or you have doubts, go "
 "back and adjust the settings before proceeding."
 msgstr ""
+"Tarkista yhteenveto alta. Jos jokin vaikuttaa olevan väärältä tai "
+"epäilyttävältä, palaa säätämään asetuksia ennen kuin jatkat."
 
 #: src/components/core/ConfirmPage.tsx:93
 msgid "Install now with potential data loss"
-msgstr ""
+msgstr "Asenna nyt, vaikka tietoja menetettäisiin"
 
 #: src/components/core/ConfirmPage.tsx:94
-#, fuzzy
 msgid "Install now"
-msgstr "Asenna"
+msgstr "Asenna nyt"
 
 #: src/components/core/ConfirmPage.tsx:97
 msgid "Go back"
-msgstr ""
+msgstr "Palaa"
 
 #: src/components/core/Details.tsx:92
-#, fuzzy
 msgid "Waiting for proposal"
-msgstr "Odotetaan liitoskohtaa"
+msgstr "Odotetaan ehdotusta"
 
 #. TRANSLATORS: The install button label
 #: src/components/core/InstallButton.tsx:56
@@ -407,12 +407,11 @@ msgstr "Ladataan tietoja..."
 #: src/components/core/ProgressStatusMonitor.tsx:73
 #, javascript-format
 msgid "(step %s of %s)"
-msgstr ""
+msgstr "(vaihe %s/%s)"
 
 #: src/components/core/ProgressBackdrop.tsx:115
-#, fuzzy
 msgid "Refreshing data..."
-msgstr "Ladataan tietoja..."
+msgstr "Virkistetään tietoja…"
 
 #: src/components/core/ProgressReport.tsx:56
 #: src/components/storage/Progress.tsx:56
@@ -437,11 +436,11 @@ msgid "Network"
 msgstr "Verkko"
 
 #: src/components/core/ProgressStatusMonitor.tsx:52
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "%s task active"
 msgid_plural "%s tasks active"
-msgstr[0] "aktiivinen"
-msgstr[1] "aktiivinen"
+msgstr[0] "%s aktiivinen tehtävä"
+msgstr[1] "%s aktiivista tehtävää"
 
 #: src/components/core/ResourceNotFound.tsx:42
 msgid "Resource not found or lost"
@@ -532,9 +531,8 @@ msgid "%1$s (%2$s)"
 msgstr "%1$s (koko %2$s)"
 
 #: src/components/l10n/L10nDetailsItem.tsx:49
-#, fuzzy
 msgid "Language and region"
-msgstr "Kieli ja näppäimistö"
+msgstr "Kieli ja alue"
 
 #. TRANSLATORS: Additional details shown under the language selection.
 #. %1$s is the keyboard layout name (e.g. "Spanish").
@@ -542,7 +540,7 @@ msgstr "Kieli ja näppäimistö"
 #: src/components/l10n/L10nDetailsItem.tsx:63
 #, javascript-format
 msgid "%1$s keyboard - %2$s timezone"
-msgstr ""
+msgstr "Näppäimistö %1$s – aikavyöhyke %2$s"
 
 #: src/components/l10n/L10nPage.tsx:38
 msgid ""
@@ -573,9 +571,8 @@ msgstr "Muuta"
 
 #: src/components/l10n/L10nPage.tsx:98 src/components/l10n/L10nPage.tsx:111
 #: src/components/l10n/L10nPage.tsx:124
-#, fuzzy
 msgid "Wrong selection"
-msgstr "Rivin valinta"
+msgstr "Väärä valinta"
 
 #: src/components/l10n/L10nPage.tsx:104
 msgid "Keyboard"
@@ -744,7 +741,7 @@ msgstr "DNS"
 #: src/components/network/FormattedIpsList.tsx:74
 #, javascript-format
 msgid "%1$s, %2$s and [%3$d more]"
-msgstr ""
+msgstr "%1$s, %2$s ja [%3$d muuta]"
 
 #. TRANSLATORS: Displays a single IP address (either IPv4 or IPv6) with
 #. count of additional IPs (e.g., "192.168.122.237 and [2 more]"). %1$s is
@@ -752,16 +749,16 @@ msgstr ""
 #. wrapped in square brackets [] is displayed as a link. Keep the brackets
 #. to ensure the link works correctly.
 #: src/components/network/FormattedIpsList.tsx:82
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "%1$s and [%2$d more]"
-msgstr "%1$s laitteella %2$s"
+msgstr "%1$s ja [%2$d muuta]"
 
 #. TRANSLATORS: Displays first IPv4 and IPv6 when both are present.
 #. %1$s is the first IPv4 and %2$s is the first IPv6.
 #: src/components/network/FormattedIpsList.tsx:102
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "%1$s and %2$s"
-msgstr "%1$s laitteella %2$s"
+msgstr "%1$s ja %2$s"
 
 #: src/components/network/InstallationOnlySwitch.tsx:53
 msgid "Use for installation only"
@@ -840,7 +837,7 @@ msgstr "Yhdyskäytävän voi määrittää vain tilassa ”Manuaalinen”"
 #: src/components/network/NetworkDetailsItem.tsx:61
 #, javascript-format
 msgid "%s and %s"
-msgstr ""
+msgstr "%s ja %s"
 
 #. TRANSLATORS: IPs summary when there are more than 2 static IP addresses.
 #. E.g., "192.168.1.1 and 2 others"
@@ -849,14 +846,13 @@ msgstr ""
 #: src/components/network/NetworkDetailsItem.tsx:66
 #, javascript-format
 msgid "%s and %d others"
-msgstr ""
+msgstr "%s ja %d muuta"
 
 #. TRANSLATORS: Description shown when network connections are configured
 #. only for installation and won't be available in the installed system
 #: src/components/network/NetworkDetailsItem.tsx:75
-#, fuzzy
 msgid "System will have no network connections"
-msgstr "Asennetussa järjestelmässä ei välttämättä ole verkkoyhteyttä"
+msgstr "Järjestelmään ei tule verkkoyhteyksiä"
 
 #. TRANSLATORS: Summary for multiple manual network connections. E.g.,
 #. "Using 3 connections with 192.168.1.1 and 2 others"
@@ -870,48 +866,45 @@ msgstr "Asennetussa järjestelmässä ei välttämättä ole verkkoyhteyttä"
 #. Full example:
 #: src/components/network/NetworkDetailsItem.tsx:83
 #: src/components/network/NetworkDetailsItem.tsx:99
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "Using %d connections with %s"
-msgstr "Muokkaa yhteyttä %s"
+msgstr "Käytetään %d yhteyttä: %s"
 
 #: src/components/network/NetworkDetailsItem.tsx:90
 #, javascript-format
 msgid "DHCP and %s"
-msgstr ""
+msgstr "DHCP ja %s"
 
 #: src/components/network/NetworkDetailsItem.tsx:90
 #, javascript-format
 msgid "DHCP, %s"
-msgstr ""
+msgstr "DHCP, %s"
 
 #: src/components/network/NetworkDetailsItem.tsx:105
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "Configured with %d connection"
 msgid_plural "Configured with %d connections"
-msgstr[0] "Kiinteät yhteydet"
-msgstr[1] "Kiinteät yhteydet"
+msgstr[0] "Määritettiin %d yhteys"
+msgstr[1] "Määritettiin %d yhteyttä"
 
 #. TRANSLATORS: Network summary title when no network has been configured
 #: src/components/network/NetworkDetailsItem.tsx:118
-#, fuzzy
 msgid "Not configured"
-msgstr "Asetuksia ei ole vielä tehty"
+msgstr "Ei määritetty"
 
 #. TRANSLATORS: Network summary title when connections are set up only for
 #. installation and won't persist in the installed system
 #: src/components/network/NetworkDetailsItem.tsx:121
-#, fuzzy
 msgid "Installation only"
-msgstr "Käytä vain asentamiseen"
+msgstr "Vain asennus"
 
 #. TRANSLATORS: Network summary title when using both automatic (DHCP) and manual configuration
 #: src/components/network/NetworkDetailsItem.tsx:124
 msgid "Auto and manual"
-msgstr ""
+msgstr "Automaattinen ja käyttäjän määrittämä"
 
 #. TRANSLATORS: Network summary title when using automatic configuration (DHCP)
 #: src/components/network/NetworkDetailsItem.tsx:126
-#, fuzzy
 msgid "Auto"
 msgstr "Automaattinen"
 
@@ -1233,35 +1226,32 @@ msgid "No wired connections were found"
 msgstr "Kiinteitä yhteyksiä ei löydy"
 
 #: src/components/overview/InstallationSummarySection.tsx:36
-#, fuzzy
 msgid "Installation summary"
-msgstr "Asennuslaitteet"
+msgstr "Asennuksen yhteenveto"
 
 #: src/components/overview/OverviewPage.tsx:43 src/router.tsx:52
 msgid "Overview"
 msgstr "Yleiskuva"
 
 #: src/components/overview/SystemInformationSection.tsx:14
-#, fuzzy
 msgid "System information"
-msgstr "Näytä tietoja kohteesta %s"
+msgstr "Järjestelmätiedot"
 
 #: src/components/overview/SystemInformationSection.tsx:17
-#, fuzzy
 msgid "Model"
-msgstr "Tapa"
+msgstr "Malli"
 
 #: src/components/overview/SystemInformationSection.tsx:18
 msgid "CPU"
-msgstr ""
+msgstr "Suoritin"
 
 #: src/components/overview/SystemInformationSection.tsx:19
 msgid "Memory"
-msgstr ""
+msgstr "Muisti"
 
 #: src/components/overview/SystemInformationSection.tsx:22
 msgid "IPs"
-msgstr ""
+msgstr "IP-osoitteet"
 
 #: src/components/product/LicenseDialog.tsx:40
 #, javascript-format
@@ -1546,13 +1536,12 @@ msgid "No support is planned."
 msgstr "Tukea ei ole suunniteltu."
 
 #: src/components/questions/UnsupportedAutoYaST.tsx:106
-#, fuzzy
 msgid ""
 "If you want to disable this check, please specify \"inst.ay_check=0\" at "
 "kernels command-line"
 msgstr ""
-"Jos haluat poistaa tämän tarkistuksen, määritä \"inst.ay_check=0\" Linux-"
-"ytimen komentoriville"
+"Jos haluat poistaa tarkistuksen, aseta Linux-ytimen komentoriville ”"
+"inst.ay_check=0”"
 
 #: src/components/software/SoftwareConflicts.tsx:100
 msgid "Show less actions"
@@ -1613,22 +1602,22 @@ msgstr "Ohjelmistojen konfliktien ratkaiseminen"
 
 #: src/components/software/SoftwareDetailsItem.tsx:43
 msgid "Required packages"
-msgstr ""
+msgstr "Vaaditut paketit"
 
 #. TRANSLATORS: %s will be replaced with amount of selected patterns.
 #: src/components/software/SoftwareDetailsItem.tsx:48
 #, javascript-format
 msgid "Required packages and %s pattern"
 msgid_plural "Required packages and %s patterns"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Vaaditut paketit ja %d kuvio"
+msgstr[1] "Vaaditut paketit ja %s kuviota"
 
 #. TRANSLATORS: %s will be replaced with a human-readable installation size
 #. (e.g. 5.95 GiB).
 #: src/components/software/SoftwareDetailsItem.tsx:64
 #, javascript-format
 msgid "Needs about %s"
-msgstr ""
+msgstr "Vaatii noin %s"
 
 #: src/components/software/SoftwarePage.tsx:62
 msgid "No additional software was selected."
@@ -2829,16 +2818,15 @@ msgstr "Lisää tai käytä osiota"
 #: src/components/storage/PotentialDataLossAlert.tsx:41
 #, javascript-format
 msgid "Proceeding may result in data loss affecting at least %s"
-msgstr ""
+msgstr "Jatkaminen voi johtaa tiedon menettämiseen: %s"
 
 #: src/components/storage/PotentialDataLossAlert.tsx:45
 msgid "Proceeding may result in data loss"
-msgstr ""
+msgstr "Jatkaminen voi johtaa tiedon menettämiseen"
 
 #: src/components/storage/PotentialDataLossAlert.tsx:51
-#, fuzzy
 msgid "View details"
-msgstr "Piilota yksityiskohdat"
+msgstr "Näytä yksityiskohdat"
 
 #: src/components/storage/Progress.tsx:117
 msgid "Loading storage"
@@ -3264,7 +3252,7 @@ msgstr "Näytä tietoja kohteesta %s"
 
 #: src/components/storage/SpaceActionsTable.tsx:226
 msgid "proposal.Device"
-msgstr ""
+msgstr "ehdotus.Laite"
 
 #: src/components/storage/SpaceActionsTable.tsx:238
 msgid "Action"
@@ -3290,44 +3278,40 @@ msgstr "Laitetta ei ole vielä valittu"
 #. TRANSLATORS: %s will be replaced by the device name and its size,
 #. example: "/dev/sda, 20 GiB"
 #: src/components/storage/StorageDetailsItem.tsx:59
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "Use device %s"
-msgstr "Käytä levyä %s"
+msgstr "Käytä laitetta %s"
 
 #: src/components/storage/StorageDetailsItem.tsx:83
-#, fuzzy
 msgid "Use several devices"
-msgstr "Tutki laitteet uudelleen"
+msgstr "Käytä useita laitteita"
 
 #: src/components/storage/StorageDetailsItem.tsx:93
-#, fuzzy
 msgid "There are no disks available for the installation"
-msgstr "Asennusta varten ei ole saatavilla levyjä."
+msgstr "Asennukseen käytettävissä olevia levyjä ei ole"
 
 #: src/components/storage/StorageDetailsItem.tsx:94
-#, fuzzy
 msgid "Invalid settings"
-msgstr "Virheelliset tallennustilan asetukset"
+msgstr "Virheellisiä asetuksia"
 
 #: src/components/storage/StorageDetailsItem.tsx:95
-#, fuzzy
 msgid "Using an advanced storage configuration"
-msgstr "Asenna käyttäen edistyneitä asetuksia."
+msgstr "Käytetään tarkkaa talletustilamääritystä"
 
 #: src/components/storage/StorageDetailsItem.tsx:112
 msgid "No data loss is expected"
-msgstr ""
+msgstr "Tietoja ei odoteta menetettävän"
 
 #. TRANSLATORS: %s will be replaced by a formatted list of affected systems
 #. like "Windows and openSUSE Tumbleweed".
 #: src/components/storage/StorageDetailsItem.tsx:119
 #, javascript-format
 msgid "Potential data loss affecting at least %s"
-msgstr ""
+msgstr "Tietoja voidaan menettää ainakin: %s"
 
 #: src/components/storage/StorageDetailsItem.tsx:124
 msgid "Potential data loss"
-msgstr ""
+msgstr "Tietoja voidaan menettää"
 
 #: src/components/storage/UnsupportedModelInfo.tsx:44
 msgid ""
@@ -4235,6 +4219,8 @@ msgstr "Verkkonimi"
 #: src/components/system/HostnameDetailsItem.tsx:56
 msgid "Temporary name that may change after reboot or network changes"
 msgstr ""
+"Väliaikaisnimi voi muuttua uudelleenkäynnistyksen jälkeen tai verkon "
+"muuttuessa"
 
 #: src/components/system/HostnamePage.tsx:63
 msgid "Enter a hostname."
