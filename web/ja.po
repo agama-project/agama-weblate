@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-01-10 17:02+0000\n"
-"PO-Revision-Date: 2025-12-03 03:04+0000\n"
+"PO-Revision-Date: 2026-01-13 00:04+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/agama/agama-web/"
 "ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.14.3\n"
+"X-Generator: Weblate 5.15.1\n"
 
 #: src/components/core/ChangeProductOption.tsx:46
 msgid "Change product"
@@ -26,9 +26,9 @@ msgstr "製品の変更"
 #. TRANSLATORS: title shown in the confirmation page before
 #. starting the installation. %s will be replaced with the product name.
 #: src/components/core/ConfirmPage.tsx:52
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "Start %s installation?"
-msgstr "基本的なインストールの設定を開始する"
+msgstr "%s のインストールを開始してよろしいですか？"
 
 #: src/components/core/ConfirmPage.tsx:72
 msgid ""
@@ -38,16 +38,15 @@ msgstr ""
 
 #: src/components/core/ConfirmPage.tsx:93
 msgid "Install now with potential data loss"
-msgstr ""
+msgstr "データ削除を了承してインストールを開始する"
 
 #: src/components/core/ConfirmPage.tsx:94
-#, fuzzy
 msgid "Install now"
-msgstr "インストール"
+msgstr "インストールを開始する"
 
 #: src/components/core/ConfirmPage.tsx:97
 msgid "Go back"
-msgstr ""
+msgstr "戻る"
 
 #: src/components/core/Details.tsx:92
 #, fuzzy
@@ -542,7 +541,7 @@ msgstr "言語とキーボード"
 #: src/components/l10n/L10nDetailsItem.tsx:63
 #, javascript-format
 msgid "%1$s keyboard - %2$s timezone"
-msgstr ""
+msgstr "%1$s キーボード - %2$s タイムゾーン"
 
 #: src/components/l10n/L10nPage.tsx:38
 msgid ""
@@ -849,7 +848,7 @@ msgstr " および "
 #: src/components/network/NetworkDetailsItem.tsx:66
 #, javascript-format
 msgid "%s and %d others"
-msgstr ""
+msgstr "%s とその他 %d 個のアドレス"
 
 #. TRANSLATORS: Description shown when network connections are configured
 #. only for installation and won't be available in the installed system
@@ -882,7 +881,7 @@ msgstr " および "
 #: src/components/network/NetworkDetailsItem.tsx:90
 #, javascript-format
 msgid "DHCP, %s"
-msgstr ""
+msgstr "DHCP, %s"
 
 #: src/components/network/NetworkDetailsItem.tsx:105
 #, fuzzy, javascript-format
@@ -906,7 +905,7 @@ msgstr "インストール"
 #. TRANSLATORS: Network summary title when using both automatic (DHCP) and manual configuration
 #: src/components/network/NetworkDetailsItem.tsx:124
 msgid "Auto and manual"
-msgstr ""
+msgstr "自動および手動"
 
 #. TRANSLATORS: Network summary title when using automatic configuration (DHCP)
 #: src/components/network/NetworkDetailsItem.tsx:126
@@ -1251,15 +1250,15 @@ msgstr "モード"
 
 #: src/components/overview/SystemInformationSection.tsx:18
 msgid "CPU"
-msgstr ""
+msgstr "CPU"
 
 #: src/components/overview/SystemInformationSection.tsx:19
 msgid "Memory"
-msgstr ""
+msgstr "メモリ"
 
 #: src/components/overview/SystemInformationSection.tsx:22
 msgid "IPs"
-msgstr ""
+msgstr "IP アドレス"
 
 #: src/components/product/LicenseDialog.tsx:40
 #, javascript-format
@@ -1613,14 +1612,14 @@ msgstr "ソフトウエアの競合の解決"
 
 #: src/components/software/SoftwareDetailsItem.tsx:43
 msgid "Required packages"
-msgstr ""
+msgstr "必要なパッケージ"
 
 #. TRANSLATORS: %s will be replaced with amount of selected patterns.
 #: src/components/software/SoftwareDetailsItem.tsx:48
 #, javascript-format
 msgid "Required packages and %s pattern"
 msgid_plural "Required packages and %s patterns"
-msgstr[0] ""
+msgstr[0] "%s 個のパターンと必要なパッケージ"
 
 #. TRANSLATORS: %s will be replaced with a human-readable installation size
 #. (e.g. 5.95 GiB).
@@ -1944,8 +1943,8 @@ msgid ""
 "To ensure the new system is able to boot, the installer may need to create "
 "or configure some partitions in the appropriate disk."
 msgstr ""
-"システムを起動できるようにするため、インストーラはディスク内にいくつかの追加"
-"パーティションを作成もしくは設定する必要があるかもしれません。"
+"システムを起動できるようにするため、インストーラは適切なディスク内にいくつか"
+"の追加パーティションを作成もしくは設定する必要があるかもしれません。"
 
 #: src/components/storage/BootSelection.tsx:184
 #: src/components/storage/ProposalPage.tsx:259
@@ -2813,10 +2812,12 @@ msgstr "パーティションの追加または使用"
 #, javascript-format
 msgid "Proceeding may result in data loss affecting at least %s"
 msgstr ""
+"続行することにより、少なくとも %s に対してデータ削除が発生する可能性がありま"
+"す"
 
 #: src/components/storage/PotentialDataLossAlert.tsx:45
 msgid "Proceeding may result in data loss"
-msgstr ""
+msgstr "続行することによりデータ削除が発生する可能性があります"
 
 #: src/components/storage/PotentialDataLossAlert.tsx:51
 #, fuzzy
@@ -3286,18 +3287,18 @@ msgstr "高度な設定項目を利用してインストールします。"
 
 #: src/components/storage/StorageDetailsItem.tsx:112
 msgid "No data loss is expected"
-msgstr ""
+msgstr "データ削除は予定されていません"
 
 #. TRANSLATORS: %s will be replaced by a formatted list of affected systems
 #. like "Windows and openSUSE Tumbleweed".
 #: src/components/storage/StorageDetailsItem.tsx:119
 #, javascript-format
 msgid "Potential data loss affecting at least %s"
-msgstr ""
+msgstr "少なくとも %s に影響する潜在的なデータ削除が発生します"
 
 #: src/components/storage/StorageDetailsItem.tsx:124
 msgid "Potential data loss"
-msgstr ""
+msgstr "潜在的なデータ削除"
 
 #: src/components/storage/UnsupportedModelInfo.tsx:44
 msgid ""
@@ -4199,7 +4200,7 @@ msgstr "ホスト名"
 
 #: src/components/system/HostnameDetailsItem.tsx:56
 msgid "Temporary name that may change after reboot or network changes"
-msgstr ""
+msgstr "システムの再起動やネットワーク側の変更により変わりうる一時的な名前です"
 
 #: src/components/system/HostnamePage.tsx:63
 msgid "Enter a hostname."
