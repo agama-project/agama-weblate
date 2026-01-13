@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-01-10 17:02+0000\n"
-"PO-Revision-Date: 2026-01-13 00:04+0000\n"
+"PO-Revision-Date: 2026-01-13 02:04+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/agama/agama-web/"
 "ja/>\n"
@@ -35,6 +35,8 @@ msgid ""
 "Review the summary below. If anything seems incorrect or you have doubts, go "
 "back and adjust the settings before proceeding."
 msgstr ""
+"下記に示す概要をご確認ください。何らかの誤りや不安な点があれば、いったん戻っ"
+"て設定を再確認／修正しておくことをお勧めします。"
 
 #: src/components/core/ConfirmPage.tsx:93
 msgid "Install now with potential data loss"
@@ -49,9 +51,8 @@ msgid "Go back"
 msgstr "戻る"
 
 #: src/components/core/Details.tsx:92
-#, fuzzy
 msgid "Waiting for proposal"
-msgstr "進捗状態を待機しています..."
+msgstr "提案内容を作成しています"
 
 #. TRANSLATORS: The install button label
 #: src/components/core/InstallButton.tsx:56
@@ -405,14 +406,13 @@ msgstr "データを読み込んでいます..."
 
 #: src/components/core/ProgressBackdrop.tsx:112
 #: src/components/core/ProgressStatusMonitor.tsx:73
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "(step %s of %s)"
-msgstr "%s のサイズを維持"
+msgstr "(ステップ %s / %s)"
 
 #: src/components/core/ProgressBackdrop.tsx:115
-#, fuzzy
 msgid "Refreshing data..."
-msgstr "データを読み込んでいます..."
+msgstr "データを更新しています..."
 
 #: src/components/core/ProgressReport.tsx:56
 #: src/components/storage/Progress.tsx:56
@@ -437,10 +437,10 @@ msgid "Network"
 msgstr "ネットワーク"
 
 #: src/components/core/ProgressStatusMonitor.tsx:52
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "%s task active"
 msgid_plural "%s tasks active"
-msgstr[0] "有効"
+msgstr[0] "%s 個の処理が動作中です"
 
 #: src/components/core/ResourceNotFound.tsx:42
 msgid "Resource not found or lost"
@@ -531,9 +531,8 @@ msgid "%1$s (%2$s)"
 msgstr "%1$s (%2$s)"
 
 #: src/components/l10n/L10nDetailsItem.tsx:49
-#, fuzzy
 msgid "Language and region"
-msgstr "言語とキーボード"
+msgstr "言語と地域"
 
 #. TRANSLATORS: Additional details shown under the language selection.
 #. %1$s is the keyboard layout name (e.g. "Spanish").
@@ -572,9 +571,8 @@ msgstr "変更"
 
 #: src/components/l10n/L10nPage.tsx:98 src/components/l10n/L10nPage.tsx:111
 #: src/components/l10n/L10nPage.tsx:124
-#, fuzzy
 msgid "Wrong selection"
-msgstr "行の選択"
+msgstr "誤った選択"
 
 #: src/components/l10n/L10nPage.tsx:104
 msgid "Keyboard"
@@ -741,9 +739,9 @@ msgstr "DNS"
 #. is displayed as a link. Keep the brackets to ensure the link works
 #. correctly.
 #: src/components/network/FormattedIpsList.tsx:74
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "%1$s, %2$s and [%3$d more]"
-msgstr "%3$s (%4$s) に %1$s %2$s を配置"
+msgstr "%1$s, %2$s [さらに %3$d 個のアドレスがあります]"
 
 #. TRANSLATORS: Displays a single IP address (either IPv4 or IPv6) with
 #. count of additional IPs (e.g., "192.168.122.237 and [2 more]"). %1$s is
@@ -751,16 +749,16 @@ msgstr "%3$s (%4$s) に %1$s %2$s を配置"
 #. wrapped in square brackets [] is displayed as a link. Keep the brackets
 #. to ensure the link works correctly.
 #: src/components/network/FormattedIpsList.tsx:82
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "%1$s and [%2$d more]"
-msgstr "%2$s にある %1$s"
+msgstr "%1$s [さらに %2$d 個のアドレスがあります]"
 
 #. TRANSLATORS: Displays first IPv4 and IPv6 when both are present.
 #. %1$s is the first IPv4 and %2$s is the first IPv6.
 #: src/components/network/FormattedIpsList.tsx:102
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "%1$s and %2$s"
-msgstr "%2$s にある %1$s"
+msgstr "%1$s, %2$s"
 
 #: src/components/network/InstallationOnlySwitch.tsx:53
 msgid "Use for installation only"
@@ -837,9 +835,9 @@ msgstr "'手動' モードの場合にのみゲートウエイを設定できま
 #. TRANSLATORS: Displays two IP addresses. E.g., "192.168.1.1 and 192.168.1.2"
 #. %s will be replaced by IP addresses
 #: src/components/network/NetworkDetailsItem.tsx:61
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "%s and %s"
-msgstr " および "
+msgstr "%s, %s"
 
 #. TRANSLATORS: IPs summary when there are more than 2 static IP addresses.
 #. E.g., "192.168.1.1 and 2 others"
@@ -853,9 +851,8 @@ msgstr "%s とその他 %d 個のアドレス"
 #. TRANSLATORS: Description shown when network connections are configured
 #. only for installation and won't be available in the installed system
 #: src/components/network/NetworkDetailsItem.tsx:75
-#, fuzzy
 msgid "System will have no network connections"
-msgstr "インストールされたシステムにはネットワーク接続がない可能性があります"
+msgstr "システムにはネットワーク接続は設定されません"
 
 #. TRANSLATORS: Summary for multiple manual network connections. E.g.,
 #. "Using 3 connections with 192.168.1.1 and 2 others"
@@ -869,14 +866,14 @@ msgstr "インストールされたシステムにはネットワーク接続が
 #. Full example:
 #: src/components/network/NetworkDetailsItem.tsx:83
 #: src/components/network/NetworkDetailsItem.tsx:99
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "Using %d connections with %s"
-msgstr "%d 個の接続が設定されています:"
+msgstr "%d 個の接続 (%s) を使用"
 
 #: src/components/network/NetworkDetailsItem.tsx:90
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "DHCP and %s"
-msgstr " および "
+msgstr "DHCP および %s"
 
 #: src/components/network/NetworkDetailsItem.tsx:90
 #, javascript-format
@@ -884,23 +881,21 @@ msgid "DHCP, %s"
 msgstr "DHCP, %s"
 
 #: src/components/network/NetworkDetailsItem.tsx:105
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "Configured with %d connection"
 msgid_plural "Configured with %d connections"
-msgstr[0] "LVM 設定"
+msgstr[0] "%d 個の接続を設定済み"
 
 #. TRANSLATORS: Network summary title when no network has been configured
 #: src/components/network/NetworkDetailsItem.tsx:118
-#, fuzzy
 msgid "Not configured"
-msgstr "まだ設定していません"
+msgstr "未設定"
 
 #. TRANSLATORS: Network summary title when connections are set up only for
 #. installation and won't persist in the installed system
 #: src/components/network/NetworkDetailsItem.tsx:121
-#, fuzzy
 msgid "Installation only"
-msgstr "インストール"
+msgstr "インストール時のみ"
 
 #. TRANSLATORS: Network summary title when using both automatic (DHCP) and manual configuration
 #: src/components/network/NetworkDetailsItem.tsx:124
@@ -1230,7 +1225,6 @@ msgid "No wired connections were found"
 msgstr "有線接続が見つかりませんでした"
 
 #: src/components/overview/InstallationSummarySection.tsx:36
-#, fuzzy
 msgid "Installation summary"
 msgstr "インストールの概要"
 
@@ -1239,14 +1233,12 @@ msgid "Overview"
 msgstr "概要"
 
 #: src/components/overview/SystemInformationSection.tsx:14
-#, fuzzy
 msgid "System information"
-msgstr "%s に関する情報を表示"
+msgstr "システム情報"
 
 #: src/components/overview/SystemInformationSection.tsx:17
-#, fuzzy
 msgid "Model"
-msgstr "モード"
+msgstr "モデル"
 
 #: src/components/overview/SystemInformationSection.tsx:18
 msgid "CPU"
@@ -1545,7 +1537,6 @@ msgid "No support is planned."
 msgstr "サポートを提供する計画はありません。"
 
 #: src/components/questions/UnsupportedAutoYaST.tsx:106
-#, fuzzy
 msgid ""
 "If you want to disable this check, please specify \"inst.ay_check=0\" at "
 "kernels command-line"
@@ -1624,9 +1615,9 @@ msgstr[0] "%s 個のパターンと必要なパッケージ"
 #. TRANSLATORS: %s will be replaced with a human-readable installation size
 #. (e.g. 5.95 GiB).
 #: src/components/software/SoftwareDetailsItem.tsx:64
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "Needs about %s"
-msgstr "こちらについて詳しく"
+msgstr "おおよそ %s が必要"
 
 #: src/components/software/SoftwarePage.tsx:62
 msgid "No additional software was selected."
@@ -2820,9 +2811,8 @@ msgid "Proceeding may result in data loss"
 msgstr "続行することによりデータ削除が発生する可能性があります"
 
 #: src/components/storage/PotentialDataLossAlert.tsx:51
-#, fuzzy
 msgid "View details"
-msgstr "詳細を隠す"
+msgstr "詳細を表示"
 
 #: src/components/storage/Progress.tsx:117
 msgid "Loading storage"
@@ -3233,9 +3223,8 @@ msgid "Show information about %s"
 msgstr "%s に関する情報を表示"
 
 #: src/components/storage/SpaceActionsTable.tsx:226
-#, fuzzy
 msgid "proposal.Device"
-msgstr "提案"
+msgstr "提案.デバイス"
 
 #: src/components/storage/SpaceActionsTable.tsx:238
 msgid "Action"
@@ -3261,29 +3250,25 @@ msgstr "まだ何もデバイスを選択していません"
 #. TRANSLATORS: %s will be replaced by the device name and its size,
 #. example: "/dev/sda, 20 GiB"
 #: src/components/storage/StorageDetailsItem.tsx:59
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "Use device %s"
-msgstr "ディスク %s を使用する"
+msgstr "デバイス %s を使用する"
 
 #: src/components/storage/StorageDetailsItem.tsx:83
-#, fuzzy
 msgid "Use several devices"
-msgstr "デバイスの再検出"
+msgstr "複数のデバイスを使用する"
 
 #: src/components/storage/StorageDetailsItem.tsx:93
-#, fuzzy
 msgid "There are no disks available for the installation"
-msgstr "インストール可能なディスクが見つかりません。"
+msgstr "インストールに使用できるディスクがありません"
 
 #: src/components/storage/StorageDetailsItem.tsx:94
-#, fuzzy
 msgid "Invalid settings"
-msgstr "正しくないストレージ設定です"
+msgstr "正しくない設定です"
 
 #: src/components/storage/StorageDetailsItem.tsx:95
-#, fuzzy
 msgid "Using an advanced storage configuration"
-msgstr "高度な設定項目を利用してインストールします。"
+msgstr "高度なストレージ設定を使用します"
 
 #: src/components/storage/StorageDetailsItem.tsx:112
 msgid "No data loss is expected"
