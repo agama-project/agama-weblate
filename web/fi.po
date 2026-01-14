@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-10 17:02+0000\n"
+"POT-Creation-Date: 2026-01-13 22:20+0000\n"
 "PO-Revision-Date: 2026-01-12 16:04+0000\n"
 "Last-Translator: Tommi Nieminen <software@legisign.org>\n"
 "Language-Team: Finnish <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -19,52 +19,20 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.15.1\n"
 
+#: src/components/core/Breadcrumbs.tsx:85
+msgid "Breadcrumbs"
+msgstr ""
+
 #: src/components/core/ChangeProductOption.tsx:46
+#: src/components/product/ProductSelectionPage.tsx:177
 msgid "Change product"
 msgstr "Vaihda tuotetta"
 
-#. TRANSLATORS: title shown in the confirmation page before
-#. starting the installation. %s will be replaced with the product name.
-#: src/components/core/ConfirmPage.tsx:52
-#, javascript-format
-msgid "Start %s installation?"
-msgstr "Aloitetaanko asennus: %s?"
-
-#: src/components/core/ConfirmPage.tsx:72
-msgid ""
-"Review the summary below. If anything seems incorrect or you have doubts, go "
-"back and adjust the settings before proceeding."
-msgstr ""
-"Tarkista yhteenveto alta. Jos jokin vaikuttaa olevan väärältä tai "
-"epäilyttävältä, palaa säätämään asetuksia ennen kuin jatkat."
-
-#: src/components/core/ConfirmPage.tsx:93
-msgid "Install now with potential data loss"
-msgstr "Asenna nyt, vaikka tietoja menetettäisiin"
-
-#: src/components/core/ConfirmPage.tsx:94
-msgid "Install now"
-msgstr "Asenna nyt"
-
-#: src/components/core/ConfirmPage.tsx:97
-msgid "Go back"
-msgstr "Palaa"
-
-#: src/components/core/Details.tsx:92
-msgid "Waiting for proposal"
-msgstr "Odotetaan ehdotusta"
-
 #. TRANSLATORS: The install button label
-#: src/components/core/InstallButton.tsx:56
+#: src/components/core/InstallButton.tsx:57
+#: src/components/overview/OverviewPage.tsx:129
 msgid "Install"
 msgstr "Asenna"
-
-#. TRANSLATORS: Text included with the install button when there are issues
-#: src/components/core/InstallButton.tsx:58
-msgid "Not possible with the current setup. Click to know more."
-msgstr ""
-"Tämä ei ole mahdollista tällä kokoonpanolla. Napsauta oppiaksesi lisää "
-"aiheesta."
 
 #: src/components/core/InstallationExit.tsx:43
 msgid "Your system is rebooting"
@@ -91,7 +59,6 @@ msgstr ""
 "irrota media ennen seuraavaa uudelleenkäynnistystä."
 
 #: src/components/core/InstallationFinished.tsx:61
-#: src/components/storage/PotentialDataLossAlert.tsx:52
 msgid "Hide details"
 msgstr "Piilota yksityiskohdat"
 
@@ -141,7 +108,7 @@ msgid "Installing the system, please wait..."
 msgstr "Asennetaan järjestelmää, ole hyvä ja odota..."
 
 #: src/components/core/InstallerOptions.tsx:73
-#: src/components/l10n/L10nPage.tsx:90
+#: src/components/l10n/L10nPage.tsx:86
 msgid "Language"
 msgstr "Kieli"
 
@@ -188,10 +155,10 @@ msgstr "Käytä näitä samoja asetuksia valitulle tuotteelle"
 #: src/components/core/InstallerOptions.tsx:391
 #: src/components/core/InstallerOptions.tsx:405
 #: src/components/core/InstallerOptions.tsx:448
-#: src/components/core/Page.tsx:281
+#: src/components/core/Page.tsx:287
 #: src/components/storage/dasd/FormatActionHandler.tsx:73
 #: src/components/storage/dasd/FormatActionHandler.tsx:100
-#: src/components/system/HostnamePage.tsx:130
+#: src/components/system/HostnamePage.tsx:125
 msgid "Accept"
 msgstr "Hyväksy"
 
@@ -255,38 +222,54 @@ msgid "Review and fix"
 msgstr "Tutki ja korjaa"
 
 #: src/components/core/IssuesDrawer.tsx:47
-#: src/components/users/UsersPage.tsx:36 src/routes/users.tsx:34
+#: src/components/users/FirstUserForm.tsx:192
+#: src/components/users/RootUserForm.tsx:137
+#: src/components/users/UsersPage.tsx:34 src/routes/users.tsx:34
 msgid "Authentication"
 msgstr "Tunnistautuminen"
 
 #: src/components/core/IssuesDrawer.tsx:48
 #: src/components/core/ProgressStatusMonitor.tsx:41
-#: src/components/storage/ProposalPage.tsx:335
-#: src/components/storage/StorageDetailsItem.tsx:142 src/routes/storage.tsx:46
+#: src/components/overview/StorageSummary.tsx:169
+#: src/components/storage/BootSelectionPage.tsx:183
+#: src/components/storage/DeviceSelectorPage.tsx:75
+#: src/components/storage/EncryptionSettingsPage.tsx:107
+#: src/components/storage/FormattableDevicePage.tsx:462
+#: src/components/storage/ISCSIPage.tsx:32
+#: src/components/storage/LogicalVolumePage.tsx:687
+#: src/components/storage/LvmPage.tsx:170
+#: src/components/storage/PartitionPage.tsx:836
+#: src/components/storage/ProposalPage.tsx:334
+#: src/components/storage/SpacePolicySelectionPage.tsx:113
+#: src/components/storage/dasd/DASDPage.tsx:36
+#: src/components/storage/zfcp/ZFCPDiskActivationPage.tsx:63
+#: src/components/storage/zfcp/ZFCPPage.tsx:186 src/routes/storage.tsx:46
 msgid "Storage"
 msgstr "Tallennustila"
 
 #: src/components/core/IssuesDrawer.tsx:49
 #: src/components/core/ProgressStatusMonitor.tsx:40
-#: src/components/software/SoftwareDetailsItem.tsx:76
-#: src/components/software/SoftwarePage.tsx:169 src/routes/software.tsx:34
+#: src/components/overview/SoftwareSummary.tsx:79
+#: src/components/software/SoftwareConflictsPage.tsx:287
+#: src/components/software/SoftwarePage.tsx:195
+#: src/components/software/SoftwarePatternsSelection.tsx:196
+#: src/routes/software.tsx:34
 msgid "Software"
 msgstr "Ohjelmistot"
 
 #: src/components/core/IssuesDrawer.tsx:50
-#: src/components/product/ProductRegistrationPage.tsx:440
+#: src/components/product/ProductRegistrationPage.tsx:438
 #: src/routes/registration.tsx:31
 msgid "Registration"
 msgstr "Rekisteröinti"
 
 #: src/components/core/IssuesDrawer.tsx:51
-#: src/components/core/ProgressStatusMonitor.tsx:43
-#: src/components/l10n/L10nPage.tsx:83 src/routes/l10n.tsx:32
+#: src/components/core/ProgressStatusMonitor.tsx:43 src/routes/l10n.tsx:32
 msgid "Localization"
 msgstr "Kotoistaminen"
 
 #: src/components/core/IssuesDrawer.tsx:52
-#: src/components/storage/ISCSIPage.tsx:34 src/routes/storage.tsx:99
+#: src/components/storage/ISCSIPage.tsx:32 src/routes/storage.tsx:99
 msgid "iSCSI"
 msgstr "iSCSI"
 
@@ -306,31 +289,42 @@ msgstr ""
 msgid "Search"
 msgstr "Hae"
 
-#: src/components/core/LoginPage.tsx:62
-msgid "Could not log in. Please, make sure that the password is correct."
-msgstr "Kirjautuminen ei onnistunut. Tarkista, että salasana on oikea."
+#: src/components/core/LoginPage.tsx:49
+#, fuzzy
+msgid "Could not log in"
+msgstr "Kohteeseen %s ei voi yhdistää"
 
-#: src/components/core/LoginPage.tsx:64
-msgid "Could not authenticate against the server, please check it."
+#: src/components/core/LoginPage.tsx:50
+msgid "Make suere that passsword is correct and try again."
+msgstr ""
+
+#: src/components/core/LoginPage.tsx:54
+#, fuzzy
+msgid "Could not authenticate against the server."
 msgstr "Palvelimelle ei voitu tunnistautua, ole hyvä ja tarkista."
 
 #. TRANSLATORS: Title for a form to provide the password for the root user. %s
 #. will be replaced by "root"
-#: src/components/core/LoginPage.tsx:72
+#: src/components/core/LoginPage.tsx:84
 #, javascript-format
 msgid "Log in as %s"
 msgstr "Kirjaudu käyttäjänä %s"
 
-#: src/components/core/LoginPage.tsx:78
+#: src/components/core/LoginPage.tsx:90
 msgid "The installer requires [root] user privileges."
 msgstr "Asennusohjelma vaatii [root]-käyttäjäoikeudet."
 
-#: src/components/core/LoginPage.tsx:104
+#: src/components/core/LoginPage.tsx:115
+#, fuzzy
+msgid "Provide its password to log in to the system."
+msgstr "Kirjoita salasana jota käytetään järjestelmään kirjautumiseen."
+
+#: src/components/core/LoginPage.tsx:131
 msgid "Login form"
 msgstr "Kirjautuminen"
 
 #. TRANSLATORS: field label
-#: src/components/core/LoginPage.tsx:107
+#: src/components/core/LoginPage.tsx:132
 #: src/components/core/PasswordAndConfirmationInput.tsx:96
 #: src/components/network/WifiConnectionForm.tsx:177
 #: src/components/questions/QuestionWithPassword.tsx:63
@@ -340,30 +334,26 @@ msgstr "Kirjautuminen"
 msgid "Password"
 msgstr "Salasana"
 
-#: src/components/core/LoginPage.tsx:112
+#: src/components/core/LoginPage.tsx:137
 msgid "Password input"
 msgstr "Salasanan syöttö"
 
-#: src/components/core/LoginPage.tsx:122
-msgid "Please, provide its password to log in to the system."
-msgstr "Kirjoita salasana jota käytetään järjestelmään kirjautumiseen."
-
-#: src/components/core/LoginPage.tsx:130
+#: src/components/core/LoginPage.tsx:154
 msgid "Log in"
 msgstr "Kirjaudu sisään"
 
-#: src/components/core/MenuButton.tsx:78 src/components/core/Page.tsx:270
-#: src/components/storage/ISCSIPage.tsx:48
-#: src/components/storage/dasd/DASDPage.tsx:49
-#: src/components/storage/zfcp/ZFCPPage.tsx:198
+#: src/components/core/MenuButton.tsx:78 src/components/core/Page.tsx:276
+#: src/components/storage/ISCSIPage.tsx:45
+#: src/components/storage/dasd/DASDPage.tsx:44
+#: src/components/storage/zfcp/ZFCPPage.tsx:193
 msgid "Back"
 msgstr "Takaisin"
 
-#: src/components/core/Page.tsx:249 src/components/core/Popup.tsx:140
-#: src/components/network/BindingSettingsForm.tsx:230
-#: src/components/network/IpSettingsForm.tsx:219
+#: src/components/core/Page.tsx:255 src/components/core/Popup.tsx:140
+#: src/components/network/BindingSettingsForm.tsx:229
+#: src/components/network/IpSettingsForm.tsx:221
 #: src/components/network/WifiConnectionForm.tsx:188
-#: src/components/product/ProductSelectionPage.tsx:107
+#: src/components/product/ProductSelectionPage.tsx:120
 msgid "Cancel"
 msgstr "Peru"
 
@@ -428,10 +418,13 @@ msgid "Finished"
 msgstr "Valmistunut"
 
 #: src/components/core/ProgressStatusMonitor.tsx:42
-#: src/components/network/NetworkDetailsItem.tsx:146
-#: src/components/network/NetworkPage.tsx:52
+#: src/components/network/BindingSettingsForm.tsx:160
+#: src/components/network/IpSettingsForm.tsx:150
+#: src/components/network/NetworkPage.tsx:50
 #: src/components/network/WifiConnectionDetails.tsx:45
-#: src/routes/network.tsx:38
+#: src/components/network/WifiNetworkPage.tsx:73
+#: src/components/network/WiredConnectionPage.tsx:68
+#: src/components/overview/NetworkSummary.tsx:149 src/routes/network.tsx:38
 msgid "Network"
 msgstr "Verkko"
 
@@ -471,15 +464,15 @@ msgstr "Rivin valinta"
 msgid "Row actions"
 msgstr "Rivitoiminnot"
 
-#: src/components/core/ServerError.tsx:48
+#: src/components/core/ServerError.tsx:46
 msgid "Cannot connect to Agama server"
 msgstr "Agama-palvelimeen ei yhteyttä"
 
-#: src/components/core/ServerError.tsx:53
+#: src/components/core/ServerError.tsx:51
 msgid "Please, check whether it is running."
 msgstr "Tarkista onko se käynnissä."
 
-#: src/components/core/ServerError.tsx:56
+#: src/components/core/ServerError.tsx:54
 msgid "Reload"
 msgstr "Lataa uudelleen"
 
@@ -491,56 +484,27 @@ msgstr "Siirry sisältöön"
 msgid "More actions"
 msgstr "Lisää toimintoja"
 
-#: src/components/l10n/KeyboardSelection.tsx:45
+#: src/components/core/Summary.tsx:47
+msgid "Waiting for proposal"
+msgstr "Odotetaan ehdotusta"
+
+#: src/components/l10n/KeyboardSelection.tsx:46
 msgid "Filter by description or keymap code"
 msgstr "Suodata kuvauksen tai näppäinkartan koodilla"
 
-#: src/components/l10n/KeyboardSelection.tsx:74
+#: src/components/l10n/KeyboardSelection.tsx:75
 msgid "None of the keymaps match the filter."
 msgstr "Yksikään näppäinkartta ei täsmää suodattimeen."
 
-#: src/components/l10n/KeyboardSelection.tsx:80
-msgid "Keyboard selection"
-msgstr "Näppäimistön valinta"
-
-#: src/components/l10n/KeyboardSelection.tsx:91
-#: src/components/l10n/L10nPage.tsx:93 src/components/l10n/L10nPage.tsx:107
-#: src/components/l10n/L10nPage.tsx:119
-#: src/components/l10n/LocaleSelection.tsx:88
-#: src/components/l10n/TimezoneSelection.tsx:136
-#: src/components/product/ProductSelectionPage.tsx:222
-#: src/components/software/SoftwarePatternsSelection.tsx:176
+#: src/components/l10n/KeyboardSelection.tsx:96
+#: src/components/l10n/L10nPage.tsx:89 src/components/l10n/L10nPage.tsx:103
+#: src/components/l10n/L10nPage.tsx:115
+#: src/components/l10n/LocaleSelection.tsx:92
+#: src/components/l10n/TimezoneSelection.tsx:140
+#: src/components/product/ProductSelectionPage.tsx:273
+#: src/components/software/SoftwarePatternsSelection.tsx:177
 msgid "Select"
 msgstr "Valitse"
-
-#. TRANSLATORS: %1$s is a description of the device (eg. "Encrypted XFS RAID") and %2$s is
-#. the RAID level (eg. "RAID0")
-#. TRANSLATORS: %1$s is an already formatted mount path (eg. "/"),
-#. %2$s is a size description (eg. at least 10 GiB)
-#. TRANSLATORS: %1$s is a filesystem type description (eg. "Btrfs with snapshots"),
-#. %2$s is a description of the size or the size limits (eg. "at least 10 GiB")
-#. TRANSLATORS: Summary of the selected language and territory.
-#. %1$s is the language name (e.g. "Spanish").
-#. %2$s is the territory/region name (e.g. "Spain").
-#: src/components/l10n/L10nDetailsItem.tsx:45
-#: src/components/storage/device-utils.tsx:94
-#: src/components/storage/utils/partition.tsx:41
-#: src/components/storage/utils/partition.tsx:85
-#, javascript-format
-msgid "%1$s (%2$s)"
-msgstr "%1$s (koko %2$s)"
-
-#: src/components/l10n/L10nDetailsItem.tsx:49
-msgid "Language and region"
-msgstr "Kieli ja alue"
-
-#. TRANSLATORS: Additional details shown under the language selection.
-#. %1$s is the keyboard layout name (e.g. "Spanish").
-#. %2$s is the time zone identifier (e.g. "Atlantic/Canary").
-#: src/components/l10n/L10nDetailsItem.tsx:63
-#, javascript-format
-msgid "%1$s keyboard - %2$s timezone"
-msgstr "Näppäimistö %1$s – aikavyöhyke %2$s"
 
 #: src/components/l10n/L10nPage.tsx:38
 msgid ""
@@ -559,66 +523,55 @@ msgstr ""
 "Nämä ovat asennettavan tuotteen asetukset. Asennusohjelman kieltä voi "
 "muuttaa yläpalkin [asetuspaneelista]."
 
-#: src/components/l10n/L10nPage.tsx:93 src/components/l10n/L10nPage.tsx:107
-#: src/components/l10n/L10nPage.tsx:119
+#: src/components/l10n/L10nPage.tsx:89 src/components/l10n/L10nPage.tsx:103
+#: src/components/l10n/L10nPage.tsx:115
+#: src/components/product/ProductSelectionPage.tsx:273
 #: src/components/storage/BootSection.tsx:97
 #: src/components/storage/EncryptionSection.tsx:60
 #: src/components/storage/iscsi/InitiatorForm.tsx:89
-#: src/components/users/FirstUserForm.tsx:235
-#: src/components/users/RootUserForm.tsx:164
+#: src/components/users/FirstUserForm.tsx:237
+#: src/components/users/RootUserForm.tsx:161
 msgid "Change"
 msgstr "Muuta"
 
-#: src/components/l10n/L10nPage.tsx:98 src/components/l10n/L10nPage.tsx:111
-#: src/components/l10n/L10nPage.tsx:124
+#: src/components/l10n/L10nPage.tsx:94 src/components/l10n/L10nPage.tsx:107
+#: src/components/l10n/L10nPage.tsx:120
 msgid "Wrong selection"
 msgstr "Väärä valinta"
 
-#: src/components/l10n/L10nPage.tsx:104
+#: src/components/l10n/L10nPage.tsx:100
 msgid "Keyboard"
 msgstr "Näppäimistö"
 
-#: src/components/l10n/L10nPage.tsx:116
+#: src/components/l10n/L10nPage.tsx:112
 msgid "Time zone"
 msgstr "Aikavyöhyke"
 
-#: src/components/l10n/LocaleSelection.tsx:42
+#: src/components/l10n/LocaleSelection.tsx:43
 msgid "Filter by language, territory or locale code"
 msgstr "Suodata kielen, alueen tai lokaalikoodin mukaan"
 
-#: src/components/l10n/LocaleSelection.tsx:71
+#: src/components/l10n/LocaleSelection.tsx:72
 msgid "None of the locales match the filter."
 msgstr "Yksikään lokaaleista ei täsmää suodattimeen."
 
-#: src/components/l10n/LocaleSelection.tsx:77
-msgid "Locale selection"
-msgstr "Maa-asetusten valinnat"
-
-#: src/components/l10n/TimezoneSelection.tsx:77
+#: src/components/l10n/TimezoneSelection.tsx:78
 msgid "Filter by territory, time zone code or UTC offset"
 msgstr "Suodata alueen, aikavyöhykoodin tai UTC-aikaeron mukaan"
 
-#: src/components/l10n/TimezoneSelection.tsx:115
+#: src/components/l10n/TimezoneSelection.tsx:116
 msgid "None of the time zones match the filter."
 msgstr "Yksikään aikavyöhykkeistä ei täsmää suodattimeen."
 
-#: src/components/l10n/TimezoneSelection.tsx:121
-msgid " Timezone selection"
-msgstr " Aikavyöhykkeen valinta"
-
-#: src/components/layout/Header.tsx:81
+#: src/components/layout/Header.tsx:83
 msgid "Options toggle"
 msgstr "Valinnat-tila"
 
-#: src/components/layout/Header.tsx:93
+#: src/components/layout/Header.tsx:95
 msgid "Download logs"
 msgstr "Lataa lokit"
 
-#: src/components/layout/Header.tsx:132
-msgid "Main navigation"
-msgstr "Päänavigointi"
-
-#: src/components/layout/Loading.tsx:132
+#: src/components/layout/Loading.tsx:101
 msgid "Loading"
 msgstr "Ladataan"
 
@@ -666,20 +619,18 @@ msgstr "Osoitteiden tietoluettelo"
 #. TRANSLATORS: this simply concatenates the two sentences that describe what is going to happen
 #. with partitions. The first %s corresponds to deleted partitions and the second one to resized
 #. ones.
-#: src/components/network/BindingSettingsForm.tsx:78
+#: src/components/network/BindingSettingsForm.tsx:79
 #: src/components/storage/utils/drive.tsx:110
 #, javascript-format
 msgid "%s - %s"
 msgstr "%s - %s"
 
-#. TRANSLATORS: The title of the page. %s will be replaced with the connection
-#. name. I.e., "Binding settings for 'Wired connection 1'"
-#: src/components/network/BindingSettingsForm.tsx:160
-#, javascript-format
-msgid "Binding settings for '%s'"
-msgstr "Sidotaan setuksia kohteelle ”%s”"
+#: src/components/network/BindingSettingsForm.tsx:162
+#, fuzzy
+msgid "Binding settings"
+msgstr "Muokkaa sidosasetuksia"
 
-#: src/components/network/BindingSettingsForm.tsx:168
+#: src/components/network/BindingSettingsForm.tsx:170
 msgid ""
 "Choose how the connection should be associated with a network device. This "
 "helps control which device the connection uses."
@@ -687,27 +638,27 @@ msgstr ""
 "Valitse kuinka yhteys liittyy verkkolaitteeseen. Tällä voidaan hallita mitä "
 "laitetta yhteys käyttää."
 
-#: src/components/network/BindingSettingsForm.tsx:179
+#: src/components/network/BindingSettingsForm.tsx:178
 msgid "Unbound"
 msgstr "Irrota sidos"
 
-#: src/components/network/BindingSettingsForm.tsx:182
+#: src/components/network/BindingSettingsForm.tsx:181
 msgid "The connection can be used by any available device."
 msgstr "Mikään saatavilla oleva laite ei voi käyttää yhteyttä."
 
-#: src/components/network/BindingSettingsForm.tsx:191
+#: src/components/network/BindingSettingsForm.tsx:190
 msgid "Bind to device name"
 msgstr "Sido laitenimeen"
 
-#: src/components/network/BindingSettingsForm.tsx:195
+#: src/components/network/BindingSettingsForm.tsx:194
 msgid "Choose device to bind by name"
 msgstr "Valitse laite joka sidotaan nimellä"
 
-#: src/components/network/BindingSettingsForm.tsx:210
+#: src/components/network/BindingSettingsForm.tsx:209
 msgid "Bind to MAC address"
 msgstr "Sido MAC-osoitteeseen"
 
-#: src/components/network/BindingSettingsForm.tsx:214
+#: src/components/network/BindingSettingsForm.tsx:213
 msgid "Choose device to bind by MAC"
 msgstr "Valitse laite joka sidotaan MAC-osoitteeseen"
 
@@ -781,38 +732,43 @@ msgstr "IP-etuliite tai verkkomaski"
 msgid "At least one address must be provided for selected mode"
 msgstr "Ainakin yksi osoite tulee antaa valitussa tilassa"
 
-#: src/components/network/IpSettingsForm.tsx:154
-#, javascript-format
-msgid "Edit connection %s"
-msgstr "Muokkaa yhteyttä %s"
+#: src/components/network/IpSettingsForm.tsx:152
+#: src/components/network/WifiConnectionDetails.tsx:100
+#: src/components/storage/FilesystemMenu.tsx:109
+#: src/components/storage/PartitionsSection.tsx:183
+#: src/components/storage/VolumeGroupEditor.tsx:168
+#: src/components/storage/iscsi/NodesPresenter.jsx:80
+#: src/components/users/FirstUser.tsx:54 src/components/users/RootUser.tsx:57
+msgid "Edit"
+msgstr "Muokkaa"
 
-#: src/components/network/IpSettingsForm.tsx:159
-#: src/components/storage/EncryptionSettingsPage.tsx:112
+#: src/components/network/IpSettingsForm.tsx:161
+#: src/components/storage/EncryptionSettingsPage.tsx:114
 #: src/components/storage/iscsi/DiscoverForm.tsx:98
 #: src/components/storage/iscsi/LoginForm.jsx:71
 #: src/components/storage/zfcp/ZFCPDiskForm.tsx:112
-#: src/components/users/FirstUserForm.tsx:197
-#: src/components/users/RootUserForm.tsx:144
+#: src/components/users/FirstUserForm.tsx:199
+#: src/components/users/RootUserForm.tsx:141
 msgid "Something went wrong"
 msgstr "Tapahtui virhe"
 
 #. TRANSLATORS: network connection mode (automatic via DHCP or manual with static IP)
-#: src/components/network/IpSettingsForm.tsx:165
-#: src/components/network/IpSettingsForm.tsx:170
+#: src/components/network/IpSettingsForm.tsx:167
 #: src/components/network/IpSettingsForm.tsx:172
+#: src/components/network/IpSettingsForm.tsx:174
 #: src/components/network/WifiConnectionDetails.tsx:106
 #: src/components/network/WiredConnectionDetails.tsx:214
 msgid "Mode"
 msgstr "Tapa"
 
-#: src/components/network/IpSettingsForm.tsx:179
+#: src/components/network/IpSettingsForm.tsx:181
 msgid "Automatic (DHCP)"
 msgstr "Automaattinen (DHCP)"
 
 #. TRANSLATORS: manual network configuration mode with a static IP address
 #. TRANSLATORS: Network summary title when using manual/static IP configuration
-#: src/components/network/IpSettingsForm.tsx:182
-#: src/components/network/NetworkDetailsItem.tsx:128
+#: src/components/network/IpSettingsForm.tsx:184
+#: src/components/overview/NetworkSummary.tsx:128
 #: src/components/storage/SizeModeSelect.tsx:191
 #: src/components/storage/SizeModeSelect.tsx:199
 #: src/components/storage/iscsi/NodeStartupOptions.js:26
@@ -820,93 +776,17 @@ msgid "Manual"
 msgstr "Manuaalinen"
 
 #. TRANSLATORS: network gateway configuration
-#: src/components/network/IpSettingsForm.tsx:190
-#: src/components/network/IpSettingsForm.tsx:193
+#: src/components/network/IpSettingsForm.tsx:192
+#: src/components/network/IpSettingsForm.tsx:195
 #: src/components/network/WifiConnectionDetails.tsx:129
 #: src/components/network/WiredConnectionDetails.tsx:110
 #: src/components/network/WiredConnectionDetails.tsx:227
 msgid "Gateway"
 msgstr "Yhdyskäytävä"
 
-#: src/components/network/IpSettingsForm.tsx:202
+#: src/components/network/IpSettingsForm.tsx:204
 msgid "Gateway can be defined only in 'Manual' mode"
 msgstr "Yhdyskäytävän voi määrittää vain tilassa ”Manuaalinen”"
-
-#. TRANSLATORS: Displays two IP addresses. E.g., "192.168.1.1 and 192.168.1.2"
-#. %s will be replaced by IP addresses
-#: src/components/network/NetworkDetailsItem.tsx:61
-#, javascript-format
-msgid "%s and %s"
-msgstr "%s ja %s"
-
-#. TRANSLATORS: IPs summary when there are more than 2 static IP addresses.
-#. E.g., "192.168.1.1 and 2 others"
-#. %s is replaced by an IP address (e.g., "192.168.1.1")
-#. %d is replaced by the count of remaining IPs (e.g., "2")
-#: src/components/network/NetworkDetailsItem.tsx:66
-#, javascript-format
-msgid "%s and %d others"
-msgstr "%s ja %d muuta"
-
-#. TRANSLATORS: Description shown when network connections are configured
-#. only for installation and won't be available in the installed system
-#: src/components/network/NetworkDetailsItem.tsx:75
-msgid "System will have no network connections"
-msgstr "Järjestelmään ei tule verkkoyhteyksiä"
-
-#. TRANSLATORS: Summary for multiple manual network connections. E.g.,
-#. "Using 3 connections with 192.168.1.1 and 2 others"
-#. %d is replaced by the number of connections (e.g., "3")
-#. %s is replaced by IP address summary (e.g., "192.168.1.1 and 2 others")
-#. TRANSLATORS: Summary for multiple connections mixing automatic
-#. (DHCP) and manual configuration. E.g., "Using 2 connections with DHCP
-#. and 192.168.1.1"
-#. %d is replaced by the number of connections (e.g., "2")
-#. %s is replaced by configuration summary (e.g., "DHCP and 192.168.1.1")
-#. Full example:
-#: src/components/network/NetworkDetailsItem.tsx:83
-#: src/components/network/NetworkDetailsItem.tsx:99
-#, javascript-format
-msgid "Using %d connections with %s"
-msgstr "Käytetään %d yhteyttä: %s"
-
-#: src/components/network/NetworkDetailsItem.tsx:90
-#, javascript-format
-msgid "DHCP and %s"
-msgstr "DHCP ja %s"
-
-#: src/components/network/NetworkDetailsItem.tsx:90
-#, javascript-format
-msgid "DHCP, %s"
-msgstr "DHCP, %s"
-
-#: src/components/network/NetworkDetailsItem.tsx:105
-#, javascript-format
-msgid "Configured with %d connection"
-msgid_plural "Configured with %d connections"
-msgstr[0] "Määritettiin %d yhteys"
-msgstr[1] "Määritettiin %d yhteyttä"
-
-#. TRANSLATORS: Network summary title when no network has been configured
-#: src/components/network/NetworkDetailsItem.tsx:118
-msgid "Not configured"
-msgstr "Ei määritetty"
-
-#. TRANSLATORS: Network summary title when connections are set up only for
-#. installation and won't persist in the installed system
-#: src/components/network/NetworkDetailsItem.tsx:121
-msgid "Installation only"
-msgstr "Vain asennus"
-
-#. TRANSLATORS: Network summary title when using both automatic (DHCP) and manual configuration
-#: src/components/network/NetworkDetailsItem.tsx:124
-msgid "Auto and manual"
-msgstr "Automaattinen ja käyttäjän määrittämä"
-
-#. TRANSLATORS: Network summary title when using automatic configuration (DHCP)
-#: src/components/network/NetworkDetailsItem.tsx:126
-msgid "Auto"
-msgstr "Automaattinen"
 
 #: src/components/network/NetworkPage.tsx:34
 msgid "Wi-Fi not supported"
@@ -920,13 +800,13 @@ msgstr ""
 "Järjestelmä ei tue Wi-Fi-yhteyksiä, luultavasti puuttuvan tai käytöstä "
 "poistetun laitteiston takia."
 
-#: src/components/network/NetworkPage.tsx:60
-#: src/components/network/NetworkPage.tsx:61
+#: src/components/network/NetworkPage.tsx:56
+#: src/components/network/NetworkPage.tsx:57
 msgid "Wired connections"
 msgstr "Kiinteät yhteydet"
 
-#: src/components/network/NetworkPage.tsx:66
-#: src/components/network/NetworkPage.tsx:67
+#: src/components/network/NetworkPage.tsx:62
+#: src/components/network/NetworkPage.tsx:63
 msgid "Wi-Fi networks"
 msgstr "Wi-Fi-verkot"
 
@@ -983,8 +863,6 @@ msgid "Device"
 msgstr "Laite"
 
 #: src/components/network/WifiConnectionDetails.tsx:73
-#: src/components/network/WifiNetworkPage.tsx:70
-#: src/components/network/WiredConnectionPage.tsx:68
 msgid "Connection details"
 msgstr "Yhteyden tiedot"
 
@@ -1003,15 +881,6 @@ msgstr "MAC"
 #: src/components/network/WifiConnectionDetails.tsx:96
 msgid "IP settings"
 msgstr "IP-asetukset"
-
-#: src/components/network/WifiConnectionDetails.tsx:100
-#: src/components/storage/FilesystemMenu.tsx:109
-#: src/components/storage/PartitionsSection.tsx:183
-#: src/components/storage/VolumeGroupEditor.tsx:168
-#: src/components/storage/iscsi/NodesPresenter.jsx:80
-#: src/components/users/FirstUser.tsx:54 src/components/users/RootUser.tsx:57
-msgid "Edit"
-msgstr "Muokkaa"
 
 #: src/components/network/WifiConnectionDetails.tsx:110
 #: src/components/network/WiredConnectionDetails.tsx:218
@@ -1090,7 +959,7 @@ msgstr "Yhdistä"
 #. TRANSLATORS: %s will be replaced with the network ssid
 #. TRANSLATORS: %s will be replaced with connection id
 #: src/components/network/WifiNetworkPage.tsx:44
-#: src/components/network/WiredConnectionPage.tsx:43
+#: src/components/network/WiredConnectionPage.tsx:42
 #, javascript-format
 msgid "\"%s\" does not exist or is no longer available."
 msgstr "”%s” ei ole enää olemassa tai saatavilla."
@@ -1100,14 +969,13 @@ msgid "Network not found or lost"
 msgstr "Verkkoa ei ole tai se on hävinnyt"
 
 #: src/components/network/WifiNetworkPage.tsx:55
-#: src/components/network/WiredConnectionPage.tsx:55
+#: src/components/network/WiredConnectionPage.tsx:54
 msgid "Go to network page"
 msgstr "Mene verkko-sivulle"
 
-#: src/components/network/WifiNetworkPage.tsx:70
-#, javascript-format
-msgid "Connect to %s"
-msgstr "Yhdistä verkkoon %s"
+#: src/components/network/WifiNetworkPage.tsx:74
+msgid "Wi-Fi"
+msgstr ""
 
 #: src/components/network/WifiNetworksList.tsx:54
 msgid "Excellent signal"
@@ -1217,7 +1085,7 @@ msgstr "Muokkaa yhteysasetuksia"
 msgid "None set"
 msgstr "Ei asetettu"
 
-#: src/components/network/WiredConnectionPage.tsx:48
+#: src/components/network/WiredConnectionPage.tsx:47
 msgid "Connection not found or lost"
 msgstr "Yhetyttä ei ole tai se on väinnyt"
 
@@ -1225,31 +1093,268 @@ msgstr "Yhetyttä ei ole tai se on väinnyt"
 msgid "No wired connections were found"
 msgstr "Kiinteitä yhteyksiä ei löydy"
 
-#: src/components/overview/InstallationSummarySection.tsx:36
-msgid "Installation summary"
-msgstr "Asennuksen yhteenveto"
+#: src/components/overview/HostnameSummary.tsx:47
+#: src/components/system/HostnamePage.tsx:77 src/router.tsx:54
+msgid "Hostname"
+msgstr "Verkkonimi"
 
-#: src/components/overview/OverviewPage.tsx:43 src/router.tsx:52
-msgid "Overview"
-msgstr "Yleiskuva"
+#: src/components/overview/HostnameSummary.tsx:55
+msgid "Temporary name that may change after reboot or network changes"
+msgstr ""
+"Väliaikaisnimi voi muuttua uudelleenkäynnistyksen jälkeen tai verkon "
+"muuttuessa"
 
-#: src/components/overview/SystemInformationSection.tsx:14
-msgid "System information"
+#: src/components/overview/InstallationSettings.tsx:46
+#, fuzzy
+msgid "Installation settings"
+msgstr "Asennuslaitteet"
+
+#. TRANSLATORS: %1$s is a description of the device (eg. "Encrypted XFS RAID") and %2$s is
+#. the RAID level (eg. "RAID0")
+#. TRANSLATORS: %1$s is an already formatted mount path (eg. "/"),
+#. %2$s is a size description (eg. at least 10 GiB)
+#. TRANSLATORS: %1$s is a filesystem type description (eg. "Btrfs with snapshots"),
+#. %2$s is a description of the size or the size limits (eg. "at least 10 GiB")
+#. TRANSLATORS: Summary of the selected language and territory.
+#. %1$s is the language name (e.g. "Spanish").
+#. %2$s is the territory/region name (e.g. "Spain").
+#: src/components/overview/L10nSummary.tsx:52
+#: src/components/storage/device-utils.tsx:94
+#: src/components/storage/utils/partition.tsx:41
+#: src/components/storage/utils/partition.tsx:85
+#, javascript-format
+msgid "%1$s (%2$s)"
+msgstr "%1$s (koko %2$s)"
+
+#: src/components/overview/L10nSummary.tsx:59
+msgid "Language and region"
+msgstr "Kieli ja alue"
+
+#. TRANSLATORS: Additional details shown under the language selection.
+#. %1$s is the keyboard layout name (e.g. "Spanish").
+#. %2$s is the time zone identifier (e.g. "Atlantic/Canary").
+#: src/components/overview/L10nSummary.tsx:67
+#, javascript-format
+msgid "%1$s keyboard - %2$s timezone"
+msgstr "Näppäimistö %1$s – aikavyöhyke %2$s"
+
+#. TRANSLATORS: Displays two IP addresses. E.g., "192.168.1.1 and 192.168.1.2"
+#. %s will be replaced by IP addresses
+#: src/components/overview/NetworkSummary.tsx:61
+#, javascript-format
+msgid "%s and %s"
+msgstr "%s ja %s"
+
+#. TRANSLATORS: IPs summary when there are more than 2 static IP addresses.
+#. E.g., "192.168.1.1 and 2 others"
+#. %s is replaced by an IP address (e.g., "192.168.1.1")
+#. %d is replaced by the count of remaining IPs (e.g., "2")
+#: src/components/overview/NetworkSummary.tsx:66
+#, javascript-format
+msgid "%s and %d others"
+msgstr "%s ja %d muuta"
+
+#. TRANSLATORS: Description shown when network connections are configured
+#. only for installation and won't be available in the installed system
+#: src/components/overview/NetworkSummary.tsx:75
+msgid "System will have no network connections"
+msgstr "Järjestelmään ei tule verkkoyhteyksiä"
+
+#. TRANSLATORS: Summary for multiple manual network connections. E.g.,
+#. "Using 3 connections with 192.168.1.1 and 2 others"
+#. %d is replaced by the number of connections (e.g., "3")
+#. %s is replaced by IP address summary (e.g., "192.168.1.1 and 2 others")
+#. TRANSLATORS: Summary for multiple connections mixing automatic
+#. (DHCP) and manual configuration. E.g., "Using 2 connections with DHCP
+#. and 192.168.1.1"
+#. %d is replaced by the number of connections (e.g., "2")
+#. %s is replaced by configuration summary (e.g., "DHCP and 192.168.1.1")
+#. Full example:
+#: src/components/overview/NetworkSummary.tsx:83
+#: src/components/overview/NetworkSummary.tsx:99
+#, javascript-format
+msgid "Using %d connections with %s"
+msgstr "Käytetään %d yhteyttä: %s"
+
+#: src/components/overview/NetworkSummary.tsx:90
+#, javascript-format
+msgid "DHCP and %s"
+msgstr "DHCP ja %s"
+
+#: src/components/overview/NetworkSummary.tsx:90
+#, javascript-format
+msgid "DHCP, %s"
+msgstr "DHCP, %s"
+
+#: src/components/overview/NetworkSummary.tsx:105
+#, javascript-format
+msgid "Configured with %d connection"
+msgid_plural "Configured with %d connections"
+msgstr[0] "Määritettiin %d yhteys"
+msgstr[1] "Määritettiin %d yhteyttä"
+
+#. TRANSLATORS: Network summary title when no network has been configured
+#: src/components/overview/NetworkSummary.tsx:118
+msgid "Not configured"
+msgstr "Ei määritetty"
+
+#. TRANSLATORS: Network summary title when connections are set up only for
+#. installation and won't persist in the installed system
+#: src/components/overview/NetworkSummary.tsx:121
+msgid "Installation only"
+msgstr "Vain asennus"
+
+#. TRANSLATORS: Network summary title when using both automatic (DHCP) and manual configuration
+#: src/components/overview/NetworkSummary.tsx:124
+msgid "Auto and manual"
+msgstr "Automaattinen ja käyttäjän määrittämä"
+
+#. TRANSLATORS: Network summary title when using automatic configuration (DHCP)
+#: src/components/overview/NetworkSummary.tsx:126
+msgid "Auto"
+msgstr "Automaattinen"
+
+#. TRANSLATORS: Confirmation dialog title. %s is replaced with the product name (e.g., "openSUSE Leap")
+#: src/components/overview/OverviewPage.tsx:70
+#, javascript-format
+msgid "Delete existing data and install %s?"
+msgstr ""
+
+#: src/components/overview/OverviewPage.tsx:70
+#, fuzzy, javascript-format
+msgid "Install %s?"
+msgstr "Asenna"
+
+#. TRANSLATORS: Warning shown when installation will delete existing data
+#: src/components/overview/OverviewPage.tsx:80
+#, fuzzy
+msgid "If unsure, cancel and review storage settings."
+msgstr "Virheelliset tallennustilan asetukset"
+
+#. TRANSLATORS: Information message confirming installation will proceed with current settings
+#: src/components/overview/OverviewPage.tsx:84
+msgid "By proceeding, the installation will begin with defined settings."
+msgstr ""
+
+#. TRANSLATORS: Button to confirm and start the installation
+#: src/components/overview/OverviewPage.tsx:89
+#, fuzzy
+msgid "Confirm and install"
+msgstr "Vahvista asentaminen"
+
+#. TRANSLATORS: This hint helps users locate the install button. Text inside
+#. square brackets [] appears in bold. Keep brackets for proper formatting.
+#: src/components/overview/OverviewPage.tsx:112
+msgid "When ready, click on the [install] button at the end of the page."
+msgstr ""
+
+#: src/components/overview/OverviewPage.tsx:130
+msgid "Install now with potential data loss"
+msgstr "Asenna nyt, vaikka tietoja menetettäisiin"
+
+#: src/components/overview/OverviewPage.tsx:131
+msgid "Install now"
+msgstr "Asenna nyt"
+
+#: src/components/overview/OverviewPage.tsx:150
+msgid ""
+"Take a moment to review the installation settings below and adjust them as "
+"needed."
+msgstr ""
+
+#: src/components/overview/OverviewPage.tsx:180
+msgid "Wait until current operations are completed."
+msgstr ""
+
+#: src/components/overview/OverviewPage.tsx:189
+msgid ""
+"You need to fix any invalid settings before proceeding with the installation."
+msgstr ""
+
+#: src/components/overview/SoftwareSummary.tsx:43
+msgid "Required packages"
+msgstr "Vaaditut paketit"
+
+#. TRANSLATORS: %s will be replaced with amount of selected patterns.
+#: src/components/overview/SoftwareSummary.tsx:48
+#, javascript-format
+msgid "Required packages and %s pattern"
+msgid_plural "Required packages and %s patterns"
+msgstr[0] "Vaaditut paketit ja %d kuvio"
+msgstr[1] "Vaaditut paketit ja %s kuviota"
+
+#. TRANSLATORS: %s will be replaced with a human-readable installation size
+#. (e.g. 5.95 GiB).
+#: src/components/overview/SoftwareSummary.tsx:64
+#, javascript-format
+msgid "Needs about %s"
+msgstr "Vaatii noin %s"
+
+#: src/components/overview/StorageSummary.tsx:51
+msgid "No device selected yet"
+msgstr "Laitetta ei ole vielä valittu"
+
+#. TRANSLATORS: %s will be replaced by the device name and its size,
+#. example: "/dev/sda, 20 GiB"
+#: src/components/overview/StorageSummary.tsx:58
+#, javascript-format
+msgid "Use device %s"
+msgstr "Käytä laitetta %s"
+
+#: src/components/overview/StorageSummary.tsx:82
+msgid "Use several devices"
+msgstr "Käytä useita laitteita"
+
+#: src/components/overview/StorageSummary.tsx:92
+msgid "There are no disks available for the installation"
+msgstr "Asennukseen käytettävissä olevia levyjä ei ole"
+
+#: src/components/overview/StorageSummary.tsx:96
+msgid "Invalid settings"
+msgstr "Virheellisiä asetuksia"
+
+#: src/components/overview/StorageSummary.tsx:101
+msgid "Using an advanced storage configuration"
+msgstr "Käytetään tarkkaa talletustilamääritystä"
+
+#: src/components/overview/StorageSummary.tsx:115
+#: src/components/storage/ProposalFailedInfo.tsx:85
+msgid "Failed to calculate a storage layout"
+msgstr "Tallennustilan määritysten laskeminen ei onnistunut"
+
+#: src/components/overview/StorageSummary.tsx:118
+msgid "No data loss is expected"
+msgstr "Tietoja ei odoteta menetettävän"
+
+#. TRANSLATORS: %s will be replaced by a formatted list of affected systems
+#. like "Windows and openSUSE Tumbleweed".
+#: src/components/overview/StorageSummary.tsx:125
+#, javascript-format
+msgid "Potential data loss affecting at least %s"
+msgstr "Tietoja voidaan menettää ainakin: %s"
+
+#: src/components/overview/StorageSummary.tsx:130
+msgid "Potential data loss"
+msgstr "Tietoja voidaan menettää"
+
+#: src/components/overview/SystemInformationSection.tsx:77
+#, fuzzy
+msgid "System Information"
 msgstr "Järjestelmätiedot"
 
-#: src/components/overview/SystemInformationSection.tsx:17
+#: src/components/overview/SystemInformationSection.tsx:82
 msgid "Model"
 msgstr "Malli"
 
-#: src/components/overview/SystemInformationSection.tsx:18
+#: src/components/overview/SystemInformationSection.tsx:83
 msgid "CPU"
 msgstr "Suoritin"
 
-#: src/components/overview/SystemInformationSection.tsx:19
+#: src/components/overview/SystemInformationSection.tsx:84
 msgid "Memory"
 msgstr "Muisti"
 
-#: src/components/overview/SystemInformationSection.tsx:22
+#: src/components/overview/SystemInformationSection.tsx:87
 msgid "IPs"
 msgstr "IP-osoitteet"
 
@@ -1259,10 +1364,16 @@ msgid "This license is not available in %s."
 msgstr "Lisenssiä ei ole saatavilla tuotteelle %s."
 
 #: src/components/product/LicenseDialog.tsx:74
-#: src/components/software/SoftwareConflicts.tsx:294
+#: src/components/software/SoftwareConflictsPage.tsx:297
 #: src/components/software/SoftwarePatternsSelection.tsx:215
 msgid "Close"
 msgstr "Sulje"
+
+#. TRANSLATORS: %s will be replaced by a product name. E.g., "openSUSE Tumbleweed"
+#: src/components/product/ProductLogo.tsx:30
+#, javascript-format
+msgid "%s logo"
+msgstr "%s -logo"
 
 #: src/components/product/ProductRegistrationAlert.tsx:57
 #, javascript-format
@@ -1340,8 +1451,8 @@ msgid "Provide email address"
 msgstr "Kirjoita sähköpostiosoite"
 
 #: src/components/product/ProductRegistrationPage.tsx:339
-#: src/components/storage/LvmPage.tsx:176
-#: src/components/system/HostnamePage.tsx:102
+#: src/components/storage/LvmPage.tsx:178
+#: src/components/system/HostnamePage.tsx:97
 msgid "Check the following before continuing"
 msgstr "Tarkista seuraavat ennen jatkamista"
 
@@ -1371,27 +1482,59 @@ msgstr ""
 msgid "hostname"
 msgstr "isäntänimi"
 
-#. TRANSLATORS: %s will be replaced by a product name. E.g., "openSUSE Tumbleweed"
-#: src/components/product/ProductSelectionPage.tsx:70
-#, javascript-format
-msgid "%s logo"
-msgstr "%s -logo"
+#: src/components/product/ProductSelectionPage.tsx:98
+#, fuzzy
+msgid "Show more"
+msgstr "Näytä enemmän toimintoja"
+
+#: src/components/product/ProductSelectionPage.tsx:99
+#, fuzzy
+msgid "Show less"
+msgstr "Näytä vähemmän toimintoja"
 
 #. TRANSLATORS: Text used for the license acceptance checkbox. %s will be
 #. replaced with the product name and the text in the square brackets [] is
 #. used for the link to show the license, please keep the brackets.
-#: src/components/product/ProductSelectionPage.tsx:156
+#: src/components/product/ProductSelectionPage.tsx:169
 #, javascript-format
 msgid "I have read and accept the [license] for %s"
 msgstr "Olen lukenut ja hyväksyn [lisenssin] tuotteelle %s"
 
-#: src/components/product/ProductSelectionPage.tsx:167
+#: src/components/product/ProductSelectionPage.tsx:173
+#, fuzzy, javascript-format
+msgid "Currently selected %s"
+msgstr "automaattisesti valittu"
+
+#: src/components/product/ProductSelectionPage.tsx:177
 msgid "Select a product"
 msgstr "Valitse tuote"
 
-#: src/components/product/ProductSelectionPage.tsx:168
-msgid "Available products"
-msgstr "Saatavilla olevat tuotteet"
+#: src/components/product/ProductSelectionPage.tsx:192
+#, fuzzy
+msgid "Show description"
+msgstr "Kuvaus"
+
+#: src/components/product/ProductSelectionPage.tsx:193
+#, fuzzy
+msgid "Hide description"
+msgstr "Kuvaus"
+
+#: src/components/product/ProductSelectionPage.tsx:210
+msgid ""
+"There is other product available. Selecting a different product will "
+"automatically adjust some installation settings to match the chosen "
+"product's defaults."
+msgid_plural ""
+"There are 2 other products available. Selecting a different product will "
+"automatically adjust some installation settings to match the chosen "
+"product's defaults."
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/components/product/ProductSelectionPage.tsx:216
+#, javascript-format
+msgid "There are %d products available"
+msgstr ""
 
 #: src/components/product/ProductSelectionProgress.tsx:43
 msgid "Configuring the product, please wait ..."
@@ -1540,26 +1683,26 @@ msgid ""
 "If you want to disable this check, please specify \"inst.ay_check=0\" at "
 "kernels command-line"
 msgstr ""
-"Jos haluat poistaa tarkistuksen, aseta Linux-ytimen komentoriville ”"
-"inst.ay_check=0”"
+"Jos haluat poistaa tarkistuksen, aseta Linux-ytimen komentoriville "
+"”inst.ay_check=0”"
 
-#: src/components/software/SoftwareConflicts.tsx:100
+#: src/components/software/SoftwareConflictsPage.tsx:101
 msgid "Show less actions"
 msgstr "Näytä vähemmän toimintoja"
 
-#: src/components/software/SoftwareConflicts.tsx:100
+#: src/components/software/SoftwareConflictsPage.tsx:101
 msgid "Show more actions"
 msgstr "Näytä enemmän toimintoja"
 
-#: src/components/software/SoftwareConflicts.tsx:138
+#: src/components/software/SoftwareConflictsPage.tsx:139
 msgid "Select a solution to continue"
 msgstr "Valitse ratkaisu jatkaaksesi"
 
-#: src/components/software/SoftwareConflicts.tsx:160
+#: src/components/software/SoftwareConflictsPage.tsx:161
 msgid "Apply selected solution"
 msgstr "Toteuta valittu ratkaisu"
 
-#: src/components/software/SoftwareConflicts.tsx:183
+#: src/components/software/SoftwareConflictsPage.tsx:184
 msgid ""
 "Multiple conflicts found. You can address them in any order, and resolving "
 "one may resolve others."
@@ -1567,7 +1710,7 @@ msgstr ""
 "Useita konflikteja. Voit käsitellä ne missä tahansa järjestyksess, ja yhden "
 "ratkaiseminen saattaa ratkaista myös muita."
 
-#: src/components/software/SoftwareConflicts.tsx:191
+#: src/components/software/SoftwareConflictsPage.tsx:192
 msgid "Skip to previous"
 msgstr "Siirry edelliseen"
 
@@ -1575,20 +1718,20 @@ msgstr "Siirry edelliseen"
 #. indicates the position of the current item out of a total. The
 #. first %d will be replaced with the current item number, the
 #. second %d with the total number of items.
-#: src/components/software/SoftwareConflicts.tsx:202
+#: src/components/software/SoftwareConflictsPage.tsx:203
 #, javascript-format
 msgid "%d of %d"
 msgstr "%d / %d"
 
-#: src/components/software/SoftwareConflicts.tsx:208
+#: src/components/software/SoftwareConflictsPage.tsx:209
 msgid "Skip to next"
 msgstr "Siirry seuraavaan"
 
-#: src/components/software/SoftwareConflicts.tsx:223
+#: src/components/software/SoftwareConflictsPage.tsx:224
 msgid "No conflicts to address"
 msgstr "Ei selvitettäviä konflikteja"
 
-#: src/components/software/SoftwareConflicts.tsx:226
+#: src/components/software/SoftwareConflictsPage.tsx:227
 msgid ""
 "All conflicts have been resolved, or none were detected. You can safely "
 "continue with your setup."
@@ -1596,47 +1739,28 @@ msgstr ""
 "Kaikki konfliktit on ratkaistu, tai yhtään ei havaittu. Asennusta voidaan "
 "jatkaa turvallisesti."
 
-#: src/components/software/SoftwareConflicts.tsx:286
+#: src/components/software/SoftwareConflictsPage.tsx:288
 msgid "Software conflicts resolution"
 msgstr "Ohjelmistojen konfliktien ratkaiseminen"
 
-#: src/components/software/SoftwareDetailsItem.tsx:43
-msgid "Required packages"
-msgstr "Vaaditut paketit"
-
-#. TRANSLATORS: %s will be replaced with amount of selected patterns.
-#: src/components/software/SoftwareDetailsItem.tsx:48
-#, javascript-format
-msgid "Required packages and %s pattern"
-msgid_plural "Required packages and %s patterns"
-msgstr[0] "Vaaditut paketit ja %d kuvio"
-msgstr[1] "Vaaditut paketit ja %s kuviota"
-
-#. TRANSLATORS: %s will be replaced with a human-readable installation size
-#. (e.g. 5.95 GiB).
-#: src/components/software/SoftwareDetailsItem.tsx:64
-#, javascript-format
-msgid "Needs about %s"
-msgstr "Vaatii noin %s"
-
-#: src/components/software/SoftwarePage.tsx:62
+#: src/components/software/SoftwarePage.tsx:61
 msgid "No additional software was selected."
 msgstr "Lisäohjelmistoja ei ole valittu."
 
-#: src/components/software/SoftwarePage.tsx:67
+#: src/components/software/SoftwarePage.tsx:66
 msgid "The following software patterns are selected for installation:"
 msgstr "Seuraavat ohjelmistoryhmät on valittu asennukseen:"
 
-#: src/components/software/SoftwarePage.tsx:82
-#: src/components/software/SoftwarePage.tsx:94
+#: src/components/software/SoftwarePage.tsx:81
+#: src/components/software/SoftwarePage.tsx:93
 msgid "Selected patterns"
 msgstr "Valitut ohjelmistoryhmät"
 
-#: src/components/software/SoftwarePage.tsx:85
+#: src/components/software/SoftwarePage.tsx:84
 msgid "Change selection"
 msgstr "Muuta valintoja"
 
-#: src/components/software/SoftwarePage.tsx:97
+#: src/components/software/SoftwarePage.tsx:96
 msgid ""
 "This product does not allow to select software patterns during installation. "
 "However, you can add additional software once the installation is finished."
@@ -1645,7 +1769,7 @@ msgstr ""
 "kuitenkin mahdollista valita lisäohjelmistoja asennuksen jälkeen."
 
 #. TRANSLATORS: error details followed by a "Try again" link
-#: src/components/software/SoftwarePage.tsx:105
+#: src/components/software/SoftwarePage.tsx:104
 msgid ""
 "Some installation repositories could not be loaded. The system cannot be "
 "installed without them."
@@ -1654,43 +1778,39 @@ msgstr ""
 "niitä."
 
 #. TRANSLATORS: title for an error message box, at least one repository could not be loaded
-#: src/components/software/SoftwarePage.tsx:118
+#: src/components/software/SoftwarePage.tsx:117
 msgid "Repository load failed"
 msgstr "Asennuslähteen lataaminen epäonnistui"
 
 #. TRANSLATORS: progress message
-#: src/components/software/SoftwarePage.tsx:122
+#: src/components/software/SoftwarePage.tsx:121
 msgid "Loading the installation repositories..."
 msgstr "Ladataan asennuslähteitä..."
 
 #. TRANSLATORS: link for retrying failed repository load
-#: src/components/software/SoftwarePage.tsx:129
+#: src/components/software/SoftwarePage.tsx:128
 msgid "Try again"
 msgstr "Yritä uudelleen"
 
-#: src/components/software/SoftwarePage.tsx:189
+#: src/components/software/SoftwarePage.tsx:180
 msgid "Used space"
 msgstr "Käytetty tila"
 
-#: src/components/software/SoftwarePatternsSelection.tsx:102
+#: src/components/software/SoftwarePatternsSelection.tsx:103
 msgid "None of the patterns match the filter."
 msgstr "Yksikään ohjelmistoryhmä ei vastaa suodatinta."
 
-#: src/components/software/SoftwarePatternsSelection.tsx:172
+#: src/components/software/SoftwarePatternsSelection.tsx:173
 msgid "auto selected"
 msgstr "automaattisesti valittu"
 
-#: src/components/software/SoftwarePatternsSelection.tsx:176
+#: src/components/software/SoftwarePatternsSelection.tsx:177
 msgid "Unselect"
 msgstr "Poista valinta"
 
-#: src/components/software/SoftwarePatternsSelection.tsx:196
-msgid "Software selection"
-msgstr "Ohjelmistojen valinta"
-
 #. TRANSLATORS: search field placeholder text
-#: src/components/software/SoftwarePatternsSelection.tsx:199
-#: src/components/software/SoftwarePatternsSelection.tsx:200
+#: src/components/software/SoftwarePatternsSelection.tsx:202
+#: src/components/software/SoftwarePatternsSelection.tsx:203
 msgid "Filter by pattern title or description"
 msgstr "Suodata ohjelmistoryhmän nimen tai kuvauksen perusteella"
 
@@ -1907,7 +2027,7 @@ msgstr ""
 "Nykyisillä asetuksilla %1$s kooltaan vähintään %2$s tullaan yrittämään luoda."
 
 #: src/components/storage/BootSection.tsx:42
-#: src/components/storage/BootSelection.tsx:154
+#: src/components/storage/BootSelectionPage.tsx:155
 #, javascript-format
 msgid ""
 "Partitions to boot will be set up if needed at the installation disk, based "
@@ -1917,7 +2037,7 @@ msgstr ""
 "asennuslevyltä, perustuen %s-tiedostojärjestelmän sijaintiin."
 
 #: src/components/storage/BootSection.tsx:53
-#: src/components/storage/BootSelection.tsx:165
+#: src/components/storage/BootSelectionPage.tsx:166
 #, javascript-format
 msgid ""
 "Partitions to boot will be set up if needed at the installation disk. "
@@ -1940,7 +2060,7 @@ msgstr ""
 "Käynnistämiseen tarvittavat osiot otetaan käyttöön tarvittaessa kohteessa %s."
 
 #: src/components/storage/BootSection.tsx:87
-#: src/components/storage/BootSelection.tsx:145
+#: src/components/storage/BootSelectionPage.tsx:146
 msgid ""
 "To ensure the new system is able to boot, the installer may need to create "
 "or configure some partitions in the appropriate disk."
@@ -1948,37 +2068,37 @@ msgstr ""
 "Jotta järjestelmä käynnistyisi, asennusohjelman saattaa täytyä luoda tai "
 "tehdä osioiden asetusmuutoksia soveltuvalla levyllä."
 
-#: src/components/storage/BootSelection.tsx:184
+#: src/components/storage/BootSelectionPage.tsx:183
 #: src/components/storage/ProposalPage.tsx:259
 msgid "Boot options"
 msgstr "Käynnistysvalinnat"
 
-#: src/components/storage/BootSelection.tsx:204
+#: src/components/storage/BootSelectionPage.tsx:202
 #: src/components/storage/SizeModeSelect.tsx:191
 #: src/components/storage/SizeModeSelect.tsx:196
 #: src/components/storage/iscsi/NodeStartupOptions.js:28
 msgid "Automatic"
 msgstr "Automaattinen"
 
-#: src/components/storage/BootSelection.tsx:222
+#: src/components/storage/BootSelectionPage.tsx:220
 msgid "Select a disk"
 msgstr "Valitse levy"
 
-#: src/components/storage/BootSelection.tsx:227
+#: src/components/storage/BootSelectionPage.tsx:225
 msgid "Partitions to boot will be set up if needed at the following device."
 msgstr ""
 "Käynnistämiseen tarvittavat osiot otetaan tarvittaessa käyttöön seuraavalta "
 "laitteelta."
 
-#: src/components/storage/BootSelection.tsx:229
+#: src/components/storage/BootSelectionPage.tsx:227
 msgid "Choose a disk for placing the boot loader"
 msgstr "Valitse levy jolle käynnistyslatain asennetaan"
 
-#: src/components/storage/BootSelection.tsx:252
+#: src/components/storage/BootSelectionPage.tsx:250
 msgid "Do not configure"
 msgstr "Älä tee asetuksia"
 
-#: src/components/storage/BootSelection.tsx:258
+#: src/components/storage/BootSelectionPage.tsx:256
 msgid ""
 "No partitions will be automatically configured for booting. Use with caution."
 msgstr ""
@@ -2127,14 +2247,14 @@ msgid "Current content"
 msgstr "Nykyinen sisältö"
 
 #. TRANSLATORS: table header for a DASD devices table
-#: src/components/storage/DeviceSelectorPage.tsx:53
+#: src/components/storage/DeviceSelectorPage.tsx:54
 #: src/components/storage/dasd/DASDTable.tsx:455
 msgid "Type"
 msgstr "Tyyppi"
 
 #. TRANSLATORS: input field for the iSCSI initiator name
-#: src/components/storage/DeviceSelectorPage.tsx:54
-#: src/components/storage/LvmPage.tsx:182
+#: src/components/storage/DeviceSelectorPage.tsx:55
+#: src/components/storage/LvmPage.tsx:184
 #: src/components/storage/iscsi/InitiatorForm.tsx:75
 #: src/components/storage/iscsi/InitiatorForm.tsx:85
 #: src/components/storage/iscsi/InitiatorSection.tsx:40
@@ -2144,17 +2264,18 @@ msgstr "Tyyppi"
 msgid "Name"
 msgstr "Nimi"
 
-#: src/components/storage/DeviceSelectorPage.tsx:55
+#: src/components/storage/DeviceSelectorPage.tsx:56
 msgid "Content"
 msgstr "Sisältö"
 
-#: src/components/storage/DeviceSelectorPage.tsx:56
+#: src/components/storage/DeviceSelectorPage.tsx:57
 msgid "Filesystems"
 msgstr "Tiedostojärjestelmät"
 
 #: src/components/storage/DeviceSelectorPage.tsx:75
-msgid "Device Selection"
-msgstr "Laitteen valinta"
+#, fuzzy
+msgid "Select device"
+msgstr "Valitse levy"
 
 #: src/components/storage/DeviceSelectorPage.tsx:80
 msgid ""
@@ -2290,20 +2411,20 @@ msgstr ""
 "Uusien tiedostojärjestelmien tietojen turvaaminen, mukaanlukien data, "
 "ohjelmistot ja järjestelmätiedostot."
 
-#: src/components/storage/EncryptionSettingsPage.tsx:76
-#: src/components/users/RootUserForm.tsx:104
+#: src/components/storage/EncryptionSettingsPage.tsx:77
+#: src/components/users/RootUserForm.tsx:105
 msgid "Password is empty."
 msgstr "Salasana on tyhjä."
 
 #. TRANSLATORS: "Trusted Platform Module" is the name of the technology and TPM its abbreviation
-#: src/components/storage/EncryptionSettingsPage.tsx:92
+#: src/components/storage/EncryptionSettingsPage.tsx:93
 msgid ""
 "Use the Trusted Platform Module (TPM) to decrypt automatically on each boot"
 msgstr ""
 "Käytä Trusted Platform Module (TPM) -ominaisuutta salauksen purkamiseen "
 "automaattisesti jokaisessa käynnistyksessä"
 
-#: src/components/storage/EncryptionSettingsPage.tsx:96
+#: src/components/storage/EncryptionSettingsPage.tsx:97
 msgid ""
 "The password will not be needed to boot and access the data if the TPM can "
 "verify the integrity of the system. TPM sealing requires the new system to "
@@ -2313,15 +2434,15 @@ msgstr ""
 "varmistamaan järjestelmän eheyden. TPM-sinetöinti vaatii, että uuteen "
 "järjestelmään käynnistetään suoraan ensimmäisellä kerralla."
 
-#: src/components/storage/EncryptionSettingsPage.tsx:106
+#: src/components/storage/EncryptionSettingsPage.tsx:108
 msgid "Encryption settings"
 msgstr "Salausasetukset"
 
-#: src/components/storage/EncryptionSettingsPage.tsx:120
+#: src/components/storage/EncryptionSettingsPage.tsx:122
 msgid "Encrypt the system"
 msgstr "Salaa järjestelmä"
 
-#: src/components/storage/EncryptionSettingsPage.tsx:122
+#: src/components/storage/EncryptionSettingsPage.tsx:124
 msgid ""
 "Full Disk Encryption (FDE) allows to protect the information stored at the "
 "new file systems, including data, programs, and system files."
@@ -2361,179 +2482,189 @@ msgid_plural ""
 msgstr[0] "Asetuksia tulee muuttaa seuraavan ongelman ratkaisemiseksi:"
 msgstr[1] "Asetuksia tulee muuttaa seuraavien ongelmien ratkaisemiseksi:"
 
-#: src/components/storage/FormattableDevicePage.tsx:230
-#: src/components/storage/LogicalVolumePage.tsx:250
-#: src/components/storage/PartitionPage.tsx:316
+#: src/components/storage/FormattableDevicePage.tsx:229
+#: src/components/storage/LogicalVolumePage.tsx:249
+#: src/components/storage/PartitionPage.tsx:315
 msgid "Select or enter a valid mount point"
 msgstr "Valitse tai syötä kelvollinen liitoskohtaa"
 
-#: src/components/storage/FormattableDevicePage.tsx:240
-#: src/components/storage/LogicalVolumePage.tsx:260
-#: src/components/storage/PartitionPage.tsx:326
+#: src/components/storage/FormattableDevicePage.tsx:239
+#: src/components/storage/LogicalVolumePage.tsx:259
+#: src/components/storage/PartitionPage.tsx:325
 msgid ""
 "Select or enter a mount point that is not already assigned to another device"
 msgstr ""
 "Valitse tai syötä kelvollinen liitoskohtaa joka ei ole jo toisen laitteen "
 "käytössä"
 
-#: src/components/storage/FormattableDevicePage.tsx:289
-#: src/components/storage/LogicalVolumePage.tsx:445
-#: src/components/storage/LogicalVolumePage.tsx:468
+#: src/components/storage/FormattableDevicePage.tsx:288
+#: src/components/storage/LogicalVolumePage.tsx:444
+#: src/components/storage/LogicalVolumePage.tsx:467
 #: src/components/storage/LogicalVolumePage.tsx:771
-#: src/components/storage/PartitionPage.tsx:576
-#: src/components/storage/PartitionPage.tsx:916
+#: src/components/storage/PartitionPage.tsx:575
+#: src/components/storage/PartitionPage.tsx:922
 msgid "Waiting for a mount point"
 msgstr "Odotetaan liitoskohtaa"
 
 #. TRANSLATORS: %s is a device name (eg. /dev/sda3).
-#: src/components/storage/FormattableDevicePage.tsx:292
-#: src/components/storage/PartitionPage.tsx:579
+#: src/components/storage/FormattableDevicePage.tsx:291
+#: src/components/storage/PartitionPage.tsx:578
 #: src/components/storage/utils/partition.tsx:69
 #, javascript-format
 msgid "Current %s"
 msgstr "Tämänhetkinen %s"
 
-#: src/components/storage/FormattableDevicePage.tsx:293
-#: src/components/storage/LogicalVolumePage.tsx:469
-#: src/components/storage/PartitionPage.tsx:580
+#: src/components/storage/FormattableDevicePage.tsx:292
+#: src/components/storage/LogicalVolumePage.tsx:468
+#: src/components/storage/PartitionPage.tsx:579
 #: src/components/storage/utils.ts:326
 msgid "Btrfs with snapshots"
 msgstr "Btrfs tilannevedoksilla"
 
-#: src/components/storage/FormattableDevicePage.tsx:311
-#: src/components/storage/LogicalVolumePage.tsx:485
-#: src/components/storage/PartitionPage.tsx:598
+#: src/components/storage/FormattableDevicePage.tsx:310
+#: src/components/storage/LogicalVolumePage.tsx:484
+#: src/components/storage/PartitionPage.tsx:597
 #, javascript-format
 msgid "Default file system for %s"
 msgstr "Oletustiedostojärjestelmä kohteelle %s"
 
-#: src/components/storage/FormattableDevicePage.tsx:312
+#: src/components/storage/FormattableDevicePage.tsx:311
 msgid "Default file system for generic mount paths"
 msgstr "Oletustiedostojärjestelmä yleiseille liitospoluille"
 
-#: src/components/storage/FormattableDevicePage.tsx:314
+#: src/components/storage/FormattableDevicePage.tsx:313
 msgid "Destroy current data and format device as"
 msgstr "Tuhoa nykyiset tiedot ja alusta laite tiedostojärjestelmällä"
 
-#: src/components/storage/FormattableDevicePage.tsx:315
+#: src/components/storage/FormattableDevicePage.tsx:314
 msgid "Format device as"
 msgstr "Alusta laite tiedostojärjestelmällä"
 
 #. TRANSLATORS: %s is the name of a device, like vda
 #. TRANSLATORS: %s is the name of a partition, like /dev/vda2
-#: src/components/storage/FormattableDevicePage.tsx:329
-#: src/components/storage/PartitionPage.tsx:615
+#: src/components/storage/FormattableDevicePage.tsx:328
+#: src/components/storage/PartitionPage.tsx:614
 #, javascript-format
 msgid "Do not format %s and keep the data"
 msgstr "Älä alusta kohdetta %s ja säilytä tiedot"
 
-#: src/components/storage/FormattableDevicePage.tsx:393
-#: src/components/storage/LogicalVolumePage.tsx:554
-#: src/components/storage/PartitionPage.tsx:680
+#: src/components/storage/FormattableDevicePage.tsx:392
+#: src/components/storage/LogicalVolumePage.tsx:553
+#: src/components/storage/PartitionPage.tsx:679
 msgid "File system label"
 msgstr "Tiedostojärjestelmän nimike"
 
-#: src/components/storage/FormattableDevicePage.tsx:465
+#: src/components/storage/FormattableDevicePage.tsx:464
+#, fuzzy
+msgid "Configure"
+msgstr "Tee zFCP-asetukset"
+
+#: src/components/storage/FormattableDevicePage.tsx:470
 #, javascript-format
 msgid "Configure device %s"
 msgstr "Tee laitteen %s asetukset"
 
-#: src/components/storage/FormattableDevicePage.tsx:472
-#: src/components/storage/FormattableDevicePage.tsx:479
+#: src/components/storage/FormattableDevicePage.tsx:474
+#: src/components/storage/FormattableDevicePage.tsx:481
 #: src/components/storage/LogicalVolumePage.tsx:699
 #: src/components/storage/LogicalVolumePage.tsx:704
-#: src/components/storage/PartitionPage.tsx:846
-#: src/components/storage/PartitionPage.tsx:853
+#: src/components/storage/PartitionPage.tsx:852
+#: src/components/storage/PartitionPage.tsx:859
 msgid "Mount point"
 msgstr "Liitoskohta"
 
-#: src/components/storage/FormattableDevicePage.tsx:477
+#: src/components/storage/FormattableDevicePage.tsx:479
 #: src/components/storage/LogicalVolumePage.tsx:702
-#: src/components/storage/PartitionPage.tsx:851
+#: src/components/storage/PartitionPage.tsx:857
 msgid "Mount point toggle"
 msgstr "Liitoskohdan tila"
 
-#: src/components/storage/FormattableDevicePage.tsx:478
+#: src/components/storage/FormattableDevicePage.tsx:480
 #: src/components/storage/LogicalVolumePage.tsx:703
-#: src/components/storage/PartitionPage.tsx:852
+#: src/components/storage/PartitionPage.tsx:858
 msgid "Suggested mount points"
 msgstr "Ehdotetut liitoskohdat"
 
-#: src/components/storage/FormattableDevicePage.tsx:480
+#: src/components/storage/FormattableDevicePage.tsx:482
 #: src/components/storage/LogicalVolumePage.tsx:705
-#: src/components/storage/PartitionPage.tsx:854
+#: src/components/storage/PartitionPage.tsx:860
 msgid "Clear selected mount point"
 msgstr "Tyhjennä valittu liitoskohta"
 
-#: src/components/storage/FormattableDevicePage.tsx:483
+#: src/components/storage/FormattableDevicePage.tsx:485
 #: src/components/storage/LogicalVolumePage.tsx:708
-#: src/components/storage/PartitionPage.tsx:857
+#: src/components/storage/PartitionPage.tsx:863
 msgid "Use"
 msgstr "Käytä"
 
-#: src/components/storage/FormattableDevicePage.tsx:494
+#: src/components/storage/FormattableDevicePage.tsx:496
 #: src/components/storage/LogicalVolumePage.tsx:717
-#: src/components/storage/PartitionPage.tsx:878
+#: src/components/storage/PartitionPage.tsx:884
 msgid "Select or enter a mount point"
 msgstr "Valitse tai syötä liitoskohta"
 
-#: src/components/storage/FormattableDevicePage.tsx:503
+#: src/components/storage/FormattableDevicePage.tsx:505
 #: src/components/storage/LogicalVolumePage.tsx:742
-#: src/components/storage/PartitionPage.tsx:887
+#: src/components/storage/PartitionPage.tsx:893
 msgid "File system"
 msgstr "Tiedostojärjestelmä"
 
-#: src/components/storage/FormattableDevicePage.tsx:514
+#: src/components/storage/FormattableDevicePage.tsx:516
 #: src/components/storage/LogicalVolumePage.tsx:753
-#: src/components/storage/PartitionPage.tsx:899
+#: src/components/storage/PartitionPage.tsx:905
 msgid "Label"
 msgstr "Nimike"
 
-#: src/components/storage/LogicalVolumePage.tsx:271
+#: src/components/storage/LogicalVolumePage.tsx:270
 msgid "Enter a name"
 msgstr "Syötä nimi"
 
-#: src/components/storage/LogicalVolumePage.tsx:298
-#: src/components/storage/PartitionPage.tsx:354
+#: src/components/storage/LogicalVolumePage.tsx:297
+#: src/components/storage/PartitionPage.tsx:353
 msgid "The minimum cannot be greater than the maximum"
 msgstr "Minimi ei voi olla isompi kuin maksimi"
 
-#: src/components/storage/LogicalVolumePage.tsx:306
+#: src/components/storage/LogicalVolumePage.tsx:305
 msgid ""
 "The maximum must be a number optionally followed by a unit like GiB or GB"
 msgstr "Maisimin tulee olla luku jota voi seurata yksikkö kuten GiB tai GB"
 
-#: src/components/storage/LogicalVolumePage.tsx:314
+#: src/components/storage/LogicalVolumePage.tsx:313
 msgid ""
 "The minimum must be a number optionally followed by a unit like GiB or GB"
 msgstr "Minimin tulee olla luku jota voi seurata yksikkö kuten GiB tai GB"
 
-#: src/components/storage/LogicalVolumePage.tsx:321
+#: src/components/storage/LogicalVolumePage.tsx:320
 msgid ""
 "Size limits must be numbers optionally followed by a unit like GiB or GB"
 msgstr ""
 "Kokorajojen tulee olla lukuja joita voi seurata yksikkö kuten GiB tai GB"
 
-#: src/components/storage/LogicalVolumePage.tsx:440
-#: src/components/storage/LogicalVolumePage.tsx:443
+#: src/components/storage/LogicalVolumePage.tsx:439
+#: src/components/storage/LogicalVolumePage.tsx:442
 msgid "Logical volume name"
 msgstr "Loogisen taltion nimi"
 
-#: src/components/storage/LogicalVolumePage.tsx:486
+#: src/components/storage/LogicalVolumePage.tsx:485
 msgid "Default file system for generic logical volumes"
 msgstr "Oletustiedostojärjestelmä loogisille taltioille"
 
-#: src/components/storage/LogicalVolumePage.tsx:488
+#: src/components/storage/LogicalVolumePage.tsx:487
 msgid "Format logical volume as"
 msgstr "Alusta looginen taltio tiedostojärjestelmällä"
 
-#: src/components/storage/LogicalVolumePage.tsx:689
-#, javascript-format
-msgid "Configure LVM logical volume at %s volume group"
-msgstr "Tee asetukset loogiselle LVM-taltiolle taltioryhmässä %s"
+#: src/components/storage/LogicalVolumePage.tsx:688
+#: src/components/storage/LvmPage.tsx:171
+msgid "LVM"
+msgstr ""
+
+#: src/components/storage/LogicalVolumePage.tsx:690
+#, fuzzy
+msgid "Configure logical volume"
+msgstr "looginen taltio"
 
 #: src/components/storage/LogicalVolumePage.tsx:766
-#: src/components/storage/PartitionPage.tsx:911
+#: src/components/storage/PartitionPage.tsx:917
 msgid "Size mode"
 msgstr "Koon tila"
 
@@ -2550,16 +2681,17 @@ msgstr "Taltioryhmä ”%s” on jo olemassa, syötä toinen nimi."
 msgid "Select at least one disk."
 msgstr "Valitse vähintään yksi levy."
 
-#: src/components/storage/LvmPage.tsx:170
-msgid "Configure LVM Volume Group"
+#: src/components/storage/LvmPage.tsx:172
+#, fuzzy
+msgid "Configure Volume Group"
 msgstr "Tee LVM-taltioryhmän asetukset"
 
-#: src/components/storage/LvmPage.tsx:185
-#: src/components/storage/zfcp/ZFCPPage.tsx:131
+#: src/components/storage/LvmPage.tsx:187
+#: src/components/storage/zfcp/ZFCPPage.tsx:130
 msgid "Disks"
 msgstr "Levyt"
 
-#: src/components/storage/LvmPage.tsx:188
+#: src/components/storage/LvmPage.tsx:190
 msgid ""
 "The needed LVM physical volumes will be added as partitions on the chosen "
 "disks, based on the sizes of the logical volumes. If you select more than "
@@ -2569,11 +2701,11 @@ msgstr ""
 "perustuen loogisten taltioiden kokoihin. Jos valitse useamman kuin yhden "
 "levyn fyysiset taltiot saatetaan jakaa usean levyn välille."
 
-#: src/components/storage/LvmPage.tsx:223
+#: src/components/storage/LvmPage.tsx:225
 msgid "Move mount points"
 msgstr "Siirrä liitoskohtia"
 
-#: src/components/storage/LvmPage.tsx:227
+#: src/components/storage/LvmPage.tsx:229
 msgid ""
 "Move the mount points currently configured at the selected disks to logical "
 "volumes of this volume group."
@@ -2686,63 +2818,68 @@ msgid_plural "%s will be created as logical volumes"
 msgstr[0] "%s luodaan loogisena taltiona"
 msgstr[1] "%s luodaan loogisina taltioina"
 
-#: src/components/storage/PartitionPage.tsx:362
+#: src/components/storage/PartitionPage.tsx:361
 msgid "The maximum must be a number followed by a unit like GiB or GB"
 msgstr "Maksimimäärän tulee olla luku jota seuraa yksikkö kuten GiB tai GB"
 
-#: src/components/storage/PartitionPage.tsx:370
+#: src/components/storage/PartitionPage.tsx:369
 msgid "The minimum must be a number followed by a unit like GiB or GB"
 msgstr "Minimin tulee olla luku jota seuraa yksikkö kuten GiB tai GB"
 
-#: src/components/storage/PartitionPage.tsx:377
+#: src/components/storage/PartitionPage.tsx:376
 msgid "Size limits must be numbers followed by a unit like GiB or GB"
 msgstr "Kokorajojen tulee olla lukuja joita seuraa yksikkö kuten GiB tai GB"
 
 #. TRANSLATORS: %s is a disk name with its size (eg. "sda, 10 GiB"
-#: src/components/storage/PartitionPage.tsx:514
+#: src/components/storage/PartitionPage.tsx:513
 #, javascript-format
 msgid "As a new partition on %s"
 msgstr "Uutena osiona kohteelle %s"
 
-#: src/components/storage/PartitionPage.tsx:516
+#: src/components/storage/PartitionPage.tsx:515
 #, javascript-format
 msgid "Using partition %s"
 msgstr "Käytetään osiota %s"
 
-#: src/components/storage/PartitionPage.tsx:545
+#: src/components/storage/PartitionPage.tsx:544
 msgid "Mount point options"
 msgstr "Liitoskohdan valinnat"
 
-#: src/components/storage/PartitionPage.tsx:550
+#: src/components/storage/PartitionPage.tsx:549
 msgid "Using an existing partition"
 msgstr "Käytä olemassa olevaa osioita"
 
-#: src/components/storage/PartitionPage.tsx:561
+#: src/components/storage/PartitionPage.tsx:560
 msgid "There are not usable partitions"
 msgstr "Käytettävissä olevia osioita ei ole"
 
-#: src/components/storage/PartitionPage.tsx:599
+#: src/components/storage/PartitionPage.tsx:598
 msgid "Default file system for generic partitions"
 msgstr "Oletustiedostojärjestelmä yleisille osioille"
 
-#: src/components/storage/PartitionPage.tsx:601
+#: src/components/storage/PartitionPage.tsx:600
 msgid "Destroy current data and format partition as"
 msgstr "Tuhoa nykyiset tiedot ja alusta osio tiedostojärjestelmällä"
 
-#: src/components/storage/PartitionPage.tsx:602
+#: src/components/storage/PartitionPage.tsx:601
 msgid "Format partition as"
 msgstr "Alusta osio tiedostojärjestelmällä"
 
-#: src/components/storage/PartitionPage.tsx:839
+#: src/components/storage/PartitionPage.tsx:842
+#, fuzzy
+msgid "Configure partition"
+msgstr "Teen osion %s asetukset"
+
+#: src/components/storage/PartitionPage.tsx:848
 #, javascript-format
 msgid "Configure partition at %s"
 msgstr "Teen osion %s asetukset"
 
-#: src/components/storage/PartitionPage.tsx:863
+#: src/components/storage/PartitionPage.tsx:869
 msgid "Mount point mode"
 msgstr "Liitoskohdan tilavalinta"
 
-#: src/components/storage/PartitionPage.tsx:946
+#: src/components/storage/PartitionPage.tsx:952
 msgid "Go to storage page"
 msgstr "Mene tallennustilasivulle"
 
@@ -2813,20 +2950,20 @@ msgstr "Osiot"
 msgid "Add or use partition"
 msgstr "Lisää tai käytä osiota"
 
+#: src/components/storage/PotentialDataLossAlert.tsx:32
+msgid "If you are unsure, check and adjust the storage settings."
+msgstr ""
+
 #. TRANSLATORS: %s will be replaced by a formatted list of affected
 #. systems like "Windows and openSUSE Tumbleweed".
-#: src/components/storage/PotentialDataLossAlert.tsx:41
-#, javascript-format
-msgid "Proceeding may result in data loss affecting at least %s"
-msgstr "Jatkaminen voi johtaa tiedon menettämiseen: %s"
-
-#: src/components/storage/PotentialDataLossAlert.tsx:45
-msgid "Proceeding may result in data loss"
+#: src/components/storage/PotentialDataLossAlert.tsx:43
+#, fuzzy, javascript-format
+msgid "Proceeding will delete existing data, including %s"
 msgstr "Jatkaminen voi johtaa tiedon menettämiseen"
 
-#: src/components/storage/PotentialDataLossAlert.tsx:51
-msgid "View details"
-msgstr "Näytä yksityiskohdat"
+#: src/components/storage/PotentialDataLossAlert.tsx:47
+msgid "Proceeding may result in data loss"
+msgstr "Jatkaminen voi johtaa tiedon menettämiseen"
 
 #: src/components/storage/Progress.tsx:117
 msgid "Loading storage"
@@ -2874,11 +3011,6 @@ msgid ""
 msgstr ""
 "Muuta alla olevia asetuksia mahdollistaaksesi riittävän tilan löytymisen "
 "uudelle järjestelmälle."
-
-#: src/components/storage/ProposalFailedInfo.tsx:85
-#: src/components/storage/StorageDetailsItem.tsx:109
-msgid "Failed to calculate a storage layout"
-msgstr "Tallennustilan määritysten laskeminen ei onnistunut"
 
 #: src/components/storage/ProposalPage.tsx:79
 msgid "Invalid storage settings"
@@ -3258,7 +3390,7 @@ msgstr "ehdotus.Laite"
 msgid "Action"
 msgstr "Toiminto"
 
-#: src/components/storage/SpacePolicySelection.tsx:106
+#: src/components/storage/SpacePolicySelectionPage.tsx:107
 msgid ""
 "Select what to do with each partition in order to find space for allocating "
 "the new system."
@@ -3266,52 +3398,10 @@ msgstr ""
 "Valitse mitä jokaiselle osiolle tehdään, jotta uuden järjestelmän käyttöön "
 "vapautuisi tilaa."
 
-#: src/components/storage/SpacePolicySelection.tsx:112
+#: src/components/storage/SpacePolicySelectionPage.tsx:114
 #, javascript-format
 msgid "Find space in %s"
 msgstr "Vapauta tilaa kohteessa %s"
-
-#: src/components/storage/StorageDetailsItem.tsx:52
-msgid "No device selected yet"
-msgstr "Laitetta ei ole vielä valittu"
-
-#. TRANSLATORS: %s will be replaced by the device name and its size,
-#. example: "/dev/sda, 20 GiB"
-#: src/components/storage/StorageDetailsItem.tsx:59
-#, javascript-format
-msgid "Use device %s"
-msgstr "Käytä laitetta %s"
-
-#: src/components/storage/StorageDetailsItem.tsx:83
-msgid "Use several devices"
-msgstr "Käytä useita laitteita"
-
-#: src/components/storage/StorageDetailsItem.tsx:93
-msgid "There are no disks available for the installation"
-msgstr "Asennukseen käytettävissä olevia levyjä ei ole"
-
-#: src/components/storage/StorageDetailsItem.tsx:94
-msgid "Invalid settings"
-msgstr "Virheellisiä asetuksia"
-
-#: src/components/storage/StorageDetailsItem.tsx:95
-msgid "Using an advanced storage configuration"
-msgstr "Käytetään tarkkaa talletustilamääritystä"
-
-#: src/components/storage/StorageDetailsItem.tsx:112
-msgid "No data loss is expected"
-msgstr "Tietoja ei odoteta menetettävän"
-
-#. TRANSLATORS: %s will be replaced by a formatted list of affected systems
-#. like "Windows and openSUSE Tumbleweed".
-#: src/components/storage/StorageDetailsItem.tsx:119
-#, javascript-format
-msgid "Potential data loss affecting at least %s"
-msgstr "Tietoja voidaan menettää ainakin: %s"
-
-#: src/components/storage/StorageDetailsItem.tsx:124
-msgid "Potential data loss"
-msgstr "Tietoja voidaan menettää"
 
 #: src/components/storage/UnsupportedModelInfo.tsx:44
 msgid ""
@@ -3411,7 +3501,7 @@ msgstr[1] "Seuraavat loogiset taltiot luodaan"
 msgid "Formatting DASD devices"
 msgstr "Alustetaan DASD-laitteita"
 
-#: src/components/storage/dasd/DASDPage.tsx:39 src/routes/storage.tsx:104
+#: src/components/storage/dasd/DASDPage.tsx:36 src/routes/storage.tsx:104
 msgid "DASD"
 msgstr "DASD"
 
@@ -4133,8 +4223,14 @@ msgstr "Aktivoitu"
 msgid "Deactivated"
 msgstr "Deaktivoitu"
 
-#: src/components/storage/zfcp/ZFCPDiskActivationPage.tsx:62
-msgid "zFCP Disk Activation"
+#: src/components/storage/zfcp/ZFCPDiskActivationPage.tsx:64
+#: src/components/storage/zfcp/ZFCPPage.tsx:186
+msgid "zFCP"
+msgstr "zFCP"
+
+#: src/components/storage/zfcp/ZFCPDiskActivationPage.tsx:65
+#, fuzzy
+msgid "Disk Activation"
 msgstr "zFCP-levyaktivointi"
 
 #. TRANSLATORS: zFCP disk activation form
@@ -4158,7 +4254,7 @@ msgstr "WWPN"
 msgid "LUN"
 msgstr "LUN"
 
-#: src/components/storage/zfcp/ZFCPPage.tsx:53
+#: src/components/storage/zfcp/ZFCPPage.tsx:52
 msgid ""
 "Automatic LUN scan is [enabled]. Activating a controller which is running in "
 "NPIV mode will automatically configures all its LUNs."
@@ -4166,7 +4262,7 @@ msgstr ""
 "Automaattinen LUN-skannaus on [käytössä]. NPIV-tilassa toimivan ohjaimen "
 "aktivoiminen määrittää automaattisesti kaikkien LUNien asetukset."
 
-#: src/components/storage/zfcp/ZFCPPage.tsx:58
+#: src/components/storage/zfcp/ZFCPPage.tsx:57
 msgid ""
 "Automatic LUN scan is [disabled]. LUNs have to be manually configured after "
 "activating a controller."
@@ -4174,79 +4270,64 @@ msgstr ""
 "Automaattinen LUN-skannaus on [pois käytöstä]. LUNien asetukset tulee "
 "määrittää käsin ohjaimen aktivoinnin jälkeen."
 
-#: src/components/storage/zfcp/ZFCPPage.tsx:79
+#: src/components/storage/zfcp/ZFCPPage.tsx:78
 msgid "Please, try to activate a zFCP disk."
 msgstr "Yritä aktivoida zFCP-levy."
 
-#: src/components/storage/zfcp/ZFCPPage.tsx:80
-#: src/components/storage/zfcp/ZFCPPage.tsx:162
+#: src/components/storage/zfcp/ZFCPPage.tsx:79
+#: src/components/storage/zfcp/ZFCPPage.tsx:161
 msgid "Please, try to activate a zFCP controller."
 msgstr "Yritä aktivoida zFCP-ohjain."
 
-#: src/components/storage/zfcp/ZFCPPage.tsx:84
+#: src/components/storage/zfcp/ZFCPPage.tsx:83
 msgid "No zFCP disks found."
 msgstr "zFCP-levyjä ei löydy."
 
-#: src/components/storage/zfcp/ZFCPPage.tsx:90
+#: src/components/storage/zfcp/ZFCPPage.tsx:89
 msgid "Activate zFCP disk"
 msgstr "Aktivoi zFCP-levy"
 
-#: src/components/storage/zfcp/ZFCPPage.tsx:113
+#: src/components/storage/zfcp/ZFCPPage.tsx:112
 msgid "Activate new disk"
 msgstr "Aktivoi uusi levy"
 
-#: src/components/storage/zfcp/ZFCPPage.tsx:141
+#: src/components/storage/zfcp/ZFCPPage.tsx:140
 msgid "Controllers"
 msgstr "Ohjaimet"
 
-#: src/components/storage/zfcp/ZFCPPage.tsx:154
+#: src/components/storage/zfcp/ZFCPPage.tsx:153
 msgid "No zFCP controllers found."
 msgstr "zFCP-ohjaimia ei löydy."
 
-#: src/components/storage/zfcp/ZFCPPage.tsx:158
+#: src/components/storage/zfcp/ZFCPPage.tsx:157
 msgid "Read zFCP devices"
 msgstr "Lue zFCP-laitteita"
 
-#: src/components/storage/zfcp/ZFCPPage.tsx:189
-msgid "zFCP"
-msgstr "zFCP"
-
-#: src/components/system/HostnameDetailsItem.tsx:42
-#: src/components/system/HostnamePage.tsx:80 src/router.tsx:57
-msgid "Hostname"
-msgstr "Verkkonimi"
-
-#: src/components/system/HostnameDetailsItem.tsx:56
-msgid "Temporary name that may change after reboot or network changes"
-msgstr ""
-"Väliaikaisnimi voi muuttua uudelleenkäynnistyksen jälkeen tai verkon "
-"muuttuessa"
-
-#: src/components/system/HostnamePage.tsx:63
+#: src/components/system/HostnamePage.tsx:62
 msgid "Enter a hostname."
 msgstr "Syötä verkkonimi."
 
-#: src/components/system/HostnamePage.tsx:68
+#: src/components/system/HostnamePage.tsx:67
 msgid "Hostname successfully updated"
 msgstr "Verkkonimi päivitetty"
 
-#: src/components/system/HostnamePage.tsx:69
+#: src/components/system/HostnamePage.tsx:68
 msgid "Hostname could not be updated"
 msgstr "Verkkonimeä ei voi päivittää"
 
 #. TRANSLATORS: The title for a notification shown when the static hostname
 #. has not been set. "transient" refers to the hostname mode, and %s will be
 #. replaced with the current hostname value.
-#: src/components/system/HostnamePage.tsx:75
+#: src/components/system/HostnamePage.tsx:74
 #, javascript-format
 msgid "Using transient hostname: %s"
 msgstr "Käytetään tilapäistä verkkonimeä: %s"
 
-#: src/components/system/HostnamePage.tsx:85
+#: src/components/system/HostnamePage.tsx:80
 msgid "Product is already registered"
 msgstr "Tuote on jo rekisteröity"
 
-#: src/components/system/HostnamePage.tsx:87
+#: src/components/system/HostnamePage.tsx:82
 msgid ""
 "Updating the hostname now or later will not change the currently registered "
 "hostname."
@@ -4254,7 +4335,7 @@ msgstr ""
 "Isäntänimen päivittäminen nyt tai myöhemmin ei muuta tällä hetkellä "
 "rekisteröityä isäntänimeä."
 
-#: src/components/system/HostnamePage.tsx:94
+#: src/components/system/HostnamePage.tsx:89
 msgid ""
 "This hostname is dynamic and may change after a reboot or network update, as "
 "configured by the local network administrator."
@@ -4263,15 +4344,15 @@ msgstr ""
 "verkkopäivityksen myötä, siten kuten paikallinen verkkoylläpitäjä on "
 "määritellyt."
 
-#: src/components/system/HostnamePage.tsx:109
+#: src/components/system/HostnamePage.tsx:104
 msgid "Use static hostname"
 msgstr "Käytä kiinteää verkkonimeä"
 
-#: src/components/system/HostnamePage.tsx:110
+#: src/components/system/HostnamePage.tsx:105
 msgid "Set a permanent hostname that won’t change with network updates."
 msgstr "Aseta pysyvä isäntänimi joka ei muuta verkkopäivityksissä."
 
-#: src/components/system/HostnamePage.tsx:120
+#: src/components/system/HostnamePage.tsx:115
 msgid "Static hostname"
 msgstr "Kiinteä verkkonimi"
 
@@ -4288,12 +4369,12 @@ msgid "No user defined yet."
 msgstr "Käyttäjää ei ole vielä määritetty."
 
 #: src/components/users/FirstUser.tsx:77
-#: src/components/users/FirstUserForm.tsx:203
+#: src/components/users/FirstUserForm.tsx:205
 msgid "Full name"
 msgstr "Koko nimi"
 
 #: src/components/users/FirstUser.tsx:83
-#: src/components/users/FirstUserForm.tsx:212
+#: src/components/users/FirstUserForm.tsx:214
 msgid "Username"
 msgstr "Käyttäjänimi"
 
@@ -4308,29 +4389,29 @@ msgstr ""
 "Määritä ensimmäinen käyttäjä pääkäyttäjän (sudo) oikeuksin järjestelmän "
 "hallintaan."
 
-#: src/components/users/FirstUserForm.tsx:57
+#: src/components/users/FirstUserForm.tsx:58
 msgid "Username suggestion dropdown"
 msgstr "Ehdotetun käyttäjänimen pudotusvalikko"
 
 #. TRANSLATORS: dropdown username suggestions
-#: src/components/users/FirstUserForm.tsx:72
+#: src/components/users/FirstUserForm.tsx:73
 msgid "Use suggested username"
 msgstr "Käytä ehdotettua käyttäjänimeä"
 
-#: src/components/users/FirstUserForm.tsx:127
+#: src/components/users/FirstUserForm.tsx:128
 msgid "All fields are required"
 msgstr "Kaikki kentät vaaditaan"
 
-#: src/components/users/FirstUserForm.tsx:191
+#: src/components/users/FirstUserForm.tsx:193
 msgid "Create user"
 msgstr "Luo käyttäjä"
 
-#: src/components/users/FirstUserForm.tsx:191
+#: src/components/users/FirstUserForm.tsx:193
 msgid "Edit user"
 msgstr "Muokkaa käyttäjää"
 
-#: src/components/users/FirstUserForm.tsx:233
-#: src/components/users/RootUserForm.tsx:162
+#: src/components/users/FirstUserForm.tsx:235
+#: src/components/users/RootUserForm.tsx:159
 msgid "Using a hashed password."
 msgstr "Käytetään tiivisteellistä salasanaa."
 
@@ -4362,39 +4443,114 @@ msgstr "Ei määritelty"
 msgid "Public SSH Key"
 msgstr "Julkinen SSH-avain"
 
-#: src/components/users/RootUserForm.tsx:62
+#: src/components/users/RootUserForm.tsx:63
 msgid "Upload, paste, or drop an SSH public key"
 msgstr "Lataa, liitä tai pudota julkinen SSH-avain"
 
 #. TRANSLATORS: push button label
-#: src/components/users/RootUserForm.tsx:64
+#: src/components/users/RootUserForm.tsx:65
 msgid "Upload"
 msgstr "Lataa"
 
 #. TRANSLATORS: push button label, clears the related input field
-#: src/components/users/RootUserForm.tsx:66
+#: src/components/users/RootUserForm.tsx:67
 msgid "Clear"
 msgstr "Tyhjennä"
 
-#: src/components/users/RootUserForm.tsx:109
+#: src/components/users/RootUserForm.tsx:110
 msgid "Public SSH Key is empty."
 msgstr "Julkinen SSH-avain on tyhjä."
 
-#: src/components/users/RootUserForm.tsx:138
-msgid "Root authentication methods"
-msgstr "Pääkäyttäjän tunnistautumistavat"
+#: src/components/users/RootUserForm.tsx:137
+msgid "root"
+msgstr ""
 
-#: src/components/users/RootUserForm.tsx:153
+#: src/components/users/RootUserForm.tsx:150
 msgid "Use password"
 msgstr "Käytä salasanaa"
 
-#: src/components/users/RootUserForm.tsx:184
+#: src/components/users/RootUserForm.tsx:181
 msgid "Use public SSH Key"
 msgstr "Käytä julkista SSH-avainta"
 
 #: src/routes/storage.tsx:113
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#, javascript-format
+#~ msgid "Start %s installation?"
+#~ msgstr "Aloitetaanko asennus: %s?"
+
+#~ msgid ""
+#~ "Review the summary below. If anything seems incorrect or you have doubts, "
+#~ "go back and adjust the settings before proceeding."
+#~ msgstr ""
+#~ "Tarkista yhteenveto alta. Jos jokin vaikuttaa olevan väärältä tai "
+#~ "epäilyttävältä, palaa säätämään asetuksia ennen kuin jatkat."
+
+#~ msgid "Go back"
+#~ msgstr "Palaa"
+
+#~ msgid "Not possible with the current setup. Click to know more."
+#~ msgstr ""
+#~ "Tämä ei ole mahdollista tällä kokoonpanolla. Napsauta oppiaksesi lisää "
+#~ "aiheesta."
+
+#~ msgid "Could not log in. Please, make sure that the password is correct."
+#~ msgstr "Kirjautuminen ei onnistunut. Tarkista, että salasana on oikea."
+
+#~ msgid "Keyboard selection"
+#~ msgstr "Näppäimistön valinta"
+
+#~ msgid "Locale selection"
+#~ msgstr "Maa-asetusten valinnat"
+
+#~ msgid " Timezone selection"
+#~ msgstr " Aikavyöhykkeen valinta"
+
+#~ msgid "Main navigation"
+#~ msgstr "Päänavigointi"
+
+#, javascript-format
+#~ msgid "Binding settings for '%s'"
+#~ msgstr "Sidotaan setuksia kohteelle ”%s”"
+
+#, javascript-format
+#~ msgid "Edit connection %s"
+#~ msgstr "Muokkaa yhteyttä %s"
+
+#, javascript-format
+#~ msgid "Connect to %s"
+#~ msgstr "Yhdistä verkkoon %s"
+
+#~ msgid "Installation summary"
+#~ msgstr "Asennuksen yhteenveto"
+
+#~ msgid "Overview"
+#~ msgstr "Yleiskuva"
+
+#~ msgid "Available products"
+#~ msgstr "Saatavilla olevat tuotteet"
+
+#~ msgid "Software selection"
+#~ msgstr "Ohjelmistojen valinta"
+
+#~ msgid "Device Selection"
+#~ msgstr "Laitteen valinta"
+
+#, javascript-format
+#~ msgid "Configure LVM logical volume at %s volume group"
+#~ msgstr "Tee asetukset loogiselle LVM-taltiolle taltioryhmässä %s"
+
+#, javascript-format
+#~ msgid "Proceeding may result in data loss affecting at least %s"
+#~ msgstr "Jatkaminen voi johtaa tiedon menettämiseen: %s"
+
+#~ msgid "View details"
+#~ msgstr "Näytä yksityiskohdat"
+
+#~ msgid "Root authentication methods"
+#~ msgstr "Pääkäyttäjän tunnistautumistavat"
 
 #~ msgid "Configuration out of sync"
 #~ msgstr "Asetukset eivät ajan tasalla"
@@ -4411,9 +4567,6 @@ msgstr "ZFCP"
 
 #~ msgid "Reload now"
 #~ msgstr "Lataa uudelleen nyt"
-
-#~ msgid "Confirm Installation"
-#~ msgstr "Vahvista asentaminen"
 
 #~ msgid ""
 #~ "If you continue, partitions on your hard disk will be modified according "
