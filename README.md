@@ -21,6 +21,10 @@ https://agama-project.github.io/docs/devel/i18n) documentation.
 
 [![Translation status](https://l10n.opensuse.org/widgets/agama/-/agama-service-master/multi-auto.svg)](https://l10n.opensuse.org/engage/agama/)
 
+### Rust
+
+[![Translation status](https://l10n.opensuse.org/widgets/agama/-/agama-rust-master/multi-auto.svg)](https://l10n.opensuse.org/engage/agama/)
+
 
 ### Products
 
