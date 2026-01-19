@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-16 15:34+0000\n"
+"POT-Creation-Date: 2026-01-19 13:35+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -22,13 +22,13 @@ msgid "Breadcrumbs"
 msgstr ""
 
 #: src/components/core/ChangeProductOption.tsx:49
-#: src/components/product/ProductSelectionPage.tsx:177
+#: src/components/product/ProductSelectionPage.tsx:471
 msgid "Change product"
 msgstr ""
 
 #. TRANSLATORS: The install button label
 #: src/components/core/InstallButton.tsx:57
-#: src/components/overview/OverviewPage.tsx:129
+#: src/components/overview/OverviewPage.tsx:123
 msgid "Install"
 msgstr ""
 
@@ -322,7 +322,7 @@ msgstr ""
 #: src/components/network/BindingSettingsForm.tsx:229
 #: src/components/network/IpSettingsForm.tsx:221
 #: src/components/network/WifiConnectionForm.tsx:188
-#: src/components/product/ProductSelectionPage.tsx:120
+#: src/components/product/ProductSelectionPage.tsx:378
 msgid "Cancel"
 msgstr ""
 
@@ -461,7 +461,7 @@ msgstr ""
 #: src/components/l10n/L10nPage.tsx:115
 #: src/components/l10n/LocaleSelection.tsx:92
 #: src/components/l10n/TimezoneSelection.tsx:140
-#: src/components/product/ProductSelectionPage.tsx:273
+#: src/components/product/ProductSelectionPage.tsx:234
 #: src/components/software/SoftwarePatternsSelection.tsx:177
 msgid "Select"
 msgstr ""
@@ -481,7 +481,7 @@ msgstr ""
 
 #: src/components/l10n/L10nPage.tsx:89 src/components/l10n/L10nPage.tsx:103
 #: src/components/l10n/L10nPage.tsx:115
-#: src/components/product/ProductSelectionPage.tsx:273
+#: src/components/product/ProductSelectionPage.tsx:234
 #: src/components/storage/BootSection.tsx:97
 #: src/components/storage/EncryptionSection.tsx:60
 #: src/components/storage/iscsi/InitiatorForm.tsx:89
@@ -1183,29 +1183,29 @@ msgstr ""
 
 #. TRANSLATORS: This hint helps users locate the install button. Text inside
 #. square brackets [] appears in bold. Keep brackets for proper formatting.
-#: src/components/overview/OverviewPage.tsx:112
+#: src/components/overview/OverviewPage.tsx:108
 msgid "When ready, click on the [install] button at the end of the page."
 msgstr ""
 
-#: src/components/overview/OverviewPage.tsx:130
+#: src/components/overview/OverviewPage.tsx:124
 msgid "Install now with potential data loss"
 msgstr ""
 
-#: src/components/overview/OverviewPage.tsx:131
+#: src/components/overview/OverviewPage.tsx:125
 msgid "Install now"
 msgstr ""
 
-#: src/components/overview/OverviewPage.tsx:150
+#: src/components/overview/OverviewPage.tsx:144
 msgid ""
 "Take a moment to review the installation settings below and adjust them as "
 "needed."
 msgstr ""
 
-#: src/components/overview/OverviewPage.tsx:180
+#: src/components/overview/OverviewPage.tsx:174
 msgid "Wait until current operations are completed."
 msgstr ""
 
-#: src/components/overview/OverviewPage.tsx:189
+#: src/components/overview/OverviewPage.tsx:183
 msgid ""
 "You need to fix any invalid settings before proceeding with the installation."
 msgstr ""
@@ -1465,54 +1465,73 @@ msgstr ""
 msgid "hostname"
 msgstr ""
 
-#: src/components/product/ProductSelectionPage.tsx:98
+#: src/components/product/ProductSelectionPage.tsx:118
+msgid "License acceptance required"
+msgstr ""
+
+#: src/components/product/ProductSelectionPage.tsx:127
 msgid "Show more"
 msgstr ""
 
-#: src/components/product/ProductSelectionPage.tsx:99
+#: src/components/product/ProductSelectionPage.tsx:128
 msgid "Show less"
 msgstr ""
 
 #. TRANSLATORS: Text used for the license acceptance checkbox. %s will be
 #. replaced with the product name and the text in the square brackets [] is
 #. used for the link to show the license, please keep the brackets.
-#: src/components/product/ProductSelectionPage.tsx:169
+#: src/components/product/ProductSelectionPage.tsx:191
 #, javascript-format
 msgid "I have read and accept the [license] for %s"
 msgstr ""
 
-#: src/components/product/ProductSelectionPage.tsx:173
+#: src/components/product/ProductSelectionPage.tsx:233
 #, javascript-format
-msgid "Currently selected %s"
+msgid "Change to %s"
 msgstr ""
 
-#: src/components/product/ProductSelectionPage.tsx:177
-msgid "Select a product"
+#: src/components/product/ProductSelectionPage.tsx:233
+#, javascript-format
+msgid "Select %s"
 msgstr ""
 
-#: src/components/product/ProductSelectionPage.tsx:192
-msgid "Show description"
+#: src/components/product/ProductSelectionPage.tsx:273
+msgid "Select a product to continue."
 msgstr ""
 
-#: src/components/product/ProductSelectionPage.tsx:193
-msgid "Hide description"
+#: src/components/product/ProductSelectionPage.tsx:275
+msgid "License acceptance is required to continue."
 msgstr ""
 
-#: src/components/product/ProductSelectionPage.tsx:210
-msgid ""
-"There is other product available. Selecting a different product will "
-"automatically adjust some installation settings to match the chosen "
-"product's defaults."
-msgid_plural ""
-"There are 2 other products available. Selecting a different product will "
-"automatically adjust some installation settings to match the chosen "
-"product's defaults."
+#: src/components/product/ProductSelectionPage.tsx:330
+#, javascript-format
+msgid "Switch to other available product"
+msgid_plural "Choose from %d available products"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/components/product/ProductSelectionPage.tsx:216
-#, javascript-format
-msgid "There are %d products available"
+#: src/components/product/ProductSelectionPage.tsx:413
+msgid "Current selection"
+msgstr ""
+
+#: src/components/product/ProductSelectionPage.tsx:424
+msgid "View license"
+msgstr ""
+
+#: src/components/product/ProductSelectionPage.tsx:464
+msgid "Select a product and confirm your choice."
+msgid_plural "Select a product and confirm your choice at the end of the list."
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/components/product/ProductSelectionPage.tsx:471
+msgid "Select a product"
+msgstr ""
+
+#: src/components/product/ProductSelectionPage.tsx:480
+msgid ""
+"Installation settings will automatically update to match the new product's "
+"defaults."
 msgstr ""
 
 #. TRANSLATORS: %s will be replaced by the registration key.

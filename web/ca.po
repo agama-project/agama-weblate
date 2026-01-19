@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-16 15:34+0000\n"
+"POT-Creation-Date: 2026-01-19 13:35+0000\n"
 "PO-Revision-Date: 2026-01-15 11:04+0000\n"
 "Last-Translator: David Medina <medipas@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -24,13 +24,13 @@ msgid "Breadcrumbs"
 msgstr "Ruta de navegació"
 
 #: src/components/core/ChangeProductOption.tsx:49
-#: src/components/product/ProductSelectionPage.tsx:177
+#: src/components/product/ProductSelectionPage.tsx:471
 msgid "Change product"
 msgstr "Canvia el producte"
 
 #. TRANSLATORS: The install button label
 #: src/components/core/InstallButton.tsx:57
-#: src/components/overview/OverviewPage.tsx:129
+#: src/components/overview/OverviewPage.tsx:123
 msgid "Install"
 msgstr "Instal·la"
 
@@ -346,7 +346,7 @@ msgstr "Ves enrere"
 #: src/components/network/BindingSettingsForm.tsx:229
 #: src/components/network/IpSettingsForm.tsx:221
 #: src/components/network/WifiConnectionForm.tsx:188
-#: src/components/product/ProductSelectionPage.tsx:120
+#: src/components/product/ProductSelectionPage.tsx:378
 msgid "Cancel"
 msgstr "Cancel·la"
 
@@ -485,7 +485,7 @@ msgstr "Cap dels mapes de tecles coincideix amb el filtre."
 #: src/components/l10n/L10nPage.tsx:115
 #: src/components/l10n/LocaleSelection.tsx:92
 #: src/components/l10n/TimezoneSelection.tsx:140
-#: src/components/product/ProductSelectionPage.tsx:273
+#: src/components/product/ProductSelectionPage.tsx:234
 #: src/components/software/SoftwarePatternsSelection.tsx:177
 msgid "Select"
 msgstr "Selecciona"
@@ -511,7 +511,7 @@ msgstr ""
 
 #: src/components/l10n/L10nPage.tsx:89 src/components/l10n/L10nPage.tsx:103
 #: src/components/l10n/L10nPage.tsx:115
-#: src/components/product/ProductSelectionPage.tsx:273
+#: src/components/product/ProductSelectionPage.tsx:234
 #: src/components/storage/BootSection.tsx:97
 #: src/components/storage/EncryptionSection.tsx:60
 #: src/components/storage/iscsi/InitiatorForm.tsx:89
@@ -1227,20 +1227,20 @@ msgstr "Confirmació i instal·lació"
 
 #. TRANSLATORS: This hint helps users locate the install button. Text inside
 #. square brackets [] appears in bold. Keep brackets for proper formatting.
-#: src/components/overview/OverviewPage.tsx:112
+#: src/components/overview/OverviewPage.tsx:108
 msgid "When ready, click on the [install] button at the end of the page."
 msgstr ""
 "Quan estigueu a punt, feu clic al botó [Instal·la] al final de la pàgina."
 
-#: src/components/overview/OverviewPage.tsx:130
+#: src/components/overview/OverviewPage.tsx:124
 msgid "Install now with potential data loss"
 msgstr "Instal·la ara amb possible pèrdua de dades"
 
-#: src/components/overview/OverviewPage.tsx:131
+#: src/components/overview/OverviewPage.tsx:125
 msgid "Install now"
 msgstr "Instal·la ara"
 
-#: src/components/overview/OverviewPage.tsx:150
+#: src/components/overview/OverviewPage.tsx:144
 msgid ""
 "Take a moment to review the installation settings below and adjust them as "
 "needed."
@@ -1248,11 +1248,11 @@ msgstr ""
 "Dediqueu un moment a revisar els paràmetres d'instal·lació següents i "
 "ajusteu-los segons calgui."
 
-#: src/components/overview/OverviewPage.tsx:180
+#: src/components/overview/OverviewPage.tsx:174
 msgid "Wait until current operations are completed."
 msgstr "Espereu fins que s'hagin completat les operacions actuals."
 
-#: src/components/overview/OverviewPage.tsx:189
+#: src/components/overview/OverviewPage.tsx:183
 msgid ""
 "You need to fix any invalid settings before proceeding with the installation."
 msgstr ""
@@ -1518,61 +1518,78 @@ msgstr ""
 msgid "hostname"
 msgstr "Nom d'amfitrió"
 
-#: src/components/product/ProductSelectionPage.tsx:98
+#: src/components/product/ProductSelectionPage.tsx:118
+#, fuzzy
+msgid "License acceptance required"
+msgstr "Tots els camps són obligatoris."
+
+#: src/components/product/ProductSelectionPage.tsx:127
 msgid "Show more"
 msgstr "Mostra'n més"
 
-#: src/components/product/ProductSelectionPage.tsx:99
+#: src/components/product/ProductSelectionPage.tsx:128
 msgid "Show less"
 msgstr "Mostra'n menys"
 
 #. TRANSLATORS: Text used for the license acceptance checkbox. %s will be
 #. replaced with the product name and the text in the square brackets [] is
 #. used for the link to show the license, please keep the brackets.
-#: src/components/product/ProductSelectionPage.tsx:169
+#: src/components/product/ProductSelectionPage.tsx:191
 #, javascript-format
 msgid "I have read and accept the [license] for %s"
 msgstr "He llegit i accepto la [llicència] de %s"
 
-#: src/components/product/ProductSelectionPage.tsx:173
-#, javascript-format
-msgid "Currently selected %s"
-msgstr "Seleccionat actualment: %s"
+#: src/components/product/ProductSelectionPage.tsx:233
+#, fuzzy, javascript-format
+msgid "Change to %s"
+msgstr "Connecta amb %s"
 
-#: src/components/product/ProductSelectionPage.tsx:177
+#: src/components/product/ProductSelectionPage.tsx:233
+#, fuzzy, javascript-format
+msgid "Select %s"
+msgstr "Selecciona"
+
+#: src/components/product/ProductSelectionPage.tsx:273
+#, fuzzy
+msgid "Select a product to continue."
+msgstr "Seleccioneu una solució per continuar"
+
+#: src/components/product/ProductSelectionPage.tsx:275
+msgid "License acceptance is required to continue."
+msgstr ""
+
+#: src/components/product/ProductSelectionPage.tsx:330
+#, fuzzy, javascript-format
+msgid "Switch to other available product"
+msgid_plural "Choose from %d available products"
+msgstr[0] "Productes disponibles"
+msgstr[1] "Productes disponibles"
+
+#: src/components/product/ProductSelectionPage.tsx:413
+#, fuzzy
+msgid "Current selection"
+msgstr "Selecció incorrecta"
+
+#: src/components/product/ProductSelectionPage.tsx:424
+msgid "View license"
+msgstr ""
+
+#: src/components/product/ProductSelectionPage.tsx:464
+#, fuzzy
+msgid "Select a product and confirm your choice."
+msgid_plural "Select a product and confirm your choice at the end of the list."
+msgstr[0] "Seleccioneu una solució per continuar"
+msgstr[1] "Seleccioneu una solució per continuar"
+
+#: src/components/product/ProductSelectionPage.tsx:471
 msgid "Select a product"
 msgstr "Seleccioneu un producte"
 
-#: src/components/product/ProductSelectionPage.tsx:192
-msgid "Show description"
-msgstr "Mostra'n la descripció"
-
-#: src/components/product/ProductSelectionPage.tsx:193
-msgid "Hide description"
-msgstr "Amaga'n la descripció"
-
-#: src/components/product/ProductSelectionPage.tsx:210
+#: src/components/product/ProductSelectionPage.tsx:480
 msgid ""
-"There is other product available. Selecting a different product will "
-"automatically adjust some installation settings to match the chosen "
-"product's defaults."
-msgid_plural ""
-"There are 2 other products available. Selecting a different product will "
-"automatically adjust some installation settings to match the chosen "
-"product's defaults."
-msgstr[0] ""
-"Hi ha un altre producte disponible. Si seleccioneu un producte diferent, "
-"s'ajustaran automàticament alguns paràmetres d'instal·lació perquè "
-"coincideixin amb els valors predeterminats del producte triat."
-msgstr[1] ""
-"Hi ha 2 productes disponibles més. Si seleccioneu un producte diferent, "
-"s'ajustaran automàticament alguns paràmetres d'instal·lació perquè "
-"coincideixin amb els valors predeterminats del producte triat."
-
-#: src/components/product/ProductSelectionPage.tsx:216
-#, javascript-format
-msgid "There are %d products available"
-msgstr "Hi ha %d productes disponibles"
+"Installation settings will automatically update to match the new product's "
+"defaults."
+msgstr ""
 
 #. TRANSLATORS: %s will be replaced by the registration key.
 #: src/components/product/RegistrationExtension.tsx:50
@@ -4533,6 +4550,37 @@ msgstr "Usa una clau pública SSH"
 msgid "ZFCP"
 msgstr "ZFCP"
 
+#, javascript-format
+#~ msgid "Currently selected %s"
+#~ msgstr "Seleccionat actualment: %s"
+
+#~ msgid "Show description"
+#~ msgstr "Mostra'n la descripció"
+
+#~ msgid "Hide description"
+#~ msgstr "Amaga'n la descripció"
+
+#~ msgid ""
+#~ "There is other product available. Selecting a different product will "
+#~ "automatically adjust some installation settings to match the chosen "
+#~ "product's defaults."
+#~ msgid_plural ""
+#~ "There are 2 other products available. Selecting a different product will "
+#~ "automatically adjust some installation settings to match the chosen "
+#~ "product's defaults."
+#~ msgstr[0] ""
+#~ "Hi ha un altre producte disponible. Si seleccioneu un producte diferent, "
+#~ "s'ajustaran automàticament alguns paràmetres d'instal·lació perquè "
+#~ "coincideixin amb els valors predeterminats del producte triat."
+#~ msgstr[1] ""
+#~ "Hi ha 2 productes disponibles més. Si seleccioneu un producte diferent, "
+#~ "s'ajustaran automàticament alguns paràmetres d'instal·lació perquè "
+#~ "coincideixin amb els valors predeterminats del producte triat."
+
+#, javascript-format
+#~ msgid "There are %d products available"
+#~ msgstr "Hi ha %d productes disponibles"
+
 #~ msgid "At this point you can power off the machine."
 #~ msgstr "En aquest punt, podeu aturar la màquina."
 
@@ -4595,18 +4643,11 @@ msgstr "ZFCP"
 #~ msgid "Edit connection %s"
 #~ msgstr "Edita la connexió %s"
 
-#, javascript-format
-#~ msgid "Connect to %s"
-#~ msgstr "Connecta amb %s"
-
 #~ msgid "Installation summary"
 #~ msgstr "Resum de la instal·lació"
 
 #~ msgid "Overview"
 #~ msgstr "Resum"
-
-#~ msgid "Available products"
-#~ msgstr "Productes disponibles"
 
 #~ msgid "Device Selection"
 #~ msgstr "Selecció de dispositiu"

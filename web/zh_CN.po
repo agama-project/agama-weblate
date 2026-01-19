@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-16 15:34+0000\n"
+"POT-Creation-Date: 2026-01-19 13:35+0000\n"
 "PO-Revision-Date: 2025-09-11 02:59+0000\n"
 "Last-Translator: Grace Yu <grace.yu@excel-gits.com>\n"
 "Language-Team: Chinese (China) <https://l10n.opensuse.org/projects/agama/"
@@ -24,13 +24,13 @@ msgid "Breadcrumbs"
 msgstr ""
 
 #: src/components/core/ChangeProductOption.tsx:49
-#: src/components/product/ProductSelectionPage.tsx:177
+#: src/components/product/ProductSelectionPage.tsx:471
 msgid "Change product"
 msgstr "更改产品"
 
 #. TRANSLATORS: The install button label
 #: src/components/core/InstallButton.tsx:57
-#: src/components/overview/OverviewPage.tsx:129
+#: src/components/overview/OverviewPage.tsx:123
 msgid "Install"
 msgstr "安装"
 
@@ -333,7 +333,7 @@ msgstr "返回"
 #: src/components/network/BindingSettingsForm.tsx:229
 #: src/components/network/IpSettingsForm.tsx:221
 #: src/components/network/WifiConnectionForm.tsx:188
-#: src/components/product/ProductSelectionPage.tsx:120
+#: src/components/product/ProductSelectionPage.tsx:378
 msgid "Cancel"
 msgstr "取消"
 
@@ -473,7 +473,7 @@ msgstr "没有符合此过滤器的键位映射。"
 #: src/components/l10n/L10nPage.tsx:115
 #: src/components/l10n/LocaleSelection.tsx:92
 #: src/components/l10n/TimezoneSelection.tsx:140
-#: src/components/product/ProductSelectionPage.tsx:273
+#: src/components/product/ProductSelectionPage.tsx:234
 #: src/components/software/SoftwarePatternsSelection.tsx:177
 msgid "Select"
 msgstr "选择"
@@ -496,7 +496,7 @@ msgstr ""
 
 #: src/components/l10n/L10nPage.tsx:89 src/components/l10n/L10nPage.tsx:103
 #: src/components/l10n/L10nPage.tsx:115
-#: src/components/product/ProductSelectionPage.tsx:273
+#: src/components/product/ProductSelectionPage.tsx:234
 #: src/components/storage/BootSection.tsx:97
 #: src/components/storage/EncryptionSection.tsx:60
 #: src/components/storage/iscsi/InitiatorForm.tsx:89
@@ -1208,30 +1208,30 @@ msgstr "确认安装"
 
 #. TRANSLATORS: This hint helps users locate the install button. Text inside
 #. square brackets [] appears in bold. Keep brackets for proper formatting.
-#: src/components/overview/OverviewPage.tsx:112
+#: src/components/overview/OverviewPage.tsx:108
 msgid "When ready, click on the [install] button at the end of the page."
 msgstr ""
 
-#: src/components/overview/OverviewPage.tsx:130
+#: src/components/overview/OverviewPage.tsx:124
 msgid "Install now with potential data loss"
 msgstr ""
 
-#: src/components/overview/OverviewPage.tsx:131
+#: src/components/overview/OverviewPage.tsx:125
 #, fuzzy
 msgid "Install now"
 msgstr "安装"
 
-#: src/components/overview/OverviewPage.tsx:150
+#: src/components/overview/OverviewPage.tsx:144
 msgid ""
 "Take a moment to review the installation settings below and adjust them as "
 "needed."
 msgstr ""
 
-#: src/components/overview/OverviewPage.tsx:180
+#: src/components/overview/OverviewPage.tsx:174
 msgid "Wait until current operations are completed."
 msgstr ""
 
-#: src/components/overview/OverviewPage.tsx:189
+#: src/components/overview/OverviewPage.tsx:183
 #, fuzzy
 msgid ""
 "You need to fix any invalid settings before proceeding with the installation."
@@ -1503,12 +1503,17 @@ msgstr "以后将无法更改此信息。如果您要在继续注册前修改，
 msgid "hostname"
 msgstr "主机名"
 
-#: src/components/product/ProductSelectionPage.tsx:98
+#: src/components/product/ProductSelectionPage.tsx:118
+#, fuzzy
+msgid "License acceptance required"
+msgstr "需要填写全部字段"
+
+#: src/components/product/ProductSelectionPage.tsx:127
 #, fuzzy
 msgid "Show more"
 msgstr "显示更多操作"
 
-#: src/components/product/ProductSelectionPage.tsx:99
+#: src/components/product/ProductSelectionPage.tsx:128
 #, fuzzy
 msgid "Show less"
 msgstr "收起部分操作"
@@ -1516,44 +1521,59 @@ msgstr "收起部分操作"
 #. TRANSLATORS: Text used for the license acceptance checkbox. %s will be
 #. replaced with the product name and the text in the square brackets [] is
 #. used for the link to show the license, please keep the brackets.
-#: src/components/product/ProductSelectionPage.tsx:169
+#: src/components/product/ProductSelectionPage.tsx:191
 #, javascript-format
 msgid "I have read and accept the [license] for %s"
 msgstr "我已阅读并接受 %s 的[许可]"
 
-#: src/components/product/ProductSelectionPage.tsx:173
+#: src/components/product/ProductSelectionPage.tsx:233
 #, fuzzy, javascript-format
-msgid "Currently selected %s"
-msgstr "自动选择"
+msgid "Change to %s"
+msgstr "连接到 %s"
 
-#: src/components/product/ProductSelectionPage.tsx:177
+#: src/components/product/ProductSelectionPage.tsx:233
+#, fuzzy, javascript-format
+msgid "Select %s"
+msgstr "选择"
+
+#: src/components/product/ProductSelectionPage.tsx:273
+#, fuzzy
+msgid "Select a product to continue."
+msgstr "选择一个解决方案以继续"
+
+#: src/components/product/ProductSelectionPage.tsx:275
+msgid "License acceptance is required to continue."
+msgstr ""
+
+#: src/components/product/ProductSelectionPage.tsx:330
+#, fuzzy, javascript-format
+msgid "Switch to other available product"
+msgid_plural "Choose from %d available products"
+msgstr[0] "可用产品"
+
+#: src/components/product/ProductSelectionPage.tsx:413
+#, fuzzy
+msgid "Current selection"
+msgstr "行选择"
+
+#: src/components/product/ProductSelectionPage.tsx:424
+msgid "View license"
+msgstr ""
+
+#: src/components/product/ProductSelectionPage.tsx:464
+#, fuzzy
+msgid "Select a product and confirm your choice."
+msgid_plural "Select a product and confirm your choice at the end of the list."
+msgstr[0] "选择一个解决方案以继续"
+
+#: src/components/product/ProductSelectionPage.tsx:471
 msgid "Select a product"
 msgstr "请选择产品"
 
-#: src/components/product/ProductSelectionPage.tsx:192
-#, fuzzy
-msgid "Show description"
-msgstr "描述"
-
-#: src/components/product/ProductSelectionPage.tsx:193
-#, fuzzy
-msgid "Hide description"
-msgstr "描述"
-
-#: src/components/product/ProductSelectionPage.tsx:210
+#: src/components/product/ProductSelectionPage.tsx:480
 msgid ""
-"There is other product available. Selecting a different product will "
-"automatically adjust some installation settings to match the chosen "
-"product's defaults."
-msgid_plural ""
-"There are 2 other products available. Selecting a different product will "
-"automatically adjust some installation settings to match the chosen "
-"product's defaults."
-msgstr[0] ""
-
-#: src/components/product/ProductSelectionPage.tsx:216
-#, javascript-format
-msgid "There are %d products available"
+"Installation settings will automatically update to match the new product's "
+"defaults."
 msgstr ""
 
 #. TRANSLATORS: %s will be replaced by the registration key.
@@ -4371,6 +4391,18 @@ msgstr "使用 SSH 公共密钥"
 msgid "ZFCP"
 msgstr "ZFCP"
 
+#, fuzzy, javascript-format
+#~ msgid "Currently selected %s"
+#~ msgstr "自动选择"
+
+#, fuzzy
+#~ msgid "Show description"
+#~ msgstr "描述"
+
+#, fuzzy
+#~ msgid "Hide description"
+#~ msgstr "描述"
+
 #~ msgid "At this point you can power off the machine."
 #~ msgstr "现在您可以关闭机器电源了。"
 
@@ -4417,19 +4449,12 @@ msgstr "ZFCP"
 #~ msgid "Edit connection %s"
 #~ msgstr "编辑连接 %s"
 
-#, javascript-format
-#~ msgid "Connect to %s"
-#~ msgstr "连接到 %s"
-
 #, fuzzy
 #~ msgid "Installation summary"
 #~ msgstr "安装概要"
 
 #~ msgid "Overview"
 #~ msgstr "概览"
-
-#~ msgid "Available products"
-#~ msgstr "可用产品"
 
 #~ msgid "Device Selection"
 #~ msgstr "选择设备"

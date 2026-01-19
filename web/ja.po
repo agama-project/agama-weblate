@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-16 15:34+0000\n"
+"POT-Creation-Date: 2026-01-19 13:35+0000\n"
 "PO-Revision-Date: 2026-01-15 11:04+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -24,13 +24,13 @@ msgid "Breadcrumbs"
 msgstr "パンくず"
 
 #: src/components/core/ChangeProductOption.tsx:49
-#: src/components/product/ProductSelectionPage.tsx:177
+#: src/components/product/ProductSelectionPage.tsx:471
 msgid "Change product"
 msgstr "製品の変更"
 
 #. TRANSLATORS: The install button label
 #: src/components/core/InstallButton.tsx:57
-#: src/components/overview/OverviewPage.tsx:129
+#: src/components/overview/OverviewPage.tsx:123
 msgid "Install"
 msgstr "インストール"
 
@@ -343,7 +343,7 @@ msgstr "戻る"
 #: src/components/network/BindingSettingsForm.tsx:229
 #: src/components/network/IpSettingsForm.tsx:221
 #: src/components/network/WifiConnectionForm.tsx:188
-#: src/components/product/ProductSelectionPage.tsx:120
+#: src/components/product/ProductSelectionPage.tsx:378
 msgid "Cancel"
 msgstr "キャンセル"
 
@@ -481,7 +481,7 @@ msgstr "フィルタに該当するキーマップがありません。"
 #: src/components/l10n/L10nPage.tsx:115
 #: src/components/l10n/LocaleSelection.tsx:92
 #: src/components/l10n/TimezoneSelection.tsx:140
-#: src/components/product/ProductSelectionPage.tsx:273
+#: src/components/product/ProductSelectionPage.tsx:234
 #: src/components/software/SoftwarePatternsSelection.tsx:177
 msgid "Select"
 msgstr "選択"
@@ -505,7 +505,7 @@ msgstr ""
 
 #: src/components/l10n/L10nPage.tsx:89 src/components/l10n/L10nPage.tsx:103
 #: src/components/l10n/L10nPage.tsx:115
-#: src/components/product/ProductSelectionPage.tsx:273
+#: src/components/product/ProductSelectionPage.tsx:234
 #: src/components/storage/BootSection.tsx:97
 #: src/components/storage/EncryptionSection.tsx:60
 #: src/components/storage/iscsi/InitiatorForm.tsx:89
@@ -1217,31 +1217,31 @@ msgstr "了承してインストールする"
 
 #. TRANSLATORS: This hint helps users locate the install button. Text inside
 #. square brackets [] appears in bold. Keep brackets for proper formatting.
-#: src/components/overview/OverviewPage.tsx:112
+#: src/components/overview/OverviewPage.tsx:108
 msgid "When ready, click on the [install] button at the end of the page."
 msgstr ""
 "準備ができたら、ページ末尾にある [インストール] ボタンを押してください。"
 
-#: src/components/overview/OverviewPage.tsx:130
+#: src/components/overview/OverviewPage.tsx:124
 msgid "Install now with potential data loss"
 msgstr "データ削除を了承してインストールを開始する"
 
-#: src/components/overview/OverviewPage.tsx:131
+#: src/components/overview/OverviewPage.tsx:125
 msgid "Install now"
 msgstr "インストールを開始する"
 
-#: src/components/overview/OverviewPage.tsx:150
+#: src/components/overview/OverviewPage.tsx:144
 msgid ""
 "Take a moment to review the installation settings below and adjust them as "
 "needed."
 msgstr ""
 "下記に示すインストール設定をご確認のうえ、必要であれば調整してください。"
 
-#: src/components/overview/OverviewPage.tsx:180
+#: src/components/overview/OverviewPage.tsx:174
 msgid "Wait until current operations are completed."
 msgstr "処理が完了するまでお待ちください。"
 
-#: src/components/overview/OverviewPage.tsx:189
+#: src/components/overview/OverviewPage.tsx:183
 msgid ""
 "You need to fix any invalid settings before proceeding with the installation."
 msgstr "インストールを続行する前に、正しくない設定を修正する必要があります。"
@@ -1503,56 +1503,76 @@ msgstr ""
 msgid "hostname"
 msgstr "ホスト名"
 
-#: src/components/product/ProductSelectionPage.tsx:98
+#: src/components/product/ProductSelectionPage.tsx:118
+#, fuzzy
+msgid "License acceptance required"
+msgstr "全ての項目に入力する必要があります"
+
+#: src/components/product/ProductSelectionPage.tsx:127
 msgid "Show more"
 msgstr "表示を増やす"
 
-#: src/components/product/ProductSelectionPage.tsx:99
+#: src/components/product/ProductSelectionPage.tsx:128
 msgid "Show less"
 msgstr "表示を減らす"
 
 #. TRANSLATORS: Text used for the license acceptance checkbox. %s will be
 #. replaced with the product name and the text in the square brackets [] is
 #. used for the link to show the license, please keep the brackets.
-#: src/components/product/ProductSelectionPage.tsx:169
+#: src/components/product/ProductSelectionPage.tsx:191
 #, javascript-format
 msgid "I have read and accept the [license] for %s"
 msgstr "%s に対する [ライセンス] を受け入れます"
 
-#: src/components/product/ProductSelectionPage.tsx:173
-#, javascript-format
-msgid "Currently selected %s"
-msgstr "現在 %s を選択済み"
+#: src/components/product/ProductSelectionPage.tsx:233
+#, fuzzy, javascript-format
+msgid "Change to %s"
+msgstr "%s に接続"
 
-#: src/components/product/ProductSelectionPage.tsx:177
+#: src/components/product/ProductSelectionPage.tsx:233
+#, fuzzy, javascript-format
+msgid "Select %s"
+msgstr "選択"
+
+#: src/components/product/ProductSelectionPage.tsx:273
+#, fuzzy
+msgid "Select a product to continue."
+msgstr "続行するにはソリューションを選択してください"
+
+#: src/components/product/ProductSelectionPage.tsx:275
+msgid "License acceptance is required to continue."
+msgstr ""
+
+#: src/components/product/ProductSelectionPage.tsx:330
+#, fuzzy, javascript-format
+msgid "Switch to other available product"
+msgid_plural "Choose from %d available products"
+msgstr[0] "利用可能な製品"
+
+#: src/components/product/ProductSelectionPage.tsx:413
+#, fuzzy
+msgid "Current selection"
+msgstr "誤った選択"
+
+#: src/components/product/ProductSelectionPage.tsx:424
+msgid "View license"
+msgstr ""
+
+#: src/components/product/ProductSelectionPage.tsx:464
+#, fuzzy
+msgid "Select a product and confirm your choice."
+msgid_plural "Select a product and confirm your choice at the end of the list."
+msgstr[0] "続行するにはソリューションを選択してください"
+
+#: src/components/product/ProductSelectionPage.tsx:471
 msgid "Select a product"
 msgstr "製品の選択"
 
-#: src/components/product/ProductSelectionPage.tsx:192
-msgid "Show description"
-msgstr "説明を表示"
-
-#: src/components/product/ProductSelectionPage.tsx:193
-msgid "Hide description"
-msgstr "説明を隠す"
-
-#: src/components/product/ProductSelectionPage.tsx:210
+#: src/components/product/ProductSelectionPage.tsx:480
 msgid ""
-"There is other product available. Selecting a different product will "
-"automatically adjust some installation settings to match the chosen "
-"product's defaults."
-msgid_plural ""
-"There are 2 other products available. Selecting a different product will "
-"automatically adjust some installation settings to match the chosen "
-"product's defaults."
-msgstr[0] ""
-"その他の製品が存在しています。製品の選択を変更すると、その製品の既定値にあわ"
-"せてインストール設定が自動調整されます。"
-
-#: src/components/product/ProductSelectionPage.tsx:216
-#, javascript-format
-msgid "There are %d products available"
-msgstr "%d 個の製品が利用できます"
+"Installation settings will automatically update to match the new product's "
+"defaults."
+msgstr ""
 
 #. TRANSLATORS: %s will be replaced by the registration key.
 #: src/components/product/RegistrationExtension.tsx:50
@@ -4456,6 +4476,32 @@ msgstr "公開 SSH 鍵の使用"
 msgid "ZFCP"
 msgstr "ZFCP"
 
+#, javascript-format
+#~ msgid "Currently selected %s"
+#~ msgstr "現在 %s を選択済み"
+
+#~ msgid "Show description"
+#~ msgstr "説明を表示"
+
+#~ msgid "Hide description"
+#~ msgstr "説明を隠す"
+
+#~ msgid ""
+#~ "There is other product available. Selecting a different product will "
+#~ "automatically adjust some installation settings to match the chosen "
+#~ "product's defaults."
+#~ msgid_plural ""
+#~ "There are 2 other products available. Selecting a different product will "
+#~ "automatically adjust some installation settings to match the chosen "
+#~ "product's defaults."
+#~ msgstr[0] ""
+#~ "その他の製品が存在しています。製品の選択を変更すると、その製品の既定値にあ"
+#~ "わせてインストール設定が自動調整されます。"
+
+#, javascript-format
+#~ msgid "There are %d products available"
+#~ msgstr "%d 個の製品が利用できます"
+
 #~ msgid "At this point you can power off the machine."
 #~ msgstr "マシンの電源を切って問題ありません。"
 
@@ -4519,18 +4565,11 @@ msgstr "ZFCP"
 #~ msgid "Edit connection %s"
 #~ msgstr "接続 %s の編集"
 
-#, javascript-format
-#~ msgid "Connect to %s"
-#~ msgstr "%s に接続"
-
 #~ msgid "Installation summary"
 #~ msgstr "インストールの概要"
 
 #~ msgid "Overview"
 #~ msgstr "概要"
-
-#~ msgid "Available products"
-#~ msgstr "利用可能な製品"
 
 #~ msgid "Device Selection"
 #~ msgstr "デバイス選択"

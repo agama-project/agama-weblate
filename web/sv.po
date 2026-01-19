@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-16 15:34+0000\n"
+"POT-Creation-Date: 2026-01-19 13:35+0000\n"
 "PO-Revision-Date: 2026-01-15 11:04+0000\n"
 "Last-Translator: Luna  Jernberg <bittin@opensuse.org>\n"
 "Language-Team: Swedish <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -24,13 +24,13 @@ msgid "Breadcrumbs"
 msgstr "Brödsmulor"
 
 #: src/components/core/ChangeProductOption.tsx:49
-#: src/components/product/ProductSelectionPage.tsx:177
+#: src/components/product/ProductSelectionPage.tsx:471
 msgid "Change product"
 msgstr "Ändra produkt"
 
 #. TRANSLATORS: The install button label
 #: src/components/core/InstallButton.tsx:57
-#: src/components/overview/OverviewPage.tsx:129
+#: src/components/overview/OverviewPage.tsx:123
 msgid "Install"
 msgstr "Installera"
 
@@ -345,7 +345,7 @@ msgstr "Bakåt"
 #: src/components/network/BindingSettingsForm.tsx:229
 #: src/components/network/IpSettingsForm.tsx:221
 #: src/components/network/WifiConnectionForm.tsx:188
-#: src/components/product/ProductSelectionPage.tsx:120
+#: src/components/product/ProductSelectionPage.tsx:378
 msgid "Cancel"
 msgstr "Avbryt"
 
@@ -484,7 +484,7 @@ msgstr "Ingen av tangentmapparna matchar filtret."
 #: src/components/l10n/L10nPage.tsx:115
 #: src/components/l10n/LocaleSelection.tsx:92
 #: src/components/l10n/TimezoneSelection.tsx:140
-#: src/components/product/ProductSelectionPage.tsx:273
+#: src/components/product/ProductSelectionPage.tsx:234
 #: src/components/software/SoftwarePatternsSelection.tsx:177
 msgid "Select"
 msgstr "Välj"
@@ -510,7 +510,7 @@ msgstr ""
 
 #: src/components/l10n/L10nPage.tsx:89 src/components/l10n/L10nPage.tsx:103
 #: src/components/l10n/L10nPage.tsx:115
-#: src/components/product/ProductSelectionPage.tsx:273
+#: src/components/product/ProductSelectionPage.tsx:234
 #: src/components/storage/BootSection.tsx:97
 #: src/components/storage/EncryptionSection.tsx:60
 #: src/components/storage/iscsi/InitiatorForm.tsx:89
@@ -1224,19 +1224,19 @@ msgstr "Bekräfta och installera"
 
 #. TRANSLATORS: This hint helps users locate the install button. Text inside
 #. square brackets [] appears in bold. Keep brackets for proper formatting.
-#: src/components/overview/OverviewPage.tsx:112
+#: src/components/overview/OverviewPage.tsx:108
 msgid "When ready, click on the [install] button at the end of the page."
 msgstr "När du är redo, klicka på [installera] knappen längst ner på sidan."
 
-#: src/components/overview/OverviewPage.tsx:130
+#: src/components/overview/OverviewPage.tsx:124
 msgid "Install now with potential data loss"
 msgstr "Installera nu med potentiell dataförlust"
 
-#: src/components/overview/OverviewPage.tsx:131
+#: src/components/overview/OverviewPage.tsx:125
 msgid "Install now"
 msgstr "Installera nu"
 
-#: src/components/overview/OverviewPage.tsx:150
+#: src/components/overview/OverviewPage.tsx:144
 msgid ""
 "Take a moment to review the installation settings below and adjust them as "
 "needed."
@@ -1244,11 +1244,11 @@ msgstr ""
 "Ta en stund för att granska installationsinställningarna nedan och justera "
 "dem efter behov."
 
-#: src/components/overview/OverviewPage.tsx:180
+#: src/components/overview/OverviewPage.tsx:174
 msgid "Wait until current operations are completed."
 msgstr "Vänta tills de aktuella operationerna är slutförda."
 
-#: src/components/overview/OverviewPage.tsx:189
+#: src/components/overview/OverviewPage.tsx:183
 msgid ""
 "You need to fix any invalid settings before proceeding with the installation."
 msgstr ""
@@ -1513,61 +1513,78 @@ msgstr ""
 msgid "hostname"
 msgstr "värdnamn"
 
-#: src/components/product/ProductSelectionPage.tsx:98
+#: src/components/product/ProductSelectionPage.tsx:118
+#, fuzzy
+msgid "License acceptance required"
+msgstr "Alla fält krävs"
+
+#: src/components/product/ProductSelectionPage.tsx:127
 msgid "Show more"
 msgstr "Visa mer"
 
-#: src/components/product/ProductSelectionPage.tsx:99
+#: src/components/product/ProductSelectionPage.tsx:128
 msgid "Show less"
 msgstr "Visa mindre"
 
 #. TRANSLATORS: Text used for the license acceptance checkbox. %s will be
 #. replaced with the product name and the text in the square brackets [] is
 #. used for the link to show the license, please keep the brackets.
-#: src/components/product/ProductSelectionPage.tsx:169
+#: src/components/product/ProductSelectionPage.tsx:191
 #, javascript-format
 msgid "I have read and accept the [license] for %s"
 msgstr "Jag har läst och accepterar [licensen] för %s"
 
-#: src/components/product/ProductSelectionPage.tsx:173
-#, javascript-format
-msgid "Currently selected %s"
-msgstr "Nuvarande vald %s"
+#: src/components/product/ProductSelectionPage.tsx:233
+#, fuzzy, javascript-format
+msgid "Change to %s"
+msgstr "Anslut till %s"
 
-#: src/components/product/ProductSelectionPage.tsx:177
+#: src/components/product/ProductSelectionPage.tsx:233
+#, fuzzy, javascript-format
+msgid "Select %s"
+msgstr "Välj"
+
+#: src/components/product/ProductSelectionPage.tsx:273
+#, fuzzy
+msgid "Select a product to continue."
+msgstr "Välj en lösning för att fortsätta"
+
+#: src/components/product/ProductSelectionPage.tsx:275
+msgid "License acceptance is required to continue."
+msgstr ""
+
+#: src/components/product/ProductSelectionPage.tsx:330
+#, fuzzy, javascript-format
+msgid "Switch to other available product"
+msgid_plural "Choose from %d available products"
+msgstr[0] "Tillgängliga produkter"
+msgstr[1] "Tillgängliga produkter"
+
+#: src/components/product/ProductSelectionPage.tsx:413
+#, fuzzy
+msgid "Current selection"
+msgstr "Fel val"
+
+#: src/components/product/ProductSelectionPage.tsx:424
+msgid "View license"
+msgstr ""
+
+#: src/components/product/ProductSelectionPage.tsx:464
+#, fuzzy
+msgid "Select a product and confirm your choice."
+msgid_plural "Select a product and confirm your choice at the end of the list."
+msgstr[0] "Välj en lösning för att fortsätta"
+msgstr[1] "Välj en lösning för att fortsätta"
+
+#: src/components/product/ProductSelectionPage.tsx:471
 msgid "Select a product"
 msgstr "Välj en produkt"
 
-#: src/components/product/ProductSelectionPage.tsx:192
-msgid "Show description"
-msgstr "Visa beskrivning"
-
-#: src/components/product/ProductSelectionPage.tsx:193
-msgid "Hide description"
-msgstr "Dölj beskrivning"
-
-#: src/components/product/ProductSelectionPage.tsx:210
+#: src/components/product/ProductSelectionPage.tsx:480
 msgid ""
-"There is other product available. Selecting a different product will "
-"automatically adjust some installation settings to match the chosen "
-"product's defaults."
-msgid_plural ""
-"There are 2 other products available. Selecting a different product will "
-"automatically adjust some installation settings to match the chosen "
-"product's defaults."
-msgstr[0] ""
-"Det finns en annan produkt tillgänglig. Om du väljer en annan produkt "
-"justeras automatiskt vissa installationsinställningar så att de matchar den "
-"valda produktens standardinställningar."
-msgstr[1] ""
-"Det finns två andra produkter tillgängliga. Om du väljer några andra "
-"produkter justeras automatiskt vissa installationsinställningar så att de "
-"matchar det valda produkternas standardinställningar."
-
-#: src/components/product/ProductSelectionPage.tsx:216
-#, javascript-format
-msgid "There are %d products available"
-msgstr "Det finns %d produkter tillgängliga"
+"Installation settings will automatically update to match the new product's "
+"defaults."
+msgstr ""
 
 #. TRANSLATORS: %s will be replaced by the registration key.
 #: src/components/product/RegistrationExtension.tsx:50
@@ -4515,6 +4532,37 @@ msgstr "Använd publik SSH nyckel"
 msgid "ZFCP"
 msgstr "ZFCP"
 
+#, javascript-format
+#~ msgid "Currently selected %s"
+#~ msgstr "Nuvarande vald %s"
+
+#~ msgid "Show description"
+#~ msgstr "Visa beskrivning"
+
+#~ msgid "Hide description"
+#~ msgstr "Dölj beskrivning"
+
+#~ msgid ""
+#~ "There is other product available. Selecting a different product will "
+#~ "automatically adjust some installation settings to match the chosen "
+#~ "product's defaults."
+#~ msgid_plural ""
+#~ "There are 2 other products available. Selecting a different product will "
+#~ "automatically adjust some installation settings to match the chosen "
+#~ "product's defaults."
+#~ msgstr[0] ""
+#~ "Det finns en annan produkt tillgänglig. Om du väljer en annan produkt "
+#~ "justeras automatiskt vissa installationsinställningar så att de matchar "
+#~ "den valda produktens standardinställningar."
+#~ msgstr[1] ""
+#~ "Det finns två andra produkter tillgängliga. Om du väljer några andra "
+#~ "produkter justeras automatiskt vissa installationsinställningar så att de "
+#~ "matchar det valda produkternas standardinställningar."
+
+#, javascript-format
+#~ msgid "There are %d products available"
+#~ msgstr "Det finns %d produkter tillgängliga"
+
 #~ msgid "At this point you can power off the machine."
 #~ msgstr "Vid det här laget kan du stänga av maskinen."
 
@@ -4575,18 +4623,11 @@ msgstr "ZFCP"
 #~ msgid "Edit connection %s"
 #~ msgstr "Redigera anslutning %s"
 
-#, javascript-format
-#~ msgid "Connect to %s"
-#~ msgstr "Anslut till %s"
-
 #~ msgid "Installation summary"
 #~ msgstr "Installationssammanfattning"
 
 #~ msgid "Overview"
 #~ msgstr "Översikt"
-
-#~ msgid "Available products"
-#~ msgstr "Tillgängliga produkter"
 
 #~ msgid "Device Selection"
 #~ msgstr "Val av enhet"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-16 15:34+0000\n"
+"POT-Creation-Date: 2026-01-19 13:35+0000\n"
 "PO-Revision-Date: 2025-09-03 10:59+0000\n"
 "Last-Translator: David D <dadu042@mailo.com>\n"
 "Language-Team: French <https://l10n.opensuse.org/projects/agama/agama-web/fr/"
@@ -24,13 +24,13 @@ msgid "Breadcrumbs"
 msgstr ""
 
 #: src/components/core/ChangeProductOption.tsx:49
-#: src/components/product/ProductSelectionPage.tsx:177
+#: src/components/product/ProductSelectionPage.tsx:471
 msgid "Change product"
 msgstr "Changer de produit"
 
 #. TRANSLATORS: The install button label
 #: src/components/core/InstallButton.tsx:57
-#: src/components/overview/OverviewPage.tsx:129
+#: src/components/overview/OverviewPage.tsx:123
 msgid "Install"
 msgstr "Installer"
 
@@ -355,7 +355,7 @@ msgstr "Retour"
 #: src/components/network/BindingSettingsForm.tsx:229
 #: src/components/network/IpSettingsForm.tsx:221
 #: src/components/network/WifiConnectionForm.tsx:188
-#: src/components/product/ProductSelectionPage.tsx:120
+#: src/components/product/ProductSelectionPage.tsx:378
 msgid "Cancel"
 msgstr "Annuler"
 
@@ -496,7 +496,7 @@ msgstr "Aucune des combinaisons de touches ne correspond au filtre."
 #: src/components/l10n/L10nPage.tsx:115
 #: src/components/l10n/LocaleSelection.tsx:92
 #: src/components/l10n/TimezoneSelection.tsx:140
-#: src/components/product/ProductSelectionPage.tsx:273
+#: src/components/product/ProductSelectionPage.tsx:234
 #: src/components/software/SoftwarePatternsSelection.tsx:177
 msgid "Select"
 msgstr "Sélectionner"
@@ -522,7 +522,7 @@ msgstr ""
 
 #: src/components/l10n/L10nPage.tsx:89 src/components/l10n/L10nPage.tsx:103
 #: src/components/l10n/L10nPage.tsx:115
-#: src/components/product/ProductSelectionPage.tsx:273
+#: src/components/product/ProductSelectionPage.tsx:234
 #: src/components/storage/BootSection.tsx:97
 #: src/components/storage/EncryptionSection.tsx:60
 #: src/components/storage/iscsi/InitiatorForm.tsx:89
@@ -1245,30 +1245,30 @@ msgstr "Confirmer l'installation"
 
 #. TRANSLATORS: This hint helps users locate the install button. Text inside
 #. square brackets [] appears in bold. Keep brackets for proper formatting.
-#: src/components/overview/OverviewPage.tsx:112
+#: src/components/overview/OverviewPage.tsx:108
 msgid "When ready, click on the [install] button at the end of the page."
 msgstr ""
 
-#: src/components/overview/OverviewPage.tsx:130
+#: src/components/overview/OverviewPage.tsx:124
 msgid "Install now with potential data loss"
 msgstr ""
 
-#: src/components/overview/OverviewPage.tsx:131
+#: src/components/overview/OverviewPage.tsx:125
 #, fuzzy
 msgid "Install now"
 msgstr "Installer"
 
-#: src/components/overview/OverviewPage.tsx:150
+#: src/components/overview/OverviewPage.tsx:144
 msgid ""
 "Take a moment to review the installation settings below and adjust them as "
 "needed."
 msgstr ""
 
-#: src/components/overview/OverviewPage.tsx:180
+#: src/components/overview/OverviewPage.tsx:174
 msgid "Wait until current operations are completed."
 msgstr ""
 
-#: src/components/overview/OverviewPage.tsx:189
+#: src/components/overview/OverviewPage.tsx:183
 #, fuzzy
 msgid ""
 "You need to fix any invalid settings before proceeding with the installation."
@@ -1547,12 +1547,17 @@ msgstr ""
 msgid "hostname"
 msgstr "nom d'hôte"
 
-#: src/components/product/ProductSelectionPage.tsx:98
+#: src/components/product/ProductSelectionPage.tsx:118
+#, fuzzy
+msgid "License acceptance required"
+msgstr "Tous les champs sont obligatoires"
+
+#: src/components/product/ProductSelectionPage.tsx:127
 #, fuzzy
 msgid "Show more"
 msgstr "Afficher plus d'actions"
 
-#: src/components/product/ProductSelectionPage.tsx:99
+#: src/components/product/ProductSelectionPage.tsx:128
 #, fuzzy
 msgid "Show less"
 msgstr "Afficher moins d'actions"
@@ -1560,45 +1565,61 @@ msgstr "Afficher moins d'actions"
 #. TRANSLATORS: Text used for the license acceptance checkbox. %s will be
 #. replaced with the product name and the text in the square brackets [] is
 #. used for the link to show the license, please keep the brackets.
-#: src/components/product/ProductSelectionPage.tsx:169
+#: src/components/product/ProductSelectionPage.tsx:191
 #, javascript-format
 msgid "I have read and accept the [license] for %s"
 msgstr "J'ai lu et j'accepte la [licence] pour %s"
 
-#: src/components/product/ProductSelectionPage.tsx:173
+#: src/components/product/ProductSelectionPage.tsx:233
 #, fuzzy, javascript-format
-msgid "Currently selected %s"
-msgstr "sélectionné automatiquement"
+msgid "Change to %s"
+msgstr "Connecter à %s"
 
-#: src/components/product/ProductSelectionPage.tsx:177
+#: src/components/product/ProductSelectionPage.tsx:233
+#, fuzzy, javascript-format
+msgid "Select %s"
+msgstr "Sélectionner"
+
+#: src/components/product/ProductSelectionPage.tsx:273
+#, fuzzy
+msgid "Select a product to continue."
+msgstr "Sélectionner une solution pour continuer"
+
+#: src/components/product/ProductSelectionPage.tsx:275
+msgid "License acceptance is required to continue."
+msgstr ""
+
+#: src/components/product/ProductSelectionPage.tsx:330
+#, fuzzy, javascript-format
+msgid "Switch to other available product"
+msgid_plural "Choose from %d available products"
+msgstr[0] "Produits disponibles"
+msgstr[1] "Produits disponibles"
+
+#: src/components/product/ProductSelectionPage.tsx:413
+#, fuzzy
+msgid "Current selection"
+msgstr "Sélection rangée"
+
+#: src/components/product/ProductSelectionPage.tsx:424
+msgid "View license"
+msgstr ""
+
+#: src/components/product/ProductSelectionPage.tsx:464
+#, fuzzy
+msgid "Select a product and confirm your choice."
+msgid_plural "Select a product and confirm your choice at the end of the list."
+msgstr[0] "Sélectionner une solution pour continuer"
+msgstr[1] "Sélectionner une solution pour continuer"
+
+#: src/components/product/ProductSelectionPage.tsx:471
 msgid "Select a product"
 msgstr "Sélectionner un produit"
 
-#: src/components/product/ProductSelectionPage.tsx:192
-#, fuzzy
-msgid "Show description"
-msgstr "Description"
-
-#: src/components/product/ProductSelectionPage.tsx:193
-#, fuzzy
-msgid "Hide description"
-msgstr "Description"
-
-#: src/components/product/ProductSelectionPage.tsx:210
+#: src/components/product/ProductSelectionPage.tsx:480
 msgid ""
-"There is other product available. Selecting a different product will "
-"automatically adjust some installation settings to match the chosen "
-"product's defaults."
-msgid_plural ""
-"There are 2 other products available. Selecting a different product will "
-"automatically adjust some installation settings to match the chosen "
-"product's defaults."
-msgstr[0] ""
-msgstr[1] ""
-
-#: src/components/product/ProductSelectionPage.tsx:216
-#, javascript-format
-msgid "There are %d products available"
+"Installation settings will automatically update to match the new product's "
+"defaults."
 msgstr ""
 
 #. TRANSLATORS: %s will be replaced by the registration key.
@@ -4609,6 +4630,18 @@ msgstr "Utiliser la clé publique SSH"
 msgid "ZFCP"
 msgstr "ZFCP"
 
+#, fuzzy, javascript-format
+#~ msgid "Currently selected %s"
+#~ msgstr "sélectionné automatiquement"
+
+#, fuzzy
+#~ msgid "Show description"
+#~ msgstr "Description"
+
+#, fuzzy
+#~ msgid "Hide description"
+#~ msgstr "Description"
+
 #~ msgid "At this point you can power off the machine."
 #~ msgstr "Vous pouvez à présent éteindre la machine."
 
@@ -4657,19 +4690,12 @@ msgstr "ZFCP"
 #~ msgid "Edit connection %s"
 #~ msgstr "Modifier la connexion %s"
 
-#, javascript-format
-#~ msgid "Connect to %s"
-#~ msgstr "Connecter à %s"
-
 #, fuzzy
 #~ msgid "Installation summary"
 #~ msgstr "Synthèse de l'installation"
 
 #~ msgid "Overview"
 #~ msgstr "Aperçu"
-
-#~ msgid "Available products"
-#~ msgstr "Produits disponibles"
 
 #~ msgid "Device Selection"
 #~ msgstr "Sélection du périphérique"
