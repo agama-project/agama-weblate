@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-19 16:01+0000\n"
+"POT-Creation-Date: 2026-01-20 14:34+0000\n"
 "PO-Revision-Date: 2025-10-05 22:59+0000\n"
 "Last-Translator: Emin Tufan Çetin <cetin@users.noreply.l10n.opensuse.org>\n"
 "Language-Team: Turkish <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -24,7 +24,7 @@ msgid "Breadcrumbs"
 msgstr ""
 
 #: src/components/core/ChangeProductOption.tsx:49
-#: src/components/product/ProductSelectionPage.tsx:471
+#: src/components/product/ProductSelectionPage.tsx:473
 msgid "Change product"
 msgstr "Ürünü değiştir"
 
@@ -34,19 +34,23 @@ msgstr "Ürünü değiştir"
 msgid "Install"
 msgstr "Yükle"
 
-#: src/components/core/InstallationExit.tsx:47
-msgid "Your system is rebooting"
+#: src/components/core/InstallationExit.tsx:51
+#, fuzzy
+msgid "The system is rebooting"
 msgstr "Sisteminiz yeniden başlatılıyor"
 
-#: src/components/core/InstallationExit.tsx:53
-msgid ""
-"The installer interface is no longer available, so you can safely close this "
-"window."
+#: src/components/core/InstallationExit.tsx:55
+#, fuzzy
+msgid "The installer interface is no longer available."
 msgstr ""
 "Kurulum arayüzü artık kullanılamıyor, bu nedenle bu pencereyi güvenle "
 "kapatabilirsiniz."
 
-#: src/components/core/InstallationFinished.tsx:51
+#: src/components/core/InstallationExit.tsx:74
+msgid "You can safely close this window."
+msgstr ""
+
+#: src/components/core/InstallationFinished.tsx:49
 msgid "TPM sealing requires the new system to be booted directly."
 msgstr "TPM yalıtımıyla yeni sistemin doğrudan başlatılması gerekir."
 
@@ -58,15 +62,7 @@ msgstr ""
 "Bu yükleyiciyi çalıştırmak için yerel medya kullanıldıysa bir sonraki "
 "önyüklemeden önce bunu kaldırın."
 
-#: src/components/core/InstallationFinished.tsx:60
-msgid "Hide details"
-msgstr "Ayrıntıları gizle"
-
-#: src/components/core/InstallationFinished.tsx:60
-msgid "See more details"
-msgstr "Daha çok ayrıntı gör"
-
-#: src/components/core/InstallationFinished.tsx:65
+#: src/components/core/InstallationFinished.tsx:63
 msgid ""
 "The final step to configure the Trusted Platform Module (TPM) to "
 "automatically open encrypted devices will take place during the first boot "
@@ -78,22 +74,20 @@ msgstr ""
 "gerçekleştirilecektir. Bunun çalışması için makine doğrudan yeni "
 "önyükleyiciye önyüklemelidir."
 
-#: src/components/core/InstallationFinished.tsx:118
-msgid "Congratulations!"
-msgstr "Tebrikler!"
-
-#: src/components/core/InstallationFinished.tsx:124
-msgid "The installation on your machine is complete."
-msgstr "Makinenize kurulum tamamlanmıştır."
-
-#: src/components/core/InstallationFinished.tsx:127
-msgid "At this point you can reboot the machine to log in to the new system."
-msgstr ""
-"Bu noktada yeni sisteme giriş yapmak için makineyi yeniden başlatabilirsiniz."
-
-#: src/components/core/InstallationFinished.tsx:134
+#: src/components/core/InstallationFinished.tsx:106
 msgid "Reboot"
 msgstr "Yeniden Başlat"
+
+#: src/components/core/InstallationFinished.tsx:133
+#, fuzzy
+msgid "Installation complete"
+msgstr "Kurulum"
+
+#: src/components/core/InstallationFinished.tsx:141
+#, fuzzy
+msgid "You can reboot the machine to log in to the new system."
+msgstr ""
+"Bu noktada yeni sisteme giriş yapmak için makineyi yeniden başlatabilirsiniz."
 
 #: src/components/core/InstallationProgress.tsx:59
 #, fuzzy
@@ -347,7 +341,7 @@ msgstr "Geri"
 #: src/components/network/BindingSettingsForm.tsx:229
 #: src/components/network/IpSettingsForm.tsx:221
 #: src/components/network/WifiConnectionForm.tsx:188
-#: src/components/product/ProductSelectionPage.tsx:378
+#: src/components/product/ProductSelectionPage.tsx:379
 msgid "Cancel"
 msgstr "İptal"
 
@@ -450,15 +444,17 @@ msgstr "Satır seçimi"
 msgid "Row actions"
 msgstr "Satır eylemleri"
 
-#: src/components/core/ServerError.tsx:46
-msgid "Cannot connect to Agama server"
-msgstr "Agama sunucusuna bağlanılamıyor"
+#: src/components/core/ServerError.tsx:60
+#, fuzzy
+msgid "Cannot connect"
+msgstr "Bağlan"
 
-#: src/components/core/ServerError.tsx:51
-msgid "Please, check whether it is running."
+#: src/components/core/ServerError.tsx:64
+#, fuzzy
+msgid "Check whether Agama server is running."
 msgstr "Çalışıp çalışmadığını kontrol edin lütfen."
 
-#: src/components/core/ServerError.tsx:54
+#: src/components/core/ServerError.tsx:86
 msgid "Reload"
 msgstr "Yenile"
 
@@ -1575,34 +1571,34 @@ msgstr "Devam etmek için bir çözüm seçin"
 msgid "License acceptance is required to continue."
 msgstr ""
 
-#: src/components/product/ProductSelectionPage.tsx:330
+#: src/components/product/ProductSelectionPage.tsx:331
 #, fuzzy, javascript-format
 msgid "Switch to other available product"
 msgid_plural "Choose from %d available products"
 msgstr[0] "Mevcut ürünler"
 msgstr[1] "Mevcut ürünler"
 
-#: src/components/product/ProductSelectionPage.tsx:413
+#: src/components/product/ProductSelectionPage.tsx:414
 #, fuzzy
 msgid "Current selection"
 msgstr "Satır seçimi"
 
-#: src/components/product/ProductSelectionPage.tsx:424
+#: src/components/product/ProductSelectionPage.tsx:425
 msgid "View license"
 msgstr ""
 
-#: src/components/product/ProductSelectionPage.tsx:464
+#: src/components/product/ProductSelectionPage.tsx:466
 #, fuzzy
 msgid "Select a product and confirm your choice."
 msgid_plural "Select a product and confirm your choice at the end of the list."
 msgstr[0] "Devam etmek için bir çözüm seçin"
 msgstr[1] "Devam etmek için bir çözüm seçin"
 
-#: src/components/product/ProductSelectionPage.tsx:471
+#: src/components/product/ProductSelectionPage.tsx:473
 msgid "Select a product"
 msgstr "Bir ürün seçin"
 
-#: src/components/product/ProductSelectionPage.tsx:480
+#: src/components/product/ProductSelectionPage.tsx:482
 msgid ""
 "Installation settings will automatically update to match the new product's "
 "defaults."
@@ -4544,6 +4540,21 @@ msgstr "Genel SSH Anahtarını Kullan"
 #: src/routes/storage.tsx:113
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#~ msgid "Hide details"
+#~ msgstr "Ayrıntıları gizle"
+
+#~ msgid "See more details"
+#~ msgstr "Daha çok ayrıntı gör"
+
+#~ msgid "Congratulations!"
+#~ msgstr "Tebrikler!"
+
+#~ msgid "The installation on your machine is complete."
+#~ msgstr "Makinenize kurulum tamamlanmıştır."
+
+#~ msgid "Cannot connect to Agama server"
+#~ msgstr "Agama sunucusuna bağlanılamıyor"
 
 #, fuzzy, javascript-format
 #~ msgid "Currently selected %s"

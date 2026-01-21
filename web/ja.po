@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-19 16:01+0000\n"
+"POT-Creation-Date: 2026-01-20 14:34+0000\n"
 "PO-Revision-Date: 2026-01-20 00:04+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -24,7 +24,7 @@ msgid "Breadcrumbs"
 msgstr "パンくず"
 
 #: src/components/core/ChangeProductOption.tsx:49
-#: src/components/product/ProductSelectionPage.tsx:471
+#: src/components/product/ProductSelectionPage.tsx:473
 msgid "Change product"
 msgstr "製品の変更"
 
@@ -34,18 +34,22 @@ msgstr "製品の変更"
 msgid "Install"
 msgstr "インストール"
 
-#: src/components/core/InstallationExit.tsx:47
-msgid "Your system is rebooting"
+#: src/components/core/InstallationExit.tsx:51
+#, fuzzy
+msgid "The system is rebooting"
 msgstr "システムを再起動しています"
 
-#: src/components/core/InstallationExit.tsx:53
-msgid ""
-"The installer interface is no longer available, so you can safely close this "
-"window."
+#: src/components/core/InstallationExit.tsx:55
+#, fuzzy
+msgid "The installer interface is no longer available."
 msgstr ""
 "インストーラの処理は完了しています。このウインドウは閉じてかまいません。"
 
-#: src/components/core/InstallationFinished.tsx:51
+#: src/components/core/InstallationExit.tsx:74
+msgid "You can safely close this window."
+msgstr ""
+
+#: src/components/core/InstallationFinished.tsx:49
 msgid "TPM sealing requires the new system to be booted directly."
 msgstr ""
 "TPM シーリングを使用するには、新しいシステムを直接起動する必要があります。"
@@ -58,15 +62,7 @@ msgstr ""
 "このインストーラの起動に際してローカルメディアを使用している場合は、次回の再"
 "起動までの間にメディアを取り出しておいてください。"
 
-#: src/components/core/InstallationFinished.tsx:60
-msgid "Hide details"
-msgstr "詳細を隠す"
-
-#: src/components/core/InstallationFinished.tsx:60
-msgid "See more details"
-msgstr "さらに詳細を表示する"
-
-#: src/components/core/InstallationFinished.tsx:65
+#: src/components/core/InstallationFinished.tsx:63
 msgid ""
 "The final step to configure the Trusted Platform Module (TPM) to "
 "automatically open encrypted devices will take place during the first boot "
@@ -78,21 +74,19 @@ msgstr ""
 "は、マシンが新しいブートローダを直接起動するように設定しておく必要がありま"
 "す。"
 
-#: src/components/core/InstallationFinished.tsx:118
-msgid "Congratulations!"
-msgstr "おめでとうございます！"
-
-#: src/components/core/InstallationFinished.tsx:124
-msgid "The installation on your machine is complete."
-msgstr "お使いのマシンへのインストールが完了しました。"
-
-#: src/components/core/InstallationFinished.tsx:127
-msgid "At this point you can reboot the machine to log in to the new system."
-msgstr "あとはマシンを再起動して新しいシステムにログインするだけです。"
-
-#: src/components/core/InstallationFinished.tsx:134
+#: src/components/core/InstallationFinished.tsx:106
 msgid "Reboot"
 msgstr "再起動"
+
+#: src/components/core/InstallationFinished.tsx:133
+#, fuzzy
+msgid "Installation complete"
+msgstr "インストール時のみ"
+
+#: src/components/core/InstallationFinished.tsx:141
+#, fuzzy
+msgid "You can reboot the machine to log in to the new system."
+msgstr "あとはマシンを再起動して新しいシステムにログインするだけです。"
 
 #: src/components/core/InstallationProgress.tsx:59
 msgid "Installation in progress"
@@ -343,7 +337,7 @@ msgstr "戻る"
 #: src/components/network/BindingSettingsForm.tsx:229
 #: src/components/network/IpSettingsForm.tsx:221
 #: src/components/network/WifiConnectionForm.tsx:188
-#: src/components/product/ProductSelectionPage.tsx:378
+#: src/components/product/ProductSelectionPage.tsx:379
 msgid "Cancel"
 msgstr "キャンセル"
 
@@ -444,15 +438,17 @@ msgstr "行の選択"
 msgid "Row actions"
 msgstr "行の処理"
 
-#: src/components/core/ServerError.tsx:46
-msgid "Cannot connect to Agama server"
-msgstr "Agama サーバに接続できません"
+#: src/components/core/ServerError.tsx:60
+#, fuzzy
+msgid "Cannot connect"
+msgstr "接続"
 
-#: src/components/core/ServerError.tsx:51
-msgid "Please, check whether it is running."
+#: src/components/core/ServerError.tsx:64
+#, fuzzy
+msgid "Check whether Agama server is running."
 msgstr "問題なく動作しているかどうかご確認ください。"
 
-#: src/components/core/ServerError.tsx:54
+#: src/components/core/ServerError.tsx:86
 msgid "Reload"
 msgstr "再読み込み"
 
@@ -1540,30 +1536,30 @@ msgstr "続行するには製品を選択してください。"
 msgid "License acceptance is required to continue."
 msgstr "続行するにはライセンスの受け入れが必要です。"
 
-#: src/components/product/ProductSelectionPage.tsx:330
+#: src/components/product/ProductSelectionPage.tsx:331
 #, javascript-format
 msgid "Switch to other available product"
 msgid_plural "Choose from %d available products"
 msgstr[0] "%d 個の利用可能な製品から選択"
 
-#: src/components/product/ProductSelectionPage.tsx:413
+#: src/components/product/ProductSelectionPage.tsx:414
 msgid "Current selection"
 msgstr "現在の選択"
 
-#: src/components/product/ProductSelectionPage.tsx:424
+#: src/components/product/ProductSelectionPage.tsx:425
 msgid "View license"
 msgstr "ライセンスの表示"
 
-#: src/components/product/ProductSelectionPage.tsx:464
+#: src/components/product/ProductSelectionPage.tsx:466
 msgid "Select a product and confirm your choice."
 msgid_plural "Select a product and confirm your choice at the end of the list."
 msgstr[0] "製品を選択したあと、末尾で選択を確認してください。"
 
-#: src/components/product/ProductSelectionPage.tsx:471
+#: src/components/product/ProductSelectionPage.tsx:473
 msgid "Select a product"
 msgstr "製品の選択"
 
-#: src/components/product/ProductSelectionPage.tsx:480
+#: src/components/product/ProductSelectionPage.tsx:482
 msgid ""
 "Installation settings will automatically update to match the new product's "
 "defaults."
@@ -4471,6 +4467,21 @@ msgstr "公開 SSH 鍵の使用"
 #: src/routes/storage.tsx:113
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#~ msgid "Hide details"
+#~ msgstr "詳細を隠す"
+
+#~ msgid "See more details"
+#~ msgstr "さらに詳細を表示する"
+
+#~ msgid "Congratulations!"
+#~ msgstr "おめでとうございます！"
+
+#~ msgid "The installation on your machine is complete."
+#~ msgstr "お使いのマシンへのインストールが完了しました。"
+
+#~ msgid "Cannot connect to Agama server"
+#~ msgstr "Agama サーバに接続できません"
 
 #, javascript-format
 #~ msgid "Currently selected %s"

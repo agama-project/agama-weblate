@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-19 16:01+0000\n"
+"POT-Creation-Date: 2026-01-20 14:34+0000\n"
 "PO-Revision-Date: 2025-11-19 16:04+0000\n"
 "Last-Translator: Victor hck <victorhck@opensuse.org>\n"
 "Language-Team: Spanish <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -24,7 +24,7 @@ msgid "Breadcrumbs"
 msgstr ""
 
 #: src/components/core/ChangeProductOption.tsx:49
-#: src/components/product/ProductSelectionPage.tsx:471
+#: src/components/product/ProductSelectionPage.tsx:473
 msgid "Change product"
 msgstr "Cambiar de producto"
 
@@ -34,19 +34,23 @@ msgstr "Cambiar de producto"
 msgid "Install"
 msgstr "Instalar"
 
-#: src/components/core/InstallationExit.tsx:47
-msgid "Your system is rebooting"
+#: src/components/core/InstallationExit.tsx:51
+#, fuzzy
+msgid "The system is rebooting"
 msgstr "El sistema se está reiniciando"
 
-#: src/components/core/InstallationExit.tsx:53
-msgid ""
-"The installer interface is no longer available, so you can safely close this "
-"window."
+#: src/components/core/InstallationExit.tsx:55
+#, fuzzy
+msgid "The installer interface is no longer available."
 msgstr ""
 "La interfaz del instalador ya no está disponible, por lo que puede cerrar "
 "esta ventana sin problemas."
 
-#: src/components/core/InstallationFinished.tsx:51
+#: src/components/core/InstallationExit.tsx:74
+msgid "You can safely close this window."
+msgstr ""
+
+#: src/components/core/InstallationFinished.tsx:49
 msgid "TPM sealing requires the new system to be booted directly."
 msgstr "El sellado TPM requiere que el nuevo sistema se inicie directamente."
 
@@ -58,15 +62,7 @@ msgstr ""
 "Si se ha utilizado un medio local para ejecutar este instalador, expúlselo "
 "antes del próximo inicio."
 
-#: src/components/core/InstallationFinished.tsx:60
-msgid "Hide details"
-msgstr "Ocultar detalles"
-
-#: src/components/core/InstallationFinished.tsx:60
-msgid "See more details"
-msgstr "Ver más detalles"
-
-#: src/components/core/InstallationFinished.tsx:65
+#: src/components/core/InstallationFinished.tsx:63
 msgid ""
 "The final step to configure the Trusted Platform Module (TPM) to "
 "automatically open encrypted devices will take place during the first boot "
@@ -78,21 +74,19 @@ msgstr ""
 "inicio del nuevo sistema. Para que eso funcione, la máquina necesita "
 "iniciarse directamente con el nuevo cargador de arranque."
 
-#: src/components/core/InstallationFinished.tsx:118
-msgid "Congratulations!"
-msgstr "¡Enhorabuena!"
-
-#: src/components/core/InstallationFinished.tsx:124
-msgid "The installation on your machine is complete."
-msgstr "La instalación en el equipo ha finalizado."
-
-#: src/components/core/InstallationFinished.tsx:127
-msgid "At this point you can reboot the machine to log in to the new system."
-msgstr "Ya puede reiniciar el equipo para iniciar sesión en el nuevo sistema."
-
-#: src/components/core/InstallationFinished.tsx:134
+#: src/components/core/InstallationFinished.tsx:106
 msgid "Reboot"
 msgstr "Reiniciar"
+
+#: src/components/core/InstallationFinished.tsx:133
+#, fuzzy
+msgid "Installation complete"
+msgstr "Instalación"
+
+#: src/components/core/InstallationFinished.tsx:141
+#, fuzzy
+msgid "You can reboot the machine to log in to the new system."
+msgstr "Ya puede reiniciar el equipo para iniciar sesión en el nuevo sistema."
 
 #: src/components/core/InstallationProgress.tsx:59
 #, fuzzy
@@ -352,7 +346,7 @@ msgstr "Retroceder"
 #: src/components/network/BindingSettingsForm.tsx:229
 #: src/components/network/IpSettingsForm.tsx:221
 #: src/components/network/WifiConnectionForm.tsx:188
-#: src/components/product/ProductSelectionPage.tsx:378
+#: src/components/product/ProductSelectionPage.tsx:379
 msgid "Cancel"
 msgstr "Cancelar"
 
@@ -455,15 +449,17 @@ msgstr "Selección de fila"
 msgid "Row actions"
 msgstr "Acciones de la fila"
 
-#: src/components/core/ServerError.tsx:46
-msgid "Cannot connect to Agama server"
-msgstr "No se pud conectar al servidor de Agama"
+#: src/components/core/ServerError.tsx:60
+#, fuzzy
+msgid "Cannot connect"
+msgstr "Conectarse"
 
-#: src/components/core/ServerError.tsx:51
-msgid "Please, check whether it is running."
+#: src/components/core/ServerError.tsx:64
+#, fuzzy
+msgid "Check whether Agama server is running."
 msgstr "Por favor, compruebe si está funcionando."
 
-#: src/components/core/ServerError.tsx:54
+#: src/components/core/ServerError.tsx:86
 msgid "Reload"
 msgstr "Recargar"
 
@@ -1586,34 +1582,34 @@ msgstr "Seleccione una solución para continuar"
 msgid "License acceptance is required to continue."
 msgstr ""
 
-#: src/components/product/ProductSelectionPage.tsx:330
+#: src/components/product/ProductSelectionPage.tsx:331
 #, fuzzy, javascript-format
 msgid "Switch to other available product"
 msgid_plural "Choose from %d available products"
 msgstr[0] "Productos disponibles"
 msgstr[1] "Productos disponibles"
 
-#: src/components/product/ProductSelectionPage.tsx:413
+#: src/components/product/ProductSelectionPage.tsx:414
 #, fuzzy
 msgid "Current selection"
 msgstr "Selección de fila"
 
-#: src/components/product/ProductSelectionPage.tsx:424
+#: src/components/product/ProductSelectionPage.tsx:425
 msgid "View license"
 msgstr ""
 
-#: src/components/product/ProductSelectionPage.tsx:464
+#: src/components/product/ProductSelectionPage.tsx:466
 #, fuzzy
 msgid "Select a product and confirm your choice."
 msgid_plural "Select a product and confirm your choice at the end of the list."
 msgstr[0] "Seleccione una solución para continuar"
 msgstr[1] "Seleccione una solución para continuar"
 
-#: src/components/product/ProductSelectionPage.tsx:471
+#: src/components/product/ProductSelectionPage.tsx:473
 msgid "Select a product"
 msgstr "Seleccione un producto"
 
-#: src/components/product/ProductSelectionPage.tsx:480
+#: src/components/product/ProductSelectionPage.tsx:482
 msgid ""
 "Installation settings will automatically update to match the new product's "
 "defaults."
@@ -4586,6 +4582,21 @@ msgstr "Utilizar clave pública SSH"
 #: src/routes/storage.tsx:113
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#~ msgid "Hide details"
+#~ msgstr "Ocultar detalles"
+
+#~ msgid "See more details"
+#~ msgstr "Ver más detalles"
+
+#~ msgid "Congratulations!"
+#~ msgstr "¡Enhorabuena!"
+
+#~ msgid "The installation on your machine is complete."
+#~ msgstr "La instalación en el equipo ha finalizado."
+
+#~ msgid "Cannot connect to Agama server"
+#~ msgstr "No se pud conectar al servidor de Agama"
 
 #, fuzzy, javascript-format
 #~ msgid "Currently selected %s"

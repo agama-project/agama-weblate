@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-19 16:01+0000\n"
+"POT-Creation-Date: 2026-01-20 14:34+0000\n"
 "PO-Revision-Date: 2025-09-11 02:59+0000\n"
 "Last-Translator: Grace Yu <grace.yu@excel-gits.com>\n"
 "Language-Team: Chinese (China) <https://l10n.opensuse.org/projects/agama/"
@@ -24,7 +24,7 @@ msgid "Breadcrumbs"
 msgstr ""
 
 #: src/components/core/ChangeProductOption.tsx:49
-#: src/components/product/ProductSelectionPage.tsx:471
+#: src/components/product/ProductSelectionPage.tsx:473
 msgid "Change product"
 msgstr "更改产品"
 
@@ -34,17 +34,21 @@ msgstr "更改产品"
 msgid "Install"
 msgstr "安装"
 
-#: src/components/core/InstallationExit.tsx:47
-msgid "Your system is rebooting"
+#: src/components/core/InstallationExit.tsx:51
+#, fuzzy
+msgid "The system is rebooting"
 msgstr "系统正在重新引导"
 
-#: src/components/core/InstallationExit.tsx:53
-msgid ""
-"The installer interface is no longer available, so you can safely close this "
-"window."
+#: src/components/core/InstallationExit.tsx:55
+#, fuzzy
+msgid "The installer interface is no longer available."
 msgstr "安装程序界面已不再可用，因此您可以安全关闭此窗口。"
 
-#: src/components/core/InstallationFinished.tsx:51
+#: src/components/core/InstallationExit.tsx:74
+msgid "You can safely close this window."
+msgstr ""
+
+#: src/components/core/InstallationFinished.tsx:49
 msgid "TPM sealing requires the new system to be booted directly."
 msgstr "TPM 密封过程要求新系统直接启动。"
 
@@ -54,15 +58,7 @@ msgid ""
 "boot."
 msgstr "如果运行此次安装时使用了本地介质，请在下次启动前移除。"
 
-#: src/components/core/InstallationFinished.tsx:60
-msgid "Hide details"
-msgstr "隐藏细节"
-
-#: src/components/core/InstallationFinished.tsx:60
-msgid "See more details"
-msgstr "查看更多细节"
-
-#: src/components/core/InstallationFinished.tsx:65
+#: src/components/core/InstallationFinished.tsx:63
 msgid ""
 "The final step to configure the Trusted Platform Module (TPM) to "
 "automatically open encrypted devices will take place during the first boot "
@@ -72,21 +68,19 @@ msgstr ""
 "配置可信平台模块 (TPM) 以自动开启加密设备的最后一步将在新系统首次启动时进行。"
 "为此，本机需要直接启动到新的引导加载程序。"
 
-#: src/components/core/InstallationFinished.tsx:118
-msgid "Congratulations!"
-msgstr "恭喜！"
-
-#: src/components/core/InstallationFinished.tsx:124
-msgid "The installation on your machine is complete."
-msgstr "在您机器上的安装过程已完成。"
-
-#: src/components/core/InstallationFinished.tsx:127
-msgid "At this point you can reboot the machine to log in to the new system."
-msgstr "现在您可以重启机器并登录到新系统。"
-
-#: src/components/core/InstallationFinished.tsx:134
+#: src/components/core/InstallationFinished.tsx:106
 msgid "Reboot"
 msgstr "重启"
+
+#: src/components/core/InstallationFinished.tsx:133
+#, fuzzy
+msgid "Installation complete"
+msgstr "安装"
+
+#: src/components/core/InstallationFinished.tsx:141
+#, fuzzy
+msgid "You can reboot the machine to log in to the new system."
+msgstr "现在您可以重启机器并登录到新系统。"
 
 #: src/components/core/InstallationProgress.tsx:59
 #, fuzzy
@@ -333,7 +327,7 @@ msgstr "返回"
 #: src/components/network/BindingSettingsForm.tsx:229
 #: src/components/network/IpSettingsForm.tsx:221
 #: src/components/network/WifiConnectionForm.tsx:188
-#: src/components/product/ProductSelectionPage.tsx:378
+#: src/components/product/ProductSelectionPage.tsx:379
 msgid "Cancel"
 msgstr "取消"
 
@@ -435,15 +429,17 @@ msgstr "行选择"
 msgid "Row actions"
 msgstr "行操作"
 
-#: src/components/core/ServerError.tsx:46
-msgid "Cannot connect to Agama server"
-msgstr "无法连接到 Agama 服务器"
+#: src/components/core/ServerError.tsx:60
+#, fuzzy
+msgid "Cannot connect"
+msgstr "连接"
 
-#: src/components/core/ServerError.tsx:51
-msgid "Please, check whether it is running."
+#: src/components/core/ServerError.tsx:64
+#, fuzzy
+msgid "Check whether Agama server is running."
 msgstr "请检查它是否在运行。"
 
-#: src/components/core/ServerError.tsx:54
+#: src/components/core/ServerError.tsx:86
 msgid "Reload"
 msgstr "重载"
 
@@ -1545,32 +1541,32 @@ msgstr "选择一个解决方案以继续"
 msgid "License acceptance is required to continue."
 msgstr ""
 
-#: src/components/product/ProductSelectionPage.tsx:330
+#: src/components/product/ProductSelectionPage.tsx:331
 #, fuzzy, javascript-format
 msgid "Switch to other available product"
 msgid_plural "Choose from %d available products"
 msgstr[0] "可用产品"
 
-#: src/components/product/ProductSelectionPage.tsx:413
+#: src/components/product/ProductSelectionPage.tsx:414
 #, fuzzy
 msgid "Current selection"
 msgstr "行选择"
 
-#: src/components/product/ProductSelectionPage.tsx:424
+#: src/components/product/ProductSelectionPage.tsx:425
 msgid "View license"
 msgstr ""
 
-#: src/components/product/ProductSelectionPage.tsx:464
+#: src/components/product/ProductSelectionPage.tsx:466
 #, fuzzy
 msgid "Select a product and confirm your choice."
 msgid_plural "Select a product and confirm your choice at the end of the list."
 msgstr[0] "选择一个解决方案以继续"
 
-#: src/components/product/ProductSelectionPage.tsx:471
+#: src/components/product/ProductSelectionPage.tsx:473
 msgid "Select a product"
 msgstr "请选择产品"
 
-#: src/components/product/ProductSelectionPage.tsx:480
+#: src/components/product/ProductSelectionPage.tsx:482
 msgid ""
 "Installation settings will automatically update to match the new product's "
 "defaults."
@@ -4390,6 +4386,21 @@ msgstr "使用 SSH 公共密钥"
 #: src/routes/storage.tsx:113
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#~ msgid "Hide details"
+#~ msgstr "隐藏细节"
+
+#~ msgid "See more details"
+#~ msgstr "查看更多细节"
+
+#~ msgid "Congratulations!"
+#~ msgstr "恭喜！"
+
+#~ msgid "The installation on your machine is complete."
+#~ msgstr "在您机器上的安装过程已完成。"
+
+#~ msgid "Cannot connect to Agama server"
+#~ msgstr "无法连接到 Agama 服务器"
 
 #, fuzzy, javascript-format
 #~ msgid "Currently selected %s"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-19 16:01+0000\n"
+"POT-Creation-Date: 2026-01-20 14:34+0000\n"
 "PO-Revision-Date: 2026-01-19 22:04+0000\n"
 "Last-Translator: Eugene Krater <lachend@gmail.com>\n"
 "Language-Team: Ukrainian <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -25,7 +25,7 @@ msgid "Breadcrumbs"
 msgstr "Навігаційна панель"
 
 #: src/components/core/ChangeProductOption.tsx:49
-#: src/components/product/ProductSelectionPage.tsx:471
+#: src/components/product/ProductSelectionPage.tsx:473
 msgid "Change product"
 msgstr "Змінити продукт"
 
@@ -35,18 +35,22 @@ msgstr "Змінити продукт"
 msgid "Install"
 msgstr "Встановити"
 
-#: src/components/core/InstallationExit.tsx:47
-msgid "Your system is rebooting"
+#: src/components/core/InstallationExit.tsx:51
+#, fuzzy
+msgid "The system is rebooting"
 msgstr "Система перезапускається"
 
-#: src/components/core/InstallationExit.tsx:53
-msgid ""
-"The installer interface is no longer available, so you can safely close this "
-"window."
+#: src/components/core/InstallationExit.tsx:55
+#, fuzzy
+msgid "The installer interface is no longer available."
 msgstr ""
 "Інтерфейс програми встановлення більше недоступний. Це вікно можна закрити."
 
-#: src/components/core/InstallationFinished.tsx:51
+#: src/components/core/InstallationExit.tsx:74
+msgid "You can safely close this window."
+msgstr ""
+
+#: src/components/core/InstallationFinished.tsx:49
 msgid "TPM sealing requires the new system to be booted directly."
 msgstr "Запечатування TPM вимагає прямого завантаження нової системи."
 
@@ -58,15 +62,7 @@ msgstr ""
 "Якщо для запуску цієї програми використовувався локальний носій, витягніть "
 "його перед наступним завантаженням."
 
-#: src/components/core/InstallationFinished.tsx:60
-msgid "Hide details"
-msgstr "Приховати подробиці"
-
-#: src/components/core/InstallationFinished.tsx:60
-msgid "See more details"
-msgstr "Див. докладніше"
-
-#: src/components/core/InstallationFinished.tsx:65
+#: src/components/core/InstallationFinished.tsx:63
 msgid ""
 "The final step to configure the Trusted Platform Module (TPM) to "
 "automatically open encrypted devices will take place during the first boot "
@@ -78,22 +74,20 @@ msgstr ""
 "завантаження нової системи. Щоб це спрацювало, комп'ютер повинен "
 "завантажитися безпосередньо з новим завантажувачем."
 
-#: src/components/core/InstallationFinished.tsx:118
-msgid "Congratulations!"
-msgstr "Вітаємо!"
-
-#: src/components/core/InstallationFinished.tsx:124
-msgid "The installation on your machine is complete."
-msgstr "Встановлення на Ваш комп'ютер завершено."
-
-#: src/components/core/InstallationFinished.tsx:127
-msgid "At this point you can reboot the machine to log in to the new system."
-msgstr ""
-"На цьому етапі Ви можете перезавантажити пристрій, щоб увійти в нову систему."
-
-#: src/components/core/InstallationFinished.tsx:134
+#: src/components/core/InstallationFinished.tsx:106
 msgid "Reboot"
 msgstr "Перезавантажити"
+
+#: src/components/core/InstallationFinished.tsx:133
+#, fuzzy
+msgid "Installation complete"
+msgstr "Тільки установка"
+
+#: src/components/core/InstallationFinished.tsx:141
+#, fuzzy
+msgid "You can reboot the machine to log in to the new system."
+msgstr ""
+"На цьому етапі Ви можете перезавантажити пристрій, щоб увійти в нову систему."
 
 #: src/components/core/InstallationProgress.tsx:59
 msgid "Installation in progress"
@@ -341,7 +335,7 @@ msgstr "Назад"
 #: src/components/network/BindingSettingsForm.tsx:229
 #: src/components/network/IpSettingsForm.tsx:221
 #: src/components/network/WifiConnectionForm.tsx:188
-#: src/components/product/ProductSelectionPage.tsx:378
+#: src/components/product/ProductSelectionPage.tsx:379
 msgid "Cancel"
 msgstr "Скасувати"
 
@@ -444,15 +438,17 @@ msgstr "Вибір рядка"
 msgid "Row actions"
 msgstr "Дії з рядком"
 
-#: src/components/core/ServerError.tsx:46
-msgid "Cannot connect to Agama server"
-msgstr "Не вдається з'єднатися з сервером Agama"
+#: src/components/core/ServerError.tsx:60
+#, fuzzy
+msgid "Cannot connect"
+msgstr "З'єднати"
 
-#: src/components/core/ServerError.tsx:51
-msgid "Please, check whether it is running."
+#: src/components/core/ServerError.tsx:64
+#, fuzzy
+msgid "Check whether Agama server is running."
 msgstr "Будь ласка, перевірте, чи він запущений."
 
-#: src/components/core/ServerError.tsx:54
+#: src/components/core/ServerError.tsx:86
 msgid "Reload"
 msgstr "Оновити"
 
@@ -1559,7 +1555,7 @@ msgstr "Виберіть рішення для продовження"
 msgid "License acceptance is required to continue."
 msgstr ""
 
-#: src/components/product/ProductSelectionPage.tsx:330
+#: src/components/product/ProductSelectionPage.tsx:331
 #, fuzzy, javascript-format
 msgid "Switch to other available product"
 msgid_plural "Choose from %d available products"
@@ -1567,16 +1563,16 @@ msgstr[0] "Доступні продукти"
 msgstr[1] "Доступні продукти"
 msgstr[2] "Доступні продукти"
 
-#: src/components/product/ProductSelectionPage.tsx:413
+#: src/components/product/ProductSelectionPage.tsx:414
 #, fuzzy
 msgid "Current selection"
 msgstr "Вибір рядка"
 
-#: src/components/product/ProductSelectionPage.tsx:424
+#: src/components/product/ProductSelectionPage.tsx:425
 msgid "View license"
 msgstr ""
 
-#: src/components/product/ProductSelectionPage.tsx:464
+#: src/components/product/ProductSelectionPage.tsx:466
 #, fuzzy
 msgid "Select a product and confirm your choice."
 msgid_plural "Select a product and confirm your choice at the end of the list."
@@ -1584,11 +1580,11 @@ msgstr[0] "Виберіть рішення для продовження"
 msgstr[1] "Виберіть рішення для продовження"
 msgstr[2] "Виберіть рішення для продовження"
 
-#: src/components/product/ProductSelectionPage.tsx:471
+#: src/components/product/ProductSelectionPage.tsx:473
 msgid "Select a product"
 msgstr "Оберіть продукт"
 
-#: src/components/product/ProductSelectionPage.tsx:480
+#: src/components/product/ProductSelectionPage.tsx:482
 msgid ""
 "Installation settings will automatically update to match the new product's "
 "defaults."
@@ -4572,6 +4568,21 @@ msgstr "Використати відкритий ключ SSH"
 #: src/routes/storage.tsx:113
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#~ msgid "Hide details"
+#~ msgstr "Приховати подробиці"
+
+#~ msgid "See more details"
+#~ msgstr "Див. докладніше"
+
+#~ msgid "Congratulations!"
+#~ msgstr "Вітаємо!"
+
+#~ msgid "The installation on your machine is complete."
+#~ msgstr "Встановлення на Ваш комп'ютер завершено."
+
+#~ msgid "Cannot connect to Agama server"
+#~ msgstr "Не вдається з'єднатися з сервером Agama"
 
 #, fuzzy, javascript-format
 #~ msgid "Currently selected %s"
