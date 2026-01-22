@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-19 14:38+0000\n"
+"POT-Creation-Date: 2026-01-21 13:13+0000\n"
 "PO-Revision-Date: 2026-01-19 15:36+0000\n"
 "Last-Translator: Ladislav Slezák <lslezak@suse.com>\n"
 "Language-Team: Czech <https://l10n.opensuse.org/projects/agama/agama-rust-"
@@ -29,15 +29,15 @@ msgstr "Ne"
 msgid "Yes"
 msgstr "Ano"
 
-#: agama-manager/src/service.rs:795
+#: agama-manager/src/service.rs:819
 msgid "Prepare the system"
 msgstr "Nachystat systém"
 
-#: agama-manager/src/service.rs:796
+#: agama-manager/src/service.rs:820
 msgid "Install software"
 msgstr "Instalovat software"
 
-#: agama-manager/src/service.rs:797
+#: agama-manager/src/service.rs:821
 msgid "Configure the system"
 msgstr "Nakonfigurovat systém"
 
@@ -48,6 +48,21 @@ msgstr "Zapisuji konfiguraci"
 #: agama-network/src/service.rs:519
 msgid "Reading configuration"
 msgstr "Načítám konfiguraci"
+
+#: agama-security/src/service.rs:228
+msgid "Reject"
+msgstr ""
+
+#: agama-security/src/service.rs:228
+#: agama-software/src/callbacks/security.rs:74
+msgid "Trust"
+msgstr "Důvěřovat"
+
+#: agama-security/src/service.rs:229
+msgid ""
+"Trying to import a self-signed certificate. Do you want to trust it and "
+"register the product?"
+msgstr ""
 
 #: agama-software/src/callbacks/commit_download.rs:48
 #: agama-software/src/callbacks/install.rs:56
@@ -70,39 +85,41 @@ msgstr "Pokračovat"
 
 #. TRANSLATORS: substituting: key ID, (key name), fingerprint
 #: agama-software/src/callbacks/security.rs:67
-#, rust-format
 msgid ""
 "The key {0} ({1}) with fingerprint {2} is unknown. Do you want to trust this "
 "key?"
-msgstr "Klíč {0} ({1}) s otiskem {2} není známý. Chcete důvěřovat tomuto klíči?"
+msgstr ""
+"Klíč {0} ({1}) s otiskem {2} není známý. Chcete důvěřovat tomuto klíči?"
 
 #: agama-software/src/callbacks/security.rs:74
 msgid "Skip"
 msgstr "Přeskočit"
 
-#: agama-software/src/callbacks/security.rs:74
-msgid "Trust"
-msgstr "Důvěřovat"
-
-#: agama-software/src/zypp_server.rs:260
+#: agama-software/src/zypp_server.rs:288
 msgid "Updating the list of repositories"
 msgstr "Aktualizuji seznam repozitářů"
 
-#: agama-software/src/zypp_server.rs:261
+#: agama-software/src/zypp_server.rs:289
 msgid "Refreshing metadata from the repositories"
 msgstr "Obnovuji metadata repozitářů"
 
-#: agama-software/src/zypp_server.rs:262
+#: agama-software/src/zypp_server.rs:290
 msgid "Calculating the software proposal"
 msgstr "Vyhodnocuje se návrh softwaru"
 
-#: agama-software/src/zypp_server.rs:265
+#: agama-software/src/zypp_server.rs:293
 msgid "Registering the system"
 msgstr "Systém se registruje"
 
-#: agama-software/src/zypp_server.rs:361
+#: agama-software/src/zypp_server.rs:388
 msgid "The product must be registered"
 msgstr "Produkt musí být zaregistrovaný"
+
+#: agama-software/src/zypp_server.rs:736
+#, fuzzy
+#| msgid "Registering the system"
+msgid "Failed to register the system"
+msgstr "Systém se registruje"
 
 #: agama-users/src/service.rs:138
 msgid ""
