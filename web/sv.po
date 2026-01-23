@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-21 13:13+0000\n"
+"POT-Creation-Date: 2026-01-22 17:12+0000\n"
 "PO-Revision-Date: 2026-01-15 11:04+0000\n"
 "Last-Translator: Luna  Jernberg <bittin@opensuse.org>\n"
 "Language-Team: Swedish <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -23,16 +23,10 @@ msgstr ""
 msgid "Breadcrumbs"
 msgstr "Brödsmulor"
 
-#: src/components/core/ChangeProductOption.tsx:49
-#: src/components/product/ProductSelectionPage.tsx:473
+#: src/components/core/ChangeProductOption.tsx:48
+#: src/components/product/ProductSelectionPage.tsx:496
 msgid "Change product"
 msgstr "Ändra produkt"
-
-#. TRANSLATORS: The install button label
-#: src/components/core/InstallButton.tsx:57
-#: src/components/overview/OverviewPage.tsx:123
-msgid "Install"
-msgstr "Installera"
 
 #: src/components/core/InstallationExit.tsx:51
 #, fuzzy
@@ -247,7 +241,7 @@ msgstr "Programvara"
 
 #: src/components/core/IssuesDrawer.tsx:50
 #: src/components/overview/RegistrationSummary.tsx:55
-#: src/components/product/ProductRegistrationPage.tsx:439
+#: src/components/product/ProductRegistrationPage.tsx:480
 #: src/routes/registration.tsx:31
 msgid "Registration"
 msgstr "Registrering"
@@ -339,7 +333,7 @@ msgstr "Bakåt"
 #: src/components/network/BindingSettingsForm.tsx:229
 #: src/components/network/IpSettingsForm.tsx:221
 #: src/components/network/WifiConnectionForm.tsx:188
-#: src/components/product/ProductSelectionPage.tsx:379
+#: src/components/product/ProductSelectionPage.tsx:402
 msgid "Cancel"
 msgstr "Avbryt"
 
@@ -419,6 +413,12 @@ msgstr "Resursen hittades inte eller förlorades"
 #: src/components/core/ResourceNotFound.tsx:43
 msgid "It doesn't exist or can't be reached."
 msgstr "Det existerar inte eller kan inte nås."
+
+#. TRANSLATORS: The review and install button label
+#: src/components/core/ReviewAndInstallButton.tsx:56
+#, fuzzy
+msgid "Review and install"
+msgstr "Granska och åtgärda"
 
 #: src/components/core/RowActions.tsx:71
 #: src/components/storage/ProposalResultSection.tsx:138
@@ -544,11 +544,11 @@ msgstr "Filtrera efter område, tidszonskod eller UTC-förskjutning"
 msgid "None of the time zones match the filter."
 msgstr "Inget av tidszonerna matchar filtret."
 
-#: src/components/layout/Header.tsx:85
+#: src/components/layout/Header.tsx:90
 msgid "Options toggle"
 msgstr "Växla mellan alternativ"
 
-#: src/components/layout/Header.tsx:97
+#: src/components/layout/Header.tsx:102
 msgid "Download logs"
 msgstr "Ladda ner loggar"
 
@@ -715,8 +715,8 @@ msgstr "Minst en adress måste tillhandahållas för valt läge"
 #: src/components/network/IpSettingsForm.tsx:152
 #: src/components/network/WifiConnectionDetails.tsx:100
 #: src/components/storage/FilesystemMenu.tsx:109
-#: src/components/storage/PartitionsSection.tsx:183
-#: src/components/storage/VolumeGroupEditor.tsx:168
+#: src/components/storage/PartitionsSection.tsx:186
+#: src/components/storage/VolumeGroupEditor.tsx:173
 #: src/components/storage/iscsi/NodesPresenter.jsx:80
 #: src/components/users/FirstUser.tsx:63 src/components/users/RootUser.tsx:57
 msgid "Edit"
@@ -1224,6 +1224,10 @@ msgstr "Bekräfta och installera"
 msgid "When ready, click on the [install] button at the end of the page."
 msgstr "När du är redo, klicka på [installera] knappen längst ner på sidan."
 
+#: src/components/overview/OverviewPage.tsx:123
+msgid "Install"
+msgstr "Installera"
+
 #: src/components/overview/OverviewPage.tsx:124
 msgid "Install now with potential data loss"
 msgstr "Installera nu med potentiell dataförlust"
@@ -1407,96 +1411,96 @@ msgstr "Stäng"
 msgid "%s logo"
 msgstr "%s logotyp"
 
-#: src/components/product/ProductRegistrationPage.tsx:68
+#: src/components/product/ProductRegistrationPage.tsx:69
 msgid "Registration server"
 msgstr "Registreringsserver"
 
-#: src/components/product/ProductRegistrationPage.tsx:69
+#: src/components/product/ProductRegistrationPage.tsx:70
 msgid "Email"
 msgstr "E-post"
 
-#: src/components/product/ProductRegistrationPage.tsx:70
+#: src/components/product/ProductRegistrationPage.tsx:71
 msgid "SUSE Customer Center (SCC)"
 msgstr "SUSE kundcenter (SCC)"
 
-#: src/components/product/ProductRegistrationPage.tsx:71
+#: src/components/product/ProductRegistrationPage.tsx:72
 #: src/components/storage/utils.ts:104
 msgid "Custom"
 msgstr "Anpassad"
 
-#: src/components/product/ProductRegistrationPage.tsx:83
+#: src/components/product/ProductRegistrationPage.tsx:86
 #, javascript-format
 msgid "%s has been registered with below information."
 msgstr "%s har registrerats med uppgifterna nedan."
 
 #. TRANSLATORS: input field label
-#: src/components/product/ProductRegistrationPage.tsx:95
-#: src/components/product/ProductRegistrationPage.tsx:183
-#: src/components/product/RegistrationExtension.tsx:150
+#: src/components/product/ProductRegistrationPage.tsx:98
+#: src/components/product/ProductRegistrationPage.tsx:186
+#: src/components/product/RegistrationExtension.tsx:141
 msgid "Registration code"
 msgstr "Registreringskod"
 
 #. TRANSLATORS: switch for displaying or hiding the registration code
-#: src/components/product/ProductRegistrationPage.tsx:100
-#: src/components/product/RegistrationExtension.tsx:64
+#: src/components/product/ProductRegistrationPage.tsx:103
+#: src/components/product/RegistrationExtension.tsx:66
 msgid "Hide"
 msgstr "Dölj"
 
-#: src/components/product/ProductRegistrationPage.tsx:100
-#: src/components/product/RegistrationExtension.tsx:64
+#: src/components/product/ProductRegistrationPage.tsx:103
+#: src/components/product/RegistrationExtension.tsx:66
 msgid "Show"
 msgstr "Visa"
 
-#: src/components/product/ProductRegistrationPage.tsx:139
+#: src/components/product/ProductRegistrationPage.tsx:142
 msgid "Server options"
 msgstr "Server alternativ"
 
-#: src/components/product/ProductRegistrationPage.tsx:140
+#: src/components/product/ProductRegistrationPage.tsx:143
 msgid "Register using SUSE server"
 msgstr "Registrera genom att använda SUSE server"
 
-#: src/components/product/ProductRegistrationPage.tsx:145
+#: src/components/product/ProductRegistrationPage.tsx:148
 msgid "Register using a custom registration server"
 msgstr "Registrera dig med en anpassad registreringsserver"
 
-#: src/components/product/ProductRegistrationPage.tsx:163
+#: src/components/product/ProductRegistrationPage.tsx:166
 msgid "Server URL"
 msgstr "Server URL"
 
 #. TRANSLATORS: %s is replaced by an example URL like https://example.com
-#: src/components/product/ProductRegistrationPage.tsx:166
+#: src/components/product/ProductRegistrationPage.tsx:169
 #, javascript-format
 msgid "Example: %s"
 msgstr "Exempel: %s"
 
-#: src/components/product/ProductRegistrationPage.tsx:215
+#: src/components/product/ProductRegistrationPage.tsx:218
 msgid "Provide registration code"
 msgstr "Ange registreringskod"
 
-#: src/components/product/ProductRegistrationPage.tsx:251
+#: src/components/product/ProductRegistrationPage.tsx:254
 msgid "Provide email address"
 msgstr "Ange en e-postadress"
 
-#: src/components/product/ProductRegistrationPage.tsx:340
+#: src/components/product/ProductRegistrationPage.tsx:345
 #: src/components/storage/LvmPage.tsx:178
 #: src/components/system/HostnamePage.tsx:97
 msgid "Check the following before continuing"
 msgstr "Kontrollera följande innan du fortsätter"
 
 #. TRANSLATORS: button label
-#: src/components/product/ProductRegistrationPage.tsx:370
-#: src/components/product/RegistrationExtension.tsx:161
-#: src/components/product/RegistrationExtension.tsx:176
+#: src/components/product/ProductRegistrationPage.tsx:375
+#: src/components/product/RegistrationExtension.tsx:152
+#: src/components/product/RegistrationExtension.tsx:167
 msgid "Register"
 msgstr "Registrera"
 
 #. TRANSLATORS: %s will be replaced with the hostname value
-#: src/components/product/ProductRegistrationPage.tsx:383
+#: src/components/product/ProductRegistrationPage.tsx:388
 #, javascript-format
 msgid "The product will be registered with \"%s\" hostname"
 msgstr "Produkten kommer att registreras med \"%s\" värdnamn"
 
-#: src/components/product/ProductRegistrationPage.tsx:387
+#: src/components/product/ProductRegistrationPage.tsx:392
 #, javascript-format
 msgid ""
 "You cannot change it later. Go to the %s section if you want to modify it "
@@ -1505,9 +1509,13 @@ msgstr ""
 "Du kan inte ändra den senare. Gå till avsnittet %s om du vill ändra den "
 "innan du fortsätter med registreringen."
 
-#: src/components/product/ProductRegistrationPage.tsx:392
+#: src/components/product/ProductRegistrationPage.tsx:397
 msgid "hostname"
 msgstr "värdnamn"
+
+#: src/components/product/ProductRegistrationPage.tsx:456
+msgid "Extensions"
+msgstr "Tillägg"
 
 #: src/components/product/ProductSelectionPage.tsx:118
 #, fuzzy
@@ -1549,66 +1557,66 @@ msgstr "Välj en lösning för att fortsätta"
 msgid "License acceptance is required to continue."
 msgstr ""
 
-#: src/components/product/ProductSelectionPage.tsx:331
+#: src/components/product/ProductSelectionPage.tsx:315
 #, fuzzy, javascript-format
-msgid "Switch to other available product"
+msgid "Switch to another available product"
 msgid_plural "Choose from %d available products"
 msgstr[0] "Tillgängliga produkter"
 msgstr[1] "Tillgängliga produkter"
 
-#: src/components/product/ProductSelectionPage.tsx:414
+#: src/components/product/ProductSelectionPage.tsx:437
 #, fuzzy
 msgid "Current selection"
 msgstr "Fel val"
 
-#: src/components/product/ProductSelectionPage.tsx:425
+#: src/components/product/ProductSelectionPage.tsx:448
 msgid "View license"
 msgstr ""
 
-#: src/components/product/ProductSelectionPage.tsx:466
+#: src/components/product/ProductSelectionPage.tsx:489
 #, fuzzy
 msgid "Select a product and confirm your choice."
 msgid_plural "Select a product and confirm your choice at the end of the list."
 msgstr[0] "Välj en lösning för att fortsätta"
 msgstr[1] "Välj en lösning för att fortsätta"
 
-#: src/components/product/ProductSelectionPage.tsx:473
+#: src/components/product/ProductSelectionPage.tsx:496
 msgid "Select a product"
 msgstr "Välj en produkt"
 
-#: src/components/product/ProductSelectionPage.tsx:482
+#: src/components/product/ProductSelectionPage.tsx:505
 msgid ""
 "Installation settings will automatically update to match the new product's "
 "defaults."
 msgstr ""
 
 #. TRANSLATORS: %s will be replaced by the registration key.
-#: src/components/product/RegistrationExtension.tsx:50
+#: src/components/product/RegistrationExtension.tsx:52
 #, javascript-format
 msgid "The extension has been registered with key %s."
 msgstr "Tillägget har registrerats med nyckeln %s."
 
-#: src/components/product/RegistrationExtension.tsx:54
+#: src/components/product/RegistrationExtension.tsx:56
 msgid "The extension was registered without any registration code."
 msgstr "Tillägget registrerades utan någon registreringskod."
 
 #. TRANSLATORS: Beta version label
-#: src/components/product/RegistrationExtension.tsx:131
+#: src/components/product/RegistrationExtension.tsx:120
 msgid "Beta"
 msgstr "Beta"
 
 #. TRANSLATORS: Label for recommended extensions
-#: src/components/product/RegistrationExtension.tsx:137
+#: src/components/product/RegistrationExtension.tsx:126
 msgid "Recommended"
 msgstr "Rekommenderad"
 
 #. TRANSLATORS: warning title, the extension is not available on the server and cannot be registered
-#: src/components/product/RegistrationExtension.tsx:182
+#: src/components/product/RegistrationExtension.tsx:173
 msgid "Not available"
 msgstr "Inte tillgänglig"
 
 #. TRANSLATORS: warning message, the extension is not available on the server and cannot be registered
-#: src/components/product/RegistrationExtension.tsx:185
+#: src/components/product/RegistrationExtension.tsx:176
 msgid ""
 "This extension is not available on the server. Ask the server administrator "
 "to mirror the extension."
@@ -2927,70 +2935,70 @@ msgstr "Monteringspunkt läge"
 msgid "Go to storage page"
 msgstr "Gå till lagringssidan"
 
-#: src/components/storage/PartitionsSection.tsx:87
+#: src/components/storage/PartitionsSection.tsx:90
 msgid "Moreover, the following partitions will be created or mounted"
 msgstr "Dessutom kommer följande partitioner att skapas eller monteras"
 
-#: src/components/storage/PartitionsSection.tsx:91
+#: src/components/storage/PartitionsSection.tsx:94
 msgid "Moreover, the following partition will be created."
 msgid_plural "Moreover, the following partitions will be created."
 msgstr[0] "Dessutom kommer följande partition att skapas."
 msgstr[1] "Dessutom kommer följande partitioner att skapas."
 
-#: src/components/storage/PartitionsSection.tsx:97
+#: src/components/storage/PartitionsSection.tsx:100
 msgid "Moreover, the following partition will be mounted."
 msgid_plural "Moreover, the following partitions will be mounted."
 msgstr[0] "Dessutom kommer följande partition att monteras."
 msgstr[1] "Dessutom kommer följande partitioner att monteras."
 
-#: src/components/storage/PartitionsSection.tsx:104
+#: src/components/storage/PartitionsSection.tsx:107
 msgid "The following partitions will be created or mounted"
 msgstr "Följande partitioner kommer att skapas eller monteras"
 
-#: src/components/storage/PartitionsSection.tsx:108
+#: src/components/storage/PartitionsSection.tsx:111
 msgid "The following partition will be created."
 msgid_plural "The following partitions will be created."
 msgstr[0] "Följande partition kommer att skapas."
 msgstr[1] "Följande partitioner kommer att skapas."
 
-#: src/components/storage/PartitionsSection.tsx:114
+#: src/components/storage/PartitionsSection.tsx:117
 msgid "The following partition will be mounted."
 msgid_plural "The following partitions will be mounted."
 msgstr[0] "Följande partition kommer att monteras."
 msgstr[1] "Följande partitioner kommer att monteras."
 
-#: src/components/storage/PartitionsSection.tsx:124
+#: src/components/storage/PartitionsSection.tsx:127
 msgid "Any partition needed to boot will be configured."
 msgstr "Alla partitioner som behövs för uppstart kommer att konfigureras."
 
-#: src/components/storage/PartitionsSection.tsx:125
+#: src/components/storage/PartitionsSection.tsx:128
 msgid "Partitions to host \"system\" will be created if needed."
 msgstr ""
 "Partitioner för att vara värd för \"systemet\" kommer att skapas vid behov."
 
 #. TRANSLATORS: ARIA (accesibility) description of an UI element. %s is a mount path.
-#: src/components/storage/PartitionsSection.tsx:162
+#: src/components/storage/PartitionsSection.tsx:165
 #, javascript-format
 msgid "Partition %s"
 msgstr "Partition %s"
 
 #. TRANSLATORS: ARIA (accesibility) description of an button. %s is a mount path.
-#: src/components/storage/PartitionsSection.tsx:174
+#: src/components/storage/PartitionsSection.tsx:177
 #, javascript-format
 msgid "Options for partition %s"
 msgstr "Alternativ för partition %s"
 
-#: src/components/storage/PartitionsSection.tsx:191
-#: src/components/storage/VolumeGroupEditor.tsx:176
+#: src/components/storage/PartitionsSection.tsx:194
+#: src/components/storage/VolumeGroupEditor.tsx:181
 #: src/components/storage/iscsi/NodesPresenter.jsx:84
 msgid "Delete"
 msgstr "Ta bort"
 
-#: src/components/storage/PartitionsSection.tsx:288
+#: src/components/storage/PartitionsSection.tsx:286
 msgid "Partitions"
 msgstr "Partitioner"
 
-#: src/components/storage/PartitionsSection.tsx:308
+#: src/components/storage/PartitionsSection.tsx:306
 #: src/components/storage/UnusedMenu.tsx:78
 msgid "Add or use partition"
 msgstr "Lägg till eller använd en partition"
@@ -3493,57 +3501,57 @@ msgstr "Formatera hela enheten eller montera ett befintligt filsystem"
 
 #. TRANSLATORS: %1$s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case). %2$s is a disk name like sda.
-#: src/components/storage/VolumeGroupEditor.tsx:79
+#: src/components/storage/VolumeGroupEditor.tsx:84
 #, javascript-format
 msgid "%1$s will be created as a partition at %2$s"
 msgid_plural "%1$s will be created as partitions at %2$s"
 msgstr[0] "%1$s kommer att skapas som en partition på %2$s"
 msgstr[1] "%1$s kommer att skapa partitioner på %2$s"
 
-#: src/components/storage/VolumeGroupEditor.tsx:88
+#: src/components/storage/VolumeGroupEditor.tsx:93
 msgid "The logical volume will also be deleted"
 msgid_plural "The logical volumes will also be deleted"
 msgstr[0] "Den logiska volymen kommer också att raderas"
 msgstr[1] "Det logiska volymerna kommer också att raderas"
 
-#: src/components/storage/VolumeGroupEditor.tsx:103
+#: src/components/storage/VolumeGroupEditor.tsx:108
 msgid "Delete volume group"
 msgstr "Ta bort volymgrupp"
 
-#: src/components/storage/VolumeGroupEditor.tsx:115
+#: src/components/storage/VolumeGroupEditor.tsx:120
 msgid "Modify settings and physical volumes"
 msgstr "Modifiera inställningar och fysiska volymer"
 
-#: src/components/storage/VolumeGroupEditor.tsx:119
+#: src/components/storage/VolumeGroupEditor.tsx:124
 msgid "Edit volume group"
 msgstr "Redigera volymgrupp"
 
 #. TRANSLATORS: ARIA (accesibility) description of an UI element. %s is a mount path.
-#: src/components/storage/VolumeGroupEditor.tsx:150
+#: src/components/storage/VolumeGroupEditor.tsx:155
 #, javascript-format
 msgid "Volume group %s"
 msgstr "Volymgrupp %s"
 
-#: src/components/storage/VolumeGroupEditor.tsx:190
+#: src/components/storage/VolumeGroupEditor.tsx:195
 #, javascript-format
 msgid "Create LVM volume group %s"
 msgstr "Skapa LVM volymgrupp %s"
 
-#: src/components/storage/VolumeGroupEditor.tsx:191
+#: src/components/storage/VolumeGroupEditor.tsx:196
 #, javascript-format
 msgid "Empty LVM volume group %s"
 msgstr "Tom LVM volymgrupp %s"
 
-#: src/components/storage/VolumeGroupEditor.tsx:246
+#: src/components/storage/VolumeGroupEditor.tsx:251
 msgid "Add logical volume"
 msgstr "Lägg till logisk volym"
 
-#: src/components/storage/VolumeGroupEditor.tsx:256
+#: src/components/storage/VolumeGroupEditor.tsx:263
 #, javascript-format
 msgid "Logical volumes for %s"
 msgstr "Logiska volymer för %s"
 
-#: src/components/storage/VolumeGroupEditor.tsx:271
+#: src/components/storage/VolumeGroupEditor.tsx:281
 msgid "The following logical volume will be created"
 msgid_plural "The following logical volumes will be created"
 msgstr[0] "Följande logiska volym kommer att skapas"
@@ -4743,9 +4751,6 @@ msgstr "ZFCP"
 #~ msgstr ""
 #~ "Installera med flera enheter med en anpassad strategi för att hitta det "
 #~ "utrymme som behövs."
-
-#~ msgid "Extensions"
-#~ msgstr "Tillägg"
 
 #~ msgid "Reloading data, please wait..."
 #~ msgstr "Laddar om data, vänligen vänta..."

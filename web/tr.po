@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-21 13:13+0000\n"
+"POT-Creation-Date: 2026-01-22 17:12+0000\n"
 "PO-Revision-Date: 2025-10-05 22:59+0000\n"
 "Last-Translator: Emin Tufan Çetin <cetin@users.noreply.l10n.opensuse.org>\n"
 "Language-Team: Turkish <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -23,16 +23,10 @@ msgstr ""
 msgid "Breadcrumbs"
 msgstr ""
 
-#: src/components/core/ChangeProductOption.tsx:49
-#: src/components/product/ProductSelectionPage.tsx:473
+#: src/components/core/ChangeProductOption.tsx:48
+#: src/components/product/ProductSelectionPage.tsx:496
 msgid "Change product"
 msgstr "Ürünü değiştir"
-
-#. TRANSLATORS: The install button label
-#: src/components/core/InstallButton.tsx:57
-#: src/components/overview/OverviewPage.tsx:123
-msgid "Install"
-msgstr "Yükle"
 
 #: src/components/core/InstallationExit.tsx:51
 #, fuzzy
@@ -245,7 +239,7 @@ msgstr "Yazılım"
 
 #: src/components/core/IssuesDrawer.tsx:50
 #: src/components/overview/RegistrationSummary.tsx:55
-#: src/components/product/ProductRegistrationPage.tsx:439
+#: src/components/product/ProductRegistrationPage.tsx:480
 #: src/routes/registration.tsx:31
 msgid "Registration"
 msgstr "Kayıt"
@@ -341,7 +335,7 @@ msgstr "Geri"
 #: src/components/network/BindingSettingsForm.tsx:229
 #: src/components/network/IpSettingsForm.tsx:221
 #: src/components/network/WifiConnectionForm.tsx:188
-#: src/components/product/ProductSelectionPage.tsx:379
+#: src/components/product/ProductSelectionPage.tsx:402
 msgid "Cancel"
 msgstr "İptal"
 
@@ -422,6 +416,12 @@ msgstr "Kaynak bulunamadı veya kayboldu"
 #: src/components/core/ResourceNotFound.tsx:43
 msgid "It doesn't exist or can't be reached."
 msgstr "Yok veya ulaşılamaz."
+
+#. TRANSLATORS: The review and install button label
+#: src/components/core/ReviewAndInstallButton.tsx:56
+#, fuzzy
+msgid "Review and install"
+msgstr "Gözden geçir ve düzelt"
 
 #: src/components/core/RowActions.tsx:71
 #: src/components/storage/ProposalResultSection.tsx:138
@@ -547,11 +547,11 @@ msgstr "Bölgeye, saat dilimi koduna veya UTC farkına göre filtreleyin"
 msgid "None of the time zones match the filter."
 msgstr "Hiçbir zaman dilimi filtreye uymuyor."
 
-#: src/components/layout/Header.tsx:85
+#: src/components/layout/Header.tsx:90
 msgid "Options toggle"
 msgstr "Seçenekler geçişi"
 
-#: src/components/layout/Header.tsx:97
+#: src/components/layout/Header.tsx:102
 msgid "Download logs"
 msgstr "Günlükleri indir"
 
@@ -719,8 +719,8 @@ msgstr "Seçilen mod için en az bir adres sağlanmalıdır"
 #: src/components/network/IpSettingsForm.tsx:152
 #: src/components/network/WifiConnectionDetails.tsx:100
 #: src/components/storage/FilesystemMenu.tsx:109
-#: src/components/storage/PartitionsSection.tsx:183
-#: src/components/storage/VolumeGroupEditor.tsx:168
+#: src/components/storage/PartitionsSection.tsx:186
+#: src/components/storage/VolumeGroupEditor.tsx:173
 #: src/components/storage/iscsi/NodesPresenter.jsx:80
 #: src/components/users/FirstUser.tsx:63 src/components/users/RootUser.tsx:57
 msgid "Edit"
@@ -1234,6 +1234,10 @@ msgstr "Kurulumu Onayla"
 msgid "When ready, click on the [install] button at the end of the page."
 msgstr ""
 
+#: src/components/overview/OverviewPage.tsx:123
+msgid "Install"
+msgstr "Yükle"
+
 #: src/components/overview/OverviewPage.tsx:124
 msgid "Install now with potential data loss"
 msgstr ""
@@ -1427,96 +1431,96 @@ msgstr "Kapat"
 msgid "%s logo"
 msgstr "%s logosu"
 
-#: src/components/product/ProductRegistrationPage.tsx:68
+#: src/components/product/ProductRegistrationPage.tsx:69
 msgid "Registration server"
 msgstr "Kayıt sunucusu"
 
-#: src/components/product/ProductRegistrationPage.tsx:69
+#: src/components/product/ProductRegistrationPage.tsx:70
 msgid "Email"
 msgstr "E-posta"
 
-#: src/components/product/ProductRegistrationPage.tsx:70
+#: src/components/product/ProductRegistrationPage.tsx:71
 msgid "SUSE Customer Center (SCC)"
 msgstr "SUSE Müşteri Merkezi (SMM)"
 
-#: src/components/product/ProductRegistrationPage.tsx:71
+#: src/components/product/ProductRegistrationPage.tsx:72
 #: src/components/storage/utils.ts:104
 msgid "Custom"
 msgstr "Özel"
 
-#: src/components/product/ProductRegistrationPage.tsx:83
+#: src/components/product/ProductRegistrationPage.tsx:86
 #, javascript-format
 msgid "%s has been registered with below information."
 msgstr "%s aşağıdaki bilgilerle kayıt edildi."
 
 #. TRANSLATORS: input field label
-#: src/components/product/ProductRegistrationPage.tsx:95
-#: src/components/product/ProductRegistrationPage.tsx:183
-#: src/components/product/RegistrationExtension.tsx:150
+#: src/components/product/ProductRegistrationPage.tsx:98
+#: src/components/product/ProductRegistrationPage.tsx:186
+#: src/components/product/RegistrationExtension.tsx:141
 msgid "Registration code"
 msgstr "Kayıt kodu"
 
 #. TRANSLATORS: switch for displaying or hiding the registration code
-#: src/components/product/ProductRegistrationPage.tsx:100
-#: src/components/product/RegistrationExtension.tsx:64
+#: src/components/product/ProductRegistrationPage.tsx:103
+#: src/components/product/RegistrationExtension.tsx:66
 msgid "Hide"
 msgstr "Gizle"
 
-#: src/components/product/ProductRegistrationPage.tsx:100
-#: src/components/product/RegistrationExtension.tsx:64
+#: src/components/product/ProductRegistrationPage.tsx:103
+#: src/components/product/RegistrationExtension.tsx:66
 msgid "Show"
 msgstr "Göster"
 
-#: src/components/product/ProductRegistrationPage.tsx:139
+#: src/components/product/ProductRegistrationPage.tsx:142
 msgid "Server options"
 msgstr "Sunucu seçenekleri"
 
-#: src/components/product/ProductRegistrationPage.tsx:140
+#: src/components/product/ProductRegistrationPage.tsx:143
 msgid "Register using SUSE server"
 msgstr "SUSE sunucusunu kullanarak kaydol"
 
-#: src/components/product/ProductRegistrationPage.tsx:145
+#: src/components/product/ProductRegistrationPage.tsx:148
 msgid "Register using a custom registration server"
 msgstr "Özel bir kayıt sunucusu kullanarak kaydol"
 
-#: src/components/product/ProductRegistrationPage.tsx:163
+#: src/components/product/ProductRegistrationPage.tsx:166
 msgid "Server URL"
 msgstr "Sunucu URL'si"
 
 #. TRANSLATORS: %s is replaced by an example URL like https://example.com
-#: src/components/product/ProductRegistrationPage.tsx:166
+#: src/components/product/ProductRegistrationPage.tsx:169
 #, javascript-format
 msgid "Example: %s"
 msgstr "Örnek: %s"
 
-#: src/components/product/ProductRegistrationPage.tsx:215
+#: src/components/product/ProductRegistrationPage.tsx:218
 msgid "Provide registration code"
 msgstr "Kayıt kodunu sağlayın"
 
-#: src/components/product/ProductRegistrationPage.tsx:251
+#: src/components/product/ProductRegistrationPage.tsx:254
 msgid "Provide email address"
 msgstr "E-posta adresini belirtin"
 
-#: src/components/product/ProductRegistrationPage.tsx:340
+#: src/components/product/ProductRegistrationPage.tsx:345
 #: src/components/storage/LvmPage.tsx:178
 #: src/components/system/HostnamePage.tsx:97
 msgid "Check the following before continuing"
 msgstr "Devam etmeden önce aşağıdakileri kontrol edin"
 
 #. TRANSLATORS: button label
-#: src/components/product/ProductRegistrationPage.tsx:370
-#: src/components/product/RegistrationExtension.tsx:161
-#: src/components/product/RegistrationExtension.tsx:176
+#: src/components/product/ProductRegistrationPage.tsx:375
+#: src/components/product/RegistrationExtension.tsx:152
+#: src/components/product/RegistrationExtension.tsx:167
 msgid "Register"
 msgstr "Kaydol"
 
 #. TRANSLATORS: %s will be replaced with the hostname value
-#: src/components/product/ProductRegistrationPage.tsx:383
+#: src/components/product/ProductRegistrationPage.tsx:388
 #, javascript-format
 msgid "The product will be registered with \"%s\" hostname"
 msgstr ""
 
-#: src/components/product/ProductRegistrationPage.tsx:387
+#: src/components/product/ProductRegistrationPage.tsx:392
 #, javascript-format
 msgid ""
 "You cannot change it later. Go to the %s section if you want to modify it "
@@ -1525,9 +1529,13 @@ msgstr ""
 "Daha sonra değiştiremezsiniz. Kayıt işlemine devam etmeden önce değiştirmek "
 "istiyorsanız %s bölümüne gidin."
 
-#: src/components/product/ProductRegistrationPage.tsx:392
+#: src/components/product/ProductRegistrationPage.tsx:397
 msgid "hostname"
 msgstr "ana bilgisayar adı"
+
+#: src/components/product/ProductRegistrationPage.tsx:456
+msgid "Extensions"
+msgstr "Uzantılar"
 
 #: src/components/product/ProductSelectionPage.tsx:118
 #, fuzzy
@@ -1571,66 +1579,66 @@ msgstr "Devam etmek için bir çözüm seçin"
 msgid "License acceptance is required to continue."
 msgstr ""
 
-#: src/components/product/ProductSelectionPage.tsx:331
+#: src/components/product/ProductSelectionPage.tsx:315
 #, fuzzy, javascript-format
-msgid "Switch to other available product"
+msgid "Switch to another available product"
 msgid_plural "Choose from %d available products"
 msgstr[0] "Mevcut ürünler"
 msgstr[1] "Mevcut ürünler"
 
-#: src/components/product/ProductSelectionPage.tsx:414
+#: src/components/product/ProductSelectionPage.tsx:437
 #, fuzzy
 msgid "Current selection"
 msgstr "Satır seçimi"
 
-#: src/components/product/ProductSelectionPage.tsx:425
+#: src/components/product/ProductSelectionPage.tsx:448
 msgid "View license"
 msgstr ""
 
-#: src/components/product/ProductSelectionPage.tsx:466
+#: src/components/product/ProductSelectionPage.tsx:489
 #, fuzzy
 msgid "Select a product and confirm your choice."
 msgid_plural "Select a product and confirm your choice at the end of the list."
 msgstr[0] "Devam etmek için bir çözüm seçin"
 msgstr[1] "Devam etmek için bir çözüm seçin"
 
-#: src/components/product/ProductSelectionPage.tsx:473
+#: src/components/product/ProductSelectionPage.tsx:496
 msgid "Select a product"
 msgstr "Bir ürün seçin"
 
-#: src/components/product/ProductSelectionPage.tsx:482
+#: src/components/product/ProductSelectionPage.tsx:505
 msgid ""
 "Installation settings will automatically update to match the new product's "
 "defaults."
 msgstr ""
 
 #. TRANSLATORS: %s will be replaced by the registration key.
-#: src/components/product/RegistrationExtension.tsx:50
+#: src/components/product/RegistrationExtension.tsx:52
 #, javascript-format
 msgid "The extension has been registered with key %s."
 msgstr "Uzantı %s anahtarıyla kaydedildi."
 
-#: src/components/product/RegistrationExtension.tsx:54
+#: src/components/product/RegistrationExtension.tsx:56
 msgid "The extension was registered without any registration code."
 msgstr "Uzantı herhangi bir kayıt kodu olmadan kaydedildi."
 
 #. TRANSLATORS: Beta version label
-#: src/components/product/RegistrationExtension.tsx:131
+#: src/components/product/RegistrationExtension.tsx:120
 msgid "Beta"
 msgstr "Beta"
 
 #. TRANSLATORS: Label for recommended extensions
-#: src/components/product/RegistrationExtension.tsx:137
+#: src/components/product/RegistrationExtension.tsx:126
 msgid "Recommended"
 msgstr "Tavsiye edilen"
 
 #. TRANSLATORS: warning title, the extension is not available on the server and cannot be registered
-#: src/components/product/RegistrationExtension.tsx:182
+#: src/components/product/RegistrationExtension.tsx:173
 msgid "Not available"
 msgstr "Müsait değil"
 
 #. TRANSLATORS: warning message, the extension is not available on the server and cannot be registered
-#: src/components/product/RegistrationExtension.tsx:185
+#: src/components/product/RegistrationExtension.tsx:176
 msgid ""
 "This extension is not available on the server. Ask the server administrator "
 "to mirror the extension."
@@ -2942,70 +2950,70 @@ msgstr "Bağlantı noktası modu"
 msgid "Go to storage page"
 msgstr "Depolama sayfasına git"
 
-#: src/components/storage/PartitionsSection.tsx:87
+#: src/components/storage/PartitionsSection.tsx:90
 msgid "Moreover, the following partitions will be created or mounted"
 msgstr "Ayrıca, aşağıdaki bölümler oluşturulacak veya bağlanacaktır"
 
-#: src/components/storage/PartitionsSection.tsx:91
+#: src/components/storage/PartitionsSection.tsx:94
 msgid "Moreover, the following partition will be created."
 msgid_plural "Moreover, the following partitions will be created."
 msgstr[0] "Ayrıca, aşağıdaki bölüm oluşturulacak veya bağlanacaktır."
 msgstr[1] "Ayrıca, aşağıdaki bölümler oluşturulacak veya bağlanacaktır."
 
-#: src/components/storage/PartitionsSection.tsx:97
+#: src/components/storage/PartitionsSection.tsx:100
 msgid "Moreover, the following partition will be mounted."
 msgid_plural "Moreover, the following partitions will be mounted."
 msgstr[0] "Ayrıca, aşağıdaki bölüm oluşturulacak veya bağlanacaktır."
 msgstr[1] "Ayrıca, aşağıdaki bölümler oluşturulacak veya bağlanacaktır."
 
-#: src/components/storage/PartitionsSection.tsx:104
+#: src/components/storage/PartitionsSection.tsx:107
 msgid "The following partitions will be created or mounted"
 msgstr "Aşağıdaki bölümler oluşturulacak veya bağlanacak"
 
-#: src/components/storage/PartitionsSection.tsx:108
+#: src/components/storage/PartitionsSection.tsx:111
 msgid "The following partition will be created."
 msgid_plural "The following partitions will be created."
 msgstr[0] "Aşağıdaki bölüm oluşturulacak veya bağlanacak."
 msgstr[1] "Aşağıdaki bölümler oluşturulacak veya bağlanacak."
 
-#: src/components/storage/PartitionsSection.tsx:114
+#: src/components/storage/PartitionsSection.tsx:117
 msgid "The following partition will be mounted."
 msgid_plural "The following partitions will be mounted."
 msgstr[0] "Aşağıdaki bölüm bağlanacak."
 msgstr[1] "Aşağıdaki bölümler bağlanacak."
 
-#: src/components/storage/PartitionsSection.tsx:124
+#: src/components/storage/PartitionsSection.tsx:127
 msgid "Any partition needed to boot will be configured."
 msgstr "Önyükleme için gereken herhangi bir bölüm yapılandırılacaktır."
 
-#: src/components/storage/PartitionsSection.tsx:125
+#: src/components/storage/PartitionsSection.tsx:128
 #, fuzzy
 msgid "Partitions to host \"system\" will be created if needed."
 msgstr "Önyükleme için gerekli bölümler kurulum diskinde ayrılacaktır."
 
 #. TRANSLATORS: ARIA (accesibility) description of an UI element. %s is a mount path.
-#: src/components/storage/PartitionsSection.tsx:162
+#: src/components/storage/PartitionsSection.tsx:165
 #, fuzzy, javascript-format
 msgid "Partition %s"
 msgstr "Bölümler"
 
 #. TRANSLATORS: ARIA (accesibility) description of an button. %s is a mount path.
-#: src/components/storage/PartitionsSection.tsx:174
+#: src/components/storage/PartitionsSection.tsx:177
 #, fuzzy, javascript-format
 msgid "Options for partition %s"
 msgstr "%s bölümü kullanılıyor"
 
-#: src/components/storage/PartitionsSection.tsx:191
-#: src/components/storage/VolumeGroupEditor.tsx:176
+#: src/components/storage/PartitionsSection.tsx:194
+#: src/components/storage/VolumeGroupEditor.tsx:181
 #: src/components/storage/iscsi/NodesPresenter.jsx:84
 msgid "Delete"
 msgstr "Sil"
 
-#: src/components/storage/PartitionsSection.tsx:288
+#: src/components/storage/PartitionsSection.tsx:286
 msgid "Partitions"
 msgstr "Bölümler"
 
-#: src/components/storage/PartitionsSection.tsx:308
+#: src/components/storage/PartitionsSection.tsx:306
 #: src/components/storage/UnusedMenu.tsx:78
 msgid "Add or use partition"
 msgstr "Bölüm ekle veya kullan"
@@ -3503,57 +3511,57 @@ msgstr "Tüm cihazı biçimlendirin veya mevcut bir dosya sistemini bağlayın"
 
 #. TRANSLATORS: %1$s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case). %2$s is a disk name like sda.
-#: src/components/storage/VolumeGroupEditor.tsx:79
+#: src/components/storage/VolumeGroupEditor.tsx:84
 #, javascript-format
 msgid "%1$s will be created as a partition at %2$s"
 msgid_plural "%1$s will be created as partitions at %2$s"
 msgstr[0] "%1$s bölümü (%2$s) olarak oluşturulacak"
 msgstr[1] "%1$s bölümleri (%2$s) olarak oluşturulacak"
 
-#: src/components/storage/VolumeGroupEditor.tsx:88
+#: src/components/storage/VolumeGroupEditor.tsx:93
 msgid "The logical volume will also be deleted"
 msgid_plural "The logical volumes will also be deleted"
 msgstr[0] "Mantıksal birimde silinecek"
 msgstr[1] "Mantıksal birimlerdede silinecek"
 
-#: src/components/storage/VolumeGroupEditor.tsx:103
+#: src/components/storage/VolumeGroupEditor.tsx:108
 msgid "Delete volume group"
 msgstr "Birim grubunu sil"
 
-#: src/components/storage/VolumeGroupEditor.tsx:115
+#: src/components/storage/VolumeGroupEditor.tsx:120
 msgid "Modify settings and physical volumes"
 msgstr "Ayarları ve fiziksel birimleri değiştirin"
 
-#: src/components/storage/VolumeGroupEditor.tsx:119
+#: src/components/storage/VolumeGroupEditor.tsx:124
 msgid "Edit volume group"
 msgstr "Birim grubunu düzenle"
 
 #. TRANSLATORS: ARIA (accesibility) description of an UI element. %s is a mount path.
-#: src/components/storage/VolumeGroupEditor.tsx:150
+#: src/components/storage/VolumeGroupEditor.tsx:155
 #, fuzzy, javascript-format
 msgid "Volume group %s"
 msgstr "Boş LVM birim grubu %s"
 
-#: src/components/storage/VolumeGroupEditor.tsx:190
+#: src/components/storage/VolumeGroupEditor.tsx:195
 #, javascript-format
 msgid "Create LVM volume group %s"
 msgstr "LVM birim grubu %s'yi oluştur"
 
-#: src/components/storage/VolumeGroupEditor.tsx:191
+#: src/components/storage/VolumeGroupEditor.tsx:196
 #, javascript-format
 msgid "Empty LVM volume group %s"
 msgstr "Boş LVM birim grubu %s"
 
-#: src/components/storage/VolumeGroupEditor.tsx:246
+#: src/components/storage/VolumeGroupEditor.tsx:251
 msgid "Add logical volume"
 msgstr "Mantıksal birim ekle"
 
-#: src/components/storage/VolumeGroupEditor.tsx:256
+#: src/components/storage/VolumeGroupEditor.tsx:263
 #, javascript-format
 msgid "Logical volumes for %s"
 msgstr "%s için mantıksal birimler"
 
-#: src/components/storage/VolumeGroupEditor.tsx:271
+#: src/components/storage/VolumeGroupEditor.tsx:281
 msgid "The following logical volume will be created"
 msgid_plural "The following logical volumes will be created"
 msgstr[0] "Aşağıdaki mantıksal birim oluşturulacak"
@@ -4721,9 +4729,6 @@ msgstr "ZFCP"
 #~ msgstr ""
 #~ "İhtiyaç duyduğunuz alanı bulmak için özel bir stratejiyle birden fazla "
 #~ "cihaz kullanarak kurulum yapın."
-
-#~ msgid "Extensions"
-#~ msgstr "Uzantılar"
 
 #~ msgid "Reloading data, please wait..."
 #~ msgstr "Veriler yeniden yükleniyor, lütfen bekleyin..."

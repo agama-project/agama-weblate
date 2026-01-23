@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-21 13:13+0000\n"
+"POT-Creation-Date: 2026-01-22 17:12+0000\n"
 "PO-Revision-Date: 2026-01-20 00:04+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -23,16 +23,10 @@ msgstr ""
 msgid "Breadcrumbs"
 msgstr "パンくず"
 
-#: src/components/core/ChangeProductOption.tsx:49
-#: src/components/product/ProductSelectionPage.tsx:473
+#: src/components/core/ChangeProductOption.tsx:48
+#: src/components/product/ProductSelectionPage.tsx:496
 msgid "Change product"
 msgstr "製品の変更"
-
-#. TRANSLATORS: The install button label
-#: src/components/core/InstallButton.tsx:57
-#: src/components/overview/OverviewPage.tsx:123
-msgid "Install"
-msgstr "インストール"
 
 #: src/components/core/InstallationExit.tsx:51
 #, fuzzy
@@ -245,7 +239,7 @@ msgstr "ソフトウエア"
 
 #: src/components/core/IssuesDrawer.tsx:50
 #: src/components/overview/RegistrationSummary.tsx:55
-#: src/components/product/ProductRegistrationPage.tsx:439
+#: src/components/product/ProductRegistrationPage.tsx:480
 #: src/routes/registration.tsx:31
 msgid "Registration"
 msgstr "登録"
@@ -337,7 +331,7 @@ msgstr "戻る"
 #: src/components/network/BindingSettingsForm.tsx:229
 #: src/components/network/IpSettingsForm.tsx:221
 #: src/components/network/WifiConnectionForm.tsx:188
-#: src/components/product/ProductSelectionPage.tsx:379
+#: src/components/product/ProductSelectionPage.tsx:402
 msgid "Cancel"
 msgstr "キャンセル"
 
@@ -416,6 +410,12 @@ msgstr "リソースが見つからないか失われています"
 #: src/components/core/ResourceNotFound.tsx:43
 msgid "It doesn't exist or can't be reached."
 msgstr "対象が存在していないか、到達不可能です。"
+
+#. TRANSLATORS: The review and install button label
+#: src/components/core/ReviewAndInstallButton.tsx:56
+#, fuzzy
+msgid "Review and install"
+msgstr "確認と修正"
 
 #: src/components/core/RowActions.tsx:71
 #: src/components/storage/ProposalResultSection.tsx:138
@@ -539,11 +539,11 @@ msgstr "地域／タイムゾーンコード／UTC オフセット値でフィ�
 msgid "None of the time zones match the filter."
 msgstr "フィルタに該当するタイムゾーンがありません。"
 
-#: src/components/layout/Header.tsx:85
+#: src/components/layout/Header.tsx:90
 msgid "Options toggle"
 msgstr "オプションの切り替え"
 
-#: src/components/layout/Header.tsx:97
+#: src/components/layout/Header.tsx:102
 msgid "Download logs"
 msgstr "ログのダウンロード"
 
@@ -710,8 +710,8 @@ msgstr ""
 #: src/components/network/IpSettingsForm.tsx:152
 #: src/components/network/WifiConnectionDetails.tsx:100
 #: src/components/storage/FilesystemMenu.tsx:109
-#: src/components/storage/PartitionsSection.tsx:183
-#: src/components/storage/VolumeGroupEditor.tsx:168
+#: src/components/storage/PartitionsSection.tsx:186
+#: src/components/storage/VolumeGroupEditor.tsx:173
 #: src/components/storage/iscsi/NodesPresenter.jsx:80
 #: src/components/users/FirstUser.tsx:63 src/components/users/RootUser.tsx:57
 msgid "Edit"
@@ -1218,6 +1218,10 @@ msgid "When ready, click on the [install] button at the end of the page."
 msgstr ""
 "準備ができたら、ページ末尾にある [インストール] ボタンを押してください。"
 
+#: src/components/overview/OverviewPage.tsx:123
+msgid "Install"
+msgstr "インストール"
+
 #: src/components/overview/OverviewPage.tsx:124
 msgid "Install now with potential data loss"
 msgstr "データ削除を了承してインストールを開始する"
@@ -1396,96 +1400,96 @@ msgstr "閉じる"
 msgid "%s logo"
 msgstr "%s ロゴ"
 
-#: src/components/product/ProductRegistrationPage.tsx:68
+#: src/components/product/ProductRegistrationPage.tsx:69
 msgid "Registration server"
 msgstr "登録サーバ"
 
-#: src/components/product/ProductRegistrationPage.tsx:69
+#: src/components/product/ProductRegistrationPage.tsx:70
 msgid "Email"
 msgstr "電子メール"
 
-#: src/components/product/ProductRegistrationPage.tsx:70
+#: src/components/product/ProductRegistrationPage.tsx:71
 msgid "SUSE Customer Center (SCC)"
 msgstr "SUSE Customer Center (SCC)"
 
-#: src/components/product/ProductRegistrationPage.tsx:71
+#: src/components/product/ProductRegistrationPage.tsx:72
 #: src/components/storage/utils.ts:104
 msgid "Custom"
 msgstr "独自設定"
 
-#: src/components/product/ProductRegistrationPage.tsx:83
+#: src/components/product/ProductRegistrationPage.tsx:86
 #, javascript-format
 msgid "%s has been registered with below information."
 msgstr "%s を下記の情報で登録しました。"
 
 #. TRANSLATORS: input field label
-#: src/components/product/ProductRegistrationPage.tsx:95
-#: src/components/product/ProductRegistrationPage.tsx:183
-#: src/components/product/RegistrationExtension.tsx:150
+#: src/components/product/ProductRegistrationPage.tsx:98
+#: src/components/product/ProductRegistrationPage.tsx:186
+#: src/components/product/RegistrationExtension.tsx:141
 msgid "Registration code"
 msgstr "登録コード"
 
 #. TRANSLATORS: switch for displaying or hiding the registration code
-#: src/components/product/ProductRegistrationPage.tsx:100
-#: src/components/product/RegistrationExtension.tsx:64
+#: src/components/product/ProductRegistrationPage.tsx:103
+#: src/components/product/RegistrationExtension.tsx:66
 msgid "Hide"
 msgstr "隠す"
 
-#: src/components/product/ProductRegistrationPage.tsx:100
-#: src/components/product/RegistrationExtension.tsx:64
+#: src/components/product/ProductRegistrationPage.tsx:103
+#: src/components/product/RegistrationExtension.tsx:66
 msgid "Show"
 msgstr "表示"
 
-#: src/components/product/ProductRegistrationPage.tsx:139
+#: src/components/product/ProductRegistrationPage.tsx:142
 msgid "Server options"
 msgstr "サーバオプション"
 
-#: src/components/product/ProductRegistrationPage.tsx:140
+#: src/components/product/ProductRegistrationPage.tsx:143
 msgid "Register using SUSE server"
 msgstr "SUSE サーバを利用して登録"
 
-#: src/components/product/ProductRegistrationPage.tsx:145
+#: src/components/product/ProductRegistrationPage.tsx:148
 msgid "Register using a custom registration server"
 msgstr "独自の登録サーバを利用して登録"
 
-#: src/components/product/ProductRegistrationPage.tsx:163
+#: src/components/product/ProductRegistrationPage.tsx:166
 msgid "Server URL"
 msgstr "サーバ URL"
 
 #. TRANSLATORS: %s is replaced by an example URL like https://example.com
-#: src/components/product/ProductRegistrationPage.tsx:166
+#: src/components/product/ProductRegistrationPage.tsx:169
 #, javascript-format
 msgid "Example: %s"
 msgstr "例: %s"
 
-#: src/components/product/ProductRegistrationPage.tsx:215
+#: src/components/product/ProductRegistrationPage.tsx:218
 msgid "Provide registration code"
 msgstr "登録コードを入力する"
 
-#: src/components/product/ProductRegistrationPage.tsx:251
+#: src/components/product/ProductRegistrationPage.tsx:254
 msgid "Provide email address"
 msgstr "電子メールアドレスを入力する"
 
-#: src/components/product/ProductRegistrationPage.tsx:340
+#: src/components/product/ProductRegistrationPage.tsx:345
 #: src/components/storage/LvmPage.tsx:178
 #: src/components/system/HostnamePage.tsx:97
 msgid "Check the following before continuing"
 msgstr "続行する前に下記をご確認ください"
 
 #. TRANSLATORS: button label
-#: src/components/product/ProductRegistrationPage.tsx:370
-#: src/components/product/RegistrationExtension.tsx:161
-#: src/components/product/RegistrationExtension.tsx:176
+#: src/components/product/ProductRegistrationPage.tsx:375
+#: src/components/product/RegistrationExtension.tsx:152
+#: src/components/product/RegistrationExtension.tsx:167
 msgid "Register"
 msgstr "登録"
 
 #. TRANSLATORS: %s will be replaced with the hostname value
-#: src/components/product/ProductRegistrationPage.tsx:383
+#: src/components/product/ProductRegistrationPage.tsx:388
 #, javascript-format
 msgid "The product will be registered with \"%s\" hostname"
 msgstr "製品をホスト名 \"%s\" で登録します"
 
-#: src/components/product/ProductRegistrationPage.tsx:387
+#: src/components/product/ProductRegistrationPage.tsx:392
 #, javascript-format
 msgid ""
 "You cannot change it later. Go to the %s section if you want to modify it "
@@ -1494,9 +1498,13 @@ msgstr ""
 "登録内容は後から変更することができません。登録に際して変更しておきたい項目が"
 "ある場合は、 %s セクションに移動してください。"
 
-#: src/components/product/ProductRegistrationPage.tsx:392
+#: src/components/product/ProductRegistrationPage.tsx:397
 msgid "hostname"
 msgstr "ホスト名"
+
+#: src/components/product/ProductRegistrationPage.tsx:456
+msgid "Extensions"
+msgstr "拡張"
 
 #: src/components/product/ProductSelectionPage.tsx:118
 msgid "License acceptance required"
@@ -1536,30 +1544,30 @@ msgstr "続行するには製品を選択してください。"
 msgid "License acceptance is required to continue."
 msgstr "続行するにはライセンスの受け入れが必要です。"
 
-#: src/components/product/ProductSelectionPage.tsx:331
-#, javascript-format
-msgid "Switch to other available product"
+#: src/components/product/ProductSelectionPage.tsx:315
+#, fuzzy, javascript-format
+msgid "Switch to another available product"
 msgid_plural "Choose from %d available products"
 msgstr[0] "%d 個の利用可能な製品から選択"
 
-#: src/components/product/ProductSelectionPage.tsx:414
+#: src/components/product/ProductSelectionPage.tsx:437
 msgid "Current selection"
 msgstr "現在の選択"
 
-#: src/components/product/ProductSelectionPage.tsx:425
+#: src/components/product/ProductSelectionPage.tsx:448
 msgid "View license"
 msgstr "ライセンスの表示"
 
-#: src/components/product/ProductSelectionPage.tsx:466
+#: src/components/product/ProductSelectionPage.tsx:489
 msgid "Select a product and confirm your choice."
 msgid_plural "Select a product and confirm your choice at the end of the list."
 msgstr[0] "製品を選択したあと、末尾で選択を確認してください。"
 
-#: src/components/product/ProductSelectionPage.tsx:473
+#: src/components/product/ProductSelectionPage.tsx:496
 msgid "Select a product"
 msgstr "製品の選択"
 
-#: src/components/product/ProductSelectionPage.tsx:482
+#: src/components/product/ProductSelectionPage.tsx:505
 msgid ""
 "Installation settings will automatically update to match the new product's "
 "defaults."
@@ -1567,32 +1575,32 @@ msgstr ""
 "インストール設定は新たに選択した製品の既定値にあわせて自動調整されます。"
 
 #. TRANSLATORS: %s will be replaced by the registration key.
-#: src/components/product/RegistrationExtension.tsx:50
+#: src/components/product/RegistrationExtension.tsx:52
 #, javascript-format
 msgid "The extension has been registered with key %s."
 msgstr "拡張を %s の鍵で登録しました。"
 
-#: src/components/product/RegistrationExtension.tsx:54
+#: src/components/product/RegistrationExtension.tsx:56
 msgid "The extension was registered without any registration code."
 msgstr "登録コード無しで拡張の登録を行いました。"
 
 #. TRANSLATORS: Beta version label
-#: src/components/product/RegistrationExtension.tsx:131
+#: src/components/product/RegistrationExtension.tsx:120
 msgid "Beta"
 msgstr "ベータ"
 
 #. TRANSLATORS: Label for recommended extensions
-#: src/components/product/RegistrationExtension.tsx:137
+#: src/components/product/RegistrationExtension.tsx:126
 msgid "Recommended"
 msgstr "推奨"
 
 #. TRANSLATORS: warning title, the extension is not available on the server and cannot be registered
-#: src/components/product/RegistrationExtension.tsx:182
+#: src/components/product/RegistrationExtension.tsx:173
 msgid "Not available"
 msgstr "利用不可"
 
 #. TRANSLATORS: warning message, the extension is not available on the server and cannot be registered
-#: src/components/product/RegistrationExtension.tsx:185
+#: src/components/product/RegistrationExtension.tsx:176
 msgid ""
 "This extension is not available on the server. Ask the server administrator "
 "to mirror the extension."
@@ -2890,66 +2898,66 @@ msgstr "マウントポイントのモード"
 msgid "Go to storage page"
 msgstr "ストレージページに移動"
 
-#: src/components/storage/PartitionsSection.tsx:87
+#: src/components/storage/PartitionsSection.tsx:90
 msgid "Moreover, the following partitions will be created or mounted"
 msgstr "このほか、下記のパーティションを作成またはマウントします"
 
-#: src/components/storage/PartitionsSection.tsx:91
+#: src/components/storage/PartitionsSection.tsx:94
 msgid "Moreover, the following partition will be created."
 msgid_plural "Moreover, the following partitions will be created."
 msgstr[0] "このほか、下記のパーティションを作成します。"
 
-#: src/components/storage/PartitionsSection.tsx:97
+#: src/components/storage/PartitionsSection.tsx:100
 msgid "Moreover, the following partition will be mounted."
 msgid_plural "Moreover, the following partitions will be mounted."
 msgstr[0] "このほか、下記のパーティションをマウントします。"
 
-#: src/components/storage/PartitionsSection.tsx:104
+#: src/components/storage/PartitionsSection.tsx:107
 msgid "The following partitions will be created or mounted"
 msgstr "下記のパーティションを作成またはマウントします"
 
-#: src/components/storage/PartitionsSection.tsx:108
+#: src/components/storage/PartitionsSection.tsx:111
 msgid "The following partition will be created."
 msgid_plural "The following partitions will be created."
 msgstr[0] "下記のパーティションを作成します。"
 
-#: src/components/storage/PartitionsSection.tsx:114
+#: src/components/storage/PartitionsSection.tsx:117
 msgid "The following partition will be mounted."
 msgid_plural "The following partitions will be mounted."
 msgstr[0] "下記のパーティションをマウントします。"
 
-#: src/components/storage/PartitionsSection.tsx:124
+#: src/components/storage/PartitionsSection.tsx:127
 msgid "Any partition needed to boot will be configured."
 msgstr "起動に必要なパーティションについても設定を行います。"
 
-#: src/components/storage/PartitionsSection.tsx:125
+#: src/components/storage/PartitionsSection.tsx:128
 msgid "Partitions to host \"system\" will be created if needed."
 msgstr ""
 "必要に応じて、 \"システム\" を保持するためのパーティションを作成します。"
 
 #. TRANSLATORS: ARIA (accesibility) description of an UI element. %s is a mount path.
-#: src/components/storage/PartitionsSection.tsx:162
+#: src/components/storage/PartitionsSection.tsx:165
 #, javascript-format
 msgid "Partition %s"
 msgstr "パーティション %s"
 
 #. TRANSLATORS: ARIA (accesibility) description of an button. %s is a mount path.
-#: src/components/storage/PartitionsSection.tsx:174
+#: src/components/storage/PartitionsSection.tsx:177
 #, javascript-format
 msgid "Options for partition %s"
 msgstr "パーティション %s のオプション"
 
-#: src/components/storage/PartitionsSection.tsx:191
-#: src/components/storage/VolumeGroupEditor.tsx:176
+#: src/components/storage/PartitionsSection.tsx:194
+#: src/components/storage/VolumeGroupEditor.tsx:181
 #: src/components/storage/iscsi/NodesPresenter.jsx:84
 msgid "Delete"
 msgstr "削除"
 
-#: src/components/storage/PartitionsSection.tsx:288
+#: src/components/storage/PartitionsSection.tsx:286
 msgid "Partitions"
 msgstr "パーティション"
 
-#: src/components/storage/PartitionsSection.tsx:308
+#: src/components/storage/PartitionsSection.tsx:306
 #: src/components/storage/UnusedMenu.tsx:78
 msgid "Add or use partition"
 msgstr "パーティションの追加または使用"
@@ -3436,55 +3444,55 @@ msgstr "デバイス全体のフォーマットまたは既存のファイルシ
 
 #. TRANSLATORS: %1$s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case). %2$s is a disk name like sda.
-#: src/components/storage/VolumeGroupEditor.tsx:79
+#: src/components/storage/VolumeGroupEditor.tsx:84
 #, javascript-format
 msgid "%1$s will be created as a partition at %2$s"
 msgid_plural "%1$s will be created as partitions at %2$s"
 msgstr[0] "%1$s を %2$s 内のパーティションとして作成します"
 
-#: src/components/storage/VolumeGroupEditor.tsx:88
+#: src/components/storage/VolumeGroupEditor.tsx:93
 msgid "The logical volume will also be deleted"
 msgid_plural "The logical volumes will also be deleted"
 msgstr[0] "論理ボリュームについても削除します"
 
-#: src/components/storage/VolumeGroupEditor.tsx:103
+#: src/components/storage/VolumeGroupEditor.tsx:108
 msgid "Delete volume group"
 msgstr "ボリュームグループの削除"
 
-#: src/components/storage/VolumeGroupEditor.tsx:115
+#: src/components/storage/VolumeGroupEditor.tsx:120
 msgid "Modify settings and physical volumes"
 msgstr "設定と物理ボリュームの変更"
 
-#: src/components/storage/VolumeGroupEditor.tsx:119
+#: src/components/storage/VolumeGroupEditor.tsx:124
 msgid "Edit volume group"
 msgstr "ボリュームグループの編集"
 
 #. TRANSLATORS: ARIA (accesibility) description of an UI element. %s is a mount path.
-#: src/components/storage/VolumeGroupEditor.tsx:150
+#: src/components/storage/VolumeGroupEditor.tsx:155
 #, javascript-format
 msgid "Volume group %s"
 msgstr "ボリュームグループ %s"
 
-#: src/components/storage/VolumeGroupEditor.tsx:190
+#: src/components/storage/VolumeGroupEditor.tsx:195
 #, javascript-format
 msgid "Create LVM volume group %s"
 msgstr "LVM ボリュームグループ %s の作成"
 
-#: src/components/storage/VolumeGroupEditor.tsx:191
+#: src/components/storage/VolumeGroupEditor.tsx:196
 #, javascript-format
 msgid "Empty LVM volume group %s"
 msgstr "空の LVM ボリュームグループ %s"
 
-#: src/components/storage/VolumeGroupEditor.tsx:246
+#: src/components/storage/VolumeGroupEditor.tsx:251
 msgid "Add logical volume"
 msgstr "論理ボリュームの追加"
 
-#: src/components/storage/VolumeGroupEditor.tsx:256
+#: src/components/storage/VolumeGroupEditor.tsx:263
 #, javascript-format
 msgid "Logical volumes for %s"
 msgstr "%s に対する論理ボリューム"
 
-#: src/components/storage/VolumeGroupEditor.tsx:271
+#: src/components/storage/VolumeGroupEditor.tsx:281
 msgid "The following logical volume will be created"
 msgid_plural "The following logical volumes will be created"
 msgstr[0] "下記の論理ボリュームを作成します"
@@ -4683,9 +4691,6 @@ msgstr "ZFCP"
 #~ msgstr ""
 #~ "必要な領域検出に際して独自の方式を利用して複数のデバイスにインストールしま"
 #~ "す。"
-
-#~ msgid "Extensions"
-#~ msgstr "拡張"
 
 #~ msgid "Reloading data, please wait..."
 #~ msgstr "データを再読み込みしています。しばらくお待ちください..."
