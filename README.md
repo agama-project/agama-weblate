@@ -52,18 +52,21 @@ cd agama-weblate
 
 # add the Weblate remote for each Weblate translation component,
 # see the note below about the credentials
-git remote add weblate-agama-web 'https://<user>:<api_key>@l10n.opensuse.org/git/agama/agama-web'
-git remote add weblate-agama-service 'https://<user>:<api_key>@l10n.opensuse.org/git/agama/agama-service-master'
-git remote add weblate-agama-products 'https://<user>:<api_key>@l10n.opensuse.org/git/agama/agama-products-master'
+git remote add weblate-agama-web "https://${USERNAME_APIKEY?}@l10n.opensuse.org/git/agama/agama-web"
+git remote add weblate-agama-service "https://${USERNAME_APIKEY?}@l10n.opensuse.org/git/agama/agama-service-master"
+git remote add weblate-agama-rust "https://${USERNAME_APIKEY?}@l10n.opensuse.org/git/agama/agama-rust-master"
+git remote add weblate-agama-products "https://${USERNAME_APIKEY?}@l10n.opensuse.org/git/agama/agama-products-master"
 
 # fetch the remotes
 git remote update weblate-agama-web
 git remote update weblate-agama-service
+git remote update weblate-agama-rust
 git remote update weblate-agama-products
 
 # merge the remotes
 git merge weblate-agama-web/master
 git merge weblate-agama-service/master
+git merge weblate-agama-rust/master
 git merge weblate-agama-products/master
 
 # now resolve the conflicts
@@ -80,6 +83,15 @@ git push
 Your user name and the API key for the Weblate Git remote can be found at the
 Weblate account settings page at
 https://l10n.opensuse.org/accounts/profile/#api.
+
+At the bottom of that page there is a sample "Accessing Git repositories" command like
+
+> git clone 'https://YourUserName:D7yd...jON@l10n.opensuse.org/git/PROJECT/COMPONENT/'
+
+Assign `USERNAME_APIKEY=YourUserName:D7yd...jON` or paste that line to the folowing command:
+```sh
+USERNAME_APIKEY=$(sed 's:.*https.//\([^@]*\)@.*:\1:')
+```
 
 ### Resetting Weblate
 
