@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-26 14:26+0000\n"
+"POT-Creation-Date: 2026-01-28 17:45+0000\n"
 "PO-Revision-Date: 2026-01-12 16:04+0000\n"
 "Last-Translator: Tommi Nieminen <software@legisign.org>\n"
 "Language-Team: Finnish <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -23,8 +23,18 @@ msgstr ""
 msgid "Breadcrumbs"
 msgstr ""
 
-#: src/components/core/ChangeProductOption.tsx:48
-#: src/components/product/ProductSelectionPage.tsx:496
+#: src/components/core/ChangeProductOption.tsx:49
+#, fuzzy
+msgid "Change mode"
+msgstr "Vaihda tuotetta"
+
+#: src/components/core/ChangeProductOption.tsx:50
+#, fuzzy
+msgid "Change product or mode"
+msgstr "Vaihda tuotetta"
+
+#: src/components/core/ChangeProductOption.tsx:51
+#: src/components/product/ProductSelectionPage.tsx:549
 msgid "Change product"
 msgstr "Vaihda tuotetta"
 
@@ -241,7 +251,7 @@ msgstr "Ohjelmistot"
 
 #: src/components/core/IssuesDrawer.tsx:50
 #: src/components/overview/RegistrationSummary.tsx:55
-#: src/components/product/ProductRegistrationPage.tsx:480
+#: src/components/product/ProductRegistrationPage.tsx:481
 #: src/routes/registration.tsx:31
 msgid "Registration"
 msgstr "Rekisteröinti"
@@ -337,7 +347,7 @@ msgstr "Takaisin"
 #: src/components/network/BindingSettingsForm.tsx:229
 #: src/components/network/IpSettingsForm.tsx:221
 #: src/components/network/WifiConnectionForm.tsx:188
-#: src/components/product/ProductSelectionPage.tsx:402
+#: src/components/product/ProductSelectionPage.tsx:437
 msgid "Cancel"
 msgstr "Peru"
 
@@ -484,7 +494,7 @@ msgstr "Yksikään näppäinkartta ei täsmää suodattimeen."
 #: src/components/l10n/L10nPage.tsx:115
 #: src/components/l10n/LocaleSelection.tsx:92
 #: src/components/l10n/TimezoneSelection.tsx:140
-#: src/components/product/ProductSelectionPage.tsx:234
+#: src/components/product/ProductSelectionPage.tsx:261
 #: src/components/software/SoftwarePatternsSelection.tsx:181
 msgid "Select"
 msgstr "Valitse"
@@ -508,7 +518,7 @@ msgstr ""
 
 #: src/components/l10n/L10nPage.tsx:89 src/components/l10n/L10nPage.tsx:103
 #: src/components/l10n/L10nPage.tsx:115
-#: src/components/product/ProductSelectionPage.tsx:234
+#: src/components/product/ProductSelectionPage.tsx:261
 #: src/components/storage/BootSection.tsx:97
 #: src/components/storage/EncryptionSection.tsx:60
 #: src/components/storage/iscsi/InitiatorForm.tsx:89
@@ -1488,26 +1498,26 @@ msgstr "Kirjoita rekisteröintikoodi"
 msgid "Provide email address"
 msgstr "Kirjoita sähköpostiosoite"
 
-#: src/components/product/ProductRegistrationPage.tsx:345
+#: src/components/product/ProductRegistrationPage.tsx:346
 #: src/components/storage/LvmPage.tsx:178
 #: src/components/system/HostnamePage.tsx:97
 msgid "Check the following before continuing"
 msgstr "Tarkista seuraavat ennen jatkamista"
 
 #. TRANSLATORS: button label
-#: src/components/product/ProductRegistrationPage.tsx:375
+#: src/components/product/ProductRegistrationPage.tsx:376
 #: src/components/product/RegistrationExtension.tsx:152
 #: src/components/product/RegistrationExtension.tsx:167
 msgid "Register"
 msgstr "Rekisteröi"
 
 #. TRANSLATORS: %s will be replaced with the hostname value
-#: src/components/product/ProductRegistrationPage.tsx:388
+#: src/components/product/ProductRegistrationPage.tsx:389
 #, javascript-format
 msgid "The product will be registered with \"%s\" hostname"
 msgstr "Tuote rekisteröidään isäntänimellä ”%s”"
 
-#: src/components/product/ProductRegistrationPage.tsx:392
+#: src/components/product/ProductRegistrationPage.tsx:393
 #, javascript-format
 msgid ""
 "You cannot change it later. Go to the %s section if you want to modify it "
@@ -1516,25 +1526,30 @@ msgstr ""
 "Et voi muuttaa sitä myöhemmin. Mene %s-osioon, jos haluat muokata sitä ennen "
 "rekisteröinnin jatkamista."
 
-#: src/components/product/ProductRegistrationPage.tsx:397
+#: src/components/product/ProductRegistrationPage.tsx:398
 msgid "hostname"
 msgstr "isäntänimi"
 
-#: src/components/product/ProductRegistrationPage.tsx:456
+#: src/components/product/ProductRegistrationPage.tsx:457
 msgid "Extensions"
 msgstr "Laajennukset"
 
-#: src/components/product/ProductSelectionPage.tsx:118
+#: src/components/product/ProductSelectionPage.tsx:121
 #, fuzzy
 msgid "License acceptance required"
 msgstr "Kaikki kentät vaaditaan"
 
 #: src/components/product/ProductSelectionPage.tsx:127
+#, fuzzy, javascript-format
+msgid "%d modes available"
+msgstr "Laitteita ei saatavilla"
+
+#: src/components/product/ProductSelectionPage.tsx:137
 #, fuzzy
 msgid "Show more"
 msgstr "Näytä enemmän toimintoja"
 
-#: src/components/product/ProductSelectionPage.tsx:128
+#: src/components/product/ProductSelectionPage.tsx:138
 #, fuzzy
 msgid "Show less"
 msgstr "Näytä vähemmän toimintoja"
@@ -1542,58 +1557,58 @@ msgstr "Näytä vähemmän toimintoja"
 #. TRANSLATORS: Text used for the license acceptance checkbox. %s will be
 #. replaced with the product name and the text in the square brackets [] is
 #. used for the link to show the license, please keep the brackets.
-#: src/components/product/ProductSelectionPage.tsx:191
+#: src/components/product/ProductSelectionPage.tsx:217
 #, javascript-format
 msgid "I have read and accept the [license] for %s"
 msgstr "Olen lukenut ja hyväksyn [lisenssin] tuotteelle %s"
 
-#: src/components/product/ProductSelectionPage.tsx:233
+#: src/components/product/ProductSelectionPage.tsx:260
 #, fuzzy, javascript-format
 msgid "Change to %s"
 msgstr "Yhdistä verkkoon %s"
 
-#: src/components/product/ProductSelectionPage.tsx:233
+#: src/components/product/ProductSelectionPage.tsx:260
 #, fuzzy, javascript-format
 msgid "Select %s"
 msgstr "Valitse"
 
-#: src/components/product/ProductSelectionPage.tsx:273
+#: src/components/product/ProductSelectionPage.tsx:300
 #, fuzzy
 msgid "Select a product to continue."
 msgstr "Valitse ratkaisu jatkaaksesi"
 
-#: src/components/product/ProductSelectionPage.tsx:275
+#: src/components/product/ProductSelectionPage.tsx:302
 msgid "License acceptance is required to continue."
 msgstr ""
 
-#: src/components/product/ProductSelectionPage.tsx:315
+#: src/components/product/ProductSelectionPage.tsx:342
 #, fuzzy, javascript-format
 msgid "Switch to another available product"
 msgid_plural "Choose from %d available products"
 msgstr[0] "Saatavilla olevat tuotteet"
 msgstr[1] "Saatavilla olevat tuotteet"
 
-#: src/components/product/ProductSelectionPage.tsx:437
+#: src/components/product/ProductSelectionPage.tsx:479
 #, fuzzy
 msgid "Current selection"
 msgstr "Väärä valinta"
 
-#: src/components/product/ProductSelectionPage.tsx:448
+#: src/components/product/ProductSelectionPage.tsx:499
 msgid "View license"
 msgstr ""
 
-#: src/components/product/ProductSelectionPage.tsx:489
+#: src/components/product/ProductSelectionPage.tsx:542
 #, fuzzy
 msgid "Select a product and confirm your choice."
 msgid_plural "Select a product and confirm your choice at the end of the list."
 msgstr[0] "Valitse ratkaisu jatkaaksesi"
 msgstr[1] "Valitse ratkaisu jatkaaksesi"
 
-#: src/components/product/ProductSelectionPage.tsx:496
+#: src/components/product/ProductSelectionPage.tsx:549
 msgid "Select a product"
 msgstr "Valitse tuote"
 
-#: src/components/product/ProductSelectionPage.tsx:505
+#: src/components/product/ProductSelectionPage.tsx:558
 msgid ""
 "Installation settings will automatically update to match the new product's "
 "defaults."
