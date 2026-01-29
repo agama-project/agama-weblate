@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-27 03:26+0000\n"
+"POT-Creation-Date: 2026-01-29 03:54+0000\n"
 "PO-Revision-Date: 2026-01-28 23:04+0000\n"
 "Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
 "Language-Team: German <https://l10n.opensuse.org/projects/agama/agama-"
@@ -27,12 +27,8 @@ msgstr ""
 msgid "Found unsupported elements in the AutoYaST profile: %{keys}."
 msgstr "Nicht unterstützte Elemente im AutoYaST-Profil gefunden: %{keys}."
 
-#. Applies the given serialized iSCSI config.
-#.
-#. @todo Raise error if the config is not valid.
-#.
-#. @param serialized_config [String] Serialized iSCSI config according to the JSON schema.
-#: service/lib/agama/dbus/storage/iscsi.rb:90
+#. Do not configure if there is nothing to change.
+#: service/lib/agama/dbus/storage/iscsi.rb:98
 msgid "Configuring iSCSI"
 msgstr "iSCSI wird konfiguriert"
 
@@ -40,7 +36,7 @@ msgstr "iSCSI wird konfiguriert"
 #.
 #. @param serialized_options [String] Serialized dicovery options.
 #. @return [Number] 0 success; 1 failure.
-#: service/lib/agama/dbus/storage/iscsi.rb:111
+#: service/lib/agama/dbus/storage/iscsi.rb:122
 msgid "Performing iSCSI discovery"
 msgstr "iSCSI-Erkennung wird durchgeführt"
 
@@ -65,15 +61,15 @@ msgstr "Installation abschließen"
 #. Gets and serializes the storage config used to calculate the current proposal.
 #.
 #. @return [String] Serialized config according to the JSON schema.
-#: service/lib/agama/dbus/storage/manager.rb:291
+#: service/lib/agama/dbus/storage/manager.rb:297
 msgid "Activating storage devices"
 msgstr "Speichergeräte werden aktiviert"
 
-#: service/lib/agama/dbus/storage/manager.rb:294
+#: service/lib/agama/dbus/storage/manager.rb:300
 msgid "Probing storage devices"
 msgstr "Speichergeräte werden untersucht"
 
-#: service/lib/agama/dbus/storage/manager.rb:297
+#: service/lib/agama/dbus/storage/manager.rb:303
 msgid "Applying storage configuration"
 msgstr "Speicherkonfiguration anwenden"
 

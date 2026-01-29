@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-27 03:26+0000\n"
+"POT-Creation-Date: 2026-01-29 03:54+0000\n"
 "PO-Revision-Date: 2025-07-07 12:59+0000\n"
 "Last-Translator: Aleksey Fedorov <Aleksejfedorov963@gmail.com>\n"
 "Language-Team: Russian <https://l10n.opensuse.org/projects/agama/agama-"
@@ -28,12 +28,8 @@ msgstr ""
 msgid "Found unsupported elements in the AutoYaST profile: %{keys}."
 msgstr "Найдены неподдерживаемые элементы в профиле AutoYaST: %{keys}."
 
-#. Applies the given serialized iSCSI config.
-#.
-#. @todo Raise error if the config is not valid.
-#.
-#. @param serialized_config [String] Serialized iSCSI config according to the JSON schema.
-#: service/lib/agama/dbus/storage/iscsi.rb:90
+#. Do not configure if there is nothing to change.
+#: service/lib/agama/dbus/storage/iscsi.rb:98
 #, fuzzy
 msgid "Configuring iSCSI"
 msgstr "Настройка Iguana"
@@ -42,7 +38,7 @@ msgstr "Настройка Iguana"
 #.
 #. @param serialized_options [String] Serialized dicovery options.
 #. @return [Number] 0 success; 1 failure.
-#: service/lib/agama/dbus/storage/iscsi.rb:111
+#: service/lib/agama/dbus/storage/iscsi.rb:122
 msgid "Performing iSCSI discovery"
 msgstr ""
 
@@ -68,15 +64,15 @@ msgstr "Прервать установку"
 #. Gets and serializes the storage config used to calculate the current proposal.
 #.
 #. @return [String] Serialized config according to the JSON schema.
-#: service/lib/agama/dbus/storage/manager.rb:291
+#: service/lib/agama/dbus/storage/manager.rb:297
 msgid "Activating storage devices"
 msgstr "Активация устройств хранения"
 
-#: service/lib/agama/dbus/storage/manager.rb:294
+#: service/lib/agama/dbus/storage/manager.rb:300
 msgid "Probing storage devices"
 msgstr "Поиск устройств хранения"
 
-#: service/lib/agama/dbus/storage/manager.rb:297
+#: service/lib/agama/dbus/storage/manager.rb:303
 #, fuzzy
 msgid "Applying storage configuration"
 msgstr "Настройка конфигурации хранилища"
