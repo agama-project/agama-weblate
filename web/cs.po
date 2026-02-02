@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-29 21:27+0000\n"
+"POT-Creation-Date: 2026-01-30 16:41+0000\n"
 "PO-Revision-Date: 2025-10-01 20:40+0000\n"
 "Last-Translator: Ladislav Slezák <lslezak@suse.com>\n"
 "Language-Team: Czech <https://l10n.opensuse.org/projects/agama/agama-web/cs/"
@@ -223,12 +223,12 @@ msgstr "Přihlašování"
 #: src/components/storage/BootSelectionPage.tsx:183
 #: src/components/storage/DeviceSelectorPage.tsx:75
 #: src/components/storage/EncryptionSettingsPage.tsx:107
-#: src/components/storage/FormattableDevicePage.tsx:462
+#: src/components/storage/FormattableDevicePage.tsx:445
 #: src/components/storage/ISCSIPage.tsx:32
-#: src/components/storage/LogicalVolumePage.tsx:687
+#: src/components/storage/LogicalVolumePage.tsx:670
 #: src/components/storage/LvmPage.tsx:170
-#: src/components/storage/PartitionPage.tsx:836
-#: src/components/storage/ProposalPage.tsx:332
+#: src/components/storage/PartitionPage.tsx:819
+#: src/components/storage/ProposalPage.tsx:330
 #: src/components/storage/SpacePolicySelectionPage.tsx:113
 #: src/components/storage/dasd/DASDPage.tsx:36
 #: src/components/storage/zfcp/ZFCPDiskActivationPage.tsx:63
@@ -1067,7 +1067,7 @@ msgid "Connected devices tabs"
 msgstr "Detaily připojení"
 
 #: src/components/network/WiredConnectionDetails.tsx:203
-#: src/components/storage/ProposalPage.tsx:203
+#: src/components/storage/ProposalPage.tsx:202
 msgid "Settings"
 msgstr "Nastavení"
 
@@ -1457,7 +1457,7 @@ msgid "SUSE Customer Center (SCC)"
 msgstr "Zákaznické centrum SUSE (SCC)"
 
 #: src/components/product/ProductRegistrationPage.tsx:72
-#: src/components/storage/utils.ts:104
+#: src/components/storage/utils.ts:106
 msgid "Custom"
 msgstr "Vlastní"
 
@@ -2150,7 +2150,7 @@ msgstr ""
 "vytvořil nebo nakonfiguroval některé oddíly na příslušném disku."
 
 #: src/components/storage/BootSelectionPage.tsx:183
-#: src/components/storage/ProposalPage.tsx:257
+#: src/components/storage/ProposalPage.tsx:256
 #, fuzzy
 msgid "Boot options"
 msgstr "Změna možností spouštění systému"
@@ -2297,7 +2297,7 @@ msgid "Configure iSCSI"
 msgstr "konfigurováno"
 
 #: src/components/storage/ConnectedDevicesMenu.tsx:62
-#: src/components/storage/ProposalPage.tsx:162
+#: src/components/storage/ProposalPage.tsx:161
 #, fuzzy
 msgid "Activate zFCP disks"
 msgstr "Aktivovat disk zFCP"
@@ -2577,201 +2577,194 @@ msgstr[0] "Před zahájením instalace vyřešte tento problém:"
 msgstr[1] "Před zahájením instalace vyřešte tyto problémy:"
 msgstr[2] "Před zahájením instalace vyřešte tyto problémy:"
 
-#: src/components/storage/FormattableDevicePage.tsx:229
-#: src/components/storage/LogicalVolumePage.tsx:249
-#: src/components/storage/PartitionPage.tsx:315
+#: src/components/storage/FormattableDevicePage.tsx:211
+#: src/components/storage/LogicalVolumePage.tsx:232
+#: src/components/storage/PartitionPage.tsx:296
 msgid "Select or enter a valid mount point"
 msgstr "Vyber nebo zadej platný bod připojení"
 
-#: src/components/storage/FormattableDevicePage.tsx:239
-#: src/components/storage/LogicalVolumePage.tsx:259
-#: src/components/storage/PartitionPage.tsx:325
+#: src/components/storage/FormattableDevicePage.tsx:221
+#: src/components/storage/LogicalVolumePage.tsx:242
+#: src/components/storage/PartitionPage.tsx:306
 msgid ""
 "Select or enter a mount point that is not already assigned to another device"
 msgstr ""
 "Vyber nebo zadej bod připojení, který ještě není přiřazen jinému zařízení"
 
-#: src/components/storage/FormattableDevicePage.tsx:288
-#: src/components/storage/LogicalVolumePage.tsx:444
-#: src/components/storage/LogicalVolumePage.tsx:467
-#: src/components/storage/LogicalVolumePage.tsx:771
-#: src/components/storage/PartitionPage.tsx:575
-#: src/components/storage/PartitionPage.tsx:922
+#: src/components/storage/FormattableDevicePage.tsx:271
+#: src/components/storage/LogicalVolumePage.tsx:427
+#: src/components/storage/LogicalVolumePage.tsx:451
+#: src/components/storage/LogicalVolumePage.tsx:754
+#: src/components/storage/PartitionPage.tsx:558
+#: src/components/storage/PartitionPage.tsx:905
 msgid "Waiting for a mount point"
 msgstr "Čekám na přípojný bod"
 
 #. TRANSLATORS: %s is a device name (eg. /dev/sda3).
-#: src/components/storage/FormattableDevicePage.tsx:291
-#: src/components/storage/PartitionPage.tsx:578
+#: src/components/storage/FormattableDevicePage.tsx:274
+#: src/components/storage/PartitionPage.tsx:561
 #: src/components/storage/utils/partition.tsx:69
 #, javascript-format
 msgid "Current %s"
 msgstr "Aktuálně %s"
 
 #: src/components/storage/FormattableDevicePage.tsx:292
-#: src/components/storage/LogicalVolumePage.tsx:468
+#: src/components/storage/LogicalVolumePage.tsx:466
 #: src/components/storage/PartitionPage.tsx:579
-#: src/components/storage/utils.ts:326
-msgid "Btrfs with snapshots"
-msgstr "Btrfs se snímky"
-
-#: src/components/storage/FormattableDevicePage.tsx:310
-#: src/components/storage/LogicalVolumePage.tsx:484
-#: src/components/storage/PartitionPage.tsx:597
 #, fuzzy, javascript-format
 msgid "Default file system for %s"
 msgstr "Pro %s již existuje souborový systém."
 
-#: src/components/storage/FormattableDevicePage.tsx:311
+#: src/components/storage/FormattableDevicePage.tsx:293
 #, fuzzy
 msgid "Default file system for generic mount paths"
 msgstr "Souborové systémy vytvořené jako nové oddíly v %s"
 
-#: src/components/storage/FormattableDevicePage.tsx:313
+#: src/components/storage/FormattableDevicePage.tsx:295
 #, fuzzy
 msgid "Destroy current data and format device as"
 msgstr "Formátuji zařízení DASD"
 
-#: src/components/storage/FormattableDevicePage.tsx:314
+#: src/components/storage/FormattableDevicePage.tsx:296
 msgid "Format device as"
 msgstr "Formátovat zařízení jako"
 
 #. TRANSLATORS: %s is the name of a device, like vda
 #. TRANSLATORS: %s is the name of a partition, like /dev/vda2
-#: src/components/storage/FormattableDevicePage.tsx:328
-#: src/components/storage/PartitionPage.tsx:614
+#: src/components/storage/FormattableDevicePage.tsx:310
+#: src/components/storage/PartitionPage.tsx:596
 #, javascript-format
 msgid "Do not format %s and keep the data"
 msgstr "NEformátovat %s a ponechat data"
 
-#: src/components/storage/FormattableDevicePage.tsx:392
-#: src/components/storage/LogicalVolumePage.tsx:553
-#: src/components/storage/PartitionPage.tsx:679
+#: src/components/storage/FormattableDevicePage.tsx:375
+#: src/components/storage/LogicalVolumePage.tsx:536
+#: src/components/storage/PartitionPage.tsx:662
 #, fuzzy
 msgid "File system label"
 msgstr "Typ systému souborů"
 
-#: src/components/storage/FormattableDevicePage.tsx:464
+#: src/components/storage/FormattableDevicePage.tsx:447
 #, fuzzy
 msgid "Configure"
 msgstr "konfigurováno"
 
-#: src/components/storage/FormattableDevicePage.tsx:470
+#: src/components/storage/FormattableDevicePage.tsx:453
 #, javascript-format
 msgid "Configure device %s"
 msgstr "Konfigurovat zařízení %s"
 
-#: src/components/storage/FormattableDevicePage.tsx:474
-#: src/components/storage/FormattableDevicePage.tsx:481
-#: src/components/storage/LogicalVolumePage.tsx:699
-#: src/components/storage/LogicalVolumePage.tsx:704
-#: src/components/storage/PartitionPage.tsx:852
-#: src/components/storage/PartitionPage.tsx:859
+#: src/components/storage/FormattableDevicePage.tsx:457
+#: src/components/storage/FormattableDevicePage.tsx:464
+#: src/components/storage/LogicalVolumePage.tsx:682
+#: src/components/storage/LogicalVolumePage.tsx:687
+#: src/components/storage/PartitionPage.tsx:835
+#: src/components/storage/PartitionPage.tsx:842
 msgid "Mount point"
 msgstr "Přípojný bod"
 
-#: src/components/storage/FormattableDevicePage.tsx:479
-#: src/components/storage/LogicalVolumePage.tsx:702
-#: src/components/storage/PartitionPage.tsx:857
+#: src/components/storage/FormattableDevicePage.tsx:462
+#: src/components/storage/LogicalVolumePage.tsx:685
+#: src/components/storage/PartitionPage.tsx:840
 #, fuzzy
 msgid "Mount point toggle"
 msgstr "Přípojný bod"
 
-#: src/components/storage/FormattableDevicePage.tsx:480
-#: src/components/storage/LogicalVolumePage.tsx:703
-#: src/components/storage/PartitionPage.tsx:858
+#: src/components/storage/FormattableDevicePage.tsx:463
+#: src/components/storage/LogicalVolumePage.tsx:686
+#: src/components/storage/PartitionPage.tsx:841
 msgid "Suggested mount points"
 msgstr "Navrhované přípojné body"
 
-#: src/components/storage/FormattableDevicePage.tsx:482
-#: src/components/storage/LogicalVolumePage.tsx:705
-#: src/components/storage/PartitionPage.tsx:860
+#: src/components/storage/FormattableDevicePage.tsx:465
+#: src/components/storage/LogicalVolumePage.tsx:688
+#: src/components/storage/PartitionPage.tsx:843
 #, fuzzy
 msgid "Clear selected mount point"
 msgstr "Tabulka s přípojnými body"
 
-#: src/components/storage/FormattableDevicePage.tsx:485
-#: src/components/storage/LogicalVolumePage.tsx:708
-#: src/components/storage/PartitionPage.tsx:863
+#: src/components/storage/FormattableDevicePage.tsx:468
+#: src/components/storage/LogicalVolumePage.tsx:691
+#: src/components/storage/PartitionPage.tsx:846
 #, fuzzy
 msgid "Use"
 msgstr "Uživatelé"
 
-#: src/components/storage/FormattableDevicePage.tsx:496
-#: src/components/storage/LogicalVolumePage.tsx:717
-#: src/components/storage/PartitionPage.tsx:884
+#: src/components/storage/FormattableDevicePage.tsx:479
+#: src/components/storage/LogicalVolumePage.tsx:700
+#: src/components/storage/PartitionPage.tsx:867
 msgid "Select or enter a mount point"
 msgstr "Vyberte nebo zadejte přípojný bod"
 
-#: src/components/storage/FormattableDevicePage.tsx:505
-#: src/components/storage/LogicalVolumePage.tsx:742
-#: src/components/storage/PartitionPage.tsx:893
+#: src/components/storage/FormattableDevicePage.tsx:488
+#: src/components/storage/LogicalVolumePage.tsx:725
+#: src/components/storage/PartitionPage.tsx:876
 msgid "File system"
 msgstr "Typ systému souborů"
 
-#: src/components/storage/FormattableDevicePage.tsx:516
-#: src/components/storage/LogicalVolumePage.tsx:753
-#: src/components/storage/PartitionPage.tsx:905
+#: src/components/storage/FormattableDevicePage.tsx:499
+#: src/components/storage/LogicalVolumePage.tsx:736
+#: src/components/storage/PartitionPage.tsx:888
 msgid "Label"
 msgstr "Štítek"
 
-#: src/components/storage/LogicalVolumePage.tsx:270
+#: src/components/storage/LogicalVolumePage.tsx:253
 msgid "Enter a name"
 msgstr "Zadejte jméno"
 
-#: src/components/storage/LogicalVolumePage.tsx:297
-#: src/components/storage/PartitionPage.tsx:353
+#: src/components/storage/LogicalVolumePage.tsx:280
+#: src/components/storage/PartitionPage.tsx:334
 msgid "The minimum cannot be greater than the maximum"
 msgstr "Minimum nemůže být větší než maximum"
 
-#: src/components/storage/LogicalVolumePage.tsx:305
+#: src/components/storage/LogicalVolumePage.tsx:288
 msgid ""
 "The maximum must be a number optionally followed by a unit like GiB or GB"
 msgstr ""
 "Maximum musí být nějaké číslo, které může následovat jednotka jako GiB nebo "
 "GB"
 
-#: src/components/storage/LogicalVolumePage.tsx:313
+#: src/components/storage/LogicalVolumePage.tsx:296
 msgid ""
 "The minimum must be a number optionally followed by a unit like GiB or GB"
 msgstr ""
 "Minimum musí být nějaké číslo, které může následovat jednotka jako GiB nebo "
 "GB"
 
-#: src/components/storage/LogicalVolumePage.tsx:320
+#: src/components/storage/LogicalVolumePage.tsx:303
 msgid ""
 "Size limits must be numbers optionally followed by a unit like GiB or GB"
 msgstr ""
 "Limity velikosti musí být nějaká čísla, která mohou být následována "
 "jednotkou jako GiB nebo GB"
 
-#: src/components/storage/LogicalVolumePage.tsx:439
-#: src/components/storage/LogicalVolumePage.tsx:442
+#: src/components/storage/LogicalVolumePage.tsx:422
+#: src/components/storage/LogicalVolumePage.tsx:425
 msgid "Logical volume name"
 msgstr "Jméno logického svazku"
 
-#: src/components/storage/LogicalVolumePage.tsx:485
+#: src/components/storage/LogicalVolumePage.tsx:467
 #, fuzzy
 msgid "Default file system for generic logical volumes"
 msgstr "Souborové systémy vytvořené jako nové oddíly v %s"
 
-#: src/components/storage/LogicalVolumePage.tsx:487
+#: src/components/storage/LogicalVolumePage.tsx:469
 #, fuzzy
 msgid "Format logical volume as"
 msgstr "Logický svazek na systému LVM"
 
-#: src/components/storage/LogicalVolumePage.tsx:688
+#: src/components/storage/LogicalVolumePage.tsx:671
 #: src/components/storage/LvmPage.tsx:171
 msgid "LVM"
 msgstr ""
 
-#: src/components/storage/LogicalVolumePage.tsx:690
+#: src/components/storage/LogicalVolumePage.tsx:673
 #, fuzzy
 msgid "Configure logical volume"
 msgstr "logický svazek"
 
-#: src/components/storage/LogicalVolumePage.tsx:766
-#: src/components/storage/PartitionPage.tsx:917
+#: src/components/storage/LogicalVolumePage.tsx:749
+#: src/components/storage/PartitionPage.tsx:900
 #, fuzzy
 msgid "Size mode"
 msgstr "Maximální požadovaná velikost"
@@ -2928,74 +2921,74 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: src/components/storage/PartitionPage.tsx:361
+#: src/components/storage/PartitionPage.tsx:342
 msgid "The maximum must be a number followed by a unit like GiB or GB"
 msgstr "Maximum musí být nějaké číslo následované jednotkou jako GiB nebo GB"
 
-#: src/components/storage/PartitionPage.tsx:369
+#: src/components/storage/PartitionPage.tsx:350
 msgid "The minimum must be a number followed by a unit like GiB or GB"
 msgstr "Minimum musí být nějaké číslo následované jednotkou jako GiB nebo GB"
 
-#: src/components/storage/PartitionPage.tsx:376
+#: src/components/storage/PartitionPage.tsx:357
 msgid "Size limits must be numbers followed by a unit like GiB or GB"
 msgstr ""
 "Velikosti limitů musí být nějaká čísla následovaná jednotkou jako GiB nebo GB"
 
 #. TRANSLATORS: %s is a disk name with its size (eg. "sda, 10 GiB"
-#: src/components/storage/PartitionPage.tsx:513
+#: src/components/storage/PartitionPage.tsx:494
 #, fuzzy, javascript-format
 msgid "As a new partition on %s"
 msgstr "Vytvořit nový oddíl"
 
-#: src/components/storage/PartitionPage.tsx:515
+#: src/components/storage/PartitionPage.tsx:496
 #, fuzzy, javascript-format
 msgid "Using partition %s"
 msgstr "zmenšování oddílů"
 
-#: src/components/storage/PartitionPage.tsx:544
+#: src/components/storage/PartitionPage.tsx:525
 #, fuzzy
 msgid "Mount point options"
 msgstr "Přípojný bod"
 
-#: src/components/storage/PartitionPage.tsx:549
+#: src/components/storage/PartitionPage.tsx:530
 #, fuzzy
 msgid "Using an existing partition"
 msgstr "Zmenšit stávající oddíly"
 
-#: src/components/storage/PartitionPage.tsx:560
+#: src/components/storage/PartitionPage.tsx:541
 #, fuzzy
 msgid "There are not usable partitions"
 msgstr "Vytvořit nový oddíl"
 
-#: src/components/storage/PartitionPage.tsx:598
+#: src/components/storage/PartitionPage.tsx:580
 #, fuzzy
 msgid "Default file system for generic partitions"
 msgstr "Souborové systémy vytvořené jako nové oddíly v %s"
 
-#: src/components/storage/PartitionPage.tsx:600
+#: src/components/storage/PartitionPage.tsx:582
 msgid "Destroy current data and format partition as"
 msgstr "Zahodit současná data a naformátovat oddíl jako"
 
-#: src/components/storage/PartitionPage.tsx:601
+#: src/components/storage/PartitionPage.tsx:583
 msgid "Format partition as"
 msgstr "Formátovat oddíl jako"
 
-#: src/components/storage/PartitionPage.tsx:842
+#: src/components/storage/PartitionPage.tsx:825
 #, fuzzy
 msgid "Configure partition"
 msgstr "Oddíl na %s"
 
-#: src/components/storage/PartitionPage.tsx:848
+#: src/components/storage/PartitionPage.tsx:831
 #, fuzzy, javascript-format
 msgid "Configure partition at %s"
 msgstr "Oddíl na %s"
 
-#: src/components/storage/PartitionPage.tsx:869
+#: src/components/storage/PartitionPage.tsx:852
 #, fuzzy
 msgid "Mount point mode"
 msgstr "Přípojný bod"
 
-#: src/components/storage/PartitionPage.tsx:952
+#: src/components/storage/PartitionPage.tsx:935
 msgid "Go to storage page"
 msgstr "Přejít na stránku úložiště"
 
@@ -3150,18 +3143,18 @@ msgstr ""
 "Upravte nastavení níže, aby bylo možné nový systém nasadit na dostupné volné "
 "místo."
 
-#: src/components/storage/ProposalPage.tsx:77
+#: src/components/storage/ProposalPage.tsx:76
 msgid "Invalid storage settings"
 msgstr "Neplatné nastavení úložiště"
 
-#: src/components/storage/ProposalPage.tsx:84
+#: src/components/storage/ProposalPage.tsx:83
 msgid "The current storage configuration has the following issue:"
 msgid_plural "The current storage configuration has the following issues:"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: src/components/storage/ProposalPage.tsx:98
+#: src/components/storage/ProposalPage.tsx:97
 msgid ""
 "You may want to discard those settings and start from scratch with a simple "
 "configuration."
@@ -3169,25 +3162,25 @@ msgstr ""
 "Možná budete chtít zahodit toto nastavení a začít od znova s jednoduchou "
 "konfigurací."
 
-#: src/components/storage/ProposalPage.tsx:102
-#: src/components/storage/ProposalPage.tsx:130
+#: src/components/storage/ProposalPage.tsx:101
+#: src/components/storage/ProposalPage.tsx:129
 #: src/components/storage/UnsupportedModelInfo.tsx:55
 #, fuzzy
 msgid "Reset to the default configuration"
 msgstr "Návrat k standardním hodnotám"
 
-#: src/components/storage/ProposalPage.tsx:114
+#: src/components/storage/ProposalPage.tsx:113
 #: src/components/storage/UnsupportedModelInfo.tsx:39
 msgid "Unable to modify the settings"
 msgstr "Není možné upravit nastavení"
 
-#: src/components/storage/ProposalPage.tsx:120
+#: src/components/storage/ProposalPage.tsx:119
 msgid ""
 "The storage configuration uses elements not supported by this interface."
 msgstr ""
 "Konfigurace úložiště používá prvky, které nejsou tímto rozhraním podporovány."
 
-#: src/components/storage/ProposalPage.tsx:126
+#: src/components/storage/ProposalPage.tsx:125
 msgid ""
 "You may want to discard the current settings and start from scratch with a "
 "simple configuration."
@@ -3195,7 +3188,7 @@ msgstr ""
 "Možná budete chtít zahodit toto nastavení a začít od znova s jednoduchou "
 "konfigurací."
 
-#: src/components/storage/ProposalPage.tsx:142
+#: src/components/storage/ProposalPage.tsx:141
 msgid ""
 "There are not disks available for the installation. You may need to "
 "configure some device."
@@ -3203,40 +3196,40 @@ msgstr ""
 "Pro instalaci nesou dostupné žádné disky. Možná bude potřeba nakonfigurovat "
 "nějaká zařízení."
 
-#: src/components/storage/ProposalPage.tsx:147
+#: src/components/storage/ProposalPage.tsx:146
 #: src/components/storage/dasd/DASDTable.tsx:304
 #, fuzzy
 msgid "No devices found"
 msgstr "Nebyl nalezen žádný obsah"
 
-#: src/components/storage/ProposalPage.tsx:156
+#: src/components/storage/ProposalPage.tsx:155
 msgid "Connect to iSCSI targets"
 msgstr "Připojení k cílům iSCSI"
 
-#: src/components/storage/ProposalPage.tsx:169
+#: src/components/storage/ProposalPage.tsx:168
 #, fuzzy
 msgid "Manage DASD devices"
 msgstr "Formátuji zařízení DASD"
 
-#: src/components/storage/ProposalPage.tsx:221
+#: src/components/storage/ProposalPage.tsx:220
 msgid "Start from scratch with the default configuration"
 msgstr "Začít znovu s výchozí konfigurací"
 
-#: src/components/storage/ProposalPage.tsx:223
+#: src/components/storage/ProposalPage.tsx:222
 msgid "Reset to defaults"
 msgstr "Obnovit výchozí nastavení"
 
-#: src/components/storage/ProposalPage.tsx:232
+#: src/components/storage/ProposalPage.tsx:231
 msgid ""
 "Changes in these settings will immediately update the 'Result' section below."
 msgstr ""
 
-#: src/components/storage/ProposalPage.tsx:239
+#: src/components/storage/ProposalPage.tsx:238
 #, fuzzy
 msgid "Installation devices"
 msgstr "Instalační zařízení"
 
-#: src/components/storage/ProposalPage.tsx:245
+#: src/components/storage/ProposalPage.tsx:244
 #, fuzzy
 msgid ""
 "Structure of the new system, including disks to use and additional devices "
@@ -3245,7 +3238,7 @@ msgstr ""
 "Struktura nového systému, včetně případných dalších oddílů potřebných pro "
 "zavádění systému"
 
-#: src/components/storage/ProposalPage.tsx:252
+#: src/components/storage/ProposalPage.tsx:251
 msgid "Encryption"
 msgstr "Šifrování"
 
@@ -3313,19 +3306,6 @@ msgstr "Přípojný bod"
 #: src/components/storage/SpaceActionsTable.tsx:230
 msgid "Details"
 msgstr "Podrobnosti"
-
-#: src/components/storage/ProposalTransactionalInfo.tsx:43
-msgid "Transactional root file system"
-msgstr "Transakční kořenový souborový systém"
-
-#: src/components/storage/ProposalTransactionalInfo.tsx:47
-#, javascript-format
-msgid ""
-"%s is an immutable system with atomic updates. It uses a read-only Btrfs "
-"file system updated via snapshots."
-msgstr ""
-"%s je neměnný systém s atomickými aktualizacemi. Používá souborový systém "
-"Btrfs pouze pro čtení aktualizovaný pomocí snímků."
 
 #: src/components/storage/SearchedDeviceMenu.tsx:69
 #, fuzzy
@@ -4103,90 +4083,98 @@ msgid "Btrfs"
 msgstr "Btrfs"
 
 #: src/components/storage/utils.ts:71
-msgid "ExFAT"
+msgid "immutable Btrfs"
 msgstr ""
 
 #: src/components/storage/utils.ts:72
-msgid "Ext2"
-msgstr ""
+msgid "Btrfs with snapshots"
+msgstr "Btrfs se snímky"
 
 #: src/components/storage/utils.ts:73
-msgid "Ext3"
+msgid "ExFAT"
 msgstr ""
 
 #: src/components/storage/utils.ts:74
-msgid "Ext4"
+msgid "Ext2"
 msgstr ""
 
 #: src/components/storage/utils.ts:75
-msgid "F2FS"
+msgid "Ext3"
 msgstr ""
 
 #: src/components/storage/utils.ts:76
-msgid "JFS"
+msgid "Ext4"
 msgstr ""
 
 #: src/components/storage/utils.ts:77
+msgid "F2FS"
+msgstr ""
+
+#: src/components/storage/utils.ts:78
+msgid "JFS"
+msgstr ""
+
+#: src/components/storage/utils.ts:79
 #, fuzzy
 msgid "NFS"
 msgstr "DNS"
 
-#: src/components/storage/utils.ts:78
+#: src/components/storage/utils.ts:80
 msgid "NILFS2"
 msgstr ""
 
-#: src/components/storage/utils.ts:79
+#: src/components/storage/utils.ts:81
 msgid "NTFS"
 msgstr ""
 
-#: src/components/storage/utils.ts:80
+#: src/components/storage/utils.ts:82
 msgid "ReiserFS"
 msgstr ""
 
-#: src/components/storage/utils.ts:81
+#: src/components/storage/utils.ts:83
 msgid "Swap"
 msgstr ""
 
-#: src/components/storage/utils.ts:82
+#: src/components/storage/utils.ts:84
 msgid "Tmpfs"
 msgstr ""
 
-#: src/components/storage/utils.ts:83
+#: src/components/storage/utils.ts:85
 msgid "FAT"
 msgstr ""
 
-#: src/components/storage/utils.ts:84
+#: src/components/storage/utils.ts:86
 msgid "XFS"
 msgstr ""
 
-#: src/components/storage/utils.ts:92
+#: src/components/storage/utils.ts:94
 msgid "Delete current content"
 msgstr "Odstranit aktuální obsah"
 
-#: src/components/storage/utils.ts:96
+#: src/components/storage/utils.ts:98
 msgid "Shrink existing partitions"
 msgstr "Zmenšit stávající oddíly"
 
-#: src/components/storage/utils.ts:100
+#: src/components/storage/utils.ts:102
 msgid "Use available space"
 msgstr "Využít dostupný prostor"
 
 #. TRANSLATORS: sub-string used to represent a path like "/" or "/var". %s is replaced by the path
 #. itself, the rest of the string (quotation marks in the English case) is used to encapsulate the
 #. path in a bigger sentence like 'Create partitions for "/" and "/var"'.
-#: src/components/storage/utils.ts:346
+#: src/components/storage/utils.ts:332
 #, javascript-format
 msgid "\"%s\""
 msgstr ""
 
 #. TRANSLATORS: Size range, %1$s is the min size and %2$s is the max
-#: src/components/storage/utils.ts:357
+#: src/components/storage/utils.ts:343
 #, fuzzy, javascript-format
 msgid "%1$s - %2$s"
 msgstr "Přepnout na %1$s (%2$s)"
 
 #. TRANSLATORS: minimum device size, %s is replaced by size string, e.g. "17.5 GiB"
-#: src/components/storage/utils.ts:359
+#: src/components/storage/utils.ts:345
 #, javascript-format
 msgid "at least %s"
 msgstr "alespoň %s"
@@ -4678,6 +4666,17 @@ msgstr "Veřejný klíč SSH pro roota"
 #: src/routes/storage.tsx:113
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#~ msgid "Transactional root file system"
+#~ msgstr "Transakční kořenový souborový systém"
+
+#, javascript-format
+#~ msgid ""
+#~ "%s is an immutable system with atomic updates. It uses a read-only Btrfs "
+#~ "file system updated via snapshots."
+#~ msgstr ""
+#~ "%s je neměnný systém s atomickými aktualizacemi. Používá souborový systém "
+#~ "Btrfs pouze pro čtení aktualizovaný pomocí snímků."
 
 #~ msgid "URL"
 #~ msgstr "Adresa URL"

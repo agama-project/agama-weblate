@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-29 21:27+0000\n"
+"POT-Creation-Date: 2026-01-30 16:41+0000\n"
 "PO-Revision-Date: 2025-09-11 02:59+0000\n"
 "Last-Translator: Grace Yu <grace.yu@excel-gits.com>\n"
 "Language-Team: Chinese (Taiwan) <https://l10n.opensuse.org/projects/agama/"
@@ -212,12 +212,12 @@ msgstr "驗證"
 #: src/components/storage/BootSelectionPage.tsx:183
 #: src/components/storage/DeviceSelectorPage.tsx:75
 #: src/components/storage/EncryptionSettingsPage.tsx:107
-#: src/components/storage/FormattableDevicePage.tsx:462
+#: src/components/storage/FormattableDevicePage.tsx:445
 #: src/components/storage/ISCSIPage.tsx:32
-#: src/components/storage/LogicalVolumePage.tsx:687
+#: src/components/storage/LogicalVolumePage.tsx:670
 #: src/components/storage/LvmPage.tsx:170
-#: src/components/storage/PartitionPage.tsx:836
-#: src/components/storage/ProposalPage.tsx:332
+#: src/components/storage/PartitionPage.tsx:819
+#: src/components/storage/ProposalPage.tsx:330
 #: src/components/storage/SpacePolicySelectionPage.tsx:113
 #: src/components/storage/dasd/DASDPage.tsx:36
 #: src/components/storage/zfcp/ZFCPDiskActivationPage.tsx:63
@@ -1041,7 +1041,7 @@ msgid "Connected devices tabs"
 msgstr "已連接裝置索引標籤"
 
 #: src/components/network/WiredConnectionDetails.tsx:203
-#: src/components/storage/ProposalPage.tsx:203
+#: src/components/storage/ProposalPage.tsx:202
 msgid "Settings"
 msgstr "設定"
 
@@ -1425,7 +1425,7 @@ msgid "SUSE Customer Center (SCC)"
 msgstr "SUSE Customer Center (SCC)"
 
 #: src/components/product/ProductRegistrationPage.tsx:72
-#: src/components/storage/utils.ts:104
+#: src/components/storage/utils.ts:106
 msgid "Custom"
 msgstr "自訂"
 
@@ -2083,7 +2083,7 @@ msgstr ""
 "為確保新系統能夠開機，安裝程式可能需要在適當的磁碟中建立或設定一些分割區。"
 
 #: src/components/storage/BootSelectionPage.tsx:183
-#: src/components/storage/ProposalPage.tsx:257
+#: src/components/storage/ProposalPage.tsx:256
 msgid "Boot options"
 msgstr "開機選項"
 
@@ -2215,7 +2215,7 @@ msgid "Configure iSCSI"
 msgstr "設定 iSCSI"
 
 #: src/components/storage/ConnectedDevicesMenu.tsx:62
-#: src/components/storage/ProposalPage.tsx:162
+#: src/components/storage/ProposalPage.tsx:161
 msgid "Activate zFCP disks"
 msgstr "啟用 zFCP 磁碟"
 
@@ -2480,186 +2480,179 @@ msgid_plural ""
 "The configuration must be adapted to address the following issues:"
 msgstr[0] "必須調整組態，以解決下列問題："
 
-#: src/components/storage/FormattableDevicePage.tsx:229
-#: src/components/storage/LogicalVolumePage.tsx:249
-#: src/components/storage/PartitionPage.tsx:315
+#: src/components/storage/FormattableDevicePage.tsx:211
+#: src/components/storage/LogicalVolumePage.tsx:232
+#: src/components/storage/PartitionPage.tsx:296
 msgid "Select or enter a valid mount point"
 msgstr "請選取或輸入有效的掛接點"
 
-#: src/components/storage/FormattableDevicePage.tsx:239
-#: src/components/storage/LogicalVolumePage.tsx:259
-#: src/components/storage/PartitionPage.tsx:325
+#: src/components/storage/FormattableDevicePage.tsx:221
+#: src/components/storage/LogicalVolumePage.tsx:242
+#: src/components/storage/PartitionPage.tsx:306
 msgid ""
 "Select or enter a mount point that is not already assigned to another device"
 msgstr "請選取或輸入尚未指定給其他裝置的掛接點"
 
-#: src/components/storage/FormattableDevicePage.tsx:288
-#: src/components/storage/LogicalVolumePage.tsx:444
-#: src/components/storage/LogicalVolumePage.tsx:467
-#: src/components/storage/LogicalVolumePage.tsx:771
-#: src/components/storage/PartitionPage.tsx:575
-#: src/components/storage/PartitionPage.tsx:922
+#: src/components/storage/FormattableDevicePage.tsx:271
+#: src/components/storage/LogicalVolumePage.tsx:427
+#: src/components/storage/LogicalVolumePage.tsx:451
+#: src/components/storage/LogicalVolumePage.tsx:754
+#: src/components/storage/PartitionPage.tsx:558
+#: src/components/storage/PartitionPage.tsx:905
 msgid "Waiting for a mount point"
 msgstr "正在等待掛接點"
 
 #. TRANSLATORS: %s is a device name (eg. /dev/sda3).
-#: src/components/storage/FormattableDevicePage.tsx:291
-#: src/components/storage/PartitionPage.tsx:578
+#: src/components/storage/FormattableDevicePage.tsx:274
+#: src/components/storage/PartitionPage.tsx:561
 #: src/components/storage/utils/partition.tsx:69
 #, javascript-format
 msgid "Current %s"
 msgstr "目前 %s"
 
 #: src/components/storage/FormattableDevicePage.tsx:292
-#: src/components/storage/LogicalVolumePage.tsx:468
+#: src/components/storage/LogicalVolumePage.tsx:466
 #: src/components/storage/PartitionPage.tsx:579
-#: src/components/storage/utils.ts:326
-msgid "Btrfs with snapshots"
-msgstr "含快照的 Btrfs"
-
-#: src/components/storage/FormattableDevicePage.tsx:310
-#: src/components/storage/LogicalVolumePage.tsx:484
-#: src/components/storage/PartitionPage.tsx:597
 #, javascript-format
 msgid "Default file system for %s"
 msgstr "%s 的預設檔案系統"
 
-#: src/components/storage/FormattableDevicePage.tsx:311
+#: src/components/storage/FormattableDevicePage.tsx:293
 msgid "Default file system for generic mount paths"
 msgstr "通用掛接路徑的預設檔案系統"
 
-#: src/components/storage/FormattableDevicePage.tsx:313
+#: src/components/storage/FormattableDevicePage.tsx:295
 msgid "Destroy current data and format device as"
 msgstr "損毀目前的資料並將裝置格式化為"
 
-#: src/components/storage/FormattableDevicePage.tsx:314
+#: src/components/storage/FormattableDevicePage.tsx:296
 msgid "Format device as"
 msgstr "將裝置格式化為"
 
 #. TRANSLATORS: %s is the name of a device, like vda
 #. TRANSLATORS: %s is the name of a partition, like /dev/vda2
-#: src/components/storage/FormattableDevicePage.tsx:328
-#: src/components/storage/PartitionPage.tsx:614
+#: src/components/storage/FormattableDevicePage.tsx:310
+#: src/components/storage/PartitionPage.tsx:596
 #, javascript-format
 msgid "Do not format %s and keep the data"
 msgstr "不格式化 %s 並保留資料"
 
-#: src/components/storage/FormattableDevicePage.tsx:392
-#: src/components/storage/LogicalVolumePage.tsx:553
-#: src/components/storage/PartitionPage.tsx:679
+#: src/components/storage/FormattableDevicePage.tsx:375
+#: src/components/storage/LogicalVolumePage.tsx:536
+#: src/components/storage/PartitionPage.tsx:662
 msgid "File system label"
 msgstr "檔案系統標籤"
 
-#: src/components/storage/FormattableDevicePage.tsx:464
+#: src/components/storage/FormattableDevicePage.tsx:447
 #, fuzzy
 msgid "Configure"
 msgstr "設定 zFCP"
 
-#: src/components/storage/FormattableDevicePage.tsx:470
+#: src/components/storage/FormattableDevicePage.tsx:453
 #, javascript-format
 msgid "Configure device %s"
 msgstr "設定裝置 %s"
 
-#: src/components/storage/FormattableDevicePage.tsx:474
-#: src/components/storage/FormattableDevicePage.tsx:481
-#: src/components/storage/LogicalVolumePage.tsx:699
-#: src/components/storage/LogicalVolumePage.tsx:704
-#: src/components/storage/PartitionPage.tsx:852
-#: src/components/storage/PartitionPage.tsx:859
+#: src/components/storage/FormattableDevicePage.tsx:457
+#: src/components/storage/FormattableDevicePage.tsx:464
+#: src/components/storage/LogicalVolumePage.tsx:682
+#: src/components/storage/LogicalVolumePage.tsx:687
+#: src/components/storage/PartitionPage.tsx:835
+#: src/components/storage/PartitionPage.tsx:842
 msgid "Mount point"
 msgstr "掛接點"
 
-#: src/components/storage/FormattableDevicePage.tsx:479
-#: src/components/storage/LogicalVolumePage.tsx:702
-#: src/components/storage/PartitionPage.tsx:857
+#: src/components/storage/FormattableDevicePage.tsx:462
+#: src/components/storage/LogicalVolumePage.tsx:685
+#: src/components/storage/PartitionPage.tsx:840
 msgid "Mount point toggle"
 msgstr "掛接點切換鈕"
 
-#: src/components/storage/FormattableDevicePage.tsx:480
-#: src/components/storage/LogicalVolumePage.tsx:703
-#: src/components/storage/PartitionPage.tsx:858
+#: src/components/storage/FormattableDevicePage.tsx:463
+#: src/components/storage/LogicalVolumePage.tsx:686
+#: src/components/storage/PartitionPage.tsx:841
 msgid "Suggested mount points"
 msgstr "建議的掛接點"
 
-#: src/components/storage/FormattableDevicePage.tsx:482
-#: src/components/storage/LogicalVolumePage.tsx:705
-#: src/components/storage/PartitionPage.tsx:860
+#: src/components/storage/FormattableDevicePage.tsx:465
+#: src/components/storage/LogicalVolumePage.tsx:688
+#: src/components/storage/PartitionPage.tsx:843
 msgid "Clear selected mount point"
 msgstr "清除所選的掛接點"
 
-#: src/components/storage/FormattableDevicePage.tsx:485
-#: src/components/storage/LogicalVolumePage.tsx:708
-#: src/components/storage/PartitionPage.tsx:863
+#: src/components/storage/FormattableDevicePage.tsx:468
+#: src/components/storage/LogicalVolumePage.tsx:691
+#: src/components/storage/PartitionPage.tsx:846
 msgid "Use"
 msgstr "使用"
 
-#: src/components/storage/FormattableDevicePage.tsx:496
-#: src/components/storage/LogicalVolumePage.tsx:717
-#: src/components/storage/PartitionPage.tsx:884
+#: src/components/storage/FormattableDevicePage.tsx:479
+#: src/components/storage/LogicalVolumePage.tsx:700
+#: src/components/storage/PartitionPage.tsx:867
 msgid "Select or enter a mount point"
 msgstr "選取或輸入掛接點"
 
-#: src/components/storage/FormattableDevicePage.tsx:505
-#: src/components/storage/LogicalVolumePage.tsx:742
-#: src/components/storage/PartitionPage.tsx:893
+#: src/components/storage/FormattableDevicePage.tsx:488
+#: src/components/storage/LogicalVolumePage.tsx:725
+#: src/components/storage/PartitionPage.tsx:876
 msgid "File system"
 msgstr "檔案系統"
 
-#: src/components/storage/FormattableDevicePage.tsx:516
-#: src/components/storage/LogicalVolumePage.tsx:753
-#: src/components/storage/PartitionPage.tsx:905
+#: src/components/storage/FormattableDevicePage.tsx:499
+#: src/components/storage/LogicalVolumePage.tsx:736
+#: src/components/storage/PartitionPage.tsx:888
 msgid "Label"
 msgstr "標籤"
 
-#: src/components/storage/LogicalVolumePage.tsx:270
+#: src/components/storage/LogicalVolumePage.tsx:253
 msgid "Enter a name"
 msgstr "輸入名稱"
 
-#: src/components/storage/LogicalVolumePage.tsx:297
-#: src/components/storage/PartitionPage.tsx:353
+#: src/components/storage/LogicalVolumePage.tsx:280
+#: src/components/storage/PartitionPage.tsx:334
 msgid "The minimum cannot be greater than the maximum"
 msgstr "下限不能大於上限"
 
-#: src/components/storage/LogicalVolumePage.tsx:305
+#: src/components/storage/LogicalVolumePage.tsx:288
 msgid ""
 "The maximum must be a number optionally followed by a unit like GiB or GB"
 msgstr "上限必須為數字，後面可跟 GiB 或 GB 等單位"
 
-#: src/components/storage/LogicalVolumePage.tsx:313
+#: src/components/storage/LogicalVolumePage.tsx:296
 msgid ""
 "The minimum must be a number optionally followed by a unit like GiB or GB"
 msgstr "下限必須為數字，後面可跟 GiB 或 GB 等單位"
 
-#: src/components/storage/LogicalVolumePage.tsx:320
+#: src/components/storage/LogicalVolumePage.tsx:303
 msgid ""
 "Size limits must be numbers optionally followed by a unit like GiB or GB"
 msgstr "大小限制必須為數字，後面可跟 GiB 或 GB 等單位"
 
-#: src/components/storage/LogicalVolumePage.tsx:439
-#: src/components/storage/LogicalVolumePage.tsx:442
+#: src/components/storage/LogicalVolumePage.tsx:422
+#: src/components/storage/LogicalVolumePage.tsx:425
 msgid "Logical volume name"
 msgstr "邏輯磁碟區名稱"
 
-#: src/components/storage/LogicalVolumePage.tsx:485
+#: src/components/storage/LogicalVolumePage.tsx:467
 msgid "Default file system for generic logical volumes"
 msgstr "通用邏輯磁碟區的預設檔案系統"
 
-#: src/components/storage/LogicalVolumePage.tsx:487
+#: src/components/storage/LogicalVolumePage.tsx:469
 msgid "Format logical volume as"
 msgstr "將邏輯磁碟區格式化為"
 
-#: src/components/storage/LogicalVolumePage.tsx:688
+#: src/components/storage/LogicalVolumePage.tsx:671
 #: src/components/storage/LvmPage.tsx:171
 msgid "LVM"
 msgstr ""
 
-#: src/components/storage/LogicalVolumePage.tsx:690
+#: src/components/storage/LogicalVolumePage.tsx:673
 #, fuzzy
 msgid "Configure logical volume"
 msgstr "邏輯磁碟區"
 
-#: src/components/storage/LogicalVolumePage.tsx:766
-#: src/components/storage/PartitionPage.tsx:917
+#: src/components/storage/LogicalVolumePage.tsx:749
+#: src/components/storage/PartitionPage.tsx:900
 msgid "Size mode"
 msgstr "大小模式"
 
@@ -2809,68 +2802,68 @@ msgid "%s will be created as a logical volume"
 msgid_plural "%s will be created as logical volumes"
 msgstr[0] "%s 將建立為邏輯磁碟區"
 
-#: src/components/storage/PartitionPage.tsx:361
+#: src/components/storage/PartitionPage.tsx:342
 msgid "The maximum must be a number followed by a unit like GiB or GB"
 msgstr "上限必須為數字且後跟單位 (如 GiB 或 GB)"
 
-#: src/components/storage/PartitionPage.tsx:369
+#: src/components/storage/PartitionPage.tsx:350
 msgid "The minimum must be a number followed by a unit like GiB or GB"
 msgstr "下限必須為數字且後跟單位 (如 GiB 或 GB)"
 
-#: src/components/storage/PartitionPage.tsx:376
+#: src/components/storage/PartitionPage.tsx:357
 msgid "Size limits must be numbers followed by a unit like GiB or GB"
 msgstr "大小限制必須為為數字且後跟單位 (如 GiB 或 GB)"
 
 #. TRANSLATORS: %s is a disk name with its size (eg. "sda, 10 GiB"
-#: src/components/storage/PartitionPage.tsx:513
+#: src/components/storage/PartitionPage.tsx:494
 #, javascript-format
 msgid "As a new partition on %s"
 msgstr "做為 %s 上的新分割區"
 
-#: src/components/storage/PartitionPage.tsx:515
+#: src/components/storage/PartitionPage.tsx:496
 #, javascript-format
 msgid "Using partition %s"
 msgstr "使用分割區 %s"
 
-#: src/components/storage/PartitionPage.tsx:544
+#: src/components/storage/PartitionPage.tsx:525
 msgid "Mount point options"
 msgstr "掛接點選項"
 
-#: src/components/storage/PartitionPage.tsx:549
+#: src/components/storage/PartitionPage.tsx:530
 msgid "Using an existing partition"
 msgstr "使用現有分割區"
 
-#: src/components/storage/PartitionPage.tsx:560
+#: src/components/storage/PartitionPage.tsx:541
 msgid "There are not usable partitions"
 msgstr "沒有可使用的分割區"
 
-#: src/components/storage/PartitionPage.tsx:598
+#: src/components/storage/PartitionPage.tsx:580
 msgid "Default file system for generic partitions"
 msgstr "通用分割區的預設檔案系統"
 
-#: src/components/storage/PartitionPage.tsx:600
+#: src/components/storage/PartitionPage.tsx:582
 msgid "Destroy current data and format partition as"
 msgstr "刪除目前資料並將分割區格式化為"
 
-#: src/components/storage/PartitionPage.tsx:601
+#: src/components/storage/PartitionPage.tsx:583
 msgid "Format partition as"
 msgstr "將分割區格式化為"
 
-#: src/components/storage/PartitionPage.tsx:842
+#: src/components/storage/PartitionPage.tsx:825
 #, fuzzy
 msgid "Configure partition"
 msgstr "在 %s 上設定分割區"
 
-#: src/components/storage/PartitionPage.tsx:848
+#: src/components/storage/PartitionPage.tsx:831
 #, javascript-format
 msgid "Configure partition at %s"
 msgstr "在 %s 上設定分割區"
 
-#: src/components/storage/PartitionPage.tsx:869
+#: src/components/storage/PartitionPage.tsx:852
 msgid "Mount point mode"
 msgstr "掛接點模式"
 
-#: src/components/storage/PartitionPage.tsx:952
+#: src/components/storage/PartitionPage.tsx:935
 msgid "Go to storage page"
 msgstr "前往儲存頁面"
 
@@ -3003,87 +2996,87 @@ msgid ""
 "space."
 msgstr "請調整下面的設定，以使新系統適配可用空間。"
 
-#: src/components/storage/ProposalPage.tsx:77
+#: src/components/storage/ProposalPage.tsx:76
 msgid "Invalid storage settings"
 msgstr "儲存設定無效"
 
-#: src/components/storage/ProposalPage.tsx:84
+#: src/components/storage/ProposalPage.tsx:83
 msgid "The current storage configuration has the following issue:"
 msgid_plural "The current storage configuration has the following issues:"
 msgstr[0] "目前的儲存組態存在以下問題："
 
-#: src/components/storage/ProposalPage.tsx:98
+#: src/components/storage/ProposalPage.tsx:97
 msgid ""
 "You may want to discard those settings and start from scratch with a simple "
 "configuration."
 msgstr "您可能需要捨棄這些設定，並採用簡單的組態從頭開始。"
 
-#: src/components/storage/ProposalPage.tsx:102
-#: src/components/storage/ProposalPage.tsx:130
+#: src/components/storage/ProposalPage.tsx:101
+#: src/components/storage/ProposalPage.tsx:129
 #: src/components/storage/UnsupportedModelInfo.tsx:55
 msgid "Reset to the default configuration"
 msgstr "重設為預設組態"
 
-#: src/components/storage/ProposalPage.tsx:114
+#: src/components/storage/ProposalPage.tsx:113
 #: src/components/storage/UnsupportedModelInfo.tsx:39
 msgid "Unable to modify the settings"
 msgstr "無法修改設定"
 
-#: src/components/storage/ProposalPage.tsx:120
+#: src/components/storage/ProposalPage.tsx:119
 msgid ""
 "The storage configuration uses elements not supported by this interface."
 msgstr "儲存組態使用了此介面不支援的元素。"
 
-#: src/components/storage/ProposalPage.tsx:126
+#: src/components/storage/ProposalPage.tsx:125
 msgid ""
 "You may want to discard the current settings and start from scratch with a "
 "simple configuration."
 msgstr "您可能需要捨棄目前設定，並採用簡單的組態從頭開始。"
 
-#: src/components/storage/ProposalPage.tsx:142
+#: src/components/storage/ProposalPage.tsx:141
 msgid ""
 "There are not disks available for the installation. You may need to "
 "configure some device."
 msgstr "沒有可用於安裝的磁碟。您可能需要設定一些裝置。"
 
-#: src/components/storage/ProposalPage.tsx:147
+#: src/components/storage/ProposalPage.tsx:146
 #: src/components/storage/dasd/DASDTable.tsx:304
 msgid "No devices found"
 msgstr "未找到裝置"
 
-#: src/components/storage/ProposalPage.tsx:156
+#: src/components/storage/ProposalPage.tsx:155
 msgid "Connect to iSCSI targets"
 msgstr "連接至 iSCSI 目標"
 
-#: src/components/storage/ProposalPage.tsx:169
+#: src/components/storage/ProposalPage.tsx:168
 msgid "Manage DASD devices"
 msgstr "管理 DASD 裝置"
 
-#: src/components/storage/ProposalPage.tsx:221
+#: src/components/storage/ProposalPage.tsx:220
 msgid "Start from scratch with the default configuration"
 msgstr "採用預設組態從頭開始"
 
-#: src/components/storage/ProposalPage.tsx:223
+#: src/components/storage/ProposalPage.tsx:222
 msgid "Reset to defaults"
 msgstr "重設為預設值"
 
-#: src/components/storage/ProposalPage.tsx:232
+#: src/components/storage/ProposalPage.tsx:231
 msgid ""
 "Changes in these settings will immediately update the 'Result' section below."
 msgstr ""
 
-#: src/components/storage/ProposalPage.tsx:239
+#: src/components/storage/ProposalPage.tsx:238
 #, fuzzy
 msgid "Installation devices"
 msgstr "安裝裝置"
 
-#: src/components/storage/ProposalPage.tsx:245
+#: src/components/storage/ProposalPage.tsx:244
 msgid ""
 "Structure of the new system, including disks to use and additional devices "
 "like LVM volume groups."
 msgstr "新系統的結構，包括要使用的磁碟和 LVM 磁碟區群組等其他裝置。"
 
-#: src/components/storage/ProposalPage.tsx:252
+#: src/components/storage/ProposalPage.tsx:251
 msgid "Encryption"
 msgstr "加密"
 
@@ -3146,19 +3139,6 @@ msgstr "掛接點"
 #: src/components/storage/SpaceActionsTable.tsx:230
 msgid "Details"
 msgstr "詳細資料"
-
-#: src/components/storage/ProposalTransactionalInfo.tsx:43
-msgid "Transactional root file system"
-msgstr "交易性根檔案系統"
-
-#: src/components/storage/ProposalTransactionalInfo.tsx:47
-#, javascript-format
-msgid ""
-"%s is an immutable system with atomic updates. It uses a read-only Btrfs "
-"file system updated via snapshots."
-msgstr ""
-"%s 是具備原子更新特性的不可變系統。它使用唯讀的 Btrfs 檔案系統，而該檔案系統"
-"透過快照保持更新。"
 
 #: src/components/storage/SearchedDeviceMenu.tsx:69
 msgid "Selected disk cannot be changed"
@@ -3874,89 +3854,97 @@ msgid "Btrfs"
 msgstr "Btrfs"
 
 #: src/components/storage/utils.ts:71
+msgid "immutable Btrfs"
+msgstr ""
+
+#: src/components/storage/utils.ts:72
+msgid "Btrfs with snapshots"
+msgstr "含快照的 Btrfs"
+
+#: src/components/storage/utils.ts:73
 msgid "ExFAT"
 msgstr "ExFAT"
 
-#: src/components/storage/utils.ts:72
+#: src/components/storage/utils.ts:74
 msgid "Ext2"
 msgstr "Ext2"
 
-#: src/components/storage/utils.ts:73
+#: src/components/storage/utils.ts:75
 msgid "Ext3"
 msgstr "Ext3"
 
-#: src/components/storage/utils.ts:74
+#: src/components/storage/utils.ts:76
 msgid "Ext4"
 msgstr "Ext4"
 
-#: src/components/storage/utils.ts:75
+#: src/components/storage/utils.ts:77
 msgid "F2FS"
 msgstr "F2FS"
 
-#: src/components/storage/utils.ts:76
+#: src/components/storage/utils.ts:78
 msgid "JFS"
 msgstr "JFS"
 
-#: src/components/storage/utils.ts:77
+#: src/components/storage/utils.ts:79
 msgid "NFS"
 msgstr "NFS"
 
-#: src/components/storage/utils.ts:78
+#: src/components/storage/utils.ts:80
 msgid "NILFS2"
 msgstr "NILFS2"
 
-#: src/components/storage/utils.ts:79
+#: src/components/storage/utils.ts:81
 msgid "NTFS"
 msgstr "NTFS"
 
-#: src/components/storage/utils.ts:80
+#: src/components/storage/utils.ts:82
 msgid "ReiserFS"
 msgstr "ReiserFS"
 
-#: src/components/storage/utils.ts:81
+#: src/components/storage/utils.ts:83
 msgid "Swap"
 msgstr "Swap"
 
-#: src/components/storage/utils.ts:82
+#: src/components/storage/utils.ts:84
 msgid "Tmpfs"
 msgstr "Tmpfs"
 
-#: src/components/storage/utils.ts:83
+#: src/components/storage/utils.ts:85
 msgid "FAT"
 msgstr "FAT"
 
-#: src/components/storage/utils.ts:84
+#: src/components/storage/utils.ts:86
 msgid "XFS"
 msgstr "XFS"
 
-#: src/components/storage/utils.ts:92
+#: src/components/storage/utils.ts:94
 msgid "Delete current content"
 msgstr "刪除目前內容"
 
-#: src/components/storage/utils.ts:96
+#: src/components/storage/utils.ts:98
 msgid "Shrink existing partitions"
 msgstr "縮小現有分割區"
 
-#: src/components/storage/utils.ts:100
+#: src/components/storage/utils.ts:102
 msgid "Use available space"
 msgstr "使用可用空間"
 
 #. TRANSLATORS: sub-string used to represent a path like "/" or "/var". %s is replaced by the path
 #. itself, the rest of the string (quotation marks in the English case) is used to encapsulate the
 #. path in a bigger sentence like 'Create partitions for "/" and "/var"'.
-#: src/components/storage/utils.ts:346
+#: src/components/storage/utils.ts:332
 #, javascript-format
 msgid "\"%s\""
 msgstr ""
 
 #. TRANSLATORS: Size range, %1$s is the min size and %2$s is the max
-#: src/components/storage/utils.ts:357
+#: src/components/storage/utils.ts:343
 #, javascript-format
 msgid "%1$s - %2$s"
 msgstr "%1$s - %2$s"
 
 #. TRANSLATORS: minimum device size, %s is replaced by size string, e.g. "17.5 GiB"
-#: src/components/storage/utils.ts:359
+#: src/components/storage/utils.ts:345
 #, javascript-format
 msgid "at least %s"
 msgstr "至少 %s"
@@ -4404,6 +4392,17 @@ msgstr "使用 SSH 公用金鑰"
 #: src/routes/storage.tsx:113
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#~ msgid "Transactional root file system"
+#~ msgstr "交易性根檔案系統"
+
+#, javascript-format
+#~ msgid ""
+#~ "%s is an immutable system with atomic updates. It uses a read-only Btrfs "
+#~ "file system updated via snapshots."
+#~ msgstr ""
+#~ "%s 是具備原子更新特性的不可變系統。它使用唯讀的 Btrfs 檔案系統，而該檔案系"
+#~ "統透過快照保持更新。"
 
 #~ msgid "URL"
 #~ msgstr "URL"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-29 21:27+0000\n"
+"POT-Creation-Date: 2026-01-30 16:41+0000\n"
 "PO-Revision-Date: 2026-01-31 04:04+0000\n"
 "Last-Translator: Arif Budiman <arifpedia@gmail.com>\n"
 "Language-Team: Indonesian <https://l10n.opensuse.org/projects/agama/agama-"
@@ -217,12 +217,12 @@ msgstr "Autentikasi"
 #: src/components/storage/BootSelectionPage.tsx:183
 #: src/components/storage/DeviceSelectorPage.tsx:75
 #: src/components/storage/EncryptionSettingsPage.tsx:107
-#: src/components/storage/FormattableDevicePage.tsx:462
+#: src/components/storage/FormattableDevicePage.tsx:445
 #: src/components/storage/ISCSIPage.tsx:32
-#: src/components/storage/LogicalVolumePage.tsx:687
+#: src/components/storage/LogicalVolumePage.tsx:670
 #: src/components/storage/LvmPage.tsx:170
-#: src/components/storage/PartitionPage.tsx:836
-#: src/components/storage/ProposalPage.tsx:332
+#: src/components/storage/PartitionPage.tsx:819
+#: src/components/storage/ProposalPage.tsx:330
 #: src/components/storage/SpacePolicySelectionPage.tsx:113
 #: src/components/storage/dasd/DASDPage.tsx:36
 #: src/components/storage/zfcp/ZFCPDiskActivationPage.tsx:63
@@ -1048,7 +1048,7 @@ msgid "Connected devices tabs"
 msgstr "Tab Perangkat Terhubung"
 
 #: src/components/network/WiredConnectionDetails.tsx:203
-#: src/components/storage/ProposalPage.tsx:203
+#: src/components/storage/ProposalPage.tsx:202
 msgid "Settings"
 msgstr "Pengaturan"
 
@@ -1420,7 +1420,7 @@ msgid "SUSE Customer Center (SCC)"
 msgstr "SUSE Customer Center (SCC)"
 
 #: src/components/product/ProductRegistrationPage.tsx:72
-#: src/components/storage/utils.ts:104
+#: src/components/storage/utils.ts:106
 msgid "Custom"
 msgstr "Khusus"
 
@@ -2115,7 +2115,7 @@ msgstr ""
 "perlu membuat atau mengonfigurasi beberapa partisi di disk yang sesuai."
 
 #: src/components/storage/BootSelectionPage.tsx:183
-#: src/components/storage/ProposalPage.tsx:257
+#: src/components/storage/ProposalPage.tsx:256
 msgid "Boot options"
 msgstr "Opsi boot"
 
@@ -2250,7 +2250,7 @@ msgid "Configure iSCSI"
 msgstr "Konfigurasi iSCSI"
 
 #: src/components/storage/ConnectedDevicesMenu.tsx:62
-#: src/components/storage/ProposalPage.tsx:162
+#: src/components/storage/ProposalPage.tsx:161
 msgid "Activate zFCP disks"
 msgstr "Aktifkan disk zFCP"
 
@@ -2522,191 +2522,184 @@ msgid_plural ""
 "The configuration must be adapted to address the following issues:"
 msgstr[0] "Konfigurasi harus disesuaikan untuk mengatasi masalah berikut:"
 
-#: src/components/storage/FormattableDevicePage.tsx:229
-#: src/components/storage/LogicalVolumePage.tsx:249
-#: src/components/storage/PartitionPage.tsx:315
+#: src/components/storage/FormattableDevicePage.tsx:211
+#: src/components/storage/LogicalVolumePage.tsx:232
+#: src/components/storage/PartitionPage.tsx:296
 msgid "Select or enter a valid mount point"
 msgstr "Pilih atau masukkan titik mount yang valid"
 
-#: src/components/storage/FormattableDevicePage.tsx:239
-#: src/components/storage/LogicalVolumePage.tsx:259
-#: src/components/storage/PartitionPage.tsx:325
+#: src/components/storage/FormattableDevicePage.tsx:221
+#: src/components/storage/LogicalVolumePage.tsx:242
+#: src/components/storage/PartitionPage.tsx:306
 msgid ""
 "Select or enter a mount point that is not already assigned to another device"
 msgstr ""
 "Pilih atau masukkan titik mount yang belum ditetapkan ke perangkat lain"
 
-#: src/components/storage/FormattableDevicePage.tsx:288
-#: src/components/storage/LogicalVolumePage.tsx:444
-#: src/components/storage/LogicalVolumePage.tsx:467
-#: src/components/storage/LogicalVolumePage.tsx:771
-#: src/components/storage/PartitionPage.tsx:575
-#: src/components/storage/PartitionPage.tsx:922
+#: src/components/storage/FormattableDevicePage.tsx:271
+#: src/components/storage/LogicalVolumePage.tsx:427
+#: src/components/storage/LogicalVolumePage.tsx:451
+#: src/components/storage/LogicalVolumePage.tsx:754
+#: src/components/storage/PartitionPage.tsx:558
+#: src/components/storage/PartitionPage.tsx:905
 msgid "Waiting for a mount point"
 msgstr "Menunggu titik mount"
 
 #. TRANSLATORS: %s is a device name (eg. /dev/sda3).
-#: src/components/storage/FormattableDevicePage.tsx:291
-#: src/components/storage/PartitionPage.tsx:578
+#: src/components/storage/FormattableDevicePage.tsx:274
+#: src/components/storage/PartitionPage.tsx:561
 #: src/components/storage/utils/partition.tsx:69
 #, javascript-format
 msgid "Current %s"
 msgstr "Saat ini %s"
 
 #: src/components/storage/FormattableDevicePage.tsx:292
-#: src/components/storage/LogicalVolumePage.tsx:468
+#: src/components/storage/LogicalVolumePage.tsx:466
 #: src/components/storage/PartitionPage.tsx:579
-#: src/components/storage/utils.ts:326
-msgid "Btrfs with snapshots"
-msgstr "Btrfs dengan snapshot"
-
-#: src/components/storage/FormattableDevicePage.tsx:310
-#: src/components/storage/LogicalVolumePage.tsx:484
-#: src/components/storage/PartitionPage.tsx:597
 #, javascript-format
 msgid "Default file system for %s"
 msgstr "Sistem berkas default untuk %s"
 
-#: src/components/storage/FormattableDevicePage.tsx:311
+#: src/components/storage/FormattableDevicePage.tsx:293
 msgid "Default file system for generic mount paths"
 msgstr "Sistem berkas default untuk jalur mount umum"
 
-#: src/components/storage/FormattableDevicePage.tsx:313
+#: src/components/storage/FormattableDevicePage.tsx:295
 msgid "Destroy current data and format device as"
 msgstr "Hapus data saat ini dan format perangkat sebagai"
 
-#: src/components/storage/FormattableDevicePage.tsx:314
+#: src/components/storage/FormattableDevicePage.tsx:296
 msgid "Format device as"
 msgstr "Format perangkat sebagai"
 
 #. TRANSLATORS: %s is the name of a device, like vda
 #. TRANSLATORS: %s is the name of a partition, like /dev/vda2
-#: src/components/storage/FormattableDevicePage.tsx:328
-#: src/components/storage/PartitionPage.tsx:614
+#: src/components/storage/FormattableDevicePage.tsx:310
+#: src/components/storage/PartitionPage.tsx:596
 #, javascript-format
 msgid "Do not format %s and keep the data"
 msgstr "Jangan memformat %s dan pertahankan data"
 
-#: src/components/storage/FormattableDevicePage.tsx:392
-#: src/components/storage/LogicalVolumePage.tsx:553
-#: src/components/storage/PartitionPage.tsx:679
+#: src/components/storage/FormattableDevicePage.tsx:375
+#: src/components/storage/LogicalVolumePage.tsx:536
+#: src/components/storage/PartitionPage.tsx:662
 msgid "File system label"
 msgstr "Label sistem berkas"
 
-#: src/components/storage/FormattableDevicePage.tsx:464
+#: src/components/storage/FormattableDevicePage.tsx:447
 msgid "Configure"
 msgstr "Konfigurasi"
 
-#: src/components/storage/FormattableDevicePage.tsx:470
+#: src/components/storage/FormattableDevicePage.tsx:453
 #, javascript-format
 msgid "Configure device %s"
 msgstr "Konfigurasikan perangkat %s"
 
-#: src/components/storage/FormattableDevicePage.tsx:474
-#: src/components/storage/FormattableDevicePage.tsx:481
-#: src/components/storage/LogicalVolumePage.tsx:699
-#: src/components/storage/LogicalVolumePage.tsx:704
-#: src/components/storage/PartitionPage.tsx:852
-#: src/components/storage/PartitionPage.tsx:859
+#: src/components/storage/FormattableDevicePage.tsx:457
+#: src/components/storage/FormattableDevicePage.tsx:464
+#: src/components/storage/LogicalVolumePage.tsx:682
+#: src/components/storage/LogicalVolumePage.tsx:687
+#: src/components/storage/PartitionPage.tsx:835
+#: src/components/storage/PartitionPage.tsx:842
 msgid "Mount point"
 msgstr "Titik pemasangan"
 
-#: src/components/storage/FormattableDevicePage.tsx:479
-#: src/components/storage/LogicalVolumePage.tsx:702
-#: src/components/storage/PartitionPage.tsx:857
+#: src/components/storage/FormattableDevicePage.tsx:462
+#: src/components/storage/LogicalVolumePage.tsx:685
+#: src/components/storage/PartitionPage.tsx:840
 msgid "Mount point toggle"
 msgstr "Tombol titik mount"
 
-#: src/components/storage/FormattableDevicePage.tsx:480
-#: src/components/storage/LogicalVolumePage.tsx:703
-#: src/components/storage/PartitionPage.tsx:858
+#: src/components/storage/FormattableDevicePage.tsx:463
+#: src/components/storage/LogicalVolumePage.tsx:686
+#: src/components/storage/PartitionPage.tsx:841
 msgid "Suggested mount points"
 msgstr "Titik mount yang disarankan"
 
-#: src/components/storage/FormattableDevicePage.tsx:482
-#: src/components/storage/LogicalVolumePage.tsx:705
-#: src/components/storage/PartitionPage.tsx:860
+#: src/components/storage/FormattableDevicePage.tsx:465
+#: src/components/storage/LogicalVolumePage.tsx:688
+#: src/components/storage/PartitionPage.tsx:843
 msgid "Clear selected mount point"
 msgstr "Hapus titik mount yang dipilih"
 
-#: src/components/storage/FormattableDevicePage.tsx:485
-#: src/components/storage/LogicalVolumePage.tsx:708
-#: src/components/storage/PartitionPage.tsx:863
+#: src/components/storage/FormattableDevicePage.tsx:468
+#: src/components/storage/LogicalVolumePage.tsx:691
+#: src/components/storage/PartitionPage.tsx:846
 msgid "Use"
 msgstr "Gunakan"
 
-#: src/components/storage/FormattableDevicePage.tsx:496
-#: src/components/storage/LogicalVolumePage.tsx:717
-#: src/components/storage/PartitionPage.tsx:884
+#: src/components/storage/FormattableDevicePage.tsx:479
+#: src/components/storage/LogicalVolumePage.tsx:700
+#: src/components/storage/PartitionPage.tsx:867
 msgid "Select or enter a mount point"
 msgstr "Pilih atau masukkan titik mount"
 
-#: src/components/storage/FormattableDevicePage.tsx:505
-#: src/components/storage/LogicalVolumePage.tsx:742
-#: src/components/storage/PartitionPage.tsx:893
+#: src/components/storage/FormattableDevicePage.tsx:488
+#: src/components/storage/LogicalVolumePage.tsx:725
+#: src/components/storage/PartitionPage.tsx:876
 msgid "File system"
 msgstr "Sistem berkas"
 
-#: src/components/storage/FormattableDevicePage.tsx:516
-#: src/components/storage/LogicalVolumePage.tsx:753
-#: src/components/storage/PartitionPage.tsx:905
+#: src/components/storage/FormattableDevicePage.tsx:499
+#: src/components/storage/LogicalVolumePage.tsx:736
+#: src/components/storage/PartitionPage.tsx:888
 msgid "Label"
 msgstr "Label"
 
-#: src/components/storage/LogicalVolumePage.tsx:270
+#: src/components/storage/LogicalVolumePage.tsx:253
 msgid "Enter a name"
 msgstr "Masukkan nama"
 
-#: src/components/storage/LogicalVolumePage.tsx:297
-#: src/components/storage/PartitionPage.tsx:353
+#: src/components/storage/LogicalVolumePage.tsx:280
+#: src/components/storage/PartitionPage.tsx:334
 msgid "The minimum cannot be greater than the maximum"
 msgstr "Nilai minimum tidak boleh lebih besar dari nilai maksimum"
 
-#: src/components/storage/LogicalVolumePage.tsx:305
+#: src/components/storage/LogicalVolumePage.tsx:288
 msgid ""
 "The maximum must be a number optionally followed by a unit like GiB or GB"
 msgstr ""
 "Nilai maksimum harus berupa angka, yang dapat diikuti oleh satuan seperti "
 "GiB atau GB"
 
-#: src/components/storage/LogicalVolumePage.tsx:313
+#: src/components/storage/LogicalVolumePage.tsx:296
 msgid ""
 "The minimum must be a number optionally followed by a unit like GiB or GB"
 msgstr ""
 "Nilai minimum harus berupa angka, yang dapat diikuti oleh satuan seperti GiB "
 "atau GB"
 
-#: src/components/storage/LogicalVolumePage.tsx:320
+#: src/components/storage/LogicalVolumePage.tsx:303
 msgid ""
 "Size limits must be numbers optionally followed by a unit like GiB or GB"
 msgstr ""
 "Batasan ukuran harus berupa angka, yang dapat diikuti oleh satuan seperti "
 "GiB atau GB"
 
-#: src/components/storage/LogicalVolumePage.tsx:439
-#: src/components/storage/LogicalVolumePage.tsx:442
+#: src/components/storage/LogicalVolumePage.tsx:422
+#: src/components/storage/LogicalVolumePage.tsx:425
 msgid "Logical volume name"
 msgstr "Nama volume logis"
 
-#: src/components/storage/LogicalVolumePage.tsx:485
+#: src/components/storage/LogicalVolumePage.tsx:467
 msgid "Default file system for generic logical volumes"
 msgstr "Sistem berkas default untuk volume logis umum"
 
-#: src/components/storage/LogicalVolumePage.tsx:487
+#: src/components/storage/LogicalVolumePage.tsx:469
 msgid "Format logical volume as"
 msgstr "Format volume logis sebagai"
 
-#: src/components/storage/LogicalVolumePage.tsx:688
+#: src/components/storage/LogicalVolumePage.tsx:671
 #: src/components/storage/LvmPage.tsx:171
 msgid "LVM"
 msgstr "LVM"
 
-#: src/components/storage/LogicalVolumePage.tsx:690
+#: src/components/storage/LogicalVolumePage.tsx:673
 msgid "Configure logical volume"
 msgstr "Konfigurasi volume logis"
 
-#: src/components/storage/LogicalVolumePage.tsx:766
-#: src/components/storage/PartitionPage.tsx:917
+#: src/components/storage/LogicalVolumePage.tsx:749
+#: src/components/storage/PartitionPage.tsx:900
 msgid "Size mode"
 msgstr "Mode ukuran"
 
@@ -2858,72 +2851,72 @@ msgid "%s will be created as a logical volume"
 msgid_plural "%s will be created as logical volumes"
 msgstr[0] "%s akan dibuat sebagai volume logis"
 
-#: src/components/storage/PartitionPage.tsx:361
+#: src/components/storage/PartitionPage.tsx:342
 msgid "The maximum must be a number followed by a unit like GiB or GB"
 msgstr ""
 "Nilai maksimum harus berupa angka, yang diikuti oleh satuan seperti GiB atau "
 "GB"
 
-#: src/components/storage/PartitionPage.tsx:369
+#: src/components/storage/PartitionPage.tsx:350
 msgid "The minimum must be a number followed by a unit like GiB or GB"
 msgstr ""
 "Nilai minimum harus berupa angka, yang diikuti oleh satuan seperti GiB atau "
 "GB"
 
-#: src/components/storage/PartitionPage.tsx:376
+#: src/components/storage/PartitionPage.tsx:357
 msgid "Size limits must be numbers followed by a unit like GiB or GB"
 msgstr ""
 "Batasan ukuran harus berupa angka diikuti dengan satuan seperti GiB atau GB"
 
 #. TRANSLATORS: %s is a disk name with its size (eg. "sda, 10 GiB"
-#: src/components/storage/PartitionPage.tsx:513
+#: src/components/storage/PartitionPage.tsx:494
 #, javascript-format
 msgid "As a new partition on %s"
 msgstr "Sebagai partisi baru di %s"
 
-#: src/components/storage/PartitionPage.tsx:515
+#: src/components/storage/PartitionPage.tsx:496
 #, javascript-format
 msgid "Using partition %s"
 msgstr "Menggunakan partisi %s"
 
-#: src/components/storage/PartitionPage.tsx:544
+#: src/components/storage/PartitionPage.tsx:525
 msgid "Mount point options"
 msgstr "Opsi titik mount"
 
-#: src/components/storage/PartitionPage.tsx:549
+#: src/components/storage/PartitionPage.tsx:530
 msgid "Using an existing partition"
 msgstr "Menggunakan partisi yang sudah ada"
 
-#: src/components/storage/PartitionPage.tsx:560
+#: src/components/storage/PartitionPage.tsx:541
 msgid "There are not usable partitions"
 msgstr "Tidak ada partisi yang dapat digunakan"
 
-#: src/components/storage/PartitionPage.tsx:598
+#: src/components/storage/PartitionPage.tsx:580
 msgid "Default file system for generic partitions"
 msgstr "Sistem berkas default untuk partisi umum"
 
-#: src/components/storage/PartitionPage.tsx:600
+#: src/components/storage/PartitionPage.tsx:582
 msgid "Destroy current data and format partition as"
 msgstr "Hapus data saat ini dan format partisi sebagai"
 
-#: src/components/storage/PartitionPage.tsx:601
+#: src/components/storage/PartitionPage.tsx:583
 msgid "Format partition as"
 msgstr "Format partisi sebagai"
 
-#: src/components/storage/PartitionPage.tsx:842
+#: src/components/storage/PartitionPage.tsx:825
 msgid "Configure partition"
 msgstr "Konfigurasi partisi"
 
-#: src/components/storage/PartitionPage.tsx:848
+#: src/components/storage/PartitionPage.tsx:831
 #, javascript-format
 msgid "Configure partition at %s"
 msgstr "Konfigurasikan partisi di %s"
 
-#: src/components/storage/PartitionPage.tsx:869
+#: src/components/storage/PartitionPage.tsx:852
 msgid "Mount point mode"
 msgstr "Mode titik mount"
 
-#: src/components/storage/PartitionPage.tsx:952
+#: src/components/storage/PartitionPage.tsx:935
 msgid "Go to storage page"
 msgstr "Buka halaman penyimpanan"
 
@@ -3059,16 +3052,16 @@ msgstr ""
 "Sesuaikan pengaturan di bawah ini agar sistem baru dapat disesuaikan dengan "
 "ruang yang tersedia."
 
-#: src/components/storage/ProposalPage.tsx:77
+#: src/components/storage/ProposalPage.tsx:76
 msgid "Invalid storage settings"
 msgstr "Pengaturan penyimpanan tidak valid"
 
-#: src/components/storage/ProposalPage.tsx:84
+#: src/components/storage/ProposalPage.tsx:83
 msgid "The current storage configuration has the following issue:"
 msgid_plural "The current storage configuration has the following issues:"
 msgstr[0] "Konfigurasi penyimpanan saat ini memiliki masalah sebagai berikut:"
 
-#: src/components/storage/ProposalPage.tsx:98
+#: src/components/storage/ProposalPage.tsx:97
 msgid ""
 "You may want to discard those settings and start from scratch with a simple "
 "configuration."
@@ -3076,25 +3069,25 @@ msgstr ""
 "Anda mungkin ingin menghapus pengaturan tersebut dan memulai dari awal "
 "dengan konfigurasi yang sederhana."
 
-#: src/components/storage/ProposalPage.tsx:102
-#: src/components/storage/ProposalPage.tsx:130
+#: src/components/storage/ProposalPage.tsx:101
+#: src/components/storage/ProposalPage.tsx:129
 #: src/components/storage/UnsupportedModelInfo.tsx:55
 msgid "Reset to the default configuration"
 msgstr "Kembalikan ke konfigurasi default"
 
-#: src/components/storage/ProposalPage.tsx:114
+#: src/components/storage/ProposalPage.tsx:113
 #: src/components/storage/UnsupportedModelInfo.tsx:39
 msgid "Unable to modify the settings"
 msgstr "Tidak dapat mengubah pengaturan"
 
-#: src/components/storage/ProposalPage.tsx:120
+#: src/components/storage/ProposalPage.tsx:119
 msgid ""
 "The storage configuration uses elements not supported by this interface."
 msgstr ""
 "Konfigurasi penyimpanan menggunakan elemen yang tidak didukung oleh "
 "antarmuka ini."
 
-#: src/components/storage/ProposalPage.tsx:126
+#: src/components/storage/ProposalPage.tsx:125
 msgid ""
 "You may want to discard the current settings and start from scratch with a "
 "simple configuration."
@@ -3102,7 +3095,7 @@ msgstr ""
 "Anda mungkin ingin menghapus pengaturan saat ini dan memulai dari awal "
 "dengan konfigurasi sederhana."
 
-#: src/components/storage/ProposalPage.tsx:142
+#: src/components/storage/ProposalPage.tsx:141
 msgid ""
 "There are not disks available for the installation. You may need to "
 "configure some device."
@@ -3110,39 +3103,39 @@ msgstr ""
 "Tidak ada disk yang tersedia untuk pemasangan. Anda mungkin perlu "
 "mengkonfigurasi beberapa perangkat."
 
-#: src/components/storage/ProposalPage.tsx:147
+#: src/components/storage/ProposalPage.tsx:146
 #: src/components/storage/dasd/DASDTable.tsx:304
 msgid "No devices found"
 msgstr "Tidak ditemukan perangkat"
 
-#: src/components/storage/ProposalPage.tsx:156
+#: src/components/storage/ProposalPage.tsx:155
 msgid "Connect to iSCSI targets"
 msgstr "Menyambungkan ke target iSCSI"
 
-#: src/components/storage/ProposalPage.tsx:169
+#: src/components/storage/ProposalPage.tsx:168
 msgid "Manage DASD devices"
 msgstr "Kelola perangkat DASD"
 
-#: src/components/storage/ProposalPage.tsx:221
+#: src/components/storage/ProposalPage.tsx:220
 msgid "Start from scratch with the default configuration"
 msgstr "Mulai dari awal dengan konfigurasi default"
 
-#: src/components/storage/ProposalPage.tsx:223
+#: src/components/storage/ProposalPage.tsx:222
 msgid "Reset to defaults"
 msgstr "Mengatur ulang ke default"
 
-#: src/components/storage/ProposalPage.tsx:232
+#: src/components/storage/ProposalPage.tsx:231
 msgid ""
 "Changes in these settings will immediately update the 'Result' section below."
 msgstr ""
 "Perubahan pada pengaturan ini akan segera memperbarui bagian 'Hasil' di "
 "bawah ini."
 
-#: src/components/storage/ProposalPage.tsx:239
+#: src/components/storage/ProposalPage.tsx:238
 msgid "Installation devices"
 msgstr "Perangkat pemasangan"
 
-#: src/components/storage/ProposalPage.tsx:245
+#: src/components/storage/ProposalPage.tsx:244
 msgid ""
 "Structure of the new system, including disks to use and additional devices "
 "like LVM volume groups."
@@ -3150,7 +3143,7 @@ msgstr ""
 "Struktur sistem baru, termasuk disk yang akan digunakan dan perangkat "
 "tambahan seperti grup volume LVM."
 
-#: src/components/storage/ProposalPage.tsx:252
+#: src/components/storage/ProposalPage.tsx:251
 msgid "Encryption"
 msgstr "Enkripsi"
 
@@ -3214,20 +3207,6 @@ msgstr "Mount Point"
 #: src/components/storage/SpaceActionsTable.tsx:230
 msgid "Details"
 msgstr "Detail"
-
-#: src/components/storage/ProposalTransactionalInfo.tsx:43
-msgid "Transactional root file system"
-msgstr "Sistem file root transaksional"
-
-#: src/components/storage/ProposalTransactionalInfo.tsx:47
-#, javascript-format
-msgid ""
-"%s is an immutable system with atomic updates. It uses a read-only Btrfs "
-"file system updated via snapshots."
-msgstr ""
-"%s adalah sistem yang tidak dapat diubah (immutable) dan mendukung pembaruan "
-"atomik. Sistem ini menggunakan file system Btrfs yang hanya-baca dan "
-"diperbarui melalui snapshot."
 
 #: src/components/storage/SearchedDeviceMenu.tsx:69
 msgid "Selected disk cannot be changed"
@@ -3964,89 +3943,97 @@ msgid "Btrfs"
 msgstr "Btrfs"
 
 #: src/components/storage/utils.ts:71
+msgid "immutable Btrfs"
+msgstr ""
+
+#: src/components/storage/utils.ts:72
+msgid "Btrfs with snapshots"
+msgstr "Btrfs dengan snapshot"
+
+#: src/components/storage/utils.ts:73
 msgid "ExFAT"
 msgstr "ExFAT"
 
-#: src/components/storage/utils.ts:72
+#: src/components/storage/utils.ts:74
 msgid "Ext2"
 msgstr "Ext2"
 
-#: src/components/storage/utils.ts:73
+#: src/components/storage/utils.ts:75
 msgid "Ext3"
 msgstr "Ext3"
 
-#: src/components/storage/utils.ts:74
+#: src/components/storage/utils.ts:76
 msgid "Ext4"
 msgstr "Ext4"
 
-#: src/components/storage/utils.ts:75
+#: src/components/storage/utils.ts:77
 msgid "F2FS"
 msgstr "F2FS"
 
-#: src/components/storage/utils.ts:76
+#: src/components/storage/utils.ts:78
 msgid "JFS"
 msgstr "JFS"
 
-#: src/components/storage/utils.ts:77
+#: src/components/storage/utils.ts:79
 msgid "NFS"
 msgstr "NFS"
 
-#: src/components/storage/utils.ts:78
+#: src/components/storage/utils.ts:80
 msgid "NILFS2"
 msgstr "NILFS2"
 
-#: src/components/storage/utils.ts:79
+#: src/components/storage/utils.ts:81
 msgid "NTFS"
 msgstr "NTFS"
 
-#: src/components/storage/utils.ts:80
+#: src/components/storage/utils.ts:82
 msgid "ReiserFS"
 msgstr "ReiserFS"
 
-#: src/components/storage/utils.ts:81
+#: src/components/storage/utils.ts:83
 msgid "Swap"
 msgstr "Swap"
 
-#: src/components/storage/utils.ts:82
+#: src/components/storage/utils.ts:84
 msgid "Tmpfs"
 msgstr "Tmpfs"
 
-#: src/components/storage/utils.ts:83
+#: src/components/storage/utils.ts:85
 msgid "FAT"
 msgstr "FAT"
 
-#: src/components/storage/utils.ts:84
+#: src/components/storage/utils.ts:86
 msgid "XFS"
 msgstr "XFS"
 
-#: src/components/storage/utils.ts:92
+#: src/components/storage/utils.ts:94
 msgid "Delete current content"
 msgstr "Hapus konten saat ini"
 
-#: src/components/storage/utils.ts:96
+#: src/components/storage/utils.ts:98
 msgid "Shrink existing partitions"
 msgstr "Perkecil partisi yang ada"
 
-#: src/components/storage/utils.ts:100
+#: src/components/storage/utils.ts:102
 msgid "Use available space"
 msgstr "Gunakan ruang yang tersedia"
 
 #. TRANSLATORS: sub-string used to represent a path like "/" or "/var". %s is replaced by the path
 #. itself, the rest of the string (quotation marks in the English case) is used to encapsulate the
 #. path in a bigger sentence like 'Create partitions for "/" and "/var"'.
-#: src/components/storage/utils.ts:346
+#: src/components/storage/utils.ts:332
 #, javascript-format
 msgid "\"%s\""
 msgstr "\"%s\""
 
 #. TRANSLATORS: Size range, %1$s is the min size and %2$s is the max
-#: src/components/storage/utils.ts:357
+#: src/components/storage/utils.ts:343
 #, javascript-format
 msgid "%1$s - %2$s"
 msgstr "%1$s - %2$s"
 
 #. TRANSLATORS: minimum device size, %s is replaced by size string, e.g. "17.5 GiB"
-#: src/components/storage/utils.ts:359
+#: src/components/storage/utils.ts:345
 #, javascript-format
 msgid "at least %s"
 msgstr "setidaknya %s"
@@ -4514,6 +4501,18 @@ msgstr "Gunakan Kunci SSH Publik"
 #: src/routes/storage.tsx:113
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#~ msgid "Transactional root file system"
+#~ msgstr "Sistem file root transaksional"
+
+#, javascript-format
+#~ msgid ""
+#~ "%s is an immutable system with atomic updates. It uses a read-only Btrfs "
+#~ "file system updated via snapshots."
+#~ msgstr ""
+#~ "%s adalah sistem yang tidak dapat diubah (immutable) dan mendukung "
+#~ "pembaruan atomik. Sistem ini menggunakan file system Btrfs yang hanya-"
+#~ "baca dan diperbarui melalui snapshot."
 
 #~ msgid "URL"
 #~ msgstr "URL"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-29 21:27+0000\n"
+"POT-Creation-Date: 2026-01-30 16:41+0000\n"
 "PO-Revision-Date: 2026-01-29 09:04+0000\n"
 "Last-Translator: David Medina <medipas@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -217,12 +217,12 @@ msgstr "Autenticació"
 #: src/components/storage/BootSelectionPage.tsx:183
 #: src/components/storage/DeviceSelectorPage.tsx:75
 #: src/components/storage/EncryptionSettingsPage.tsx:107
-#: src/components/storage/FormattableDevicePage.tsx:462
+#: src/components/storage/FormattableDevicePage.tsx:445
 #: src/components/storage/ISCSIPage.tsx:32
-#: src/components/storage/LogicalVolumePage.tsx:687
+#: src/components/storage/LogicalVolumePage.tsx:670
 #: src/components/storage/LvmPage.tsx:170
-#: src/components/storage/PartitionPage.tsx:836
-#: src/components/storage/ProposalPage.tsx:332
+#: src/components/storage/PartitionPage.tsx:819
+#: src/components/storage/ProposalPage.tsx:330
 #: src/components/storage/SpacePolicySelectionPage.tsx:113
 #: src/components/storage/dasd/DASDPage.tsx:36
 #: src/components/storage/zfcp/ZFCPDiskActivationPage.tsx:63
@@ -1051,7 +1051,7 @@ msgid "Connected devices tabs"
 msgstr "Pestanyes de dispositius connectats"
 
 #: src/components/network/WiredConnectionDetails.tsx:203
-#: src/components/storage/ProposalPage.tsx:203
+#: src/components/storage/ProposalPage.tsx:202
 msgid "Settings"
 msgstr "Configuració"
 
@@ -1426,7 +1426,7 @@ msgid "SUSE Customer Center (SCC)"
 msgstr "Centre de clients de SUSE (SCC)"
 
 #: src/components/product/ProductRegistrationPage.tsx:72
-#: src/components/storage/utils.ts:104
+#: src/components/storage/utils.ts:106
 msgid "Custom"
 msgstr "Personalitzat"
 
@@ -2123,7 +2123,7 @@ msgstr ""
 "l'instal·lador hagi de crear o configurar algunes particions al disc adequat."
 
 #: src/components/storage/BootSelectionPage.tsx:183
-#: src/components/storage/ProposalPage.tsx:257
+#: src/components/storage/ProposalPage.tsx:256
 msgid "Boot options"
 msgstr "Opcions d'arrencada"
 
@@ -2264,7 +2264,7 @@ msgid "Configure iSCSI"
 msgstr "Configuració d'iSCSI"
 
 #: src/components/storage/ConnectedDevicesMenu.tsx:62
-#: src/components/storage/ProposalPage.tsx:162
+#: src/components/storage/ProposalPage.tsx:161
 msgid "Activate zFCP disks"
 msgstr "Activa els discs zFCP"
 
@@ -2542,192 +2542,185 @@ msgstr[0] "La configuració s'ha d'adaptar per solucionar el problema següent:"
 msgstr[1] ""
 "La configuració s'ha d'adaptar per solucionar els problemes següents:"
 
-#: src/components/storage/FormattableDevicePage.tsx:229
-#: src/components/storage/LogicalVolumePage.tsx:249
-#: src/components/storage/PartitionPage.tsx:315
+#: src/components/storage/FormattableDevicePage.tsx:211
+#: src/components/storage/LogicalVolumePage.tsx:232
+#: src/components/storage/PartitionPage.tsx:296
 msgid "Select or enter a valid mount point"
 msgstr "Seleccioneu o introduïu un punt de muntatge vàlid"
 
-#: src/components/storage/FormattableDevicePage.tsx:239
-#: src/components/storage/LogicalVolumePage.tsx:259
-#: src/components/storage/PartitionPage.tsx:325
+#: src/components/storage/FormattableDevicePage.tsx:221
+#: src/components/storage/LogicalVolumePage.tsx:242
+#: src/components/storage/PartitionPage.tsx:306
 msgid ""
 "Select or enter a mount point that is not already assigned to another device"
 msgstr ""
 "Seleccioneu o introduïu un punt de muntatge que no estigui assignat a un "
 "altre dispositiu"
 
-#: src/components/storage/FormattableDevicePage.tsx:288
-#: src/components/storage/LogicalVolumePage.tsx:444
-#: src/components/storage/LogicalVolumePage.tsx:467
-#: src/components/storage/LogicalVolumePage.tsx:771
-#: src/components/storage/PartitionPage.tsx:575
-#: src/components/storage/PartitionPage.tsx:922
+#: src/components/storage/FormattableDevicePage.tsx:271
+#: src/components/storage/LogicalVolumePage.tsx:427
+#: src/components/storage/LogicalVolumePage.tsx:451
+#: src/components/storage/LogicalVolumePage.tsx:754
+#: src/components/storage/PartitionPage.tsx:558
+#: src/components/storage/PartitionPage.tsx:905
 msgid "Waiting for a mount point"
 msgstr "S'espera un punt de muntatge"
 
 #. TRANSLATORS: %s is a device name (eg. /dev/sda3).
-#: src/components/storage/FormattableDevicePage.tsx:291
-#: src/components/storage/PartitionPage.tsx:578
+#: src/components/storage/FormattableDevicePage.tsx:274
+#: src/components/storage/PartitionPage.tsx:561
 #: src/components/storage/utils/partition.tsx:69
 #, javascript-format
 msgid "Current %s"
 msgstr "Actual: %s"
 
 #: src/components/storage/FormattableDevicePage.tsx:292
-#: src/components/storage/LogicalVolumePage.tsx:468
+#: src/components/storage/LogicalVolumePage.tsx:466
 #: src/components/storage/PartitionPage.tsx:579
-#: src/components/storage/utils.ts:326
-msgid "Btrfs with snapshots"
-msgstr "Btrfs amb instantànies"
-
-#: src/components/storage/FormattableDevicePage.tsx:310
-#: src/components/storage/LogicalVolumePage.tsx:484
-#: src/components/storage/PartitionPage.tsx:597
 #, javascript-format
 msgid "Default file system for %s"
 msgstr "Sistema de fitxers per defecte per a %s"
 
-#: src/components/storage/FormattableDevicePage.tsx:311
+#: src/components/storage/FormattableDevicePage.tsx:293
 msgid "Default file system for generic mount paths"
 msgstr "Sistema de fitxers per defecte per als camins de muntatge genèrics"
 
-#: src/components/storage/FormattableDevicePage.tsx:313
+#: src/components/storage/FormattableDevicePage.tsx:295
 msgid "Destroy current data and format device as"
 msgstr "Destrueix les dades actuals i formata el dispositiu com a"
 
-#: src/components/storage/FormattableDevicePage.tsx:314
+#: src/components/storage/FormattableDevicePage.tsx:296
 msgid "Format device as"
 msgstr "Formata el dispositiu com a"
 
 #. TRANSLATORS: %s is the name of a device, like vda
 #. TRANSLATORS: %s is the name of a partition, like /dev/vda2
-#: src/components/storage/FormattableDevicePage.tsx:328
-#: src/components/storage/PartitionPage.tsx:614
+#: src/components/storage/FormattableDevicePage.tsx:310
+#: src/components/storage/PartitionPage.tsx:596
 #, javascript-format
 msgid "Do not format %s and keep the data"
 msgstr "No formatis %s i conserva'n les dades"
 
-#: src/components/storage/FormattableDevicePage.tsx:392
-#: src/components/storage/LogicalVolumePage.tsx:553
-#: src/components/storage/PartitionPage.tsx:679
+#: src/components/storage/FormattableDevicePage.tsx:375
+#: src/components/storage/LogicalVolumePage.tsx:536
+#: src/components/storage/PartitionPage.tsx:662
 msgid "File system label"
 msgstr "Etiqueta del sistema de fitxers"
 
-#: src/components/storage/FormattableDevicePage.tsx:464
+#: src/components/storage/FormattableDevicePage.tsx:447
 msgid "Configure"
 msgstr "Configura"
 
-#: src/components/storage/FormattableDevicePage.tsx:470
+#: src/components/storage/FormattableDevicePage.tsx:453
 #, javascript-format
 msgid "Configure device %s"
 msgstr "Configura el dispositiu %s"
 
-#: src/components/storage/FormattableDevicePage.tsx:474
-#: src/components/storage/FormattableDevicePage.tsx:481
-#: src/components/storage/LogicalVolumePage.tsx:699
-#: src/components/storage/LogicalVolumePage.tsx:704
-#: src/components/storage/PartitionPage.tsx:852
-#: src/components/storage/PartitionPage.tsx:859
+#: src/components/storage/FormattableDevicePage.tsx:457
+#: src/components/storage/FormattableDevicePage.tsx:464
+#: src/components/storage/LogicalVolumePage.tsx:682
+#: src/components/storage/LogicalVolumePage.tsx:687
+#: src/components/storage/PartitionPage.tsx:835
+#: src/components/storage/PartitionPage.tsx:842
 msgid "Mount point"
 msgstr "Punt de muntatge"
 
-#: src/components/storage/FormattableDevicePage.tsx:479
-#: src/components/storage/LogicalVolumePage.tsx:702
-#: src/components/storage/PartitionPage.tsx:857
+#: src/components/storage/FormattableDevicePage.tsx:462
+#: src/components/storage/LogicalVolumePage.tsx:685
+#: src/components/storage/PartitionPage.tsx:840
 msgid "Mount point toggle"
 msgstr "Commutació de punt de muntatge"
 
-#: src/components/storage/FormattableDevicePage.tsx:480
-#: src/components/storage/LogicalVolumePage.tsx:703
-#: src/components/storage/PartitionPage.tsx:858
+#: src/components/storage/FormattableDevicePage.tsx:463
+#: src/components/storage/LogicalVolumePage.tsx:686
+#: src/components/storage/PartitionPage.tsx:841
 msgid "Suggested mount points"
 msgstr "Punts de muntatge suggerits"
 
-#: src/components/storage/FormattableDevicePage.tsx:482
-#: src/components/storage/LogicalVolumePage.tsx:705
-#: src/components/storage/PartitionPage.tsx:860
+#: src/components/storage/FormattableDevicePage.tsx:465
+#: src/components/storage/LogicalVolumePage.tsx:688
+#: src/components/storage/PartitionPage.tsx:843
 msgid "Clear selected mount point"
 msgstr "Suprimeix el punt de muntatge seleccionat"
 
-#: src/components/storage/FormattableDevicePage.tsx:485
-#: src/components/storage/LogicalVolumePage.tsx:708
-#: src/components/storage/PartitionPage.tsx:863
+#: src/components/storage/FormattableDevicePage.tsx:468
+#: src/components/storage/LogicalVolumePage.tsx:691
+#: src/components/storage/PartitionPage.tsx:846
 msgid "Use"
 msgstr "Usa'l"
 
-#: src/components/storage/FormattableDevicePage.tsx:496
-#: src/components/storage/LogicalVolumePage.tsx:717
-#: src/components/storage/PartitionPage.tsx:884
+#: src/components/storage/FormattableDevicePage.tsx:479
+#: src/components/storage/LogicalVolumePage.tsx:700
+#: src/components/storage/PartitionPage.tsx:867
 msgid "Select or enter a mount point"
 msgstr "Seleccioneu o introduïu un punt de muntatge"
 
-#: src/components/storage/FormattableDevicePage.tsx:505
-#: src/components/storage/LogicalVolumePage.tsx:742
-#: src/components/storage/PartitionPage.tsx:893
+#: src/components/storage/FormattableDevicePage.tsx:488
+#: src/components/storage/LogicalVolumePage.tsx:725
+#: src/components/storage/PartitionPage.tsx:876
 msgid "File system"
 msgstr "Sistema de fitxers"
 
-#: src/components/storage/FormattableDevicePage.tsx:516
-#: src/components/storage/LogicalVolumePage.tsx:753
-#: src/components/storage/PartitionPage.tsx:905
+#: src/components/storage/FormattableDevicePage.tsx:499
+#: src/components/storage/LogicalVolumePage.tsx:736
+#: src/components/storage/PartitionPage.tsx:888
 msgid "Label"
 msgstr "Etiqueta"
 
-#: src/components/storage/LogicalVolumePage.tsx:270
+#: src/components/storage/LogicalVolumePage.tsx:253
 msgid "Enter a name"
 msgstr "Introduïu un nom"
 
-#: src/components/storage/LogicalVolumePage.tsx:297
-#: src/components/storage/PartitionPage.tsx:353
+#: src/components/storage/LogicalVolumePage.tsx:280
+#: src/components/storage/PartitionPage.tsx:334
 msgid "The minimum cannot be greater than the maximum"
 msgstr "El mínim no pot ser superior al màxim"
 
-#: src/components/storage/LogicalVolumePage.tsx:305
+#: src/components/storage/LogicalVolumePage.tsx:288
 msgid ""
 "The maximum must be a number optionally followed by a unit like GiB or GB"
 msgstr ""
 "El màxim ha de ser un número seguit opcionalment d'una unitat com ara GiB o "
 "GB"
 
-#: src/components/storage/LogicalVolumePage.tsx:313
+#: src/components/storage/LogicalVolumePage.tsx:296
 msgid ""
 "The minimum must be a number optionally followed by a unit like GiB or GB"
 msgstr ""
 "El mínim ha de ser un número seguit opcionalment d'una unitat com ara GiB o "
 "GB"
 
-#: src/components/storage/LogicalVolumePage.tsx:320
+#: src/components/storage/LogicalVolumePage.tsx:303
 msgid ""
 "Size limits must be numbers optionally followed by a unit like GiB or GB"
 msgstr ""
 "Els límits de mida han de ser números seguits opcionalment d'una unitat com "
 "ara GiB o GB"
 
-#: src/components/storage/LogicalVolumePage.tsx:439
-#: src/components/storage/LogicalVolumePage.tsx:442
+#: src/components/storage/LogicalVolumePage.tsx:422
+#: src/components/storage/LogicalVolumePage.tsx:425
 msgid "Logical volume name"
 msgstr "Nom del volum lògic"
 
-#: src/components/storage/LogicalVolumePage.tsx:485
+#: src/components/storage/LogicalVolumePage.tsx:467
 msgid "Default file system for generic logical volumes"
 msgstr "Sistema de fitxers per defecte per a volums lògics genèrics"
 
-#: src/components/storage/LogicalVolumePage.tsx:487
+#: src/components/storage/LogicalVolumePage.tsx:469
 msgid "Format logical volume as"
 msgstr "Formata el volum lògic com a"
 
-#: src/components/storage/LogicalVolumePage.tsx:688
+#: src/components/storage/LogicalVolumePage.tsx:671
 #: src/components/storage/LvmPage.tsx:171
 msgid "LVM"
 msgstr "LVM"
 
-#: src/components/storage/LogicalVolumePage.tsx:690
+#: src/components/storage/LogicalVolumePage.tsx:673
 msgid "Configure logical volume"
 msgstr "Configura un volum lògic"
 
-#: src/components/storage/LogicalVolumePage.tsx:766
-#: src/components/storage/PartitionPage.tsx:917
+#: src/components/storage/LogicalVolumePage.tsx:749
+#: src/components/storage/PartitionPage.tsx:900
 msgid "Size mode"
 msgstr "Mode de mida"
 
@@ -2883,68 +2876,68 @@ msgid_plural "%s will be created as logical volumes"
 msgstr[0] "%s es crearà com a volum lògic"
 msgstr[1] "%s es crearan com a volums lògics"
 
-#: src/components/storage/PartitionPage.tsx:361
+#: src/components/storage/PartitionPage.tsx:342
 msgid "The maximum must be a number followed by a unit like GiB or GB"
 msgstr "El màxim ha de ser un número seguit d'una unitat com ara GiB o GB."
 
-#: src/components/storage/PartitionPage.tsx:369
+#: src/components/storage/PartitionPage.tsx:350
 msgid "The minimum must be a number followed by a unit like GiB or GB"
 msgstr "El mínim ha de ser un número seguit d'una unitat com ara GiB o GB"
 
-#: src/components/storage/PartitionPage.tsx:376
+#: src/components/storage/PartitionPage.tsx:357
 msgid "Size limits must be numbers followed by a unit like GiB or GB"
 msgstr ""
 "Els límits de mida han de ser números seguits d'una unitat com ara GiB o GB."
 
 #. TRANSLATORS: %s is a disk name with its size (eg. "sda, 10 GiB"
-#: src/components/storage/PartitionPage.tsx:513
+#: src/components/storage/PartitionPage.tsx:494
 #, javascript-format
 msgid "As a new partition on %s"
 msgstr "Com a partició nova a %s"
 
-#: src/components/storage/PartitionPage.tsx:515
+#: src/components/storage/PartitionPage.tsx:496
 #, javascript-format
 msgid "Using partition %s"
 msgstr "S'usa la partició %s"
 
-#: src/components/storage/PartitionPage.tsx:544
+#: src/components/storage/PartitionPage.tsx:525
 msgid "Mount point options"
 msgstr "Opcions de punt de muntatge"
 
-#: src/components/storage/PartitionPage.tsx:549
+#: src/components/storage/PartitionPage.tsx:530
 msgid "Using an existing partition"
 msgstr "S'usa una partició existent"
 
-#: src/components/storage/PartitionPage.tsx:560
+#: src/components/storage/PartitionPage.tsx:541
 msgid "There are not usable partitions"
 msgstr "No hi ha particions usables"
 
-#: src/components/storage/PartitionPage.tsx:598
+#: src/components/storage/PartitionPage.tsx:580
 msgid "Default file system for generic partitions"
 msgstr "Sistema de fitxers per defecte per a particions genèriques"
 
-#: src/components/storage/PartitionPage.tsx:600
+#: src/components/storage/PartitionPage.tsx:582
 msgid "Destroy current data and format partition as"
 msgstr "Destrueix les dades actuals i formata la partició com a"
 
-#: src/components/storage/PartitionPage.tsx:601
+#: src/components/storage/PartitionPage.tsx:583
 msgid "Format partition as"
 msgstr "Formata la partició com a"
 
-#: src/components/storage/PartitionPage.tsx:842
+#: src/components/storage/PartitionPage.tsx:825
 msgid "Configure partition"
 msgstr "Configura la partició"
 
-#: src/components/storage/PartitionPage.tsx:848
+#: src/components/storage/PartitionPage.tsx:831
 #, javascript-format
 msgid "Configure partition at %s"
 msgstr "Configura la partició a %s"
 
-#: src/components/storage/PartitionPage.tsx:869
+#: src/components/storage/PartitionPage.tsx:852
 msgid "Mount point mode"
 msgstr "Mode de punt de muntatge"
 
-#: src/components/storage/PartitionPage.tsx:952
+#: src/components/storage/PartitionPage.tsx:935
 msgid "Go to storage page"
 msgstr "Ves a la pàgina de l'emmagatzematge"
 
@@ -3088,17 +3081,17 @@ msgstr ""
 "Ajusteu la configuració següent perquè el sistema nou s'adapti a l'espai "
 "disponible."
 
-#: src/components/storage/ProposalPage.tsx:77
+#: src/components/storage/ProposalPage.tsx:76
 msgid "Invalid storage settings"
 msgstr "Configuració d'emmagatzematge no vàlida"
 
-#: src/components/storage/ProposalPage.tsx:84
+#: src/components/storage/ProposalPage.tsx:83
 msgid "The current storage configuration has the following issue:"
 msgid_plural "The current storage configuration has the following issues:"
 msgstr[0] "La configuració d'emmagatzematge actual té el problema següent:"
 msgstr[1] "La configuració d'emmagatzematge actual té els problemes següents:"
 
-#: src/components/storage/ProposalPage.tsx:98
+#: src/components/storage/ProposalPage.tsx:97
 msgid ""
 "You may want to discard those settings and start from scratch with a simple "
 "configuration."
@@ -3106,25 +3099,25 @@ msgstr ""
 "És possible que vulgueu descartar aquests paràmetres i començar des de zero "
 "amb una configuració simple."
 
-#: src/components/storage/ProposalPage.tsx:102
-#: src/components/storage/ProposalPage.tsx:130
+#: src/components/storage/ProposalPage.tsx:101
+#: src/components/storage/ProposalPage.tsx:129
 #: src/components/storage/UnsupportedModelInfo.tsx:55
 msgid "Reset to the default configuration"
 msgstr "Restableix la configuració predeterminada"
 
-#: src/components/storage/ProposalPage.tsx:114
+#: src/components/storage/ProposalPage.tsx:113
 #: src/components/storage/UnsupportedModelInfo.tsx:39
 msgid "Unable to modify the settings"
 msgstr "No es pot modificar la configuració"
 
-#: src/components/storage/ProposalPage.tsx:120
+#: src/components/storage/ProposalPage.tsx:119
 msgid ""
 "The storage configuration uses elements not supported by this interface."
 msgstr ""
 "La configuració d'emmagatzematge usa elements no compatibles amb aquesta "
 "interfície."
 
-#: src/components/storage/ProposalPage.tsx:126
+#: src/components/storage/ProposalPage.tsx:125
 msgid ""
 "You may want to discard the current settings and start from scratch with a "
 "simple configuration."
@@ -3132,7 +3125,7 @@ msgstr ""
 "És possible que vulgueu descartar la configuració actual i començar des de "
 "zero amb una configuració simple."
 
-#: src/components/storage/ProposalPage.tsx:142
+#: src/components/storage/ProposalPage.tsx:141
 msgid ""
 "There are not disks available for the installation. You may need to "
 "configure some device."
@@ -3140,39 +3133,39 @@ msgstr ""
 "No hi ha discs disponibles per a la instal·lació. És possible que hàgiu de "
 "configurar algun dispositiu."
 
-#: src/components/storage/ProposalPage.tsx:147
+#: src/components/storage/ProposalPage.tsx:146
 #: src/components/storage/dasd/DASDTable.tsx:304
 msgid "No devices found"
 msgstr "No s'ha trobat cap dispositiu"
 
-#: src/components/storage/ProposalPage.tsx:156
+#: src/components/storage/ProposalPage.tsx:155
 msgid "Connect to iSCSI targets"
 msgstr "Connecta amb objectius iSCSI"
 
-#: src/components/storage/ProposalPage.tsx:169
+#: src/components/storage/ProposalPage.tsx:168
 msgid "Manage DASD devices"
 msgstr "Gestioneu els dispositius DASD"
 
-#: src/components/storage/ProposalPage.tsx:221
+#: src/components/storage/ProposalPage.tsx:220
 msgid "Start from scratch with the default configuration"
 msgstr "Comença des de zero amb la configuració predeterminada"
 
-#: src/components/storage/ProposalPage.tsx:223
+#: src/components/storage/ProposalPage.tsx:222
 msgid "Reset to defaults"
 msgstr "Restableix els valors predeterminats"
 
-#: src/components/storage/ProposalPage.tsx:232
+#: src/components/storage/ProposalPage.tsx:231
 msgid ""
 "Changes in these settings will immediately update the 'Result' section below."
 msgstr ""
 "Els canvis en aquesta configuració actualitzaran immediatament la secció de "
 "Resultat que hi ha a continuació."
 
-#: src/components/storage/ProposalPage.tsx:239
+#: src/components/storage/ProposalPage.tsx:238
 msgid "Installation devices"
 msgstr "Dispositius per a la instal·lació"
 
-#: src/components/storage/ProposalPage.tsx:245
+#: src/components/storage/ProposalPage.tsx:244
 msgid ""
 "Structure of the new system, including disks to use and additional devices "
 "like LVM volume groups."
@@ -3180,7 +3173,7 @@ msgstr ""
 "Estructura del nou sistema, inclosos els discos per usar i els dispositius "
 "addicionals com ara els grups de volums d'LVM."
 
-#: src/components/storage/ProposalPage.tsx:252
+#: src/components/storage/ProposalPage.tsx:251
 msgid "Encryption"
 msgstr "Encriptació"
 
@@ -3246,19 +3239,6 @@ msgstr "Punt de muntatge"
 #: src/components/storage/SpaceActionsTable.tsx:230
 msgid "Details"
 msgstr "Detalls"
-
-#: src/components/storage/ProposalTransactionalInfo.tsx:43
-msgid "Transactional root file system"
-msgstr "Sistema de fitxers d'arrel transaccional"
-
-#: src/components/storage/ProposalTransactionalInfo.tsx:47
-#, javascript-format
-msgid ""
-"%s is an immutable system with atomic updates. It uses a read-only Btrfs "
-"file system updated via snapshots."
-msgstr ""
-"%s és un sistema immutable amb actualitzacions atòmiques. Usa un sistema de "
-"fitxers Btrfs només de lectura actualitzat a través d'instantànies."
 
 #: src/components/storage/SearchedDeviceMenu.tsx:69
 msgid "Selected disk cannot be changed"
@@ -3998,89 +3978,97 @@ msgid "Btrfs"
 msgstr "Btrfs"
 
 #: src/components/storage/utils.ts:71
+msgid "immutable Btrfs"
+msgstr ""
+
+#: src/components/storage/utils.ts:72
+msgid "Btrfs with snapshots"
+msgstr "Btrfs amb instantànies"
+
+#: src/components/storage/utils.ts:73
 msgid "ExFAT"
 msgstr "ExFAT"
 
-#: src/components/storage/utils.ts:72
+#: src/components/storage/utils.ts:74
 msgid "Ext2"
 msgstr "Ext2"
 
-#: src/components/storage/utils.ts:73
+#: src/components/storage/utils.ts:75
 msgid "Ext3"
 msgstr "Ext3"
 
-#: src/components/storage/utils.ts:74
+#: src/components/storage/utils.ts:76
 msgid "Ext4"
 msgstr "Ext4"
 
-#: src/components/storage/utils.ts:75
+#: src/components/storage/utils.ts:77
 msgid "F2FS"
 msgstr "F2FS"
 
-#: src/components/storage/utils.ts:76
+#: src/components/storage/utils.ts:78
 msgid "JFS"
 msgstr "JFS"
 
-#: src/components/storage/utils.ts:77
+#: src/components/storage/utils.ts:79
 msgid "NFS"
 msgstr "NFS"
 
-#: src/components/storage/utils.ts:78
+#: src/components/storage/utils.ts:80
 msgid "NILFS2"
 msgstr "NILFS2"
 
-#: src/components/storage/utils.ts:79
+#: src/components/storage/utils.ts:81
 msgid "NTFS"
 msgstr "NTFS"
 
-#: src/components/storage/utils.ts:80
+#: src/components/storage/utils.ts:82
 msgid "ReiserFS"
 msgstr "ReiserFS"
 
-#: src/components/storage/utils.ts:81
+#: src/components/storage/utils.ts:83
 msgid "Swap"
 msgstr "Intercanvi"
 
-#: src/components/storage/utils.ts:82
+#: src/components/storage/utils.ts:84
 msgid "Tmpfs"
 msgstr "Tmpfs"
 
-#: src/components/storage/utils.ts:83
+#: src/components/storage/utils.ts:85
 msgid "FAT"
 msgstr "FAT"
 
-#: src/components/storage/utils.ts:84
+#: src/components/storage/utils.ts:86
 msgid "XFS"
 msgstr "XFS"
 
-#: src/components/storage/utils.ts:92
+#: src/components/storage/utils.ts:94
 msgid "Delete current content"
 msgstr "Suprimeix el contingut actual"
 
-#: src/components/storage/utils.ts:96
+#: src/components/storage/utils.ts:98
 msgid "Shrink existing partitions"
 msgstr "Encongeix les particions existents"
 
-#: src/components/storage/utils.ts:100
+#: src/components/storage/utils.ts:102
 msgid "Use available space"
 msgstr "Usa l'espai disponible"
 
 #. TRANSLATORS: sub-string used to represent a path like "/" or "/var". %s is replaced by the path
 #. itself, the rest of the string (quotation marks in the English case) is used to encapsulate the
 #. path in a bigger sentence like 'Create partitions for "/" and "/var"'.
-#: src/components/storage/utils.ts:346
+#: src/components/storage/utils.ts:332
 #, javascript-format
 msgid "\"%s\""
 msgstr "%s"
 
 #. TRANSLATORS: Size range, %1$s is the min size and %2$s is the max
-#: src/components/storage/utils.ts:357
+#: src/components/storage/utils.ts:343
 #, javascript-format
 msgid "%1$s - %2$s"
 msgstr "%1$s - %2$s"
 
 #. TRANSLATORS: minimum device size, %s is replaced by size string, e.g. "17.5 GiB"
-#: src/components/storage/utils.ts:359
+#: src/components/storage/utils.ts:345
 #, javascript-format
 msgid "at least %s"
 msgstr "almenys %s"
@@ -4550,6 +4538,17 @@ msgstr "Usa una clau pública SSH"
 #: src/routes/storage.tsx:113
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#~ msgid "Transactional root file system"
+#~ msgstr "Sistema de fitxers d'arrel transaccional"
+
+#, javascript-format
+#~ msgid ""
+#~ "%s is an immutable system with atomic updates. It uses a read-only Btrfs "
+#~ "file system updated via snapshots."
+#~ msgstr ""
+#~ "%s és un sistema immutable amb actualitzacions atòmiques. Usa un sistema "
+#~ "de fitxers Btrfs només de lectura actualitzat a través d'instantànies."
 
 #~ msgid "URL"
 #~ msgstr "URL"
