@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-30 16:41+0000\n"
+"POT-Creation-Date: 2026-02-02 13:01+0000\n"
 "PO-Revision-Date: 2024-06-29 13:46+0000\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.opensuse.org/projects/agama/"
@@ -19,22 +19,24 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.6\n"
 
-#: src/components/core/Breadcrumbs.tsx:85
+#: src/components/core/Breadcrumbs.tsx:93
 msgid "Breadcrumbs"
 msgstr ""
 
 #: src/components/core/ChangeProductOption.tsx:49
+#: src/components/product/ProductSelectionPage.tsx:614
 #, fuzzy
 msgid "Change mode"
 msgstr "Endre produkt"
 
 #: src/components/core/ChangeProductOption.tsx:50
+#: src/components/product/ProductSelectionPage.tsx:627
 #, fuzzy
 msgid "Change product or mode"
 msgstr "Endre produkt"
 
 #: src/components/core/ChangeProductOption.tsx:51
-#: src/components/product/ProductSelectionPage.tsx:549
+#: src/components/product/ProductSelectionPage.tsx:630
 msgid "Change product"
 msgstr "Endre produkt"
 
@@ -238,7 +240,7 @@ msgstr "Lagring"
 #: src/components/overview/SoftwareSummary.tsx:84
 #: src/components/software/SoftwareConflictsPage.tsx:287
 #: src/components/software/SoftwarePage.tsx:195
-#: src/components/software/SoftwarePatternsSelection.tsx:201
+#: src/components/software/SoftwarePatternsSelection.tsx:204
 #: src/routes/software.tsx:34
 msgid "Software"
 msgstr "Programvare"
@@ -340,7 +342,7 @@ msgstr "Tilbake"
 #: src/components/network/BindingSettingsForm.tsx:229
 #: src/components/network/IpSettingsForm.tsx:221
 #: src/components/network/WifiConnectionForm.tsx:188
-#: src/components/product/ProductSelectionPage.tsx:437
+#: src/components/product/ProductSelectionPage.tsx:531
 msgid "Cancel"
 msgstr "Avbryt"
 
@@ -494,8 +496,8 @@ msgstr "Ingen av tastene passer sammen med filteret."
 #: src/components/l10n/L10nPage.tsx:115
 #: src/components/l10n/LocaleSelection.tsx:92
 #: src/components/l10n/TimezoneSelection.tsx:140
-#: src/components/product/ProductSelectionPage.tsx:261
-#: src/components/software/SoftwarePatternsSelection.tsx:182
+#: src/components/product/ProductSelectionPage.tsx:282
+#: src/components/software/SoftwarePatternsSelection.tsx:185
 msgid "Select"
 msgstr "Velg"
 
@@ -514,7 +516,7 @@ msgstr ""
 
 #: src/components/l10n/L10nPage.tsx:89 src/components/l10n/L10nPage.tsx:103
 #: src/components/l10n/L10nPage.tsx:115
-#: src/components/product/ProductSelectionPage.tsx:261
+#: src/components/product/ProductSelectionPage.tsx:282
 #: src/components/storage/BootSection.tsx:97
 #: src/components/storage/EncryptionSection.tsx:60
 #: src/components/storage/iscsi/InitiatorForm.tsx:89
@@ -1450,7 +1452,7 @@ msgstr ""
 
 #: src/components/product/LicenseDialog.tsx:74
 #: src/components/software/SoftwareConflictsPage.tsx:297
-#: src/components/software/SoftwarePatternsSelection.tsx:220
+#: src/components/software/SoftwarePatternsSelection.tsx:223
 msgid "Close"
 msgstr "Lukk"
 
@@ -1571,22 +1573,31 @@ msgstr "Brukernavn"
 msgid "Extensions"
 msgstr ""
 
-#: src/components/product/ProductSelectionPage.tsx:121
+#: src/components/product/ProductSelectionPage.tsx:115
+#, fuzzy, javascript-format
+msgid "%d other mode available"
+msgid_plural "%d other modes available"
+msgstr[0] "Bruk tilgjengelig plass"
+msgstr[1] "Bruk tilgjengelig plass"
+
+#: src/components/product/ProductSelectionPage.tsx:116
+#, fuzzy, javascript-format
+msgid "%d mode available"
+msgid_plural "%d modes available"
+msgstr[0] "Bruk tilgjengelig plass"
+msgstr[1] "Bruk tilgjengelig plass"
+
+#: src/components/product/ProductSelectionPage.tsx:141
 #, fuzzy
 msgid "License acceptance required"
 msgstr "Alle feltene er påkrevd"
 
-#: src/components/product/ProductSelectionPage.tsx:127
-#, fuzzy, javascript-format
-msgid "%d modes available"
-msgstr "Bruk tilgjengelig plass"
-
-#: src/components/product/ProductSelectionPage.tsx:137
+#: src/components/product/ProductSelectionPage.tsx:155
 #, fuzzy
 msgid "Show more"
 msgstr "Kobler til"
 
-#: src/components/product/ProductSelectionPage.tsx:138
+#: src/components/product/ProductSelectionPage.tsx:156
 #, fuzzy
 msgid "Show less"
 msgstr "Kobler til"
@@ -1594,59 +1605,104 @@ msgstr "Kobler til"
 #. TRANSLATORS: Text used for the license acceptance checkbox. %s will be
 #. replaced with the product name and the text in the square brackets [] is
 #. used for the link to show the license, please keep the brackets.
-#: src/components/product/ProductSelectionPage.tsx:217
+#: src/components/product/ProductSelectionPage.tsx:236
 #, javascript-format
 msgid "I have read and accept the [license] for %s"
 msgstr ""
 
-#: src/components/product/ProductSelectionPage.tsx:260
+#: src/components/product/ProductSelectionPage.tsx:281
 #, fuzzy, javascript-format
 msgid "Change to %s"
 msgstr "Koblet til %s"
 
-#: src/components/product/ProductSelectionPage.tsx:260
+#: src/components/product/ProductSelectionPage.tsx:281
 #, fuzzy, javascript-format
 msgid "Select %s"
 msgstr "Velg"
 
-#: src/components/product/ProductSelectionPage.tsx:300
+#: src/components/product/ProductSelectionPage.tsx:327
 #, fuzzy
 msgid "Select a product to continue."
 msgstr "Velg hva som skal skje med hver partisjon."
 
-#: src/components/product/ProductSelectionPage.tsx:302
+#: src/components/product/ProductSelectionPage.tsx:329
+#, fuzzy
+msgid "Select a product mode to continue."
+msgstr "Velg hva som skal skje med hver partisjon."
+
+#: src/components/product/ProductSelectionPage.tsx:331
 msgid "License acceptance is required to continue."
 msgstr ""
 
-#: src/components/product/ProductSelectionPage.tsx:342
+#: src/components/product/ProductSelectionPage.tsx:386
+msgid "Switch to a different mode"
+msgstr ""
+
+#: src/components/product/ProductSelectionPage.tsx:391
+#, fuzzy
+msgid "Choose a mode"
+msgstr "Endre produkt"
+
+#: src/components/product/ProductSelectionPage.tsx:396
+#: src/components/product/ProductSelectionPage.tsx:402
 #, fuzzy, javascript-format
-msgid "Switch to another available product"
+msgid "Choose a product"
 msgid_plural "Choose from %d available products"
+msgstr[0] "Endre produkt"
+msgstr[1] "Endre produkt"
+
+#: src/components/product/ProductSelectionPage.tsx:411
+#, fuzzy, javascript-format
+msgid "Switch to another product"
+msgid_plural "Switch to one of %d available products"
 msgstr[0] "Tilgjengelige produkter"
 msgstr[1] "Tilgjengelige produkter"
 
-#: src/components/product/ProductSelectionPage.tsx:479
+#: src/components/product/ProductSelectionPage.tsx:422
+#, fuzzy, javascript-format
+msgid "Switch to a different mode or another product"
+msgid_plural "Switch to a different mode or to one of %d available products"
+msgstr[0] "Tilgjengelige produkter"
+msgstr[1] "Tilgjengelige produkter"
+
+#: src/components/product/ProductSelectionPage.tsx:574
 #, fuzzy
 msgid "Current selection"
 msgstr "Valg av programvare"
 
-#: src/components/product/ProductSelectionPage.tsx:499
+#: src/components/product/ProductSelectionPage.tsx:594
 msgid "View license"
 msgstr ""
 
-#: src/components/product/ProductSelectionPage.tsx:542
+#: src/components/product/ProductSelectionPage.tsx:617
+#, fuzzy
+msgid "Select a mode"
+msgstr "Velg en disk"
+
+#: src/components/product/ProductSelectionPage.tsx:619
+#: src/components/product/ProductSelectionPage.tsx:623
+#, fuzzy
+msgid "Select a product"
+msgstr "Velg en plassering"
+
+#: src/components/product/ProductSelectionPage.tsx:646
+#, fuzzy
+msgid "Select a mode and confirm your choice."
+msgstr "Velg hva som skal skje med hver partisjon."
+
+#: src/components/product/ProductSelectionPage.tsx:648
+#, fuzzy
+msgid "Confirm the product selection."
+msgstr "Produktutvalg"
+
+#: src/components/product/ProductSelectionPage.tsx:654
 #, fuzzy
 msgid "Select a product and confirm your choice."
 msgid_plural "Select a product and confirm your choice at the end of the list."
 msgstr[0] "Velg hva som skal skje med hver partisjon."
 msgstr[1] "Velg hva som skal skje med hver partisjon."
 
-#: src/components/product/ProductSelectionPage.tsx:549
-#, fuzzy
-msgid "Select a product"
-msgstr "Velg en plassering"
-
-#: src/components/product/ProductSelectionPage.tsx:558
+#: src/components/product/ProductSelectionPage.tsx:707
 msgid ""
 "Installation settings will automatically update to match the new product's "
 "defaults."
@@ -1909,18 +1965,18 @@ msgstr "Ubrukt plass"
 msgid "None of the patterns match the filter."
 msgstr "Ingen av mønstrene passer sammen med filteret."
 
-#: src/components/software/SoftwarePatternsSelection.tsx:178
+#: src/components/software/SoftwarePatternsSelection.tsx:181
 msgid "auto selected"
 msgstr "Automatisk valgt"
 
-#: src/components/software/SoftwarePatternsSelection.tsx:182
+#: src/components/software/SoftwarePatternsSelection.tsx:185
 #, fuzzy
 msgid "Unselect"
 msgstr "Velg"
 
 #. TRANSLATORS: search field placeholder text
-#: src/components/software/SoftwarePatternsSelection.tsx:207
-#: src/components/software/SoftwarePatternsSelection.tsx:208
+#: src/components/software/SoftwarePatternsSelection.tsx:210
+#: src/components/software/SoftwarePatternsSelection.tsx:211
 msgid "Filter by pattern title or description"
 msgstr "Filtrer etter mønstertittel eller beskrivelse"
 
@@ -5761,9 +5817,6 @@ msgstr ""
 
 #~ msgid "This product does not require registration."
 #~ msgstr "Dette produktet krever ikke registrering."
-
-#~ msgid "Product selection"
-#~ msgstr "Produktutvalg"
 
 #~ msgid "Software summary and filter options"
 #~ msgstr "Programvare oppsummering og filter alternativ"

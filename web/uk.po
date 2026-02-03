@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-30 16:41+0000\n"
+"POT-Creation-Date: 2026-02-02 13:01+0000\n"
 "PO-Revision-Date: 2026-01-29 21:04+0000\n"
 "Last-Translator: Eugene Krater <lachend@gmail.com>\n"
 "Language-Team: Ukrainian <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -20,20 +20,22 @@ msgstr ""
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 5.15.2\n"
 
-#: src/components/core/Breadcrumbs.tsx:85
+#: src/components/core/Breadcrumbs.tsx:93
 msgid "Breadcrumbs"
 msgstr "Навігаційна панель"
 
 #: src/components/core/ChangeProductOption.tsx:49
+#: src/components/product/ProductSelectionPage.tsx:614
 msgid "Change mode"
 msgstr "Змінити режим"
 
 #: src/components/core/ChangeProductOption.tsx:50
+#: src/components/product/ProductSelectionPage.tsx:627
 msgid "Change product or mode"
 msgstr "Змінити продукт або режим"
 
 #: src/components/core/ChangeProductOption.tsx:51
-#: src/components/product/ProductSelectionPage.tsx:549
+#: src/components/product/ProductSelectionPage.tsx:630
 msgid "Change product"
 msgstr "Змінити продукт"
 
@@ -232,7 +234,7 @@ msgstr "Сховище"
 #: src/components/overview/SoftwareSummary.tsx:84
 #: src/components/software/SoftwareConflictsPage.tsx:287
 #: src/components/software/SoftwarePage.tsx:195
-#: src/components/software/SoftwarePatternsSelection.tsx:201
+#: src/components/software/SoftwarePatternsSelection.tsx:204
 #: src/routes/software.tsx:34
 msgid "Software"
 msgstr "Програми"
@@ -331,7 +333,7 @@ msgstr "Назад"
 #: src/components/network/BindingSettingsForm.tsx:229
 #: src/components/network/IpSettingsForm.tsx:221
 #: src/components/network/WifiConnectionForm.tsx:188
-#: src/components/product/ProductSelectionPage.tsx:437
+#: src/components/product/ProductSelectionPage.tsx:531
 msgid "Cancel"
 msgstr "Скасувати"
 
@@ -476,8 +478,8 @@ msgstr "Жодна з карт не відповідає фільтру."
 #: src/components/l10n/L10nPage.tsx:115
 #: src/components/l10n/LocaleSelection.tsx:92
 #: src/components/l10n/TimezoneSelection.tsx:140
-#: src/components/product/ProductSelectionPage.tsx:261
-#: src/components/software/SoftwarePatternsSelection.tsx:182
+#: src/components/product/ProductSelectionPage.tsx:282
+#: src/components/software/SoftwarePatternsSelection.tsx:185
 msgid "Select"
 msgstr "Вибір"
 
@@ -501,7 +503,7 @@ msgstr ""
 
 #: src/components/l10n/L10nPage.tsx:89 src/components/l10n/L10nPage.tsx:103
 #: src/components/l10n/L10nPage.tsx:115
-#: src/components/product/ProductSelectionPage.tsx:261
+#: src/components/product/ProductSelectionPage.tsx:282
 #: src/components/storage/BootSection.tsx:97
 #: src/components/storage/EncryptionSection.tsx:60
 #: src/components/storage/iscsi/InitiatorForm.tsx:89
@@ -1396,7 +1398,7 @@ msgstr "Ліцензія недоступна цією мовою: %s."
 
 #: src/components/product/LicenseDialog.tsx:74
 #: src/components/software/SoftwareConflictsPage.tsx:297
-#: src/components/software/SoftwarePatternsSelection.tsx:220
+#: src/components/software/SoftwarePatternsSelection.tsx:223
 msgid "Close"
 msgstr "Закрити"
 
@@ -1512,77 +1514,135 @@ msgstr "ім'я хоста"
 msgid "Extensions"
 msgstr "Розширення"
 
-#: src/components/product/ProductSelectionPage.tsx:121
+#: src/components/product/ProductSelectionPage.tsx:115
+#, fuzzy, javascript-format
+msgid "%d other mode available"
+msgid_plural "%d other modes available"
+msgstr[0] "Доступно %d режимів"
+msgstr[1] "Доступно %d режимів"
+msgstr[2] "Доступно %d режимів"
+
+#: src/components/product/ProductSelectionPage.tsx:116
+#, fuzzy, javascript-format
+msgid "%d mode available"
+msgid_plural "%d modes available"
+msgstr[0] "Доступно %d режимів"
+msgstr[1] "Доступно %d режимів"
+msgstr[2] "Доступно %d режимів"
+
+#: src/components/product/ProductSelectionPage.tsx:141
 msgid "License acceptance required"
 msgstr "Необхідно прийняти ліцензію"
 
-#: src/components/product/ProductSelectionPage.tsx:127
-#, javascript-format
-msgid "%d modes available"
-msgstr "Доступно %d режимів"
-
-#: src/components/product/ProductSelectionPage.tsx:137
+#: src/components/product/ProductSelectionPage.tsx:155
 msgid "Show more"
 msgstr "Показати більше"
 
-#: src/components/product/ProductSelectionPage.tsx:138
+#: src/components/product/ProductSelectionPage.tsx:156
 msgid "Show less"
 msgstr "Показати менше"
 
 #. TRANSLATORS: Text used for the license acceptance checkbox. %s will be
 #. replaced with the product name and the text in the square brackets [] is
 #. used for the link to show the license, please keep the brackets.
-#: src/components/product/ProductSelectionPage.tsx:217
+#: src/components/product/ProductSelectionPage.tsx:236
 #, javascript-format
 msgid "I have read and accept the [license] for %s"
 msgstr "Я прочитав і приймаю [license] на %s"
 
-#: src/components/product/ProductSelectionPage.tsx:260
+#: src/components/product/ProductSelectionPage.tsx:281
 #, javascript-format
 msgid "Change to %s"
 msgstr "Змінити на %s"
 
-#: src/components/product/ProductSelectionPage.tsx:260
+#: src/components/product/ProductSelectionPage.tsx:281
 #, javascript-format
 msgid "Select %s"
 msgstr "Вибір %s"
 
-#: src/components/product/ProductSelectionPage.tsx:300
+#: src/components/product/ProductSelectionPage.tsx:327
 msgid "Select a product to continue."
 msgstr "Виберіть продукт для продовження."
 
-#: src/components/product/ProductSelectionPage.tsx:302
+#: src/components/product/ProductSelectionPage.tsx:329
+#, fuzzy
+msgid "Select a product mode to continue."
+msgstr "Виберіть продукт для продовження."
+
+#: src/components/product/ProductSelectionPage.tsx:331
 msgid "License acceptance is required to continue."
 msgstr "Для продовження необхідно прийняти ліцензію."
 
-#: src/components/product/ProductSelectionPage.tsx:342
-#, javascript-format
-msgid "Switch to another available product"
+#: src/components/product/ProductSelectionPage.tsx:386
+msgid "Switch to a different mode"
+msgstr ""
+
+#: src/components/product/ProductSelectionPage.tsx:391
+#, fuzzy
+msgid "Choose a mode"
+msgstr "Змінити режим"
+
+#: src/components/product/ProductSelectionPage.tsx:396
+#: src/components/product/ProductSelectionPage.tsx:402
+#, fuzzy, javascript-format
+msgid "Choose a product"
 msgid_plural "Choose from %d available products"
+msgstr[0] "Змінити продукт"
+msgstr[1] "Змінити продукт"
+msgstr[2] "Змінити продукт"
+
+#: src/components/product/ProductSelectionPage.tsx:411
+#, fuzzy, javascript-format
+msgid "Switch to another product"
+msgid_plural "Switch to one of %d available products"
 msgstr[0] "Перейти до іншого доступного продукту"
 msgstr[1] "Вибрати з %d доступних продуктів"
 msgstr[2] "Вибрати з %d доступних продуктів"
 
-#: src/components/product/ProductSelectionPage.tsx:479
+#: src/components/product/ProductSelectionPage.tsx:422
+#, fuzzy, javascript-format
+msgid "Switch to a different mode or another product"
+msgid_plural "Switch to a different mode or to one of %d available products"
+msgstr[0] "Перейти до іншого доступного продукту"
+msgstr[1] "Вибрати з %d доступних продуктів"
+msgstr[2] "Вибрати з %d доступних продуктів"
+
+#: src/components/product/ProductSelectionPage.tsx:574
 msgid "Current selection"
 msgstr "Поточний вибір"
 
-#: src/components/product/ProductSelectionPage.tsx:499
+#: src/components/product/ProductSelectionPage.tsx:594
 msgid "View license"
 msgstr "Переглянути ліцензію"
 
-#: src/components/product/ProductSelectionPage.tsx:542
+#: src/components/product/ProductSelectionPage.tsx:617
+#, fuzzy
+msgid "Select a mode"
+msgstr "Оберіть диск"
+
+#: src/components/product/ProductSelectionPage.tsx:619
+#: src/components/product/ProductSelectionPage.tsx:623
+msgid "Select a product"
+msgstr "Оберіть продукт"
+
+#: src/components/product/ProductSelectionPage.tsx:646
+#, fuzzy
+msgid "Select a mode and confirm your choice."
+msgstr "Виберіть продукт і підтвердіть свій вибір."
+
+#: src/components/product/ProductSelectionPage.tsx:648
+#, fuzzy
+msgid "Confirm the product selection."
+msgstr "Налаштування продукту; будь ласка, зачекайте…"
+
+#: src/components/product/ProductSelectionPage.tsx:654
 msgid "Select a product and confirm your choice."
 msgid_plural "Select a product and confirm your choice at the end of the list."
 msgstr[0] "Виберіть продукт і підтвердіть свій вибір."
 msgstr[1] "Виберіть продукт і підтвердіть свій вибір у кінці списку."
 msgstr[2] "Виберіть продукт і підтвердіть свій вибір у кінці списку."
 
-#: src/components/product/ProductSelectionPage.tsx:549
-msgid "Select a product"
-msgstr "Оберіть продукт"
-
-#: src/components/product/ProductSelectionPage.tsx:558
+#: src/components/product/ProductSelectionPage.tsx:707
 msgid ""
 "Installation settings will automatically update to match the new product's "
 "defaults."
@@ -1848,17 +1908,17 @@ msgstr "Використаний простір"
 msgid "None of the patterns match the filter."
 msgstr "Жоден з шаблонів не відповідає фільтру."
 
-#: src/components/software/SoftwarePatternsSelection.tsx:178
+#: src/components/software/SoftwarePatternsSelection.tsx:181
 msgid "auto selected"
 msgstr "автоматичний вибір"
 
-#: src/components/software/SoftwarePatternsSelection.tsx:182
+#: src/components/software/SoftwarePatternsSelection.tsx:185
 msgid "Unselect"
 msgstr "Відмінити обране"
 
 #. TRANSLATORS: search field placeholder text
-#: src/components/software/SoftwarePatternsSelection.tsx:207
-#: src/components/software/SoftwarePatternsSelection.tsx:208
+#: src/components/software/SoftwarePatternsSelection.tsx:210
+#: src/components/software/SoftwarePatternsSelection.tsx:211
 msgid "Filter by pattern title or description"
 msgstr "Фільтр за назвою або описом шаблону"
 
@@ -4603,9 +4663,6 @@ msgstr "ZFCP"
 #, javascript-format
 #~ msgid "%s [must be registered]."
 #~ msgstr "%s [має бути зареєстровано]."
-
-#~ msgid "Configuring the product, please wait ..."
-#~ msgstr "Налаштування продукту; будь ласка, зачекайте…"
 
 #, fuzzy, javascript-format
 #~ msgid "Start %s installation?"

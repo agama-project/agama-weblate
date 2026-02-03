@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-30 16:41+0000\n"
+"POT-Creation-Date: 2026-02-02 13:01+0000\n"
 "PO-Revision-Date: 2025-06-17 06:59+0000\n"
 "Last-Translator: Feike Donia <feikedonia@proton.me>\n"
 "Language-Team: Dutch <https://l10n.opensuse.org/projects/agama/agama-web/nl/"
@@ -19,22 +19,24 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.12.1\n"
 
-#: src/components/core/Breadcrumbs.tsx:85
+#: src/components/core/Breadcrumbs.tsx:93
 msgid "Breadcrumbs"
 msgstr ""
 
 #: src/components/core/ChangeProductOption.tsx:49
+#: src/components/product/ProductSelectionPage.tsx:614
 #, fuzzy
 msgid "Change mode"
 msgstr "Product wijzigen"
 
 #: src/components/core/ChangeProductOption.tsx:50
+#: src/components/product/ProductSelectionPage.tsx:627
 #, fuzzy
 msgid "Change product or mode"
 msgstr "Product wijzigen"
 
 #: src/components/core/ChangeProductOption.tsx:51
-#: src/components/product/ProductSelectionPage.tsx:549
+#: src/components/product/ProductSelectionPage.tsx:630
 msgid "Change product"
 msgstr "Product wijzigen"
 
@@ -245,7 +247,7 @@ msgstr "Opslag"
 #: src/components/overview/SoftwareSummary.tsx:84
 #: src/components/software/SoftwareConflictsPage.tsx:287
 #: src/components/software/SoftwarePage.tsx:195
-#: src/components/software/SoftwarePatternsSelection.tsx:201
+#: src/components/software/SoftwarePatternsSelection.tsx:204
 #: src/routes/software.tsx:34
 msgid "Software"
 msgstr "Software"
@@ -349,7 +351,7 @@ msgstr "Terug"
 #: src/components/network/BindingSettingsForm.tsx:229
 #: src/components/network/IpSettingsForm.tsx:221
 #: src/components/network/WifiConnectionForm.tsx:188
-#: src/components/product/ProductSelectionPage.tsx:437
+#: src/components/product/ProductSelectionPage.tsx:531
 msgid "Cancel"
 msgstr "Annuleren"
 
@@ -505,8 +507,8 @@ msgstr "Geen van de indelingen komt overeen met het filter."
 #: src/components/l10n/L10nPage.tsx:115
 #: src/components/l10n/LocaleSelection.tsx:92
 #: src/components/l10n/TimezoneSelection.tsx:140
-#: src/components/product/ProductSelectionPage.tsx:261
-#: src/components/software/SoftwarePatternsSelection.tsx:182
+#: src/components/product/ProductSelectionPage.tsx:282
+#: src/components/software/SoftwarePatternsSelection.tsx:185
 msgid "Select"
 msgstr "Selecteer"
 
@@ -531,7 +533,7 @@ msgstr ""
 
 #: src/components/l10n/L10nPage.tsx:89 src/components/l10n/L10nPage.tsx:103
 #: src/components/l10n/L10nPage.tsx:115
-#: src/components/product/ProductSelectionPage.tsx:261
+#: src/components/product/ProductSelectionPage.tsx:282
 #: src/components/storage/BootSection.tsx:97
 #: src/components/storage/EncryptionSection.tsx:60
 #: src/components/storage/iscsi/InitiatorForm.tsx:89
@@ -1483,7 +1485,7 @@ msgstr ""
 
 #: src/components/product/LicenseDialog.tsx:74
 #: src/components/software/SoftwareConflictsPage.tsx:297
-#: src/components/software/SoftwarePatternsSelection.tsx:220
+#: src/components/software/SoftwarePatternsSelection.tsx:223
 msgid "Close"
 msgstr "Sluiten"
 
@@ -1608,22 +1610,31 @@ msgstr "Gebruikersnaam"
 msgid "Extensions"
 msgstr "Uitbreidingen"
 
-#: src/components/product/ProductSelectionPage.tsx:121
+#: src/components/product/ProductSelectionPage.tsx:115
+#, fuzzy, javascript-format
+msgid "%d other mode available"
+msgid_plural "%d other modes available"
+msgstr[0] "Beschikbare apparaten"
+msgstr[1] "Beschikbare apparaten"
+
+#: src/components/product/ProductSelectionPage.tsx:116
+#, fuzzy, javascript-format
+msgid "%d mode available"
+msgid_plural "%d modes available"
+msgstr[0] "Beschikbare apparaten"
+msgstr[1] "Beschikbare apparaten"
+
+#: src/components/product/ProductSelectionPage.tsx:141
 #, fuzzy
 msgid "License acceptance required"
 msgstr "Alle velden zijn verplicht"
 
-#: src/components/product/ProductSelectionPage.tsx:127
-#, fuzzy, javascript-format
-msgid "%d modes available"
-msgstr "Beschikbare apparaten"
-
-#: src/components/product/ProductSelectionPage.tsx:137
+#: src/components/product/ProductSelectionPage.tsx:155
 #, fuzzy
 msgid "Show more"
 msgstr "Verbinden"
 
-#: src/components/product/ProductSelectionPage.tsx:138
+#: src/components/product/ProductSelectionPage.tsx:156
 #, fuzzy
 msgid "Show less"
 msgstr "Verbinden"
@@ -1631,59 +1642,104 @@ msgstr "Verbinden"
 #. TRANSLATORS: Text used for the license acceptance checkbox. %s will be
 #. replaced with the product name and the text in the square brackets [] is
 #. used for the link to show the license, please keep the brackets.
-#: src/components/product/ProductSelectionPage.tsx:217
+#: src/components/product/ProductSelectionPage.tsx:236
 #, javascript-format
 msgid "I have read and accept the [license] for %s"
 msgstr "Ik heb de [licentie] gelezen en begrepen voor %s"
 
-#: src/components/product/ProductSelectionPage.tsx:260
+#: src/components/product/ProductSelectionPage.tsx:281
 #, fuzzy, javascript-format
 msgid "Change to %s"
 msgstr "Verbonden (%s)"
 
-#: src/components/product/ProductSelectionPage.tsx:260
+#: src/components/product/ProductSelectionPage.tsx:281
 #, fuzzy, javascript-format
 msgid "Select %s"
 msgstr "Selecteer"
 
-#: src/components/product/ProductSelectionPage.tsx:300
+#: src/components/product/ProductSelectionPage.tsx:327
 #, fuzzy
 msgid "Select a product to continue."
 msgstr "taal"
 
-#: src/components/product/ProductSelectionPage.tsx:302
+#: src/components/product/ProductSelectionPage.tsx:329
+#, fuzzy
+msgid "Select a product mode to continue."
+msgstr "taal"
+
+#: src/components/product/ProductSelectionPage.tsx:331
 msgid "License acceptance is required to continue."
 msgstr ""
 
-#: src/components/product/ProductSelectionPage.tsx:342
+#: src/components/product/ProductSelectionPage.tsx:386
+msgid "Switch to a different mode"
+msgstr ""
+
+#: src/components/product/ProductSelectionPage.tsx:391
+#, fuzzy
+msgid "Choose a mode"
+msgstr "taal"
+
+#: src/components/product/ProductSelectionPage.tsx:396
+#: src/components/product/ProductSelectionPage.tsx:402
 #, fuzzy, javascript-format
-msgid "Switch to another available product"
+msgid "Choose a product"
 msgid_plural "Choose from %d available products"
+msgstr[0] "Product wijzigen"
+msgstr[1] "Product wijzigen"
+
+#: src/components/product/ProductSelectionPage.tsx:411
+#, fuzzy, javascript-format
+msgid "Switch to another product"
+msgid_plural "Switch to one of %d available products"
 msgstr[0] "Beschikbare producten"
 msgstr[1] "Beschikbare producten"
 
-#: src/components/product/ProductSelectionPage.tsx:479
+#: src/components/product/ProductSelectionPage.tsx:422
+#, fuzzy, javascript-format
+msgid "Switch to a different mode or another product"
+msgid_plural "Switch to a different mode or to one of %d available products"
+msgstr[0] "Beschikbare producten"
+msgstr[1] "Beschikbare producten"
+
+#: src/components/product/ProductSelectionPage.tsx:574
 #, fuzzy
 msgid "Current selection"
 msgstr "Software %s"
 
-#: src/components/product/ProductSelectionPage.tsx:499
+#: src/components/product/ProductSelectionPage.tsx:594
 msgid "View license"
 msgstr ""
 
-#: src/components/product/ProductSelectionPage.tsx:542
+#: src/components/product/ProductSelectionPage.tsx:617
+#, fuzzy
+msgid "Select a mode"
+msgstr "taal"
+
+#: src/components/product/ProductSelectionPage.tsx:619
+#: src/components/product/ProductSelectionPage.tsx:623
+#, fuzzy
+msgid "Select a product"
+msgstr "taal"
+
+#: src/components/product/ProductSelectionPage.tsx:646
+#, fuzzy
+msgid "Select a mode and confirm your choice."
+msgstr "taal"
+
+#: src/components/product/ProductSelectionPage.tsx:648
+#, fuzzy
+msgid "Confirm the product selection."
+msgstr "Product selectie"
+
+#: src/components/product/ProductSelectionPage.tsx:654
 #, fuzzy
 msgid "Select a product and confirm your choice."
 msgid_plural "Select a product and confirm your choice at the end of the list."
 msgstr[0] "taal"
 msgstr[1] "taal"
 
-#: src/components/product/ProductSelectionPage.tsx:549
-#, fuzzy
-msgid "Select a product"
-msgstr "taal"
-
-#: src/components/product/ProductSelectionPage.tsx:558
+#: src/components/product/ProductSelectionPage.tsx:707
 msgid ""
 "Installation settings will automatically update to match the new product's "
 "defaults."
@@ -1960,19 +2016,19 @@ msgstr "Lees zFCP apparaten"
 msgid "None of the patterns match the filter."
 msgstr "Geen van de patronen komt overeen met het filter."
 
-#: src/components/software/SoftwarePatternsSelection.tsx:178
+#: src/components/software/SoftwarePatternsSelection.tsx:181
 #, fuzzy
 msgid "auto selected"
 msgstr "Niet ingesteld"
 
-#: src/components/software/SoftwarePatternsSelection.tsx:182
+#: src/components/software/SoftwarePatternsSelection.tsx:185
 #, fuzzy
 msgid "Unselect"
 msgstr "Selecteer"
 
 #. TRANSLATORS: search field placeholder text
-#: src/components/software/SoftwarePatternsSelection.tsx:207
-#: src/components/software/SoftwarePatternsSelection.tsx:208
+#: src/components/software/SoftwarePatternsSelection.tsx:210
+#: src/components/software/SoftwarePatternsSelection.tsx:211
 msgid "Filter by pattern title or description"
 msgstr "Filter middels patroon titel of beschrijving"
 
@@ -5636,10 +5692,6 @@ msgstr "ZFCP"
 #~ msgstr "Laad verschillende producten, wacht alstublieft..."
 
 #, fuzzy
-#~ msgid "Choose a language"
-#~ msgstr "taal"
-
-#, fuzzy
 #~ msgid "No WiFi connections found."
 #~ msgstr "Geen WiFi verbindingen gevonden"
 
@@ -5773,9 +5825,6 @@ msgstr "ZFCP"
 #, fuzzy
 #~ msgid "Deregister product"
 #~ msgstr "Wijzig product"
-
-#~ msgid "Product selection"
-#~ msgstr "Product selectie"
 
 #~ msgid "Storage DASD"
 #~ msgstr "DASD opslag"

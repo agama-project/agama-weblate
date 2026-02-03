@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-30 16:41+0000\n"
+"POT-Creation-Date: 2026-02-02 13:01+0000\n"
 "PO-Revision-Date: 2025-12-11 16:04+0000\n"
 "Last-Translator: Aleksey Fedorov <Aleksejfedorov963@gmail.com>\n"
 "Language-Team: Russian <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -20,22 +20,24 @@ msgstr ""
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 5.14.3\n"
 
-#: src/components/core/Breadcrumbs.tsx:85
+#: src/components/core/Breadcrumbs.tsx:93
 msgid "Breadcrumbs"
 msgstr ""
 
 #: src/components/core/ChangeProductOption.tsx:49
+#: src/components/product/ProductSelectionPage.tsx:614
 #, fuzzy
 msgid "Change mode"
 msgstr "Изменить продукт"
 
 #: src/components/core/ChangeProductOption.tsx:50
+#: src/components/product/ProductSelectionPage.tsx:627
 #, fuzzy
 msgid "Change product or mode"
 msgstr "Изменить продукт"
 
 #: src/components/core/ChangeProductOption.tsx:51
-#: src/components/product/ProductSelectionPage.tsx:549
+#: src/components/product/ProductSelectionPage.tsx:630
 msgid "Change product"
 msgstr "Изменить продукт"
 
@@ -244,7 +246,7 @@ msgstr "Хранилище"
 #: src/components/overview/SoftwareSummary.tsx:84
 #: src/components/software/SoftwareConflictsPage.tsx:287
 #: src/components/software/SoftwarePage.tsx:195
-#: src/components/software/SoftwarePatternsSelection.tsx:201
+#: src/components/software/SoftwarePatternsSelection.tsx:204
 #: src/routes/software.tsx:34
 msgid "Software"
 msgstr "Программы"
@@ -350,7 +352,7 @@ msgstr "Назад"
 #: src/components/network/BindingSettingsForm.tsx:229
 #: src/components/network/IpSettingsForm.tsx:221
 #: src/components/network/WifiConnectionForm.tsx:188
-#: src/components/product/ProductSelectionPage.tsx:437
+#: src/components/product/ProductSelectionPage.tsx:531
 msgid "Cancel"
 msgstr "Отмена"
 
@@ -500,8 +502,8 @@ msgstr "Ни одна из карт не соответствует фильтр
 #: src/components/l10n/L10nPage.tsx:115
 #: src/components/l10n/LocaleSelection.tsx:92
 #: src/components/l10n/TimezoneSelection.tsx:140
-#: src/components/product/ProductSelectionPage.tsx:261
-#: src/components/software/SoftwarePatternsSelection.tsx:182
+#: src/components/product/ProductSelectionPage.tsx:282
+#: src/components/software/SoftwarePatternsSelection.tsx:185
 msgid "Select"
 msgstr "Выбрать"
 
@@ -525,7 +527,7 @@ msgstr ""
 
 #: src/components/l10n/L10nPage.tsx:89 src/components/l10n/L10nPage.tsx:103
 #: src/components/l10n/L10nPage.tsx:115
-#: src/components/product/ProductSelectionPage.tsx:261
+#: src/components/product/ProductSelectionPage.tsx:282
 #: src/components/storage/BootSection.tsx:97
 #: src/components/storage/EncryptionSection.tsx:60
 #: src/components/storage/iscsi/InitiatorForm.tsx:89
@@ -1442,7 +1444,7 @@ msgstr "Лицензия недоступна на этом языке: %s."
 
 #: src/components/product/LicenseDialog.tsx:74
 #: src/components/software/SoftwareConflictsPage.tsx:297
-#: src/components/software/SoftwarePatternsSelection.tsx:220
+#: src/components/software/SoftwarePatternsSelection.tsx:223
 msgid "Close"
 msgstr "Закрыть"
 
@@ -1558,22 +1560,33 @@ msgstr "имя узла"
 msgid "Extensions"
 msgstr "Расширения"
 
-#: src/components/product/ProductSelectionPage.tsx:121
+#: src/components/product/ProductSelectionPage.tsx:115
+#, fuzzy, javascript-format
+msgid "%d other mode available"
+msgid_plural "%d other modes available"
+msgstr[0] "Нет доступных устройств"
+msgstr[1] "Нет доступных устройств"
+msgstr[2] "Нет доступных устройств"
+
+#: src/components/product/ProductSelectionPage.tsx:116
+#, fuzzy, javascript-format
+msgid "%d mode available"
+msgid_plural "%d modes available"
+msgstr[0] "Нет доступных устройств"
+msgstr[1] "Нет доступных устройств"
+msgstr[2] "Нет доступных устройств"
+
+#: src/components/product/ProductSelectionPage.tsx:141
 #, fuzzy
 msgid "License acceptance required"
 msgstr "Все поля обязательны для заполнения"
 
-#: src/components/product/ProductSelectionPage.tsx:127
-#, fuzzy, javascript-format
-msgid "%d modes available"
-msgstr "Нет доступных устройств"
-
-#: src/components/product/ProductSelectionPage.tsx:137
+#: src/components/product/ProductSelectionPage.tsx:155
 #, fuzzy
 msgid "Show more"
 msgstr "Другие действия"
 
-#: src/components/product/ProductSelectionPage.tsx:138
+#: src/components/product/ProductSelectionPage.tsx:156
 #, fuzzy
 msgid "Show less"
 msgstr "Свернуть действия"
@@ -1581,48 +1594,99 @@ msgstr "Свернуть действия"
 #. TRANSLATORS: Text used for the license acceptance checkbox. %s will be
 #. replaced with the product name and the text in the square brackets [] is
 #. used for the link to show the license, please keep the brackets.
-#: src/components/product/ProductSelectionPage.tsx:217
+#: src/components/product/ProductSelectionPage.tsx:236
 #, javascript-format
 msgid "I have read and accept the [license] for %s"
 msgstr "Я прочитал(-а) и принимаю [лицензию] для %s"
 
-#: src/components/product/ProductSelectionPage.tsx:260
+#: src/components/product/ProductSelectionPage.tsx:281
 #, fuzzy, javascript-format
 msgid "Change to %s"
 msgstr "Подключиться к %s"
 
-#: src/components/product/ProductSelectionPage.tsx:260
+#: src/components/product/ProductSelectionPage.tsx:281
 #, fuzzy, javascript-format
 msgid "Select %s"
 msgstr "Выбрать"
 
-#: src/components/product/ProductSelectionPage.tsx:300
+#: src/components/product/ProductSelectionPage.tsx:327
 #, fuzzy
 msgid "Select a product to continue."
 msgstr "Выберите решение, чтобы продолжить"
 
-#: src/components/product/ProductSelectionPage.tsx:302
+#: src/components/product/ProductSelectionPage.tsx:329
+#, fuzzy
+msgid "Select a product mode to continue."
+msgstr "Выберите решение, чтобы продолжить"
+
+#: src/components/product/ProductSelectionPage.tsx:331
 msgid "License acceptance is required to continue."
 msgstr ""
 
-#: src/components/product/ProductSelectionPage.tsx:342
+#: src/components/product/ProductSelectionPage.tsx:386
+msgid "Switch to a different mode"
+msgstr ""
+
+#: src/components/product/ProductSelectionPage.tsx:391
+#, fuzzy
+msgid "Choose a mode"
+msgstr "Выберите язык"
+
+#: src/components/product/ProductSelectionPage.tsx:396
+#: src/components/product/ProductSelectionPage.tsx:402
 #, fuzzy, javascript-format
-msgid "Switch to another available product"
+msgid "Choose a product"
 msgid_plural "Choose from %d available products"
+msgstr[0] "Изменить продукт"
+msgstr[1] "Изменить продукт"
+msgstr[2] "Изменить продукт"
+
+#: src/components/product/ProductSelectionPage.tsx:411
+#, fuzzy, javascript-format
+msgid "Switch to another product"
+msgid_plural "Switch to one of %d available products"
 msgstr[0] "Доступные продукты"
 msgstr[1] "Доступные продукты"
 msgstr[2] "Доступные продукты"
 
-#: src/components/product/ProductSelectionPage.tsx:479
+#: src/components/product/ProductSelectionPage.tsx:422
+#, fuzzy, javascript-format
+msgid "Switch to a different mode or another product"
+msgid_plural "Switch to a different mode or to one of %d available products"
+msgstr[0] "Доступные продукты"
+msgstr[1] "Доступные продукты"
+msgstr[2] "Доступные продукты"
+
+#: src/components/product/ProductSelectionPage.tsx:574
 #, fuzzy
 msgid "Current selection"
 msgstr "Выбор строки"
 
-#: src/components/product/ProductSelectionPage.tsx:499
+#: src/components/product/ProductSelectionPage.tsx:594
 msgid "View license"
 msgstr ""
 
-#: src/components/product/ProductSelectionPage.tsx:542
+#: src/components/product/ProductSelectionPage.tsx:617
+#, fuzzy
+msgid "Select a mode"
+msgstr "Выберите диск"
+
+#: src/components/product/ProductSelectionPage.tsx:619
+#: src/components/product/ProductSelectionPage.tsx:623
+msgid "Select a product"
+msgstr "Выберите продукт"
+
+#: src/components/product/ProductSelectionPage.tsx:646
+#, fuzzy
+msgid "Select a mode and confirm your choice."
+msgstr "Выберите решение, чтобы продолжить"
+
+#: src/components/product/ProductSelectionPage.tsx:648
+#, fuzzy
+msgid "Confirm the product selection."
+msgstr "Выбор продукта"
+
+#: src/components/product/ProductSelectionPage.tsx:654
 #, fuzzy
 msgid "Select a product and confirm your choice."
 msgid_plural "Select a product and confirm your choice at the end of the list."
@@ -1630,11 +1694,7 @@ msgstr[0] "Выберите решение, чтобы продолжить"
 msgstr[1] "Выберите решение, чтобы продолжить"
 msgstr[2] "Выберите решение, чтобы продолжить"
 
-#: src/components/product/ProductSelectionPage.tsx:549
-msgid "Select a product"
-msgstr "Выберите продукт"
-
-#: src/components/product/ProductSelectionPage.tsx:558
+#: src/components/product/ProductSelectionPage.tsx:707
 msgid ""
 "Installation settings will automatically update to match the new product's "
 "defaults."
@@ -1899,17 +1959,17 @@ msgstr "Используемое"
 msgid "None of the patterns match the filter."
 msgstr "Ни один из шаблонов не соответствует фильтру."
 
-#: src/components/software/SoftwarePatternsSelection.tsx:178
+#: src/components/software/SoftwarePatternsSelection.tsx:181
 msgid "auto selected"
 msgstr "автоматический выбор"
 
-#: src/components/software/SoftwarePatternsSelection.tsx:182
+#: src/components/software/SoftwarePatternsSelection.tsx:185
 msgid "Unselect"
 msgstr "Отменить выбор"
 
 #. TRANSLATORS: search field placeholder text
-#: src/components/software/SoftwarePatternsSelection.tsx:207
-#: src/components/software/SoftwarePatternsSelection.tsx:208
+#: src/components/software/SoftwarePatternsSelection.tsx:210
+#: src/components/software/SoftwarePatternsSelection.tsx:211
 msgid "Filter by pattern title or description"
 msgstr "Фильтр по названию или описанию шаблона"
 
@@ -5642,9 +5702,6 @@ msgstr "ZFCP"
 #~ msgid "Shrinkable"
 #~ msgstr "Можно уменьшить"
 
-#~ msgid "Choose a language"
-#~ msgstr "Выберите язык"
-
 #~ msgid "No WiFi connections found."
 #~ msgstr "WiFi-соединения не найдены."
 
@@ -5823,9 +5880,6 @@ msgstr "ZFCP"
 
 #~ msgid "This product does not require registration."
 #~ msgstr "Этот продукт не требует регистрации."
-
-#~ msgid "Product selection"
-#~ msgstr "Выбор продукта"
 
 #~ msgid "Software summary and filter options"
 #~ msgstr "Сводка по программному обеспечению и параметры фильтрации"
