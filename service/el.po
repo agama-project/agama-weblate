@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-02-19 14:08+0000\n"
-"PO-Revision-Date: 2026-02-23 20:09+0000\n"
+"PO-Revision-Date: 2026-02-23 22:04+0000\n"
 "Last-Translator: Efstathios Iosifidis <eiosifidis@yandex.com>\n"
 "Language-Team: Greek <https://l10n.opensuse.org/projects/agama/agama-service-"
 "sle-16/el/>\n"
@@ -33,17 +33,17 @@ msgstr "Βρέθηκαν μη υποστηριζόμενα στοιχεία στ
 #. @param data [Hash] Extra data provided to the D-Bus calls.
 #: service/lib/agama/manager.rb:99
 msgid "Analyze disks"
-msgstr ""
+msgstr "Ανάλυση δίσκων"
 
 #: service/lib/agama/manager.rb:99
 msgid "Configure software"
-msgstr ""
+msgstr "Ρύθμιση λογισμικού"
 
 #. Runs the install phase
 #. rubocop:disable Metrics/AbcSize, Metrics/MethodLength
 #: service/lib/agama/manager.rb:118
 msgid "Prepare disks"
-msgstr ""
+msgstr "Προετοιμασία δίσκων"
 
 #: service/lib/agama/manager.rb:119
 msgid "Install software"
@@ -56,11 +56,11 @@ msgstr "Ρύθμιση του συστήματος"
 #. rubocop:enable Metrics/AbcSize, Metrics/MethodLength
 #: service/lib/agama/manager.rb:161
 msgid "Load software translations"
-msgstr ""
+msgstr "Φόρτωση μεταφράσεων λογισμικού"
 
 #: service/lib/agama/manager.rb:162
 msgid "Load storage translations"
-msgstr ""
+msgstr "Φόρτωση μεταφράσεων αποθηκευτικού χώρου"
 
 #. @param certificate [Agama::SSL::Certificate]
 #. @return [Agama::Question]
@@ -69,6 +69,8 @@ msgid ""
 "Trying to import a self signed certificate. Do you want to trust it and regist"
 "er the product?"
 msgstr ""
+"Γίνεται προσπάθεια εισαγωγής ενός αυτο-υπογεγραμμένου πιστοποιητικού. Θέλετε "
+"να το εμπιστευτείτε και να προχωρήσετε στην εγγραφή του προϊόντος;"
 
 #. TRANSLATORS: button label, try downloading the failed package again
 #: service/lib/agama/software/callbacks/base.rb:48
@@ -78,12 +80,12 @@ msgstr "Δοκιμάστε ξανά"
 #. TRANSLATORS: button label, ignore the failed download, skip package installation
 #: service/lib/agama/software/callbacks/base.rb:54
 msgid "Continue anyway"
-msgstr ""
+msgstr "Συνέχεια οπωσδήποτε"
 
 #. TRANSLATORS: button label, abort the installation completely after an error
 #: service/lib/agama/software/callbacks/base.rb:60
 msgid "Abort installation"
-msgstr ""
+msgstr "Εγκατάλειψη εγκατάστασης"
 
 #. TRANSLATORS: button label, skip the error
 #: service/lib/agama/software/callbacks/base.rb:66
@@ -111,6 +113,10 @@ msgid ""
 "although the file is part of the signed repository, the list of checksums does"
 " not mention this file. Use it anyway?"
 msgstr ""
+"Δεν βρέθηκε άθροισμα ελέγχου (checksum) για το αρχείο %{file} στο "
+"αποθετήριο. Αυτό σημαίνει ότι παρόλο που το αρχείο είναι μέρος του "
+"υπογεγραμμένου αποθετηρίου, η λίστα αθροισμάτων ελέγχου δεν το αναφέρει. "
+"Χρήση οπωσδήποτε;"
 
 #. Callback to accept an unknown digest
 #.
@@ -124,6 +130,9 @@ msgid ""
 "nknown. This means that the origin and integrity of the file cannot be verifie"
 "d. Use it anyway?"
 msgstr ""
+"Το άθροισμα ελέγχου του αρχείου %{file} είναι \"%{digest}\" αλλά το "
+"αναμενόμενο είναι άγνωστο. Αυτό σημαίνει ότι η προέλευση και η ακεραιότητα "
+"του αρχείου δεν μπορούν να επαληθευτούν. Χρήση οπωσδήποτε;"
 
 #. Callback to accept wrong digest
 #.
@@ -138,6 +147,9 @@ msgid ""
 "\"%{expected}\". The file has changed by accident or by an attacker since the cr"
 "eater signed it. Use it anyway?"
 msgstr ""
+"Το αναμενόμενο άθροισμα ελέγχου του αρχείου %{file} είναι \"%{found}\" αλλά "
+"αναμενόταν να είναι \"%{expected}\". Το αρχείο έχει αλλάξει κατά λάθος ή από "
+"επιτιθέμενο μετά την υπογραφή του. Χρήση οπωσδήποτε;"
 
 #. DoneProvide callback
 #.
@@ -159,6 +171,9 @@ msgid ""
 "The file %{filename} from %{repo_url} is not digitally signed. The origin and "
 "integrity of the file cannot be verified. Use it anyway?"
 msgstr ""
+"Το αρχείο %{filename} από το %{repo_url} δεν είναι ψηφιακά υπογεγραμμένο. Η "
+"προέλευση και η ακεραιότητα του αρχείου δεν μπορούν να επαληθευτούν. Χρήση "
+"οπωσδήποτε;"
 
 #: service/lib/agama/software/callbacks/signature.rb:72
 #, perl-brace-format
@@ -166,6 +181,8 @@ msgid ""
 "The file %{filename} is not digitally signed. The origin and integrity of the "
 "file cannot be verified. Use it anyway?"
 msgstr ""
+"Το αρχείο %{filename} δεν είναι ψηφιακά υπογεγραμμένο. Η προέλευση και η "
+"ακεραιότητα του αρχείου δεν μπορούν να επαληθευτούν. Χρήση οπωσδήποτε;"
 
 #. Callback to handle signature verification failures
 #.
@@ -177,6 +194,8 @@ msgid ""
 "The key %{id} (%{name}) with fingerprint %{fingerprint} is unknown. Do you wan"
 "t to trust this key?"
 msgstr ""
+"Το κλειδί %{id} (%{name}) με αποτύπωμα %{fingerprint} είναι άγνωστο. Θέλετε "
+"να εμπιστευτείτε αυτό το κλειδί;"
 
 #. Callback to handle unknown GPG keys
 #.
@@ -189,6 +208,8 @@ msgid ""
 "The file %{filename} from %{repo_url} is digitally signed with the following u"
 "nknown GnuPG key: %{key_id}. Use it anyway?"
 msgstr ""
+"Το αρχείο %{filename} από το %{repo_url} είναι ψηφιακά υπογεγραμμένο με το "
+"ακόλουθο άγνωστο κλειδί GnuPG: %{key_id}. Χρήση οπωσδήποτε;"
 
 #: service/lib/agama/software/callbacks/signature.rb:137
 #, perl-brace-format
@@ -196,6 +217,8 @@ msgid ""
 "The file %{filename} is digitally signed with the following unknown GnuPG key:"
 " %{key_id}. Use it anyway?"
 msgstr ""
+"Το αρχείο %{filename} είναι ψηφιακά υπογεγραμμένο με το ακόλουθο άγνωστο "
+"κλειδί GnuPG: %{key_id}. Χρήση οπωσδήποτε;"
 
 #. Callback to handle file verification failures
 #.
@@ -209,6 +232,9 @@ msgid ""
 "nuPG key, but the integrity check failed: %{key_id} (%{key_name}). Use it anyw"
 "ay?"
 msgstr ""
+"Το αρχείο %{filename} από το %{repo_url} είναι ψηφιακά υπογεγραμμένο με το "
+"ακόλουθο κλειδί GnuPG, αλλά ο έλεγχος ακεραιότητας απέτυχε: %{key_id} (%"
+"{key_name}). Χρήση οπωσδήποτε;"
 
 #: service/lib/agama/software/callbacks/signature.rb:175
 #, perl-brace-format
@@ -216,6 +242,9 @@ msgid ""
 "The file %{filename} is digitally signed with the following GnuPG key, but the"
 " integrity check failed: %{key_id} (%{key_name}). Use it anyway?"
 msgstr ""
+"Το αρχείο %{filename} είναι ψηφιακά υπογεγραμμένο με το ακόλουθο κλειδί "
+"GnuPG, αλλά ο έλεγχος ακεραιότητας απέτυχε: %{key_id} (%{key_name}). Χρήση "
+"οπωσδήποτε;"
 
 #. TRANSLATORS: button label, trust the GPG key or the signature
 #: service/lib/agama/software/callbacks/signature.rb:199
@@ -225,7 +254,7 @@ msgstr "Εμπιστοσύνη"
 #. Should an error be raised?
 #: service/lib/agama/software/manager.rb:178
 msgid "Refreshing repositories metadata"
-msgstr ""
+msgstr "Ανανέωση μεταδεδομένων αποθετηρίων"
 
 #: service/lib/agama/software/manager.rb:179
 msgid "Calculating the software proposal"
@@ -233,37 +262,37 @@ msgstr "Υπολογισμός της πρότασης λογισμικού"
 
 #: service/lib/agama/software/manager.rb:183
 msgid "Initializing sources"
-msgstr ""
+msgstr "Προετοιμασία πηγών"
 
 #. error message
 #: service/lib/agama/software/manager.rb:427
 #, c-format
 msgid "Adding service '%s' failed."
-msgstr ""
+msgstr "Η προσθήκη της υπηρεσίας '%s' απέτυχε."
 
 #. error message
 #: service/lib/agama/software/manager.rb:432
 #, c-format
 msgid "Updating service '%s' failed."
-msgstr ""
+msgstr "Η ενημέρωση της υπηρεσίας '%s' απέτυχε."
 
 #. error message
 #: service/lib/agama/software/manager.rb:438
 #, c-format
 msgid "Saving service '%s' failed."
-msgstr ""
+msgstr "Η αποθήκευση της υπηρεσίας '%s' απέτυχε."
 
 #. error message
 #: service/lib/agama/software/manager.rb:444
 #, c-format
 msgid "Refreshing service '%s' failed."
-msgstr ""
+msgstr "Η ανανέωση της υπηρεσίας '%s' απέτυχε."
 
 #. rubocop:enable Metrics/AbcSize
 #: service/lib/agama/software/manager.rb:453
 #, c-format
 msgid "Removing service '%s' failed."
-msgstr ""
+msgstr "Η αφαίρεση της υπηρεσίας '%s' απέτυχε."
 
 #. Issues related to the software proposal.
 #.
@@ -273,21 +302,21 @@ msgstr ""
 #: service/lib/agama/software/manager.rb:710
 #, c-format
 msgid "Could not read repository \"%s\""
-msgstr ""
+msgstr "Αδυναμία ανάγνωσης του αποθετηρίου \"%s\""
 
 #. Issue when a product is missing
 #.
 #. @return [Agama::Issue]
 #: service/lib/agama/software/manager.rb:720
 msgid "Product not selected yet"
-msgstr ""
+msgstr "Δεν έχει επιλεγεί προϊόν ακόμη"
 
 #. Issue when a product requires registration but it is not registered yet.
 #.
 #. @return [Agama::Issue]
 #: service/lib/agama/software/manager.rb:729
 msgid "Product must be registered"
-msgstr ""
+msgstr "Το προϊόν πρέπει να εγγραφεί"
 
 #. Returns solver error messages from the last attempt
 #.
@@ -295,7 +324,7 @@ msgstr ""
 #: service/lib/agama/software/proposal.rb:276
 #, c-format
 msgid "Found %s dependency issues."
-msgstr ""
+msgstr "Βρέθηκαν %s προβλήματα εξαρτήσεων."
 
 #. TRANSLATORS: SSL certificate details
 #: service/lib/agama/ssl/certificate_details.rb:31
@@ -442,7 +471,7 @@ msgstr "Δεν υπάρχει συσκευή-μέλος MD RAID με το ψευ
 #. @return [Issue, nil]
 #: service/lib/agama/storage/config_checkers/md_raid.rb:110
 msgid "There is a MD RAID without level"
-msgstr "Υπάρχει ένα MD RAID χωρίς επίπεδο (level)"
+msgstr "Υπάρχει ένα MD RAID χωρίς επίπεδο"
 
 #. Issue if the MD RAID does not contain enough member devices.
 #.
@@ -537,7 +566,7 @@ msgstr ""
 msgid "'%{method}' is not a suitable method to encrypt the physical volumes."
 msgstr ""
 "Η '%{method}' δεν είναι κατάλληλη μέθοδος για την κρυπτογράφηση των φυσικών "
-"τόμων (physical volumes)."
+"τόμων."
 
 #. TRANSLATORS: %s is replaced by a device name (e.g., "/dev/vda").
 #: service/lib/agama/storage/config_checkers/search.rb:74
@@ -577,7 +606,7 @@ msgstr "συσκευή"
 #. @return [Issue, nil]
 #: service/lib/agama/storage/config_checkers/volume_group.rb:76
 msgid "There is a volume group without name"
-msgstr "Υπάρχει μια ομάδα τόμων (volume group) χωρίς όνομα"
+msgstr "Υπάρχει μια ομάδα τόμων χωρίς όνομα"
 
 #. TRANSLATORS: %s is the replaced by a device alias (e.g., "pv1").
 #: service/lib/agama/storage/config_checkers/volume_group.rb:106
@@ -639,17 +668,17 @@ msgstr "Αντιγραφή σημαντικών αρχείων εγκατάστ�
 #. Constructor
 #: service/lib/agama/storage/finisher.rb:186
 msgid "Writing Linux Security Modules configuration"
-msgstr ""
+msgstr "Εγγραφή ρυθμίσεων Linux Security Modules (LSM)"
 
 #. Step to write the bootloader configuration
 #: service/lib/agama/storage/finisher.rb:197
 msgid "Installing bootloader"
-msgstr "Εγκατάσταση διαχειριστή εκκίνησης (bootloader)"
+msgstr "Εγκατάσταση διαχειριστή εκκίνησης"
 
 #. Step to finish the Y2Storage configuration
 #: service/lib/agama/storage/finisher.rb:214
 msgid "Adjusting storage configuration"
-msgstr "Προσαρμογή ρυθμίσεων αποθήκευσης"
+msgstr "Προσαρμογή ρυθμίσεων αποθηκευτικού χώρου"
 
 #. Step to finish the iSCSI configuration
 #: service/lib/agama/storage/finisher.rb:225
@@ -659,7 +688,7 @@ msgstr "Προσαρμογή ρυθμίσεων iSCSI"
 #. Step to configure the file-system snapshots
 #: service/lib/agama/storage/finisher.rb:236
 msgid "Configuring file systems snapshots"
-msgstr "Ρύθμιση στιγμιότυπων (snapshots) συστημάτων αρχείων"
+msgstr "Ρύθμιση στιγμιότυπων συστημάτων αρχείων"
 
 #. Step to copy the installation logs
 #: service/lib/agama/storage/finisher.rb:254
@@ -669,12 +698,12 @@ msgstr "Αντιγραφή καταγραφών (logs)"
 #. Executes post-installation scripts
 #: service/lib/agama/storage/finisher.rb:288
 msgid "Running user-defined scripts"
-msgstr ""
+msgstr "Εκτέλεση scripts ορισμένων από τον χρήστη"
 
 #. Executes post-installation scripts
 #: service/lib/agama/storage/finisher.rb:327
 msgid "Deploying user-defined files"
-msgstr ""
+msgstr "Παράδοση αρχείων ορισμένων από τον χρήστη"
 
 #. Step to unmount the target file-systems
 #: service/lib/agama/storage/finisher.rb:346
@@ -686,15 +715,15 @@ msgstr "Αποπροσάρτηση συσκευών αποθήκευσης"
 #. @param config [ISCSI::Config]
 #: service/lib/agama/storage/iscsi/manager.rb:300
 msgid "Logout iSCSI targets"
-msgstr ""
+msgstr "Αποσύνδεση από στόχους iSCSI"
 
 #: service/lib/agama/storage/iscsi/manager.rb:301
 msgid "Discover iSCSI targets"
-msgstr ""
+msgstr "Εντοπισμός στόχων iSCSI"
 
 #: service/lib/agama/storage/iscsi/manager.rb:302
 msgid "Login iSCSI targets"
-msgstr ""
+msgstr "Σύνδεση σε στόχους (targets) iSCSI"
 
 #. Login issue.
 #.
@@ -703,7 +732,7 @@ msgstr ""
 #: service/lib/agama/storage/iscsi/manager.rb:366
 #, c-format
 msgid "Cannot login to iSCSI target %s"
-msgstr ""
+msgstr "Αδυναμία σύνδεσης στον στόχο iSCSI %s"
 
 #. Probes storage devices and performs an initial proposal
 #.
@@ -721,17 +750,17 @@ msgstr "Ανίχνευση συσκευών αποθήκευσης"
 
 #: service/lib/agama/storage/manager.rb:135
 msgid "Calculating the storage proposal"
-msgstr ""
+msgstr "Υπολογισμός της πρότασης αποθηκευτικού χώρου"
 
 #. Prepares the partitioning to install the system
 #: service/lib/agama/storage/manager.rb:161
 msgid "Preparing bootloader proposal"
-msgstr "Προετοιμασία πρότασης διαχειριστή εκκίνησης (bootloader)"
+msgstr "Προετοιμασία πρότασης διαχειριστή εκκίνησης"
 
 #. then also apply changes to that proposal
 #: service/lib/agama/storage/manager.rb:168
 msgid "Adding storage-related packages"
-msgstr ""
+msgstr "Προσθήκη πακέτων σχετικών με την αποθήκευση"
 
 #: service/lib/agama/storage/manager.rb:169
 msgid "Preparing the storage devices"
@@ -747,7 +776,7 @@ msgstr "Εγγραφή sysconfig διαχειριστή εκκίνησης"
 #: service/lib/agama/storage/proposal.rb:345
 msgid "Cannot calculate a valid storage setup with the current configuration"
 msgstr ""
-"Δεν είναι δυνατός ο υπολογισμός έγκυρης διαμόρφωσης αποθήκευσης με τις "
+"Δεν είναι δυνατός ο υπολογισμός έγκυρης ρύθμισης αποθηκευτικού χωρου με τις "
 "τρέχουσες ρυθμίσεις"
 
 #. Issue to communicate a generic Y2Storage error.
@@ -755,14 +784,15 @@ msgstr ""
 #. @return [Issue]
 #: service/lib/agama/storage/proposal.rb:356
 msgid "A problem ocurred while calculating the storage setup"
-msgstr "Παρουσιάστηκε πρόβλημα κατά τον υπολογισμό της διαμόρφωσης αποθήκευσης"
+msgstr ""
+"Παρουσιάστηκε πρόβλημα κατά τον υπολογισμό της ρύθμισης αποθηκευτικού χώρου"
 
 #. Returns an issue if there is no target device.
 #.
 #. @return [Issue, nil]
 #: service/lib/agama/storage/proposal_strategies/guided.rb:135
 msgid "No device selected for installation"
-msgstr ""
+msgstr "Δεν έχει επιλεγεί συσκευή για εγκατάσταση"
 
 #. Returns an issue if any of the devices required for the proposal is not found
 #.
@@ -771,12 +801,12 @@ msgstr ""
 #, perl-brace-format
 msgid "The following selected device is not found in the system: %{devices}"
 msgid_plural "The following selected devices are not found in the system: %{devices}"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Η ακόλουθη επιλεγμένη συσκευή δεν βρέθηκε στο σύστημα: %{devices}"
+msgstr[1] "Οι ακόλουθες επιλεγμένες συσκευές δεν βρέθηκαν στο σύστημα: %{devices}"
 
 #. Recalculates the list of issues
 #: service/lib/agama/users.rb:154
 msgid "Defining a user, setting the root password or a SSH public key is required"
 msgstr ""
-"Απαιτείται ο ορισμός ενός χρήστη, ο ορισμός κωδικού πρόσβασης root ή ενός "
+"Απαιτείται ο ορισμός ενός χρήστη, ο ορισμός συνθηματικού root ή ενός "
 "δημόσιου κλειδιού SSH"
