@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-02-27 23:01+0000\n"
-"PO-Revision-Date: 2026-02-20 08:04+0000\n"
+"PO-Revision-Date: 2026-02-28 08:04+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/agama/agama-web/"
 "ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.16\n"
+"X-Generator: Weblate 5.16.1\n"
 
 #: src/components/core/Breadcrumbs.tsx:130
 msgid "Breadcrumbs"
@@ -1914,9 +1914,8 @@ msgid "Try again"
 msgstr "再試行"
 
 #: src/components/software/SoftwarePage.tsx:143
-#, fuzzy
 msgid "No information available yet"
-msgstr "%s に関する情報を表示"
+msgstr "まだ情報はありません"
 
 #: src/components/software/SoftwarePage.tsx:181
 msgid "Used space"
@@ -3574,7 +3573,6 @@ msgid "No devices available"
 msgstr "デバイスがありません"
 
 #: src/components/storage/dasd/DASDPage.tsx:39
-#, fuzzy
 msgid "No DASD devices found in this machine."
 msgstr "このマシンには DASD デバイスが見つかりませんでした。"
 
@@ -3583,17 +3581,14 @@ msgid "DASD"
 msgstr "DASD"
 
 #: src/components/storage/dasd/DASDTable.tsx:121
-#, fuzzy
 msgid "Active"
-msgstr "有効化"
+msgstr "有効"
 
 #: src/components/storage/dasd/DASDTable.tsx:122
-#, fuzzy
 msgid "Offline"
 msgstr "オフライン"
 
 #: src/components/storage/dasd/DASDTable.tsx:123
-#, fuzzy
 msgid "Read only"
 msgstr "読み込み専用"
 
@@ -3638,16 +3633,16 @@ msgstr "フォーマット"
 #. TRANSLATORS: shown in the filter toolbar when filters are active.
 #. %1$s is the number of matching devices, %2$s is the total number.
 #: src/components/storage/dasd/DASDTable.tsx:296
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "%1$d of %2$d devices match filters"
-msgstr "フィルタに該当するターゲットがありません"
+msgstr "%2$d 個のデバイスのうち %1$d 個が条件に該当しています"
 
 #. TRANSLATORS: shown in the filter toolbar when no filters are active.
 #. %s is the total number of devices.
 #: src/components/storage/dasd/DASDTable.tsx:303
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "%d devices available"
-msgstr "デバイスがありません"
+msgstr "%d 個のデバイスが利用可能です"
 
 #: src/components/storage/dasd/DASDTable.tsx:316
 #: src/components/storage/dasd/DASDTable.tsx:328
@@ -3679,16 +3674,15 @@ msgstr "全てのフィルタを消去"
 #. TRANSLATORS: message shown in bulk action toolbar when just one device
 #. is selected
 #: src/components/storage/dasd/DASDTable.tsx:383
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "Actions for the selected device:"
 msgid_plural "Actions for %s selected devices:"
-msgstr[0] "選択した %s 個のデバイスに適用"
+msgstr[0] "選択した %s 個のデバイスに対する処理:"
 
 #. TRANSLATORS: hint shown in the bulk actions toolbar when no devices are selected.
 #: src/components/storage/dasd/DASDTable.tsx:392
-#, fuzzy
 msgid "Select devices to perform bulk actions"
-msgstr "一括処理を有効にするデバイスを選択してください。"
+msgstr "一括処理を実施するデバイスを選択してください"
 
 #. TRANSLATORS: message announced to screen reader users when just one
 #. device is selected.
@@ -3697,20 +3691,22 @@ msgstr "一括処理を有効にするデバイスを選択してください。
 msgid "1 device selected. Use the actions toolbar to apply changes."
 msgid_plural "%s devices selected. Use the actions toolbar to apply changes."
 msgstr[0] ""
+"%s 個のデバイスを選択しています。変更を適用するには処理ツールバーをお使いくだ"
+"さい。"
 
 #. TRANSLATORS: message announced to screen reader users when no devices
 #. are selected.
 #: src/components/storage/dasd/DASDTable.tsx:410
-#, fuzzy
 msgid ""
 "No devices selected. Select one or more devices to perform bulk actions."
-msgstr "一括処理を有効にするデバイスを選択してください。"
+msgstr ""
+"何もデバイスを選択していません。一括処理を実施する 1 つ以上のデバイスを選択し"
+"てください。"
 
 #. TRANSLATORS: table header for a DASD devices table
 #: src/components/storage/dasd/DASDTable.tsx:544
-#, fuzzy
 msgid "Channel"
-msgstr "チャネル ID"
+msgstr "チャネル"
 
 #. TRANSLATORS: table header for `DIAG access mode` on DASD devices table.
 #. It refers to an special disk access mode on IBM mainframes. Keep
@@ -3737,9 +3733,8 @@ msgid "This message will close automatically when everything is done."
 msgstr "全ての処理が完了すると、このメッセージは自動的に閉じます。"
 
 #: src/components/storage/dasd/DASDTable.tsx:706
-#, fuzzy
 msgid "No devices match filters"
-msgstr "フィルタに該当するターゲットがありません"
+msgstr "フィルタに該当するデバイスがありません"
 
 #: src/components/storage/dasd/DASDTable.tsx:710
 #: src/components/storage/iscsi/TargetsTable.tsx:359
@@ -3778,9 +3773,8 @@ msgid "Format device %s"
 msgstr "デバイス %s のフォーマット"
 
 #: src/components/storage/dasd/FormatActionHandler.tsx:140
-#, fuzzy
 msgid "This action will destroy any data stored on the device."
-msgstr "この処理によりデバイス内のデータが全て消去されます。"
+msgstr "この処理により、デバイス内に書き込まれている全てのデータが消去されます。"
 
 #: src/components/storage/dasd/FormatActionHandler.tsx:141
 #: src/components/storage/dasd/FormatActionHandler.tsx:168
@@ -3797,9 +3791,10 @@ msgid "Format selected devices?"
 msgstr "選択したデバイスをフォーマットしますか？"
 
 #: src/components/storage/dasd/FormatActionHandler.tsx:165
-#, fuzzy
 msgid "This action will destroy any data stored on the devices listed below."
-msgstr "この処理により、下記に示したデバイス内のデータが全て消去されます。"
+msgstr ""
+"この処理により、下記のデバイス内に書き込まれている全てのデータが消去されます"
+"。"
 
 #: src/components/storage/dasd/TextinputFilter.tsx:92
 msgid "Clear input"
