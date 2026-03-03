@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-13 10:41+0000\n"
+"POT-Creation-Date: 2026-03-03 11:27+0000\n"
 "PO-Revision-Date: 2026-02-17 04:04+0000\n"
 "Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
 "Language-Team: German <https://l10n.opensuse.org/projects/agama/agama-"
@@ -28,7 +28,7 @@ msgid "Found unsupported elements in the AutoYaST profile: %{keys}."
 msgstr "Nicht unterstützte Elemente im AutoYaST-Profil gefunden: %{keys}."
 
 #. Implementation for the API method #Probe.
-#: service/lib/agama/dbus/storage/dasd.rb:64
+#: service/lib/agama/dbus/storage/dasd.rb:66
 msgid "Probing DASD devices"
 msgstr "DASD-Geräte werden untersucht"
 
@@ -40,12 +40,12 @@ msgstr "DASD-Geräte werden untersucht"
 #. @raise if there is an unfinished configuration.
 #.
 #. @param config_json [Hash]
-#: service/lib/agama/dbus/storage/dasd.rb:121
+#: service/lib/agama/dbus/storage/dasd.rb:119
 msgid "Configuring DASD"
 msgstr "DASD wird konfiguriert"
 
 #. Do not configure if there is nothing to change.
-#: service/lib/agama/dbus/storage/iscsi.rb:98
+#: service/lib/agama/dbus/storage/iscsi.rb:80
 msgid "Configuring iSCSI"
 msgstr "iSCSI wird konfiguriert"
 
@@ -53,44 +53,44 @@ msgstr "iSCSI wird konfiguriert"
 #.
 #. @param serialized_options [String] Serialized dicovery options.
 #. @return [Number] 0 success; 1 failure.
-#: service/lib/agama/dbus/storage/iscsi.rb:122
+#: service/lib/agama/dbus/storage/iscsi.rb:105
 msgid "Performing iSCSI discovery"
 msgstr "iSCSI-Erkennung wird durchgeführt"
 
 #. Implementation for the API method #Install.
-#: service/lib/agama/dbus/storage/manager.rb:118
+#: service/lib/agama/dbus/storage/manager.rb:187
 msgid "Preparing bootloader proposal"
 msgstr "Bootloader-Vorschlag wird vorbereitet"
 
-#: service/lib/agama/dbus/storage/manager.rb:121
+#: service/lib/agama/dbus/storage/manager.rb:190
 msgid "Preparing the storage devices"
 msgstr "Speichergeräte werden vorbereitet"
 
-#: service/lib/agama/dbus/storage/manager.rb:124
+#: service/lib/agama/dbus/storage/manager.rb:193
 msgid "Writing bootloader sysconfig"
 msgstr "Bootloader-Systemkonfiguration wird geschrieben"
 
 #. Implementation for the API method #Finish.
-#: service/lib/agama/dbus/storage/manager.rb:132
+#: service/lib/agama/dbus/storage/manager.rb:201
 msgid "Finishing installation"
 msgstr "Installation abschließen"
 
-#: service/lib/agama/dbus/storage/manager.rb:138
+#. Implementation for the API method #Umount.
+#: service/lib/agama/dbus/storage/manager.rb:208
 msgid "Unmounting devices"
 msgstr "Geräte werden ausgehängt"
 
-#. Gets and serializes the storage config used to calculate the current proposal.
-#.
-#. @return [String] Serialized config according to the JSON schema.
-#: service/lib/agama/dbus/storage/manager.rb:298
+#. after loading config try to apply it, so proper packages can be requested
+#. TODO: generate also new issue from configuration
+#: service/lib/agama/dbus/storage/manager.rb:237
 msgid "Activating storage devices"
 msgstr "Speichergeräte werden aktiviert"
 
-#: service/lib/agama/dbus/storage/manager.rb:301
+#: service/lib/agama/dbus/storage/manager.rb:240
 msgid "Probing storage devices"
 msgstr "Speichergeräte werden untersucht"
 
-#: service/lib/agama/dbus/storage/manager.rb:304
+#: service/lib/agama/dbus/storage/manager.rb:243
 msgid "Applying storage configuration"
 msgstr "Speicherkonfiguration anwenden"
 
