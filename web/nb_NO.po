@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-27 23:01+0000\n"
+"POT-Creation-Date: 2026-03-03 12:08+0000\n"
 "PO-Revision-Date: 2024-06-29 13:46+0000\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.opensuse.org/projects/agama/"
@@ -256,7 +256,7 @@ msgstr "Root autentisering"
 #: src/components/storage/PartitionPage.tsx:819
 #: src/components/storage/ProposalPage.tsx:322
 #: src/components/storage/SpacePolicySelectionPage.tsx:113
-#: src/components/storage/dasd/DASDPage.tsx:69
+#: src/components/storage/dasd/DASDPage.tsx:70
 #: src/components/storage/iscsi/DiscoverFormPage.tsx:268
 #: src/components/storage/iscsi/InitiatorFormPage.tsx:58
 #: src/components/storage/iscsi/TargetLoginPage.tsx:303
@@ -416,16 +416,18 @@ msgstr "Bekreft"
 msgid "Loading data..."
 msgstr "Laster data..."
 
-#: src/components/core/ProgressBackdrop.tsx:112
+#. TRANSLATORS: Message shown next to a spinner while the UI is being updated
+#. after an operation has completed.
+#: src/components/core/ProgressBackdrop.tsx:124
+#, fuzzy
+msgid "Refreshing data..."
+msgstr "Laster data..."
+
+#: src/components/core/ProgressBackdrop.tsx:177
 #: src/components/core/ProgressStatusMonitor.tsx:73
 #, javascript-format
 msgid "(step %s of %s)"
 msgstr ""
-
-#: src/components/core/ProgressBackdrop.tsx:115
-#, fuzzy
-msgid "Refreshing data..."
-msgstr "Laster data..."
 
 #: src/components/core/ProgressReport.tsx:66
 #, javascript-format
@@ -3706,20 +3708,21 @@ msgid_plural "The following logical volumes will be created"
 msgstr[0] "Ingen ytterligere programvare ble valgt."
 msgstr[1] "Ingen ytterligere programvare ble valgt."
 
-#: src/components/storage/dasd/DASDFormatProgress.tsx:59
-msgid "Formatting DASD devices"
+#: src/components/storage/dasd/DASDFormatProgress.tsx:106
+#, fuzzy
+msgid "Formatting devices"
 msgstr "Formaterer DASD enheter"
 
-#: src/components/storage/dasd/DASDPage.tsx:38
+#: src/components/storage/dasd/DASDPage.tsx:39
 #, fuzzy
 msgid "No devices available"
 msgstr "Bruk tilgjengelig plass"
 
-#: src/components/storage/dasd/DASDPage.tsx:39
+#: src/components/storage/dasd/DASDPage.tsx:40
 msgid "No DASD devices found in this machine."
 msgstr ""
 
-#: src/components/storage/dasd/DASDPage.tsx:69 src/routes/storage.tsx:119
+#: src/components/storage/dasd/DASDPage.tsx:70 src/routes/storage.tsx:119
 #, fuzzy
 msgid "DASD"
 msgstr "DASD %s"
