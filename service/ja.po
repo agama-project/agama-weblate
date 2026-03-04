@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-03 15:34+0000\n"
-"PO-Revision-Date: 2026-02-13 10:41+0000\n"
+"PO-Revision-Date: 2026-03-04 03:04+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/agama/agama-"
 "service-master/ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.15.2\n"
+"X-Generator: Weblate 5.16.1\n"
 
 #. Reports the problems and decide whether to continue or not.
 #.
@@ -445,9 +445,8 @@ msgstr "ファイルシステムのスナップショットを設定していま
 #.
 #. @return [Issue, nil]
 #: service/lib/agama/storage/manager.rb:252
-#, fuzzy
 msgid "There is no suitable device for installation"
-msgstr "インストール先のデバイスを選択していません"
+msgstr "インストール先として利用できるデバイスがありません"
 
 #. Issue representing the proposal is not valid.
 #.
@@ -482,16 +481,16 @@ msgstr "ストレージデバイスのマウントを解除しています"
 #: service/lib/agama/storage/zfcp/manager.rb:206
 #, c-format
 msgid "The zFCP controller %s cannot be activated"
-msgstr ""
+msgstr "zFCP コントローラ %s を有効化できません"
 
 #. Activates a device if it is not active yet.
 #.
 #. @param device [Device]
 #. @return [Boolean] Whether the device was activated.
 #: service/lib/agama/storage/zfcp/manager.rb:239
-#, fuzzy, c-format
+#, c-format
 msgid "The zFCP device %s cannot be activated"
-msgstr "起動デバイスを自動選択できません"
+msgstr "zFCP デバイス %s を有効化できません"
 
 #. Deactivates a device if it is active.
 #.
@@ -500,9 +499,9 @@ msgstr "起動デバイスを自動選択できません"
 #. @param device [Device]
 #. @return [Boolean] Whether the device was deactivated.
 #: service/lib/agama/storage/zfcp/manager.rb:277
-#, fuzzy, c-format
+#, c-format
 msgid "The zFCP device %s cannot be deactivated"
-msgstr "起動デバイスを自動選択できません"
+msgstr "zFCP デバイス %s を無効化できません"
 
 #. Issue if the controller is missing.
 #.
@@ -511,7 +510,7 @@ msgstr "起動デバイスを自動選択できません"
 #: service/lib/agama/storage/zfcp/manager.rb:307
 #, c-format
 msgid "Unknown zFCP controller %s"
-msgstr ""
+msgstr "未知の zFCP コントローラです: %s"
 
 #. Issue if the device is missing.
 #.
@@ -520,7 +519,7 @@ msgstr ""
 #: service/lib/agama/storage/zfcp/manager.rb:326
 #, c-format
 msgid "Unknown zFCP LUN %s"
-msgstr ""
+msgstr "未知の zFCP LUN です: %s"
 
 #~ msgid "Logout iSCSI targets"
 #~ msgstr "iSCSI ターゲットからのログアウト"
