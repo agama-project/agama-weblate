@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-05 09:25+0000\n"
+"POT-Creation-Date: 2026-03-06 10:32+0000\n"
 "PO-Revision-Date: 2026-02-26 17:04+0000\n"
 "Last-Translator: Aleksey Fedorov <Aleksejfedorov963@gmail.com>\n"
 "Language-Team: Russian <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -1195,50 +1195,61 @@ msgid "Auto"
 msgstr "Автоматически"
 
 #. TRANSLATORS: Confirmation dialog title. %s is replaced with the product name (e.g., "openSUSE Leap")
-#: src/components/overview/OverviewPage.tsx:74
+#: src/components/overview/OverviewPage.tsx:76
 #, javascript-format
 msgid "Delete existing data and install %s?"
 msgstr "Удалить существующие данные и установить %s?"
 
-#: src/components/overview/OverviewPage.tsx:74
+#: src/components/overview/OverviewPage.tsx:76
 #, javascript-format
 msgid "Install %s?"
 msgstr "Установить %s?"
 
 #. TRANSLATORS: Warning shown when installation will delete existing data
-#: src/components/overview/OverviewPage.tsx:84
+#: src/components/overview/OverviewPage.tsx:86
 msgid "If unsure, cancel and review storage settings."
 msgstr "Если не уверены, отмените и проверьте параметры хранилища."
 
 #. TRANSLATORS: Information message confirming installation will proceed with current settings
-#: src/components/overview/OverviewPage.tsx:88
+#: src/components/overview/OverviewPage.tsx:90
 msgid "By proceeding, the installation will begin with defined settings."
 msgstr "При продолжении установка начнется с заданными параметрами."
 
 #. TRANSLATORS: Button to confirm and start the installation
-#: src/components/overview/OverviewPage.tsx:93
+#: src/components/overview/OverviewPage.tsx:95
 msgid "Confirm and install"
 msgstr "Подтвердить и установить"
 
+#: src/components/overview/OverviewPage.tsx:108
+#, fuzzy
+msgid "Product not found"
+msgstr "Цель не найдена"
+
+#: src/components/overview/OverviewPage.tsx:111
+msgid ""
+"The product was not found in the repositories so it is not possible to "
+"proceed with the installation."
+msgstr ""
+
 #. TRANSLATORS: This hint helps users locate the install button. Text inside
 #. square brackets [] appears in bold. Keep brackets for proper formatting.
-#: src/components/overview/OverviewPage.tsx:112
+#: src/components/overview/OverviewPage.tsx:131
 msgid "When ready, click on the [install] button at the end of the page."
 msgstr "Когда будете готовы, нажмите кнопку [установить] в конце страницы."
 
-#: src/components/overview/OverviewPage.tsx:127
+#: src/components/overview/OverviewPage.tsx:146
 msgid "Install"
 msgstr "Установить"
 
-#: src/components/overview/OverviewPage.tsx:128
+#: src/components/overview/OverviewPage.tsx:147
 msgid "Install now with potential data loss"
 msgstr "Установить сейчас с возможной потерей данных"
 
-#: src/components/overview/OverviewPage.tsx:129
+#: src/components/overview/OverviewPage.tsx:148
 msgid "Install now"
 msgstr "Установить"
 
-#: src/components/overview/OverviewPage.tsx:153
+#: src/components/overview/OverviewPage.tsx:172
 msgid ""
 "Take a moment to review the installation settings below and adjust them as "
 "needed."
@@ -1246,38 +1257,38 @@ msgstr ""
 "Уделите немного времени, чтобы ознакомиться с параметрами установки ниже и "
 "при необходимости изменить их."
 
-#: src/components/overview/OverviewPage.tsx:188
+#: src/components/overview/OverviewPage.tsx:207
 msgid "Wait until current operations are completed."
 msgstr "Дождитесь завершения текущих операций."
 
-#: src/components/overview/OverviewPage.tsx:199
+#: src/components/overview/OverviewPage.tsx:218
 msgid ""
 "You need to fix any invalid settings before proceeding with the installation."
 msgstr ""
 "Перед продолжением установки необходимо исправить все неверные параметры."
 
-#: src/components/overview/RegistrationSummary.tsx:35
+#: src/components/overview/RegistrationSummary.tsx:36
 msgid "Registered without a code"
 msgstr "Зарегистрировано без кода"
 
 #. TRANSLATORS: Brief summary about the product registration.
 #. %s will be replaced with the last 4 digits of the registration code.
-#: src/components/overview/RegistrationSummary.tsx:40
+#: src/components/overview/RegistrationSummary.tsx:41
 #, javascript-format
 msgid "Using code ending in %s"
 msgstr "Использ. код, заканчивающийся на %s"
 
-#: src/components/overview/RegistrationSummary.tsx:71
-#: src/components/product/ProductRegistrationPage.tsx:481
+#: src/components/overview/RegistrationSummary.tsx:72
+#: src/components/product/ProductRegistrationPage.tsx:528
 #: src/routes/registration.tsx:31
 msgid "Registration"
 msgstr "Регистрация"
 
-#: src/components/overview/RegistrationSummary.tsx:74
+#: src/components/overview/RegistrationSummary.tsx:75
 msgid "Not registered yet"
 msgstr "Ещё не зарегистрировано"
 
-#: src/components/overview/RegistrationSummary.tsx:74
+#: src/components/overview/RegistrationSummary.tsx:75
 msgid "Registered"
 msgstr "Зарегистрировано"
 
@@ -1429,96 +1440,100 @@ msgstr "Закрыть"
 msgid "%s logo"
 msgstr "Логотип %s"
 
-#: src/components/product/ProductRegistrationPage.tsx:69
+#: src/components/product/ProductRegistrationPage.tsx:70
 msgid "Registration server"
 msgstr "Сервер регистрации"
 
-#: src/components/product/ProductRegistrationPage.tsx:70
+#: src/components/product/ProductRegistrationPage.tsx:71
 msgid "Email"
 msgstr "Электронная почта"
 
-#: src/components/product/ProductRegistrationPage.tsx:71
+#: src/components/product/ProductRegistrationPage.tsx:72
 msgid "SUSE Customer Center (SCC)"
 msgstr "Центр обслуживания клиентов SUSE (SCC)"
 
-#: src/components/product/ProductRegistrationPage.tsx:72
+#: src/components/product/ProductRegistrationPage.tsx:73
 #: src/components/storage/utils.ts:106
 msgid "Custom"
 msgstr "По-своему"
 
-#: src/components/product/ProductRegistrationPage.tsx:86
+#: src/components/product/ProductRegistrationPage.tsx:87
 #, javascript-format
 msgid "%s has been registered with below information."
 msgstr "Регистрация %s была выполнена с указанной ниже информацией."
 
-#. TRANSLATORS: input field label
-#: src/components/product/ProductRegistrationPage.tsx:98
-#: src/components/product/ProductRegistrationPage.tsx:186
-#: src/components/product/RegistrationExtension.tsx:141
+#: src/components/product/ProductRegistrationPage.tsx:99
+#: src/components/product/ProductRegistrationPage.tsx:187
+#: src/components/product/RegistrationExtension.tsx:151
 msgid "Registration code"
 msgstr "Код регистрации"
 
 #. TRANSLATORS: switch for displaying or hiding the registration code
-#: src/components/product/ProductRegistrationPage.tsx:103
-#: src/components/product/RegistrationExtension.tsx:66
+#: src/components/product/ProductRegistrationPage.tsx:104
+#: src/components/product/RegistrationExtension.tsx:67
 msgid "Hide"
 msgstr "Скрыть"
 
-#: src/components/product/ProductRegistrationPage.tsx:103
-#: src/components/product/RegistrationExtension.tsx:66
+#: src/components/product/ProductRegistrationPage.tsx:104
+#: src/components/product/RegistrationExtension.tsx:67
 msgid "Show"
 msgstr "Показать"
 
-#: src/components/product/ProductRegistrationPage.tsx:142
+#: src/components/product/ProductRegistrationPage.tsx:143
 msgid "Server options"
 msgstr "Опции серверов"
 
-#: src/components/product/ProductRegistrationPage.tsx:143
+#: src/components/product/ProductRegistrationPage.tsx:144
 msgid "Register using SUSE server"
 msgstr "Регистрация с помощью сервера SUSE"
 
-#: src/components/product/ProductRegistrationPage.tsx:148
+#: src/components/product/ProductRegistrationPage.tsx:149
 msgid "Register using a custom registration server"
 msgstr "Регистрация с помощью пользовательского сервера регистрации"
 
-#: src/components/product/ProductRegistrationPage.tsx:166
+#: src/components/product/ProductRegistrationPage.tsx:167
 msgid "Server URL"
 msgstr "URL сервера"
 
 #. TRANSLATORS: %s is replaced by an example URL like https://example.com
-#: src/components/product/ProductRegistrationPage.tsx:169
+#: src/components/product/ProductRegistrationPage.tsx:170
 #, javascript-format
 msgid "Example: %s"
 msgstr "Пример: %s"
 
-#: src/components/product/ProductRegistrationPage.tsx:218
+#: src/components/product/ProductRegistrationPage.tsx:219
 msgid "Provide registration code"
 msgstr "Укажите код регистрации"
 
-#: src/components/product/ProductRegistrationPage.tsx:254
+#: src/components/product/ProductRegistrationPage.tsx:255
 msgid "Provide email address"
 msgstr "Укажите адрес эл. почты"
 
-#: src/components/product/ProductRegistrationPage.tsx:346
+#: src/components/product/ProductRegistrationPage.tsx:371
 #: src/components/storage/LvmPage.tsx:178
 #: src/components/system/HostnamePage.tsx:97
 msgid "Check the following before continuing"
 msgstr "Прежде чем продолжить, проверьте следующее"
 
 #. TRANSLATORS: button label
-#: src/components/product/ProductRegistrationPage.tsx:376
-#: src/components/product/RegistrationExtension.tsx:152
-#: src/components/product/RegistrationExtension.tsx:167
+#: src/components/product/ProductRegistrationPage.tsx:402
+#: src/components/product/RegistrationExtension.tsx:164
 msgid "Register"
 msgstr "Зарегистрировать"
 
+#: src/components/product/ProductRegistrationPage.tsx:406
+#: src/components/product/RegistrationExtension.tsx:173
+#, fuzzy
+msgid "Do not register"
+msgstr "Не использовать"
+
 #. TRANSLATORS: %s will be replaced with the hostname value
-#: src/components/product/ProductRegistrationPage.tsx:389
+#: src/components/product/ProductRegistrationPage.tsx:421
 #, javascript-format
 msgid "The product will be registered with \"%s\" hostname"
 msgstr "Продукт будет зарегистрирован с именем узла «%s»"
 
-#: src/components/product/ProductRegistrationPage.tsx:393
+#: src/components/product/ProductRegistrationPage.tsx:425
 #, javascript-format
 msgid ""
 "You cannot change it later. Go to the %s section if you want to modify it "
@@ -1527,11 +1542,11 @@ msgstr ""
 "Вы не сможете изменить его позже. Перейдите в раздел «%s», если хотите "
 "изменить его перед тем, как продолжить регистрацию."
 
-#: src/components/product/ProductRegistrationPage.tsx:398
+#: src/components/product/ProductRegistrationPage.tsx:430
 msgid "hostname"
 msgstr "имя узла"
 
-#: src/components/product/ProductRegistrationPage.tsx:457
+#: src/components/product/ProductRegistrationPage.tsx:504
 msgid "Extensions"
 msgstr "Расширения"
 
@@ -1667,32 +1682,32 @@ msgstr ""
 "параметрами по умолчанию нового продукта."
 
 #. TRANSLATORS: %s will be replaced by the registration key.
-#: src/components/product/RegistrationExtension.tsx:52
+#: src/components/product/RegistrationExtension.tsx:53
 #, javascript-format
 msgid "The extension has been registered with key %s."
 msgstr "Расширение было зарегистрировано с ключом %s."
 
-#: src/components/product/RegistrationExtension.tsx:56
+#: src/components/product/RegistrationExtension.tsx:57
 msgid "The extension was registered without any registration code."
 msgstr "Расширение было зарегистрировано без кода регистрации."
 
 #. TRANSLATORS: Beta version label
-#: src/components/product/RegistrationExtension.tsx:120
+#: src/components/product/RegistrationExtension.tsx:129
 msgid "Beta"
 msgstr "Бета-версия"
 
 #. TRANSLATORS: Label for recommended extensions
-#: src/components/product/RegistrationExtension.tsx:126
+#: src/components/product/RegistrationExtension.tsx:135
 msgid "Recommended"
 msgstr "Рекомендуется"
 
 #. TRANSLATORS: warning title, the extension is not available on the server and cannot be registered
-#: src/components/product/RegistrationExtension.tsx:173
+#: src/components/product/RegistrationExtension.tsx:183
 msgid "Not available"
 msgstr "Недоступно"
 
 #. TRANSLATORS: warning message, the extension is not available on the server and cannot be registered
-#: src/components/product/RegistrationExtension.tsx:176
+#: src/components/product/RegistrationExtension.tsx:186
 msgid ""
 "This extension is not available on the server. Ask the server administrator "
 "to mirror the extension."
