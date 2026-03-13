@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-10 10:13+0000\n"
+"POT-Creation-Date: 2026-03-13 10:08+0000\n"
 "PO-Revision-Date: 2026-01-10 08:04+0000\n"
 "Last-Translator: \"Kristijan \\\"Fremen\\\" Velkovski\" <me@krisfremen.com>\n"
 "Language-Team: Macedonian <https://l10n.opensuse.org/projects/agama/agama-"
@@ -55,7 +55,6 @@ msgstr "Видете повеќе детали"
 #: src/components/storage/EncryptionSettingsPage.tsx:114
 #: src/components/storage/iscsi/DiscoverFormPage.tsx:175
 #: src/components/storage/iscsi/TargetLoginPage.tsx:189
-#: src/components/storage/zfcp/ZFCPDiskForm.tsx:112
 #: src/components/users/FirstUserForm.tsx:195
 #: src/components/users/RootUserForm.tsx:141
 msgid "Something went wrong"
@@ -179,6 +178,7 @@ msgstr ""
 #: src/components/core/Page.tsx:286
 #: src/components/storage/dasd/FormatActionHandler.tsx:95
 #: src/components/storage/dasd/FormatActionHandler.tsx:122
+#: src/components/storage/zfcp/ZFCPControllersPage.tsx:161
 #: src/components/system/HostnamePage.tsx:125
 msgid "Accept"
 msgstr "Прифати"
@@ -234,7 +234,7 @@ msgid "More installer options"
 msgstr "Инсталирањето заврши"
 
 #: src/components/core/InstallerOptionsMenu.tsx:83
-#: src/components/storage/ConnectedDevicesMenu.tsx:85
+#: src/components/storage/ConnectedDevicesMenu.tsx:86
 msgid "More"
 msgstr ""
 
@@ -308,7 +308,6 @@ msgid "Provide its password to log in to the system."
 msgstr ""
 
 #: src/components/core/MenuButton.tsx:78 src/components/core/Page.tsx:275
-#: src/components/storage/zfcp/ZFCPPage.tsx:193
 msgid "Back"
 msgstr ""
 
@@ -320,6 +319,7 @@ msgstr ""
 #: src/components/storage/iscsi/DiscoverFormPage.tsx:252
 #: src/components/storage/iscsi/InitiatorFormPage.tsx:81
 #: src/components/storage/iscsi/TargetLoginPage.tsx:279
+#: src/components/storage/zfcp/ZFCPControllersPage.tsx:162
 msgid "Cancel"
 msgstr "Откажи"
 
@@ -386,7 +386,7 @@ msgid "Software"
 msgstr ""
 
 #: src/components/core/ProgressStatusMonitor.tsx:41
-#: src/components/overview/StorageSummary.tsx:166
+#: src/components/overview/StorageSummary.tsx:190
 #: src/components/storage/BootSelectionPage.tsx:183
 #: src/components/storage/DeviceSelectorPage.tsx:75
 #: src/components/storage/EncryptionSettingsPage.tsx:107
@@ -395,14 +395,14 @@ msgstr ""
 #: src/components/storage/LogicalVolumePage.tsx:670
 #: src/components/storage/LvmPage.tsx:170
 #: src/components/storage/PartitionPage.tsx:819
-#: src/components/storage/ProposalPage.tsx:322
+#: src/components/storage/ProposalPage.tsx:323
 #: src/components/storage/SpacePolicySelectionPage.tsx:113
 #: src/components/storage/dasd/DASDPage.tsx:70
 #: src/components/storage/iscsi/DiscoverFormPage.tsx:268
 #: src/components/storage/iscsi/InitiatorFormPage.tsx:58
 #: src/components/storage/iscsi/TargetLoginPage.tsx:303
-#: src/components/storage/zfcp/ZFCPDiskActivationPage.tsx:63
-#: src/components/storage/zfcp/ZFCPPage.tsx:186 src/routes/storage.tsx:50
+#: src/components/storage/zfcp/ZFCPControllersPage.tsx:190
+#: src/components/storage/zfcp/ZFCPPage.tsx:174 src/routes/storage.tsx:46
 msgid "Storage"
 msgstr ""
 
@@ -821,6 +821,7 @@ msgstr ""
 msgid "Signal strength"
 msgstr ""
 
+#. TRANSLATORS: table header for a zFCP devices table.
 #. TRANSLATORS: table header for a DASD devices table
 #. TRANSLATORS: table header for an iSCSI targets table
 #: src/components/network/WifiConnectionDetails.tsx:56
@@ -830,7 +831,8 @@ msgstr ""
 #: src/components/storage/dasd/DASDTable.tsx:550
 #: src/components/storage/iscsi/StatusFilter.tsx:77
 #: src/components/storage/iscsi/TargetsTable.tsx:495
-#: src/components/storage/zfcp/ZFCPControllersTable.tsx:21
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:164
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:340
 msgid "Status"
 msgstr ""
 
@@ -840,11 +842,13 @@ msgstr ""
 msgid "Security"
 msgstr ""
 
+#. TRANSLATORS: table header for a zFCP devices table.
 #. TRANSLATORS: table header for a DASD devices table
 #: src/components/network/WifiConnectionDetails.tsx:72
 #: src/components/storage/DeviceSelectorModal.tsx:87
 #: src/components/storage/ProposalResultTable.tsx:134
 #: src/components/storage/dasd/DASDTable.tsx:556
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:346
 msgid "Device"
 msgstr ""
 
@@ -1331,50 +1335,56 @@ msgstr ""
 msgid "Invalid software selection"
 msgstr "Избор на ред"
 
-#: src/components/overview/StorageSummary.tsx:50
+#: src/components/overview/StorageSummary.tsx:53
 msgid "No device selected yet"
 msgstr ""
 
 #. TRANSLATORS: %s will be replaced by the device name and its size,
 #. example: "/dev/sda, 20 GiB"
-#: src/components/overview/StorageSummary.tsx:57
+#: src/components/overview/StorageSummary.tsx:60
 #, fuzzy, javascript-format
 msgid "Use device %s"
 msgstr "Сокриј детали"
 
-#: src/components/overview/StorageSummary.tsx:81
+#: src/components/overview/StorageSummary.tsx:84
 msgid "Use several devices"
 msgstr ""
 
-#: src/components/overview/StorageSummary.tsx:91
+#. TRANSLATORS: The text in [] is used as a link.
+#: src/components/overview/StorageSummary.tsx:90
+#, fuzzy
+msgid "Invalid [zFCP] settings"
+msgstr "Потврдете ја инсталацијата"
+
+#: src/components/overview/StorageSummary.tsx:110
 msgid "There are no disks available for the installation"
 msgstr ""
 
-#: src/components/overview/StorageSummary.tsx:93
+#: src/components/overview/StorageSummary.tsx:112
 msgid "Invalid settings"
 msgstr ""
 
-#: src/components/overview/StorageSummary.tsx:96
+#: src/components/overview/StorageSummary.tsx:116
 msgid "Using an advanced storage configuration"
 msgstr ""
 
-#: src/components/overview/StorageSummary.tsx:110
+#: src/components/overview/StorageSummary.tsx:131
 #: src/components/storage/ProposalFailedInfo.tsx:85
 msgid "Failed to calculate a storage layout"
 msgstr ""
 
-#: src/components/overview/StorageSummary.tsx:113
+#: src/components/overview/StorageSummary.tsx:134
 msgid "No data loss is expected"
 msgstr ""
 
 #. TRANSLATORS: %s will be replaced by a formatted list of affected systems
 #. like "Windows and openSUSE Tumbleweed".
-#: src/components/overview/StorageSummary.tsx:120
+#: src/components/overview/StorageSummary.tsx:141
 #, javascript-format
 msgid "Potential data loss affecting at least %s"
 msgstr ""
 
-#: src/components/overview/StorageSummary.tsx:125
+#: src/components/overview/StorageSummary.tsx:146
 msgid "Potential data loss"
 msgstr ""
 
@@ -2232,41 +2242,41 @@ msgid "More devices"
 msgstr ""
 
 #. TRANSLATORS: this is an ARIA (accesibility) description of an UI element
-#: src/components/storage/ConnectedDevicesMenu.tsx:48
+#: src/components/storage/ConnectedDevicesMenu.tsx:49
 #, fuzzy
 msgid "More storage options"
 msgstr "Не може да се поврзе со D-Bus"
 
-#: src/components/storage/ConnectedDevicesMenu.tsx:54
+#: src/components/storage/ConnectedDevicesMenu.tsx:55
 msgid "Discover and connect to iSCSI targets"
 msgstr ""
 
-#: src/components/storage/ConnectedDevicesMenu.tsx:56
+#: src/components/storage/ConnectedDevicesMenu.tsx:57
 msgid "Configure iSCSI"
 msgstr ""
 
-#: src/components/storage/ConnectedDevicesMenu.tsx:62
+#: src/components/storage/ConnectedDevicesMenu.tsx:63
 #: src/components/storage/ProposalPage.tsx:163
 msgid "Activate zFCP disks"
 msgstr ""
 
-#: src/components/storage/ConnectedDevicesMenu.tsx:64
+#: src/components/storage/ConnectedDevicesMenu.tsx:65
 msgid "Configure zFCP"
 msgstr ""
 
-#: src/components/storage/ConnectedDevicesMenu.tsx:71
+#: src/components/storage/ConnectedDevicesMenu.tsx:72
 msgid "Activate and format DASD devices"
 msgstr ""
 
-#: src/components/storage/ConnectedDevicesMenu.tsx:73
+#: src/components/storage/ConnectedDevicesMenu.tsx:74
 msgid "Configure DASD"
 msgstr ""
 
-#: src/components/storage/ConnectedDevicesMenu.tsx:79
+#: src/components/storage/ConnectedDevicesMenu.tsx:80
 msgid "Update available disks and activate crypt devices"
 msgstr ""
 
-#: src/components/storage/ConnectedDevicesMenu.tsx:81
+#: src/components/storage/ConnectedDevicesMenu.tsx:82
 msgid "Rescan devices"
 msgstr ""
 
@@ -2301,7 +2311,6 @@ msgstr ""
 #: src/components/storage/iscsi/InitiatorFormPage.tsx:75
 #: src/components/storage/iscsi/TargetsTable.tsx:282
 #: src/components/storage/iscsi/TargetsTable.tsx:456
-#: src/components/storage/zfcp/ZFCPDisksTable.tsx:42
 msgid "Name"
 msgstr ""
 
@@ -2705,7 +2714,6 @@ msgid "Configure Volume Group"
 msgstr ""
 
 #: src/components/storage/LvmPage.tsx:187
-#: src/components/storage/zfcp/ZFCPPage.tsx:130
 msgid "Disks"
 msgstr ""
 
@@ -3467,6 +3475,7 @@ msgid "Formatting devices"
 msgstr "Сокриј детали"
 
 #: src/components/storage/dasd/DASDPage.tsx:39
+#: src/components/storage/zfcp/ZFCPPage.tsx:66
 msgid "No devices available"
 msgstr ""
 
@@ -3474,7 +3483,7 @@ msgstr ""
 msgid "No DASD devices found in this machine."
 msgstr ""
 
-#: src/components/storage/dasd/DASDPage.tsx:70 src/routes/storage.tsx:119
+#: src/components/storage/dasd/DASDPage.tsx:70 src/routes/storage.tsx:115
 msgid "DASD"
 msgstr ""
 
@@ -3494,7 +3503,7 @@ msgstr ""
 #: src/components/storage/dasd/DASDTable.tsx:575
 #: src/components/storage/dasd/DASDTable.tsx:583
 #: src/components/storage/iscsi/TargetsTable.tsx:490
-#: src/components/storage/zfcp/ZFCPControllersTable.tsx:36
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:353
 msgid "Yes"
 msgstr ""
 
@@ -3502,17 +3511,17 @@ msgstr ""
 #: src/components/storage/dasd/DASDTable.tsx:575
 #: src/components/storage/dasd/DASDTable.tsx:583
 #: src/components/storage/iscsi/TargetsTable.tsx:490
-#: src/components/storage/zfcp/ZFCPControllersTable.tsx:36
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:353
 msgid "No"
 msgstr ""
 
 #: src/components/storage/dasd/DASDTable.tsx:193
-#: src/components/storage/zfcp/ZFCPControllersTable.tsx:51
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:231
 msgid "Activate"
 msgstr ""
 
 #: src/components/storage/dasd/DASDTable.tsx:203
-#: src/components/storage/zfcp/ZFCPDisksTable.tsx:56
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:237
 msgid "Deactivate"
 msgstr ""
 
@@ -3531,6 +3540,7 @@ msgstr ""
 #. TRANSLATORS: shown in the filter toolbar when filters are active.
 #. %1$s is the number of matching devices, %2$s is the total number.
 #: src/components/storage/dasd/DASDTable.tsx:296
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:147
 #, javascript-format
 msgid "%1$d of %2$d devices match filters"
 msgstr ""
@@ -3538,6 +3548,7 @@ msgstr ""
 #. TRANSLATORS: shown in the filter toolbar when no filters are active.
 #. %s is the total number of devices.
 #: src/components/storage/dasd/DASDTable.tsx:303
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:154
 #, javascript-format
 msgid "%d devices available"
 msgstr ""
@@ -3545,6 +3556,9 @@ msgstr ""
 #: src/components/storage/dasd/DASDTable.tsx:316
 #: src/components/storage/dasd/DASDTable.tsx:328
 #: src/components/storage/iscsi/StatusFilter.tsx:58
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:167
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:176
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:185
 #, fuzzy
 msgid "All"
 msgstr "Инсталирајте"
@@ -3567,6 +3581,8 @@ msgstr ""
 #: src/components/storage/dasd/DASDTable.tsx:358
 #: src/components/storage/dasd/DASDTable.tsx:714
 #: src/components/storage/iscsi/TargetsTable.tsx:363
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:199
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:427
 msgid "Clear all filters"
 msgstr ""
 
@@ -3600,8 +3616,11 @@ msgid ""
 "No devices selected. Select one or more devices to perform bulk actions."
 msgstr ""
 
+#. TRANSLATORS: table header for a zFCP devices table.
 #. TRANSLATORS: table header for a DASD devices table
 #: src/components/storage/dasd/DASDTable.tsx:544
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:173
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:322
 msgid "Channel"
 msgstr ""
 
@@ -3630,11 +3649,13 @@ msgid "This message will close automatically when everything is done."
 msgstr ""
 
 #: src/components/storage/dasd/DASDTable.tsx:706
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:419
 msgid "No devices match filters"
 msgstr ""
 
 #: src/components/storage/dasd/DASDTable.tsx:710
 #: src/components/storage/iscsi/TargetsTable.tsx:359
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:423
 msgid "Change filters and try again."
 msgstr ""
 
@@ -4218,98 +4239,123 @@ msgid_plural "New volumes will be created for %s"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/components/storage/zfcp/ZFCPControllersTable.tsx:20
-#: src/components/storage/zfcp/ZFCPDiskForm.tsx:117
-#: src/components/storage/zfcp/ZFCPDisksTable.tsx:43
-msgid "Channel ID"
+#: src/components/storage/zfcp/ZFCPControllersPage.tsx:50
+msgid "No controllers available"
 msgstr ""
 
-#: src/components/storage/zfcp/ZFCPControllersTable.tsx:22
-msgid "Auto LUNs Scan"
+#: src/components/storage/zfcp/ZFCPControllersPage.tsx:51
+msgid "There are not zFCP controllers pending of activation."
 msgstr ""
 
-#: src/components/storage/zfcp/ZFCPControllersTable.tsx:33
-msgid "Activated"
+#: src/components/storage/zfcp/ZFCPControllersPage.tsx:63
+msgid "Automatic LUN scan is enabled"
 msgstr ""
 
-#: src/components/storage/zfcp/ZFCPControllersTable.tsx:33
-msgid "Deactivated"
+#: src/components/storage/zfcp/ZFCPControllersPage.tsx:65
+msgid ""
+"Activating a controller which is running in NPIV mode will automatically "
+"configures all its LUNs."
 msgstr ""
 
-#: src/components/storage/zfcp/ZFCPDiskActivationPage.tsx:64
-#: src/components/storage/zfcp/ZFCPPage.tsx:186
+#: src/components/storage/zfcp/ZFCPControllersPage.tsx:70
+msgid "Automatic LUN scan is disabled"
+msgstr ""
+
+#: src/components/storage/zfcp/ZFCPControllersPage.tsx:71
+msgid "LUNs have to be manually configured after activating a controller."
+msgstr ""
+
+#: src/components/storage/zfcp/ZFCPControllersPage.tsx:93
+msgid "Performs auto LUN scan"
+msgstr ""
+
+#: src/components/storage/zfcp/ZFCPControllersPage.tsx:134
+msgid "Select the controllers to activate"
+msgstr ""
+
+#: src/components/storage/zfcp/ZFCPControllersPage.tsx:142
+msgid "Select the zFCP controllers to activate:"
+msgstr ""
+
+#: src/components/storage/zfcp/ZFCPControllersPage.tsx:191
+#: src/components/storage/zfcp/ZFCPPage.tsx:174
 msgid "zFCP"
 msgstr ""
 
-#: src/components/storage/zfcp/ZFCPDiskActivationPage.tsx:65
-#, fuzzy
-msgid "Disk Activation"
-msgstr "Потврдете ја инсталацијата"
-
-#. TRANSLATORS: zFCP disk activation form
-#: src/components/storage/zfcp/ZFCPDiskForm.tsx:110
-msgid "zFCP Disk activation form"
+#: src/components/storage/zfcp/ZFCPControllersPage.tsx:192
+#: src/components/storage/zfcp/ZFCPPage.tsx:109
+msgid "Activate controllers"
 msgstr ""
 
-#: src/components/storage/zfcp/ZFCPDiskForm.tsx:113
-msgid "The zFCP disk was not activated."
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:55
+msgid "Activated"
 msgstr ""
 
-#. TRANSLATORS: abbrev. World Wide Port Name
-#: src/components/storage/zfcp/ZFCPDiskForm.tsx:130
-#: src/components/storage/zfcp/ZFCPDisksTable.tsx:44
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:56
+msgid "Deactivated"
+msgstr ""
+
+#. TRANSLATORS: table header for a zFCP devices table.
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:182
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:328
 msgid "WWPN"
 msgstr ""
 
-#. TRANSLATORS: abbrev. Logical Unit Number
-#: src/components/storage/zfcp/ZFCPDiskForm.tsx:138
-#: src/components/storage/zfcp/ZFCPDisksTable.tsx:45
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:231
+#, fuzzy
+msgid "Try to activate again"
+msgstr "Пробај повторно"
+
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:237
+msgid "Try to deactivate again"
+msgstr ""
+
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:245
+msgid "Do not activate"
+msgstr ""
+
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:245
+msgid "Do not deactivate"
+msgstr ""
+
+#. TRANSLATORS: table header for a zFCP devices table.
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:334
 msgid "LUN"
 msgstr ""
 
-#: src/components/storage/zfcp/ZFCPPage.tsx:52
-msgid ""
-"Automatic LUN scan is [enabled]. Activating a controller which is running in "
-"NPIV mode will automatically configures all its LUNs."
+#. TRANSLATORS: table header for a zFCP devices table.
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:352
+msgid "Auto Scanned"
 msgstr ""
 
-#: src/components/storage/zfcp/ZFCPPage.tsx:57
-msgid ""
-"Automatic LUN scan is [disabled]. LUNs have to be manually configured after "
-"activating a controller."
+#: src/components/storage/zfcp/ZFCPPage.tsx:54
+msgid "zFCP is not available"
 msgstr ""
 
-#: src/components/storage/zfcp/ZFCPPage.tsx:78
-msgid "Please, try to activate a zFCP disk."
+#: src/components/storage/zfcp/ZFCPPage.tsx:55
+msgid "No zFCP controllers found in this machine."
 msgstr ""
 
-#: src/components/storage/zfcp/ZFCPPage.tsx:79
-#: src/components/storage/zfcp/ZFCPPage.tsx:161
-msgid "Please, try to activate a zFCP controller."
+#: src/components/storage/zfcp/ZFCPPage.tsx:67
+msgid "No zFCP devices found in this machine."
 msgstr ""
 
-#: src/components/storage/zfcp/ZFCPPage.tsx:83
-msgid "No zFCP disks found."
+#: src/components/storage/zfcp/ZFCPPage.tsx:87
+msgid "There is a deactivated zFCP controller."
 msgstr ""
 
-#: src/components/storage/zfcp/ZFCPPage.tsx:89
-msgid "Activate zFCP disk"
+#: src/components/storage/zfcp/ZFCPPage.tsx:88
+#, javascript-format
+msgid "There are %s deactivated zFCP controllers."
 msgstr ""
 
-#: src/components/storage/zfcp/ZFCPPage.tsx:112
-msgid "Activate new disk"
+#: src/components/storage/zfcp/ZFCPPage.tsx:92
+msgid "All the available zFCP controllers are already activated."
 msgstr ""
 
-#: src/components/storage/zfcp/ZFCPPage.tsx:140
-msgid "Controllers"
-msgstr ""
-
-#: src/components/storage/zfcp/ZFCPPage.tsx:153
-msgid "No zFCP controllers found."
-msgstr ""
-
-#: src/components/storage/zfcp/ZFCPPage.tsx:157
-msgid "Read zFCP devices"
+#: src/components/storage/zfcp/ZFCPPage.tsx:104
+#: src/components/storage/zfcp/ZFCPPage.tsx:118
+msgid "zFCP controllers"
 msgstr ""
 
 #: src/components/system/HostnamePage.tsx:62
@@ -4473,9 +4519,13 @@ msgstr ""
 msgid "Use public SSH Key"
 msgstr ""
 
-#: src/routes/storage.tsx:129
+#: src/routes/storage.tsx:120
 msgid "ZFCP"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Disk Activation"
+#~ msgstr "Потврдете ја инсталацијата"
 
 #, fuzzy
 #~ msgid "Show less actions"

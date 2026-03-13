@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-10 10:13+0000\n"
+"POT-Creation-Date: 2026-03-13 10:08+0000\n"
 "PO-Revision-Date: 2025-09-11 02:59+0000\n"
 "Last-Translator: Grace Yu <grace.yu@excel-gits.com>\n"
 "Language-Team: Chinese (Taiwan) <https://l10n.opensuse.org/projects/agama/"
@@ -55,7 +55,6 @@ msgstr "檢視更多詳細資料"
 #: src/components/storage/EncryptionSettingsPage.tsx:114
 #: src/components/storage/iscsi/DiscoverFormPage.tsx:175
 #: src/components/storage/iscsi/TargetLoginPage.tsx:189
-#: src/components/storage/zfcp/ZFCPDiskForm.tsx:112
 #: src/components/users/FirstUserForm.tsx:195
 #: src/components/users/RootUserForm.tsx:141
 msgid "Something went wrong"
@@ -180,6 +179,7 @@ msgstr "對所選產品使用同樣的設定"
 #: src/components/core/Page.tsx:286
 #: src/components/storage/dasd/FormatActionHandler.tsx:95
 #: src/components/storage/dasd/FormatActionHandler.tsx:122
+#: src/components/storage/zfcp/ZFCPControllersPage.tsx:161
 #: src/components/system/HostnamePage.tsx:125
 msgid "Accept"
 msgstr "接受"
@@ -235,7 +235,7 @@ msgid "More installer options"
 msgstr "更多動作"
 
 #: src/components/core/InstallerOptionsMenu.tsx:83
-#: src/components/storage/ConnectedDevicesMenu.tsx:85
+#: src/components/storage/ConnectedDevicesMenu.tsx:86
 msgid "More"
 msgstr ""
 
@@ -313,7 +313,6 @@ msgid "Provide its password to log in to the system."
 msgstr "請提供其密碼以登入系統。"
 
 #: src/components/core/MenuButton.tsx:78 src/components/core/Page.tsx:275
-#: src/components/storage/zfcp/ZFCPPage.tsx:193
 msgid "Back"
 msgstr "後退"
 
@@ -325,6 +324,7 @@ msgstr "後退"
 #: src/components/storage/iscsi/DiscoverFormPage.tsx:252
 #: src/components/storage/iscsi/InitiatorFormPage.tsx:81
 #: src/components/storage/iscsi/TargetLoginPage.tsx:279
+#: src/components/storage/zfcp/ZFCPControllersPage.tsx:162
 msgid "Cancel"
 msgstr "取消"
 
@@ -391,7 +391,7 @@ msgid "Software"
 msgstr "軟體"
 
 #: src/components/core/ProgressStatusMonitor.tsx:41
-#: src/components/overview/StorageSummary.tsx:166
+#: src/components/overview/StorageSummary.tsx:190
 #: src/components/storage/BootSelectionPage.tsx:183
 #: src/components/storage/DeviceSelectorPage.tsx:75
 #: src/components/storage/EncryptionSettingsPage.tsx:107
@@ -400,14 +400,14 @@ msgstr "軟體"
 #: src/components/storage/LogicalVolumePage.tsx:670
 #: src/components/storage/LvmPage.tsx:170
 #: src/components/storage/PartitionPage.tsx:819
-#: src/components/storage/ProposalPage.tsx:322
+#: src/components/storage/ProposalPage.tsx:323
 #: src/components/storage/SpacePolicySelectionPage.tsx:113
 #: src/components/storage/dasd/DASDPage.tsx:70
 #: src/components/storage/iscsi/DiscoverFormPage.tsx:268
 #: src/components/storage/iscsi/InitiatorFormPage.tsx:58
 #: src/components/storage/iscsi/TargetLoginPage.tsx:303
-#: src/components/storage/zfcp/ZFCPDiskActivationPage.tsx:63
-#: src/components/storage/zfcp/ZFCPPage.tsx:186 src/routes/storage.tsx:50
+#: src/components/storage/zfcp/ZFCPControllersPage.tsx:190
+#: src/components/storage/zfcp/ZFCPPage.tsx:174 src/routes/storage.tsx:46
 msgid "Storage"
 msgstr "儲存"
 
@@ -823,6 +823,7 @@ msgstr "SSID"
 msgid "Signal strength"
 msgstr "訊號強度"
 
+#. TRANSLATORS: table header for a zFCP devices table.
 #. TRANSLATORS: table header for a DASD devices table
 #. TRANSLATORS: table header for an iSCSI targets table
 #: src/components/network/WifiConnectionDetails.tsx:56
@@ -832,7 +833,8 @@ msgstr "訊號強度"
 #: src/components/storage/dasd/DASDTable.tsx:550
 #: src/components/storage/iscsi/StatusFilter.tsx:77
 #: src/components/storage/iscsi/TargetsTable.tsx:495
-#: src/components/storage/zfcp/ZFCPControllersTable.tsx:21
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:164
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:340
 msgid "Status"
 msgstr "狀態"
 
@@ -842,11 +844,13 @@ msgstr "狀態"
 msgid "Security"
 msgstr "安全性"
 
+#. TRANSLATORS: table header for a zFCP devices table.
 #. TRANSLATORS: table header for a DASD devices table
 #: src/components/network/WifiConnectionDetails.tsx:72
 #: src/components/storage/DeviceSelectorModal.tsx:87
 #: src/components/storage/ProposalResultTable.tsx:134
 #: src/components/storage/dasd/DASDTable.tsx:556
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:346
 msgid "Device"
 msgstr "裝置"
 
@@ -1329,54 +1333,60 @@ msgstr ""
 msgid "Invalid software selection"
 msgstr "軟體選擇"
 
-#: src/components/overview/StorageSummary.tsx:50
+#: src/components/overview/StorageSummary.tsx:53
 msgid "No device selected yet"
 msgstr "尚未選取裝置"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size,
 #. example: "/dev/sda, 20 GiB"
-#: src/components/overview/StorageSummary.tsx:57
+#: src/components/overview/StorageSummary.tsx:60
 #, fuzzy, javascript-format
 msgid "Use device %s"
 msgstr "使用磁碟 %s"
 
-#: src/components/overview/StorageSummary.tsx:81
+#: src/components/overview/StorageSummary.tsx:84
 #, fuzzy
 msgid "Use several devices"
 msgstr "重新掃描裝置"
 
-#: src/components/overview/StorageSummary.tsx:91
+#. TRANSLATORS: The text in [] is used as a link.
+#: src/components/overview/StorageSummary.tsx:90
+#, fuzzy
+msgid "Invalid [zFCP] settings"
+msgstr "儲存設定無效"
+
+#: src/components/overview/StorageSummary.tsx:110
 #, fuzzy
 msgid "There are no disks available for the installation"
 msgstr "沒有可用於安裝的磁碟。"
 
-#: src/components/overview/StorageSummary.tsx:93
+#: src/components/overview/StorageSummary.tsx:112
 #, fuzzy
 msgid "Invalid settings"
 msgstr "儲存設定無效"
 
-#: src/components/overview/StorageSummary.tsx:96
+#: src/components/overview/StorageSummary.tsx:116
 #, fuzzy
 msgid "Using an advanced storage configuration"
 msgstr "使用進階組態安裝。"
 
-#: src/components/overview/StorageSummary.tsx:110
+#: src/components/overview/StorageSummary.tsx:131
 #: src/components/storage/ProposalFailedInfo.tsx:85
 msgid "Failed to calculate a storage layout"
 msgstr "無法計算儲存配置"
 
-#: src/components/overview/StorageSummary.tsx:113
+#: src/components/overview/StorageSummary.tsx:134
 msgid "No data loss is expected"
 msgstr ""
 
 #. TRANSLATORS: %s will be replaced by a formatted list of affected systems
 #. like "Windows and openSUSE Tumbleweed".
-#: src/components/overview/StorageSummary.tsx:120
+#: src/components/overview/StorageSummary.tsx:141
 #, javascript-format
 msgid "Potential data loss affecting at least %s"
 msgstr ""
 
-#: src/components/overview/StorageSummary.tsx:125
+#: src/components/overview/StorageSummary.tsx:146
 msgid "Potential data loss"
 msgstr ""
 
@@ -2248,41 +2258,41 @@ msgid "More devices"
 msgstr "更多裝置"
 
 #. TRANSLATORS: this is an ARIA (accesibility) description of an UI element
-#: src/components/storage/ConnectedDevicesMenu.tsx:48
+#: src/components/storage/ConnectedDevicesMenu.tsx:49
 #, fuzzy
 msgid "More storage options"
 msgstr "更多動作"
 
-#: src/components/storage/ConnectedDevicesMenu.tsx:54
+#: src/components/storage/ConnectedDevicesMenu.tsx:55
 msgid "Discover and connect to iSCSI targets"
 msgstr "探查並連接至 iSCSI 目標"
 
-#: src/components/storage/ConnectedDevicesMenu.tsx:56
+#: src/components/storage/ConnectedDevicesMenu.tsx:57
 msgid "Configure iSCSI"
 msgstr "設定 iSCSI"
 
-#: src/components/storage/ConnectedDevicesMenu.tsx:62
+#: src/components/storage/ConnectedDevicesMenu.tsx:63
 #: src/components/storage/ProposalPage.tsx:163
 msgid "Activate zFCP disks"
 msgstr "啟用 zFCP 磁碟"
 
-#: src/components/storage/ConnectedDevicesMenu.tsx:64
+#: src/components/storage/ConnectedDevicesMenu.tsx:65
 msgid "Configure zFCP"
 msgstr "設定 zFCP"
 
-#: src/components/storage/ConnectedDevicesMenu.tsx:71
+#: src/components/storage/ConnectedDevicesMenu.tsx:72
 msgid "Activate and format DASD devices"
 msgstr "啟用並格式化 DASD 裝置"
 
-#: src/components/storage/ConnectedDevicesMenu.tsx:73
+#: src/components/storage/ConnectedDevicesMenu.tsx:74
 msgid "Configure DASD"
 msgstr "設定 DASD"
 
-#: src/components/storage/ConnectedDevicesMenu.tsx:79
+#: src/components/storage/ConnectedDevicesMenu.tsx:80
 msgid "Update available disks and activate crypt devices"
 msgstr "更新可用磁碟並啟用加密裝置"
 
-#: src/components/storage/ConnectedDevicesMenu.tsx:81
+#: src/components/storage/ConnectedDevicesMenu.tsx:82
 msgid "Rescan devices"
 msgstr "重新掃描裝置"
 
@@ -2315,7 +2325,6 @@ msgstr "類型"
 #: src/components/storage/iscsi/InitiatorFormPage.tsx:75
 #: src/components/storage/iscsi/TargetsTable.tsx:282
 #: src/components/storage/iscsi/TargetsTable.tsx:456
-#: src/components/storage/zfcp/ZFCPDisksTable.tsx:42
 msgid "Name"
 msgstr "名稱"
 
@@ -2729,7 +2738,6 @@ msgid "Configure Volume Group"
 msgstr "設定 LVM 磁碟區群組"
 
 #: src/components/storage/LvmPage.tsx:187
-#: src/components/storage/zfcp/ZFCPPage.tsx:130
 msgid "Disks"
 msgstr "磁碟"
 
@@ -3482,6 +3490,7 @@ msgid "Formatting devices"
 msgstr "正在格式化 DASD 裝置"
 
 #: src/components/storage/dasd/DASDPage.tsx:39
+#: src/components/storage/zfcp/ZFCPPage.tsx:66
 msgid "No devices available"
 msgstr "沒有可用的裝置"
 
@@ -3490,7 +3499,7 @@ msgstr "沒有可用的裝置"
 msgid "No DASD devices found in this machine."
 msgstr "未在此機器上找到任何 DASD 裝置。"
 
-#: src/components/storage/dasd/DASDPage.tsx:70 src/routes/storage.tsx:119
+#: src/components/storage/dasd/DASDPage.tsx:70 src/routes/storage.tsx:115
 msgid "DASD"
 msgstr "DASD"
 
@@ -3513,7 +3522,7 @@ msgstr "唯讀"
 #: src/components/storage/dasd/DASDTable.tsx:575
 #: src/components/storage/dasd/DASDTable.tsx:583
 #: src/components/storage/iscsi/TargetsTable.tsx:490
-#: src/components/storage/zfcp/ZFCPControllersTable.tsx:36
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:353
 msgid "Yes"
 msgstr "是"
 
@@ -3521,17 +3530,17 @@ msgstr "是"
 #: src/components/storage/dasd/DASDTable.tsx:575
 #: src/components/storage/dasd/DASDTable.tsx:583
 #: src/components/storage/iscsi/TargetsTable.tsx:490
-#: src/components/storage/zfcp/ZFCPControllersTable.tsx:36
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:353
 msgid "No"
 msgstr "否"
 
 #: src/components/storage/dasd/DASDTable.tsx:193
-#: src/components/storage/zfcp/ZFCPControllersTable.tsx:51
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:231
 msgid "Activate"
 msgstr "啟用"
 
 #: src/components/storage/dasd/DASDTable.tsx:203
-#: src/components/storage/zfcp/ZFCPDisksTable.tsx:56
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:237
 msgid "Deactivate"
 msgstr "停用"
 
@@ -3550,6 +3559,7 @@ msgstr "格式化"
 #. TRANSLATORS: shown in the filter toolbar when filters are active.
 #. %1$s is the number of matching devices, %2$s is the total number.
 #: src/components/storage/dasd/DASDTable.tsx:296
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:147
 #, fuzzy, javascript-format
 msgid "%1$d of %2$d devices match filters"
 msgstr "沒有與過濾條件相符的地區設定。"
@@ -3557,6 +3567,7 @@ msgstr "沒有與過濾條件相符的地區設定。"
 #. TRANSLATORS: shown in the filter toolbar when no filters are active.
 #. %s is the total number of devices.
 #: src/components/storage/dasd/DASDTable.tsx:303
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:154
 #, fuzzy, javascript-format
 msgid "%d devices available"
 msgstr "沒有可用的裝置"
@@ -3564,6 +3575,9 @@ msgstr "沒有可用的裝置"
 #: src/components/storage/dasd/DASDTable.tsx:316
 #: src/components/storage/dasd/DASDTable.tsx:328
 #: src/components/storage/iscsi/StatusFilter.tsx:58
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:167
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:176
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:185
 #, fuzzy
 msgid "All"
 msgstr "全部"
@@ -3586,6 +3600,8 @@ msgstr "最大通道"
 #: src/components/storage/dasd/DASDTable.tsx:358
 #: src/components/storage/dasd/DASDTable.tsx:714
 #: src/components/storage/iscsi/TargetsTable.tsx:363
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:199
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:427
 msgid "Clear all filters"
 msgstr "清除所有過濾器"
 
@@ -3619,8 +3635,11 @@ msgid ""
 "No devices selected. Select one or more devices to perform bulk actions."
 msgstr "選取裝置以啟用大量動作。"
 
+#. TRANSLATORS: table header for a zFCP devices table.
 #. TRANSLATORS: table header for a DASD devices table
 #: src/components/storage/dasd/DASDTable.tsx:544
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:173
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:322
 #, fuzzy
 msgid "Channel"
 msgstr "通道 ID"
@@ -3650,12 +3669,14 @@ msgid "This message will close automatically when everything is done."
 msgstr "當所有操作均完成後，此訊息會自動關閉。"
 
 #: src/components/storage/dasd/DASDTable.tsx:706
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:419
 #, fuzzy
 msgid "No devices match filters"
 msgstr "沒有與過濾條件相符的地區設定。"
 
 #: src/components/storage/dasd/DASDTable.tsx:710
 #: src/components/storage/iscsi/TargetsTable.tsx:359
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:423
 msgid "Change filters and try again."
 msgstr "請變更過濾器，然後重試。"
 
@@ -4251,101 +4272,140 @@ msgid "A new volume will be created for %s"
 msgid_plural "New volumes will be created for %s"
 msgstr[0] "將會為 %s 建立新磁碟區"
 
-#: src/components/storage/zfcp/ZFCPControllersTable.tsx:20
-#: src/components/storage/zfcp/ZFCPDiskForm.tsx:117
-#: src/components/storage/zfcp/ZFCPDisksTable.tsx:43
-msgid "Channel ID"
-msgstr "通道 ID"
-
-#: src/components/storage/zfcp/ZFCPControllersTable.tsx:22
-msgid "Auto LUNs Scan"
-msgstr "自動掃描 LUN"
-
-#: src/components/storage/zfcp/ZFCPControllersTable.tsx:33
-msgid "Activated"
-msgstr "已啟用"
-
-#: src/components/storage/zfcp/ZFCPControllersTable.tsx:33
-msgid "Deactivated"
-msgstr "已停用"
-
-#: src/components/storage/zfcp/ZFCPDiskActivationPage.tsx:64
-#: src/components/storage/zfcp/ZFCPPage.tsx:186
-msgid "zFCP"
-msgstr "zFCP"
-
-#: src/components/storage/zfcp/ZFCPDiskActivationPage.tsx:65
+#: src/components/storage/zfcp/ZFCPControllersPage.tsx:50
 #, fuzzy
-msgid "Disk Activation"
-msgstr "zFCP 磁碟啟用"
+msgid "No controllers available"
+msgstr "不可用"
 
-#. TRANSLATORS: zFCP disk activation form
-#: src/components/storage/zfcp/ZFCPDiskForm.tsx:110
-msgid "zFCP Disk activation form"
-msgstr "zFCP 磁碟啟用表單"
+#: src/components/storage/zfcp/ZFCPControllersPage.tsx:51
+msgid "There are not zFCP controllers pending of activation."
+msgstr ""
 
-#: src/components/storage/zfcp/ZFCPDiskForm.tsx:113
-msgid "The zFCP disk was not activated."
-msgstr "未啟用该 zFCP 磁碟。"
+#: src/components/storage/zfcp/ZFCPControllersPage.tsx:63
+msgid "Automatic LUN scan is enabled"
+msgstr ""
 
-#. TRANSLATORS: abbrev. World Wide Port Name
-#: src/components/storage/zfcp/ZFCPDiskForm.tsx:130
-#: src/components/storage/zfcp/ZFCPDisksTable.tsx:44
-msgid "WWPN"
-msgstr "WWPN"
-
-#. TRANSLATORS: abbrev. Logical Unit Number
-#: src/components/storage/zfcp/ZFCPDiskForm.tsx:138
-#: src/components/storage/zfcp/ZFCPDisksTable.tsx:45
-msgid "LUN"
-msgstr "LUN"
-
-#: src/components/storage/zfcp/ZFCPPage.tsx:52
+#: src/components/storage/zfcp/ZFCPControllersPage.tsx:65
+#, fuzzy
 msgid ""
-"Automatic LUN scan is [enabled]. Activating a controller which is running in "
-"NPIV mode will automatically configures all its LUNs."
+"Activating a controller which is running in NPIV mode will automatically "
+"configures all its LUNs."
 msgstr ""
 "自動掃描 LUN 功能 [已啟用]。如果啟用在 NPIV 模式下 執行的控制器，將自動設定其"
 "所有 LUN。"
 
-#: src/components/storage/zfcp/ZFCPPage.tsx:57
-msgid ""
-"Automatic LUN scan is [disabled]. LUNs have to be manually configured after "
-"activating a controller."
+#: src/components/storage/zfcp/ZFCPControllersPage.tsx:70
+msgid "Automatic LUN scan is disabled"
+msgstr ""
+
+#: src/components/storage/zfcp/ZFCPControllersPage.tsx:71
+#, fuzzy
+msgid "LUNs have to be manually configured after activating a controller."
 msgstr "自動掃描 LUN 功能 [已停用]。啟用控制器後必須手動設定 LUN。"
 
-#: src/components/storage/zfcp/ZFCPPage.tsx:78
-msgid "Please, try to activate a zFCP disk."
-msgstr "請嘗試啟用 zFCP 磁碟。"
+#: src/components/storage/zfcp/ZFCPControllersPage.tsx:93
+#, fuzzy
+msgid "Performs auto LUN scan"
+msgstr "執行動作"
 
-#: src/components/storage/zfcp/ZFCPPage.tsx:79
-#: src/components/storage/zfcp/ZFCPPage.tsx:161
-msgid "Please, try to activate a zFCP controller."
-msgstr "請嘗試啟用 zFCP 控制器。"
+#: src/components/storage/zfcp/ZFCPControllersPage.tsx:134
+#, fuzzy
+msgid "Select the controllers to activate"
+msgstr "選取一個解決方案以繼續"
 
-#: src/components/storage/zfcp/ZFCPPage.tsx:83
-msgid "No zFCP disks found."
-msgstr "未找到 zFCP 磁碟。"
+#: src/components/storage/zfcp/ZFCPControllersPage.tsx:142
+msgid "Select the zFCP controllers to activate:"
+msgstr ""
 
-#: src/components/storage/zfcp/ZFCPPage.tsx:89
-msgid "Activate zFCP disk"
-msgstr "啟用 zFCP 磁碟"
+#: src/components/storage/zfcp/ZFCPControllersPage.tsx:191
+#: src/components/storage/zfcp/ZFCPPage.tsx:174
+msgid "zFCP"
+msgstr "zFCP"
 
-#: src/components/storage/zfcp/ZFCPPage.tsx:112
-msgid "Activate new disk"
+#: src/components/storage/zfcp/ZFCPControllersPage.tsx:192
+#: src/components/storage/zfcp/ZFCPPage.tsx:109
+#, fuzzy
+msgid "Activate controllers"
 msgstr "啟用新磁碟"
 
-#: src/components/storage/zfcp/ZFCPPage.tsx:140
-msgid "Controllers"
-msgstr "控制器"
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:55
+msgid "Activated"
+msgstr "已啟用"
 
-#: src/components/storage/zfcp/ZFCPPage.tsx:153
-msgid "No zFCP controllers found."
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:56
+msgid "Deactivated"
+msgstr "已停用"
+
+#. TRANSLATORS: table header for a zFCP devices table.
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:182
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:328
+msgid "WWPN"
+msgstr "WWPN"
+
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:231
+#, fuzzy
+msgid "Try to activate again"
+msgstr "再試一次"
+
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:237
+msgid "Try to deactivate again"
+msgstr ""
+
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:245
+#, fuzzy
+msgid "Do not activate"
+msgstr "停用"
+
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:245
+#, fuzzy
+msgid "Do not deactivate"
+msgstr "停用"
+
+#. TRANSLATORS: table header for a zFCP devices table.
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:334
+msgid "LUN"
+msgstr "LUN"
+
+#. TRANSLATORS: table header for a zFCP devices table.
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:352
+#, fuzzy
+msgid "Auto Scanned"
+msgstr "自動掃描 LUN"
+
+#: src/components/storage/zfcp/ZFCPPage.tsx:54
+#, fuzzy
+msgid "zFCP is not available"
+msgstr "不可用"
+
+#: src/components/storage/zfcp/ZFCPPage.tsx:55
+#, fuzzy
+msgid "No zFCP controllers found in this machine."
 msgstr "未找到 zFCP 控制器。"
 
-#: src/components/storage/zfcp/ZFCPPage.tsx:157
-msgid "Read zFCP devices"
-msgstr "讀取 zFCP 裝置"
+#: src/components/storage/zfcp/ZFCPPage.tsx:67
+#, fuzzy
+msgid "No zFCP devices found in this machine."
+msgstr "未在此機器上找到任何 DASD 裝置。"
+
+#: src/components/storage/zfcp/ZFCPPage.tsx:87
+#, fuzzy
+msgid "There is a deactivated zFCP controller."
+msgstr "請嘗試啟用 zFCP 控制器。"
+
+#: src/components/storage/zfcp/ZFCPPage.tsx:88
+#, fuzzy, javascript-format
+msgid "There are %s deactivated zFCP controllers."
+msgstr "請嘗試啟用 zFCP 控制器。"
+
+#: src/components/storage/zfcp/ZFCPPage.tsx:92
+msgid "All the available zFCP controllers are already activated."
+msgstr ""
+
+#: src/components/storage/zfcp/ZFCPPage.tsx:104
+#: src/components/storage/zfcp/ZFCPPage.tsx:118
+#, fuzzy
+msgid "zFCP controllers"
+msgstr "控制器"
 
 #: src/components/system/HostnamePage.tsx:62
 msgid "Enter a hostname."
@@ -4510,18 +4570,40 @@ msgstr "使用密碼"
 msgid "Use public SSH Key"
 msgstr "使用 SSH 公用金鑰"
 
-#: src/routes/storage.tsx:129
+#: src/routes/storage.tsx:120
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#~ msgid "Channel ID"
+#~ msgstr "通道 ID"
+
+#, fuzzy
+#~ msgid "Disk Activation"
+#~ msgstr "zFCP 磁碟啟用"
+
+#~ msgid "zFCP Disk activation form"
+#~ msgstr "zFCP 磁碟啟用表單"
+
+#~ msgid "The zFCP disk was not activated."
+#~ msgstr "未啟用该 zFCP 磁碟。"
+
+#~ msgid "Please, try to activate a zFCP disk."
+#~ msgstr "請嘗試啟用 zFCP 磁碟。"
+
+#~ msgid "No zFCP disks found."
+#~ msgstr "未找到 zFCP 磁碟。"
+
+#~ msgid "Activate zFCP disk"
+#~ msgstr "啟用 zFCP 磁碟"
+
+#~ msgid "Read zFCP devices"
+#~ msgstr "讀取 zFCP 裝置"
 
 #~ msgid "Show less actions"
 #~ msgstr "收起部分動作"
 
 #~ msgid "Show more actions"
 #~ msgstr "顯示更多動作"
-
-#~ msgid "Select a solution to continue"
-#~ msgstr "選取一個解決方案以繼續"
 
 #~ msgid "Apply selected solution"
 #~ msgstr "套用所選的解決方案"
@@ -4869,9 +4951,6 @@ msgstr "ZFCP"
 #~ "Offline devices must be activated before formatting them. Please, "
 #~ "unselect or activate the devices listed below and try it again"
 #~ msgstr "格式化前必須啟用離線裝置。請先取消選取或啟用下列裝置，然後再試"
-
-#~ msgid "Perform an action"
-#~ msgstr "執行動作"
 
 #~ msgid "Remove min channel filter"
 #~ msgstr "移除最小通道過濾器"
