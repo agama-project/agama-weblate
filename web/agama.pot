@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-13 10:08+0000\n"
+"POT-Creation-Date: 2026-03-16 14:24+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -47,7 +47,7 @@ msgid "Retrieving error details"
 msgstr ""
 
 #: src/components/core/ErrorPage.tsx:134
-#: src/components/network/IpSettingsForm.tsx:161
+#: src/components/network/IpSettingsForm.tsx:197
 #: src/components/storage/EncryptionSettingsPage.tsx:114
 #: src/components/storage/iscsi/DiscoverFormPage.tsx:175
 #: src/components/storage/iscsi/TargetLoginPage.tsx:189
@@ -162,7 +162,7 @@ msgstr ""
 #: src/components/core/InstallerL10nOptions.tsx:391
 #: src/components/core/InstallerL10nOptions.tsx:405
 #: src/components/core/InstallerL10nOptions.tsx:448
-#: src/components/core/Page.tsx:286
+#: src/components/core/Page.tsx:287
 #: src/components/storage/dasd/FormatActionHandler.tsx:95
 #: src/components/storage/dasd/FormatActionHandler.tsx:122
 #: src/components/storage/zfcp/ZFCPControllersPage.tsx:161
@@ -292,13 +292,13 @@ msgstr ""
 msgid "Provide its password to log in to the system."
 msgstr ""
 
-#: src/components/core/MenuButton.tsx:78 src/components/core/Page.tsx:275
+#: src/components/core/MenuButton.tsx:78 src/components/core/Page.tsx:276
 msgid "Back"
 msgstr ""
 
-#: src/components/core/Page.tsx:254 src/components/core/Popup.tsx:140
-#: src/components/network/BindingSettingsForm.tsx:229
-#: src/components/network/IpSettingsForm.tsx:221
+#: src/components/core/Page.tsx:255 src/components/core/Popup.tsx:140
+#: src/components/network/BindingSettingsForm.tsx:180
+#: src/components/network/IpSettingsForm.tsx:289
 #: src/components/network/WifiConnectionForm.tsx:188
 #: src/components/product/ProductSelectionPage.tsx:539
 #: src/components/storage/iscsi/DiscoverFormPage.tsx:252
@@ -391,13 +391,14 @@ msgid "Storage"
 msgstr ""
 
 #: src/components/core/ProgressStatusMonitor.tsx:42
-#: src/components/network/BindingSettingsForm.tsx:160
-#: src/components/network/IpSettingsForm.tsx:150
-#: src/components/network/NetworkPage.tsx:50
-#: src/components/network/WifiConnectionDetails.tsx:45
-#: src/components/network/WifiNetworkPage.tsx:73
-#: src/components/network/WiredConnectionPage.tsx:68
-#: src/components/overview/NetworkSummary.tsx:149 src/routes/network.tsx:38
+#: src/components/network/BindingSettingsForm.tsx:111
+#: src/components/network/IpSettingsForm.tsx:181
+#: src/components/network/NetworkPage.tsx:43
+#: src/components/network/WifiConnectionForm.tsx:142
+#: src/components/network/WifiConnectionForm.tsx:198
+#: src/components/network/WiredConnectionDetails.tsx:95
+#: src/components/network/WiredConnectionPage.tsx:69
+#: src/components/overview/NetworkSummary.tsx:149 src/routes/network.tsx:36
 msgid "Network"
 msgstr ""
 
@@ -552,6 +553,7 @@ msgstr ""
 #. TRANSLATORS: button label
 #: src/components/network/AddressesDataList.tsx:102
 #: src/components/network/DnsDataList.tsx:106
+#: src/components/network/DnsSearchDataList.tsx:102
 msgid "Remove"
 msgstr ""
 
@@ -576,12 +578,223 @@ msgid "Add another address"
 msgstr ""
 
 #: src/components/network/AddressesDataList.tsx:141
-#: src/components/network/WifiConnectionDetails.tsx:119
 msgid "Addresses"
 msgstr ""
 
 #: src/components/network/AddressesDataList.tsx:148
 msgid "Addresses data list"
+msgstr ""
+
+#: src/components/network/BindingSettingsForm.tsx:113
+msgid "Binding settings"
+msgstr ""
+
+#: src/components/network/BindingSettingsForm.tsx:121
+msgid ""
+"Choose how the connection should be associated with a network device. This "
+"helps control which device the connection uses."
+msgstr ""
+
+#: src/components/network/BindingSettingsForm.tsx:129
+msgid "Unbound"
+msgstr ""
+
+#: src/components/network/BindingSettingsForm.tsx:132
+msgid "The connection can be used by any available device."
+msgstr ""
+
+#: src/components/network/BindingSettingsForm.tsx:141
+msgid "Bind to device name"
+msgstr ""
+
+#: src/components/network/BindingSettingsForm.tsx:145
+msgid "Choose device to bind by name"
+msgstr ""
+
+#: src/components/network/BindingSettingsForm.tsx:160
+msgid "Bind to MAC address"
+msgstr ""
+
+#: src/components/network/BindingSettingsForm.tsx:164
+msgid "Choose device to bind by MAC"
+msgstr ""
+
+#: src/components/network/ConnectionsTable.tsx:143
+msgid "(bound by name)"
+msgstr ""
+
+#: src/components/network/ConnectionsTable.tsx:144
+msgid "(bound by MAC)"
+msgstr ""
+
+#. TRANSLATORS: table header for an iSCSI targets table
+#. TRANSLATORS: input field for the iSCSI initiator name
+#: src/components/network/ConnectionsTable.tsx:150
+#: src/components/network/ConnectionsTable.tsx:274
+#: src/components/network/IpSettingsForm.tsx:203
+#: src/components/network/IpSettingsForm.tsx:207
+#: src/components/network/IpSettingsForm.tsx:209
+#: src/components/storage/DeviceSelectorPage.tsx:55
+#: src/components/storage/LvmPage.tsx:184
+#: src/components/storage/iscsi/InitiatorFormPage.tsx:66
+#: src/components/storage/iscsi/InitiatorFormPage.tsx:75
+#: src/components/storage/iscsi/TargetsTable.tsx:282
+#: src/components/storage/iscsi/TargetsTable.tsx:456
+msgid "Name"
+msgstr ""
+
+#. TRANSLATORS: table header for a DASD devices table
+#: src/components/network/ConnectionsTable.tsx:155
+#: src/components/network/ConnectionsTable.tsx:282
+#: src/components/storage/DeviceSelectorPage.tsx:54
+#: src/components/storage/dasd/DASDTable.tsx:563
+msgid "Type"
+msgstr ""
+
+#: src/components/network/ConnectionsTable.tsx:156
+#: src/components/network/ConnectionsTable.tsx:287
+msgid "Ethernet"
+msgstr ""
+
+#: src/components/network/ConnectionsTable.tsx:156
+#: src/components/network/ConnectionsTable.tsx:286
+msgid "Wi-Fi"
+msgstr ""
+
+#. TRANSLATORS: table header for a zFCP devices table.
+#. TRANSLATORS: table header for a DASD devices table
+#. TRANSLATORS: table header for an iSCSI targets table
+#: src/components/network/ConnectionsTable.tsx:160
+#: src/components/network/ConnectionsTable.tsx:294
+#: src/components/network/WiredConnectionDetails.tsx:108
+#: src/components/network/WiredConnectionDetails.tsx:142
+#: src/components/storage/dasd/DASDTable.tsx:313
+#: src/components/storage/dasd/DASDTable.tsx:550
+#: src/components/storage/iscsi/StatusFilter.tsx:77
+#: src/components/storage/iscsi/TargetsTable.tsx:495
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:164
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:335
+msgid "Status"
+msgstr ""
+
+#: src/components/network/ConnectionsTable.tsx:162
+#: src/components/network/WifiNetworksList.tsx:134
+#: src/components/storage/iscsi/TargetsTable.tsx:158
+msgid "Connected"
+msgstr ""
+
+#: src/components/network/ConnectionsTable.tsx:162
+#: src/components/storage/iscsi/TargetsTable.tsx:163
+msgid "Disconnected"
+msgstr ""
+
+#. TRANSLATORS: table header for a zFCP devices table.
+#. TRANSLATORS: table header for a DASD devices table
+#: src/components/network/ConnectionsTable.tsx:166
+#: src/components/storage/DeviceSelectorModal.tsx:87
+#: src/components/storage/ProposalResultTable.tsx:134
+#: src/components/storage/dasd/DASDTable.tsx:556
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:341
+msgid "Device"
+msgstr ""
+
+#: src/components/network/ConnectionsTable.tsx:189
+#: src/components/network/WiredConnectionDetails.tsx:159
+#: src/components/network/WiredConnectionDetails.tsx:287
+msgid "IP Addresses"
+msgstr ""
+
+#. TRANSLATORS: shown in the filter toolbar when filters are active.
+#. %1$s is the number of matching connections, %2$s is the total number.
+#: src/components/network/ConnectionsTable.tsx:255
+#, javascript-format
+msgid "%1$d of %2$d connections match filters"
+msgstr ""
+
+#. TRANSLATORS: shown in the filter toolbar when no filters are active.
+#. %s is the total number of connections.
+#: src/components/network/ConnectionsTable.tsx:262
+#, javascript-format
+msgid "%d connections available"
+msgstr ""
+
+#: src/components/network/ConnectionsTable.tsx:285
+#: src/components/network/ConnectionsTable.tsx:297
+#: src/components/storage/dasd/DASDTable.tsx:316
+#: src/components/storage/dasd/DASDTable.tsx:328
+#: src/components/storage/iscsi/StatusFilter.tsx:58
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:167
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:176
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:185
+msgid "All"
+msgstr ""
+
+#: src/components/network/ConnectionsTable.tsx:298
+msgid "Up"
+msgstr ""
+
+#: src/components/network/ConnectionsTable.tsx:299
+msgid "Down"
+msgstr ""
+
+#: src/components/network/ConnectionsTable.tsx:312
+#: src/components/network/ConnectionsTable.tsx:392
+#: src/components/storage/dasd/DASDTable.tsx:358
+#: src/components/storage/dasd/DASDTable.tsx:714
+#: src/components/storage/iscsi/TargetsTable.tsx:363
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:199
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:428
+msgid "Clear all filters"
+msgstr ""
+
+#: src/components/network/ConnectionsTable.tsx:339
+#: src/components/storage/ProposalResultTable.tsx:136
+#: src/components/storage/SpaceActionsTable.tsx:230
+msgid "Details"
+msgstr ""
+
+#: src/components/network/ConnectionsTable.tsx:347
+#: src/components/storage/iscsi/TargetsTable.tsx:224
+msgid "Edit connection"
+msgstr ""
+
+#: src/components/network/ConnectionsTable.tsx:352
+msgid "Edit binding"
+msgstr ""
+
+#. TRANSLATORS: button label, connect to a Wi-Fi network
+#: src/components/network/ConnectionsTable.tsx:361
+#: src/components/network/WifiConnectionForm.tsx:186
+#: src/components/storage/iscsi/TargetsTable.tsx:236
+#: src/components/storage/iscsi/TargetsTable.tsx:247
+msgid "Connect"
+msgstr ""
+
+#: src/components/network/ConnectionsTable.tsx:366
+#: src/components/storage/iscsi/TargetsTable.tsx:228
+msgid "Disconnect"
+msgstr ""
+
+#: src/components/network/ConnectionsTable.tsx:374
+#: src/components/storage/PartitionsSection.tsx:194
+#: src/components/storage/VolumeGroupEditor.tsx:181
+#: src/components/storage/iscsi/TargetsTable.tsx:252
+msgid "Delete"
+msgstr ""
+
+#: src/components/network/ConnectionsTable.tsx:384
+msgid "No connections match filters"
+msgstr ""
+
+#: src/components/network/ConnectionsTable.tsx:388
+#: src/components/storage/dasd/DASDTable.tsx:710
+#: src/components/storage/iscsi/TargetsTable.tsx:359
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:424
+msgid "Change filters and try again."
+msgstr ""
+
+#: src/components/network/DevicesSelector.tsx:68
+msgid "None (unbound)"
 msgstr ""
 
 #. TRANSLATORS: this simply concatenates the two sentences that describe what is going to happen
@@ -593,44 +806,10 @@ msgstr ""
 #. name first, others the MAC address. I.e. "enp1s0 - CC-7F-C8-FC-7A-A1"
 #. or "CC-7F-C8-FC-7A-A1 - enp1s0". You may change the separator, but
 #. please keep both %s placeholders.
-#: src/components/network/BindingSettingsForm.tsx:79
+#: src/components/network/DevicesSelector.tsx:76
 #: src/components/storage/utils/drive.tsx:110
 #, javascript-format
 msgid "%s - %s"
-msgstr ""
-
-#: src/components/network/BindingSettingsForm.tsx:162
-msgid "Binding settings"
-msgstr ""
-
-#: src/components/network/BindingSettingsForm.tsx:170
-msgid ""
-"Choose how the connection should be associated with a network device. This "
-"helps control which device the connection uses."
-msgstr ""
-
-#: src/components/network/BindingSettingsForm.tsx:178
-msgid "Unbound"
-msgstr ""
-
-#: src/components/network/BindingSettingsForm.tsx:181
-msgid "The connection can be used by any available device."
-msgstr ""
-
-#: src/components/network/BindingSettingsForm.tsx:190
-msgid "Bind to device name"
-msgstr ""
-
-#: src/components/network/BindingSettingsForm.tsx:194
-msgid "Choose device to bind by name"
-msgstr ""
-
-#: src/components/network/BindingSettingsForm.tsx:209
-msgid "Bind to MAC address"
-msgstr ""
-
-#: src/components/network/BindingSettingsForm.tsx:213
-msgid "Choose device to bind by MAC"
 msgstr ""
 
 #. TRANSLATORS: input field name
@@ -648,10 +827,28 @@ msgid "Add another DNS"
 msgstr ""
 
 #: src/components/network/DnsDataList.tsx:118
-#: src/components/network/WifiConnectionDetails.tsx:138
-#: src/components/network/WiredConnectionDetails.tsx:129
-#: src/components/network/WiredConnectionDetails.tsx:249
+#: src/components/network/WiredConnectionDetails.tsx:169
+#: src/components/network/WiredConnectionDetails.tsx:299
 msgid "DNS"
+msgstr ""
+
+#. TRANSLATORS: input field name
+#: src/components/network/DnsSearchDataList.tsx:86
+msgid "Domain"
+msgstr ""
+
+#: src/components/network/DnsSearchDataList.tsx:112
+msgid "Add another search domain"
+msgstr ""
+
+#: src/components/network/DnsSearchDataList.tsx:113
+msgid "Add search domain"
+msgstr ""
+
+#: src/components/network/DnsSearchDataList.tsx:116
+#: src/components/network/WiredConnectionDetails.tsx:179
+#: src/components/network/WiredConnectionDetails.tsx:309
+msgid "DNS Search List"
 msgstr ""
 
 #. TRANSLATORS: Displays both IPv4 and IPv6 addresses with count of
@@ -701,12 +898,11 @@ msgid "Ip prefix or netmask"
 msgstr ""
 
 #. TRANSLATORS: error message
-#: src/components/network/IpSettingsForm.tsx:106
+#: src/components/network/IpSettingsForm.tsx:133
 msgid "At least one address must be provided for selected mode"
 msgstr ""
 
-#: src/components/network/IpSettingsForm.tsx:152
-#: src/components/network/WifiConnectionDetails.tsx:100
+#: src/components/network/IpSettingsForm.tsx:188
 #: src/components/storage/FilesystemMenu.tsx:109
 #: src/components/storage/PartitionsSection.tsx:186
 #: src/components/storage/VolumeGroupEditor.tsx:173
@@ -714,22 +910,32 @@ msgstr ""
 msgid "Edit"
 msgstr ""
 
+#: src/components/network/IpSettingsForm.tsx:218
+msgid "(bind by name)"
+msgstr ""
+
+#. TRANSLATORS: table header for an iSCSI targets table
+#: src/components/network/IpSettingsForm.tsx:218
+#: src/components/network/WiredConnectionDetails.tsx:138
+#: src/components/storage/iscsi/TargetsTable.tsx:476
+msgid "Interface"
+msgstr ""
+
 #. TRANSLATORS: network connection mode (automatic via DHCP or manual with static IP)
-#: src/components/network/IpSettingsForm.tsx:167
-#: src/components/network/IpSettingsForm.tsx:172
-#: src/components/network/IpSettingsForm.tsx:174
-#: src/components/network/WifiConnectionDetails.tsx:106
-#: src/components/network/WiredConnectionDetails.tsx:214
+#: src/components/network/IpSettingsForm.tsx:233
+#: src/components/network/IpSettingsForm.tsx:238
+#: src/components/network/IpSettingsForm.tsx:240
+#: src/components/network/WiredConnectionDetails.tsx:264
 msgid "Mode"
 msgstr ""
 
-#: src/components/network/IpSettingsForm.tsx:181
+#: src/components/network/IpSettingsForm.tsx:247
 msgid "Automatic (DHCP)"
 msgstr ""
 
 #. TRANSLATORS: Network summary title when using manual/static IP configuration
 #. TRANSLATORS: manual network configuration mode with a static IP address
-#: src/components/network/IpSettingsForm.tsx:184
+#: src/components/network/IpSettingsForm.tsx:250
 #: src/components/overview/NetworkSummary.tsx:128
 #: src/components/storage/SizeModeSelect.tsx:191
 #: src/components/storage/SizeModeSelect.tsx:199
@@ -738,36 +944,28 @@ msgid "Manual"
 msgstr ""
 
 #. TRANSLATORS: network gateway configuration
-#: src/components/network/IpSettingsForm.tsx:192
-#: src/components/network/IpSettingsForm.tsx:195
-#: src/components/network/WifiConnectionDetails.tsx:129
-#: src/components/network/WiredConnectionDetails.tsx:110
-#: src/components/network/WiredConnectionDetails.tsx:227
+#: src/components/network/IpSettingsForm.tsx:258
+#: src/components/network/IpSettingsForm.tsx:261
+#: src/components/network/WiredConnectionDetails.tsx:150
+#: src/components/network/WiredConnectionDetails.tsx:277
 msgid "Gateway"
 msgstr ""
 
-#: src/components/network/IpSettingsForm.tsx:204
+#: src/components/network/IpSettingsForm.tsx:270
 msgid "Gateway can be defined only in 'Manual' mode"
 msgstr ""
 
-#: src/components/network/NetworkPage.tsx:34
-msgid "Wi-Fi not supported"
-msgstr ""
-
-#: src/components/network/NetworkPage.tsx:36
+#: src/components/network/NetworkPage.tsx:50
 msgid ""
-"The system does not support Wi-Fi connections, probably because of missing "
-"or disabled hardware."
+"Manage available connections, connect to Wi-Fi, or add a new connection."
 msgstr ""
 
-#: src/components/network/NetworkPage.tsx:56
-#: src/components/network/NetworkPage.tsx:57
-msgid "Wired connections"
+#: src/components/network/NetworkPage.tsx:58
+msgid "Add connection"
 msgstr ""
 
-#: src/components/network/NetworkPage.tsx:62
-#: src/components/network/NetworkPage.tsx:63
-msgid "Wi-Fi networks"
+#: src/components/network/NetworkPage.tsx:64
+msgid "Connect to Wi-Fi network"
 msgstr ""
 
 #: src/components/network/NoPersistentConnectionsAlert.tsx:40
@@ -781,129 +979,39 @@ msgid ""
 "system"
 msgstr ""
 
-#: src/components/network/WifiConnectionDetails.tsx:46
-msgid "Network details"
-msgstr ""
-
-#: src/components/network/WifiConnectionDetails.tsx:48
-msgid "SSID"
-msgstr ""
-
-#: src/components/network/WifiConnectionDetails.tsx:52
-msgid "Signal strength"
-msgstr ""
-
-#. TRANSLATORS: table header for a zFCP devices table.
-#. TRANSLATORS: table header for a DASD devices table
-#. TRANSLATORS: table header for an iSCSI targets table
-#: src/components/network/WifiConnectionDetails.tsx:56
-#: src/components/network/WifiConnectionDetails.tsx:79
-#: src/components/network/WiredConnectionDetails.tsx:102
-#: src/components/storage/dasd/DASDTable.tsx:313
-#: src/components/storage/dasd/DASDTable.tsx:550
-#: src/components/storage/iscsi/StatusFilter.tsx:77
-#: src/components/storage/iscsi/TargetsTable.tsx:495
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:164
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:340
-msgid "Status"
-msgstr ""
-
-#: src/components/network/WifiConnectionDetails.tsx:60
-#: src/components/network/WifiConnectionForm.tsx:153
-#: src/components/network/WifiConnectionForm.tsx:156
-msgid "Security"
-msgstr ""
-
-#. TRANSLATORS: table header for a zFCP devices table.
-#. TRANSLATORS: table header for a DASD devices table
-#: src/components/network/WifiConnectionDetails.tsx:72
-#: src/components/storage/DeviceSelectorModal.tsx:87
-#: src/components/storage/ProposalResultTable.tsx:134
-#: src/components/storage/dasd/DASDTable.tsx:556
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:346
-msgid "Device"
-msgstr ""
-
-#: src/components/network/WifiConnectionDetails.tsx:73
-msgid "Connection details"
-msgstr ""
-
-#. TRANSLATORS: table header for an iSCSI targets table
-#: src/components/network/WifiConnectionDetails.tsx:75
-#: src/components/network/WiredConnectionDetails.tsx:98
-#: src/components/storage/iscsi/TargetsTable.tsx:476
-msgid "Interface"
-msgstr ""
-
-#: src/components/network/WifiConnectionDetails.tsx:83
-#: src/components/network/WiredConnectionDetails.tsx:106
-msgid "MAC"
-msgstr ""
-
-#: src/components/network/WifiConnectionDetails.tsx:96
-msgid "IP settings"
-msgstr ""
-
-#: src/components/network/WifiConnectionDetails.tsx:110
-#: src/components/network/WiredConnectionDetails.tsx:218
-msgid "IPv4"
-msgstr ""
-
-#: src/components/network/WifiConnectionDetails.tsx:113
-#: src/components/network/WiredConnectionDetails.tsx:221
-msgid "IPv6"
-msgstr ""
-
-#: src/components/network/WifiConnectionDetails.tsx:148
-#: src/components/network/WiredConnectionDetails.tsx:139
-msgid "Routes"
-msgstr ""
-
 #. TRANSLATORS: WiFi authentication mode
-#: src/components/network/WifiConnectionForm.tsx:44
+#: src/components/network/WifiConnectionForm.tsx:47
 msgid "None"
 msgstr ""
 
 #. TRANSLATORS: WiFi authentication mode
-#: src/components/network/WifiConnectionForm.tsx:46
+#: src/components/network/WifiConnectionForm.tsx:49
 msgid "WPA & WPA2 Personal"
 msgstr ""
 
-#: src/components/network/WifiConnectionForm.tsx:57
+#: src/components/network/WifiConnectionForm.tsx:60
 msgid "Not protected network"
 msgstr ""
 
-#: src/components/network/WifiConnectionForm.tsx:59
+#: src/components/network/WifiConnectionForm.tsx:62
 msgid ""
 "You will connect to a public network without encryption. Your data may not "
 "be secure."
 msgstr ""
 
-#: src/components/network/WifiConnectionForm.tsx:70
-msgid "Setting up connection"
+#: src/components/network/WifiConnectionForm.tsx:135
+#: src/components/network/WifiNetworksList.tsx:177
+msgid "No Wi-Fi networks were found"
 msgstr ""
 
-#: src/components/network/WifiConnectionForm.tsx:72
-msgid "It may take some time."
-msgstr ""
-
-#: src/components/network/WifiConnectionForm.tsx:74
-msgid "Details will appear after the connection is successfully established."
-msgstr ""
-
-#. TRANSLATORS: %s will be replaced by network ssid.
-#: src/components/network/WifiConnectionForm.tsx:82
-#, javascript-format
-msgid "Could not connect to %s"
-msgstr ""
-
-#: src/components/network/WifiConnectionForm.tsx:86
-msgid "Check the authentication parameters."
-msgstr ""
-
-#. TRANSLATORS: accessible name for the WiFi connection form
-#: src/components/network/WifiConnectionForm.tsx:148
+#: src/components/network/WifiConnectionForm.tsx:141
 msgid "Wi-Fi connection form"
+msgstr ""
+
+#: src/components/network/WifiConnectionForm.tsx:153
+#: src/components/network/WifiConnectionForm.tsx:156
+#: src/components/network/WiredConnectionDetails.tsx:102
+msgid "Security"
 msgstr ""
 
 #. TRANSLATORS: WiFi password
@@ -911,32 +1019,8 @@ msgstr ""
 msgid "WPA Password"
 msgstr ""
 
-#. TRANSLATORS: button label, connect to a Wi-Fi network
-#: src/components/network/WifiConnectionForm.tsx:186
-#: src/components/storage/iscsi/TargetsTable.tsx:236
-#: src/components/storage/iscsi/TargetsTable.tsx:247
-msgid "Connect"
-msgstr ""
-
-#. TRANSLATORS: %s will be replaced with the network ssid
-#. TRANSLATORS: %s will be replaced with connection id
-#: src/components/network/WifiNetworkPage.tsx:44
-#: src/components/network/WiredConnectionPage.tsx:42
-#, javascript-format
-msgid "\"%s\" does not exist or is no longer available."
-msgstr ""
-
-#: src/components/network/WifiNetworkPage.tsx:47
-msgid "Network not found or lost"
-msgstr ""
-
-#: src/components/network/WifiNetworkPage.tsx:55
-#: src/components/network/WiredConnectionPage.tsx:54
-msgid "Go to network page"
-msgstr ""
-
-#: src/components/network/WifiNetworkPage.tsx:74
-msgid "Wi-Fi"
+#: src/components/network/WifiConnectionForm.tsx:199
+msgid "New Wi-Fi connection"
 msgstr ""
 
 #: src/components/network/WifiNetworksList.tsx:54
@@ -965,95 +1049,118 @@ msgstr ""
 msgid "Connecting to %s"
 msgstr ""
 
-#: src/components/network/WifiNetworksList.tsx:134
-#: src/components/storage/iscsi/TargetsTable.tsx:158
-msgid "Connected"
-msgstr ""
-
 #: src/components/network/WifiNetworksList.tsx:141
-#: src/components/network/WiredConnectionsList.tsx:67
 msgid "IP addresses"
 msgstr ""
 
 #: src/components/network/WifiNetworksList.tsx:147
-#: src/components/network/WiredConnectionsList.tsx:71
 msgid "Configured for installation only"
 msgstr ""
 
-#: src/components/network/WifiNetworksList.tsx:177
-msgid "No Wi-Fi networks were found"
-msgstr ""
-
-#: src/components/network/WiredConnectionDetails.tsx:59
+#: src/components/network/WiredConnectionDetails.tsx:60
 msgid "Connection is available to all devices."
 msgstr ""
 
 #. TRANSLATORS: %s will be replaced by a network device name, like eth0 or enp1s0
-#: src/components/network/WiredConnectionDetails.tsx:62
+#: src/components/network/WiredConnectionDetails.tsx:63
 #, javascript-format
 msgid "Connection is bound to device %s."
 msgstr ""
 
 #. TRANSLATORS: %s will be replaced by MAC addrss, like 7C:D7:11:28:F5:40
-#: src/components/network/WiredConnectionDetails.tsx:65
+#: src/components/network/WiredConnectionDetails.tsx:66
 #, javascript-format
 msgid "Connection is bound to MAC address %s."
 msgstr ""
 
-#: src/components/network/WiredConnectionDetails.tsx:72
+#: src/components/network/WiredConnectionDetails.tsx:73
 msgid "Binding"
 msgstr ""
 
-#: src/components/network/WiredConnectionDetails.tsx:80
+#: src/components/network/WiredConnectionDetails.tsx:81
 msgid "Edit binding settings"
 msgstr ""
 
-#: src/components/network/WiredConnectionDetails.tsx:93
+#: src/components/network/WiredConnectionDetails.tsx:96
+msgid "Network details"
+msgstr ""
+
+#: src/components/network/WiredConnectionDetails.tsx:98
+msgid "SSID"
+msgstr ""
+
+#: src/components/network/WiredConnectionDetails.tsx:112
+msgid "Signal strength"
+msgstr ""
+
+#: src/components/network/WiredConnectionDetails.tsx:121
+msgid "Network not availble"
+msgstr ""
+
+#: src/components/network/WiredConnectionDetails.tsx:133
 msgid "Device details"
 msgstr ""
 
-#: src/components/network/WiredConnectionDetails.tsx:119
-#: src/components/network/WiredConnectionDetails.tsx:237
-msgid "IP Addresses"
+#: src/components/network/WiredConnectionDetails.tsx:146
+msgid "MAC"
 msgstr ""
 
-#: src/components/network/WiredConnectionDetails.tsx:172
+#: src/components/network/WiredConnectionDetails.tsx:189
+msgid "Routes"
+msgstr ""
+
+#: src/components/network/WiredConnectionDetails.tsx:222
 msgid "Connected device"
 msgstr ""
 
-#: src/components/network/WiredConnectionDetails.tsx:172
+#: src/components/network/WiredConnectionDetails.tsx:222
 msgid "Connected devices"
 msgstr ""
 
-#: src/components/network/WiredConnectionDetails.tsx:175
+#: src/components/network/WiredConnectionDetails.tsx:225
 msgid "No device is currently using this connection."
 msgstr ""
 
-#: src/components/network/WiredConnectionDetails.tsx:181
+#: src/components/network/WiredConnectionDetails.tsx:231
 msgid "Connected devices tabs"
 msgstr ""
 
-#: src/components/network/WiredConnectionDetails.tsx:203
+#: src/components/network/WiredConnectionDetails.tsx:253
 #: src/components/storage/ProposalPage.tsx:204
 msgid "Settings"
 msgstr ""
 
-#: src/components/network/WiredConnectionDetails.tsx:207
+#: src/components/network/WiredConnectionDetails.tsx:257
 msgid "Edit connection settings"
 msgstr ""
 
-#: src/components/network/WiredConnectionDetails.tsx:231
-#: src/components/network/WiredConnectionDetails.tsx:241
-#: src/components/network/WiredConnectionDetails.tsx:253
+#: src/components/network/WiredConnectionDetails.tsx:268
+msgid "IPv4"
+msgstr ""
+
+#: src/components/network/WiredConnectionDetails.tsx:271
+msgid "IPv6"
+msgstr ""
+
+#: src/components/network/WiredConnectionDetails.tsx:281
+#: src/components/network/WiredConnectionDetails.tsx:291
+#: src/components/network/WiredConnectionDetails.tsx:303
+#: src/components/network/WiredConnectionDetails.tsx:313
 msgid "None set"
+msgstr ""
+
+#. TRANSLATORS: %s will be replaced with connection id
+#: src/components/network/WiredConnectionPage.tsx:42
+#, javascript-format
+msgid "\"%s\" does not exist or is no longer available."
 msgstr ""
 
 #: src/components/network/WiredConnectionPage.tsx:47
 msgid "Connection not found or lost"
 msgstr ""
 
-#: src/components/network/WiredConnectionsList.tsx:91
-msgid "No wired connections were found"
+#: src/components/network/WiredConnectionPage.tsx:54
+msgid "Go to network page"
 msgstr ""
 
 #: src/components/overview/HostnameSummary.tsx:47
@@ -2233,23 +2340,6 @@ msgstr ""
 msgid "Current content"
 msgstr ""
 
-#. TRANSLATORS: table header for a DASD devices table
-#: src/components/storage/DeviceSelectorPage.tsx:54
-#: src/components/storage/dasd/DASDTable.tsx:563
-msgid "Type"
-msgstr ""
-
-#. TRANSLATORS: table header for an iSCSI targets table
-#. TRANSLATORS: input field for the iSCSI initiator name
-#: src/components/storage/DeviceSelectorPage.tsx:55
-#: src/components/storage/LvmPage.tsx:184
-#: src/components/storage/iscsi/InitiatorFormPage.tsx:66
-#: src/components/storage/iscsi/InitiatorFormPage.tsx:75
-#: src/components/storage/iscsi/TargetsTable.tsx:282
-#: src/components/storage/iscsi/TargetsTable.tsx:456
-msgid "Name"
-msgstr ""
-
 #: src/components/storage/DeviceSelectorPage.tsx:56
 msgid "Content"
 msgstr ""
@@ -2888,12 +2978,6 @@ msgstr ""
 msgid "Options for partition %s"
 msgstr ""
 
-#: src/components/storage/PartitionsSection.tsx:194
-#: src/components/storage/VolumeGroupEditor.tsx:181
-#: src/components/storage/iscsi/TargetsTable.tsx:252
-msgid "Delete"
-msgstr ""
-
 #: src/components/storage/PartitionsSection.tsx:286
 msgid "Partitions"
 msgstr ""
@@ -3095,11 +3179,6 @@ msgstr ""
 
 #: src/components/storage/ProposalResultTable.tsx:135
 msgid "Mount Point"
-msgstr ""
-
-#: src/components/storage/ProposalResultTable.tsx:136
-#: src/components/storage/SpaceActionsTable.tsx:230
-msgid "Details"
 msgstr ""
 
 #: src/components/storage/SearchedDeviceMenu.tsx:69
@@ -3430,7 +3509,7 @@ msgstr ""
 #: src/components/storage/dasd/DASDTable.tsx:575
 #: src/components/storage/dasd/DASDTable.tsx:583
 #: src/components/storage/iscsi/TargetsTable.tsx:490
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:353
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:348
 msgid "Yes"
 msgstr ""
 
@@ -3438,17 +3517,17 @@ msgstr ""
 #: src/components/storage/dasd/DASDTable.tsx:575
 #: src/components/storage/dasd/DASDTable.tsx:583
 #: src/components/storage/iscsi/TargetsTable.tsx:490
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:353
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:348
 msgid "No"
 msgstr ""
 
 #: src/components/storage/dasd/DASDTable.tsx:193
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:231
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:226
 msgid "Activate"
 msgstr ""
 
 #: src/components/storage/dasd/DASDTable.tsx:203
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:237
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:232
 msgid "Deactivate"
 msgstr ""
 
@@ -3480,15 +3559,6 @@ msgstr ""
 msgid "%d devices available"
 msgstr ""
 
-#: src/components/storage/dasd/DASDTable.tsx:316
-#: src/components/storage/dasd/DASDTable.tsx:328
-#: src/components/storage/iscsi/StatusFilter.tsx:58
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:167
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:176
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:185
-msgid "All"
-msgstr ""
-
 #. TRANSLATORS: table header for a column in a DASD devices table that
 #. usually contains "Yes" or "No"" values
 #: src/components/storage/dasd/DASDTable.tsx:326
@@ -3502,14 +3572,6 @@ msgstr ""
 
 #: src/components/storage/dasd/DASDTable.tsx:344
 msgid "Max channel"
-msgstr ""
-
-#: src/components/storage/dasd/DASDTable.tsx:358
-#: src/components/storage/dasd/DASDTable.tsx:714
-#: src/components/storage/iscsi/TargetsTable.tsx:363
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:199
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:427
-msgid "Clear all filters"
 msgstr ""
 
 #. TRANSLATORS: message shown in bulk action toolbar when just one device
@@ -3546,7 +3608,7 @@ msgstr ""
 #. TRANSLATORS: table header for a DASD devices table
 #: src/components/storage/dasd/DASDTable.tsx:544
 #: src/components/storage/zfcp/ZFCPDevicesTable.tsx:173
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:322
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:317
 msgid "Channel"
 msgstr ""
 
@@ -3575,14 +3637,8 @@ msgid "This message will close automatically when everything is done."
 msgstr ""
 
 #: src/components/storage/dasd/DASDTable.tsx:706
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:419
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:420
 msgid "No devices match filters"
-msgstr ""
-
-#: src/components/storage/dasd/DASDTable.tsx:710
-#: src/components/storage/iscsi/TargetsTable.tsx:359
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:423
-msgid "Change filters and try again."
 msgstr ""
 
 #: src/components/storage/dasd/FormatActionHandler.tsx:90
@@ -3788,20 +3844,8 @@ msgstr ""
 msgid "Disconnection failed"
 msgstr ""
 
-#: src/components/storage/iscsi/TargetsTable.tsx:163
-msgid "Disconnected"
-msgstr ""
-
 #: src/components/storage/iscsi/TargetsTable.tsx:164
 msgid "Missing"
-msgstr ""
-
-#: src/components/storage/iscsi/TargetsTable.tsx:224
-msgid "Edit connection"
-msgstr ""
-
-#: src/components/storage/iscsi/TargetsTable.tsx:228
-msgid "Disconnect"
 msgstr ""
 
 #: src/components/storage/iscsi/TargetsTable.tsx:240
@@ -4214,33 +4258,33 @@ msgstr ""
 
 #. TRANSLATORS: table header for a zFCP devices table.
 #: src/components/storage/zfcp/ZFCPDevicesTable.tsx:182
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:328
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:323
 msgid "WWPN"
 msgstr ""
 
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:231
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:226
 msgid "Try to activate again"
 msgstr ""
 
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:237
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:232
 msgid "Try to deactivate again"
 msgstr ""
 
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:245
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:240
 msgid "Do not activate"
 msgstr ""
 
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:245
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:240
 msgid "Do not deactivate"
 msgstr ""
 
 #. TRANSLATORS: table header for a zFCP devices table.
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:334
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:329
 msgid "LUN"
 msgstr ""
 
 #. TRANSLATORS: table header for a zFCP devices table.
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:352
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:347
 msgid "Auto Scanned"
 msgstr ""
 
