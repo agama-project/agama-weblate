@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-13 10:08+0000\n"
+"POT-Creation-Date: 2026-03-16 14:24+0000\n"
 "PO-Revision-Date: 2026-02-23 21:04+0000\n"
 "Last-Translator: Efstathios Iosifidis <eiosifidis@yandex.com>\n"
 "Language-Team: Greek <https://l10n.opensuse.org/projects/agama/agama-web/el/"
@@ -49,7 +49,7 @@ msgid "Retrieving error details"
 msgstr "Λεπτομέρειες συσκευής"
 
 #: src/components/core/ErrorPage.tsx:134
-#: src/components/network/IpSettingsForm.tsx:161
+#: src/components/network/IpSettingsForm.tsx:197
 #: src/components/storage/EncryptionSettingsPage.tsx:114
 #: src/components/storage/iscsi/DiscoverFormPage.tsx:175
 #: src/components/storage/iscsi/TargetLoginPage.tsx:189
@@ -179,7 +179,7 @@ msgstr "Χρήση των ίδιων ρυθμίσεων για το επιλεγ
 #: src/components/core/InstallerL10nOptions.tsx:391
 #: src/components/core/InstallerL10nOptions.tsx:405
 #: src/components/core/InstallerL10nOptions.tsx:448
-#: src/components/core/Page.tsx:286
+#: src/components/core/Page.tsx:287
 #: src/components/storage/dasd/FormatActionHandler.tsx:95
 #: src/components/storage/dasd/FormatActionHandler.tsx:122
 #: src/components/storage/zfcp/ZFCPControllersPage.tsx:161
@@ -315,13 +315,13 @@ msgstr "Σύνδεση"
 msgid "Provide its password to log in to the system."
 msgstr "Εισαγάγετε τον κωδικό πρόσβασης για να συνδεθείτε στο σύστημα."
 
-#: src/components/core/MenuButton.tsx:78 src/components/core/Page.tsx:275
+#: src/components/core/MenuButton.tsx:78 src/components/core/Page.tsx:276
 msgid "Back"
 msgstr "Πίσω"
 
-#: src/components/core/Page.tsx:254 src/components/core/Popup.tsx:140
-#: src/components/network/BindingSettingsForm.tsx:229
-#: src/components/network/IpSettingsForm.tsx:221
+#: src/components/core/Page.tsx:255 src/components/core/Popup.tsx:140
+#: src/components/network/BindingSettingsForm.tsx:180
+#: src/components/network/IpSettingsForm.tsx:289
 #: src/components/network/WifiConnectionForm.tsx:188
 #: src/components/product/ProductSelectionPage.tsx:539
 #: src/components/storage/iscsi/DiscoverFormPage.tsx:252
@@ -414,13 +414,14 @@ msgid "Storage"
 msgstr "Αποθηκευτικός χώρος"
 
 #: src/components/core/ProgressStatusMonitor.tsx:42
-#: src/components/network/BindingSettingsForm.tsx:160
-#: src/components/network/IpSettingsForm.tsx:150
-#: src/components/network/NetworkPage.tsx:50
-#: src/components/network/WifiConnectionDetails.tsx:45
-#: src/components/network/WifiNetworkPage.tsx:73
-#: src/components/network/WiredConnectionPage.tsx:68
-#: src/components/overview/NetworkSummary.tsx:149 src/routes/network.tsx:38
+#: src/components/network/BindingSettingsForm.tsx:111
+#: src/components/network/IpSettingsForm.tsx:181
+#: src/components/network/NetworkPage.tsx:43
+#: src/components/network/WifiConnectionForm.tsx:142
+#: src/components/network/WifiConnectionForm.tsx:198
+#: src/components/network/WiredConnectionDetails.tsx:95
+#: src/components/network/WiredConnectionPage.tsx:69
+#: src/components/overview/NetworkSummary.tsx:149 src/routes/network.tsx:36
 msgid "Network"
 msgstr "Δίκτυο"
 
@@ -581,6 +582,7 @@ msgstr "Φόρτωση"
 #. TRANSLATORS: button label
 #: src/components/network/AddressesDataList.tsx:102
 #: src/components/network/DnsDataList.tsx:106
+#: src/components/network/DnsSearchDataList.tsx:102
 msgid "Remove"
 msgstr "Αφαίρεση"
 
@@ -605,13 +607,229 @@ msgid "Add another address"
 msgstr "Προσθήκη άλλης διεύθυνσης"
 
 #: src/components/network/AddressesDataList.tsx:141
-#: src/components/network/WifiConnectionDetails.tsx:119
 msgid "Addresses"
 msgstr "Διευθύνσεις"
 
 #: src/components/network/AddressesDataList.tsx:148
 msgid "Addresses data list"
 msgstr "Λίστα δεδομένων διευθύνσεων"
+
+#: src/components/network/BindingSettingsForm.tsx:113
+msgid "Binding settings"
+msgstr "Ρυθμίσεις συσχέτισης (binding)"
+
+#: src/components/network/BindingSettingsForm.tsx:121
+msgid ""
+"Choose how the connection should be associated with a network device. This "
+"helps control which device the connection uses."
+msgstr ""
+"Επιλέξτε πώς θα συσχετίζεται η σύνδεση με μια συσκευή δικτύου. Αυτό βοηθά "
+"στον έλεγχο της συσκευής που χρησιμοποιεί η σύνδεση."
+
+#: src/components/network/BindingSettingsForm.tsx:129
+msgid "Unbound"
+msgstr "Χωρίς συσχέτιση (unbound)"
+
+#: src/components/network/BindingSettingsForm.tsx:132
+msgid "The connection can be used by any available device."
+msgstr "Η σύνδεση μπορεί να χρησιμοποιηθεί από οποιαδήποτε διαθέσιμη συσκευή."
+
+#: src/components/network/BindingSettingsForm.tsx:141
+msgid "Bind to device name"
+msgstr "Συσχέτιση με όνομα συσκευής"
+
+#: src/components/network/BindingSettingsForm.tsx:145
+msgid "Choose device to bind by name"
+msgstr "Επιλέξτε συσκευή για συσχέτιση βάσει ονόματος"
+
+#: src/components/network/BindingSettingsForm.tsx:160
+msgid "Bind to MAC address"
+msgstr "Συσχέτιση με διεύθυνση MAC"
+
+#: src/components/network/BindingSettingsForm.tsx:164
+msgid "Choose device to bind by MAC"
+msgstr "Επιλέξτε συσκευή για συσχέτιση βάσει MAC"
+
+#: src/components/network/ConnectionsTable.tsx:143
+msgid "(bound by name)"
+msgstr ""
+
+#: src/components/network/ConnectionsTable.tsx:144
+msgid "(bound by MAC)"
+msgstr ""
+
+#. TRANSLATORS: table header for an iSCSI targets table
+#. TRANSLATORS: input field for the iSCSI initiator name
+#: src/components/network/ConnectionsTable.tsx:150
+#: src/components/network/ConnectionsTable.tsx:274
+#: src/components/network/IpSettingsForm.tsx:203
+#: src/components/network/IpSettingsForm.tsx:207
+#: src/components/network/IpSettingsForm.tsx:209
+#: src/components/storage/DeviceSelectorPage.tsx:55
+#: src/components/storage/LvmPage.tsx:184
+#: src/components/storage/iscsi/InitiatorFormPage.tsx:66
+#: src/components/storage/iscsi/InitiatorFormPage.tsx:75
+#: src/components/storage/iscsi/TargetsTable.tsx:282
+#: src/components/storage/iscsi/TargetsTable.tsx:456
+msgid "Name"
+msgstr "Όνομα"
+
+#. TRANSLATORS: table header for a DASD devices table
+#: src/components/network/ConnectionsTable.tsx:155
+#: src/components/network/ConnectionsTable.tsx:282
+#: src/components/storage/DeviceSelectorPage.tsx:54
+#: src/components/storage/dasd/DASDTable.tsx:563
+msgid "Type"
+msgstr "Τύπος"
+
+#: src/components/network/ConnectionsTable.tsx:156
+#: src/components/network/ConnectionsTable.tsx:287
+msgid "Ethernet"
+msgstr ""
+
+#: src/components/network/ConnectionsTable.tsx:156
+#: src/components/network/ConnectionsTable.tsx:286
+msgid "Wi-Fi"
+msgstr "Wi-Fi"
+
+#. TRANSLATORS: table header for a zFCP devices table.
+#. TRANSLATORS: table header for a DASD devices table
+#. TRANSLATORS: table header for an iSCSI targets table
+#: src/components/network/ConnectionsTable.tsx:160
+#: src/components/network/ConnectionsTable.tsx:294
+#: src/components/network/WiredConnectionDetails.tsx:108
+#: src/components/network/WiredConnectionDetails.tsx:142
+#: src/components/storage/dasd/DASDTable.tsx:313
+#: src/components/storage/dasd/DASDTable.tsx:550
+#: src/components/storage/iscsi/StatusFilter.tsx:77
+#: src/components/storage/iscsi/TargetsTable.tsx:495
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:164
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:335
+msgid "Status"
+msgstr "Κατάσταση"
+
+#: src/components/network/ConnectionsTable.tsx:162
+#: src/components/network/WifiNetworksList.tsx:134
+#: src/components/storage/iscsi/TargetsTable.tsx:158
+msgid "Connected"
+msgstr "Συνδέθηκε"
+
+#: src/components/network/ConnectionsTable.tsx:162
+#: src/components/storage/iscsi/TargetsTable.tsx:163
+msgid "Disconnected"
+msgstr "Αποσυνδεδεμένο"
+
+#. TRANSLATORS: table header for a zFCP devices table.
+#. TRANSLATORS: table header for a DASD devices table
+#: src/components/network/ConnectionsTable.tsx:166
+#: src/components/storage/DeviceSelectorModal.tsx:87
+#: src/components/storage/ProposalResultTable.tsx:134
+#: src/components/storage/dasd/DASDTable.tsx:556
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:341
+msgid "Device"
+msgstr "Συσκευή"
+
+#: src/components/network/ConnectionsTable.tsx:189
+#: src/components/network/WiredConnectionDetails.tsx:159
+#: src/components/network/WiredConnectionDetails.tsx:287
+msgid "IP Addresses"
+msgstr "Διευθύνσεις IP"
+
+#. TRANSLATORS: shown in the filter toolbar when filters are active.
+#. %1$s is the number of matching connections, %2$s is the total number.
+#: src/components/network/ConnectionsTable.tsx:255
+#, fuzzy, javascript-format
+msgid "%1$d of %2$d connections match filters"
+msgstr "Κανένας στόχος δεν ταιριάζει με τα φίλτρα"
+
+#. TRANSLATORS: shown in the filter toolbar when no filters are active.
+#. %s is the total number of connections.
+#: src/components/network/ConnectionsTable.tsx:262
+#, fuzzy, javascript-format
+msgid "%d connections available"
+msgstr "%d διαθέσιμη λειτουργία"
+
+#: src/components/network/ConnectionsTable.tsx:285
+#: src/components/network/ConnectionsTable.tsx:297
+#: src/components/storage/dasd/DASDTable.tsx:316
+#: src/components/storage/dasd/DASDTable.tsx:328
+#: src/components/storage/iscsi/StatusFilter.tsx:58
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:167
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:176
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:185
+msgid "All"
+msgstr "Όλα"
+
+#: src/components/network/ConnectionsTable.tsx:298
+msgid "Up"
+msgstr ""
+
+#: src/components/network/ConnectionsTable.tsx:299
+msgid "Down"
+msgstr ""
+
+#: src/components/network/ConnectionsTable.tsx:312
+#: src/components/network/ConnectionsTable.tsx:392
+#: src/components/storage/dasd/DASDTable.tsx:358
+#: src/components/storage/dasd/DASDTable.tsx:714
+#: src/components/storage/iscsi/TargetsTable.tsx:363
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:199
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:428
+msgid "Clear all filters"
+msgstr "Εκκαθάριση όλων των φίλτρων"
+
+#: src/components/network/ConnectionsTable.tsx:339
+#: src/components/storage/ProposalResultTable.tsx:136
+#: src/components/storage/SpaceActionsTable.tsx:230
+msgid "Details"
+msgstr "Λεπτομέρειες"
+
+#: src/components/network/ConnectionsTable.tsx:347
+#: src/components/storage/iscsi/TargetsTable.tsx:224
+msgid "Edit connection"
+msgstr "Επεξεργασία σύνδεσης"
+
+#: src/components/network/ConnectionsTable.tsx:352
+#, fuzzy
+msgid "Edit binding"
+msgstr "Επεξεργασία ρυθμίσεων συσχέτισης"
+
+#. TRANSLATORS: button label, connect to a Wi-Fi network
+#: src/components/network/ConnectionsTable.tsx:361
+#: src/components/network/WifiConnectionForm.tsx:186
+#: src/components/storage/iscsi/TargetsTable.tsx:236
+#: src/components/storage/iscsi/TargetsTable.tsx:247
+msgid "Connect"
+msgstr "Σύνδεση"
+
+#: src/components/network/ConnectionsTable.tsx:366
+#: src/components/storage/iscsi/TargetsTable.tsx:228
+msgid "Disconnect"
+msgstr "Αποσύνδεση"
+
+#: src/components/network/ConnectionsTable.tsx:374
+#: src/components/storage/PartitionsSection.tsx:194
+#: src/components/storage/VolumeGroupEditor.tsx:181
+#: src/components/storage/iscsi/TargetsTable.tsx:252
+msgid "Delete"
+msgstr "Διαγραφή"
+
+#: src/components/network/ConnectionsTable.tsx:384
+#, fuzzy
+msgid "No connections match filters"
+msgstr "Κανένας στόχος δεν ταιριάζει με τα φίλτρα"
+
+#: src/components/network/ConnectionsTable.tsx:388
+#: src/components/storage/dasd/DASDTable.tsx:710
+#: src/components/storage/iscsi/TargetsTable.tsx:359
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:424
+msgid "Change filters and try again."
+msgstr "Αλλάξτε τα φίλτρα και δοκιμάστε ξανά."
+
+#: src/components/network/DevicesSelector.tsx:68
+#, fuzzy
+msgid "None (unbound)"
+msgstr "Δεν βρέθηκε περιεχόμενο"
 
 #. TRANSLATORS: this simply concatenates the two sentences that describe what is going to happen
 #. with partitions. The first %s corresponds to deleted partitions and the second one to resized
@@ -622,47 +840,11 @@ msgstr "Λίστα δεδομένων διευθύνσεων"
 #. name first, others the MAC address. I.e. "enp1s0 - CC-7F-C8-FC-7A-A1"
 #. or "CC-7F-C8-FC-7A-A1 - enp1s0". You may change the separator, but
 #. please keep both %s placeholders.
-#: src/components/network/BindingSettingsForm.tsx:79
+#: src/components/network/DevicesSelector.tsx:76
 #: src/components/storage/utils/drive.tsx:110
 #, javascript-format
 msgid "%s - %s"
 msgstr "%s - %s"
-
-#: src/components/network/BindingSettingsForm.tsx:162
-msgid "Binding settings"
-msgstr "Ρυθμίσεις συσχέτισης (binding)"
-
-#: src/components/network/BindingSettingsForm.tsx:170
-msgid ""
-"Choose how the connection should be associated with a network device. This "
-"helps control which device the connection uses."
-msgstr ""
-"Επιλέξτε πώς θα συσχετίζεται η σύνδεση με μια συσκευή δικτύου. Αυτό βοηθά "
-"στον έλεγχο της συσκευής που χρησιμοποιεί η σύνδεση."
-
-#: src/components/network/BindingSettingsForm.tsx:178
-msgid "Unbound"
-msgstr "Χωρίς συσχέτιση (unbound)"
-
-#: src/components/network/BindingSettingsForm.tsx:181
-msgid "The connection can be used by any available device."
-msgstr "Η σύνδεση μπορεί να χρησιμοποιηθεί από οποιαδήποτε διαθέσιμη συσκευή."
-
-#: src/components/network/BindingSettingsForm.tsx:190
-msgid "Bind to device name"
-msgstr "Συσχέτιση με όνομα συσκευής"
-
-#: src/components/network/BindingSettingsForm.tsx:194
-msgid "Choose device to bind by name"
-msgstr "Επιλέξτε συσκευή για συσχέτιση βάσει ονόματος"
-
-#: src/components/network/BindingSettingsForm.tsx:209
-msgid "Bind to MAC address"
-msgstr "Συσχέτιση με διεύθυνση MAC"
-
-#: src/components/network/BindingSettingsForm.tsx:213
-msgid "Choose device to bind by MAC"
-msgstr "Επιλέξτε συσκευή για συσχέτιση βάσει MAC"
 
 #. TRANSLATORS: input field name
 #: src/components/network/DnsDataList.tsx:90
@@ -679,11 +861,30 @@ msgid "Add another DNS"
 msgstr "Προσθήκη άλλου DNS"
 
 #: src/components/network/DnsDataList.tsx:118
-#: src/components/network/WifiConnectionDetails.tsx:138
-#: src/components/network/WiredConnectionDetails.tsx:129
-#: src/components/network/WiredConnectionDetails.tsx:249
+#: src/components/network/WiredConnectionDetails.tsx:169
+#: src/components/network/WiredConnectionDetails.tsx:299
 msgid "DNS"
 msgstr "DNS"
+
+#. TRANSLATORS: input field name
+#: src/components/network/DnsSearchDataList.tsx:86
+msgid "Domain"
+msgstr ""
+
+#: src/components/network/DnsSearchDataList.tsx:112
+#, fuzzy
+msgid "Add another search domain"
+msgstr "Προσθήκη άλλης διεύθυνσης"
+
+#: src/components/network/DnsSearchDataList.tsx:113
+msgid "Add search domain"
+msgstr ""
+
+#: src/components/network/DnsSearchDataList.tsx:116
+#: src/components/network/WiredConnectionDetails.tsx:179
+#: src/components/network/WiredConnectionDetails.tsx:309
+msgid "DNS Search List"
+msgstr ""
 
 #. TRANSLATORS: Displays both IPv4 and IPv6 addresses with count of
 #. additional IPs (e.g., "192.168.122.237, fe80::5054:ff:fe46:2af9 and 1
@@ -734,13 +935,12 @@ msgid "Ip prefix or netmask"
 msgstr "Πρόθεμα IP ή μάσκα δικτύου"
 
 #. TRANSLATORS: error message
-#: src/components/network/IpSettingsForm.tsx:106
+#: src/components/network/IpSettingsForm.tsx:133
 msgid "At least one address must be provided for selected mode"
 msgstr ""
 "Πρέπει να δοθεί τουλάχιστον μία διεύθυνση για την επιλεγμένη λειτουργία"
 
-#: src/components/network/IpSettingsForm.tsx:152
-#: src/components/network/WifiConnectionDetails.tsx:100
+#: src/components/network/IpSettingsForm.tsx:188
 #: src/components/storage/FilesystemMenu.tsx:109
 #: src/components/storage/PartitionsSection.tsx:186
 #: src/components/storage/VolumeGroupEditor.tsx:173
@@ -748,22 +948,32 @@ msgstr ""
 msgid "Edit"
 msgstr "Επεξεργασία"
 
+#: src/components/network/IpSettingsForm.tsx:218
+msgid "(bind by name)"
+msgstr ""
+
+#. TRANSLATORS: table header for an iSCSI targets table
+#: src/components/network/IpSettingsForm.tsx:218
+#: src/components/network/WiredConnectionDetails.tsx:138
+#: src/components/storage/iscsi/TargetsTable.tsx:476
+msgid "Interface"
+msgstr "Διεπαφή"
+
 #. TRANSLATORS: network connection mode (automatic via DHCP or manual with static IP)
-#: src/components/network/IpSettingsForm.tsx:167
-#: src/components/network/IpSettingsForm.tsx:172
-#: src/components/network/IpSettingsForm.tsx:174
-#: src/components/network/WifiConnectionDetails.tsx:106
-#: src/components/network/WiredConnectionDetails.tsx:214
+#: src/components/network/IpSettingsForm.tsx:233
+#: src/components/network/IpSettingsForm.tsx:238
+#: src/components/network/IpSettingsForm.tsx:240
+#: src/components/network/WiredConnectionDetails.tsx:264
 msgid "Mode"
 msgstr "Λειτουργία"
 
-#: src/components/network/IpSettingsForm.tsx:181
+#: src/components/network/IpSettingsForm.tsx:247
 msgid "Automatic (DHCP)"
 msgstr "Αυτόματη (DHCP)"
 
 #. TRANSLATORS: Network summary title when using manual/static IP configuration
 #. TRANSLATORS: manual network configuration mode with a static IP address
-#: src/components/network/IpSettingsForm.tsx:184
+#: src/components/network/IpSettingsForm.tsx:250
 #: src/components/overview/NetworkSummary.tsx:128
 #: src/components/storage/SizeModeSelect.tsx:191
 #: src/components/storage/SizeModeSelect.tsx:199
@@ -772,38 +982,30 @@ msgid "Manual"
 msgstr "Χειροκίνητη"
 
 #. TRANSLATORS: network gateway configuration
-#: src/components/network/IpSettingsForm.tsx:192
-#: src/components/network/IpSettingsForm.tsx:195
-#: src/components/network/WifiConnectionDetails.tsx:129
-#: src/components/network/WiredConnectionDetails.tsx:110
-#: src/components/network/WiredConnectionDetails.tsx:227
+#: src/components/network/IpSettingsForm.tsx:258
+#: src/components/network/IpSettingsForm.tsx:261
+#: src/components/network/WiredConnectionDetails.tsx:150
+#: src/components/network/WiredConnectionDetails.tsx:277
 msgid "Gateway"
 msgstr "Πύλη"
 
-#: src/components/network/IpSettingsForm.tsx:204
+#: src/components/network/IpSettingsForm.tsx:270
 msgid "Gateway can be defined only in 'Manual' mode"
 msgstr "Η πύλη μπορεί να οριστεί μόνο στη «Χειροκίνητη» λειτουργία"
 
-#: src/components/network/NetworkPage.tsx:34
-msgid "Wi-Fi not supported"
-msgstr "Το Wi-Fi δεν υποστηρίζεται"
-
-#: src/components/network/NetworkPage.tsx:36
+#: src/components/network/NetworkPage.tsx:50
 msgid ""
-"The system does not support Wi-Fi connections, probably because of missing "
-"or disabled hardware."
+"Manage available connections, connect to Wi-Fi, or add a new connection."
 msgstr ""
-"Το σύστημα δεν υποστηρίζει συνδέσεις Wi-Fi, πιθανώς λόγω έλλειψης ή "
-"απενεργοποιημένου υλικού."
 
-#: src/components/network/NetworkPage.tsx:56
-#: src/components/network/NetworkPage.tsx:57
-msgid "Wired connections"
-msgstr "Ενσύρματες συνδέσεις"
+#: src/components/network/NetworkPage.tsx:58
+#, fuzzy
+msgid "Add connection"
+msgstr "Επεξεργασία σύνδεσης"
 
-#: src/components/network/NetworkPage.tsx:62
-#: src/components/network/NetworkPage.tsx:63
-msgid "Wi-Fi networks"
+#: src/components/network/NetworkPage.tsx:64
+#, fuzzy
+msgid "Connect to Wi-Fi network"
 msgstr "Δίκτυα Wi-Fi"
 
 #: src/components/network/NoPersistentConnectionsAlert.tsx:40
@@ -820,99 +1022,21 @@ msgstr ""
 "επί του παρόντος ρυθμισμένες να χρησιμοποιούνται μόνο κατά την εγκατάσταση "
 "και δεν θα αντιγραφούν στο εγκατεστημένο σύστημα"
 
-#: src/components/network/WifiConnectionDetails.tsx:46
-msgid "Network details"
-msgstr "Λεπτομέρειες δικτύου"
-
-#: src/components/network/WifiConnectionDetails.tsx:48
-msgid "SSID"
-msgstr "SSID"
-
-#: src/components/network/WifiConnectionDetails.tsx:52
-msgid "Signal strength"
-msgstr "Ισχύς σήματος"
-
-#. TRANSLATORS: table header for a zFCP devices table.
-#. TRANSLATORS: table header for a DASD devices table
-#. TRANSLATORS: table header for an iSCSI targets table
-#: src/components/network/WifiConnectionDetails.tsx:56
-#: src/components/network/WifiConnectionDetails.tsx:79
-#: src/components/network/WiredConnectionDetails.tsx:102
-#: src/components/storage/dasd/DASDTable.tsx:313
-#: src/components/storage/dasd/DASDTable.tsx:550
-#: src/components/storage/iscsi/StatusFilter.tsx:77
-#: src/components/storage/iscsi/TargetsTable.tsx:495
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:164
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:340
-msgid "Status"
-msgstr "Κατάσταση"
-
-#: src/components/network/WifiConnectionDetails.tsx:60
-#: src/components/network/WifiConnectionForm.tsx:153
-#: src/components/network/WifiConnectionForm.tsx:156
-msgid "Security"
-msgstr "Ασφάλεια"
-
-#. TRANSLATORS: table header for a zFCP devices table.
-#. TRANSLATORS: table header for a DASD devices table
-#: src/components/network/WifiConnectionDetails.tsx:72
-#: src/components/storage/DeviceSelectorModal.tsx:87
-#: src/components/storage/ProposalResultTable.tsx:134
-#: src/components/storage/dasd/DASDTable.tsx:556
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:346
-msgid "Device"
-msgstr "Συσκευή"
-
-#: src/components/network/WifiConnectionDetails.tsx:73
-msgid "Connection details"
-msgstr "Λεπτομέρειες σύνδεσης"
-
-#. TRANSLATORS: table header for an iSCSI targets table
-#: src/components/network/WifiConnectionDetails.tsx:75
-#: src/components/network/WiredConnectionDetails.tsx:98
-#: src/components/storage/iscsi/TargetsTable.tsx:476
-msgid "Interface"
-msgstr "Διεπαφή"
-
-#: src/components/network/WifiConnectionDetails.tsx:83
-#: src/components/network/WiredConnectionDetails.tsx:106
-msgid "MAC"
-msgstr "MAC"
-
-#: src/components/network/WifiConnectionDetails.tsx:96
-msgid "IP settings"
-msgstr "Ρυθμίσεις IP"
-
-#: src/components/network/WifiConnectionDetails.tsx:110
-#: src/components/network/WiredConnectionDetails.tsx:218
-msgid "IPv4"
-msgstr "IPv4"
-
-#: src/components/network/WifiConnectionDetails.tsx:113
-#: src/components/network/WiredConnectionDetails.tsx:221
-msgid "IPv6"
-msgstr "IPv6"
-
-#: src/components/network/WifiConnectionDetails.tsx:148
-#: src/components/network/WiredConnectionDetails.tsx:139
-msgid "Routes"
-msgstr "Διαδρομές (Routes)"
-
 #. TRANSLATORS: WiFi authentication mode
-#: src/components/network/WifiConnectionForm.tsx:44
+#: src/components/network/WifiConnectionForm.tsx:47
 msgid "None"
 msgstr "Καμία"
 
 #. TRANSLATORS: WiFi authentication mode
-#: src/components/network/WifiConnectionForm.tsx:46
+#: src/components/network/WifiConnectionForm.tsx:49
 msgid "WPA & WPA2 Personal"
 msgstr "WPA & WPA2 Personal"
 
-#: src/components/network/WifiConnectionForm.tsx:57
+#: src/components/network/WifiConnectionForm.tsx:60
 msgid "Not protected network"
 msgstr "Μη προστατευμένο δίκτυο"
 
-#: src/components/network/WifiConnectionForm.tsx:59
+#: src/components/network/WifiConnectionForm.tsx:62
 msgid ""
 "You will connect to a public network without encryption. Your data may not "
 "be secure."
@@ -920,65 +1044,30 @@ msgstr ""
 "Θα συνδεθείτε σε ένα δημόσιο δίκτυο χωρίς κρυπτογράφηση. Τα δεδομένα σας "
 "ενδέχεται να μην είναι ασφαλή."
 
-#: src/components/network/WifiConnectionForm.tsx:70
-msgid "Setting up connection"
-msgstr "Ρύθμιση σύνδεσης"
+#: src/components/network/WifiConnectionForm.tsx:135
+#: src/components/network/WifiNetworksList.tsx:177
+msgid "No Wi-Fi networks were found"
+msgstr "Δεν βρέθηκαν δίκτυα Wi-Fi"
 
-#: src/components/network/WifiConnectionForm.tsx:72
-msgid "It may take some time."
-msgstr "Ενδέχεται να πάρει κάποιο χρόνο."
-
-#: src/components/network/WifiConnectionForm.tsx:74
-msgid "Details will appear after the connection is successfully established."
-msgstr "Οι λεπτομέρειες θα εμφανιστούν αφού εδραιωθεί επιτυχώς η σύνδεση."
-
-#. TRANSLATORS: %s will be replaced by network ssid.
-#: src/components/network/WifiConnectionForm.tsx:82
-#, javascript-format
-msgid "Could not connect to %s"
-msgstr "Αδυναμία σύνδεσης στο %s"
-
-#: src/components/network/WifiConnectionForm.tsx:86
-msgid "Check the authentication parameters."
-msgstr "Ελέγξτε τις παραμέτρους πιστοποίησης."
-
-#. TRANSLATORS: accessible name for the WiFi connection form
-#: src/components/network/WifiConnectionForm.tsx:148
+#: src/components/network/WifiConnectionForm.tsx:141
 msgid "Wi-Fi connection form"
 msgstr "Φόρμα σύνδεσης Wi-Fi"
+
+#: src/components/network/WifiConnectionForm.tsx:153
+#: src/components/network/WifiConnectionForm.tsx:156
+#: src/components/network/WiredConnectionDetails.tsx:102
+msgid "Security"
+msgstr "Ασφάλεια"
 
 #. TRANSLATORS: WiFi password
 #: src/components/network/WifiConnectionForm.tsx:173
 msgid "WPA Password"
 msgstr "Συνθηματικό WPA"
 
-#. TRANSLATORS: button label, connect to a Wi-Fi network
-#: src/components/network/WifiConnectionForm.tsx:186
-#: src/components/storage/iscsi/TargetsTable.tsx:236
-#: src/components/storage/iscsi/TargetsTable.tsx:247
-msgid "Connect"
-msgstr "Σύνδεση"
-
-#. TRANSLATORS: %s will be replaced with the network ssid
-#. TRANSLATORS: %s will be replaced with connection id
-#: src/components/network/WifiNetworkPage.tsx:44
-#: src/components/network/WiredConnectionPage.tsx:42
-#, javascript-format
-msgid "\"%s\" does not exist or is no longer available."
-msgstr "Το «%s» δεν υπάρχει ή δεν είναι πλέον διαθέσιμο."
-
-#: src/components/network/WifiNetworkPage.tsx:47
-msgid "Network not found or lost"
-msgstr "Το δίκτυο δεν βρέθηκε ή χάθηκε"
-
-#: src/components/network/WifiNetworkPage.tsx:55
-#: src/components/network/WiredConnectionPage.tsx:54
-msgid "Go to network page"
-msgstr "Μετάβαση στη σελίδα δικτύου"
-
-#: src/components/network/WifiNetworkPage.tsx:74
-msgid "Wi-Fi"
-msgstr "Wi-Fi"
+#: src/components/network/WifiConnectionForm.tsx:199
+#, fuzzy
+msgid "New Wi-Fi connection"
+msgstr "Φόρμα σύνδεσης Wi-Fi"
 
 #: src/components/network/WifiNetworksList.tsx:54
 msgid "Excellent signal"
@@ -1006,96 +1095,120 @@ msgstr "Δημόσιο δίκτυο"
 msgid "Connecting to %s"
 msgstr "Σύνδεση στο %s"
 
-#: src/components/network/WifiNetworksList.tsx:134
-#: src/components/storage/iscsi/TargetsTable.tsx:158
-msgid "Connected"
-msgstr "Συνδέθηκε"
-
 #: src/components/network/WifiNetworksList.tsx:141
-#: src/components/network/WiredConnectionsList.tsx:67
 msgid "IP addresses"
 msgstr "Διευθύνσεις IP"
 
 #: src/components/network/WifiNetworksList.tsx:147
-#: src/components/network/WiredConnectionsList.tsx:71
 msgid "Configured for installation only"
 msgstr "Ρυθμίστηκε μόνο για την εγκατάσταση"
 
-#: src/components/network/WifiNetworksList.tsx:177
-msgid "No Wi-Fi networks were found"
-msgstr "Δεν βρέθηκαν δίκτυα Wi-Fi"
-
-#: src/components/network/WiredConnectionDetails.tsx:59
+#: src/components/network/WiredConnectionDetails.tsx:60
 msgid "Connection is available to all devices."
 msgstr "Η σύνδεση είναι διαθέσιμη σε όλες τις συσκευές."
 
 #. TRANSLATORS: %s will be replaced by a network device name, like eth0 or enp1s0
-#: src/components/network/WiredConnectionDetails.tsx:62
+#: src/components/network/WiredConnectionDetails.tsx:63
 #, javascript-format
 msgid "Connection is bound to device %s."
 msgstr "Η σύνδεση είναι συσχετισμένη (bound) στη συσκευή %s."
 
 #. TRANSLATORS: %s will be replaced by MAC addrss, like 7C:D7:11:28:F5:40
-#: src/components/network/WiredConnectionDetails.tsx:65
+#: src/components/network/WiredConnectionDetails.tsx:66
 #, javascript-format
 msgid "Connection is bound to MAC address %s."
 msgstr "Η σύνδεση είναι συσχετισμένη (bound) στη διεύθυνση MAC %s."
 
-#: src/components/network/WiredConnectionDetails.tsx:72
+#: src/components/network/WiredConnectionDetails.tsx:73
 msgid "Binding"
 msgstr "Συσχέτιση"
 
-#: src/components/network/WiredConnectionDetails.tsx:80
+#: src/components/network/WiredConnectionDetails.tsx:81
 msgid "Edit binding settings"
 msgstr "Επεξεργασία ρυθμίσεων συσχέτισης"
 
-#: src/components/network/WiredConnectionDetails.tsx:93
+#: src/components/network/WiredConnectionDetails.tsx:96
+msgid "Network details"
+msgstr "Λεπτομέρειες δικτύου"
+
+#: src/components/network/WiredConnectionDetails.tsx:98
+msgid "SSID"
+msgstr "SSID"
+
+#: src/components/network/WiredConnectionDetails.tsx:112
+msgid "Signal strength"
+msgstr "Ισχύς σήματος"
+
+#: src/components/network/WiredConnectionDetails.tsx:121
+#, fuzzy
+msgid "Network not availble"
+msgstr "Μη διαθέσιμο"
+
+#: src/components/network/WiredConnectionDetails.tsx:133
 msgid "Device details"
 msgstr "Λεπτομέρειες συσκευής"
 
-#: src/components/network/WiredConnectionDetails.tsx:119
-#: src/components/network/WiredConnectionDetails.tsx:237
-msgid "IP Addresses"
-msgstr "Διευθύνσεις IP"
+#: src/components/network/WiredConnectionDetails.tsx:146
+msgid "MAC"
+msgstr "MAC"
 
-#: src/components/network/WiredConnectionDetails.tsx:172
+#: src/components/network/WiredConnectionDetails.tsx:189
+msgid "Routes"
+msgstr "Διαδρομές (Routes)"
+
+#: src/components/network/WiredConnectionDetails.tsx:222
 msgid "Connected device"
 msgstr "Συνδεδεμένη συσκευή"
 
-#: src/components/network/WiredConnectionDetails.tsx:172
+#: src/components/network/WiredConnectionDetails.tsx:222
 msgid "Connected devices"
 msgstr "Συνδεδεμένες συσκευές"
 
-#: src/components/network/WiredConnectionDetails.tsx:175
+#: src/components/network/WiredConnectionDetails.tsx:225
 msgid "No device is currently using this connection."
 msgstr "Καμία συσκευή δεν χρησιμοποιεί αυτή τη σύνδεση αυτή τη στιγμή."
 
-#: src/components/network/WiredConnectionDetails.tsx:181
+#: src/components/network/WiredConnectionDetails.tsx:231
 msgid "Connected devices tabs"
 msgstr "Καρτέλες συνδεδεμένων συσκευών"
 
-#: src/components/network/WiredConnectionDetails.tsx:203
+#: src/components/network/WiredConnectionDetails.tsx:253
 #: src/components/storage/ProposalPage.tsx:204
 msgid "Settings"
 msgstr "Ρυθμίσεις"
 
-#: src/components/network/WiredConnectionDetails.tsx:207
+#: src/components/network/WiredConnectionDetails.tsx:257
 msgid "Edit connection settings"
 msgstr "Επεξεργασία ρυθμίσεων σύνδεσης"
 
-#: src/components/network/WiredConnectionDetails.tsx:231
-#: src/components/network/WiredConnectionDetails.tsx:241
-#: src/components/network/WiredConnectionDetails.tsx:253
+#: src/components/network/WiredConnectionDetails.tsx:268
+msgid "IPv4"
+msgstr "IPv4"
+
+#: src/components/network/WiredConnectionDetails.tsx:271
+msgid "IPv6"
+msgstr "IPv6"
+
+#: src/components/network/WiredConnectionDetails.tsx:281
+#: src/components/network/WiredConnectionDetails.tsx:291
+#: src/components/network/WiredConnectionDetails.tsx:303
+#: src/components/network/WiredConnectionDetails.tsx:313
 msgid "None set"
 msgstr "Δεν ορίστηκε"
+
+#. TRANSLATORS: %s will be replaced with connection id
+#: src/components/network/WiredConnectionPage.tsx:42
+#, javascript-format
+msgid "\"%s\" does not exist or is no longer available."
+msgstr "Το «%s» δεν υπάρχει ή δεν είναι πλέον διαθέσιμο."
 
 #: src/components/network/WiredConnectionPage.tsx:47
 msgid "Connection not found or lost"
 msgstr "Η σύνδεση δεν βρέθηκε ή χάθηκε"
 
-#: src/components/network/WiredConnectionsList.tsx:91
-msgid "No wired connections were found"
-msgstr "Δεν βρέθηκαν ενσύρματες συνδέσεις"
+#: src/components/network/WiredConnectionPage.tsx:54
+msgid "Go to network page"
+msgstr "Μετάβαση στη σελίδα δικτύου"
 
 #: src/components/overview/HostnameSummary.tsx:47
 #: src/components/system/HostnamePage.tsx:77 src/router.tsx:52
@@ -2367,23 +2480,6 @@ msgstr "Περιγραφή"
 msgid "Current content"
 msgstr "Τρέχον περιεχόμενο"
 
-#. TRANSLATORS: table header for a DASD devices table
-#: src/components/storage/DeviceSelectorPage.tsx:54
-#: src/components/storage/dasd/DASDTable.tsx:563
-msgid "Type"
-msgstr "Τύπος"
-
-#. TRANSLATORS: table header for an iSCSI targets table
-#. TRANSLATORS: input field for the iSCSI initiator name
-#: src/components/storage/DeviceSelectorPage.tsx:55
-#: src/components/storage/LvmPage.tsx:184
-#: src/components/storage/iscsi/InitiatorFormPage.tsx:66
-#: src/components/storage/iscsi/InitiatorFormPage.tsx:75
-#: src/components/storage/iscsi/TargetsTable.tsx:282
-#: src/components/storage/iscsi/TargetsTable.tsx:456
-msgid "Name"
-msgstr "Όνομα"
-
 #: src/components/storage/DeviceSelectorPage.tsx:56
 msgid "Content"
 msgstr "Περιεχόμενο"
@@ -3066,12 +3162,6 @@ msgstr "Κατάτμηση %s"
 msgid "Options for partition %s"
 msgstr "Επιλογές για την κατάτμηση %s"
 
-#: src/components/storage/PartitionsSection.tsx:194
-#: src/components/storage/VolumeGroupEditor.tsx:181
-#: src/components/storage/iscsi/TargetsTable.tsx:252
-msgid "Delete"
-msgstr "Διαγραφή"
-
 #: src/components/storage/PartitionsSection.tsx:286
 msgid "Partitions"
 msgstr "Κατατμήσεις"
@@ -3300,11 +3390,6 @@ msgstr "Πριν %s"
 #: src/components/storage/ProposalResultTable.tsx:135
 msgid "Mount Point"
 msgstr "Σημείο Προσάρτησης"
-
-#: src/components/storage/ProposalResultTable.tsx:136
-#: src/components/storage/SpaceActionsTable.tsx:230
-msgid "Details"
-msgstr "Λεπτομέρειες"
 
 #: src/components/storage/SearchedDeviceMenu.tsx:69
 msgid "Selected disk cannot be changed"
@@ -3659,7 +3744,7 @@ msgstr "μόνο για ανάγνωση"
 #: src/components/storage/dasd/DASDTable.tsx:575
 #: src/components/storage/dasd/DASDTable.tsx:583
 #: src/components/storage/iscsi/TargetsTable.tsx:490
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:353
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:348
 msgid "Yes"
 msgstr "Ναι"
 
@@ -3667,17 +3752,17 @@ msgstr "Ναι"
 #: src/components/storage/dasd/DASDTable.tsx:575
 #: src/components/storage/dasd/DASDTable.tsx:583
 #: src/components/storage/iscsi/TargetsTable.tsx:490
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:353
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:348
 msgid "No"
 msgstr "Όχι"
 
 #: src/components/storage/dasd/DASDTable.tsx:193
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:231
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:226
 msgid "Activate"
 msgstr "Ενεργοποίηση"
 
 #: src/components/storage/dasd/DASDTable.tsx:203
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:237
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:232
 msgid "Deactivate"
 msgstr "Απενεργοποίηση"
 
@@ -3709,15 +3794,6 @@ msgstr "Κανένας στόχος δεν ταιριάζει με τα φίλτ
 msgid "%d devices available"
 msgstr "Δεν υπάρχουν διαθέσιμες συσκευές"
 
-#: src/components/storage/dasd/DASDTable.tsx:316
-#: src/components/storage/dasd/DASDTable.tsx:328
-#: src/components/storage/iscsi/StatusFilter.tsx:58
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:167
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:176
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:185
-msgid "All"
-msgstr "Όλα"
-
 #. TRANSLATORS: table header for a column in a DASD devices table that
 #. usually contains "Yes" or "No"" values
 #: src/components/storage/dasd/DASDTable.tsx:326
@@ -3732,14 +3808,6 @@ msgstr "Ελάχιστο κανάλι"
 #: src/components/storage/dasd/DASDTable.tsx:344
 msgid "Max channel"
 msgstr "Μέγιστο κανάλι"
-
-#: src/components/storage/dasd/DASDTable.tsx:358
-#: src/components/storage/dasd/DASDTable.tsx:714
-#: src/components/storage/iscsi/TargetsTable.tsx:363
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:199
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:427
-msgid "Clear all filters"
-msgstr "Εκκαθάριση όλων των φίλτρων"
 
 #. TRANSLATORS: message shown in bulk action toolbar when just one device
 #. is selected
@@ -3777,7 +3845,7 @@ msgstr "Επιλέξτε συσκευές για να ενεργοποιήσετ
 #. TRANSLATORS: table header for a DASD devices table
 #: src/components/storage/dasd/DASDTable.tsx:544
 #: src/components/storage/zfcp/ZFCPDevicesTable.tsx:173
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:322
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:317
 #, fuzzy
 msgid "Channel"
 msgstr "ID καναλιού"
@@ -3807,16 +3875,10 @@ msgid "This message will close automatically when everything is done."
 msgstr "Αυτό το μήνυμα θα κλείσει αυτόματα όταν όλα ολοκληρωθούν."
 
 #: src/components/storage/dasd/DASDTable.tsx:706
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:419
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:420
 #, fuzzy
 msgid "No devices match filters"
 msgstr "Κανένας στόχος δεν ταιριάζει με τα φίλτρα"
-
-#: src/components/storage/dasd/DASDTable.tsx:710
-#: src/components/storage/iscsi/TargetsTable.tsx:359
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:423
-msgid "Change filters and try again."
-msgstr "Αλλάξτε τα φίλτρα και δοκιμάστε ξανά."
 
 #: src/components/storage/dasd/FormatActionHandler.tsx:90
 #, javascript-format
@@ -4033,21 +4095,9 @@ msgstr "Αποσυνδεδεμένο από το σύστημα"
 msgid "Disconnection failed"
 msgstr "Η αποσύνδεση απέτυχε"
 
-#: src/components/storage/iscsi/TargetsTable.tsx:163
-msgid "Disconnected"
-msgstr "Αποσυνδεδεμένο"
-
 #: src/components/storage/iscsi/TargetsTable.tsx:164
 msgid "Missing"
 msgstr "Λείπει"
-
-#: src/components/storage/iscsi/TargetsTable.tsx:224
-msgid "Edit connection"
-msgstr "Επεξεργασία σύνδεσης"
-
-#: src/components/storage/iscsi/TargetsTable.tsx:228
-msgid "Disconnect"
-msgstr "Αποσύνδεση"
 
 #: src/components/storage/iscsi/TargetsTable.tsx:240
 msgid "Cancel connection"
@@ -4485,36 +4535,36 @@ msgstr "Απενεργοποιημένο"
 
 #. TRANSLATORS: table header for a zFCP devices table.
 #: src/components/storage/zfcp/ZFCPDevicesTable.tsx:182
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:328
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:323
 msgid "WWPN"
 msgstr "WWPN"
 
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:231
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:226
 #, fuzzy
 msgid "Try to activate again"
 msgstr "Δοκιμάστε ξανά"
 
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:237
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:232
 msgid "Try to deactivate again"
 msgstr ""
 
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:245
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:240
 #, fuzzy
 msgid "Do not activate"
 msgstr "Απενεργοποίηση"
 
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:245
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:240
 #, fuzzy
 msgid "Do not deactivate"
 msgstr "Απενεργοποίηση"
 
 #. TRANSLATORS: table header for a zFCP devices table.
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:334
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:329
 msgid "LUN"
 msgstr "LUN"
 
 #. TRANSLATORS: table header for a zFCP devices table.
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:352
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:347
 #, fuzzy
 msgid "Auto Scanned"
 msgstr "Αυτόματη σάρωση LUN"
@@ -4729,6 +4779,48 @@ msgstr "Χρήση δημόσιου κλειδιού SSH"
 #: src/routes/storage.tsx:120
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#~ msgid "Wi-Fi not supported"
+#~ msgstr "Το Wi-Fi δεν υποστηρίζεται"
+
+#~ msgid ""
+#~ "The system does not support Wi-Fi connections, probably because of "
+#~ "missing or disabled hardware."
+#~ msgstr ""
+#~ "Το σύστημα δεν υποστηρίζει συνδέσεις Wi-Fi, πιθανώς λόγω έλλειψης ή "
+#~ "απενεργοποιημένου υλικού."
+
+#~ msgid "Wired connections"
+#~ msgstr "Ενσύρματες συνδέσεις"
+
+#~ msgid "Connection details"
+#~ msgstr "Λεπτομέρειες σύνδεσης"
+
+#~ msgid "IP settings"
+#~ msgstr "Ρυθμίσεις IP"
+
+#~ msgid "Setting up connection"
+#~ msgstr "Ρύθμιση σύνδεσης"
+
+#~ msgid "It may take some time."
+#~ msgstr "Ενδέχεται να πάρει κάποιο χρόνο."
+
+#~ msgid ""
+#~ "Details will appear after the connection is successfully established."
+#~ msgstr "Οι λεπτομέρειες θα εμφανιστούν αφού εδραιωθεί επιτυχώς η σύνδεση."
+
+#, javascript-format
+#~ msgid "Could not connect to %s"
+#~ msgstr "Αδυναμία σύνδεσης στο %s"
+
+#~ msgid "Check the authentication parameters."
+#~ msgstr "Ελέγξτε τις παραμέτρους πιστοποίησης."
+
+#~ msgid "Network not found or lost"
+#~ msgstr "Το δίκτυο δεν βρέθηκε ή χάθηκε"
+
+#~ msgid "No wired connections were found"
+#~ msgstr "Δεν βρέθηκαν ενσύρματες συνδέσεις"
 
 #~ msgid "Channel ID"
 #~ msgstr "ID καναλιού"

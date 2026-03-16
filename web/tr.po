@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-13 10:08+0000\n"
+"POT-Creation-Date: 2026-03-16 14:24+0000\n"
 "PO-Revision-Date: 2026-02-23 14:04+0000\n"
 "Last-Translator: Akın Birdal <reend21@protonmail.com>\n"
 "Language-Team: Turkish <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -51,7 +51,7 @@ msgid "Retrieving error details"
 msgstr "Daha çok ayrıntı gör"
 
 #: src/components/core/ErrorPage.tsx:134
-#: src/components/network/IpSettingsForm.tsx:161
+#: src/components/network/IpSettingsForm.tsx:197
 #: src/components/storage/EncryptionSettingsPage.tsx:114
 #: src/components/storage/iscsi/DiscoverFormPage.tsx:175
 #: src/components/storage/iscsi/TargetLoginPage.tsx:189
@@ -186,7 +186,7 @@ msgstr "Seçili ürün için aynı ayarları kullan"
 #: src/components/core/InstallerL10nOptions.tsx:391
 #: src/components/core/InstallerL10nOptions.tsx:405
 #: src/components/core/InstallerL10nOptions.tsx:448
-#: src/components/core/Page.tsx:286
+#: src/components/core/Page.tsx:287
 #: src/components/storage/dasd/FormatActionHandler.tsx:95
 #: src/components/storage/dasd/FormatActionHandler.tsx:122
 #: src/components/storage/zfcp/ZFCPControllersPage.tsx:161
@@ -324,13 +324,13 @@ msgstr "Giriş Yap"
 msgid "Provide its password to log in to the system."
 msgstr "Lütfen sisteme giriş yapabilmek için şifrenizi giriniz."
 
-#: src/components/core/MenuButton.tsx:78 src/components/core/Page.tsx:275
+#: src/components/core/MenuButton.tsx:78 src/components/core/Page.tsx:276
 msgid "Back"
 msgstr "Geri"
 
-#: src/components/core/Page.tsx:254 src/components/core/Popup.tsx:140
-#: src/components/network/BindingSettingsForm.tsx:229
-#: src/components/network/IpSettingsForm.tsx:221
+#: src/components/core/Page.tsx:255 src/components/core/Popup.tsx:140
+#: src/components/network/BindingSettingsForm.tsx:180
+#: src/components/network/IpSettingsForm.tsx:289
 #: src/components/network/WifiConnectionForm.tsx:188
 #: src/components/product/ProductSelectionPage.tsx:539
 #: src/components/storage/iscsi/DiscoverFormPage.tsx:252
@@ -424,13 +424,14 @@ msgid "Storage"
 msgstr "Depolama"
 
 #: src/components/core/ProgressStatusMonitor.tsx:42
-#: src/components/network/BindingSettingsForm.tsx:160
-#: src/components/network/IpSettingsForm.tsx:150
-#: src/components/network/NetworkPage.tsx:50
-#: src/components/network/WifiConnectionDetails.tsx:45
-#: src/components/network/WifiNetworkPage.tsx:73
-#: src/components/network/WiredConnectionPage.tsx:68
-#: src/components/overview/NetworkSummary.tsx:149 src/routes/network.tsx:38
+#: src/components/network/BindingSettingsForm.tsx:111
+#: src/components/network/IpSettingsForm.tsx:181
+#: src/components/network/NetworkPage.tsx:43
+#: src/components/network/WifiConnectionForm.tsx:142
+#: src/components/network/WifiConnectionForm.tsx:198
+#: src/components/network/WiredConnectionDetails.tsx:95
+#: src/components/network/WiredConnectionPage.tsx:69
+#: src/components/overview/NetworkSummary.tsx:149 src/routes/network.tsx:36
 msgid "Network"
 msgstr "Ağ"
 
@@ -594,6 +595,7 @@ msgstr "Yükleniyor"
 #. TRANSLATORS: button label
 #: src/components/network/AddressesDataList.tsx:102
 #: src/components/network/DnsDataList.tsx:106
+#: src/components/network/DnsSearchDataList.tsx:102
 msgid "Remove"
 msgstr "Kaldır"
 
@@ -618,13 +620,233 @@ msgid "Add another address"
 msgstr "Başka Bir Adres Ekle"
 
 #: src/components/network/AddressesDataList.tsx:141
-#: src/components/network/WifiConnectionDetails.tsx:119
 msgid "Addresses"
 msgstr "Adresler"
 
 #: src/components/network/AddressesDataList.tsx:148
 msgid "Addresses data list"
 msgstr "Adres veri listesi"
+
+#: src/components/network/BindingSettingsForm.tsx:113
+#, fuzzy
+msgid "Binding settings"
+msgstr "Bağlama ayarlarını düzenle"
+
+#: src/components/network/BindingSettingsForm.tsx:121
+msgid ""
+"Choose how the connection should be associated with a network device. This "
+"helps control which device the connection uses."
+msgstr ""
+"Bağlantının bir ağ cihazıyla nasıl ilişkilendirileceğini seçin. Bu, "
+"bağlantının hangi cihazı kullanacağını kontrol etmenize yardımcı olur."
+
+#: src/components/network/BindingSettingsForm.tsx:129
+msgid "Unbound"
+msgstr "Bağlanmamış"
+
+#: src/components/network/BindingSettingsForm.tsx:132
+msgid "The connection can be used by any available device."
+msgstr "Bağlantıyı herhangi bir mevcut cihazdan kullanabilirsiniz."
+
+#: src/components/network/BindingSettingsForm.tsx:141
+msgid "Bind to device name"
+msgstr "Aygıt adına bağlan"
+
+#: src/components/network/BindingSettingsForm.tsx:145
+msgid "Choose device to bind by name"
+msgstr "Adına göre bağlanacak cihazı seçin"
+
+#: src/components/network/BindingSettingsForm.tsx:160
+msgid "Bind to MAC address"
+msgstr "MAC adresine bağlan"
+
+#: src/components/network/BindingSettingsForm.tsx:164
+msgid "Choose device to bind by MAC"
+msgstr "Bağlanacak cihazı MAC ile seçin"
+
+#: src/components/network/ConnectionsTable.tsx:143
+msgid "(bound by name)"
+msgstr ""
+
+#: src/components/network/ConnectionsTable.tsx:144
+msgid "(bound by MAC)"
+msgstr ""
+
+#. TRANSLATORS: table header for an iSCSI targets table
+#. TRANSLATORS: input field for the iSCSI initiator name
+#: src/components/network/ConnectionsTable.tsx:150
+#: src/components/network/ConnectionsTable.tsx:274
+#: src/components/network/IpSettingsForm.tsx:203
+#: src/components/network/IpSettingsForm.tsx:207
+#: src/components/network/IpSettingsForm.tsx:209
+#: src/components/storage/DeviceSelectorPage.tsx:55
+#: src/components/storage/LvmPage.tsx:184
+#: src/components/storage/iscsi/InitiatorFormPage.tsx:66
+#: src/components/storage/iscsi/InitiatorFormPage.tsx:75
+#: src/components/storage/iscsi/TargetsTable.tsx:282
+#: src/components/storage/iscsi/TargetsTable.tsx:456
+msgid "Name"
+msgstr "İsim"
+
+#. TRANSLATORS: table header for a DASD devices table
+#: src/components/network/ConnectionsTable.tsx:155
+#: src/components/network/ConnectionsTable.tsx:282
+#: src/components/storage/DeviceSelectorPage.tsx:54
+#: src/components/storage/dasd/DASDTable.tsx:563
+msgid "Type"
+msgstr "Tip"
+
+#: src/components/network/ConnectionsTable.tsx:156
+#: src/components/network/ConnectionsTable.tsx:287
+#, fuzzy
+msgid "Ethernet"
+msgstr "Diğer"
+
+#: src/components/network/ConnectionsTable.tsx:156
+#: src/components/network/ConnectionsTable.tsx:286
+msgid "Wi-Fi"
+msgstr "Wi-Fi"
+
+#. TRANSLATORS: table header for a zFCP devices table.
+#. TRANSLATORS: table header for a DASD devices table
+#. TRANSLATORS: table header for an iSCSI targets table
+#: src/components/network/ConnectionsTable.tsx:160
+#: src/components/network/ConnectionsTable.tsx:294
+#: src/components/network/WiredConnectionDetails.tsx:108
+#: src/components/network/WiredConnectionDetails.tsx:142
+#: src/components/storage/dasd/DASDTable.tsx:313
+#: src/components/storage/dasd/DASDTable.tsx:550
+#: src/components/storage/iscsi/StatusFilter.tsx:77
+#: src/components/storage/iscsi/TargetsTable.tsx:495
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:164
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:335
+msgid "Status"
+msgstr "Durum"
+
+#: src/components/network/ConnectionsTable.tsx:162
+#: src/components/network/WifiNetworksList.tsx:134
+#: src/components/storage/iscsi/TargetsTable.tsx:158
+msgid "Connected"
+msgstr "Bağlı"
+
+#: src/components/network/ConnectionsTable.tsx:162
+#: src/components/storage/iscsi/TargetsTable.tsx:163
+msgid "Disconnected"
+msgstr "Bağlantısı Kesildi"
+
+#. TRANSLATORS: table header for a zFCP devices table.
+#. TRANSLATORS: table header for a DASD devices table
+#: src/components/network/ConnectionsTable.tsx:166
+#: src/components/storage/DeviceSelectorModal.tsx:87
+#: src/components/storage/ProposalResultTable.tsx:134
+#: src/components/storage/dasd/DASDTable.tsx:556
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:341
+msgid "Device"
+msgstr "Cihaz"
+
+#: src/components/network/ConnectionsTable.tsx:189
+#: src/components/network/WiredConnectionDetails.tsx:159
+#: src/components/network/WiredConnectionDetails.tsx:287
+msgid "IP Addresses"
+msgstr "IP Adresleri"
+
+#. TRANSLATORS: shown in the filter toolbar when filters are active.
+#. %1$s is the number of matching connections, %2$s is the total number.
+#: src/components/network/ConnectionsTable.tsx:255
+#, fuzzy, javascript-format
+msgid "%1$d of %2$d connections match filters"
+msgstr "Hiçbir yerel ayar filtreye uymuyor."
+
+#. TRANSLATORS: shown in the filter toolbar when no filters are active.
+#. %s is the total number of connections.
+#: src/components/network/ConnectionsTable.tsx:262
+#, fuzzy, javascript-format
+msgid "%d connections available"
+msgstr "Hiçbir cihaz mevcut değil"
+
+#: src/components/network/ConnectionsTable.tsx:285
+#: src/components/network/ConnectionsTable.tsx:297
+#: src/components/storage/dasd/DASDTable.tsx:316
+#: src/components/storage/dasd/DASDTable.tsx:328
+#: src/components/storage/iscsi/StatusFilter.tsx:58
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:167
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:176
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:185
+#, fuzzy
+msgid "All"
+msgstr "tümü"
+
+#: src/components/network/ConnectionsTable.tsx:298
+msgid "Up"
+msgstr ""
+
+#: src/components/network/ConnectionsTable.tsx:299
+msgid "Down"
+msgstr ""
+
+#: src/components/network/ConnectionsTable.tsx:312
+#: src/components/network/ConnectionsTable.tsx:392
+#: src/components/storage/dasd/DASDTable.tsx:358
+#: src/components/storage/dasd/DASDTable.tsx:714
+#: src/components/storage/iscsi/TargetsTable.tsx:363
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:199
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:428
+msgid "Clear all filters"
+msgstr "Tüm filtreleri temizle"
+
+#: src/components/network/ConnectionsTable.tsx:339
+#: src/components/storage/ProposalResultTable.tsx:136
+#: src/components/storage/SpaceActionsTable.tsx:230
+msgid "Details"
+msgstr "Ayrıntılar"
+
+#: src/components/network/ConnectionsTable.tsx:347
+#: src/components/storage/iscsi/TargetsTable.tsx:224
+#, fuzzy
+msgid "Edit connection"
+msgstr "Bağlantıyı düzenle %s"
+
+#: src/components/network/ConnectionsTable.tsx:352
+#, fuzzy
+msgid "Edit binding"
+msgstr "Bağlama ayarlarını düzenle"
+
+#. TRANSLATORS: button label, connect to a Wi-Fi network
+#: src/components/network/ConnectionsTable.tsx:361
+#: src/components/network/WifiConnectionForm.tsx:186
+#: src/components/storage/iscsi/TargetsTable.tsx:236
+#: src/components/storage/iscsi/TargetsTable.tsx:247
+msgid "Connect"
+msgstr "Bağlan"
+
+#: src/components/network/ConnectionsTable.tsx:366
+#: src/components/storage/iscsi/TargetsTable.tsx:228
+msgid "Disconnect"
+msgstr "Bağlantıyı kes"
+
+#: src/components/network/ConnectionsTable.tsx:374
+#: src/components/storage/PartitionsSection.tsx:194
+#: src/components/storage/VolumeGroupEditor.tsx:181
+#: src/components/storage/iscsi/TargetsTable.tsx:252
+msgid "Delete"
+msgstr "Sil"
+
+#: src/components/network/ConnectionsTable.tsx:384
+#, fuzzy
+msgid "No connections match filters"
+msgstr "Hiçbir yerel ayar filtreye uymuyor."
+
+#: src/components/network/ConnectionsTable.tsx:388
+#: src/components/storage/dasd/DASDTable.tsx:710
+#: src/components/storage/iscsi/TargetsTable.tsx:359
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:424
+msgid "Change filters and try again."
+msgstr "Filtreleri değiştirip tekrar deneyin."
+
+#: src/components/network/DevicesSelector.tsx:68
+#, fuzzy
+msgid "None (unbound)"
+msgstr "İçerik bulunamadı"
 
 #. TRANSLATORS: this simply concatenates the two sentences that describe what is going to happen
 #. with partitions. The first %s corresponds to deleted partitions and the second one to resized
@@ -635,48 +857,11 @@ msgstr "Adres veri listesi"
 #. name first, others the MAC address. I.e. "enp1s0 - CC-7F-C8-FC-7A-A1"
 #. or "CC-7F-C8-FC-7A-A1 - enp1s0". You may change the separator, but
 #. please keep both %s placeholders.
-#: src/components/network/BindingSettingsForm.tsx:79
+#: src/components/network/DevicesSelector.tsx:76
 #: src/components/storage/utils/drive.tsx:110
 #, javascript-format
 msgid "%s - %s"
 msgstr "%s - %s"
-
-#: src/components/network/BindingSettingsForm.tsx:162
-#, fuzzy
-msgid "Binding settings"
-msgstr "Bağlama ayarlarını düzenle"
-
-#: src/components/network/BindingSettingsForm.tsx:170
-msgid ""
-"Choose how the connection should be associated with a network device. This "
-"helps control which device the connection uses."
-msgstr ""
-"Bağlantının bir ağ cihazıyla nasıl ilişkilendirileceğini seçin. Bu, "
-"bağlantının hangi cihazı kullanacağını kontrol etmenize yardımcı olur."
-
-#: src/components/network/BindingSettingsForm.tsx:178
-msgid "Unbound"
-msgstr "Bağlanmamış"
-
-#: src/components/network/BindingSettingsForm.tsx:181
-msgid "The connection can be used by any available device."
-msgstr "Bağlantıyı herhangi bir mevcut cihazdan kullanabilirsiniz."
-
-#: src/components/network/BindingSettingsForm.tsx:190
-msgid "Bind to device name"
-msgstr "Aygıt adına bağlan"
-
-#: src/components/network/BindingSettingsForm.tsx:194
-msgid "Choose device to bind by name"
-msgstr "Adına göre bağlanacak cihazı seçin"
-
-#: src/components/network/BindingSettingsForm.tsx:209
-msgid "Bind to MAC address"
-msgstr "MAC adresine bağlan"
-
-#: src/components/network/BindingSettingsForm.tsx:213
-msgid "Choose device to bind by MAC"
-msgstr "Bağlanacak cihazı MAC ile seçin"
 
 #. TRANSLATORS: input field name
 #: src/components/network/DnsDataList.tsx:90
@@ -693,11 +878,30 @@ msgid "Add another DNS"
 msgstr "Başka bir DNS ekle"
 
 #: src/components/network/DnsDataList.tsx:118
-#: src/components/network/WifiConnectionDetails.tsx:138
-#: src/components/network/WiredConnectionDetails.tsx:129
-#: src/components/network/WiredConnectionDetails.tsx:249
+#: src/components/network/WiredConnectionDetails.tsx:169
+#: src/components/network/WiredConnectionDetails.tsx:299
 msgid "DNS"
 msgstr "DNS"
+
+#. TRANSLATORS: input field name
+#: src/components/network/DnsSearchDataList.tsx:86
+msgid "Domain"
+msgstr ""
+
+#: src/components/network/DnsSearchDataList.tsx:112
+#, fuzzy
+msgid "Add another search domain"
+msgstr "Başka Bir Adres Ekle"
+
+#: src/components/network/DnsSearchDataList.tsx:113
+msgid "Add search domain"
+msgstr ""
+
+#: src/components/network/DnsSearchDataList.tsx:116
+#: src/components/network/WiredConnectionDetails.tsx:179
+#: src/components/network/WiredConnectionDetails.tsx:309
+msgid "DNS Search List"
+msgstr ""
 
 #. TRANSLATORS: Displays both IPv4 and IPv6 addresses with count of
 #. additional IPs (e.g., "192.168.122.237, fe80::5054:ff:fe46:2af9 and 1
@@ -748,12 +952,11 @@ msgid "Ip prefix or netmask"
 msgstr "IP öneki veya ağ maskesi"
 
 #. TRANSLATORS: error message
-#: src/components/network/IpSettingsForm.tsx:106
+#: src/components/network/IpSettingsForm.tsx:133
 msgid "At least one address must be provided for selected mode"
 msgstr "Seçilen mod için en az bir adres sağlanmalıdır"
 
-#: src/components/network/IpSettingsForm.tsx:152
-#: src/components/network/WifiConnectionDetails.tsx:100
+#: src/components/network/IpSettingsForm.tsx:188
 #: src/components/storage/FilesystemMenu.tsx:109
 #: src/components/storage/PartitionsSection.tsx:186
 #: src/components/storage/VolumeGroupEditor.tsx:173
@@ -761,22 +964,32 @@ msgstr "Seçilen mod için en az bir adres sağlanmalıdır"
 msgid "Edit"
 msgstr "Düzenle"
 
+#: src/components/network/IpSettingsForm.tsx:218
+msgid "(bind by name)"
+msgstr ""
+
+#. TRANSLATORS: table header for an iSCSI targets table
+#: src/components/network/IpSettingsForm.tsx:218
+#: src/components/network/WiredConnectionDetails.tsx:138
+#: src/components/storage/iscsi/TargetsTable.tsx:476
+msgid "Interface"
+msgstr "Arayüz"
+
 #. TRANSLATORS: network connection mode (automatic via DHCP or manual with static IP)
-#: src/components/network/IpSettingsForm.tsx:167
-#: src/components/network/IpSettingsForm.tsx:172
-#: src/components/network/IpSettingsForm.tsx:174
-#: src/components/network/WifiConnectionDetails.tsx:106
-#: src/components/network/WiredConnectionDetails.tsx:214
+#: src/components/network/IpSettingsForm.tsx:233
+#: src/components/network/IpSettingsForm.tsx:238
+#: src/components/network/IpSettingsForm.tsx:240
+#: src/components/network/WiredConnectionDetails.tsx:264
 msgid "Mode"
 msgstr "Mod"
 
-#: src/components/network/IpSettingsForm.tsx:181
+#: src/components/network/IpSettingsForm.tsx:247
 msgid "Automatic (DHCP)"
 msgstr "Kendiliğinden (DHCP)"
 
 #. TRANSLATORS: Network summary title when using manual/static IP configuration
 #. TRANSLATORS: manual network configuration mode with a static IP address
-#: src/components/network/IpSettingsForm.tsx:184
+#: src/components/network/IpSettingsForm.tsx:250
 #: src/components/overview/NetworkSummary.tsx:128
 #: src/components/storage/SizeModeSelect.tsx:191
 #: src/components/storage/SizeModeSelect.tsx:199
@@ -785,39 +998,31 @@ msgid "Manual"
 msgstr "Manuel"
 
 #. TRANSLATORS: network gateway configuration
-#: src/components/network/IpSettingsForm.tsx:192
-#: src/components/network/IpSettingsForm.tsx:195
-#: src/components/network/WifiConnectionDetails.tsx:129
-#: src/components/network/WiredConnectionDetails.tsx:110
-#: src/components/network/WiredConnectionDetails.tsx:227
+#: src/components/network/IpSettingsForm.tsx:258
+#: src/components/network/IpSettingsForm.tsx:261
+#: src/components/network/WiredConnectionDetails.tsx:150
+#: src/components/network/WiredConnectionDetails.tsx:277
 msgid "Gateway"
 msgstr "Ağ Geçidi"
 
-#: src/components/network/IpSettingsForm.tsx:204
+#: src/components/network/IpSettingsForm.tsx:270
 msgid "Gateway can be defined only in 'Manual' mode"
 msgstr "Ağ geçidi yalnızca 'Manuel' modda tanımlanabilir"
 
-#: src/components/network/NetworkPage.tsx:34
-msgid "Wi-Fi not supported"
-msgstr "Wi-Fi desteklenmiyor"
-
-#: src/components/network/NetworkPage.tsx:36
+#: src/components/network/NetworkPage.tsx:50
 msgid ""
-"The system does not support Wi-Fi connections, probably because of missing "
-"or disabled hardware."
+"Manage available connections, connect to Wi-Fi, or add a new connection."
 msgstr ""
-"Sistem muhtemelen eksik veya devre dışı donanım nedeniyle Wi-Fi "
-"bağlantılarını desteklemiyor."
 
-#: src/components/network/NetworkPage.tsx:56
-#: src/components/network/NetworkPage.tsx:57
-msgid "Wired connections"
-msgstr "Kablolu bağlantılar"
+#: src/components/network/NetworkPage.tsx:58
+#, fuzzy
+msgid "Add connection"
+msgstr "Bağlantıyı düzenle %s"
 
-#: src/components/network/NetworkPage.tsx:62
-#: src/components/network/NetworkPage.tsx:63
-msgid "Wi-Fi networks"
-msgstr "Wi-Fi ağları"
+#: src/components/network/NetworkPage.tsx:64
+#, fuzzy
+msgid "Connect to Wi-Fi network"
+msgstr "Bir Wi-Fi ağına bağlanın"
 
 #: src/components/network/NoPersistentConnectionsAlert.tsx:40
 msgid "Installed system may not have network connections"
@@ -833,99 +1038,21 @@ msgstr ""
 "sırasında kullanılacak şekilde ayarlanmıştır ve kurulu sisteme "
 "kopyalanmayacaktır"
 
-#: src/components/network/WifiConnectionDetails.tsx:46
-msgid "Network details"
-msgstr "Ağ ayrıntıları"
-
-#: src/components/network/WifiConnectionDetails.tsx:48
-msgid "SSID"
-msgstr "SSID"
-
-#: src/components/network/WifiConnectionDetails.tsx:52
-msgid "Signal strength"
-msgstr "Sinyal gücü"
-
-#. TRANSLATORS: table header for a zFCP devices table.
-#. TRANSLATORS: table header for a DASD devices table
-#. TRANSLATORS: table header for an iSCSI targets table
-#: src/components/network/WifiConnectionDetails.tsx:56
-#: src/components/network/WifiConnectionDetails.tsx:79
-#: src/components/network/WiredConnectionDetails.tsx:102
-#: src/components/storage/dasd/DASDTable.tsx:313
-#: src/components/storage/dasd/DASDTable.tsx:550
-#: src/components/storage/iscsi/StatusFilter.tsx:77
-#: src/components/storage/iscsi/TargetsTable.tsx:495
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:164
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:340
-msgid "Status"
-msgstr "Durum"
-
-#: src/components/network/WifiConnectionDetails.tsx:60
-#: src/components/network/WifiConnectionForm.tsx:153
-#: src/components/network/WifiConnectionForm.tsx:156
-msgid "Security"
-msgstr "Güvenlik"
-
-#. TRANSLATORS: table header for a zFCP devices table.
-#. TRANSLATORS: table header for a DASD devices table
-#: src/components/network/WifiConnectionDetails.tsx:72
-#: src/components/storage/DeviceSelectorModal.tsx:87
-#: src/components/storage/ProposalResultTable.tsx:134
-#: src/components/storage/dasd/DASDTable.tsx:556
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:346
-msgid "Device"
-msgstr "Cihaz"
-
-#: src/components/network/WifiConnectionDetails.tsx:73
-msgid "Connection details"
-msgstr "Bağlantı ayrıntıları"
-
-#. TRANSLATORS: table header for an iSCSI targets table
-#: src/components/network/WifiConnectionDetails.tsx:75
-#: src/components/network/WiredConnectionDetails.tsx:98
-#: src/components/storage/iscsi/TargetsTable.tsx:476
-msgid "Interface"
-msgstr "Arayüz"
-
-#: src/components/network/WifiConnectionDetails.tsx:83
-#: src/components/network/WiredConnectionDetails.tsx:106
-msgid "MAC"
-msgstr "MAC"
-
-#: src/components/network/WifiConnectionDetails.tsx:96
-msgid "IP settings"
-msgstr "IP ayarları"
-
-#: src/components/network/WifiConnectionDetails.tsx:110
-#: src/components/network/WiredConnectionDetails.tsx:218
-msgid "IPv4"
-msgstr "IPv4"
-
-#: src/components/network/WifiConnectionDetails.tsx:113
-#: src/components/network/WiredConnectionDetails.tsx:221
-msgid "IPv6"
-msgstr "IPv6"
-
-#: src/components/network/WifiConnectionDetails.tsx:148
-#: src/components/network/WiredConnectionDetails.tsx:139
-msgid "Routes"
-msgstr "Rotalar"
-
 #. TRANSLATORS: WiFi authentication mode
-#: src/components/network/WifiConnectionForm.tsx:44
+#: src/components/network/WifiConnectionForm.tsx:47
 msgid "None"
 msgstr "Yok"
 
 #. TRANSLATORS: WiFi authentication mode
-#: src/components/network/WifiConnectionForm.tsx:46
+#: src/components/network/WifiConnectionForm.tsx:49
 msgid "WPA & WPA2 Personal"
 msgstr "WPA ve WPA2 Kişisel"
 
-#: src/components/network/WifiConnectionForm.tsx:57
+#: src/components/network/WifiConnectionForm.tsx:60
 msgid "Not protected network"
 msgstr "Korunmayan ağ"
 
-#: src/components/network/WifiConnectionForm.tsx:59
+#: src/components/network/WifiConnectionForm.tsx:62
 msgid ""
 "You will connect to a public network without encryption. Your data may not "
 "be secure."
@@ -933,65 +1060,30 @@ msgstr ""
 "Şifreleme olmadan halka açık bir ağa bağlanacaksınız. Verileriniz güvenli "
 "olmayabilir."
 
-#: src/components/network/WifiConnectionForm.tsx:70
-msgid "Setting up connection"
-msgstr "Bağlantı kuruluyor"
+#: src/components/network/WifiConnectionForm.tsx:135
+#: src/components/network/WifiNetworksList.tsx:177
+msgid "No Wi-Fi networks were found"
+msgstr "Hiçbir Wi-Fi ağı bulunamadı"
 
-#: src/components/network/WifiConnectionForm.tsx:72
-msgid "It may take some time."
-msgstr "Biraz zaman alabilir."
-
-#: src/components/network/WifiConnectionForm.tsx:74
-msgid "Details will appear after the connection is successfully established."
-msgstr "Bağlantı başarıyla kurulduktan sonra ayrıntılar görünecektir."
-
-#. TRANSLATORS: %s will be replaced by network ssid.
-#: src/components/network/WifiConnectionForm.tsx:82
-#, javascript-format
-msgid "Could not connect to %s"
-msgstr "%s'ye bağlanılamadı"
-
-#: src/components/network/WifiConnectionForm.tsx:86
-msgid "Check the authentication parameters."
-msgstr "Kimlik doğrulama parametrelerini kontrol edin."
-
-#. TRANSLATORS: accessible name for the WiFi connection form
-#: src/components/network/WifiConnectionForm.tsx:148
+#: src/components/network/WifiConnectionForm.tsx:141
 msgid "Wi-Fi connection form"
 msgstr "Wi-Fi bağlantı formu"
+
+#: src/components/network/WifiConnectionForm.tsx:153
+#: src/components/network/WifiConnectionForm.tsx:156
+#: src/components/network/WiredConnectionDetails.tsx:102
+msgid "Security"
+msgstr "Güvenlik"
 
 #. TRANSLATORS: WiFi password
 #: src/components/network/WifiConnectionForm.tsx:173
 msgid "WPA Password"
 msgstr "WPA Şifresi"
 
-#. TRANSLATORS: button label, connect to a Wi-Fi network
-#: src/components/network/WifiConnectionForm.tsx:186
-#: src/components/storage/iscsi/TargetsTable.tsx:236
-#: src/components/storage/iscsi/TargetsTable.tsx:247
-msgid "Connect"
-msgstr "Bağlan"
-
-#. TRANSLATORS: %s will be replaced with the network ssid
-#. TRANSLATORS: %s will be replaced with connection id
-#: src/components/network/WifiNetworkPage.tsx:44
-#: src/components/network/WiredConnectionPage.tsx:42
-#, javascript-format
-msgid "\"%s\" does not exist or is no longer available."
-msgstr ""
-
-#: src/components/network/WifiNetworkPage.tsx:47
-msgid "Network not found or lost"
-msgstr "Ağ bulunamadı veya kaybedildi"
-
-#: src/components/network/WifiNetworkPage.tsx:55
-#: src/components/network/WiredConnectionPage.tsx:54
-msgid "Go to network page"
-msgstr "Ağ sayfasına git"
-
-#: src/components/network/WifiNetworkPage.tsx:74
-msgid "Wi-Fi"
-msgstr "Wi-Fi"
+#: src/components/network/WifiConnectionForm.tsx:199
+#, fuzzy
+msgid "New Wi-Fi connection"
+msgstr "Wi-Fi bağlantı formu"
 
 #: src/components/network/WifiNetworksList.tsx:54
 msgid "Excellent signal"
@@ -1019,96 +1111,120 @@ msgstr "Herkese açık ağ"
 msgid "Connecting to %s"
 msgstr "%s'ye bağlanılıyor"
 
-#: src/components/network/WifiNetworksList.tsx:134
-#: src/components/storage/iscsi/TargetsTable.tsx:158
-msgid "Connected"
-msgstr "Bağlı"
-
 #: src/components/network/WifiNetworksList.tsx:141
-#: src/components/network/WiredConnectionsList.tsx:67
 msgid "IP addresses"
 msgstr "IP adresleri"
 
 #: src/components/network/WifiNetworksList.tsx:147
-#: src/components/network/WiredConnectionsList.tsx:71
 msgid "Configured for installation only"
 msgstr "Yalnızca kurulum için yapılandırıldı"
 
-#: src/components/network/WifiNetworksList.tsx:177
-msgid "No Wi-Fi networks were found"
-msgstr "Hiçbir Wi-Fi ağı bulunamadı"
-
-#: src/components/network/WiredConnectionDetails.tsx:59
+#: src/components/network/WiredConnectionDetails.tsx:60
 msgid "Connection is available to all devices."
 msgstr "Tüm cihazlara bağlantı mevcuttur."
 
 #. TRANSLATORS: %s will be replaced by a network device name, like eth0 or enp1s0
-#: src/components/network/WiredConnectionDetails.tsx:62
+#: src/components/network/WiredConnectionDetails.tsx:63
 #, javascript-format
 msgid "Connection is bound to device %s."
 msgstr "Bağlantı %s aygıtına bağlı."
 
 #. TRANSLATORS: %s will be replaced by MAC addrss, like 7C:D7:11:28:F5:40
-#: src/components/network/WiredConnectionDetails.tsx:65
+#: src/components/network/WiredConnectionDetails.tsx:66
 #, javascript-format
 msgid "Connection is bound to MAC address %s."
 msgstr "Bağlantı %s MAC adresine bağlı."
 
-#: src/components/network/WiredConnectionDetails.tsx:72
+#: src/components/network/WiredConnectionDetails.tsx:73
 msgid "Binding"
 msgstr "Bağlayıcı"
 
-#: src/components/network/WiredConnectionDetails.tsx:80
+#: src/components/network/WiredConnectionDetails.tsx:81
 msgid "Edit binding settings"
 msgstr "Bağlama ayarlarını düzenle"
 
-#: src/components/network/WiredConnectionDetails.tsx:93
+#: src/components/network/WiredConnectionDetails.tsx:96
+msgid "Network details"
+msgstr "Ağ ayrıntıları"
+
+#: src/components/network/WiredConnectionDetails.tsx:98
+msgid "SSID"
+msgstr "SSID"
+
+#: src/components/network/WiredConnectionDetails.tsx:112
+msgid "Signal strength"
+msgstr "Sinyal gücü"
+
+#: src/components/network/WiredConnectionDetails.tsx:121
+#, fuzzy
+msgid "Network not availble"
+msgstr "Müsait değil"
+
+#: src/components/network/WiredConnectionDetails.tsx:133
 msgid "Device details"
 msgstr "Aygıt ayrıntıları"
 
-#: src/components/network/WiredConnectionDetails.tsx:119
-#: src/components/network/WiredConnectionDetails.tsx:237
-msgid "IP Addresses"
-msgstr "IP Adresleri"
+#: src/components/network/WiredConnectionDetails.tsx:146
+msgid "MAC"
+msgstr "MAC"
 
-#: src/components/network/WiredConnectionDetails.tsx:172
+#: src/components/network/WiredConnectionDetails.tsx:189
+msgid "Routes"
+msgstr "Rotalar"
+
+#: src/components/network/WiredConnectionDetails.tsx:222
 msgid "Connected device"
 msgstr "Bağlı cihaz"
 
-#: src/components/network/WiredConnectionDetails.tsx:172
+#: src/components/network/WiredConnectionDetails.tsx:222
 msgid "Connected devices"
 msgstr "Bağlı cihazlar"
 
-#: src/components/network/WiredConnectionDetails.tsx:175
+#: src/components/network/WiredConnectionDetails.tsx:225
 msgid "No device is currently using this connection."
 msgstr "Şu anda bu bağlantıyı kullanan bir cihaz yok."
 
-#: src/components/network/WiredConnectionDetails.tsx:181
+#: src/components/network/WiredConnectionDetails.tsx:231
 msgid "Connected devices tabs"
 msgstr "Bağlı cihazlar sekmeleri"
 
-#: src/components/network/WiredConnectionDetails.tsx:203
+#: src/components/network/WiredConnectionDetails.tsx:253
 #: src/components/storage/ProposalPage.tsx:204
 msgid "Settings"
 msgstr "Ayarlar"
 
-#: src/components/network/WiredConnectionDetails.tsx:207
+#: src/components/network/WiredConnectionDetails.tsx:257
 msgid "Edit connection settings"
 msgstr "Bağlantı ayarlarını düzenle"
 
-#: src/components/network/WiredConnectionDetails.tsx:231
-#: src/components/network/WiredConnectionDetails.tsx:241
-#: src/components/network/WiredConnectionDetails.tsx:253
+#: src/components/network/WiredConnectionDetails.tsx:268
+msgid "IPv4"
+msgstr "IPv4"
+
+#: src/components/network/WiredConnectionDetails.tsx:271
+msgid "IPv6"
+msgstr "IPv6"
+
+#: src/components/network/WiredConnectionDetails.tsx:281
+#: src/components/network/WiredConnectionDetails.tsx:291
+#: src/components/network/WiredConnectionDetails.tsx:303
+#: src/components/network/WiredConnectionDetails.tsx:313
 msgid "None set"
 msgstr "Hiçbiri ayarlanmadı"
+
+#. TRANSLATORS: %s will be replaced with connection id
+#: src/components/network/WiredConnectionPage.tsx:42
+#, javascript-format
+msgid "\"%s\" does not exist or is no longer available."
+msgstr ""
 
 #: src/components/network/WiredConnectionPage.tsx:47
 msgid "Connection not found or lost"
 msgstr "Bağlantı bulunamadı veya kayboldu"
 
-#: src/components/network/WiredConnectionsList.tsx:91
-msgid "No wired connections were found"
-msgstr "Kablolu bağlantı bulunamadı"
+#: src/components/network/WiredConnectionPage.tsx:54
+msgid "Go to network page"
+msgstr "Ağ sayfasına git"
 
 #: src/components/overview/HostnameSummary.tsx:47
 #: src/components/system/HostnamePage.tsx:77 src/router.tsx:52
@@ -2380,23 +2496,6 @@ msgstr "Açıklama"
 msgid "Current content"
 msgstr "Güncel içerik"
 
-#. TRANSLATORS: table header for a DASD devices table
-#: src/components/storage/DeviceSelectorPage.tsx:54
-#: src/components/storage/dasd/DASDTable.tsx:563
-msgid "Type"
-msgstr "Tip"
-
-#. TRANSLATORS: table header for an iSCSI targets table
-#. TRANSLATORS: input field for the iSCSI initiator name
-#: src/components/storage/DeviceSelectorPage.tsx:55
-#: src/components/storage/LvmPage.tsx:184
-#: src/components/storage/iscsi/InitiatorFormPage.tsx:66
-#: src/components/storage/iscsi/InitiatorFormPage.tsx:75
-#: src/components/storage/iscsi/TargetsTable.tsx:282
-#: src/components/storage/iscsi/TargetsTable.tsx:456
-msgid "Name"
-msgstr "İsim"
-
 #: src/components/storage/DeviceSelectorPage.tsx:56
 msgid "Content"
 msgstr "İçerik"
@@ -3073,12 +3172,6 @@ msgstr "Bölümler"
 msgid "Options for partition %s"
 msgstr "%s bölümü kullanılıyor"
 
-#: src/components/storage/PartitionsSection.tsx:194
-#: src/components/storage/VolumeGroupEditor.tsx:181
-#: src/components/storage/iscsi/TargetsTable.tsx:252
-msgid "Delete"
-msgstr "Sil"
-
 #: src/components/storage/PartitionsSection.tsx:286
 msgid "Partitions"
 msgstr "Bölümler"
@@ -3296,11 +3389,6 @@ msgstr "Önce %s"
 #: src/components/storage/ProposalResultTable.tsx:135
 msgid "Mount Point"
 msgstr "Bağlantı Noktası"
-
-#: src/components/storage/ProposalResultTable.tsx:136
-#: src/components/storage/SpaceActionsTable.tsx:230
-msgid "Details"
-msgstr "Ayrıntılar"
 
 #: src/components/storage/SearchedDeviceMenu.tsx:69
 msgid "Selected disk cannot be changed"
@@ -3649,7 +3737,7 @@ msgstr "salt_okunur"
 #: src/components/storage/dasd/DASDTable.tsx:575
 #: src/components/storage/dasd/DASDTable.tsx:583
 #: src/components/storage/iscsi/TargetsTable.tsx:490
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:353
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:348
 msgid "Yes"
 msgstr "Evet"
 
@@ -3657,17 +3745,17 @@ msgstr "Evet"
 #: src/components/storage/dasd/DASDTable.tsx:575
 #: src/components/storage/dasd/DASDTable.tsx:583
 #: src/components/storage/iscsi/TargetsTable.tsx:490
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:353
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:348
 msgid "No"
 msgstr "Hayır"
 
 #: src/components/storage/dasd/DASDTable.tsx:193
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:231
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:226
 msgid "Activate"
 msgstr "Etkinleştir"
 
 #: src/components/storage/dasd/DASDTable.tsx:203
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:237
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:232
 msgid "Deactivate"
 msgstr "Devre dışı bırak"
 
@@ -3699,16 +3787,6 @@ msgstr "Hiçbir yerel ayar filtreye uymuyor."
 msgid "%d devices available"
 msgstr "Hiçbir cihaz mevcut değil"
 
-#: src/components/storage/dasd/DASDTable.tsx:316
-#: src/components/storage/dasd/DASDTable.tsx:328
-#: src/components/storage/iscsi/StatusFilter.tsx:58
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:167
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:176
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:185
-#, fuzzy
-msgid "All"
-msgstr "tümü"
-
 #. TRANSLATORS: table header for a column in a DASD devices table that
 #. usually contains "Yes" or "No"" values
 #: src/components/storage/dasd/DASDTable.tsx:326
@@ -3723,14 +3801,6 @@ msgstr "Minimum kanal"
 #: src/components/storage/dasd/DASDTable.tsx:344
 msgid "Max channel"
 msgstr "Maksimum kanal"
-
-#: src/components/storage/dasd/DASDTable.tsx:358
-#: src/components/storage/dasd/DASDTable.tsx:714
-#: src/components/storage/iscsi/TargetsTable.tsx:363
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:199
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:427
-msgid "Clear all filters"
-msgstr "Tüm filtreleri temizle"
 
 #. TRANSLATORS: message shown in bulk action toolbar when just one device
 #. is selected
@@ -3768,7 +3838,7 @@ msgstr "Toplu işlemleri etkinleştirmek için aygıtları seç."
 #. TRANSLATORS: table header for a DASD devices table
 #: src/components/storage/dasd/DASDTable.tsx:544
 #: src/components/storage/zfcp/ZFCPDevicesTable.tsx:173
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:322
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:317
 #, fuzzy
 msgid "Channel"
 msgstr "Kanal Kimliği"
@@ -3798,16 +3868,10 @@ msgid "This message will close automatically when everything is done."
 msgstr "Her şey tamamlandığında bu ileti kendiliğinden kapanacaktır."
 
 #: src/components/storage/dasd/DASDTable.tsx:706
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:419
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:420
 #, fuzzy
 msgid "No devices match filters"
 msgstr "Hiçbir yerel ayar filtreye uymuyor."
-
-#: src/components/storage/dasd/DASDTable.tsx:710
-#: src/components/storage/iscsi/TargetsTable.tsx:359
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:423
-msgid "Change filters and try again."
-msgstr "Filtreleri değiştirip tekrar deneyin."
 
 #: src/components/storage/dasd/FormatActionHandler.tsx:90
 #, javascript-format
@@ -4033,22 +4097,9 @@ msgstr "Sistemi şifrele"
 msgid "Disconnection failed"
 msgstr "Bağlantısı Kesildi"
 
-#: src/components/storage/iscsi/TargetsTable.tsx:163
-msgid "Disconnected"
-msgstr "Bağlantısı Kesildi"
-
 #: src/components/storage/iscsi/TargetsTable.tsx:164
 msgid "Missing"
 msgstr ""
-
-#: src/components/storage/iscsi/TargetsTable.tsx:224
-#, fuzzy
-msgid "Edit connection"
-msgstr "Bağlantıyı düzenle %s"
-
-#: src/components/storage/iscsi/TargetsTable.tsx:228
-msgid "Disconnect"
-msgstr "Bağlantıyı kes"
 
 #: src/components/storage/iscsi/TargetsTable.tsx:240
 #, fuzzy
@@ -4485,36 +4536,36 @@ msgstr "Devre dışı bırakıldı"
 
 #. TRANSLATORS: table header for a zFCP devices table.
 #: src/components/storage/zfcp/ZFCPDevicesTable.tsx:182
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:328
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:323
 msgid "WWPN"
 msgstr "WWPN"
 
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:231
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:226
 #, fuzzy
 msgid "Try to activate again"
 msgstr "Tekrar deneyin"
 
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:237
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:232
 msgid "Try to deactivate again"
 msgstr ""
 
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:245
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:240
 #, fuzzy
 msgid "Do not activate"
 msgstr "Devre dışı bırak"
 
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:245
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:240
 #, fuzzy
 msgid "Do not deactivate"
 msgstr "Devre dışı bırak"
 
 #. TRANSLATORS: table header for a zFCP devices table.
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:334
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:329
 msgid "LUN"
 msgstr "LUN"
 
 #. TRANSLATORS: table header for a zFCP devices table.
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:352
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:347
 #, fuzzy
 msgid "Auto Scanned"
 msgstr "Kendiliğinden LUN Taraması"
@@ -4728,6 +4779,51 @@ msgstr "Genel SSH Anahtarını Kullan"
 #: src/routes/storage.tsx:120
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#~ msgid "Wi-Fi not supported"
+#~ msgstr "Wi-Fi desteklenmiyor"
+
+#~ msgid ""
+#~ "The system does not support Wi-Fi connections, probably because of "
+#~ "missing or disabled hardware."
+#~ msgstr ""
+#~ "Sistem muhtemelen eksik veya devre dışı donanım nedeniyle Wi-Fi "
+#~ "bağlantılarını desteklemiyor."
+
+#~ msgid "Wired connections"
+#~ msgstr "Kablolu bağlantılar"
+
+#~ msgid "Wi-Fi networks"
+#~ msgstr "Wi-Fi ağları"
+
+#~ msgid "Connection details"
+#~ msgstr "Bağlantı ayrıntıları"
+
+#~ msgid "IP settings"
+#~ msgstr "IP ayarları"
+
+#~ msgid "Setting up connection"
+#~ msgstr "Bağlantı kuruluyor"
+
+#~ msgid "It may take some time."
+#~ msgstr "Biraz zaman alabilir."
+
+#~ msgid ""
+#~ "Details will appear after the connection is successfully established."
+#~ msgstr "Bağlantı başarıyla kurulduktan sonra ayrıntılar görünecektir."
+
+#, javascript-format
+#~ msgid "Could not connect to %s"
+#~ msgstr "%s'ye bağlanılamadı"
+
+#~ msgid "Check the authentication parameters."
+#~ msgstr "Kimlik doğrulama parametrelerini kontrol edin."
+
+#~ msgid "Network not found or lost"
+#~ msgstr "Ağ bulunamadı veya kaybedildi"
+
+#~ msgid "No wired connections were found"
+#~ msgstr "Kablolu bağlantı bulunamadı"
 
 #~ msgid "Channel ID"
 #~ msgstr "Kanal Kimliği"
@@ -5257,9 +5353,6 @@ msgstr "ZFCP"
 #~ msgid "Connect to hidden network"
 #~ msgstr "Gizli ağa bağlan"
 
-#~ msgid "Connect to a Wi-Fi network"
-#~ msgstr "Bir Wi-Fi ağına bağlanın"
-
 #, fuzzy
 #~ msgid "New LVM volume group"
 #~ msgstr "Yeni bir LVM Disk Grubu"
@@ -5510,9 +5603,6 @@ msgstr "ZFCP"
 
 #~ msgid "Add file system"
 #~ msgstr "Dosya sistemi ekle"
-
-#~ msgid "Other"
-#~ msgstr "Diğer"
 
 #~ msgid "Partitions and file systems"
 #~ msgstr "Bölümler ve dosya sistemleri"
