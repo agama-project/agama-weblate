@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-14 10:20+0000\n"
+"POT-Creation-Date: 2026-04-14 16:06+0000\n"
 "PO-Revision-Date: 2026-02-26 17:04+0000\n"
 "Last-Translator: Aleksey Fedorov <Aleksejfedorov963@gmail.com>\n"
 "Language-Team: Russian <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -50,7 +50,6 @@ msgid "Retrieving error details"
 msgstr "См. подробнее"
 
 #: src/components/core/ErrorPage.tsx:134
-#: src/components/network/IpSettingsForm.tsx:197
 #: src/components/storage/EncryptionSettingsPage.tsx:114
 #: src/components/storage/iscsi/DiscoverFormPage.tsx:175
 #: src/components/storage/iscsi/TargetLoginPage.tsx:189
@@ -173,11 +172,12 @@ msgstr "Язык и клавиатура"
 msgid "Use these same settings for the selected product"
 msgstr "Исп. эти же настройки для выбранного продукта"
 
+#. TRANSLATORS: label for the form submit button.
 #: src/components/core/InstallerL10nOptions.tsx:345
 #: src/components/core/InstallerL10nOptions.tsx:391
 #: src/components/core/InstallerL10nOptions.tsx:405
 #: src/components/core/InstallerL10nOptions.tsx:448
-#: src/components/core/Page.tsx:287
+#: src/components/core/Page.tsx:287 src/components/form/SubmitButton.tsx:49
 #: src/components/storage/dasd/FormatActionHandler.tsx:95
 #: src/components/storage/dasd/FormatActionHandler.tsx:122
 #: src/components/storage/zfcp/ZFCPControllersPage.tsx:161
@@ -316,9 +316,10 @@ msgstr "Укажите его пароль для входа в систему."
 msgid "Back"
 msgstr "Назад"
 
+#. TRANSLATORS: label for the form cancel button.
 #: src/components/core/Page.tsx:255 src/components/core/Popup.tsx:140
+#: src/components/form/CancelButton.tsx:47
 #: src/components/network/BindingSettingsForm.tsx:180
-#: src/components/network/IpSettingsForm.tsx:289
 #: src/components/network/WifiConnectionForm.tsx:188
 #: src/components/product/ProductSelectionPage.tsx:539
 #: src/components/storage/iscsi/DiscoverFormPage.tsx:252
@@ -410,14 +411,15 @@ msgstr "Программы"
 msgid "Storage"
 msgstr "Хранилище"
 
+#. TRANSLATORS: breadcrumb label for the network configuration section.
 #: src/components/core/ProgressStatusMonitor.tsx:42
 #: src/components/network/BindingSettingsForm.tsx:111
-#: src/components/network/IpSettingsForm.tsx:181
+#: src/components/network/ConnectionForm.tsx:642
 #: src/components/network/NetworkPage.tsx:43
 #: src/components/network/WifiConnectionForm.tsx:142
 #: src/components/network/WifiConnectionForm.tsx:198
 #: src/components/network/WiredConnectionDetails.tsx:95
-#: src/components/network/WiredConnectionPage.tsx:69
+#: src/components/network/WiredConnectionPage.tsx:75
 #: src/components/overview/NetworkSummary.tsx:149 src/routes/network.tsx:36
 msgid "Network"
 msgstr "Сеть"
@@ -496,6 +498,106 @@ msgstr "Доп. действия"
 #: src/components/core/Summary.tsx:73
 msgid "Waiting for proposal"
 msgstr "Ожидание предложения"
+
+#. TRANSLATORS: %d will be replaced with a number of duplicate entries skipped.
+#: src/components/form/ArrayField.tsx:94
+#, javascript-format
+msgid "%d duplicates skipped."
+msgstr ""
+
+#. TRANSLATORS: %d will be replaced with a number of added entries.
+#: src/components/form/ArrayField.tsx:99
+#, javascript-format
+msgid "%d entries added."
+msgstr ""
+
+#. TRANSLATORS: first %d is the number of added entries, second %d is
+#. the number of invalid entries.
+#: src/components/form/ArrayField.tsx:102
+#, javascript-format
+msgid "%d entries added, %d invalid."
+msgstr ""
+
+#. TRANSLATORS: first %d is the number of added entries, second %d is the number of duplicate entries skipped.
+#: src/components/form/ArrayField.tsx:107
+#, javascript-format
+msgid "%d entries added, %d duplicates skipped."
+msgstr ""
+
+#: src/components/form/ArrayField.tsx:111
+#, javascript-format
+msgid "%d entries added, %d invalid, %d duplicates skipped."
+msgstr ""
+
+#. TRANSLATORS: accessible label for an invalid entry. First %s is the entry value, second %s is the validation error.
+#: src/components/form/ArrayField.tsx:184
+#, javascript-format
+msgid "%s is invalid: %s"
+msgstr ""
+
+#. TRANSLATORS: accessible label for the remove button of an entry. %s is the entry value.
+#: src/components/form/ArrayField.tsx:192
+#, fuzzy, javascript-format
+msgid "Remove %s"
+msgstr "Удалить"
+
+#. TRANSLATORS: screen reader announcement when a duplicate entry is skipped. %s is the entry value.
+#: src/components/form/ArrayField.tsx:420
+#, javascript-format
+msgid "%s already exists, skipped."
+msgstr ""
+
+#. TRANSLATORS: screen reader announcement when an invalid entry is
+#. added. First %s is the entry value, second %s is the validation error.
+#: src/components/form/ArrayField.tsx:431
+#, javascript-format
+msgid "%s added but is invalid: %s. Select to edit."
+msgstr ""
+
+#. TRANSLATORS: screen reader announcement when an entry is added. %s
+#. is the entry value.
+#: src/components/form/ArrayField.tsx:434
+#, javascript-format
+msgid "%s added."
+msgstr ""
+
+#. TRANSLATORS: screen reader announcement when an entry is removed. %s is
+#. the entry value.
+#: src/components/form/ArrayField.tsx:444
+#, javascript-format
+msgid "%s removed."
+msgstr ""
+
+#. TRANSLATORS: screen reader announcement when an entry is moved to the
+#. input for editing. %s is the entry value.
+#: src/components/form/ArrayField.tsx:459
+#, javascript-format
+msgid "%s moved to input for editing."
+msgstr ""
+
+#. TRANSLATORS: screen reader announcement when all invalid entries are
+#. cleared. %d is the number of removed entries.
+#: src/components/form/ArrayField.tsx:469
+#, javascript-format
+msgid "%d invalid entries removed."
+msgstr ""
+
+#. TRANSLATORS: accessible label for the entries list. %s is the
+#. field label (e.g. "DNS servers").
+#: src/components/form/ArrayField.tsx:591
+#, javascript-format
+msgid "%s entries"
+msgstr ""
+
+#: src/components/form/ArrayField.tsx:643
+msgid ""
+"Enter or Tab to add; arrow keys to navigate entries, Ctrl+arrows to reorder, "
+"Escape to exit; Backspace or Delete to remove."
+msgstr ""
+
+#: src/components/form/ArrayField.tsx:659
+msgid "Select entries to edit or remove them. Or [remove all invalid entries.]"
+msgstr ""
 
 #: src/components/l10n/KeyboardSelection.tsx:46
 msgid "Filter by description or keymap code"
@@ -578,40 +680,56 @@ msgstr "Ни один из часовых поясов не соответств
 msgid "Loading"
 msgstr "Загрузка"
 
-#. TRANSLATORS: button label
-#: src/components/network/AddressesDataList.tsx:102
-#: src/components/network/DnsDataList.tsx:106
-#: src/components/network/DnsSearchDataList.tsx:102
-msgid "Remove"
-msgstr "Удалить"
+#. TRANSLATORS: option label meaning the connection works with any network device.
+#: src/components/network/BindingModeSelector.tsx:32
+msgid "Any"
+msgstr ""
 
-#. TRANSLATORS: input field name
-#: src/components/network/AddressesDataList.tsx:112
-#: src/components/network/IpAddressInput.tsx:35
-msgid "IP Address"
-msgstr "IP-адрес"
+#. TRANSLATORS: description for the "Any" binding mode. The connection is
+#. not limited to a specific device.
+#: src/components/network/BindingModeSelector.tsx:35
+#, fuzzy
+msgid "The connection is available for all devices"
+msgstr "Подключение доступно для всех устройств."
 
-#. TRANSLATORS: input field name
-#: src/components/network/AddressesDataList.tsx:120
-msgid "Prefix length or netmask"
-msgstr "Длина префикса или маска сети"
+#. TRANSLATORS: option label for binding by device interface name (e.g. eth0).
+#: src/components/network/BindingModeSelector.tsx:40
+#, fuzzy
+msgid "Chosen by name"
+msgstr "Выберите устройство для привязки по имени"
 
-#: src/components/network/AddressesDataList.tsx:138
-msgid "Add an address"
-msgstr "Добавить адрес"
+#. TRANSLATORS: description for the "Chosen by name" binding mode. The
+#. "device name" refers to the interface name (e.g. eth0).
+#: src/components/network/BindingModeSelector.tsx:43
+msgid "Identify the connection device by its name in the system"
+msgstr ""
 
-#. TRANSLATORS: button label
-#: src/components/network/AddressesDataList.tsx:138
-msgid "Add another address"
-msgstr "Добавить другой адрес"
+#. TRANSLATORS: option label for binding by MAC address
+#: src/components/network/BindingModeSelector.tsx:48
+#, fuzzy
+msgid "Chosen by MAC"
+msgstr "Выберите устройство для привязки по MAC-адресу"
 
-#: src/components/network/AddressesDataList.tsx:141
-msgid "Addresses"
-msgstr "Адреса"
+#. TRANSLATORS: description for the "Chosen by MAC" binding mode. MAC is the
+#. hardware address, persisting across interface renames.
+#: src/components/network/BindingModeSelector.tsx:51
+msgid "Identify the connection device by its physical address"
+msgstr ""
 
-#: src/components/network/AddressesDataList.tsx:148
-msgid "Addresses data list"
-msgstr "Список данных адресов"
+#. TRANSLATORS: table header for a DASD devices table
+#. TRANSLATORS: table header for a zFCP devices table.
+#. TRANSLATORS: label for the device binding dropdown.
+#: src/components/network/BindingModeSelector.tsx:68
+#: src/components/network/ConnectionsTable.tsx:166
+#: src/components/storage/DrivesTable.tsx:71
+#: src/components/storage/MdRaidsTable.tsx:70
+#: src/components/storage/ProposalResultTable.tsx:134
+#: src/components/storage/SpaceActionsTable.tsx:223
+#: src/components/storage/VolumeGroupsTable.tsx:72
+#: src/components/storage/dasd/DASDTable.tsx:543
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:342
+msgid "Device"
+msgstr "Устройство"
 
 #: src/components/network/BindingSettingsForm.tsx:113
 msgid "Binding settings"
@@ -649,21 +767,90 @@ msgstr "Привязать к MAC-адресу"
 msgid "Choose device to bind by MAC"
 msgstr "Выберите устройство для привязки по MAC-адресу"
 
-#: src/components/network/ConnectionsTable.tsx:143
-msgid "(bound by name)"
+#. TRANSLATORS: validation error for the connection name field.
+#: src/components/network/ConnectionForm.tsx:261
+#, fuzzy
+msgid "Name is required"
+msgstr "Требуется значение размера"
+
+#. TRANSLATORS: validation error for the IPv4 addresses field.
+#: src/components/network/ConnectionForm.tsx:267
+#, fuzzy
+msgid "At least one IPv4 address is required"
+msgstr "Требуется значение размера"
+
+#. TRANSLATORS: validation error for the IPv4 addresses field.
+#: src/components/network/ConnectionForm.tsx:269
+msgid "Some IPv4 addresses are invalid"
 msgstr ""
 
-#: src/components/network/ConnectionsTable.tsx:144
-msgid "(bound by MAC)"
+#. TRANSLATORS: validation error for the IPv6 addresses field.
+#: src/components/network/ConnectionForm.tsx:276
+#, fuzzy
+msgid "At least one IPv6 address is required"
+msgstr "Требуется значение размера"
+
+#. TRANSLATORS: validation error for the IPv6 addresses field.
+#: src/components/network/ConnectionForm.tsx:278
+msgid "Some IPv6 addresses are invalid"
 msgstr ""
+
+#. TRANSLATORS: validation error for the IPv4 gateway field.
+#: src/components/network/ConnectionForm.tsx:286
+#, fuzzy
+msgid "IPv4 gateway is required"
+msgstr "Требуется значение размера"
+
+#. TRANSLATORS: validation error for the IPv4 gateway field.
+#: src/components/network/ConnectionForm.tsx:288
+msgid "Invalid IPv4 gateway"
+msgstr ""
+
+#. TRANSLATORS: validation error for the IPv6 gateway field.
+#: src/components/network/ConnectionForm.tsx:296
+#, fuzzy
+msgid "IPv6 gateway is required"
+msgstr "Требуется значение размера"
+
+#. TRANSLATORS: validation error for the IPv6 gateway field.
+#: src/components/network/ConnectionForm.tsx:298
+msgid "Invalid IPv6 gateway"
+msgstr ""
+
+#. TRANSLATORS: validation error for the DNS servers field.
+#: src/components/network/ConnectionForm.tsx:305
+#, fuzzy
+msgid "At least one DNS server is required"
+msgstr "Требуется значение размера"
+
+#. TRANSLATORS: validation error for the DNS servers field.
+#: src/components/network/ConnectionForm.tsx:307
+msgid "Some DNS server addresses are invalid"
+msgstr ""
+
+#. TRANSLATORS: validation error for the DNS search domains field.
+#: src/components/network/ConnectionForm.tsx:314
+msgid "At least one DNS search domain is required"
+msgstr ""
+
+#. TRANSLATORS: validation error for the DNS search domains field.
+#: src/components/network/ConnectionForm.tsx:316
+msgid "Some DNS search domains are invalid"
+msgstr ""
+
+#. TRANSLATORS: title of an error for a failed network connection save.
+#. Do not end with a period.
+#: src/components/network/ConnectionForm.tsx:443
+#, fuzzy
+msgid "The connection could not be saved"
+msgstr "Не удалось обновить имя инициатора"
 
 #. TRANSLATORS: table header for an iSCSI targets table
 #. TRANSLATORS: input field for the iSCSI initiator name
+#. TRANSLATORS: label for the network connection profile name field.
+#: src/components/network/ConnectionForm.tsx:484
 #: src/components/network/ConnectionsTable.tsx:150
 #: src/components/network/ConnectionsTable.tsx:274
-#: src/components/network/IpSettingsForm.tsx:203
-#: src/components/network/IpSettingsForm.tsx:207
-#: src/components/network/IpSettingsForm.tsx:209
 #: src/components/storage/DeviceSelectorPage.tsx:55
 #: src/components/storage/LvmPage.tsx:182
 #: src/components/storage/iscsi/InitiatorFormPage.tsx:66
@@ -672,6 +859,83 @@ msgstr ""
 #: src/components/storage/iscsi/TargetsTable.tsx:456
 msgid "Name"
 msgstr "Имя"
+
+#. TRANSLATORS: checkbox label for custom DNS server configuration.
+#: src/components/network/ConnectionForm.tsx:500
+msgid "Use custom DNS servers"
+msgstr ""
+
+#. TRANSLATORS: label for the DNS servers field.
+#: src/components/network/ConnectionForm.tsx:513
+#, fuzzy
+msgid "DNS servers"
+msgstr "IP сервера"
+
+#. TRANSLATORS: helper text for DNS servers field explaining the format.
+#: src/components/network/ConnectionForm.tsx:517
+msgid "E.g., 8.8.8.8 or 2001:4860:4860::8888"
+msgstr ""
+
+#. TRANSLATORS: validation error for an invalid DNS server address entry.
+#: src/components/network/ConnectionForm.tsx:521
+#, fuzzy
+msgid "Invalid DNS server address"
+msgstr "Нет действительного адреса."
+
+#. TRANSLATORS: checkbox label for custom DNS search domain configuration.
+#: src/components/network/ConnectionForm.tsx:536
+msgid "Use custom DNS search domains"
+msgstr ""
+
+#. TRANSLATORS: label for the DNS search domains field.
+#: src/components/network/ConnectionForm.tsx:549
+#, fuzzy
+msgid "DNS search domains"
+msgstr "Добавить другой адрес"
+
+#. TRANSLATORS: helper text for DNS search domains field explaining the format.
+#: src/components/network/ConnectionForm.tsx:553
+msgid "E.g., example.com"
+msgstr ""
+
+#. TRANSLATORS: validation error for an invalid DNS search domain entry.
+#: src/components/network/ConnectionForm.tsx:557
+#, fuzzy
+msgid "Invalid DNS search domain"
+msgstr "Добавить другой адрес"
+
+#. TRANSLATORS: title of the page shown when the requested connection
+#. profile does not exist. Do not end with a period.
+#: src/components/network/ConnectionForm.tsx:585
+#, fuzzy
+msgid "Connection not found"
+msgstr "Подключение не найдено или потеряно"
+
+#. TRANSLATORS: body text on the connection not found page.
+#: src/components/network/ConnectionForm.tsx:587
+#, fuzzy
+msgid "The connection does not exist or is no longer available."
+msgstr "«%s» не существует или больше недоступен."
+
+#. TRANSLATORS: link text on the connection not found page.
+#: src/components/network/ConnectionForm.tsx:589
+#: src/components/network/WiredConnectionPage.tsx:54
+msgid "Go to network page"
+msgstr "Перейти к разделу «Сеть»"
+
+#. TRANSLATORS: page title and breadcrumb label for creating a new connection.
+#: src/components/network/ConnectionForm.tsx:640
+#, fuzzy
+msgid "New connection"
+msgstr "Форма подключения Wi-Fi"
+
+#: src/components/network/ConnectionsTable.tsx:143
+msgid "(bound by name)"
+msgstr ""
+
+#: src/components/network/ConnectionsTable.tsx:144
+msgid "(bound by MAC)"
+msgstr ""
 
 #. TRANSLATORS: table header for a DASD devices table
 #: src/components/network/ConnectionsTable.tsx:155
@@ -718,19 +982,6 @@ msgstr "Подключено"
 #: src/components/storage/iscsi/TargetsTable.tsx:163
 msgid "Disconnected"
 msgstr "Отключено"
-
-#. TRANSLATORS: table header for a DASD devices table
-#. TRANSLATORS: table header for a zFCP devices table.
-#: src/components/network/ConnectionsTable.tsx:166
-#: src/components/storage/DrivesTable.tsx:71
-#: src/components/storage/MdRaidsTable.tsx:70
-#: src/components/storage/ProposalResultTable.tsx:134
-#: src/components/storage/SpaceActionsTable.tsx:223
-#: src/components/storage/VolumeGroupsTable.tsx:72
-#: src/components/storage/dasd/DASDTable.tsx:543
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:342
-msgid "Device"
-msgstr "Устройство"
 
 #: src/components/network/ConnectionsTable.tsx:189
 #: src/components/network/WiredConnectionDetails.tsx:159
@@ -829,6 +1080,18 @@ msgstr "Нет целей, соответствующих фильтрам"
 msgid "Change filters and try again."
 msgstr "Измените фильтры и попробуйте снова."
 
+#. TRANSLATORS: accessible label for the device selector. MAC address refers
+#. to the hardware identifier of the network interface.
+#: src/components/network/DeviceSelector.tsx:61
+#, fuzzy
+msgid "Device name"
+msgstr "Меню устройства %s"
+
+#: src/components/network/DeviceSelector.tsx:61
+#, fuzzy
+msgid "MAC address"
+msgstr "Адрес"
+
 #: src/components/network/DevicesSelector.tsx:68
 #, fuzzy
 msgid "None (unbound)"
@@ -852,46 +1115,6 @@ msgstr "Содержимое не найдено"
 #, javascript-format
 msgid "%s - %s"
 msgstr "%s - %s"
-
-#. TRANSLATORS: input field name
-#: src/components/network/DnsDataList.tsx:90
-msgid "Server IP"
-msgstr "IP сервера"
-
-#: src/components/network/DnsDataList.tsx:115
-msgid "Add DNS"
-msgstr "Добавить DNS"
-
-#. TRANSLATORS: button label
-#: src/components/network/DnsDataList.tsx:115
-msgid "Add another DNS"
-msgstr "Добавить другой DNS"
-
-#: src/components/network/DnsDataList.tsx:118
-#: src/components/network/WiredConnectionDetails.tsx:169
-#: src/components/network/WiredConnectionDetails.tsx:299
-msgid "DNS"
-msgstr "DNS"
-
-#. TRANSLATORS: input field name
-#: src/components/network/DnsSearchDataList.tsx:86
-msgid "Domain"
-msgstr ""
-
-#: src/components/network/DnsSearchDataList.tsx:112
-#, fuzzy
-msgid "Add another search domain"
-msgstr "Добавить другой адрес"
-
-#: src/components/network/DnsSearchDataList.tsx:113
-msgid "Add search domain"
-msgstr ""
-
-#: src/components/network/DnsSearchDataList.tsx:116
-#: src/components/network/WiredConnectionDetails.tsx:179
-#: src/components/network/WiredConnectionDetails.tsx:309
-msgid "DNS Search List"
-msgstr ""
 
 #. TRANSLATORS: Displays both IPv4 and IPv6 addresses with count of
 #. additional IPs (e.g., "192.168.122.237, fe80::5054:ff:fe46:2af9 and 1
@@ -939,49 +1162,34 @@ msgstr ""
 "Это подключение будет использоваться только во время установки и не будет "
 "доступно в установленной системе."
 
-#: src/components/network/IpPrefixInput.tsx:35
-msgid "Ip prefix or netmask"
-msgstr "Ip префикс или маска сети"
+#. TRANSLATORS: option label for automatic IP configuration.
+#: src/components/network/IpSettings.tsx:50
+#: src/components/storage/BootSelectionPage.tsx:202
+#: src/components/storage/SizeModeSelect.tsx:191
+#: src/components/storage/SizeModeSelect.tsx:196
+#: src/components/storage/iscsi/TargetLoginPage.tsx:58
+msgid "Automatic"
+msgstr "Автоматически"
 
-#. TRANSLATORS: error message
-#: src/components/network/IpSettingsForm.tsx:133
-msgid "At least one address must be provided for selected mode"
-msgstr "Для выбранного режима необходимо предоставить не менее одного адреса"
-
-#: src/components/network/IpSettingsForm.tsx:188
-#: src/components/storage/FilesystemMenu.tsx:109
-#: src/components/storage/PartitionsSection.tsx:186
-#: src/components/storage/VolumeGroupEditor.tsx:179
-#: src/components/users/FirstUser.tsx:63 src/components/users/RootUser.tsx:57
-msgid "Edit"
-msgstr "Изменить"
-
-#: src/components/network/IpSettingsForm.tsx:218
-msgid "(bind by name)"
+#. TRANSLATORS: description for automatic IP configuration mode.
+#: src/components/network/IpSettings.tsx:52
+msgid "Address and gateway assigned from the network"
 msgstr ""
 
-#. TRANSLATORS: table header for an iSCSI targets table
-#: src/components/network/IpSettingsForm.tsx:218
-#: src/components/network/WiredConnectionDetails.tsx:138
-#: src/components/storage/iscsi/TargetsTable.tsx:476
-msgid "Interface"
-msgstr "Интерфейс"
+#. TRANSLATORS: option label for advanced automatic IP configuration with static addresses.
+#: src/components/network/IpSettings.tsx:57
+#, fuzzy
+msgid "Automatic + manual"
+msgstr "Автоматически и вручную"
 
-#. TRANSLATORS: network connection mode (automatic via DHCP or manual with static IP)
-#: src/components/network/IpSettingsForm.tsx:233
-#: src/components/network/IpSettingsForm.tsx:238
-#: src/components/network/IpSettingsForm.tsx:240
-#: src/components/network/WiredConnectionDetails.tsx:264
-msgid "Mode"
-msgstr "Режим"
+#. TRANSLATORS: description for advanced automatic mode with static addresses.
+#: src/components/network/IpSettings.tsx:59
+msgid "Configuration from the network plus static addresses and gateway"
+msgstr ""
 
-#: src/components/network/IpSettingsForm.tsx:247
-msgid "Automatic (DHCP)"
-msgstr "Автоматически (DHCP)"
-
-#. TRANSLATORS: manual network configuration mode with a static IP address
+#. TRANSLATORS: option label for manual IP configuration
 #. TRANSLATORS: Network summary title when using manual/static IP configuration
-#: src/components/network/IpSettingsForm.tsx:250
+#: src/components/network/IpSettings.tsx:64
 #: src/components/overview/NetworkSummary.tsx:128
 #: src/components/storage/SizeModeSelect.tsx:191
 #: src/components/storage/SizeModeSelect.tsx:199
@@ -989,17 +1197,79 @@ msgstr "Автоматически (DHCP)"
 msgid "Manual"
 msgstr "Вручную"
 
-#. TRANSLATORS: network gateway configuration
-#: src/components/network/IpSettingsForm.tsx:258
-#: src/components/network/IpSettingsForm.tsx:261
-#: src/components/network/WiredConnectionDetails.tsx:150
-#: src/components/network/WiredConnectionDetails.tsx:277
-msgid "Gateway"
+#. TRANSLATORS: description for manual IP configuration mode.
+#: src/components/network/IpSettings.tsx:66
+msgid "Static addresses and gateway"
+msgstr ""
+
+#. TRANSLATORS: label for the IPv4 or IPv6 settings dropdown.
+#: src/components/network/IpSettings.tsx:97
+#, fuzzy
+msgid "IPv4 Settings"
+msgstr "Настройки IP"
+
+#: src/components/network/IpSettings.tsx:97
+#, fuzzy
+msgid "IPv6 Settings"
+msgstr "Настройки IP"
+
+#. TRANSLATORS: label for the IP addresses field.
+#: src/components/network/IpSettings.tsx:99
+#, fuzzy
+msgid "IPv4 Addresses"
+msgstr "IP-адреса"
+
+#: src/components/network/IpSettings.tsx:99
+#, fuzzy
+msgid "IPv6 Addresses"
+msgstr "IP-адреса"
+
+#. TRANSLATORS: label for the IP gateway field.
+#: src/components/network/IpSettings.tsx:101
+#, fuzzy
+msgid "IPv4 Gateway"
 msgstr "Шлюз"
 
-#: src/components/network/IpSettingsForm.tsx:270
-msgid "Gateway can be defined only in 'Manual' mode"
-msgstr "Шлюз можно указать только в ручном режиме"
+#: src/components/network/IpSettings.tsx:101
+#, fuzzy
+msgid "IPv6 Gateway"
+msgstr "Шлюз"
+
+#. TRANSLATORS: helper text for IPv4 addresses field. Explains format and that prefix is auto-added.
+#: src/components/network/IpSettings.tsx:137
+msgid "E.g., 192.168.1.1 or 192.168.1.1/24. Prefix auto-added if omitted."
+msgstr ""
+
+#. TRANSLATORS: helper text for IPv6 addresses field. Explains format and that prefix is auto-added.
+#: src/components/network/IpSettings.tsx:139
+msgid "E.g., 2001:db8::1 or 2001:db8::1/64. Prefix auto-added if omitted."
+msgstr ""
+
+#. TRANSLATORS: validation error for an invalid IP address entry.
+#: src/components/network/IpSettings.tsx:145
+#, fuzzy
+msgid "Invalid IPv4 address"
+msgstr "Нет действительного адреса."
+
+#: src/components/network/IpSettings.tsx:145
+#, fuzzy
+msgid "Invalid IPv6 address"
+msgstr "Нет действительного адреса."
+
+#. TRANSLATORS: label suffix indicating an optional field.
+#: src/components/network/IpSettings.tsx:157
+msgid "(optional)"
+msgstr ""
+
+#. TRANSLATORS: helper text for IPv4 gateway field explaining the format.
+#: src/components/network/IpSettings.tsx:165
+msgid "E.g., 192.168.1.1"
+msgstr ""
+
+#. TRANSLATORS: helper text for IPv6 gateway field explaining the format.
+#: src/components/network/IpSettings.tsx:167
+msgid "E.g., 2001:db8::1"
+msgstr ""
 
 #: src/components/network/NetworkPage.tsx:50
 msgid ""
@@ -1156,9 +1426,30 @@ msgstr "Недоступно"
 msgid "Device details"
 msgstr "Сведения об устройстве"
 
+#. TRANSLATORS: table header for an iSCSI targets table
+#: src/components/network/WiredConnectionDetails.tsx:138
+#: src/components/storage/iscsi/TargetsTable.tsx:476
+msgid "Interface"
+msgstr "Интерфейс"
+
 #: src/components/network/WiredConnectionDetails.tsx:146
 msgid "MAC"
 msgstr "MAC-адрес"
+
+#: src/components/network/WiredConnectionDetails.tsx:150
+#: src/components/network/WiredConnectionDetails.tsx:277
+msgid "Gateway"
+msgstr "Шлюз"
+
+#: src/components/network/WiredConnectionDetails.tsx:169
+#: src/components/network/WiredConnectionDetails.tsx:299
+msgid "DNS"
+msgstr "DNS"
+
+#: src/components/network/WiredConnectionDetails.tsx:179
+#: src/components/network/WiredConnectionDetails.tsx:309
+msgid "DNS Search List"
+msgstr ""
 
 #: src/components/network/WiredConnectionDetails.tsx:189
 msgid "Routes"
@@ -1189,20 +1480,26 @@ msgstr "Настройки"
 msgid "Edit connection settings"
 msgstr "Изменить настройки подключения"
 
+#: src/components/network/WiredConnectionDetails.tsx:264
+msgid "Mode"
+msgstr "Режим"
+
 #: src/components/network/WiredConnectionDetails.tsx:268
 msgid "IPv4"
 msgstr "IPv4"
 
+#: src/components/network/WiredConnectionDetails.tsx:268
 #: src/components/network/WiredConnectionDetails.tsx:271
-msgid "IPv6"
-msgstr "IPv6"
-
 #: src/components/network/WiredConnectionDetails.tsx:281
 #: src/components/network/WiredConnectionDetails.tsx:291
 #: src/components/network/WiredConnectionDetails.tsx:303
 #: src/components/network/WiredConnectionDetails.tsx:313
 msgid "None set"
 msgstr "Не задано"
+
+#: src/components/network/WiredConnectionDetails.tsx:271
+msgid "IPv6"
+msgstr "IPv6"
 
 #. TRANSLATORS: %s will be replaced with connection id
 #: src/components/network/WiredConnectionPage.tsx:42
@@ -1213,10 +1510,6 @@ msgstr "«%s» не существует или больше недоступе�
 #: src/components/network/WiredConnectionPage.tsx:47
 msgid "Connection not found or lost"
 msgstr "Подключение не найдено или потеряно"
-
-#: src/components/network/WiredConnectionPage.tsx:54
-msgid "Go to network page"
-msgstr "Перейти к разделу «Сеть»"
 
 #: src/components/overview/HostnameSummary.tsx:47
 #: src/components/system/HostnamePage.tsx:77 src/router.tsx:52
@@ -2321,13 +2614,6 @@ msgstr ""
 msgid "Boot options"
 msgstr "Параметры загрузки"
 
-#: src/components/storage/BootSelectionPage.tsx:202
-#: src/components/storage/SizeModeSelect.tsx:191
-#: src/components/storage/SizeModeSelect.tsx:196
-#: src/components/storage/iscsi/TargetLoginPage.tsx:58
-msgid "Automatic"
-msgstr "Автоматически"
-
 #: src/components/storage/BootSelectionPage.tsx:220
 #: src/components/storage/ConfigureDeviceMenu.tsx:60
 msgid "Select a disk"
@@ -2779,6 +3065,13 @@ msgstr "Устройство будет отформатировано как %1
 #: src/components/storage/FilesystemMenu.tsx:106
 msgid "Change the file system or mount point"
 msgstr "Изменить файловую систему или точку монтирования"
+
+#: src/components/storage/FilesystemMenu.tsx:109
+#: src/components/storage/PartitionsSection.tsx:186
+#: src/components/storage/VolumeGroupEditor.tsx:179
+#: src/components/users/FirstUser.tsx:63 src/components/users/RootUser.tsx:57
+msgid "Edit"
+msgstr "Изменить"
 
 #: src/components/storage/FixableConfigInfo.tsx:48
 msgid "The configuration must be adapted to address the following issue:"
@@ -5099,6 +5392,43 @@ msgstr "Использовать публичный ключ SSH"
 msgid "ZFCP"
 msgstr "ZFCP"
 
+#~ msgid "IP Address"
+#~ msgstr "IP-адрес"
+
+#~ msgid "Prefix length or netmask"
+#~ msgstr "Длина префикса или маска сети"
+
+#~ msgid "Add an address"
+#~ msgstr "Добавить адрес"
+
+#~ msgid "Add another address"
+#~ msgstr "Добавить другой адрес"
+
+#~ msgid "Addresses"
+#~ msgstr "Адреса"
+
+#~ msgid "Addresses data list"
+#~ msgstr "Список данных адресов"
+
+#~ msgid "Add DNS"
+#~ msgstr "Добавить DNS"
+
+#~ msgid "Add another DNS"
+#~ msgstr "Добавить другой DNS"
+
+#~ msgid "Ip prefix or netmask"
+#~ msgstr "Ip префикс или маска сети"
+
+#~ msgid "At least one address must be provided for selected mode"
+#~ msgstr ""
+#~ "Для выбранного режима необходимо предоставить не менее одного адреса"
+
+#~ msgid "Automatic (DHCP)"
+#~ msgstr "Автоматически (DHCP)"
+
+#~ msgid "Gateway can be defined only in 'Manual' mode"
+#~ msgstr "Шлюз можно указать только в ручном режиме"
+
 #~ msgid "Select another device to define partitions or to mount"
 #~ msgstr ""
 #~ "Выберите другое устройство для определения разделов или монтирования"
@@ -5157,9 +5487,6 @@ msgstr "ZFCP"
 
 #~ msgid "Connection details"
 #~ msgstr "Сведения о подключении"
-
-#~ msgid "IP settings"
-#~ msgstr "Настройки IP"
 
 #~ msgid "Setting up connection"
 #~ msgstr "Настройка подключения"
@@ -5315,9 +5642,6 @@ msgstr "ZFCP"
 
 #~ msgid "Initiator name successfully updated"
 #~ msgstr "Имя инициатора успешно обновлено"
-
-#~ msgid "Initiator name could not be updated"
-#~ msgstr "Не удалось обновить имя инициатора"
 
 #~ msgid "Updating the initiator name"
 #~ msgstr "Обновление имени инициатора"
@@ -6048,9 +6372,6 @@ msgstr "ZFCP"
 
 #~ msgid "The mount point is invalid"
 #~ msgstr "Точка монтирования недопустима"
-
-#~ msgid "A size value is required"
-#~ msgstr "Требуется значение размера"
 
 #~ msgid "Do you want to edit it?"
 #~ msgstr "Вы хотите изменить её?"
