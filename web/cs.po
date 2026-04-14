@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-10 08:25+0000\n"
+"POT-Creation-Date: 2026-04-14 10:20+0000\n"
 "PO-Revision-Date: 2026-03-30 13:04+0000\n"
 "Last-Translator: Ondřej  Sedlák <sedlak.o@tutanota.com>\n"
 "Language-Team: Czech <https://l10n.opensuse.org/projects/agama/agama-web/cs/"
@@ -392,11 +392,11 @@ msgstr "Software"
 #: src/components/storage/EncryptionSettingsPage.tsx:107
 #: src/components/storage/FormattableDevicePage.tsx:445
 #: src/components/storage/ISCSIPage.tsx:36
-#: src/components/storage/LogicalVolumePage.tsx:670
-#: src/components/storage/LvmPage.tsx:170
+#: src/components/storage/LogicalVolumePage.tsx:885
+#: src/components/storage/LvmPage.tsx:168
 #: src/components/storage/PartitionPage.tsx:819
 #: src/components/storage/ProposalPage.tsx:323
-#: src/components/storage/SpacePolicySelectionPage.tsx:113
+#: src/components/storage/SpacePolicySelectionPage.tsx:121
 #: src/components/storage/dasd/DASDPage.tsx:70
 #: src/components/storage/iscsi/DiscoverFormPage.tsx:268
 #: src/components/storage/iscsi/InitiatorFormPage.tsx:58
@@ -453,6 +453,7 @@ msgid "Actions"
 msgstr "Akce"
 
 #: src/components/core/SelectTypeaheadCreatable.tsx:70
+#: src/components/storage/DeviceSelectorModal.tsx:292
 msgid "Add"
 msgstr "Přidat"
 
@@ -531,6 +532,7 @@ msgstr ""
 #: src/components/l10n/L10nPage.tsx:115
 #: src/components/product/ProductSelectionPage.tsx:290
 #: src/components/storage/BootSection.tsx:97
+#: src/components/storage/DeviceSelectorModal.tsx:292
 #: src/components/storage/EncryptionSection.tsx:60
 #: src/components/storage/iscsi/InitiatorFormPage.tsx:80
 #: src/components/users/FirstUserForm.tsx:233
@@ -658,7 +660,7 @@ msgstr "(vázáno na MAC)"
 #: src/components/network/IpSettingsForm.tsx:207
 #: src/components/network/IpSettingsForm.tsx:209
 #: src/components/storage/DeviceSelectorPage.tsx:55
-#: src/components/storage/LvmPage.tsx:184
+#: src/components/storage/LvmPage.tsx:182
 #: src/components/storage/iscsi/InitiatorFormPage.tsx:66
 #: src/components/storage/iscsi/InitiatorFormPage.tsx:75
 #: src/components/storage/iscsi/TargetsTable.tsx:282
@@ -714,8 +716,11 @@ msgstr "Odpojeno"
 #. TRANSLATORS: table header for a DASD devices table
 #. TRANSLATORS: table header for a zFCP devices table.
 #: src/components/network/ConnectionsTable.tsx:166
-#: src/components/storage/DeviceSelectorModal.tsx:87
+#: src/components/storage/DrivesTable.tsx:71
+#: src/components/storage/MdRaidsTable.tsx:70
 #: src/components/storage/ProposalResultTable.tsx:134
+#: src/components/storage/SpaceActionsTable.tsx:223
+#: src/components/storage/VolumeGroupsTable.tsx:72
 #: src/components/storage/dasd/DASDTable.tsx:543
 #: src/components/storage/zfcp/ZFCPDevicesTable.tsx:342
 msgid "Device"
@@ -772,7 +777,7 @@ msgstr "Vymazat všechny filtry"
 
 #: src/components/network/ConnectionsTable.tsx:339
 #: src/components/storage/ProposalResultTable.tsx:136
-#: src/components/storage/SpaceActionsTable.tsx:230
+#: src/components/storage/SpaceActionsTable.tsx:227
 msgid "Details"
 msgstr "Podrobnosti"
 
@@ -801,7 +806,7 @@ msgstr "Odpojit"
 
 #: src/components/network/ConnectionsTable.tsx:374
 #: src/components/storage/PartitionsSection.tsx:194
-#: src/components/storage/VolumeGroupEditor.tsx:181
+#: src/components/storage/VolumeGroupEditor.tsx:187
 #: src/components/storage/iscsi/TargetsTable.tsx:252
 msgid "Delete"
 msgstr "Smazat"
@@ -824,6 +829,9 @@ msgstr "Žádné (nepřiřazeno)"
 #. TRANSLATORS: this simply concatenates the two sentences that describe what is going to happen
 #. with partitions. The first %s corresponds to deleted partitions and the second one to resized
 #. ones.
+#. TRANSLATORS: this simply concatenates the two sentences that describe what is going to happen
+#. with logical volumes. The first %s corresponds to deleted logical volumes and the second one
+#. to resized ones.
 #. TRANSLATORS: A label shown in a dropdown for selecting a network
 #. device. It combines the device name and MAC address, with the order
 #. determined by the component settings: some selectors will show the
@@ -831,7 +839,8 @@ msgstr "Žádné (nepřiřazeno)"
 #. or "CC-7F-C8-FC-7A-A1 - enp1s0". You may change the separator, but
 #. please keep both %s placeholders.
 #: src/components/network/DevicesSelector.tsx:76
-#: src/components/storage/utils/drive.tsx:110
+#: src/components/storage/utils/drive.tsx:106
+#: src/components/storage/utils/volume-group.tsx:96
 #, javascript-format
 msgid "%s - %s"
 msgstr "%s - %s"
@@ -933,7 +942,7 @@ msgstr "Pro zvolený režim musí být uvedena alespoň jedna adresa"
 #: src/components/network/IpSettingsForm.tsx:188
 #: src/components/storage/FilesystemMenu.tsx:109
 #: src/components/storage/PartitionsSection.tsx:186
-#: src/components/storage/VolumeGroupEditor.tsx:173
+#: src/components/storage/VolumeGroupEditor.tsx:179
 #: src/components/users/FirstUser.tsx:63 src/components/users/RootUser.tsx:57
 msgid "Edit"
 msgstr "Upravit"
@@ -1225,7 +1234,7 @@ msgstr "Instalační nastavení"
 #: src/components/overview/L10nSummary.tsx:52
 #: src/components/storage/device-utils.tsx:94
 #: src/components/storage/utils/partition.tsx:41
-#: src/components/storage/utils/partition.tsx:85
+#: src/components/storage/utils/partition.tsx:72
 #, javascript-format
 msgid "%1$s (%2$s)"
 msgstr "%1$s (%2$s)"
@@ -1478,7 +1487,7 @@ msgid "Using an advanced storage configuration"
 msgstr "Nainstalovat pomocí pokročilé konfigurace"
 
 #: src/components/overview/StorageSummary.tsx:131
-#: src/components/storage/ProposalFailedInfo.tsx:85
+#: src/components/storage/ProposalFailedInfo.tsx:77
 msgid "Failed to calculate a storage layout"
 msgstr "Nepodařilo se vypočítat návrh úložiště"
 
@@ -1591,7 +1600,7 @@ msgid "SUSE Customer Center (SCC)"
 msgstr "Zákaznické centrum SUSE (SCC)"
 
 #: src/components/product/ProductRegistrationPage.tsx:73
-#: src/components/storage/utils.ts:106
+#: src/components/storage/utils.ts:106 src/components/storage/utils.ts:125
 msgid "Custom"
 msgstr "Vlastní"
 
@@ -1648,7 +1657,7 @@ msgid "Provide email address"
 msgstr "Zadejte emailovou adresu"
 
 #: src/components/product/ProductRegistrationPage.tsx:371
-#: src/components/storage/LvmPage.tsx:178
+#: src/components/storage/LvmPage.tsx:176
 #: src/components/system/HostnamePage.tsx:97
 msgid "Check the following before continuing"
 msgstr "Před pokračování zkontrolujte následující"
@@ -1723,7 +1732,9 @@ msgstr "Zobrazit méně"
 msgid "I have read and accept the [license] for %s"
 msgstr "Přečetl jsem si a přijímám [licenci] pro %s"
 
+#. TRANSLATORS: %s is replaced by a device label, e.g. "sda (512 GiB)"
 #: src/components/product/ProductSelectionPage.tsx:289
+#: src/components/storage/DeviceSelectorModal.tsx:299
 #, javascript-format
 msgid "Change to %s"
 msgstr "Změnit na %s"
@@ -2299,6 +2310,7 @@ msgid "Automatic"
 msgstr "Automatický"
 
 #: src/components/storage/BootSelectionPage.tsx:220
+#: src/components/storage/ConfigureDeviceMenu.tsx:60
 msgid "Select a disk"
 msgstr "Výběr disku"
 
@@ -2341,31 +2353,30 @@ msgstr ""
 msgid "reset to defaults"
 msgstr "Obnovit výchozí nastavení"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:48
-msgid "Select a device to define partitions or to mount"
-msgstr "Vyberte zařízení pro definování oddílů nebo pro připojení"
+#: src/components/storage/ConfigureDeviceMenu.tsx:56
+#, fuzzy
+msgid "Select an existing device"
+msgstr "Výběr instalačního zařízení"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:49
-msgid "Select another device to define partitions or to mount"
-msgstr "Vyberte další zařízení pro definování oddílů nebo pro připojení"
+#: src/components/storage/ConfigureDeviceMenu.tsx:57
+#, fuzzy
+msgid "Select another existing device"
+msgstr "Výběr instalačního zařízení"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:52
-msgid "Select a disk to define partitions or to mount"
-msgstr "Vyberte disk pro definování oddílů nebo pro připojení"
+#: src/components/storage/ConfigureDeviceMenu.tsx:61
+#, fuzzy
+msgid "Select another disk"
+msgstr "Výběr disku"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:53
-msgid "Select another disk to define partitions or to mount"
-msgstr "Vyberte další disk pro definování oddílů nebo pro připojení"
-
-#: src/components/storage/ConfigureDeviceMenu.tsx:58
+#: src/components/storage/ConfigureDeviceMenu.tsx:66
 msgid "Already using all available devices"
 msgstr "Již se používají všechna dostupná zařízení"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:59
+#: src/components/storage/ConfigureDeviceMenu.tsx:67
 msgid "Already using all available disks"
 msgstr "Již se používají všechny dostupné disky"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:66
+#: src/components/storage/ConfigureDeviceMenu.tsx:74
 #, javascript-format
 msgid "Extend the installation beyond the currently selected device"
 msgid_plural "Extend the installation beyond the current %d devices"
@@ -2373,7 +2384,7 @@ msgstr[0] "Rozšířit instalaci nad rámec aktuálně vybraného zařízení"
 msgstr[1] "Rozšířit instalaci nad rámec aktuálních %d zařízení"
 msgstr[2] "Rozšířit instalaci nad rámec aktuálních %d zařízení"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:75
+#: src/components/storage/ConfigureDeviceMenu.tsx:83
 #, javascript-format
 msgid "Extend the installation beyond the currently selected disk"
 msgid_plural "Extend the installation beyond the current %d disks"
@@ -2381,33 +2392,47 @@ msgstr[0] "Rozšířit instalaci nad rámec aktuálně vybraného disku"
 msgstr[1] "Rozšířit instalaci nad rámec aktuálních %d disků"
 msgstr[2] "Rozšířit instalaci nad rámec aktuálních %d disků"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:83
+#: src/components/storage/ConfigureDeviceMenu.tsx:91
 msgid "Start configuring a basic installation"
 msgstr "Začít nastavovat základní instalaci"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:99
+#: src/components/storage/ConfigureDeviceMenu.tsx:108
 msgid "Add device menu"
 msgstr "Nabídka přidat zařízení"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:143
+#: src/components/storage/ConfigureDeviceMenu.tsx:161
 msgid "Define a new LVM on top of one or several disks"
 msgstr "Definovat nové LVM nad jedním nebo více disky"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:144
+#: src/components/storage/ConfigureDeviceMenu.tsx:162
 msgid "Define a new LVM on the disk"
 msgstr "Definovat nové LVM na disku"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:150
+#: src/components/storage/ConfigureDeviceMenu.tsx:168
 msgid "Configure device menu"
 msgstr "Konfigurovat nabídku zařízení"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:170
+#: src/components/storage/ConfigureDeviceMenu.tsx:189
 msgid "Add LVM volume group"
 msgstr "Přidat novou skupinu LVM svazků"
 
-#: src/components/storage/ConfigureDeviceMenu.tsx:176
+#: src/components/storage/ConfigureDeviceMenu.tsx:194
 msgid "More devices"
 msgstr "Další zařízení"
+
+#: src/components/storage/ConfigureDeviceMenu.tsx:213
+#, fuzzy
+msgid "Choose a disk to define partitions or to mount"
+msgstr "Vyberte disk pro definování oddílů nebo pro připojení"
+
+#: src/components/storage/ConfigureDeviceMenu.tsx:214
+#, fuzzy
+msgid "Choose a RAID device to define partitions or to mount"
+msgstr "Vyberte zařízení pro definování oddílů nebo pro připojení"
+
+#: src/components/storage/ConfigureDeviceMenu.tsx:215
+msgid "Choose a volume group to define logical volumes"
+msgstr ""
 
 #. TRANSLATORS: this is an ARIA (accesibility) description of an UI element
 #: src/components/storage/ConnectedDevicesMenu.tsx:49
@@ -2448,20 +2473,67 @@ msgstr "Aktualizovat dostupné disky a aktivovat šifrovaná zařízení"
 msgid "Rescan devices"
 msgstr "Načtení zařízení zFCP"
 
-#: src/components/storage/DeviceSelectorModal.tsx:89
-#: src/components/storage/ProposalResultTable.tsx:137
-#: src/components/storage/SizeModeSelect.tsx:125
-#: src/components/storage/SpaceActionsTable.tsx:234
-msgid "Size"
-msgstr "Velikost"
+#. TRANSLATORS: %s is replaced by a device label, e.g. "sda (512 GiB)"
+#: src/components/storage/DeviceSelectorModal.tsx:294
+#, fuzzy, javascript-format
+msgid "Add %s"
+msgstr "Přidat DNS"
 
-#: src/components/storage/DeviceSelectorModal.tsx:94
-msgid "Description"
-msgstr "Popis"
+#: src/components/storage/DeviceSelectorModal.tsx:297
+#, javascript-format
+msgid "Keep %s"
+msgstr ""
 
-#: src/components/storage/DeviceSelectorModal.tsx:95
-msgid "Current content"
-msgstr "Aktuální obsah"
+#: src/components/storage/DeviceSelectorModal.tsx:306
+msgid "Use the tabs to browse disks, RAID devices and LVM volume groups."
+msgstr ""
+
+#: src/components/storage/DeviceSelectorModal.tsx:325
+#: src/components/storage/LvmPage.tsx:185
+msgid "Disks"
+msgstr "Disky"
+
+#: src/components/storage/DeviceSelectorModal.tsx:327
+#, fuzzy
+msgid "No disks found"
+msgstr "Nebyly nalezeny žádné disky zFCP."
+
+#: src/components/storage/DeviceSelectorModal.tsx:328
+#, fuzzy
+msgid "No disks are available for selection."
+msgstr "Pro instalaci nejsou k dispozici žádné disky"
+
+#: src/components/storage/DeviceSelectorModal.tsx:340
+msgid "RAID"
+msgstr ""
+
+#: src/components/storage/DeviceSelectorModal.tsx:342
+#, fuzzy
+msgid "No RAID devices found"
+msgstr "Nebyl nalezen žádný obsah"
+
+#: src/components/storage/DeviceSelectorModal.tsx:345
+msgid "No software RAID devices are available for selection."
+msgstr ""
+
+#: src/components/storage/DeviceSelectorModal.tsx:358
+#: src/components/storage/LvmPage.tsx:169
+msgid "LVM"
+msgstr "LVM"
+
+#: src/components/storage/DeviceSelectorModal.tsx:360
+#, fuzzy
+msgid "No LVM volume groups found"
+msgstr "Nová skupina svazků LVM"
+
+#: src/components/storage/DeviceSelectorModal.tsx:363
+msgid "No LVM volume groups are available for selection."
+msgstr ""
+
+#: src/components/storage/DeviceSelectorModal.tsx:396
+#, fuzzy
+msgid "Select a device"
+msgstr "Vybrat zařízení"
 
 #: src/components/storage/DeviceSelectorPage.tsx:56
 msgid "Content"
@@ -2589,6 +2661,24 @@ msgstr "Použít disk %s pro konfiguraci zaváděcích oddílů"
 msgid "Use disk %s"
 msgstr "Použít disk %s"
 
+#: src/components/storage/DrivesTable.tsx:77
+#: src/components/storage/MdRaidsTable.tsx:76
+#: src/components/storage/ProposalResultTable.tsx:137
+#: src/components/storage/SizeModeSelect.tsx:125
+#: src/components/storage/SpaceActionsTable.tsx:231
+#: src/components/storage/VolumeGroupsTable.tsx:78
+msgid "Size"
+msgstr "Velikost"
+
+#: src/components/storage/DrivesTable.tsx:82
+msgid "Description"
+msgstr "Popis"
+
+#: src/components/storage/DrivesTable.tsx:83
+#: src/components/storage/MdRaidsTable.tsx:86
+msgid "Current content"
+msgstr "Aktuální obsah"
+
 #: src/components/storage/EncryptionSection.tsx:35
 msgid "Encryption is disabled"
 msgstr "Šifrování je vypnuto"
@@ -2681,13 +2771,13 @@ msgstr[1] "Před zahájením instalace vyřešte tyto problémy:"
 msgstr[2] "Před zahájením instalace vyřešte tyto problémy:"
 
 #: src/components/storage/FormattableDevicePage.tsx:211
-#: src/components/storage/LogicalVolumePage.tsx:232
+#: src/components/storage/LogicalVolumePage.tsx:304
 #: src/components/storage/PartitionPage.tsx:296
 msgid "Select or enter a valid mount point"
 msgstr "Vyber nebo zadej platný bod připojení"
 
 #: src/components/storage/FormattableDevicePage.tsx:221
-#: src/components/storage/LogicalVolumePage.tsx:242
+#: src/components/storage/LogicalVolumePage.tsx:314
 #: src/components/storage/PartitionPage.tsx:306
 msgid ""
 "Select or enter a mount point that is not already assigned to another device"
@@ -2695,9 +2785,9 @@ msgstr ""
 "Vyber nebo zadej bod připojení, který ještě není přiřazen jinému zařízení"
 
 #: src/components/storage/FormattableDevicePage.tsx:271
-#: src/components/storage/LogicalVolumePage.tsx:427
-#: src/components/storage/LogicalVolumePage.tsx:451
-#: src/components/storage/LogicalVolumePage.tsx:754
+#: src/components/storage/LogicalVolumePage.tsx:595
+#: src/components/storage/LogicalVolumePage.tsx:623
+#: src/components/storage/LogicalVolumePage.tsx:981
 #: src/components/storage/PartitionPage.tsx:558
 #: src/components/storage/PartitionPage.tsx:905
 msgid "Waiting for a mount point"
@@ -2705,14 +2795,15 @@ msgstr "Čekám na přípojný bod"
 
 #. TRANSLATORS: %s is a device name (eg. /dev/sda3).
 #: src/components/storage/FormattableDevicePage.tsx:274
+#: src/components/storage/LogicalVolumePage.tsx:626
 #: src/components/storage/PartitionPage.tsx:561
-#: src/components/storage/utils/partition.tsx:69
+#: src/components/storage/utils/partition.tsx:57
 #, javascript-format
 msgid "Current %s"
 msgstr "Aktuálně %s"
 
 #: src/components/storage/FormattableDevicePage.tsx:292
-#: src/components/storage/LogicalVolumePage.tsx:466
+#: src/components/storage/LogicalVolumePage.tsx:644
 #: src/components/storage/PartitionPage.tsx:579
 #, javascript-format
 msgid "Default file system for %s"
@@ -2732,14 +2823,16 @@ msgstr "Formátovat zařízení jako"
 
 #. TRANSLATORS: %s is the name of a partition, like /dev/vda2
 #. TRANSLATORS: %s is the name of a device, like vda
+#. TRANSLATORS: %s is the name of a logical volume, like /dev/system/home
 #: src/components/storage/FormattableDevicePage.tsx:310
+#: src/components/storage/LogicalVolumePage.tsx:661
 #: src/components/storage/PartitionPage.tsx:596
 #, javascript-format
 msgid "Do not format %s and keep the data"
 msgstr "NEformátovat %s a ponechat data"
 
 #: src/components/storage/FormattableDevicePage.tsx:375
-#: src/components/storage/LogicalVolumePage.tsx:536
+#: src/components/storage/LogicalVolumePage.tsx:727
 #: src/components/storage/PartitionPage.tsx:662
 msgid "File system label"
 msgstr "Jmenovka souborového systému"
@@ -2755,52 +2848,52 @@ msgstr "Konfigurovat zařízení %s"
 
 #: src/components/storage/FormattableDevicePage.tsx:457
 #: src/components/storage/FormattableDevicePage.tsx:464
-#: src/components/storage/LogicalVolumePage.tsx:682
-#: src/components/storage/LogicalVolumePage.tsx:687
+#: src/components/storage/LogicalVolumePage.tsx:897
+#: src/components/storage/LogicalVolumePage.tsx:904
 #: src/components/storage/PartitionPage.tsx:835
 #: src/components/storage/PartitionPage.tsx:842
 msgid "Mount point"
 msgstr "Přípojný bod"
 
 #: src/components/storage/FormattableDevicePage.tsx:462
-#: src/components/storage/LogicalVolumePage.tsx:685
+#: src/components/storage/LogicalVolumePage.tsx:902
 #: src/components/storage/PartitionPage.tsx:840
 #, fuzzy
 msgid "Mount point toggle"
 msgstr "Přípojný bod"
 
 #: src/components/storage/FormattableDevicePage.tsx:463
-#: src/components/storage/LogicalVolumePage.tsx:686
+#: src/components/storage/LogicalVolumePage.tsx:903
 #: src/components/storage/PartitionPage.tsx:841
 msgid "Suggested mount points"
 msgstr "Navrhované přípojné body"
 
 #: src/components/storage/FormattableDevicePage.tsx:465
-#: src/components/storage/LogicalVolumePage.tsx:688
+#: src/components/storage/LogicalVolumePage.tsx:905
 #: src/components/storage/PartitionPage.tsx:843
 msgid "Clear selected mount point"
 msgstr "Vymazat vybraný přípojný bod"
 
 #: src/components/storage/FormattableDevicePage.tsx:468
-#: src/components/storage/LogicalVolumePage.tsx:691
+#: src/components/storage/LogicalVolumePage.tsx:908
 #: src/components/storage/PartitionPage.tsx:846
 msgid "Use"
 msgstr "Použít"
 
 #: src/components/storage/FormattableDevicePage.tsx:479
-#: src/components/storage/LogicalVolumePage.tsx:700
+#: src/components/storage/LogicalVolumePage.tsx:931
 #: src/components/storage/PartitionPage.tsx:867
 msgid "Select or enter a mount point"
 msgstr "Vyberte nebo zadejte přípojný bod"
 
 #: src/components/storage/FormattableDevicePage.tsx:488
-#: src/components/storage/LogicalVolumePage.tsx:725
+#: src/components/storage/LogicalVolumePage.tsx:952
 #: src/components/storage/PartitionPage.tsx:876
 msgid "File system"
 msgstr "Typ systému souborů"
 
 #: src/components/storage/FormattableDevicePage.tsx:499
-#: src/components/storage/LogicalVolumePage.tsx:736
+#: src/components/storage/LogicalVolumePage.tsx:964
 #: src/components/storage/PartitionPage.tsx:888
 msgid "Label"
 msgstr "Štítek"
@@ -2812,86 +2905,119 @@ msgstr "Štítek"
 msgid "iSCSI"
 msgstr "iSCSI"
 
-#: src/components/storage/LogicalVolumePage.tsx:253
+#: src/components/storage/LogicalVolumePage.tsx:325
 msgid "Enter a name"
 msgstr "Zadejte jméno"
 
-#: src/components/storage/LogicalVolumePage.tsx:280
+#: src/components/storage/LogicalVolumePage.tsx:352
 #: src/components/storage/PartitionPage.tsx:334
 msgid "The minimum cannot be greater than the maximum"
 msgstr "Minimum nemůže být větší než maximum"
 
-#: src/components/storage/LogicalVolumePage.tsx:288
-msgid ""
-"The maximum must be a number optionally followed by a unit like GiB or GB"
-msgstr ""
-"Maximum musí být nějaké číslo, které může následovat jednotka jako GiB nebo "
-"GB"
+#: src/components/storage/LogicalVolumePage.tsx:360
+#: src/components/storage/PartitionPage.tsx:342
+msgid "The maximum must be a number followed by a unit like GiB or GB"
+msgstr "Maximum musí být nějaké číslo následované jednotkou jako GiB nebo GB"
 
-#: src/components/storage/LogicalVolumePage.tsx:296
-msgid ""
-"The minimum must be a number optionally followed by a unit like GiB or GB"
-msgstr ""
-"Minimum musí být nějaké číslo, které může následovat jednotka jako GiB nebo "
-"GB"
+#: src/components/storage/LogicalVolumePage.tsx:368
+#: src/components/storage/PartitionPage.tsx:350
+msgid "The minimum must be a number followed by a unit like GiB or GB"
+msgstr "Minimum musí být nějaké číslo následované jednotkou jako GiB nebo GB"
 
-#: src/components/storage/LogicalVolumePage.tsx:303
-msgid ""
-"Size limits must be numbers optionally followed by a unit like GiB or GB"
+#: src/components/storage/LogicalVolumePage.tsx:375
+#: src/components/storage/PartitionPage.tsx:357
+msgid "Size limits must be numbers followed by a unit like GiB or GB"
 msgstr ""
-"Limity velikosti musí být nějaká čísla, která mohou být následována "
-"jednotkou jako GiB nebo GB"
+"Velikosti limitů musí být nějaká čísla následovaná jednotkou jako GiB nebo GB"
 
-#: src/components/storage/LogicalVolumePage.tsx:422
-#: src/components/storage/LogicalVolumePage.tsx:425
+#. TRANSLATORS: %s is a disk name with its size (eg. "sda, 10 GiB"
+#: src/components/storage/LogicalVolumePage.tsx:516
+#, fuzzy, javascript-format
+msgid "As a new logical volume on %s"
+msgstr "Logický svazek na systému LVM"
+
+#: src/components/storage/LogicalVolumePage.tsx:518
+#, fuzzy, javascript-format
+msgid "Using logical volume %s"
+msgstr "logický svazek"
+
+#: src/components/storage/LogicalVolumePage.tsx:549
+#: src/components/storage/PartitionPage.tsx:525
+msgid "Mount point options"
+msgstr "Možnosti přípojného bodu"
+
+#: src/components/storage/LogicalVolumePage.tsx:554
+#, fuzzy
+msgid "Using an existing logical volume"
+msgstr "Použít stávající oddíl"
+
+#: src/components/storage/LogicalVolumePage.tsx:565
+#, fuzzy
+msgid "There are not usable logical volumes"
+msgstr "K dispozici nejsou žádné použitelné oddíly"
+
+#: src/components/storage/LogicalVolumePage.tsx:590
+#: src/components/storage/LogicalVolumePage.tsx:593
 msgid "Logical volume name"
 msgstr "Jméno logického svazku"
 
-#: src/components/storage/LogicalVolumePage.tsx:467
-msgid "Default file system for generic logical volumes"
+#: src/components/storage/LogicalVolumePage.tsx:645
+#, fuzzy
+msgid "Default file system for generic logical volume"
 msgstr "Výchozí souborový systém pro obecně připojené svazky"
 
-#: src/components/storage/LogicalVolumePage.tsx:469
+#: src/components/storage/LogicalVolumePage.tsx:647
+#, fuzzy
+msgid "Destroy current data and format logical volume as"
+msgstr "Odstranit stávající data a formátovat jako"
+
+#: src/components/storage/LogicalVolumePage.tsx:648
 msgid "Format logical volume as"
 msgstr "Formátovat logický svazek jako"
 
-#: src/components/storage/LogicalVolumePage.tsx:671
-#: src/components/storage/LvmPage.tsx:171
-msgid "LVM"
-msgstr "LVM"
-
-#: src/components/storage/LogicalVolumePage.tsx:673
+#: src/components/storage/LogicalVolumePage.tsx:887
 msgid "Configure logical volume"
 msgstr "Konfigurovat logický svazek"
 
-#: src/components/storage/LogicalVolumePage.tsx:749
+#: src/components/storage/LogicalVolumePage.tsx:893
+#, fuzzy, javascript-format
+msgid "Configure logical volume at %s"
+msgstr "Konfigurovat logický svazek"
+
+#: src/components/storage/LogicalVolumePage.tsx:915
+#: src/components/storage/PartitionPage.tsx:852
+msgid "Mount point mode"
+msgstr "Mód přípojného bodu"
+
+#: src/components/storage/LogicalVolumePage.tsx:976
 #: src/components/storage/PartitionPage.tsx:900
 msgid "Size mode"
 msgstr "Režim velikosti"
 
-#: src/components/storage/LvmPage.tsx:80
+#: src/components/storage/LogicalVolumePage.tsx:1011
+#: src/components/storage/PartitionPage.tsx:935
+msgid "Go to storage page"
+msgstr "Přejít na stránku úložiště"
+
+#: src/components/storage/LvmPage.tsx:78
 msgid "Enter a name for the volume group."
 msgstr "Zadejte název pro skupinu svazků."
 
-#: src/components/storage/LvmPage.tsx:84
+#: src/components/storage/LvmPage.tsx:82
 #, javascript-format
 msgid "Volume group '%s' already exists. Enter a different name."
 msgstr "Skupina svazků ‘%s’ již existuje. Zadejte jiný název."
 
-#: src/components/storage/LvmPage.tsx:88
+#: src/components/storage/LvmPage.tsx:86
 msgid "Select at least one disk."
 msgstr "Vyberte alespoň jeden disk."
 
-#: src/components/storage/LvmPage.tsx:172
+#: src/components/storage/LvmPage.tsx:170
 #, fuzzy
 msgid "Configure Volume Group"
 msgstr "Nastavit skupinu svazků LVM"
 
-#: src/components/storage/LvmPage.tsx:187
-msgid "Disks"
-msgstr "Disky"
-
-#: src/components/storage/LvmPage.tsx:190
+#: src/components/storage/LvmPage.tsx:188
 msgid ""
 "The needed LVM physical volumes will be added as partitions on the chosen "
 "disks, based on the sizes of the logical volumes. If you select more than "
@@ -2901,11 +3027,11 @@ msgstr ""
 "základě velikosti logických svazků. Pokud vyberete více než jeden disk, "
 "fyzické svazky mohou být rozloženy mezi několik disků."
 
-#: src/components/storage/LvmPage.tsx:225
+#: src/components/storage/LvmPage.tsx:223
 msgid "Move mount points"
 msgstr "Přesunout přípojné body"
 
-#: src/components/storage/LvmPage.tsx:229
+#: src/components/storage/LvmPage.tsx:227
 msgid ""
 "Move the mount points currently configured at the selected disks to logical "
 "volumes of this volume group."
@@ -2997,6 +3123,15 @@ msgstr "Použít RAID %s ke konfiguraci oddílů pro zavádění"
 msgid "Use RAID %s"
 msgstr "Použít RAID %s"
 
+#: src/components/storage/MdRaidsTable.tsx:81
+msgid "Level"
+msgstr ""
+
+#: src/components/storage/MdRaidsTable.tsx:83
+#, fuzzy
+msgid "Members"
+msgstr "Členové: %s"
+
 #. TRANSLATORS: %s is the short name of a disk, like 'sda'
 #: src/components/storage/NewVgMenuOption.tsx:51
 #, javascript-format
@@ -3012,25 +3147,13 @@ msgstr "Vytvořit skupinu svazků LVM na %s"
 #. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case).
 #: src/components/storage/NewVgMenuOption.tsx:64
+#: src/components/storage/SearchedDeviceMenu.tsx:235
 #, javascript-format
 msgid "%s will be created as a logical volume"
 msgid_plural "%s will be created as logical volumes"
 msgstr[0] "%s bude vytvořen jako logický svazek"
 msgstr[1] "%s budou vytvořeny jako logické svazky"
 msgstr[2] "%s budou vytvořeny jako logické svazky"
-
-#: src/components/storage/PartitionPage.tsx:342
-msgid "The maximum must be a number followed by a unit like GiB or GB"
-msgstr "Maximum musí být nějaké číslo následované jednotkou jako GiB nebo GB"
-
-#: src/components/storage/PartitionPage.tsx:350
-msgid "The minimum must be a number followed by a unit like GiB or GB"
-msgstr "Minimum musí být nějaké číslo následované jednotkou jako GiB nebo GB"
-
-#: src/components/storage/PartitionPage.tsx:357
-msgid "Size limits must be numbers followed by a unit like GiB or GB"
-msgstr ""
-"Velikosti limitů musí být nějaká čísla následovaná jednotkou jako GiB nebo GB"
 
 #. TRANSLATORS: %s is a disk name with its size (eg. "sda, 10 GiB"
 #: src/components/storage/PartitionPage.tsx:494
@@ -3042,10 +3165,6 @@ msgstr "Jako nový oddíl na %s"
 #, javascript-format
 msgid "Using partition %s"
 msgstr "Používá se oddíl %s"
-
-#: src/components/storage/PartitionPage.tsx:525
-msgid "Mount point options"
-msgstr "Možnosti přípojného bodu"
 
 #: src/components/storage/PartitionPage.tsx:530
 msgid "Using an existing partition"
@@ -3075,14 +3194,6 @@ msgstr "Konfigurovat oddíl"
 #, javascript-format
 msgid "Configure partition at %s"
 msgstr "Konfigurovat oddíl na %s"
-
-#: src/components/storage/PartitionPage.tsx:852
-msgid "Mount point mode"
-msgstr "Mód přípojného bodu"
-
-#: src/components/storage/PartitionPage.tsx:935
-msgid "Go to storage page"
-msgstr "Přejít na stránku úložiště"
 
 #: src/components/storage/PartitionsSection.tsx:90
 msgid "Moreover, the following partitions will be created or mounted"
@@ -3181,7 +3292,7 @@ msgstr[0] "Zobrazit %d akci podsvazku"
 msgstr[1] "Zobrazit %d akce podsvazku"
 msgstr[2] "Zobrazit %d akcí podsvazku"
 
-#: src/components/storage/ProposalFailedInfo.tsx:52
+#: src/components/storage/ProposalFailedInfo.tsx:44
 msgid ""
 "It is not possible to install the system with the current configuration. "
 "Adjust the settings below."
@@ -3190,19 +3301,19 @@ msgstr ""
 
 #. TRANSLATORS: %s is a list of formatted mount points with a partition size like
 #. '"/" (at least 10 GiB), "/var" (20 GiB) and "swap" (2 GiB)'
-#: src/components/storage/ProposalFailedInfo.tsx:65
+#: src/components/storage/ProposalFailedInfo.tsx:57
 #, javascript-format
 msgid "It is not possible to allocate space for the boot partition and for %s."
 msgstr "Není možné vyhradit místo pro spuštěcí oddíl a pro %s."
 
 #. TRANSLATORS: %s is a list of formatted mount points with a partition size like
 #. '"/" (at least 10 GiB), "/var" (20 GiB) and "swap" (2 GiB)'
-#: src/components/storage/ProposalFailedInfo.tsx:68
+#: src/components/storage/ProposalFailedInfo.tsx:60
 #, javascript-format
 msgid "It is not possible to allocate space for %s."
 msgstr "Není možné vyhradit místo pro %s."
 
-#: src/components/storage/ProposalFailedInfo.tsx:73
+#: src/components/storage/ProposalFailedInfo.tsx:65
 msgid ""
 "Adjust the settings below to make the new system fit into the available "
 "space."
@@ -3368,70 +3479,73 @@ msgstr "Před %s"
 msgid "Mount Point"
 msgstr "Přípojný bod"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:69
+#: src/components/storage/SearchedDeviceMenu.tsx:89
 #, fuzzy
 msgid "Selected disk cannot be changed"
 msgstr "Vyberte, co se má s jednotlivými oddíly dělat."
 
 #. TRANSLATORS: %s is a formatted mount point like '"/home"'
-#: src/components/storage/SearchedDeviceMenu.tsx:74
+#: src/components/storage/SearchedDeviceMenu.tsx:94
 #, fuzzy, javascript-format
-msgid "Change the disk to format as %s"
+msgid "Change the device to format as %s"
 msgstr "Vyberte, ve kterém zařízení se má vytvořit systém souborů"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:81
+#: src/components/storage/SearchedDeviceMenu.tsx:101
+#: src/components/storage/SearchedVolumeGroupMenu.tsx:82
 #, fuzzy
-msgid "Change the disk to configure"
+msgid "Change the device to configure"
 msgstr "Vyberte, co se má s jednotlivými oddíly dělat."
 
-#: src/components/storage/SearchedDeviceMenu.tsx:85
+#: src/components/storage/SearchedDeviceMenu.tsx:105
+#: src/components/storage/SearchedVolumeGroupMenu.tsx:86
 #, fuzzy
-msgid "Change the disk to install the system"
+msgid "Change the device to install the system"
 msgstr "Vyberte, ve kterém zařízení se má vytvořit systém souborů"
 
 #. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case).
-#: src/components/storage/SearchedDeviceMenu.tsx:95
+#: src/components/storage/SearchedDeviceMenu.tsx:115
+#: src/components/storage/SearchedVolumeGroupMenu.tsx:96
 #, fuzzy, javascript-format
-msgid "Change the disk to create %s"
+msgid "Change the device to create %s"
 msgstr "Vyberte, ve kterém zařízení se má vytvořit systém souborů"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:118
+#: src/components/storage/SearchedDeviceMenu.tsx:138
 #, fuzzy
 msgid "This uses the existing file system at the disk"
 msgstr "Zmenšit stávající oddíly"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:122
+#: src/components/storage/SearchedDeviceMenu.tsx:142
 #, fuzzy
 msgid "This uses existing partitions at the disk"
 msgstr "Zmenšit stávající oddíly"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:130
+#: src/components/storage/SearchedDeviceMenu.tsx:150
 msgid "It is chosen for booting and for some LVM groups"
 msgstr "Je vybrán pro spuštění systému a pro některé skupiny LVM"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:132
+#: src/components/storage/SearchedDeviceMenu.tsx:152
 msgid "It is chosen for some LVM groups"
 msgstr "Je vybráno pro některé skupiny LVM"
 
 #. TRANSLATORS: %s is the name of the LVM
-#: src/components/storage/SearchedDeviceMenu.tsx:137
+#: src/components/storage/SearchedDeviceMenu.tsx:157
 #, javascript-format
 msgid "It is chosen for booting and for the LVM group '%s'"
 msgstr "Je vybrán pro spuštění systému a pro LVM skupinu '%s'"
 
 #. TRANSLATORS: %s is the name of the LVM
-#: src/components/storage/SearchedDeviceMenu.tsx:143
+#: src/components/storage/SearchedDeviceMenu.tsx:163
 #, javascript-format
 msgid "It is chosen for the LVM group '%s'"
 msgstr "Je vybrán pro LVM skupinu '%s'"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:148
+#: src/components/storage/SearchedDeviceMenu.tsx:168
 msgid "It is chosen for booting"
 msgstr "Je vybrán pro spuštění systému"
 
 #. TRANSLATORS: %s is the name of the disk (eg. sda)
-#: src/components/storage/SearchedDeviceMenu.tsx:157
+#: src/components/storage/SearchedDeviceMenu.tsx:177
 #, javascript-format
 msgid ""
 "%s will still contain the configured LVM groups and any partition needed to "
@@ -3441,13 +3555,13 @@ msgstr ""
 "systému"
 
 #. TRANSLATORS: %s is the name of the disk (eg. sda)
-#: src/components/storage/SearchedDeviceMenu.tsx:163
+#: src/components/storage/SearchedDeviceMenu.tsx:183
 #, javascript-format
 msgid "The configured LVM groups will remain at %s"
 msgstr "Nakonfigurované LVM skupiny na %s zůstanou"
 
 #. TRANSLATORS: %1$s is the name of the disk (eg. sda) and %2$s the name of the LVM
-#: src/components/storage/SearchedDeviceMenu.tsx:169
+#: src/components/storage/SearchedDeviceMenu.tsx:189
 #, javascript-format
 msgid ""
 "%1$s will still contain the LVM group '%2$s' and any partition needed to boot"
@@ -3456,51 +3570,92 @@ msgstr ""
 "spuštění systému"
 
 #. TRANSLATORS: %1$s is the name of the LVM and %2$s the name of the disk (eg. sda)
-#: src/components/storage/SearchedDeviceMenu.tsx:177
+#: src/components/storage/SearchedDeviceMenu.tsx:197
 #, javascript-format
 msgid "The LVM group '%1$s' will remain at %2$s"
 msgstr "LVM skupina '%1$s' zůstane na %2$s"
 
 #. TRANSLATORS: %s is the name of the disk (eg. sda)
-#: src/components/storage/SearchedDeviceMenu.tsx:185
+#: src/components/storage/SearchedDeviceMenu.tsx:205
 #, javascript-format
 msgid "Partitions needed for booting will remain at %s"
 msgstr "Oddíly potřebné pro spuštění systému zůstanou na %s"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:189
+#: src/components/storage/SearchedDeviceMenu.tsx:209
+#: src/components/storage/SearchedVolumeGroupMenu.tsx:117
 msgid "Partitions needed for booting will also be adapted"
 msgstr "Oddíly potřebné pro spuštění systému se také přizpůsobí"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:211
+#: src/components/storage/SearchedDeviceMenu.tsx:262
 msgid "Change device menu"
 msgstr "Nabídka změny zařízení"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:265
+#: src/components/storage/SearchedDeviceMenu.tsx:295
 msgid "The disk is used for LVM and boot"
 msgstr "Tento disk se používá pro LVM a spuštění systému"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:267
+#: src/components/storage/SearchedDeviceMenu.tsx:297
 msgid "The disk is used for booting"
 msgstr "Tento disk se používá pro spuštění systému"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:271
+#: src/components/storage/SearchedDeviceMenu.tsx:301
 msgid "The disk is used for LVM"
 msgstr "Tento disk se používá pro LVM"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:273
+#: src/components/storage/SearchedDeviceMenu.tsx:303
 #, fuzzy
 msgid "Remove the configuration for this disk"
 msgstr "konfigurace snímků"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:285
+#: src/components/storage/SearchedDeviceMenu.tsx:315
+#: src/components/storage/SearchedVolumeGroupMenu.tsx:187
 #, fuzzy
 msgid "Do not use"
 msgstr "Nekonfigurujte"
 
-#: src/components/storage/SearchedDeviceMenu.tsx:344
+#: src/components/storage/SearchedDeviceMenu.tsx:360
 #, fuzzy, javascript-format
 msgid "Device %s menu"
 msgstr "Zařízení: %s"
+
+#: src/components/storage/SearchedDeviceMenu.tsx:383
+msgid "Volume groups cannot be formatted"
+msgstr ""
+
+#: src/components/storage/SearchedVolumeGroupMenu.tsx:75
+#, fuzzy
+msgid "Selected volume group cannot be changed"
+msgstr "Vyberte, co se má s jednotlivými oddíly dělat."
+
+#: src/components/storage/SearchedVolumeGroupMenu.tsx:113
+#, fuzzy
+msgid "This uses existing logical volumes at the volume group"
+msgstr "Nakonfigurovat logický LVM svazek na skupině svazků %s"
+
+#. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
+#. single mount point in the singular case).
+#: src/components/storage/SearchedVolumeGroupMenu.tsx:135
+#, fuzzy, javascript-format
+msgid "%s will be created as a partition"
+msgid_plural "%s will be created as partitions"
+msgstr[0] "%1$s kořenový oddíl (%2$s)"
+msgstr[1] "%1$s kořenový oddíl (%2$s)"
+msgstr[2] "%1$s kořenový oddíl (%2$s)"
+
+#: src/components/storage/SearchedVolumeGroupMenu.tsx:158
+#, fuzzy
+msgid "Change volume group menu"
+msgstr "Nová skupina svazků LVM"
+
+#: src/components/storage/SearchedVolumeGroupMenu.tsx:183
+#, fuzzy
+msgid "Remove the configuration for this volume group"
+msgstr "konfigurace snímků"
+
+#: src/components/storage/SearchedVolumeGroupMenu.tsx:252
+#, fuzzy, javascript-format
+msgid "Volume group %s menu"
+msgstr "Nová skupina svazků LVM"
 
 #: src/components/storage/SizeModeSelect.tsx:75
 #, javascript-format
@@ -3552,41 +3707,45 @@ msgstr "Nechat instalátor navrhnout vhodnout velikost"
 msgid "Define a custom size"
 msgstr "Nyní definujte uživatele"
 
-#: src/components/storage/SpaceActionsTable.tsx:76
+#: src/components/storage/SpaceActionsTable.tsx:73
 #, fuzzy
 msgid "The device will be used by the new system."
 msgstr "Vybrané zařízení bude formátováno jako souborový systém %s."
 
 #. TRANSLATORS: %s is a mount path like "/home".
-#: src/components/storage/SpaceActionsTable.tsx:79
+#: src/components/storage/SpaceActionsTable.tsx:76
 #, fuzzy, javascript-format
 msgid "The device will be mounted at %s."
 msgstr "Vybrané zařízení bude formátováno jako souborový systém %s."
 
-#: src/components/storage/SpaceActionsTable.tsx:85
+#: src/components/storage/SpaceActionsTable.tsx:82
 #, javascript-format
 msgid "Up to %s can be recovered by shrinking the device."
 msgstr "Zmenšením zařízení lze obnovit až %s."
 
-#: src/components/storage/SpaceActionsTable.tsx:94
+#: src/components/storage/SpaceActionsTable.tsx:91
 msgid "The device cannot be shrunk:"
 msgstr "Zařízení nelze zmenšit:"
 
-#: src/components/storage/SpaceActionsTable.tsx:115
+#: src/components/storage/SpaceActionsTable.tsx:112
 #, javascript-format
 msgid "Show information about %s"
 msgstr "Zobrazit informace o %s"
 
-#: src/components/storage/SpaceActionsTable.tsx:226
-#, fuzzy
-msgid "proposal.Device"
-msgstr "Návrh"
-
-#: src/components/storage/SpaceActionsTable.tsx:238
+#: src/components/storage/SpaceActionsTable.tsx:235
 msgid "Action"
 msgstr "Akce"
 
-#: src/components/storage/SpacePolicySelectionPage.tsx:107
+#: src/components/storage/SpacePolicySelectionPage.tsx:109
+#, fuzzy
+msgid ""
+"Select what to do with each logical volume in order to find space for "
+"allocating the new system."
+msgstr ""
+"Vybrat pro každý oddíl co dělat, aby se podařilo najít místo pro vyhrazení "
+"novému systému."
+
+#: src/components/storage/SpacePolicySelectionPage.tsx:114
 msgid ""
 "Select what to do with each partition in order to find space for allocating "
 "the new system."
@@ -3594,7 +3753,7 @@ msgstr ""
 "Vybrat pro každý oddíl co dělat, aby se podařilo najít místo pro vyhrazení "
 "novému systému."
 
-#: src/components/storage/SpacePolicySelectionPage.tsx:114
+#: src/components/storage/SpacePolicySelectionPage.tsx:122
 #, javascript-format
 msgid "Find space in %s"
 msgstr "Najít místo na %s"
@@ -3636,7 +3795,7 @@ msgstr "Naformátovat celé zařízení nebo připojit stávající systém soub
 
 #. TRANSLATORS: %1$s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case). %2$s is a disk name like sda.
-#: src/components/storage/VolumeGroupEditor.tsx:84
+#: src/components/storage/VolumeGroupEditor.tsx:89
 #, fuzzy, javascript-format
 msgid "%1$s will be created as a partition at %2$s"
 msgid_plural "%1$s will be created as partitions at %2$s"
@@ -3644,7 +3803,7 @@ msgstr[0] "%1$s kořenový oddíl (%2$s)"
 msgstr[1] "%1$s kořenový oddíl (%2$s)"
 msgstr[2] "%1$s kořenový oddíl (%2$s)"
 
-#: src/components/storage/VolumeGroupEditor.tsx:93
+#: src/components/storage/VolumeGroupEditor.tsx:98
 #, fuzzy
 msgid "The logical volume will also be deleted"
 msgid_plural "The logical volumes will also be deleted"
@@ -3652,52 +3811,72 @@ msgstr[0] "Obsah může být smazán"
 msgstr[1] "Obsah může být smazán"
 msgstr[2] "Obsah může být smazán"
 
-#: src/components/storage/VolumeGroupEditor.tsx:108
+#: src/components/storage/VolumeGroupEditor.tsx:113
 #, fuzzy
 msgid "Delete volume group"
 msgstr "Nová skupina svazků LVM"
 
-#: src/components/storage/VolumeGroupEditor.tsx:120
+#: src/components/storage/VolumeGroupEditor.tsx:125
 msgid "Modify settings and physical volumes"
 msgstr "Upravit nastavení a fyzické svazky"
 
-#: src/components/storage/VolumeGroupEditor.tsx:124
+#: src/components/storage/VolumeGroupEditor.tsx:129
 #, fuzzy
 msgid "Edit volume group"
 msgstr "Nová skupina svazků LVM"
 
 #. TRANSLATORS: ARIA (accesibility) description of an UI element. %s is a mount path.
-#: src/components/storage/VolumeGroupEditor.tsx:155
+#: src/components/storage/VolumeGroupEditor.tsx:161
 #, fuzzy, javascript-format
 msgid "Volume group %s"
 msgstr "Nová skupina svazků LVM"
 
-#: src/components/storage/VolumeGroupEditor.tsx:195
+#: src/components/storage/VolumeGroupEditor.tsx:208
+#, fuzzy, javascript-format
+msgid "Use LVM volume group %s"
+msgstr "Nová skupina svazků LVM"
+
+#: src/components/storage/VolumeGroupEditor.tsx:211
 #, fuzzy, javascript-format
 msgid "Create LVM volume group %s"
 msgstr "Nová skupina svazků LVM"
 
-#: src/components/storage/VolumeGroupEditor.tsx:196
+#: src/components/storage/VolumeGroupEditor.tsx:212
 #, fuzzy, javascript-format
 msgid "Empty LVM volume group %s"
 msgstr "Nová skupina svazků LVM"
 
-#: src/components/storage/VolumeGroupEditor.tsx:251
+#: src/components/storage/VolumeGroupEditor.tsx:296
 msgid "Add logical volume"
 msgstr "Přidat logický svazek"
 
-#: src/components/storage/VolumeGroupEditor.tsx:263
+#: src/components/storage/VolumeGroupEditor.tsx:296
+#, fuzzy
+msgid "Add or use logical volume"
+msgstr "Přidat logický svazek"
+
+#: src/components/storage/VolumeGroupEditor.tsx:309
 #, fuzzy, javascript-format
 msgid "Logical volumes for %s"
 msgstr "Logický svazek na systému LVM"
 
-#: src/components/storage/VolumeGroupEditor.tsx:281
+#: src/components/storage/VolumeGroupEditor.tsx:331
 #, fuzzy
 msgid "The following logical volume will be created"
 msgid_plural "The following logical volumes will be created"
 msgstr[0] "Nebyl vybrán žádný další software."
 msgstr[1] "Nebyl vybrán žádný další software."
 msgstr[2] "Nebyl vybrán žádný další software."
+
+#: src/components/storage/VolumeGroupsTable.tsx:84
+#, fuzzy
+msgid "Logical volumes"
+msgstr "logický svazek"
+
+#: src/components/storage/VolumeGroupsTable.tsx:88
+#, fuzzy
+msgid "Physical volumes"
+msgstr "logický svazek"
 
 #: src/components/storage/dasd/DASDFormatProgress.tsx:106
 #, fuzzy
@@ -4238,7 +4417,7 @@ msgstr ""
 msgid "XFS"
 msgstr ""
 
-#: src/components/storage/utils.ts:94
+#: src/components/storage/utils.ts:94 src/components/storage/utils.ts:113
 msgid "Delete current content"
 msgstr "Odstranit aktuální obsah"
 
@@ -4246,166 +4425,184 @@ msgstr "Odstranit aktuální obsah"
 msgid "Shrink existing partitions"
 msgstr "Zmenšit stávající oddíly"
 
-#: src/components/storage/utils.ts:102
+#: src/components/storage/utils.ts:102 src/components/storage/utils.ts:121
 msgid "Use available space"
 msgstr "Využít dostupný prostor"
+
+#: src/components/storage/utils.ts:117
+#, fuzzy
+msgid "Shrink existing logical volumes"
+msgstr "Zmenšit stávající oddíly"
 
 #. TRANSLATORS: sub-string used to represent a path like "/" or "/var". %s is replaced by the path
 #. itself, the rest of the string (quotation marks in the English case) is used to encapsulate the
 #. path in a bigger sentence like 'Create partitions for "/" and "/var"'.
-#: src/components/storage/utils.ts:332
+#: src/components/storage/utils.ts:351
 #, javascript-format
 msgid "\"%s\""
 msgstr ""
 
 #. TRANSLATORS: Size range, %1$s is the min size and %2$s is the max
-#: src/components/storage/utils.ts:343
+#: src/components/storage/utils.ts:362
 #, fuzzy, javascript-format
 msgid "%1$s - %2$s"
 msgstr "Přepnout na %1$s (%2$s)"
 
 #. TRANSLATORS: minimum device size, %s is replaced by size string, e.g. "17.5 GiB"
-#: src/components/storage/utils.ts:345
+#: src/components/storage/utils.ts:364
 #, javascript-format
 msgid "at least %s"
 msgstr "alespoň %s"
 
 #. TRANSLATORS: multipath device type
-#: src/components/storage/utils/device.tsx:31
+#: src/components/storage/utils/device.tsx:33
 msgid "Multipath"
 msgstr "Vícecestný"
 
 #. TRANSLATORS: %s is replaced by the device bus ID
-#: src/components/storage/utils/device.tsx:36
+#: src/components/storage/utils/device.tsx:38
 #, javascript-format
 msgid "DASD %s"
 msgstr "DASD %s"
 
-#: src/components/storage/utils/device.tsx:40
+#: src/components/storage/utils/device.tsx:42
 msgid "SD Card"
 msgstr "Karta SD"
 
 #. TRANSLATORS: %s is substituted by the type of disk like "iSCSI" or "SATA"
-#: src/components/storage/utils/device.tsx:46
+#: src/components/storage/utils/device.tsx:48
 #, javascript-format
 msgid "%s disk"
 msgstr "%s disk"
 
-#: src/components/storage/utils/device.tsx:47
+#: src/components/storage/utils/device.tsx:49
 msgid "Disk"
 msgstr "Disk"
 
 #. TRANSLATORS: software RAID device, %s is replaced by the RAID level, e.g. RAID-1
-#: src/components/storage/utils/device.tsx:59
+#: src/components/storage/utils/device.tsx:61
 #, javascript-format
 msgid "Software %s"
 msgstr "Software %s"
 
+#. TRANSLATORS: status message, no existing content was found on the disk,
+#. i.e. the disk is completely empty
+#: src/components/storage/utils/device.tsx:80
+#: src/components/storage/utils/device.tsx:110
+msgid "No content found"
+msgstr "Nebyl nalezen žádný obsah"
+
+#: src/components/storage/utils/device.tsx:83
+#, fuzzy, javascript-format
+msgid "Volume %s"
+msgstr "Nová skupina svazků LVM"
+
+#: src/components/storage/utils/device.tsx:85
+#, fuzzy, javascript-format
+msgid "Volumes %s"
+msgstr "Nová skupina svazků LVM"
+
 #. TRANSLATORS: disk partition info, %s is replaced by partition table
 #. type (MS-DOS or GPT), %d is the number of the partitions
-#: src/components/storage/utils/device.tsx:83
+#: src/components/storage/utils/device.tsx:103
 #, javascript-format
 msgid "%s with %d partitions"
 msgstr "%s s %d oddíly"
 
-#. TRANSLATORS: status message, no existing content was found on the disk,
-#. i.e. the disk is completely empty
-#: src/components/storage/utils/device.tsx:90
-msgid "No content found"
-msgstr "Nebyl nalezen žádný obsah"
-
-#: src/components/storage/utils/drive.tsx:46
+#: src/components/storage/utils/drive.tsx:42
 #, fuzzy
 msgid "A partition will be deleted"
 msgstr "%d oddíl bude zmenšen"
 
-#: src/components/storage/utils/drive.tsx:47
+#: src/components/storage/utils/drive.tsx:43
 msgid "At least one partition will be deleted"
 msgstr ""
 
-#: src/components/storage/utils/drive.tsx:48
+#: src/components/storage/utils/drive.tsx:44
 #, fuzzy
 msgid "Several partitions will be deleted"
 msgstr "%d oddíl bude zmenšen"
 
-#: src/components/storage/utils/drive.tsx:49
+#: src/components/storage/utils/drive.tsx:45
 #, fuzzy
 msgid "A partition may be deleted"
 msgstr "Obsah může být smazán"
 
-#: src/components/storage/utils/drive.tsx:51
+#: src/components/storage/utils/drive.tsx:47
 #, fuzzy
 msgid "Some partitions may be deleted"
 msgstr "Obsah může být smazán"
 
-#: src/components/storage/utils/drive.tsx:62
+#: src/components/storage/utils/drive.tsx:58
 #, fuzzy
 msgid "A partition may be shrunk"
 msgstr "%d oddíl bude zmenšen"
 
-#: src/components/storage/utils/drive.tsx:64
+#: src/components/storage/utils/drive.tsx:60
 #, fuzzy
 msgid "Some partitions may be shrunk"
 msgstr "%d oddíl bude zmenšen"
 
-#: src/components/storage/utils/drive.tsx:77
+#: src/components/storage/utils/drive.tsx:73
+#: src/components/storage/utils/volume-group.tsx:63
 #, fuzzy
 msgid "All content not configured to be mounted will be deleted"
 msgstr "Obsah může být smazán"
 
-#: src/components/storage/utils/drive.tsx:78
+#: src/components/storage/utils/drive.tsx:74
+#: src/components/storage/utils/volume-group.tsx:64
 #, fuzzy
 msgid "All content will be deleted"
 msgstr "Obsah může být smazán"
 
-#: src/components/storage/utils/drive.tsx:81
+#: src/components/storage/utils/drive.tsx:77
 #, fuzzy
 msgid "Reused partitions will not be shrunk"
 msgstr "%d oddíl bude zmenšen"
 
-#: src/components/storage/utils/drive.tsx:82
+#: src/components/storage/utils/drive.tsx:78
 #, fuzzy
 msgid "Some existing partitions may be shrunk"
 msgstr "Zmenšit stávající oddíly"
 
-#: src/components/storage/utils/drive.tsx:84
-#: src/components/storage/utils/drive.tsx:119
+#: src/components/storage/utils/drive.tsx:80
+#: src/components/storage/utils/drive.tsx:115
 #, fuzzy
 msgid "Current partitions will be kept"
 msgstr "%d oddíl bude zmenšen"
 
-#: src/components/storage/utils/drive.tsx:137
+#: src/components/storage/utils/drive.tsx:133
 #, fuzzy
 msgid ""
 "Partitions that are not reused will be removed and that data will be lost."
 msgstr ""
 "Všechny oddíly budou odstraněny a veškerá data na discích budou ztracena."
 
-#: src/components/storage/utils/drive.tsx:138
+#: src/components/storage/utils/drive.tsx:134
 #, fuzzy
 msgid ""
 "Any existing partition will be removed and all data in the disk will be lost."
 msgstr ""
 "Všechny oddíly budou odstraněny a veškerá data na discích budou ztracena."
 
-#: src/components/storage/utils/drive.tsx:142
+#: src/components/storage/utils/drive.tsx:138
 #, fuzzy
 msgid "Partitions that are not reused will be resized as needed."
 msgstr ""
 "Data zůstanou zachována, ale velikost aktuálních oddílů se podle potřeby "
 "změní."
 
-#: src/components/storage/utils/drive.tsx:144
+#: src/components/storage/utils/drive.tsx:140
 msgid "Partitions that are not reused would be resized if needed."
 msgstr ""
 
-#: src/components/storage/utils/drive.tsx:146
+#: src/components/storage/utils/drive.tsx:142
 msgid "The data is kept, but the current partitions will be resized as needed."
 msgstr ""
 "Data zůstanou zachována, ale velikost aktuálních oddílů se podle potřeby "
 "změní."
 
-#: src/components/storage/utils/drive.tsx:150
+#: src/components/storage/utils/drive.tsx:146
 #, fuzzy
 msgid ""
 "Only reused partitions and space not assigned to any partition will be used."
@@ -4413,38 +4610,38 @@ msgstr ""
 "Data jsou uchována. Využije se pouze prostor, který není přiřazen žádnému "
 "oddílu."
 
-#: src/components/storage/utils/drive.tsx:152
+#: src/components/storage/utils/drive.tsx:148
 #, fuzzy
 msgid "Only reused partitions will be used."
 msgstr "%d oddíl bude zmenšen"
 
-#: src/components/storage/utils/drive.tsx:154
+#: src/components/storage/utils/drive.tsx:150
 msgid ""
 "The data is kept. Only the space not assigned to any partition will be used."
 msgstr ""
 "Data jsou uchována. Využije se pouze prostor, který není přiřazen žádnému "
 "oddílu."
 
-#: src/components/storage/utils/drive.tsx:156
+#: src/components/storage/utils/drive.tsx:152
 msgid "Select what to do with each partition."
 msgstr "Vyberte, co se má s jednotlivými oddíly dělat."
 
-#: src/components/storage/utils/drive.tsx:166
+#: src/components/storage/utils/drive.tsx:162
 #, fuzzy, javascript-format
 msgid "The whole device will be used for %s"
 msgstr "Vybrané zařízení bude formátováno jako souborový systém %s."
 
-#: src/components/storage/utils/drive.tsx:170
+#: src/components/storage/utils/drive.tsx:166
 #, fuzzy
 msgid "A file system will be used for the whole device"
 msgstr "Souborový systém je přidělen na zařízení %s."
 
-#: src/components/storage/utils/drive.tsx:175
+#: src/components/storage/utils/drive.tsx:171
 #, fuzzy
 msgid "No additional partitions will be created"
 msgstr "Nebyl vybrán žádný další software."
 
-#: src/components/storage/utils/drive.tsx:183
+#: src/components/storage/utils/drive.tsx:179
 #, fuzzy, javascript-format
 msgid "An existing partition will be used for %s"
 msgid_plural "Existing partitions will be used for %s"
@@ -4452,7 +4649,7 @@ msgstr[0] "%d oddíl bude zmenšen"
 msgstr[1] "%d oddíl bude zmenšen"
 msgstr[2] "%d oddíl bude zmenšen"
 
-#: src/components/storage/utils/drive.tsx:197
+#: src/components/storage/utils/drive.tsx:193
 #, fuzzy, javascript-format
 msgid "A new partition will be created for %s"
 msgid_plural "New partitions will be created for %s"
@@ -4462,35 +4659,167 @@ msgstr[2] "%d oddíl bude zmenšen"
 
 #. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case).
-#: src/components/storage/utils/drive.tsx:208
+#: src/components/storage/utils/drive.tsx:204
 #, javascript-format
 msgid "Partitions will be used and created for %s"
 msgstr ""
 
 #. TRANSLATORS: %1$s is a filesystem type (eg. Btrfs), %2$s is a device name (eg. /dev/sda3).
-#: src/components/storage/utils/partition.tsx:66
+#: src/components/storage/utils/partition.tsx:55
 #, fuzzy, javascript-format
 msgid "Current %1$s at %2$s"
 msgstr "Připojit %1$s at %2$s (%3$s)"
 
 #. TRANSLATORS: %1$s is a filesystem type (eg. Btrfs), %2$s is a device name (eg. /dev/sda3).
-#: src/components/storage/utils/partition.tsx:73
+#: src/components/storage/utils/partition.tsx:60
 #, fuzzy, javascript-format
 msgid "%1$s at %2$s"
 msgstr "%1$s kořen na %2$s (%3$s)"
 
-#: src/components/storage/utils/volume-group.tsx:29
+#: src/components/storage/utils/volume-group.tsx:35
 #, fuzzy
-msgid "No logical volumes are defined yet"
-msgstr "Zatím není definován žádný uživatel."
+msgid "A logical volume will be deleted"
+msgstr "Obsah může být smazán"
 
 #: src/components/storage/utils/volume-group.tsx:36
+#, fuzzy
+msgid "At least one logical volume will be deleted"
+msgstr "Obsah může být smazán"
+
+#: src/components/storage/utils/volume-group.tsx:37
+#, fuzzy
+msgid "Several logical volumes will be deleted"
+msgstr "Obsah může být smazán"
+
+#: src/components/storage/utils/volume-group.tsx:38
+#, fuzzy
+msgid "A logical volume may be deleted"
+msgstr "Obsah může být smazán"
+
+#: src/components/storage/utils/volume-group.tsx:40
+#, fuzzy
+msgid "Some logical volumes may be deleted"
+msgstr "Obsah může být smazán"
+
+#: src/components/storage/utils/volume-group.tsx:51
+#, fuzzy
+msgid "A logical volume may be shrunk"
+msgstr "Formátovat logický svazek jako"
+
+#: src/components/storage/utils/volume-group.tsx:53
+#, fuzzy
+msgid "Some logical volumes may be shrunk"
+msgstr "%d oddíl bude zmenšen"
+
+#: src/components/storage/utils/volume-group.tsx:67
+#, fuzzy
+msgid "Reused logical volumes will not be shrunk"
+msgstr "%d oddíl bude zmenšen"
+
+#: src/components/storage/utils/volume-group.tsx:68
+#, fuzzy
+msgid "Some existing logical volumes may be shrunk"
+msgstr "Zmenšit stávající oddíly"
+
+#: src/components/storage/utils/volume-group.tsx:70
+#: src/components/storage/utils/volume-group.tsx:105
+#, fuzzy
+msgid "Current logical volumes will be kept"
+msgstr "Obsah může být smazán"
+
+#: src/components/storage/utils/volume-group.tsx:120
+#, fuzzy
+msgid ""
+"Logical volumes that are not reused will be removed and that data will be "
+"lost."
+msgstr ""
+"Všechny oddíly budou odstraněny a veškerá data na discích budou ztracena."
+
+#: src/components/storage/utils/volume-group.tsx:122
+#, fuzzy
+msgid ""
+"Any existing logical volume will be removed and all data in the volume group "
+"will be lost."
+msgstr ""
+"Všechny oddíly budou odstraněny a veškerá data na discích budou ztracena."
+
+#: src/components/storage/utils/volume-group.tsx:127
+#, fuzzy
+msgid "Logical volumes that are not reused will be resized as needed."
+msgstr ""
+"Data zůstanou zachována, ale velikost aktuálních oddílů se podle potřeby "
+"změní."
+
+#: src/components/storage/utils/volume-group.tsx:129
+#, fuzzy
+msgid "Logical volumes that are not reused would be resized if needed."
+msgstr ""
+"Data zůstanou zachována, ale velikost aktuálních oddílů se podle potřeby "
+"změní."
+
+#: src/components/storage/utils/volume-group.tsx:131
+#, fuzzy
+msgid ""
+"The data is kept, but the current logical volumes will be resized as needed."
+msgstr ""
+"Data zůstanou zachována, ale velikost aktuálních oddílů se podle potřeby "
+"změní."
+
+#: src/components/storage/utils/volume-group.tsx:136
+#, fuzzy
+msgid ""
+"Only reused logical volumes and space not assigned to any logical volume "
+"will be used."
+msgstr ""
+"Data jsou uchována. Využije se pouze prostor, který není přiřazen žádnému "
+"oddílu."
+
+#: src/components/storage/utils/volume-group.tsx:139
+#, fuzzy
+msgid "Only reused logical volumes will be used."
+msgstr "%d oddíl bude zmenšen"
+
+#: src/components/storage/utils/volume-group.tsx:141
+#, fuzzy
+msgid ""
+"The data is kept. Only the space not assigned to any logical volume will be "
+"used."
+msgstr ""
+"Data jsou uchována. Využije se pouze prostor, který není přiřazen žádnému "
+"oddílu."
+
+#: src/components/storage/utils/volume-group.tsx:143
+#, fuzzy
+msgid "Select what to do with each logical volume."
+msgstr "Vyberte, co se má s jednotlivými oddíly dělat."
+
+#: src/components/storage/utils/volume-group.tsx:153
+#, fuzzy
+msgid "No additional logical volumes will be created"
+msgstr "Nebyl vybrán žádný další software."
+
+#: src/components/storage/utils/volume-group.tsx:161
 #, fuzzy, javascript-format
-msgid "A new volume will be created for %s"
-msgid_plural "New volumes will be created for %s"
+msgid "An existing logical volume will be used for %s"
+msgid_plural "Existing logical volumes will be used for %s"
+msgstr[0] "%d oddíl bude zmenšen"
+msgstr[1] "%d oddíl bude zmenšen"
+msgstr[2] "%d oddíl bude zmenšen"
+
+#: src/components/storage/utils/volume-group.tsx:175
+#, fuzzy, javascript-format
+msgid "A new logical volume will be created for %s"
+msgid_plural "New logical volumes will be created for %s"
 msgstr[0] "Vybrané zařízení bude formátováno jako souborový systém %s."
 msgstr[1] "Vybrané zařízení bude formátováno jako souborový systém %s."
 msgstr[2] "Vybrané zařízení bude formátováno jako souborový systém %s."
+
+#. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
+#. single mount point in the singular case).
+#: src/components/storage/utils/volume-group.tsx:188
+#, fuzzy, javascript-format
+msgid "Logical volumes will be used and created for %s"
+msgstr "Vybrané zařízení bude formátováno jako souborový systém %s."
 
 #: src/components/storage/zfcp/ZFCPControllersPage.tsx:50
 #, fuzzy
@@ -4803,6 +5132,38 @@ msgstr "Veřejný klíč SSH pro roota"
 msgid "ZFCP"
 msgstr "ZFCP"
 
+#~ msgid "Select another device to define partitions or to mount"
+#~ msgstr "Vyberte další zařízení pro definování oddílů nebo pro připojení"
+
+#~ msgid "Select another disk to define partitions or to mount"
+#~ msgstr "Vyberte další disk pro definování oddílů nebo pro připojení"
+
+#~ msgid ""
+#~ "The maximum must be a number optionally followed by a unit like GiB or GB"
+#~ msgstr ""
+#~ "Maximum musí být nějaké číslo, které může následovat jednotka jako GiB "
+#~ "nebo GB"
+
+#~ msgid ""
+#~ "The minimum must be a number optionally followed by a unit like GiB or GB"
+#~ msgstr ""
+#~ "Minimum musí být nějaké číslo, které může následovat jednotka jako GiB "
+#~ "nebo GB"
+
+#~ msgid ""
+#~ "Size limits must be numbers optionally followed by a unit like GiB or GB"
+#~ msgstr ""
+#~ "Limity velikosti musí být nějaká čísla, která mohou být následována "
+#~ "jednotkou jako GiB nebo GB"
+
+#, fuzzy
+#~ msgid "proposal.Device"
+#~ msgstr "Návrh"
+
+#, fuzzy
+#~ msgid "No logical volumes are defined yet"
+#~ msgstr "Zatím není definován žádný uživatel."
+
 #~ msgid "Applying changes"
 #~ msgstr "Aplikování změn"
 
@@ -4872,9 +5233,6 @@ msgstr "ZFCP"
 
 #~ msgid "Please, try to activate a zFCP disk."
 #~ msgstr "Zkuste aktivovat disk zFCP."
-
-#~ msgid "No zFCP disks found."
-#~ msgstr "Nebyly nalezeny žádné disky zFCP."
 
 #~ msgid "Activate zFCP disk"
 #~ msgstr "Aktivovat disk zFCP"
@@ -5113,10 +5471,6 @@ msgstr "ZFCP"
 
 #~ msgid "Device Selection"
 #~ msgstr "Výběr zařízení"
-
-#, javascript-format
-#~ msgid "Configure LVM logical volume at %s volume group"
-#~ msgstr "Nakonfigurovat logický LVM svazek na skupině svazků %s"
 
 #, fuzzy
 #~ msgid "View details"
@@ -5361,10 +5715,6 @@ msgstr "ZFCP"
 #~ msgid "Connect to hidden network"
 #~ msgstr "Připojit ke skryté síti"
 
-#, fuzzy
-#~ msgid "New LVM volume group"
-#~ msgstr "Nová skupina svazků LVM"
-
 #~ msgid "Edit iSCSI Initiator"
 #~ msgstr "Upravit iniciátor iSCSI"
 
@@ -5482,9 +5832,6 @@ msgstr "ZFCP"
 #~ "svazky nové skupiny svazků LVM]. Odpovídající fyzické svazky budou na "
 #~ "vyžádání vytvořeny jako nové oddíly na vybraných zařízeních."
 
-#~ msgid "Select installation device"
-#~ msgstr "Výběr instalačního zařízení"
-
 #~ msgid "Install new system on"
 #~ msgstr "Instalace nového systému na"
 
@@ -5502,10 +5849,6 @@ msgstr "ZFCP"
 
 #~ msgid "storage techs"
 #~ msgstr "technologie úložiště"
-
-#, c-format
-#~ msgid "Members: %s"
-#~ msgstr "Členové: %s"
 
 #, c-format
 #~ msgid "Wires: %s"
