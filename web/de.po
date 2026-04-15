@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-14 16:06+0000\n"
-"PO-Revision-Date: 2026-04-15 07:04+0000\n"
+"PO-Revision-Date: 2026-04-15 15:04+0000\n"
 "Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
 "Language-Team: German <https://l10n.opensuse.org/projects/agama/agama-web/"
 "de/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.16.2\n"
+"X-Generator: Weblate 5.17\n"
 
 #: src/components/core/Breadcrumbs.tsx:130
 msgid "Breadcrumbs"
@@ -554,7 +554,7 @@ msgstr "%s existiert bereits, übersprungen."
 #: src/components/form/ArrayField.tsx:431
 #, javascript-format
 msgid "%s added but is invalid: %s. Select to edit."
-msgstr ""
+msgstr "%s hinzugefügt, ist jedoch ungültig: %s. Zum Bearbeiten auswählen."
 
 #. TRANSLATORS: screen reader announcement when an entry is added. %s
 #. is the entry value.
@@ -575,7 +575,7 @@ msgstr "%s entfernt."
 #: src/components/form/ArrayField.tsx:459
 #, javascript-format
 msgid "%s moved to input for editing."
-msgstr ""
+msgstr "%s wurde zur Bearbeitung in das Eingabefeld verschoben."
 
 #. TRANSLATORS: screen reader announcement when all invalid entries are
 #. cleared. %d is the number of removed entries.
@@ -596,10 +596,16 @@ msgid ""
 "Enter or Tab to add; arrow keys to navigate entries, Ctrl+arrows to reorder, "
 "Escape to exit; Backspace or Delete to remove."
 msgstr ""
+"Zum Hinzufügen die Eingabetaste oder die Tabulatortaste drücken; mit den "
+"Pfeiltasten durch die Einträge navigieren, mit Strg+Pfeiltasten die "
+"Reihenfolge ändern, mit Esc das Fenster schließen; mit Rücktaste oder Entf "
+"löschen."
 
 #: src/components/form/ArrayField.tsx:659
 msgid "Select entries to edit or remove them. Or [remove all invalid entries.]"
 msgstr ""
+"Wählen Sie die Einträge aus, die Sie bearbeiten oder löschen möchten. Oder "
+"[alle ungültigen Einträge löschen.]"
 
 #: src/components/l10n/KeyboardSelection.tsx:46
 msgid "Filter by description or keymap code"
@@ -703,7 +709,7 @@ msgstr "Nach Namen ausgewählt"
 #. "device name" refers to the interface name (e.g. eth0).
 #: src/components/network/BindingModeSelector.tsx:43
 msgid "Identify the connection device by its name in the system"
-msgstr ""
+msgstr "Das Verbindungsgerät anhand seines Namens im System identifizieren"
 
 #. TRANSLATORS: option label for binding by MAC address
 #: src/components/network/BindingModeSelector.tsx:48
@@ -715,6 +721,7 @@ msgstr "Nach MAC ausgewählt"
 #: src/components/network/BindingModeSelector.tsx:51
 msgid "Identify the connection device by its physical address"
 msgstr ""
+"Das Verbindungsgerät anhand seiner physikalischen Adresse identifizieren"
 
 #. TRANSLATORS: table header for a DASD devices table
 #. TRANSLATORS: table header for a zFCP devices table.
@@ -917,11 +924,11 @@ msgstr "Neue Verbindung"
 
 #: src/components/network/ConnectionsTable.tsx:143
 msgid "(bound by name)"
-msgstr ""
+msgstr "(namensgebunden)"
 
 #: src/components/network/ConnectionsTable.tsx:144
 msgid "(bound by MAC)"
-msgstr ""
+msgstr "(MAC-gebunden)"
 
 #. TRANSLATORS: table header for a DASD devices table
 #: src/components/network/ConnectionsTable.tsx:155
@@ -1075,9 +1082,8 @@ msgid "MAC address"
 msgstr "MAC-Adresse"
 
 #: src/components/network/DevicesSelector.tsx:68
-#, fuzzy
 msgid "None (unbound)"
-msgstr "Kein Inhalt gefunden"
+msgstr "Keine (ungebunden)"
 
 #. TRANSLATORS: this simply concatenates the two sentences that describe what is going to happen
 #. with partitions. The first %s corresponds to deleted partitions and the second one to resized
@@ -1154,7 +1160,7 @@ msgstr "Automatisch"
 #. TRANSLATORS: description for automatic IP configuration mode.
 #: src/components/network/IpSettings.tsx:52
 msgid "Address and gateway assigned from the network"
-msgstr ""
+msgstr "Vom Netzwerk zugewiesene Adresse und Gateway"
 
 #. TRANSLATORS: option label for advanced automatic IP configuration with static addresses.
 #: src/components/network/IpSettings.tsx:57
@@ -1164,7 +1170,7 @@ msgstr "Automatisch + manuell"
 #. TRANSLATORS: description for advanced automatic mode with static addresses.
 #: src/components/network/IpSettings.tsx:59
 msgid "Configuration from the network plus static addresses and gateway"
-msgstr ""
+msgstr "Konfiguration über das Netzwerk sowie statische Adressen und Gateway"
 
 #. TRANSLATORS: option label for manual IP configuration
 #. TRANSLATORS: Network summary title when using manual/static IP configuration
@@ -1179,7 +1185,7 @@ msgstr "Manuell"
 #. TRANSLATORS: description for manual IP configuration mode.
 #: src/components/network/IpSettings.tsx:66
 msgid "Static addresses and gateway"
-msgstr ""
+msgstr "Statische Adressen und Gateway"
 
 #. TRANSLATORS: label for the IPv4 or IPv6 settings dropdown.
 #: src/components/network/IpSettings.tsx:97
@@ -1212,11 +1218,15 @@ msgstr "IPv6-Gateway"
 #: src/components/network/IpSettings.tsx:137
 msgid "E.g., 192.168.1.1 or 192.168.1.1/24. Prefix auto-added if omitted."
 msgstr ""
+"Z. B. 192.168.1.1 oder 192.168.1.1/24. Das Präfix wird automatisch "
+"hinzugefügt, wenn es weggelassen wird."
 
 #. TRANSLATORS: helper text for IPv6 addresses field. Explains format and that prefix is auto-added.
 #: src/components/network/IpSettings.tsx:139
 msgid "E.g., 2001:db8::1 or 2001:db8::1/64. Prefix auto-added if omitted."
 msgstr ""
+"Z. B. 2001:db8::1 oder 2001:db8::1/64. Das Präfix wird automatisch "
+"hinzugefügt, wenn es weggelassen wird."
 
 #. TRANSLATORS: validation error for an invalid IP address entry.
 #: src/components/network/IpSettings.tsx:145
@@ -1637,10 +1647,13 @@ msgid "Product not found"
 msgstr "Produkt nicht gefunden"
 
 #: src/components/overview/OverviewPage.tsx:109
+#, fuzzy
 msgid ""
 "The product was not found in the repositories so it is not possible to "
 "proceed with the installation."
 msgstr ""
+"Das Produkt wurde in den Repositorien nicht gefunden, daher kann die "
+"Installation nicht fortgesetzt werden."
 
 #. TRANSLATORS: This hint helps users locate the install button. Text inside
 #. square brackets [] appears in bold. Keep brackets for proper formatting.
@@ -2693,21 +2706,18 @@ msgid "More devices"
 msgstr "Weitere Geräte"
 
 #: src/components/storage/ConfigureDeviceMenu.tsx:213
-#, fuzzy
 msgid "Choose a disk to define partitions or to mount"
 msgstr ""
 "Wählen Sie eine Festplatte aus, um Partitionen zu definieren oder einzuhängen"
 
 #: src/components/storage/ConfigureDeviceMenu.tsx:214
-#, fuzzy
 msgid "Choose a RAID device to define partitions or to mount"
 msgstr ""
-"Wählen Sie ein Gerät aus, um Partitionen zu definieren oder einzuhängen"
+"Wählen Sie ein RAID-Gerät aus, um Partitionen zu definieren oder einzuhängen"
 
 #: src/components/storage/ConfigureDeviceMenu.tsx:215
-#, fuzzy
 msgid "Choose a volume group to define logical volumes"
-msgstr "Die Volume-Gruppe und ihre logischen Volumes löschen"
+msgstr "Wählen Sie eine Volume-Gruppe aus, um logische Volumes zu definieren"
 
 #. TRANSLATORS: this is an ARIA (accesibility) description of an UI element
 #: src/components/storage/ConnectedDevicesMenu.tsx:49
@@ -2761,6 +2771,8 @@ msgstr "%s behalten"
 #: src/components/storage/DeviceSelectorModal.tsx:306
 msgid "Use the tabs to browse disks, RAID devices and LVM volume groups."
 msgstr ""
+"Verwenden Sie die Tabs, um Festplatten, RAID-Geräte und LVM-Volume-Gruppen "
+"zu durchsuchen."
 
 #: src/components/storage/DeviceSelectorModal.tsx:325
 #: src/components/storage/LvmPage.tsx:185
@@ -2772,9 +2784,8 @@ msgid "No disks found"
 msgstr "Keine Festplatten gefunden"
 
 #: src/components/storage/DeviceSelectorModal.tsx:328
-#, fuzzy
 msgid "No disks are available for selection."
-msgstr "Es sind keine Datenträger für die Installation verfügbar."
+msgstr "Es stehen keine Festplatten zur Auswahl."
 
 #: src/components/storage/DeviceSelectorModal.tsx:340
 msgid "RAID"
@@ -2786,7 +2797,7 @@ msgstr "Keine RAID-Geräte gefunden"
 
 #: src/components/storage/DeviceSelectorModal.tsx:345
 msgid "No software RAID devices are available for selection."
-msgstr ""
+msgstr "Es stehen keine Software-RAID-Geräte zur Auswahl."
 
 #: src/components/storage/DeviceSelectorModal.tsx:358
 #: src/components/storage/LvmPage.tsx:169
@@ -2799,8 +2810,9 @@ msgid "No LVM volume groups found"
 msgstr "Neue LVM-Volume-Gruppen gefunden"
 
 #: src/components/storage/DeviceSelectorModal.tsx:363
+#, fuzzy
 msgid "No LVM volume groups are available for selection."
-msgstr ""
+msgstr "Es stehen keine LVM-Volume-Gruppen zur Auswahl."
 
 #: src/components/storage/DeviceSelectorModal.tsx:396
 msgid "Select a device"
@@ -3220,9 +3232,9 @@ msgstr ""
 
 #. TRANSLATORS: %s is a disk name with its size (eg. "sda, 10 GiB"
 #: src/components/storage/LogicalVolumePage.tsx:516
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "As a new logical volume on %s"
-msgstr "Logische Volumes für %s"
+msgstr "Als neues logisches Volume auf %s"
 
 #: src/components/storage/LogicalVolumePage.tsx:518
 #, fuzzy, javascript-format
@@ -3235,14 +3247,12 @@ msgid "Mount point options"
 msgstr "Einhängepunktoptionen"
 
 #: src/components/storage/LogicalVolumePage.tsx:554
-#, fuzzy
 msgid "Using an existing logical volume"
-msgstr "Vorhandene Partition verwenden"
+msgstr "Verwendung eines vorhandenen logischen Volumes"
 
 #: src/components/storage/LogicalVolumePage.tsx:565
-#, fuzzy
 msgid "There are not usable logical volumes"
-msgstr "Es sind keine nutzbaren Partitionen vorhanden"
+msgstr "Es sind keine nutzbaren logischen Volumes vorhanden"
 
 #: src/components/storage/LogicalVolumePage.tsx:590
 #: src/components/storage/LogicalVolumePage.tsx:593
@@ -3250,14 +3260,12 @@ msgid "Logical volume name"
 msgstr "Name des logischen Volumes"
 
 #: src/components/storage/LogicalVolumePage.tsx:645
-#, fuzzy
 msgid "Default file system for generic logical volume"
 msgstr "Standard-Dateisystem für generische logische Volumes"
 
 #: src/components/storage/LogicalVolumePage.tsx:647
-#, fuzzy
 msgid "Destroy current data and format logical volume as"
-msgstr "Aktuelle Daten zerstören und Gerät formatieren als"
+msgstr "Aktuelle Daten löschen und logisches Volume formatieren als"
 
 #: src/components/storage/LogicalVolumePage.tsx:648
 msgid "Format logical volume as"
@@ -3268,9 +3276,9 @@ msgid "Configure logical volume"
 msgstr "Logisches Volume konfigurieren"
 
 #: src/components/storage/LogicalVolumePage.tsx:893
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "Configure logical volume at %s"
-msgstr "Logisches Volume konfigurieren"
+msgstr "Logisches Volume unter %s konfigurieren"
 
 #: src/components/storage/LogicalVolumePage.tsx:915
 #: src/components/storage/PartitionPage.tsx:852
@@ -3897,12 +3905,11 @@ msgstr "Menü von Gerät %s"
 
 #: src/components/storage/SearchedDeviceMenu.tsx:383
 msgid "Volume groups cannot be formatted"
-msgstr ""
+msgstr "Volume-Gruppen können nicht formatiert werden"
 
 #: src/components/storage/SearchedVolumeGroupMenu.tsx:75
-#, fuzzy
 msgid "Selected volume group cannot be changed"
-msgstr "Ausgewählte Festplatte kann nicht geändert werden"
+msgstr "Ausgewählte Volume-Gruppe kann nicht geändert werden"
 
 #: src/components/storage/SearchedVolumeGroupMenu.tsx:113
 #, fuzzy
@@ -3919,14 +3926,12 @@ msgstr[0] "%s wird als eine Partition erstellt"
 msgstr[1] "%s werden als Partitionen erstellt"
 
 #: src/components/storage/SearchedVolumeGroupMenu.tsx:158
-#, fuzzy
 msgid "Change volume group menu"
-msgstr "LVM-Volume-Gruppe %s erstellen"
+msgstr ""
 
 #: src/components/storage/SearchedVolumeGroupMenu.tsx:183
-#, fuzzy
 msgid "Remove the configuration for this volume group"
-msgstr "Konfiguration für diese Festplatte entfernen"
+msgstr "Konfiguration für diese Volume-Gruppe entfernen"
 
 #: src/components/storage/SearchedVolumeGroupMenu.tsx:252
 #, fuzzy, javascript-format
@@ -4015,13 +4020,12 @@ msgid "Action"
 msgstr "Aktion"
 
 #: src/components/storage/SpacePolicySelectionPage.tsx:109
-#, fuzzy
 msgid ""
 "Select what to do with each logical volume in order to find space for "
 "allocating the new system."
 msgstr ""
-"Wählen Sie aus, was mit jeder Partition geschehen soll, um Platz für das "
-"neue System zu finden."
+"Wählen Sie für jedes logische Volume aus, was geschehen soll, um "
+"Speicherplatz für das neue System zu schaffen."
 
 #: src/components/storage/SpacePolicySelectionPage.tsx:114
 msgid ""
@@ -4103,9 +4107,9 @@ msgid "Volume group %s"
 msgstr "Volume-Gruppe %s"
 
 #: src/components/storage/VolumeGroupEditor.tsx:208
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "Use LVM volume group %s"
-msgstr "LVM-Volume-Gruppe %s erstellen"
+msgstr "LVM-Volume-Gruppe %s verwenden"
 
 #: src/components/storage/VolumeGroupEditor.tsx:211
 #, javascript-format
@@ -4122,9 +4126,8 @@ msgid "Add logical volume"
 msgstr "Logisches Volume hinzufügen"
 
 #: src/components/storage/VolumeGroupEditor.tsx:296
-#, fuzzy
 msgid "Add or use logical volume"
-msgstr "Logisches Volume hinzufügen"
+msgstr "Logisches Volume hinzufügen oder verwenden"
 
 #: src/components/storage/VolumeGroupEditor.tsx:309
 #, javascript-format
@@ -4138,14 +4141,12 @@ msgstr[0] "Das folgende logische Volume wird erstellt"
 msgstr[1] "Die folgenden logischen Volumes werden erstellt"
 
 #: src/components/storage/VolumeGroupsTable.tsx:84
-#, fuzzy
 msgid "Logical volumes"
 msgstr "Logische Volumes"
 
 #: src/components/storage/VolumeGroupsTable.tsx:88
-#, fuzzy
 msgid "Physical volumes"
-msgstr "logisches Volume"
+msgstr "Physikalische Volumes"
 
 #: src/components/storage/dasd/DASDFormatProgress.tsx:106
 msgid "Formatting devices"
@@ -4665,9 +4666,8 @@ msgid "Use available space"
 msgstr "Verfügbaren Speicherplatz verwenden"
 
 #: src/components/storage/utils.ts:117
-#, fuzzy
 msgid "Shrink existing logical volumes"
-msgstr "Vorhandene Partitionen verkleinern"
+msgstr "Vorhandene logische Volumes verkleinern"
 
 #. TRANSLATORS: sub-string used to represent a path like "/" or "/var". %s is replaced by the path
 #. itself, the rest of the string (quotation marks in the English case) is used to encapsulate the
@@ -4728,12 +4728,12 @@ msgid "No content found"
 msgstr "Kein Inhalt gefunden"
 
 #: src/components/storage/utils/device.tsx:83
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "Volume %s"
 msgstr "Volume %s"
 
 #: src/components/storage/utils/device.tsx:85
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "Volumes %s"
 msgstr "Volumes %s"
 
@@ -4896,49 +4896,40 @@ msgid "%1$s at %2$s"
 msgstr "%1$s bei %2$s"
 
 #: src/components/storage/utils/volume-group.tsx:35
-#, fuzzy
 msgid "A logical volume will be deleted"
-msgstr "Das logische Volume wird ebenfalls gelöscht"
+msgstr "Ein logisches Volume wird gelöscht"
 
 #: src/components/storage/utils/volume-group.tsx:36
-#, fuzzy
 msgid "At least one logical volume will be deleted"
-msgstr "Das logische Volume wird ebenfalls gelöscht"
+msgstr "Mindestens ein logisches Volume wird gelöscht"
 
 #: src/components/storage/utils/volume-group.tsx:37
-#, fuzzy
 msgid "Several logical volumes will be deleted"
-msgstr "Das logische Volume wird ebenfalls gelöscht"
+msgstr "Mehrere logische Volumes werden gelöscht"
 
 #: src/components/storage/utils/volume-group.tsx:38
-#, fuzzy
 msgid "A logical volume may be deleted"
-msgstr "Das logische Volume wird ebenfalls gelöscht"
+msgstr "Ein logisches Volume wird möglicherweise gelöscht"
 
 #: src/components/storage/utils/volume-group.tsx:40
-#, fuzzy
 msgid "Some logical volumes may be deleted"
-msgstr "Das logische Volume wird ebenfalls gelöscht"
+msgstr "Einige logische Volumes werden möglicherweise gelöscht"
 
 #: src/components/storage/utils/volume-group.tsx:51
-#, fuzzy
 msgid "A logical volume may be shrunk"
-msgstr "Logisches Volume formatieren als"
+msgstr "Ein logisches Volume wird möglicherweise verkleinert"
 
 #: src/components/storage/utils/volume-group.tsx:53
-#, fuzzy
 msgid "Some logical volumes may be shrunk"
-msgstr "Einige Partitionen können verkleinert werden"
+msgstr "Einige logische Volumes werden möglicherweise verkleinert"
 
 #: src/components/storage/utils/volume-group.tsx:67
-#, fuzzy
 msgid "Reused logical volumes will not be shrunk"
-msgstr "Wiederverwendete Partitionen werden nicht verkleinert"
+msgstr "Wiederverwendete logische Volumes werden nicht verkleinert"
 
 #: src/components/storage/utils/volume-group.tsx:68
-#, fuzzy
 msgid "Some existing logical volumes may be shrunk"
-msgstr "Einige vorhandene Partitionen können verkleinert werden"
+msgstr "Einige vorhandene logische Volumes werden möglicherweise verkleinert"
 
 #: src/components/storage/utils/volume-group.tsx:70
 #: src/components/storage/utils/volume-group.tsx:105
