@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-20 09:45+0000\n"
-"PO-Revision-Date: 2026-04-13 20:04+0000\n"
+"PO-Revision-Date: 2026-04-22 21:04+0000\n"
 "Last-Translator: Eugene Krater <lachend@gmail.com>\n"
 "Language-Team: Ukrainian <https://l10n.opensuse.org/projects/agama/agama-"
 "service-master/uk/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.16.2\n"
+"X-Generator: Weblate 5.17\n"
 
 #. Reports the problems and decide whether to continue or not.
 #.
@@ -225,144 +225,144 @@ msgstr "Не знайдено обов'язковий елемент: %s"
 #. @param device [Y2Storage::BlkDevice] Parent of the member device.
 #. @return [Issue, nil]
 #: service/lib/agama/storage/config_checkers/search.rb:126
-#, fuzzy, perl-brace-format
+#, perl-brace-format
 msgid ""
 "The device '%{parent_name}' cannot be formatted because it is part of the "
 "reused MD RAID '%{reused_name}'"
 msgstr ""
-"Пристрій «%{member}» не може бути відформатований, оскільки він є частиною "
-"MD RAID %{md_raid}"
+"Пристрій '%{parent_name}' не може бути відформатований, оскільки він є "
+"частиною переробленого MD RAID '%{reused_name}'"
 
 #. TRANSLATORS: %{parent_name} and %{reused_name} are replaced by device names (e.g.,
 #. "/dev/vda", "/dev/md0").
 #: service/lib/agama/storage/config_checkers/search.rb:136
-#, fuzzy, perl-brace-format
+#, perl-brace-format
 msgid ""
 "The device '%{parent_name}' cannot be formatted because it is a physical "
 "volume of the reused LVM volume group '%{reused_name}'"
 msgstr ""
-"Пристрій «%{member}» не може бути відформатований, оскільки він є частиною "
-"MD RAID %{md_raid}"
+"Пристрій «%{parent_name}» неможливо відформатувати, оскільки це фізичний том "
+"групи томів LVM, що використовується повторно, «%{reused_name}»"
 
 #. Issue if the member device is deleted.
 #.
 #. @param member_config [#search]
 #. @return [Issue, nil]
 #: service/lib/agama/storage/config_checkers/search.rb:166
-#, fuzzy, perl-brace-format
+#, perl-brace-format
 msgid ""
 "The device '%{member_name}' cannot be deleted because it is part of the "
 "reused MD RAID '%{reused_name}'"
 msgstr ""
-"Пристрій «%{member}» не може бути видалений, оскільки він є частиною MD RAID "
-"%{md_raid}"
+"Пристрій «%{member_name}» не можна видалити, оскільки він входить до складу "
+"повторно використовуваного масиву MD RAID «%{reused_name}»"
 
 #. TRANSLATORS: %{member_name} and %{reused_name} are replaced by device names (e.g.,
 #. "/dev/vda", "/dev/md0").
 #: service/lib/agama/storage/config_checkers/search.rb:176
-#, fuzzy, perl-brace-format
+#, perl-brace-format
 msgid ""
 "The device '%{member_name}' cannot be deleted because it is a physical "
 "volume of the reused LVM volume group '%{reused_name}'"
 msgstr ""
-"Пристрій «%{member}» не може бути видалений, оскільки він є частиною MD RAID "
-"%{md_raid}"
+"Об'єкт «%{member_name}» не можна видалити, оскільки це фізичний том групи "
+"томів LVM, що повторно використовується, «%{reused_name}»"
 
 #. Issue if the device member is resized.
 #.
 #. @param member_config [#search]
 #. @return [Issue, nil]
 #: service/lib/agama/storage/config_checkers/search.rb:206
-#, fuzzy, perl-brace-format
+#, perl-brace-format
 msgid ""
 "The device '%{member_name}' cannot be resized because it is part of the "
 "reused MD RAID '%{reused_name}'"
 msgstr ""
-"Розмір пристрою «%{member}» не може бути змінений, тому що він є частиною MD "
-"RAID %{md_raid}"
+"Розмір пристрою «%{member_name}» не можна змінити, оскільки він є частиною "
+"повторно використовуваного масиву MD RAID «%{reused_name}»"
 
 #. TRANSLATORS: %{member_name} and %{reused_name} are replaced by device names (e.g.,
 #. "/dev/vda", "/dev/md0").
 #: service/lib/agama/storage/config_checkers/search.rb:216
-#, fuzzy, perl-brace-format
+#, perl-brace-format
 msgid ""
 "The device '%{member_name}' cannot be resized because it is a physical "
 "volume of the reused LVM volume group '%{reused_name}'"
 msgstr ""
-"Розмір пристрою «%{member}» не може бути змінений, тому що він є частиною MD "
-"RAID %{md_raid}"
+"Розмір пристрою «%{member_name}» не можна змінити, оскільки це фізичний том "
+"групи томів LVM, що повторно використовується, «%{reused_name}»"
 
 #. Issue if the device member is formatted.
 #.
 #. @param member_config [#search]
 #. @return [Issue, nil]
 #: service/lib/agama/storage/config_checkers/search.rb:246
-#, fuzzy, perl-brace-format
+#, perl-brace-format
 msgid ""
 "The device '%{member_name}' cannot be formatted because it is part of the "
 "reused MD RAID '%{reused_name}'"
 msgstr ""
-"Пристрій «%{member}» не може бути відформатований, оскільки він є частиною "
-"MD RAID %{md_raid}"
+"Об'єкт «%{member_name}» неможливо відформатувати, оскільки він є частиною "
+"повторно використаного масиву MD RAID «%{reused_name}»"
 
 #. TRANSLATORS: %{member_name} and %{reused_name} are replaced by device names (e.g.,
 #. "/dev/vda", "/dev/md0").
 #: service/lib/agama/storage/config_checkers/search.rb:256
-#, fuzzy, perl-brace-format
+#, perl-brace-format
 msgid ""
 "The device '%{member_name}' cannot be formatted because it is a physical "
 "volume of the reused LVM volume group '%{reused_name}'"
 msgstr ""
-"Пристрій «%{member}» не може бути відформатований, оскільки він є частиною "
-"MD RAID %{md_raid}"
+"Об'єкт «%{member_name}» неможливо відформатувати, оскільки це фізичний том "
+"групи томів LVM, що використовується повторно, «%{reused_name}»"
 
 #. Issue if the device member is partitioned.
 #.
 #. @param member_config [#search]
 #. @return [Issue, nil]
 #: service/lib/agama/storage/config_checkers/search.rb:286
-#, fuzzy, perl-brace-format
+#, perl-brace-format
 msgid ""
 "The device '%{member_name}' cannot be partitioned because it is part of the "
 "reused MD RAID '%{reused_name}'"
 msgstr ""
-"Пристрій «%{member}» не може бути розбитий на розділи, тому що він є "
-"частиною MD RAID %{md_raid}"
+"Пристрій «%{member_name}» не можна розділити на розділи, оскільки він "
+"входить до складу повторно використовуваного масиву MD RAID «%{reused_name}»"
 
 #. TRANSLATORS: %{member_name} and %{reused_name} are replaced by device names (e.g.,
 #. "/dev/vda", "/dev/md0").
 #: service/lib/agama/storage/config_checkers/search.rb:296
-#, fuzzy, perl-brace-format
+#, perl-brace-format
 msgid ""
 "The device '%{member_name}' cannot be partitioned because it is a physical "
 "volume of the reused LVM volume group '%{reused_name}'"
 msgstr ""
-"Пристрій «%{member}» не може бути розбитий на розділи, тому що він є "
-"частиною MD RAID %{md_raid}"
+"Пристрій «%{member_name}» не можна розділити на розділи, оскільки це "
+"фізичний том групи томів LVM, що повторно використовується, «%{reused_name}»"
 
 #. Issue if the device member is used by other device (e.g., as target for physical volumes).
 #.
 #. @param member_config [#search]
 #. @return [Issue, nil]
 #: service/lib/agama/storage/config_checkers/search.rb:325
-#, fuzzy, perl-brace-format
+#, perl-brace-format
 msgid ""
 "The device '%{member_name}' cannot be used because it is part of the reused "
 "MD RAID '%{reused_name}'"
 msgstr ""
-"Пристрій «%{member}» не може бути використаний, оскільки він є частиною MD "
-"RAID %{md_raid}"
+"Об'єкт «%{member_name}» не можна використовувати, оскільки він є частиною "
+"повторно використовуваного масиву MD RAID «%{reused_name}»"
 
 #. TRANSLATORS: %{member_name} and %{reused_name} are replaced by device names (e.g.,
 #. "/dev/vda", "/dev/md0").
 #: service/lib/agama/storage/config_checkers/search.rb:335
-#, fuzzy, perl-brace-format
+#, perl-brace-format
 msgid ""
 "The device '%{member_name}' cannot be used because it is a physical volume "
 "of the reused LVM volume group '%{reused_name}'"
 msgstr ""
-"Пристрій «%{member}» не може бути використаний, оскільки він є частиною MD "
-"RAID %{md_raid}"
+"Пристрій «%{member_name}» не можна використовувати, оскільки це фізичний том "
+"групи томів LVM, що повторно використовується, «%{reused_name}»"
 
 #. @return [String]
 #: service/lib/agama/storage/config_checkers/search.rb:383
