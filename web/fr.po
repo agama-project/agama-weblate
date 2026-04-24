@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-14 16:06+0000\n"
+"POT-Creation-Date: 2026-04-24 14:37+0000\n"
 "PO-Revision-Date: 2026-03-28 07:04+0000\n"
 "Last-Translator: David D <dadu042@mailo.com>\n"
 "Language-Team: French <https://l10n.opensuse.org/projects/agama/agama-web/fr/"
@@ -404,9 +404,9 @@ msgid "Step %1$d of %2$d"
 msgstr "%d sur %d"
 
 #: src/components/core/ProgressStatusMonitor.tsx:40
-#: src/components/overview/SoftwareSummary.tsx:84
-#: src/components/software/SoftwarePage.tsx:196
-#: src/components/software/SoftwarePatternsSelection.tsx:204
+#: src/components/overview/SoftwareSummary.tsx:160
+#: src/components/software/SoftwarePage.tsx:361
+#: src/components/software/SoftwarePatternsSelection.tsx:363
 #: src/routes/software.tsx:33
 msgid "Software"
 msgstr "Logiciel"
@@ -637,7 +637,6 @@ msgstr "Aucune des combinaisons de touches ne correspond au filtre."
 #: src/components/l10n/LocaleSelection.tsx:92
 #: src/components/l10n/TimezoneSelection.tsx:140
 #: src/components/product/ProductSelectionPage.tsx:290
-#: src/components/software/SoftwarePatternsSelection.tsx:185
 msgid "Select"
 msgstr "Sélectionner"
 
@@ -1665,39 +1664,35 @@ msgid "Auto"
 msgstr "Auto"
 
 #. TRANSLATORS: Confirmation dialog title. %s is replaced with the product name (e.g., "openSUSE Leap")
-#: src/components/overview/OverviewPage.tsx:74
+#: src/components/overview/OverviewPage.tsx:79
 #, javascript-format
 msgid "Delete existing data and install %s?"
 msgstr "Supprimer données existantes et installer %s ?"
 
-#: src/components/overview/OverviewPage.tsx:74
+#: src/components/overview/OverviewPage.tsx:79
 #, fuzzy, javascript-format
 msgid "Install %s?"
 msgstr "Installer"
 
-#. TRANSLATORS: Warning shown when installation will delete existing data
-#: src/components/overview/OverviewPage.tsx:84
+#. TRANSLATORS: shown at the top of the install confirmation dialog.
+#: src/components/overview/OverviewPage.tsx:90
 #, fuzzy
-msgid "If unsure, cancel and review storage settings."
-msgstr "Paramètres de stockage non valides"
-
-#. TRANSLATORS: Information message confirming installation will proceed with current settings
-#: src/components/overview/OverviewPage.tsx:88
-msgid "By proceeding, the installation will begin with defined settings."
+msgid ""
+"Confirming starts the installation immediately with the defined settings."
 msgstr "En procédant, l’installation commencera avec les paramètres définis."
 
 #. TRANSLATORS: Button to confirm and start the installation
-#: src/components/overview/OverviewPage.tsx:93
+#: src/components/overview/OverviewPage.tsx:97
 #, fuzzy
 msgid "Confirm and install"
 msgstr "Confirmer l'installation"
 
-#: src/components/overview/OverviewPage.tsx:106
+#: src/components/overview/OverviewPage.tsx:110
 #, fuzzy
 msgid "Product not found"
 msgstr "Aucun contenu n'a été trouvé"
 
-#: src/components/overview/OverviewPage.tsx:109
+#: src/components/overview/OverviewPage.tsx:113
 msgid ""
 "The product was not found in the repositories so it is not possible to "
 "proceed with the installation."
@@ -1707,26 +1702,26 @@ msgstr ""
 
 #. TRANSLATORS: This hint helps users locate the install button. Text inside
 #. square brackets [] appears in bold. Keep brackets for proper formatting.
-#: src/components/overview/OverviewPage.tsx:129
+#: src/components/overview/OverviewPage.tsx:133
 msgid "When ready, click on the [install] button at the end of the page."
 msgstr ""
 "Lorsque vous êtes prêt(e), cliquez sur le bouton [installer] à la fin de la "
 "page."
 
-#: src/components/overview/OverviewPage.tsx:144
+#: src/components/overview/OverviewPage.tsx:148
 msgid "Install"
 msgstr "Installer"
 
-#: src/components/overview/OverviewPage.tsx:145
+#: src/components/overview/OverviewPage.tsx:149
 msgid "Install now with potential data loss"
 msgstr "Installer maintenant avec perte de données potentielle"
 
-#: src/components/overview/OverviewPage.tsx:146
+#: src/components/overview/OverviewPage.tsx:150
 #, fuzzy
 msgid "Install now"
 msgstr "Installer"
 
-#: src/components/overview/OverviewPage.tsx:170
+#: src/components/overview/OverviewPage.tsx:174
 msgid ""
 "Take a moment to review the installation settings below and adjust them as "
 "needed."
@@ -1734,11 +1729,11 @@ msgstr ""
 "Prenez un moment pour examiner les paramètres d’installation ci-dessous et "
 "les ajuster si nécessaire."
 
-#: src/components/overview/OverviewPage.tsx:205
+#: src/components/overview/OverviewPage.tsx:209
 msgid "Wait until current operations are completed."
 msgstr "Attendez que les opérations actuelles soient terminées."
 
-#: src/components/overview/OverviewPage.tsx:216
+#: src/components/overview/OverviewPage.tsx:220
 #, fuzzy
 msgid ""
 "You need to fix any invalid settings before proceeding with the installation."
@@ -1774,26 +1769,52 @@ msgstr "Pas encore sélectionnée"
 msgid "Registered"
 msgstr "Enregistrer"
 
-#: src/components/overview/SoftwareSummary.tsx:45
-msgid "Required packages"
-msgstr "Paquets requis"
+#. TRANSLATORS: count of patterns picked on top of the default selection.
+#. %d is a number.
+#: src/components/overview/SoftwareSummary.tsx:48
+#, fuzzy, javascript-format
+msgid "Using %d additional pattern"
+msgid_plural "Using %d additional patterns"
+msgstr[0] "Utiliser le disque %s pour les partitions supplémentaires"
+msgstr[1] "Utiliser le disque %s pour les partitions supplémentaires"
 
-#. TRANSLATORS: %s will be replaced with amount of selected patterns.
-#: src/components/overview/SoftwareSummary.tsx:50
+#. TRANSLATORS: alert title shown in the install confirmation dialog when no desktop is selected.
+#. TRANSLATORS: shown in the software summary when no desktop is selected.
+#: src/components/overview/SoftwareSummary.tsx:71
+#: src/components/software/NoDesktopAlert.tsx:43
+#, fuzzy
+msgid "No desktop selected"
+msgstr "sélectionné automatiquement"
+
+#: src/components/overview/SoftwareSummary.tsx:87
+#, fuzzy, javascript-format
+msgid "%d desktop selected"
+msgid_plural "%d desktops selected"
+msgstr[0] "sélectionné automatiquement"
+msgstr[1] "sélectionné automatiquement"
+
+#. TRANSLATORS: shown in the software summary when the user hasn't picked
+#. anything on top of the product's default selection.
+#: src/components/overview/SoftwareSummary.tsx:97
+#, fuzzy
+msgid "Default selection"
+msgstr "Sélection de la localité"
+
+#: src/components/overview/SoftwareSummary.tsx:132
 #, javascript-format
-msgid "Required packages and %s pattern"
-msgid_plural "Required packages and %s patterns"
+msgid "Includes %1$d additional pattern. Requires %2$s"
+msgid_plural "Includes %1$d additional patterns. Requires %2$s"
 msgstr[0] ""
 msgstr[1] ""
 
-#. TRANSLATORS: %s will be replaced with a human-readable installation size
-#. (e.g. 5.95 GiB).
-#: src/components/overview/SoftwareSummary.tsx:65
+#. TRANSLATORS: total installation size shown in the software summary.
+#. %s is a human-readable disk size (e.g. "5.95 GiB").
+#: src/components/overview/SoftwareSummary.tsx:143
 #, fuzzy, javascript-format
-msgid "Needs about %s"
-msgstr "En savoir plus"
+msgid "Requires %s"
+msgstr "Chemins: %s"
 
-#: src/components/overview/SoftwareSummary.tsx:87
+#: src/components/overview/SoftwareSummary.tsx:163
 #, fuzzy
 msgid "Invalid software selection"
 msgstr "Sélection de logiciels"
@@ -1933,7 +1954,6 @@ msgid "This license is not available in %s."
 msgstr "Cette licence n'est pas disponible dans %s."
 
 #: src/components/product/LicenseDialog.tsx:74
-#: src/components/software/SoftwarePatternsSelection.tsx:223
 msgid "Close"
 msgstr "Fermer"
 
@@ -2334,24 +2354,74 @@ msgstr ""
 "Si vous voulez désactiver cette vérification, veuillez spécifier "
 "\"inst.ay_check=0\" en ligne de commande des noyaux"
 
-#: src/components/software/SoftwarePage.tsx:62
-msgid "No additional software was selected."
-msgstr "Aucun logiciel supplémentaire n'a été sélectionné."
+#. TRANSLATORS: label shown for patterns automatically selected as dependencies
+#: src/components/software/AutoSelectedLabel.tsx:34
+msgid "auto selected"
+msgstr "sélectionné automatiquement"
 
-#: src/components/software/SoftwarePage.tsx:67
-msgid "The following software patterns are selected for installation:"
-msgstr "Les schémas logiciels suivants sont sélectionnés pour l'installation :"
+#. TRANSLATORS: explains the consequence of installing without a desktop.
+#: src/components/software/NoDesktopAlert.tsx:47
+msgid "The system will boot to a command-line interface."
+msgstr ""
 
-#: src/components/software/SoftwarePage.tsx:82
-#: src/components/software/SoftwarePage.tsx:94
-msgid "Selected patterns"
-msgstr "Modèles sélectionnés"
+#: src/components/software/NoDesktopAlert.tsx:54
+msgid ""
+"If that is not intended, cancel and select a desktop in the [software] "
+"settings."
+msgstr ""
 
-#: src/components/software/SoftwarePage.tsx:85
-msgid "Change selection"
-msgstr "Modifier la sélection"
+#. TRANSLATORS: empty state title for a software section with nothing selected
+#: src/components/software/SoftwarePage.tsx:71
+#, fuzzy
+msgid "None selected"
+msgstr "sélectionné automatiquement"
 
-#: src/components/software/SoftwarePage.tsx:97
+#: src/components/software/SoftwarePage.tsx:107
+#, fuzzy
+msgid "Read less"
+msgstr "lecture_seulement"
+
+#. TRANSLATORS: accessible label for the collapse button; %s is the pattern name
+#: src/components/software/SoftwarePage.tsx:109
+#, fuzzy, javascript-format
+msgid "Read less about %s"
+msgstr "En savoir plus"
+
+#: src/components/software/SoftwarePage.tsx:113
+#, fuzzy
+msgid "Read more"
+msgstr "lecture_seulement"
+
+#. TRANSLATORS: accessible label for the expand button; %s is the pattern name
+#: src/components/software/SoftwarePage.tsx:115
+#, fuzzy, javascript-format
+msgid "Read more about %s"
+msgstr "En savoir plus"
+
+#. TRANSLATORS: %s is the required disk space. Keep the [brackets]: they mark the value to be displayed in bold.
+#: src/components/software/SoftwarePage.tsx:185
+#, javascript-format
+msgid "Required space with current selection: [%s]"
+msgstr ""
+
+#. TRANSLATORS: %s is the required disk space. Keep the [brackets]: they mark the value to be displayed in bold.
+#: src/components/software/SoftwarePage.tsx:187
+#, fuzzy, javascript-format
+msgid "Required space: [%s]"
+msgstr "Paquets requis"
+
+#. TRANSLATORS: %1$d is selected count, %2$d is total available count
+#: src/components/software/SoftwarePage.tsx:235
+#: src/components/software/SoftwarePatternsSelection.tsx:147
+#, fuzzy, javascript-format
+msgid "%1$d of %2$d selected"
+msgstr "Aucune des langues ne correspond au filtre."
+
+#: src/components/software/SoftwarePage.tsx:258
+msgid "Patterns"
+msgstr ""
+
+#: src/components/software/SoftwarePage.tsx:262
 msgid ""
 "This product does not allow to select software patterns during installation. "
 "However, you can add additional software once the installation is finished."
@@ -2360,55 +2430,123 @@ msgstr ""
 "l'installation. Cependant, vous pouvez ajouter des logiciels supplémentaires "
 "une fois l'installation terminée."
 
-#. TRANSLATORS: error details followed by a "Try again" link
-#: src/components/software/SoftwarePage.tsx:105
-msgid ""
-"Some installation repositories could not be loaded. The system cannot be "
-"installed without them."
-msgstr ""
-"Certains dépôts d'installation n'ont pas pu être chargés. Le système ne peut "
-"pas être installé sans eux."
-
-#. TRANSLATORS: title for an error message box, at least one repository could not be loaded
-#: src/components/software/SoftwarePage.tsx:118
-msgid "Repository load failed"
-msgstr "Échec du chargement du dépôt"
-
-#. TRANSLATORS: progress message
-#: src/components/software/SoftwarePage.tsx:122
-msgid "Loading the installation repositories..."
-msgstr "Chargement des dépôts d'installation..."
-
-#. TRANSLATORS: link for retrying failed repository load
-#: src/components/software/SoftwarePage.tsx:129
-msgid "Try again"
-msgstr "Réessayer"
-
-#: src/components/software/SoftwarePage.tsx:143
+#. TRANSLATORS: shown while the software proposal is not yet available
+#: src/components/software/SoftwarePage.tsx:279
 #, fuzzy
 msgid "No information available yet"
 msgstr "Afficher les informations sur %s"
 
-#: src/components/software/SoftwarePage.tsx:181
-msgid "Used space"
-msgstr "Espace utilisé"
+#: src/components/software/SoftwarePage.tsx:302
+msgid "Desktops"
+msgstr ""
 
-#: src/components/software/SoftwarePatternsSelection.tsx:103
-msgid "None of the patterns match the filter."
+#. TRANSLATORS: description for the Desktops section
+#: src/components/software/SoftwarePage.tsx:305
+msgid "Graphical desktop environments for the system."
+msgstr ""
+
+#. TRANSLATORS: button to change the desktop selection
+#: src/components/software/SoftwarePage.tsx:309
+#, fuzzy
+msgid "Change desktop"
+msgid_plural "Change desktops"
+msgstr[0] "Changer de produit"
+msgstr[1] "Changer de produit"
+
+#. TRANSLATORS: hint shown when no desktop environment has been chosen
+#: src/components/software/SoftwarePage.tsx:319
+msgid "Select a desktop environment to get a graphical interface."
+msgstr ""
+
+#. TRANSLATORS: button to go to the desktop environment selection page
+#: src/components/software/SoftwarePage.tsx:321
+#, fuzzy
+msgid "Select a desktop"
+msgstr "Sélectionner un disque"
+
+#: src/components/software/SoftwarePage.tsx:328
+#, fuzzy
+msgid "Additional patterns"
+msgstr "Utiliser le RAID %s pour les partitions supplémentaires"
+
+#. TRANSLATORS: description for the Additional software section
+#: src/components/software/SoftwarePage.tsx:331
+msgid ""
+"Curated sets of packages for common use cases and features to extend the "
+"system."
+msgstr ""
+
+#. TRANSLATORS: button to change the additional software selection
+#: src/components/software/SoftwarePage.tsx:334
+#, fuzzy
+msgid "Change patterns"
+msgstr "Connecter à %s"
+
+#. TRANSLATORS: hint shown when no additional software patterns have been chosen
+#: src/components/software/SoftwarePage.tsx:343
+#, fuzzy
+msgid "Select one or more to extend the system."
+msgstr "Taille exacte du système de fichiers."
+
+#. TRANSLATORS: button to go to the pattern selection page
+#: src/components/software/SoftwarePage.tsx:345
+#, fuzzy
+msgid "Select patterns"
+msgstr "Modèles sélectionnés"
+
+#. TRANSLATORS: page title when selecting all software patterns
+#. TRANSLATORS: page title when selecting non-desktop software patterns
+#: src/components/software/SoftwarePatternsSelection.tsx:113
+#: src/components/software/SoftwarePatternsSelection.tsx:117
+#, fuzzy
+msgid "Patterns selection"
+msgstr "Sélection rangée"
+
+#. TRANSLATORS: page title when selecting desktop environments
+#: src/components/software/SoftwarePatternsSelection.tsx:115
+#, fuzzy
+msgid "Desktop selection"
+msgstr "Sélection rangée"
+
+#. TRANSLATORS: shown next to a category heading when the search filter excludes all its patterns
+#: src/components/software/SoftwarePatternsSelection.tsx:156
+#, fuzzy
+msgid "No patterns match the filter"
 msgstr "Aucun des schémas ne correspond au filtre."
 
-#: src/components/software/SoftwarePatternsSelection.tsx:181
-msgid "auto selected"
-msgstr "sélectionné automatiquement"
+#. TRANSLATORS: count of patterns matching the search filter in this category
+#: src/components/software/SoftwarePatternsSelection.tsx:158
+#, fuzzy, javascript-format
+msgid "%d matches the filter"
+msgid_plural "%d match the filter"
+msgstr[0] "Aucune des langues ne correspond au filtre."
+msgstr[1] "Aucune des langues ne correspond au filtre."
 
-#: src/components/software/SoftwarePatternsSelection.tsx:185
-msgid "Unselect"
-msgstr "Désélectionner"
+#: src/components/software/SoftwarePatternsSelection.tsx:344
+#, fuzzy, javascript-format
+msgid "%d pattern found"
+msgid_plural "%d patterns found"
+msgstr[0] "erreur %d trouvée"
+msgstr[1] "erreurs %d trouvées"
 
-#. TRANSLATORS: search field placeholder text
-#: src/components/software/SoftwarePatternsSelection.tsx:210
-#: src/components/software/SoftwarePatternsSelection.tsx:211
-msgid "Filter by pattern title or description"
+#. TRANSLATORS: search results badge on the filter input when no pattern matches
+#: src/components/software/SoftwarePatternsSelection.tsx:354
+#, fuzzy
+msgid "No patterns match"
+msgstr "Aucun des schémas ne correspond au filtre."
+
+#. TRANSLATORS: search results badge on the filter input.
+#. %1$d is matches found, %2$d is the total number of patterns.
+#: src/components/software/SoftwarePatternsSelection.tsx:357
+#, fuzzy, javascript-format
+msgid "%1$d of %2$d patterns"
+msgstr "Aucune des langues ne correspond au filtre."
+
+#. TRANSLATORS: placeholder for the search field on the patterns selection page
+#: src/components/software/SoftwarePatternsSelection.tsx:400
+#: src/components/software/SoftwarePatternsSelection.tsx:402
+#, fuzzy
+msgid "Filter by name and description"
 msgstr "Filtrer par titre ou description du modèle"
 
 #. TRANSLATORS: %s will be replaced by the estimated installation size,
@@ -3662,21 +3800,23 @@ msgstr "Partitions"
 msgid "Add or use partition"
 msgstr "Ajouter ou utiliser une partition"
 
-#: src/components/storage/PotentialDataLossAlert.tsx:32
-msgid "If you are unsure, check and adjust the storage settings."
-msgstr ""
-"Si vous n’êtes pas sûr(e), vérifiez et ajustez les paramètres de stockage."
-
 #. TRANSLATORS: %s will be replaced by a formatted list of affected
 #. systems like "Windows and openSUSE Tumbleweed".
-#: src/components/storage/PotentialDataLossAlert.tsx:43
+#: src/components/storage/PotentialDataLossAlert.tsx:52
 #, javascript-format
 msgid "Proceeding will delete existing data, including %s"
 msgstr "La procédure supprimera les données existantes, y compris %s"
 
-#: src/components/storage/PotentialDataLossAlert.tsx:47
+#: src/components/storage/PotentialDataLossAlert.tsx:56
 msgid "Proceeding may result in data loss"
 msgstr "Le processus pourrait entraîner une perte de données"
+
+#. TRANSLATORS: advice shown when destructive actions are pending.
+#. The text inside [] becomes a link that navigates to the storage section.
+#: src/components/storage/PotentialDataLossAlert.tsx:71
+#, fuzzy
+msgid "If unsure, cancel and review [storage] settings."
+msgstr "Paramètres de stockage non valides"
 
 #: src/components/storage/ProposalActions.tsx:66
 #, javascript-format
@@ -5499,6 +5639,42 @@ msgstr "Utiliser la clé publique SSH"
 msgid "ZFCP"
 msgstr "ZFCP"
 
+#~ msgid "No additional software was selected."
+#~ msgstr "Aucun logiciel supplémentaire n'a été sélectionné."
+
+#~ msgid "The following software patterns are selected for installation:"
+#~ msgstr ""
+#~ "Les schémas logiciels suivants sont sélectionnés pour l'installation :"
+
+#~ msgid "Change selection"
+#~ msgstr "Modifier la sélection"
+
+#~ msgid ""
+#~ "Some installation repositories could not be loaded. The system cannot be "
+#~ "installed without them."
+#~ msgstr ""
+#~ "Certains dépôts d'installation n'ont pas pu être chargés. Le système ne "
+#~ "peut pas être installé sans eux."
+
+#~ msgid "Repository load failed"
+#~ msgstr "Échec du chargement du dépôt"
+
+#~ msgid "Loading the installation repositories..."
+#~ msgstr "Chargement des dépôts d'installation..."
+
+#~ msgid "Try again"
+#~ msgstr "Réessayer"
+
+#~ msgid "Used space"
+#~ msgstr "Espace utilisé"
+
+#~ msgid "Unselect"
+#~ msgstr "Désélectionner"
+
+#~ msgid "If you are unsure, check and adjust the storage settings."
+#~ msgstr ""
+#~ "Si vous n’êtes pas sûr(e), vérifiez et ajustez les paramètres de stockage."
+
 #~ msgid "IP Address"
 #~ msgstr "Adresse IP"
 
@@ -5845,9 +6021,6 @@ msgstr "ZFCP"
 
 #~ msgid "Keyboard selection"
 #~ msgstr "Choix du clavier"
-
-#~ msgid "Locale selection"
-#~ msgstr "Sélection de la localité"
 
 #~ msgid " Timezone selection"
 #~ msgstr " Sélection du fuseau horaire"
@@ -6319,10 +6492,6 @@ msgstr "ZFCP"
 #~ msgid "storage techs"
 #~ msgstr "technologies de stockage"
 
-#, c-format
-#~ msgid "Wires: %s"
-#~ msgstr "Chemins: %s"
-
 #~ msgid "Manage and format"
 #~ msgstr "Gérer et formater"
 
@@ -6605,10 +6774,6 @@ msgstr "ZFCP"
 #~ msgstr "Sélectionner une valeur"
 
 #, fuzzy
-#~ msgid "Select how to allocate the file system"
-#~ msgstr "Taille exacte du système de fichiers."
-
-#, fuzzy
 #~ msgid ""
 #~ "The file system will be allocated as a new partition at the selected disk."
 #~ msgstr ""
@@ -6888,12 +7053,6 @@ msgstr "ZFCP"
 
 #~ msgid "Found Issues"
 #~ msgstr "Problèmes rencontrés"
-
-#, c-format
-#~ msgid "%d error found"
-#~ msgid_plural "%d errors found"
-#~ msgstr[0] "erreur %d trouvée"
-#~ msgstr[1] "erreurs %d trouvées"
 
 #~ msgid "keyboard"
 #~ msgstr "clavier"

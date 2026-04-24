@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-14 16:06+0000\n"
+"POT-Creation-Date: 2026-04-24 14:37+0000\n"
 "PO-Revision-Date: 2026-04-21 03:04+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -380,9 +380,9 @@ msgid "Step %1$d of %2$d"
 msgstr "ステップ %1$d / %2$d"
 
 #: src/components/core/ProgressStatusMonitor.tsx:40
-#: src/components/overview/SoftwareSummary.tsx:84
-#: src/components/software/SoftwarePage.tsx:196
-#: src/components/software/SoftwarePatternsSelection.tsx:204
+#: src/components/overview/SoftwareSummary.tsx:160
+#: src/components/software/SoftwarePage.tsx:361
+#: src/components/software/SoftwarePatternsSelection.tsx:363
 #: src/routes/software.tsx:33
 msgid "Software"
 msgstr "ソフトウエア"
@@ -549,7 +549,8 @@ msgstr "%s は既に存在しているため、読み飛ばしました。"
 #: src/components/form/ArrayField.tsx:431
 #, javascript-format
 msgid "%s added but is invalid: %s. Select to edit."
-msgstr "%s を追加しましたが、正しくありません: %s 。編集するには選択してください。"
+msgstr ""
+"%s を追加しましたが、正しくありません: %s 。編集するには選択してください。"
 
 #. TRANSLATORS: screen reader announcement when an entry is added. %s
 #. is the entry value.
@@ -592,8 +593,8 @@ msgid ""
 "Escape to exit; Backspace or Delete to remove."
 msgstr ""
 "Enter キーまたは Tab キーで追加、矢印キーで項目間の移動、 Ctrl+矢印キーで順序"
-"変更、 Esc キーで終了、Backspace もしくは Delete キーで削除をそれぞれ行います"
-"。"
+"変更、 Esc キーで終了、Backspace もしくは Delete キーで削除をそれぞれ行いま"
+"す。"
 
 #: src/components/form/ArrayField.tsx:659
 msgid "Select entries to edit or remove them. Or [remove all invalid entries.]"
@@ -615,7 +616,6 @@ msgstr "フィルタに該当するキーマップがありません。"
 #: src/components/l10n/LocaleSelection.tsx:92
 #: src/components/l10n/TimezoneSelection.tsx:140
 #: src/components/product/ProductSelectionPage.tsx:290
-#: src/components/software/SoftwarePatternsSelection.tsx:185
 msgid "Select"
 msgstr "選択"
 
@@ -1157,7 +1157,8 @@ msgstr "自動 + 手動"
 #. TRANSLATORS: description for advanced automatic mode with static addresses.
 #: src/components/network/IpSettings.tsx:59
 msgid "Configuration from the network plus static addresses and gateway"
-msgstr "ネットワーク側からの設定に加え、固定のアドレスとゲートウエイを設定します"
+msgstr ""
+"ネットワーク側からの設定に加え、固定のアドレスとゲートウエイを設定します"
 
 #. TRANSLATORS: option label for manual IP configuration
 #. TRANSLATORS: Network summary title when using manual/static IP configuration
@@ -1593,36 +1594,33 @@ msgid "Auto"
 msgstr "自動"
 
 #. TRANSLATORS: Confirmation dialog title. %s is replaced with the product name (e.g., "openSUSE Leap")
-#: src/components/overview/OverviewPage.tsx:74
+#: src/components/overview/OverviewPage.tsx:79
 #, javascript-format
 msgid "Delete existing data and install %s?"
 msgstr "既存のデータを削除して %s をインストールしてよろしいですか？"
 
-#: src/components/overview/OverviewPage.tsx:74
+#: src/components/overview/OverviewPage.tsx:79
 #, javascript-format
 msgid "Install %s?"
 msgstr "%s をインストールしてよろしいですか？"
 
-#. TRANSLATORS: Warning shown when installation will delete existing data
-#: src/components/overview/OverviewPage.tsx:84
-msgid "If unsure, cancel and review storage settings."
-msgstr "不安な場合はいったんキャンセルして、ストレージ設定をご確認ください。"
-
-#. TRANSLATORS: Information message confirming installation will proceed with current settings
-#: src/components/overview/OverviewPage.tsx:88
-msgid "By proceeding, the installation will begin with defined settings."
+#. TRANSLATORS: shown at the top of the install confirmation dialog.
+#: src/components/overview/OverviewPage.tsx:90
+#, fuzzy
+msgid ""
+"Confirming starts the installation immediately with the defined settings."
 msgstr "続行すると、指定の設定でインストールが開始されます。"
 
 #. TRANSLATORS: Button to confirm and start the installation
-#: src/components/overview/OverviewPage.tsx:93
+#: src/components/overview/OverviewPage.tsx:97
 msgid "Confirm and install"
 msgstr "了承してインストールする"
 
-#: src/components/overview/OverviewPage.tsx:106
+#: src/components/overview/OverviewPage.tsx:110
 msgid "Product not found"
 msgstr "製品が見つかりません"
 
-#: src/components/overview/OverviewPage.tsx:109
+#: src/components/overview/OverviewPage.tsx:113
 msgid ""
 "The product was not found in the repositories so it is not possible to "
 "proceed with the installation."
@@ -1632,35 +1630,35 @@ msgstr ""
 
 #. TRANSLATORS: This hint helps users locate the install button. Text inside
 #. square brackets [] appears in bold. Keep brackets for proper formatting.
-#: src/components/overview/OverviewPage.tsx:129
+#: src/components/overview/OverviewPage.tsx:133
 msgid "When ready, click on the [install] button at the end of the page."
 msgstr ""
 "準備ができたら、ページ末尾にある [インストール] ボタンを押してください。"
 
-#: src/components/overview/OverviewPage.tsx:144
+#: src/components/overview/OverviewPage.tsx:148
 msgid "Install"
 msgstr "インストール"
 
-#: src/components/overview/OverviewPage.tsx:145
+#: src/components/overview/OverviewPage.tsx:149
 msgid "Install now with potential data loss"
 msgstr "データ削除を了承してインストールを開始する"
 
-#: src/components/overview/OverviewPage.tsx:146
+#: src/components/overview/OverviewPage.tsx:150
 msgid "Install now"
 msgstr "インストールを開始する"
 
-#: src/components/overview/OverviewPage.tsx:170
+#: src/components/overview/OverviewPage.tsx:174
 msgid ""
 "Take a moment to review the installation settings below and adjust them as "
 "needed."
 msgstr ""
 "下記に示すインストール設定をご確認のうえ、必要であれば調整してください。"
 
-#: src/components/overview/OverviewPage.tsx:205
+#: src/components/overview/OverviewPage.tsx:209
 msgid "Wait until current operations are completed."
 msgstr "処理が完了するまでお待ちください。"
 
-#: src/components/overview/OverviewPage.tsx:216
+#: src/components/overview/OverviewPage.tsx:220
 msgid ""
 "You need to fix any invalid settings before proceeding with the installation."
 msgstr "インストールを続行する前に、設定を修正する必要があります。"
@@ -1690,25 +1688,49 @@ msgstr "まだ登録していません"
 msgid "Registered"
 msgstr "登録済み"
 
-#: src/components/overview/SoftwareSummary.tsx:45
-msgid "Required packages"
-msgstr "必要なパッケージ"
+#. TRANSLATORS: count of patterns picked on top of the default selection.
+#. %d is a number.
+#: src/components/overview/SoftwareSummary.tsx:48
+#, fuzzy, javascript-format
+msgid "Using %d additional pattern"
+msgid_plural "Using %d additional patterns"
+msgstr[0] "追加パーティション用にディスク %s を使用する"
 
-#. TRANSLATORS: %s will be replaced with amount of selected patterns.
-#: src/components/overview/SoftwareSummary.tsx:50
-#, javascript-format
-msgid "Required packages and %s pattern"
-msgid_plural "Required packages and %s patterns"
-msgstr[0] "%s 個のパターンと必要なパッケージ"
-
-#. TRANSLATORS: %s will be replaced with a human-readable installation size
-#. (e.g. 5.95 GiB).
-#: src/components/overview/SoftwareSummary.tsx:65
-#, javascript-format
-msgid "Needs about %s"
-msgstr "おおよそ %s が必要"
+#. TRANSLATORS: alert title shown in the install confirmation dialog when no desktop is selected.
+#. TRANSLATORS: shown in the software summary when no desktop is selected.
+#: src/components/overview/SoftwareSummary.tsx:71
+#: src/components/software/NoDesktopAlert.tsx:43
+#, fuzzy
+msgid "No desktop selected"
+msgstr "自動選択済み"
 
 #: src/components/overview/SoftwareSummary.tsx:87
+#, fuzzy, javascript-format
+msgid "%d desktop selected"
+msgid_plural "%d desktops selected"
+msgstr[0] "自動選択済み"
+
+#. TRANSLATORS: shown in the software summary when the user hasn't picked
+#. anything on top of the product's default selection.
+#: src/components/overview/SoftwareSummary.tsx:97
+#, fuzzy
+msgid "Default selection"
+msgstr "ロケールの選択"
+
+#: src/components/overview/SoftwareSummary.tsx:132
+#, javascript-format
+msgid "Includes %1$d additional pattern. Requires %2$s"
+msgid_plural "Includes %1$d additional patterns. Requires %2$s"
+msgstr[0] ""
+
+#. TRANSLATORS: total installation size shown in the software summary.
+#. %s is a human-readable disk size (e.g. "5.95 GiB").
+#: src/components/overview/SoftwareSummary.tsx:143
+#, fuzzy, javascript-format
+msgid "Requires %s"
+msgstr "接続: %s"
+
+#: src/components/overview/SoftwareSummary.tsx:163
 msgid "Invalid software selection"
 msgstr "ソフトウエア選択が正しくありません"
 
@@ -1834,7 +1856,6 @@ msgid "This license is not available in %s."
 msgstr "このライセンスは %s では提供されていません。"
 
 #: src/components/product/LicenseDialog.tsx:74
-#: src/components/software/SoftwarePatternsSelection.tsx:223
 msgid "Close"
 msgstr "閉じる"
 
@@ -2218,24 +2239,74 @@ msgstr ""
 "このチェックを無効化したい場合は、カーネルのコマンドラインに "
 "\"inst.ay_check=0\" を指定してください"
 
-#: src/components/software/SoftwarePage.tsx:62
-msgid "No additional software was selected."
-msgstr "追加のソフトウエアは何も選択していません。"
+#. TRANSLATORS: label shown for patterns automatically selected as dependencies
+#: src/components/software/AutoSelectedLabel.tsx:34
+msgid "auto selected"
+msgstr "自動選択済み"
 
-#: src/components/software/SoftwarePage.tsx:67
-msgid "The following software patterns are selected for installation:"
-msgstr "下記のソフトウエアパターンをインストールするよう選択しています:"
+#. TRANSLATORS: explains the consequence of installing without a desktop.
+#: src/components/software/NoDesktopAlert.tsx:47
+msgid "The system will boot to a command-line interface."
+msgstr ""
 
-#: src/components/software/SoftwarePage.tsx:82
-#: src/components/software/SoftwarePage.tsx:94
-msgid "Selected patterns"
-msgstr "パターンの選択"
+#: src/components/software/NoDesktopAlert.tsx:54
+msgid ""
+"If that is not intended, cancel and select a desktop in the [software] "
+"settings."
+msgstr ""
 
-#: src/components/software/SoftwarePage.tsx:85
-msgid "Change selection"
-msgstr "選択の変更"
+#. TRANSLATORS: empty state title for a software section with nothing selected
+#: src/components/software/SoftwarePage.tsx:71
+#, fuzzy
+msgid "None selected"
+msgstr "自動選択済み"
 
-#: src/components/software/SoftwarePage.tsx:97
+#: src/components/software/SoftwarePage.tsx:107
+#, fuzzy
+msgid "Read less"
+msgstr "読み込み専用"
+
+#. TRANSLATORS: accessible label for the collapse button; %s is the pattern name
+#: src/components/software/SoftwarePage.tsx:109
+#, fuzzy, javascript-format
+msgid "Read less about %s"
+msgstr "おおよそ %s が必要"
+
+#: src/components/software/SoftwarePage.tsx:113
+#, fuzzy
+msgid "Read more"
+msgstr "読み込み専用"
+
+#. TRANSLATORS: accessible label for the expand button; %s is the pattern name
+#: src/components/software/SoftwarePage.tsx:115
+#, fuzzy, javascript-format
+msgid "Read more about %s"
+msgstr "おおよそ %s が必要"
+
+#. TRANSLATORS: %s is the required disk space. Keep the [brackets]: they mark the value to be displayed in bold.
+#: src/components/software/SoftwarePage.tsx:185
+#, javascript-format
+msgid "Required space with current selection: [%s]"
+msgstr ""
+
+#. TRANSLATORS: %s is the required disk space. Keep the [brackets]: they mark the value to be displayed in bold.
+#: src/components/software/SoftwarePage.tsx:187
+#, fuzzy, javascript-format
+msgid "Required space: [%s]"
+msgstr "必要なパッケージ"
+
+#. TRANSLATORS: %1$d is selected count, %2$d is total available count
+#: src/components/software/SoftwarePage.tsx:235
+#: src/components/software/SoftwarePatternsSelection.tsx:147
+#, fuzzy, javascript-format
+msgid "%1$d of %2$d selected"
+msgstr "%2$d 個のデバイスのうち %1$d 個が条件に該当しています"
+
+#: src/components/software/SoftwarePage.tsx:258
+msgid "Patterns"
+msgstr ""
+
+#: src/components/software/SoftwarePage.tsx:262
 msgid ""
 "This product does not allow to select software patterns during installation. "
 "However, you can add additional software once the installation is finished."
@@ -2243,54 +2314,119 @@ msgstr ""
 "この製品はインストール時のパターン選択を許可していません。なお、インストール"
 "完了後に必要なソフトウエアを追加できます。"
 
-#. TRANSLATORS: error details followed by a "Try again" link
-#: src/components/software/SoftwarePage.tsx:105
-msgid ""
-"Some installation repositories could not be loaded. The system cannot be "
-"installed without them."
-msgstr ""
-"インストール用リポジトリのうち、読み込めなかったものがあります。これらのリポ"
-"ジトリ無しにはシステムをインストールできません。"
-
-#. TRANSLATORS: title for an error message box, at least one repository could not be loaded
-#: src/components/software/SoftwarePage.tsx:118
-msgid "Repository load failed"
-msgstr "リポジトリ読み込み失敗"
-
-#. TRANSLATORS: progress message
-#: src/components/software/SoftwarePage.tsx:122
-msgid "Loading the installation repositories..."
-msgstr "インストール用リポジトリを読み込んでいます..."
-
-#. TRANSLATORS: link for retrying failed repository load
-#: src/components/software/SoftwarePage.tsx:129
-msgid "Try again"
-msgstr "再試行"
-
-#: src/components/software/SoftwarePage.tsx:143
+#. TRANSLATORS: shown while the software proposal is not yet available
+#: src/components/software/SoftwarePage.tsx:279
 msgid "No information available yet"
 msgstr "まだ情報はありません"
 
-#: src/components/software/SoftwarePage.tsx:181
-msgid "Used space"
-msgstr "使用済み領域"
+#: src/components/software/SoftwarePage.tsx:302
+msgid "Desktops"
+msgstr ""
 
-#: src/components/software/SoftwarePatternsSelection.tsx:103
-msgid "None of the patterns match the filter."
+#. TRANSLATORS: description for the Desktops section
+#: src/components/software/SoftwarePage.tsx:305
+msgid "Graphical desktop environments for the system."
+msgstr ""
+
+#. TRANSLATORS: button to change the desktop selection
+#: src/components/software/SoftwarePage.tsx:309
+#, fuzzy
+msgid "Change desktop"
+msgid_plural "Change desktops"
+msgstr[0] "モードの変更"
+
+#. TRANSLATORS: hint shown when no desktop environment has been chosen
+#: src/components/software/SoftwarePage.tsx:319
+msgid "Select a desktop environment to get a graphical interface."
+msgstr ""
+
+#. TRANSLATORS: button to go to the desktop environment selection page
+#: src/components/software/SoftwarePage.tsx:321
+#, fuzzy
+msgid "Select a desktop"
+msgstr "ディスクの選択"
+
+#: src/components/software/SoftwarePage.tsx:328
+#, fuzzy
+msgid "Additional patterns"
+msgstr "追加パーティション用に RAID %s を使用する"
+
+#. TRANSLATORS: description for the Additional software section
+#: src/components/software/SoftwarePage.tsx:331
+msgid ""
+"Curated sets of packages for common use cases and features to extend the "
+"system."
+msgstr ""
+
+#. TRANSLATORS: button to change the additional software selection
+#: src/components/software/SoftwarePage.tsx:334
+#, fuzzy
+msgid "Change patterns"
+msgstr "%s に変更"
+
+#. TRANSLATORS: hint shown when no additional software patterns have been chosen
+#: src/components/software/SoftwarePage.tsx:343
+#, fuzzy
+msgid "Select one or more to extend the system."
+msgstr "ファイルシステムの割り当て方法を選択してください"
+
+#. TRANSLATORS: button to go to the pattern selection page
+#: src/components/software/SoftwarePage.tsx:345
+#, fuzzy
+msgid "Select patterns"
+msgstr "パターンの選択"
+
+#. TRANSLATORS: page title when selecting all software patterns
+#. TRANSLATORS: page title when selecting non-desktop software patterns
+#: src/components/software/SoftwarePatternsSelection.tsx:113
+#: src/components/software/SoftwarePatternsSelection.tsx:117
+#, fuzzy
+msgid "Patterns selection"
+msgstr "誤った選択"
+
+#. TRANSLATORS: page title when selecting desktop environments
+#: src/components/software/SoftwarePatternsSelection.tsx:115
+#, fuzzy
+msgid "Desktop selection"
+msgstr "行の選択"
+
+#. TRANSLATORS: shown next to a category heading when the search filter excludes all its patterns
+#: src/components/software/SoftwarePatternsSelection.tsx:156
+#, fuzzy
+msgid "No patterns match the filter"
 msgstr "フィルタに該当するパターンがありません。"
 
-#: src/components/software/SoftwarePatternsSelection.tsx:181
-msgid "auto selected"
-msgstr "自動選択済み"
+#. TRANSLATORS: count of patterns matching the search filter in this category
+#: src/components/software/SoftwarePatternsSelection.tsx:158
+#, fuzzy, javascript-format
+msgid "%d matches the filter"
+msgid_plural "%d match the filter"
+msgstr[0] "フィルタに該当するターゲットがありません"
 
-#: src/components/software/SoftwarePatternsSelection.tsx:185
-msgid "Unselect"
-msgstr "未選択"
+#: src/components/software/SoftwarePatternsSelection.tsx:344
+#, fuzzy, javascript-format
+msgid "%d pattern found"
+msgid_plural "%d patterns found"
+msgstr[0] "%d 個のエラーが見つかりました"
 
-#. TRANSLATORS: search field placeholder text
-#: src/components/software/SoftwarePatternsSelection.tsx:210
-#: src/components/software/SoftwarePatternsSelection.tsx:211
-msgid "Filter by pattern title or description"
+#. TRANSLATORS: search results badge on the filter input when no pattern matches
+#: src/components/software/SoftwarePatternsSelection.tsx:354
+#, fuzzy
+msgid "No patterns match"
+msgstr "フィルタに該当するパターンがありません。"
+
+#. TRANSLATORS: search results badge on the filter input.
+#. %1$d is matches found, %2$d is the total number of patterns.
+#: src/components/software/SoftwarePatternsSelection.tsx:357
+#, fuzzy, javascript-format
+msgid "%1$d of %2$d patterns"
+msgstr "%2$d 個のデバイスのうち %1$d 個が条件に該当しています"
+
+#. TRANSLATORS: placeholder for the search field on the patterns selection page
+#: src/components/software/SoftwarePatternsSelection.tsx:400
+#: src/components/software/SoftwarePatternsSelection.tsx:402
+#, fuzzy
+msgid "Filter by name and description"
 msgstr "パターンタイトルまたは説明でフィルタ"
 
 #. TRANSLATORS: %s will be replaced by the estimated installation size,
@@ -2647,7 +2783,8 @@ msgstr "パーティションの設定またはマウントを行うディスク
 
 #: src/components/storage/ConfigureDeviceMenu.tsx:214
 msgid "Choose a RAID device to define partitions or to mount"
-msgstr "パーティションの設定またはマウントを行う RAID デバイスを選択してください"
+msgstr ""
+"パーティションの設定またはマウントを行う RAID デバイスを選択してください"
 
 #: src/components/storage/ConfigureDeviceMenu.tsx:215
 msgid "Choose a volume group to define logical volumes"
@@ -2704,7 +2841,8 @@ msgstr "%s を維持"
 
 #: src/components/storage/DeviceSelectorModal.tsx:306
 msgid "Use the tabs to browse disks, RAID devices and LVM volume groups."
-msgstr "ディスクや RAID, LVM ボリュームグループを参照するには、タブをお使いください。"
+msgstr ""
+"ディスクや RAID, LVM ボリュームグループを参照するには、タブをお使いください。"
 
 #: src/components/storage/DeviceSelectorModal.tsx:325
 #: src/components/storage/LvmPage.tsx:185
@@ -3464,21 +3602,23 @@ msgstr "パーティション"
 msgid "Add or use partition"
 msgstr "パーティションの追加または使用"
 
-#: src/components/storage/PotentialDataLossAlert.tsx:32
-msgid "If you are unsure, check and adjust the storage settings."
-msgstr ""
-"不安な場合はストレージ設定をご確認のうえ、必要であれば変更してください。"
-
 #. TRANSLATORS: %s will be replaced by a formatted list of affected
 #. systems like "Windows and openSUSE Tumbleweed".
-#: src/components/storage/PotentialDataLossAlert.tsx:43
+#: src/components/storage/PotentialDataLossAlert.tsx:52
 #, javascript-format
 msgid "Proceeding will delete existing data, including %s"
 msgstr "続行することにより、 %s を含む既存のデータが削除されます"
 
-#: src/components/storage/PotentialDataLossAlert.tsx:47
+#: src/components/storage/PotentialDataLossAlert.tsx:56
 msgid "Proceeding may result in data loss"
 msgstr "続行することによりデータ削除が発生する可能性があります"
+
+#. TRANSLATORS: advice shown when destructive actions are pending.
+#. The text inside [] becomes a link that navigates to the storage section.
+#: src/components/storage/PotentialDataLossAlert.tsx:71
+#, fuzzy
+msgid "If unsure, cancel and review [storage] settings."
+msgstr "不安な場合はいったんキャンセルして、ストレージ設定をご確認ください。"
 
 #: src/components/storage/ProposalActions.tsx:66
 #, javascript-format
@@ -4815,7 +4955,8 @@ msgstr "現在の論理ボリュームを維持します"
 msgid ""
 "Logical volumes that are not reused will be removed and that data will be "
 "lost."
-msgstr "再利用するように設定していない論理ボリュームは削除され、データは失われます。"
+msgstr ""
+"再利用するように設定していない論理ボリュームは削除され、データは失われます。"
 
 #: src/components/storage/utils/volume-group.tsx:122
 msgid ""
@@ -5183,6 +5324,46 @@ msgstr "公開 SSH 鍵の使用"
 #: src/routes/storage.tsx:120
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#, javascript-format
+#~ msgid "Required packages and %s pattern"
+#~ msgid_plural "Required packages and %s patterns"
+#~ msgstr[0] "%s 個のパターンと必要なパッケージ"
+
+#~ msgid "No additional software was selected."
+#~ msgstr "追加のソフトウエアは何も選択していません。"
+
+#~ msgid "The following software patterns are selected for installation:"
+#~ msgstr "下記のソフトウエアパターンをインストールするよう選択しています:"
+
+#~ msgid "Change selection"
+#~ msgstr "選択の変更"
+
+#~ msgid ""
+#~ "Some installation repositories could not be loaded. The system cannot be "
+#~ "installed without them."
+#~ msgstr ""
+#~ "インストール用リポジトリのうち、読み込めなかったものがあります。これらのリ"
+#~ "ポジトリ無しにはシステムをインストールできません。"
+
+#~ msgid "Repository load failed"
+#~ msgstr "リポジトリ読み込み失敗"
+
+#~ msgid "Loading the installation repositories..."
+#~ msgstr "インストール用リポジトリを読み込んでいます..."
+
+#~ msgid "Try again"
+#~ msgstr "再試行"
+
+#~ msgid "Used space"
+#~ msgstr "使用済み領域"
+
+#~ msgid "Unselect"
+#~ msgstr "未選択"
+
+#~ msgid "If you are unsure, check and adjust the storage settings."
+#~ msgstr ""
+#~ "不安な場合はストレージ設定をご確認のうえ、必要であれば変更してください。"
 
 #~ msgid "IP Address"
 #~ msgstr "IP アドレス"
@@ -5558,9 +5739,6 @@ msgstr "ZFCP"
 
 #~ msgid "Keyboard selection"
 #~ msgstr "キーボードの選択"
-
-#~ msgid "Locale selection"
-#~ msgstr "ロケールの選択"
 
 #~ msgid " Timezone selection"
 #~ msgstr " タイムゾーンの選択"
@@ -6032,10 +6210,6 @@ msgstr "ZFCP"
 #~ msgid "storage techs"
 #~ msgstr "ストレージ技術"
 
-#, c-format
-#~ msgid "Wires: %s"
-#~ msgstr "接続: %s"
-
 #~ msgid "Manage and format"
 #~ msgstr "管理とフォーマット"
 
@@ -6313,9 +6487,6 @@ msgstr "ZFCP"
 
 #~ msgid "Select a location"
 #~ msgstr "場所の選択"
-
-#~ msgid "Select how to allocate the file system"
-#~ msgstr "ファイルシステムの割り当て方法を選択してください"
 
 #~ msgid ""
 #~ "The file system will be allocated as a new partition at the selected disk."
@@ -6596,11 +6767,6 @@ msgstr "ZFCP"
 
 #~ msgid "Found Issues"
 #~ msgstr "見つかった問題点"
-
-#, c-format
-#~ msgid "%d error found"
-#~ msgid_plural "%d errors found"
-#~ msgstr[0] "%d 個のエラーが見つかりました"
 
 #~ msgid "keyboard"
 #~ msgstr "キーボード"

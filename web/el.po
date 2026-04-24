@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-14 16:06+0000\n"
+"POT-Creation-Date: 2026-04-24 14:37+0000\n"
 "PO-Revision-Date: 2026-02-23 21:04+0000\n"
 "Last-Translator: Efstathios Iosifidis <eiosifidis@yandex.com>\n"
 "Language-Team: Greek <https://l10n.opensuse.org/projects/agama/agama-web/el/"
@@ -386,9 +386,9 @@ msgid "Step %1$d of %2$d"
 msgstr "Βήμα %1$d από %2$d"
 
 #: src/components/core/ProgressStatusMonitor.tsx:40
-#: src/components/overview/SoftwareSummary.tsx:84
-#: src/components/software/SoftwarePage.tsx:196
-#: src/components/software/SoftwarePatternsSelection.tsx:204
+#: src/components/overview/SoftwareSummary.tsx:160
+#: src/components/software/SoftwarePage.tsx:361
+#: src/components/software/SoftwarePatternsSelection.tsx:363
 #: src/routes/software.tsx:33
 msgid "Software"
 msgstr "Λογισμικό"
@@ -615,7 +615,6 @@ msgstr "Καμία διάταξη πληκτρολογίου δεν ταιριά
 #: src/components/l10n/LocaleSelection.tsx:92
 #: src/components/l10n/TimezoneSelection.tsx:140
 #: src/components/product/ProductSelectionPage.tsx:290
-#: src/components/software/SoftwarePatternsSelection.tsx:185
 msgid "Select"
 msgstr "Επιλογή"
 
@@ -1631,37 +1630,34 @@ msgid "Auto"
 msgstr "Αυτόματη"
 
 #. TRANSLATORS: Confirmation dialog title. %s is replaced with the product name (e.g., "openSUSE Leap")
-#: src/components/overview/OverviewPage.tsx:74
+#: src/components/overview/OverviewPage.tsx:79
 #, javascript-format
 msgid "Delete existing data and install %s?"
 msgstr "Διαγραφή υπαρχόντων δεδομένων και εγκατάσταση του %s;"
 
-#: src/components/overview/OverviewPage.tsx:74
+#: src/components/overview/OverviewPage.tsx:79
 #, javascript-format
 msgid "Install %s?"
 msgstr "Εγκατάσταση του %s;"
 
-#. TRANSLATORS: Warning shown when installation will delete existing data
-#: src/components/overview/OverviewPage.tsx:84
-msgid "If unsure, cancel and review storage settings."
-msgstr "Αν δεν είστε σίγουροι, ακυρώστε και ελέγξτε τις ρυθμίσεις αποθήκευσης."
-
-#. TRANSLATORS: Information message confirming installation will proceed with current settings
-#: src/components/overview/OverviewPage.tsx:88
-msgid "By proceeding, the installation will begin with defined settings."
+#. TRANSLATORS: shown at the top of the install confirmation dialog.
+#: src/components/overview/OverviewPage.tsx:90
+#, fuzzy
+msgid ""
+"Confirming starts the installation immediately with the defined settings."
 msgstr "Προχωρώντας, η εγκατάσταση θα ξεκινήσει με τις καθορισμένες ρυθμίσεις."
 
 #. TRANSLATORS: Button to confirm and start the installation
-#: src/components/overview/OverviewPage.tsx:93
+#: src/components/overview/OverviewPage.tsx:97
 msgid "Confirm and install"
 msgstr "Επιβεβαίωση και εγκατάσταση"
 
-#: src/components/overview/OverviewPage.tsx:106
+#: src/components/overview/OverviewPage.tsx:110
 #, fuzzy
 msgid "Product not found"
 msgstr "Ο στόχος δεν βρέθηκε"
 
-#: src/components/overview/OverviewPage.tsx:109
+#: src/components/overview/OverviewPage.tsx:113
 msgid ""
 "The product was not found in the repositories so it is not possible to "
 "proceed with the installation."
@@ -1669,25 +1665,25 @@ msgstr ""
 
 #. TRANSLATORS: This hint helps users locate the install button. Text inside
 #. square brackets [] appears in bold. Keep brackets for proper formatting.
-#: src/components/overview/OverviewPage.tsx:129
+#: src/components/overview/OverviewPage.tsx:133
 msgid "When ready, click on the [install] button at the end of the page."
 msgstr ""
 "Όταν είστε έτοιμοι, κάντε κλικ στο κουμπί [εγκατάσταση] στο τέλος της "
 "σελίδας."
 
-#: src/components/overview/OverviewPage.tsx:144
+#: src/components/overview/OverviewPage.tsx:148
 msgid "Install"
 msgstr "Εγκατάσταση"
 
-#: src/components/overview/OverviewPage.tsx:145
+#: src/components/overview/OverviewPage.tsx:149
 msgid "Install now with potential data loss"
 msgstr "Εγκατάσταση τώρα με πιθανή απώλεια δεδομένων"
 
-#: src/components/overview/OverviewPage.tsx:146
+#: src/components/overview/OverviewPage.tsx:150
 msgid "Install now"
 msgstr "Εγκατάσταση τώρα"
 
-#: src/components/overview/OverviewPage.tsx:170
+#: src/components/overview/OverviewPage.tsx:174
 msgid ""
 "Take a moment to review the installation settings below and adjust them as "
 "needed."
@@ -1695,11 +1691,11 @@ msgstr ""
 "Αφιερώστε λίγο χρόνο για να ελέγξετε τις παρακάτω ρυθμίσεις εγκατάστασης και "
 "να τις προσαρμόσετε όπως απαιτείται."
 
-#: src/components/overview/OverviewPage.tsx:205
+#: src/components/overview/OverviewPage.tsx:209
 msgid "Wait until current operations are completed."
 msgstr "Περιμένετε μέχρι να ολοκληρωθούν οι τρέχουσες λειτουργίες."
 
-#: src/components/overview/OverviewPage.tsx:216
+#: src/components/overview/OverviewPage.tsx:220
 msgid ""
 "You need to fix any invalid settings before proceeding with the installation."
 msgstr ""
@@ -1731,26 +1727,52 @@ msgstr "Δεν έχει εγγραφεί ακόμη"
 msgid "Registered"
 msgstr "Εγγεγραμμένο"
 
-#: src/components/overview/SoftwareSummary.tsx:45
-msgid "Required packages"
-msgstr "Απαιτούμενα πακέτα"
+#. TRANSLATORS: count of patterns picked on top of the default selection.
+#. %d is a number.
+#: src/components/overview/SoftwareSummary.tsx:48
+#, fuzzy, javascript-format
+msgid "Using %d additional pattern"
+msgid_plural "Using %d additional patterns"
+msgstr[0] "Χρήση δίσκου %s για πρόσθετες κατατμήσεις"
+msgstr[1] "Χρήση δίσκου %s για πρόσθετες κατατμήσεις"
 
-#. TRANSLATORS: %s will be replaced with amount of selected patterns.
-#: src/components/overview/SoftwareSummary.tsx:50
-#, javascript-format
-msgid "Required packages and %s pattern"
-msgid_plural "Required packages and %s patterns"
-msgstr[0] "Απαιτούμενα πακέτα και %s πρότυπο (pattern)"
-msgstr[1] "Απαιτούμενα πακέτα και %s πρότυπα (patterns)"
-
-#. TRANSLATORS: %s will be replaced with a human-readable installation size
-#. (e.g. 5.95 GiB).
-#: src/components/overview/SoftwareSummary.tsx:65
-#, javascript-format
-msgid "Needs about %s"
-msgstr "Χρειάζεται περίπου %s"
+#. TRANSLATORS: alert title shown in the install confirmation dialog when no desktop is selected.
+#. TRANSLATORS: shown in the software summary when no desktop is selected.
+#: src/components/overview/SoftwareSummary.tsx:71
+#: src/components/software/NoDesktopAlert.tsx:43
+#, fuzzy
+msgid "No desktop selected"
+msgstr "αυτόματα επιλεγμένο"
 
 #: src/components/overview/SoftwareSummary.tsx:87
+#, fuzzy, javascript-format
+msgid "%d desktop selected"
+msgid_plural "%d desktops selected"
+msgstr[0] "αυτόματα επιλεγμένο"
+msgstr[1] "αυτόματα επιλεγμένο"
+
+#. TRANSLATORS: shown in the software summary when the user hasn't picked
+#. anything on top of the product's default selection.
+#: src/components/overview/SoftwareSummary.tsx:97
+#, fuzzy
+msgid "Default selection"
+msgstr "Τρέχουσα επιλογή"
+
+#: src/components/overview/SoftwareSummary.tsx:132
+#, javascript-format
+msgid "Includes %1$d additional pattern. Requires %2$s"
+msgid_plural "Includes %1$d additional patterns. Requires %2$s"
+msgstr[0] ""
+msgstr[1] ""
+
+#. TRANSLATORS: total installation size shown in the software summary.
+#. %s is a human-readable disk size (e.g. "5.95 GiB").
+#: src/components/overview/SoftwareSummary.tsx:143
+#, fuzzy, javascript-format
+msgid "Requires %s"
+msgstr "Απαιτούμενα πακέτα"
+
+#: src/components/overview/SoftwareSummary.tsx:163
 msgid "Invalid software selection"
 msgstr "Μη έγκυρη επιλογή λογισμικού"
 
@@ -1877,7 +1899,6 @@ msgid "This license is not available in %s."
 msgstr "Αυτή η άδεια χρήσης δεν είναι διαθέσιμη στο %s."
 
 #: src/components/product/LicenseDialog.tsx:74
-#: src/components/software/SoftwarePatternsSelection.tsx:223
 msgid "Close"
 msgstr "Κλείσιμο"
 
@@ -2270,24 +2291,74 @@ msgstr ""
 "Εάν θέλετε να απενεργοποιήσετε αυτόν τον έλεγχο, προσδιορίστε "
 "«inst.ay_check=0» στη γραμμή εντολών του πυρήνα"
 
-#: src/components/software/SoftwarePage.tsx:62
-msgid "No additional software was selected."
-msgstr "Δεν επιλέχθηκε πρόσθετο λογισμικό."
+#. TRANSLATORS: label shown for patterns automatically selected as dependencies
+#: src/components/software/AutoSelectedLabel.tsx:34
+msgid "auto selected"
+msgstr "αυτόματα επιλεγμένο"
 
-#: src/components/software/SoftwarePage.tsx:67
-msgid "The following software patterns are selected for installation:"
-msgstr "Τα ακόλουθα πρότυπα λογισμικού έχουν επιλεγεί για εγκατάσταση:"
+#. TRANSLATORS: explains the consequence of installing without a desktop.
+#: src/components/software/NoDesktopAlert.tsx:47
+msgid "The system will boot to a command-line interface."
+msgstr ""
 
-#: src/components/software/SoftwarePage.tsx:82
-#: src/components/software/SoftwarePage.tsx:94
-msgid "Selected patterns"
-msgstr "Επιλεγμένα πρότυπα"
+#: src/components/software/NoDesktopAlert.tsx:54
+msgid ""
+"If that is not intended, cancel and select a desktop in the [software] "
+"settings."
+msgstr ""
 
-#: src/components/software/SoftwarePage.tsx:85
-msgid "Change selection"
-msgstr "Αλλαγή επιλογής"
+#. TRANSLATORS: empty state title for a software section with nothing selected
+#: src/components/software/SoftwarePage.tsx:71
+#, fuzzy
+msgid "None selected"
+msgstr "αυτόματα επιλεγμένο"
 
-#: src/components/software/SoftwarePage.tsx:97
+#: src/components/software/SoftwarePage.tsx:107
+#, fuzzy
+msgid "Read less"
+msgstr "μόνο για ανάγνωση"
+
+#. TRANSLATORS: accessible label for the collapse button; %s is the pattern name
+#: src/components/software/SoftwarePage.tsx:109
+#, fuzzy, javascript-format
+msgid "Read less about %s"
+msgstr "Χρειάζεται περίπου %s"
+
+#: src/components/software/SoftwarePage.tsx:113
+#, fuzzy
+msgid "Read more"
+msgstr "μόνο για ανάγνωση"
+
+#. TRANSLATORS: accessible label for the expand button; %s is the pattern name
+#: src/components/software/SoftwarePage.tsx:115
+#, fuzzy, javascript-format
+msgid "Read more about %s"
+msgstr "Χρειάζεται περίπου %s"
+
+#. TRANSLATORS: %s is the required disk space. Keep the [brackets]: they mark the value to be displayed in bold.
+#: src/components/software/SoftwarePage.tsx:185
+#, javascript-format
+msgid "Required space with current selection: [%s]"
+msgstr ""
+
+#. TRANSLATORS: %s is the required disk space. Keep the [brackets]: they mark the value to be displayed in bold.
+#: src/components/software/SoftwarePage.tsx:187
+#, fuzzy, javascript-format
+msgid "Required space: [%s]"
+msgstr "Απαιτούμενα πακέτα"
+
+#. TRANSLATORS: %1$d is selected count, %2$d is total available count
+#: src/components/software/SoftwarePage.tsx:235
+#: src/components/software/SoftwarePatternsSelection.tsx:147
+#, fuzzy, javascript-format
+msgid "%1$d of %2$d selected"
+msgstr "Κανένας στόχος δεν ταιριάζει με τα φίλτρα"
+
+#: src/components/software/SoftwarePage.tsx:258
+msgid "Patterns"
+msgstr ""
+
+#: src/components/software/SoftwarePage.tsx:262
 msgid ""
 "This product does not allow to select software patterns during installation. "
 "However, you can add additional software once the installation is finished."
@@ -2296,55 +2367,122 @@ msgstr ""
 "εγκατάσταση. Ωστόσο, μπορείτε να προσθέσετε επιπλέον λογισμικό αφού "
 "ολοκληρωθεί η εγκατάσταση."
 
-#. TRANSLATORS: error details followed by a "Try again" link
-#: src/components/software/SoftwarePage.tsx:105
-msgid ""
-"Some installation repositories could not be loaded. The system cannot be "
-"installed without them."
-msgstr ""
-"Ορισμένα αποθετήρια εγκατάστασης δεν μπόρεσαν να φορτωθούν. Το σύστημα δεν "
-"μπορεί να εγκατασταθεί χωρίς αυτά."
-
-#. TRANSLATORS: title for an error message box, at least one repository could not be loaded
-#: src/components/software/SoftwarePage.tsx:118
-msgid "Repository load failed"
-msgstr "Η φόρτωση του αποθετηρίου απέτυχε"
-
-#. TRANSLATORS: progress message
-#: src/components/software/SoftwarePage.tsx:122
-msgid "Loading the installation repositories..."
-msgstr "Φόρτωση των αποθετηρίων εγκατάστασης..."
-
-#. TRANSLATORS: link for retrying failed repository load
-#: src/components/software/SoftwarePage.tsx:129
-msgid "Try again"
-msgstr "Δοκιμάστε ξανά"
-
-#: src/components/software/SoftwarePage.tsx:143
+#. TRANSLATORS: shown while the software proposal is not yet available
+#: src/components/software/SoftwarePage.tsx:279
 #, fuzzy
 msgid "No information available yet"
 msgstr "Εμφάνιση πληροφοριών σχετικά με το %s"
 
-#: src/components/software/SoftwarePage.tsx:181
-msgid "Used space"
-msgstr "Χρησιμοποιούμενος χώρος"
+#: src/components/software/SoftwarePage.tsx:302
+msgid "Desktops"
+msgstr ""
 
-#: src/components/software/SoftwarePatternsSelection.tsx:103
-msgid "None of the patterns match the filter."
+#. TRANSLATORS: description for the Desktops section
+#: src/components/software/SoftwarePage.tsx:305
+msgid "Graphical desktop environments for the system."
+msgstr ""
+
+#. TRANSLATORS: button to change the desktop selection
+#: src/components/software/SoftwarePage.tsx:309
+#, fuzzy
+msgid "Change desktop"
+msgid_plural "Change desktops"
+msgstr[0] "Αλλαγή λειτουργίας"
+msgstr[1] "Αλλαγή λειτουργίας"
+
+#. TRANSLATORS: hint shown when no desktop environment has been chosen
+#: src/components/software/SoftwarePage.tsx:319
+msgid "Select a desktop environment to get a graphical interface."
+msgstr ""
+
+#. TRANSLATORS: button to go to the desktop environment selection page
+#: src/components/software/SoftwarePage.tsx:321
+#, fuzzy
+msgid "Select a desktop"
+msgstr "Επιλέξτε έναν δίσκο"
+
+#: src/components/software/SoftwarePage.tsx:328
+#, fuzzy
+msgid "Additional patterns"
+msgstr "Χρήση RAID %s για πρόσθετες κατατμήσεις"
+
+#. TRANSLATORS: description for the Additional software section
+#: src/components/software/SoftwarePage.tsx:331
+msgid ""
+"Curated sets of packages for common use cases and features to extend the "
+"system."
+msgstr ""
+
+#. TRANSLATORS: button to change the additional software selection
+#: src/components/software/SoftwarePage.tsx:334
+#, fuzzy
+msgid "Change patterns"
+msgstr "Αλλαγή σε %s"
+
+#. TRANSLATORS: hint shown when no additional software patterns have been chosen
+#: src/components/software/SoftwarePage.tsx:343
+msgid "Select one or more to extend the system."
+msgstr ""
+
+#. TRANSLATORS: button to go to the pattern selection page
+#: src/components/software/SoftwarePage.tsx:345
+#, fuzzy
+msgid "Select patterns"
+msgstr "Επιλεγμένα πρότυπα"
+
+#. TRANSLATORS: page title when selecting all software patterns
+#. TRANSLATORS: page title when selecting non-desktop software patterns
+#: src/components/software/SoftwarePatternsSelection.tsx:113
+#: src/components/software/SoftwarePatternsSelection.tsx:117
+#, fuzzy
+msgid "Patterns selection"
+msgstr "Εσφαλμένη επιλογή"
+
+#. TRANSLATORS: page title when selecting desktop environments
+#: src/components/software/SoftwarePatternsSelection.tsx:115
+#, fuzzy
+msgid "Desktop selection"
+msgstr "Επιλογή γραμμής"
+
+#. TRANSLATORS: shown next to a category heading when the search filter excludes all its patterns
+#: src/components/software/SoftwarePatternsSelection.tsx:156
+#, fuzzy
+msgid "No patterns match the filter"
 msgstr "Κανένα από τα πρότυπα δεν ταιριάζει με το φίλτρο."
 
-#: src/components/software/SoftwarePatternsSelection.tsx:181
-msgid "auto selected"
-msgstr "αυτόματα επιλεγμένο"
+#. TRANSLATORS: count of patterns matching the search filter in this category
+#: src/components/software/SoftwarePatternsSelection.tsx:158
+#, fuzzy, javascript-format
+msgid "%d matches the filter"
+msgid_plural "%d match the filter"
+msgstr[0] "Κανένας στόχος δεν ταιριάζει με τα φίλτρα"
+msgstr[1] "Κανένας στόχος δεν ταιριάζει με τα φίλτρα"
 
-#: src/components/software/SoftwarePatternsSelection.tsx:185
-msgid "Unselect"
-msgstr "Αποεπιλογή"
+#: src/components/software/SoftwarePatternsSelection.tsx:344
+#, fuzzy, javascript-format
+msgid "%d pattern found"
+msgid_plural "%d patterns found"
+msgstr[0] "Δεν βρέθηκε περιεχόμενο"
+msgstr[1] "Δεν βρέθηκε περιεχόμενο"
 
-#. TRANSLATORS: search field placeholder text
-#: src/components/software/SoftwarePatternsSelection.tsx:210
-#: src/components/software/SoftwarePatternsSelection.tsx:211
-msgid "Filter by pattern title or description"
+#. TRANSLATORS: search results badge on the filter input when no pattern matches
+#: src/components/software/SoftwarePatternsSelection.tsx:354
+#, fuzzy
+msgid "No patterns match"
+msgstr "Κανένα από τα πρότυπα δεν ταιριάζει με το φίλτρο."
+
+#. TRANSLATORS: search results badge on the filter input.
+#. %1$d is matches found, %2$d is the total number of patterns.
+#: src/components/software/SoftwarePatternsSelection.tsx:357
+#, fuzzy, javascript-format
+msgid "%1$d of %2$d patterns"
+msgstr "Κανένας στόχος δεν ταιριάζει με τα φίλτρα"
+
+#. TRANSLATORS: placeholder for the search field on the patterns selection page
+#: src/components/software/SoftwarePatternsSelection.tsx:400
+#: src/components/software/SoftwarePatternsSelection.tsx:402
+#, fuzzy
+msgid "Filter by name and description"
 msgstr "Φιλτράρισμα βάσει τίτλου ή περιγραφής προτύπου"
 
 #. TRANSLATORS: %s will be replaced by the estimated installation size,
@@ -3576,22 +3714,24 @@ msgstr "Κατατμήσεις"
 msgid "Add or use partition"
 msgstr "Προσθήκη ή χρήση κατάτμησης"
 
-#: src/components/storage/PotentialDataLossAlert.tsx:32
-msgid "If you are unsure, check and adjust the storage settings."
-msgstr ""
-"Εάν δεν είστε σίγουροι, ελέγξτε και προσαρμόστε τις ρυθμίσεις αποθήκευσης."
-
 #. TRANSLATORS: %s will be replaced by a formatted list of affected
 #. systems like "Windows and openSUSE Tumbleweed".
-#: src/components/storage/PotentialDataLossAlert.tsx:43
+#: src/components/storage/PotentialDataLossAlert.tsx:52
 #, javascript-format
 msgid "Proceeding will delete existing data, including %s"
 msgstr ""
 "Η συνέχεια θα διαγράψει τα υπάρχοντα δεδομένα, συμπεριλαμβανομένων των %s"
 
-#: src/components/storage/PotentialDataLossAlert.tsx:47
+#: src/components/storage/PotentialDataLossAlert.tsx:56
 msgid "Proceeding may result in data loss"
 msgstr "Η συνέχεια ενδέχεται να οδηγήσει σε απώλεια δεδομένων"
+
+#. TRANSLATORS: advice shown when destructive actions are pending.
+#. The text inside [] becomes a link that navigates to the storage section.
+#: src/components/storage/PotentialDataLossAlert.tsx:71
+#, fuzzy
+msgid "If unsure, cancel and review [storage] settings."
+msgstr "Αν δεν είστε σίγουροι, ακυρώστε και ελέγξτε τις ρυθμίσεις αποθήκευσης."
 
 #: src/components/storage/ProposalActions.tsx:66
 #, javascript-format
@@ -5394,6 +5534,47 @@ msgstr "Χρήση δημόσιου κλειδιού SSH"
 #: src/routes/storage.tsx:120
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#, javascript-format
+#~ msgid "Required packages and %s pattern"
+#~ msgid_plural "Required packages and %s patterns"
+#~ msgstr[0] "Απαιτούμενα πακέτα και %s πρότυπο (pattern)"
+#~ msgstr[1] "Απαιτούμενα πακέτα και %s πρότυπα (patterns)"
+
+#~ msgid "No additional software was selected."
+#~ msgstr "Δεν επιλέχθηκε πρόσθετο λογισμικό."
+
+#~ msgid "The following software patterns are selected for installation:"
+#~ msgstr "Τα ακόλουθα πρότυπα λογισμικού έχουν επιλεγεί για εγκατάσταση:"
+
+#~ msgid "Change selection"
+#~ msgstr "Αλλαγή επιλογής"
+
+#~ msgid ""
+#~ "Some installation repositories could not be loaded. The system cannot be "
+#~ "installed without them."
+#~ msgstr ""
+#~ "Ορισμένα αποθετήρια εγκατάστασης δεν μπόρεσαν να φορτωθούν. Το σύστημα "
+#~ "δεν μπορεί να εγκατασταθεί χωρίς αυτά."
+
+#~ msgid "Repository load failed"
+#~ msgstr "Η φόρτωση του αποθετηρίου απέτυχε"
+
+#~ msgid "Loading the installation repositories..."
+#~ msgstr "Φόρτωση των αποθετηρίων εγκατάστασης..."
+
+#~ msgid "Try again"
+#~ msgstr "Δοκιμάστε ξανά"
+
+#~ msgid "Used space"
+#~ msgstr "Χρησιμοποιούμενος χώρος"
+
+#~ msgid "Unselect"
+#~ msgstr "Αποεπιλογή"
+
+#~ msgid "If you are unsure, check and adjust the storage settings."
+#~ msgstr ""
+#~ "Εάν δεν είστε σίγουροι, ελέγξτε και προσαρμόστε τις ρυθμίσεις αποθήκευσης."
 
 #~ msgid "IP Address"
 #~ msgstr "Διεύθυνση IP"
