@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-14 16:06+0000\n"
+"POT-Creation-Date: 2026-04-24 14:37+0000\n"
 "PO-Revision-Date: 2026-04-20 09:04+0000\n"
 "Last-Translator: Arif Budiman <arifpedia@gmail.com>\n"
 "Language-Team: Indonesian <https://l10n.opensuse.org/projects/agama/agama-"
@@ -380,9 +380,9 @@ msgid "Step %1$d of %2$d"
 msgstr "Langkah %1$d dari %2$d"
 
 #: src/components/core/ProgressStatusMonitor.tsx:40
-#: src/components/overview/SoftwareSummary.tsx:84
-#: src/components/software/SoftwarePage.tsx:196
-#: src/components/software/SoftwarePatternsSelection.tsx:204
+#: src/components/overview/SoftwareSummary.tsx:160
+#: src/components/software/SoftwarePage.tsx:361
+#: src/components/software/SoftwarePatternsSelection.tsx:363
 #: src/routes/software.tsx:33
 msgid "Software"
 msgstr "Perangkat Lunak"
@@ -613,7 +613,6 @@ msgstr "Tidak ada keymap yang cocok dengan filter."
 #: src/components/l10n/LocaleSelection.tsx:92
 #: src/components/l10n/TimezoneSelection.tsx:140
 #: src/components/product/ProductSelectionPage.tsx:290
-#: src/components/software/SoftwarePatternsSelection.tsx:185
 msgid "Select"
 msgstr "Pilih"
 
@@ -1597,38 +1596,36 @@ msgid "Auto"
 msgstr "Otomatis"
 
 #. TRANSLATORS: Confirmation dialog title. %s is replaced with the product name (e.g., "openSUSE Leap")
-#: src/components/overview/OverviewPage.tsx:74
+#: src/components/overview/OverviewPage.tsx:79
 #, javascript-format
 msgid "Delete existing data and install %s?"
 msgstr "Hapus data yang ada dan instal %s?"
 
-#: src/components/overview/OverviewPage.tsx:74
+#: src/components/overview/OverviewPage.tsx:79
 #, javascript-format
 msgid "Install %s?"
 msgstr "Instal %s?"
 
-#. TRANSLATORS: Warning shown when installation will delete existing data
-#: src/components/overview/OverviewPage.tsx:84
-msgid "If unsure, cancel and review storage settings."
-msgstr "Jika tidak yakin, batalkan dan tinjau pengaturan penyimpanan."
-
-#. TRANSLATORS: Information message confirming installation will proceed with current settings
-#: src/components/overview/OverviewPage.tsx:88
-msgid "By proceeding, the installation will begin with defined settings."
+#. TRANSLATORS: shown at the top of the install confirmation dialog.
+#: src/components/overview/OverviewPage.tsx:90
+#, fuzzy
+#| msgid "By proceeding, the installation will begin with defined settings."
+msgid ""
+"Confirming starts the installation immediately with the defined settings."
 msgstr ""
 "Dengan melanjutkan, instalasi akan dimulai dengan pengaturan yang telah "
 "ditentukan."
 
 #. TRANSLATORS: Button to confirm and start the installation
-#: src/components/overview/OverviewPage.tsx:93
+#: src/components/overview/OverviewPage.tsx:97
 msgid "Confirm and install"
 msgstr "Konfirmasi dan instal"
 
-#: src/components/overview/OverviewPage.tsx:106
+#: src/components/overview/OverviewPage.tsx:110
 msgid "Product not found"
 msgstr "Produk tidak ditemukan"
 
-#: src/components/overview/OverviewPage.tsx:109
+#: src/components/overview/OverviewPage.tsx:113
 msgid ""
 "The product was not found in the repositories so it is not possible to "
 "proceed with the installation."
@@ -1638,23 +1635,23 @@ msgstr ""
 
 #. TRANSLATORS: This hint helps users locate the install button. Text inside
 #. square brackets [] appears in bold. Keep brackets for proper formatting.
-#: src/components/overview/OverviewPage.tsx:129
+#: src/components/overview/OverviewPage.tsx:133
 msgid "When ready, click on the [install] button at the end of the page."
 msgstr "Saat siap, klik tombol [instal] di akhir halaman."
 
-#: src/components/overview/OverviewPage.tsx:144
+#: src/components/overview/OverviewPage.tsx:148
 msgid "Install"
 msgstr "Instal"
 
-#: src/components/overview/OverviewPage.tsx:145
+#: src/components/overview/OverviewPage.tsx:149
 msgid "Install now with potential data loss"
 msgstr "Instal sekarang dengan potensi kehilangan data"
 
-#: src/components/overview/OverviewPage.tsx:146
+#: src/components/overview/OverviewPage.tsx:150
 msgid "Install now"
 msgstr "Instal sekarang"
 
-#: src/components/overview/OverviewPage.tsx:170
+#: src/components/overview/OverviewPage.tsx:174
 msgid ""
 "Take a moment to review the installation settings below and adjust them as "
 "needed."
@@ -1662,11 +1659,11 @@ msgstr ""
 "Luangkan waktu untuk meninjau pengaturan instalasi di bawah ini dan "
 "sesuaikan bila diperlukan."
 
-#: src/components/overview/OverviewPage.tsx:205
+#: src/components/overview/OverviewPage.tsx:209
 msgid "Wait until current operations are completed."
 msgstr "Tunggu hingga operasi saat ini selesai."
 
-#: src/components/overview/OverviewPage.tsx:216
+#: src/components/overview/OverviewPage.tsx:220
 msgid ""
 "You need to fix any invalid settings before proceeding with the installation."
 msgstr ""
@@ -1698,25 +1695,54 @@ msgstr "Belum terdaftar"
 msgid "Registered"
 msgstr "Terdaftar"
 
-#: src/components/overview/SoftwareSummary.tsx:45
-msgid "Required packages"
-msgstr "Paket yang diperlukan"
+#. TRANSLATORS: count of patterns picked on top of the default selection.
+#. %d is a number.
+#: src/components/overview/SoftwareSummary.tsx:48
+#, fuzzy, javascript-format
+#| msgid "Use disk %s for additional partitions"
+msgid "Using %d additional pattern"
+msgid_plural "Using %d additional patterns"
+msgstr[0] "Gunakan disk %s untuk partisi tambahan"
 
-#. TRANSLATORS: %s will be replaced with amount of selected patterns.
-#: src/components/overview/SoftwareSummary.tsx:50
-#, javascript-format
-msgid "Required packages and %s pattern"
-msgid_plural "Required packages and %s patterns"
-msgstr[0] "Paket yang diperlukan dan %s pola"
-
-#. TRANSLATORS: %s will be replaced with a human-readable installation size
-#. (e.g. 5.95 GiB).
-#: src/components/overview/SoftwareSummary.tsx:65
-#, javascript-format
-msgid "Needs about %s"
-msgstr "Memerlukan sekitar %s"
+#. TRANSLATORS: alert title shown in the install confirmation dialog when no desktop is selected.
+#. TRANSLATORS: shown in the software summary when no desktop is selected.
+#: src/components/overview/SoftwareSummary.tsx:71
+#: src/components/software/NoDesktopAlert.tsx:43
+#, fuzzy
+#| msgid "auto selected"
+msgid "No desktop selected"
+msgstr "otomatis dipilih"
 
 #: src/components/overview/SoftwareSummary.tsx:87
+#, fuzzy, javascript-format
+#| msgid "auto selected"
+msgid "%d desktop selected"
+msgid_plural "%d desktops selected"
+msgstr[0] "otomatis dipilih"
+
+#. TRANSLATORS: shown in the software summary when the user hasn't picked
+#. anything on top of the product's default selection.
+#: src/components/overview/SoftwareSummary.tsx:97
+#, fuzzy
+#| msgid "Locale selection"
+msgid "Default selection"
+msgstr "Pemilihan lokasi"
+
+#: src/components/overview/SoftwareSummary.tsx:132
+#, javascript-format
+msgid "Includes %1$d additional pattern. Requires %2$s"
+msgid_plural "Includes %1$d additional patterns. Requires %2$s"
+msgstr[0] ""
+
+#. TRANSLATORS: total installation size shown in the software summary.
+#. %s is a human-readable disk size (e.g. "5.95 GiB").
+#: src/components/overview/SoftwareSummary.tsx:143
+#, fuzzy, javascript-format
+#| msgid "Wires: %s"
+msgid "Requires %s"
+msgstr "Kabel: %s"
+
+#: src/components/overview/SoftwareSummary.tsx:163
 msgid "Invalid software selection"
 msgstr "Pilihan perangkat lunak tidak valid"
 
@@ -1842,7 +1868,6 @@ msgid "This license is not available in %s."
 msgstr "Lisensi ini tidak tersedia di %s."
 
 #: src/components/product/LicenseDialog.tsx:74
-#: src/components/software/SoftwarePatternsSelection.tsx:223
 msgid "Close"
 msgstr "Tutup"
 
@@ -2226,24 +2251,81 @@ msgstr ""
 "Jika Anda ingin menonaktifkan pemeriksaan ini, harap tentukan "
 "\"inst.ay_check=0\" pada baris perintah kernel"
 
-#: src/components/software/SoftwarePage.tsx:62
-msgid "No additional software was selected."
-msgstr "Tidak ada perangkat lunak tambahan yang dipilih."
+#. TRANSLATORS: label shown for patterns automatically selected as dependencies
+#: src/components/software/AutoSelectedLabel.tsx:34
+msgid "auto selected"
+msgstr "otomatis dipilih"
 
-#: src/components/software/SoftwarePage.tsx:67
-msgid "The following software patterns are selected for installation:"
-msgstr "Pola perangkat lunak berikut ini dipilih untuk instalasi:"
+#. TRANSLATORS: explains the consequence of installing without a desktop.
+#: src/components/software/NoDesktopAlert.tsx:47
+msgid "The system will boot to a command-line interface."
+msgstr ""
 
-#: src/components/software/SoftwarePage.tsx:82
-#: src/components/software/SoftwarePage.tsx:94
-msgid "Selected patterns"
-msgstr "Pola yang dipilih"
+#: src/components/software/NoDesktopAlert.tsx:54
+msgid ""
+"If that is not intended, cancel and select a desktop in the [software] "
+"settings."
+msgstr ""
 
-#: src/components/software/SoftwarePage.tsx:85
-msgid "Change selection"
-msgstr "Mengubah pilihan"
+#. TRANSLATORS: empty state title for a software section with nothing selected
+#: src/components/software/SoftwarePage.tsx:71
+#, fuzzy
+#| msgid "auto selected"
+msgid "None selected"
+msgstr "otomatis dipilih"
 
-#: src/components/software/SoftwarePage.tsx:97
+#: src/components/software/SoftwarePage.tsx:107
+#, fuzzy
+#| msgid "Read only"
+msgid "Read less"
+msgstr "Hanya baca"
+
+#. TRANSLATORS: accessible label for the collapse button; %s is the pattern name
+#: src/components/software/SoftwarePage.tsx:109
+#, fuzzy, javascript-format
+#| msgid "Needs about %s"
+msgid "Read less about %s"
+msgstr "Memerlukan sekitar %s"
+
+#: src/components/software/SoftwarePage.tsx:113
+#, fuzzy
+#| msgid "Read only"
+msgid "Read more"
+msgstr "Hanya baca"
+
+#. TRANSLATORS: accessible label for the expand button; %s is the pattern name
+#: src/components/software/SoftwarePage.tsx:115
+#, fuzzy, javascript-format
+#| msgid "Needs about %s"
+msgid "Read more about %s"
+msgstr "Memerlukan sekitar %s"
+
+#. TRANSLATORS: %s is the required disk space. Keep the [brackets]: they mark the value to be displayed in bold.
+#: src/components/software/SoftwarePage.tsx:185
+#, javascript-format
+msgid "Required space with current selection: [%s]"
+msgstr ""
+
+#. TRANSLATORS: %s is the required disk space. Keep the [brackets]: they mark the value to be displayed in bold.
+#: src/components/software/SoftwarePage.tsx:187
+#, fuzzy, javascript-format
+#| msgid "Required packages"
+msgid "Required space: [%s]"
+msgstr "Paket yang diperlukan"
+
+#. TRANSLATORS: %1$d is selected count, %2$d is total available count
+#: src/components/software/SoftwarePage.tsx:235
+#: src/components/software/SoftwarePatternsSelection.tsx:147
+#, fuzzy, javascript-format
+#| msgid "%1$d of %2$d devices match filters"
+msgid "%1$d of %2$d selected"
+msgstr "%1$d dari %2$d perangkat cocok dengan filter"
+
+#: src/components/software/SoftwarePage.tsx:258
+msgid "Patterns"
+msgstr ""
+
+#: src/components/software/SoftwarePage.tsx:262
 msgid ""
 "This product does not allow to select software patterns during installation. "
 "However, you can add additional software once the installation is finished."
@@ -2252,54 +2334,134 @@ msgstr ""
 "instalasi. Namun demikian, Anda dapat menambahkan perangkat lunak tambahan "
 "setelah penginstalan selesai."
 
-#. TRANSLATORS: error details followed by a "Try again" link
-#: src/components/software/SoftwarePage.tsx:105
-msgid ""
-"Some installation repositories could not be loaded. The system cannot be "
-"installed without them."
-msgstr ""
-"Beberapa repositori instalasi tidak dapat dimuat. Sistem tidak dapat "
-"diinstal tanpa repositori tersebut."
-
-#. TRANSLATORS: title for an error message box, at least one repository could not be loaded
-#: src/components/software/SoftwarePage.tsx:118
-msgid "Repository load failed"
-msgstr "Pemuatan repositori gagal"
-
-#. TRANSLATORS: progress message
-#: src/components/software/SoftwarePage.tsx:122
-msgid "Loading the installation repositories..."
-msgstr "Memuat repositori instalasi..."
-
-#. TRANSLATORS: link for retrying failed repository load
-#: src/components/software/SoftwarePage.tsx:129
-msgid "Try again"
-msgstr "Coba lagi"
-
-#: src/components/software/SoftwarePage.tsx:143
+#. TRANSLATORS: shown while the software proposal is not yet available
+#: src/components/software/SoftwarePage.tsx:279
 msgid "No information available yet"
 msgstr "Belum ada informasi yang tersedia"
 
-#: src/components/software/SoftwarePage.tsx:181
-msgid "Used space"
-msgstr "Ruang yang digunakan"
+#: src/components/software/SoftwarePage.tsx:302
+msgid "Desktops"
+msgstr ""
 
-#: src/components/software/SoftwarePatternsSelection.tsx:103
-msgid "None of the patterns match the filter."
+#. TRANSLATORS: description for the Desktops section
+#: src/components/software/SoftwarePage.tsx:305
+msgid "Graphical desktop environments for the system."
+msgstr ""
+
+#. TRANSLATORS: button to change the desktop selection
+#: src/components/software/SoftwarePage.tsx:309
+#, fuzzy
+#| msgid "Change mode"
+msgid "Change desktop"
+msgid_plural "Change desktops"
+msgstr[0] "Ubah mode"
+
+#. TRANSLATORS: hint shown when no desktop environment has been chosen
+#: src/components/software/SoftwarePage.tsx:319
+msgid "Select a desktop environment to get a graphical interface."
+msgstr ""
+
+#. TRANSLATORS: button to go to the desktop environment selection page
+#: src/components/software/SoftwarePage.tsx:321
+#, fuzzy
+#| msgid "Select a disk"
+msgid "Select a desktop"
+msgstr "Pilih disk"
+
+#: src/components/software/SoftwarePage.tsx:328
+#, fuzzy
+#| msgid "Use RAID %s for additional partitions"
+msgid "Additional patterns"
+msgstr "Gunakan RAID %s untuk partisi tambahan"
+
+#. TRANSLATORS: description for the Additional software section
+#: src/components/software/SoftwarePage.tsx:331
+msgid ""
+"Curated sets of packages for common use cases and features to extend the "
+"system."
+msgstr ""
+
+#. TRANSLATORS: button to change the additional software selection
+#: src/components/software/SoftwarePage.tsx:334
+#, fuzzy
+#| msgid "Change to %s"
+msgid "Change patterns"
+msgstr "Ubah ke %s"
+
+#. TRANSLATORS: hint shown when no additional software patterns have been chosen
+#: src/components/software/SoftwarePage.tsx:343
+#, fuzzy
+#| msgid "Select how to allocate the file system"
+msgid "Select one or more to extend the system."
+msgstr "Pilih cara mengalokasikan sistem file"
+
+#. TRANSLATORS: button to go to the pattern selection page
+#: src/components/software/SoftwarePage.tsx:345
+#, fuzzy
+#| msgid "Selected patterns"
+msgid "Select patterns"
+msgstr "Pola yang dipilih"
+
+#. TRANSLATORS: page title when selecting all software patterns
+#. TRANSLATORS: page title when selecting non-desktop software patterns
+#: src/components/software/SoftwarePatternsSelection.tsx:113
+#: src/components/software/SoftwarePatternsSelection.tsx:117
+#, fuzzy
+#| msgid "Wrong selection"
+msgid "Patterns selection"
+msgstr "Pilihan salah"
+
+#. TRANSLATORS: page title when selecting desktop environments
+#: src/components/software/SoftwarePatternsSelection.tsx:115
+#, fuzzy
+#| msgid "Row selection"
+msgid "Desktop selection"
+msgstr "Baris pemilihan"
+
+#. TRANSLATORS: shown next to a category heading when the search filter excludes all its patterns
+#: src/components/software/SoftwarePatternsSelection.tsx:156
+#, fuzzy
+#| msgid "None of the patterns match the filter."
+msgid "No patterns match the filter"
 msgstr "Tidak ada pola yang cocok dengan filter."
 
-#: src/components/software/SoftwarePatternsSelection.tsx:181
-msgid "auto selected"
-msgstr "otomatis dipilih"
+#. TRANSLATORS: count of patterns matching the search filter in this category
+#: src/components/software/SoftwarePatternsSelection.tsx:158
+#, fuzzy, javascript-format
+#| msgid "No targets matches filters"
+msgid "%d matches the filter"
+msgid_plural "%d match the filter"
+msgstr[0] "Tidak ada target yang cocok dengan filter"
 
-#: src/components/software/SoftwarePatternsSelection.tsx:185
-msgid "Unselect"
-msgstr "Batalkan pilihan"
+#: src/components/software/SoftwarePatternsSelection.tsx:344
+#, fuzzy, javascript-format
+#| msgid "%d error found"
+#| msgid_plural "%d errors found"
+msgid "%d pattern found"
+msgid_plural "%d patterns found"
+msgstr[0] "%d kesalahan ditemukan"
 
-#. TRANSLATORS: search field placeholder text
-#: src/components/software/SoftwarePatternsSelection.tsx:210
-#: src/components/software/SoftwarePatternsSelection.tsx:211
-msgid "Filter by pattern title or description"
+#. TRANSLATORS: search results badge on the filter input when no pattern matches
+#: src/components/software/SoftwarePatternsSelection.tsx:354
+#, fuzzy
+#| msgid "None of the patterns match the filter."
+msgid "No patterns match"
+msgstr "Tidak ada pola yang cocok dengan filter."
+
+#. TRANSLATORS: search results badge on the filter input.
+#. %1$d is matches found, %2$d is the total number of patterns.
+#: src/components/software/SoftwarePatternsSelection.tsx:357
+#, fuzzy, javascript-format
+#| msgid "%1$d of %2$d devices match filters"
+msgid "%1$d of %2$d patterns"
+msgstr "%1$d dari %2$d perangkat cocok dengan filter"
+
+#. TRANSLATORS: placeholder for the search field on the patterns selection page
+#: src/components/software/SoftwarePatternsSelection.tsx:400
+#: src/components/software/SoftwarePatternsSelection.tsx:402
+#, fuzzy
+#| msgid "Filter by pattern title or description"
+msgid "Filter by name and description"
 msgstr "Memfilter berdasarkan judul atau deskripsi pola"
 
 #. TRANSLATORS: %s will be replaced by the estimated installation size,
@@ -2727,7 +2889,8 @@ msgstr "Pertahankan %s"
 
 #: src/components/storage/DeviceSelectorModal.tsx:306
 msgid "Use the tabs to browse disks, RAID devices and LVM volume groups."
-msgstr "Gunakan tab untuk menelusuri disk, perangkat RAID, dan grup volume LVM."
+msgstr ""
+"Gunakan tab untuk menelusuri disk, perangkat RAID, dan grup volume LVM."
 
 #: src/components/storage/DeviceSelectorModal.tsx:325
 #: src/components/storage/LvmPage.tsx:185
@@ -3488,20 +3651,24 @@ msgstr "Partisi"
 msgid "Add or use partition"
 msgstr "Tambahkan atau gunakan partisi"
 
-#: src/components/storage/PotentialDataLossAlert.tsx:32
-msgid "If you are unsure, check and adjust the storage settings."
-msgstr "Jika Anda tidak yakin, periksa dan sesuaikan pengaturan penyimpanan."
-
 #. TRANSLATORS: %s will be replaced by a formatted list of affected
 #. systems like "Windows and openSUSE Tumbleweed".
-#: src/components/storage/PotentialDataLossAlert.tsx:43
+#: src/components/storage/PotentialDataLossAlert.tsx:52
 #, javascript-format
 msgid "Proceeding will delete existing data, including %s"
 msgstr "Melanjutkan akan menghapus data yang ada, termasuk %s"
 
-#: src/components/storage/PotentialDataLossAlert.tsx:47
+#: src/components/storage/PotentialDataLossAlert.tsx:56
 msgid "Proceeding may result in data loss"
 msgstr "Melanjutkan dapat menyebabkan kehilangan data"
+
+#. TRANSLATORS: advice shown when destructive actions are pending.
+#. The text inside [] becomes a link that navigates to the storage section.
+#: src/components/storage/PotentialDataLossAlert.tsx:71
+#, fuzzy
+#| msgid "If unsure, cancel and review storage settings."
+msgid "If unsure, cancel and review [storage] settings."
+msgstr "Jika tidak yakin, batalkan dan tinjau pengaturan penyimpanan."
 
 #: src/components/storage/ProposalActions.tsx:66
 #, javascript-format
@@ -5220,6 +5387,46 @@ msgstr "Gunakan Kunci SSH Publik"
 msgid "ZFCP"
 msgstr "ZFCP"
 
+#, javascript-format
+#~ msgid "Required packages and %s pattern"
+#~ msgid_plural "Required packages and %s patterns"
+#~ msgstr[0] "Paket yang diperlukan dan %s pola"
+
+#~ msgid "No additional software was selected."
+#~ msgstr "Tidak ada perangkat lunak tambahan yang dipilih."
+
+#~ msgid "The following software patterns are selected for installation:"
+#~ msgstr "Pola perangkat lunak berikut ini dipilih untuk instalasi:"
+
+#~ msgid "Change selection"
+#~ msgstr "Mengubah pilihan"
+
+#~ msgid ""
+#~ "Some installation repositories could not be loaded. The system cannot be "
+#~ "installed without them."
+#~ msgstr ""
+#~ "Beberapa repositori instalasi tidak dapat dimuat. Sistem tidak dapat "
+#~ "diinstal tanpa repositori tersebut."
+
+#~ msgid "Repository load failed"
+#~ msgstr "Pemuatan repositori gagal"
+
+#~ msgid "Loading the installation repositories..."
+#~ msgstr "Memuat repositori instalasi..."
+
+#~ msgid "Try again"
+#~ msgstr "Coba lagi"
+
+#~ msgid "Used space"
+#~ msgstr "Ruang yang digunakan"
+
+#~ msgid "Unselect"
+#~ msgstr "Batalkan pilihan"
+
+#~ msgid "If you are unsure, check and adjust the storage settings."
+#~ msgstr ""
+#~ "Jika Anda tidak yakin, periksa dan sesuaikan pengaturan penyimpanan."
+
 #~ msgid "IP Address"
 #~ msgstr "Alamat IP"
 
@@ -5571,9 +5778,6 @@ msgstr "ZFCP"
 
 #~ msgid "Keyboard selection"
 #~ msgstr "Pemilihan keyboard"
-
-#~ msgid "Locale selection"
-#~ msgstr "Pemilihan lokasi"
 
 #~ msgid " Timezone selection"
 #~ msgstr " Pemilihan zona waktu"
@@ -5990,10 +6194,6 @@ msgstr "ZFCP"
 #~ msgid "storage techs"
 #~ msgstr "teknisi penyimpanan"
 
-#, c-format
-#~ msgid "Wires: %s"
-#~ msgstr "Kabel: %s"
-
 #~ msgid "Manage and format"
 #~ msgstr "Mengelola dan memformat"
 
@@ -6270,9 +6470,6 @@ msgstr "ZFCP"
 #~ msgid "Select a location"
 #~ msgstr "Pilih lokasi"
 
-#~ msgid "Select how to allocate the file system"
-#~ msgstr "Pilih cara mengalokasikan sistem file"
-
 #~ msgid ""
 #~ "The file system will be allocated as a new partition at the selected disk."
 #~ msgstr ""
@@ -6507,11 +6704,6 @@ msgstr "ZFCP"
 
 #~ msgid "Found Issues"
 #~ msgstr "Masalah yang Ditemukan"
-
-#, c-format
-#~ msgid "%d error found"
-#~ msgid_plural "%d errors found"
-#~ msgstr[0] "%d kesalahan ditemukan"
 
 #~ msgid "keyboard"
 #~ msgstr "papan ketik"
