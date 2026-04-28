@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-28 10:34+0000\n"
+"POT-Creation-Date: 2026-04-28 11:28+0000\n"
 "PO-Revision-Date: 2026-02-23 14:04+0000\n"
 "Last-Translator: Akın Birdal <reend21@protonmail.com>\n"
 "Language-Team: Turkish <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -397,8 +397,8 @@ msgstr "%d'den %d"
 
 #: src/components/core/ProgressStatusMonitor.tsx:40
 #: src/components/overview/SoftwareSummary.tsx:160
-#: src/components/software/SoftwarePage.tsx:361
-#: src/components/software/SoftwarePatternsSelection.tsx:364
+#: src/components/software/SoftwarePage.tsx:377
+#: src/components/software/SoftwarePatternsSelection.tsx:355
 #: src/routes/software.tsx:33
 msgid "Software"
 msgstr "Yazılım"
@@ -1831,7 +1831,7 @@ msgstr[1] "Ek bölümler için %s diskini kullan"
 #. TRANSLATORS: alert title shown in the install confirmation dialog when no desktop is selected.
 #. TRANSLATORS: shown in the software summary when no desktop is selected.
 #: src/components/overview/SoftwareSummary.tsx:71
-#: src/components/software/NoDesktopAlert.tsx:43
+#: src/components/software/NoDesktopAlert.tsx:51
 #, fuzzy
 msgid "No desktop selected"
 msgstr "kendiliğinden seçildi"
@@ -2403,11 +2403,11 @@ msgid "auto selected"
 msgstr "kendiliğinden seçildi"
 
 #. TRANSLATORS: explains the consequence of installing without a desktop.
-#: src/components/software/NoDesktopAlert.tsx:47
+#: src/components/software/NoDesktopAlert.tsx:55
 msgid "The system will boot to a command-line interface."
 msgstr ""
 
-#: src/components/software/NoDesktopAlert.tsx:54
+#: src/components/software/NoDesktopAlert.tsx:62
 msgid ""
 "If that is not intended, cancel and select a desktop in the [software] "
 "settings."
@@ -2419,52 +2419,63 @@ msgstr ""
 msgid "None selected"
 msgstr "kendiliğinden seçildi"
 
-#: src/components/software/SoftwarePage.tsx:107
+#. TRANSLATORS: empty state title when no desktop environments are available
+#: src/components/software/SoftwarePage.tsx:88
+#, fuzzy
+msgid "No desktops available"
+msgstr "Hiçbir cihaz mevcut değil"
+
+#. TRANSLATORS: explanation shown when the product has no desktop environments
+#: src/components/software/SoftwarePage.tsx:91
+msgid "This product does not provide desktop environments."
+msgstr ""
+
+#: src/components/software/SoftwarePage.tsx:120
 #, fuzzy
 msgid "Read less"
 msgstr "salt_okunur"
 
 #. TRANSLATORS: accessible label for the collapse button; %s is the pattern name
-#: src/components/software/SoftwarePage.tsx:109
+#: src/components/software/SoftwarePage.tsx:122
 #, fuzzy, javascript-format
 msgid "Read less about %s"
 msgstr "en az %s"
 
-#: src/components/software/SoftwarePage.tsx:113
+#: src/components/software/SoftwarePage.tsx:126
 #, fuzzy
 msgid "Read more"
 msgstr "salt_okunur"
 
 #. TRANSLATORS: accessible label for the expand button; %s is the pattern name
-#: src/components/software/SoftwarePage.tsx:115
+#: src/components/software/SoftwarePage.tsx:128
 #, javascript-format
 msgid "Read more about %s"
 msgstr ""
 
 #. TRANSLATORS: %s is the required disk space. Keep the [brackets]: they mark the value to be displayed in bold.
-#: src/components/software/SoftwarePage.tsx:185
+#: src/components/software/SoftwarePage.tsx:198
 #, javascript-format
 msgid "Required space with current selection: [%s]"
 msgstr ""
 
 #. TRANSLATORS: %s is the required disk space. Keep the [brackets]: they mark the value to be displayed in bold.
-#: src/components/software/SoftwarePage.tsx:187
+#: src/components/software/SoftwarePage.tsx:200
 #, fuzzy, javascript-format
 msgid "Required space: [%s]"
 msgstr "%s'de boşluk bul"
 
 #. TRANSLATORS: %1$d is selected count, %2$d is total available count
-#: src/components/software/SoftwarePage.tsx:235
+#: src/components/software/SoftwarePage.tsx:248
 #: src/components/software/SoftwarePatternsSelection.tsx:147
 #, fuzzy, javascript-format
 msgid "%1$d of %2$d selected"
 msgstr "Hiçbir yerel ayar filtreye uymuyor."
 
-#: src/components/software/SoftwarePage.tsx:258
+#: src/components/software/SoftwarePage.tsx:271
 msgid "Patterns"
 msgstr ""
 
-#: src/components/software/SoftwarePage.tsx:262
+#: src/components/software/SoftwarePage.tsx:275
 msgid ""
 "This product does not allow to select software patterns during installation. "
 "However, you can add additional software once the installation is finished."
@@ -2473,22 +2484,22 @@ msgstr ""
 "Ancak kurulum tamamlandıktan sonra ek yazılım ekleyebilirsiniz."
 
 #. TRANSLATORS: shown while the software proposal is not yet available
-#: src/components/software/SoftwarePage.tsx:279
+#: src/components/software/SoftwarePage.tsx:292
 #, fuzzy
 msgid "No information available yet"
 msgstr "%s hakkında bilgi göster"
 
-#: src/components/software/SoftwarePage.tsx:302
+#: src/components/software/SoftwarePage.tsx:314
 msgid "Desktops"
 msgstr ""
 
 #. TRANSLATORS: description for the Desktops section
-#: src/components/software/SoftwarePage.tsx:305
+#: src/components/software/SoftwarePage.tsx:317
 msgid "Graphical desktop environments for the system."
 msgstr ""
 
 #. TRANSLATORS: button to change the desktop selection
-#: src/components/software/SoftwarePage.tsx:309
+#: src/components/software/SoftwarePage.tsx:321
 #, fuzzy
 msgid "Change desktop"
 msgid_plural "Change desktops"
@@ -2496,42 +2507,42 @@ msgstr[0] "Ürünü değiştir"
 msgstr[1] "Ürünü değiştir"
 
 #. TRANSLATORS: hint shown when no desktop environment has been chosen
-#: src/components/software/SoftwarePage.tsx:319
+#: src/components/software/SoftwarePage.tsx:334
 msgid "Select a desktop environment to get a graphical interface."
 msgstr ""
 
 #. TRANSLATORS: button to go to the desktop environment selection page
-#: src/components/software/SoftwarePage.tsx:321
+#: src/components/software/SoftwarePage.tsx:336
 #, fuzzy
 msgid "Select a desktop"
 msgstr "Bir disk seçin"
 
-#: src/components/software/SoftwarePage.tsx:328
+#: src/components/software/SoftwarePage.tsx:344
 #, fuzzy
 msgid "Additional patterns"
 msgstr "Ek bölümler için RAID %s kullan"
 
 #. TRANSLATORS: description for the Additional software section
-#: src/components/software/SoftwarePage.tsx:331
+#: src/components/software/SoftwarePage.tsx:347
 msgid ""
 "Curated sets of packages for common use cases and features to extend the "
 "system."
 msgstr ""
 
 #. TRANSLATORS: button to change the additional software selection
-#: src/components/software/SoftwarePage.tsx:334
+#: src/components/software/SoftwarePage.tsx:350
 #, fuzzy
 msgid "Change patterns"
 msgstr "%s'ye bağlan"
 
 #. TRANSLATORS: hint shown when no additional software patterns have been chosen
-#: src/components/software/SoftwarePage.tsx:343
+#: src/components/software/SoftwarePage.tsx:359
 #, fuzzy
 msgid "Select one or more to extend the system."
 msgstr "Dosya sisteminin nasıl tahsis edileceğini seçin"
 
 #. TRANSLATORS: button to go to the pattern selection page
-#: src/components/software/SoftwarePage.tsx:345
+#: src/components/software/SoftwarePage.tsx:361
 #, fuzzy
 msgid "Select patterns"
 msgstr "Seçilmiş desenler"
@@ -2564,7 +2575,7 @@ msgid_plural "%d match the filter"
 msgstr[0] "Hiçbir yerel ayar filtreye uymuyor."
 msgstr[1] "Hiçbir yerel ayar filtreye uymuyor."
 
-#: src/components/software/SoftwarePatternsSelection.tsx:345
+#: src/components/software/SoftwarePatternsSelection.tsx:336
 #, fuzzy, javascript-format
 msgid "%d pattern found"
 msgid_plural "%d patterns found"
@@ -2572,21 +2583,21 @@ msgstr[0] "%d hata bulundu"
 msgstr[1] "%d hata bulundu"
 
 #. TRANSLATORS: search results badge on the filter input when no pattern matches
-#: src/components/software/SoftwarePatternsSelection.tsx:355
+#: src/components/software/SoftwarePatternsSelection.tsx:346
 #, fuzzy
 msgid "No patterns match"
 msgstr "Desenlerin hiçbiri filtreyle eşleşmiyor."
 
 #. TRANSLATORS: search results badge on the filter input.
 #. %1$d is matches found, %2$d is the total number of patterns.
-#: src/components/software/SoftwarePatternsSelection.tsx:358
+#: src/components/software/SoftwarePatternsSelection.tsx:349
 #, fuzzy, javascript-format
 msgid "%1$d of %2$d patterns"
 msgstr "Hiçbir yerel ayar filtreye uymuyor."
 
 #. TRANSLATORS: placeholder for the search field on the patterns selection page
-#: src/components/software/SoftwarePatternsSelection.tsx:401
-#: src/components/software/SoftwarePatternsSelection.tsx:403
+#: src/components/software/SoftwarePatternsSelection.tsx:392
+#: src/components/software/SoftwarePatternsSelection.tsx:394
 #, fuzzy
 msgid "Filter by name and description"
 msgstr "Desen başlığına veya açıklamasına göre filtrele"
