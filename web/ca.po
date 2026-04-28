@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-24 15:36+0000\n"
+"POT-Creation-Date: 2026-04-28 10:34+0000\n"
 "PO-Revision-Date: 2026-04-27 14:04+0000\n"
 "Last-Translator: David Medina <medipas@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -414,12 +414,12 @@ msgstr "Emmagatzematge"
 #. TRANSLATORS: breadcrumb label for the network configuration section.
 #: src/components/core/ProgressStatusMonitor.tsx:42
 #: src/components/network/BindingSettingsForm.tsx:111
-#: src/components/network/ConnectionForm.tsx:642
+#: src/components/network/ConnectionDetails.tsx:95
+#: src/components/network/ConnectionForm.tsx:569
+#: src/components/network/ConnectionPage.tsx:75
 #: src/components/network/NetworkPage.tsx:43
 #: src/components/network/WifiConnectionForm.tsx:142
 #: src/components/network/WifiConnectionForm.tsx:198
-#: src/components/network/WiredConnectionDetails.tsx:95
-#: src/components/network/WiredConnectionPage.tsx:75
 #: src/components/overview/NetworkSummary.tsx:149 src/routes/network.tsx:36
 msgid "Network"
 msgstr "Xarxa"
@@ -720,7 +720,7 @@ msgstr "Identifica el dispositiu de connexió per l'adreça física"
 #. TRANSLATORS: table header for a zFCP devices table.
 #. TRANSLATORS: label for the device binding dropdown.
 #: src/components/network/BindingModeSelector.tsx:68
-#: src/components/network/ConnectionsTable.tsx:166
+#: src/components/network/ConnectionsTable.tsx:164
 #: src/components/storage/DrivesTable.tsx:71
 #: src/components/storage/MdRaidsTable.tsx:70
 #: src/components/storage/ProposalResultTable.tsx:134
@@ -767,83 +767,243 @@ msgstr "Vincula a l'adreça MAC"
 msgid "Choose device to bind by MAC"
 msgstr "Trieu el dispositiu per vincular per MAC"
 
-#. TRANSLATORS: validation error for the connection name field.
-#: src/components/network/ConnectionForm.tsx:261
-msgid "Name is required"
-msgstr "Cal el nom"
+#. TRANSLATORS: label for the network interface name field.
+#. TRANSLATORS: accessible label for the device selector. MAC address refers
+#. to the hardware identifier of the network interface.
+#: src/components/network/BondSettings.tsx:65
+#: src/components/network/BondSettings.tsx:70
+#: src/components/network/DeviceSelector.tsx:61
+msgid "Device name"
+msgstr "Nom del dispositiu"
 
-#. TRANSLATORS: validation error for the IPv4 addresses field.
-#: src/components/network/ConnectionForm.tsx:267
-msgid "At least one IPv4 address is required"
-msgstr "Cal com a mínim una adreça IPv4"
+#. TRANSLATORS: helper text for the bond device name field.
+#: src/components/network/BondSettings.tsx:74
+msgid "E.g., bond0"
+msgstr ""
 
-#. TRANSLATORS: validation error for the IPv4 addresses field.
-#: src/components/network/ConnectionForm.tsx:269
-msgid "Some IPv4 addresses are invalid"
-msgstr "Algunes adreces IPv4 no són vàlides"
+#. TRANSLATORS: label for the bond mode field.
+#: src/components/network/BondSettings.tsx:85
+#: src/components/network/ConnectionDetails.tsx:134
+#, fuzzy
+#| msgid "Change mode"
+msgid "Bond mode"
+msgstr "Canvia'n el mode"
 
-#. TRANSLATORS: validation error for the IPv6 addresses field.
-#: src/components/network/ConnectionForm.tsx:276
-msgid "At least one IPv6 address is required"
-msgstr "Cal com a mínim una adreça IPv6"
+#. TRANSLATORS: label for the bond options field.
+#: src/components/network/BondSettings.tsx:96
+#: src/components/network/ConnectionDetails.tsx:140
+#, fuzzy
+#| msgid "Boot options"
+msgid "Bond options"
+msgstr "Opcions d'arrencada"
 
-#. TRANSLATORS: validation error for the IPv6 addresses field.
-#: src/components/network/ConnectionForm.tsx:278
-msgid "Some IPv6 addresses are invalid"
-msgstr "Algunes adreces IPv6 no són vàlides"
+#. TRANSLATORS: helper text for the bond options field.
+#: src/components/network/BondSettings.tsx:100
+msgid "E.g., downdelay=0, primary=eth1, miimon=100, lacp_rate=fast"
+msgstr ""
 
-#. TRANSLATORS: validation error for the IPv4 gateway field.
-#: src/components/network/ConnectionForm.tsx:286
-msgid "IPv4 gateway is required"
-msgstr "Cal una passarel·la IPv4"
+#. TRANSLATORS: label for the bond ports field.
+#: src/components/network/BondSettings.tsx:110
+#: src/components/network/ConnectionDetails.tsx:146
+msgid "Bond ports"
+msgstr ""
 
-#. TRANSLATORS: validation error for the IPv4 gateway field.
-#: src/components/network/ConnectionForm.tsx:288
-msgid "Invalid IPv4 gateway"
-msgstr "Passarel·la IPv4 no vàlida"
+#. TRANSLATORS: helper text for the bond ports field. %s is a list of available devices.
+#: src/components/network/BondSettings.tsx:114
+#, fuzzy, javascript-format
+#| msgid "Available devices"
+msgid "Available devices: %s"
+msgstr "Dispositius disponibles"
 
-#. TRANSLATORS: validation error for the IPv6 gateway field.
-#: src/components/network/ConnectionForm.tsx:296
-msgid "IPv6 gateway is required"
-msgstr "Cal una passarel·la IPv6"
+#: src/components/network/ConnectionDetails.tsx:60
+msgid "Connection is available to all devices."
+msgstr "La connexió està disponible per a tots els dispositius."
 
-#. TRANSLATORS: validation error for the IPv6 gateway field.
-#: src/components/network/ConnectionForm.tsx:298
-msgid "Invalid IPv6 gateway"
-msgstr "Passarel·la IPv6 no vàlida"
+#. TRANSLATORS: %s will be replaced by a network device name, like eth0 or enp1s0
+#: src/components/network/ConnectionDetails.tsx:63
+#, javascript-format
+msgid "Connection is bound to device %s."
+msgstr "La connexió està vinculada al dispositiu %s."
 
-#. TRANSLATORS: validation error for the DNS servers field.
-#: src/components/network/ConnectionForm.tsx:305
-msgid "At least one DNS server is required"
-msgstr "Cal com a mínim un servidor DNS"
+#. TRANSLATORS: %s will be replaced by MAC addrss, like 7C:D7:11:28:F5:40
+#: src/components/network/ConnectionDetails.tsx:66
+#, javascript-format
+msgid "Connection is bound to MAC address %s."
+msgstr "La connexió està vinculada a l'adreça MAC %s."
 
-#. TRANSLATORS: validation error for the DNS servers field.
-#: src/components/network/ConnectionForm.tsx:307
-msgid "Some DNS server addresses are invalid"
-msgstr "Algunes adreces de servidor DNS no són vàlides"
+#: src/components/network/ConnectionDetails.tsx:73
+msgid "Binding"
+msgstr "Vinculació"
 
-#. TRANSLATORS: validation error for the DNS search domains field.
-#: src/components/network/ConnectionForm.tsx:314
-msgid "At least one DNS search domain is required"
-msgstr "Cal com a mínim un domini de cerca de DNS"
+#: src/components/network/ConnectionDetails.tsx:81
+msgid "Edit binding settings"
+msgstr "Edita la configuració de la vinculació"
 
-#. TRANSLATORS: validation error for the DNS search domains field.
-#: src/components/network/ConnectionForm.tsx:316
-msgid "Some DNS search domains are invalid"
-msgstr "Alguns dominis de cerca de DNS no són vàlids"
+#: src/components/network/ConnectionDetails.tsx:96
+msgid "Network details"
+msgstr "Detalls de la xarxa"
+
+#: src/components/network/ConnectionDetails.tsx:98
+msgid "SSID"
+msgstr "SSID"
+
+#: src/components/network/ConnectionDetails.tsx:102
+#: src/components/network/WifiConnectionForm.tsx:153
+#: src/components/network/WifiConnectionForm.tsx:156
+msgid "Security"
+msgstr "Seguretat"
+
+#. TRANSLATORS: table header for a DASD devices table
+#. TRANSLATORS: table header for an iSCSI targets table
+#. TRANSLATORS: table header for a zFCP devices table.
+#: src/components/network/ConnectionDetails.tsx:108
+#: src/components/network/ConnectionDetails.tsx:173
+#: src/components/network/ConnectionsTable.tsx:158
+#: src/components/network/ConnectionsTable.tsx:293
+#: src/components/storage/dasd/DASDTable.tsx:312
+#: src/components/storage/dasd/DASDTable.tsx:536
+#: src/components/storage/iscsi/StatusFilter.tsx:77
+#: src/components/storage/iscsi/TargetsTable.tsx:495
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:164
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:335
+msgid "Status"
+msgstr "Estat"
+
+#: src/components/network/ConnectionDetails.tsx:112
+msgid "Signal strength"
+msgstr "Força del senyal"
+
+#: src/components/network/ConnectionDetails.tsx:121
+msgid "Network not available"
+msgstr "Xarxa no disponible"
+
+#: src/components/network/ConnectionDetails.tsx:131 src/utils/network.ts:61
+msgid "Bond"
+msgstr ""
+
+#: src/components/network/ConnectionDetails.tsx:132
+#, fuzzy
+#| msgid "Hide details"
+msgid "Bond details"
+msgstr "Amaga els detalls"
+
+#: src/components/network/ConnectionDetails.tsx:136
+#: src/components/network/ConnectionDetails.tsx:142
+#: src/components/network/ConnectionDetails.tsx:150
+#: src/components/network/ConnectionDetails.tsx:185
+#: src/components/network/ConnectionDetails.tsx:200
+#: src/components/network/ConnectionDetails.tsx:210
+#: src/components/network/ConnectionDetails.tsx:220
+#: src/components/network/ConnectionDetails.tsx:230
+#: src/components/network/ConnectionDetails.tsx:307
+#: src/components/network/ConnectionDetails.tsx:310
+#: src/components/network/ConnectionDetails.tsx:320
+#: src/components/network/ConnectionDetails.tsx:332
+#: src/components/network/ConnectionDetails.tsx:344
+#: src/components/network/ConnectionDetails.tsx:354
+msgid "None set"
+msgstr "No s'ha establert"
+
+#: src/components/network/ConnectionDetails.tsx:164
+msgid "Device details"
+msgstr "Detalls del dispositiu"
+
+#. TRANSLATORS: table header for an iSCSI targets table
+#: src/components/network/ConnectionDetails.tsx:169
+#: src/components/storage/iscsi/TargetsTable.tsx:476
+msgid "Interface"
+msgstr "Interfície"
+
+#: src/components/network/ConnectionDetails.tsx:177
+msgid "MAC"
+msgstr "MAC"
+
+#: src/components/network/ConnectionDetails.tsx:181
+#: src/components/network/ConnectionDetails.tsx:316
+msgid "Gateway"
+msgstr "Passarel·la"
+
+#: src/components/network/ConnectionDetails.tsx:196
+#: src/components/network/ConnectionDetails.tsx:328
+#: src/components/network/ConnectionsTable.tsx:187
+msgid "IP Addresses"
+msgstr "Adreces IP"
+
+#: src/components/network/ConnectionDetails.tsx:206
+#: src/components/network/ConnectionDetails.tsx:340
+msgid "DNS"
+msgstr "DNS"
+
+#. TRANSLATORS: label for the DNS search domains field.
+#: src/components/network/ConnectionDetails.tsx:216
+#: src/components/network/ConnectionDetails.tsx:350
+#: src/components/network/ConnectionForm.tsx:477
+msgid "DNS search domains"
+msgstr "Dominis de cerca de DNS"
+
+#: src/components/network/ConnectionDetails.tsx:226
+msgid "Routes"
+msgstr "Camins"
+
+#: src/components/network/ConnectionDetails.tsx:261
+msgid "Connected device"
+msgstr "Dispositiu connectat"
+
+#: src/components/network/ConnectionDetails.tsx:261
+msgid "Connected devices"
+msgstr "Dispositius connectats"
+
+#: src/components/network/ConnectionDetails.tsx:264
+msgid "No device is currently using this connection."
+msgstr "Cap dispositiu usa actualment aquesta connexió."
+
+#: src/components/network/ConnectionDetails.tsx:270
+msgid "Connected devices tabs"
+msgstr "Pestanyes de dispositius connectats"
+
+#: src/components/network/ConnectionDetails.tsx:292
+#: src/components/storage/ProposalPage.tsx:204
+msgid "Settings"
+msgstr "Configuració"
+
+#: src/components/network/ConnectionDetails.tsx:296
+msgid "Edit connection settings"
+msgstr "Edita la configuració de la connexió"
+
+#: src/components/network/ConnectionDetails.tsx:303
+msgid "Mode"
+msgstr "Mode"
+
+#: src/components/network/ConnectionDetails.tsx:307
+msgid "IPv4"
+msgstr "IPv4"
+
+#: src/components/network/ConnectionDetails.tsx:310
+msgid "IPv6"
+msgstr "IPv6"
 
 #. TRANSLATORS: title of an error for a failed network connection save.
 #. Do not end with a period.
-#: src/components/network/ConnectionForm.tsx:443
+#: src/components/network/ConnectionForm.tsx:340
 msgid "The connection could not be saved"
 msgstr "No s'ha pogut desar la connexió"
+
+#. TRANSLATORS: table header for a DASD devices table
+#. TRANSLATORS: checkbox label for custom DNS server configuration.
+#: src/components/network/ConnectionForm.tsx:357
+#: src/components/network/ConnectionsTable.tsx:153
+#: src/components/network/ConnectionsTable.tsx:280
+#: src/components/storage/DeviceSelectorPage.tsx:54
+#: src/components/storage/dasd/DASDTable.tsx:550
+msgid "Type"
+msgstr "Tipus"
 
 #. TRANSLATORS: table header for an iSCSI targets table
 #. TRANSLATORS: input field for the iSCSI initiator name
 #. TRANSLATORS: label for the network connection profile name field.
-#: src/components/network/ConnectionForm.tsx:484
-#: src/components/network/ConnectionsTable.tsx:150
-#: src/components/network/ConnectionsTable.tsx:274
+#: src/components/network/ConnectionForm.tsx:372
+#: src/components/network/ConnectionsTable.tsx:148
+#: src/components/network/ConnectionsTable.tsx:272
 #: src/components/storage/DeviceSelectorPage.tsx:55
 #: src/components/storage/LvmPage.tsx:182
 #: src/components/storage/iscsi/InitiatorFormPage.tsx:66
@@ -854,142 +1014,117 @@ msgid "Name"
 msgstr "Nom"
 
 #. TRANSLATORS: checkbox label for custom DNS server configuration.
-#: src/components/network/ConnectionForm.tsx:500
+#: src/components/network/ConnectionForm.tsx:428
 msgid "Use custom DNS servers"
 msgstr "Usa servidors DNS personalitzats"
 
 #. TRANSLATORS: label for the DNS servers field.
-#: src/components/network/ConnectionForm.tsx:513
+#: src/components/network/ConnectionForm.tsx:441
 msgid "DNS servers"
 msgstr "Servidors DNS"
 
 #. TRANSLATORS: helper text for DNS servers field explaining the format.
-#: src/components/network/ConnectionForm.tsx:517
+#: src/components/network/ConnectionForm.tsx:445
 msgid "E.g., 8.8.8.8 or 2001:4860:4860::8888"
 msgstr "P. ex., 8.8.8.8 o 2001:4860:4860::8888"
 
 #. TRANSLATORS: validation error for an invalid DNS server address entry.
-#: src/components/network/ConnectionForm.tsx:521
+#: src/components/network/ConnectionForm.tsx:449
 msgid "Invalid DNS server address"
 msgstr "Adreça del servidor DNS no vàlida"
 
 #. TRANSLATORS: checkbox label for custom DNS search domain configuration.
-#: src/components/network/ConnectionForm.tsx:536
+#: src/components/network/ConnectionForm.tsx:464
 msgid "Use custom DNS search domains"
 msgstr "Usa dominis de cerca de DNS personalitzats"
 
-#. TRANSLATORS: label for the DNS search domains field.
-#: src/components/network/ConnectionForm.tsx:549
-msgid "DNS search domains"
-msgstr "Dominis de cerca de DNS"
-
 #. TRANSLATORS: helper text for DNS search domains field explaining the format.
-#: src/components/network/ConnectionForm.tsx:553
+#: src/components/network/ConnectionForm.tsx:481
 msgid "E.g., example.com"
 msgstr "P. ex., exemple.com"
 
 #. TRANSLATORS: validation error for an invalid DNS search domain entry.
-#: src/components/network/ConnectionForm.tsx:557
+#: src/components/network/ConnectionForm.tsx:485
 msgid "Invalid DNS search domain"
 msgstr "Domini de cerca de DNS no vàlid"
 
 #. TRANSLATORS: title of the page shown when the requested connection
 #. profile does not exist. Do not end with a period.
-#: src/components/network/ConnectionForm.tsx:585
+#: src/components/network/ConnectionForm.tsx:513
 msgid "Connection not found"
 msgstr "No s'ha trobat la connexió"
 
 #. TRANSLATORS: body text on the connection not found page.
-#: src/components/network/ConnectionForm.tsx:587
+#: src/components/network/ConnectionForm.tsx:515
 msgid "The connection does not exist or is no longer available."
 msgstr "La connexió no existeix o ja no està disponible."
 
 #. TRANSLATORS: link text on the connection not found page.
-#: src/components/network/ConnectionForm.tsx:589
-#: src/components/network/WiredConnectionPage.tsx:54
+#: src/components/network/ConnectionForm.tsx:517
+#: src/components/network/ConnectionPage.tsx:54
 msgid "Go to network page"
 msgstr "Ves a la pàgina de la xarxa"
 
-#. TRANSLATORS: page title and breadcrumb label for creating a new connection.
-#: src/components/network/ConnectionForm.tsx:640
+#. TRANSLATORS: breadcrumb label for the connection-edit form. Keep the
+#. noun ("connection"): the previous crumb is the connection name, so a
+#. bare "Edit" reads fine visually but leaves screen-reader users without
+#. the object being acted on when the crumb is announced on its own.
+#: src/components/network/ConnectionForm.tsx:579
+#: src/components/network/ConnectionsTable.tsx:343
+#: src/components/storage/iscsi/TargetsTable.tsx:224
+msgid "Edit connection"
+msgstr "Edita la connexió"
+
+#. TRANSLATORS: breadcrumb label for the new-connection form.
+#: src/components/network/ConnectionForm.tsx:583
 msgid "New connection"
 msgstr "Connexió nova"
 
-#: src/components/network/ConnectionsTable.tsx:143
+#. TRANSLATORS: %s will be replaced with connection id
+#: src/components/network/ConnectionPage.tsx:42
+#, javascript-format
+msgid "\"%s\" does not exist or is no longer available."
+msgstr "La xarxa %s no existeix o ja no està disponible."
+
+#: src/components/network/ConnectionPage.tsx:47
+msgid "Connection not found or lost"
+msgstr "Connexió no trobada o perduda"
+
+#: src/components/network/ConnectionsTable.tsx:141
 msgid "(bound by name)"
 msgstr "(vinculació per nom)"
 
-#: src/components/network/ConnectionsTable.tsx:144
+#: src/components/network/ConnectionsTable.tsx:142
 msgid "(bound by MAC)"
 msgstr "(vinculació per MAC)"
 
-#. TRANSLATORS: table header for a DASD devices table
-#: src/components/network/ConnectionsTable.tsx:155
-#: src/components/network/ConnectionsTable.tsx:282
-#: src/components/storage/DeviceSelectorPage.tsx:54
-#: src/components/storage/dasd/DASDTable.tsx:550
-msgid "Type"
-msgstr "Tipus"
-
-#: src/components/network/ConnectionsTable.tsx:156
-#: src/components/network/ConnectionsTable.tsx:287
-msgid "Ethernet"
-msgstr "Xarxa amb fil"
-
-#: src/components/network/ConnectionsTable.tsx:156
-#: src/components/network/ConnectionsTable.tsx:286
-msgid "Wi-Fi"
-msgstr "Sense fil"
-
-#. TRANSLATORS: table header for a DASD devices table
-#. TRANSLATORS: table header for an iSCSI targets table
-#. TRANSLATORS: table header for a zFCP devices table.
 #: src/components/network/ConnectionsTable.tsx:160
-#: src/components/network/ConnectionsTable.tsx:294
-#: src/components/network/WiredConnectionDetails.tsx:108
-#: src/components/network/WiredConnectionDetails.tsx:142
-#: src/components/storage/dasd/DASDTable.tsx:312
-#: src/components/storage/dasd/DASDTable.tsx:536
-#: src/components/storage/iscsi/StatusFilter.tsx:77
-#: src/components/storage/iscsi/TargetsTable.tsx:495
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:164
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:335
-msgid "Status"
-msgstr "Estat"
-
-#: src/components/network/ConnectionsTable.tsx:162
 #: src/components/network/WifiNetworksList.tsx:134
 #: src/components/storage/iscsi/TargetsTable.tsx:158
 msgid "Connected"
 msgstr "Connectat"
 
-#: src/components/network/ConnectionsTable.tsx:162
+#: src/components/network/ConnectionsTable.tsx:160
 #: src/components/storage/iscsi/TargetsTable.tsx:163
 msgid "Disconnected"
 msgstr "Desconnectat"
 
-#: src/components/network/ConnectionsTable.tsx:189
-#: src/components/network/WiredConnectionDetails.tsx:159
-#: src/components/network/WiredConnectionDetails.tsx:287
-msgid "IP Addresses"
-msgstr "Adreces IP"
-
 #. TRANSLATORS: shown in the filter toolbar when filters are active.
 #. %1$s is the number of matching connections, %2$s is the total number.
-#: src/components/network/ConnectionsTable.tsx:255
+#: src/components/network/ConnectionsTable.tsx:253
 #, javascript-format
 msgid "%1$d of %2$d connections match filters"
 msgstr "%1$d de %2$d connexions coincideixen amb els filtres"
 
 #. TRANSLATORS: shown in the filter toolbar when no filters are active.
 #. %s is the total number of connections.
-#: src/components/network/ConnectionsTable.tsx:262
+#: src/components/network/ConnectionsTable.tsx:260
 #, javascript-format
 msgid "%d connections available"
 msgstr "%d connexions disponibles"
 
-#: src/components/network/ConnectionsTable.tsx:285
-#: src/components/network/ConnectionsTable.tsx:297
+#: src/components/network/ConnectionsTable.tsx:283
+#: src/components/network/ConnectionsTable.tsx:296
 #: src/components/storage/dasd/DASDTable.tsx:315
 #: src/components/storage/dasd/DASDTable.tsx:327
 #: src/components/storage/iscsi/StatusFilter.tsx:58
@@ -999,16 +1134,16 @@ msgstr "%d connexions disponibles"
 msgid "All"
 msgstr "Tot"
 
-#: src/components/network/ConnectionsTable.tsx:298
+#: src/components/network/ConnectionsTable.tsx:297
 msgid "Up"
 msgstr "Amunt"
 
-#: src/components/network/ConnectionsTable.tsx:299
+#: src/components/network/ConnectionsTable.tsx:298
 msgid "Down"
 msgstr "Avall"
 
-#: src/components/network/ConnectionsTable.tsx:312
-#: src/components/network/ConnectionsTable.tsx:392
+#: src/components/network/ConnectionsTable.tsx:311
+#: src/components/network/ConnectionsTable.tsx:383
 #: src/components/storage/dasd/DASDTable.tsx:357
 #: src/components/storage/dasd/DASDTable.tsx:693
 #: src/components/storage/iscsi/TargetsTable.tsx:363
@@ -1017,63 +1152,48 @@ msgstr "Avall"
 msgid "Clear all filters"
 msgstr "Esborra tots els filtres"
 
-#: src/components/network/ConnectionsTable.tsx:339
+#: src/components/network/ConnectionsTable.tsx:338
 #: src/components/storage/ProposalResultTable.tsx:136
 #: src/components/storage/SpaceActionsTable.tsx:227
 msgid "Details"
 msgstr "Detalls"
 
-#: src/components/network/ConnectionsTable.tsx:347
-#: src/components/storage/iscsi/TargetsTable.tsx:224
-msgid "Edit connection"
-msgstr "Edita la connexió"
-
-#: src/components/network/ConnectionsTable.tsx:352
-msgid "Edit binding"
-msgstr "Edita la vinculació"
-
 #. TRANSLATORS: button label, connect to a Wi-Fi network
-#: src/components/network/ConnectionsTable.tsx:361
+#: src/components/network/ConnectionsTable.tsx:352
 #: src/components/network/WifiConnectionForm.tsx:186
 #: src/components/storage/iscsi/TargetsTable.tsx:236
 #: src/components/storage/iscsi/TargetsTable.tsx:247
 msgid "Connect"
 msgstr "Connecta't"
 
-#: src/components/network/ConnectionsTable.tsx:366
+#: src/components/network/ConnectionsTable.tsx:357
 #: src/components/storage/iscsi/TargetsTable.tsx:228
 msgid "Disconnect"
 msgstr "Desconnecta"
 
-#: src/components/network/ConnectionsTable.tsx:374
+#: src/components/network/ConnectionsTable.tsx:365
 #: src/components/storage/PartitionsSection.tsx:194
 #: src/components/storage/VolumeGroupEditor.tsx:187
 #: src/components/storage/iscsi/TargetsTable.tsx:252
 msgid "Delete"
 msgstr "Suprimeix"
 
-#: src/components/network/ConnectionsTable.tsx:384
+#: src/components/network/ConnectionsTable.tsx:375
 msgid "No connections match filters"
 msgstr "Cap connexió coincideix amb els filtres"
 
-#: src/components/network/ConnectionsTable.tsx:388
+#: src/components/network/ConnectionsTable.tsx:379
 #: src/components/storage/dasd/DASDTable.tsx:689
 #: src/components/storage/iscsi/TargetsTable.tsx:359
 #: src/components/storage/zfcp/ZFCPDevicesTable.tsx:425
 msgid "Change filters and try again."
 msgstr "Canvieu els filtres i torneu-ho a intentar."
 
-#. TRANSLATORS: accessible label for the device selector. MAC address refers
-#. to the hardware identifier of the network interface.
-#: src/components/network/DeviceSelector.tsx:61
-msgid "Device name"
-msgstr "Nom del dispositiu"
-
 #: src/components/network/DeviceSelector.tsx:61
 msgid "MAC address"
 msgstr "Adreça MAC"
 
-#: src/components/network/DevicesSelector.tsx:68
+#: src/components/network/DevicesSelector.tsx:69
 msgid "None (unbound)"
 msgstr "Cap (sense vinculació)"
 
@@ -1089,7 +1209,7 @@ msgstr "Cap (sense vinculació)"
 #. name first, others the MAC address. I.e. "enp1s0 - CC-7F-C8-FC-7A-A1"
 #. or "CC-7F-C8-FC-7A-A1 - enp1s0". You may change the separator, but
 #. please keep both %s placeholders.
-#: src/components/network/DevicesSelector.tsx:76
+#: src/components/network/DevicesSelector.tsx:77
 #: src/components/storage/utils/drive.tsx:106
 #: src/components/storage/utils/volume-group.tsx:96
 #, javascript-format
@@ -1304,12 +1424,6 @@ msgstr "No s'ha trobat cap xarxa sense fil"
 msgid "Wi-Fi connection form"
 msgstr "Formulari de connexió sense fil"
 
-#: src/components/network/WifiConnectionForm.tsx:153
-#: src/components/network/WifiConnectionForm.tsx:156
-#: src/components/network/WiredConnectionDetails.tsx:102
-msgid "Security"
-msgstr "Seguretat"
-
 #. TRANSLATORS: WiFi password
 #: src/components/network/WifiConnectionForm.tsx:173
 msgid "WPA Password"
@@ -1353,134 +1467,98 @@ msgstr "Adreces IP"
 msgid "Configured for installation only"
 msgstr "Configuració només per a la instal·lació"
 
-#: src/components/network/WiredConnectionDetails.tsx:60
-msgid "Connection is available to all devices."
-msgstr "La connexió està disponible per a tots els dispositius."
-
-#. TRANSLATORS: %s will be replaced by a network device name, like eth0 or enp1s0
-#: src/components/network/WiredConnectionDetails.tsx:63
+#. TRANSLATORS: validation error for the bond options field when the 'primary' option is used in an invalid mode.
+#. %s is replaced with a list of valid mode names.
+#: src/components/network/connectionFormValidation.ts:146
 #, javascript-format
-msgid "Connection is bound to device %s."
-msgstr "La connexió està vinculada al dispositiu %s."
+msgid "The 'primary' option is only valid for %s modes"
+msgstr ""
 
-#. TRANSLATORS: %s will be replaced by MAC addrss, like 7C:D7:11:28:F5:40
-#: src/components/network/WiredConnectionDetails.tsx:66
-#, javascript-format
-msgid "Connection is bound to MAC address %s."
-msgstr "La connexió està vinculada a l'adreça MAC %s."
+#. TRANSLATORS: validation error for the connection name field.
+#: src/components/network/connectionFormValidation.ts:158
+msgid "Name is required"
+msgstr "Cal el nom"
 
-#: src/components/network/WiredConnectionDetails.tsx:73
-msgid "Binding"
-msgstr "Vinculació"
+#. TRANSLATORS: validation error for the IPv4 addresses field.
+#: src/components/network/connectionFormValidation.ts:164
+msgid "At least one IPv4 address is required"
+msgstr "Cal com a mínim una adreça IPv4"
 
-#: src/components/network/WiredConnectionDetails.tsx:81
-msgid "Edit binding settings"
-msgstr "Edita la configuració de la vinculació"
+#. TRANSLATORS: validation error for the IPv4 addresses field.
+#: src/components/network/connectionFormValidation.ts:166
+msgid "Some IPv4 addresses are invalid"
+msgstr "Algunes adreces IPv4 no són vàlides"
 
-#: src/components/network/WiredConnectionDetails.tsx:96
-msgid "Network details"
-msgstr "Detalls de la xarxa"
+#. TRANSLATORS: validation error for the IPv6 addresses field.
+#: src/components/network/connectionFormValidation.ts:173
+msgid "At least one IPv6 address is required"
+msgstr "Cal com a mínim una adreça IPv6"
 
-#: src/components/network/WiredConnectionDetails.tsx:98
-msgid "SSID"
-msgstr "SSID"
+#. TRANSLATORS: validation error for the IPv6 addresses field.
+#: src/components/network/connectionFormValidation.ts:175
+msgid "Some IPv6 addresses are invalid"
+msgstr "Algunes adreces IPv6 no són vàlides"
 
-#: src/components/network/WiredConnectionDetails.tsx:112
-msgid "Signal strength"
-msgstr "Força del senyal"
+#. TRANSLATORS: validation error for the IPv4 gateway field.
+#: src/components/network/connectionFormValidation.ts:183
+msgid "IPv4 gateway is required"
+msgstr "Cal una passarel·la IPv4"
 
-#: src/components/network/WiredConnectionDetails.tsx:121
-msgid "Network not available"
-msgstr "Xarxa no disponible"
+#. TRANSLATORS: validation error for the IPv4 gateway field.
+#: src/components/network/connectionFormValidation.ts:185
+msgid "Invalid IPv4 gateway"
+msgstr "Passarel·la IPv4 no vàlida"
 
-#: src/components/network/WiredConnectionDetails.tsx:133
-msgid "Device details"
-msgstr "Detalls del dispositiu"
+#. TRANSLATORS: validation error for the IPv6 gateway field.
+#: src/components/network/connectionFormValidation.ts:193
+msgid "IPv6 gateway is required"
+msgstr "Cal una passarel·la IPv6"
 
-#. TRANSLATORS: table header for an iSCSI targets table
-#: src/components/network/WiredConnectionDetails.tsx:138
-#: src/components/storage/iscsi/TargetsTable.tsx:476
-msgid "Interface"
-msgstr "Interfície"
+#. TRANSLATORS: validation error for the IPv6 gateway field.
+#: src/components/network/connectionFormValidation.ts:195
+msgid "Invalid IPv6 gateway"
+msgstr "Passarel·la IPv6 no vàlida"
 
-#: src/components/network/WiredConnectionDetails.tsx:146
-msgid "MAC"
-msgstr "MAC"
+#. TRANSLATORS: validation error for the DNS servers field.
+#: src/components/network/connectionFormValidation.ts:202
+msgid "At least one DNS server is required"
+msgstr "Cal com a mínim un servidor DNS"
 
-#: src/components/network/WiredConnectionDetails.tsx:150
-#: src/components/network/WiredConnectionDetails.tsx:277
-msgid "Gateway"
-msgstr "Passarel·la"
+#. TRANSLATORS: validation error for the DNS servers field.
+#: src/components/network/connectionFormValidation.ts:204
+msgid "Some DNS server addresses are invalid"
+msgstr "Algunes adreces de servidor DNS no són vàlides"
 
-#: src/components/network/WiredConnectionDetails.tsx:169
-#: src/components/network/WiredConnectionDetails.tsx:299
-msgid "DNS"
-msgstr "DNS"
+#. TRANSLATORS: validation error for the DNS search domains field.
+#: src/components/network/connectionFormValidation.ts:211
+msgid "At least one DNS search domain is required"
+msgstr "Cal com a mínim un domini de cerca de DNS"
 
-#: src/components/network/WiredConnectionDetails.tsx:179
-#: src/components/network/WiredConnectionDetails.tsx:309
-msgid "DNS Search List"
-msgstr "Llista de cerca de DNS"
+#. TRANSLATORS: validation error for the DNS search domains field.
+#: src/components/network/connectionFormValidation.ts:213
+msgid "Some DNS search domains are invalid"
+msgstr "Alguns dominis de cerca de DNS no són vàlids"
 
-#: src/components/network/WiredConnectionDetails.tsx:189
-msgid "Routes"
-msgstr "Camins"
+#. TRANSLATORS: validation error for the bond device name field.
+#: src/components/network/connectionFormValidation.ts:226
+#, fuzzy
+#| msgid "Name is required"
+msgid "Device name is required"
+msgstr "Cal el nom"
 
-#: src/components/network/WiredConnectionDetails.tsx:222
-msgid "Connected device"
-msgstr "Dispositiu connectat"
+#. TRANSLATORS: validation error for the bond mode field.
+#: src/components/network/connectionFormValidation.ts:228
+#, fuzzy
+#| msgid "Name is required"
+msgid "Bond mode is required"
+msgstr "Cal el nom"
 
-#: src/components/network/WiredConnectionDetails.tsx:222
-msgid "Connected devices"
-msgstr "Dispositius connectats"
-
-#: src/components/network/WiredConnectionDetails.tsx:225
-msgid "No device is currently using this connection."
-msgstr "Cap dispositiu usa actualment aquesta connexió."
-
-#: src/components/network/WiredConnectionDetails.tsx:231
-msgid "Connected devices tabs"
-msgstr "Pestanyes de dispositius connectats"
-
-#: src/components/network/WiredConnectionDetails.tsx:253
-#: src/components/storage/ProposalPage.tsx:204
-msgid "Settings"
-msgstr "Configuració"
-
-#: src/components/network/WiredConnectionDetails.tsx:257
-msgid "Edit connection settings"
-msgstr "Edita la configuració de la connexió"
-
-#: src/components/network/WiredConnectionDetails.tsx:264
-msgid "Mode"
-msgstr "Mode"
-
-#: src/components/network/WiredConnectionDetails.tsx:268
-msgid "IPv4"
-msgstr "IPv4"
-
-#: src/components/network/WiredConnectionDetails.tsx:268
-#: src/components/network/WiredConnectionDetails.tsx:271
-#: src/components/network/WiredConnectionDetails.tsx:281
-#: src/components/network/WiredConnectionDetails.tsx:291
-#: src/components/network/WiredConnectionDetails.tsx:303
-#: src/components/network/WiredConnectionDetails.tsx:313
-msgid "None set"
-msgstr "No s'ha establert"
-
-#: src/components/network/WiredConnectionDetails.tsx:271
-msgid "IPv6"
-msgstr "IPv6"
-
-#. TRANSLATORS: %s will be replaced with connection id
-#: src/components/network/WiredConnectionPage.tsx:42
-#, javascript-format
-msgid "\"%s\" does not exist or is no longer available."
-msgstr "La xarxa %s no existeix o ja no està disponible."
-
-#: src/components/network/WiredConnectionPage.tsx:47
-msgid "Connection not found or lost"
-msgstr "Connexió no trobada o perduda"
+#. TRANSLATORS: validation error for the bond ports field.
+#: src/components/network/connectionFormValidation.ts:232
+#, fuzzy
+#| msgid "At least one DNS server is required"
+msgid "At least one bond port is required"
+msgstr "Cal com a mínim un servidor DNS"
 
 #: src/components/overview/HostnameSummary.tsx:47
 #: src/components/system/HostnamePage.tsx:77 src/router.tsx:52
@@ -1800,6 +1878,7 @@ msgid "Potential data loss"
 msgstr "Pèrdua potencial de dades"
 
 #: src/components/overview/SystemInformationSection.tsx:58
+#: src/utils/network.ts:64
 msgid "Unknown"
 msgstr "Desconegut"
 
@@ -5391,6 +5470,34 @@ msgstr "Usa una clau pública SSH"
 msgid "ZFCP"
 msgstr "ZFCP"
 
+#: src/utils/network.ts:58
+msgid "Ethernet"
+msgstr "Xarxa amb fil"
+
+#: src/utils/network.ts:59
+msgid "Wi-Fi"
+msgstr "Sense fil"
+
+#: src/utils/network.ts:60
+#, fuzzy
+#| msgid "Go back"
+msgid "Loopback"
+msgstr "Enrere"
+
+#: src/utils/network.ts:62
+msgid "Bridge"
+msgstr ""
+
+#: src/utils/network.ts:63
+msgid "VLAN"
+msgstr ""
+
+#~ msgid "Edit binding"
+#~ msgstr "Edita la vinculació"
+
+#~ msgid "DNS Search List"
+#~ msgstr "Llista de cerca de DNS"
+
 #, javascript-format
 #~ msgid "Required packages and %s pattern"
 #~ msgid_plural "Required packages and %s patterns"
@@ -5735,9 +5842,6 @@ msgstr "ZFCP"
 #~ msgid "URL"
 #~ msgstr "URL"
 
-#~ msgid "Hide details"
-#~ msgstr "Amaga els detalls"
-
 #~ msgid "Congratulations!"
 #~ msgstr "Enhorabona!"
 
@@ -5807,9 +5911,6 @@ msgstr "ZFCP"
 #~ msgstr ""
 #~ "Reviseu el resum següent. Si alguna cosa us sembla incorrecta o teniu "
 #~ "dubtes, torneu enrere i ajusteu la configuració abans de continuar."
-
-#~ msgid "Go back"
-#~ msgstr "Enrere"
 
 #~ msgid "Not possible with the current setup. Click to know more."
 #~ msgstr ""
@@ -7030,9 +7131,6 @@ msgstr "ZFCP"
 
 #~ msgid "Select a value"
 #~ msgstr "Seleccioneu un valor"
-
-#~ msgid "Available devices"
-#~ msgstr "Dispositius disponibles"
 
 #~ msgid "Diag"
 #~ msgstr "Diag."
