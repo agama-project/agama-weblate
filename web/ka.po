@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-28 11:49+0000\n"
+"POT-Creation-Date: 2026-04-29 14:21+0000\n"
 "PO-Revision-Date: 2026-04-29 06:04+0000\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -369,7 +369,7 @@ msgstr "ნაბიჯი %1$d %2$d-დან"
 
 #: src/components/core/ProgressStatusMonitor.tsx:40
 #: src/components/overview/SoftwareSummary.tsx:160
-#: src/components/software/SoftwarePage.tsx:377
+#: src/components/software/SoftwarePage.tsx:373
 #: src/components/software/SoftwarePatternsSelection.tsx:355
 #: src/routes/software.tsx:33
 msgid "Software"
@@ -827,8 +827,8 @@ msgstr "SSID"
 msgid "Security"
 msgstr "უსაფრთხოება"
 
-#. TRANSLATORS: table header for an iSCSI targets table
 #. TRANSLATORS: table header for a DASD devices table
+#. TRANSLATORS: table header for an iSCSI targets table
 #. TRANSLATORS: table header for a zFCP devices table.
 #: src/components/network/ConnectionDetails.tsx:108
 #: src/components/network/ConnectionDetails.tsx:173
@@ -1255,8 +1255,8 @@ msgid "Configuration from the network plus static addresses and gateway"
 msgstr ""
 "კონფიგურაცია ქსელიდან, პლუს სტატიკური მისამართები და ნაგულისხმევი რაუტერი"
 
-#. TRANSLATORS: Network summary title when using manual/static IP configuration
 #. TRANSLATORS: option label for manual IP configuration
+#. TRANSLATORS: Network summary title when using manual/static IP configuration
 #: src/components/network/IpSettings.tsx:64
 #: src/components/overview/NetworkSummary.tsx:128
 #: src/components/storage/SizeModeSelect.tsx:191
@@ -1534,12 +1534,12 @@ msgstr ""
 msgid "Installation settings"
 msgstr "დაყენების მორგება"
 
-#. TRANSLATORS: %1$s is a description of the device (eg. "Encrypted XFS RAID") and %2$s is
-#. the RAID level (eg. "RAID0")
 #. TRANSLATORS: %1$s is an already formatted mount path (eg. "/"),
 #. %2$s is a size description (eg. at least 10 GiB)
 #. TRANSLATORS: %1$s is a filesystem type description (eg. "Btrfs with snapshots"),
 #. %2$s is a description of the size or the size limits (eg. "at least 10 GiB")
+#. TRANSLATORS: %1$s is a description of the device (eg. "Encrypted XFS RAID") and %2$s is
+#. the RAID level (eg. "RAID0")
 #. TRANSLATORS: Summary of the selected language and territory.
 #. %1$s is the language name (e.g. "Spanish").
 #. %2$s is the territory/region name (e.g. "Spain").
@@ -1738,8 +1738,8 @@ msgid_plural "Using %d additional patterns"
 msgstr[0] "გამოიყენება %d დამატებითი ნიმუში"
 msgstr[1] "გამოიყენება %d დამატებითი ნიმუში"
 
-#. TRANSLATORS: shown in the software summary when no desktop is selected.
 #. TRANSLATORS: alert title shown in the install confirmation dialog when no desktop is selected.
+#. TRANSLATORS: shown in the software summary when no desktop is selected.
 #: src/components/overview/SoftwareSummary.tsx:71
 #: src/components/software/NoDesktopAlert.tsx:51
 msgid "No desktop selected"
@@ -2297,126 +2297,169 @@ msgid ""
 "settings."
 msgstr ""
 
+#. TRANSLATORS: empty state title when software cannot be selected
+#: src/components/software/PatternSelectionUnavailable.tsx:60
+#, fuzzy
+#| msgid "No targets available"
+msgid "Software selection is not available"
+msgstr "სამიზნეები ხელმისაწვდომი არაა"
+
+#. TRANSLATORS: link to go to registration settings
+#: src/components/software/PatternSelectionUnavailable.tsx:112
+#, fuzzy
+#| msgid "Registration"
+msgid "Go to registration"
+msgstr "რეგისტრაცია"
+
+#. TRANSLATORS: additional hint when base product is missing
+#: src/components/software/PatternSelectionUnavailable.tsx:124
+msgid "This might be due to network connectivity."
+msgstr ""
+
+#. TRANSLATORS: link to go to network settings
+#: src/components/software/PatternSelectionUnavailable.tsx:130
+#, fuzzy
+#| msgid "Go to network page"
+msgid "Go to network settings"
+msgstr "ქსელის გვერდზე გადასვლა"
+
+#: src/components/software/PatternSelectionUnavailable.tsx:142
+msgid ""
+"This product does not allow selecting software at installation time. "
+"Additional software can be added after the installation is complete."
+msgstr ""
+
+#. TRANSLATORS: shown when software selection cannot be determined
+#: src/components/software/PatternSelectionUnavailable.tsx:153
+#, fuzzy
+#| msgid "The connection could not be saved"
+msgid "The software selection could not be loaded."
+msgstr "კავშირის შენახვა შეუძლებელია"
+
 #. TRANSLATORS: empty state title for a software section with nothing selected
-#: src/components/software/SoftwarePage.tsx:71
+#: src/components/software/SoftwarePage.tsx:72
 msgid "None selected"
 msgstr "არჩეული არაფერია"
 
-#. TRANSLATORS: empty state title when no desktop environments are available
-#: src/components/software/SoftwarePage.tsx:88
-msgid "No desktops available"
-msgstr "სამუშაო გარემოები ხელმისაწვდომი არაა"
-
-#. TRANSLATORS: explanation shown when the product has no desktop environments
-#: src/components/software/SoftwarePage.tsx:91
-msgid "This product does not provide desktop environments."
-msgstr "ეს პროდუქტი სამუშაო გარემოებს არ მოგაწვდით."
-
-#: src/components/software/SoftwarePage.tsx:120
+#: src/components/software/SoftwarePage.tsx:117
 msgid "Read less"
 msgstr "ნაკლების წაკითხვა"
 
 #. TRANSLATORS: accessible label for the collapse button; %s is the pattern name
-#: src/components/software/SoftwarePage.tsx:122
+#: src/components/software/SoftwarePage.tsx:119
 #, javascript-format
 msgid "Read less about %s"
 msgstr "ნაკლების წაკითხვა %s-ის შესახებ"
 
-#: src/components/software/SoftwarePage.tsx:126
+#: src/components/software/SoftwarePage.tsx:123
 msgid "Read more"
 msgstr "მეტის წაკითხვა"
 
 #. TRANSLATORS: accessible label for the expand button; %s is the pattern name
-#: src/components/software/SoftwarePage.tsx:128
+#: src/components/software/SoftwarePage.tsx:125
 #, javascript-format
 msgid "Read more about %s"
 msgstr "მეტის წაკითხვა %s-ის შესახებ"
 
 #. TRANSLATORS: %s is the required disk space. Keep the [brackets]: they mark the value to be displayed in bold.
-#: src/components/software/SoftwarePage.tsx:198
+#: src/components/software/SoftwarePage.tsx:195
 #, javascript-format
 msgid "Required space with current selection: [%s]"
 msgstr "საჭირო ადგილი მიმდინარე არჩევნით: [%s]"
 
 #. TRANSLATORS: %s is the required disk space. Keep the [brackets]: they mark the value to be displayed in bold.
-#: src/components/software/SoftwarePage.tsx:200
+#: src/components/software/SoftwarePage.tsx:197
 #, javascript-format
 msgid "Required space: [%s]"
 msgstr "საჭირო ადგილი: [%s]"
 
 #. TRANSLATORS: %1$d is selected count, %2$d is total available count
-#: src/components/software/SoftwarePage.tsx:248
+#: src/components/software/SoftwarePage.tsx:245
 #: src/components/software/SoftwarePatternsSelection.tsx:147
 #, javascript-format
 msgid "%1$d of %2$d selected"
 msgstr "არჩეულია %1$d %2$d-დან"
 
-#: src/components/software/SoftwarePage.tsx:271
-msgid "Patterns"
-msgstr "ნიმუშები"
-
-#: src/components/software/SoftwarePage.tsx:275
-msgid ""
-"This product does not allow to select software patterns during installation. "
-"However, you can add additional software once the installation is finished."
-msgstr ""
-
 #. TRANSLATORS: shown while the software proposal is not yet available
-#: src/components/software/SoftwarePage.tsx:292
+#: src/components/software/SoftwarePage.tsx:273
 msgid "No information available yet"
 msgstr "ჯერ ინფორმაცია ხელმისაწვდომი არაა"
 
-#: src/components/software/SoftwarePage.tsx:314
+#. TRANSLATORS: empty state title when no desktop environments are available
+#: src/components/software/SoftwarePage.tsx:289
+msgid "No desktops available"
+msgstr "სამუშაო გარემოები ხელმისაწვდომი არაა"
+
+#. TRANSLATORS: explanation shown when the product has no desktop environments
+#: src/components/software/SoftwarePage.tsx:291
+msgid "This product does not provide desktop environments."
+msgstr "ეს პროდუქტი სამუშაო გარემოებს არ მოგაწვდით."
+
+#. TRANSLATORS: hint shown when no desktop environment has been chosen
+#: src/components/software/SoftwarePage.tsx:297
+msgid "Select a desktop environment to get a graphical interface."
+msgstr "გრაფიკული ინტერფეისის მისაღებად აირჩიეთ სამუშაო გარემო."
+
+#. TRANSLATORS: button to go to the desktop environment selection page
+#: src/components/software/SoftwarePage.tsx:299
+msgid "Select a desktop"
+msgstr "სამუშაო გარემოს არჩევა"
+
+#. TRANSLATORS: empty state title when no additional patterns are available
+#: src/components/software/SoftwarePage.tsx:307
+#, fuzzy
+#| msgid "Additional patterns"
+msgid "No additional patterns available"
+msgstr "დამატებით ნიმუშები"
+
+#. TRANSLATORS: explanation shown when the product has no additional patterns
+#: src/components/software/SoftwarePage.tsx:309
+#, fuzzy
+#| msgid "This product does not provide desktop environments."
+msgid "This product does not provide additional patterns."
+msgstr "ეს პროდუქტი სამუშაო გარემოებს არ მოგაწვდით."
+
+#. TRANSLATORS: hint shown when no additional software patterns have been chosen
+#: src/components/software/SoftwarePage.tsx:315
+msgid "Select one or more to extend the system."
+msgstr "აირჩიეთ ერთი, ან მეტი სისტემის გასაფართოებლად."
+
+#. TRANSLATORS: button to go to the pattern selection page
+#: src/components/software/SoftwarePage.tsx:317
+msgid "Select patterns"
+msgstr "ნიმუშების არჩევა"
+
+#: src/components/software/SoftwarePage.tsx:329
 msgid "Desktops"
 msgstr "სამუშაო გარემოები"
 
 #. TRANSLATORS: description for the Desktops section
-#: src/components/software/SoftwarePage.tsx:317
+#: src/components/software/SoftwarePage.tsx:332
 msgid "Graphical desktop environments for the system."
 msgstr "გრაფიკული სამუშაო გარემოები სისტემისთვის."
 
 #. TRANSLATORS: button to change the desktop selection
-#: src/components/software/SoftwarePage.tsx:321
+#: src/components/software/SoftwarePage.tsx:336
 msgid "Change desktop"
 msgid_plural "Change desktops"
 msgstr[0] "სამუშაო გარემოს შეცვლა"
 msgstr[1] "სამუშაო გარემოების შეცვლა"
 
-#. TRANSLATORS: hint shown when no desktop environment has been chosen
-#: src/components/software/SoftwarePage.tsx:334
-msgid "Select a desktop environment to get a graphical interface."
-msgstr "გრაფიკული ინტერფეისის მისაღებად აირჩიეთ სამუშაო გარემო."
-
-#. TRANSLATORS: button to go to the desktop environment selection page
-#: src/components/software/SoftwarePage.tsx:336
-msgid "Select a desktop"
-msgstr "სამუშაო გარემოს არჩევა"
-
-#: src/components/software/SoftwarePage.tsx:344
+#: src/components/software/SoftwarePage.tsx:347
 msgid "Additional patterns"
 msgstr "დამატებით ნიმუშები"
 
 #. TRANSLATORS: description for the Additional software section
-#: src/components/software/SoftwarePage.tsx:347
+#: src/components/software/SoftwarePage.tsx:350
 msgid ""
 "Curated sets of packages for common use cases and features to extend the "
 "system."
 msgstr ""
 
 #. TRANSLATORS: button to change the additional software selection
-#: src/components/software/SoftwarePage.tsx:350
+#: src/components/software/SoftwarePage.tsx:353
 msgid "Change patterns"
 msgstr "ნიმუშების შეცვლა"
-
-#. TRANSLATORS: hint shown when no additional software patterns have been chosen
-#: src/components/software/SoftwarePage.tsx:359
-msgid "Select one or more to extend the system."
-msgstr "აირჩიეთ ერთი, ან მეტი სისტემის გასაფართოებლად."
-
-#. TRANSLATORS: button to go to the pattern selection page
-#: src/components/software/SoftwarePage.tsx:361
-msgid "Select patterns"
-msgstr "ნიმუშების არჩევა"
 
 #. TRANSLATORS: page title when selecting all software patterns
 #. TRANSLATORS: page title when selecting non-desktop software patterns
@@ -3176,9 +3219,9 @@ msgstr "არსებული მონაცემების განა�
 msgid "Format device as"
 msgstr "მოწყობილობების დაფორმატება, როგორც"
 
+#. TRANSLATORS: %s is the name of a partition, like /dev/vda2
 #. TRANSLATORS: %s is the name of a device, like vda
 #. TRANSLATORS: %s is the name of a logical volume, like /dev/system/home
-#. TRANSLATORS: %s is the name of a partition, like /dev/vda2
 #: src/components/storage/FormattableDevicePage.tsx:310
 #: src/components/storage/LogicalVolumePage.tsx:661
 #: src/components/storage/PartitionPage.tsx:596
@@ -5324,6 +5367,9 @@ msgstr "ხიდი"
 #: src/utils/network.ts:63
 msgid "VLAN"
 msgstr "VLAN"
+
+#~ msgid "Patterns"
+#~ msgstr "ნიმუშები"
 
 #~ msgid "Edit binding"
 #~ msgstr "მიბმის ჩასწორება"
