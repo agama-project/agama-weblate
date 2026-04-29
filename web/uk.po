@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-28 11:49+0000\n"
+"POT-Creation-Date: 2026-04-29 14:21+0000\n"
 "PO-Revision-Date: 2026-04-28 10:04+0000\n"
 "Last-Translator: Eugene Krater <lachend@gmail.com>\n"
 "Language-Team: Ukrainian <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -380,7 +380,7 @@ msgstr "Крок %1$d з %2$d"
 
 #: src/components/core/ProgressStatusMonitor.tsx:40
 #: src/components/overview/SoftwareSummary.tsx:160
-#: src/components/software/SoftwarePage.tsx:377
+#: src/components/software/SoftwarePage.tsx:373
 #: src/components/software/SoftwarePatternsSelection.tsx:355
 #: src/routes/software.tsx:33
 msgid "Software"
@@ -847,8 +847,8 @@ msgstr "Назва мережі"
 msgid "Security"
 msgstr "Захист"
 
-#. TRANSLATORS: table header for an iSCSI targets table
 #. TRANSLATORS: table header for a DASD devices table
+#. TRANSLATORS: table header for an iSCSI targets table
 #. TRANSLATORS: table header for a zFCP devices table.
 #: src/components/network/ConnectionDetails.tsx:108
 #: src/components/network/ConnectionDetails.tsx:173
@@ -1279,8 +1279,8 @@ msgstr "Автоматична та ручна"
 msgid "Configuration from the network plus static addresses and gateway"
 msgstr "Налаштування через мережу, а також статичні адреси та шлюз"
 
-#. TRANSLATORS: Network summary title when using manual/static IP configuration
 #. TRANSLATORS: option label for manual IP configuration
+#. TRANSLATORS: Network summary title when using manual/static IP configuration
 #: src/components/network/IpSettings.tsx:64
 #: src/components/overview/NetworkSummary.tsx:128
 #: src/components/storage/SizeModeSelect.tsx:191
@@ -1566,12 +1566,12 @@ msgstr ""
 msgid "Installation settings"
 msgstr "Параметри встановлення"
 
-#. TRANSLATORS: %1$s is a description of the device (eg. "Encrypted XFS RAID") and %2$s is
-#. the RAID level (eg. "RAID0")
 #. TRANSLATORS: %1$s is an already formatted mount path (eg. "/"),
 #. %2$s is a size description (eg. at least 10 GiB)
 #. TRANSLATORS: %1$s is a filesystem type description (eg. "Btrfs with snapshots"),
 #. %2$s is a description of the size or the size limits (eg. "at least 10 GiB")
+#. TRANSLATORS: %1$s is a description of the device (eg. "Encrypted XFS RAID") and %2$s is
+#. the RAID level (eg. "RAID0")
 #. TRANSLATORS: Summary of the selected language and territory.
 #. %1$s is the language name (e.g. "Spanish").
 #. %2$s is the territory/region name (e.g. "Spain").
@@ -1777,8 +1777,8 @@ msgstr[0] "Використовуємо %d додатковий шаблон"
 msgstr[1] "Використовуємо %d додаткових шаблони"
 msgstr[2] "Використовуємо %d додаткових шаблонів"
 
-#. TRANSLATORS: shown in the software summary when no desktop is selected.
 #. TRANSLATORS: alert title shown in the install confirmation dialog when no desktop is selected.
+#. TRANSLATORS: shown in the software summary when no desktop is selected.
 #: src/components/overview/SoftwareSummary.tsx:71
 #: src/components/software/NoDesktopAlert.tsx:51
 msgid "No desktop selected"
@@ -2352,116 +2352,164 @@ msgstr ""
 "Якщо це не було Вашим наміром, скасуйте дію та виберіть робочий стіл у "
 "налаштуваннях [програми]."
 
-#. TRANSLATORS: empty state title for a software section with nothing selected
-#: src/components/software/SoftwarePage.tsx:71
+#. TRANSLATORS: empty state title when software cannot be selected
+#: src/components/software/PatternSelectionUnavailable.tsx:60
 #, fuzzy
-msgid "None selected"
-msgstr "автоматичний вибір"
+msgid "Software selection is not available"
+msgstr "Немає доступних цілей"
 
-#. TRANSLATORS: empty state title when no desktop environments are available
-#: src/components/software/SoftwarePage.tsx:88
+#. TRANSLATORS: link to go to registration settings
+#: src/components/software/PatternSelectionUnavailable.tsx:112
 #, fuzzy
-msgid "No desktops available"
-msgstr "Нема доступних пристроїв"
+msgid "Go to registration"
+msgstr "Реєстрація"
 
-#. TRANSLATORS: explanation shown when the product has no desktop environments
-#: src/components/software/SoftwarePage.tsx:91
-msgid "This product does not provide desktop environments."
+#. TRANSLATORS: additional hint when base product is missing
+#: src/components/software/PatternSelectionUnavailable.tsx:124
+msgid "This might be due to network connectivity."
 msgstr ""
 
-#: src/components/software/SoftwarePage.tsx:120
+#. TRANSLATORS: link to go to network settings
+#: src/components/software/PatternSelectionUnavailable.tsx:130
 #, fuzzy
-msgid "Read less"
-msgstr "Тільки читання"
+msgid "Go to network settings"
+msgstr "Перейти до розділу «Мережа»"
 
-#. TRANSLATORS: accessible label for the collapse button; %s is the pattern name
-#: src/components/software/SoftwarePage.tsx:122
-#, fuzzy, javascript-format
-msgid "Read less about %s"
-msgstr "Потрібно приблизно %s"
-
-#: src/components/software/SoftwarePage.tsx:126
+#: src/components/software/PatternSelectionUnavailable.tsx:142
 #, fuzzy
-msgid "Read more"
-msgstr "Тільки читання"
-
-#. TRANSLATORS: accessible label for the expand button; %s is the pattern name
-#: src/components/software/SoftwarePage.tsx:128
-#, fuzzy, javascript-format
-msgid "Read more about %s"
-msgstr "Потрібно приблизно %s"
-
-#. TRANSLATORS: %s is the required disk space. Keep the [brackets]: they mark the value to be displayed in bold.
-#: src/components/software/SoftwarePage.tsx:198
-#, javascript-format
-msgid "Required space with current selection: [%s]"
-msgstr "Необхідний простір для поточного виділення: [%s]"
-
-#. TRANSLATORS: %s is the required disk space. Keep the [brackets]: they mark the value to be displayed in bold.
-#: src/components/software/SoftwarePage.tsx:200
-#, javascript-format
-msgid "Required space: [%s]"
-msgstr "Необхідний простір: [%s]"
-
-#. TRANSLATORS: %1$d is selected count, %2$d is total available count
-#: src/components/software/SoftwarePage.tsx:248
-#: src/components/software/SoftwarePatternsSelection.tsx:147
-#, fuzzy, javascript-format
-msgid "%1$d of %2$d selected"
-msgstr "%1$d з %2$d пристроїв відповідають фільтрам"
-
-#: src/components/software/SoftwarePage.tsx:271
-msgid "Patterns"
-msgstr "Шаблони"
-
-#: src/components/software/SoftwarePage.tsx:275
 msgid ""
-"This product does not allow to select software patterns during installation. "
-"However, you can add additional software once the installation is finished."
+"This product does not allow selecting software at installation time. "
+"Additional software can be added after the installation is complete."
 msgstr ""
 "Цей продукт не дозволяє вибирати шаблони програмного забезпечення під час "
 "інсталяції. Однак Ви можете додати додаткове програмне забезпечення після "
 "завершення інсталяції."
 
+#. TRANSLATORS: shown when software selection cannot be determined
+#: src/components/software/PatternSelectionUnavailable.tsx:153
+#, fuzzy
+msgid "The software selection could not be loaded."
+msgstr "З'єднання не вдалося зберегти"
+
+#. TRANSLATORS: empty state title for a software section with nothing selected
+#: src/components/software/SoftwarePage.tsx:72
+#, fuzzy
+msgid "None selected"
+msgstr "автоматичний вибір"
+
+#: src/components/software/SoftwarePage.tsx:117
+#, fuzzy
+msgid "Read less"
+msgstr "Тільки читання"
+
+#. TRANSLATORS: accessible label for the collapse button; %s is the pattern name
+#: src/components/software/SoftwarePage.tsx:119
+#, fuzzy, javascript-format
+msgid "Read less about %s"
+msgstr "Потрібно приблизно %s"
+
+#: src/components/software/SoftwarePage.tsx:123
+#, fuzzy
+msgid "Read more"
+msgstr "Тільки читання"
+
+#. TRANSLATORS: accessible label for the expand button; %s is the pattern name
+#: src/components/software/SoftwarePage.tsx:125
+#, fuzzy, javascript-format
+msgid "Read more about %s"
+msgstr "Потрібно приблизно %s"
+
+#. TRANSLATORS: %s is the required disk space. Keep the [brackets]: they mark the value to be displayed in bold.
+#: src/components/software/SoftwarePage.tsx:195
+#, javascript-format
+msgid "Required space with current selection: [%s]"
+msgstr "Необхідний простір для поточного виділення: [%s]"
+
+#. TRANSLATORS: %s is the required disk space. Keep the [brackets]: they mark the value to be displayed in bold.
+#: src/components/software/SoftwarePage.tsx:197
+#, javascript-format
+msgid "Required space: [%s]"
+msgstr "Необхідний простір: [%s]"
+
+#. TRANSLATORS: %1$d is selected count, %2$d is total available count
+#: src/components/software/SoftwarePage.tsx:245
+#: src/components/software/SoftwarePatternsSelection.tsx:147
+#, fuzzy, javascript-format
+msgid "%1$d of %2$d selected"
+msgstr "%1$d з %2$d пристроїв відповідають фільтрам"
+
 #. TRANSLATORS: shown while the software proposal is not yet available
-#: src/components/software/SoftwarePage.tsx:292
+#: src/components/software/SoftwarePage.tsx:273
 msgid "No information available yet"
 msgstr "Інформація ще не доступна"
 
-#: src/components/software/SoftwarePage.tsx:314
+#. TRANSLATORS: empty state title when no desktop environments are available
+#: src/components/software/SoftwarePage.tsx:289
+#, fuzzy
+msgid "No desktops available"
+msgstr "Нема доступних пристроїв"
+
+#. TRANSLATORS: explanation shown when the product has no desktop environments
+#: src/components/software/SoftwarePage.tsx:291
+msgid "This product does not provide desktop environments."
+msgstr ""
+
+#. TRANSLATORS: hint shown when no desktop environment has been chosen
+#: src/components/software/SoftwarePage.tsx:297
+msgid "Select a desktop environment to get a graphical interface."
+msgstr "Виберіть середовище робочого столу, щоб отримати графічний інтерфейс."
+
+#. TRANSLATORS: button to go to the desktop environment selection page
+#: src/components/software/SoftwarePage.tsx:299
+#, fuzzy
+msgid "Select a desktop"
+msgstr "Оберіть диск"
+
+#. TRANSLATORS: empty state title when no additional patterns are available
+#: src/components/software/SoftwarePage.tsx:307
+#, fuzzy
+msgid "No additional patterns available"
+msgstr "Додаткові шаблони"
+
+#. TRANSLATORS: explanation shown when the product has no additional patterns
+#: src/components/software/SoftwarePage.tsx:309
+msgid "This product does not provide additional patterns."
+msgstr ""
+
+#. TRANSLATORS: hint shown when no additional software patterns have been chosen
+#: src/components/software/SoftwarePage.tsx:315
+msgid "Select one or more to extend the system."
+msgstr "Виберіть один або кілька варіантів, щоб розширити систему."
+
+#. TRANSLATORS: button to go to the pattern selection page
+#: src/components/software/SoftwarePage.tsx:317
+#, fuzzy
+msgid "Select patterns"
+msgstr "Обрані шаблони"
+
+#: src/components/software/SoftwarePage.tsx:329
 msgid "Desktops"
 msgstr "Робочі столи"
 
 #. TRANSLATORS: description for the Desktops section
-#: src/components/software/SoftwarePage.tsx:317
+#: src/components/software/SoftwarePage.tsx:332
 msgid "Graphical desktop environments for the system."
 msgstr "Графічні робочі середовища для системи."
 
 #. TRANSLATORS: button to change the desktop selection
-#: src/components/software/SoftwarePage.tsx:321
+#: src/components/software/SoftwarePage.tsx:336
 msgid "Change desktop"
 msgid_plural "Change desktops"
 msgstr[0] "Змінити робочий стіл"
 msgstr[1] "Змінити робочі столи"
 msgstr[2] "Змінити робочі столи"
 
-#. TRANSLATORS: hint shown when no desktop environment has been chosen
-#: src/components/software/SoftwarePage.tsx:334
-msgid "Select a desktop environment to get a graphical interface."
-msgstr "Виберіть середовище робочого столу, щоб отримати графічний інтерфейс."
-
-#. TRANSLATORS: button to go to the desktop environment selection page
-#: src/components/software/SoftwarePage.tsx:336
-#, fuzzy
-msgid "Select a desktop"
-msgstr "Оберіть диск"
-
-#: src/components/software/SoftwarePage.tsx:344
+#: src/components/software/SoftwarePage.tsx:347
 msgid "Additional patterns"
 msgstr "Додаткові шаблони"
 
 #. TRANSLATORS: description for the Additional software section
-#: src/components/software/SoftwarePage.tsx:347
+#: src/components/software/SoftwarePage.tsx:350
 msgid ""
 "Curated sets of packages for common use cases and features to extend the "
 "system."
@@ -2470,21 +2518,10 @@ msgstr ""
 "розширення можливостей системи."
 
 #. TRANSLATORS: button to change the additional software selection
-#: src/components/software/SoftwarePage.tsx:350
+#: src/components/software/SoftwarePage.tsx:353
 #, fuzzy
 msgid "Change patterns"
 msgstr "Змінити на %s"
-
-#. TRANSLATORS: hint shown when no additional software patterns have been chosen
-#: src/components/software/SoftwarePage.tsx:359
-msgid "Select one or more to extend the system."
-msgstr "Виберіть один або кілька варіантів, щоб розширити систему."
-
-#. TRANSLATORS: button to go to the pattern selection page
-#: src/components/software/SoftwarePage.tsx:361
-#, fuzzy
-msgid "Select patterns"
-msgstr "Обрані шаблони"
 
 #. TRANSLATORS: page title when selecting all software patterns
 #. TRANSLATORS: page title when selecting non-desktop software patterns
@@ -3324,9 +3361,9 @@ msgstr "Знищити поточні дані і відформатувати �
 msgid "Format device as"
 msgstr "Форматувати пристрій як"
 
+#. TRANSLATORS: %s is the name of a partition, like /dev/vda2
 #. TRANSLATORS: %s is the name of a device, like vda
 #. TRANSLATORS: %s is the name of a logical volume, like /dev/system/home
-#. TRANSLATORS: %s is the name of a partition, like /dev/vda2
 #: src/components/storage/FormattableDevicePage.tsx:310
 #: src/components/storage/LogicalVolumePage.tsx:661
 #: src/components/storage/PartitionPage.tsx:596
@@ -5574,6 +5611,9 @@ msgstr ""
 #: src/utils/network.ts:63
 msgid "VLAN"
 msgstr ""
+
+#~ msgid "Patterns"
+#~ msgstr "Шаблони"
 
 #~ msgid "Edit binding"
 #~ msgstr "Редагувати прив'язку"
