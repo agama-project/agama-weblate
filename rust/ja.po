@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-24 14:37+0000\n"
+"POT-Creation-Date: 2026-04-30 09:32+0000\n"
 "PO-Revision-Date: 2026-04-18 11:04+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/agama/agama-rust-"
@@ -37,7 +37,7 @@ msgstr "インストールの提案内容を作成しています:"
 msgid "Installing the system:"
 msgstr "システムをインストールしています:"
 
-#: agama-cli/src/progress.rs:217
+#: agama-cli/src/progress.rs:217 agama-cli/src/status.rs:77
 msgid "Installation is ready to start."
 msgstr "インストールの開始準備ができています。"
 
@@ -124,6 +124,55 @@ msgstr "ユーザ"
 #: agama-cli/src/progress.rs:342
 msgid "Current step"
 msgstr "現在のステップ"
+
+#: agama-cli/src/status.rs:75
+#, fuzzy
+msgid "Installation failed."
+msgstr "インストールが失敗しました"
+
+#: agama-cli/src/status.rs:76
+#, fuzzy
+msgid "Installation finished successfully."
+msgstr "インストールが成功しました"
+
+#: agama-cli/src/status.rs:78
+#, fuzzy
+msgid "Installation is in progress."
+msgstr "インストールの開始準備ができています。"
+
+#: agama-cli/src/status.rs:79
+#, fuzzy
+msgid "Installation is being proposed."
+msgstr "インストールの開始準備ができています。"
+
+#: agama-cli/src/status.rs:80
+#, fuzzy
+msgid ""
+"There are unanswered questions. Please use `agama questions` command or web "
+"interface to answer them."
+msgstr ""
+"未回答の質問が残っています。 agama questions` コマンドを利用するか、もしくは "
+"Web インターフェイスを利用して回答してください:"
+
+#: agama-cli/src/status.rs:81
+#, fuzzy
+msgid ""
+"The installer failed to calculate the installation proposal. There are "
+"issues blocking the installation."
+msgstr "インストーラは提案内容の作成に失敗しました。"
+
+#: agama-cli/src/status.rs:111
+#, fuzzy
+msgid "Details:"
+msgstr "詳細"
+
+#: agama-cli/src/status.rs:113
+msgid "Open questions:"
+msgstr ""
+
+#: agama-cli/src/status.rs:119
+msgid "Blocking issues:"
+msgstr ""
 
 #. TRANSLATORS: %s is replaced by the script name.
 #: agama-files/src/service.rs:198
@@ -249,6 +298,7 @@ msgstr "続行"
 
 #. TRANSLATORS: substituting: key ID, (key name), fingerprint
 #: agama-software/src/callbacks/security.rs:104
+#, rust-format
 msgid ""
 "The key {0} ({1}) with fingerprint {2} is unknown. Do you want to trust this "
 "key?"
