@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-29 14:21+0000\n"
-"PO-Revision-Date: 2026-05-04 06:04+0000\n"
+"PO-Revision-Date: 2026-05-04 07:04+0000\n"
 "Last-Translator: David D <dadu042@mailo.com>\n"
 "Language-Team: French <https://l10n.opensuse.org/projects/agama/agama-web/"
 "fr/>\n"
@@ -394,14 +394,14 @@ msgstr "Chargement des données..."
 
 #: src/components/core/ProgressBackdrop.tsx:178
 #: src/components/core/ProgressStatusMonitor.tsx:73
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "(step %s of %s)"
-msgstr "Conserver la taille de %s"
+msgstr "(étape %s de %s)"
 
 #: src/components/core/ProgressReport.tsx:66
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "Step %1$d of %2$d"
-msgstr "%d sur %d"
+msgstr "Étape %1$d de %2$d"
 
 #: src/components/core/ProgressStatusMonitor.tsx:40
 #: src/components/overview/SoftwareSummary.tsx:160
@@ -450,11 +450,11 @@ msgid "Localization"
 msgstr "Localisation"
 
 #: src/components/core/ProgressStatusMonitor.tsx:52
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "%s task active"
 msgid_plural "%s tasks active"
-msgstr[0] "actif"
-msgstr[1] "actif"
+msgstr[0] "%s tâche active"
+msgstr[1] "%s tâches actives"
 
 #: src/components/core/RebootButton.tsx:54
 msgid "Reboot"
@@ -561,9 +561,9 @@ msgstr "%s n’est pas valide : %s"
 
 #. TRANSLATORS: accessible label for the remove button of an entry. %s is the entry value.
 #: src/components/form/ArrayField.tsx:192
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "Remove %s"
-msgstr "Supprimer"
+msgstr "Retirer  %s"
 
 #. TRANSLATORS: screen reader announcement when a duplicate entry is skipped. %s is the entry value.
 #: src/components/form/ArrayField.tsx:420
@@ -718,9 +718,8 @@ msgstr "N'importe"
 #. TRANSLATORS: description for the "Any" binding mode. The connection is
 #. not limited to a specific device.
 #: src/components/network/BindingModeSelector.tsx:35
-#, fuzzy
 msgid "The connection is available for all devices"
-msgstr "La connexion est disponible pour tous les appareils."
+msgstr "La connexion est disponible pour tous les appareils"
 
 #. TRANSLATORS: option label for binding by device interface name (e.g. eth0).
 #: src/components/network/BindingModeSelector.tsx:40
@@ -841,9 +840,9 @@ msgstr ""
 
 #. TRANSLATORS: helper text for the bond ports field. %s is a list of available devices.
 #: src/components/network/BondSettings.tsx:114
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "Available devices: %s"
-msgstr "Périphériques disponibles"
+msgstr "Périphériques disponibles : %s"
 
 #: src/components/network/ConnectionDetails.tsx:60
 msgid "Connection is available to all devices."
@@ -1150,16 +1149,16 @@ msgstr "Déconnecté"
 #. TRANSLATORS: shown in the filter toolbar when filters are active.
 #. %1$s is the number of matching connections, %2$s is the total number.
 #: src/components/network/ConnectionsTable.tsx:253
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "%1$d of %2$d connections match filters"
-msgstr "Aucune des langues ne correspond au filtre."
+msgstr "%1$d de %2$d connexions correspondent aux filtres"
 
 #. TRANSLATORS: shown in the filter toolbar when no filters are active.
 #. %s is the total number of connections.
 #: src/components/network/ConnectionsTable.tsx:260
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "%d connections available"
-msgstr "Pas d’appareils disponibles"
+msgstr "%d connexions disponibles"
 
 #: src/components/network/ConnectionsTable.tsx:283
 #: src/components/network/ConnectionsTable.tsx:296
@@ -1218,9 +1217,8 @@ msgid "Delete"
 msgstr "Supprimer"
 
 #: src/components/network/ConnectionsTable.tsx:375
-#, fuzzy
 msgid "No connections match filters"
-msgstr "Aucune des langues ne correspond au filtre."
+msgstr "Aucune connexion ne correspond aux filtres"
 
 #: src/components/network/ConnectionsTable.tsx:379
 #: src/components/storage/dasd/DASDTable.tsx:689
@@ -1380,11 +1378,15 @@ msgstr "Passerelle"
 #: src/components/network/IpSettings.tsx:137
 msgid "E.g., 192.168.1.1 or 192.168.1.1/24. Prefix auto-added if omitted."
 msgstr ""
+"Par ex. 192.168.1.1 ou 192.168.1.1/24. Préfixe ajouté automatiquement si "
+"omis."
 
 #. TRANSLATORS: helper text for IPv6 addresses field. Explains format and that prefix is auto-added.
 #: src/components/network/IpSettings.tsx:139
 msgid "E.g., 2001:db8::1 or 2001:db8::1/64. Prefix auto-added if omitted."
 msgstr ""
+"Par ex. 2001:db8::1 ou 2001:db8::1/64. Préfixe automatiquement ajouté si "
+"omis."
 
 #. TRANSLATORS: validation error for an invalid IP address entry.
 #: src/components/network/IpSettings.tsx:145
@@ -1400,22 +1402,24 @@ msgstr "Aucun conflit à traiter"
 #. TRANSLATORS: label suffix indicating an optional field.
 #: src/components/network/IpSettings.tsx:157
 msgid "(optional)"
-msgstr ""
+msgstr "(optionnel)"
 
 #. TRANSLATORS: helper text for IPv4 gateway field explaining the format.
 #: src/components/network/IpSettings.tsx:165
 msgid "E.g., 192.168.1.1"
-msgstr ""
+msgstr "Ex. 192.168.1.1"
 
 #. TRANSLATORS: helper text for IPv6 gateway field explaining the format.
 #: src/components/network/IpSettings.tsx:167
 msgid "E.g., 2001:db8::1"
-msgstr ""
+msgstr "Ex. 2001:db8::1"
 
 #: src/components/network/NetworkPage.tsx:50
 msgid ""
 "Manage available connections, connect to Wi-Fi, or add a new connection."
 msgstr ""
+"Gérer les connexions disponibles, se connecter au Wi-Fi ou ajouter une "
+"nouvelle connexion."
 
 #: src/components/network/NetworkPage.tsx:58
 #, fuzzy
@@ -1538,7 +1542,7 @@ msgstr "Une valeur de taille est requise"
 #. TRANSLATORS: validation error for the IPv4 addresses field.
 #: src/components/network/connectionFormValidation.ts:166
 msgid "Some IPv4 addresses are invalid"
-msgstr ""
+msgstr "Certaines adresses IPv4 ne sont pas valides"
 
 #. TRANSLATORS: validation error for the IPv6 addresses field.
 #: src/components/network/connectionFormValidation.ts:173
@@ -1549,7 +1553,7 @@ msgstr "Une valeur de taille est requise"
 #. TRANSLATORS: validation error for the IPv6 addresses field.
 #: src/components/network/connectionFormValidation.ts:175
 msgid "Some IPv6 addresses are invalid"
-msgstr ""
+msgstr "Certaines adresses IPv6 ne sont pas valides"
 
 #. TRANSLATORS: validation error for the IPv4 gateway field.
 #: src/components/network/connectionFormValidation.ts:183
@@ -1560,7 +1564,7 @@ msgstr "Une valeur de taille est requise"
 #. TRANSLATORS: validation error for the IPv4 gateway field.
 #: src/components/network/connectionFormValidation.ts:185
 msgid "Invalid IPv4 gateway"
-msgstr ""
+msgstr "Passerelle IPv4 non valide"
 
 #. TRANSLATORS: validation error for the IPv6 gateway field.
 #: src/components/network/connectionFormValidation.ts:193
@@ -1571,7 +1575,7 @@ msgstr "Une valeur de taille est requise"
 #. TRANSLATORS: validation error for the IPv6 gateway field.
 #: src/components/network/connectionFormValidation.ts:195
 msgid "Invalid IPv6 gateway"
-msgstr ""
+msgstr "Passerelle IPv6 non valide"
 
 #. TRANSLATORS: validation error for the DNS servers field.
 #: src/components/network/connectionFormValidation.ts:202
@@ -1582,17 +1586,17 @@ msgstr "Une valeur de taille est requise"
 #. TRANSLATORS: validation error for the DNS servers field.
 #: src/components/network/connectionFormValidation.ts:204
 msgid "Some DNS server addresses are invalid"
-msgstr ""
+msgstr "Certaines adresses de serveurs DNS sont invalides"
 
 #. TRANSLATORS: validation error for the DNS search domains field.
 #: src/components/network/connectionFormValidation.ts:211
 msgid "At least one DNS search domain is required"
-msgstr ""
+msgstr "Au moins un domaine de recherche DNS est requis"
 
 #. TRANSLATORS: validation error for the DNS search domains field.
 #: src/components/network/connectionFormValidation.ts:213
 msgid "Some DNS search domains are invalid"
-msgstr ""
+msgstr "Certains domaines de recherche DNS sont invalides"
 
 #. TRANSLATORS: validation error for the bond device name field.
 #: src/components/network/connectionFormValidation.ts:226
@@ -1661,9 +1665,9 @@ msgstr "Clavier %1$s - fuseau horaire %2$s"
 #. TRANSLATORS: Displays two IP addresses. E.g., "192.168.1.1 and 192.168.1.2"
 #. %s will be replaced by IP addresses
 #: src/components/overview/NetworkSummary.tsx:61
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "%s and %s"
-msgstr " et "
+msgstr "%s et %s"
 
 #. TRANSLATORS: IPs summary when there are more than 2 static IP addresses.
 #. E.g., "192.168.1.1 and 2 others"
@@ -1693,14 +1697,14 @@ msgstr "Le système installé ne dispose peut-être pas de connexions réseau"
 #. Full example:
 #: src/components/overview/NetworkSummary.tsx:83
 #: src/components/overview/NetworkSummary.tsx:99
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "Using %d connections with %s"
-msgstr "%d Connexion établie:"
+msgstr "Utilisation de %d connexions avec %s"
 
 #: src/components/overview/NetworkSummary.tsx:90
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "DHCP and %s"
-msgstr " et "
+msgstr "DHCP et %s"
 
 #: src/components/overview/NetworkSummary.tsx:90
 #, javascript-format
@@ -1708,11 +1712,11 @@ msgid "DHCP, %s"
 msgstr ""
 
 #: src/components/overview/NetworkSummary.tsx:105
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "Configured with %d connection"
 msgid_plural "Configured with %d connections"
-msgstr[0] "Configurer les paramètres LVM"
-msgstr[1] "Configurer les paramètres LVM"
+msgstr[0] "Configuré avec %d connexion"
+msgstr[1] "Configuré avec %d connexions"
 
 #. TRANSLATORS: Network summary title when no network has been configured
 #: src/components/overview/NetworkSummary.tsx:118
@@ -1744,9 +1748,9 @@ msgid "Delete existing data and install %s?"
 msgstr "Supprimer données existantes et installer %s ?"
 
 #: src/components/overview/OverviewPage.tsx:79
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "Install %s?"
-msgstr "Installer"
+msgstr "Installer %s ?"
 
 #. TRANSLATORS: shown at the top of the install confirmation dialog.
 #: src/components/overview/OverviewPage.tsx:90
@@ -1822,9 +1826,9 @@ msgstr "Code d'inscription"
 #. TRANSLATORS: Brief summary about the product registration.
 #. %s will be replaced with the last 4 digits of the registration code.
 #: src/components/overview/RegistrationSummary.tsx:41
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "Using code ending in %s"
-msgstr "%d Connexion établie:"
+msgstr "Utilisation d’un code se terminant par %s"
 
 #: src/components/overview/RegistrationSummary.tsx:72
 #: src/components/product/ProductRegistrationPage.tsx:528
@@ -1860,11 +1864,11 @@ msgid "No desktop selected"
 msgstr "sélectionné automatiquement"
 
 #: src/components/overview/SoftwareSummary.tsx:87
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "%d desktop selected"
 msgid_plural "%d desktops selected"
-msgstr[0] "sélectionné automatiquement"
-msgstr[1] "sélectionné automatiquement"
+msgstr[0] "%d bureau sélectionné"
+msgstr[1] "%d bureaux sélectionnés"
 
 #. TRANSLATORS: shown in the software summary when the user hasn't picked
 #. anything on top of the product's default selection.
@@ -1883,9 +1887,9 @@ msgstr[1] ""
 #. TRANSLATORS: total installation size shown in the software summary.
 #. %s is a human-readable disk size (e.g. "5.95 GiB").
 #: src/components/overview/SoftwareSummary.tsx:143
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "Requires %s"
-msgstr "Chemins: %s"
+msgstr "Nécessite %s"
 
 #: src/components/overview/SoftwareSummary.tsx:163
 #, fuzzy
@@ -1915,9 +1919,8 @@ msgid "Invalid [zFCP] settings"
 msgstr "Paramètres de stockage non valides"
 
 #: src/components/overview/StorageSummary.tsx:110
-#, fuzzy
 msgid "There are no disks available for the installation"
-msgstr "Aucun disque n'est disponible pour l'installation."
+msgstr "Aucun disque n’est disponible pour l’installation"
 
 #: src/components/overview/StorageSummary.tsx:112
 #, fuzzy
@@ -1925,9 +1928,8 @@ msgid "Invalid settings"
 msgstr "Paramètres de stockage non valides"
 
 #: src/components/overview/StorageSummary.tsx:116
-#, fuzzy
 msgid "Using an advanced storage configuration"
-msgstr "Effectuez l'installation en utilisant la configuration avancée."
+msgstr "Utilisation d’une configuration de stockage avancée"
 
 #: src/components/overview/StorageSummary.tsx:131
 #: src/components/storage/ProposalFailedInfo.tsx:77
@@ -1975,7 +1977,7 @@ msgstr "Mémoire"
 
 #: src/components/overview/SystemInformationSection.tsx:96
 msgid "IPs"
-msgstr ""
+msgstr "IPs"
 
 #: src/components/overview/UsersSummary.tsx:58
 #: src/components/storage/UnusedMenu.tsx:33
@@ -1989,9 +1991,9 @@ msgstr "Les mots de passe ne correspondent pas"
 
 #. TRANSLATORS: %s is a username like 'jdoe'
 #: src/components/overview/UsersSummary.tsx:64
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "Configured for root and user %s"
-msgstr "Les mots de passe ne correspondent pas"
+msgstr "Configuré pour root et l’utilisateur %s"
 
 #. TRANSLATORS: %s is a username like 'jdoe'
 #: src/components/overview/UsersSummary.tsx:66
@@ -2147,18 +2149,18 @@ msgid "Extensions"
 msgstr "Extensions"
 
 #: src/components/product/ProductSelectionPage.tsx:116
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "%d other mode available"
 msgid_plural "%d other modes available"
-msgstr[0] "Pas d’appareils disponibles"
-msgstr[1] "Pas d’appareils disponibles"
+msgstr[0] "%d autre mode disponible"
+msgstr[1] "%d autres modes disponibles"
 
 #: src/components/product/ProductSelectionPage.tsx:117
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "%d mode available"
 msgid_plural "%d modes available"
-msgstr[0] "Pas d’appareils disponibles"
-msgstr[1] "Pas d’appareils disponibles"
+msgstr[0] "%d appareil disponible"
+msgstr[1] "%d appareils disponibles"
 
 #: src/components/product/ProductSelectionPage.tsx:142
 #, fuzzy
@@ -2191,19 +2193,17 @@ msgid "Change to %s"
 msgstr "Connecter à %s"
 
 #: src/components/product/ProductSelectionPage.tsx:289
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "Select %s"
-msgstr "Sélectionner"
+msgstr "Sélectionner %s"
 
 #: src/components/product/ProductSelectionPage.tsx:335
-#, fuzzy
 msgid "Select a product to continue."
-msgstr "Sélectionner une solution pour continuer"
+msgstr "Sélectionnez un produit pour continuer."
 
 #: src/components/product/ProductSelectionPage.tsx:337
-#, fuzzy
 msgid "Select a product mode to continue."
-msgstr "Sélectionner une solution pour continuer"
+msgstr "Sélectionnez un mode produit pour continuer."
 
 #: src/components/product/ProductSelectionPage.tsx:339
 msgid "License acceptance is required to continue."
@@ -2220,11 +2220,11 @@ msgstr "Changer de langue"
 
 #: src/components/product/ProductSelectionPage.tsx:404
 #: src/components/product/ProductSelectionPage.tsx:410
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "Choose a product"
 msgid_plural "Choose from %d available products"
-msgstr[0] "Changer de produit"
-msgstr[1] "Changer de produit"
+msgstr[0] "Choisir un produit"
+msgstr[1] "Choisir parmi %d produits disponibles"
 
 #: src/components/product/ProductSelectionPage.tsx:419
 #, fuzzy, javascript-format
@@ -2260,21 +2260,18 @@ msgid "Select a product"
 msgstr "Sélectionner un produit"
 
 #: src/components/product/ProductSelectionPage.tsx:663
-#, fuzzy
 msgid "Select a mode and confirm your choice."
-msgstr "Sélectionner une solution pour continuer"
+msgstr "Sélectionnez un mode et confirmez votre choix."
 
 #: src/components/product/ProductSelectionPage.tsx:665
-#, fuzzy
 msgid "Confirm the product selection."
-msgstr "Sélection des produits"
+msgstr "Confirmez la sélection du produit."
 
 #: src/components/product/ProductSelectionPage.tsx:671
-#, fuzzy
 msgid "Select a product and confirm your choice."
 msgid_plural "Select a product and confirm your choice at the end of the list."
-msgstr[0] "Sélectionner une solution pour continuer"
-msgstr[1] "Sélectionner une solution pour continuer"
+msgstr[0] "Sélectionnez un produit et confirmez votre choix."
+msgstr[1] "Sélectionnez un produit et confirmez votre choix à la fin de la liste."
 
 #: src/components/product/ProductSelectionPage.tsx:725
 msgid ""
@@ -2435,7 +2432,7 @@ msgstr "sélectionné automatiquement"
 #. TRANSLATORS: explains the consequence of installing without a desktop.
 #: src/components/software/NoDesktopAlert.tsx:55
 msgid "The system will boot to a command-line interface."
-msgstr ""
+msgstr "Le système démarrera sur une interface de ligne de commande."
 
 #: src/components/software/NoDesktopAlert.tsx:62
 msgid ""
@@ -2458,7 +2455,7 @@ msgstr "Enregistrement"
 #. TRANSLATORS: additional hint when base product is missing
 #: src/components/software/PatternSelectionUnavailable.tsx:124
 msgid "This might be due to network connectivity."
-msgstr ""
+msgstr "Cela pourrait être dû à la connectivité réseau."
 
 #. TRANSLATORS: link to go to network settings
 #: src/components/software/PatternSelectionUnavailable.tsx:130
@@ -2478,9 +2475,8 @@ msgstr ""
 
 #. TRANSLATORS: shown when software selection cannot be determined
 #: src/components/software/PatternSelectionUnavailable.tsx:153
-#, fuzzy
 msgid "The software selection could not be loaded."
-msgstr "Le nom de l'initiateur n'a pas pu être mis à jour"
+msgstr "La sélection de logiciels n’a pas pu être chargée."
 
 #. TRANSLATORS: empty state title for a software section with nothing selected
 #: src/components/software/SoftwarePage.tsx:72
@@ -2495,9 +2491,9 @@ msgstr "lecture_seulement"
 
 #. TRANSLATORS: accessible label for the collapse button; %s is the pattern name
 #: src/components/software/SoftwarePage.tsx:119
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "Read less about %s"
-msgstr "En savoir plus"
+msgstr "En lire moins à propos de %s"
 
 #: src/components/software/SoftwarePage.tsx:123
 #, fuzzy
@@ -2506,28 +2502,28 @@ msgstr "lecture_seulement"
 
 #. TRANSLATORS: accessible label for the expand button; %s is the pattern name
 #: src/components/software/SoftwarePage.tsx:125
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "Read more about %s"
-msgstr "En savoir plus"
+msgstr "En lire plus à propos de %s"
 
 #. TRANSLATORS: %s is the required disk space. Keep the [brackets]: they mark the value to be displayed in bold.
 #: src/components/software/SoftwarePage.tsx:195
 #, javascript-format
 msgid "Required space with current selection: [%s]"
-msgstr ""
+msgstr "Espace requis avec la sélection actuelle : [%s]"
 
 #. TRANSLATORS: %s is the required disk space. Keep the [brackets]: they mark the value to be displayed in bold.
 #: src/components/software/SoftwarePage.tsx:197
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "Required space: [%s]"
-msgstr "Paquets requis"
+msgstr "Espace requis : [%s]"
 
 #. TRANSLATORS: %1$d is selected count, %2$d is total available count
 #: src/components/software/SoftwarePage.tsx:245
 #: src/components/software/SoftwarePatternsSelection.tsx:147
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "%1$d of %2$d selected"
-msgstr "Aucune des langues ne correspond au filtre."
+msgstr "%1$d de %2$d sélectionné(s)"
 
 #. TRANSLATORS: shown while the software proposal is not yet available
 #: src/components/software/SoftwarePage.tsx:273
@@ -2551,6 +2547,7 @@ msgstr "Ce produit ne nécessite pas d'enregistrement."
 #: src/components/software/SoftwarePage.tsx:297
 msgid "Select a desktop environment to get a graphical interface."
 msgstr ""
+"Sélectionnez un environnement de bureau pour obtenir une interface graphique."
 
 #. TRANSLATORS: button to go to the desktop environment selection page
 #: src/components/software/SoftwarePage.tsx:299
@@ -2584,12 +2581,12 @@ msgstr "Modèles sélectionnés"
 
 #: src/components/software/SoftwarePage.tsx:329
 msgid "Desktops"
-msgstr ""
+msgstr "Bureaux"
 
 #. TRANSLATORS: description for the Desktops section
 #: src/components/software/SoftwarePage.tsx:332
 msgid "Graphical desktop environments for the system."
-msgstr ""
+msgstr "Environnements de bureau graphiques pour le système."
 
 #. TRANSLATORS: button to change the desktop selection
 #: src/components/software/SoftwarePage.tsx:336
@@ -2633,17 +2630,16 @@ msgstr "Sélection rangée"
 
 #. TRANSLATORS: shown next to a category heading when the search filter excludes all its patterns
 #: src/components/software/SoftwarePatternsSelection.tsx:156
-#, fuzzy
 msgid "No patterns match the filter"
-msgstr "Aucun des schémas ne correspond au filtre."
+msgstr "Aucun motif ne correspond au filtre"
 
 #. TRANSLATORS: count of patterns matching the search filter in this category
 #: src/components/software/SoftwarePatternsSelection.tsx:158
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "%d matches the filter"
 msgid_plural "%d match the filter"
-msgstr[0] "Aucune des langues ne correspond au filtre."
-msgstr[1] "Aucune des langues ne correspond au filtre."
+msgstr[0] "%d correspond au filtre"
+msgstr[1] "%d correspondent au filtre"
 
 #: src/components/software/SoftwarePatternsSelection.tsx:336
 #, fuzzy, javascript-format
@@ -2654,16 +2650,15 @@ msgstr[1] "erreurs %d trouvées"
 
 #. TRANSLATORS: search results badge on the filter input when no pattern matches
 #: src/components/software/SoftwarePatternsSelection.tsx:346
-#, fuzzy
 msgid "No patterns match"
-msgstr "Aucun des schémas ne correspond au filtre."
+msgstr "Aucun motif ne correspond"
 
 #. TRANSLATORS: search results badge on the filter input.
 #. %1$d is matches found, %2$d is the total number of patterns.
 #: src/components/software/SoftwarePatternsSelection.tsx:349
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "%1$d of %2$d patterns"
-msgstr "Aucune des langues ne correspond au filtre."
+msgstr "%1$d de %2$d motifs"
 
 #. TRANSLATORS: placeholder for the search field on the patterns selection page
 #: src/components/software/SoftwarePatternsSelection.tsx:392
@@ -3070,7 +3065,7 @@ msgstr ""
 
 #: src/components/storage/ConfigureDeviceMenu.tsx:215
 msgid "Choose a volume group to define logical volumes"
-msgstr ""
+msgstr "Choisissez un groupe de volumes pour définir des volumes logiques"
 
 #. TRANSLATORS: this is an ARIA (accesibility) description of an UI element
 #: src/components/storage/ConnectedDevicesMenu.tsx:49
@@ -3115,18 +3110,20 @@ msgstr "Réanalyser les périphériques"
 
 #. TRANSLATORS: %s is replaced by a device label, e.g. "sda (512 GiB)"
 #: src/components/storage/DeviceSelectorModal.tsx:294
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "Add %s"
-msgstr "Ajouter un DNS"
+msgstr "Ajouter %s"
 
 #: src/components/storage/DeviceSelectorModal.tsx:297
 #, javascript-format
 msgid "Keep %s"
-msgstr ""
+msgstr "Garder %s"
 
 #: src/components/storage/DeviceSelectorModal.tsx:306
 msgid "Use the tabs to browse disks, RAID devices and LVM volume groups."
 msgstr ""
+"Utilisez les onglets pour parcourir les disques, les périphériques RAID et "
+"les groupes de volumes LVM."
 
 #: src/components/storage/DeviceSelectorModal.tsx:325
 #: src/components/storage/LvmPage.tsx:185
@@ -3134,9 +3131,8 @@ msgid "Disks"
 msgstr "Disques"
 
 #: src/components/storage/DeviceSelectorModal.tsx:327
-#, fuzzy
 msgid "No disks found"
-msgstr "Aucun disque zFCP n'a été trouvé."
+msgstr "Aucun disque trouvé"
 
 #: src/components/storage/DeviceSelectorModal.tsx:328
 #, fuzzy
@@ -3145,7 +3141,7 @@ msgstr "Aucun disque n'est disponible pour l'installation."
 
 #: src/components/storage/DeviceSelectorModal.tsx:340
 msgid "RAID"
-msgstr ""
+msgstr "RAID"
 
 #: src/components/storage/DeviceSelectorModal.tsx:342
 #, fuzzy
@@ -3154,12 +3150,12 @@ msgstr "Aucun périphérique trouvé"
 
 #: src/components/storage/DeviceSelectorModal.tsx:345
 msgid "No software RAID devices are available for selection."
-msgstr ""
+msgstr "Aucun périphérique RAID logiciel n’est disponible pour la sélection."
 
 #: src/components/storage/DeviceSelectorModal.tsx:358
 #: src/components/storage/LvmPage.tsx:169
 msgid "LVM"
-msgstr ""
+msgstr "LVM"
 
 #: src/components/storage/DeviceSelectorModal.tsx:360
 #, fuzzy
@@ -3168,7 +3164,7 @@ msgstr "Un nouveau groupe de volumes LVM"
 
 #: src/components/storage/DeviceSelectorModal.tsx:363
 msgid "No LVM volume groups are available for selection."
-msgstr ""
+msgstr "Aucun groupe de volumes LVM n’est disponible pour la sélection."
 
 #: src/components/storage/DeviceSelectorModal.tsx:396
 #, fuzzy
@@ -3597,9 +3593,9 @@ msgid "As a new logical volume on %s"
 msgstr "Volumes logiques pour %s"
 
 #: src/components/storage/LogicalVolumePage.tsx:518
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "Using logical volume %s"
-msgstr "volume logique"
+msgstr "Utilisation volume logique %s"
 
 #: src/components/storage/LogicalVolumePage.tsx:549
 #: src/components/storage/PartitionPage.tsx:525
@@ -3641,9 +3637,9 @@ msgid "Configure logical volume"
 msgstr "volume logique"
 
 #: src/components/storage/LogicalVolumePage.tsx:893
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "Configure logical volume at %s"
-msgstr "volume logique"
+msgstr "Configurer volume logique à %s"
 
 #: src/components/storage/LogicalVolumePage.tsx:915
 #: src/components/storage/PartitionPage.tsx:852
@@ -3904,9 +3900,9 @@ msgstr "Des partitions pour l’hôte « système » seront créées si néces
 
 #. TRANSLATORS: ARIA (accesibility) description of an UI element. %s is a mount path.
 #: src/components/storage/PartitionsSection.tsx:165
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "Partition %s"
-msgstr "Partitions"
+msgstr "Partition %s"
 
 #. TRANSLATORS: ARIA (accesibility) description of an button. %s is a mount path.
 #: src/components/storage/PartitionsSection.tsx:177
@@ -4114,21 +4110,19 @@ msgstr ""
 "« Paramètres » ci-dessus."
 
 #: src/components/storage/ProposalResultSection.tsx:142
-#, fuzzy
 msgid ""
 "The following actions will be performed in the system during installation."
-msgstr "Les schémas logiciels suivants sont sélectionnés pour l'installation :"
+msgstr ""
+"Les actions suivantes seront effectuées dans le système lors de "
+"l’installation."
 
 #: src/components/storage/ProposalResultSection.tsx:148
 msgid "Final layout"
 msgstr ""
 
 #: src/components/storage/ProposalResultSection.tsx:152
-#, fuzzy
 msgid "Final structure of the system after installation."
-msgstr ""
-"La disposition du clavier ne peut pas être modifiée via l'installation à "
-"distance"
+msgstr "Structure finale du système après l’installation."
 
 #: src/components/storage/ProposalResultTable.tsx:77
 msgid "New"
@@ -4296,11 +4290,11 @@ msgstr "Configurer le volume logique LVM au niveau du groupe de volumes %s"
 #. TRANSLATORS: %s is a list of formatted mount points like '"/", "/var" and "swap"' (or a
 #. single mount point in the singular case).
 #: src/components/storage/SearchedVolumeGroupMenu.tsx:135
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "%s will be created as a partition"
 msgid_plural "%s will be created as partitions"
-msgstr[0] "%1$s sera crée en tant que partition à %2$s"
-msgstr[1] "%1$s seront crées en tant que partitions à %2$s"
+msgstr[0] "%s sera crée en tant que partition"
+msgstr[1] "%s seront crées en tant que partitions"
 
 #: src/components/storage/SearchedVolumeGroupMenu.tsx:158
 #, fuzzy
@@ -4604,17 +4598,17 @@ msgstr "Format"
 #. %1$s is the number of matching devices, %2$s is the total number.
 #: src/components/storage/dasd/DASDTable.tsx:295
 #: src/components/storage/zfcp/ZFCPDevicesTable.tsx:147
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "%1$d of %2$d devices match filters"
-msgstr "Aucune des langues ne correspond au filtre."
+msgstr "%1$d de %2$d appareils correspondent aux filtres"
 
 #. TRANSLATORS: shown in the filter toolbar when no filters are active.
 #. %s is the total number of devices.
 #: src/components/storage/dasd/DASDTable.tsx:302
 #: src/components/storage/zfcp/ZFCPDevicesTable.tsx:154
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "%d devices available"
-msgstr "Pas d’appareils disponibles"
+msgstr "%d appareils disponibles"
 
 #. TRANSLATORS: table header for a column in a DASD devices table that
 #. usually contains "Yes" or "No"" values
@@ -4634,17 +4628,16 @@ msgstr "Canal max"
 #. TRANSLATORS: message shown in bulk action toolbar when just one device
 #. is selected
 #: src/components/storage/dasd/DASDTable.tsx:382
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "Actions for the selected device:"
 msgid_plural "Actions for %s selected devices:"
-msgstr[0] "Appliquer à l’appareil sélectionné"
-msgstr[1] "Appliquer aux %s appareils sélectionnés"
+msgstr[0] "Actions pour l’appareil sélectionné :"
+msgstr[1] "Actions pour %s appareils sélectionnés :"
 
 #. TRANSLATORS: hint shown in the bulk actions toolbar when no devices are selected.
 #: src/components/storage/dasd/DASDTable.tsx:391
-#, fuzzy
 msgid "Select devices to perform bulk actions"
-msgstr "Sélectionner appareils pour activer les actions en masse."
+msgstr "Sélection d'appareils pour effectuer des actions en masse"
 
 #. TRANSLATORS: message announced to screen reader users when just one
 #. device is selected.
@@ -4686,9 +4679,8 @@ msgstr "Informations sur la partition"
 
 #: src/components/storage/dasd/DASDTable.tsx:685
 #: src/components/storage/zfcp/ZFCPDevicesTable.tsx:421
-#, fuzzy
 msgid "No devices match filters"
-msgstr "Aucune des langues ne correspond au filtre."
+msgstr "Aucun appareil ne correspond aux filtres"
 
 #: src/components/storage/dasd/FormatActionHandler.tsx:90
 #, javascript-format
@@ -4754,9 +4746,8 @@ msgid "Unused space"
 msgstr "Espace inutilisé"
 
 #: src/components/storage/iscsi/DiscoverFormPage.tsx:149
-#, fuzzy
 msgid "No valid address."
-msgstr "Aucun conflit à traiter"
+msgstr "Aucune adresse valide."
 
 #: src/components/storage/iscsi/DiscoverFormPage.tsx:153
 msgid "No valid port."
@@ -4764,9 +4755,8 @@ msgstr "Pas de port valide."
 
 #: src/components/storage/iscsi/DiscoverFormPage.tsx:157
 #: src/components/storage/iscsi/TargetLoginPage.tsx:148
-#, fuzzy
 msgid "All fields are required."
-msgstr "Tous les champs sont obligatoires"
+msgstr "Tous les champs sont requis."
 
 #: src/components/storage/iscsi/DiscoverFormPage.tsx:185
 msgid "Address"
@@ -4888,9 +4878,9 @@ msgid "Target not found"
 msgstr "Cible non trouvée"
 
 #: src/components/storage/iscsi/TargetLoginPage.tsx:313
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "%s at portal %s does not exist or cannot be reached."
-msgstr "Cela n’existe pas ou ne peut pas être atteint(e)."
+msgstr "%s sur le portail %s n’existe pas ou ne peut pas être atteint."
 
 #: src/components/storage/iscsi/TargetLoginPage.tsx:317
 #, fuzzy
@@ -4943,18 +4933,17 @@ msgstr ""
 "disponibles."
 
 #: src/components/storage/iscsi/TargetsTable.tsx:355
-#, fuzzy
 msgid "No targets matches filters"
-msgstr "Aucune des langues ne correspond au filtre."
+msgstr "Aucune cible ne correspond aux filtres"
 
 #: src/components/storage/iscsi/TargetsTable.tsx:489
 msgid "iBFT"
 msgstr "iBFT"
 
 #: src/components/storage/iscsi/TargetsTable.tsx:595
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "Actions for %s at portal %s"
-msgstr "Actions concernant la connexion %s"
+msgstr "Actions pour %s dans le portail %s"
 
 #: src/components/storage/iscsi/TargetsTable.tsx:604
 msgid ""
@@ -5454,7 +5443,7 @@ msgstr "Non disponible"
 
 #: src/components/storage/zfcp/ZFCPControllersPage.tsx:51
 msgid "There are not zFCP controllers pending of activation."
-msgstr ""
+msgstr "Il n’y a pas de contrôleurs zFCP en attente d’activation."
 
 #: src/components/storage/zfcp/ZFCPControllersPage.tsx:63
 msgid "Automatic LUN scan is enabled"
@@ -5492,7 +5481,7 @@ msgstr "Sélectionner une solution pour continuer"
 
 #: src/components/storage/zfcp/ZFCPControllersPage.tsx:142
 msgid "Select the zFCP controllers to activate:"
-msgstr ""
+msgstr "Sélectionnez les contrôleurs zFCP à activer :"
 
 #: src/components/storage/zfcp/ZFCPControllersPage.tsx:191
 #: src/components/storage/zfcp/ZFCPPage.tsx:174
@@ -5570,9 +5559,9 @@ msgid "There is a deactivated zFCP controller."
 msgstr "Veuillez essayer d'activer un contrôleur zFCP."
 
 #: src/components/storage/zfcp/ZFCPPage.tsx:88
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "There are %s deactivated zFCP controllers."
-msgstr "Veuillez essayer d'activer un contrôleur zFCP."
+msgstr "Il y a %s contrôleurs zFCP désactivés."
 
 #: src/components/storage/zfcp/ZFCPPage.tsx:92
 msgid "All the available zFCP controllers are already activated."
