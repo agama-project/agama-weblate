@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-29 14:21+0000\n"
+"POT-Creation-Date: 2026-05-07 20:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -395,7 +395,7 @@ msgstr ""
 #: src/components/core/ProgressStatusMonitor.tsx:42
 #: src/components/network/BindingSettingsForm.tsx:111
 #: src/components/network/ConnectionDetails.tsx:95
-#: src/components/network/ConnectionForm.tsx:569
+#: src/components/network/ConnectionForm.tsx:658
 #: src/components/network/ConnectionPage.tsx:75
 #: src/components/network/NetworkPage.tsx:43
 #: src/components/network/WifiConnectionForm.tsx:142
@@ -508,73 +508,84 @@ msgstr ""
 msgid "%d entries added, %d invalid, %d duplicates skipped."
 msgstr ""
 
+#: src/components/form/ArrayField.tsx:148
+msgid ""
+"Enter or Tab to add, Backspace or Delete to remove, arrow keys to navigate "
+"entries, Escape to exit"
+msgstr ""
+
+#. TRANSLATORS: keyboard usage hint when entries exist.
+#: src/components/form/ArrayField.tsx:170
+msgid ""
+"Enter or Tab to add, Backspace or Delete to remove, arrow keys to navigate"
+msgstr ""
+
+#. TRANSLATORS: keyboard usage hint when field is empty.
+#: src/components/form/ArrayField.tsx:172
+msgid "Enter or Tab to add"
+msgstr ""
+
 #. TRANSLATORS: accessible label for an invalid entry. First %s is the entry value, second %s is the validation error.
-#: src/components/form/ArrayField.tsx:184
+#: src/components/form/ArrayField.tsx:227
 #, javascript-format
 msgid "%s is invalid: %s"
 msgstr ""
 
 #. TRANSLATORS: accessible label for the remove button of an entry. %s is the entry value.
-#: src/components/form/ArrayField.tsx:192
+#: src/components/form/ArrayField.tsx:235
 #, javascript-format
 msgid "Remove %s"
 msgstr ""
 
 #. TRANSLATORS: screen reader announcement when a duplicate entry is skipped. %s is the entry value.
-#: src/components/form/ArrayField.tsx:420
+#: src/components/form/ArrayField.tsx:463
 #, javascript-format
 msgid "%s already exists, skipped."
 msgstr ""
 
 #. TRANSLATORS: screen reader announcement when an invalid entry is
 #. added. First %s is the entry value, second %s is the validation error.
-#: src/components/form/ArrayField.tsx:431
+#: src/components/form/ArrayField.tsx:474
 #, javascript-format
 msgid "%s added but is invalid: %s. Select to edit."
 msgstr ""
 
 #. TRANSLATORS: screen reader announcement when an entry is added. %s
 #. is the entry value.
-#: src/components/form/ArrayField.tsx:434
+#: src/components/form/ArrayField.tsx:477
 #, javascript-format
 msgid "%s added."
 msgstr ""
 
 #. TRANSLATORS: screen reader announcement when an entry is removed. %s is
 #. the entry value.
-#: src/components/form/ArrayField.tsx:444
+#: src/components/form/ArrayField.tsx:487
 #, javascript-format
 msgid "%s removed."
 msgstr ""
 
 #. TRANSLATORS: screen reader announcement when an entry is moved to the
 #. input for editing. %s is the entry value.
-#: src/components/form/ArrayField.tsx:459
+#: src/components/form/ArrayField.tsx:502
 #, javascript-format
 msgid "%s moved to input for editing."
 msgstr ""
 
 #. TRANSLATORS: screen reader announcement when all invalid entries are
 #. cleared. %d is the number of removed entries.
-#: src/components/form/ArrayField.tsx:469
+#: src/components/form/ArrayField.tsx:512
 #, javascript-format
 msgid "%d invalid entries removed."
 msgstr ""
 
 #. TRANSLATORS: accessible label for the entries list. %s is the
 #. field label (e.g. "DNS servers").
-#: src/components/form/ArrayField.tsx:591
+#: src/components/form/ArrayField.tsx:634
 #, javascript-format
 msgid "%s entries"
 msgstr ""
 
-#: src/components/form/ArrayField.tsx:643
-msgid ""
-"Enter or Tab to add; arrow keys to navigate entries, Ctrl+arrows to reorder, "
-"Escape to exit; Backspace or Delete to remove."
-msgstr ""
-
-#: src/components/form/ArrayField.tsx:659
+#: src/components/form/ArrayField.tsx:697
 msgid "Select entries to edit or remove them. Or [remove all invalid entries.]"
 msgstr ""
 
@@ -740,6 +751,8 @@ msgstr ""
 #. to the hardware identifier of the network interface.
 #: src/components/network/BondSettings.tsx:65
 #: src/components/network/BondSettings.tsx:70
+#: src/components/network/BridgeSettings.tsx:85
+#: src/components/network/BridgeSettings.tsx:90
 #: src/components/network/DeviceSelector.tsx:61
 msgid "Device name"
 msgstr ""
@@ -772,10 +785,117 @@ msgstr ""
 msgid "Bond ports"
 msgstr ""
 
+#. TRANSLATORS: helper text for the bridge ports field. %s is a list of available devices.
 #. TRANSLATORS: helper text for the bond ports field. %s is a list of available devices.
 #: src/components/network/BondSettings.tsx:114
+#: src/components/network/BridgeSettings.tsx:109
 #, javascript-format
 msgid "Available devices: %s"
+msgstr ""
+
+#. TRANSLATORS: option label for the bridge STP configuration to use the system default.
+#: src/components/network/BridgeSettings.tsx:40
+msgid "Default"
+msgstr ""
+
+#. TRANSLATORS: description for the default bridge STP configuration.
+#: src/components/network/BridgeSettings.tsx:42
+msgid "Enabled with the system default settings"
+msgstr ""
+
+#. TRANSLATORS: option label for enabling bridge STP.
+#: src/components/network/BridgeSettings.tsx:47
+#: src/components/product/ProductRegistrationPage.tsx:73
+#: src/components/storage/utils.ts:106 src/components/storage/utils.ts:125
+msgid "Custom"
+msgstr ""
+
+#. TRANSLATORS: description for enabling bridge STP with manual settings.
+#: src/components/network/BridgeSettings.tsx:49
+msgid "Explicitly enabled with manual settings"
+msgstr ""
+
+#. TRANSLATORS: option label for disabling bridge STP.
+#: src/components/network/BridgeSettings.tsx:54
+#: src/components/network/ConnectionDetails.tsx:169
+msgid "Disabled"
+msgstr ""
+
+#. TRANSLATORS: description for disabling bridge STP.
+#: src/components/network/BridgeSettings.tsx:56
+msgid "Not used by this bridge"
+msgstr ""
+
+#. TRANSLATORS: helper text for the bond device name field.
+#: src/components/network/BridgeSettings.tsx:94
+msgid "E.g., br0"
+msgstr ""
+
+#. TRANSLATORS: label for the bridge ports field.
+#: src/components/network/BridgeSettings.tsx:105
+#: src/components/network/ConnectionDetails.tsx:195
+msgid "Bridge ports"
+msgstr ""
+
+#. TRANSLATORS: label for the bridge STP (Spanning Tree Protocol) field.
+#: src/components/network/BridgeSettings.tsx:121
+msgid "Spanning Tree Protocol (STP)"
+msgstr ""
+
+#. TRANSLATORS: label suffix indicating an optional field.
+#: src/components/network/BridgeSettings.tsx:141
+#: src/components/network/BridgeSettings.tsx:170
+#: src/components/network/BridgeSettings.tsx:190
+#: src/components/network/BridgeSettings.tsx:210
+#: src/components/network/IpSettings.tsx:157
+msgid "(optional)"
+msgstr ""
+
+#. TRANSLATORS: label for the bridge priority field.
+#: src/components/network/BridgeSettings.tsx:144
+#: src/components/network/ConnectionDetails.tsx:175
+msgid "Priority"
+msgstr ""
+
+#. TRANSLATORS: Helper text for the bridge priority
+#. field. Text inside square brackets [] is
+#. semantically and visually emphasized. Keep the
+#. brackets.
+#: src/components/network/BridgeSettings.tsx:155
+msgid "Root bridge selection (0-61440). [Lower is higher priority]."
+msgstr ""
+
+#. TRANSLATORS: label for the bridge forward delay field.
+#: src/components/network/BridgeSettings.tsx:173
+#: src/components/network/ConnectionDetails.tsx:179
+msgid "Forward delay"
+msgstr ""
+
+#. TRANSLATORS: helper text for the bridge forward delay field.
+#: src/components/network/BridgeSettings.tsx:179
+msgid "Listening and learning time (4-30 seconds)."
+msgstr ""
+
+#. TRANSLATORS: label for the bridge hello time field.
+#: src/components/network/BridgeSettings.tsx:193
+#: src/components/network/ConnectionDetails.tsx:185
+msgid "Hello time"
+msgstr ""
+
+#. TRANSLATORS: helper text for the bridge hello time field.
+#: src/components/network/BridgeSettings.tsx:199
+msgid "Protocol message interval (1-10 seconds)."
+msgstr ""
+
+#. TRANSLATORS: label for the bridge max message age field.
+#: src/components/network/BridgeSettings.tsx:213
+#: src/components/network/ConnectionDetails.tsx:189
+msgid "Max message age"
+msgstr ""
+
+#. TRANSLATORS: helper text for the bridge max message age field.
+#: src/components/network/BridgeSettings.tsx:219
+msgid "Protocol message retention time (6-40 seconds)."
 msgstr ""
 
 #: src/components/network/ConnectionDetails.tsx:60
@@ -820,9 +940,9 @@ msgstr ""
 #. TRANSLATORS: table header for an iSCSI targets table
 #. TRANSLATORS: table header for a zFCP devices table.
 #: src/components/network/ConnectionDetails.tsx:108
-#: src/components/network/ConnectionDetails.tsx:173
+#: src/components/network/ConnectionDetails.tsx:224
 #: src/components/network/ConnectionsTable.tsx:158
-#: src/components/network/ConnectionsTable.tsx:293
+#: src/components/network/ConnectionsTable.tsx:294
 #: src/components/storage/dasd/DASDTable.tsx:312
 #: src/components/storage/dasd/DASDTable.tsx:536
 #: src/components/storage/iscsi/StatusFilter.tsx:77
@@ -840,7 +960,7 @@ msgstr ""
 msgid "Network not available"
 msgstr ""
 
-#: src/components/network/ConnectionDetails.tsx:131 src/utils/network.ts:61
+#: src/components/network/ConnectionDetails.tsx:131 src/utils/network.ts:69
 msgid "Bond"
 msgstr ""
 
@@ -851,107 +971,124 @@ msgstr ""
 #: src/components/network/ConnectionDetails.tsx:136
 #: src/components/network/ConnectionDetails.tsx:142
 #: src/components/network/ConnectionDetails.tsx:150
-#: src/components/network/ConnectionDetails.tsx:185
-#: src/components/network/ConnectionDetails.tsx:200
-#: src/components/network/ConnectionDetails.tsx:210
-#: src/components/network/ConnectionDetails.tsx:220
-#: src/components/network/ConnectionDetails.tsx:230
-#: src/components/network/ConnectionDetails.tsx:307
-#: src/components/network/ConnectionDetails.tsx:310
-#: src/components/network/ConnectionDetails.tsx:320
-#: src/components/network/ConnectionDetails.tsx:332
-#: src/components/network/ConnectionDetails.tsx:344
-#: src/components/network/ConnectionDetails.tsx:354
+#: src/components/network/ConnectionDetails.tsx:199
+#: src/components/network/ConnectionDetails.tsx:236
+#: src/components/network/ConnectionDetails.tsx:251
+#: src/components/network/ConnectionDetails.tsx:261
+#: src/components/network/ConnectionDetails.tsx:271
+#: src/components/network/ConnectionDetails.tsx:281
+#: src/components/network/ConnectionDetails.tsx:358
+#: src/components/network/ConnectionDetails.tsx:361
+#: src/components/network/ConnectionDetails.tsx:371
+#: src/components/network/ConnectionDetails.tsx:383
+#: src/components/network/ConnectionDetails.tsx:395
+#: src/components/network/ConnectionDetails.tsx:405
 msgid "None set"
 msgstr ""
 
-#: src/components/network/ConnectionDetails.tsx:164
+#: src/components/network/ConnectionDetails.tsx:164 src/utils/network.ts:70
+msgid "Bridge"
+msgstr ""
+
+#: src/components/network/ConnectionDetails.tsx:165
+msgid "Bridge details"
+msgstr ""
+
+#: src/components/network/ConnectionDetails.tsx:167
+msgid "STP"
+msgstr ""
+
+#: src/components/network/ConnectionDetails.tsx:169
+msgid "Enabled"
+msgstr ""
+
+#: src/components/network/ConnectionDetails.tsx:215
 msgid "Device details"
 msgstr ""
 
 #. TRANSLATORS: table header for an iSCSI targets table
-#: src/components/network/ConnectionDetails.tsx:169
+#: src/components/network/ConnectionDetails.tsx:220
 #: src/components/storage/iscsi/TargetsTable.tsx:476
 msgid "Interface"
 msgstr ""
 
-#: src/components/network/ConnectionDetails.tsx:177
+#: src/components/network/ConnectionDetails.tsx:228
 msgid "MAC"
 msgstr ""
 
-#: src/components/network/ConnectionDetails.tsx:181
-#: src/components/network/ConnectionDetails.tsx:316
+#: src/components/network/ConnectionDetails.tsx:232
+#: src/components/network/ConnectionDetails.tsx:367
 msgid "Gateway"
 msgstr ""
 
-#: src/components/network/ConnectionDetails.tsx:196
-#: src/components/network/ConnectionDetails.tsx:328
+#: src/components/network/ConnectionDetails.tsx:247
+#: src/components/network/ConnectionDetails.tsx:379
 #: src/components/network/ConnectionsTable.tsx:187
 msgid "IP Addresses"
 msgstr ""
 
-#: src/components/network/ConnectionDetails.tsx:206
-#: src/components/network/ConnectionDetails.tsx:340
+#: src/components/network/ConnectionDetails.tsx:257
+#: src/components/network/ConnectionDetails.tsx:391
 msgid "DNS"
 msgstr ""
 
 #. TRANSLATORS: label for the DNS search domains field.
-#: src/components/network/ConnectionDetails.tsx:216
-#: src/components/network/ConnectionDetails.tsx:350
-#: src/components/network/ConnectionForm.tsx:477
+#: src/components/network/ConnectionDetails.tsx:267
+#: src/components/network/ConnectionDetails.tsx:401
+#: src/components/network/ConnectionForm.tsx:560
 msgid "DNS search domains"
 msgstr ""
 
-#: src/components/network/ConnectionDetails.tsx:226
+#: src/components/network/ConnectionDetails.tsx:277
 msgid "Routes"
 msgstr ""
 
-#: src/components/network/ConnectionDetails.tsx:261
+#: src/components/network/ConnectionDetails.tsx:312
 msgid "Connected device"
 msgstr ""
 
-#: src/components/network/ConnectionDetails.tsx:261
+#: src/components/network/ConnectionDetails.tsx:312
 msgid "Connected devices"
 msgstr ""
 
-#: src/components/network/ConnectionDetails.tsx:264
+#: src/components/network/ConnectionDetails.tsx:315
 msgid "No device is currently using this connection."
 msgstr ""
 
-#: src/components/network/ConnectionDetails.tsx:270
+#: src/components/network/ConnectionDetails.tsx:321
 msgid "Connected devices tabs"
 msgstr ""
 
-#: src/components/network/ConnectionDetails.tsx:292
+#: src/components/network/ConnectionDetails.tsx:343
 #: src/components/storage/ProposalPage.tsx:204
 msgid "Settings"
 msgstr ""
 
-#: src/components/network/ConnectionDetails.tsx:296
+#: src/components/network/ConnectionDetails.tsx:347
 msgid "Edit connection settings"
 msgstr ""
 
-#: src/components/network/ConnectionDetails.tsx:303
+#: src/components/network/ConnectionDetails.tsx:354
 msgid "Mode"
 msgstr ""
 
-#: src/components/network/ConnectionDetails.tsx:307
+#: src/components/network/ConnectionDetails.tsx:358
 msgid "IPv4"
 msgstr ""
 
-#: src/components/network/ConnectionDetails.tsx:310
+#: src/components/network/ConnectionDetails.tsx:361
 msgid "IPv6"
 msgstr ""
 
 #. TRANSLATORS: title of an error for a failed network connection save.
 #. Do not end with a period.
-#: src/components/network/ConnectionForm.tsx:340
+#: src/components/network/ConnectionForm.tsx:417
 msgid "The connection could not be saved"
 msgstr ""
 
 #. TRANSLATORS: table header for a DASD devices table
 #. TRANSLATORS: checkbox label for custom DNS server configuration.
-#: src/components/network/ConnectionForm.tsx:357
+#: src/components/network/ConnectionForm.tsx:434
 #: src/components/network/ConnectionsTable.tsx:153
 #: src/components/network/ConnectionsTable.tsx:280
 #: src/components/storage/DeviceSelectorPage.tsx:54
@@ -962,7 +1099,7 @@ msgstr ""
 #. TRANSLATORS: table header for an iSCSI targets table
 #. TRANSLATORS: input field for the iSCSI initiator name
 #. TRANSLATORS: label for the network connection profile name field.
-#: src/components/network/ConnectionForm.tsx:372
+#: src/components/network/ConnectionForm.tsx:449
 #: src/components/network/ConnectionsTable.tsx:148
 #: src/components/network/ConnectionsTable.tsx:272
 #: src/components/storage/DeviceSelectorPage.tsx:55
@@ -975,53 +1112,53 @@ msgid "Name"
 msgstr ""
 
 #. TRANSLATORS: checkbox label for custom DNS server configuration.
-#: src/components/network/ConnectionForm.tsx:428
+#: src/components/network/ConnectionForm.tsx:511
 msgid "Use custom DNS servers"
 msgstr ""
 
 #. TRANSLATORS: label for the DNS servers field.
-#: src/components/network/ConnectionForm.tsx:441
+#: src/components/network/ConnectionForm.tsx:524
 msgid "DNS servers"
 msgstr ""
 
 #. TRANSLATORS: helper text for DNS servers field explaining the format.
-#: src/components/network/ConnectionForm.tsx:445
+#: src/components/network/ConnectionForm.tsx:528
 msgid "E.g., 8.8.8.8 or 2001:4860:4860::8888"
 msgstr ""
 
 #. TRANSLATORS: validation error for an invalid DNS server address entry.
-#: src/components/network/ConnectionForm.tsx:449
+#: src/components/network/ConnectionForm.tsx:532
 msgid "Invalid DNS server address"
 msgstr ""
 
 #. TRANSLATORS: checkbox label for custom DNS search domain configuration.
-#: src/components/network/ConnectionForm.tsx:464
+#: src/components/network/ConnectionForm.tsx:547
 msgid "Use custom DNS search domains"
 msgstr ""
 
 #. TRANSLATORS: helper text for DNS search domains field explaining the format.
-#: src/components/network/ConnectionForm.tsx:481
+#: src/components/network/ConnectionForm.tsx:564
 msgid "E.g., example.com"
 msgstr ""
 
 #. TRANSLATORS: validation error for an invalid DNS search domain entry.
-#: src/components/network/ConnectionForm.tsx:485
+#: src/components/network/ConnectionForm.tsx:568
 msgid "Invalid DNS search domain"
 msgstr ""
 
 #. TRANSLATORS: title of the page shown when the requested connection
 #. profile does not exist. Do not end with a period.
-#: src/components/network/ConnectionForm.tsx:513
+#: src/components/network/ConnectionForm.tsx:596
 msgid "Connection not found"
 msgstr ""
 
 #. TRANSLATORS: body text on the connection not found page.
-#: src/components/network/ConnectionForm.tsx:515
+#: src/components/network/ConnectionForm.tsx:598
 msgid "The connection does not exist or is no longer available."
 msgstr ""
 
 #. TRANSLATORS: link text on the connection not found page.
-#: src/components/network/ConnectionForm.tsx:517
+#: src/components/network/ConnectionForm.tsx:600
 #: src/components/network/ConnectionPage.tsx:54
 msgid "Go to network page"
 msgstr ""
@@ -1030,14 +1167,14 @@ msgstr ""
 #. noun ("connection"): the previous crumb is the connection name, so a
 #. bare "Edit" reads fine visually but leaves screen-reader users without
 #. the object being acted on when the crumb is announced on its own.
-#: src/components/network/ConnectionForm.tsx:579
-#: src/components/network/ConnectionsTable.tsx:343
+#: src/components/network/ConnectionForm.tsx:668
+#: src/components/network/ConnectionsTable.tsx:344
 #: src/components/storage/iscsi/TargetsTable.tsx:224
 msgid "Edit connection"
 msgstr ""
 
 #. TRANSLATORS: breadcrumb label for the new-connection form.
-#: src/components/network/ConnectionForm.tsx:583
+#: src/components/network/ConnectionForm.tsx:672
 msgid "New connection"
 msgstr ""
 
@@ -1085,7 +1222,7 @@ msgid "%d connections available"
 msgstr ""
 
 #: src/components/network/ConnectionsTable.tsx:283
-#: src/components/network/ConnectionsTable.tsx:296
+#: src/components/network/ConnectionsTable.tsx:297
 #: src/components/storage/dasd/DASDTable.tsx:315
 #: src/components/storage/dasd/DASDTable.tsx:327
 #: src/components/storage/iscsi/StatusFilter.tsx:58
@@ -1095,16 +1232,16 @@ msgstr ""
 msgid "All"
 msgstr ""
 
-#: src/components/network/ConnectionsTable.tsx:297
+#: src/components/network/ConnectionsTable.tsx:298
 msgid "Up"
 msgstr ""
 
-#: src/components/network/ConnectionsTable.tsx:298
+#: src/components/network/ConnectionsTable.tsx:299
 msgid "Down"
 msgstr ""
 
-#: src/components/network/ConnectionsTable.tsx:311
-#: src/components/network/ConnectionsTable.tsx:383
+#: src/components/network/ConnectionsTable.tsx:312
+#: src/components/network/ConnectionsTable.tsx:384
 #: src/components/storage/dasd/DASDTable.tsx:357
 #: src/components/storage/dasd/DASDTable.tsx:693
 #: src/components/storage/iscsi/TargetsTable.tsx:363
@@ -1113,37 +1250,37 @@ msgstr ""
 msgid "Clear all filters"
 msgstr ""
 
-#: src/components/network/ConnectionsTable.tsx:338
+#: src/components/network/ConnectionsTable.tsx:339
 #: src/components/storage/ProposalResultTable.tsx:136
 #: src/components/storage/SpaceActionsTable.tsx:227
 msgid "Details"
 msgstr ""
 
 #. TRANSLATORS: button label, connect to a Wi-Fi network
-#: src/components/network/ConnectionsTable.tsx:352
+#: src/components/network/ConnectionsTable.tsx:353
 #: src/components/network/WifiConnectionForm.tsx:186
 #: src/components/storage/iscsi/TargetsTable.tsx:236
 #: src/components/storage/iscsi/TargetsTable.tsx:247
 msgid "Connect"
 msgstr ""
 
-#: src/components/network/ConnectionsTable.tsx:357
+#: src/components/network/ConnectionsTable.tsx:358
 #: src/components/storage/iscsi/TargetsTable.tsx:228
 msgid "Disconnect"
 msgstr ""
 
-#: src/components/network/ConnectionsTable.tsx:365
+#: src/components/network/ConnectionsTable.tsx:366
 #: src/components/storage/PartitionsSection.tsx:194
 #: src/components/storage/VolumeGroupEditor.tsx:187
 #: src/components/storage/iscsi/TargetsTable.tsx:252
 msgid "Delete"
 msgstr ""
 
-#: src/components/network/ConnectionsTable.tsx:375
+#: src/components/network/ConnectionsTable.tsx:376
 msgid "No connections match filters"
 msgstr ""
 
-#: src/components/network/ConnectionsTable.tsx:379
+#: src/components/network/ConnectionsTable.tsx:380
 #: src/components/storage/dasd/DASDTable.tsx:689
 #: src/components/storage/iscsi/TargetsTable.tsx:359
 #: src/components/storage/zfcp/ZFCPDevicesTable.tsx:425
@@ -1302,11 +1439,6 @@ msgstr ""
 
 #: src/components/network/IpSettings.tsx:145
 msgid "Invalid IPv6 address"
-msgstr ""
-
-#. TRANSLATORS: label suffix indicating an optional field.
-#: src/components/network/IpSettings.tsx:157
-msgid "(optional)"
 msgstr ""
 
 #. TRANSLATORS: helper text for IPv4 gateway field explaining the format.
@@ -1488,7 +1620,9 @@ msgid "Some DNS search domains are invalid"
 msgstr ""
 
 #. TRANSLATORS: validation error for the bond device name field.
+#. TRANSLATORS: validation error for the bridge device name field.
 #: src/components/network/connectionFormValidation.ts:226
+#: src/components/network/connectionFormValidation.ts:281
 msgid "Device name is required"
 msgstr ""
 
@@ -1500,6 +1634,27 @@ msgstr ""
 #. TRANSLATORS: validation error for the bond ports field.
 #: src/components/network/connectionFormValidation.ts:232
 msgid "At least one bond port is required"
+msgstr ""
+
+#: src/components/network/connectionFormValidation.ts:251
+msgid "Priority must be between 0 and 61440"
+msgstr ""
+
+#: src/components/network/connectionFormValidation.ts:256
+msgid "Forward delay must be between 4 and 30 seconds"
+msgstr ""
+
+#: src/components/network/connectionFormValidation.ts:261
+msgid "Hello time must be between 1 and 10 seconds"
+msgstr ""
+
+#: src/components/network/connectionFormValidation.ts:267
+msgid "Max message age must be between 6 and 40 seconds"
+msgstr ""
+
+#. TRANSLATORS: validation error for the bridge ports field.
+#: src/components/network/connectionFormValidation.ts:285
+msgid "At least one bridge port is required"
 msgstr ""
 
 #: src/components/overview/HostnameSummary.tsx:47
@@ -1810,7 +1965,7 @@ msgid "Potential data loss"
 msgstr ""
 
 #: src/components/overview/SystemInformationSection.tsx:58
-#: src/utils/network.ts:64
+#: src/utils/network.ts:72
 msgid "Unknown"
 msgstr ""
 
@@ -1899,11 +2054,6 @@ msgstr ""
 
 #: src/components/product/ProductRegistrationPage.tsx:72
 msgid "SUSE Customer Center (SCC)"
-msgstr ""
-
-#: src/components/product/ProductRegistrationPage.tsx:73
-#: src/components/storage/utils.ts:106 src/components/storage/utils.ts:125
-msgid "Custom"
 msgstr ""
 
 #: src/components/product/ProductRegistrationPage.tsx:87
@@ -5251,22 +5401,18 @@ msgstr ""
 msgid "ZFCP"
 msgstr ""
 
-#: src/utils/network.ts:58
+#: src/utils/network.ts:66
 msgid "Ethernet"
 msgstr ""
 
-#: src/utils/network.ts:59
+#: src/utils/network.ts:67
 msgid "Wi-Fi"
 msgstr ""
 
-#: src/utils/network.ts:60
+#: src/utils/network.ts:68
 msgid "Loopback"
 msgstr ""
 
-#: src/utils/network.ts:62
-msgid "Bridge"
-msgstr ""
-
-#: src/utils/network.ts:63
+#: src/utils/network.ts:71
 msgid "VLAN"
 msgstr ""
