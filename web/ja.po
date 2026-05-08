@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-07 20:46+0000\n"
+"POT-Creation-Date: 2026-05-08 12:49+0000\n"
 "PO-Revision-Date: 2026-04-30 03:04+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -339,17 +339,23 @@ msgstr "パスワードの確認"
 #. square brackets around %s to apply special formatting in
 #. the UI.
 #: src/components/core/PasswordInput.tsx:69
-#, javascript-format
-msgid "Using [%s] keyboard"
+#, fuzzy, javascript-format
+msgid "Using [%s] keyboard layout"
 msgstr "[%s] キーボードを使用しています"
 
 #. TRANSLATORS: Warns users that CAPS LOCK is on.
+#. Text inside square brackets [] will be formatted in bold.
+#. Keep the brackets for proper formatting.
+#.
+#. TRANSLATORS: Warns users that CAPS LOCK is on.
 #. Keep square brackets to apply special formatting in the UI.
 #: src/components/core/PasswordInput.tsx:90
+#: src/components/form/MaskedField.tsx:113
 msgid "[CAPS LOCK] is on"
 msgstr "[CAPS LOCK] が有効化されています"
 
 #: src/components/core/PasswordInput.tsx:144
+#: src/components/form/MaskedField.tsx:181
 msgid "Password visibility button"
 msgstr "パスワード表示ボタン"
 
@@ -381,7 +387,7 @@ msgstr "ステップ %1$d / %2$d"
 
 #: src/components/core/ProgressStatusMonitor.tsx:40
 #: src/components/overview/SoftwareSummary.tsx:160
-#: src/components/software/SoftwarePage.tsx:373
+#: src/components/software/SoftwarePage.tsx:378
 #: src/components/software/SoftwarePatternsSelection.tsx:355
 #: src/routes/software.tsx:33
 msgid "Software"
@@ -610,6 +616,15 @@ msgstr ""
 "編集または削除する項目を選択してください。もしくは [正しくない全ての項目を削"
 "除] することもできます。"
 
+#. TRANSLATORS: Message to inform users which keyboard layout is active
+#. %s will be replaced with the keyboard layout name (e.g., "US", "DE").
+#. Example: "Using us keyboard".
+#.
+#: src/components/form/MaskedField.tsx:83
+#, fuzzy, javascript-format
+msgid "Using %s keyboard layout"
+msgstr "[%s] キーボードを使用しています"
+
 #: src/components/l10n/KeyboardSelection.tsx:46
 msgid "Filter by description or keymap code"
 msgstr "説明またはキーマップコードでフィルタ"
@@ -833,7 +848,7 @@ msgstr "設定を変更できませんでした"
 
 #. TRANSLATORS: option label for enabling bridge STP.
 #: src/components/network/BridgeSettings.tsx:47
-#: src/components/product/ProductRegistrationPage.tsx:73
+#: src/components/product/ProductRegistrationForm.tsx:200
 #: src/components/storage/utils.ts:106 src/components/storage/utils.ts:125
 msgid "Custom"
 msgstr "独自設定"
@@ -879,6 +894,8 @@ msgstr ""
 #: src/components/network/BridgeSettings.tsx:190
 #: src/components/network/BridgeSettings.tsx:210
 #: src/components/network/IpSettings.tsx:157
+#: src/components/product/ProductRegistrationForm.tsx:227
+#: src/components/product/ProductRegistrationForm.tsx:242
 msgid "(optional)"
 msgstr "(任意)"
 
@@ -1898,7 +1915,7 @@ msgid "Using code ending in %s"
 msgstr "末尾 %s のコードを使用"
 
 #: src/components/overview/RegistrationSummary.tsx:72
-#: src/components/product/ProductRegistrationPage.tsx:528
+#: src/components/product/ProductRegistrationPage.tsx:225
 #: src/routes/registration.tsx:31
 msgid "Registration"
 msgstr "登録"
@@ -2087,107 +2104,106 @@ msgstr "閉じる"
 msgid "%s logo"
 msgstr "%s ロゴ"
 
-#: src/components/product/ProductRegistrationPage.tsx:70
+#. TRANSLATORS: validation error for the registration server URL field.
+#: src/components/product/ProductRegistrationForm.tsx:77
+#, fuzzy
+msgid "Enter a server URL"
+msgstr "サーバ URL"
+
+#. TRANSLATORS: validation error for the registration code field.
+#: src/components/product/ProductRegistrationForm.tsx:82
+#, fuzzy
+msgid "Enter a registration code"
+msgstr "登録コード"
+
+#. TRANSLATORS: button to dismiss the error alert and clear the registration data
+#: src/components/product/ProductRegistrationForm.tsx:170
+#, fuzzy
+msgid "Dismiss and clear registration data"
+msgstr "登録コードを入力する"
+
+#: src/components/product/ProductRegistrationForm.tsx:191
+#: src/components/product/ProductRegistrationPage.tsx:74
 msgid "Registration server"
 msgstr "登録サーバ"
 
-#: src/components/product/ProductRegistrationPage.tsx:71
-msgid "Email"
-msgstr "電子メール"
-
-#: src/components/product/ProductRegistrationPage.tsx:72
+#: src/components/product/ProductRegistrationForm.tsx:195
 msgid "SUSE Customer Center (SCC)"
 msgstr "SUSE Customer Center (SCC)"
 
-#: src/components/product/ProductRegistrationPage.tsx:87
-#, javascript-format
-msgid "%s has been registered with below information."
-msgstr "%s を下記の情報で登録しました。"
+#: src/components/product/ProductRegistrationForm.tsx:196
+msgid "Register using SUSE server"
+msgstr "SUSE サーバを利用して登録"
 
-#: src/components/product/ProductRegistrationPage.tsx:99
-#: src/components/product/ProductRegistrationPage.tsx:187
+#: src/components/product/ProductRegistrationForm.tsx:201
+msgid "Register using a custom registration server"
+msgstr "独自の登録サーバを利用して登録"
+
+#: src/components/product/ProductRegistrationForm.tsx:215
+msgid "Server URL"
+msgstr "サーバ URL"
+
+#: src/components/product/ProductRegistrationForm.tsx:216
+#, fuzzy, javascript-format
+msgid "E.g., %s"
+msgstr "例: bond0"
+
+#: src/components/product/ProductRegistrationForm.tsx:228
+#: src/components/product/ProductRegistrationPage.tsx:80
 #: src/components/product/RegistrationExtension.tsx:151
 msgid "Registration code"
 msgstr "登録コード"
 
-#. TRANSLATORS: switch for displaying or hiding the registration code
-#: src/components/product/ProductRegistrationPage.tsx:104
-#: src/components/product/RegistrationExtension.tsx:67
-msgid "Hide"
-msgstr "隠す"
-
-#: src/components/product/ProductRegistrationPage.tsx:104
-#: src/components/product/RegistrationExtension.tsx:67
-msgid "Show"
-msgstr "表示"
-
-#: src/components/product/ProductRegistrationPage.tsx:143
-msgid "Server options"
-msgstr "サーバオプション"
-
-#: src/components/product/ProductRegistrationPage.tsx:144
-msgid "Register using SUSE server"
-msgstr "SUSE サーバを利用して登録"
-
-#: src/components/product/ProductRegistrationPage.tsx:149
-msgid "Register using a custom registration server"
-msgstr "独自の登録サーバを利用して登録"
-
-#: src/components/product/ProductRegistrationPage.tsx:167
-msgid "Server URL"
-msgstr "サーバ URL"
-
-#. TRANSLATORS: %s is replaced by an example URL like https://example.com
-#: src/components/product/ProductRegistrationPage.tsx:170
-#, javascript-format
-msgid "Example: %s"
-msgstr "例: %s"
-
-#: src/components/product/ProductRegistrationPage.tsx:219
-msgid "Provide registration code"
-msgstr "登録コードを入力する"
-
-#: src/components/product/ProductRegistrationPage.tsx:255
-msgid "Provide email address"
-msgstr "電子メールアドレスを入力する"
-
-#: src/components/product/ProductRegistrationPage.tsx:371
-#: src/components/storage/LvmPage.tsx:176
-#: src/components/system/HostnamePage.tsx:97
-msgid "Check the following before continuing"
-msgstr "続行する前に下記をご確認ください"
+#: src/components/product/ProductRegistrationForm.tsx:242
+#: src/components/product/ProductRegistrationPage.tsx:93
+msgid "Email"
+msgstr "電子メール"
 
 #. TRANSLATORS: button label
-#: src/components/product/ProductRegistrationPage.tsx:402
+#: src/components/product/ProductRegistrationForm.tsx:258
 #: src/components/product/RegistrationExtension.tsx:164
 msgid "Register"
 msgstr "登録する"
 
-#: src/components/product/ProductRegistrationPage.tsx:406
-#: src/components/product/RegistrationExtension.tsx:173
-msgid "Do not register"
-msgstr "登録しない"
+#: src/components/product/ProductRegistrationForm.tsx:263
+#, fuzzy
+msgid "Registration in progress"
+msgstr "インストールを行っています"
+
+#: src/components/product/ProductRegistrationPage.tsx:68
+#, javascript-format
+msgid "%s has been registered with below information."
+msgstr "%s を下記の情報で登録しました。"
+
+#. TRANSLATORS: switch for displaying or hiding the registration code
+#: src/components/product/ProductRegistrationPage.tsx:85
+#: src/components/product/RegistrationExtension.tsx:67
+msgid "Hide"
+msgstr "隠す"
+
+#: src/components/product/ProductRegistrationPage.tsx:85
+#: src/components/product/RegistrationExtension.tsx:67
+msgid "Show"
+msgstr "表示"
+
+#: src/components/product/ProductRegistrationPage.tsx:108
+#, fuzzy
+msgid "Hostname cannot be changed after registration"
+msgstr "リモートインストールの場合は変更できません"
 
 #. TRANSLATORS: %s will be replaced with the hostname value
-#: src/components/product/ProductRegistrationPage.tsx:421
-#, javascript-format
-msgid "The product will be registered with \"%s\" hostname"
-msgstr "製品をホスト名 \"%s\" で登録します"
+#: src/components/product/ProductRegistrationPage.tsx:117
+#, fuzzy, javascript-format
+msgid "Configured as %s."
+msgstr "ユーザ %s のみ設定済み"
 
-#: src/components/product/ProductRegistrationPage.tsx:425
-#, javascript-format
-msgid ""
-"You cannot change it later. Go to the %s section if you want to modify it "
-"before proceeding with registration."
+#. TRANSLATORS: text in square brackets is the section name and will be
+#. rendered as a link. Keep the brackets
+#: src/components/product/ProductRegistrationPage.tsx:129
+msgid "To change it, visit the [hostname] section before registering."
 msgstr ""
-"登録内容は後から変更することができません。登録に際して変更しておきたい項目が"
-"ある場合は、 %s セクションに移動してください。"
 
-#: src/components/product/ProductRegistrationPage.tsx:430
-msgid "hostname"
-msgstr "ホスト名"
-
-#: src/components/product/ProductRegistrationPage.tsx:504
+#: src/components/product/ProductRegistrationPage.tsx:206
 msgid "Extensions"
 msgstr "拡張"
 
@@ -2330,6 +2346,10 @@ msgstr "ベータ"
 #: src/components/product/RegistrationExtension.tsx:135
 msgid "Recommended"
 msgstr "推奨"
+
+#: src/components/product/RegistrationExtension.tsx:173
+msgid "Do not register"
+msgstr "登録しない"
 
 #. TRANSLATORS: warning title, the extension is not available on the server and cannot be registered
 #: src/components/product/RegistrationExtension.tsx:183
@@ -2477,26 +2497,26 @@ msgstr ""
 "ア] 設定でデスクトップ環境を選択してください。"
 
 #. TRANSLATORS: empty state title when software cannot be selected
-#: src/components/software/PatternSelectionUnavailable.tsx:60
+#: src/components/software/PatternSelectionUnavailable.tsx:68
 msgid "Software selection is not available"
 msgstr "ソフトウエア選択は利用できません"
 
 #. TRANSLATORS: link to go to registration settings
-#: src/components/software/PatternSelectionUnavailable.tsx:112
+#: src/components/software/PatternSelectionUnavailable.tsx:120
 msgid "Go to registration"
 msgstr "登録に移動"
 
 #. TRANSLATORS: additional hint when base product is missing
-#: src/components/software/PatternSelectionUnavailable.tsx:124
+#: src/components/software/PatternSelectionUnavailable.tsx:132
 msgid "This might be due to network connectivity."
 msgstr "ネットワークに接続されていない可能性があります。"
 
 #. TRANSLATORS: link to go to network settings
-#: src/components/software/PatternSelectionUnavailable.tsx:130
+#: src/components/software/PatternSelectionUnavailable.tsx:138
 msgid "Go to network settings"
 msgstr "ネットワーク設定に移動"
 
-#: src/components/software/PatternSelectionUnavailable.tsx:142
+#: src/components/software/PatternSelectionUnavailable.tsx:150
 msgid ""
 "This product does not allow selecting software at installation time. "
 "Additional software can be added after the installation is complete."
@@ -2505,123 +2525,123 @@ msgstr ""
 "了後に必要なソフトウエアを追加してください。"
 
 #. TRANSLATORS: shown when software selection cannot be determined
-#: src/components/software/PatternSelectionUnavailable.tsx:153
+#: src/components/software/PatternSelectionUnavailable.tsx:161
 msgid "The software selection could not be loaded."
 msgstr "ソフトウエア選択を読み込めませんでした。"
 
 #. TRANSLATORS: empty state title for a software section with nothing selected
-#: src/components/software/SoftwarePage.tsx:72
+#: src/components/software/SoftwarePage.tsx:74
 msgid "None selected"
 msgstr "何も選択していません"
 
-#: src/components/software/SoftwarePage.tsx:117
+#: src/components/software/SoftwarePage.tsx:119
 msgid "Read less"
 msgstr "表示を減らす"
 
 #. TRANSLATORS: accessible label for the collapse button; %s is the pattern name
-#: src/components/software/SoftwarePage.tsx:119
+#: src/components/software/SoftwarePage.tsx:121
 #, javascript-format
 msgid "Read less about %s"
 msgstr "%s に関する表示を減らす"
 
-#: src/components/software/SoftwarePage.tsx:123
+#: src/components/software/SoftwarePage.tsx:125
 msgid "Read more"
 msgstr "表示を増やす"
 
 #. TRANSLATORS: accessible label for the expand button; %s is the pattern name
-#: src/components/software/SoftwarePage.tsx:125
+#: src/components/software/SoftwarePage.tsx:127
 #, javascript-format
 msgid "Read more about %s"
 msgstr "%s に関する表示を増やす"
 
 #. TRANSLATORS: %s is the required disk space. Keep the [brackets]: they mark the value to be displayed in bold.
-#: src/components/software/SoftwarePage.tsx:195
+#: src/components/software/SoftwarePage.tsx:197
 #, javascript-format
 msgid "Required space with current selection: [%s]"
 msgstr "現在の選択で必要となる容量: [%s]"
 
 #. TRANSLATORS: %s is the required disk space. Keep the [brackets]: they mark the value to be displayed in bold.
-#: src/components/software/SoftwarePage.tsx:197
+#: src/components/software/SoftwarePage.tsx:199
 #, javascript-format
 msgid "Required space: [%s]"
 msgstr "必要な容量: [%s]"
 
 #. TRANSLATORS: %1$d is selected count, %2$d is total available count
-#: src/components/software/SoftwarePage.tsx:245
+#: src/components/software/SoftwarePage.tsx:247
 #: src/components/software/SoftwarePatternsSelection.tsx:147
 #, javascript-format
 msgid "%1$d of %2$d selected"
 msgstr "%2$d 個のうち %1$d 個を選択済み"
 
 #. TRANSLATORS: shown while the software proposal is not yet available
-#: src/components/software/SoftwarePage.tsx:273
+#: src/components/software/SoftwarePage.tsx:275
 msgid "No information available yet"
 msgstr "まだ情報はありません"
 
 #. TRANSLATORS: empty state title when no desktop environments are available
-#: src/components/software/SoftwarePage.tsx:289
+#: src/components/software/SoftwarePage.tsx:291
 msgid "No desktops available"
 msgstr "デスクトップ環境が提供されていません"
 
 #. TRANSLATORS: explanation shown when the product has no desktop environments
-#: src/components/software/SoftwarePage.tsx:291
+#: src/components/software/SoftwarePage.tsx:293
 msgid "This product does not provide desktop environments."
 msgstr "この製品ではデスクトップ環境が提供されていません。"
 
 #. TRANSLATORS: hint shown when no desktop environment has been chosen
-#: src/components/software/SoftwarePage.tsx:297
+#: src/components/software/SoftwarePage.tsx:299
 msgid "Select a desktop environment to get a graphical interface."
 msgstr ""
 "グラフィカルユーザインターフェイス (GUI) を使用したい場合は、デスクトップ環境"
 "を選択してください。"
 
 #. TRANSLATORS: button to go to the desktop environment selection page
-#: src/components/software/SoftwarePage.tsx:299
+#: src/components/software/SoftwarePage.tsx:301
 msgid "Select a desktop"
 msgstr "デスクトップ環境の選択"
 
 #. TRANSLATORS: empty state title when no additional patterns are available
-#: src/components/software/SoftwarePage.tsx:307
+#: src/components/software/SoftwarePage.tsx:309
 msgid "No additional patterns available"
 msgstr "利用可能な追加パターンはありません"
 
 #. TRANSLATORS: explanation shown when the product has no additional patterns
-#: src/components/software/SoftwarePage.tsx:309
+#: src/components/software/SoftwarePage.tsx:311
 msgid "This product does not provide additional patterns."
 msgstr "この製品では追加パターンが提供されていません。"
 
 #. TRANSLATORS: hint shown when no additional software patterns have been chosen
-#: src/components/software/SoftwarePage.tsx:315
+#: src/components/software/SoftwarePage.tsx:317
 msgid "Select one or more to extend the system."
 msgstr ""
 "システムの機能を拡張したい場合は、 1 つ以上のパターンを選択してください。"
 
 #. TRANSLATORS: button to go to the pattern selection page
-#: src/components/software/SoftwarePage.tsx:317
+#: src/components/software/SoftwarePage.tsx:319
 msgid "Select patterns"
 msgstr "パターンの選択"
 
-#: src/components/software/SoftwarePage.tsx:329
+#: src/components/software/SoftwarePage.tsx:331
 msgid "Desktops"
 msgstr "デスクトップ"
 
 #. TRANSLATORS: description for the Desktops section
-#: src/components/software/SoftwarePage.tsx:332
+#: src/components/software/SoftwarePage.tsx:334
 msgid "Graphical desktop environments for the system."
 msgstr "システムに対するグラフィカルなデスクトップ環境です。"
 
 #. TRANSLATORS: button to change the desktop selection
-#: src/components/software/SoftwarePage.tsx:336
+#: src/components/software/SoftwarePage.tsx:338
 msgid "Change desktop"
 msgid_plural "Change desktops"
 msgstr[0] "デスクトップ環境の変更"
 
-#: src/components/software/SoftwarePage.tsx:347
+#: src/components/software/SoftwarePage.tsx:349
 msgid "Additional patterns"
 msgstr "追加のパターン"
 
 #. TRANSLATORS: description for the Additional software section
-#: src/components/software/SoftwarePage.tsx:350
+#: src/components/software/SoftwarePage.tsx:352
 msgid ""
 "Curated sets of packages for common use cases and features to extend the "
 "system."
@@ -2629,7 +2649,7 @@ msgstr ""
 "一般的な用途のほか、システムの機能拡張のために厳選したパッケージセットです。"
 
 #. TRANSLATORS: button to change the additional software selection
-#: src/components/software/SoftwarePage.tsx:353
+#: src/components/software/SoftwarePage.tsx:355
 msgid "Change patterns"
 msgstr "パターンの変更"
 
@@ -3620,6 +3640,11 @@ msgstr "少なくとも 1 つのディスクを選択してください。"
 #: src/components/storage/LvmPage.tsx:170
 msgid "Configure Volume Group"
 msgstr "ボリュームグループの設定"
+
+#: src/components/storage/LvmPage.tsx:176
+#: src/components/system/HostnamePage.tsx:97
+msgid "Check the following before continuing"
+msgstr "続行する前に下記をご確認ください"
 
 #: src/components/storage/LvmPage.tsx:188
 msgid ""
@@ -5592,6 +5617,31 @@ msgstr "ループバック"
 #: src/utils/network.ts:71
 msgid "VLAN"
 msgstr "VLAN"
+
+#~ msgid "Server options"
+#~ msgstr "サーバオプション"
+
+#, javascript-format
+#~ msgid "Example: %s"
+#~ msgstr "例: %s"
+
+#~ msgid "Provide email address"
+#~ msgstr "電子メールアドレスを入力する"
+
+#, javascript-format
+#~ msgid "The product will be registered with \"%s\" hostname"
+#~ msgstr "製品をホスト名 \"%s\" で登録します"
+
+#, javascript-format
+#~ msgid ""
+#~ "You cannot change it later. Go to the %s section if you want to modify it "
+#~ "before proceeding with registration."
+#~ msgstr ""
+#~ "登録内容は後から変更することができません。登録に際して変更しておきたい項目"
+#~ "がある場合は、 %s セクションに移動してください。"
+
+#~ msgid "hostname"
+#~ msgstr "ホスト名"
 
 #~ msgid ""
 #~ "Enter or Tab to add; arrow keys to navigate entries, Ctrl+arrows to "

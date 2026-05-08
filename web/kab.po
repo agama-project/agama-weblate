@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-07 20:46+0000\n"
+"POT-Creation-Date: 2026-05-08 12:49+0000\n"
 "PO-Revision-Date: 2026-03-29 20:04+0000\n"
 "Last-Translator: Amger ugurzil <amger_ugurzil@proton.me>\n"
 "Language-Team: Kabyle <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -333,17 +333,23 @@ msgstr "Asentem n wawal n uɛeddi"
 #. square brackets around %s to apply special formatting in
 #. the UI.
 #: src/components/core/PasswordInput.tsx:69
-#, javascript-format
-msgid "Using [%s] keyboard"
+#, fuzzy, javascript-format
+msgid "Using [%s] keyboard layout"
 msgstr "Tesseqdaceḍ anasiw [%s]"
 
 #. TRANSLATORS: Warns users that CAPS LOCK is on.
+#. Text inside square brackets [] will be formatted in bold.
+#. Keep the brackets for proper formatting.
+#.
+#. TRANSLATORS: Warns users that CAPS LOCK is on.
 #. Keep square brackets to apply special formatting in the UI.
 #: src/components/core/PasswordInput.tsx:90
+#: src/components/form/MaskedField.tsx:113
 msgid "[CAPS LOCK] is on"
 msgstr "Tawuri [asekkeṛ n yisekkilen] termed"
 
 #: src/components/core/PasswordInput.tsx:144
+#: src/components/form/MaskedField.tsx:181
 msgid "Password visibility button"
 msgstr "Taqeffalt n tmeẓri n wawal n uɛeddi"
 
@@ -375,7 +381,7 @@ msgstr "Asurif %1$d n %2$d"
 
 #: src/components/core/ProgressStatusMonitor.tsx:40
 #: src/components/overview/SoftwareSummary.tsx:160
-#: src/components/software/SoftwarePage.tsx:373
+#: src/components/software/SoftwarePage.tsx:378
 #: src/components/software/SoftwarePatternsSelection.tsx:355
 #: src/routes/software.tsx:33
 msgid "Software"
@@ -603,6 +609,15 @@ msgstr ""
 msgid "Select entries to edit or remove them. Or [remove all invalid entries.]"
 msgstr ""
 
+#. TRANSLATORS: Message to inform users which keyboard layout is active
+#. %s will be replaced with the keyboard layout name (e.g., "US", "DE").
+#. Example: "Using us keyboard".
+#.
+#: src/components/form/MaskedField.tsx:83
+#, fuzzy, javascript-format
+msgid "Using %s keyboard layout"
+msgstr "Tesseqdaceḍ anasiw [%s]"
+
 #: src/components/l10n/KeyboardSelection.tsx:46
 msgid "Filter by description or keymap code"
 msgstr ""
@@ -829,7 +844,7 @@ msgstr "D awezɣi abeddel n iɣewwaṛen"
 
 #. TRANSLATORS: option label for enabling bridge STP.
 #: src/components/network/BridgeSettings.tsx:47
-#: src/components/product/ProductRegistrationPage.tsx:73
+#: src/components/product/ProductRegistrationForm.tsx:200
 #: src/components/storage/utils.ts:106 src/components/storage/utils.ts:125
 msgid "Custom"
 msgstr "Udmawan"
@@ -872,6 +887,8 @@ msgstr ""
 #: src/components/network/BridgeSettings.tsx:190
 #: src/components/network/BridgeSettings.tsx:210
 #: src/components/network/IpSettings.tsx:157
+#: src/components/product/ProductRegistrationForm.tsx:227
+#: src/components/product/ProductRegistrationForm.tsx:242
 msgid "(optional)"
 msgstr ""
 
@@ -1913,7 +1930,7 @@ msgid "Using code ending in %s"
 msgstr "Aseqdec n tangalt yettfakan s %s"
 
 #: src/components/overview/RegistrationSummary.tsx:72
-#: src/components/product/ProductRegistrationPage.tsx:528
+#: src/components/product/ProductRegistrationPage.tsx:225
 #: src/routes/registration.tsx:31
 msgid "Registration"
 msgstr "Ajerred"
@@ -2107,107 +2124,106 @@ msgstr "Mdel"
 msgid "%s logo"
 msgstr "Alugu n %s"
 
-#: src/components/product/ProductRegistrationPage.tsx:70
+#. TRANSLATORS: validation error for the registration server URL field.
+#: src/components/product/ProductRegistrationForm.tsx:77
+#, fuzzy
+msgid "Enter a server URL"
+msgstr "URL n uqeddac"
+
+#. TRANSLATORS: validation error for the registration code field.
+#: src/components/product/ProductRegistrationForm.tsx:82
+#, fuzzy
+msgid "Enter a registration code"
+msgstr "Angal n ujerred"
+
+#. TRANSLATORS: button to dismiss the error alert and clear the registration data
+#: src/components/product/ProductRegistrationForm.tsx:170
+#, fuzzy
+msgid "Dismiss and clear registration data"
+msgstr "Mudd tangalt n ujerred"
+
+#: src/components/product/ProductRegistrationForm.tsx:191
+#: src/components/product/ProductRegistrationPage.tsx:74
 msgid "Registration server"
 msgstr "Aqeddac n ujerred"
 
-#: src/components/product/ProductRegistrationPage.tsx:71
-msgid "Email"
-msgstr "Imayl"
-
-#: src/components/product/ProductRegistrationPage.tsx:72
+#: src/components/product/ProductRegistrationForm.tsx:195
 msgid "SUSE Customer Center (SCC)"
 msgstr ""
 
-#: src/components/product/ProductRegistrationPage.tsx:87
+#: src/components/product/ProductRegistrationForm.tsx:196
+msgid "Register using SUSE server"
+msgstr "Jerred s useqdec n uqeddac SUSE"
+
+#: src/components/product/ProductRegistrationForm.tsx:201
+msgid "Register using a custom registration server"
+msgstr "Jerred s useqdec n uqeddac yugnen"
+
+#: src/components/product/ProductRegistrationForm.tsx:215
+msgid "Server URL"
+msgstr "URL n uqeddac"
+
+#: src/components/product/ProductRegistrationForm.tsx:216
 #, javascript-format
-msgid "%s has been registered with below information."
+msgid "E.g., %s"
 msgstr ""
 
-#: src/components/product/ProductRegistrationPage.tsx:99
-#: src/components/product/ProductRegistrationPage.tsx:187
+#: src/components/product/ProductRegistrationForm.tsx:228
+#: src/components/product/ProductRegistrationPage.tsx:80
 #: src/components/product/RegistrationExtension.tsx:151
 msgid "Registration code"
 msgstr "Angal n ujerred"
 
-#. TRANSLATORS: switch for displaying or hiding the registration code
-#: src/components/product/ProductRegistrationPage.tsx:104
-#: src/components/product/RegistrationExtension.tsx:67
-msgid "Hide"
-msgstr "Ffer"
-
-#: src/components/product/ProductRegistrationPage.tsx:104
-#: src/components/product/RegistrationExtension.tsx:67
-msgid "Show"
-msgstr "Sken-d"
-
-#: src/components/product/ProductRegistrationPage.tsx:143
-msgid "Server options"
-msgstr "Tixtiṛiyin n uqeddac"
-
-#: src/components/product/ProductRegistrationPage.tsx:144
-msgid "Register using SUSE server"
-msgstr "Jerred s useqdec n uqeddac SUSE"
-
-#: src/components/product/ProductRegistrationPage.tsx:149
-msgid "Register using a custom registration server"
-msgstr "Jerred s useqdec n uqeddac yugnen"
-
-#: src/components/product/ProductRegistrationPage.tsx:167
-msgid "Server URL"
-msgstr "URL n uqeddac"
-
-#. TRANSLATORS: %s is replaced by an example URL like https://example.com
-#: src/components/product/ProductRegistrationPage.tsx:170
-#, javascript-format
-msgid "Example: %s"
-msgstr "Amedya: %s"
-
-#: src/components/product/ProductRegistrationPage.tsx:219
-msgid "Provide registration code"
-msgstr "Mudd tangalt n ujerred"
-
-#: src/components/product/ProductRegistrationPage.tsx:255
-msgid "Provide email address"
-msgstr "Awi-d tansa imayl"
-
-#: src/components/product/ProductRegistrationPage.tsx:371
-#: src/components/storage/LvmPage.tsx:176
-#: src/components/system/HostnamePage.tsx:97
-msgid "Check the following before continuing"
-msgstr "Selken ayen i d-itteddun send ad tkemmleḍ"
+#: src/components/product/ProductRegistrationForm.tsx:242
+#: src/components/product/ProductRegistrationPage.tsx:93
+msgid "Email"
+msgstr "Imayl"
 
 #. TRANSLATORS: button label
-#: src/components/product/ProductRegistrationPage.tsx:402
+#: src/components/product/ProductRegistrationForm.tsx:258
 #: src/components/product/RegistrationExtension.tsx:164
 msgid "Register"
 msgstr "Jerred"
 
-#: src/components/product/ProductRegistrationPage.tsx:406
-#: src/components/product/RegistrationExtension.tsx:173
-msgid "Do not register"
-msgstr "Ur jerred ara"
+#: src/components/product/ProductRegistrationForm.tsx:263
+#, fuzzy
+msgid "Registration in progress"
+msgstr "Asbeddi iteddu"
+
+#: src/components/product/ProductRegistrationPage.tsx:68
+#, javascript-format
+msgid "%s has been registered with below information."
+msgstr ""
+
+#. TRANSLATORS: switch for displaying or hiding the registration code
+#: src/components/product/ProductRegistrationPage.tsx:85
+#: src/components/product/RegistrationExtension.tsx:67
+msgid "Hide"
+msgstr "Ffer"
+
+#: src/components/product/ProductRegistrationPage.tsx:85
+#: src/components/product/RegistrationExtension.tsx:67
+msgid "Show"
+msgstr "Sken-d"
+
+#: src/components/product/ProductRegistrationPage.tsx:108
+#, fuzzy
+msgid "Hostname cannot be changed after registration"
+msgstr "Ur izmir ara ad ittusnifel deg usebded anmeggag"
 
 #. TRANSLATORS: %s will be replaced with the hostname value
-#: src/components/product/ProductRegistrationPage.tsx:421
-#, javascript-format
-msgid "The product will be registered with \"%s\" hostname"
-msgstr "Afaris ad yettwasekles s yisem n usneftaɣ \"%s\""
+#: src/components/product/ProductRegistrationPage.tsx:117
+#, fuzzy, javascript-format
+msgid "Configured as %s."
+msgstr "Yettwaswel useqdac %s"
 
-#: src/components/product/ProductRegistrationPage.tsx:425
-#, javascript-format
-msgid ""
-"You cannot change it later. Go to the %s section if you want to modify it "
-"before proceeding with registration."
+#. TRANSLATORS: text in square brackets is the section name and will be
+#. rendered as a link. Keep the brackets
+#: src/components/product/ProductRegistrationPage.tsx:129
+msgid "To change it, visit the [hostname] section before registering."
 msgstr ""
-"Ur tezmireḍ ara ad t-tbeddleḍ ticki. Ddu ɣer tgezmi %s ma tebɣiḍ ad tt-"
-"tbeddeleḍ send ajerred."
 
-#: src/components/product/ProductRegistrationPage.tsx:430
-msgid "hostname"
-msgstr "isem n usentfaɣ"
-
-#: src/components/product/ProductRegistrationPage.tsx:504
+#: src/components/product/ProductRegistrationPage.tsx:206
 msgid "Extensions"
 msgstr "Isiɣzaf"
 
@@ -2358,6 +2374,10 @@ msgstr "Biṭa"
 msgid "Recommended"
 msgstr "Yettuwelleh"
 
+#: src/components/product/RegistrationExtension.tsx:173
+msgid "Do not register"
+msgstr "Ur jerred ara"
+
 #. TRANSLATORS: warning title, the extension is not available on the server and cannot be registered
 #: src/components/product/RegistrationExtension.tsx:183
 msgid "Not available"
@@ -2498,29 +2518,29 @@ msgid ""
 msgstr ""
 
 #. TRANSLATORS: empty state title when software cannot be selected
-#: src/components/software/PatternSelectionUnavailable.tsx:60
+#: src/components/software/PatternSelectionUnavailable.tsx:68
 #, fuzzy
 msgid "Software selection is not available"
 msgstr "Ulac-it"
 
 #. TRANSLATORS: link to go to registration settings
-#: src/components/software/PatternSelectionUnavailable.tsx:112
+#: src/components/software/PatternSelectionUnavailable.tsx:120
 #, fuzzy
 msgid "Go to registration"
 msgstr "Ajerred"
 
 #. TRANSLATORS: additional hint when base product is missing
-#: src/components/software/PatternSelectionUnavailable.tsx:124
+#: src/components/software/PatternSelectionUnavailable.tsx:132
 msgid "This might be due to network connectivity."
 msgstr ""
 
 #. TRANSLATORS: link to go to network settings
-#: src/components/software/PatternSelectionUnavailable.tsx:130
+#: src/components/software/PatternSelectionUnavailable.tsx:138
 #, fuzzy
 msgid "Go to network settings"
 msgstr "Ddu ar usebter n uẓeṭṭa"
 
-#: src/components/software/PatternSelectionUnavailable.tsx:142
+#: src/components/software/PatternSelectionUnavailable.tsx:150
 #, fuzzy
 msgid ""
 "This product does not allow selecting software at installation time. "
@@ -2531,137 +2551,137 @@ msgstr ""
 "yemmed."
 
 #. TRANSLATORS: shown when software selection cannot be determined
-#: src/components/software/PatternSelectionUnavailable.tsx:153
+#: src/components/software/PatternSelectionUnavailable.tsx:161
 msgid "The software selection could not be loaded."
 msgstr ""
 
 #. TRANSLATORS: empty state title for a software section with nothing selected
-#: src/components/software/SoftwarePage.tsx:72
+#: src/components/software/SoftwarePage.tsx:74
 #, fuzzy
 msgid "None selected"
 msgstr "yettwafran s wudem awurman"
 
-#: src/components/software/SoftwarePage.tsx:117
+#: src/components/software/SoftwarePage.tsx:119
 #, fuzzy
 msgid "Read less"
 msgstr "i tɣuri_kan"
 
 #. TRANSLATORS: accessible label for the collapse button; %s is the pattern name
-#: src/components/software/SoftwarePage.tsx:119
+#: src/components/software/SoftwarePage.tsx:121
 #, fuzzy, javascript-format
 msgid "Read less about %s"
 msgstr "Yesra azal n %s"
 
-#: src/components/software/SoftwarePage.tsx:123
+#: src/components/software/SoftwarePage.tsx:125
 #, fuzzy
 msgid "Read more"
 msgstr "i tɣuri_kan"
 
 #. TRANSLATORS: accessible label for the expand button; %s is the pattern name
-#: src/components/software/SoftwarePage.tsx:125
+#: src/components/software/SoftwarePage.tsx:127
 #, fuzzy, javascript-format
 msgid "Read more about %s"
 msgstr "Yesra azal n %s"
 
 #. TRANSLATORS: %s is the required disk space. Keep the [brackets]: they mark the value to be displayed in bold.
-#: src/components/software/SoftwarePage.tsx:195
+#: src/components/software/SoftwarePage.tsx:197
 #, javascript-format
 msgid "Required space with current selection: [%s]"
 msgstr ""
 
 #. TRANSLATORS: %s is the required disk space. Keep the [brackets]: they mark the value to be displayed in bold.
-#: src/components/software/SoftwarePage.tsx:197
+#: src/components/software/SoftwarePage.tsx:199
 #, fuzzy, javascript-format
 msgid "Required space: [%s]"
 msgstr "Ikemmusen yettwasran"
 
 #. TRANSLATORS: %1$d is selected count, %2$d is total available count
-#: src/components/software/SoftwarePage.tsx:245
+#: src/components/software/SoftwarePage.tsx:247
 #: src/components/software/SoftwarePatternsSelection.tsx:147
 #, fuzzy, javascript-format
 msgid "%1$d of %2$d selected"
 msgstr "Asurif %1$d n %2$d"
 
 #. TRANSLATORS: shown while the software proposal is not yet available
-#: src/components/software/SoftwarePage.tsx:273
+#: src/components/software/SoftwarePage.tsx:275
 msgid "No information available yet"
 msgstr "Ulac talɣut iwejden yakan"
 
 #. TRANSLATORS: empty state title when no desktop environments are available
-#: src/components/software/SoftwarePage.tsx:289
+#: src/components/software/SoftwarePage.tsx:291
 #, fuzzy
 msgid "No desktops available"
 msgstr "Ulac ibenkan i yellan"
 
 #. TRANSLATORS: explanation shown when the product has no desktop environments
-#: src/components/software/SoftwarePage.tsx:291
+#: src/components/software/SoftwarePage.tsx:293
 msgid "This product does not provide desktop environments."
 msgstr ""
 
 #. TRANSLATORS: hint shown when no desktop environment has been chosen
-#: src/components/software/SoftwarePage.tsx:297
+#: src/components/software/SoftwarePage.tsx:299
 msgid "Select a desktop environment to get a graphical interface."
 msgstr ""
 
 #. TRANSLATORS: button to go to the desktop environment selection page
-#: src/components/software/SoftwarePage.tsx:299
+#: src/components/software/SoftwarePage.tsx:301
 #, fuzzy
 msgid "Select a desktop"
 msgstr "Fren aḍebsi"
 
 #. TRANSLATORS: empty state title when no additional patterns are available
-#: src/components/software/SoftwarePage.tsx:307
+#: src/components/software/SoftwarePage.tsx:309
 #, fuzzy
 msgid "No additional patterns available"
 msgstr "Seqdec RAID %s i yiḥricen-nniḍen imernan"
 
 #. TRANSLATORS: explanation shown when the product has no additional patterns
-#: src/components/software/SoftwarePage.tsx:309
+#: src/components/software/SoftwarePage.tsx:311
 msgid "This product does not provide additional patterns."
 msgstr ""
 
 #. TRANSLATORS: hint shown when no additional software patterns have been chosen
-#: src/components/software/SoftwarePage.tsx:315
+#: src/components/software/SoftwarePage.tsx:317
 msgid "Select one or more to extend the system."
 msgstr ""
 
 #. TRANSLATORS: button to go to the pattern selection page
-#: src/components/software/SoftwarePage.tsx:317
+#: src/components/software/SoftwarePage.tsx:319
 #, fuzzy
 msgid "Select patterns"
 msgstr "Tineɣrufin yettwafernen"
 
-#: src/components/software/SoftwarePage.tsx:329
+#: src/components/software/SoftwarePage.tsx:331
 msgid "Desktops"
 msgstr ""
 
 #. TRANSLATORS: description for the Desktops section
-#: src/components/software/SoftwarePage.tsx:332
+#: src/components/software/SoftwarePage.tsx:334
 msgid "Graphical desktop environments for the system."
 msgstr ""
 
 #. TRANSLATORS: button to change the desktop selection
-#: src/components/software/SoftwarePage.tsx:336
+#: src/components/software/SoftwarePage.tsx:338
 #, fuzzy
 msgid "Change desktop"
 msgid_plural "Change desktops"
 msgstr[0] "Beddel afaris"
 msgstr[1] "Beddel afaris"
 
-#: src/components/software/SoftwarePage.tsx:347
+#: src/components/software/SoftwarePage.tsx:349
 #, fuzzy
 msgid "Additional patterns"
 msgstr "Seqdec RAID %s i yiḥricen-nniḍen imernan"
 
 #. TRANSLATORS: description for the Additional software section
-#: src/components/software/SoftwarePage.tsx:350
+#: src/components/software/SoftwarePage.tsx:352
 msgid ""
 "Curated sets of packages for common use cases and features to extend the "
 "system."
 msgstr ""
 
 #. TRANSLATORS: button to change the additional software selection
-#: src/components/software/SoftwarePage.tsx:353
+#: src/components/software/SoftwarePage.tsx:355
 #, fuzzy
 msgid "Change patterns"
 msgstr "Snifel ɣer %s"
@@ -3662,6 +3682,11 @@ msgstr "Fren xerṣum yiwen n uḍebsi."
 #: src/components/storage/LvmPage.tsx:170
 msgid "Configure Volume Group"
 msgstr "Swel agraw n ubleɣ"
+
+#: src/components/storage/LvmPage.tsx:176
+#: src/components/system/HostnamePage.tsx:97
+msgid "Check the following before continuing"
+msgstr "Selken ayen i d-itteddun send ad tkemmleḍ"
 
 #: src/components/storage/LvmPage.tsx:188
 msgid ""
@@ -5667,6 +5692,31 @@ msgstr ""
 #: src/utils/network.ts:71
 msgid "VLAN"
 msgstr ""
+
+#~ msgid "Server options"
+#~ msgstr "Tixtiṛiyin n uqeddac"
+
+#, javascript-format
+#~ msgid "Example: %s"
+#~ msgstr "Amedya: %s"
+
+#~ msgid "Provide email address"
+#~ msgstr "Awi-d tansa imayl"
+
+#, javascript-format
+#~ msgid "The product will be registered with \"%s\" hostname"
+#~ msgstr "Afaris ad yettwasekles s yisem n usneftaɣ \"%s\""
+
+#, javascript-format
+#~ msgid ""
+#~ "You cannot change it later. Go to the %s section if you want to modify it "
+#~ "before proceeding with registration."
+#~ msgstr ""
+#~ "Ur tezmireḍ ara ad t-tbeddleḍ ticki. Ddu ɣer tgezmi %s ma tebɣiḍ ad tt-"
+#~ "tbeddeleḍ send ajerred."
+
+#~ msgid "hostname"
+#~ msgstr "isem n usentfaɣ"
 
 #, fuzzy
 #~ msgid "Edit binding"

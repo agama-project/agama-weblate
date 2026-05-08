@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-07 20:46+0000\n"
+"POT-Creation-Date: 2026-05-08 12:49+0000\n"
 "PO-Revision-Date: 2026-05-03 19:04+0000\n"
 "Last-Translator: Eugene Krater <lachend@gmail.com>\n"
 "Language-Team: Ukrainian <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -338,17 +338,23 @@ msgstr "Підтвердження пароля"
 #. square brackets around %s to apply special formatting in
 #. the UI.
 #: src/components/core/PasswordInput.tsx:69
-#, javascript-format
-msgid "Using [%s] keyboard"
+#, fuzzy, javascript-format
+msgid "Using [%s] keyboard layout"
 msgstr "Розкладка клавіатури [%s]"
 
 #. TRANSLATORS: Warns users that CAPS LOCK is on.
+#. Text inside square brackets [] will be formatted in bold.
+#. Keep the brackets for proper formatting.
+#.
+#. TRANSLATORS: Warns users that CAPS LOCK is on.
 #. Keep square brackets to apply special formatting in the UI.
 #: src/components/core/PasswordInput.tsx:90
+#: src/components/form/MaskedField.tsx:113
 msgid "[CAPS LOCK] is on"
 msgstr "[CAPS LOCK] увімкнений"
 
 #: src/components/core/PasswordInput.tsx:144
+#: src/components/form/MaskedField.tsx:181
 msgid "Password visibility button"
 msgstr "Кнопка виявлення пароля"
 
@@ -380,7 +386,7 @@ msgstr "Крок %1$d з %2$d"
 
 #: src/components/core/ProgressStatusMonitor.tsx:40
 #: src/components/overview/SoftwareSummary.tsx:160
-#: src/components/software/SoftwarePage.tsx:373
+#: src/components/software/SoftwarePage.tsx:378
 #: src/components/software/SoftwarePatternsSelection.tsx:355
 #: src/routes/software.tsx:33
 msgid "Software"
@@ -608,6 +614,15 @@ msgstr ""
 "Виберіть записи, щоб відредагувати або видалити їх. Або [видалити всі "
 "недійсні записи.]"
 
+#. TRANSLATORS: Message to inform users which keyboard layout is active
+#. %s will be replaced with the keyboard layout name (e.g., "US", "DE").
+#. Example: "Using us keyboard".
+#.
+#: src/components/form/MaskedField.tsx:83
+#, fuzzy, javascript-format
+msgid "Using %s keyboard layout"
+msgstr "Розкладка клавіатури [%s]"
+
 #: src/components/l10n/KeyboardSelection.tsx:46
 msgid "Filter by description or keymap code"
 msgstr "Фільтр за описом або кодом клавішної карти"
@@ -832,7 +847,7 @@ msgstr "Не вдається змінити налаштування"
 
 #. TRANSLATORS: option label for enabling bridge STP.
 #: src/components/network/BridgeSettings.tsx:47
-#: src/components/product/ProductRegistrationPage.tsx:73
+#: src/components/product/ProductRegistrationForm.tsx:200
 #: src/components/storage/utils.ts:106 src/components/storage/utils.ts:125
 msgid "Custom"
 msgstr "По-своєму"
@@ -878,6 +893,8 @@ msgstr ""
 #: src/components/network/BridgeSettings.tsx:190
 #: src/components/network/BridgeSettings.tsx:210
 #: src/components/network/IpSettings.tsx:157
+#: src/components/product/ProductRegistrationForm.tsx:227
+#: src/components/product/ProductRegistrationForm.tsx:242
 msgid "(optional)"
 msgstr "(не обов'язково)"
 
@@ -1910,7 +1927,7 @@ msgid "Using code ending in %s"
 msgstr "Використання коду, що закінчується на %s"
 
 #: src/components/overview/RegistrationSummary.tsx:72
-#: src/components/product/ProductRegistrationPage.tsx:528
+#: src/components/product/ProductRegistrationPage.tsx:225
 #: src/routes/registration.tsx:31
 msgid "Registration"
 msgstr "Реєстрація"
@@ -2105,107 +2122,106 @@ msgstr "Закрити"
 msgid "%s logo"
 msgstr "Логотип %s"
 
-#: src/components/product/ProductRegistrationPage.tsx:70
+#. TRANSLATORS: validation error for the registration server URL field.
+#: src/components/product/ProductRegistrationForm.tsx:77
+#, fuzzy
+msgid "Enter a server URL"
+msgstr "URL сервера"
+
+#. TRANSLATORS: validation error for the registration code field.
+#: src/components/product/ProductRegistrationForm.tsx:82
+#, fuzzy
+msgid "Enter a registration code"
+msgstr "Код реєстрації"
+
+#. TRANSLATORS: button to dismiss the error alert and clear the registration data
+#: src/components/product/ProductRegistrationForm.tsx:170
+#, fuzzy
+msgid "Dismiss and clear registration data"
+msgstr "Вкажіть код реєстрації"
+
+#: src/components/product/ProductRegistrationForm.tsx:191
+#: src/components/product/ProductRegistrationPage.tsx:74
 msgid "Registration server"
 msgstr "Сервер реєстрації"
 
-#: src/components/product/ProductRegistrationPage.tsx:71
-msgid "Email"
-msgstr "Електронна пошта"
-
-#: src/components/product/ProductRegistrationPage.tsx:72
+#: src/components/product/ProductRegistrationForm.tsx:195
 msgid "SUSE Customer Center (SCC)"
 msgstr "Центр обслуговування клієнтів SUSE (SCC)"
 
-#: src/components/product/ProductRegistrationPage.tsx:87
-#, javascript-format
-msgid "%s has been registered with below information."
-msgstr "%s було зареєстровано з наведеною нижче інформацією."
+#: src/components/product/ProductRegistrationForm.tsx:196
+msgid "Register using SUSE server"
+msgstr "Реєстрація з допомогою сервера SUSE"
 
-#: src/components/product/ProductRegistrationPage.tsx:99
-#: src/components/product/ProductRegistrationPage.tsx:187
+#: src/components/product/ProductRegistrationForm.tsx:201
+msgid "Register using a custom registration server"
+msgstr "Реєстрація за допомогою спеціального реєстраційного сервера"
+
+#: src/components/product/ProductRegistrationForm.tsx:215
+msgid "Server URL"
+msgstr "URL сервера"
+
+#: src/components/product/ProductRegistrationForm.tsx:216
+#, fuzzy, javascript-format
+msgid "E.g., %s"
+msgstr "Наприклад, bond0"
+
+#: src/components/product/ProductRegistrationForm.tsx:228
+#: src/components/product/ProductRegistrationPage.tsx:80
 #: src/components/product/RegistrationExtension.tsx:151
 msgid "Registration code"
 msgstr "Код реєстрації"
 
-#. TRANSLATORS: switch for displaying or hiding the registration code
-#: src/components/product/ProductRegistrationPage.tsx:104
-#: src/components/product/RegistrationExtension.tsx:67
-msgid "Hide"
-msgstr "Приховати"
-
-#: src/components/product/ProductRegistrationPage.tsx:104
-#: src/components/product/RegistrationExtension.tsx:67
-msgid "Show"
-msgstr "Показати"
-
-#: src/components/product/ProductRegistrationPage.tsx:143
-msgid "Server options"
-msgstr "Параметри сервера"
-
-#: src/components/product/ProductRegistrationPage.tsx:144
-msgid "Register using SUSE server"
-msgstr "Реєстрація з допомогою сервера SUSE"
-
-#: src/components/product/ProductRegistrationPage.tsx:149
-msgid "Register using a custom registration server"
-msgstr "Реєстрація за допомогою спеціального реєстраційного сервера"
-
-#: src/components/product/ProductRegistrationPage.tsx:167
-msgid "Server URL"
-msgstr "URL сервера"
-
-#. TRANSLATORS: %s is replaced by an example URL like https://example.com
-#: src/components/product/ProductRegistrationPage.tsx:170
-#, javascript-format
-msgid "Example: %s"
-msgstr "Приклад: %s"
-
-#: src/components/product/ProductRegistrationPage.tsx:219
-msgid "Provide registration code"
-msgstr "Вкажіть код реєстрації"
-
-#: src/components/product/ProductRegistrationPage.tsx:255
-msgid "Provide email address"
-msgstr "Вкажіть адресу електронної пошти"
-
-#: src/components/product/ProductRegistrationPage.tsx:371
-#: src/components/storage/LvmPage.tsx:176
-#: src/components/system/HostnamePage.tsx:97
-msgid "Check the following before continuing"
-msgstr "Перш ніж продовжити, перевірте наступне"
+#: src/components/product/ProductRegistrationForm.tsx:242
+#: src/components/product/ProductRegistrationPage.tsx:93
+msgid "Email"
+msgstr "Електронна пошта"
 
 #. TRANSLATORS: button label
-#: src/components/product/ProductRegistrationPage.tsx:402
+#: src/components/product/ProductRegistrationForm.tsx:258
 #: src/components/product/RegistrationExtension.tsx:164
 msgid "Register"
 msgstr "Зареєструвати"
 
-#: src/components/product/ProductRegistrationPage.tsx:406
-#: src/components/product/RegistrationExtension.tsx:173
-msgid "Do not register"
-msgstr "Не реєструвати"
+#: src/components/product/ProductRegistrationForm.tsx:263
+#, fuzzy
+msgid "Registration in progress"
+msgstr "Встановлення триває"
+
+#: src/components/product/ProductRegistrationPage.tsx:68
+#, javascript-format
+msgid "%s has been registered with below information."
+msgstr "%s було зареєстровано з наведеною нижче інформацією."
+
+#. TRANSLATORS: switch for displaying or hiding the registration code
+#: src/components/product/ProductRegistrationPage.tsx:85
+#: src/components/product/RegistrationExtension.tsx:67
+msgid "Hide"
+msgstr "Приховати"
+
+#: src/components/product/ProductRegistrationPage.tsx:85
+#: src/components/product/RegistrationExtension.tsx:67
+msgid "Show"
+msgstr "Показати"
+
+#: src/components/product/ProductRegistrationPage.tsx:108
+#, fuzzy
+msgid "Hostname cannot be changed after registration"
+msgstr "Неможливо змінити під час віддаленого встановлення"
 
 #. TRANSLATORS: %s will be replaced with the hostname value
-#: src/components/product/ProductRegistrationPage.tsx:421
-#, javascript-format
-msgid "The product will be registered with \"%s\" hostname"
-msgstr "Продукт буде зареєстрований з назвою хоста «%s»"
+#: src/components/product/ProductRegistrationPage.tsx:117
+#, fuzzy, javascript-format
+msgid "Configured as %s."
+msgstr "Налаштовано для користувача %s"
 
-#: src/components/product/ProductRegistrationPage.tsx:425
-#, javascript-format
-msgid ""
-"You cannot change it later. Go to the %s section if you want to modify it "
-"before proceeding with registration."
+#. TRANSLATORS: text in square brackets is the section name and will be
+#. rendered as a link. Keep the brackets
+#: src/components/product/ProductRegistrationPage.tsx:129
+msgid "To change it, visit the [hostname] section before registering."
 msgstr ""
-"Ви не зможете змінити його пізніше. Перейдіть до розділу %s, якщо хочете "
-"змінити це перед тим, як продовжити реєстрацію."
 
-#: src/components/product/ProductRegistrationPage.tsx:430
-msgid "hostname"
-msgstr "ім'я хоста"
-
-#: src/components/product/ProductRegistrationPage.tsx:504
+#: src/components/product/ProductRegistrationPage.tsx:206
 msgid "Extensions"
 msgstr "Розширення"
 
@@ -2362,6 +2378,10 @@ msgstr "Бета"
 msgid "Recommended"
 msgstr "Рекомендовано"
 
+#: src/components/product/RegistrationExtension.tsx:173
+msgid "Do not register"
+msgstr "Не реєструвати"
+
 #. TRANSLATORS: warning title, the extension is not available on the server and cannot be registered
 #: src/components/product/RegistrationExtension.tsx:183
 msgid "Not available"
@@ -2504,29 +2524,29 @@ msgstr ""
 "налаштуваннях [програми]."
 
 #. TRANSLATORS: empty state title when software cannot be selected
-#: src/components/software/PatternSelectionUnavailable.tsx:60
+#: src/components/software/PatternSelectionUnavailable.tsx:68
 #, fuzzy
 msgid "Software selection is not available"
 msgstr "Немає доступних цілей"
 
 #. TRANSLATORS: link to go to registration settings
-#: src/components/software/PatternSelectionUnavailable.tsx:112
+#: src/components/software/PatternSelectionUnavailable.tsx:120
 #, fuzzy
 msgid "Go to registration"
 msgstr "Реєстрація"
 
 #. TRANSLATORS: additional hint when base product is missing
-#: src/components/software/PatternSelectionUnavailable.tsx:124
+#: src/components/software/PatternSelectionUnavailable.tsx:132
 msgid "This might be due to network connectivity."
 msgstr ""
 
 #. TRANSLATORS: link to go to network settings
-#: src/components/software/PatternSelectionUnavailable.tsx:130
+#: src/components/software/PatternSelectionUnavailable.tsx:138
 #, fuzzy
 msgid "Go to network settings"
 msgstr "Перейти до розділу «Мережа»"
 
-#: src/components/software/PatternSelectionUnavailable.tsx:142
+#: src/components/software/PatternSelectionUnavailable.tsx:150
 #, fuzzy
 msgid ""
 "This product does not allow selecting software at installation time. "
@@ -2537,130 +2557,130 @@ msgstr ""
 "завершення інсталяції."
 
 #. TRANSLATORS: shown when software selection cannot be determined
-#: src/components/software/PatternSelectionUnavailable.tsx:153
+#: src/components/software/PatternSelectionUnavailable.tsx:161
 #, fuzzy
 msgid "The software selection could not be loaded."
 msgstr "З'єднання не вдалося зберегти"
 
 #. TRANSLATORS: empty state title for a software section with nothing selected
-#: src/components/software/SoftwarePage.tsx:72
+#: src/components/software/SoftwarePage.tsx:74
 #, fuzzy
 msgid "None selected"
 msgstr "автоматичний вибір"
 
-#: src/components/software/SoftwarePage.tsx:117
+#: src/components/software/SoftwarePage.tsx:119
 #, fuzzy
 msgid "Read less"
 msgstr "Тільки читання"
 
 #. TRANSLATORS: accessible label for the collapse button; %s is the pattern name
-#: src/components/software/SoftwarePage.tsx:119
+#: src/components/software/SoftwarePage.tsx:121
 #, fuzzy, javascript-format
 msgid "Read less about %s"
 msgstr "Потрібно приблизно %s"
 
-#: src/components/software/SoftwarePage.tsx:123
+#: src/components/software/SoftwarePage.tsx:125
 #, fuzzy
 msgid "Read more"
 msgstr "Тільки читання"
 
 #. TRANSLATORS: accessible label for the expand button; %s is the pattern name
-#: src/components/software/SoftwarePage.tsx:125
+#: src/components/software/SoftwarePage.tsx:127
 #, fuzzy, javascript-format
 msgid "Read more about %s"
 msgstr "Потрібно приблизно %s"
 
 #. TRANSLATORS: %s is the required disk space. Keep the [brackets]: they mark the value to be displayed in bold.
-#: src/components/software/SoftwarePage.tsx:195
+#: src/components/software/SoftwarePage.tsx:197
 #, javascript-format
 msgid "Required space with current selection: [%s]"
 msgstr "Необхідний простір для поточного виділення: [%s]"
 
 #. TRANSLATORS: %s is the required disk space. Keep the [brackets]: they mark the value to be displayed in bold.
-#: src/components/software/SoftwarePage.tsx:197
+#: src/components/software/SoftwarePage.tsx:199
 #, javascript-format
 msgid "Required space: [%s]"
 msgstr "Необхідний простір: [%s]"
 
 #. TRANSLATORS: %1$d is selected count, %2$d is total available count
-#: src/components/software/SoftwarePage.tsx:245
+#: src/components/software/SoftwarePage.tsx:247
 #: src/components/software/SoftwarePatternsSelection.tsx:147
 #, fuzzy, javascript-format
 msgid "%1$d of %2$d selected"
 msgstr "%1$d з %2$d пристроїв відповідають фільтрам"
 
 #. TRANSLATORS: shown while the software proposal is not yet available
-#: src/components/software/SoftwarePage.tsx:273
+#: src/components/software/SoftwarePage.tsx:275
 msgid "No information available yet"
 msgstr "Інформація ще не доступна"
 
 #. TRANSLATORS: empty state title when no desktop environments are available
-#: src/components/software/SoftwarePage.tsx:289
+#: src/components/software/SoftwarePage.tsx:291
 #, fuzzy
 msgid "No desktops available"
 msgstr "Нема доступних пристроїв"
 
 #. TRANSLATORS: explanation shown when the product has no desktop environments
-#: src/components/software/SoftwarePage.tsx:291
+#: src/components/software/SoftwarePage.tsx:293
 msgid "This product does not provide desktop environments."
 msgstr ""
 
 #. TRANSLATORS: hint shown when no desktop environment has been chosen
-#: src/components/software/SoftwarePage.tsx:297
+#: src/components/software/SoftwarePage.tsx:299
 msgid "Select a desktop environment to get a graphical interface."
 msgstr "Виберіть середовище робочого столу, щоб отримати графічний інтерфейс."
 
 #. TRANSLATORS: button to go to the desktop environment selection page
-#: src/components/software/SoftwarePage.tsx:299
+#: src/components/software/SoftwarePage.tsx:301
 #, fuzzy
 msgid "Select a desktop"
 msgstr "Оберіть диск"
 
 #. TRANSLATORS: empty state title when no additional patterns are available
-#: src/components/software/SoftwarePage.tsx:307
+#: src/components/software/SoftwarePage.tsx:309
 #, fuzzy
 msgid "No additional patterns available"
 msgstr "Додаткові шаблони"
 
 #. TRANSLATORS: explanation shown when the product has no additional patterns
-#: src/components/software/SoftwarePage.tsx:309
+#: src/components/software/SoftwarePage.tsx:311
 msgid "This product does not provide additional patterns."
 msgstr ""
 
 #. TRANSLATORS: hint shown when no additional software patterns have been chosen
-#: src/components/software/SoftwarePage.tsx:315
+#: src/components/software/SoftwarePage.tsx:317
 msgid "Select one or more to extend the system."
 msgstr "Виберіть один або кілька варіантів, щоб розширити систему."
 
 #. TRANSLATORS: button to go to the pattern selection page
-#: src/components/software/SoftwarePage.tsx:317
+#: src/components/software/SoftwarePage.tsx:319
 #, fuzzy
 msgid "Select patterns"
 msgstr "Обрані шаблони"
 
-#: src/components/software/SoftwarePage.tsx:329
+#: src/components/software/SoftwarePage.tsx:331
 msgid "Desktops"
 msgstr "Робочі столи"
 
 #. TRANSLATORS: description for the Desktops section
-#: src/components/software/SoftwarePage.tsx:332
+#: src/components/software/SoftwarePage.tsx:334
 msgid "Graphical desktop environments for the system."
 msgstr "Графічні робочі середовища для системи."
 
 #. TRANSLATORS: button to change the desktop selection
-#: src/components/software/SoftwarePage.tsx:336
+#: src/components/software/SoftwarePage.tsx:338
 msgid "Change desktop"
 msgid_plural "Change desktops"
 msgstr[0] "Змінити робочий стіл"
 msgstr[1] "Змінити робочі столи"
 msgstr[2] "Змінити робочі столи"
 
-#: src/components/software/SoftwarePage.tsx:347
+#: src/components/software/SoftwarePage.tsx:349
 msgid "Additional patterns"
 msgstr "Додаткові шаблони"
 
 #. TRANSLATORS: description for the Additional software section
-#: src/components/software/SoftwarePage.tsx:350
+#: src/components/software/SoftwarePage.tsx:352
 msgid ""
 "Curated sets of packages for common use cases and features to extend the "
 "system."
@@ -2669,7 +2689,7 @@ msgstr ""
 "розширення можливостей системи."
 
 #. TRANSLATORS: button to change the additional software selection
-#: src/components/software/SoftwarePage.tsx:353
+#: src/components/software/SoftwarePage.tsx:355
 #, fuzzy
 msgid "Change patterns"
 msgstr "Змінити на %s"
@@ -3710,6 +3730,11 @@ msgstr "Оберіть хоча б один диск."
 #: src/components/storage/LvmPage.tsx:170
 msgid "Configure Volume Group"
 msgstr "Налаштувати групу томів"
+
+#: src/components/storage/LvmPage.tsx:176
+#: src/components/system/HostnamePage.tsx:97
+msgid "Check the following before continuing"
+msgstr "Перш ніж продовжити, перевірте наступне"
 
 #: src/components/storage/LvmPage.tsx:188
 msgid ""
@@ -5758,6 +5783,31 @@ msgstr ""
 #: src/utils/network.ts:71
 msgid "VLAN"
 msgstr ""
+
+#~ msgid "Server options"
+#~ msgstr "Параметри сервера"
+
+#, javascript-format
+#~ msgid "Example: %s"
+#~ msgstr "Приклад: %s"
+
+#~ msgid "Provide email address"
+#~ msgstr "Вкажіть адресу електронної пошти"
+
+#, javascript-format
+#~ msgid "The product will be registered with \"%s\" hostname"
+#~ msgstr "Продукт буде зареєстрований з назвою хоста «%s»"
+
+#, javascript-format
+#~ msgid ""
+#~ "You cannot change it later. Go to the %s section if you want to modify it "
+#~ "before proceeding with registration."
+#~ msgstr ""
+#~ "Ви не зможете змінити його пізніше. Перейдіть до розділу %s, якщо хочете "
+#~ "змінити це перед тим, як продовжити реєстрацію."
+
+#~ msgid "hostname"
+#~ msgstr "ім'я хоста"
 
 #~ msgid ""
 #~ "Enter or Tab to add; arrow keys to navigate entries, Ctrl+arrows to "

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-07 20:46+0000\n"
+"POT-Creation-Date: 2026-05-08 12:49+0000\n"
 "PO-Revision-Date: 2026-05-02 19:04+0000\n"
 "Last-Translator: Victor hck <victorhck@opensuse.org>\n"
 "Language-Team: Spanish <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -341,17 +341,23 @@ msgstr "Confirmación de contraseña"
 #. square brackets around %s to apply special formatting in
 #. the UI.
 #: src/components/core/PasswordInput.tsx:69
-#, javascript-format
-msgid "Using [%s] keyboard"
+#, fuzzy, javascript-format
+msgid "Using [%s] keyboard layout"
 msgstr "Se está utilizando el teclado [%s]"
 
 #. TRANSLATORS: Warns users that CAPS LOCK is on.
+#. Text inside square brackets [] will be formatted in bold.
+#. Keep the brackets for proper formatting.
+#.
+#. TRANSLATORS: Warns users that CAPS LOCK is on.
 #. Keep square brackets to apply special formatting in the UI.
 #: src/components/core/PasswordInput.tsx:90
+#: src/components/form/MaskedField.tsx:113
 msgid "[CAPS LOCK] is on"
 msgstr "[BLOQ MAYÚS] está activado"
 
 #: src/components/core/PasswordInput.tsx:144
+#: src/components/form/MaskedField.tsx:181
 msgid "Password visibility button"
 msgstr "Botón de visibilidad de contraseña"
 
@@ -383,7 +389,7 @@ msgstr "Paso %1$d de %2$d"
 
 #: src/components/core/ProgressStatusMonitor.tsx:40
 #: src/components/overview/SoftwareSummary.tsx:160
-#: src/components/software/SoftwarePage.tsx:373
+#: src/components/software/SoftwarePage.tsx:378
 #: src/components/software/SoftwarePatternsSelection.tsx:355
 #: src/routes/software.tsx:33
 msgid "Software"
@@ -610,6 +616,15 @@ msgstr ""
 "Seleccione entradas para editarlas o eliminarlas. O [eliminar todas las "
 "entradas inválidas.]"
 
+#. TRANSLATORS: Message to inform users which keyboard layout is active
+#. %s will be replaced with the keyboard layout name (e.g., "US", "DE").
+#. Example: "Using us keyboard".
+#.
+#: src/components/form/MaskedField.tsx:83
+#, fuzzy, javascript-format
+msgid "Using %s keyboard layout"
+msgstr "Se está utilizando el teclado [%s]"
+
 #: src/components/l10n/KeyboardSelection.tsx:46
 msgid "Filter by description or keymap code"
 msgstr "Filtrar por descripción o código de mapa de teclas"
@@ -835,7 +850,7 @@ msgstr "No es posible modificar los ajustes"
 
 #. TRANSLATORS: option label for enabling bridge STP.
 #: src/components/network/BridgeSettings.tsx:47
-#: src/components/product/ProductRegistrationPage.tsx:73
+#: src/components/product/ProductRegistrationForm.tsx:200
 #: src/components/storage/utils.ts:106 src/components/storage/utils.ts:125
 msgid "Custom"
 msgstr "Personalizado"
@@ -881,6 +896,8 @@ msgstr ""
 #: src/components/network/BridgeSettings.tsx:190
 #: src/components/network/BridgeSettings.tsx:210
 #: src/components/network/IpSettings.tsx:157
+#: src/components/product/ProductRegistrationForm.tsx:227
+#: src/components/product/ProductRegistrationForm.tsx:242
 msgid "(optional)"
 msgstr "(opcional)"
 
@@ -1911,7 +1928,7 @@ msgid "Using code ending in %s"
 msgstr "Utilizando el código que finaliza en %s"
 
 #: src/components/overview/RegistrationSummary.tsx:72
-#: src/components/product/ProductRegistrationPage.tsx:528
+#: src/components/product/ProductRegistrationPage.tsx:225
 #: src/routes/registration.tsx:31
 msgid "Registration"
 msgstr "Registro"
@@ -2103,107 +2120,106 @@ msgstr "Cerrar"
 msgid "%s logo"
 msgstr "logo de %s"
 
-#: src/components/product/ProductRegistrationPage.tsx:70
+#. TRANSLATORS: validation error for the registration server URL field.
+#: src/components/product/ProductRegistrationForm.tsx:77
+#, fuzzy
+msgid "Enter a server URL"
+msgstr "URL del servidor"
+
+#. TRANSLATORS: validation error for the registration code field.
+#: src/components/product/ProductRegistrationForm.tsx:82
+#, fuzzy
+msgid "Enter a registration code"
+msgstr "Código de registro"
+
+#. TRANSLATORS: button to dismiss the error alert and clear the registration data
+#: src/components/product/ProductRegistrationForm.tsx:170
+#, fuzzy
+msgid "Dismiss and clear registration data"
+msgstr "Proporcione el código de registro"
+
+#: src/components/product/ProductRegistrationForm.tsx:191
+#: src/components/product/ProductRegistrationPage.tsx:74
 msgid "Registration server"
 msgstr "Servidor de registro"
 
-#: src/components/product/ProductRegistrationPage.tsx:71
-msgid "Email"
-msgstr "Correo electrónico"
-
-#: src/components/product/ProductRegistrationPage.tsx:72
+#: src/components/product/ProductRegistrationForm.tsx:195
 msgid "SUSE Customer Center (SCC)"
 msgstr "Centro de servicios al cliente de SUSE (SCC)"
 
-#: src/components/product/ProductRegistrationPage.tsx:87
-#, javascript-format
-msgid "%s has been registered with below information."
-msgstr "%s se ha registrado con la siguiente información."
+#: src/components/product/ProductRegistrationForm.tsx:196
+msgid "Register using SUSE server"
+msgstr "Registrarse usando el servidor SUSE"
 
-#: src/components/product/ProductRegistrationPage.tsx:99
-#: src/components/product/ProductRegistrationPage.tsx:187
+#: src/components/product/ProductRegistrationForm.tsx:201
+msgid "Register using a custom registration server"
+msgstr "Registrarse usando un servidor de registro personalizado"
+
+#: src/components/product/ProductRegistrationForm.tsx:215
+msgid "Server URL"
+msgstr "URL del servidor"
+
+#: src/components/product/ProductRegistrationForm.tsx:216
+#, fuzzy, javascript-format
+msgid "E.g., %s"
+msgstr "Por ejemplo, enlace0"
+
+#: src/components/product/ProductRegistrationForm.tsx:228
+#: src/components/product/ProductRegistrationPage.tsx:80
 #: src/components/product/RegistrationExtension.tsx:151
 msgid "Registration code"
 msgstr "Código de registro"
 
-#. TRANSLATORS: switch for displaying or hiding the registration code
-#: src/components/product/ProductRegistrationPage.tsx:104
-#: src/components/product/RegistrationExtension.tsx:67
-msgid "Hide"
-msgstr "Ocultar"
-
-#: src/components/product/ProductRegistrationPage.tsx:104
-#: src/components/product/RegistrationExtension.tsx:67
-msgid "Show"
-msgstr "Mostrar"
-
-#: src/components/product/ProductRegistrationPage.tsx:143
-msgid "Server options"
-msgstr "Opciones del servidor"
-
-#: src/components/product/ProductRegistrationPage.tsx:144
-msgid "Register using SUSE server"
-msgstr "Registrarse usando el servidor SUSE"
-
-#: src/components/product/ProductRegistrationPage.tsx:149
-msgid "Register using a custom registration server"
-msgstr "Registrarse usando un servidor de registro personalizado"
-
-#: src/components/product/ProductRegistrationPage.tsx:167
-msgid "Server URL"
-msgstr "URL del servidor"
-
-#. TRANSLATORS: %s is replaced by an example URL like https://example.com
-#: src/components/product/ProductRegistrationPage.tsx:170
-#, javascript-format
-msgid "Example: %s"
-msgstr "Ejemplo: %s"
-
-#: src/components/product/ProductRegistrationPage.tsx:219
-msgid "Provide registration code"
-msgstr "Proporcione el código de registro"
-
-#: src/components/product/ProductRegistrationPage.tsx:255
-msgid "Provide email address"
-msgstr "Proporcione una dirección de correo electrónico"
-
-#: src/components/product/ProductRegistrationPage.tsx:371
-#: src/components/storage/LvmPage.tsx:176
-#: src/components/system/HostnamePage.tsx:97
-msgid "Check the following before continuing"
-msgstr "Compruebe lo siguiente antes de continuar"
+#: src/components/product/ProductRegistrationForm.tsx:242
+#: src/components/product/ProductRegistrationPage.tsx:93
+msgid "Email"
+msgstr "Correo electrónico"
 
 #. TRANSLATORS: button label
-#: src/components/product/ProductRegistrationPage.tsx:402
+#: src/components/product/ProductRegistrationForm.tsx:258
 #: src/components/product/RegistrationExtension.tsx:164
 msgid "Register"
 msgstr "Registrar"
 
-#: src/components/product/ProductRegistrationPage.tsx:406
-#: src/components/product/RegistrationExtension.tsx:173
-msgid "Do not register"
-msgstr "No registrar"
+#: src/components/product/ProductRegistrationForm.tsx:263
+#, fuzzy
+msgid "Registration in progress"
+msgstr "Instalación en progreso"
+
+#: src/components/product/ProductRegistrationPage.tsx:68
+#, javascript-format
+msgid "%s has been registered with below information."
+msgstr "%s se ha registrado con la siguiente información."
+
+#. TRANSLATORS: switch for displaying or hiding the registration code
+#: src/components/product/ProductRegistrationPage.tsx:85
+#: src/components/product/RegistrationExtension.tsx:67
+msgid "Hide"
+msgstr "Ocultar"
+
+#: src/components/product/ProductRegistrationPage.tsx:85
+#: src/components/product/RegistrationExtension.tsx:67
+msgid "Show"
+msgstr "Mostrar"
+
+#: src/components/product/ProductRegistrationPage.tsx:108
+#, fuzzy
+msgid "Hostname cannot be changed after registration"
+msgstr "No se puede cambiar en instalación remota"
 
 #. TRANSLATORS: %s will be replaced with the hostname value
-#: src/components/product/ProductRegistrationPage.tsx:421
-#, javascript-format
-msgid "The product will be registered with \"%s\" hostname"
-msgstr "El producto se registrará con el nombre de host \"%s\""
+#: src/components/product/ProductRegistrationPage.tsx:117
+#, fuzzy, javascript-format
+msgid "Configured as %s."
+msgstr "Configurado para el usuario %s"
 
-#: src/components/product/ProductRegistrationPage.tsx:425
-#, javascript-format
-msgid ""
-"You cannot change it later. Go to the %s section if you want to modify it "
-"before proceeding with registration."
+#. TRANSLATORS: text in square brackets is the section name and will be
+#. rendered as a link. Keep the brackets
+#: src/components/product/ProductRegistrationPage.tsx:129
+msgid "To change it, visit the [hostname] section before registering."
 msgstr ""
-"No puede cambiarlo más tarde. Vaya a la sección %s si desea modificarlo "
-"antes de proceder con el registro."
 
-#: src/components/product/ProductRegistrationPage.tsx:430
-msgid "hostname"
-msgstr "nombre del equipo"
-
-#: src/components/product/ProductRegistrationPage.tsx:504
+#: src/components/product/ProductRegistrationPage.tsx:206
 msgid "Extensions"
 msgstr "Extensiones"
 
@@ -2354,6 +2370,10 @@ msgstr "Beta"
 msgid "Recommended"
 msgstr "Recomendado"
 
+#: src/components/product/RegistrationExtension.tsx:173
+msgid "Do not register"
+msgstr "No registrar"
+
 #. TRANSLATORS: warning title, the extension is not available on the server and cannot be registered
 #: src/components/product/RegistrationExtension.tsx:183
 msgid "Not available"
@@ -2496,26 +2516,26 @@ msgstr ""
 "[de software]."
 
 #. TRANSLATORS: empty state title when software cannot be selected
-#: src/components/software/PatternSelectionUnavailable.tsx:60
+#: src/components/software/PatternSelectionUnavailable.tsx:68
 msgid "Software selection is not available"
 msgstr "No está disponible la selección de software"
 
 #. TRANSLATORS: link to go to registration settings
-#: src/components/software/PatternSelectionUnavailable.tsx:112
+#: src/components/software/PatternSelectionUnavailable.tsx:120
 msgid "Go to registration"
 msgstr "Ir a registro"
 
 #. TRANSLATORS: additional hint when base product is missing
-#: src/components/software/PatternSelectionUnavailable.tsx:124
+#: src/components/software/PatternSelectionUnavailable.tsx:132
 msgid "This might be due to network connectivity."
 msgstr "Esto podría deberse a la conectividad de la red."
 
 #. TRANSLATORS: link to go to network settings
-#: src/components/software/PatternSelectionUnavailable.tsx:130
+#: src/components/software/PatternSelectionUnavailable.tsx:138
 msgid "Go to network settings"
 msgstr "Ir a la configuración de red"
 
-#: src/components/software/PatternSelectionUnavailable.tsx:142
+#: src/components/software/PatternSelectionUnavailable.tsx:150
 msgid ""
 "This product does not allow selecting software at installation time. "
 "Additional software can be added after the installation is complete."
@@ -2525,121 +2545,121 @@ msgstr ""
 "instalación."
 
 #. TRANSLATORS: shown when software selection cannot be determined
-#: src/components/software/PatternSelectionUnavailable.tsx:153
+#: src/components/software/PatternSelectionUnavailable.tsx:161
 msgid "The software selection could not be loaded."
 msgstr "La selección de software no pudo cargarse."
 
 #. TRANSLATORS: empty state title for a software section with nothing selected
-#: src/components/software/SoftwarePage.tsx:72
+#: src/components/software/SoftwarePage.tsx:74
 msgid "None selected"
 msgstr "Ninguno seleccionado"
 
-#: src/components/software/SoftwarePage.tsx:117
+#: src/components/software/SoftwarePage.tsx:119
 msgid "Read less"
 msgstr "Leer menos"
 
 #. TRANSLATORS: accessible label for the collapse button; %s is the pattern name
-#: src/components/software/SoftwarePage.tsx:119
+#: src/components/software/SoftwarePage.tsx:121
 #, javascript-format
 msgid "Read less about %s"
 msgstr "Leer menos sobre %s"
 
-#: src/components/software/SoftwarePage.tsx:123
+#: src/components/software/SoftwarePage.tsx:125
 msgid "Read more"
 msgstr "Leer más"
 
 #. TRANSLATORS: accessible label for the expand button; %s is the pattern name
-#: src/components/software/SoftwarePage.tsx:125
+#: src/components/software/SoftwarePage.tsx:127
 #, javascript-format
 msgid "Read more about %s"
 msgstr "Leer más sobre %s"
 
 #. TRANSLATORS: %s is the required disk space. Keep the [brackets]: they mark the value to be displayed in bold.
-#: src/components/software/SoftwarePage.tsx:195
+#: src/components/software/SoftwarePage.tsx:197
 #, javascript-format
 msgid "Required space with current selection: [%s]"
 msgstr "Espacio requerido con selección actual: [%s]"
 
 #. TRANSLATORS: %s is the required disk space. Keep the [brackets]: they mark the value to be displayed in bold.
-#: src/components/software/SoftwarePage.tsx:197
+#: src/components/software/SoftwarePage.tsx:199
 #, javascript-format
 msgid "Required space: [%s]"
 msgstr "Espacio requerido: [%s]"
 
 #. TRANSLATORS: %1$d is selected count, %2$d is total available count
-#: src/components/software/SoftwarePage.tsx:245
+#: src/components/software/SoftwarePage.tsx:247
 #: src/components/software/SoftwarePatternsSelection.tsx:147
 #, javascript-format
 msgid "%1$d of %2$d selected"
 msgstr "%1$d de %2$d seleccionados"
 
 #. TRANSLATORS: shown while the software proposal is not yet available
-#: src/components/software/SoftwarePage.tsx:273
+#: src/components/software/SoftwarePage.tsx:275
 msgid "No information available yet"
 msgstr "Sin información disponible aún"
 
 #. TRANSLATORS: empty state title when no desktop environments are available
-#: src/components/software/SoftwarePage.tsx:289
+#: src/components/software/SoftwarePage.tsx:291
 msgid "No desktops available"
 msgstr "No hay escritorios disponibles"
 
 #. TRANSLATORS: explanation shown when the product has no desktop environments
-#: src/components/software/SoftwarePage.tsx:291
+#: src/components/software/SoftwarePage.tsx:293
 msgid "This product does not provide desktop environments."
 msgstr "Este producto no ofrece entornos de escritorio."
 
 #. TRANSLATORS: hint shown when no desktop environment has been chosen
-#: src/components/software/SoftwarePage.tsx:297
+#: src/components/software/SoftwarePage.tsx:299
 msgid "Select a desktop environment to get a graphical interface."
 msgstr "Seleccione un entorno de escritorio para obtener una interfaz gráfica."
 
 #. TRANSLATORS: button to go to the desktop environment selection page
-#: src/components/software/SoftwarePage.tsx:299
+#: src/components/software/SoftwarePage.tsx:301
 msgid "Select a desktop"
 msgstr "Seleccione un escritorio"
 
 #. TRANSLATORS: empty state title when no additional patterns are available
-#: src/components/software/SoftwarePage.tsx:307
+#: src/components/software/SoftwarePage.tsx:309
 msgid "No additional patterns available"
 msgstr "No hay patrones adicionales disponibles"
 
 #. TRANSLATORS: explanation shown when the product has no additional patterns
-#: src/components/software/SoftwarePage.tsx:309
+#: src/components/software/SoftwarePage.tsx:311
 msgid "This product does not provide additional patterns."
 msgstr "Este producto no proporciona patrones adicionales."
 
 #. TRANSLATORS: hint shown when no additional software patterns have been chosen
-#: src/components/software/SoftwarePage.tsx:315
+#: src/components/software/SoftwarePage.tsx:317
 msgid "Select one or more to extend the system."
 msgstr "Seleccione uno o más para ampliar el sistema."
 
 #. TRANSLATORS: button to go to the pattern selection page
-#: src/components/software/SoftwarePage.tsx:317
+#: src/components/software/SoftwarePage.tsx:319
 msgid "Select patterns"
 msgstr "Seleccionar patrones"
 
-#: src/components/software/SoftwarePage.tsx:329
+#: src/components/software/SoftwarePage.tsx:331
 msgid "Desktops"
 msgstr "Escritorios"
 
 #. TRANSLATORS: description for the Desktops section
-#: src/components/software/SoftwarePage.tsx:332
+#: src/components/software/SoftwarePage.tsx:334
 msgid "Graphical desktop environments for the system."
 msgstr "Entornos gráficos de escritorio para el sistema."
 
 #. TRANSLATORS: button to change the desktop selection
-#: src/components/software/SoftwarePage.tsx:336
+#: src/components/software/SoftwarePage.tsx:338
 msgid "Change desktop"
 msgid_plural "Change desktops"
 msgstr[0] "Cambiar escritorio"
 msgstr[1] "Cambiar escritorios"
 
-#: src/components/software/SoftwarePage.tsx:347
+#: src/components/software/SoftwarePage.tsx:349
 msgid "Additional patterns"
 msgstr "Patrones adicionales"
 
 #. TRANSLATORS: description for the Additional software section
-#: src/components/software/SoftwarePage.tsx:350
+#: src/components/software/SoftwarePage.tsx:352
 msgid ""
 "Curated sets of packages for common use cases and features to extend the "
 "system."
@@ -2648,7 +2668,7 @@ msgstr ""
 "características para ampliar el sistema."
 
 #. TRANSLATORS: button to change the additional software selection
-#: src/components/software/SoftwarePage.tsx:353
+#: src/components/software/SoftwarePage.tsx:355
 msgid "Change patterns"
 msgstr "Cambiar patrones"
 
@@ -3665,6 +3685,11 @@ msgstr "Seleccione al menos un disco."
 #: src/components/storage/LvmPage.tsx:170
 msgid "Configure Volume Group"
 msgstr "Configurar Grupo de Volúmenes"
+
+#: src/components/storage/LvmPage.tsx:176
+#: src/components/system/HostnamePage.tsx:97
+msgid "Check the following before continuing"
+msgstr "Compruebe lo siguiente antes de continuar"
 
 #: src/components/storage/LvmPage.tsx:188
 msgid ""
@@ -5676,6 +5701,31 @@ msgstr "Loopback"
 #: src/utils/network.ts:71
 msgid "VLAN"
 msgstr "VLAN"
+
+#~ msgid "Server options"
+#~ msgstr "Opciones del servidor"
+
+#, javascript-format
+#~ msgid "Example: %s"
+#~ msgstr "Ejemplo: %s"
+
+#~ msgid "Provide email address"
+#~ msgstr "Proporcione una dirección de correo electrónico"
+
+#, javascript-format
+#~ msgid "The product will be registered with \"%s\" hostname"
+#~ msgstr "El producto se registrará con el nombre de host \"%s\""
+
+#, javascript-format
+#~ msgid ""
+#~ "You cannot change it later. Go to the %s section if you want to modify it "
+#~ "before proceeding with registration."
+#~ msgstr ""
+#~ "No puede cambiarlo más tarde. Vaya a la sección %s si desea modificarlo "
+#~ "antes de proceder con el registro."
+
+#~ msgid "hostname"
+#~ msgstr "nombre del equipo"
 
 #~ msgid ""
 #~ "Enter or Tab to add; arrow keys to navigate entries, Ctrl+arrows to "

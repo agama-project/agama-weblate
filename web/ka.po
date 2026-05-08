@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-07 20:46+0000\n"
+"POT-Creation-Date: 2026-05-08 12:49+0000\n"
 "PO-Revision-Date: 2026-05-01 04:04+0000\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -327,17 +327,23 @@ msgstr "პაროლის დადასტურება"
 #. square brackets around %s to apply special formatting in
 #. the UI.
 #: src/components/core/PasswordInput.tsx:69
-#, javascript-format
-msgid "Using [%s] keyboard"
+#, fuzzy, javascript-format
+msgid "Using [%s] keyboard layout"
 msgstr "გამოიყენება [%s] კლავიატურა"
 
 #. TRANSLATORS: Warns users that CAPS LOCK is on.
+#. Text inside square brackets [] will be formatted in bold.
+#. Keep the brackets for proper formatting.
+#.
+#. TRANSLATORS: Warns users that CAPS LOCK is on.
 #. Keep square brackets to apply special formatting in the UI.
 #: src/components/core/PasswordInput.tsx:90
+#: src/components/form/MaskedField.tsx:113
 msgid "[CAPS LOCK] is on"
 msgstr "[CAPS LOCK] ჩართულია"
 
 #: src/components/core/PasswordInput.tsx:144
+#: src/components/form/MaskedField.tsx:181
 msgid "Password visibility button"
 msgstr "პაროლის ხილვადობის ღილაკი"
 
@@ -369,7 +375,7 @@ msgstr "ნაბიჯი %1$d %2$d-დან"
 
 #: src/components/core/ProgressStatusMonitor.tsx:40
 #: src/components/overview/SoftwareSummary.tsx:160
-#: src/components/software/SoftwarePage.tsx:373
+#: src/components/software/SoftwarePage.tsx:378
 #: src/components/software/SoftwarePatternsSelection.tsx:355
 #: src/routes/software.tsx:33
 msgid "Software"
@@ -596,6 +602,15 @@ msgstr ""
 "აირჩიეთ ჩასასწორებელი, ან წასაშლელი ჩანაწერები, ან [ყველა არასწორი ჩანაწერის "
 "წაშლა]"
 
+#. TRANSLATORS: Message to inform users which keyboard layout is active
+#. %s will be replaced with the keyboard layout name (e.g., "US", "DE").
+#. Example: "Using us keyboard".
+#.
+#: src/components/form/MaskedField.tsx:83
+#, fuzzy, javascript-format
+msgid "Using %s keyboard layout"
+msgstr "გამოიყენება [%s] კლავიატურა"
+
 #: src/components/l10n/KeyboardSelection.tsx:46
 msgid "Filter by description or keymap code"
 msgstr "გაფილტვრა აღწერით ან რილაკების რუკის კოდით"
@@ -817,7 +832,7 @@ msgstr "პარამეტრების შეცვლა შეუძლ�
 
 #. TRANSLATORS: option label for enabling bridge STP.
 #: src/components/network/BridgeSettings.tsx:47
-#: src/components/product/ProductRegistrationPage.tsx:73
+#: src/components/product/ProductRegistrationForm.tsx:200
 #: src/components/storage/utils.ts:106 src/components/storage/utils.ts:125
 msgid "Custom"
 msgstr "მორგებული"
@@ -863,6 +878,8 @@ msgstr ""
 #: src/components/network/BridgeSettings.tsx:190
 #: src/components/network/BridgeSettings.tsx:210
 #: src/components/network/IpSettings.tsx:157
+#: src/components/product/ProductRegistrationForm.tsx:227
+#: src/components/product/ProductRegistrationForm.tsx:242
 msgid "(optional)"
 msgstr "(არასავალდებულო)"
 
@@ -1878,7 +1895,7 @@ msgid "Using code ending in %s"
 msgstr "გამოიყენება კოდი, რომელიც სრულდება %s-ით"
 
 #: src/components/overview/RegistrationSummary.tsx:72
-#: src/components/product/ProductRegistrationPage.tsx:528
+#: src/components/product/ProductRegistrationPage.tsx:225
 #: src/routes/registration.tsx:31
 msgid "Registration"
 msgstr "რეგისტრაცია"
@@ -2070,105 +2087,106 @@ msgstr "დახურვა"
 msgid "%s logo"
 msgstr "%s-ის ლოგო"
 
-#: src/components/product/ProductRegistrationPage.tsx:70
+#. TRANSLATORS: validation error for the registration server URL field.
+#: src/components/product/ProductRegistrationForm.tsx:77
+#, fuzzy
+msgid "Enter a server URL"
+msgstr "სერვერის URL"
+
+#. TRANSLATORS: validation error for the registration code field.
+#: src/components/product/ProductRegistrationForm.tsx:82
+#, fuzzy
+msgid "Enter a registration code"
+msgstr "რეგისტრაციის კოდი"
+
+#. TRANSLATORS: button to dismiss the error alert and clear the registration data
+#: src/components/product/ProductRegistrationForm.tsx:170
+#, fuzzy
+msgid "Dismiss and clear registration data"
+msgstr "შეიყვანეთ რეგისტრაციის კოდი"
+
+#: src/components/product/ProductRegistrationForm.tsx:191
+#: src/components/product/ProductRegistrationPage.tsx:74
 msgid "Registration server"
 msgstr "რეგისტრაციის სერვერი"
 
-#: src/components/product/ProductRegistrationPage.tsx:71
-msgid "Email"
-msgstr "ელფოსტა"
-
-#: src/components/product/ProductRegistrationPage.tsx:72
+#: src/components/product/ProductRegistrationForm.tsx:195
 msgid "SUSE Customer Center (SCC)"
 msgstr "SUSE Customer Center (SCC)"
 
-#: src/components/product/ProductRegistrationPage.tsx:87
-#, javascript-format
-msgid "%s has been registered with below information."
-msgstr "%s დარეგისტრირებულია შემდეგი ინფორმაციით ქვემოთ."
+#: src/components/product/ProductRegistrationForm.tsx:196
+msgid "Register using SUSE server"
+msgstr "რეგისტრაცია SUSE Server-ის გამოყენებით"
 
-#: src/components/product/ProductRegistrationPage.tsx:99
-#: src/components/product/ProductRegistrationPage.tsx:187
+#: src/components/product/ProductRegistrationForm.tsx:201
+msgid "Register using a custom registration server"
+msgstr "რეგისტრაცია მორგებული რეგისტრაციის სერვერით"
+
+#: src/components/product/ProductRegistrationForm.tsx:215
+msgid "Server URL"
+msgstr "სერვერის URL"
+
+#: src/components/product/ProductRegistrationForm.tsx:216
+#, fuzzy, javascript-format
+msgid "E.g., %s"
+msgstr "მაგ: bond0"
+
+#: src/components/product/ProductRegistrationForm.tsx:228
+#: src/components/product/ProductRegistrationPage.tsx:80
 #: src/components/product/RegistrationExtension.tsx:151
 msgid "Registration code"
 msgstr "რეგისტრაციის კოდი"
 
-#. TRANSLATORS: switch for displaying or hiding the registration code
-#: src/components/product/ProductRegistrationPage.tsx:104
-#: src/components/product/RegistrationExtension.tsx:67
-msgid "Hide"
-msgstr "დამალვა"
-
-#: src/components/product/ProductRegistrationPage.tsx:104
-#: src/components/product/RegistrationExtension.tsx:67
-msgid "Show"
-msgstr "ჩვენება"
-
-#: src/components/product/ProductRegistrationPage.tsx:143
-msgid "Server options"
-msgstr "სერვერის პარამეტრები"
-
-#: src/components/product/ProductRegistrationPage.tsx:144
-msgid "Register using SUSE server"
-msgstr "რეგისტრაცია SUSE Server-ის გამოყენებით"
-
-#: src/components/product/ProductRegistrationPage.tsx:149
-msgid "Register using a custom registration server"
-msgstr "რეგისტრაცია მორგებული რეგისტრაციის სერვერით"
-
-#: src/components/product/ProductRegistrationPage.tsx:167
-msgid "Server URL"
-msgstr "სერვერის URL"
-
-#. TRANSLATORS: %s is replaced by an example URL like https://example.com
-#: src/components/product/ProductRegistrationPage.tsx:170
-#, javascript-format
-msgid "Example: %s"
-msgstr "მაგ: %s"
-
-#: src/components/product/ProductRegistrationPage.tsx:219
-msgid "Provide registration code"
-msgstr "შეიყვანეთ რეგისტრაციის კოდი"
-
-#: src/components/product/ProductRegistrationPage.tsx:255
-msgid "Provide email address"
-msgstr "შეიყვანეთ ელფოსტის მისამართი"
-
-#: src/components/product/ProductRegistrationPage.tsx:371
-#: src/components/storage/LvmPage.tsx:176
-#: src/components/system/HostnamePage.tsx:97
-msgid "Check the following before continuing"
-msgstr "შეამოწმეთ შემდეგი ელემენტები გაგრძელებამდე"
+#: src/components/product/ProductRegistrationForm.tsx:242
+#: src/components/product/ProductRegistrationPage.tsx:93
+msgid "Email"
+msgstr "ელფოსტა"
 
 #. TRANSLATORS: button label
-#: src/components/product/ProductRegistrationPage.tsx:402
+#: src/components/product/ProductRegistrationForm.tsx:258
 #: src/components/product/RegistrationExtension.tsx:164
 msgid "Register"
 msgstr "რესგისტრაცია"
 
-#: src/components/product/ProductRegistrationPage.tsx:406
-#: src/components/product/RegistrationExtension.tsx:173
-msgid "Do not register"
-msgstr "რეგისტრაციის გარეშე"
+#: src/components/product/ProductRegistrationForm.tsx:263
+#, fuzzy
+msgid "Registration in progress"
+msgstr "მიმდინარეობს დაყენება"
+
+#: src/components/product/ProductRegistrationPage.tsx:68
+#, javascript-format
+msgid "%s has been registered with below information."
+msgstr "%s დარეგისტრირებულია შემდეგი ინფორმაციით ქვემოთ."
+
+#. TRANSLATORS: switch for displaying or hiding the registration code
+#: src/components/product/ProductRegistrationPage.tsx:85
+#: src/components/product/RegistrationExtension.tsx:67
+msgid "Hide"
+msgstr "დამალვა"
+
+#: src/components/product/ProductRegistrationPage.tsx:85
+#: src/components/product/RegistrationExtension.tsx:67
+msgid "Show"
+msgstr "ჩვენება"
+
+#: src/components/product/ProductRegistrationPage.tsx:108
+#, fuzzy
+msgid "Hostname cannot be changed after registration"
+msgstr "ვერ შეიცვლება დაშორებული დაყენებისას"
 
 #. TRANSLATORS: %s will be replaced with the hostname value
-#: src/components/product/ProductRegistrationPage.tsx:421
-#, javascript-format
-msgid "The product will be registered with \"%s\" hostname"
-msgstr "პროდუქტი დარეგისტრირდება ჰოსტის სახელით \"%s\""
+#: src/components/product/ProductRegistrationPage.tsx:117
+#, fuzzy, javascript-format
+msgid "Configured as %s."
+msgstr "მორგებულია მომხმარებლისთვის %s"
 
-#: src/components/product/ProductRegistrationPage.tsx:425
-#, javascript-format
-msgid ""
-"You cannot change it later. Go to the %s section if you want to modify it "
-"before proceeding with registration."
+#. TRANSLATORS: text in square brackets is the section name and will be
+#. rendered as a link. Keep the brackets
+#: src/components/product/ProductRegistrationPage.tsx:129
+msgid "To change it, visit the [hostname] section before registering."
 msgstr ""
 
-#: src/components/product/ProductRegistrationPage.tsx:430
-msgid "hostname"
-msgstr "ჰოსტის სახელი"
-
-#: src/components/product/ProductRegistrationPage.tsx:504
+#: src/components/product/ProductRegistrationPage.tsx:206
 msgid "Extensions"
 msgstr "გაფართოებები"
 
@@ -2319,6 +2337,10 @@ msgstr "ბეტა"
 msgid "Recommended"
 msgstr "რეკომენდებულია"
 
+#: src/components/product/RegistrationExtension.tsx:173
+msgid "Do not register"
+msgstr "რეგისტრაციის გარეშე"
+
 #. TRANSLATORS: warning title, the extension is not available on the server and cannot be registered
 #: src/components/product/RegistrationExtension.tsx:183
 msgid "Not available"
@@ -2455,154 +2477,154 @@ msgid ""
 msgstr ""
 
 #. TRANSLATORS: empty state title when software cannot be selected
-#: src/components/software/PatternSelectionUnavailable.tsx:60
+#: src/components/software/PatternSelectionUnavailable.tsx:68
 msgid "Software selection is not available"
 msgstr "პროგრამების არჩევანი ხელმისაწვდომი არაა"
 
 #. TRANSLATORS: link to go to registration settings
-#: src/components/software/PatternSelectionUnavailable.tsx:112
+#: src/components/software/PatternSelectionUnavailable.tsx:120
 msgid "Go to registration"
 msgstr "რეგისტრაციაზე გადასვლა"
 
 #. TRANSLATORS: additional hint when base product is missing
-#: src/components/software/PatternSelectionUnavailable.tsx:124
+#: src/components/software/PatternSelectionUnavailable.tsx:132
 msgid "This might be due to network connectivity."
 msgstr "ეს, შეიძლება, ქსელის კავშირის გამო ხდებოდეს."
 
 #. TRANSLATORS: link to go to network settings
-#: src/components/software/PatternSelectionUnavailable.tsx:130
+#: src/components/software/PatternSelectionUnavailable.tsx:138
 msgid "Go to network settings"
 msgstr "ქსელის მორგების გვერდზე გადასვლა"
 
-#: src/components/software/PatternSelectionUnavailable.tsx:142
+#: src/components/software/PatternSelectionUnavailable.tsx:150
 msgid ""
 "This product does not allow selecting software at installation time. "
 "Additional software can be added after the installation is complete."
 msgstr ""
 
 #. TRANSLATORS: shown when software selection cannot be determined
-#: src/components/software/PatternSelectionUnavailable.tsx:153
+#: src/components/software/PatternSelectionUnavailable.tsx:161
 msgid "The software selection could not be loaded."
 msgstr "პროგრამების არჩევნის ჩატვირთვა შეუძლებელია."
 
 #. TRANSLATORS: empty state title for a software section with nothing selected
-#: src/components/software/SoftwarePage.tsx:72
+#: src/components/software/SoftwarePage.tsx:74
 msgid "None selected"
 msgstr "არჩეული არაფერია"
 
-#: src/components/software/SoftwarePage.tsx:117
+#: src/components/software/SoftwarePage.tsx:119
 msgid "Read less"
 msgstr "ნაკლების წაკითხვა"
 
 #. TRANSLATORS: accessible label for the collapse button; %s is the pattern name
-#: src/components/software/SoftwarePage.tsx:119
+#: src/components/software/SoftwarePage.tsx:121
 #, javascript-format
 msgid "Read less about %s"
 msgstr "ნაკლების წაკითხვა %s-ის შესახებ"
 
-#: src/components/software/SoftwarePage.tsx:123
+#: src/components/software/SoftwarePage.tsx:125
 msgid "Read more"
 msgstr "მეტის წაკითხვა"
 
 #. TRANSLATORS: accessible label for the expand button; %s is the pattern name
-#: src/components/software/SoftwarePage.tsx:125
+#: src/components/software/SoftwarePage.tsx:127
 #, javascript-format
 msgid "Read more about %s"
 msgstr "მეტის წაკითხვა %s-ის შესახებ"
 
 #. TRANSLATORS: %s is the required disk space. Keep the [brackets]: they mark the value to be displayed in bold.
-#: src/components/software/SoftwarePage.tsx:195
+#: src/components/software/SoftwarePage.tsx:197
 #, javascript-format
 msgid "Required space with current selection: [%s]"
 msgstr "საჭირო ადგილი მიმდინარე არჩევნით: [%s]"
 
 #. TRANSLATORS: %s is the required disk space. Keep the [brackets]: they mark the value to be displayed in bold.
-#: src/components/software/SoftwarePage.tsx:197
+#: src/components/software/SoftwarePage.tsx:199
 #, javascript-format
 msgid "Required space: [%s]"
 msgstr "საჭირო ადგილი: [%s]"
 
 #. TRANSLATORS: %1$d is selected count, %2$d is total available count
-#: src/components/software/SoftwarePage.tsx:245
+#: src/components/software/SoftwarePage.tsx:247
 #: src/components/software/SoftwarePatternsSelection.tsx:147
 #, javascript-format
 msgid "%1$d of %2$d selected"
 msgstr "არჩეულია %1$d %2$d-დან"
 
 #. TRANSLATORS: shown while the software proposal is not yet available
-#: src/components/software/SoftwarePage.tsx:273
+#: src/components/software/SoftwarePage.tsx:275
 msgid "No information available yet"
 msgstr "ჯერ ინფორმაცია ხელმისაწვდომი არაა"
 
 #. TRANSLATORS: empty state title when no desktop environments are available
-#: src/components/software/SoftwarePage.tsx:289
+#: src/components/software/SoftwarePage.tsx:291
 msgid "No desktops available"
 msgstr "სამუშაო გარემოები ხელმისაწვდომი არაა"
 
 #. TRANSLATORS: explanation shown when the product has no desktop environments
-#: src/components/software/SoftwarePage.tsx:291
+#: src/components/software/SoftwarePage.tsx:293
 msgid "This product does not provide desktop environments."
 msgstr "ეს პროდუქტი სამუშაო გარემოებს არ მოგაწვდით."
 
 #. TRANSLATORS: hint shown when no desktop environment has been chosen
-#: src/components/software/SoftwarePage.tsx:297
+#: src/components/software/SoftwarePage.tsx:299
 msgid "Select a desktop environment to get a graphical interface."
 msgstr "გრაფიკული ინტერფეისის მისაღებად აირჩიეთ სამუშაო გარემო."
 
 #. TRANSLATORS: button to go to the desktop environment selection page
-#: src/components/software/SoftwarePage.tsx:299
+#: src/components/software/SoftwarePage.tsx:301
 msgid "Select a desktop"
 msgstr "სამუშაო გარემოს არჩევა"
 
 #. TRANSLATORS: empty state title when no additional patterns are available
-#: src/components/software/SoftwarePage.tsx:307
+#: src/components/software/SoftwarePage.tsx:309
 msgid "No additional patterns available"
 msgstr "დამატებით ნიმუშები ხელმისაწვდომი არაა"
 
 #. TRANSLATORS: explanation shown when the product has no additional patterns
-#: src/components/software/SoftwarePage.tsx:309
+#: src/components/software/SoftwarePage.tsx:311
 msgid "This product does not provide additional patterns."
 msgstr "ეს პროდუქტი სამუშაო დამატებით ნიმუშებს."
 
 #. TRANSLATORS: hint shown when no additional software patterns have been chosen
-#: src/components/software/SoftwarePage.tsx:315
+#: src/components/software/SoftwarePage.tsx:317
 msgid "Select one or more to extend the system."
 msgstr "აირჩიეთ ერთი, ან მეტი სისტემის გასაფართოებლად."
 
 #. TRANSLATORS: button to go to the pattern selection page
-#: src/components/software/SoftwarePage.tsx:317
+#: src/components/software/SoftwarePage.tsx:319
 msgid "Select patterns"
 msgstr "ნიმუშების არჩევა"
 
-#: src/components/software/SoftwarePage.tsx:329
+#: src/components/software/SoftwarePage.tsx:331
 msgid "Desktops"
 msgstr "სამუშაო გარემოები"
 
 #. TRANSLATORS: description for the Desktops section
-#: src/components/software/SoftwarePage.tsx:332
+#: src/components/software/SoftwarePage.tsx:334
 msgid "Graphical desktop environments for the system."
 msgstr "გრაფიკული სამუშაო გარემოები სისტემისთვის."
 
 #. TRANSLATORS: button to change the desktop selection
-#: src/components/software/SoftwarePage.tsx:336
+#: src/components/software/SoftwarePage.tsx:338
 msgid "Change desktop"
 msgid_plural "Change desktops"
 msgstr[0] "სამუშაო გარემოს შეცვლა"
 msgstr[1] "სამუშაო გარემოების შეცვლა"
 
-#: src/components/software/SoftwarePage.tsx:347
+#: src/components/software/SoftwarePage.tsx:349
 msgid "Additional patterns"
 msgstr "დამატებით ნიმუშები"
 
 #. TRANSLATORS: description for the Additional software section
-#: src/components/software/SoftwarePage.tsx:350
+#: src/components/software/SoftwarePage.tsx:352
 msgid ""
 "Curated sets of packages for common use cases and features to extend the "
 "system."
 msgstr ""
 
 #. TRANSLATORS: button to change the additional software selection
-#: src/components/software/SoftwarePage.tsx:353
+#: src/components/software/SoftwarePage.tsx:355
 msgid "Change patterns"
 msgstr "ნიმუშების შეცვლა"
 
@@ -3554,6 +3576,11 @@ msgstr "აირჩიეთ, სულ ცოტა, ერთი დისკ
 #: src/components/storage/LvmPage.tsx:170
 msgid "Configure Volume Group"
 msgstr "ტომების ჯგუფის მორგება"
+
+#: src/components/storage/LvmPage.tsx:176
+#: src/components/system/HostnamePage.tsx:97
+msgid "Check the following before continuing"
+msgstr "შეამოწმეთ შემდეგი ელემენტები გაგრძელებამდე"
 
 #: src/components/storage/LvmPage.tsx:188
 msgid ""
@@ -5510,6 +5537,23 @@ msgstr "მარყუჟი"
 #: src/utils/network.ts:71
 msgid "VLAN"
 msgstr "VLAN"
+
+#~ msgid "Server options"
+#~ msgstr "სერვერის პარამეტრები"
+
+#, javascript-format
+#~ msgid "Example: %s"
+#~ msgstr "მაგ: %s"
+
+#~ msgid "Provide email address"
+#~ msgstr "შეიყვანეთ ელფოსტის მისამართი"
+
+#, javascript-format
+#~ msgid "The product will be registered with \"%s\" hostname"
+#~ msgstr "პროდუქტი დარეგისტრირდება ჰოსტის სახელით \"%s\""
+
+#~ msgid "hostname"
+#~ msgstr "ჰოსტის სახელი"
 
 #~ msgid "Patterns"
 #~ msgstr "ნიმუშები"
