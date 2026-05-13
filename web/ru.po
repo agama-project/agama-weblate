@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-13 13:23+0000\n"
+"POT-Creation-Date: 2026-05-13 14:53+0000\n"
 "PO-Revision-Date: 2026-02-26 17:04+0000\n"
 "Last-Translator: Aleksey Fedorov <Aleksejfedorov963@gmail.com>\n"
 "Language-Team: Russian <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -173,6 +173,8 @@ msgid "Use these same settings for the selected product"
 msgstr "Исп. эти же настройки для выбранного продукта"
 
 #. TRANSLATORS: label for the form submit button.
+#. TRANSLATORS: button to save hostname changes
+#. TRANSLATORS: button to save system settings changes
 #: src/components/core/InstallerL10nOptions.tsx:345
 #: src/components/core/InstallerL10nOptions.tsx:391
 #: src/components/core/InstallerL10nOptions.tsx:405
@@ -181,7 +183,8 @@ msgstr "Исп. эти же настройки для выбранного пр�
 #: src/components/storage/dasd/FormatActionHandler.tsx:95
 #: src/components/storage/dasd/FormatActionHandler.tsx:122
 #: src/components/storage/zfcp/ZFCPControllersPage.tsx:161
-#: src/components/system/HostnamePage.tsx:125
+#: src/components/system/HostnamePage.tsx:254
+#: src/components/system/SystemPage.tsx:230
 msgid "Accept"
 msgstr "Подтвердить"
 
@@ -843,7 +846,9 @@ msgid "Available devices: %s"
 msgstr "Доступные локали"
 
 #. TRANSLATORS: option label for the bridge STP configuration to use the system default.
+#. TRANSLATORS: NTP mode option
 #: src/components/network/BridgeSettings.tsx:40
+#: src/components/system/NtpSettings.tsx:68
 msgid "Default"
 msgstr ""
 
@@ -854,9 +859,11 @@ msgid "Enabled with the system default settings"
 msgstr "Невозможно изменить настройки"
 
 #. TRANSLATORS: option label for enabling bridge STP.
+#. TRANSLATORS: NTP mode option
 #: src/components/network/BridgeSettings.tsx:47
 #: src/components/product/ProductRegistrationForm.tsx:200
 #: src/components/storage/utils.ts:106 src/components/storage/utils.ts:125
+#: src/components/system/NtpSettings.tsx:75
 msgid "Custom"
 msgstr "По-своему"
 
@@ -1126,7 +1133,13 @@ msgstr "Настройки"
 msgid "Edit connection settings"
 msgstr "Изменить настройки подключения"
 
+#. TRANSLATORS: label for hostname mode selector
+#. TRANSLATORS: label for NTP mode selector
+#. TRANSLATORS: label for hostname mode selector
 #: src/components/network/ConnectionDetails.tsx:354
+#: src/components/system/HostnamePage.tsx:210
+#: src/components/system/HostnameSettings.tsx:114
+#: src/components/system/NtpSettings.tsx:63
 msgid "Mode"
 msgstr "Режим"
 
@@ -1158,6 +1171,8 @@ msgstr "Тип"
 #. TRANSLATORS: table header for an iSCSI targets table
 #. TRANSLATORS: input field for the iSCSI initiator name
 #. TRANSLATORS: label for the network connection profile name field.
+#. TRANSLATORS: label for hostname value display
+#. TRANSLATORS: label for hostname input
 #: src/components/network/ConnectionForm.tsx:449
 #: src/components/network/ConnectionsTable.tsx:148
 #: src/components/network/ConnectionsTable.tsx:272
@@ -1167,6 +1182,8 @@ msgstr "Тип"
 #: src/components/storage/iscsi/InitiatorFormPage.tsx:75
 #: src/components/storage/iscsi/TargetsTable.tsx:282
 #: src/components/storage/iscsi/TargetsTable.tsx:456
+#: src/components/system/HostnameSettings.tsx:142
+#: src/components/system/HostnameSettings.tsx:151
 msgid "Name"
 msgstr "Имя"
 
@@ -1756,8 +1773,10 @@ msgstr ""
 msgid "At least one bridge port is required"
 msgstr "Требуется значение размера"
 
+#. TRANSLATORS: fieldset legend for hostname configuration
 #: src/components/overview/HostnameSummary.tsx:47
-#: src/components/system/HostnamePage.tsx:77 src/router.tsx:52
+#: src/components/system/HostnamePage.tsx:151
+#: src/components/system/HostnameSettings.tsx:106
 msgid "Hostname"
 msgstr "Имя узла"
 
@@ -2101,6 +2120,53 @@ msgstr "Память"
 #: src/components/overview/SystemInformationSection.tsx:96
 msgid "IPs"
 msgstr "IP-адреса"
+
+#. TRANSLATORS: system hostname in summary. %s is the hostname.
+#: src/components/overview/SystemSummary.tsx:43
+#, fuzzy, javascript-format
+msgid "Name %s"
+msgstr "Имя"
+
+#. TRANSLATORS: explanation shown when hostname is transient (not static)
+#: src/components/overview/SystemSummary.tsx:57
+#, fuzzy
+msgid "Using transient name, which may change after reboot or network changes"
+msgstr ""
+"Временное имя, которое может измениться после перезагрузки или изменения "
+"сетевых настроек"
+
+#. TRANSLATORS: NTP server count shown inline (transient mode). %d is the count.
+#: src/components/overview/SystemSummary.tsx:69
+#, fuzzy, javascript-format
+msgid "%d NTP server"
+msgid_plural "%d NTP servers"
+msgstr[0] "IP сервера"
+msgstr[1] "IP сервера"
+msgstr[2] "IP сервера"
+
+#. TRANSLATORS: shown when using product default NTP servers (transient mode)
+#. TRANSLATORS: shown when using product default NTP servers (static mode)
+#: src/components/overview/SystemSummary.tsx:76
+#: src/components/overview/SystemSummary.tsx:86
+msgid "Default NTP"
+msgstr ""
+
+#. TRANSLATORS: shown when using a single custom NTP server (static mode). %s is the server address (shown in bold).
+#: src/components/overview/SystemSummary.tsx:95
+#, javascript-format
+msgid "Using %s as NTP server"
+msgstr ""
+
+#. TRANSLATORS: shown when using multiple custom NTP servers (static mode). First %s is the count, second %s is the first server address. Keep the brackets [] around the second %s - they mark bold text.
+#: src/components/overview/SystemSummary.tsx:107
+#, javascript-format
+msgid "Using %s NTP servers, including [%s]"
+msgstr ""
+
+#: src/components/overview/SystemSummary.tsx:143
+#: src/components/system/SystemPage.tsx:176 src/router.tsx:52
+msgid "System"
+msgstr ""
 
 #: src/components/overview/UsersSummary.tsx:58
 #: src/components/storage/UnusedMenu.tsx:33
@@ -3775,7 +3841,6 @@ msgid "Configure Volume Group"
 msgstr "Настройка группы томов"
 
 #: src/components/storage/LvmPage.tsx:176
-#: src/components/system/HostnamePage.tsx:97
 msgid "Check the following before continuing"
 msgstr "Прежде чем продолжить, проверьте следующее"
 
@@ -5664,59 +5729,185 @@ msgstr ""
 msgid "zFCP controllers"
 msgstr "Контроллеры"
 
-#: src/components/system/HostnamePage.tsx:62
-msgid "Enter a hostname."
-msgstr "Введите имя узла."
+#. TRANSLATORS: information shown when using transient hostname mode. "transient"
+#. refers to the hostname mode, and %s will be replaced with the current hostname value.
+#: src/components/system/HostnamePage.tsx:57
+#, fuzzy, javascript-format
+msgid "Current value: %s"
+msgstr "Текущий %s"
 
-#: src/components/system/HostnamePage.tsx:67
-msgid "Hostname successfully updated"
-msgstr "Имя узла успешно обновлено"
-
-#: src/components/system/HostnamePage.tsx:68
-msgid "Hostname could not be updated"
-msgstr "Не удалось обновить имя узла"
-
-#. TRANSLATORS: The title for a notification shown when the static hostname
-#. has not been set. "transient" refers to the hostname mode, and %s will be
-#. replaced with the current hostname value.
-#: src/components/system/HostnamePage.tsx:74
-#, javascript-format
-msgid "Using transient hostname: %s"
-msgstr "Использование переходного имени узла: %s"
-
-#: src/components/system/HostnamePage.tsx:80
-msgid "Product is already registered"
-msgstr "Продукт уже зарегистрирован"
-
-#: src/components/system/HostnamePage.tsx:82
+#: src/components/system/HostnamePage.tsx:69
+#, fuzzy
 msgid ""
-"Updating the hostname now or later will not change the currently registered "
-"hostname."
-msgstr ""
-"Обновление имени узла сейчас или позже не приведет к изменению текущего "
-"зарегистрированного имени узла."
-
-#: src/components/system/HostnamePage.tsx:89
-msgid ""
-"This hostname is dynamic and may change after a reboot or network update, as "
-"configured by the local network administrator."
+"This hostname is dynamic and [may change after a reboot or network update], "
+"as configured by the local network administrator."
 msgstr ""
 "Это имя узла является динамическим и может измениться после перезагрузки или "
 "обновления сети, как настроено администратором локальной сети."
 
-#: src/components/system/HostnamePage.tsx:104
-msgid "Use static hostname"
-msgstr "Использовать статическое имя узла"
-
-#: src/components/system/HostnamePage.tsx:105
-msgid "Set a permanent hostname that won’t change with network updates."
+#. TRANSLATORS: helper text for static hostname input.
+#. Text in square brackets will be displayed in bold.
+#: src/components/system/HostnamePage.tsx:89
+msgid "Once set, will [persist across reboots and network changes]."
 msgstr ""
-"Установить постоянное имя хоста, которое не будет меняться при обновлении "
-"сети."
 
-#: src/components/system/HostnamePage.tsx:115
-msgid "Static hostname"
-msgstr "Статическое имя узла"
+#. TRANSLATORS: validation error when static hostname value is empty
+#: src/components/system/HostnamePage.tsx:131
+#: src/components/system/systemFormValidation.ts:94
+#, fuzzy
+msgid "Enter a hostname value."
+msgstr "Введите имя узла."
+
+#. TRANSLATORS: error message when hostname update request fails
+#: src/components/system/HostnamePage.tsx:144
+msgid "Hostname could not be updated"
+msgstr "Не удалось обновить имя узла"
+
+#. TRANSLATORS: alert title warning about registered hostname not changing
+#: src/components/system/HostnamePage.tsx:158
+#: src/components/system/HostnameSettings.tsx:180
+#, fuzzy
+msgid "Registered hostname will not change"
+msgstr "Зарегистрировано без кода"
+
+#: src/components/system/HostnamePage.tsx:163
+msgid ""
+"The product is already registered. Changes made here will not affect the "
+"hostname stored at the registration server."
+msgstr ""
+
+#. TRANSLATORS: error alert title when hostname update fails
+#: src/components/system/HostnamePage.tsx:182
+#, fuzzy
+msgid "The hostname could not be saved"
+msgstr "Не удалось обновить имя инициатора"
+
+#. TRANSLATORS: success message shown after hostname is updated
+#: src/components/system/HostnamePage.tsx:201
+msgid "Hostname successfully updated"
+msgstr "Имя узла успешно обновлено"
+
+#. TRANSLATORS: hostname mode option
+#: src/components/system/HostnamePage.tsx:215
+#: src/components/system/HostnameSettings.tsx:119
+msgid "Transient"
+msgstr ""
+
+#. TRANSLATORS: description for transient hostname mode
+#: src/components/system/HostnamePage.tsx:217
+#: src/components/system/HostnameSettings.tsx:121
+#, fuzzy
+msgid "Provided by the network"
+msgstr "Обеспечение аутентификации"
+
+#. TRANSLATORS: hostname mode option
+#: src/components/system/HostnamePage.tsx:222
+#: src/components/system/HostnameSettings.tsx:126
+#, fuzzy
+msgid "Static"
+msgstr "Автоматически"
+
+#. TRANSLATORS: description for static hostname mode
+#: src/components/system/HostnamePage.tsx:224
+#: src/components/system/HostnameSettings.tsx:128
+msgid "Set manually"
+msgstr ""
+
+#. TRANSLATORS: label for static hostname input
+#: src/components/system/HostnamePage.tsx:242
+msgid "Value"
+msgstr ""
+
+#. TRANSLATORS: explanation of transient hostname behavior.
+#. Text in square brackets will be displayed in bold.
+#: src/components/system/HostnameSettings.tsx:51
+#, fuzzy
+msgid "Hostname is dynamic and [may change after a reboot or network update]."
+msgstr ""
+"Временное имя, которое может измениться после перезагрузки или изменения "
+"сетевых настроек"
+
+#. TRANSLATORS: helper text for static hostname input.
+#. Text in square brackets will be displayed in bold.
+#: src/components/system/HostnameSettings.tsx:76
+#, fuzzy
+msgid "Hostname [will remain unchanged] across reboots and network changes."
+msgstr ""
+"Временное имя, которое может измениться после перезагрузки или изменения "
+"сетевых настроек"
+
+#: src/components/system/HostnameSettings.tsx:185
+msgid ""
+"The product is already registered. Hostname changes will not affect the "
+"hostname stored at the registration server."
+msgstr ""
+
+#. TRANSLATORS: fieldset legend for NTP configuration
+#: src/components/system/NtpSettings.tsx:50
+msgid "Time Synchronization Servers"
+msgstr ""
+
+#: src/components/system/NtpSettings.tsx:55
+msgid ""
+"Configure the Network Time Protocol (NTP) servers used to set the system "
+"date and time."
+msgstr ""
+
+#. TRANSLATORS: description for default NTP mode
+#: src/components/system/NtpSettings.tsx:70
+msgid "Use product's default NTP servers"
+msgstr ""
+
+#. TRANSLATORS: description for custom NTP mode
+#: src/components/system/NtpSettings.tsx:77
+msgid "Set NTP servers manually"
+msgstr ""
+
+#. TRANSLATORS: label for NTP servers input field
+#: src/components/system/NtpSettings.tsx:91
+#, fuzzy
+msgid "Server addresses"
+msgstr "IP-адреса"
+
+#: src/components/system/NtpSettings.tsx:94
+msgid ""
+"Hostnames, IP addresses, or fully qualified domain names (FQDNs). E.g., "
+"pool.ntp.org"
+msgstr ""
+
+#. TRANSLATORS: validation error for an invalid NTP server address entry
+#: src/components/system/NtpSettings.tsx:99
+#, fuzzy
+msgid "Invalid NTP server address"
+msgstr "Нет действительного адреса."
+
+#. TRANSLATORS: error message when system settings update request fails
+#: src/components/system/SystemPage.tsx:194
+#, fuzzy
+msgid "System settings could not be updated"
+msgstr "Не удалось обновить имя узла"
+
+#. TRANSLATORS: success message shown after system settings are updated
+#: src/components/system/SystemPage.tsx:216
+#, fuzzy
+msgid "System settings successfully updated"
+msgstr "Имя узла успешно обновлено"
+
+#. TRANSLATORS: info message shown when submitting the form with no changes
+#: src/components/system/SystemPage.tsx:218
+msgid "No changes detected. System settings are already up to date."
+msgstr ""
+
+#. TRANSLATORS: validation error when no NTP servers are provided in custom mode
+#: src/components/system/systemFormValidation.ts:108
+#, fuzzy
+msgid "At least one NTP server is required"
+msgstr "Требуется значение размера"
+
+#. TRANSLATORS: validation error when some NTP server addresses are invalid
+#: src/components/system/systemFormValidation.ts:115
+msgid "Some NTP server addresses are invalid"
+msgstr ""
 
 #: src/components/users/FirstUser.tsx:57
 msgid "Define a user now"
@@ -5855,6 +6046,31 @@ msgstr ""
 #: src/utils/network.ts:71
 msgid "VLAN"
 msgstr ""
+
+#, javascript-format
+#~ msgid "Using transient hostname: %s"
+#~ msgstr "Использование переходного имени узла: %s"
+
+#~ msgid "Product is already registered"
+#~ msgstr "Продукт уже зарегистрирован"
+
+#~ msgid ""
+#~ "Updating the hostname now or later will not change the currently "
+#~ "registered hostname."
+#~ msgstr ""
+#~ "Обновление имени узла сейчас или позже не приведет к изменению текущего "
+#~ "зарегистрированного имени узла."
+
+#~ msgid "Use static hostname"
+#~ msgstr "Использовать статическое имя узла"
+
+#~ msgid "Set a permanent hostname that won’t change with network updates."
+#~ msgstr ""
+#~ "Установить постоянное имя хоста, которое не будет меняться при обновлении "
+#~ "сети."
+
+#~ msgid "Static hostname"
+#~ msgstr "Статическое имя узла"
 
 #~ msgid "Server options"
 #~ msgstr "Опции серверов"
@@ -6592,10 +6808,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "Hostname settings"
 #~ msgstr "Шифрование"
-
-#, fuzzy, c-format
-#~ msgid "static"
-#~ msgstr "Автоматически"
 
 #, fuzzy
 #~ msgid "Product registration form"
