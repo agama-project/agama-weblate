@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-13 13:23+0000\n"
+"POT-Creation-Date: 2026-05-13 14:53+0000\n"
 "PO-Revision-Date: 2026-02-23 21:04+0000\n"
 "Last-Translator: Efstathios Iosifidis <eiosifidis@yandex.com>\n"
 "Language-Team: Greek <https://l10n.opensuse.org/projects/agama/agama-web/el/"
@@ -175,6 +175,8 @@ msgid "Use these same settings for the selected product"
 msgstr "Χρήση των ίδιων ρυθμίσεων για το επιλεγμένο προϊόν"
 
 #. TRANSLATORS: label for the form submit button.
+#. TRANSLATORS: button to save hostname changes
+#. TRANSLATORS: button to save system settings changes
 #: src/components/core/InstallerL10nOptions.tsx:345
 #: src/components/core/InstallerL10nOptions.tsx:391
 #: src/components/core/InstallerL10nOptions.tsx:405
@@ -183,7 +185,8 @@ msgstr "Χρήση των ίδιων ρυθμίσεων για το επιλεγ
 #: src/components/storage/dasd/FormatActionHandler.tsx:95
 #: src/components/storage/dasd/FormatActionHandler.tsx:122
 #: src/components/storage/zfcp/ZFCPControllersPage.tsx:161
-#: src/components/system/HostnamePage.tsx:125
+#: src/components/system/HostnamePage.tsx:254
+#: src/components/system/SystemPage.tsx:230
 msgid "Accept"
 msgstr "Αποδοχή"
 
@@ -846,7 +849,9 @@ msgid "Available devices: %s"
 msgstr "Χρήση συσκευής %s"
 
 #. TRANSLATORS: option label for the bridge STP configuration to use the system default.
+#. TRANSLATORS: NTP mode option
 #: src/components/network/BridgeSettings.tsx:40
+#: src/components/system/NtpSettings.tsx:68
 msgid "Default"
 msgstr ""
 
@@ -857,9 +862,11 @@ msgid "Enabled with the system default settings"
 msgstr "Αδυναμία τροποποίησης των ρυθμίσεων"
 
 #. TRANSLATORS: option label for enabling bridge STP.
+#. TRANSLATORS: NTP mode option
 #: src/components/network/BridgeSettings.tsx:47
 #: src/components/product/ProductRegistrationForm.tsx:200
 #: src/components/storage/utils.ts:106 src/components/storage/utils.ts:125
+#: src/components/system/NtpSettings.tsx:75
 msgid "Custom"
 msgstr "Προσαρμοσμένο"
 
@@ -1127,7 +1134,13 @@ msgstr "Ρυθμίσεις"
 msgid "Edit connection settings"
 msgstr "Επεξεργασία ρυθμίσεων σύνδεσης"
 
+#. TRANSLATORS: label for hostname mode selector
+#. TRANSLATORS: label for NTP mode selector
+#. TRANSLATORS: label for hostname mode selector
 #: src/components/network/ConnectionDetails.tsx:354
+#: src/components/system/HostnamePage.tsx:210
+#: src/components/system/HostnameSettings.tsx:114
+#: src/components/system/NtpSettings.tsx:63
 msgid "Mode"
 msgstr "Λειτουργία"
 
@@ -1159,6 +1172,8 @@ msgstr "Τύπος"
 #. TRANSLATORS: table header for an iSCSI targets table
 #. TRANSLATORS: input field for the iSCSI initiator name
 #. TRANSLATORS: label for the network connection profile name field.
+#. TRANSLATORS: label for hostname value display
+#. TRANSLATORS: label for hostname input
 #: src/components/network/ConnectionForm.tsx:449
 #: src/components/network/ConnectionsTable.tsx:148
 #: src/components/network/ConnectionsTable.tsx:272
@@ -1168,6 +1183,8 @@ msgstr "Τύπος"
 #: src/components/storage/iscsi/InitiatorFormPage.tsx:75
 #: src/components/storage/iscsi/TargetsTable.tsx:282
 #: src/components/storage/iscsi/TargetsTable.tsx:456
+#: src/components/system/HostnameSettings.tsx:142
+#: src/components/system/HostnameSettings.tsx:151
 msgid "Name"
 msgstr "Όνομα"
 
@@ -1756,8 +1773,10 @@ msgid "At least one bridge port is required"
 msgstr ""
 "Πρέπει να δοθεί τουλάχιστον μία διεύθυνση για την επιλεγμένη λειτουργία"
 
+#. TRANSLATORS: fieldset legend for hostname configuration
 #: src/components/overview/HostnameSummary.tsx:47
-#: src/components/system/HostnamePage.tsx:77 src/router.tsx:52
+#: src/components/system/HostnamePage.tsx:151
+#: src/components/system/HostnameSettings.tsx:106
 msgid "Hostname"
 msgstr "Όνομα συστήματος"
 
@@ -2100,6 +2119,54 @@ msgstr "Μνήμη"
 #: src/components/overview/SystemInformationSection.tsx:96
 msgid "IPs"
 msgstr "Διευθύνσεις IP"
+
+#. TRANSLATORS: system hostname in summary. %s is the hostname.
+#: src/components/overview/SystemSummary.tsx:43
+#, fuzzy, javascript-format
+#| msgid "Name"
+msgid "Name %s"
+msgstr "Όνομα"
+
+#. TRANSLATORS: explanation shown when hostname is transient (not static)
+#: src/components/overview/SystemSummary.tsx:57
+#, fuzzy
+#| msgid "Temporary name that may change after reboot or network changes"
+msgid "Using transient name, which may change after reboot or network changes"
+msgstr ""
+"Προσωρινό όνομα που ενδέχεται να αλλάξει μετά από επανεκκίνηση ή αλλαγές "
+"δικτύου"
+
+#. TRANSLATORS: NTP server count shown inline (transient mode). %d is the count.
+#: src/components/overview/SystemSummary.tsx:69
+#, fuzzy, javascript-format
+msgid "%d NTP server"
+msgid_plural "%d NTP servers"
+msgstr[0] "IP διακομιστή"
+msgstr[1] "IP διακομιστή"
+
+#. TRANSLATORS: shown when using product default NTP servers (transient mode)
+#. TRANSLATORS: shown when using product default NTP servers (static mode)
+#: src/components/overview/SystemSummary.tsx:76
+#: src/components/overview/SystemSummary.tsx:86
+msgid "Default NTP"
+msgstr ""
+
+#. TRANSLATORS: shown when using a single custom NTP server (static mode). %s is the server address (shown in bold).
+#: src/components/overview/SystemSummary.tsx:95
+#, javascript-format
+msgid "Using %s as NTP server"
+msgstr ""
+
+#. TRANSLATORS: shown when using multiple custom NTP servers (static mode). First %s is the count, second %s is the first server address. Keep the brackets [] around the second %s - they mark bold text.
+#: src/components/overview/SystemSummary.tsx:107
+#, javascript-format
+msgid "Using %s NTP servers, including [%s]"
+msgstr ""
+
+#: src/components/overview/SystemSummary.tsx:143
+#: src/components/system/SystemPage.tsx:176 src/router.tsx:52
+msgid "System"
+msgstr ""
 
 #: src/components/overview/UsersSummary.tsx:58
 #: src/components/storage/UnusedMenu.tsx:33
@@ -3769,7 +3836,6 @@ msgid "Configure Volume Group"
 msgstr "Ρύθμιση ομάδας τόμων"
 
 #: src/components/storage/LvmPage.tsx:176
-#: src/components/system/HostnamePage.tsx:97
 msgid "Check the following before continuing"
 msgstr "Ελέγξτε τα παρακάτω πριν συνεχίσετε"
 
@@ -5658,60 +5724,200 @@ msgstr ""
 msgid "zFCP controllers"
 msgstr "Ελεγκτές"
 
-#: src/components/system/HostnamePage.tsx:62
-msgid "Enter a hostname."
-msgstr "Εισαγάγετε ένα όνομα συστήματος."
+#. TRANSLATORS: information shown when using transient hostname mode. "transient"
+#. refers to the hostname mode, and %s will be replaced with the current hostname value.
+#: src/components/system/HostnamePage.tsx:57
+#, fuzzy, javascript-format
+#| msgid "Current %s"
+msgid "Current value: %s"
+msgstr "Τρέχον %s"
 
-#: src/components/system/HostnamePage.tsx:67
-msgid "Hostname successfully updated"
-msgstr "Το όνομα συστήματος ενημερώθηκε επιτυχώς"
-
-#: src/components/system/HostnamePage.tsx:68
-msgid "Hostname could not be updated"
-msgstr "Αδυναμία ενημέρωσης του ονόματος συστήματος"
-
-#. TRANSLATORS: The title for a notification shown when the static hostname
-#. has not been set. "transient" refers to the hostname mode, and %s will be
-#. replaced with the current hostname value.
-#: src/components/system/HostnamePage.tsx:74
-#, javascript-format
-msgid "Using transient hostname: %s"
-msgstr "Χρήση προσωρινού ονόματος συστήματος: %s"
-
-#: src/components/system/HostnamePage.tsx:80
-msgid "Product is already registered"
-msgstr "Το προϊόν είναι ήδη εγγεγραμμένο"
-
-#: src/components/system/HostnamePage.tsx:82
+#: src/components/system/HostnamePage.tsx:69
+#, fuzzy
+#| msgid ""
+#| "This hostname is dynamic and may change after a reboot or network update, "
+#| "as configured by the local network administrator."
 msgid ""
-"Updating the hostname now or later will not change the currently registered "
-"hostname."
-msgstr ""
-"Η ενημέρωση του ονόματος συστήματος τώρα ή αργότερα δεν θα αλλάξει το ήδη "
-"εγγεγραμμένο όνομα συστήματος."
-
-#: src/components/system/HostnamePage.tsx:89
-msgid ""
-"This hostname is dynamic and may change after a reboot or network update, as "
-"configured by the local network administrator."
+"This hostname is dynamic and [may change after a reboot or network update], "
+"as configured by the local network administrator."
 msgstr ""
 "Αυτό το όνομα συστήματος είναι δυναμικό και ενδέχεται να αλλάξει μετά από "
 "επανεκκίνηση ή ενημέρωση δικτύου, σύμφωνα με τις ρυθμίσεις του διαχειριστή "
 "δικτύου."
 
-#: src/components/system/HostnamePage.tsx:104
-msgid "Use static hostname"
-msgstr "Χρήση στατικού ονόματος συστήματος"
-
-#: src/components/system/HostnamePage.tsx:105
-msgid "Set a permanent hostname that won’t change with network updates."
+#. TRANSLATORS: helper text for static hostname input.
+#. Text in square brackets will be displayed in bold.
+#: src/components/system/HostnamePage.tsx:89
+msgid "Once set, will [persist across reboots and network changes]."
 msgstr ""
-"Ορίστε ένα μόνιμο όνομα συστήματος που δεν θα αλλάζει με τις ενημερώσεις "
-"δικτύου."
 
-#: src/components/system/HostnamePage.tsx:115
-msgid "Static hostname"
-msgstr "Στατικό όνομα συστήματος"
+#. TRANSLATORS: validation error when static hostname value is empty
+#: src/components/system/HostnamePage.tsx:131
+#: src/components/system/systemFormValidation.ts:94
+#, fuzzy
+#| msgid "Enter a hostname."
+msgid "Enter a hostname value."
+msgstr "Εισαγάγετε ένα όνομα συστήματος."
+
+#. TRANSLATORS: error message when hostname update request fails
+#: src/components/system/HostnamePage.tsx:144
+msgid "Hostname could not be updated"
+msgstr "Αδυναμία ενημέρωσης του ονόματος συστήματος"
+
+#. TRANSLATORS: alert title warning about registered hostname not changing
+#: src/components/system/HostnamePage.tsx:158
+#: src/components/system/HostnameSettings.tsx:180
+#, fuzzy
+#| msgid "Registered without a code"
+msgid "Registered hostname will not change"
+msgstr "Εγγράφηκε χωρίς κωδικό"
+
+#: src/components/system/HostnamePage.tsx:163
+msgid ""
+"The product is already registered. Changes made here will not affect the "
+"hostname stored at the registration server."
+msgstr ""
+
+#. TRANSLATORS: error alert title when hostname update fails
+#: src/components/system/HostnamePage.tsx:182
+#, fuzzy
+msgid "The hostname could not be saved"
+msgstr "Αδυναμία ενημέρωσης του ονόματος συστήματος"
+
+#. TRANSLATORS: success message shown after hostname is updated
+#: src/components/system/HostnamePage.tsx:201
+msgid "Hostname successfully updated"
+msgstr "Το όνομα συστήματος ενημερώθηκε επιτυχώς"
+
+#. TRANSLATORS: hostname mode option
+#: src/components/system/HostnamePage.tsx:215
+#: src/components/system/HostnameSettings.tsx:119
+msgid "Transient"
+msgstr ""
+
+#. TRANSLATORS: description for transient hostname mode
+#: src/components/system/HostnamePage.tsx:217
+#: src/components/system/HostnameSettings.tsx:121
+#, fuzzy
+#| msgid "Provide authentication"
+msgid "Provided by the network"
+msgstr "Παροχή πιστοποίησης"
+
+#. TRANSLATORS: hostname mode option
+#: src/components/system/HostnamePage.tsx:222
+#: src/components/system/HostnameSettings.tsx:126
+#, fuzzy
+#| msgid "Status"
+msgid "Static"
+msgstr "Κατάσταση"
+
+#. TRANSLATORS: description for static hostname mode
+#: src/components/system/HostnamePage.tsx:224
+#: src/components/system/HostnameSettings.tsx:128
+msgid "Set manually"
+msgstr ""
+
+#. TRANSLATORS: label for static hostname input
+#: src/components/system/HostnamePage.tsx:242
+msgid "Value"
+msgstr ""
+
+#. TRANSLATORS: explanation of transient hostname behavior.
+#. Text in square brackets will be displayed in bold.
+#: src/components/system/HostnameSettings.tsx:51
+#, fuzzy
+#| msgid "Temporary name that may change after reboot or network changes"
+msgid "Hostname is dynamic and [may change after a reboot or network update]."
+msgstr ""
+"Προσωρινό όνομα που ενδέχεται να αλλάξει μετά από επανεκκίνηση ή αλλαγές "
+"δικτύου"
+
+#. TRANSLATORS: helper text for static hostname input.
+#. Text in square brackets will be displayed in bold.
+#: src/components/system/HostnameSettings.tsx:76
+#, fuzzy
+#| msgid "Temporary name that may change after reboot or network changes"
+msgid "Hostname [will remain unchanged] across reboots and network changes."
+msgstr ""
+"Προσωρινό όνομα που ενδέχεται να αλλάξει μετά από επανεκκίνηση ή αλλαγές "
+"δικτύου"
+
+#: src/components/system/HostnameSettings.tsx:185
+msgid ""
+"The product is already registered. Hostname changes will not affect the "
+"hostname stored at the registration server."
+msgstr ""
+
+#. TRANSLATORS: fieldset legend for NTP configuration
+#: src/components/system/NtpSettings.tsx:50
+msgid "Time Synchronization Servers"
+msgstr ""
+
+#: src/components/system/NtpSettings.tsx:55
+msgid ""
+"Configure the Network Time Protocol (NTP) servers used to set the system "
+"date and time."
+msgstr ""
+
+#. TRANSLATORS: description for default NTP mode
+#: src/components/system/NtpSettings.tsx:70
+msgid "Use product's default NTP servers"
+msgstr ""
+
+#. TRANSLATORS: description for custom NTP mode
+#: src/components/system/NtpSettings.tsx:77
+msgid "Set NTP servers manually"
+msgstr ""
+
+#. TRANSLATORS: label for NTP servers input field
+#: src/components/system/NtpSettings.tsx:91
+#, fuzzy
+#| msgid "IP addresses"
+msgid "Server addresses"
+msgstr "Διευθύνσεις IP"
+
+#: src/components/system/NtpSettings.tsx:94
+msgid ""
+"Hostnames, IP addresses, or fully qualified domain names (FQDNs). E.g., "
+"pool.ntp.org"
+msgstr ""
+
+#. TRANSLATORS: validation error for an invalid NTP server address entry
+#: src/components/system/NtpSettings.tsx:99
+#, fuzzy
+msgid "Invalid NTP server address"
+msgstr "Μη έγκυρη διεύθυνση."
+
+#. TRANSLATORS: error message when system settings update request fails
+#: src/components/system/SystemPage.tsx:194
+#, fuzzy
+#| msgid "Hostname could not be updated"
+msgid "System settings could not be updated"
+msgstr "Αδυναμία ενημέρωσης του ονόματος συστήματος"
+
+#. TRANSLATORS: success message shown after system settings are updated
+#: src/components/system/SystemPage.tsx:216
+#, fuzzy
+#| msgid "Hostname successfully updated"
+msgid "System settings successfully updated"
+msgstr "Το όνομα συστήματος ενημερώθηκε επιτυχώς"
+
+#. TRANSLATORS: info message shown when submitting the form with no changes
+#: src/components/system/SystemPage.tsx:218
+msgid "No changes detected. System settings are already up to date."
+msgstr ""
+
+#. TRANSLATORS: validation error when no NTP servers are provided in custom mode
+#: src/components/system/systemFormValidation.ts:108
+#, fuzzy
+msgid "At least one NTP server is required"
+msgstr ""
+"Πρέπει να δοθεί τουλάχιστον μία διεύθυνση για την επιλεγμένη λειτουργία"
+
+#. TRANSLATORS: validation error when some NTP server addresses are invalid
+#: src/components/system/systemFormValidation.ts:115
+msgid "Some NTP server addresses are invalid"
+msgstr ""
 
 #: src/components/users/FirstUser.tsx:57
 msgid "Define a user now"
@@ -5849,6 +6055,31 @@ msgstr ""
 #: src/utils/network.ts:71
 msgid "VLAN"
 msgstr ""
+
+#, javascript-format
+#~ msgid "Using transient hostname: %s"
+#~ msgstr "Χρήση προσωρινού ονόματος συστήματος: %s"
+
+#~ msgid "Product is already registered"
+#~ msgstr "Το προϊόν είναι ήδη εγγεγραμμένο"
+
+#~ msgid ""
+#~ "Updating the hostname now or later will not change the currently "
+#~ "registered hostname."
+#~ msgstr ""
+#~ "Η ενημέρωση του ονόματος συστήματος τώρα ή αργότερα δεν θα αλλάξει το ήδη "
+#~ "εγγεγραμμένο όνομα συστήματος."
+
+#~ msgid "Use static hostname"
+#~ msgstr "Χρήση στατικού ονόματος συστήματος"
+
+#~ msgid "Set a permanent hostname that won’t change with network updates."
+#~ msgstr ""
+#~ "Ορίστε ένα μόνιμο όνομα συστήματος που δεν θα αλλάζει με τις ενημερώσεις "
+#~ "δικτύου."
+
+#~ msgid "Static hostname"
+#~ msgstr "Στατικό όνομα συστήματος"
 
 #~ msgid "Server options"
 #~ msgstr "Επιλογές διακομιστή"
