@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-05-13 14:53+0000\n"
-"PO-Revision-Date: 2026-05-13 05:04+0000\n"
+"PO-Revision-Date: 2026-05-14 09:12+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/agama/agama-web/"
 "ja/>\n"
@@ -2069,47 +2069,47 @@ msgstr "IP アドレス"
 
 #. TRANSLATORS: system hostname in summary. %s is the hostname.
 #: src/components/overview/SystemSummary.tsx:43
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "Name %s"
-msgstr "名前"
+msgstr "名前: %s"
 
 #. TRANSLATORS: explanation shown when hostname is transient (not static)
 #: src/components/overview/SystemSummary.tsx:57
-#, fuzzy
 msgid "Using transient name, which may change after reboot or network changes"
-msgstr "システムの再起動やネットワーク側の変更により変わりうる一時的な名前です"
+msgstr ""
+"システムの再起動やネットワーク側の変更により変わりうる一時的な名前を使用して"
+"います"
 
 #. TRANSLATORS: NTP server count shown inline (transient mode). %d is the count.
 #: src/components/overview/SystemSummary.tsx:69
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "%d NTP server"
 msgid_plural "%d NTP servers"
-msgstr[0] "DNS サーバ"
+msgstr[0] "%d 個の NTP サーバ"
 
 #. TRANSLATORS: shown when using product default NTP servers (transient mode)
 #. TRANSLATORS: shown when using product default NTP servers (static mode)
 #: src/components/overview/SystemSummary.tsx:76
 #: src/components/overview/SystemSummary.tsx:86
-#, fuzzy
 msgid "Default NTP"
-msgstr "既定値"
+msgstr "既定の NTP サーバ"
 
 #. TRANSLATORS: shown when using a single custom NTP server (static mode). %s is the server address (shown in bold).
 #: src/components/overview/SystemSummary.tsx:95
 #, javascript-format
 msgid "Using %s as NTP server"
-msgstr ""
+msgstr "%s を NTP サーバとして使用"
 
 #. TRANSLATORS: shown when using multiple custom NTP servers (static mode). First %s is the count, second %s is the first server address. Keep the brackets [] around the second %s - they mark bold text.
 #: src/components/overview/SystemSummary.tsx:107
 #, javascript-format
 msgid "Using %s NTP servers, including [%s]"
-msgstr ""
+msgstr "%s 個の NTP サーバを使用 [%s ほか]"
 
 #: src/components/overview/SystemSummary.tsx:143
 #: src/components/system/SystemPage.tsx:176 src/router.tsx:52
 msgid "System"
-msgstr ""
+msgstr "システム"
 
 #: src/components/overview/UsersSummary.tsx:58
 #: src/components/storage/UnusedMenu.tsx:33
@@ -5490,29 +5490,29 @@ msgstr "zFCP コントローラ"
 #. TRANSLATORS: information shown when using transient hostname mode. "transient"
 #. refers to the hostname mode, and %s will be replaced with the current hostname value.
 #: src/components/system/HostnamePage.tsx:57
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "Current value: %s"
-msgstr "現在の %s"
+msgstr "現在の値: %s"
 
 #: src/components/system/HostnamePage.tsx:69
-#, fuzzy
 msgid ""
 "This hostname is dynamic and [may change after a reboot or network update], "
 "as configured by the local network administrator."
 msgstr ""
-"ホスト名は動的なものとなります。ご利用のネットワークの設定に依存しますが、再"
-"起動やネットワーク側の変更によって変わってしまう場合があります。"
+"ホスト名は動的なものとなります。ご利用のネットワークの仕様に依存しますが、 "
+"[再起動やネットワーク側の変更によって変わってしまう場合があります] 。"
 
 #. TRANSLATORS: helper text for static hostname input.
 #. Text in square brackets will be displayed in bold.
 #: src/components/system/HostnamePage.tsx:89
 msgid "Once set, will [persist across reboots and network changes]."
 msgstr ""
+"設定を行うと、 [再起動やネットワーク側の変更が発生しても変わらなくなります] "
+"。"
 
 #. TRANSLATORS: validation error when static hostname value is empty
 #: src/components/system/HostnamePage.tsx:131
 #: src/components/system/systemFormValidation.ts:94
-#, fuzzy
 msgid "Enter a hostname value."
 msgstr "ホスト名を入力してください。"
 
@@ -5524,21 +5524,21 @@ msgstr "ホスト名を更新できませんでした"
 #. TRANSLATORS: alert title warning about registered hostname not changing
 #: src/components/system/HostnamePage.tsx:158
 #: src/components/system/HostnameSettings.tsx:180
-#, fuzzy
 msgid "Registered hostname will not change"
-msgstr "コード無しで登録済み"
+msgstr "登録済みの場合、ホスト名は変更できません"
 
 #: src/components/system/HostnamePage.tsx:163
 msgid ""
 "The product is already registered. Changes made here will not affect the "
 "hostname stored at the registration server."
 msgstr ""
+"製品は既に登録済みです。ここで変更を行っても、登録サーバ内に記録されている"
+"ホスト名は変更されません。"
 
 #. TRANSLATORS: error alert title when hostname update fails
 #: src/components/system/HostnamePage.tsx:182
-#, fuzzy
 msgid "The hostname could not be saved"
-msgstr "接続を保存できませんでした"
+msgstr "ホスト名を保存できませんでした"
 
 #. TRANSLATORS: success message shown after hostname is updated
 #: src/components/system/HostnamePage.tsx:201
@@ -5548,123 +5548,119 @@ msgstr "ホスト名を更新しました"
 #. TRANSLATORS: hostname mode option
 #: src/components/system/HostnamePage.tsx:215
 #: src/components/system/HostnameSettings.tsx:119
-#, fuzzy
 msgid "Transient"
-msgstr "暫定の"
+msgstr "暫定"
 
 #. TRANSLATORS: description for transient hostname mode
 #: src/components/system/HostnamePage.tsx:217
 #: src/components/system/HostnameSettings.tsx:121
-#, fuzzy
 msgid "Provided by the network"
-msgstr "認証情報を設定"
+msgstr "ネットワーク側から提示済み"
 
 #. TRANSLATORS: hostname mode option
 #: src/components/system/HostnamePage.tsx:222
 #: src/components/system/HostnameSettings.tsx:126
-#, fuzzy
 msgid "Static"
-msgstr "固定の"
+msgstr "固定"
 
 #. TRANSLATORS: description for static hostname mode
 #: src/components/system/HostnamePage.tsx:224
 #: src/components/system/HostnameSettings.tsx:128
 msgid "Set manually"
-msgstr ""
+msgstr "手動設定"
 
 #. TRANSLATORS: label for static hostname input
 #: src/components/system/HostnamePage.tsx:242
 msgid "Value"
-msgstr ""
+msgstr "値"
 
 #. TRANSLATORS: explanation of transient hostname behavior.
 #. Text in square brackets will be displayed in bold.
 #: src/components/system/HostnameSettings.tsx:51
-#, fuzzy
 msgid "Hostname is dynamic and [may change after a reboot or network update]."
-msgstr "システムの再起動やネットワーク側の変更により変わりうる一時的な名前です"
+msgstr "[システムの再起動やネットワーク側の変更により変わりうる] 一時的な名前です。"
 
 #. TRANSLATORS: helper text for static hostname input.
 #. Text in square brackets will be displayed in bold.
 #: src/components/system/HostnameSettings.tsx:76
-#, fuzzy
 msgid "Hostname [will remain unchanged] across reboots and network changes."
-msgstr "システムの再起動やネットワーク側の変更により変わりうる一時的な名前です"
+msgstr ""
+"システムの再起動やネットワークの変更を行っても、ホスト名は [変更されません] "
+"。"
 
 #: src/components/system/HostnameSettings.tsx:185
 msgid ""
 "The product is already registered. Hostname changes will not affect the "
 "hostname stored at the registration server."
 msgstr ""
+"製品は既に登録済みです。ここで変更を行っても、登録サーバ内に記録されている"
+"ホスト名は変更されません。"
 
 #. TRANSLATORS: fieldset legend for NTP configuration
 #: src/components/system/NtpSettings.tsx:50
 msgid "Time Synchronization Servers"
-msgstr ""
+msgstr "時刻同期サーバ"
 
 #: src/components/system/NtpSettings.tsx:55
 msgid ""
 "Configure the Network Time Protocol (NTP) servers used to set the system "
 "date and time."
 msgstr ""
+"Network Time Protocol (NTP) サーバを設定することで、システムの日時を自動設定"
+"することができます。"
 
 #. TRANSLATORS: description for default NTP mode
 #: src/components/system/NtpSettings.tsx:70
-#, fuzzy
 msgid "Use product's default NTP servers"
-msgstr "独自の DNS サーバを使用"
+msgstr "製品既定の NTP サーバを使用"
 
 #. TRANSLATORS: description for custom NTP mode
 #: src/components/system/NtpSettings.tsx:77
 msgid "Set NTP servers manually"
-msgstr ""
+msgstr "NTP サーバを指定する"
 
 #. TRANSLATORS: label for NTP servers input field
 #: src/components/system/NtpSettings.tsx:91
-#, fuzzy
 msgid "Server addresses"
-msgstr "IP アドレス"
+msgstr "サーバアドレス"
 
 #: src/components/system/NtpSettings.tsx:94
 msgid ""
 "Hostnames, IP addresses, or fully qualified domain names (FQDNs). E.g., "
 "pool.ntp.org"
 msgstr ""
+"ホスト名／IP アドレス／完全修飾ドメイン名 (FQDN) のいずれかを入力します。例: "
+"pool.ntp.org"
 
 #. TRANSLATORS: validation error for an invalid NTP server address entry
 #: src/components/system/NtpSettings.tsx:99
-#, fuzzy
 msgid "Invalid NTP server address"
-msgstr "DNS サーバのアドレスが正しくありません"
+msgstr "NTP サーバのアドレスが正しくありません"
 
 #. TRANSLATORS: error message when system settings update request fails
 #: src/components/system/SystemPage.tsx:194
-#, fuzzy
 msgid "System settings could not be updated"
-msgstr "ホスト名を更新できませんでした"
+msgstr "システム設定を更新できませんでした"
 
 #. TRANSLATORS: success message shown after system settings are updated
 #: src/components/system/SystemPage.tsx:216
-#, fuzzy
 msgid "System settings successfully updated"
-msgstr "ホスト名を更新しました"
+msgstr "システム設定を更新しました"
 
 #. TRANSLATORS: info message shown when submitting the form with no changes
 #: src/components/system/SystemPage.tsx:218
 msgid "No changes detected. System settings are already up to date."
-msgstr ""
+msgstr "何も変更されていません。システム設定は既に最新の状態です。"
 
 #. TRANSLATORS: validation error when no NTP servers are provided in custom mode
 #: src/components/system/systemFormValidation.ts:108
-#, fuzzy
 msgid "At least one NTP server is required"
-msgstr "1 つ以上の DNS サーバを設定する必要があります"
+msgstr "1 つ以上の NTP サーバを設定する必要があります"
 
 #. TRANSLATORS: validation error when some NTP server addresses are invalid
 #: src/components/system/systemFormValidation.ts:115
-#, fuzzy
 msgid "Some NTP server addresses are invalid"
-msgstr "DNS サーバの中に正しくないものがあります"
+msgstr "NTP サーバの中に正しくないものがあります"
 
 #: src/components/users/FirstUser.tsx:57
 msgid "Define a user now"
