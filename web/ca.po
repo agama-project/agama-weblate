@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-05-13 14:53+0000\n"
-"PO-Revision-Date: 2026-05-13 09:12+0000\n"
+"PO-Revision-Date: 2026-05-14 08:12+0000\n"
 "Last-Translator: David Medina <medipas@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.opensuse.org/projects/agama/agama-web/"
 "ca/>\n"
@@ -2086,48 +2086,48 @@ msgstr "IPs"
 
 #. TRANSLATORS: system hostname in summary. %s is the hostname.
 #: src/components/overview/SystemSummary.tsx:43
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "Name %s"
-msgstr "Nom"
+msgstr "Nom: %s"
 
 #. TRANSLATORS: explanation shown when hostname is transient (not static)
 #: src/components/overview/SystemSummary.tsx:57
-#, fuzzy
 msgid "Using transient name, which may change after reboot or network changes"
-msgstr "Nom temporal que pot canviar després d'un reinici o canvis de xarxa"
+msgstr ""
+"S'usa un nom transitori, que pot canviar després d'un reinici o de canvi de "
+"xarxa."
 
 #. TRANSLATORS: NTP server count shown inline (transient mode). %d is the count.
 #: src/components/overview/SystemSummary.tsx:69
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "%d NTP server"
 msgid_plural "%d NTP servers"
-msgstr[0] "Servidors DNS"
-msgstr[1] "Servidors DNS"
+msgstr[0] "%d servidor NTP"
+msgstr[1] "%d servidors NTP"
 
 #. TRANSLATORS: shown when using product default NTP servers (transient mode)
 #. TRANSLATORS: shown when using product default NTP servers (static mode)
 #: src/components/overview/SystemSummary.tsx:76
 #: src/components/overview/SystemSummary.tsx:86
-#, fuzzy
 msgid "Default NTP"
-msgstr "Per defecte"
+msgstr "NTP per defecte"
 
 #. TRANSLATORS: shown when using a single custom NTP server (static mode). %s is the server address (shown in bold).
 #: src/components/overview/SystemSummary.tsx:95
 #, javascript-format
 msgid "Using %s as NTP server"
-msgstr ""
+msgstr "S'usa %s com a servidor NTP"
 
 #. TRANSLATORS: shown when using multiple custom NTP servers (static mode). First %s is the count, second %s is the first server address. Keep the brackets [] around the second %s - they mark bold text.
 #: src/components/overview/SystemSummary.tsx:107
 #, javascript-format
 msgid "Using %s NTP servers, including [%s]"
-msgstr ""
+msgstr "S'usen %s servidors NTP, incloent-hi [%s]"
 
 #: src/components/overview/SystemSummary.tsx:143
 #: src/components/system/SystemPage.tsx:176 src/router.tsx:52
 msgid "System"
-msgstr ""
+msgstr "Sistema"
 
 #: src/components/overview/UsersSummary.tsx:58
 #: src/components/storage/UnusedMenu.tsx:33
@@ -5562,32 +5562,30 @@ msgstr "Controladors de zFCP"
 #. TRANSLATORS: information shown when using transient hostname mode. "transient"
 #. refers to the hostname mode, and %s will be replaced with the current hostname value.
 #: src/components/system/HostnamePage.tsx:57
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "Current value: %s"
-msgstr "Actual: %s"
+msgstr "Valor actual: %s"
 
 #: src/components/system/HostnamePage.tsx:69
-#, fuzzy
 msgid ""
 "This hostname is dynamic and [may change after a reboot or network update], "
 "as configured by the local network administrator."
 msgstr ""
-"Aquest nom d'amfitrió és dinàmic i pot canviar després d'un reinici o una "
-"actualització per xarxa, tal com el configura l'administrador de la xarxa "
-"local."
+"Aquest nom d'amfitrió és dinàmic i [pot canviar després d'un reinici o una "
+"actualització de xarxa], tal com ho ha configurat l'administrador de la "
+"xarxa local."
 
 #. TRANSLATORS: helper text for static hostname input.
 #. Text in square brackets will be displayed in bold.
 #: src/components/system/HostnamePage.tsx:89
 msgid "Once set, will [persist across reboots and network changes]."
-msgstr ""
+msgstr "Un cop establert, [persistirà després de reiniciar i canviar de xarxa]."
 
 #. TRANSLATORS: validation error when static hostname value is empty
 #: src/components/system/HostnamePage.tsx:131
 #: src/components/system/systemFormValidation.ts:94
-#, fuzzy
 msgid "Enter a hostname value."
-msgstr "Introduïu un nom d'amfitrió."
+msgstr "Introduïu un valor de nom d'amfitrió."
 
 #. TRANSLATORS: error message when hostname update request fails
 #: src/components/system/HostnamePage.tsx:144
@@ -5597,21 +5595,21 @@ msgstr "No s'ha pogut actualitzar el nom d'amfitrió"
 #. TRANSLATORS: alert title warning about registered hostname not changing
 #: src/components/system/HostnamePage.tsx:158
 #: src/components/system/HostnameSettings.tsx:180
-#, fuzzy
 msgid "Registered hostname will not change"
-msgstr "Registrat sense codi"
+msgstr "El nom d'amfitrió registrat no canviarà"
 
 #: src/components/system/HostnamePage.tsx:163
 msgid ""
 "The product is already registered. Changes made here will not affect the "
 "hostname stored at the registration server."
 msgstr ""
+"El producte ja està registrat. Els canvis fets aquí no afectaran el nom "
+"d'amfitrió desat al servidor de registre."
 
 #. TRANSLATORS: error alert title when hostname update fails
 #: src/components/system/HostnamePage.tsx:182
-#, fuzzy
 msgid "The hostname could not be saved"
-msgstr "No s'ha pogut desar la connexió"
+msgstr "No s'ha pogut desar el nom d'amfitrió."
 
 #. TRANSLATORS: success message shown after hostname is updated
 #: src/components/system/HostnamePage.tsx:201
@@ -5621,123 +5619,122 @@ msgstr "El nom d'amfitrió s'ha actualitzat correctament"
 #. TRANSLATORS: hostname mode option
 #: src/components/system/HostnamePage.tsx:215
 #: src/components/system/HostnameSettings.tsx:119
-#, fuzzy
 msgid "Transient"
-msgstr "transitori"
+msgstr "Transitori"
 
 #. TRANSLATORS: description for transient hostname mode
 #: src/components/system/HostnamePage.tsx:217
 #: src/components/system/HostnameSettings.tsx:121
-#, fuzzy
 msgid "Provided by the network"
-msgstr "Proporcioneu l'autenticació"
+msgstr "Proporcionat per la xarxa"
 
 #. TRANSLATORS: hostname mode option
 #: src/components/system/HostnamePage.tsx:222
 #: src/components/system/HostnameSettings.tsx:126
-#, fuzzy
 msgid "Static"
-msgstr "estàtic"
+msgstr "Estàtic"
 
 #. TRANSLATORS: description for static hostname mode
 #: src/components/system/HostnamePage.tsx:224
 #: src/components/system/HostnameSettings.tsx:128
 msgid "Set manually"
-msgstr ""
+msgstr "Establert manualment"
 
 #. TRANSLATORS: label for static hostname input
 #: src/components/system/HostnamePage.tsx:242
 msgid "Value"
-msgstr ""
+msgstr "Valor"
 
 #. TRANSLATORS: explanation of transient hostname behavior.
 #. Text in square brackets will be displayed in bold.
 #: src/components/system/HostnameSettings.tsx:51
-#, fuzzy
 msgid "Hostname is dynamic and [may change after a reboot or network update]."
-msgstr "Nom temporal que pot canviar després d'un reinici o canvis de xarxa"
+msgstr ""
+"El nom de l'amfitrió és dinàmic i [pot canviar després d'un reinici o una "
+"actualització de la xarxa]."
 
 #. TRANSLATORS: helper text for static hostname input.
 #. Text in square brackets will be displayed in bold.
 #: src/components/system/HostnameSettings.tsx:76
-#, fuzzy
 msgid "Hostname [will remain unchanged] across reboots and network changes."
-msgstr "Nom temporal que pot canviar després d'un reinici o canvis de xarxa"
+msgstr ""
+"El nom de l'amfitrió [es mantindrà sense canvis] després de reiniciar i "
+"canviar de xarxa."
 
 #: src/components/system/HostnameSettings.tsx:185
 msgid ""
 "The product is already registered. Hostname changes will not affect the "
 "hostname stored at the registration server."
 msgstr ""
+"El producte ja està registrat. Els canvis de nom d'amfitrió no afectaran el "
+"nom d'amfitrió desat al servidor de registre."
 
 #. TRANSLATORS: fieldset legend for NTP configuration
 #: src/components/system/NtpSettings.tsx:50
 msgid "Time Synchronization Servers"
-msgstr ""
+msgstr "Servidors de sincronització d'hora"
 
 #: src/components/system/NtpSettings.tsx:55
 msgid ""
 "Configure the Network Time Protocol (NTP) servers used to set the system "
 "date and time."
 msgstr ""
+"Configureu els servidors del Protocol d'hora de xarxa (NTP) que s'usen per "
+"establir la data i l'hora del sistema."
 
 #. TRANSLATORS: description for default NTP mode
 #: src/components/system/NtpSettings.tsx:70
-#, fuzzy
 msgid "Use product's default NTP servers"
-msgstr "Usa servidors DNS personalitzats"
+msgstr "Usa els servidors NTP predeterminats del producte"
 
 #. TRANSLATORS: description for custom NTP mode
 #: src/components/system/NtpSettings.tsx:77
 msgid "Set NTP servers manually"
-msgstr ""
+msgstr "Estableix els servidors NTP manualment"
 
 #. TRANSLATORS: label for NTP servers input field
 #: src/components/system/NtpSettings.tsx:91
-#, fuzzy
 msgid "Server addresses"
-msgstr "Adreces IP"
+msgstr "Adreces del servidor"
 
 #: src/components/system/NtpSettings.tsx:94
 msgid ""
 "Hostnames, IP addresses, or fully qualified domain names (FQDNs). E.g., "
 "pool.ntp.org"
 msgstr ""
+"Noms d'amfitrió, adreces IP o noms de domini completament qualificats (FQDN)"
+". P. ex., pool.ntp.org"
 
 #. TRANSLATORS: validation error for an invalid NTP server address entry
 #: src/components/system/NtpSettings.tsx:99
-#, fuzzy
 msgid "Invalid NTP server address"
-msgstr "Adreça del servidor DNS no vàlida"
+msgstr "Adreça de servidor NTP no vàlida"
 
 #. TRANSLATORS: error message when system settings update request fails
 #: src/components/system/SystemPage.tsx:194
-#, fuzzy
 msgid "System settings could not be updated"
-msgstr "No s'ha pogut actualitzar el nom d'amfitrió"
+msgstr "No s'ha pogut actualitzar la configuració del sistema."
 
 #. TRANSLATORS: success message shown after system settings are updated
 #: src/components/system/SystemPage.tsx:216
-#, fuzzy
 msgid "System settings successfully updated"
-msgstr "El nom d'amfitrió s'ha actualitzat correctament"
+msgstr "La configuració del sistema s'ha actualitzat correctament."
 
 #. TRANSLATORS: info message shown when submitting the form with no changes
 #: src/components/system/SystemPage.tsx:218
 msgid "No changes detected. System settings are already up to date."
 msgstr ""
+"No s'ha detectat cap canvi. La configuració del sistema ja està actualitzada."
 
 #. TRANSLATORS: validation error when no NTP servers are provided in custom mode
 #: src/components/system/systemFormValidation.ts:108
-#, fuzzy
 msgid "At least one NTP server is required"
-msgstr "Cal com a mínim un servidor DNS"
+msgstr "Cal com a mínim un servidor NTP."
 
 #. TRANSLATORS: validation error when some NTP server addresses are invalid
 #: src/components/system/systemFormValidation.ts:115
-#, fuzzy
 msgid "Some NTP server addresses are invalid"
-msgstr "Algunes adreces de servidor DNS no són vàlides"
+msgstr "Algunes adreces de servidor NTP no són vàlides."
 
 #: src/components/users/FirstUser.tsx:57
 msgid "Define a user now"
