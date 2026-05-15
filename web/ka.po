@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-05-14 13:11+0000\n"
-"PO-Revision-Date: 2026-05-13 08:12+0000\n"
+"PO-Revision-Date: 2026-05-15 03:12+0000\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://l10n.opensuse.org/projects/agama/agama-web/"
 "ka/>\n"
@@ -2045,25 +2045,24 @@ msgstr "IP-ები"
 
 #. TRANSLATORS: system hostname in summary. %s is the hostname.
 #: src/components/overview/SystemSummary.tsx:43
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "Name %s"
-msgstr "სახელი"
+msgstr "სახელი %s"
 
 #. TRANSLATORS: explanation shown when hostname is transient (not static)
 #: src/components/overview/SystemSummary.tsx:57
-#, fuzzy
 msgid "Using transient name, which may change after reboot or network changes"
 msgstr ""
-"დროებითი სახელი, რომელიც შეიძლება, შეიცვალოს გადატვირთვის, ან ქსელის "
+"გარდამავალი სახელი, რომელიც შეიძლება, შეიცვალოს გადატვირთვის, ან ქსელის "
 "ცვლილების შემდეგ"
 
 #. TRANSLATORS: NTP server count shown inline (transient mode). %d is the count.
 #: src/components/overview/SystemSummary.tsx:69
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "%d NTP server"
 msgid_plural "%d NTP servers"
-msgstr[0] "DNS სერვერები"
-msgstr[1] "DNS სერვერები"
+msgstr[0] "%d NTP სერვერი"
+msgstr[1] "%d NTP სერვერი"
 
 #. TRANSLATORS: shown when using product default NTP servers (transient mode)
 #. TRANSLATORS: shown when using product default NTP servers (static mode)
@@ -5403,18 +5402,18 @@ msgstr "zFCP კონტროლერები"
 #. TRANSLATORS: information shown when using transient hostname mode. "transient"
 #. refers to the hostname mode, and %s will be replaced with the current hostname value.
 #: src/components/system/HostnamePage.tsx:57
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "Current value: %s"
-msgstr "მიმდინარეა %s"
+msgstr "მიმდინარე მნიშვნელობა: %s"
 
 #: src/components/system/HostnamePage.tsx:69
-#, fuzzy
 msgid ""
 "This hostname is dynamic and [may change after a reboot or network update], "
 "as configured by the local network administrator."
 msgstr ""
-"ეს ჰოსტის სახელი დინამიკურია და შეიძლება, შეიცვალოს დაყენების ან ქსელური "
-"განახლების შემდეგ, როგორც ამას ლოკალური ქსელის ადმინისტრატორი მიუთითებს."
+"ეს ჰოსტის სახელი დინამიკურია და [შეიძლება, შეიცვალოს დაყენების, ან ქსელური "
+"განახლების შემდეგ], როგორც ეს ლოკალური ქსელის ადმინისტრატორის მიერაა "
+"მითითებული."
 
 #. TRANSLATORS: helper text for static hostname input.
 #. Text in square brackets will be displayed in bold.
@@ -5425,9 +5424,8 @@ msgstr ""
 #. TRANSLATORS: validation error when static hostname value is empty
 #: src/components/system/HostnamePage.tsx:131
 #: src/components/system/systemFormValidation.ts:94
-#, fuzzy
 msgid "Enter a hostname value."
-msgstr "შეიყვანეთ ჰოსტის სახელი."
+msgstr "შეიყვანეთ ჰოსტის სახელის მნიშვნელობა."
 
 #. TRANSLATORS: error message when hostname update request fails
 #: src/components/system/HostnamePage.tsx:144
@@ -5437,9 +5435,8 @@ msgstr "ჰოსტის სახელის განახლება შ
 #. TRANSLATORS: alert title warning about registered hostname not changing
 #: src/components/system/HostnamePage.tsx:158
 #: src/components/system/HostnameSettings.tsx:180
-#, fuzzy
 msgid "Registered hostname will not change"
-msgstr "რეგისტრირებულია კოდის გარეშე"
+msgstr "რეგისტრირებული ჰოსტის სახელი არ შეიცვლება"
 
 #: src/components/system/HostnamePage.tsx:163
 msgid ""
@@ -5449,9 +5446,8 @@ msgstr ""
 
 #. TRANSLATORS: error alert title when hostname update fails
 #: src/components/system/HostnamePage.tsx:182
-#, fuzzy
 msgid "The hostname could not be saved"
-msgstr "კავშირის შენახვა შეუძლებელია"
+msgstr "ჰოსტის სახელის შენახვა შეუძლებელია"
 
 #. TRANSLATORS: success message shown after hostname is updated
 #: src/components/system/HostnamePage.tsx:201
@@ -5467,16 +5463,14 @@ msgstr ""
 #. TRANSLATORS: description for transient hostname mode
 #: src/components/system/HostnamePage.tsx:217
 #: src/components/system/HostnameSettings.tsx:121
-#, fuzzy
 msgid "Provided by the network"
-msgstr "ავთენტიკაციის მიწოდება"
+msgstr "მოწოდებულია ქსელის მიერ"
 
 #. TRANSLATORS: hostname mode option
 #: src/components/system/HostnamePage.tsx:222
 #: src/components/system/HostnameSettings.tsx:126
-#, fuzzy
 msgid "Static"
-msgstr "ავტომატური"
+msgstr "სტატიკური"
 
 #. TRANSLATORS: description for static hostname mode
 #: src/components/system/HostnamePage.tsx:224
@@ -5492,20 +5486,17 @@ msgstr ""
 #. TRANSLATORS: explanation of transient hostname behavior.
 #. Text in square brackets will be displayed in bold.
 #: src/components/system/HostnameSettings.tsx:51
-#, fuzzy
 msgid "Hostname is dynamic and [may change after a reboot or network update]."
 msgstr ""
-"დროებითი სახელი, რომელიც შეიძლება, შეიცვალოს გადატვირთვის, ან ქსელის "
-"ცვლილების შემდეგ"
+"ჰოსტის სახელი დინამიკურია [და შეიძლება, შეიცვალოს გადატვირთვის, ან ქსელის "
+"ცვლილების შემდეგ]."
 
 #. TRANSLATORS: helper text for static hostname input.
 #. Text in square brackets will be displayed in bold.
 #: src/components/system/HostnameSettings.tsx:76
-#, fuzzy
 msgid "Hostname [will remain unchanged] across reboots and network changes."
 msgstr ""
-"დროებითი სახელი, რომელიც შეიძლება, შეიცვალოს გადატვირთვის, ან ქსელის "
-"ცვლილების შემდეგ"
+"ჰოსტის სახელი [უცვლელი დარჩება] გადატვირთვის, ან ქსელის ცვლილების შემდეგ."
 
 #: src/components/system/HostnameSettings.tsx:185
 msgid ""
@@ -5526,9 +5517,8 @@ msgstr ""
 
 #. TRANSLATORS: description for default NTP mode
 #: src/components/system/NtpSettings.tsx:70
-#, fuzzy
 msgid "Use product's default NTP servers"
-msgstr "მომხმარებლის DNS სერვერების გამოყენება"
+msgstr "პროდუქტის ნაგულისხმევი NTP სერვერების გამოყენება"
 
 #. TRANSLATORS: description for custom NTP mode
 #: src/components/system/NtpSettings.tsx:77
@@ -5537,9 +5527,8 @@ msgstr ""
 
 #. TRANSLATORS: label for NTP servers input field
 #: src/components/system/NtpSettings.tsx:91
-#, fuzzy
 msgid "Server addresses"
-msgstr "IP მისამართები"
+msgstr "სერვერის მისამართები"
 
 #: src/components/system/NtpSettings.tsx:94
 msgid ""
@@ -5549,21 +5538,18 @@ msgstr ""
 
 #. TRANSLATORS: validation error for an invalid NTP server address entry
 #: src/components/system/NtpSettings.tsx:99
-#, fuzzy
 msgid "Invalid NTP server address"
-msgstr "არასწორი DNS სერვერის მისამართი"
+msgstr "არასწორი NTP სერვერის მისამართი"
 
 #. TRANSLATORS: error message when system settings update request fails
 #: src/components/system/SystemPage.tsx:194
-#, fuzzy
 msgid "System settings could not be updated"
-msgstr "ჰოსტის სახელის განახლება შეუძლებელია"
+msgstr "სისტემის პარამეტრების განახლება შეუძლებელია"
 
 #. TRANSLATORS: success message shown after system settings are updated
 #: src/components/system/SystemPage.tsx:216
-#, fuzzy
 msgid "System settings successfully updated"
-msgstr "ჰოსტის სახელი წარმატებით განახლდა"
+msgstr "სისტემის პარამეტრები წარმატებით განახლდა"
 
 #. TRANSLATORS: info message shown when submitting the form with no changes
 #: src/components/system/SystemPage.tsx:218
@@ -5572,15 +5558,13 @@ msgstr ""
 
 #. TRANSLATORS: validation error when no NTP servers are provided in custom mode
 #: src/components/system/systemFormValidation.ts:108
-#, fuzzy
 msgid "At least one NTP server is required"
-msgstr "საჭიროა, სულ ცოტა, ერთი DNS სერვერი"
+msgstr "საჭიროა, სულ ცოტა, ერთი NTP სერვერი"
 
 #. TRANSLATORS: validation error when some NTP server addresses are invalid
 #: src/components/system/systemFormValidation.ts:115
-#, fuzzy
 msgid "Some NTP server addresses are invalid"
-msgstr "ზოგიერთი DNS სერვერის მისამართი არასწორია"
+msgstr "ზოგიერთი NTP სერვერის მისამართი არასწორია"
 
 #: src/components/users/FirstUser.tsx:57
 msgid "Define a user now"
