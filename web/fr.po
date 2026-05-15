@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-15 12:50+0000\n"
+"POT-Creation-Date: 2026-05-15 15:22+0000\n"
 "PO-Revision-Date: 2026-05-04 07:04+0000\n"
 "Last-Translator: David D <dadu042@mailo.com>\n"
 "Language-Team: French <https://l10n.opensuse.org/projects/agama/agama-web/fr/"
@@ -51,7 +51,7 @@ msgid "Retrieving error details"
 msgstr "Plus de détails"
 
 #: src/components/core/ErrorPage.tsx:134
-#: src/components/storage/EncryptionSettingsPage.tsx:114
+#: src/components/storage/EncryptionSettingsPage.tsx:128
 #: src/components/storage/iscsi/DiscoverFormPage.tsx:175
 #: src/components/storage/iscsi/TargetLoginPage.tsx:189
 #: src/components/users/FirstUserForm.tsx:195
@@ -96,12 +96,12 @@ msgstr "Télécharger les journaux pour résolution ou partage avec le support."
 msgid "Reboot to try again."
 msgstr "Redémarrer pour essayer à nouveau."
 
-#: src/components/core/InstallationFinished.tsx:44
+#: src/components/core/InstallationFinished.tsx:43
 msgid "TPM sealing requires the new system to be booted directly."
 msgstr ""
 "Le cryptage via TPM impose que le nouveau système soit démarré directement."
 
-#: src/components/core/InstallationFinished.tsx:51
+#: src/components/core/InstallationFinished.tsx:50
 msgid ""
 "If a local media was used to run this installer, remove it before the next "
 "boot."
@@ -109,7 +109,7 @@ msgstr ""
 "Si un périphérique local a été utilisé pour exécuter ce programme "
 "d'installation, retirez-le avant le prochain démarrage."
 
-#: src/components/core/InstallationFinished.tsx:58
+#: src/components/core/InstallationFinished.tsx:57
 msgid ""
 "The final step to configure the Trusted Platform Module (TPM) to "
 "automatically open encrypted devices will take place during the first boot "
@@ -121,12 +121,12 @@ msgstr ""
 "premier démarrage du nouveau système. Pour que cela fonctionne, la machine "
 "doit démarrer directement avec le nouveau chargeur d'amorçage."
 
-#: src/components/core/InstallationFinished.tsx:100
+#: src/components/core/InstallationFinished.tsx:76
 #, fuzzy
 msgid "Installation complete"
 msgstr "Installation"
 
-#: src/components/core/InstallationFinished.tsx:115
+#: src/components/core/InstallationFinished.tsx:91
 #, fuzzy
 msgid "You can reboot the machine to log in to the new system."
 msgstr ""
@@ -424,7 +424,7 @@ msgstr "Logiciel"
 #: src/components/overview/StorageSummary.tsx:190
 #: src/components/storage/BootSelectionPage.tsx:183
 #: src/components/storage/DeviceSelectorPage.tsx:75
-#: src/components/storage/EncryptionSettingsPage.tsx:107
+#: src/components/storage/EncryptionSettingsPage.tsx:121
 #: src/components/storage/FormattableDevicePage.tsx:445
 #: src/components/storage/ISCSIPage.tsx:36
 #: src/components/storage/LogicalVolumePage.tsx:885
@@ -695,7 +695,7 @@ msgstr ""
 #: src/components/product/ProductSelectionPage.tsx:289
 #: src/components/storage/BootSection.tsx:97
 #: src/components/storage/DeviceSelectorModal.tsx:292
-#: src/components/storage/EncryptionSection.tsx:60
+#: src/components/storage/EncryptionSection.tsx:59
 #: src/components/storage/iscsi/InitiatorFormPage.tsx:80
 #: src/components/users/FirstUserForm.tsx:233
 #: src/components/users/RootUserForm.tsx:161
@@ -3561,7 +3561,7 @@ msgstr "Le chiffrement est activé en utilisant le déverrouillage TPM"
 msgid "Encryption is enabled"
 msgstr "Le chiffrement est activé"
 
-#: src/components/storage/EncryptionSection.tsx:51
+#: src/components/storage/EncryptionSection.tsx:50
 #, fuzzy
 msgid ""
 "Protection for the information stored at the new file systems, including "
@@ -3570,39 +3570,51 @@ msgstr ""
 "Protection des informations stockées dans les nouveaux systèmes de fichiers, "
 "y compris les données, les programmes et les fichiers système."
 
-#: src/components/storage/EncryptionSettingsPage.tsx:77
-#: src/components/users/RootUserForm.tsx:105
-msgid "Password is empty."
-msgstr "Le mot de passe est vide."
-
-#. TRANSLATORS: "Trusted Platform Module" is the name of the technology and TPM its abbreviation
-#: src/components/storage/EncryptionSettingsPage.tsx:93
-msgid ""
-"Use the Trusted Platform Module (TPM) to decrypt automatically on each boot"
-msgstr ""
-"Utiliser le TPM (Trusted Platform Module) pour décrypter automatiquement les "
-"données à chaque amorçage"
-
-#: src/components/storage/EncryptionSettingsPage.tsx:97
+#: src/components/storage/EncryptionSettingsPage.tsx:41
+#, fuzzy
+#| msgid ""
+#| "The password will not be needed to boot and access the data if the TPM "
+#| "can verify the integrity of the system. TPM sealing requires the new "
+#| "system to be booted directly on its first run."
 msgid ""
 "The password will not be needed to boot and access the data if the TPM can "
-"verify the integrity of the system. TPM sealing requires the new system to "
-"be booted directly on its first run."
+"verify the integrity of the system."
 msgstr ""
 "Le mot de passe ne sera pas nécessaire pour démarrer et accéder aux données "
 "si le TPM peut vérifier l'intégrité du système. Le verrouillage du TPM "
 "requiert que le nouveau système soit démarré directement lors de sa première "
 "exécution."
 
-#: src/components/storage/EncryptionSettingsPage.tsx:108
+#: src/components/storage/EncryptionSettingsPage.tsx:49
+#, fuzzy
+#| msgid "TPM sealing requires the new system to be booted directly."
+msgid ""
+"TPM sealing requires the new system to be booted directly on its first run."
+msgstr ""
+"Le cryptage via TPM impose que le nouveau système soit démarré directement."
+
+#: src/components/storage/EncryptionSettingsPage.tsx:99
+#: src/components/users/RootUserForm.tsx:105
+msgid "Password is empty."
+msgstr "Le mot de passe est vide."
+
+#. TRANSLATORS: "Trusted Platform Module" is the name of the technology and TPM its abbreviation
+#: src/components/storage/EncryptionSettingsPage.tsx:115
+msgid ""
+"Use the Trusted Platform Module (TPM) to decrypt automatically on each boot"
+msgstr ""
+"Utiliser le TPM (Trusted Platform Module) pour décrypter automatiquement les "
+"données à chaque amorçage"
+
+#: src/components/storage/EncryptionSettingsPage.tsx:122
 msgid "Encryption settings"
 msgstr "Paramètres de chiffrement"
 
-#: src/components/storage/EncryptionSettingsPage.tsx:122
+#: src/components/storage/EncryptionSettingsPage.tsx:136
 msgid "Encrypt the system"
 msgstr "Chiffrer le système"
 
-#: src/components/storage/EncryptionSettingsPage.tsx:124
+#: src/components/storage/EncryptionSettingsPage.tsx:138
 msgid ""
 "Full Disk Encryption (FDE) allows to protect the information stored at the "
 "new file systems, including data, programs, and system files."
