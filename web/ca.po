@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-15 12:50+0000\n"
+"POT-Creation-Date: 2026-05-15 15:22+0000\n"
 "PO-Revision-Date: 2026-05-14 08:12+0000\n"
 "Last-Translator: David Medina <medipas@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -48,7 +48,7 @@ msgid "Retrieving error details"
 msgstr "Obtenció dels detalls de l'error"
 
 #: src/components/core/ErrorPage.tsx:134
-#: src/components/storage/EncryptionSettingsPage.tsx:114
+#: src/components/storage/EncryptionSettingsPage.tsx:128
 #: src/components/storage/iscsi/DiscoverFormPage.tsx:175
 #: src/components/storage/iscsi/TargetLoginPage.tsx:189
 #: src/components/users/FirstUserForm.tsx:195
@@ -90,11 +90,11 @@ msgstr ""
 msgid "Reboot to try again."
 msgstr "Reinicia per tornar-ho a provar."
 
-#: src/components/core/InstallationFinished.tsx:44
+#: src/components/core/InstallationFinished.tsx:43
 msgid "TPM sealing requires the new system to be booted directly."
 msgstr "El segellament TPM requereix que el sistema nou s'iniciï directament."
 
-#: src/components/core/InstallationFinished.tsx:51
+#: src/components/core/InstallationFinished.tsx:50
 msgid ""
 "If a local media was used to run this installer, remove it before the next "
 "boot."
@@ -102,7 +102,7 @@ msgstr ""
 "Si s'ha usat un mitjà local per executar aquest instal·lador, traieu-lo "
 "abans de la propera arrencada."
 
-#: src/components/core/InstallationFinished.tsx:58
+#: src/components/core/InstallationFinished.tsx:57
 msgid ""
 "The final step to configure the Trusted Platform Module (TPM) to "
 "automatically open encrypted devices will take place during the first boot "
@@ -114,11 +114,11 @@ msgstr ""
 "arrencada del nou sistema. Perquè això funcioni, la màquina ha d'arrencar "
 "directament amb el carregador d'arrencada nou."
 
-#: src/components/core/InstallationFinished.tsx:100
+#: src/components/core/InstallationFinished.tsx:76
 msgid "Installation complete"
 msgstr "Instal·lació completa"
 
-#: src/components/core/InstallationFinished.tsx:115
+#: src/components/core/InstallationFinished.tsx:91
 msgid "You can reboot the machine to log in to the new system."
 msgstr "Podeu reiniciar la màquina per iniciar la sessió al sistema nou."
 
@@ -403,7 +403,7 @@ msgstr "Programari"
 #: src/components/overview/StorageSummary.tsx:190
 #: src/components/storage/BootSelectionPage.tsx:183
 #: src/components/storage/DeviceSelectorPage.tsx:75
-#: src/components/storage/EncryptionSettingsPage.tsx:107
+#: src/components/storage/EncryptionSettingsPage.tsx:121
 #: src/components/storage/FormattableDevicePage.tsx:445
 #: src/components/storage/ISCSIPage.tsx:36
 #: src/components/storage/LogicalVolumePage.tsx:885
@@ -674,7 +674,7 @@ msgstr ""
 #: src/components/product/ProductSelectionPage.tsx:289
 #: src/components/storage/BootSection.tsx:97
 #: src/components/storage/DeviceSelectorModal.tsx:292
-#: src/components/storage/EncryptionSection.tsx:60
+#: src/components/storage/EncryptionSection.tsx:59
 #: src/components/storage/iscsi/InitiatorFormPage.tsx:80
 #: src/components/users/FirstUserForm.tsx:233
 #: src/components/users/RootUserForm.tsx:161
@@ -3406,7 +3406,7 @@ msgstr "L'encriptació s'habilita amb el desblocatge de TPM"
 msgid "Encryption is enabled"
 msgstr "L'encriptació està habilitada"
 
-#: src/components/storage/EncryptionSection.tsx:51
+#: src/components/storage/EncryptionSection.tsx:50
 msgid ""
 "Protection for the information stored at the new file systems, including "
 "data, programs, and system files."
@@ -3414,38 +3414,44 @@ msgstr ""
 "Protecció de la informació desada als sistemes de fitxers nous, incloses "
 "dades, programes i fitxers del sistema."
 
-#: src/components/storage/EncryptionSettingsPage.tsx:77
+#: src/components/storage/EncryptionSettingsPage.tsx:41
+#, fuzzy
+msgid ""
+"The password will not be needed to boot and access the data if the TPM can "
+"verify the integrity of the system."
+msgstr ""
+"La contrasenya no caldrà per arrencar i accedir a les dades si el TPM pot "
+"verificar la integritat del sistema. El segellat de TPM requereix que el nou "
+"sistema s'iniciï directament a la primera execució."
+
+#: src/components/storage/EncryptionSettingsPage.tsx:49
+#, fuzzy
+msgid ""
+"TPM sealing requires the new system to be booted directly on its first run."
+msgstr "El segellament TPM requereix que el sistema nou s'iniciï directament."
+
+#: src/components/storage/EncryptionSettingsPage.tsx:99
 #: src/components/users/RootUserForm.tsx:105
 msgid "Password is empty."
 msgstr "La contrasenya està buida."
 
 #. TRANSLATORS: "Trusted Platform Module" is the name of the technology and TPM its abbreviation
-#: src/components/storage/EncryptionSettingsPage.tsx:93
+#: src/components/storage/EncryptionSettingsPage.tsx:115
 msgid ""
 "Use the Trusted Platform Module (TPM) to decrypt automatically on each boot"
 msgstr ""
 "Useu el mòdul de plataforma de confiança (TPM) per fer-ne la desencriptació "
 "automàticament a cada arrencada."
 
-#: src/components/storage/EncryptionSettingsPage.tsx:97
-msgid ""
-"The password will not be needed to boot and access the data if the TPM can "
-"verify the integrity of the system. TPM sealing requires the new system to "
-"be booted directly on its first run."
-msgstr ""
-"La contrasenya no caldrà per arrencar i accedir a les dades si el TPM pot "
-"verificar la integritat del sistema. El segellat de TPM requereix que el nou "
-"sistema s'iniciï directament a la primera execució."
-
-#: src/components/storage/EncryptionSettingsPage.tsx:108
+#: src/components/storage/EncryptionSettingsPage.tsx:122
 msgid "Encryption settings"
 msgstr "Configuració de l'encriptació"
 
-#: src/components/storage/EncryptionSettingsPage.tsx:122
+#: src/components/storage/EncryptionSettingsPage.tsx:136
 msgid "Encrypt the system"
 msgstr "Encripta el sistema"
 
-#: src/components/storage/EncryptionSettingsPage.tsx:124
+#: src/components/storage/EncryptionSettingsPage.tsx:138
 msgid ""
 "Full Disk Encryption (FDE) allows to protect the information stored at the "
 "new file systems, including data, programs, and system files."
