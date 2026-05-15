@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-14 13:11+0000\n"
+"POT-Creation-Date: 2026-05-15 09:15+0000\n"
 "PO-Revision-Date: 2026-05-02 19:04+0000\n"
 "Last-Translator: Victor hck <victorhck@opensuse.org>\n"
 "Language-Team: Spanish <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -746,7 +746,7 @@ msgstr "Identifica el dispositivo de conexión por su dirección física"
 #. TRANSLATORS: table header for a DASD devices table
 #. TRANSLATORS: label for the device binding dropdown.
 #: src/components/network/BindingModeSelector.tsx:68
-#: src/components/network/ConnectionsTable.tsx:164
+#: src/components/network/ConnectionsTable.tsx:173
 #: src/components/storage/DrivesTable.tsx:71
 #: src/components/storage/MdRaidsTable.tsx:70
 #: src/components/storage/ProposalResultTable.tsx:134
@@ -998,8 +998,6 @@ msgstr "Seguridad"
 #. TRANSLATORS: table header for an iSCSI targets table
 #: src/components/network/ConnectionDetails.tsx:108
 #: src/components/network/ConnectionDetails.tsx:224
-#: src/components/network/ConnectionsTable.tsx:158
-#: src/components/network/ConnectionsTable.tsx:294
 #: src/components/storage/dasd/DASDTable.tsx:312
 #: src/components/storage/dasd/DASDTable.tsx:536
 #: src/components/storage/iscsi/StatusFilter.tsx:77
@@ -1017,7 +1015,7 @@ msgstr "Intensidad de la señal"
 msgid "Network not available"
 msgstr "Red no disponible"
 
-#: src/components/network/ConnectionDetails.tsx:131 src/utils/network.ts:69
+#: src/components/network/ConnectionDetails.tsx:131 src/utils/network.ts:87
 msgid "Bond"
 msgstr "Vínculo"
 
@@ -1043,7 +1041,7 @@ msgstr "Detalles del vínculo"
 msgid "None set"
 msgstr "Ninguna establecida"
 
-#: src/components/network/ConnectionDetails.tsx:164 src/utils/network.ts:70
+#: src/components/network/ConnectionDetails.tsx:164 src/utils/network.ts:88
 msgid "Bridge"
 msgstr "Puente"
 
@@ -1082,7 +1080,7 @@ msgstr "Puerta de enlace"
 
 #: src/components/network/ConnectionDetails.tsx:247
 #: src/components/network/ConnectionDetails.tsx:379
-#: src/components/network/ConnectionsTable.tsx:187
+#: src/components/network/ConnectionsTable.tsx:196
 msgid "IP Addresses"
 msgstr "Direcciones IP"
 
@@ -1153,8 +1151,8 @@ msgstr "No se pudo guardar la conexión"
 #. TRANSLATORS: table header for a DASD devices table
 #. TRANSLATORS: checkbox label for custom DNS server configuration.
 #: src/components/network/ConnectionForm.tsx:434
-#: src/components/network/ConnectionsTable.tsx:153
-#: src/components/network/ConnectionsTable.tsx:280
+#: src/components/network/ConnectionsTable.tsx:163
+#: src/components/network/ConnectionsTable.tsx:288
 #: src/components/storage/DeviceSelectorPage.tsx:54
 #: src/components/storage/dasd/DASDTable.tsx:550
 msgid "Type"
@@ -1166,8 +1164,8 @@ msgstr "Tipo"
 #. TRANSLATORS: label for hostname value display
 #. TRANSLATORS: label for hostname input
 #: src/components/network/ConnectionForm.tsx:449
-#: src/components/network/ConnectionsTable.tsx:148
-#: src/components/network/ConnectionsTable.tsx:272
+#: src/components/network/ConnectionsTable.tsx:158
+#: src/components/network/ConnectionsTable.tsx:280
 #: src/components/storage/DeviceSelectorPage.tsx:55
 #: src/components/storage/LvmPage.tsx:182
 #: src/components/storage/iscsi/InitiatorFormPage.tsx:66
@@ -1236,7 +1234,7 @@ msgstr "Ir a la página de red"
 #. bare "Edit" reads fine visually but leaves screen-reader users without
 #. the object being acted on when the crumb is announced on its own.
 #: src/components/network/ConnectionForm.tsx:668
-#: src/components/network/ConnectionsTable.tsx:344
+#: src/components/network/ConnectionsTable.tsx:357
 #: src/components/storage/iscsi/TargetsTable.tsx:224
 msgid "Edit connection"
 msgstr "Editar conexión"
@@ -1256,41 +1254,36 @@ msgstr "\"%s\" no existe o ya no está disponible."
 msgid "Connection not found or lost"
 msgstr "Conexión no encontrada o perdida"
 
-#: src/components/network/ConnectionsTable.tsx:141
+#: src/components/network/ConnectionsTable.tsx:151
 msgid "(bound by name)"
 msgstr "(vinculado por su nombre)"
 
-#: src/components/network/ConnectionsTable.tsx:142
+#: src/components/network/ConnectionsTable.tsx:152
 msgid "(bound by MAC)"
 msgstr "(vinculado por su MAC)"
 
-#: src/components/network/ConnectionsTable.tsx:160
-#: src/components/network/WifiNetworksList.tsx:134
-#: src/components/storage/iscsi/TargetsTable.tsx:158
-msgid "Connected"
-msgstr "Conectado"
-
-#: src/components/network/ConnectionsTable.tsx:160
-#: src/components/storage/iscsi/TargetsTable.tsx:163
-msgid "Disconnected"
-msgstr "Desconectado"
+#: src/components/network/ConnectionsTable.tsx:168
+#: src/components/network/ConnectionsTable.tsx:302
+#, fuzzy
+msgid "State"
+msgstr "Estado"
 
 #. TRANSLATORS: shown in the filter toolbar when filters are active.
 #. %1$s is the number of matching connections, %2$s is the total number.
-#: src/components/network/ConnectionsTable.tsx:253
+#: src/components/network/ConnectionsTable.tsx:261
 #, javascript-format
 msgid "%1$d of %2$d connections match filters"
 msgstr "%1$d de %2$d conexiones coinciden con los filtros"
 
 #. TRANSLATORS: shown in the filter toolbar when no filters are active.
 #. %s is the total number of connections.
-#: src/components/network/ConnectionsTable.tsx:260
+#: src/components/network/ConnectionsTable.tsx:268
 #, javascript-format
 msgid "%d connections available"
 msgstr "%d conexiones disponibles"
 
-#: src/components/network/ConnectionsTable.tsx:283
-#: src/components/network/ConnectionsTable.tsx:297
+#: src/components/network/ConnectionsTable.tsx:291
+#: src/components/network/ConnectionsTable.tsx:305
 #: src/components/storage/dasd/DASDTable.tsx:315
 #: src/components/storage/dasd/DASDTable.tsx:327
 #: src/components/storage/iscsi/StatusFilter.tsx:58
@@ -1300,16 +1293,8 @@ msgstr "%d conexiones disponibles"
 msgid "All"
 msgstr "Todo"
 
-#: src/components/network/ConnectionsTable.tsx:298
-msgid "Up"
-msgstr "Subida"
-
-#: src/components/network/ConnectionsTable.tsx:299
-msgid "Down"
-msgstr "Bajada"
-
-#: src/components/network/ConnectionsTable.tsx:312
-#: src/components/network/ConnectionsTable.tsx:384
+#: src/components/network/ConnectionsTable.tsx:325
+#: src/components/network/ConnectionsTable.tsx:397
 #: src/components/storage/dasd/DASDTable.tsx:357
 #: src/components/storage/dasd/DASDTable.tsx:693
 #: src/components/storage/iscsi/TargetsTable.tsx:363
@@ -1318,37 +1303,37 @@ msgstr "Bajada"
 msgid "Clear all filters"
 msgstr "Borrar todos los filtros"
 
-#: src/components/network/ConnectionsTable.tsx:339
+#: src/components/network/ConnectionsTable.tsx:352
 #: src/components/storage/ProposalResultTable.tsx:136
 #: src/components/storage/SpaceActionsTable.tsx:227
 msgid "Details"
 msgstr "Detalles"
 
 #. TRANSLATORS: button label, connect to a Wi-Fi network
-#: src/components/network/ConnectionsTable.tsx:353
+#: src/components/network/ConnectionsTable.tsx:366
 #: src/components/network/WifiConnectionForm.tsx:186
 #: src/components/storage/iscsi/TargetsTable.tsx:236
 #: src/components/storage/iscsi/TargetsTable.tsx:247
 msgid "Connect"
 msgstr "Conectarse"
 
-#: src/components/network/ConnectionsTable.tsx:358
+#: src/components/network/ConnectionsTable.tsx:371
 #: src/components/storage/iscsi/TargetsTable.tsx:228
 msgid "Disconnect"
 msgstr "Desconectar"
 
-#: src/components/network/ConnectionsTable.tsx:366
+#: src/components/network/ConnectionsTable.tsx:379
 #: src/components/storage/PartitionsSection.tsx:194
 #: src/components/storage/VolumeGroupEditor.tsx:187
 #: src/components/storage/iscsi/TargetsTable.tsx:252
 msgid "Delete"
 msgstr "Eliminar"
 
-#: src/components/network/ConnectionsTable.tsx:376
+#: src/components/network/ConnectionsTable.tsx:389
 msgid "No connections match filters"
 msgstr "Ninguna conexión coincide con los filtros"
 
-#: src/components/network/ConnectionsTable.tsx:380
+#: src/components/network/ConnectionsTable.tsx:393
 #: src/components/storage/dasd/DASDTable.tsx:689
 #: src/components/storage/iscsi/TargetsTable.tsx:359
 #: src/components/storage/zfcp/ZFCPDevicesTable.tsx:425
@@ -1620,6 +1605,11 @@ msgstr "Red pública"
 #, javascript-format
 msgid "Connecting to %s"
 msgstr "Conectándose a %s"
+
+#: src/components/network/WifiNetworksList.tsx:134
+#: src/components/storage/iscsi/TargetsTable.tsx:158
+msgid "Connected"
+msgstr "Conectado"
 
 #: src/components/network/WifiNetworksList.tsx:141
 msgid "IP addresses"
@@ -2059,7 +2049,7 @@ msgid "Potential data loss"
 msgstr "Posible pérdida de datos"
 
 #: src/components/overview/SystemInformationSection.tsx:58
-#: src/utils/network.ts:72
+#: src/utils/network.ts:59 src/utils/network.ts:90
 msgid "Unknown"
 msgstr "Desconocido"
 
@@ -4950,6 +4940,10 @@ msgstr "Desconectado por el sistema"
 msgid "Disconnection failed"
 msgstr "Desconexión fallida"
 
+#: src/components/storage/iscsi/TargetsTable.tsx:163
+msgid "Disconnected"
+msgstr "Desconectado"
+
 #: src/components/storage/iscsi/TargetsTable.tsx:164
 msgid "Missing"
 msgstr "Falta"
@@ -5502,11 +5496,11 @@ msgstr "zFCP"
 msgid "Activate controllers"
 msgstr "Activar controladores"
 
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:55
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:55 src/utils/network.ts:61
 msgid "Activated"
 msgstr "Activado"
 
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:56
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:56 src/utils/network.ts:63
 msgid "Deactivated"
 msgstr "Desactivado"
 
@@ -5871,21 +5865,37 @@ msgstr "Utilizar clave pública SSH"
 msgid "ZFCP"
 msgstr "ZFCP"
 
-#: src/utils/network.ts:66
+#: src/utils/network.ts:60
+#, fuzzy
+msgid "Activating"
+msgstr "Activar"
+
+#: src/utils/network.ts:62
+#, fuzzy
+msgid "Deactivating"
+msgstr "Desactivar"
+
+#: src/utils/network.ts:84
 msgid "Ethernet"
 msgstr "Ethernet"
 
-#: src/utils/network.ts:67
+#: src/utils/network.ts:85
 msgid "Wi-Fi"
 msgstr "WiFi"
 
-#: src/utils/network.ts:68
+#: src/utils/network.ts:86
 msgid "Loopback"
 msgstr "Loopback"
 
-#: src/utils/network.ts:71
+#: src/utils/network.ts:89
 msgid "VLAN"
 msgstr "VLAN"
+
+#~ msgid "Up"
+#~ msgstr "Subida"
+
+#~ msgid "Down"
+#~ msgstr "Bajada"
 
 #, javascript-format
 #~ msgid "Using transient hostname: %s"
