@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-05-15 12:11+0000\n"
-"PO-Revision-Date: 2026-05-16 15:12+0000\n"
+"PO-Revision-Date: 2026-05-17 20:12+0000\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <https://l10n.opensuse.org/projects/agama/agama-"
 "service-sle-16/sk/>\n"
@@ -129,6 +129,9 @@ msgid ""
 "is unknown. This means that the origin and integrity of the file cannot be "
 "verified. Use it anyway?"
 msgstr ""
+"Kontrolný súčet súboru %{file} je \"%{digest}\", očakávaný kontrolný súčet "
+"však nie je známy. To znamená, že pôvod a integritu súboru nemožno overiť. "
+"Napriek tomu ho použiť?"
 
 #. Callback to accept wrong digest
 #.
@@ -143,6 +146,9 @@ msgid ""
 "be \"%{expected}\". The file has changed by accident or by an attacker since "
 "the creater signed it. Use it anyway?"
 msgstr ""
+"Očakávaný kontrolný súčet súboru %{file} je \"%{found}\", pričom mal byť \"%"
+"{expected}\". Súbor sa od momentu, keď ho autor podpísal, zmenil náhodou "
+"alebo útočníkom. Napriek tomu ho použiť?"
 
 #. DoneProvide callback
 #.
@@ -151,7 +157,7 @@ msgstr ""
 #. @see https://github.com/yast/yast-yast2/blob/19180445ab935a25edd4ae0243aa7a3bcd09c9de/library/packages/src/modules/PackageCallbacks.rb#L620
 #: service/lib/agama/software/callbacks/script.rb:50
 msgid "There was a problem running a package script."
-msgstr ""
+msgstr "Pri spúšťaní skriptu balíka nastal problém."
 
 #. Callback to handle unsigned files
 #.
@@ -163,6 +169,8 @@ msgid ""
 "The file %{filename} from %{repo_url} is not digitally signed. The origin "
 "and integrity of the file cannot be verified. Use it anyway?"
 msgstr ""
+"Súbor %{filename} z %{repo_url} nie je digitálne podpísaný. Pôvod a "
+"integritu súboru nie je možné overiť. Napriek tomu ho použiť?"
 
 #: service/lib/agama/software/callbacks/signature.rb:72
 #, perl-brace-format
@@ -170,6 +178,8 @@ msgid ""
 "The file %{filename} is not digitally signed. The origin and integrity of "
 "the file cannot be verified. Use it anyway?"
 msgstr ""
+"Súbor %{filename} nie je digitálne podpísaný. Pôvod a integritu súboru nie "
+"je možné overiť. Napriek tomu ho použiť?"
 
 #. Callback to handle signature verification failures
 #.
@@ -181,6 +191,8 @@ msgid ""
 "The key %{id} (%{name}) with fingerprint %{fingerprint} is unknown. Do you "
 "want to trust this key?"
 msgstr ""
+"Kľúč %{id} (%{name}) s odtlačkom %{fingerprint} nie je známy. Chcete tomuto "
+"kľúču dôverovať?"
 
 #. Callback to handle unknown GPG keys
 #.
@@ -193,6 +205,8 @@ msgid ""
 "The file %{filename} from %{repo_url} is digitally signed with the following "
 "unknown GnuPG key: %{key_id}. Use it anyway?"
 msgstr ""
+"Súbor %{filename} z %{repo_url} je digitálne podpísaný nasledujúcim neznámym "
+"kľúčom GnuPG: %{key_id}. Napriek tomu ho použiť?"
 
 #: service/lib/agama/software/callbacks/signature.rb:137
 #, perl-brace-format
@@ -200,6 +214,8 @@ msgid ""
 "The file %{filename} is digitally signed with the following unknown GnuPG "
 "key: %{key_id}. Use it anyway?"
 msgstr ""
+"Súbor %{filename} je digitálne podpísaný nasledujúcim neznámym kľúčom GnuPG: "
+"%{key_id}. Napriek tomu ho použiť?"
 
 #. Callback to handle file verification failures
 #.
@@ -213,6 +229,9 @@ msgid ""
 "GnuPG key, but the integrity check failed: %{key_id} (%{key_name}). Use it "
 "anyway?"
 msgstr ""
+"Súbor %{filename} z %{repo_url} je digitálne podpísaný nasledujúcim kľúčom "
+"GnuPG, ale kontrola integrity zlyhala: %{key_id} (%{key_name}). Napriek tomu "
+"ho použiť?"
 
 #: service/lib/agama/software/callbacks/signature.rb:175
 #, perl-brace-format
@@ -220,6 +239,8 @@ msgid ""
 "The file %{filename} is digitally signed with the following GnuPG key, but "
 "the integrity check failed: %{key_id} (%{key_name}). Use it anyway?"
 msgstr ""
+"Súbor %{filename} je digitálne podpísaný nasledujúcim kľúčom GnuPG, ale "
+"kontrola integrity zlyhala: %{key_id} (%{key_name}). Napriek tomu ho použiť?"
 
 #. TRANSLATORS: button label, trust the GPG key or the signature
 #: service/lib/agama/software/callbacks/signature.rb:199
