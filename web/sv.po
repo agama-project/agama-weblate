@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-15 15:22+0000\n"
+"POT-Creation-Date: 2026-05-18 10:24+0000\n"
 "PO-Revision-Date: 2026-05-18 09:12+0000\n"
 "Last-Translator: Luna  Jernberg <bittin@opensuse.org>\n"
 "Language-Team: Swedish <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -318,7 +318,6 @@ msgstr "Bakåt"
 #. TRANSLATORS: label for the form cancel button.
 #: src/components/core/Page.tsx:255 src/components/core/Popup.tsx:140
 #: src/components/form/CancelButton.tsx:47
-#: src/components/network/BindingSettingsForm.tsx:180
 #: src/components/network/WifiConnectionForm.tsx:188
 #: src/components/product/ProductSelectionPage.tsx:538
 #: src/components/storage/iscsi/DiscoverFormPage.tsx:252
@@ -418,14 +417,13 @@ msgstr "Lagring"
 
 #. TRANSLATORS: breadcrumb label for the network configuration section.
 #: src/components/core/ProgressStatusMonitor.tsx:42
-#: src/components/network/BindingSettingsForm.tsx:111
 #: src/components/network/ConnectionDetails.tsx:95
 #: src/components/network/ConnectionForm.tsx:658
 #: src/components/network/ConnectionPage.tsx:75
 #: src/components/network/NetworkPage.tsx:43
 #: src/components/network/WifiConnectionForm.tsx:142
 #: src/components/network/WifiConnectionForm.tsx:198
-#: src/components/overview/NetworkSummary.tsx:149 src/routes/network.tsx:36
+#: src/components/overview/NetworkSummary.tsx:149 src/routes/network.tsx:35
 msgid "Network"
 msgstr "Nätverk"
 
@@ -757,42 +755,6 @@ msgstr "Identifiera anslutningsenhet med hjälp av dess fysiska adress"
 #: src/components/storage/zfcp/ZFCPDevicesTable.tsx:342
 msgid "Device"
 msgstr "Enhet"
-
-#: src/components/network/BindingSettingsForm.tsx:113
-msgid "Binding settings"
-msgstr "Bindningsinställningar"
-
-#: src/components/network/BindingSettingsForm.tsx:121
-msgid ""
-"Choose how the connection should be associated with a network device. This "
-"helps control which device the connection uses."
-msgstr ""
-"Välj hur anslutningen ska kopplas till en nätverksenhet. Detta hjälper till "
-"att styra vilken enhet anslutningen använder."
-
-#: src/components/network/BindingSettingsForm.tsx:129
-msgid "Unbound"
-msgstr "Obunden"
-
-#: src/components/network/BindingSettingsForm.tsx:132
-msgid "The connection can be used by any available device."
-msgstr "Anslutningen kan användas av vilken tillgänglig enhet som helst."
-
-#: src/components/network/BindingSettingsForm.tsx:141
-msgid "Bind to device name"
-msgstr "Bind till enhetsnamn"
-
-#: src/components/network/BindingSettingsForm.tsx:145
-msgid "Choose device to bind by name"
-msgstr "Välj enhet att binda efter namn"
-
-#: src/components/network/BindingSettingsForm.tsx:160
-msgid "Bind to MAC address"
-msgstr "Bind till MAC-adress"
-
-#: src/components/network/BindingSettingsForm.tsx:164
-msgid "Choose device to bind by MAC"
-msgstr "Välj enhet att binda via MAC"
 
 #. TRANSLATORS: label for the network interface name field.
 #. TRANSLATORS: accessible label for the device selector. MAC address refers
@@ -1337,29 +1299,6 @@ msgstr "Ändra filter och försök igen."
 #: src/components/network/DeviceSelector.tsx:61
 msgid "MAC address"
 msgstr "MAC adress"
-
-#: src/components/network/DevicesSelector.tsx:69
-msgid "None (unbound)"
-msgstr "Ingen (obunden)"
-
-#. TRANSLATORS: this simply concatenates the two sentences that describe what is going to happen
-#. with logical volumes. The first %s corresponds to deleted logical volumes and the second one
-#. to resized ones.
-#. TRANSLATORS: this simply concatenates the two sentences that describe what is going to happen
-#. with partitions. The first %s corresponds to deleted partitions and the second one to resized
-#. ones.
-#. TRANSLATORS: A label shown in a dropdown for selecting a network
-#. device. It combines the device name and MAC address, with the order
-#. determined by the component settings: some selectors will show the
-#. name first, others the MAC address. I.e. "enp1s0 - CC-7F-C8-FC-7A-A1"
-#. or "CC-7F-C8-FC-7A-A1 - enp1s0". You may change the separator, but
-#. please keep both %s placeholders.
-#: src/components/network/DevicesSelector.tsx:77
-#: src/components/storage/utils/drive.tsx:106
-#: src/components/storage/utils/volume-group.tsx:96
-#, javascript-format
-msgid "%s - %s"
-msgstr "%s - %s"
 
 #. TRANSLATORS: Displays both IPv4 and IPv6 addresses with count of
 #. additional IPs (e.g., "192.168.122.237, fe80::5054:ff:fe46:2af9 and 1
@@ -5200,6 +5139,18 @@ msgstr "Vissa befintliga partitioner kan krympas"
 msgid "Current partitions will be kept"
 msgstr "Nuvarande partitioner kommer att behållas"
 
+#. TRANSLATORS: this simply concatenates the two sentences that describe what is going to happen
+#. with logical volumes. The first %s corresponds to deleted logical volumes and the second one
+#. to resized ones.
+#. TRANSLATORS: this simply concatenates the two sentences that describe what is going to happen
+#. with partitions. The first %s corresponds to deleted partitions and the second one to resized
+#. ones.
+#: src/components/storage/utils/drive.tsx:106
+#: src/components/storage/utils/volume-group.tsx:96
+#, javascript-format
+msgid "%s - %s"
+msgstr "%s - %s"
+
 #: src/components/storage/utils/drive.tsx:133
 msgid ""
 "Partitions that are not reused will be removed and that data will be lost."
@@ -5859,6 +5810,37 @@ msgstr "Loopback"
 #: src/utils/network.ts:89
 msgid "VLAN"
 msgstr "VLAN"
+
+#~ msgid "Binding settings"
+#~ msgstr "Bindningsinställningar"
+
+#~ msgid ""
+#~ "Choose how the connection should be associated with a network device. "
+#~ "This helps control which device the connection uses."
+#~ msgstr ""
+#~ "Välj hur anslutningen ska kopplas till en nätverksenhet. Detta hjälper "
+#~ "till att styra vilken enhet anslutningen använder."
+
+#~ msgid "Unbound"
+#~ msgstr "Obunden"
+
+#~ msgid "The connection can be used by any available device."
+#~ msgstr "Anslutningen kan användas av vilken tillgänglig enhet som helst."
+
+#~ msgid "Bind to device name"
+#~ msgstr "Bind till enhetsnamn"
+
+#~ msgid "Choose device to bind by name"
+#~ msgstr "Välj enhet att binda efter namn"
+
+#~ msgid "Bind to MAC address"
+#~ msgstr "Bind till MAC-adress"
+
+#~ msgid "Choose device to bind by MAC"
+#~ msgstr "Välj enhet att binda via MAC"
+
+#~ msgid "None (unbound)"
+#~ msgstr "Ingen (obunden)"
 
 #~ msgid "Up"
 #~ msgstr "Uppe"

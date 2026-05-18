@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-15 15:22+0000\n"
+"POT-Creation-Date: 2026-05-18 10:24+0000\n"
 "PO-Revision-Date: 2025-06-17 06:59+0000\n"
 "Last-Translator: Feike Donia <feikedonia@proton.me>\n"
 "Language-Team: Dutch <https://l10n.opensuse.org/projects/agama/agama-web/nl/"
@@ -338,7 +338,6 @@ msgstr "Terug"
 #. TRANSLATORS: label for the form cancel button.
 #: src/components/core/Page.tsx:255 src/components/core/Popup.tsx:140
 #: src/components/form/CancelButton.tsx:47
-#: src/components/network/BindingSettingsForm.tsx:180
 #: src/components/network/WifiConnectionForm.tsx:188
 #: src/components/product/ProductSelectionPage.tsx:538
 #: src/components/storage/iscsi/DiscoverFormPage.tsx:252
@@ -440,14 +439,13 @@ msgstr "Opslag"
 
 #. TRANSLATORS: breadcrumb label for the network configuration section.
 #: src/components/core/ProgressStatusMonitor.tsx:42
-#: src/components/network/BindingSettingsForm.tsx:111
 #: src/components/network/ConnectionDetails.tsx:95
 #: src/components/network/ConnectionForm.tsx:658
 #: src/components/network/ConnectionPage.tsx:75
 #: src/components/network/NetworkPage.tsx:43
 #: src/components/network/WifiConnectionForm.tsx:142
 #: src/components/network/WifiConnectionForm.tsx:198
-#: src/components/overview/NetworkSummary.tsx:149 src/routes/network.tsx:36
+#: src/components/overview/NetworkSummary.tsx:149 src/routes/network.tsx:35
 msgid "Network"
 msgstr "Netwerk"
 
@@ -789,46 +787,6 @@ msgstr ""
 #: src/components/storage/zfcp/ZFCPDevicesTable.tsx:342
 msgid "Device"
 msgstr "Apparaat"
-
-#: src/components/network/BindingSettingsForm.tsx:113
-#, fuzzy
-msgid "Binding settings"
-msgstr "Encryptie instellingen"
-
-#: src/components/network/BindingSettingsForm.tsx:121
-msgid ""
-"Choose how the connection should be associated with a network device. This "
-"helps control which device the connection uses."
-msgstr ""
-
-#: src/components/network/BindingSettingsForm.tsx:129
-msgid "Unbound"
-msgstr ""
-
-#: src/components/network/BindingSettingsForm.tsx:132
-#, fuzzy
-msgid "The connection can be used by any available device."
-msgstr ""
-"De verbinding zal alleen tijdens de installatie worden gebruikt en niet "
-"beschikbaar zijn voor het geinstalleerde systeem."
-
-#: src/components/network/BindingSettingsForm.tsx:141
-#, fuzzy
-msgid "Bind to device name"
-msgstr "Lees zFCP apparaten"
-
-#: src/components/network/BindingSettingsForm.tsx:145
-msgid "Choose device to bind by name"
-msgstr ""
-
-#: src/components/network/BindingSettingsForm.tsx:160
-#, fuzzy
-msgid "Bind to MAC address"
-msgstr "Een adres toevoegen"
-
-#: src/components/network/BindingSettingsForm.tsx:164
-msgid "Choose device to bind by MAC"
-msgstr ""
 
 #. TRANSLATORS: label for the network interface name field.
 #. TRANSLATORS: accessible label for the device selector. MAC address refers
@@ -1413,30 +1371,6 @@ msgstr ""
 #, fuzzy
 msgid "MAC address"
 msgstr "Adres"
-
-#: src/components/network/DevicesSelector.tsx:69
-#, fuzzy
-msgid "None (unbound)"
-msgstr "Geen inhoud gevonden"
-
-#. TRANSLATORS: this simply concatenates the two sentences that describe what is going to happen
-#. with logical volumes. The first %s corresponds to deleted logical volumes and the second one
-#. to resized ones.
-#. TRANSLATORS: this simply concatenates the two sentences that describe what is going to happen
-#. with partitions. The first %s corresponds to deleted partitions and the second one to resized
-#. ones.
-#. TRANSLATORS: A label shown in a dropdown for selecting a network
-#. device. It combines the device name and MAC address, with the order
-#. determined by the component settings: some selectors will show the
-#. name first, others the MAC address. I.e. "enp1s0 - CC-7F-C8-FC-7A-A1"
-#. or "CC-7F-C8-FC-7A-A1 - enp1s0". You may change the separator, but
-#. please keep both %s placeholders.
-#: src/components/network/DevicesSelector.tsx:77
-#: src/components/storage/utils/drive.tsx:106
-#: src/components/storage/utils/volume-group.tsx:96
-#, javascript-format
-msgid "%s - %s"
-msgstr ""
 
 #. TRANSLATORS: Displays both IPv4 and IPv6 addresses with count of
 #. additional IPs (e.g., "192.168.122.237, fe80::5054:ff:fe46:2af9 and 1
@@ -5442,6 +5376,18 @@ msgstr "%s met %d partities"
 msgid "Current partitions will be kept"
 msgstr "partitie"
 
+#. TRANSLATORS: this simply concatenates the two sentences that describe what is going to happen
+#. with logical volumes. The first %s corresponds to deleted logical volumes and the second one
+#. to resized ones.
+#. TRANSLATORS: this simply concatenates the two sentences that describe what is going to happen
+#. with partitions. The first %s corresponds to deleted partitions and the second one to resized
+#. ones.
+#: src/components/storage/utils/drive.tsx:106
+#: src/components/storage/utils/volume-group.tsx:96
+#, javascript-format
+msgid "%s - %s"
+msgstr ""
+
 #: src/components/storage/utils/drive.tsx:133
 #, fuzzy
 msgid ""
@@ -6156,6 +6102,28 @@ msgstr ""
 #: src/utils/network.ts:89
 msgid "VLAN"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Binding settings"
+#~ msgstr "Encryptie instellingen"
+
+#, fuzzy
+#~ msgid "The connection can be used by any available device."
+#~ msgstr ""
+#~ "De verbinding zal alleen tijdens de installatie worden gebruikt en niet "
+#~ "beschikbaar zijn voor het geinstalleerde systeem."
+
+#, fuzzy
+#~ msgid "Bind to device name"
+#~ msgstr "Lees zFCP apparaten"
+
+#, fuzzy
+#~ msgid "Bind to MAC address"
+#~ msgstr "Een adres toevoegen"
+
+#, fuzzy
+#~ msgid "None (unbound)"
+#~ msgstr "Geen inhoud gevonden"
 
 #, fuzzy, javascript-format
 #~ msgid "Using transient hostname: %s"

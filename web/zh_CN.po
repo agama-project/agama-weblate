@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-15 15:22+0000\n"
+"POT-Creation-Date: 2026-05-18 10:24+0000\n"
 "PO-Revision-Date: 2026-05-15 09:12+0000\n"
 "Last-Translator: Emily Dong <Emily.Dong@excel-gits.com>\n"
 "Language-Team: Chinese (China) <https://l10n.opensuse.org/projects/agama/"
@@ -323,7 +323,6 @@ msgstr "返回"
 #. TRANSLATORS: label for the form cancel button.
 #: src/components/core/Page.tsx:255 src/components/core/Popup.tsx:140
 #: src/components/form/CancelButton.tsx:47
-#: src/components/network/BindingSettingsForm.tsx:180
 #: src/components/network/WifiConnectionForm.tsx:188
 #: src/components/product/ProductSelectionPage.tsx:538
 #: src/components/storage/iscsi/DiscoverFormPage.tsx:252
@@ -424,14 +423,13 @@ msgstr "存储"
 
 #. TRANSLATORS: breadcrumb label for the network configuration section.
 #: src/components/core/ProgressStatusMonitor.tsx:42
-#: src/components/network/BindingSettingsForm.tsx:111
 #: src/components/network/ConnectionDetails.tsx:95
 #: src/components/network/ConnectionForm.tsx:658
 #: src/components/network/ConnectionPage.tsx:75
 #: src/components/network/NetworkPage.tsx:43
 #: src/components/network/WifiConnectionForm.tsx:142
 #: src/components/network/WifiConnectionForm.tsx:198
-#: src/components/overview/NetworkSummary.tsx:149 src/routes/network.tsx:36
+#: src/components/overview/NetworkSummary.tsx:149 src/routes/network.tsx:35
 msgid "Network"
 msgstr "网络"
 
@@ -761,41 +759,6 @@ msgstr ""
 #: src/components/storage/zfcp/ZFCPDevicesTable.tsx:342
 msgid "Device"
 msgstr "设备"
-
-#: src/components/network/BindingSettingsForm.tsx:113
-#, fuzzy
-msgid "Binding settings"
-msgstr "编辑绑定设置"
-
-#: src/components/network/BindingSettingsForm.tsx:121
-msgid ""
-"Choose how the connection should be associated with a network device. This "
-"helps control which device the connection uses."
-msgstr "选择连接与网络设备关联的方式。这有助于控制连接使用的设备。"
-
-#: src/components/network/BindingSettingsForm.tsx:129
-msgid "Unbound"
-msgstr "已取消绑定"
-
-#: src/components/network/BindingSettingsForm.tsx:132
-msgid "The connection can be used by any available device."
-msgstr "任何可用设备都可以使用此连接。"
-
-#: src/components/network/BindingSettingsForm.tsx:141
-msgid "Bind to device name"
-msgstr "绑定到设备名称"
-
-#: src/components/network/BindingSettingsForm.tsx:145
-msgid "Choose device to bind by name"
-msgstr "按名称选择要绑定的设备"
-
-#: src/components/network/BindingSettingsForm.tsx:160
-msgid "Bind to MAC address"
-msgstr "绑定到 MAC 地址"
-
-#: src/components/network/BindingSettingsForm.tsx:164
-msgid "Choose device to bind by MAC"
-msgstr "按 MAC 选择要绑定的设备"
 
 #. TRANSLATORS: label for the network interface name field.
 #. TRANSLATORS: accessible label for the device selector. MAC address refers
@@ -1362,30 +1325,6 @@ msgstr "请更改过滤条件，然后重试。"
 #, fuzzy
 msgid "MAC address"
 msgstr "地址"
-
-#: src/components/network/DevicesSelector.tsx:69
-#, fuzzy
-msgid "None (unbound)"
-msgstr "未找到内容"
-
-#. TRANSLATORS: this simply concatenates the two sentences that describe what is going to happen
-#. with logical volumes. The first %s corresponds to deleted logical volumes and the second one
-#. to resized ones.
-#. TRANSLATORS: this simply concatenates the two sentences that describe what is going to happen
-#. with partitions. The first %s corresponds to deleted partitions and the second one to resized
-#. ones.
-#. TRANSLATORS: A label shown in a dropdown for selecting a network
-#. device. It combines the device name and MAC address, with the order
-#. determined by the component settings: some selectors will show the
-#. name first, others the MAC address. I.e. "enp1s0 - CC-7F-C8-FC-7A-A1"
-#. or "CC-7F-C8-FC-7A-A1 - enp1s0". You may change the separator, but
-#. please keep both %s placeholders.
-#: src/components/network/DevicesSelector.tsx:77
-#: src/components/storage/utils/drive.tsx:106
-#: src/components/storage/utils/volume-group.tsx:96
-#, javascript-format
-msgid "%s - %s"
-msgstr "%s - %s"
 
 #. TRANSLATORS: Displays both IPv4 and IPv6 addresses with count of
 #. additional IPs (e.g., "192.168.122.237, fe80::5054:ff:fe46:2af9 and 1
@@ -5214,6 +5153,18 @@ msgstr "可能会收缩部分现有分区"
 msgid "Current partitions will be kept"
 msgstr "将保留当前分区"
 
+#. TRANSLATORS: this simply concatenates the two sentences that describe what is going to happen
+#. with logical volumes. The first %s corresponds to deleted logical volumes and the second one
+#. to resized ones.
+#. TRANSLATORS: this simply concatenates the two sentences that describe what is going to happen
+#. with partitions. The first %s corresponds to deleted partitions and the second one to resized
+#. ones.
+#: src/components/storage/utils/drive.tsx:106
+#: src/components/storage/utils/volume-group.tsx:96
+#, javascript-format
+msgid "%s - %s"
+msgstr "%s - %s"
+
 #: src/components/storage/utils/drive.tsx:133
 msgid ""
 "Partitions that are not reused will be removed and that data will be lost."
@@ -5882,6 +5833,37 @@ msgstr ""
 #: src/utils/network.ts:89
 msgid "VLAN"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Binding settings"
+#~ msgstr "编辑绑定设置"
+
+#~ msgid ""
+#~ "Choose how the connection should be associated with a network device. "
+#~ "This helps control which device the connection uses."
+#~ msgstr "选择连接与网络设备关联的方式。这有助于控制连接使用的设备。"
+
+#~ msgid "Unbound"
+#~ msgstr "已取消绑定"
+
+#~ msgid "The connection can be used by any available device."
+#~ msgstr "任何可用设备都可以使用此连接。"
+
+#~ msgid "Bind to device name"
+#~ msgstr "绑定到设备名称"
+
+#~ msgid "Choose device to bind by name"
+#~ msgstr "按名称选择要绑定的设备"
+
+#~ msgid "Bind to MAC address"
+#~ msgstr "绑定到 MAC 地址"
+
+#~ msgid "Choose device to bind by MAC"
+#~ msgstr "按 MAC 选择要绑定的设备"
+
+#, fuzzy
+#~ msgid "None (unbound)"
+#~ msgstr "未找到内容"
 
 #, javascript-format
 #~ msgid "Using transient hostname: %s"
