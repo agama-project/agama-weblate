@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-15 15:22+0000\n"
+"POT-Creation-Date: 2026-05-18 10:24+0000\n"
 "PO-Revision-Date: 2026-05-16 04:12+0000\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -307,7 +307,6 @@ msgstr "უკან"
 #. TRANSLATORS: label for the form cancel button.
 #: src/components/core/Page.tsx:255 src/components/core/Popup.tsx:140
 #: src/components/form/CancelButton.tsx:47
-#: src/components/network/BindingSettingsForm.tsx:180
 #: src/components/network/WifiConnectionForm.tsx:188
 #: src/components/product/ProductSelectionPage.tsx:538
 #: src/components/storage/iscsi/DiscoverFormPage.tsx:252
@@ -407,14 +406,13 @@ msgstr "საცავი"
 
 #. TRANSLATORS: breadcrumb label for the network configuration section.
 #: src/components/core/ProgressStatusMonitor.tsx:42
-#: src/components/network/BindingSettingsForm.tsx:111
 #: src/components/network/ConnectionDetails.tsx:95
 #: src/components/network/ConnectionForm.tsx:658
 #: src/components/network/ConnectionPage.tsx:75
 #: src/components/network/NetworkPage.tsx:43
 #: src/components/network/WifiConnectionForm.tsx:142
 #: src/components/network/WifiConnectionForm.tsx:198
-#: src/components/overview/NetworkSummary.tsx:149 src/routes/network.tsx:36
+#: src/components/overview/NetworkSummary.tsx:149 src/routes/network.tsx:35
 msgid "Network"
 msgstr "ქსელი"
 
@@ -740,40 +738,6 @@ msgstr "კავშირის მოწყობილობის იდე�
 #: src/components/storage/zfcp/ZFCPDevicesTable.tsx:342
 msgid "Device"
 msgstr "მოწყობილობა"
-
-#: src/components/network/BindingSettingsForm.tsx:113
-msgid "Binding settings"
-msgstr "მიბმის პარამეტრები"
-
-#: src/components/network/BindingSettingsForm.tsx:121
-msgid ""
-"Choose how the connection should be associated with a network device. This "
-"helps control which device the connection uses."
-msgstr ""
-
-#: src/components/network/BindingSettingsForm.tsx:129
-msgid "Unbound"
-msgstr "მოხსნა"
-
-#: src/components/network/BindingSettingsForm.tsx:132
-msgid "The connection can be used by any available device."
-msgstr "კავშირის გამოყენება ნებისმიერ ხელმისაწვდომ მოწყობილობას შეუძლია."
-
-#: src/components/network/BindingSettingsForm.tsx:141
-msgid "Bind to device name"
-msgstr "მიბმა მოწყობილობის სახელზე"
-
-#: src/components/network/BindingSettingsForm.tsx:145
-msgid "Choose device to bind by name"
-msgstr "აირჩიეთ მოწყობილობა, რომლის სახელზეც მიბმა გნებავთ"
-
-#: src/components/network/BindingSettingsForm.tsx:160
-msgid "Bind to MAC address"
-msgstr "მიბმა MAC მისამართზე"
-
-#: src/components/network/BindingSettingsForm.tsx:164
-msgid "Choose device to bind by MAC"
-msgstr "აირჩიეთ მოწყობილობა MAC-ით მისაბმელად"
 
 #. TRANSLATORS: label for the network interface name field.
 #. TRANSLATORS: accessible label for the device selector. MAC address refers
@@ -1318,29 +1282,6 @@ msgstr "შეცვალეთ ფილტრები და თავიდ
 #: src/components/network/DeviceSelector.tsx:61
 msgid "MAC address"
 msgstr "MAC მისამართი"
-
-#: src/components/network/DevicesSelector.tsx:69
-msgid "None (unbound)"
-msgstr "არცერთი (მიბმის გარეშე)"
-
-#. TRANSLATORS: this simply concatenates the two sentences that describe what is going to happen
-#. with logical volumes. The first %s corresponds to deleted logical volumes and the second one
-#. to resized ones.
-#. TRANSLATORS: this simply concatenates the two sentences that describe what is going to happen
-#. with partitions. The first %s corresponds to deleted partitions and the second one to resized
-#. ones.
-#. TRANSLATORS: A label shown in a dropdown for selecting a network
-#. device. It combines the device name and MAC address, with the order
-#. determined by the component settings: some selectors will show the
-#. name first, others the MAC address. I.e. "enp1s0 - CC-7F-C8-FC-7A-A1"
-#. or "CC-7F-C8-FC-7A-A1 - enp1s0". You may change the separator, but
-#. please keep both %s placeholders.
-#: src/components/network/DevicesSelector.tsx:77
-#: src/components/storage/utils/drive.tsx:106
-#: src/components/storage/utils/volume-group.tsx:96
-#, javascript-format
-msgid "%s - %s"
-msgstr "%s - %s"
 
 #. TRANSLATORS: Displays both IPv4 and IPv6 addresses with count of
 #. additional IPs (e.g., "192.168.122.237, fe80::5054:ff:fe46:2af9 and 1
@@ -5064,6 +5005,18 @@ msgstr "ზოგიერთი არსებული დანაყოფ�
 msgid "Current partitions will be kept"
 msgstr "არსებული დანაყოფები შენარჩუნდება"
 
+#. TRANSLATORS: this simply concatenates the two sentences that describe what is going to happen
+#. with logical volumes. The first %s corresponds to deleted logical volumes and the second one
+#. to resized ones.
+#. TRANSLATORS: this simply concatenates the two sentences that describe what is going to happen
+#. with partitions. The first %s corresponds to deleted partitions and the second one to resized
+#. ones.
+#: src/components/storage/utils/drive.tsx:106
+#: src/components/storage/utils/volume-group.tsx:96
+#, javascript-format
+msgid "%s - %s"
+msgstr "%s - %s"
+
 #: src/components/storage/utils/drive.tsx:133
 msgid ""
 "Partitions that are not reused will be removed and that data will be lost."
@@ -5707,6 +5660,30 @@ msgstr "მარყუჟი"
 #: src/utils/network.ts:89
 msgid "VLAN"
 msgstr "VLAN"
+
+#~ msgid "Binding settings"
+#~ msgstr "მიბმის პარამეტრები"
+
+#~ msgid "Unbound"
+#~ msgstr "მოხსნა"
+
+#~ msgid "The connection can be used by any available device."
+#~ msgstr "კავშირის გამოყენება ნებისმიერ ხელმისაწვდომ მოწყობილობას შეუძლია."
+
+#~ msgid "Bind to device name"
+#~ msgstr "მიბმა მოწყობილობის სახელზე"
+
+#~ msgid "Choose device to bind by name"
+#~ msgstr "აირჩიეთ მოწყობილობა, რომლის სახელზეც მიბმა გნებავთ"
+
+#~ msgid "Bind to MAC address"
+#~ msgstr "მიბმა MAC მისამართზე"
+
+#~ msgid "Choose device to bind by MAC"
+#~ msgstr "აირჩიეთ მოწყობილობა MAC-ით მისაბმელად"
+
+#~ msgid "None (unbound)"
+#~ msgstr "არცერთი (მიბმის გარეშე)"
 
 #~ msgid "Up"
 #~ msgstr "ჩართ"

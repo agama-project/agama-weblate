@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-15 15:22+0000\n"
+"POT-Creation-Date: 2026-05-18 10:24+0000\n"
 "PO-Revision-Date: 2026-05-04 07:04+0000\n"
 "Last-Translator: David D <dadu042@mailo.com>\n"
 "Language-Team: French <https://l10n.opensuse.org/projects/agama/agama-web/fr/"
@@ -342,7 +342,6 @@ msgstr "Retour"
 #. TRANSLATORS: label for the form cancel button.
 #: src/components/core/Page.tsx:255 src/components/core/Popup.tsx:140
 #: src/components/form/CancelButton.tsx:47
-#: src/components/network/BindingSettingsForm.tsx:180
 #: src/components/network/WifiConnectionForm.tsx:188
 #: src/components/product/ProductSelectionPage.tsx:538
 #: src/components/storage/iscsi/DiscoverFormPage.tsx:252
@@ -443,14 +442,13 @@ msgstr "Stockage"
 
 #. TRANSLATORS: breadcrumb label for the network configuration section.
 #: src/components/core/ProgressStatusMonitor.tsx:42
-#: src/components/network/BindingSettingsForm.tsx:111
 #: src/components/network/ConnectionDetails.tsx:95
 #: src/components/network/ConnectionForm.tsx:658
 #: src/components/network/ConnectionPage.tsx:75
 #: src/components/network/NetworkPage.tsx:43
 #: src/components/network/WifiConnectionForm.tsx:142
 #: src/components/network/WifiConnectionForm.tsx:198
-#: src/components/overview/NetworkSummary.tsx:149 src/routes/network.tsx:36
+#: src/components/overview/NetworkSummary.tsx:149 src/routes/network.tsx:35
 msgid "Network"
 msgstr "Réseau"
 
@@ -785,44 +783,6 @@ msgstr "Identifier le périphérique de connexion par son adresse physique"
 #: src/components/storage/zfcp/ZFCPDevicesTable.tsx:342
 msgid "Device"
 msgstr "Périphérique"
-
-#: src/components/network/BindingSettingsForm.tsx:113
-#, fuzzy
-msgid "Binding settings"
-msgstr "Modifier les paramètres de liaison"
-
-#: src/components/network/BindingSettingsForm.tsx:121
-msgid ""
-"Choose how the connection should be associated with a network device. This "
-"helps control which device the connection uses."
-msgstr ""
-"Choisissez comment la connexion doit être associée à un appareil réseau. "
-"Cela aide à contrôler quel appareil la connexion utilise."
-
-#: src/components/network/BindingSettingsForm.tsx:129
-msgid "Unbound"
-msgstr "Non lié(e)"
-
-#: src/components/network/BindingSettingsForm.tsx:132
-msgid "The connection can be used by any available device."
-msgstr ""
-"La connexion peut être utilisée par n'importe quel appareil disponible."
-
-#: src/components/network/BindingSettingsForm.tsx:141
-msgid "Bind to device name"
-msgstr "Lier au nom de l'appareil"
-
-#: src/components/network/BindingSettingsForm.tsx:145
-msgid "Choose device to bind by name"
-msgstr "Choisir un périphérique à lier selon le nom"
-
-#: src/components/network/BindingSettingsForm.tsx:160
-msgid "Bind to MAC address"
-msgstr "Lier à l'adresse MAC"
-
-#: src/components/network/BindingSettingsForm.tsx:164
-msgid "Choose device to bind by MAC"
-msgstr "Choisir un périphérique à lier en fonction de l'adresse MAC"
 
 #. TRANSLATORS: label for the network interface name field.
 #. TRANSLATORS: accessible label for the device selector. MAC address refers
@@ -1388,30 +1348,6 @@ msgstr "Changez filtres puis réessayez."
 #, fuzzy
 msgid "MAC address"
 msgstr "Adresse"
-
-#: src/components/network/DevicesSelector.tsx:69
-#, fuzzy
-msgid "None (unbound)"
-msgstr "Aucun contenu n'a été trouvé"
-
-#. TRANSLATORS: this simply concatenates the two sentences that describe what is going to happen
-#. with logical volumes. The first %s corresponds to deleted logical volumes and the second one
-#. to resized ones.
-#. TRANSLATORS: this simply concatenates the two sentences that describe what is going to happen
-#. with partitions. The first %s corresponds to deleted partitions and the second one to resized
-#. ones.
-#. TRANSLATORS: A label shown in a dropdown for selecting a network
-#. device. It combines the device name and MAC address, with the order
-#. determined by the component settings: some selectors will show the
-#. name first, others the MAC address. I.e. "enp1s0 - CC-7F-C8-FC-7A-A1"
-#. or "CC-7F-C8-FC-7A-A1 - enp1s0". You may change the separator, but
-#. please keep both %s placeholders.
-#: src/components/network/DevicesSelector.tsx:77
-#: src/components/storage/utils/drive.tsx:106
-#: src/components/storage/utils/volume-group.tsx:96
-#, javascript-format
-msgid "%s - %s"
-msgstr "%s - %s"
 
 #. TRANSLATORS: Displays both IPv4 and IPv6 addresses with count of
 #. additional IPs (e.g., "192.168.122.237, fe80::5054:ff:fe46:2af9 and 1
@@ -5434,6 +5370,18 @@ msgstr "Il se peut que certaines partitions existantes soient réduites"
 msgid "Current partitions will be kept"
 msgstr "Les partitions actuelles seront conservées"
 
+#. TRANSLATORS: this simply concatenates the two sentences that describe what is going to happen
+#. with logical volumes. The first %s corresponds to deleted logical volumes and the second one
+#. to resized ones.
+#. TRANSLATORS: this simply concatenates the two sentences that describe what is going to happen
+#. with partitions. The first %s corresponds to deleted partitions and the second one to resized
+#. ones.
+#: src/components/storage/utils/drive.tsx:106
+#: src/components/storage/utils/volume-group.tsx:96
+#, javascript-format
+msgid "%s - %s"
+msgstr "%s - %s"
+
 #: src/components/storage/utils/drive.tsx:133
 msgid ""
 "Partitions that are not reused will be removed and that data will be lost."
@@ -6146,6 +6094,40 @@ msgstr ""
 #: src/utils/network.ts:89
 msgid "VLAN"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Binding settings"
+#~ msgstr "Modifier les paramètres de liaison"
+
+#~ msgid ""
+#~ "Choose how the connection should be associated with a network device. "
+#~ "This helps control which device the connection uses."
+#~ msgstr ""
+#~ "Choisissez comment la connexion doit être associée à un appareil réseau. "
+#~ "Cela aide à contrôler quel appareil la connexion utilise."
+
+#~ msgid "Unbound"
+#~ msgstr "Non lié(e)"
+
+#~ msgid "The connection can be used by any available device."
+#~ msgstr ""
+#~ "La connexion peut être utilisée par n'importe quel appareil disponible."
+
+#~ msgid "Bind to device name"
+#~ msgstr "Lier au nom de l'appareil"
+
+#~ msgid "Choose device to bind by name"
+#~ msgstr "Choisir un périphérique à lier selon le nom"
+
+#~ msgid "Bind to MAC address"
+#~ msgstr "Lier à l'adresse MAC"
+
+#~ msgid "Choose device to bind by MAC"
+#~ msgstr "Choisir un périphérique à lier en fonction de l'adresse MAC"
+
+#, fuzzy
+#~ msgid "None (unbound)"
+#~ msgstr "Aucun contenu n'a été trouvé"
 
 #~ msgid "Up"
 #~ msgstr "Haut"
