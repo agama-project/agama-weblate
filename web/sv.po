@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-18 10:24+0000\n"
+"POT-Creation-Date: 2026-05-22 09:20+0000\n"
 "PO-Revision-Date: 2026-05-18 09:12+0000\n"
 "Last-Translator: Luna  Jernberg <bittin@opensuse.org>\n"
 "Language-Team: Swedish <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -170,7 +170,6 @@ msgid "Use these same settings for the selected product"
 msgstr "Använd samma inställningar för den valda produkten"
 
 #. TRANSLATORS: label for the form submit button.
-#. TRANSLATORS: button to save hostname changes
 #. TRANSLATORS: button to save system settings changes
 #: src/components/core/InstallerL10nOptions.tsx:345
 #: src/components/core/InstallerL10nOptions.tsx:391
@@ -180,8 +179,7 @@ msgstr "Använd samma inställningar för den valda produkten"
 #: src/components/storage/dasd/FormatActionHandler.tsx:95
 #: src/components/storage/dasd/FormatActionHandler.tsx:122
 #: src/components/storage/zfcp/ZFCPControllersPage.tsx:161
-#: src/components/system/HostnamePage.tsx:254
-#: src/components/system/SystemPage.tsx:230
+#: src/components/system/system-form/Form.tsx:209
 msgid "Accept"
 msgstr "Acceptera"
 
@@ -389,7 +387,7 @@ msgstr "Steg %1$d av %2$d"
 #: src/components/core/ProgressStatusMonitor.tsx:40
 #: src/components/overview/SoftwareSummary.tsx:160
 #: src/components/software/SoftwarePage.tsx:378
-#: src/components/software/SoftwarePatternsSelection.tsx:355
+#: src/components/software/patterns-form/Form.tsx:351
 #: src/routes/software.tsx:33
 msgid "Software"
 msgstr "Programvara"
@@ -418,11 +416,11 @@ msgstr "Lagring"
 #. TRANSLATORS: breadcrumb label for the network configuration section.
 #: src/components/core/ProgressStatusMonitor.tsx:42
 #: src/components/network/ConnectionDetails.tsx:95
-#: src/components/network/ConnectionForm.tsx:658
 #: src/components/network/ConnectionPage.tsx:75
 #: src/components/network/NetworkPage.tsx:43
 #: src/components/network/WifiConnectionForm.tsx:142
 #: src/components/network/WifiConnectionForm.tsx:198
+#: src/components/network/connection-form/Form.tsx:583
 #: src/components/overview/NetworkSummary.tsx:149 src/routes/network.tsx:35
 msgid "Network"
 msgstr "Nätverk"
@@ -708,212 +706,6 @@ msgstr "Inget av tidszonerna matchar filtret."
 msgid "Loading"
 msgstr "Laddar"
 
-#. TRANSLATORS: option label meaning the connection works with any network device.
-#: src/components/network/BindingModeSelector.tsx:32
-msgid "Any"
-msgstr "Vilken som helst"
-
-#. TRANSLATORS: description for the "Any" binding mode. The connection is
-#. not limited to a specific device.
-#: src/components/network/BindingModeSelector.tsx:35
-msgid "The connection is available for all devices"
-msgstr "Anslutning är tillgänglig för alla enheter"
-
-#. TRANSLATORS: option label for binding by device interface name (e.g. eth0).
-#: src/components/network/BindingModeSelector.tsx:40
-msgid "Chosen by name"
-msgstr "Vald efter namn"
-
-#. TRANSLATORS: description for the "Chosen by name" binding mode. The
-#. "device name" refers to the interface name (e.g. eth0).
-#: src/components/network/BindingModeSelector.tsx:43
-msgid "Identify the connection device by its name in the system"
-msgstr "Identifiera anslutningsenheten med dess namn i systemet"
-
-#. TRANSLATORS: option label for binding by MAC address
-#: src/components/network/BindingModeSelector.tsx:48
-msgid "Chosen by MAC"
-msgstr "Vald av MAC"
-
-#. TRANSLATORS: description for the "Chosen by MAC" binding mode. MAC is the
-#. hardware address, persisting across interface renames.
-#: src/components/network/BindingModeSelector.tsx:51
-msgid "Identify the connection device by its physical address"
-msgstr "Identifiera anslutningsenhet med hjälp av dess fysiska adress"
-
-#. TRANSLATORS: table header for a zFCP devices table.
-#. TRANSLATORS: table header for a DASD devices table
-#. TRANSLATORS: label for the device binding dropdown.
-#: src/components/network/BindingModeSelector.tsx:68
-#: src/components/network/ConnectionsTable.tsx:173
-#: src/components/storage/DrivesTable.tsx:71
-#: src/components/storage/MdRaidsTable.tsx:70
-#: src/components/storage/ProposalResultTable.tsx:134
-#: src/components/storage/SpaceActionsTable.tsx:223
-#: src/components/storage/VolumeGroupsTable.tsx:72
-#: src/components/storage/dasd/DASDTable.tsx:543
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:342
-msgid "Device"
-msgstr "Enhet"
-
-#. TRANSLATORS: label for the network interface name field.
-#. TRANSLATORS: accessible label for the device selector. MAC address refers
-#. to the hardware identifier of the network interface.
-#: src/components/network/BondSettings.tsx:65
-#: src/components/network/BondSettings.tsx:70
-#: src/components/network/BridgeSettings.tsx:85
-#: src/components/network/BridgeSettings.tsx:90
-#: src/components/network/DeviceSelector.tsx:61
-msgid "Device name"
-msgstr "Enhetsnamn"
-
-#. TRANSLATORS: helper text for the bond device name field.
-#: src/components/network/BondSettings.tsx:74
-msgid "E.g., bond0"
-msgstr "T.ex. bond0"
-
-#. TRANSLATORS: label for the bond mode field.
-#: src/components/network/BondSettings.tsx:85
-#: src/components/network/ConnectionDetails.tsx:134
-msgid "Bond mode"
-msgstr "Bond läge"
-
-#. TRANSLATORS: label for the bond options field.
-#: src/components/network/BondSettings.tsx:96
-#: src/components/network/ConnectionDetails.tsx:140
-msgid "Bond options"
-msgstr "Bond alternativ"
-
-#. TRANSLATORS: helper text for the bond options field.
-#: src/components/network/BondSettings.tsx:100
-msgid "E.g., downdelay=0, primary=eth1, miimon=100, lacp_rate=fast"
-msgstr "T.ex. downdelay=0, primary=eth1, miimon=100, lacp_rate=fast"
-
-#. TRANSLATORS: label for the bond ports field.
-#: src/components/network/BondSettings.tsx:110
-#: src/components/network/ConnectionDetails.tsx:146
-msgid "Bond ports"
-msgstr "Bond portar"
-
-#. TRANSLATORS: helper text for the bond ports field. %s is a list of available devices.
-#. TRANSLATORS: helper text for the bridge ports field. %s is a list of available devices.
-#: src/components/network/BondSettings.tsx:114
-#: src/components/network/BridgeSettings.tsx:109
-#, javascript-format
-msgid "Available devices: %s"
-msgstr "Tillgängliga enheter: %s"
-
-#. TRANSLATORS: option label for the bridge STP configuration to use the system default.
-#. TRANSLATORS: NTP mode option
-#: src/components/network/BridgeSettings.tsx:40
-#: src/components/system/NtpSettings.tsx:68
-msgid "Default"
-msgstr "Standard"
-
-#. TRANSLATORS: description for the default bridge STP configuration.
-#: src/components/network/BridgeSettings.tsx:42
-msgid "Enabled with the system default settings"
-msgstr "Aktiverat med systemets standardinställningar"
-
-#. TRANSLATORS: option label for enabling bridge STP.
-#. TRANSLATORS: NTP mode option
-#: src/components/network/BridgeSettings.tsx:47
-#: src/components/product/ProductRegistrationForm.tsx:200
-#: src/components/storage/utils.ts:106 src/components/storage/utils.ts:125
-#: src/components/system/NtpSettings.tsx:75
-msgid "Custom"
-msgstr "Anpassad"
-
-#. TRANSLATORS: description for enabling bridge STP with manual settings.
-#: src/components/network/BridgeSettings.tsx:49
-msgid "Explicitly enabled with manual settings"
-msgstr "Explicit aktiverat med manuella inställningar"
-
-#. TRANSLATORS: option label for disabling bridge STP.
-#: src/components/network/BridgeSettings.tsx:54
-#: src/components/network/ConnectionDetails.tsx:169
-msgid "Disabled"
-msgstr "Inaktiverat"
-
-#. TRANSLATORS: description for disabling bridge STP.
-#: src/components/network/BridgeSettings.tsx:56
-msgid "Not used by this bridge"
-msgstr "Används inte av denna brygga"
-
-#. TRANSLATORS: helper text for the bond device name field.
-#: src/components/network/BridgeSettings.tsx:94
-msgid "E.g., br0"
-msgstr "T.ex., br0"
-
-#. TRANSLATORS: label for the bridge ports field.
-#: src/components/network/BridgeSettings.tsx:105
-#: src/components/network/ConnectionDetails.tsx:195
-msgid "Bridge ports"
-msgstr "Brygg portar"
-
-#. TRANSLATORS: label for the bridge STP (Spanning Tree Protocol) field.
-#: src/components/network/BridgeSettings.tsx:121
-msgid "Spanning Tree Protocol (STP)"
-msgstr "Spanning Tree-protokoll (STP)"
-
-#. TRANSLATORS: label suffix indicating an optional field.
-#: src/components/network/BridgeSettings.tsx:141
-#: src/components/network/BridgeSettings.tsx:170
-#: src/components/network/BridgeSettings.tsx:190
-#: src/components/network/BridgeSettings.tsx:210
-#: src/components/network/IpSettings.tsx:157
-#: src/components/product/ProductRegistrationForm.tsx:227
-#: src/components/product/ProductRegistrationForm.tsx:242
-msgid "(optional)"
-msgstr "(valfritt)"
-
-#. TRANSLATORS: label for the bridge priority field.
-#: src/components/network/BridgeSettings.tsx:144
-#: src/components/network/ConnectionDetails.tsx:175
-msgid "Priority"
-msgstr "Prioritet"
-
-#. TRANSLATORS: Helper text for the bridge priority
-#. field. Text inside square brackets [] is
-#. semantically and visually emphasized. Keep the
-#. brackets.
-#: src/components/network/BridgeSettings.tsx:155
-msgid "Root bridge selection (0-61440). [Lower is higher priority]."
-msgstr "Val av rotbrygga (0-61440). [Lägre är högre prioritet]."
-
-#. TRANSLATORS: label for the bridge forward delay field.
-#: src/components/network/BridgeSettings.tsx:173
-#: src/components/network/ConnectionDetails.tsx:179
-msgid "Forward delay"
-msgstr "Forward delay"
-
-#. TRANSLATORS: helper text for the bridge forward delay field.
-#: src/components/network/BridgeSettings.tsx:179
-msgid "Listening and learning time (4-30 seconds)."
-msgstr "Lyssnings och inlärningstid (4–30 sekunder)."
-
-#. TRANSLATORS: label for the bridge hello time field.
-#: src/components/network/BridgeSettings.tsx:193
-#: src/components/network/ConnectionDetails.tsx:185
-msgid "Hello time"
-msgstr "Hallå tid"
-
-#. TRANSLATORS: helper text for the bridge hello time field.
-#: src/components/network/BridgeSettings.tsx:199
-msgid "Protocol message interval (1-10 seconds)."
-msgstr "Protokollmeddelandeintervall (1–10 sekunder)."
-
-#. TRANSLATORS: label for the bridge max message age field.
-#: src/components/network/BridgeSettings.tsx:213
-#: src/components/network/ConnectionDetails.tsx:189
-msgid "Max message age"
-msgstr "Maximal meddelanden ålder"
-
-#. TRANSLATORS: helper text for the bridge max message age field.
-#: src/components/network/BridgeSettings.tsx:219
-msgid "Protocol message retention time (6-40 seconds)."
-msgstr "Protokollmeddelandets kvarhållningstid (6–40 sekunder)."
-
 #: src/components/network/ConnectionDetails.tsx:60
 msgid "Connection is available to all devices."
 msgstr "Anslutning är tillgänglig för alla enheter."
@@ -982,6 +774,12 @@ msgstr "Bond"
 msgid "Bond details"
 msgstr "Bond detaljer"
 
+#. TRANSLATORS: label for the bond mode field.
+#: src/components/network/ConnectionDetails.tsx:134
+#: src/components/network/connection-form/BondFields.tsx:85
+msgid "Bond mode"
+msgstr "Bond läge"
+
 #: src/components/network/ConnectionDetails.tsx:136
 #: src/components/network/ConnectionDetails.tsx:142
 #: src/components/network/ConnectionDetails.tsx:150
@@ -1000,6 +798,18 @@ msgstr "Bond detaljer"
 msgid "None set"
 msgstr "Ingen inställd"
 
+#. TRANSLATORS: label for the bond options field.
+#: src/components/network/ConnectionDetails.tsx:140
+#: src/components/network/connection-form/BondFields.tsx:96
+msgid "Bond options"
+msgstr "Bond alternativ"
+
+#. TRANSLATORS: label for the bond ports field.
+#: src/components/network/ConnectionDetails.tsx:146
+#: src/components/network/connection-form/BondFields.tsx:110
+msgid "Bond ports"
+msgstr "Bond portar"
+
 #: src/components/network/ConnectionDetails.tsx:164 src/utils/network.ts:88
 msgid "Bridge"
 msgstr "Brygga"
@@ -1012,9 +822,45 @@ msgstr "Brygg detaljer"
 msgid "STP"
 msgstr "STP"
 
+#. TRANSLATORS: option label for disabling bridge STP.
+#: src/components/network/ConnectionDetails.tsx:169
+#: src/components/network/connection-form/BridgeFields.tsx:54
+msgid "Disabled"
+msgstr "Inaktiverat"
+
 #: src/components/network/ConnectionDetails.tsx:169
 msgid "Enabled"
 msgstr "Aktiverad"
+
+#. TRANSLATORS: label for the bridge priority field.
+#: src/components/network/ConnectionDetails.tsx:175
+#: src/components/network/connection-form/BridgeFields.tsx:144
+msgid "Priority"
+msgstr "Prioritet"
+
+#. TRANSLATORS: label for the bridge forward delay field.
+#: src/components/network/ConnectionDetails.tsx:179
+#: src/components/network/connection-form/BridgeFields.tsx:173
+msgid "Forward delay"
+msgstr "Forward delay"
+
+#. TRANSLATORS: label for the bridge hello time field.
+#: src/components/network/ConnectionDetails.tsx:185
+#: src/components/network/connection-form/BridgeFields.tsx:193
+msgid "Hello time"
+msgstr "Hallå tid"
+
+#. TRANSLATORS: label for the bridge max message age field.
+#: src/components/network/ConnectionDetails.tsx:189
+#: src/components/network/connection-form/BridgeFields.tsx:213
+msgid "Max message age"
+msgstr "Maximal meddelanden ålder"
+
+#. TRANSLATORS: label for the bridge ports field.
+#: src/components/network/ConnectionDetails.tsx:195
+#: src/components/network/connection-form/BridgeFields.tsx:105
+msgid "Bridge ports"
+msgstr "Brygg portar"
 
 #: src/components/network/ConnectionDetails.tsx:215
 msgid "Device details"
@@ -1049,7 +895,7 @@ msgstr "DNS"
 #. TRANSLATORS: label for the DNS search domains field.
 #: src/components/network/ConnectionDetails.tsx:267
 #: src/components/network/ConnectionDetails.tsx:401
-#: src/components/network/ConnectionForm.tsx:560
+#: src/components/network/connection-form/Form.tsx:485
 msgid "DNS search domains"
 msgstr "DNS-sökdomäner"
 
@@ -1082,12 +928,11 @@ msgstr "Inställningar"
 msgid "Edit connection settings"
 msgstr "Redigera anslutningsinställningar"
 
-#. TRANSLATORS: label for hostname mode selector
 #. TRANSLATORS: label for NTP mode selector
+#. TRANSLATORS: label for hostname mode selector
 #: src/components/network/ConnectionDetails.tsx:354
-#: src/components/system/HostnamePage.tsx:210
-#: src/components/system/HostnameSettings.tsx:114
-#: src/components/system/NtpSettings.tsx:63
+#: src/components/system/system-form/HostnameFields.tsx:109
+#: src/components/system/system-form/NtpFields.tsx:57
 msgid "Mode"
 msgstr "Läge"
 
@@ -1099,108 +944,6 @@ msgstr "IPv4"
 msgid "IPv6"
 msgstr "IPv6"
 
-#. TRANSLATORS: title of an error for a failed network connection save.
-#. Do not end with a period.
-#: src/components/network/ConnectionForm.tsx:417
-msgid "The connection could not be saved"
-msgstr "Anslutningen kunde inte sparas"
-
-#. TRANSLATORS: table header for a DASD devices table
-#. TRANSLATORS: checkbox label for custom DNS server configuration.
-#: src/components/network/ConnectionForm.tsx:434
-#: src/components/network/ConnectionsTable.tsx:163
-#: src/components/network/ConnectionsTable.tsx:288
-#: src/components/storage/DeviceSelectorPage.tsx:54
-#: src/components/storage/dasd/DASDTable.tsx:550
-msgid "Type"
-msgstr "Typ"
-
-#. TRANSLATORS: table header for an iSCSI targets table
-#. TRANSLATORS: input field for the iSCSI initiator name
-#. TRANSLATORS: label for the network connection profile name field.
-#. TRANSLATORS: label for hostname value display
-#. TRANSLATORS: label for hostname input
-#: src/components/network/ConnectionForm.tsx:449
-#: src/components/network/ConnectionsTable.tsx:158
-#: src/components/network/ConnectionsTable.tsx:280
-#: src/components/storage/DeviceSelectorPage.tsx:55
-#: src/components/storage/LvmPage.tsx:182
-#: src/components/storage/iscsi/InitiatorFormPage.tsx:66
-#: src/components/storage/iscsi/InitiatorFormPage.tsx:75
-#: src/components/storage/iscsi/TargetsTable.tsx:282
-#: src/components/storage/iscsi/TargetsTable.tsx:456
-#: src/components/system/HostnameSettings.tsx:142
-#: src/components/system/HostnameSettings.tsx:151
-msgid "Name"
-msgstr "Namn"
-
-#. TRANSLATORS: checkbox label for custom DNS server configuration.
-#: src/components/network/ConnectionForm.tsx:511
-msgid "Use custom DNS servers"
-msgstr "Använd anpassade DNS-servrar"
-
-#. TRANSLATORS: label for the DNS servers field.
-#: src/components/network/ConnectionForm.tsx:524
-msgid "DNS servers"
-msgstr "DNS-servrar"
-
-#. TRANSLATORS: helper text for DNS servers field explaining the format.
-#: src/components/network/ConnectionForm.tsx:528
-msgid "E.g., 8.8.8.8 or 2001:4860:4860::8888"
-msgstr "T.ex. 8.8.8.8 eller 2001:4860:4860::8888"
-
-#. TRANSLATORS: validation error for an invalid DNS server address entry.
-#: src/components/network/ConnectionForm.tsx:532
-msgid "Invalid DNS server address"
-msgstr "Ogiltig DNS-serveradress"
-
-#. TRANSLATORS: checkbox label for custom DNS search domain configuration.
-#: src/components/network/ConnectionForm.tsx:547
-msgid "Use custom DNS search domains"
-msgstr "Använd anpassade DNS-sökdomäner"
-
-#. TRANSLATORS: helper text for DNS search domains field explaining the format.
-#: src/components/network/ConnectionForm.tsx:564
-msgid "E.g., example.com"
-msgstr "T.ex. exempel.com"
-
-#. TRANSLATORS: validation error for an invalid DNS search domain entry.
-#: src/components/network/ConnectionForm.tsx:568
-msgid "Invalid DNS search domain"
-msgstr "Ogiltig DNS-sökdomän"
-
-#. TRANSLATORS: title of the page shown when the requested connection
-#. profile does not exist. Do not end with a period.
-#: src/components/network/ConnectionForm.tsx:596
-msgid "Connection not found"
-msgstr "Anslutningen kunde inte hittas"
-
-#. TRANSLATORS: body text on the connection not found page.
-#: src/components/network/ConnectionForm.tsx:598
-msgid "The connection does not exist or is no longer available."
-msgstr "Anslutningen existrerar inte eller är inte längre tillgänglig."
-
-#. TRANSLATORS: link text on the connection not found page.
-#: src/components/network/ConnectionForm.tsx:600
-#: src/components/network/ConnectionPage.tsx:54
-msgid "Go to network page"
-msgstr "Gå till nätverkssidan"
-
-#. TRANSLATORS: breadcrumb label for the connection-edit form. Keep the
-#. noun ("connection"): the previous crumb is the connection name, so a
-#. bare "Edit" reads fine visually but leaves screen-reader users without
-#. the object being acted on when the crumb is announced on its own.
-#: src/components/network/ConnectionForm.tsx:668
-#: src/components/network/ConnectionsTable.tsx:357
-#: src/components/storage/iscsi/TargetsTable.tsx:224
-msgid "Edit connection"
-msgstr "Redigera anslutning"
-
-#. TRANSLATORS: breadcrumb label for the new-connection form.
-#: src/components/network/ConnectionForm.tsx:672
-msgid "New connection"
-msgstr "Ny anslutning"
-
 #. TRANSLATORS: %s will be replaced with connection id
 #: src/components/network/ConnectionPage.tsx:42
 #, javascript-format
@@ -1211,6 +954,12 @@ msgstr "\"%s\" existrerar inte eller är inte längre tillgänglig."
 msgid "Connection not found or lost"
 msgstr "Anslutningen hittades inte eller förlorades"
 
+#. TRANSLATORS: link text on the connection not found page.
+#: src/components/network/ConnectionPage.tsx:54
+#: src/components/network/connection-form/Form.tsx:525
+msgid "Go to network page"
+msgstr "Gå till nätverkssidan"
+
 #: src/components/network/ConnectionsTable.tsx:151
 msgid "(bound by name)"
 msgstr "(bunden vid namn)"
@@ -1219,10 +968,54 @@ msgstr "(bunden vid namn)"
 msgid "(bound by MAC)"
 msgstr "(bunden vid MAC)"
 
+#. TRANSLATORS: table header for an iSCSI targets table
+#. TRANSLATORS: input field for the iSCSI initiator name
+#. TRANSLATORS: label for the network connection profile name field.
+#. TRANSLATORS: label for hostname value display
+#. TRANSLATORS: label for hostname input
+#: src/components/network/ConnectionsTable.tsx:158
+#: src/components/network/ConnectionsTable.tsx:280
+#: src/components/network/connection-form/Form.tsx:374
+#: src/components/storage/DeviceSelectorPage.tsx:55
+#: src/components/storage/LvmPage.tsx:182
+#: src/components/storage/iscsi/InitiatorFormPage.tsx:66
+#: src/components/storage/iscsi/InitiatorFormPage.tsx:75
+#: src/components/storage/iscsi/TargetsTable.tsx:282
+#: src/components/storage/iscsi/TargetsTable.tsx:456
+#: src/components/system/system-form/HostnameFields.tsx:137
+#: src/components/system/system-form/HostnameFields.tsx:146
+msgid "Name"
+msgstr "Namn"
+
+#. TRANSLATORS: table header for a DASD devices table
+#. TRANSLATORS: checkbox label for custom DNS server configuration.
+#: src/components/network/ConnectionsTable.tsx:163
+#: src/components/network/ConnectionsTable.tsx:288
+#: src/components/network/connection-form/Form.tsx:359
+#: src/components/storage/DeviceSelectorPage.tsx:54
+#: src/components/storage/dasd/DASDTable.tsx:550
+msgid "Type"
+msgstr "Typ"
+
 #: src/components/network/ConnectionsTable.tsx:168
 #: src/components/network/ConnectionsTable.tsx:302
 msgid "State"
 msgstr "Status"
+
+#. TRANSLATORS: table header for a zFCP devices table.
+#. TRANSLATORS: table header for a DASD devices table
+#. TRANSLATORS: label for the device binding dropdown.
+#: src/components/network/ConnectionsTable.tsx:173
+#: src/components/network/connection-form/BindingModeSelector.tsx:68
+#: src/components/storage/DrivesTable.tsx:71
+#: src/components/storage/MdRaidsTable.tsx:70
+#: src/components/storage/ProposalResultTable.tsx:134
+#: src/components/storage/SpaceActionsTable.tsx:223
+#: src/components/storage/VolumeGroupsTable.tsx:72
+#: src/components/storage/dasd/DASDTable.tsx:543
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:342
+msgid "Device"
+msgstr "Enhet"
 
 #. TRANSLATORS: shown in the filter toolbar when filters are active.
 #. %1$s is the number of matching connections, %2$s is the total number.
@@ -1265,6 +1058,16 @@ msgstr "Rensa alla filter"
 msgid "Details"
 msgstr "Detaljer"
 
+#. TRANSLATORS: breadcrumb label for the connection-edit form. Keep the
+#. noun ("connection"): the previous crumb is the connection name, so a
+#. bare "Edit" reads fine visually but leaves screen-reader users without
+#. the object being acted on when the crumb is announced on its own.
+#: src/components/network/ConnectionsTable.tsx:357
+#: src/components/network/connection-form/Form.tsx:593
+#: src/components/storage/iscsi/TargetsTable.tsx:224
+msgid "Edit connection"
+msgstr "Redigera anslutning"
+
 #. TRANSLATORS: button label, connect to a Wi-Fi network
 #: src/components/network/ConnectionsTable.tsx:366
 #: src/components/network/WifiConnectionForm.tsx:186
@@ -1295,10 +1098,6 @@ msgstr "Inga anslutningar matchar filtren"
 #: src/components/storage/zfcp/ZFCPDevicesTable.tsx:425
 msgid "Change filters and try again."
 msgstr "Ändra filter och försök igen."
-
-#: src/components/network/DeviceSelector.tsx:61
-msgid "MAC address"
-msgstr "MAC adress"
 
 #. TRANSLATORS: Displays both IPv4 and IPv6 addresses with count of
 #. additional IPs (e.g., "192.168.122.237, fe80::5054:ff:fe46:2af9 and 1
@@ -1343,105 +1142,6 @@ msgid ""
 msgstr ""
 "Anslutningen kommer endast att användas under installationen och är inte "
 "tillgänglig i det installerade systemet."
-
-#. TRANSLATORS: option label for automatic IP configuration.
-#: src/components/network/IpSettings.tsx:50
-#: src/components/storage/BootSelectionPage.tsx:202
-#: src/components/storage/SizeModeSelect.tsx:191
-#: src/components/storage/SizeModeSelect.tsx:196
-#: src/components/storage/iscsi/TargetLoginPage.tsx:58
-msgid "Automatic"
-msgstr "Automatisk"
-
-#. TRANSLATORS: description for automatic IP configuration mode.
-#: src/components/network/IpSettings.tsx:52
-msgid "Address and gateway assigned from the network"
-msgstr "Adress och gateway tilldelad från nätverket"
-
-#. TRANSLATORS: option label for advanced automatic IP configuration with static addresses.
-#: src/components/network/IpSettings.tsx:57
-msgid "Automatic + manual"
-msgstr "Automatisk + manuell"
-
-#. TRANSLATORS: description for advanced automatic mode with static addresses.
-#: src/components/network/IpSettings.tsx:59
-msgid "Configuration from the network plus static addresses and gateway"
-msgstr "Konfiguration från nätverket plus statiska adresser och gateway"
-
-#. TRANSLATORS: Network summary title when using manual/static IP configuration
-#. TRANSLATORS: option label for manual IP configuration
-#: src/components/network/IpSettings.tsx:64
-#: src/components/overview/NetworkSummary.tsx:128
-#: src/components/storage/SizeModeSelect.tsx:191
-#: src/components/storage/SizeModeSelect.tsx:199
-#: src/components/storage/iscsi/TargetLoginPage.tsx:56
-msgid "Manual"
-msgstr "Manuell"
-
-#. TRANSLATORS: description for manual IP configuration mode.
-#: src/components/network/IpSettings.tsx:66
-msgid "Static addresses and gateway"
-msgstr "Statiska adresser och gateway"
-
-#. TRANSLATORS: label for the IPv4 or IPv6 settings dropdown.
-#: src/components/network/IpSettings.tsx:97
-msgid "IPv4 Settings"
-msgstr "IPv4 inställningar"
-
-#: src/components/network/IpSettings.tsx:97
-msgid "IPv6 Settings"
-msgstr "IPv6 inställningar"
-
-#. TRANSLATORS: label for the IP addresses field.
-#: src/components/network/IpSettings.tsx:99
-msgid "IPv4 Addresses"
-msgstr "IPv4-adresser"
-
-#: src/components/network/IpSettings.tsx:99
-msgid "IPv6 Addresses"
-msgstr "IPv6-adresser"
-
-#. TRANSLATORS: label for the IP gateway field.
-#: src/components/network/IpSettings.tsx:101
-msgid "IPv4 Gateway"
-msgstr "IPv4 Gateway"
-
-#: src/components/network/IpSettings.tsx:101
-msgid "IPv6 Gateway"
-msgstr "IPv6 Gateway"
-
-#. TRANSLATORS: helper text for IPv4 addresses field. Explains format and that prefix is auto-added.
-#: src/components/network/IpSettings.tsx:137
-msgid "E.g., 192.168.1.1 or 192.168.1.1/24. Prefix auto-added if omitted."
-msgstr ""
-"T.ex. 192.168.1.1 eller 192.168.1.1/24. Prefix läggs till automatiskt om det "
-"utelämnas."
-
-#. TRANSLATORS: helper text for IPv6 addresses field. Explains format and that prefix is auto-added.
-#: src/components/network/IpSettings.tsx:139
-msgid "E.g., 2001:db8::1 or 2001:db8::1/64. Prefix auto-added if omitted."
-msgstr ""
-"T.ex. 2001:db8::1 eller 2001:db8::1/64. Prefix läggs till automatiskt om det "
-"utelämnas."
-
-#. TRANSLATORS: validation error for an invalid IP address entry.
-#: src/components/network/IpSettings.tsx:145
-msgid "Invalid IPv4 address"
-msgstr "Ogiltig IPv4 adress"
-
-#: src/components/network/IpSettings.tsx:145
-msgid "Invalid IPv6 address"
-msgstr "Ogiltig IPv6 adress"
-
-#. TRANSLATORS: helper text for IPv4 gateway field explaining the format.
-#: src/components/network/IpSettings.tsx:165
-msgid "E.g., 192.168.1.1"
-msgstr "T.ex. 192.168.1.1"
-
-#. TRANSLATORS: helper text for IPv6 gateway field explaining the format.
-#: src/components/network/IpSettings.tsx:167
-msgid "E.g., 2001:db8::1"
-msgstr "T.ex. 2001:db8::1"
 
 #: src/components/network/NetworkPage.tsx:50
 msgid ""
@@ -1551,120 +1251,403 @@ msgstr "IP adresser"
 msgid "Configured for installation only"
 msgstr "Endast konfigurerad för installation"
 
+#. TRANSLATORS: option label meaning the connection works with any network device.
+#: src/components/network/connection-form/BindingModeSelector.tsx:32
+msgid "Any"
+msgstr "Vilken som helst"
+
+#. TRANSLATORS: description for the "Any" binding mode. The connection is
+#. not limited to a specific device.
+#: src/components/network/connection-form/BindingModeSelector.tsx:35
+msgid "The connection is available for all devices"
+msgstr "Anslutning är tillgänglig för alla enheter"
+
+#. TRANSLATORS: option label for binding by device interface name (e.g. eth0).
+#: src/components/network/connection-form/BindingModeSelector.tsx:40
+msgid "Chosen by name"
+msgstr "Vald efter namn"
+
+#. TRANSLATORS: description for the "Chosen by name" binding mode. The
+#. "device name" refers to the interface name (e.g. eth0).
+#: src/components/network/connection-form/BindingModeSelector.tsx:43
+msgid "Identify the connection device by its name in the system"
+msgstr "Identifiera anslutningsenheten med dess namn i systemet"
+
+#. TRANSLATORS: option label for binding by MAC address
+#: src/components/network/connection-form/BindingModeSelector.tsx:48
+msgid "Chosen by MAC"
+msgstr "Vald av MAC"
+
+#. TRANSLATORS: description for the "Chosen by MAC" binding mode. MAC is the
+#. hardware address, persisting across interface renames.
+#: src/components/network/connection-form/BindingModeSelector.tsx:51
+msgid "Identify the connection device by its physical address"
+msgstr "Identifiera anslutningsenhet med hjälp av dess fysiska adress"
+
+#. TRANSLATORS: label for the network interface name field.
+#. TRANSLATORS: accessible label for the device selector. MAC address refers
+#. to the hardware identifier of the network interface.
+#: src/components/network/connection-form/BondFields.tsx:65
+#: src/components/network/connection-form/BondFields.tsx:70
+#: src/components/network/connection-form/BridgeFields.tsx:85
+#: src/components/network/connection-form/BridgeFields.tsx:90
+#: src/components/network/connection-form/DeviceSelector.tsx:61
+msgid "Device name"
+msgstr "Enhetsnamn"
+
+#. TRANSLATORS: helper text for the bond device name field.
+#: src/components/network/connection-form/BondFields.tsx:74
+msgid "E.g., bond0"
+msgstr "T.ex. bond0"
+
+#. TRANSLATORS: helper text for the bond options field.
+#: src/components/network/connection-form/BondFields.tsx:100
+msgid "E.g., downdelay=0, primary=eth1, miimon=100, lacp_rate=fast"
+msgstr "T.ex. downdelay=0, primary=eth1, miimon=100, lacp_rate=fast"
+
+#. TRANSLATORS: helper text for the bridge ports field. %s is a list of available devices.
+#. TRANSLATORS: helper text for the bond ports field. %s is a list of available devices.
+#: src/components/network/connection-form/BondFields.tsx:114
+#: src/components/network/connection-form/BridgeFields.tsx:109
+#, javascript-format
+msgid "Available devices: %s"
+msgstr "Tillgängliga enheter: %s"
+
+#. TRANSLATORS: option label for the bridge STP configuration to use the system default.
+#. TRANSLATORS: NTP mode option
+#: src/components/network/connection-form/BridgeFields.tsx:40
+#: src/components/system/system-form/NtpFields.tsx:62
+msgid "Default"
+msgstr "Standard"
+
+#. TRANSLATORS: description for the default bridge STP configuration.
+#: src/components/network/connection-form/BridgeFields.tsx:42
+msgid "Enabled with the system default settings"
+msgstr "Aktiverat med systemets standardinställningar"
+
+#. TRANSLATORS: option label for enabling bridge STP.
+#. TRANSLATORS: NTP mode option
+#: src/components/network/connection-form/BridgeFields.tsx:47
+#: src/components/product/registration-form/Form.tsx:157
+#: src/components/storage/utils.ts:106 src/components/storage/utils.ts:125
+#: src/components/system/system-form/NtpFields.tsx:69
+msgid "Custom"
+msgstr "Anpassad"
+
+#. TRANSLATORS: description for enabling bridge STP with manual settings.
+#: src/components/network/connection-form/BridgeFields.tsx:49
+msgid "Explicitly enabled with manual settings"
+msgstr "Explicit aktiverat med manuella inställningar"
+
+#. TRANSLATORS: description for disabling bridge STP.
+#: src/components/network/connection-form/BridgeFields.tsx:56
+msgid "Not used by this bridge"
+msgstr "Används inte av denna brygga"
+
+#. TRANSLATORS: helper text for the bond device name field.
+#: src/components/network/connection-form/BridgeFields.tsx:94
+msgid "E.g., br0"
+msgstr "T.ex., br0"
+
+#. TRANSLATORS: label for the bridge STP (Spanning Tree Protocol) field.
+#: src/components/network/connection-form/BridgeFields.tsx:121
+msgid "Spanning Tree Protocol (STP)"
+msgstr "Spanning Tree-protokoll (STP)"
+
+#. TRANSLATORS: label suffix indicating an optional field.
+#: src/components/network/connection-form/BridgeFields.tsx:141
+#: src/components/network/connection-form/BridgeFields.tsx:170
+#: src/components/network/connection-form/BridgeFields.tsx:190
+#: src/components/network/connection-form/BridgeFields.tsx:210
+#: src/components/network/connection-form/IpFields.tsx:153
+#: src/components/product/registration-form/Form.tsx:184
+#: src/components/product/registration-form/Form.tsx:199
+msgid "(optional)"
+msgstr "(valfritt)"
+
+#. TRANSLATORS: Helper text for the bridge priority
+#. field. Text inside square brackets [] is
+#. semantically and visually emphasized. Keep the
+#. brackets.
+#: src/components/network/connection-form/BridgeFields.tsx:155
+msgid "Root bridge selection (0-61440). [Lower is higher priority]."
+msgstr "Val av rotbrygga (0-61440). [Lägre är högre prioritet]."
+
+#. TRANSLATORS: helper text for the bridge forward delay field.
+#: src/components/network/connection-form/BridgeFields.tsx:179
+msgid "Listening and learning time (4-30 seconds)."
+msgstr "Lyssnings och inlärningstid (4–30 sekunder)."
+
+#. TRANSLATORS: helper text for the bridge hello time field.
+#: src/components/network/connection-form/BridgeFields.tsx:199
+msgid "Protocol message interval (1-10 seconds)."
+msgstr "Protokollmeddelandeintervall (1–10 sekunder)."
+
+#. TRANSLATORS: helper text for the bridge max message age field.
+#: src/components/network/connection-form/BridgeFields.tsx:219
+msgid "Protocol message retention time (6-40 seconds)."
+msgstr "Protokollmeddelandets kvarhållningstid (6–40 sekunder)."
+
+#: src/components/network/connection-form/DeviceSelector.tsx:61
+msgid "MAC address"
+msgstr "MAC adress"
+
+#. TRANSLATORS: title of an error for a failed network connection save.
+#. Do not end with a period.
+#: src/components/network/connection-form/Form.tsx:342
+msgid "The connection could not be saved"
+msgstr "Anslutningen kunde inte sparas"
+
+#. TRANSLATORS: checkbox label for custom DNS server configuration.
+#: src/components/network/connection-form/Form.tsx:436
+msgid "Use custom DNS servers"
+msgstr "Använd anpassade DNS-servrar"
+
+#. TRANSLATORS: label for the DNS servers field.
+#: src/components/network/connection-form/Form.tsx:449
+msgid "DNS servers"
+msgstr "DNS-servrar"
+
+#. TRANSLATORS: helper text for DNS servers field explaining the format.
+#: src/components/network/connection-form/Form.tsx:453
+msgid "E.g., 8.8.8.8 or 2001:4860:4860::8888"
+msgstr "T.ex. 8.8.8.8 eller 2001:4860:4860::8888"
+
+#. TRANSLATORS: validation error for an invalid DNS server address entry.
+#: src/components/network/connection-form/Form.tsx:457
+msgid "Invalid DNS server address"
+msgstr "Ogiltig DNS-serveradress"
+
+#. TRANSLATORS: checkbox label for custom DNS search domain configuration.
+#: src/components/network/connection-form/Form.tsx:472
+msgid "Use custom DNS search domains"
+msgstr "Använd anpassade DNS-sökdomäner"
+
+#. TRANSLATORS: helper text for DNS search domains field explaining the format.
+#: src/components/network/connection-form/Form.tsx:489
+msgid "E.g., example.com"
+msgstr "T.ex. exempel.com"
+
+#. TRANSLATORS: validation error for an invalid DNS search domain entry.
+#: src/components/network/connection-form/Form.tsx:493
+msgid "Invalid DNS search domain"
+msgstr "Ogiltig DNS-sökdomän"
+
+#. TRANSLATORS: title of the page shown when the requested connection
+#. profile does not exist. Do not end with a period.
+#: src/components/network/connection-form/Form.tsx:521
+msgid "Connection not found"
+msgstr "Anslutningen kunde inte hittas"
+
+#. TRANSLATORS: body text on the connection not found page.
+#: src/components/network/connection-form/Form.tsx:523
+msgid "The connection does not exist or is no longer available."
+msgstr "Anslutningen existrerar inte eller är inte längre tillgänglig."
+
+#. TRANSLATORS: breadcrumb label for the new-connection form.
+#: src/components/network/connection-form/Form.tsx:597
+msgid "New connection"
+msgstr "Ny anslutning"
+
+#. TRANSLATORS: option label for automatic IP configuration.
+#: src/components/network/connection-form/IpFields.tsx:46
+#: src/components/storage/BootSelectionPage.tsx:202
+#: src/components/storage/SizeModeSelect.tsx:191
+#: src/components/storage/SizeModeSelect.tsx:196
+#: src/components/storage/iscsi/TargetLoginPage.tsx:58
+msgid "Automatic"
+msgstr "Automatisk"
+
+#. TRANSLATORS: description for automatic IP configuration mode.
+#: src/components/network/connection-form/IpFields.tsx:48
+msgid "Address and gateway assigned from the network"
+msgstr "Adress och gateway tilldelad från nätverket"
+
+#. TRANSLATORS: option label for advanced automatic IP configuration with static addresses.
+#: src/components/network/connection-form/IpFields.tsx:53
+msgid "Automatic + manual"
+msgstr "Automatisk + manuell"
+
+#. TRANSLATORS: description for advanced automatic mode with static addresses.
+#: src/components/network/connection-form/IpFields.tsx:55
+msgid "Configuration from the network plus static addresses and gateway"
+msgstr "Konfiguration från nätverket plus statiska adresser och gateway"
+
+#. TRANSLATORS: Network summary title when using manual/static IP configuration
+#. TRANSLATORS: option label for manual IP configuration
+#: src/components/network/connection-form/IpFields.tsx:60
+#: src/components/overview/NetworkSummary.tsx:128
+#: src/components/storage/SizeModeSelect.tsx:191
+#: src/components/storage/SizeModeSelect.tsx:199
+#: src/components/storage/iscsi/TargetLoginPage.tsx:56
+msgid "Manual"
+msgstr "Manuell"
+
+#. TRANSLATORS: description for manual IP configuration mode.
+#: src/components/network/connection-form/IpFields.tsx:62
+msgid "Static addresses and gateway"
+msgstr "Statiska adresser och gateway"
+
+#. TRANSLATORS: label for the IPv4 or IPv6 settings dropdown.
+#: src/components/network/connection-form/IpFields.tsx:93
+msgid "IPv4 Settings"
+msgstr "IPv4 inställningar"
+
+#: src/components/network/connection-form/IpFields.tsx:93
+msgid "IPv6 Settings"
+msgstr "IPv6 inställningar"
+
+#. TRANSLATORS: label for the IP addresses field.
+#: src/components/network/connection-form/IpFields.tsx:95
+msgid "IPv4 Addresses"
+msgstr "IPv4-adresser"
+
+#: src/components/network/connection-form/IpFields.tsx:95
+msgid "IPv6 Addresses"
+msgstr "IPv6-adresser"
+
+#. TRANSLATORS: label for the IP gateway field.
+#: src/components/network/connection-form/IpFields.tsx:97
+msgid "IPv4 Gateway"
+msgstr "IPv4 Gateway"
+
+#: src/components/network/connection-form/IpFields.tsx:97
+msgid "IPv6 Gateway"
+msgstr "IPv6 Gateway"
+
+#. TRANSLATORS: helper text for IPv4 addresses field. Explains format and that prefix is auto-added.
+#: src/components/network/connection-form/IpFields.tsx:133
+msgid "E.g., 192.168.1.1 or 192.168.1.1/24. Prefix auto-added if omitted."
+msgstr ""
+"T.ex. 192.168.1.1 eller 192.168.1.1/24. Prefix läggs till automatiskt om det "
+"utelämnas."
+
+#. TRANSLATORS: helper text for IPv6 addresses field. Explains format and that prefix is auto-added.
+#: src/components/network/connection-form/IpFields.tsx:135
+msgid "E.g., 2001:db8::1 or 2001:db8::1/64. Prefix auto-added if omitted."
+msgstr ""
+"T.ex. 2001:db8::1 eller 2001:db8::1/64. Prefix läggs till automatiskt om det "
+"utelämnas."
+
+#. TRANSLATORS: validation error for an invalid IP address entry.
+#: src/components/network/connection-form/IpFields.tsx:141
+msgid "Invalid IPv4 address"
+msgstr "Ogiltig IPv4 adress"
+
+#: src/components/network/connection-form/IpFields.tsx:141
+msgid "Invalid IPv6 address"
+msgstr "Ogiltig IPv6 adress"
+
+#. TRANSLATORS: helper text for IPv4 gateway field explaining the format.
+#: src/components/network/connection-form/IpFields.tsx:161
+msgid "E.g., 192.168.1.1"
+msgstr "T.ex. 192.168.1.1"
+
+#. TRANSLATORS: helper text for IPv6 gateway field explaining the format.
+#: src/components/network/connection-form/IpFields.tsx:163
+msgid "E.g., 2001:db8::1"
+msgstr "T.ex. 2001:db8::1"
+
+#. TRANSLATORS: validation error for the connection name field.
+#: src/components/network/connection-form/fields.ts:247
+msgid "Name is required"
+msgstr "Namn krävs"
+
+#: src/components/network/connection-form/fields.ts:263
+msgid "At least one IPv4 address is required"
+msgstr "Åtminstone en IPv4-adress krävs"
+
+#: src/components/network/connection-form/fields.ts:264
+msgid "Some IPv4 addresses are invalid"
+msgstr "Vissa IPv4-adresser är ogiltiga"
+
+#: src/components/network/connection-form/fields.ts:271
+msgid "IPv4 gateway is required"
+msgstr "IPv4-gateway krävs"
+
+#: src/components/network/connection-form/fields.ts:272
+msgid "Invalid IPv4 gateway"
+msgstr "Ogiltig IPv4-gateway"
+
+#: src/components/network/connection-form/fields.ts:279
+msgid "At least one IPv6 address is required"
+msgstr "Åtminstone en IPv6-adress krävs"
+
+#: src/components/network/connection-form/fields.ts:280
+msgid "Some IPv6 addresses are invalid"
+msgstr "Vissa IPv6-adresser är ogiltiga"
+
+#: src/components/network/connection-form/fields.ts:287
+msgid "IPv6 gateway is required"
+msgstr "IPv6-gateway krävs"
+
+#: src/components/network/connection-form/fields.ts:288
+msgid "Invalid IPv6 gateway"
+msgstr "Ogiltig IPv6-gateway"
+
+#: src/components/network/connection-form/fields.ts:296
+msgid "At least one DNS server is required"
+msgstr "Åtminstone en DNS-server krävs"
+
+#: src/components/network/connection-form/fields.ts:297
+msgid "Some DNS server addresses are invalid"
+msgstr "Vissa DNS-serveradresser är ogiltiga"
+
+#: src/components/network/connection-form/fields.ts:305
+msgid "At least one DNS search domain is required"
+msgstr "Åtminstone en DNS-sökdomän krävs"
+
+#: src/components/network/connection-form/fields.ts:306
+msgid "Some DNS search domains are invalid"
+msgstr "Vissa DNS-sökdomäner är ogiltiga"
+
 #. TRANSLATORS: validation error for the bond options field when the 'primary' option is used in an invalid mode.
 #. %s is replaced with a list of valid mode names.
-#: src/components/network/connectionFormValidation.ts:146
+#: src/components/network/connection-form/fields.ts:333
 #, javascript-format
 msgid "The 'primary' option is only valid for %s modes"
 msgstr "Det 'primära' alternativet är endast giltigt för %s lägen"
 
-#. TRANSLATORS: validation error for the connection name field.
-#: src/components/network/connectionFormValidation.ts:158
-msgid "Name is required"
-msgstr "Namn krävs"
-
-#. TRANSLATORS: validation error for the IPv4 addresses field.
-#: src/components/network/connectionFormValidation.ts:164
-msgid "At least one IPv4 address is required"
-msgstr "Åtminstone en IPv4-adress krävs"
-
-#. TRANSLATORS: validation error for the IPv4 addresses field.
-#: src/components/network/connectionFormValidation.ts:166
-msgid "Some IPv4 addresses are invalid"
-msgstr "Vissa IPv4-adresser är ogiltiga"
-
-#. TRANSLATORS: validation error for the IPv6 addresses field.
-#: src/components/network/connectionFormValidation.ts:173
-msgid "At least one IPv6 address is required"
-msgstr "Åtminstone en IPv6-adress krävs"
-
-#. TRANSLATORS: validation error for the IPv6 addresses field.
-#: src/components/network/connectionFormValidation.ts:175
-msgid "Some IPv6 addresses are invalid"
-msgstr "Vissa IPv6-adresser är ogiltiga"
-
-#. TRANSLATORS: validation error for the IPv4 gateway field.
-#: src/components/network/connectionFormValidation.ts:183
-msgid "IPv4 gateway is required"
-msgstr "IPv4-gateway krävs"
-
-#. TRANSLATORS: validation error for the IPv4 gateway field.
-#: src/components/network/connectionFormValidation.ts:185
-msgid "Invalid IPv4 gateway"
-msgstr "Ogiltig IPv4-gateway"
-
-#. TRANSLATORS: validation error for the IPv6 gateway field.
-#: src/components/network/connectionFormValidation.ts:193
-msgid "IPv6 gateway is required"
-msgstr "IPv6-gateway krävs"
-
-#. TRANSLATORS: validation error for the IPv6 gateway field.
-#: src/components/network/connectionFormValidation.ts:195
-msgid "Invalid IPv6 gateway"
-msgstr "Ogiltig IPv6-gateway"
-
-#. TRANSLATORS: validation error for the DNS servers field.
-#: src/components/network/connectionFormValidation.ts:202
-msgid "At least one DNS server is required"
-msgstr "Åtminstone en DNS-server krävs"
-
-#. TRANSLATORS: validation error for the DNS servers field.
-#: src/components/network/connectionFormValidation.ts:204
-msgid "Some DNS server addresses are invalid"
-msgstr "Vissa DNS-serveradresser är ogiltiga"
-
-#. TRANSLATORS: validation error for the DNS search domains field.
-#: src/components/network/connectionFormValidation.ts:211
-msgid "At least one DNS search domain is required"
-msgstr "Åtminstone en DNS-sökdomän krävs"
-
-#. TRANSLATORS: validation error for the DNS search domains field.
-#: src/components/network/connectionFormValidation.ts:213
-msgid "Some DNS search domains are invalid"
-msgstr "Vissa DNS-sökdomäner är ogiltiga"
-
 #. TRANSLATORS: validation error for the bond device name field.
 #. TRANSLATORS: validation error for the bridge device name field.
-#: src/components/network/connectionFormValidation.ts:226
-#: src/components/network/connectionFormValidation.ts:281
+#: src/components/network/connection-form/fields.ts:338
+#: src/components/network/connection-form/fields.ts:360
 msgid "Device name is required"
 msgstr "Enhetsnamn krävs"
 
-#. TRANSLATORS: validation error for the bond mode field.
-#: src/components/network/connectionFormValidation.ts:228
+#. TRANSLATORS: validation error for the bond mode name field.
+#: src/components/network/connection-form/fields.ts:340
 msgid "Bond mode is required"
 msgstr "Bond läge krävs"
 
 #. TRANSLATORS: validation error for the bond ports field.
-#: src/components/network/connectionFormValidation.ts:232
+#: src/components/network/connection-form/fields.ts:342
 msgid "At least one bond port is required"
 msgstr "Åtminstone minst en bondport krävs"
 
-#: src/components/network/connectionFormValidation.ts:251
-msgid "Priority must be between 0 and 61440"
-msgstr "Prioritet måste vara mellan 0 och 61440"
-
-#: src/components/network/connectionFormValidation.ts:256
-msgid "Forward delay must be between 4 and 30 seconds"
-msgstr "Forward delay måste vara mellan 4 och 30 sekunder"
-
-#: src/components/network/connectionFormValidation.ts:261
-msgid "Hello time must be between 1 and 10 seconds"
-msgstr "Hallå tid måste vara mellan 1 och 10 sekunder"
-
-#: src/components/network/connectionFormValidation.ts:267
-msgid "Max message age must be between 6 and 40 seconds"
-msgstr "Maximal meddelandeålder måste vara mellan 6 och 40 sekunder"
-
-#. TRANSLATORS: validation error for the bridge ports field.
-#: src/components/network/connectionFormValidation.ts:285
+#: src/components/network/connection-form/fields.ts:363
 msgid "At least one bridge port is required"
 msgstr "Åtminstone minst en bryggport krävs"
 
+#: src/components/network/connection-form/fields.ts:371
+msgid "Priority must be between 0 and 61440"
+msgstr "Prioritet måste vara mellan 0 och 61440"
+
+#: src/components/network/connection-form/fields.ts:378
+msgid "Forward delay must be between 4 and 30 seconds"
+msgstr "Forward delay måste vara mellan 4 och 30 sekunder"
+
+#: src/components/network/connection-form/fields.ts:385
+msgid "Hello time must be between 1 and 10 seconds"
+msgstr "Hallå tid måste vara mellan 1 och 10 sekunder"
+
+#: src/components/network/connection-form/fields.ts:392
+msgid "Max message age must be between 6 and 40 seconds"
+msgstr "Maximal meddelandeålder måste vara mellan 6 och 40 sekunder"
+
 #. TRANSLATORS: fieldset legend for hostname configuration
 #: src/components/overview/HostnameSummary.tsx:47
-#: src/components/system/HostnamePage.tsx:151
-#: src/components/system/HostnameSettings.tsx:106
+#: src/components/system/system-form/HostnameFields.tsx:101
 msgid "Hostname"
 msgstr "Värdnamn"
 
@@ -2044,7 +2027,7 @@ msgid "Using %s NTP servers, including [%s]"
 msgstr "Använder %s NTP servrar, inkluderar [%s]"
 
 #: src/components/overview/SystemSummary.tsx:143
-#: src/components/system/SystemPage.tsx:176 src/router.tsx:52
+#: src/components/system/system-form/Form.tsx:155 src/router.tsx:52
 msgid "System"
 msgstr "System"
 
@@ -2103,72 +2086,21 @@ msgstr "Stäng"
 msgid "%s logo"
 msgstr "%s logotyp"
 
-#. TRANSLATORS: validation error for the registration server URL field.
-#: src/components/product/ProductRegistrationForm.tsx:77
-msgid "Enter a server URL"
-msgstr "Ange en server URL"
-
-#. TRANSLATORS: validation error for the registration code field.
-#: src/components/product/ProductRegistrationForm.tsx:82
-msgid "Enter a registration code"
-msgstr "Ange en registreringskod"
-
-#. TRANSLATORS: button to dismiss the error alert and clear the registration data
-#: src/components/product/ProductRegistrationForm.tsx:170
-msgid "Dismiss and clear registration data"
-msgstr "Avfärda och rensa registreringsdata"
-
-#: src/components/product/ProductRegistrationForm.tsx:191
-#: src/components/product/ProductRegistrationPage.tsx:74
-msgid "Registration server"
-msgstr "Registreringsserver"
-
-#: src/components/product/ProductRegistrationForm.tsx:195
-msgid "SUSE Customer Center (SCC)"
-msgstr "SUSE kundcenter (SCC)"
-
-#: src/components/product/ProductRegistrationForm.tsx:196
-msgid "Register using SUSE server"
-msgstr "Registrera genom att använda SUSE server"
-
-#: src/components/product/ProductRegistrationForm.tsx:201
-msgid "Register using a custom registration server"
-msgstr "Registrera dig med en anpassad registreringsserver"
-
-#: src/components/product/ProductRegistrationForm.tsx:215
-msgid "Server URL"
-msgstr "Server URL"
-
-#: src/components/product/ProductRegistrationForm.tsx:216
-#, javascript-format
-msgid "E.g., %s"
-msgstr "T.ex., %s"
-
-#: src/components/product/ProductRegistrationForm.tsx:228
-#: src/components/product/ProductRegistrationPage.tsx:80
-#: src/components/product/RegistrationExtension.tsx:151
-msgid "Registration code"
-msgstr "Registreringskod"
-
-#: src/components/product/ProductRegistrationForm.tsx:242
-#: src/components/product/ProductRegistrationPage.tsx:93
-msgid "Email"
-msgstr "E-post"
-
-#. TRANSLATORS: button label
-#: src/components/product/ProductRegistrationForm.tsx:258
-#: src/components/product/RegistrationExtension.tsx:164
-msgid "Register"
-msgstr "Registrera"
-
-#: src/components/product/ProductRegistrationForm.tsx:263
-msgid "Registration in progress"
-msgstr "Registrering pågår"
-
 #: src/components/product/ProductRegistrationPage.tsx:68
 #, javascript-format
 msgid "%s has been registered with below information."
 msgstr "%s har registrerats med uppgifterna nedan."
+
+#: src/components/product/ProductRegistrationPage.tsx:74
+#: src/components/product/registration-form/Form.tsx:148
+msgid "Registration server"
+msgstr "Registreringsserver"
+
+#: src/components/product/ProductRegistrationPage.tsx:80
+#: src/components/product/RegistrationExtension.tsx:151
+#: src/components/product/registration-form/Form.tsx:185
+msgid "Registration code"
+msgstr "Registreringskod"
 
 #. TRANSLATORS: switch for displaying or hiding the registration code
 #: src/components/product/ProductRegistrationPage.tsx:85
@@ -2180,6 +2112,11 @@ msgstr "Dölj"
 #: src/components/product/RegistrationExtension.tsx:67
 msgid "Show"
 msgstr "Visa"
+
+#: src/components/product/ProductRegistrationPage.tsx:93
+#: src/components/product/registration-form/Form.tsx:199
+msgid "Email"
+msgstr "E-post"
 
 #: src/components/product/ProductRegistrationPage.tsx:108
 msgid "Hostname cannot be changed after registration"
@@ -2350,6 +2287,12 @@ msgstr "Beta"
 msgid "Recommended"
 msgstr "Rekommenderad"
 
+#. TRANSLATORS: button label
+#: src/components/product/RegistrationExtension.tsx:164
+#: src/components/product/registration-form/Form.tsx:215
+msgid "Register"
+msgstr "Registrera"
+
 #: src/components/product/RegistrationExtension.tsx:173
 msgid "Do not register"
 msgstr "Registrera inte"
@@ -2367,6 +2310,46 @@ msgid ""
 msgstr ""
 "Det här tillägget är inte tillgängligt på servern. Be serveradministratören "
 "att spegla tillägget."
+
+#. TRANSLATORS: button to dismiss the error alert and clear the registration data
+#: src/components/product/registration-form/Form.tsx:127
+msgid "Dismiss and clear registration data"
+msgstr "Avfärda och rensa registreringsdata"
+
+#: src/components/product/registration-form/Form.tsx:152
+msgid "SUSE Customer Center (SCC)"
+msgstr "SUSE kundcenter (SCC)"
+
+#: src/components/product/registration-form/Form.tsx:153
+msgid "Register using SUSE server"
+msgstr "Registrera genom att använda SUSE server"
+
+#: src/components/product/registration-form/Form.tsx:158
+msgid "Register using a custom registration server"
+msgstr "Registrera dig med en anpassad registreringsserver"
+
+#: src/components/product/registration-form/Form.tsx:172
+msgid "Server URL"
+msgstr "Server URL"
+
+#: src/components/product/registration-form/Form.tsx:173
+#, javascript-format
+msgid "E.g., %s"
+msgstr "T.ex., %s"
+
+#: src/components/product/registration-form/Form.tsx:220
+msgid "Registration in progress"
+msgstr "Registrering pågår"
+
+#. TRANSLATORS: validation error for the registration server URL field.
+#: src/components/product/registration-form/fields.ts:75
+msgid "Enter a server URL"
+msgstr "Ange en server URL"
+
+#. TRANSLATORS: validation error for the registration code field.
+#: src/components/product/registration-form/fields.ts:80
+msgid "Enter a registration code"
+msgstr "Ange en registreringskod"
 
 #: src/components/questions/GenericQuestion.tsx:51
 #: src/components/questions/LuksActivationQuestion.tsx:69
@@ -2568,7 +2551,7 @@ msgstr "Nödvändigt utrymme: [%s]"
 
 #. TRANSLATORS: %1$d is selected count, %2$d is total available count
 #: src/components/software/SoftwarePage.tsx:247
-#: src/components/software/SoftwarePatternsSelection.tsx:147
+#: src/components/software/patterns-form/Form.tsx:143
 #, javascript-format
 msgid "%1$d of %2$d selected"
 msgstr "%1$d av %2$d valt"
@@ -2652,56 +2635,6 @@ msgstr ""
 msgid "Change patterns"
 msgstr "Ändra mönster"
 
-#. TRANSLATORS: page title when selecting all software patterns
-#. TRANSLATORS: page title when selecting non-desktop software patterns
-#: src/components/software/SoftwarePatternsSelection.tsx:113
-#: src/components/software/SoftwarePatternsSelection.tsx:117
-msgid "Patterns selection"
-msgstr "Mönster val"
-
-#. TRANSLATORS: page title when selecting desktop environments
-#: src/components/software/SoftwarePatternsSelection.tsx:115
-msgid "Desktop selection"
-msgstr "Val av skrivbord"
-
-#. TRANSLATORS: shown next to a category heading when the search filter excludes all its patterns
-#: src/components/software/SoftwarePatternsSelection.tsx:156
-msgid "No patterns match the filter"
-msgstr "Inget av mönstren matchar filtret"
-
-#. TRANSLATORS: count of patterns matching the search filter in this category
-#: src/components/software/SoftwarePatternsSelection.tsx:158
-#, javascript-format
-msgid "%d matches the filter"
-msgid_plural "%d match the filter"
-msgstr[0] "%d matchar filtret"
-msgstr[1] "%d flera matchar filterna"
-
-#: src/components/software/SoftwarePatternsSelection.tsx:336
-#, javascript-format
-msgid "%d pattern found"
-msgid_plural "%d patterns found"
-msgstr[0] "%d mönster hittades"
-msgstr[1] "%d flera mönster hittades"
-
-#. TRANSLATORS: search results badge on the filter input when no pattern matches
-#: src/components/software/SoftwarePatternsSelection.tsx:346
-msgid "No patterns match"
-msgstr "Inget av mönstren matchar"
-
-#. TRANSLATORS: search results badge on the filter input.
-#. %1$d is matches found, %2$d is the total number of patterns.
-#: src/components/software/SoftwarePatternsSelection.tsx:349
-#, javascript-format
-msgid "%1$d of %2$d patterns"
-msgstr "%1$d av %2$d mönster"
-
-#. TRANSLATORS: placeholder for the search field on the patterns selection page
-#: src/components/software/SoftwarePatternsSelection.tsx:392
-#: src/components/software/SoftwarePatternsSelection.tsx:394
-msgid "Filter by name and description"
-msgstr "Filtrera efter namn och beskrivning"
-
 #. TRANSLATORS: %s will be replaced by the estimated installation size,
 #. example: "728.8 MiB"
 #: src/components/software/UsedSize.tsx:33
@@ -2716,6 +2649,56 @@ msgid ""
 msgstr ""
 "Detta utrymme inkluderar bassystemet och de valda programvarumönsterna, om "
 "några."
+
+#. TRANSLATORS: page title when selecting all software patterns
+#. TRANSLATORS: page title when selecting non-desktop software patterns
+#: src/components/software/patterns-form/Form.tsx:109
+#: src/components/software/patterns-form/Form.tsx:113
+msgid "Patterns selection"
+msgstr "Mönster val"
+
+#. TRANSLATORS: page title when selecting desktop environments
+#: src/components/software/patterns-form/Form.tsx:111
+msgid "Desktop selection"
+msgstr "Val av skrivbord"
+
+#. TRANSLATORS: shown next to a category heading when the search filter excludes all its patterns
+#: src/components/software/patterns-form/Form.tsx:152
+msgid "No patterns match the filter"
+msgstr "Inget av mönstren matchar filtret"
+
+#. TRANSLATORS: count of patterns matching the search filter in this category
+#: src/components/software/patterns-form/Form.tsx:154
+#, javascript-format
+msgid "%d matches the filter"
+msgid_plural "%d match the filter"
+msgstr[0] "%d matchar filtret"
+msgstr[1] "%d flera matchar filterna"
+
+#: src/components/software/patterns-form/Form.tsx:332
+#, javascript-format
+msgid "%d pattern found"
+msgid_plural "%d patterns found"
+msgstr[0] "%d mönster hittades"
+msgstr[1] "%d flera mönster hittades"
+
+#. TRANSLATORS: search results badge on the filter input when no pattern matches
+#: src/components/software/patterns-form/Form.tsx:342
+msgid "No patterns match"
+msgstr "Inget av mönstren matchar"
+
+#. TRANSLATORS: search results badge on the filter input.
+#. %1$d is matches found, %2$d is the total number of patterns.
+#: src/components/software/patterns-form/Form.tsx:345
+#, javascript-format
+msgid "%1$d of %2$d patterns"
+msgstr "%1$d av %2$d mönster"
+
+#. TRANSLATORS: placeholder for the search field on the patterns selection page
+#: src/components/software/patterns-form/Form.tsx:388
+#: src/components/software/patterns-form/Form.tsx:390
+msgid "Filter by name and description"
+msgstr "Filtrera efter namn och beskrivning"
 
 #: src/components/storage/AutoSizeText.tsx:35
 msgid "logical volume"
@@ -5490,97 +5473,24 @@ msgstr "Alla tillgängliga zFCP-styrenheter är redan aktiverade."
 msgid "zFCP controllers"
 msgstr "zFCP styrenheter"
 
-#. TRANSLATORS: information shown when using transient hostname mode. "transient"
-#. refers to the hostname mode, and %s will be replaced with the current hostname value.
-#: src/components/system/HostnamePage.tsx:57
-#, javascript-format
-msgid "Current value: %s"
-msgstr "Nuvarande värde: %s"
+#. TRANSLATORS: error message when system settings update request fails
+#: src/components/system/system-form/Form.tsx:173
+msgid "System settings could not be updated"
+msgstr "Systeminställningarna kunde inte uppdateras"
 
-#: src/components/system/HostnamePage.tsx:69
-msgid ""
-"This hostname is dynamic and [may change after a reboot or network update], "
-"as configured by the local network administrator."
-msgstr ""
-"Detta värdnamn är dynamiskt och [kan ändras efter en omstart eller "
-"nätverksuppdatering], enligt konfigurationen av den lokala "
-"nätverksadministratören."
+#. TRANSLATORS: success message shown after system settings are updated
+#: src/components/system/system-form/Form.tsx:195
+msgid "System settings successfully updated"
+msgstr "Systeminställningarna har uppdaterats framgångsrikt"
 
-#. TRANSLATORS: helper text for static hostname input.
-#. Text in square brackets will be displayed in bold.
-#: src/components/system/HostnamePage.tsx:89
-msgid "Once set, will [persist across reboots and network changes]."
-msgstr ""
-"När detta är inställt kommer det [att finnas kvar vid omstart och "
-"nätverksändringar]."
-
-#. TRANSLATORS: validation error when static hostname value is empty
-#: src/components/system/HostnamePage.tsx:131
-#: src/components/system/systemFormValidation.ts:94
-msgid "Enter a hostname value."
-msgstr "Ange ett värdnamn värde."
-
-#. TRANSLATORS: error message when hostname update request fails
-#: src/components/system/HostnamePage.tsx:144
-msgid "Hostname could not be updated"
-msgstr "Värdnamnet kunde inte uppdateras"
-
-#. TRANSLATORS: alert title warning about registered hostname not changing
-#: src/components/system/HostnamePage.tsx:158
-#: src/components/system/HostnameSettings.tsx:180
-msgid "Registered hostname will not change"
-msgstr "Registrerat värdnamn kommer inte att ändras"
-
-#: src/components/system/HostnamePage.tsx:163
-msgid ""
-"The product is already registered. Changes made here will not affect the "
-"hostname stored at the registration server."
-msgstr ""
-"Produkten är redan registrerad. Ändringar som görs här påverkar inte "
-"värdnamnet som lagras på registreringsservern."
-
-#. TRANSLATORS: error alert title when hostname update fails
-#: src/components/system/HostnamePage.tsx:182
-msgid "The hostname could not be saved"
-msgstr "Värdnamnet kunde inte sparas"
-
-#. TRANSLATORS: success message shown after hostname is updated
-#: src/components/system/HostnamePage.tsx:201
-msgid "Hostname successfully updated"
-msgstr "Värdnamnet har uppdaterats"
-
-#. TRANSLATORS: hostname mode option
-#: src/components/system/HostnamePage.tsx:215
-#: src/components/system/HostnameSettings.tsx:119
-msgid "Transient"
-msgstr "Tillfälligt"
-
-#. TRANSLATORS: description for transient hostname mode
-#: src/components/system/HostnamePage.tsx:217
-#: src/components/system/HostnameSettings.tsx:121
-msgid "Provided by the network"
-msgstr "Tillhandahålls av nätverket"
-
-#. TRANSLATORS: hostname mode option
-#: src/components/system/HostnamePage.tsx:222
-#: src/components/system/HostnameSettings.tsx:126
-msgid "Static"
-msgstr "Statiskt"
-
-#. TRANSLATORS: description for static hostname mode
-#: src/components/system/HostnamePage.tsx:224
-#: src/components/system/HostnameSettings.tsx:128
-msgid "Set manually"
-msgstr "Ställ in manuellt"
-
-#. TRANSLATORS: label for static hostname input
-#: src/components/system/HostnamePage.tsx:242
-msgid "Value"
-msgstr "Värde"
+#. TRANSLATORS: info message shown when submitting the form with no changes
+#: src/components/system/system-form/Form.tsx:197
+msgid "No changes detected. System settings are already up to date."
+msgstr "Inga ändringar upptäcktes. Systeminställningarna är redan uppdaterade."
 
 #. TRANSLATORS: explanation of transient hostname behavior.
 #. Text in square brackets will be displayed in bold.
-#: src/components/system/HostnameSettings.tsx:51
+#: src/components/system/system-form/HostnameFields.tsx:46
 msgid "Hostname is dynamic and [may change after a reboot or network update]."
 msgstr ""
 "Värdnamn är dynamiskt och [kan ändras efter omstart eller "
@@ -5588,11 +5498,36 @@ msgstr ""
 
 #. TRANSLATORS: helper text for static hostname input.
 #. Text in square brackets will be displayed in bold.
-#: src/components/system/HostnameSettings.tsx:76
+#: src/components/system/system-form/HostnameFields.tsx:71
 msgid "Hostname [will remain unchanged] across reboots and network changes."
 msgstr "Värdnamn [förblir oförändrat] vid omstarter och nätverksändringar."
 
-#: src/components/system/HostnameSettings.tsx:185
+#. TRANSLATORS: hostname mode option
+#: src/components/system/system-form/HostnameFields.tsx:114
+msgid "Transient"
+msgstr "Tillfälligt"
+
+#. TRANSLATORS: description for transient hostname mode
+#: src/components/system/system-form/HostnameFields.tsx:116
+msgid "Provided by the network"
+msgstr "Tillhandahålls av nätverket"
+
+#. TRANSLATORS: hostname mode option
+#: src/components/system/system-form/HostnameFields.tsx:121
+msgid "Static"
+msgstr "Statiskt"
+
+#. TRANSLATORS: description for static hostname mode
+#: src/components/system/system-form/HostnameFields.tsx:123
+msgid "Set manually"
+msgstr "Ställ in manuellt"
+
+#. TRANSLATORS: alert title warning about registered hostname not changing
+#: src/components/system/system-form/HostnameFields.tsx:175
+msgid "Registered hostname will not change"
+msgstr "Registrerat värdnamn kommer inte att ändras"
+
+#: src/components/system/system-form/HostnameFields.tsx:180
 msgid ""
 "The product is already registered. Hostname changes will not affect the "
 "hostname stored at the registration server."
@@ -5601,11 +5536,11 @@ msgstr ""
 "värdnamnet som lagras på registreringsservern."
 
 #. TRANSLATORS: fieldset legend for NTP configuration
-#: src/components/system/NtpSettings.tsx:50
+#: src/components/system/system-form/NtpFields.tsx:44
 msgid "Time Synchronization Servers"
 msgstr "Tidssynkroniseringsservrar"
 
-#: src/components/system/NtpSettings.tsx:55
+#: src/components/system/system-form/NtpFields.tsx:49
 msgid ""
 "Configure the Network Time Protocol (NTP) servers used to set the system "
 "date and time."
@@ -5614,21 +5549,21 @@ msgstr ""
 "in systemets datum och tid."
 
 #. TRANSLATORS: description for default NTP mode
-#: src/components/system/NtpSettings.tsx:70
+#: src/components/system/system-form/NtpFields.tsx:64
 msgid "Use product's default NTP servers"
 msgstr "Använd produktens standard-NTP-servrar"
 
 #. TRANSLATORS: description for custom NTP mode
-#: src/components/system/NtpSettings.tsx:77
+#: src/components/system/system-form/NtpFields.tsx:71
 msgid "Set NTP servers manually"
 msgstr "Ställ in NTP-servrar manuellt"
 
 #. TRANSLATORS: label for NTP servers input field
-#: src/components/system/NtpSettings.tsx:91
+#: src/components/system/system-form/NtpFields.tsx:85
 msgid "Server addresses"
 msgstr "Server adresser"
 
-#: src/components/system/NtpSettings.tsx:94
+#: src/components/system/system-form/NtpFields.tsx:88
 msgid ""
 "Hostnames, IP addresses, or fully qualified domain names (FQDNs). E.g., "
 "pool.ntp.org"
@@ -5637,32 +5572,26 @@ msgstr ""
 "T.ex. pool.ntp.org"
 
 #. TRANSLATORS: validation error for an invalid NTP server address entry
-#: src/components/system/NtpSettings.tsx:99
+#: src/components/system/system-form/NtpFields.tsx:93
 msgid "Invalid NTP server address"
 msgstr "Ogiltig NTP-serveradress"
 
-#. TRANSLATORS: error message when system settings update request fails
-#: src/components/system/SystemPage.tsx:194
-msgid "System settings could not be updated"
-msgstr "Systeminställningarna kunde inte uppdateras"
+#: src/components/system/system-form/fields.ts:133
+msgid "Enter a hostname value."
+msgstr "Ange ett värdnamn värde."
 
-#. TRANSLATORS: success message shown after system settings are updated
-#: src/components/system/SystemPage.tsx:216
-msgid "System settings successfully updated"
-msgstr "Systeminställningarna har uppdaterats framgångsrikt"
-
-#. TRANSLATORS: info message shown when submitting the form with no changes
-#: src/components/system/SystemPage.tsx:218
-msgid "No changes detected. System settings are already up to date."
-msgstr "Inga ändringar upptäcktes. Systeminställningarna är redan uppdaterade."
+#: src/components/system/system-form/fields.ts:134
+#, fuzzy
+msgid "Invalid hostname value."
+msgstr "Ange ett värdnamn värde."
 
 #. TRANSLATORS: validation error when no NTP servers are provided in custom mode
-#: src/components/system/systemFormValidation.ts:108
+#: src/components/system/system-form/fields.ts:151
 msgid "At least one NTP server is required"
 msgstr "Åtminstone en NTP-server krävs"
 
 #. TRANSLATORS: validation error when some NTP server addresses are invalid
-#: src/components/system/systemFormValidation.ts:115
+#: src/components/system/system-form/fields.ts:153
 msgid "Some NTP server addresses are invalid"
 msgstr "Vissa NTP-serveradresser är ogiltiga"
 
@@ -5810,6 +5739,42 @@ msgstr "Loopback"
 #: src/utils/network.ts:89
 msgid "VLAN"
 msgstr "VLAN"
+
+#, javascript-format
+#~ msgid "Current value: %s"
+#~ msgstr "Nuvarande värde: %s"
+
+#~ msgid ""
+#~ "This hostname is dynamic and [may change after a reboot or network "
+#~ "update], as configured by the local network administrator."
+#~ msgstr ""
+#~ "Detta värdnamn är dynamiskt och [kan ändras efter en omstart eller "
+#~ "nätverksuppdatering], enligt konfigurationen av den lokala "
+#~ "nätverksadministratören."
+
+#~ msgid "Once set, will [persist across reboots and network changes]."
+#~ msgstr ""
+#~ "När detta är inställt kommer det [att finnas kvar vid omstart och "
+#~ "nätverksändringar]."
+
+#~ msgid "Hostname could not be updated"
+#~ msgstr "Värdnamnet kunde inte uppdateras"
+
+#~ msgid ""
+#~ "The product is already registered. Changes made here will not affect the "
+#~ "hostname stored at the registration server."
+#~ msgstr ""
+#~ "Produkten är redan registrerad. Ändringar som görs här påverkar inte "
+#~ "värdnamnet som lagras på registreringsservern."
+
+#~ msgid "The hostname could not be saved"
+#~ msgstr "Värdnamnet kunde inte sparas"
+
+#~ msgid "Hostname successfully updated"
+#~ msgstr "Värdnamnet har uppdaterats"
+
+#~ msgid "Value"
+#~ msgstr "Värde"
 
 #~ msgid "Binding settings"
 #~ msgstr "Bindningsinställningar"
