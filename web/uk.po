@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-18 10:24+0000\n"
+"POT-Creation-Date: 2026-05-22 09:20+0000\n"
 "PO-Revision-Date: 2026-05-19 20:12+0000\n"
 "Last-Translator: Eugene Krater <lachend@gmail.com>\n"
 "Language-Team: Ukrainian <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -173,7 +173,6 @@ msgid "Use these same settings for the selected product"
 msgstr "Використовувати ці ж налаштування для обраного продукту"
 
 #. TRANSLATORS: label for the form submit button.
-#. TRANSLATORS: button to save hostname changes
 #. TRANSLATORS: button to save system settings changes
 #: src/components/core/InstallerL10nOptions.tsx:345
 #: src/components/core/InstallerL10nOptions.tsx:391
@@ -183,8 +182,7 @@ msgstr "Використовувати ці ж налаштування для �
 #: src/components/storage/dasd/FormatActionHandler.tsx:95
 #: src/components/storage/dasd/FormatActionHandler.tsx:122
 #: src/components/storage/zfcp/ZFCPControllersPage.tsx:161
-#: src/components/system/HostnamePage.tsx:254
-#: src/components/system/SystemPage.tsx:230
+#: src/components/system/system-form/Form.tsx:209
 msgid "Accept"
 msgstr "Прийняти"
 
@@ -389,7 +387,7 @@ msgstr "Крок %1$d з %2$d"
 #: src/components/core/ProgressStatusMonitor.tsx:40
 #: src/components/overview/SoftwareSummary.tsx:160
 #: src/components/software/SoftwarePage.tsx:378
-#: src/components/software/SoftwarePatternsSelection.tsx:355
+#: src/components/software/patterns-form/Form.tsx:351
 #: src/routes/software.tsx:33
 msgid "Software"
 msgstr "Програми"
@@ -418,11 +416,11 @@ msgstr "Сховище"
 #. TRANSLATORS: breadcrumb label for the network configuration section.
 #: src/components/core/ProgressStatusMonitor.tsx:42
 #: src/components/network/ConnectionDetails.tsx:95
-#: src/components/network/ConnectionForm.tsx:658
 #: src/components/network/ConnectionPage.tsx:75
 #: src/components/network/NetworkPage.tsx:43
 #: src/components/network/WifiConnectionForm.tsx:142
 #: src/components/network/WifiConnectionForm.tsx:198
+#: src/components/network/connection-form/Form.tsx:583
 #: src/components/overview/NetworkSummary.tsx:149 src/routes/network.tsx:35
 msgid "Network"
 msgstr "Мережа"
@@ -708,216 +706,6 @@ msgstr "Жоден з часових поясів не відповідає фі
 msgid "Loading"
 msgstr "Завантаження"
 
-#. TRANSLATORS: option label meaning the connection works with any network device.
-#: src/components/network/BindingModeSelector.tsx:32
-msgid "Any"
-msgstr "Будь-який"
-
-#. TRANSLATORS: description for the "Any" binding mode. The connection is
-#. not limited to a specific device.
-#: src/components/network/BindingModeSelector.tsx:35
-msgid "The connection is available for all devices"
-msgstr "Підключення доступне для всіх пристроїв"
-
-#. TRANSLATORS: option label for binding by device interface name (e.g. eth0).
-#: src/components/network/BindingModeSelector.tsx:40
-msgid "Chosen by name"
-msgstr "Вибрано за назвою"
-
-#. TRANSLATORS: description for the "Chosen by name" binding mode. The
-#. "device name" refers to the interface name (e.g. eth0).
-#: src/components/network/BindingModeSelector.tsx:43
-msgid "Identify the connection device by its name in the system"
-msgstr "Визначати пристрій підключення за його назвою в системі"
-
-#. TRANSLATORS: option label for binding by MAC address
-#: src/components/network/BindingModeSelector.tsx:48
-msgid "Chosen by MAC"
-msgstr "Вибрано за MAC-адресою"
-
-#. TRANSLATORS: description for the "Chosen by MAC" binding mode. MAC is the
-#. hardware address, persisting across interface renames.
-#: src/components/network/BindingModeSelector.tsx:51
-msgid "Identify the connection device by its physical address"
-msgstr "Визначати пристрій підключення за його фізичною адресою"
-
-#. TRANSLATORS: table header for a zFCP devices table.
-#. TRANSLATORS: table header for a DASD devices table
-#. TRANSLATORS: label for the device binding dropdown.
-#: src/components/network/BindingModeSelector.tsx:68
-#: src/components/network/ConnectionsTable.tsx:173
-#: src/components/storage/DrivesTable.tsx:71
-#: src/components/storage/MdRaidsTable.tsx:70
-#: src/components/storage/ProposalResultTable.tsx:134
-#: src/components/storage/SpaceActionsTable.tsx:223
-#: src/components/storage/VolumeGroupsTable.tsx:72
-#: src/components/storage/dasd/DASDTable.tsx:543
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:342
-msgid "Device"
-msgstr "Пристрій"
-
-#. TRANSLATORS: label for the network interface name field.
-#. TRANSLATORS: accessible label for the device selector. MAC address refers
-#. to the hardware identifier of the network interface.
-#: src/components/network/BondSettings.tsx:65
-#: src/components/network/BondSettings.tsx:70
-#: src/components/network/BridgeSettings.tsx:85
-#: src/components/network/BridgeSettings.tsx:90
-#: src/components/network/DeviceSelector.tsx:61
-msgid "Device name"
-msgstr "Назва пристрою"
-
-#. TRANSLATORS: helper text for the bond device name field.
-#: src/components/network/BondSettings.tsx:74
-msgid "E.g., bond0"
-msgstr "Наприклад, bond0"
-
-#. TRANSLATORS: label for the bond mode field.
-#: src/components/network/BondSettings.tsx:85
-#: src/components/network/ConnectionDetails.tsx:134
-msgid "Bond mode"
-msgstr "Режим прив'язки"
-
-#. TRANSLATORS: label for the bond options field.
-#: src/components/network/BondSettings.tsx:96
-#: src/components/network/ConnectionDetails.tsx:140
-msgid "Bond options"
-msgstr "Параметри прив'язки"
-
-#. TRANSLATORS: helper text for the bond options field.
-#: src/components/network/BondSettings.tsx:100
-msgid "E.g., downdelay=0, primary=eth1, miimon=100, lacp_rate=fast"
-msgstr "Наприклад, downdelay=0, primary=eth1, miimon=100, lacp_rate=fast"
-
-#. TRANSLATORS: label for the bond ports field.
-#: src/components/network/BondSettings.tsx:110
-#: src/components/network/ConnectionDetails.tsx:146
-msgid "Bond ports"
-msgstr "Порти прив'язки"
-
-#. TRANSLATORS: helper text for the bond ports field. %s is a list of available devices.
-#. TRANSLATORS: helper text for the bridge ports field. %s is a list of available devices.
-#: src/components/network/BondSettings.tsx:114
-#: src/components/network/BridgeSettings.tsx:109
-#, javascript-format
-msgid "Available devices: %s"
-msgstr "Доступні пристрої: %s"
-
-#. TRANSLATORS: option label for the bridge STP configuration to use the system default.
-#. TRANSLATORS: NTP mode option
-#: src/components/network/BridgeSettings.tsx:40
-#: src/components/system/NtpSettings.tsx:68
-msgid "Default"
-msgstr "Типово"
-
-#. TRANSLATORS: description for the default bridge STP configuration.
-#: src/components/network/BridgeSettings.tsx:42
-msgid "Enabled with the system default settings"
-msgstr "Увімкнено з типовими налаштуваннями системи"
-
-#. TRANSLATORS: option label for enabling bridge STP.
-#. TRANSLATORS: NTP mode option
-#: src/components/network/BridgeSettings.tsx:47
-#: src/components/product/ProductRegistrationForm.tsx:200
-#: src/components/storage/utils.ts:106 src/components/storage/utils.ts:125
-#: src/components/system/NtpSettings.tsx:75
-msgid "Custom"
-msgstr "По-своєму"
-
-#. TRANSLATORS: description for enabling bridge STP with manual settings.
-#: src/components/network/BridgeSettings.tsx:49
-msgid "Explicitly enabled with manual settings"
-msgstr "Явно ввімкнено за допомогою ручних налаштувань"
-
-#. TRANSLATORS: option label for disabling bridge STP.
-#: src/components/network/BridgeSettings.tsx:54
-#: src/components/network/ConnectionDetails.tsx:169
-#, fuzzy
-msgid "Disabled"
-msgstr "вимкнено"
-
-#. TRANSLATORS: description for disabling bridge STP.
-#: src/components/network/BridgeSettings.tsx:56
-msgid "Not used by this bridge"
-msgstr "Цей міст його не використовує"
-
-#. TRANSLATORS: helper text for the bond device name field.
-#: src/components/network/BridgeSettings.tsx:94
-#, fuzzy
-msgid "E.g., br0"
-msgstr "Наприклад, bond0"
-
-#. TRANSLATORS: label for the bridge ports field.
-#: src/components/network/BridgeSettings.tsx:105
-#: src/components/network/ConnectionDetails.tsx:195
-#, fuzzy
-msgid "Bridge ports"
-msgstr "Порти прив'язки"
-
-#. TRANSLATORS: label for the bridge STP (Spanning Tree Protocol) field.
-#: src/components/network/BridgeSettings.tsx:121
-msgid "Spanning Tree Protocol (STP)"
-msgstr "Протокол Spanning Tree (STP)"
-
-#. TRANSLATORS: label suffix indicating an optional field.
-#: src/components/network/BridgeSettings.tsx:141
-#: src/components/network/BridgeSettings.tsx:170
-#: src/components/network/BridgeSettings.tsx:190
-#: src/components/network/BridgeSettings.tsx:210
-#: src/components/network/IpSettings.tsx:157
-#: src/components/product/ProductRegistrationForm.tsx:227
-#: src/components/product/ProductRegistrationForm.tsx:242
-msgid "(optional)"
-msgstr "(не обов'язково)"
-
-#. TRANSLATORS: label for the bridge priority field.
-#: src/components/network/BridgeSettings.tsx:144
-#: src/components/network/ConnectionDetails.tsx:175
-msgid "Priority"
-msgstr "Пріоритет"
-
-#. TRANSLATORS: Helper text for the bridge priority
-#. field. Text inside square brackets [] is
-#. semantically and visually emphasized. Keep the
-#. brackets.
-#: src/components/network/BridgeSettings.tsx:155
-msgid "Root bridge selection (0-61440). [Lower is higher priority]."
-msgstr ""
-"Вибір кореневого мосту (0–61440). [Чим менше значення, тим вищий пріоритет]."
-
-#. TRANSLATORS: label for the bridge forward delay field.
-#: src/components/network/BridgeSettings.tsx:173
-#: src/components/network/ConnectionDetails.tsx:179
-msgid "Forward delay"
-msgstr "Затримка на вході"
-
-#. TRANSLATORS: helper text for the bridge forward delay field.
-#: src/components/network/BridgeSettings.tsx:179
-msgid "Listening and learning time (4-30 seconds)."
-msgstr "Час для прослуховування та вивчення (4–30 секунд)."
-
-#. TRANSLATORS: label for the bridge hello time field.
-#: src/components/network/BridgeSettings.tsx:193
-#: src/components/network/ConnectionDetails.tsx:185
-msgid "Hello time"
-msgstr "Час на привітання"
-
-#. TRANSLATORS: helper text for the bridge hello time field.
-#: src/components/network/BridgeSettings.tsx:199
-msgid "Protocol message interval (1-10 seconds)."
-msgstr "Інтервал між повідомленнями протоколу (1–10 секунд)."
-
-#. TRANSLATORS: label for the bridge max message age field.
-#: src/components/network/BridgeSettings.tsx:213
-#: src/components/network/ConnectionDetails.tsx:189
-msgid "Max message age"
-msgstr "Макс. термін зберігання повідомлення"
-
-#. TRANSLATORS: helper text for the bridge max message age field.
-#: src/components/network/BridgeSettings.tsx:219
-msgid "Protocol message retention time (6-40 seconds)."
-msgstr "Час зберігання повідомлень протоколу (6–40 секунд)."
-
 #: src/components/network/ConnectionDetails.tsx:60
 msgid "Connection is available to all devices."
 msgstr "Підключення доступне для всіх пристроїв."
@@ -986,6 +774,12 @@ msgstr "Прив'язати"
 msgid "Bond details"
 msgstr "Подробиці прив'язки"
 
+#. TRANSLATORS: label for the bond mode field.
+#: src/components/network/ConnectionDetails.tsx:134
+#: src/components/network/connection-form/BondFields.tsx:85
+msgid "Bond mode"
+msgstr "Режим прив'язки"
+
 #: src/components/network/ConnectionDetails.tsx:136
 #: src/components/network/ConnectionDetails.tsx:142
 #: src/components/network/ConnectionDetails.tsx:150
@@ -1004,6 +798,18 @@ msgstr "Подробиці прив'язки"
 msgid "None set"
 msgstr "Не задано"
 
+#. TRANSLATORS: label for the bond options field.
+#: src/components/network/ConnectionDetails.tsx:140
+#: src/components/network/connection-form/BondFields.tsx:96
+msgid "Bond options"
+msgstr "Параметри прив'язки"
+
+#. TRANSLATORS: label for the bond ports field.
+#: src/components/network/ConnectionDetails.tsx:146
+#: src/components/network/connection-form/BondFields.tsx:110
+msgid "Bond ports"
+msgstr "Порти прив'язки"
+
 #: src/components/network/ConnectionDetails.tsx:164 src/utils/network.ts:88
 msgid "Bridge"
 msgstr "Міст"
@@ -1017,10 +823,48 @@ msgstr "Приховати подробиці"
 msgid "STP"
 msgstr "STP"
 
+#. TRANSLATORS: option label for disabling bridge STP.
+#: src/components/network/ConnectionDetails.tsx:169
+#: src/components/network/connection-form/BridgeFields.tsx:54
+#, fuzzy
+msgid "Disabled"
+msgstr "вимкнено"
+
 #: src/components/network/ConnectionDetails.tsx:169
 #, fuzzy
 msgid "Enabled"
 msgstr "Увімкнути"
+
+#. TRANSLATORS: label for the bridge priority field.
+#: src/components/network/ConnectionDetails.tsx:175
+#: src/components/network/connection-form/BridgeFields.tsx:144
+msgid "Priority"
+msgstr "Пріоритет"
+
+#. TRANSLATORS: label for the bridge forward delay field.
+#: src/components/network/ConnectionDetails.tsx:179
+#: src/components/network/connection-form/BridgeFields.tsx:173
+msgid "Forward delay"
+msgstr "Затримка на вході"
+
+#. TRANSLATORS: label for the bridge hello time field.
+#: src/components/network/ConnectionDetails.tsx:185
+#: src/components/network/connection-form/BridgeFields.tsx:193
+msgid "Hello time"
+msgstr "Час на привітання"
+
+#. TRANSLATORS: label for the bridge max message age field.
+#: src/components/network/ConnectionDetails.tsx:189
+#: src/components/network/connection-form/BridgeFields.tsx:213
+msgid "Max message age"
+msgstr "Макс. термін зберігання повідомлення"
+
+#. TRANSLATORS: label for the bridge ports field.
+#: src/components/network/ConnectionDetails.tsx:195
+#: src/components/network/connection-form/BridgeFields.tsx:105
+#, fuzzy
+msgid "Bridge ports"
+msgstr "Порти прив'язки"
 
 #: src/components/network/ConnectionDetails.tsx:215
 msgid "Device details"
@@ -1055,7 +899,7 @@ msgstr "DNS"
 #. TRANSLATORS: label for the DNS search domains field.
 #: src/components/network/ConnectionDetails.tsx:267
 #: src/components/network/ConnectionDetails.tsx:401
-#: src/components/network/ConnectionForm.tsx:560
+#: src/components/network/connection-form/Form.tsx:485
 msgid "DNS search domains"
 msgstr "Домени пошуку DNS"
 
@@ -1088,12 +932,11 @@ msgstr "Налаштування"
 msgid "Edit connection settings"
 msgstr "Змінити налаштування з'єднання"
 
-#. TRANSLATORS: label for hostname mode selector
 #. TRANSLATORS: label for NTP mode selector
+#. TRANSLATORS: label for hostname mode selector
 #: src/components/network/ConnectionDetails.tsx:354
-#: src/components/system/HostnamePage.tsx:210
-#: src/components/system/HostnameSettings.tsx:114
-#: src/components/system/NtpSettings.tsx:63
+#: src/components/system/system-form/HostnameFields.tsx:109
+#: src/components/system/system-form/NtpFields.tsx:57
 msgid "Mode"
 msgstr "Режим"
 
@@ -1105,108 +948,6 @@ msgstr "IPv4"
 msgid "IPv6"
 msgstr "IPv6"
 
-#. TRANSLATORS: title of an error for a failed network connection save.
-#. Do not end with a period.
-#: src/components/network/ConnectionForm.tsx:417
-msgid "The connection could not be saved"
-msgstr "З'єднання не вдалося зберегти"
-
-#. TRANSLATORS: table header for a DASD devices table
-#. TRANSLATORS: checkbox label for custom DNS server configuration.
-#: src/components/network/ConnectionForm.tsx:434
-#: src/components/network/ConnectionsTable.tsx:163
-#: src/components/network/ConnectionsTable.tsx:288
-#: src/components/storage/DeviceSelectorPage.tsx:54
-#: src/components/storage/dasd/DASDTable.tsx:550
-msgid "Type"
-msgstr "Тип"
-
-#. TRANSLATORS: table header for an iSCSI targets table
-#. TRANSLATORS: input field for the iSCSI initiator name
-#. TRANSLATORS: label for the network connection profile name field.
-#. TRANSLATORS: label for hostname value display
-#. TRANSLATORS: label for hostname input
-#: src/components/network/ConnectionForm.tsx:449
-#: src/components/network/ConnectionsTable.tsx:158
-#: src/components/network/ConnectionsTable.tsx:280
-#: src/components/storage/DeviceSelectorPage.tsx:55
-#: src/components/storage/LvmPage.tsx:182
-#: src/components/storage/iscsi/InitiatorFormPage.tsx:66
-#: src/components/storage/iscsi/InitiatorFormPage.tsx:75
-#: src/components/storage/iscsi/TargetsTable.tsx:282
-#: src/components/storage/iscsi/TargetsTable.tsx:456
-#: src/components/system/HostnameSettings.tsx:142
-#: src/components/system/HostnameSettings.tsx:151
-msgid "Name"
-msgstr "Назва"
-
-#. TRANSLATORS: checkbox label for custom DNS server configuration.
-#: src/components/network/ConnectionForm.tsx:511
-msgid "Use custom DNS servers"
-msgstr "Використовувати власні DNS-сервери"
-
-#. TRANSLATORS: label for the DNS servers field.
-#: src/components/network/ConnectionForm.tsx:524
-msgid "DNS servers"
-msgstr "DNS-сервери"
-
-#. TRANSLATORS: helper text for DNS servers field explaining the format.
-#: src/components/network/ConnectionForm.tsx:528
-msgid "E.g., 8.8.8.8 or 2001:4860:4860::8888"
-msgstr "Наприклад, 8.8.8.8 або 2001:4860:4860::8888"
-
-#. TRANSLATORS: validation error for an invalid DNS server address entry.
-#: src/components/network/ConnectionForm.tsx:532
-msgid "Invalid DNS server address"
-msgstr "Неправильна адреса DNS-сервера"
-
-#. TRANSLATORS: checkbox label for custom DNS search domain configuration.
-#: src/components/network/ConnectionForm.tsx:547
-msgid "Use custom DNS search domains"
-msgstr "Використовувати власні домени пошуку DNS"
-
-#. TRANSLATORS: helper text for DNS search domains field explaining the format.
-#: src/components/network/ConnectionForm.tsx:564
-msgid "E.g., example.com"
-msgstr "Наприклад, example.com"
-
-#. TRANSLATORS: validation error for an invalid DNS search domain entry.
-#: src/components/network/ConnectionForm.tsx:568
-msgid "Invalid DNS search domain"
-msgstr "Недійсний домен пошуку DNS"
-
-#. TRANSLATORS: title of the page shown when the requested connection
-#. profile does not exist. Do not end with a period.
-#: src/components/network/ConnectionForm.tsx:596
-msgid "Connection not found"
-msgstr "З'єднання не знайдено"
-
-#. TRANSLATORS: body text on the connection not found page.
-#: src/components/network/ConnectionForm.tsx:598
-msgid "The connection does not exist or is no longer available."
-msgstr "З'єднання не існує або більше не доступне."
-
-#. TRANSLATORS: link text on the connection not found page.
-#: src/components/network/ConnectionForm.tsx:600
-#: src/components/network/ConnectionPage.tsx:54
-msgid "Go to network page"
-msgstr "Перейти до розділу «Мережа»"
-
-#. TRANSLATORS: breadcrumb label for the connection-edit form. Keep the
-#. noun ("connection"): the previous crumb is the connection name, so a
-#. bare "Edit" reads fine visually but leaves screen-reader users without
-#. the object being acted on when the crumb is announced on its own.
-#: src/components/network/ConnectionForm.tsx:668
-#: src/components/network/ConnectionsTable.tsx:357
-#: src/components/storage/iscsi/TargetsTable.tsx:224
-msgid "Edit connection"
-msgstr "Редагувати з'єднання"
-
-#. TRANSLATORS: breadcrumb label for the new-connection form.
-#: src/components/network/ConnectionForm.tsx:672
-msgid "New connection"
-msgstr "Нове з'єднання"
-
 #. TRANSLATORS: %s will be replaced with connection id
 #: src/components/network/ConnectionPage.tsx:42
 #, javascript-format
@@ -1217,6 +958,12 @@ msgstr "\"%s\" не існує або більше не доступна."
 msgid "Connection not found or lost"
 msgstr "З'єднання не знайдено або втрачено"
 
+#. TRANSLATORS: link text on the connection not found page.
+#: src/components/network/ConnectionPage.tsx:54
+#: src/components/network/connection-form/Form.tsx:525
+msgid "Go to network page"
+msgstr "Перейти до розділу «Мережа»"
+
 #: src/components/network/ConnectionsTable.tsx:151
 msgid "(bound by name)"
 msgstr "(прив'язаний за назвою)"
@@ -1225,11 +972,55 @@ msgstr "(прив'язаний за назвою)"
 msgid "(bound by MAC)"
 msgstr "(прив'язаний до MAC-адреси)"
 
+#. TRANSLATORS: table header for an iSCSI targets table
+#. TRANSLATORS: input field for the iSCSI initiator name
+#. TRANSLATORS: label for the network connection profile name field.
+#. TRANSLATORS: label for hostname value display
+#. TRANSLATORS: label for hostname input
+#: src/components/network/ConnectionsTable.tsx:158
+#: src/components/network/ConnectionsTable.tsx:280
+#: src/components/network/connection-form/Form.tsx:374
+#: src/components/storage/DeviceSelectorPage.tsx:55
+#: src/components/storage/LvmPage.tsx:182
+#: src/components/storage/iscsi/InitiatorFormPage.tsx:66
+#: src/components/storage/iscsi/InitiatorFormPage.tsx:75
+#: src/components/storage/iscsi/TargetsTable.tsx:282
+#: src/components/storage/iscsi/TargetsTable.tsx:456
+#: src/components/system/system-form/HostnameFields.tsx:137
+#: src/components/system/system-form/HostnameFields.tsx:146
+msgid "Name"
+msgstr "Назва"
+
+#. TRANSLATORS: table header for a DASD devices table
+#. TRANSLATORS: checkbox label for custom DNS server configuration.
+#: src/components/network/ConnectionsTable.tsx:163
+#: src/components/network/ConnectionsTable.tsx:288
+#: src/components/network/connection-form/Form.tsx:359
+#: src/components/storage/DeviceSelectorPage.tsx:54
+#: src/components/storage/dasd/DASDTable.tsx:550
+msgid "Type"
+msgstr "Тип"
+
 #: src/components/network/ConnectionsTable.tsx:168
 #: src/components/network/ConnectionsTable.tsx:302
 #, fuzzy
 msgid "State"
 msgstr "Стан"
+
+#. TRANSLATORS: table header for a zFCP devices table.
+#. TRANSLATORS: table header for a DASD devices table
+#. TRANSLATORS: label for the device binding dropdown.
+#: src/components/network/ConnectionsTable.tsx:173
+#: src/components/network/connection-form/BindingModeSelector.tsx:68
+#: src/components/storage/DrivesTable.tsx:71
+#: src/components/storage/MdRaidsTable.tsx:70
+#: src/components/storage/ProposalResultTable.tsx:134
+#: src/components/storage/SpaceActionsTable.tsx:223
+#: src/components/storage/VolumeGroupsTable.tsx:72
+#: src/components/storage/dasd/DASDTable.tsx:543
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:342
+msgid "Device"
+msgstr "Пристрій"
 
 #. TRANSLATORS: shown in the filter toolbar when filters are active.
 #. %1$s is the number of matching connections, %2$s is the total number.
@@ -1272,6 +1063,16 @@ msgstr "Очистити всі фільтри"
 msgid "Details"
 msgstr "Подробиці"
 
+#. TRANSLATORS: breadcrumb label for the connection-edit form. Keep the
+#. noun ("connection"): the previous crumb is the connection name, so a
+#. bare "Edit" reads fine visually but leaves screen-reader users without
+#. the object being acted on when the crumb is announced on its own.
+#: src/components/network/ConnectionsTable.tsx:357
+#: src/components/network/connection-form/Form.tsx:593
+#: src/components/storage/iscsi/TargetsTable.tsx:224
+msgid "Edit connection"
+msgstr "Редагувати з'єднання"
+
 #. TRANSLATORS: button label, connect to a Wi-Fi network
 #: src/components/network/ConnectionsTable.tsx:366
 #: src/components/network/WifiConnectionForm.tsx:186
@@ -1302,10 +1103,6 @@ msgstr "Жодне з'єднання не відповідає фільтрам"
 #: src/components/storage/zfcp/ZFCPDevicesTable.tsx:425
 msgid "Change filters and try again."
 msgstr "Змініть фільтри та спробуйте ще раз."
-
-#: src/components/network/DeviceSelector.tsx:61
-msgid "MAC address"
-msgstr "MAC адреса"
 
 #. TRANSLATORS: Displays both IPv4 and IPv6 addresses with count of
 #. additional IPs (e.g., "192.168.122.237, fe80::5054:ff:fe46:2af9 and 1
@@ -1352,105 +1149,6 @@ msgid ""
 msgstr ""
 "Це з'єднання буде використовуватися тільки під час встановлення і не буде "
 "доступним у встановленій системі."
-
-#. TRANSLATORS: option label for automatic IP configuration.
-#: src/components/network/IpSettings.tsx:50
-#: src/components/storage/BootSelectionPage.tsx:202
-#: src/components/storage/SizeModeSelect.tsx:191
-#: src/components/storage/SizeModeSelect.tsx:196
-#: src/components/storage/iscsi/TargetLoginPage.tsx:58
-msgid "Automatic"
-msgstr "Автоматично"
-
-#. TRANSLATORS: description for automatic IP configuration mode.
-#: src/components/network/IpSettings.tsx:52
-msgid "Address and gateway assigned from the network"
-msgstr "Адреса та шлюз, призначені мережею"
-
-#. TRANSLATORS: option label for advanced automatic IP configuration with static addresses.
-#: src/components/network/IpSettings.tsx:57
-msgid "Automatic + manual"
-msgstr "Автоматична та ручна"
-
-#. TRANSLATORS: description for advanced automatic mode with static addresses.
-#: src/components/network/IpSettings.tsx:59
-msgid "Configuration from the network plus static addresses and gateway"
-msgstr "Налаштування через мережу, а також статичні адреси та шлюз"
-
-#. TRANSLATORS: Network summary title when using manual/static IP configuration
-#. TRANSLATORS: option label for manual IP configuration
-#: src/components/network/IpSettings.tsx:64
-#: src/components/overview/NetworkSummary.tsx:128
-#: src/components/storage/SizeModeSelect.tsx:191
-#: src/components/storage/SizeModeSelect.tsx:199
-#: src/components/storage/iscsi/TargetLoginPage.tsx:56
-msgid "Manual"
-msgstr "Вручну"
-
-#. TRANSLATORS: description for manual IP configuration mode.
-#: src/components/network/IpSettings.tsx:66
-msgid "Static addresses and gateway"
-msgstr "Статичні адреси та шлюз"
-
-#. TRANSLATORS: label for the IPv4 or IPv6 settings dropdown.
-#: src/components/network/IpSettings.tsx:97
-msgid "IPv4 Settings"
-msgstr "Налаштування IPv4"
-
-#: src/components/network/IpSettings.tsx:97
-msgid "IPv6 Settings"
-msgstr "Налаштування IPv6"
-
-#. TRANSLATORS: label for the IP addresses field.
-#: src/components/network/IpSettings.tsx:99
-msgid "IPv4 Addresses"
-msgstr "IPv4-адреси"
-
-#: src/components/network/IpSettings.tsx:99
-msgid "IPv6 Addresses"
-msgstr "IPv6-адреси"
-
-#. TRANSLATORS: label for the IP gateway field.
-#: src/components/network/IpSettings.tsx:101
-msgid "IPv4 Gateway"
-msgstr "Шлюз IPv4"
-
-#: src/components/network/IpSettings.tsx:101
-msgid "IPv6 Gateway"
-msgstr "Шлюз IPv6"
-
-#. TRANSLATORS: helper text for IPv4 addresses field. Explains format and that prefix is auto-added.
-#: src/components/network/IpSettings.tsx:137
-msgid "E.g., 192.168.1.1 or 192.168.1.1/24. Prefix auto-added if omitted."
-msgstr ""
-"Наприклад, 192.168.1.1 або 192.168.1.1/24. Якщо префікс не вказано, він "
-"додається автоматично."
-
-#. TRANSLATORS: helper text for IPv6 addresses field. Explains format and that prefix is auto-added.
-#: src/components/network/IpSettings.tsx:139
-msgid "E.g., 2001:db8::1 or 2001:db8::1/64. Prefix auto-added if omitted."
-msgstr ""
-"Наприклад, 2001:db8::1 або 2001:db8::1/64. Якщо префікс не вказано, він "
-"додається автоматично."
-
-#. TRANSLATORS: validation error for an invalid IP address entry.
-#: src/components/network/IpSettings.tsx:145
-msgid "Invalid IPv4 address"
-msgstr "Неправильна адреса IPv4"
-
-#: src/components/network/IpSettings.tsx:145
-msgid "Invalid IPv6 address"
-msgstr "Неправильна адреса IPv6"
-
-#. TRANSLATORS: helper text for IPv4 gateway field explaining the format.
-#: src/components/network/IpSettings.tsx:165
-msgid "E.g., 192.168.1.1"
-msgstr "Наприклад, 192.168.1.1"
-
-#. TRANSLATORS: helper text for IPv6 gateway field explaining the format.
-#: src/components/network/IpSettings.tsx:167
-msgid "E.g., 2001:db8::1"
-msgstr "Наприклад, 2001:db8::1"
 
 #: src/components/network/NetworkPage.tsx:50
 msgid ""
@@ -1560,121 +1258,406 @@ msgstr "IP адреси"
 msgid "Configured for installation only"
 msgstr "Налаштовано лише для встановлення"
 
+#. TRANSLATORS: option label meaning the connection works with any network device.
+#: src/components/network/connection-form/BindingModeSelector.tsx:32
+msgid "Any"
+msgstr "Будь-який"
+
+#. TRANSLATORS: description for the "Any" binding mode. The connection is
+#. not limited to a specific device.
+#: src/components/network/connection-form/BindingModeSelector.tsx:35
+msgid "The connection is available for all devices"
+msgstr "Підключення доступне для всіх пристроїв"
+
+#. TRANSLATORS: option label for binding by device interface name (e.g. eth0).
+#: src/components/network/connection-form/BindingModeSelector.tsx:40
+msgid "Chosen by name"
+msgstr "Вибрано за назвою"
+
+#. TRANSLATORS: description for the "Chosen by name" binding mode. The
+#. "device name" refers to the interface name (e.g. eth0).
+#: src/components/network/connection-form/BindingModeSelector.tsx:43
+msgid "Identify the connection device by its name in the system"
+msgstr "Визначати пристрій підключення за його назвою в системі"
+
+#. TRANSLATORS: option label for binding by MAC address
+#: src/components/network/connection-form/BindingModeSelector.tsx:48
+msgid "Chosen by MAC"
+msgstr "Вибрано за MAC-адресою"
+
+#. TRANSLATORS: description for the "Chosen by MAC" binding mode. MAC is the
+#. hardware address, persisting across interface renames.
+#: src/components/network/connection-form/BindingModeSelector.tsx:51
+msgid "Identify the connection device by its physical address"
+msgstr "Визначати пристрій підключення за його фізичною адресою"
+
+#. TRANSLATORS: label for the network interface name field.
+#. TRANSLATORS: accessible label for the device selector. MAC address refers
+#. to the hardware identifier of the network interface.
+#: src/components/network/connection-form/BondFields.tsx:65
+#: src/components/network/connection-form/BondFields.tsx:70
+#: src/components/network/connection-form/BridgeFields.tsx:85
+#: src/components/network/connection-form/BridgeFields.tsx:90
+#: src/components/network/connection-form/DeviceSelector.tsx:61
+msgid "Device name"
+msgstr "Назва пристрою"
+
+#. TRANSLATORS: helper text for the bond device name field.
+#: src/components/network/connection-form/BondFields.tsx:74
+msgid "E.g., bond0"
+msgstr "Наприклад, bond0"
+
+#. TRANSLATORS: helper text for the bond options field.
+#: src/components/network/connection-form/BondFields.tsx:100
+msgid "E.g., downdelay=0, primary=eth1, miimon=100, lacp_rate=fast"
+msgstr "Наприклад, downdelay=0, primary=eth1, miimon=100, lacp_rate=fast"
+
+#. TRANSLATORS: helper text for the bridge ports field. %s is a list of available devices.
+#. TRANSLATORS: helper text for the bond ports field. %s is a list of available devices.
+#: src/components/network/connection-form/BondFields.tsx:114
+#: src/components/network/connection-form/BridgeFields.tsx:109
+#, javascript-format
+msgid "Available devices: %s"
+msgstr "Доступні пристрої: %s"
+
+#. TRANSLATORS: option label for the bridge STP configuration to use the system default.
+#. TRANSLATORS: NTP mode option
+#: src/components/network/connection-form/BridgeFields.tsx:40
+#: src/components/system/system-form/NtpFields.tsx:62
+msgid "Default"
+msgstr "Типово"
+
+#. TRANSLATORS: description for the default bridge STP configuration.
+#: src/components/network/connection-form/BridgeFields.tsx:42
+msgid "Enabled with the system default settings"
+msgstr "Увімкнено з типовими налаштуваннями системи"
+
+#. TRANSLATORS: option label for enabling bridge STP.
+#. TRANSLATORS: NTP mode option
+#: src/components/network/connection-form/BridgeFields.tsx:47
+#: src/components/product/registration-form/Form.tsx:157
+#: src/components/storage/utils.ts:106 src/components/storage/utils.ts:125
+#: src/components/system/system-form/NtpFields.tsx:69
+msgid "Custom"
+msgstr "По-своєму"
+
+#. TRANSLATORS: description for enabling bridge STP with manual settings.
+#: src/components/network/connection-form/BridgeFields.tsx:49
+msgid "Explicitly enabled with manual settings"
+msgstr "Явно ввімкнено за допомогою ручних налаштувань"
+
+#. TRANSLATORS: description for disabling bridge STP.
+#: src/components/network/connection-form/BridgeFields.tsx:56
+msgid "Not used by this bridge"
+msgstr "Цей міст його не використовує"
+
+#. TRANSLATORS: helper text for the bond device name field.
+#: src/components/network/connection-form/BridgeFields.tsx:94
+#, fuzzy
+msgid "E.g., br0"
+msgstr "Наприклад, bond0"
+
+#. TRANSLATORS: label for the bridge STP (Spanning Tree Protocol) field.
+#: src/components/network/connection-form/BridgeFields.tsx:121
+msgid "Spanning Tree Protocol (STP)"
+msgstr "Протокол Spanning Tree (STP)"
+
+#. TRANSLATORS: label suffix indicating an optional field.
+#: src/components/network/connection-form/BridgeFields.tsx:141
+#: src/components/network/connection-form/BridgeFields.tsx:170
+#: src/components/network/connection-form/BridgeFields.tsx:190
+#: src/components/network/connection-form/BridgeFields.tsx:210
+#: src/components/network/connection-form/IpFields.tsx:153
+#: src/components/product/registration-form/Form.tsx:184
+#: src/components/product/registration-form/Form.tsx:199
+msgid "(optional)"
+msgstr "(не обов'язково)"
+
+#. TRANSLATORS: Helper text for the bridge priority
+#. field. Text inside square brackets [] is
+#. semantically and visually emphasized. Keep the
+#. brackets.
+#: src/components/network/connection-form/BridgeFields.tsx:155
+msgid "Root bridge selection (0-61440). [Lower is higher priority]."
+msgstr ""
+"Вибір кореневого мосту (0–61440). [Чим менше значення, тим вищий пріоритет]."
+
+#. TRANSLATORS: helper text for the bridge forward delay field.
+#: src/components/network/connection-form/BridgeFields.tsx:179
+msgid "Listening and learning time (4-30 seconds)."
+msgstr "Час для прослуховування та вивчення (4–30 секунд)."
+
+#. TRANSLATORS: helper text for the bridge hello time field.
+#: src/components/network/connection-form/BridgeFields.tsx:199
+msgid "Protocol message interval (1-10 seconds)."
+msgstr "Інтервал між повідомленнями протоколу (1–10 секунд)."
+
+#. TRANSLATORS: helper text for the bridge max message age field.
+#: src/components/network/connection-form/BridgeFields.tsx:219
+msgid "Protocol message retention time (6-40 seconds)."
+msgstr "Час зберігання повідомлень протоколу (6–40 секунд)."
+
+#: src/components/network/connection-form/DeviceSelector.tsx:61
+msgid "MAC address"
+msgstr "MAC адреса"
+
+#. TRANSLATORS: title of an error for a failed network connection save.
+#. Do not end with a period.
+#: src/components/network/connection-form/Form.tsx:342
+msgid "The connection could not be saved"
+msgstr "З'єднання не вдалося зберегти"
+
+#. TRANSLATORS: checkbox label for custom DNS server configuration.
+#: src/components/network/connection-form/Form.tsx:436
+msgid "Use custom DNS servers"
+msgstr "Використовувати власні DNS-сервери"
+
+#. TRANSLATORS: label for the DNS servers field.
+#: src/components/network/connection-form/Form.tsx:449
+msgid "DNS servers"
+msgstr "DNS-сервери"
+
+#. TRANSLATORS: helper text for DNS servers field explaining the format.
+#: src/components/network/connection-form/Form.tsx:453
+msgid "E.g., 8.8.8.8 or 2001:4860:4860::8888"
+msgstr "Наприклад, 8.8.8.8 або 2001:4860:4860::8888"
+
+#. TRANSLATORS: validation error for an invalid DNS server address entry.
+#: src/components/network/connection-form/Form.tsx:457
+msgid "Invalid DNS server address"
+msgstr "Неправильна адреса DNS-сервера"
+
+#. TRANSLATORS: checkbox label for custom DNS search domain configuration.
+#: src/components/network/connection-form/Form.tsx:472
+msgid "Use custom DNS search domains"
+msgstr "Використовувати власні домени пошуку DNS"
+
+#. TRANSLATORS: helper text for DNS search domains field explaining the format.
+#: src/components/network/connection-form/Form.tsx:489
+msgid "E.g., example.com"
+msgstr "Наприклад, example.com"
+
+#. TRANSLATORS: validation error for an invalid DNS search domain entry.
+#: src/components/network/connection-form/Form.tsx:493
+msgid "Invalid DNS search domain"
+msgstr "Недійсний домен пошуку DNS"
+
+#. TRANSLATORS: title of the page shown when the requested connection
+#. profile does not exist. Do not end with a period.
+#: src/components/network/connection-form/Form.tsx:521
+msgid "Connection not found"
+msgstr "З'єднання не знайдено"
+
+#. TRANSLATORS: body text on the connection not found page.
+#: src/components/network/connection-form/Form.tsx:523
+msgid "The connection does not exist or is no longer available."
+msgstr "З'єднання не існує або більше не доступне."
+
+#. TRANSLATORS: breadcrumb label for the new-connection form.
+#: src/components/network/connection-form/Form.tsx:597
+msgid "New connection"
+msgstr "Нове з'єднання"
+
+#. TRANSLATORS: option label for automatic IP configuration.
+#: src/components/network/connection-form/IpFields.tsx:46
+#: src/components/storage/BootSelectionPage.tsx:202
+#: src/components/storage/SizeModeSelect.tsx:191
+#: src/components/storage/SizeModeSelect.tsx:196
+#: src/components/storage/iscsi/TargetLoginPage.tsx:58
+msgid "Automatic"
+msgstr "Автоматично"
+
+#. TRANSLATORS: description for automatic IP configuration mode.
+#: src/components/network/connection-form/IpFields.tsx:48
+msgid "Address and gateway assigned from the network"
+msgstr "Адреса та шлюз, призначені мережею"
+
+#. TRANSLATORS: option label for advanced automatic IP configuration with static addresses.
+#: src/components/network/connection-form/IpFields.tsx:53
+msgid "Automatic + manual"
+msgstr "Автоматична та ручна"
+
+#. TRANSLATORS: description for advanced automatic mode with static addresses.
+#: src/components/network/connection-form/IpFields.tsx:55
+msgid "Configuration from the network plus static addresses and gateway"
+msgstr "Налаштування через мережу, а також статичні адреси та шлюз"
+
+#. TRANSLATORS: Network summary title when using manual/static IP configuration
+#. TRANSLATORS: option label for manual IP configuration
+#: src/components/network/connection-form/IpFields.tsx:60
+#: src/components/overview/NetworkSummary.tsx:128
+#: src/components/storage/SizeModeSelect.tsx:191
+#: src/components/storage/SizeModeSelect.tsx:199
+#: src/components/storage/iscsi/TargetLoginPage.tsx:56
+msgid "Manual"
+msgstr "Вручну"
+
+#. TRANSLATORS: description for manual IP configuration mode.
+#: src/components/network/connection-form/IpFields.tsx:62
+msgid "Static addresses and gateway"
+msgstr "Статичні адреси та шлюз"
+
+#. TRANSLATORS: label for the IPv4 or IPv6 settings dropdown.
+#: src/components/network/connection-form/IpFields.tsx:93
+msgid "IPv4 Settings"
+msgstr "Налаштування IPv4"
+
+#: src/components/network/connection-form/IpFields.tsx:93
+msgid "IPv6 Settings"
+msgstr "Налаштування IPv6"
+
+#. TRANSLATORS: label for the IP addresses field.
+#: src/components/network/connection-form/IpFields.tsx:95
+msgid "IPv4 Addresses"
+msgstr "IPv4-адреси"
+
+#: src/components/network/connection-form/IpFields.tsx:95
+msgid "IPv6 Addresses"
+msgstr "IPv6-адреси"
+
+#. TRANSLATORS: label for the IP gateway field.
+#: src/components/network/connection-form/IpFields.tsx:97
+msgid "IPv4 Gateway"
+msgstr "Шлюз IPv4"
+
+#: src/components/network/connection-form/IpFields.tsx:97
+msgid "IPv6 Gateway"
+msgstr "Шлюз IPv6"
+
+#. TRANSLATORS: helper text for IPv4 addresses field. Explains format and that prefix is auto-added.
+#: src/components/network/connection-form/IpFields.tsx:133
+msgid "E.g., 192.168.1.1 or 192.168.1.1/24. Prefix auto-added if omitted."
+msgstr ""
+"Наприклад, 192.168.1.1 або 192.168.1.1/24. Якщо префікс не вказано, він "
+"додається автоматично."
+
+#. TRANSLATORS: helper text for IPv6 addresses field. Explains format and that prefix is auto-added.
+#: src/components/network/connection-form/IpFields.tsx:135
+msgid "E.g., 2001:db8::1 or 2001:db8::1/64. Prefix auto-added if omitted."
+msgstr ""
+"Наприклад, 2001:db8::1 або 2001:db8::1/64. Якщо префікс не вказано, він "
+"додається автоматично."
+
+#. TRANSLATORS: validation error for an invalid IP address entry.
+#: src/components/network/connection-form/IpFields.tsx:141
+msgid "Invalid IPv4 address"
+msgstr "Неправильна адреса IPv4"
+
+#: src/components/network/connection-form/IpFields.tsx:141
+msgid "Invalid IPv6 address"
+msgstr "Неправильна адреса IPv6"
+
+#. TRANSLATORS: helper text for IPv4 gateway field explaining the format.
+#: src/components/network/connection-form/IpFields.tsx:161
+msgid "E.g., 192.168.1.1"
+msgstr "Наприклад, 192.168.1.1"
+
+#. TRANSLATORS: helper text for IPv6 gateway field explaining the format.
+#: src/components/network/connection-form/IpFields.tsx:163
+msgid "E.g., 2001:db8::1"
+msgstr "Наприклад, 2001:db8::1"
+
+#. TRANSLATORS: validation error for the connection name field.
+#: src/components/network/connection-form/fields.ts:247
+msgid "Name is required"
+msgstr "Ім'я вводити обов'язково"
+
+#: src/components/network/connection-form/fields.ts:263
+msgid "At least one IPv4 address is required"
+msgstr "Потрібна принаймні одна адреса IPv4"
+
+#: src/components/network/connection-form/fields.ts:264
+msgid "Some IPv4 addresses are invalid"
+msgstr "Деякі адреси IPv4 є недійсними"
+
+#: src/components/network/connection-form/fields.ts:271
+msgid "IPv4 gateway is required"
+msgstr "Потрібен шлюз IPv4"
+
+#: src/components/network/connection-form/fields.ts:272
+msgid "Invalid IPv4 gateway"
+msgstr "Недійсний шлюз IPv4"
+
+#: src/components/network/connection-form/fields.ts:279
+msgid "At least one IPv6 address is required"
+msgstr "Потрібна принаймні одна адреса IPv6"
+
+#: src/components/network/connection-form/fields.ts:280
+msgid "Some IPv6 addresses are invalid"
+msgstr "Деякі адреси IPv6 є недійсними"
+
+#: src/components/network/connection-form/fields.ts:287
+msgid "IPv6 gateway is required"
+msgstr "Потрібен шлюз IPv6"
+
+#: src/components/network/connection-form/fields.ts:288
+msgid "Invalid IPv6 gateway"
+msgstr "Недійсний шлюз IPv6"
+
+#: src/components/network/connection-form/fields.ts:296
+msgid "At least one DNS server is required"
+msgstr "Потрібен принаймні один DNS-сервер"
+
+#: src/components/network/connection-form/fields.ts:297
+msgid "Some DNS server addresses are invalid"
+msgstr "Деякі адреси DNS-серверів є недійсними"
+
+#: src/components/network/connection-form/fields.ts:305
+msgid "At least one DNS search domain is required"
+msgstr "Потрібен принаймні один домен для пошуку DNS"
+
+#: src/components/network/connection-form/fields.ts:306
+msgid "Some DNS search domains are invalid"
+msgstr "Деякі домени пошуку DNS є недійсними"
+
 #. TRANSLATORS: validation error for the bond options field when the 'primary' option is used in an invalid mode.
 #. %s is replaced with a list of valid mode names.
-#: src/components/network/connectionFormValidation.ts:146
+#: src/components/network/connection-form/fields.ts:333
 #, javascript-format
 msgid "The 'primary' option is only valid for %s modes"
 msgstr "Параметр «primary» діє лише для режимів %s"
 
-#. TRANSLATORS: validation error for the connection name field.
-#: src/components/network/connectionFormValidation.ts:158
-msgid "Name is required"
-msgstr "Ім'я вводити обов'язково"
-
-#. TRANSLATORS: validation error for the IPv4 addresses field.
-#: src/components/network/connectionFormValidation.ts:164
-msgid "At least one IPv4 address is required"
-msgstr "Потрібна принаймні одна адреса IPv4"
-
-#. TRANSLATORS: validation error for the IPv4 addresses field.
-#: src/components/network/connectionFormValidation.ts:166
-msgid "Some IPv4 addresses are invalid"
-msgstr "Деякі адреси IPv4 є недійсними"
-
-#. TRANSLATORS: validation error for the IPv6 addresses field.
-#: src/components/network/connectionFormValidation.ts:173
-msgid "At least one IPv6 address is required"
-msgstr "Потрібна принаймні одна адреса IPv6"
-
-#. TRANSLATORS: validation error for the IPv6 addresses field.
-#: src/components/network/connectionFormValidation.ts:175
-msgid "Some IPv6 addresses are invalid"
-msgstr "Деякі адреси IPv6 є недійсними"
-
-#. TRANSLATORS: validation error for the IPv4 gateway field.
-#: src/components/network/connectionFormValidation.ts:183
-msgid "IPv4 gateway is required"
-msgstr "Потрібен шлюз IPv4"
-
-#. TRANSLATORS: validation error for the IPv4 gateway field.
-#: src/components/network/connectionFormValidation.ts:185
-msgid "Invalid IPv4 gateway"
-msgstr "Недійсний шлюз IPv4"
-
-#. TRANSLATORS: validation error for the IPv6 gateway field.
-#: src/components/network/connectionFormValidation.ts:193
-msgid "IPv6 gateway is required"
-msgstr "Потрібен шлюз IPv6"
-
-#. TRANSLATORS: validation error for the IPv6 gateway field.
-#: src/components/network/connectionFormValidation.ts:195
-msgid "Invalid IPv6 gateway"
-msgstr "Недійсний шлюз IPv6"
-
-#. TRANSLATORS: validation error for the DNS servers field.
-#: src/components/network/connectionFormValidation.ts:202
-msgid "At least one DNS server is required"
-msgstr "Потрібен принаймні один DNS-сервер"
-
-#. TRANSLATORS: validation error for the DNS servers field.
-#: src/components/network/connectionFormValidation.ts:204
-msgid "Some DNS server addresses are invalid"
-msgstr "Деякі адреси DNS-серверів є недійсними"
-
-#. TRANSLATORS: validation error for the DNS search domains field.
-#: src/components/network/connectionFormValidation.ts:211
-msgid "At least one DNS search domain is required"
-msgstr "Потрібен принаймні один домен для пошуку DNS"
-
-#. TRANSLATORS: validation error for the DNS search domains field.
-#: src/components/network/connectionFormValidation.ts:213
-msgid "Some DNS search domains are invalid"
-msgstr "Деякі домени пошуку DNS є недійсними"
-
 #. TRANSLATORS: validation error for the bond device name field.
 #. TRANSLATORS: validation error for the bridge device name field.
-#: src/components/network/connectionFormValidation.ts:226
-#: src/components/network/connectionFormValidation.ts:281
+#: src/components/network/connection-form/fields.ts:338
+#: src/components/network/connection-form/fields.ts:360
 msgid "Device name is required"
 msgstr "Ім'я пристрою вводити обов'язково"
 
-#. TRANSLATORS: validation error for the bond mode field.
-#: src/components/network/connectionFormValidation.ts:228
+#. TRANSLATORS: validation error for the bond mode name field.
+#: src/components/network/connection-form/fields.ts:340
 msgid "Bond mode is required"
 msgstr "Необхідно ввімкнути режим прив'язки"
 
 #. TRANSLATORS: validation error for the bond ports field.
-#: src/components/network/connectionFormValidation.ts:232
+#: src/components/network/connection-form/fields.ts:342
 msgid "At least one bond port is required"
 msgstr "Потрібен принаймні один порт для збору даних"
 
-#: src/components/network/connectionFormValidation.ts:251
+#: src/components/network/connection-form/fields.ts:363
+msgid "At least one bridge port is required"
+msgstr "Потрібен принаймні один порт-міст"
+
+#: src/components/network/connection-form/fields.ts:371
 msgid "Priority must be between 0 and 61440"
 msgstr "Значення параметра «Пріоритет» має бути в діапазоні від 0 до 61440"
 
-#: src/components/network/connectionFormValidation.ts:256
+#: src/components/network/connection-form/fields.ts:378
 msgid "Forward delay must be between 4 and 30 seconds"
 msgstr "Затримка на вході повинна становити від 4 до 30 секунд"
 
-#: src/components/network/connectionFormValidation.ts:261
+#: src/components/network/connection-form/fields.ts:385
 msgid "Hello time must be between 1 and 10 seconds"
 msgstr "Час на привітання повинен становити від 1 до 10 секунд"
 
-#: src/components/network/connectionFormValidation.ts:267
+#: src/components/network/connection-form/fields.ts:392
 msgid "Max message age must be between 6 and 40 seconds"
 msgstr ""
 "Максимальний час існування повідомлення повинен становити від 6 до 40 секунд"
 
-#. TRANSLATORS: validation error for the bridge ports field.
-#: src/components/network/connectionFormValidation.ts:285
-msgid "At least one bridge port is required"
-msgstr "Потрібен принаймні один порт-міст"
-
 #. TRANSLATORS: fieldset legend for hostname configuration
 #: src/components/overview/HostnameSummary.tsx:47
-#: src/components/system/HostnamePage.tsx:151
-#: src/components/system/HostnameSettings.tsx:106
+#: src/components/system/system-form/HostnameFields.tsx:101
 msgid "Hostname"
 msgstr "Ім'я хоста"
 
@@ -2057,7 +2040,7 @@ msgid "Using %s NTP servers, including [%s]"
 msgstr "Задіяно %s NTP-серверів, включаючи [%s]"
 
 #: src/components/overview/SystemSummary.tsx:143
-#: src/components/system/SystemPage.tsx:176 src/router.tsx:52
+#: src/components/system/system-form/Form.tsx:155 src/router.tsx:52
 msgid "System"
 msgstr "Система"
 
@@ -2116,76 +2099,21 @@ msgstr "Закрити"
 msgid "%s logo"
 msgstr "Логотип %s"
 
-#. TRANSLATORS: validation error for the registration server URL field.
-#: src/components/product/ProductRegistrationForm.tsx:77
-#, fuzzy
-msgid "Enter a server URL"
-msgstr "URL сервера"
-
-#. TRANSLATORS: validation error for the registration code field.
-#: src/components/product/ProductRegistrationForm.tsx:82
-#, fuzzy
-msgid "Enter a registration code"
-msgstr "Код реєстрації"
-
-#. TRANSLATORS: button to dismiss the error alert and clear the registration data
-#: src/components/product/ProductRegistrationForm.tsx:170
-#, fuzzy
-msgid "Dismiss and clear registration data"
-msgstr "Вкажіть код реєстрації"
-
-#: src/components/product/ProductRegistrationForm.tsx:191
-#: src/components/product/ProductRegistrationPage.tsx:74
-msgid "Registration server"
-msgstr "Сервер реєстрації"
-
-#: src/components/product/ProductRegistrationForm.tsx:195
-msgid "SUSE Customer Center (SCC)"
-msgstr "Центр обслуговування клієнтів SUSE (SCC)"
-
-#: src/components/product/ProductRegistrationForm.tsx:196
-msgid "Register using SUSE server"
-msgstr "Реєстрація з допомогою сервера SUSE"
-
-#: src/components/product/ProductRegistrationForm.tsx:201
-msgid "Register using a custom registration server"
-msgstr "Реєстрація за допомогою спеціального реєстраційного сервера"
-
-#: src/components/product/ProductRegistrationForm.tsx:215
-msgid "Server URL"
-msgstr "URL сервера"
-
-#: src/components/product/ProductRegistrationForm.tsx:216
-#, javascript-format
-msgid "E.g., %s"
-msgstr "Наприклад,%s"
-
-#: src/components/product/ProductRegistrationForm.tsx:228
-#: src/components/product/ProductRegistrationPage.tsx:80
-#: src/components/product/RegistrationExtension.tsx:151
-msgid "Registration code"
-msgstr "Код реєстрації"
-
-#: src/components/product/ProductRegistrationForm.tsx:242
-#: src/components/product/ProductRegistrationPage.tsx:93
-msgid "Email"
-msgstr "Електронна пошта"
-
-#. TRANSLATORS: button label
-#: src/components/product/ProductRegistrationForm.tsx:258
-#: src/components/product/RegistrationExtension.tsx:164
-msgid "Register"
-msgstr "Зареєструвати"
-
-#: src/components/product/ProductRegistrationForm.tsx:263
-#, fuzzy
-msgid "Registration in progress"
-msgstr "Встановлення триває"
-
 #: src/components/product/ProductRegistrationPage.tsx:68
 #, javascript-format
 msgid "%s has been registered with below information."
 msgstr "%s було зареєстровано з наведеною нижче інформацією."
+
+#: src/components/product/ProductRegistrationPage.tsx:74
+#: src/components/product/registration-form/Form.tsx:148
+msgid "Registration server"
+msgstr "Сервер реєстрації"
+
+#: src/components/product/ProductRegistrationPage.tsx:80
+#: src/components/product/RegistrationExtension.tsx:151
+#: src/components/product/registration-form/Form.tsx:185
+msgid "Registration code"
+msgstr "Код реєстрації"
 
 #. TRANSLATORS: switch for displaying or hiding the registration code
 #: src/components/product/ProductRegistrationPage.tsx:85
@@ -2197,6 +2125,11 @@ msgstr "Приховати"
 #: src/components/product/RegistrationExtension.tsx:67
 msgid "Show"
 msgstr "Показати"
+
+#: src/components/product/ProductRegistrationPage.tsx:93
+#: src/components/product/registration-form/Form.tsx:199
+msgid "Email"
+msgstr "Електронна пошта"
 
 #: src/components/product/ProductRegistrationPage.tsx:108
 #, fuzzy
@@ -2372,6 +2305,12 @@ msgstr "Бета"
 msgid "Recommended"
 msgstr "Рекомендовано"
 
+#. TRANSLATORS: button label
+#: src/components/product/RegistrationExtension.tsx:164
+#: src/components/product/registration-form/Form.tsx:215
+msgid "Register"
+msgstr "Зареєструвати"
+
 #: src/components/product/RegistrationExtension.tsx:173
 msgid "Do not register"
 msgstr "Не реєструвати"
@@ -2389,6 +2328,50 @@ msgid ""
 msgstr ""
 "Це розширення недоступне на сервері. Попросіть адміністратора сервера "
 "віддзеркалити розширення."
+
+#. TRANSLATORS: button to dismiss the error alert and clear the registration data
+#: src/components/product/registration-form/Form.tsx:127
+#, fuzzy
+msgid "Dismiss and clear registration data"
+msgstr "Вкажіть код реєстрації"
+
+#: src/components/product/registration-form/Form.tsx:152
+msgid "SUSE Customer Center (SCC)"
+msgstr "Центр обслуговування клієнтів SUSE (SCC)"
+
+#: src/components/product/registration-form/Form.tsx:153
+msgid "Register using SUSE server"
+msgstr "Реєстрація з допомогою сервера SUSE"
+
+#: src/components/product/registration-form/Form.tsx:158
+msgid "Register using a custom registration server"
+msgstr "Реєстрація за допомогою спеціального реєстраційного сервера"
+
+#: src/components/product/registration-form/Form.tsx:172
+msgid "Server URL"
+msgstr "URL сервера"
+
+#: src/components/product/registration-form/Form.tsx:173
+#, javascript-format
+msgid "E.g., %s"
+msgstr "Наприклад,%s"
+
+#: src/components/product/registration-form/Form.tsx:220
+#, fuzzy
+msgid "Registration in progress"
+msgstr "Встановлення триває"
+
+#. TRANSLATORS: validation error for the registration server URL field.
+#: src/components/product/registration-form/fields.ts:75
+#, fuzzy
+msgid "Enter a server URL"
+msgstr "URL сервера"
+
+#. TRANSLATORS: validation error for the registration code field.
+#: src/components/product/registration-form/fields.ts:80
+#, fuzzy
+msgid "Enter a registration code"
+msgstr "Код реєстрації"
 
 #: src/components/questions/GenericQuestion.tsx:51
 #: src/components/questions/LuksActivationQuestion.tsx:69
@@ -2595,7 +2578,7 @@ msgstr "Необхідний простір: [%s]"
 
 #. TRANSLATORS: %1$d is selected count, %2$d is total available count
 #: src/components/software/SoftwarePage.tsx:247
-#: src/components/software/SoftwarePatternsSelection.tsx:147
+#: src/components/software/patterns-form/Form.tsx:143
 #, fuzzy, javascript-format
 msgid "%1$d of %2$d selected"
 msgstr "%1$d з %2$d пристроїв відповідають фільтрам"
@@ -2685,61 +2668,6 @@ msgstr ""
 msgid "Change patterns"
 msgstr "Змінити на %s"
 
-#. TRANSLATORS: page title when selecting all software patterns
-#. TRANSLATORS: page title when selecting non-desktop software patterns
-#: src/components/software/SoftwarePatternsSelection.tsx:113
-#: src/components/software/SoftwarePatternsSelection.tsx:117
-#, fuzzy
-msgid "Patterns selection"
-msgstr "Неправильний вибір"
-
-#. TRANSLATORS: page title when selecting desktop environments
-#: src/components/software/SoftwarePatternsSelection.tsx:115
-#, fuzzy
-msgid "Desktop selection"
-msgstr "Вибір рядка"
-
-#. TRANSLATORS: shown next to a category heading when the search filter excludes all its patterns
-#: src/components/software/SoftwarePatternsSelection.tsx:156
-msgid "No patterns match the filter"
-msgstr "Жоден з шаблонів не відповідає фільтру"
-
-#. TRANSLATORS: count of patterns matching the search filter in this category
-#: src/components/software/SoftwarePatternsSelection.tsx:158
-#, javascript-format
-msgid "%d matches the filter"
-msgid_plural "%d match the filter"
-msgstr[0] "%d збіг з фільтром"
-msgstr[1] "%d збігів з фільтром"
-msgstr[2] "%d збігів з фільтром"
-
-#: src/components/software/SoftwarePatternsSelection.tsx:336
-#, javascript-format
-msgid "%d pattern found"
-msgid_plural "%d patterns found"
-msgstr[0] "знайдено %d шаблон"
-msgstr[1] "знайдено %d шаблони"
-msgstr[2] "знайдено %d шаблонів"
-
-#. TRANSLATORS: search results badge on the filter input when no pattern matches
-#: src/components/software/SoftwarePatternsSelection.tsx:346
-msgid "No patterns match"
-msgstr "Жодних збігів не знайдено"
-
-#. TRANSLATORS: search results badge on the filter input.
-#. %1$d is matches found, %2$d is the total number of patterns.
-#: src/components/software/SoftwarePatternsSelection.tsx:349
-#, fuzzy, javascript-format
-msgid "%1$d of %2$d patterns"
-msgstr "%1$d з %2$d пристроїв відповідають фільтрам"
-
-#. TRANSLATORS: placeholder for the search field on the patterns selection page
-#: src/components/software/SoftwarePatternsSelection.tsx:392
-#: src/components/software/SoftwarePatternsSelection.tsx:394
-#, fuzzy
-msgid "Filter by name and description"
-msgstr "Фільтр за назвою або описом шаблону"
-
 #. TRANSLATORS: %s will be replaced by the estimated installation size,
 #. example: "728.8 MiB"
 #: src/components/software/UsedSize.tsx:33
@@ -2753,6 +2681,61 @@ msgid ""
 "any."
 msgstr ""
 "Цей простір включає базову систему та вибрані програмні шаблони, якщо такі є."
+
+#. TRANSLATORS: page title when selecting all software patterns
+#. TRANSLATORS: page title when selecting non-desktop software patterns
+#: src/components/software/patterns-form/Form.tsx:109
+#: src/components/software/patterns-form/Form.tsx:113
+#, fuzzy
+msgid "Patterns selection"
+msgstr "Неправильний вибір"
+
+#. TRANSLATORS: page title when selecting desktop environments
+#: src/components/software/patterns-form/Form.tsx:111
+#, fuzzy
+msgid "Desktop selection"
+msgstr "Вибір рядка"
+
+#. TRANSLATORS: shown next to a category heading when the search filter excludes all its patterns
+#: src/components/software/patterns-form/Form.tsx:152
+msgid "No patterns match the filter"
+msgstr "Жоден з шаблонів не відповідає фільтру"
+
+#. TRANSLATORS: count of patterns matching the search filter in this category
+#: src/components/software/patterns-form/Form.tsx:154
+#, javascript-format
+msgid "%d matches the filter"
+msgid_plural "%d match the filter"
+msgstr[0] "%d збіг з фільтром"
+msgstr[1] "%d збігів з фільтром"
+msgstr[2] "%d збігів з фільтром"
+
+#: src/components/software/patterns-form/Form.tsx:332
+#, javascript-format
+msgid "%d pattern found"
+msgid_plural "%d patterns found"
+msgstr[0] "знайдено %d шаблон"
+msgstr[1] "знайдено %d шаблони"
+msgstr[2] "знайдено %d шаблонів"
+
+#. TRANSLATORS: search results badge on the filter input when no pattern matches
+#: src/components/software/patterns-form/Form.tsx:342
+msgid "No patterns match"
+msgstr "Жодних збігів не знайдено"
+
+#. TRANSLATORS: search results badge on the filter input.
+#. %1$d is matches found, %2$d is the total number of patterns.
+#: src/components/software/patterns-form/Form.tsx:345
+#, fuzzy, javascript-format
+msgid "%1$d of %2$d patterns"
+msgstr "%1$d з %2$d пристроїв відповідають фільтрам"
+
+#. TRANSLATORS: placeholder for the search field on the patterns selection page
+#: src/components/software/patterns-form/Form.tsx:388
+#: src/components/software/patterns-form/Form.tsx:390
+#, fuzzy
+msgid "Filter by name and description"
+msgstr "Фільтр за назвою або описом шаблону"
 
 #: src/components/storage/AutoSizeText.tsx:35
 msgid "logical volume"
@@ -5606,103 +5589,25 @@ msgstr "Усі наявні контролери zFCP вже активован�
 msgid "zFCP controllers"
 msgstr "Контролери zFCP"
 
-#. TRANSLATORS: information shown when using transient hostname mode. "transient"
-#. refers to the hostname mode, and %s will be replaced with the current hostname value.
-#: src/components/system/HostnamePage.tsx:57
-#, fuzzy, javascript-format
-msgid "Current value: %s"
-msgstr "Поточна %s"
-
-#: src/components/system/HostnamePage.tsx:69
+#. TRANSLATORS: error message when system settings update request fails
+#: src/components/system/system-form/Form.tsx:173
 #, fuzzy
-msgid ""
-"This hostname is dynamic and [may change after a reboot or network update], "
-"as configured by the local network administrator."
-msgstr ""
-"Це ім'я хоста є динамічним і може змінитися після перезавантаження або "
-"оновлення мережі, як це налаштовано адміністратором локальної мережі."
-
-#. TRANSLATORS: helper text for static hostname input.
-#. Text in square brackets will be displayed in bold.
-#: src/components/system/HostnamePage.tsx:89
-msgid "Once set, will [persist across reboots and network changes]."
-msgstr ""
-"Після налаштування ці параметри [зберігатимуться навіть після "
-"перезавантаження та зміни мережевих налаштувань]."
-
-#. TRANSLATORS: validation error when static hostname value is empty
-#: src/components/system/HostnamePage.tsx:131
-#: src/components/system/systemFormValidation.ts:94
-#, fuzzy
-msgid "Enter a hostname value."
-msgstr "Введіть ім'я хоста."
-
-#. TRANSLATORS: error message when hostname update request fails
-#: src/components/system/HostnamePage.tsx:144
-msgid "Hostname could not be updated"
+msgid "System settings could not be updated"
 msgstr "Не вдалося оновити ім'я хоста"
 
-#. TRANSLATORS: alert title warning about registered hostname not changing
-#: src/components/system/HostnamePage.tsx:158
-#: src/components/system/HostnameSettings.tsx:180
-#, fuzzy
-msgid "Registered hostname will not change"
-msgstr "Зареєстровано без коду"
+#. TRANSLATORS: success message shown after system settings are updated
+#: src/components/system/system-form/Form.tsx:195
+msgid "System settings successfully updated"
+msgstr "Налаштування системи успішно оновлено"
 
-#: src/components/system/HostnamePage.tsx:163
-msgid ""
-"The product is already registered. Changes made here will not affect the "
-"hostname stored at the registration server."
-msgstr ""
-"Продукт уже зареєстровано. Зміни, внесені тут, не вплинуть на ім’я хоста, "
-"збережене на сервері реєстрації."
-
-#. TRANSLATORS: error alert title when hostname update fails
-#: src/components/system/HostnamePage.tsx:182
-#, fuzzy
-msgid "The hostname could not be saved"
-msgstr "З'єднання не вдалося зберегти"
-
-#. TRANSLATORS: success message shown after hostname is updated
-#: src/components/system/HostnamePage.tsx:201
-msgid "Hostname successfully updated"
-msgstr "Ім'я хоста успішно оновлено"
-
-#. TRANSLATORS: hostname mode option
-#: src/components/system/HostnamePage.tsx:215
-#: src/components/system/HostnameSettings.tsx:119
-#, fuzzy
-msgid "Transient"
-msgstr "перехідний"
-
-#. TRANSLATORS: description for transient hostname mode
-#: src/components/system/HostnamePage.tsx:217
-#: src/components/system/HostnameSettings.tsx:121
-#, fuzzy
-msgid "Provided by the network"
-msgstr "Забезпечення автентифікації"
-
-#. TRANSLATORS: hostname mode option
-#: src/components/system/HostnamePage.tsx:222
-#: src/components/system/HostnameSettings.tsx:126
-#, fuzzy
-msgid "Static"
-msgstr "статичне"
-
-#. TRANSLATORS: description for static hostname mode
-#: src/components/system/HostnamePage.tsx:224
-#: src/components/system/HostnameSettings.tsx:128
-msgid "Set manually"
-msgstr "Задати вручну"
-
-#. TRANSLATORS: label for static hostname input
-#: src/components/system/HostnamePage.tsx:242
-msgid "Value"
-msgstr "Значення"
+#. TRANSLATORS: info message shown when submitting the form with no changes
+#: src/components/system/system-form/Form.tsx:197
+msgid "No changes detected. System settings are already up to date."
+msgstr "Змін не виявлено. Налаштування системи вже оновлено."
 
 #. TRANSLATORS: explanation of transient hostname behavior.
 #. Text in square brackets will be displayed in bold.
-#: src/components/system/HostnameSettings.tsx:51
+#: src/components/system/system-form/HostnameFields.tsx:46
 msgid "Hostname is dynamic and [may change after a reboot or network update]."
 msgstr ""
 "Назва хоста є динамічною і [може змінитися після перезавантаження або "
@@ -5710,13 +5615,42 @@ msgstr ""
 
 #. TRANSLATORS: helper text for static hostname input.
 #. Text in square brackets will be displayed in bold.
-#: src/components/system/HostnameSettings.tsx:76
+#: src/components/system/system-form/HostnameFields.tsx:71
 msgid "Hostname [will remain unchanged] across reboots and network changes."
 msgstr ""
 "Назва хоста [залишатиметься незмінною] після перезавантаження та змін у "
 "мережі."
 
-#: src/components/system/HostnameSettings.tsx:185
+#. TRANSLATORS: hostname mode option
+#: src/components/system/system-form/HostnameFields.tsx:114
+#, fuzzy
+msgid "Transient"
+msgstr "перехідний"
+
+#. TRANSLATORS: description for transient hostname mode
+#: src/components/system/system-form/HostnameFields.tsx:116
+#, fuzzy
+msgid "Provided by the network"
+msgstr "Забезпечення автентифікації"
+
+#. TRANSLATORS: hostname mode option
+#: src/components/system/system-form/HostnameFields.tsx:121
+#, fuzzy
+msgid "Static"
+msgstr "статичне"
+
+#. TRANSLATORS: description for static hostname mode
+#: src/components/system/system-form/HostnameFields.tsx:123
+msgid "Set manually"
+msgstr "Задати вручну"
+
+#. TRANSLATORS: alert title warning about registered hostname not changing
+#: src/components/system/system-form/HostnameFields.tsx:175
+#, fuzzy
+msgid "Registered hostname will not change"
+msgstr "Зареєстровано без коду"
+
+#: src/components/system/system-form/HostnameFields.tsx:180
 msgid ""
 "The product is already registered. Hostname changes will not affect the "
 "hostname stored at the registration server."
@@ -5725,11 +5659,11 @@ msgstr ""
 "збережену на сервері реєстрації."
 
 #. TRANSLATORS: fieldset legend for NTP configuration
-#: src/components/system/NtpSettings.tsx:50
+#: src/components/system/system-form/NtpFields.tsx:44
 msgid "Time Synchronization Servers"
 msgstr "Сервери сихронізації часу"
 
-#: src/components/system/NtpSettings.tsx:55
+#: src/components/system/system-form/NtpFields.tsx:49
 msgid ""
 "Configure the Network Time Protocol (NTP) servers used to set the system "
 "date and time."
@@ -5738,22 +5672,22 @@ msgstr ""
 "для встановлення системної дати та часу."
 
 #. TRANSLATORS: description for default NTP mode
-#: src/components/system/NtpSettings.tsx:70
+#: src/components/system/system-form/NtpFields.tsx:64
 #, fuzzy
 msgid "Use product's default NTP servers"
 msgstr "Використовувати власні DNS-сервери"
 
 #. TRANSLATORS: description for custom NTP mode
-#: src/components/system/NtpSettings.tsx:77
+#: src/components/system/system-form/NtpFields.tsx:71
 msgid "Set NTP servers manually"
 msgstr "Налаштувати сервери NTP вручну"
 
 #. TRANSLATORS: label for NTP servers input field
-#: src/components/system/NtpSettings.tsx:91
+#: src/components/system/system-form/NtpFields.tsx:85
 msgid "Server addresses"
 msgstr "Адреси серверів"
 
-#: src/components/system/NtpSettings.tsx:94
+#: src/components/system/system-form/NtpFields.tsx:88
 msgid ""
 "Hostnames, IP addresses, or fully qualified domain names (FQDNs). E.g., "
 "pool.ntp.org"
@@ -5762,35 +5696,29 @@ msgstr ""
 "pool.ntp.org"
 
 #. TRANSLATORS: validation error for an invalid NTP server address entry
-#: src/components/system/NtpSettings.tsx:99
+#: src/components/system/system-form/NtpFields.tsx:93
 #, fuzzy
 msgid "Invalid NTP server address"
 msgstr "Неправильна адреса DNS-сервера"
 
-#. TRANSLATORS: error message when system settings update request fails
-#: src/components/system/SystemPage.tsx:194
+#: src/components/system/system-form/fields.ts:133
 #, fuzzy
-msgid "System settings could not be updated"
-msgstr "Не вдалося оновити ім'я хоста"
+msgid "Enter a hostname value."
+msgstr "Введіть ім'я хоста."
 
-#. TRANSLATORS: success message shown after system settings are updated
-#: src/components/system/SystemPage.tsx:216
-msgid "System settings successfully updated"
-msgstr "Налаштування системи успішно оновлено"
-
-#. TRANSLATORS: info message shown when submitting the form with no changes
-#: src/components/system/SystemPage.tsx:218
-msgid "No changes detected. System settings are already up to date."
-msgstr "Змін не виявлено. Налаштування системи вже оновлено."
+#: src/components/system/system-form/fields.ts:134
+#, fuzzy
+msgid "Invalid hostname value."
+msgstr "Введіть ім'я хоста."
 
 #. TRANSLATORS: validation error when no NTP servers are provided in custom mode
-#: src/components/system/systemFormValidation.ts:108
+#: src/components/system/system-form/fields.ts:151
 #, fuzzy
 msgid "At least one NTP server is required"
 msgstr "Потрібен принаймні один DNS-сервер"
 
 #. TRANSLATORS: validation error when some NTP server addresses are invalid
-#: src/components/system/systemFormValidation.ts:115
+#: src/components/system/system-form/fields.ts:153
 #, fuzzy
 msgid "Some NTP server addresses are invalid"
 msgstr "Деякі адреси DNS-серверів є недійсними"
@@ -5941,6 +5869,43 @@ msgstr "Зациклення"
 #: src/utils/network.ts:89
 msgid "VLAN"
 msgstr "VLAN"
+
+#, fuzzy, javascript-format
+#~ msgid "Current value: %s"
+#~ msgstr "Поточна %s"
+
+#, fuzzy
+#~ msgid ""
+#~ "This hostname is dynamic and [may change after a reboot or network "
+#~ "update], as configured by the local network administrator."
+#~ msgstr ""
+#~ "Це ім'я хоста є динамічним і може змінитися після перезавантаження або "
+#~ "оновлення мережі, як це налаштовано адміністратором локальної мережі."
+
+#~ msgid "Once set, will [persist across reboots and network changes]."
+#~ msgstr ""
+#~ "Після налаштування ці параметри [зберігатимуться навіть після "
+#~ "перезавантаження та зміни мережевих налаштувань]."
+
+#~ msgid "Hostname could not be updated"
+#~ msgstr "Не вдалося оновити ім'я хоста"
+
+#~ msgid ""
+#~ "The product is already registered. Changes made here will not affect the "
+#~ "hostname stored at the registration server."
+#~ msgstr ""
+#~ "Продукт уже зареєстровано. Зміни, внесені тут, не вплинуть на ім’я хоста, "
+#~ "збережене на сервері реєстрації."
+
+#, fuzzy
+#~ msgid "The hostname could not be saved"
+#~ msgstr "З'єднання не вдалося зберегти"
+
+#~ msgid "Hostname successfully updated"
+#~ msgstr "Ім'я хоста успішно оновлено"
+
+#~ msgid "Value"
+#~ msgstr "Значення"
 
 #~ msgid "Binding settings"
 #~ msgstr "Налаштування прив'язки"
