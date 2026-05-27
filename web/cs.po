@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-22 09:20+0000\n"
+"POT-Creation-Date: 2026-05-27 15:50+0000\n"
 "PO-Revision-Date: 2026-03-30 13:04+0000\n"
 "Last-Translator: Ondřej  Sedlák <sedlak.o@tutanota.com>\n"
 "Language-Team: Czech <https://l10n.opensuse.org/projects/agama/agama-web/cs/"
@@ -245,15 +245,9 @@ msgstr "Více"
 msgid "Download config"
 msgstr "Stáhnout konfiguraci"
 
-#: src/components/core/IssuesAlert.tsx:37
-msgid ""
-"Before starting the installation, you need to address the following problems:"
-msgstr "Před zahájením instalace vyřešte tyto problémy:"
-
-#. TRANSLATORS: Clickable link to show and resolve package dependency conflicts
-#: src/components/core/IssuesAlert.tsx:47
-msgid "Review and fix"
-msgstr "Zkontrolovat a opravit"
+#: src/components/core/IssuesAlert.tsx:39
+msgid "You must fix these issues"
+msgstr ""
 
 #: src/components/core/ListSearch.tsx:58
 msgid "Search"
@@ -343,11 +337,11 @@ msgid "Using [%s] keyboard layout"
 msgstr "Používá se klávesnice [%s]"
 
 #. TRANSLATORS: Warns users that CAPS LOCK is on.
+#. Keep square brackets to apply special formatting in the UI.
+#. TRANSLATORS: Warns users that CAPS LOCK is on.
 #. Text inside square brackets [] will be formatted in bold.
 #. Keep the brackets for proper formatting.
 #.
-#. TRANSLATORS: Warns users that CAPS LOCK is on.
-#. Keep square brackets to apply special formatting in the UI.
 #: src/components/core/PasswordInput.tsx:90
 #: src/components/form/MaskedField.tsx:113
 msgid "[CAPS LOCK] is on"
@@ -737,8 +731,8 @@ msgstr "SSID"
 msgid "Security"
 msgstr "Zabezpečení"
 
-#. TRANSLATORS: table header for a zFCP devices table.
 #. TRANSLATORS: table header for a DASD devices table
+#. TRANSLATORS: table header for a zFCP devices table.
 #. TRANSLATORS: table header for an iSCSI targets table
 #: src/components/network/ConnectionDetails.tsx:108
 #: src/components/network/ConnectionDetails.tsx:224
@@ -968,8 +962,8 @@ msgstr "(vázáno na název)"
 msgid "(bound by MAC)"
 msgstr "(vázáno na MAC)"
 
-#. TRANSLATORS: table header for an iSCSI targets table
 #. TRANSLATORS: input field for the iSCSI initiator name
+#. TRANSLATORS: table header for an iSCSI targets table
 #. TRANSLATORS: label for the network connection profile name field.
 #. TRANSLATORS: label for hostname value display
 #. TRANSLATORS: label for hostname input
@@ -1003,8 +997,8 @@ msgstr "Typ"
 msgid "State"
 msgstr "Stav"
 
-#. TRANSLATORS: table header for a zFCP devices table.
 #. TRANSLATORS: table header for a DASD devices table
+#. TRANSLATORS: table header for a zFCP devices table.
 #. TRANSLATORS: label for the device binding dropdown.
 #: src/components/network/ConnectionsTable.tsx:173
 #: src/components/network/connection-form/BindingModeSelector.tsx:68
@@ -1293,6 +1287,7 @@ msgstr ""
 #. TRANSLATORS: label for the network interface name field.
 #. TRANSLATORS: accessible label for the device selector. MAC address refers
 #. to the hardware identifier of the network interface.
+#. TRANSLATORS: label for the network interface name field.
 #: src/components/network/connection-form/BondFields.tsx:65
 #: src/components/network/connection-form/BondFields.tsx:70
 #: src/components/network/connection-form/BridgeFields.tsx:85
@@ -1312,8 +1307,8 @@ msgstr ""
 msgid "E.g., downdelay=0, primary=eth1, miimon=100, lacp_rate=fast"
 msgstr ""
 
-#. TRANSLATORS: helper text for the bridge ports field. %s is a list of available devices.
 #. TRANSLATORS: helper text for the bond ports field. %s is a list of available devices.
+#. TRANSLATORS: helper text for the bridge ports field. %s is a list of available devices.
 #: src/components/network/connection-form/BondFields.tsx:114
 #: src/components/network/connection-form/BridgeFields.tsx:109
 #, fuzzy, javascript-format
@@ -1491,8 +1486,8 @@ msgstr "Automatické a manuální"
 msgid "Configuration from the network plus static addresses and gateway"
 msgstr ""
 
-#. TRANSLATORS: Network summary title when using manual/static IP configuration
 #. TRANSLATORS: option label for manual IP configuration
+#. TRANSLATORS: Network summary title when using manual/static IP configuration
 #: src/components/network/connection-form/IpFields.tsx:60
 #: src/components/overview/NetworkSummary.tsx:128
 #: src/components/storage/SizeModeSelect.tsx:191
@@ -1693,12 +1688,12 @@ msgstr ""
 msgid "Installation settings"
 msgstr "Instalační nastavení"
 
-#. TRANSLATORS: %1$s is a description of the device (eg. "Encrypted XFS RAID") and %2$s is
-#. the RAID level (eg. "RAID0")
 #. TRANSLATORS: %1$s is an already formatted mount path (eg. "/"),
 #. %2$s is a size description (eg. at least 10 GiB)
 #. TRANSLATORS: %1$s is a filesystem type description (eg. "Btrfs with snapshots"),
 #. %2$s is a description of the size or the size limits (eg. "at least 10 GiB")
+#. TRANSLATORS: %1$s is a description of the device (eg. "Encrypted XFS RAID") and %2$s is
+#. the RAID level (eg. "RAID0")
 #. TRANSLATORS: Summary of the selected language and territory.
 #. %1$s is the language name (e.g. "Spanish").
 #. %2$s is the territory/region name (e.g. "Spain").
@@ -3535,9 +3530,9 @@ msgstr "Odstranit stávající data a formátovat jako"
 msgid "Format device as"
 msgstr "Formátovat zařízení jako"
 
+#. TRANSLATORS: %s is the name of a logical volume, like /dev/system/home
 #. TRANSLATORS: %s is the name of a partition, like /dev/vda2
 #. TRANSLATORS: %s is the name of a device, like vda
-#. TRANSLATORS: %s is the name of a logical volume, like /dev/system/home
 #: src/components/storage/FormattableDevicePage.tsx:310
 #: src/components/storage/LogicalVolumePage.tsx:661
 #: src/components/storage/PartitionPage.tsx:596
@@ -4743,8 +4738,8 @@ msgid ""
 "No devices selected. Select one or more devices to perform bulk actions."
 msgstr "Vyberte, co se má s jednotlivými oddíly dělat."
 
-#. TRANSLATORS: table header for a zFCP devices table.
 #. TRANSLATORS: table header for a DASD devices table
+#. TRANSLATORS: table header for a zFCP devices table.
 #: src/components/storage/dasd/DASDTable.tsx:530
 #: src/components/storage/zfcp/ZFCPDevicesTable.tsx:173
 #: src/components/storage/zfcp/ZFCPDevicesTable.tsx:317
@@ -5299,11 +5294,11 @@ msgid "Current partitions will be kept"
 msgstr "%d oddíl bude zmenšen"
 
 #. TRANSLATORS: this simply concatenates the two sentences that describe what is going to happen
-#. with logical volumes. The first %s corresponds to deleted logical volumes and the second one
-#. to resized ones.
-#. TRANSLATORS: this simply concatenates the two sentences that describe what is going to happen
 #. with partitions. The first %s corresponds to deleted partitions and the second one to resized
 #. ones.
+#. TRANSLATORS: this simply concatenates the two sentences that describe what is going to happen
+#. with logical volumes. The first %s corresponds to deleted logical volumes and the second one
+#. to resized ones.
 #: src/components/storage/utils/drive.tsx:106
 #: src/components/storage/utils/volume-group.tsx:96
 #, javascript-format
@@ -5976,6 +5971,14 @@ msgstr ""
 #: src/utils/network.ts:89
 msgid "VLAN"
 msgstr ""
+
+#~ msgid ""
+#~ "Before starting the installation, you need to address the following "
+#~ "problems:"
+#~ msgstr "Před zahájením instalace vyřešte tyto problémy:"
+
+#~ msgid "Review and fix"
+#~ msgstr "Zkontrolovat a opravit"
 
 #, fuzzy, javascript-format
 #~ msgid "Current value: %s"
