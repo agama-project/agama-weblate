@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-28 11:44+0000\n"
+"POT-Creation-Date: 2026-05-28 18:33+0000\n"
 "PO-Revision-Date: 2026-03-30 13:04+0000\n"
 "Last-Translator: Ondřej  Sedlák <sedlak.o@tutanota.com>\n"
 "Language-Team: Czech <https://l10n.opensuse.org/projects/agama/agama-web/cs/"
@@ -436,6 +436,31 @@ msgid_plural "%s tasks active"
 msgstr[0] "%s aktivní úkol"
 msgstr[1] "%s aktivní úkoly"
 msgstr[2] "%s aktivních úkolů"
+
+#: src/components/core/ProgressStatusMonitor.tsx:111
+#, fuzzy, javascript-format
+#| msgid "%s task active"
+#| msgid_plural "%s tasks active"
+msgid "System status: %s task active"
+msgid_plural "System status: %s tasks active"
+msgstr[0] "%s aktivní úkol"
+msgstr[1] "%s aktivní úkoly"
+msgstr[2] "%s aktivních úkolů"
+
+#. TRANSLATORS: aria-label for system status button when idle
+#: src/components/core/ProgressStatusMonitor.tsx:118
+msgid "System status: Idle"
+msgstr ""
+
+#. TRANSLATORS: header when no background tasks are running
+#: src/components/core/ProgressStatusMonitor.tsx:136
+msgid "No pending tasks"
+msgstr ""
+
+#. TRANSLATORS: message when all background tasks completed
+#: src/components/core/ProgressStatusMonitor.tsx:138
+msgid "All background tasks completed"
+msgstr ""
 
 #: src/components/core/RebootButton.tsx:54
 msgid "Reboot"
@@ -1803,33 +1828,33 @@ msgid "Auto"
 msgstr "Auto"
 
 #. TRANSLATORS: Confirmation dialog title. %s is replaced with the product name (e.g., "openSUSE Leap")
-#: src/components/overview/OverviewPage.tsx:79
+#: src/components/overview/OverviewPage.tsx:80
 #, javascript-format
 msgid "Delete existing data and install %s?"
 msgstr "Smazat existující data a nainstalovat %s?"
 
-#: src/components/overview/OverviewPage.tsx:79
+#: src/components/overview/OverviewPage.tsx:80
 #, javascript-format
 msgid "Install %s?"
 msgstr "Nainstalovat %s?"
 
 #. TRANSLATORS: shown at the top of the install confirmation dialog.
-#: src/components/overview/OverviewPage.tsx:90
+#: src/components/overview/OverviewPage.tsx:91
 #, fuzzy
 msgid ""
 "Confirming starts the installation immediately with the defined settings."
 msgstr "Pokračováním se spustí instalace s definovaným nastavením."
 
 #. TRANSLATORS: Button to confirm and start the installation
-#: src/components/overview/OverviewPage.tsx:97
+#: src/components/overview/OverviewPage.tsx:98
 msgid "Confirm and install"
 msgstr "Potvrdit a spustit instalaci"
 
-#: src/components/overview/OverviewPage.tsx:110
+#: src/components/overview/OverviewPage.tsx:111
 msgid "Product not found"
 msgstr "Produkt nenalezen"
 
-#: src/components/overview/OverviewPage.tsx:113
+#: src/components/overview/OverviewPage.tsx:114
 msgid ""
 "The product was not found in the repositories so it is not possible to "
 "proceed with the installation."
@@ -1839,24 +1864,24 @@ msgstr ""
 
 #. TRANSLATORS: This hint helps users locate the install button. Text inside
 #. square brackets [] appears in bold. Keep brackets for proper formatting.
-#: src/components/overview/OverviewPage.tsx:133
+#: src/components/overview/OverviewPage.tsx:134
 msgid "When ready, click on the [install] button at the end of the page."
 msgstr ""
 "Až budete připraveni, klikněte na tlačítko [instalovat] na konci stránky."
 
-#: src/components/overview/OverviewPage.tsx:148
+#: src/components/overview/OverviewPage.tsx:149
 msgid "Install"
 msgstr "Instalovat"
 
-#: src/components/overview/OverviewPage.tsx:149
+#: src/components/overview/OverviewPage.tsx:150
 msgid "Install now with potential data loss"
 msgstr "Spustit instalaci s potenciální ztrátou dat"
 
-#: src/components/overview/OverviewPage.tsx:150
+#: src/components/overview/OverviewPage.tsx:151
 msgid "Install now"
 msgstr "Spustit instalaci"
 
-#: src/components/overview/OverviewPage.tsx:174
+#: src/components/overview/OverviewPage.tsx:178
 msgid ""
 "Take a moment to review the installation settings below and adjust them as "
 "needed."
@@ -1864,11 +1889,11 @@ msgstr ""
 "Věnujte prosím chvíli kontrole níže uvedených nastavení instalace a podle "
 "potřeby je upravte."
 
-#: src/components/overview/OverviewPage.tsx:209
+#: src/components/overview/OverviewPage.tsx:213
 msgid "Wait until current operations are completed."
 msgstr "Počkejte dokud probíhající operace nejsou dokončeny."
 
-#: src/components/overview/OverviewPage.tsx:220
+#: src/components/overview/OverviewPage.tsx:224
 msgid ""
 "You need to fix any invalid settings before proceeding with the installation."
 msgstr "Před spuštěním instalace musíte opravit všechna neplatná nastavení."
@@ -2317,7 +2342,7 @@ msgstr[0] "Vyberte produkt a potvrďte vaši volbu."
 msgstr[1] "Vyberte produkt a potvrďte vaši volbu na konci seznamu."
 msgstr[2] "Vyberte produkt a potvrďte vaši volbu na konci seznamu."
 
-#: src/components/product/ProductSelectionPage.tsx:743
+#: src/components/product/ProductSelectionPage.tsx:744
 msgid ""
 "Installation settings will automatically update to match the new product's "
 "defaults."

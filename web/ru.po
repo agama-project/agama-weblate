@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-28 11:44+0000\n"
+"POT-Creation-Date: 2026-05-28 18:33+0000\n"
 "PO-Revision-Date: 2026-02-26 17:04+0000\n"
 "Last-Translator: Aleksey Fedorov <Aleksejfedorov963@gmail.com>\n"
 "Language-Team: Russian <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -440,6 +440,31 @@ msgid_plural "%s tasks active"
 msgstr[0] "%s задача активна"
 msgstr[1] "%s задачи активны"
 msgstr[2] "%s задач активно"
+
+#: src/components/core/ProgressStatusMonitor.tsx:111
+#, fuzzy, javascript-format
+#| msgid "%s task active"
+#| msgid_plural "%s tasks active"
+msgid "System status: %s task active"
+msgid_plural "System status: %s tasks active"
+msgstr[0] "%s задача активна"
+msgstr[1] "%s задачи активны"
+msgstr[2] "%s задач активно"
+
+#. TRANSLATORS: aria-label for system status button when idle
+#: src/components/core/ProgressStatusMonitor.tsx:118
+msgid "System status: Idle"
+msgstr ""
+
+#. TRANSLATORS: header when no background tasks are running
+#: src/components/core/ProgressStatusMonitor.tsx:136
+msgid "No pending tasks"
+msgstr ""
+
+#. TRANSLATORS: message when all background tasks completed
+#: src/components/core/ProgressStatusMonitor.tsx:138
+msgid "All background tasks completed"
+msgstr ""
 
 #: src/components/core/RebootButton.tsx:54
 msgid "Reboot"
@@ -1810,34 +1835,34 @@ msgid "Auto"
 msgstr "Автоматически"
 
 #. TRANSLATORS: Confirmation dialog title. %s is replaced with the product name (e.g., "openSUSE Leap")
-#: src/components/overview/OverviewPage.tsx:79
+#: src/components/overview/OverviewPage.tsx:80
 #, javascript-format
 msgid "Delete existing data and install %s?"
 msgstr "Удалить существующие данные и установить %s?"
 
-#: src/components/overview/OverviewPage.tsx:79
+#: src/components/overview/OverviewPage.tsx:80
 #, javascript-format
 msgid "Install %s?"
 msgstr "Установить %s?"
 
 #. TRANSLATORS: shown at the top of the install confirmation dialog.
-#: src/components/overview/OverviewPage.tsx:90
+#: src/components/overview/OverviewPage.tsx:91
 #, fuzzy
 msgid ""
 "Confirming starts the installation immediately with the defined settings."
 msgstr "При продолжении установка начнется с заданными параметрами."
 
 #. TRANSLATORS: Button to confirm and start the installation
-#: src/components/overview/OverviewPage.tsx:97
+#: src/components/overview/OverviewPage.tsx:98
 msgid "Confirm and install"
 msgstr "Подтвердить и установить"
 
-#: src/components/overview/OverviewPage.tsx:110
+#: src/components/overview/OverviewPage.tsx:111
 #, fuzzy
 msgid "Product not found"
 msgstr "Цель не найдена"
 
-#: src/components/overview/OverviewPage.tsx:113
+#: src/components/overview/OverviewPage.tsx:114
 msgid ""
 "The product was not found in the repositories so it is not possible to "
 "proceed with the installation."
@@ -1845,23 +1870,23 @@ msgstr ""
 
 #. TRANSLATORS: This hint helps users locate the install button. Text inside
 #. square brackets [] appears in bold. Keep brackets for proper formatting.
-#: src/components/overview/OverviewPage.tsx:133
+#: src/components/overview/OverviewPage.tsx:134
 msgid "When ready, click on the [install] button at the end of the page."
 msgstr "Когда будете готовы, нажмите кнопку [установить] в конце страницы."
 
-#: src/components/overview/OverviewPage.tsx:148
+#: src/components/overview/OverviewPage.tsx:149
 msgid "Install"
 msgstr "Установить"
 
-#: src/components/overview/OverviewPage.tsx:149
+#: src/components/overview/OverviewPage.tsx:150
 msgid "Install now with potential data loss"
 msgstr "Установить сейчас с возможной потерей данных"
 
-#: src/components/overview/OverviewPage.tsx:150
+#: src/components/overview/OverviewPage.tsx:151
 msgid "Install now"
 msgstr "Установить"
 
-#: src/components/overview/OverviewPage.tsx:174
+#: src/components/overview/OverviewPage.tsx:178
 msgid ""
 "Take a moment to review the installation settings below and adjust them as "
 "needed."
@@ -1869,11 +1894,11 @@ msgstr ""
 "Уделите немного времени, чтобы ознакомиться с параметрами установки ниже и "
 "при необходимости изменить их."
 
-#: src/components/overview/OverviewPage.tsx:209
+#: src/components/overview/OverviewPage.tsx:213
 msgid "Wait until current operations are completed."
 msgstr "Дождитесь завершения текущих операций."
 
-#: src/components/overview/OverviewPage.tsx:220
+#: src/components/overview/OverviewPage.tsx:224
 msgid ""
 "You need to fix any invalid settings before proceeding with the installation."
 msgstr ""
@@ -2322,7 +2347,7 @@ msgstr[0] "Выберите продукт и подтвердите свой в
 msgstr[1] "Выберите продукт и подтвердите свой выбор в конце списка."
 msgstr[2] "Выберите продукт и подтвердите свой выбор в конце списка."
 
-#: src/components/product/ProductSelectionPage.tsx:743
+#: src/components/product/ProductSelectionPage.tsx:744
 msgid ""
 "Installation settings will automatically update to match the new product's "
 "defaults."
