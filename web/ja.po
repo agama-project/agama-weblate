@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-28 08:41+0000\n"
+"POT-Creation-Date: 2026-05-28 11:44+0000\n"
 "PO-Revision-Date: 2026-05-28 01:12+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -24,17 +24,17 @@ msgid "Breadcrumbs"
 msgstr "パンくず"
 
 #: src/components/core/ChangeProductOption.tsx:90
-#: src/components/product/ProductSelectionPage.tsx:630
+#: src/components/product/ProductSelectionPage.tsx:643
 msgid "Change mode"
 msgstr "モードの変更"
 
 #: src/components/core/ChangeProductOption.tsx:91
-#: src/components/product/ProductSelectionPage.tsx:643
+#: src/components/product/ProductSelectionPage.tsx:656
 msgid "Change product or mode"
 msgstr "製品またはモードの変更"
 
 #: src/components/core/ChangeProductOption.tsx:92
-#: src/components/product/ProductSelectionPage.tsx:646
+#: src/components/product/ProductSelectionPage.tsx:659
 msgid "Change product"
 msgstr "製品の変更"
 
@@ -314,7 +314,7 @@ msgstr "戻る"
 #: src/components/core/Page.tsx:255 src/components/core/Popup.tsx:140
 #: src/components/form/CancelButton.tsx:47
 #: src/components/network/WifiConnectionForm.tsx:188
-#: src/components/product/ProductSelectionPage.tsx:538
+#: src/components/product/ProductSelectionPage.tsx:549
 #: src/components/storage/iscsi/DiscoverFormPage.tsx:252
 #: src/components/storage/iscsi/InitiatorFormPage.tsx:81
 #: src/components/storage/iscsi/TargetLoginPage.tsx:279
@@ -344,11 +344,11 @@ msgid "Using [%s] keyboard layout"
 msgstr "[%s] キーボードレイアウトを使用しています"
 
 #. TRANSLATORS: Warns users that CAPS LOCK is on.
+#. Keep square brackets to apply special formatting in the UI.
+#. TRANSLATORS: Warns users that CAPS LOCK is on.
 #. Text inside square brackets [] will be formatted in bold.
 #. Keep the brackets for proper formatting.
 #.
-#. TRANSLATORS: Warns users that CAPS LOCK is on.
-#. Keep square brackets to apply special formatting in the UI.
 #: src/components/core/PasswordInput.tsx:90
 #: src/components/form/MaskedField.tsx:113
 msgid "[CAPS LOCK] is on"
@@ -744,8 +744,8 @@ msgstr "SSID"
 msgid "Security"
 msgstr "セキュリティ"
 
-#. TRANSLATORS: table header for a zFCP devices table.
 #. TRANSLATORS: table header for a DASD devices table
+#. TRANSLATORS: table header for a zFCP devices table.
 #. TRANSLATORS: table header for an iSCSI targets table
 #: src/components/network/ConnectionDetails.tsx:108
 #: src/components/network/ConnectionDetails.tsx:224
@@ -970,8 +970,8 @@ msgstr "(名前で結びつけ)"
 msgid "(bound by MAC)"
 msgstr "(MAC アドレスで結びつけ)"
 
-#. TRANSLATORS: table header for an iSCSI targets table
 #. TRANSLATORS: input field for the iSCSI initiator name
+#. TRANSLATORS: table header for an iSCSI targets table
 #. TRANSLATORS: label for the network connection profile name field.
 #. TRANSLATORS: label for hostname value display
 #. TRANSLATORS: label for hostname input
@@ -1004,8 +1004,8 @@ msgstr "種類"
 msgid "State"
 msgstr "状態"
 
-#. TRANSLATORS: table header for a zFCP devices table.
 #. TRANSLATORS: table header for a DASD devices table
+#. TRANSLATORS: table header for a zFCP devices table.
 #. TRANSLATORS: label for the device binding dropdown.
 #: src/components/network/ConnectionsTable.tsx:173
 #: src/components/network/connection-form/BindingModeSelector.tsx:68
@@ -1284,6 +1284,7 @@ msgstr "物理アドレスで接続に使用するデバイスを識別します
 #. TRANSLATORS: label for the network interface name field.
 #. TRANSLATORS: accessible label for the device selector. MAC address refers
 #. to the hardware identifier of the network interface.
+#. TRANSLATORS: label for the network interface name field.
 #: src/components/network/connection-form/BondFields.tsx:65
 #: src/components/network/connection-form/BondFields.tsx:70
 #: src/components/network/connection-form/BridgeFields.tsx:85
@@ -1302,8 +1303,8 @@ msgstr "例: bond0"
 msgid "E.g., downdelay=0, primary=eth1, miimon=100, lacp_rate=fast"
 msgstr "例: downdelay=0, primary=eth1, miimon=100, lacp_rate=fast"
 
-#. TRANSLATORS: helper text for the bridge ports field. %s is a list of available devices.
 #. TRANSLATORS: helper text for the bond ports field. %s is a list of available devices.
+#. TRANSLATORS: helper text for the bridge ports field. %s is a list of available devices.
 #: src/components/network/connection-form/BondFields.tsx:114
 #: src/components/network/connection-form/BridgeFields.tsx:109
 #, javascript-format
@@ -1474,8 +1475,8 @@ msgid "Configuration from the network plus static addresses and gateway"
 msgstr ""
 "ネットワーク側からの設定に加え、固定のアドレスとゲートウエイを設定します"
 
-#. TRANSLATORS: Network summary title when using manual/static IP configuration
 #. TRANSLATORS: option label for manual IP configuration
+#. TRANSLATORS: Network summary title when using manual/static IP configuration
 #: src/components/network/connection-form/IpFields.tsx:60
 #: src/components/overview/NetworkSummary.tsx:128
 #: src/components/storage/SizeModeSelect.tsx:191
@@ -1660,12 +1661,12 @@ msgstr "システムの再起動やネットワーク側の変更により変わ
 msgid "Installation settings"
 msgstr "インストール設定"
 
-#. TRANSLATORS: %1$s is a description of the device (eg. "Encrypted XFS RAID") and %2$s is
-#. the RAID level (eg. "RAID0")
 #. TRANSLATORS: %1$s is an already formatted mount path (eg. "/"),
 #. %2$s is a size description (eg. at least 10 GiB)
 #. TRANSLATORS: %1$s is a filesystem type description (eg. "Btrfs with snapshots"),
 #. %2$s is a description of the size or the size limits (eg. "at least 10 GiB")
+#. TRANSLATORS: %1$s is a description of the device (eg. "Encrypted XFS RAID") and %2$s is
+#. the RAID level (eg. "RAID0")
 #. TRANSLATORS: Summary of the selected language and territory.
 #. %1$s is the language name (e.g. "Spanish").
 #. %2$s is the territory/region name (e.g. "Spain").
@@ -2180,76 +2181,80 @@ msgstr "%s に変更"
 msgid "Select %s"
 msgstr "%s を選択"
 
-#: src/components/product/ProductSelectionPage.tsx:334
+#: src/components/product/ProductSelectionPage.tsx:340
 msgid "Select a product to continue."
 msgstr "続行するには製品を選択してください。"
 
-#: src/components/product/ProductSelectionPage.tsx:336
+#: src/components/product/ProductSelectionPage.tsx:342
 msgid "Select a product mode to continue."
 msgstr "続行するには製品モードを選択してください。"
 
-#: src/components/product/ProductSelectionPage.tsx:338
+#: src/components/product/ProductSelectionPage.tsx:344
 msgid "License acceptance is required to continue."
 msgstr "続行するにはライセンスの受け入れが必要です。"
 
-#: src/components/product/ProductSelectionPage.tsx:393
+#: src/components/product/ProductSelectionPage.tsx:349
+msgid "Changing the product will reset your current settings."
+msgstr ""
+
+#: src/components/product/ProductSelectionPage.tsx:404
 msgid "Switch to a different mode"
 msgstr "異なるモードに切り替え"
 
-#: src/components/product/ProductSelectionPage.tsx:398
+#: src/components/product/ProductSelectionPage.tsx:409
 msgid "Choose a mode"
 msgstr "モードを選択"
 
-#: src/components/product/ProductSelectionPage.tsx:403
-#: src/components/product/ProductSelectionPage.tsx:409
+#: src/components/product/ProductSelectionPage.tsx:414
+#: src/components/product/ProductSelectionPage.tsx:420
 #, javascript-format
 msgid "Choose a product"
 msgid_plural "Choose from %d available products"
 msgstr[0] "利用可能な %d 個の製品から選択してください"
 
-#: src/components/product/ProductSelectionPage.tsx:418
+#: src/components/product/ProductSelectionPage.tsx:429
 #, javascript-format
 msgid "Switch to another product"
 msgid_plural "Switch to one of %d available products"
 msgstr[0] "利用可能な %d 個の製品のいずれかに切り替え"
 
-#: src/components/product/ProductSelectionPage.tsx:429
+#: src/components/product/ProductSelectionPage.tsx:440
 #, javascript-format
 msgid "Switch to a different mode or another product"
 msgid_plural "Switch to a different mode or to one of %d available products"
 msgstr[0] "異なるモード、もしくは利用可能な %d 個の製品のいずれかに切り替え"
 
-#: src/components/product/ProductSelectionPage.tsx:590
+#: src/components/product/ProductSelectionPage.tsx:603
 msgid "Current selection"
 msgstr "現在の選択"
 
-#: src/components/product/ProductSelectionPage.tsx:610
+#: src/components/product/ProductSelectionPage.tsx:623
 msgid "View license"
 msgstr "ライセンスの表示"
 
-#: src/components/product/ProductSelectionPage.tsx:633
+#: src/components/product/ProductSelectionPage.tsx:646
 msgid "Select a mode"
 msgstr "モードの選択"
 
-#: src/components/product/ProductSelectionPage.tsx:635
-#: src/components/product/ProductSelectionPage.tsx:639
+#: src/components/product/ProductSelectionPage.tsx:648
+#: src/components/product/ProductSelectionPage.tsx:652
 msgid "Select a product"
 msgstr "製品の選択"
 
-#: src/components/product/ProductSelectionPage.tsx:662
+#: src/components/product/ProductSelectionPage.tsx:675
 msgid "Select a mode and confirm your choice."
 msgstr "モードを選択したあと、確認のためにボタンを押してください。"
 
-#: src/components/product/ProductSelectionPage.tsx:664
+#: src/components/product/ProductSelectionPage.tsx:677
 msgid "Confirm the product selection."
 msgstr "製品セクションで確認を行ってください。"
 
-#: src/components/product/ProductSelectionPage.tsx:670
+#: src/components/product/ProductSelectionPage.tsx:683
 msgid "Select a product and confirm your choice."
 msgid_plural "Select a product and confirm your choice at the end of the list."
 msgstr[0] "製品を選択してください。"
 
-#: src/components/product/ProductSelectionPage.tsx:724
+#: src/components/product/ProductSelectionPage.tsx:743
 msgid ""
 "Installation settings will automatically update to match the new product's "
 "defaults."
@@ -3429,9 +3434,9 @@ msgstr "現在のデータを消去して下記の形式でデバイスをフォ
 msgid "Format device as"
 msgstr "下記の形式でフォーマット:"
 
+#. TRANSLATORS: %s is the name of a logical volume, like /dev/system/home
 #. TRANSLATORS: %s is the name of a partition, like /dev/vda2
 #. TRANSLATORS: %s is the name of a device, like vda
-#. TRANSLATORS: %s is the name of a logical volume, like /dev/system/home
 #: src/components/storage/FormattableDevicePage.tsx:310
 #: src/components/storage/LogicalVolumePage.tsx:661
 #: src/components/storage/PartitionPage.tsx:596
@@ -4551,8 +4556,8 @@ msgstr ""
 "何もデバイスを選択していません。一括処理を実施する 1 つ以上のデバイスを選択し"
 "てください。"
 
-#. TRANSLATORS: table header for a zFCP devices table.
 #. TRANSLATORS: table header for a DASD devices table
+#. TRANSLATORS: table header for a zFCP devices table.
 #: src/components/storage/dasd/DASDTable.tsx:530
 #: src/components/storage/zfcp/ZFCPDevicesTable.tsx:173
 #: src/components/storage/zfcp/ZFCPDevicesTable.tsx:317
@@ -5073,11 +5078,11 @@ msgid "Current partitions will be kept"
 msgstr "現在のパーティションを維持する"
 
 #. TRANSLATORS: this simply concatenates the two sentences that describe what is going to happen
-#. with logical volumes. The first %s corresponds to deleted logical volumes and the second one
-#. to resized ones.
-#. TRANSLATORS: this simply concatenates the two sentences that describe what is going to happen
 #. with partitions. The first %s corresponds to deleted partitions and the second one to resized
 #. ones.
+#. TRANSLATORS: this simply concatenates the two sentences that describe what is going to happen
+#. with logical volumes. The first %s corresponds to deleted logical volumes and the second one
+#. to resized ones.
 #: src/components/storage/utils/drive.tsx:106
 #: src/components/storage/utils/volume-group.tsx:96
 #, javascript-format
