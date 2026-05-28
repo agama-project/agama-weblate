@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-27 15:50+0000\n"
+"POT-Creation-Date: 2026-05-28 08:41+0000\n"
 "PO-Revision-Date: 2026-05-15 09:12+0000\n"
 "Last-Translator: Emily Dong <Emily.Dong@excel-gits.com>\n"
 "Language-Team: Chinese (China) <https://l10n.opensuse.org/projects/agama/"
@@ -54,8 +54,6 @@ msgstr "查看更多细节"
 #: src/components/storage/EncryptionSettingsPage.tsx:128
 #: src/components/storage/iscsi/DiscoverFormPage.tsx:175
 #: src/components/storage/iscsi/TargetLoginPage.tsx:189
-#: src/components/users/FirstUserForm.tsx:195
-#: src/components/users/RootUserForm.tsx:141
 msgid "Something went wrong"
 msgstr "出了点问题"
 
@@ -182,7 +180,8 @@ msgstr "对所选产品使用同样的设置"
 #: src/components/storage/dasd/FormatActionHandler.tsx:95
 #: src/components/storage/dasd/FormatActionHandler.tsx:122
 #: src/components/storage/zfcp/ZFCPControllersPage.tsx:161
-#: src/components/system/system-form/Form.tsx:209
+#: src/components/system/system-form/Form.tsx:210
+#: src/components/users/authentication-form/Form.tsx:276
 msgid "Accept"
 msgstr "接受"
 
@@ -284,6 +283,7 @@ msgstr "安装程序要求 [root] 用户权限。"
 msgid "Login form"
 msgstr "登录表单"
 
+#. TRANSLATORS: authentication mode option
 #. TRANSLATORS: field label
 #: src/components/core/LoginPage.tsx:91
 #: src/components/core/PasswordAndConfirmationInput.tsx:96
@@ -291,7 +291,9 @@ msgstr "登录表单"
 #: src/components/questions/QuestionWithPassword.tsx:63
 #: src/components/storage/iscsi/DiscoverFormPage.tsx:210
 #: src/components/storage/iscsi/TargetLoginPage.tsx:237
-#: src/components/users/RootUser.tsx:64
+#: src/components/users/authentication-form/FirstUserFields.tsx:45
+#: src/components/users/authentication-form/RootAuthFields.tsx:47
+#: src/components/users/authentication-form/RootAuthFields.tsx:77
 msgid "Password"
 msgstr "密码"
 
@@ -325,10 +327,14 @@ msgid "Cancel"
 msgstr "取消"
 
 #: src/components/core/PasswordAndConfirmationInput.tsx:72
+#: src/components/users/authentication-form/fields.ts:144
+#: src/components/users/authentication-form/fields.ts:175
 msgid "Passwords do not match"
 msgstr "密码不匹配"
 
 #: src/components/core/PasswordAndConfirmationInput.tsx:107
+#: src/components/users/authentication-form/FirstUserFields.tsx:51
+#: src/components/users/authentication-form/RootAuthFields.tsx:53
 msgid "Password confirmation"
 msgstr "确认密码"
 
@@ -342,11 +348,11 @@ msgid "Using [%s] keyboard layout"
 msgstr "使用 [%s] 键盘"
 
 #. TRANSLATORS: Warns users that CAPS LOCK is on.
-#. Keep square brackets to apply special formatting in the UI.
-#. TRANSLATORS: Warns users that CAPS LOCK is on.
 #. Text inside square brackets [] will be formatted in bold.
 #. Keep the brackets for proper formatting.
 #.
+#. TRANSLATORS: Warns users that CAPS LOCK is on.
+#. Keep square brackets to apply special formatting in the UI.
 #: src/components/core/PasswordInput.tsx:90
 #: src/components/form/MaskedField.tsx:113
 msgid "[CAPS LOCK] is on"
@@ -503,113 +509,113 @@ msgid "Waiting for proposal"
 msgstr "正在等待进度状态…"
 
 #. TRANSLATORS: %d will be replaced with a number of duplicate entries skipped.
-#: src/components/form/ArrayField.tsx:94
+#: src/components/form/ArrayField.tsx:95
 #, javascript-format
 msgid "%d duplicates skipped."
 msgstr ""
 
 #. TRANSLATORS: %d will be replaced with a number of added entries.
-#: src/components/form/ArrayField.tsx:99
+#: src/components/form/ArrayField.tsx:100
 #, javascript-format
 msgid "%d entries added."
 msgstr ""
 
 #. TRANSLATORS: first %d is the number of added entries, second %d is
 #. the number of invalid entries.
-#: src/components/form/ArrayField.tsx:102
+#: src/components/form/ArrayField.tsx:103
 #, javascript-format
 msgid "%d entries added, %d invalid."
 msgstr ""
 
 #. TRANSLATORS: first %d is the number of added entries, second %d is the number of duplicate entries skipped.
-#: src/components/form/ArrayField.tsx:107
+#: src/components/form/ArrayField.tsx:108
 #, javascript-format
 msgid "%d entries added, %d duplicates skipped."
 msgstr ""
 
-#: src/components/form/ArrayField.tsx:111
+#: src/components/form/ArrayField.tsx:112
 #, javascript-format
 msgid "%d entries added, %d invalid, %d duplicates skipped."
 msgstr ""
 
-#: src/components/form/ArrayField.tsx:148
+#: src/components/form/ArrayField.tsx:156
 msgid ""
 "Enter or Tab to add, Backspace or Delete to remove, arrow keys to navigate "
 "entries, Escape to exit"
 msgstr ""
 
 #. TRANSLATORS: keyboard usage hint when entries exist.
-#: src/components/form/ArrayField.tsx:170
+#: src/components/form/ArrayField.tsx:178
 msgid ""
 "Enter or Tab to add, Backspace or Delete to remove, arrow keys to navigate"
 msgstr ""
 
 #. TRANSLATORS: keyboard usage hint when field is empty.
-#: src/components/form/ArrayField.tsx:172
+#: src/components/form/ArrayField.tsx:180
 msgid "Enter or Tab to add"
 msgstr ""
 
 #. TRANSLATORS: accessible label for an invalid entry. First %s is the entry value, second %s is the validation error.
-#: src/components/form/ArrayField.tsx:227
+#: src/components/form/ArrayField.tsx:260
 #, javascript-format
 msgid "%s is invalid: %s"
 msgstr ""
 
 #. TRANSLATORS: accessible label for the remove button of an entry. %s is the entry value.
-#: src/components/form/ArrayField.tsx:235
+#: src/components/form/ArrayField.tsx:268
 #, fuzzy, javascript-format
 msgid "Remove %s"
 msgstr "移除"
 
 #. TRANSLATORS: screen reader announcement when a duplicate entry is skipped. %s is the entry value.
-#: src/components/form/ArrayField.tsx:463
+#: src/components/form/ArrayField.tsx:527
 #, javascript-format
 msgid "%s already exists, skipped."
 msgstr ""
 
 #. TRANSLATORS: screen reader announcement when an invalid entry is
 #. added. First %s is the entry value, second %s is the validation error.
-#: src/components/form/ArrayField.tsx:474
+#: src/components/form/ArrayField.tsx:538
 #, javascript-format
 msgid "%s added but is invalid: %s. Select to edit."
 msgstr ""
 
 #. TRANSLATORS: screen reader announcement when an entry is added. %s
 #. is the entry value.
-#: src/components/form/ArrayField.tsx:477
+#: src/components/form/ArrayField.tsx:541
 #, javascript-format
 msgid "%s added."
 msgstr ""
 
 #. TRANSLATORS: screen reader announcement when an entry is removed. %s is
 #. the entry value.
-#: src/components/form/ArrayField.tsx:487
+#: src/components/form/ArrayField.tsx:551
 #, javascript-format
 msgid "%s removed."
 msgstr ""
 
 #. TRANSLATORS: screen reader announcement when an entry is moved to the
 #. input for editing. %s is the entry value.
-#: src/components/form/ArrayField.tsx:502
+#: src/components/form/ArrayField.tsx:566
 #, javascript-format
 msgid "%s moved to input for editing."
 msgstr ""
 
 #. TRANSLATORS: screen reader announcement when all invalid entries are
 #. cleared. %d is the number of removed entries.
-#: src/components/form/ArrayField.tsx:512
+#: src/components/form/ArrayField.tsx:576
 #, javascript-format
 msgid "%d invalid entries removed."
 msgstr ""
 
 #. TRANSLATORS: accessible label for the entries list. %s is the
 #. field label (e.g. "DNS servers").
-#: src/components/form/ArrayField.tsx:634
+#: src/components/form/ArrayField.tsx:698
 #, javascript-format
 msgid "%s entries"
 msgstr ""
 
-#: src/components/form/ArrayField.tsx:697
+#: src/components/form/ArrayField.tsx:762
 msgid "Select entries to edit or remove them. Or [remove all invalid entries.]"
 msgstr ""
 
@@ -621,6 +627,17 @@ msgstr ""
 #, fuzzy, javascript-format
 msgid "Using %s keyboard layout"
 msgstr "使用 [%s] 键盘"
+
+#: src/components/form/PreservedValueField.tsx:64
+#: src/components/l10n/L10nPage.tsx:89 src/components/l10n/L10nPage.tsx:103
+#: src/components/l10n/L10nPage.tsx:115
+#: src/components/product/ProductSelectionPage.tsx:289
+#: src/components/storage/BootSection.tsx:97
+#: src/components/storage/DeviceSelectorModal.tsx:292
+#: src/components/storage/EncryptionSection.tsx:59
+#: src/components/storage/iscsi/InitiatorFormPage.tsx:80
+msgid "Change"
+msgstr "更改"
 
 #: src/components/l10n/KeyboardSelection.tsx:46
 msgid "Filter by description or keymap code"
@@ -654,18 +671,6 @@ msgid ""
 "can be adjusted via the [settings panel] accessible from the top bar."
 msgstr ""
 "以下是待安装产品的相关设置。安装程序语言可通过顶部栏的[设置面板]进行调整。"
-
-#: src/components/l10n/L10nPage.tsx:89 src/components/l10n/L10nPage.tsx:103
-#: src/components/l10n/L10nPage.tsx:115
-#: src/components/product/ProductSelectionPage.tsx:289
-#: src/components/storage/BootSection.tsx:97
-#: src/components/storage/DeviceSelectorModal.tsx:292
-#: src/components/storage/EncryptionSection.tsx:59
-#: src/components/storage/iscsi/InitiatorFormPage.tsx:80
-#: src/components/users/FirstUserForm.tsx:233
-#: src/components/users/RootUserForm.tsx:161
-msgid "Change"
-msgstr "更改"
 
 #: src/components/l10n/L10nPage.tsx:94 src/components/l10n/L10nPage.tsx:107
 #: src/components/l10n/L10nPage.tsx:120
@@ -739,8 +744,8 @@ msgstr "SSID"
 msgid "Security"
 msgstr "安全性"
 
-#. TRANSLATORS: table header for a DASD devices table
 #. TRANSLATORS: table header for a zFCP devices table.
+#. TRANSLATORS: table header for a DASD devices table
 #. TRANSLATORS: table header for an iSCSI targets table
 #: src/components/network/ConnectionDetails.tsx:108
 #: src/components/network/ConnectionDetails.tsx:224
@@ -822,9 +827,11 @@ msgstr "隐藏细节"
 msgid "STP"
 msgstr ""
 
+#. TRANSLATORS: authentication mode option
 #. TRANSLATORS: option label for disabling bridge STP.
 #: src/components/network/ConnectionDetails.tsx:169
 #: src/components/network/connection-form/BridgeFields.tsx:54
+#: src/components/users/authentication-form/RootAuthFields.tsx:70
 #, fuzzy
 msgid "Disabled"
 msgstr "已禁用"
@@ -971,8 +978,8 @@ msgstr ""
 msgid "(bound by MAC)"
 msgstr ""
 
-#. TRANSLATORS: input field for the iSCSI initiator name
 #. TRANSLATORS: table header for an iSCSI targets table
+#. TRANSLATORS: input field for the iSCSI initiator name
 #. TRANSLATORS: label for the network connection profile name field.
 #. TRANSLATORS: label for hostname value display
 #. TRANSLATORS: label for hostname input
@@ -1006,8 +1013,8 @@ msgstr "类型"
 msgid "State"
 msgstr "状态"
 
-#. TRANSLATORS: table header for a DASD devices table
 #. TRANSLATORS: table header for a zFCP devices table.
+#. TRANSLATORS: table header for a DASD devices table
 #. TRANSLATORS: label for the device binding dropdown.
 #: src/components/network/ConnectionsTable.tsx:173
 #: src/components/network/connection-form/BindingModeSelector.tsx:68
@@ -1291,7 +1298,6 @@ msgstr ""
 #. TRANSLATORS: label for the network interface name field.
 #. TRANSLATORS: accessible label for the device selector. MAC address refers
 #. to the hardware identifier of the network interface.
-#. TRANSLATORS: label for the network interface name field.
 #: src/components/network/connection-form/BondFields.tsx:65
 #: src/components/network/connection-form/BondFields.tsx:70
 #: src/components/network/connection-form/BridgeFields.tsx:85
@@ -1311,8 +1317,8 @@ msgstr ""
 msgid "E.g., downdelay=0, primary=eth1, miimon=100, lacp_rate=fast"
 msgstr ""
 
-#. TRANSLATORS: helper text for the bond ports field. %s is a list of available devices.
 #. TRANSLATORS: helper text for the bridge ports field. %s is a list of available devices.
+#. TRANSLATORS: helper text for the bond ports field. %s is a list of available devices.
 #: src/components/network/connection-form/BondFields.tsx:114
 #: src/components/network/connection-form/BridgeFields.tsx:109
 #, fuzzy, javascript-format
@@ -1369,6 +1375,7 @@ msgstr ""
 #: src/components/network/connection-form/IpFields.tsx:153
 #: src/components/product/registration-form/Form.tsx:184
 #: src/components/product/registration-form/Form.tsx:199
+#: src/components/users/authentication-form/FirstUserFields.tsx:149
 msgid "(optional)"
 msgstr ""
 
@@ -1489,8 +1496,8 @@ msgstr "自动"
 msgid "Configuration from the network plus static addresses and gateway"
 msgstr ""
 
-#. TRANSLATORS: option label for manual IP configuration
 #. TRANSLATORS: Network summary title when using manual/static IP configuration
+#. TRANSLATORS: option label for manual IP configuration
 #: src/components/network/connection-form/IpFields.tsx:60
 #: src/components/overview/NetworkSummary.tsx:128
 #: src/components/storage/SizeModeSelect.tsx:191
@@ -1690,12 +1697,12 @@ msgstr ""
 msgid "Installation settings"
 msgstr "安装设备"
 
+#. TRANSLATORS: %1$s is a description of the device (eg. "Encrypted XFS RAID") and %2$s is
+#. the RAID level (eg. "RAID0")
 #. TRANSLATORS: %1$s is an already formatted mount path (eg. "/"),
 #. %2$s is a size description (eg. at least 10 GiB)
 #. TRANSLATORS: %1$s is a filesystem type description (eg. "Btrfs with snapshots"),
 #. %2$s is a description of the size or the size limits (eg. "at least 10 GiB")
-#. TRANSLATORS: %1$s is a description of the device (eg. "Encrypted XFS RAID") and %2$s is
-#. the RAID level (eg. "RAID0")
 #. TRANSLATORS: Summary of the selected language and territory.
 #. %1$s is the language name (e.g. "Spanish").
 #. %2$s is the territory/region name (e.g. "Spain").
@@ -2068,46 +2075,47 @@ msgstr ""
 msgid "System"
 msgstr ""
 
-#: src/components/overview/UsersSummary.tsx:58
+#. TRANSLATORS: %s is either "root" or a username like 'jdoe'
+#: src/components/overview/UsersSummary.tsx:63
+#, javascript-format
+msgid "Public key provided for %s"
+msgstr ""
+
+#. TRANSLATORS: %s is either "root" or a username like 'jdoe'
+#: src/components/overview/UsersSummary.tsx:74
+#, fuzzy, javascript-format
+msgid "Using %s account"
+msgstr "编辑用户账户"
+
+#. TRANSLATORS: shown when no user accounts are configured yet
+#: src/components/overview/UsersSummary.tsx:87
 #: src/components/storage/UnusedMenu.tsx:33
 msgid "Not configured yet"
 msgstr "尚未配置"
 
-#: src/components/overview/UsersSummary.tsx:59
-#, fuzzy
-msgid "Configured for the root user"
-msgstr "密码不匹配"
-
-#. TRANSLATORS: %s is a username like 'jdoe'
-#: src/components/overview/UsersSummary.tsx:64
+#: src/components/overview/UsersSummary.tsx:96
 #, fuzzy, javascript-format
-msgid "Configured for root and user %s"
-msgstr "密码不匹配"
+msgid "Using %s and %s accounts"
+msgstr "使用 [%s] 键盘"
 
-#. TRANSLATORS: %s is a username like 'jdoe'
-#: src/components/overview/UsersSummary.tsx:66
-#, fuzzy, javascript-format
-msgid "Configured for user %s"
-msgstr "配置设备 %s"
-
-#: src/components/overview/UsersSummary.tsx:86
-#, fuzzy
-msgid "Root login with password and SSH key"
-msgstr "Root 认证设定为同时使用密码与 SSH 公钥"
-
-#: src/components/overview/UsersSummary.tsx:87
-#, fuzzy
-msgid "Root login with password"
-msgstr "Root 密码"
-
-#: src/components/overview/UsersSummary.tsx:88
-msgid "Root login with SSH key"
+#. TRANSLATORS: both user accounts have SSH public keys configured
+#: src/components/overview/UsersSummary.tsx:126
+msgid "Public key provided for both"
 msgstr ""
 
-#: src/components/overview/UsersSummary.tsx:104
-#: src/components/users/FirstUserForm.tsx:188
-#: src/components/users/RootUserForm.tsx:137
-#: src/components/users/UsersPage.tsx:36 src/routes/users.tsx:34
+#. TRANSLATORS: SSH public key is configured for a single account
+#: src/components/overview/UsersSummary.tsx:129
+msgid "Public key provided"
+msgstr ""
+
+#. TRANSLATORS: warning when root account has no SSH public key configured
+#: src/components/overview/UsersSummary.tsx:139
+msgid "No public key provided, SSH login might be restricted"
+msgstr ""
+
+#. TRANSLATORS: section title for user authentication configuration
+#: src/components/overview/UsersSummary.tsx:156
+#: src/components/users/UsersPage.tsx:35 src/routes/users.tsx:32
 msgid "Authentication"
 msgstr "身份验证"
 
@@ -3366,7 +3374,6 @@ msgid ""
 msgstr "TPM 密封过程要求新系统直接启动。"
 
 #: src/components/storage/EncryptionSettingsPage.tsx:99
-#: src/components/users/RootUserForm.tsx:105
 msgid "Password is empty."
 msgstr "口令为空。"
 
@@ -3419,7 +3426,6 @@ msgstr "更改文件系统或挂载点"
 #: src/components/storage/FilesystemMenu.tsx:109
 #: src/components/storage/PartitionsSection.tsx:186
 #: src/components/storage/VolumeGroupEditor.tsx:179
-#: src/components/users/FirstUser.tsx:63 src/components/users/RootUser.tsx:57
 msgid "Edit"
 msgstr "编辑"
 
@@ -3479,9 +3485,9 @@ msgstr "销毁当前数据并将设备格式化为"
 msgid "Format device as"
 msgstr "将设备格式化为"
 
-#. TRANSLATORS: %s is the name of a logical volume, like /dev/system/home
 #. TRANSLATORS: %s is the name of a partition, like /dev/vda2
 #. TRANSLATORS: %s is the name of a device, like vda
+#. TRANSLATORS: %s is the name of a logical volume, like /dev/system/home
 #: src/components/storage/FormattableDevicePage.tsx:310
 #: src/components/storage/LogicalVolumePage.tsx:661
 #: src/components/storage/PartitionPage.tsx:596
@@ -4598,8 +4604,8 @@ msgid ""
 "No devices selected. Select one or more devices to perform bulk actions."
 msgstr "选择设备以启用批量操作。"
 
-#. TRANSLATORS: table header for a DASD devices table
 #. TRANSLATORS: table header for a zFCP devices table.
+#. TRANSLATORS: table header for a DASD devices table
 #: src/components/storage/dasd/DASDTable.tsx:530
 #: src/components/storage/zfcp/ZFCPDevicesTable.tsx:173
 #: src/components/storage/zfcp/ZFCPDevicesTable.tsx:317
@@ -5132,11 +5138,11 @@ msgid "Current partitions will be kept"
 msgstr "将保留当前分区"
 
 #. TRANSLATORS: this simply concatenates the two sentences that describe what is going to happen
-#. with partitions. The first %s corresponds to deleted partitions and the second one to resized
-#. ones.
-#. TRANSLATORS: this simply concatenates the two sentences that describe what is going to happen
 #. with logical volumes. The first %s corresponds to deleted logical volumes and the second one
 #. to resized ones.
+#. TRANSLATORS: this simply concatenates the two sentences that describe what is going to happen
+#. with partitions. The first %s corresponds to deleted partitions and the second one to resized
+#. ones.
 #: src/components/storage/utils/drive.tsx:106
 #: src/components/storage/utils/volume-group.tsx:96
 #, javascript-format
@@ -5492,19 +5498,19 @@ msgid "zFCP controllers"
 msgstr "控制器"
 
 #. TRANSLATORS: error message when system settings update request fails
-#: src/components/system/system-form/Form.tsx:173
+#: src/components/system/system-form/Form.tsx:174
 #, fuzzy
 msgid "System settings could not be updated"
 msgstr "无法更新主机名"
 
 #. TRANSLATORS: success message shown after system settings are updated
-#: src/components/system/system-form/Form.tsx:195
+#: src/components/system/system-form/Form.tsx:196
 #, fuzzy
 msgid "System settings successfully updated"
 msgstr "已成功更新主机名"
 
 #. TRANSLATORS: info message shown when submitting the form with no changes
-#: src/components/system/system-form/Form.tsx:197
+#: src/components/system/system-form/Form.tsx:198
 msgid "No changes detected. System settings are already up to date."
 msgstr ""
 
@@ -5617,118 +5623,163 @@ msgstr "必须输入尺寸值"
 msgid "Some NTP server addresses are invalid"
 msgstr ""
 
-#: src/components/users/FirstUser.tsx:57
-msgid "Define a user now"
-msgstr "现在设定用户"
-
-#: src/components/users/FirstUser.tsx:65
-msgid "Discard"
-msgstr "丢弃"
-
-#: src/components/users/FirstUser.tsx:77
-msgid "No user defined yet."
-msgstr "尚未设定用户。"
-
-#: src/components/users/FirstUser.tsx:86
-#: src/components/users/FirstUserForm.tsx:201
-msgid "Full name"
-msgstr "全名"
-
-#: src/components/users/FirstUser.tsx:92
-#: src/components/users/FirstUserForm.tsx:210
-msgid "Username"
-msgstr "用户名"
-
-#: src/components/users/FirstUser.tsx:108
-msgid "First user"
-msgstr "首个用户"
-
-#: src/components/users/FirstUser.tsx:110
-msgid ""
-"Define the first user with admin (sudo) privileges for system management."
-msgstr "定义具有管理员 (sudo) 特权的首个用户以管理系统。"
-
-#: src/components/users/FirstUserForm.tsx:58
-msgid "Username suggestion dropdown"
-msgstr "建议用户名下拉列表"
-
-#. TRANSLATORS: dropdown username suggestions
-#: src/components/users/FirstUserForm.tsx:73
-msgid "Use suggested username"
-msgstr "使用建议的用户名"
-
-#: src/components/users/FirstUserForm.tsx:125
-msgid "All fields are required"
-msgstr "需要填写全部字段"
-
-#: src/components/users/FirstUserForm.tsx:189
-msgid "Create user"
-msgstr "创建用户"
-
-#: src/components/users/FirstUserForm.tsx:189
-msgid "Edit user"
-msgstr "编辑用户"
-
-#: src/components/users/FirstUserForm.tsx:231
-#: src/components/users/RootUserForm.tsx:159
-msgid "Using a hashed password."
-msgstr "正在使用经过哈希处理的口令。"
-
 #: src/components/users/PasswordCheck.tsx:40
 msgid "The password is weak"
 msgstr "口令强度太弱"
 
-#: src/components/users/RootUser.tsx:53
-msgid "Root user"
-msgstr "root 用户"
+#. TRANSLATORS: fieldset legend for first user configuration
+#: src/components/users/authentication-form/FirstUserFields.tsx:73
+#, fuzzy
+msgid "Administrator account"
+msgstr "编辑用户账户"
 
-#: src/components/users/RootUser.tsx:55
+#: src/components/users/authentication-form/FirstUserFields.tsx:81
 msgid ""
-"Alongside defining the first user, authentication methods for the root user "
-"can be configured."
-msgstr "除了定义首个用户外，还可配置 root 用户的身份验证方法。"
-
-#: src/components/users/RootUser.tsx:66
-msgid "Defined (hidden)"
-msgstr "已定义（已隐藏）"
-
-#: src/components/users/RootUser.tsx:66 src/components/users/RootUser.tsx:72
-msgid "Not defined"
-msgstr "未定义"
-
-#: src/components/users/RootUser.tsx:70
-msgid "Public SSH Key"
-msgstr "SSH 公共密钥"
-
-#: src/components/users/RootUserForm.tsx:64
-msgid "Upload, paste, or drop an SSH public key"
-msgstr "上传、粘贴或拖入 SSH 公钥"
-
-#. TRANSLATORS: push button label
-#: src/components/users/RootUserForm.tsx:66
-msgid "Upload"
-msgstr "上传"
-
-#. TRANSLATORS: push button label, clears the related input field
-#: src/components/users/RootUserForm.tsx:68
-msgid "Clear"
-msgstr "清除"
-
-#: src/components/users/RootUserForm.tsx:110
-msgid "Public SSH Key is empty."
-msgstr "SSH 公共密钥为空。"
-
-#: src/components/users/RootUserForm.tsx:137
-msgid "root"
+"Sets up a main login account. It can run administrator commands using [sudo] "
+"but is separate from the root account."
 msgstr ""
 
-#: src/components/users/RootUserForm.tsx:150
-msgid "Use password"
-msgstr "使用口令"
+#. TRANSLATORS: checkbox label to enable first user definition
+#: src/components/users/authentication-form/FirstUserFields.tsx:97
+#, fuzzy
+msgid "Define an administrator user"
+msgstr "指定自定义大小"
 
-#: src/components/users/RootUserForm.tsx:181
-msgid "Use public SSH Key"
-msgstr "使用 SSH 公共密钥"
+#: src/components/users/authentication-form/FirstUserFields.tsx:115
+msgid "Full name"
+msgstr "全名"
+
+#: src/components/users/authentication-form/FirstUserFields.tsx:123
+msgid "Username"
+msgstr "用户名"
+
+#: src/components/users/authentication-form/FirstUserFields.tsx:134
+#: src/components/users/authentication-form/RootAuthFields.tsx:143
+msgid "Using a hashed password."
+msgstr "正在使用经过哈希处理的口令。"
+
+#. TRANSLATORS: label for root SSH public keys input field
+#: src/components/users/authentication-form/FirstUserFields.tsx:149
+#: src/components/users/authentication-form/RootAuthFields.tsx:161
+#, fuzzy
+msgid "SSH Public Keys"
+msgstr "上传 SSH 公钥"
+
+#: src/components/users/authentication-form/FirstUserFields.tsx:154
+#: src/components/users/authentication-form/RootAuthFields.tsx:166
+#, fuzzy
+msgid "Invalid SSH Key"
+msgstr "SSH 公共密钥"
+
+#: src/components/users/authentication-form/FirstUserFields.tsx:157
+#: src/components/users/authentication-form/RootAuthFields.tsx:169
+msgid "Paste or enter one or more public SSH keys (e.g. ssh-ed25519 AAAA...)"
+msgstr ""
+
+#: src/components/users/authentication-form/Form.tsx:262
+#, fuzzy
+msgid "Changes could not be applied"
+msgstr "无法更新发起端名称"
+
+#. TRANSLATORS: description for no authentication mode
+#: src/components/users/authentication-form/RootAuthFields.tsx:72
+#, fuzzy
+msgid "Root login is off"
+msgstr "Root 密码"
+
+#. TRANSLATORS: description for password authentication mode
+#: src/components/users/authentication-form/RootAuthFields.tsx:79
+#, fuzzy
+msgid "Log in using a password"
+msgstr "正在使用经过哈希处理的口令。"
+
+#. TRANSLATORS: authentication mode option
+#: src/components/users/authentication-form/RootAuthFields.tsx:84
+#, fuzzy
+msgid "SSH Public Key"
+msgstr "上传 SSH 公钥"
+
+#. TRANSLATORS: description for SSH public key authentication mode
+#: src/components/users/authentication-form/RootAuthFields.tsx:86
+#, fuzzy
+msgid "Log in using a trusted SSH public key"
+msgstr "Root 的 SSH 公钥"
+
+#. TRANSLATORS: authentication mode option
+#: src/components/users/authentication-form/RootAuthFields.tsx:91
+#, fuzzy
+msgid "Password and SSH Public Key"
+msgstr "上传 SSH 公钥"
+
+#. TRANSLATORS: description for both password and SSH key authentication
+#: src/components/users/authentication-form/RootAuthFields.tsx:93
+msgid "Sets up both and use either to log in"
+msgstr ""
+
+#. TRANSLATORS: fieldset legend for root authentication configuration
+#: src/components/users/authentication-form/RootAuthFields.tsx:112
+#, fuzzy
+msgid "Root account"
+msgstr "编辑用户账户"
+
+#. TRANSLATORS: explanation of how to enable the root account
+#: src/components/users/authentication-form/RootAuthFields.tsx:116
+#, fuzzy
+msgid "Choose whether to enable the root account."
+msgstr "选择如何处理当前内容"
+
+#. TRANSLATORS: label for the root authentication mode selector
+#: src/components/users/authentication-form/RootAuthFields.tsx:123
+#, fuzzy
+msgid "Root login method"
+msgstr "Root 密码"
+
+#: src/components/users/authentication-form/fields.ts:138
+#, fuzzy
+msgid "Full name is required"
+msgstr "必须输入尺寸值"
+
+#: src/components/users/authentication-form/fields.ts:139
+#, fuzzy
+msgid "Username is required"
+msgstr "必须输入尺寸值"
+
+#: src/components/users/authentication-form/fields.ts:141
+#: src/components/users/authentication-form/fields.ts:172
+#, fuzzy
+msgid "Password is required"
+msgstr "需要口令"
+
+#: src/components/users/authentication-form/fields.ts:146
+#: src/components/users/authentication-form/fields.ts:177
+#, fuzzy
+msgid "Password confirmation is required"
+msgstr "确认密码"
+
+#: src/components/users/authentication-form/fields.ts:151
+#: src/components/users/authentication-form/fields.ts:184
+#, fuzzy
+msgid "Some SSH public keys are invalid"
+msgstr "Root 的 SSH 公钥"
+
+#: src/components/users/authentication-form/fields.ts:183
+#, fuzzy
+msgid "At least one SSH public key is required"
+msgstr "必须输入尺寸值"
+
+#: src/hooks/use-form-submit.tsx:160
+#, fuzzy
+msgid "Changes successfully applied"
+msgstr "已成功更新主机名"
+
+#: src/hooks/use-form-submit.tsx:161
+msgid "No changes to apply"
+msgstr ""
+
+#: src/hooks/use-form-submit.tsx:162
+#, fuzzy
+msgid "Fix the errors below and try again"
+msgstr "请更改过滤条件，然后重试。"
 
 #: src/routes/storage.tsx:120
 msgid "ZFCP"
@@ -5761,6 +5812,85 @@ msgstr ""
 msgid "VLAN"
 msgstr ""
 
+#, fuzzy
+#~ msgid "Configured for the root user"
+#~ msgstr "密码不匹配"
+
+#, fuzzy, javascript-format
+#~ msgid "Configured for root and user %s"
+#~ msgstr "密码不匹配"
+
+#, fuzzy, javascript-format
+#~ msgid "Configured for user %s"
+#~ msgstr "配置设备 %s"
+
+#, fuzzy
+#~ msgid "Root login with password and SSH key"
+#~ msgstr "Root 认证设定为同时使用密码与 SSH 公钥"
+
+#~ msgid "Define a user now"
+#~ msgstr "现在设定用户"
+
+#~ msgid "Discard"
+#~ msgstr "丢弃"
+
+#~ msgid "No user defined yet."
+#~ msgstr "尚未设定用户。"
+
+#~ msgid "First user"
+#~ msgstr "首个用户"
+
+#~ msgid ""
+#~ "Define the first user with admin (sudo) privileges for system management."
+#~ msgstr "定义具有管理员 (sudo) 特权的首个用户以管理系统。"
+
+#~ msgid "Username suggestion dropdown"
+#~ msgstr "建议用户名下拉列表"
+
+#~ msgid "Use suggested username"
+#~ msgstr "使用建议的用户名"
+
+#~ msgid "All fields are required"
+#~ msgstr "需要填写全部字段"
+
+#~ msgid "Create user"
+#~ msgstr "创建用户"
+
+#~ msgid "Edit user"
+#~ msgstr "编辑用户"
+
+#~ msgid "Root user"
+#~ msgstr "root 用户"
+
+#~ msgid ""
+#~ "Alongside defining the first user, authentication methods for the root "
+#~ "user can be configured."
+#~ msgstr "除了定义首个用户外，还可配置 root 用户的身份验证方法。"
+
+#~ msgid "Defined (hidden)"
+#~ msgstr "已定义（已隐藏）"
+
+#~ msgid "Not defined"
+#~ msgstr "未定义"
+
+#~ msgid "Upload, paste, or drop an SSH public key"
+#~ msgstr "上传、粘贴或拖入 SSH 公钥"
+
+#~ msgid "Upload"
+#~ msgstr "上传"
+
+#~ msgid "Clear"
+#~ msgstr "清除"
+
+#~ msgid "Public SSH Key is empty."
+#~ msgstr "SSH 公共密钥为空。"
+
+#~ msgid "Use password"
+#~ msgstr "使用口令"
+
+#~ msgid "Use public SSH Key"
+#~ msgstr "使用 SSH 公共密钥"
+
 #~ msgid ""
 #~ "Before starting the installation, you need to address the following "
 #~ "problems:"
@@ -5783,13 +5913,6 @@ msgstr ""
 
 #~ msgid "Hostname could not be updated"
 #~ msgstr "无法更新主机名"
-
-#, fuzzy
-#~ msgid "The hostname could not be saved"
-#~ msgstr "无法更新发起端名称"
-
-#~ msgid "Hostname successfully updated"
-#~ msgstr "已成功更新主机名"
 
 #, fuzzy
 #~ msgid "Binding settings"
@@ -6401,9 +6524,6 @@ msgstr ""
 #~ msgid "This disk will contain any partition needed for booting"
 #~ msgstr "此磁盘将包含引导所需的任何分区"
 
-#~ msgid "Choose what to with current content"
-#~ msgstr "选择如何处理当前内容"
-
 #~ msgid "Content will be kept"
 #~ msgstr "内容将会保留"
 
@@ -6932,9 +7052,6 @@ msgstr ""
 #~ msgid "Set a password"
 #~ msgstr "设置密码"
 
-#~ msgid "Upload a SSH Public Key"
-#~ msgstr "上传 SSH 公钥"
-
 #~ msgid "Change the root password"
 #~ msgstr "修改 Root 密码"
 
@@ -6963,9 +7080,6 @@ msgstr ""
 
 #~ msgid "Set root SSH public key"
 #~ msgstr "设定 root 的 SSH 公钥"
-
-#~ msgid "Root SSH public key"
-#~ msgstr "Root 的 SSH 公钥"
 
 #~ msgid ""
 #~ "Take your time to check your configuration before starting the "
@@ -7228,9 +7342,6 @@ msgstr ""
 #, c-format
 #~ msgid "shrinking partitions of the %d selected disks"
 #~ msgstr "缩小选定的 %d 个磁盘上的分区"
-
-#~ msgid "Edit user account"
-#~ msgstr "编辑用户账户"
 
 #~ msgid "D-Bus Error"
 #~ msgstr "D-Bus 错误"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-27 15:50+0000\n"
+"POT-Creation-Date: 2026-05-28 08:41+0000\n"
 "PO-Revision-Date: 2026-05-23 02:12+0000\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -51,8 +51,6 @@ msgstr "შეცდომის დეტალების მიღება"
 #: src/components/storage/EncryptionSettingsPage.tsx:128
 #: src/components/storage/iscsi/DiscoverFormPage.tsx:175
 #: src/components/storage/iscsi/TargetLoginPage.tsx:189
-#: src/components/users/FirstUserForm.tsx:195
-#: src/components/users/RootUserForm.tsx:141
 msgid "Something went wrong"
 msgstr "რაღაც არასწორია"
 
@@ -170,7 +168,8 @@ msgstr "იგივე პარამეტრების გამოყე�
 #: src/components/storage/dasd/FormatActionHandler.tsx:95
 #: src/components/storage/dasd/FormatActionHandler.tsx:122
 #: src/components/storage/zfcp/ZFCPControllersPage.tsx:161
-#: src/components/system/system-form/Form.tsx:209
+#: src/components/system/system-form/Form.tsx:210
+#: src/components/users/authentication-form/Form.tsx:276
 msgid "Accept"
 msgstr "დასტური"
 
@@ -269,6 +268,7 @@ msgstr "დაყენების პროგრამას [root] მომ
 msgid "Login form"
 msgstr "შესვლის ფორმა"
 
+#. TRANSLATORS: authentication mode option
 #. TRANSLATORS: field label
 #: src/components/core/LoginPage.tsx:91
 #: src/components/core/PasswordAndConfirmationInput.tsx:96
@@ -276,7 +276,9 @@ msgstr "შესვლის ფორმა"
 #: src/components/questions/QuestionWithPassword.tsx:63
 #: src/components/storage/iscsi/DiscoverFormPage.tsx:210
 #: src/components/storage/iscsi/TargetLoginPage.tsx:237
-#: src/components/users/RootUser.tsx:64
+#: src/components/users/authentication-form/FirstUserFields.tsx:45
+#: src/components/users/authentication-form/RootAuthFields.tsx:47
+#: src/components/users/authentication-form/RootAuthFields.tsx:77
 msgid "Password"
 msgstr "პაროლი"
 
@@ -309,10 +311,14 @@ msgid "Cancel"
 msgstr "გაუქმება"
 
 #: src/components/core/PasswordAndConfirmationInput.tsx:72
+#: src/components/users/authentication-form/fields.ts:144
+#: src/components/users/authentication-form/fields.ts:175
 msgid "Passwords do not match"
 msgstr "პაროლები არ ემთხვევა"
 
 #: src/components/core/PasswordAndConfirmationInput.tsx:107
+#: src/components/users/authentication-form/FirstUserFields.tsx:51
+#: src/components/users/authentication-form/RootAuthFields.tsx:53
 msgid "Password confirmation"
 msgstr "პაროლის დადასტურება"
 
@@ -326,11 +332,11 @@ msgid "Using [%s] keyboard layout"
 msgstr "გამოიყენება [%s] კლავიატურის განლაგება"
 
 #. TRANSLATORS: Warns users that CAPS LOCK is on.
-#. Keep square brackets to apply special formatting in the UI.
-#. TRANSLATORS: Warns users that CAPS LOCK is on.
 #. Text inside square brackets [] will be formatted in bold.
 #. Keep the brackets for proper formatting.
 #.
+#. TRANSLATORS: Warns users that CAPS LOCK is on.
+#. Keep square brackets to apply special formatting in the UI.
 #: src/components/core/PasswordInput.tsx:90
 #: src/components/form/MaskedField.tsx:113
 msgid "[CAPS LOCK] is on"
@@ -483,113 +489,113 @@ msgid "Waiting for proposal"
 msgstr "შეთავაზების მოლოდინი"
 
 #. TRANSLATORS: %d will be replaced with a number of duplicate entries skipped.
-#: src/components/form/ArrayField.tsx:94
+#: src/components/form/ArrayField.tsx:95
 #, javascript-format
 msgid "%d duplicates skipped."
 msgstr "%d გამეორება გამოტოვებულია."
 
 #. TRANSLATORS: %d will be replaced with a number of added entries.
-#: src/components/form/ArrayField.tsx:99
+#: src/components/form/ArrayField.tsx:100
 #, javascript-format
 msgid "%d entries added."
 msgstr "%d ჩანაწერი დამატებულია."
 
 #. TRANSLATORS: first %d is the number of added entries, second %d is
 #. the number of invalid entries.
-#: src/components/form/ArrayField.tsx:102
+#: src/components/form/ArrayField.tsx:103
 #, javascript-format
 msgid "%d entries added, %d invalid."
 msgstr "%d ჩანაწერი დამატებულია. %d არასწორია."
 
 #. TRANSLATORS: first %d is the number of added entries, second %d is the number of duplicate entries skipped.
-#: src/components/form/ArrayField.tsx:107
+#: src/components/form/ArrayField.tsx:108
 #, javascript-format
 msgid "%d entries added, %d duplicates skipped."
 msgstr "%d ჩანაწერი დამატებულია. %d გამეორება გამოტოვებულია."
 
-#: src/components/form/ArrayField.tsx:111
+#: src/components/form/ArrayField.tsx:112
 #, javascript-format
 msgid "%d entries added, %d invalid, %d duplicates skipped."
 msgstr "%d ჩანაწერი დაემატა, %d არასწორია, გამოტოვებულია %d გამეორებული."
 
-#: src/components/form/ArrayField.tsx:148
+#: src/components/form/ArrayField.tsx:156
 msgid ""
 "Enter or Tab to add, Backspace or Delete to remove, arrow keys to navigate "
 "entries, Escape to exit"
 msgstr ""
 
 #. TRANSLATORS: keyboard usage hint when entries exist.
-#: src/components/form/ArrayField.tsx:170
+#: src/components/form/ArrayField.tsx:178
 msgid ""
 "Enter or Tab to add, Backspace or Delete to remove, arrow keys to navigate"
 msgstr ""
 
 #. TRANSLATORS: keyboard usage hint when field is empty.
-#: src/components/form/ArrayField.tsx:172
+#: src/components/form/ArrayField.tsx:180
 msgid "Enter or Tab to add"
 msgstr "დასამატებლად დააჭირეთ Enter-ს, ან Tab-ს"
 
 #. TRANSLATORS: accessible label for an invalid entry. First %s is the entry value, second %s is the validation error.
-#: src/components/form/ArrayField.tsx:227
+#: src/components/form/ArrayField.tsx:260
 #, javascript-format
 msgid "%s is invalid: %s"
 msgstr "%s არასწორია: %s"
 
 #. TRANSLATORS: accessible label for the remove button of an entry. %s is the entry value.
-#: src/components/form/ArrayField.tsx:235
+#: src/components/form/ArrayField.tsx:268
 #, javascript-format
 msgid "Remove %s"
 msgstr "%s-ის წაშლა"
 
 #. TRANSLATORS: screen reader announcement when a duplicate entry is skipped. %s is the entry value.
-#: src/components/form/ArrayField.tsx:463
+#: src/components/form/ArrayField.tsx:527
 #, javascript-format
 msgid "%s already exists, skipped."
 msgstr "%s უკვე არსებობს. გამოტოვებულია."
 
 #. TRANSLATORS: screen reader announcement when an invalid entry is
 #. added. First %s is the entry value, second %s is the validation error.
-#: src/components/form/ArrayField.tsx:474
+#: src/components/form/ArrayField.tsx:538
 #, javascript-format
 msgid "%s added but is invalid: %s. Select to edit."
 msgstr "%s დაემატა, მაგრამ არასწორია: %s. აირჩიეთ ჩასასწორებლად."
 
 #. TRANSLATORS: screen reader announcement when an entry is added. %s
 #. is the entry value.
-#: src/components/form/ArrayField.tsx:477
+#: src/components/form/ArrayField.tsx:541
 #, javascript-format
 msgid "%s added."
 msgstr "%s დამატებულია."
 
 #. TRANSLATORS: screen reader announcement when an entry is removed. %s is
 #. the entry value.
-#: src/components/form/ArrayField.tsx:487
+#: src/components/form/ArrayField.tsx:551
 #, javascript-format
 msgid "%s removed."
 msgstr "%s წაშლილია."
 
 #. TRANSLATORS: screen reader announcement when an entry is moved to the
 #. input for editing. %s is the entry value.
-#: src/components/form/ArrayField.tsx:502
+#: src/components/form/ArrayField.tsx:566
 #, javascript-format
 msgid "%s moved to input for editing."
 msgstr "%s გადატანილია შეყვანაზე ჩასასწორებლად."
 
 #. TRANSLATORS: screen reader announcement when all invalid entries are
 #. cleared. %d is the number of removed entries.
-#: src/components/form/ArrayField.tsx:512
+#: src/components/form/ArrayField.tsx:576
 #, javascript-format
 msgid "%d invalid entries removed."
 msgstr "%d არასწორი ჩანაწერი წაიშალა."
 
 #. TRANSLATORS: accessible label for the entries list. %s is the
 #. field label (e.g. "DNS servers").
-#: src/components/form/ArrayField.tsx:634
+#: src/components/form/ArrayField.tsx:698
 #, javascript-format
 msgid "%s entries"
 msgstr "%s ჩანაწერი"
 
-#: src/components/form/ArrayField.tsx:697
+#: src/components/form/ArrayField.tsx:762
 msgid "Select entries to edit or remove them. Or [remove all invalid entries.]"
 msgstr ""
 "აირჩიეთ ჩასასწორებელი, ან წასაშლელი ჩანაწერები, ან [ყველა არასწორი ჩანაწერის "
@@ -603,6 +609,17 @@ msgstr ""
 #, javascript-format
 msgid "Using %s keyboard layout"
 msgstr "გამოიყენება %s კლავიატურის განლაგება"
+
+#: src/components/form/PreservedValueField.tsx:64
+#: src/components/l10n/L10nPage.tsx:89 src/components/l10n/L10nPage.tsx:103
+#: src/components/l10n/L10nPage.tsx:115
+#: src/components/product/ProductSelectionPage.tsx:289
+#: src/components/storage/BootSection.tsx:97
+#: src/components/storage/DeviceSelectorModal.tsx:292
+#: src/components/storage/EncryptionSection.tsx:59
+#: src/components/storage/iscsi/InitiatorFormPage.tsx:80
+msgid "Change"
+msgstr "შეცვლა"
 
 #: src/components/l10n/KeyboardSelection.tsx:46
 msgid "Filter by description or keymap code"
@@ -637,18 +654,6 @@ msgid ""
 msgstr ""
 "ეს დასაყენებელი პროდუქტის პარამეტრებია. დაყენების პროგრამის ენის მორგება "
 "[მორგების პანელიდან] ზედა ზოლიდანაა ხელმისაწვდომი."
-
-#: src/components/l10n/L10nPage.tsx:89 src/components/l10n/L10nPage.tsx:103
-#: src/components/l10n/L10nPage.tsx:115
-#: src/components/product/ProductSelectionPage.tsx:289
-#: src/components/storage/BootSection.tsx:97
-#: src/components/storage/DeviceSelectorModal.tsx:292
-#: src/components/storage/EncryptionSection.tsx:59
-#: src/components/storage/iscsi/InitiatorFormPage.tsx:80
-#: src/components/users/FirstUserForm.tsx:233
-#: src/components/users/RootUserForm.tsx:161
-msgid "Change"
-msgstr "შეცვლა"
 
 #: src/components/l10n/L10nPage.tsx:94 src/components/l10n/L10nPage.tsx:107
 #: src/components/l10n/L10nPage.tsx:120
@@ -721,8 +726,8 @@ msgstr "SSID"
 msgid "Security"
 msgstr "უსაფრთხოება"
 
-#. TRANSLATORS: table header for a DASD devices table
 #. TRANSLATORS: table header for a zFCP devices table.
+#. TRANSLATORS: table header for a DASD devices table
 #. TRANSLATORS: table header for an iSCSI targets table
 #: src/components/network/ConnectionDetails.tsx:108
 #: src/components/network/ConnectionDetails.tsx:224
@@ -799,9 +804,11 @@ msgstr "ხიდის დეტალები"
 msgid "STP"
 msgstr "STP"
 
+#. TRANSLATORS: authentication mode option
 #. TRANSLATORS: option label for disabling bridge STP.
 #: src/components/network/ConnectionDetails.tsx:169
 #: src/components/network/connection-form/BridgeFields.tsx:54
+#: src/components/users/authentication-form/RootAuthFields.tsx:70
 msgid "Disabled"
 msgstr "გამორთულია"
 
@@ -945,8 +952,8 @@ msgstr "(მიბმა სახელით)"
 msgid "(bound by MAC)"
 msgstr "(მიბმა MAC-ით)"
 
-#. TRANSLATORS: input field for the iSCSI initiator name
 #. TRANSLATORS: table header for an iSCSI targets table
+#. TRANSLATORS: input field for the iSCSI initiator name
 #. TRANSLATORS: label for the network connection profile name field.
 #. TRANSLATORS: label for hostname value display
 #. TRANSLATORS: label for hostname input
@@ -979,8 +986,8 @@ msgstr "ტიპი"
 msgid "State"
 msgstr "მდგომარეობა"
 
-#. TRANSLATORS: table header for a DASD devices table
 #. TRANSLATORS: table header for a zFCP devices table.
+#. TRANSLATORS: table header for a DASD devices table
 #. TRANSLATORS: label for the device binding dropdown.
 #: src/components/network/ConnectionsTable.tsx:173
 #: src/components/network/connection-form/BindingModeSelector.tsx:68
@@ -1256,7 +1263,6 @@ msgstr "კავშირის მოწყობილობის იდე�
 #. TRANSLATORS: label for the network interface name field.
 #. TRANSLATORS: accessible label for the device selector. MAC address refers
 #. to the hardware identifier of the network interface.
-#. TRANSLATORS: label for the network interface name field.
 #: src/components/network/connection-form/BondFields.tsx:65
 #: src/components/network/connection-form/BondFields.tsx:70
 #: src/components/network/connection-form/BridgeFields.tsx:85
@@ -1275,8 +1281,8 @@ msgstr "მაგ: bond0"
 msgid "E.g., downdelay=0, primary=eth1, miimon=100, lacp_rate=fast"
 msgstr "მაგ: downdelay=0, primary=eth1, miimon=100, lacp_rate=fast"
 
-#. TRANSLATORS: helper text for the bond ports field. %s is a list of available devices.
 #. TRANSLATORS: helper text for the bridge ports field. %s is a list of available devices.
+#. TRANSLATORS: helper text for the bond ports field. %s is a list of available devices.
 #: src/components/network/connection-form/BondFields.tsx:114
 #: src/components/network/connection-form/BridgeFields.tsx:109
 #, javascript-format
@@ -1332,6 +1338,7 @@ msgstr ""
 #: src/components/network/connection-form/IpFields.tsx:153
 #: src/components/product/registration-form/Form.tsx:184
 #: src/components/product/registration-form/Form.tsx:199
+#: src/components/users/authentication-form/FirstUserFields.tsx:149
 msgid "(optional)"
 msgstr "(არასავალდებულო)"
 
@@ -1444,8 +1451,8 @@ msgid "Configuration from the network plus static addresses and gateway"
 msgstr ""
 "კონფიგურაცია ქსელიდან, პლუს სტატიკური მისამართები და ნაგულისხმევი რაუტერი"
 
-#. TRANSLATORS: option label for manual IP configuration
 #. TRANSLATORS: Network summary title when using manual/static IP configuration
+#. TRANSLATORS: option label for manual IP configuration
 #: src/components/network/connection-form/IpFields.tsx:60
 #: src/components/overview/NetworkSummary.tsx:128
 #: src/components/storage/SizeModeSelect.tsx:191
@@ -1632,12 +1639,12 @@ msgstr ""
 msgid "Installation settings"
 msgstr "დაყენების მორგება"
 
+#. TRANSLATORS: %1$s is a description of the device (eg. "Encrypted XFS RAID") and %2$s is
+#. the RAID level (eg. "RAID0")
 #. TRANSLATORS: %1$s is an already formatted mount path (eg. "/"),
 #. %2$s is a size description (eg. at least 10 GiB)
 #. TRANSLATORS: %1$s is a filesystem type description (eg. "Btrfs with snapshots"),
 #. %2$s is a description of the size or the size limits (eg. "at least 10 GiB")
-#. TRANSLATORS: %1$s is a description of the device (eg. "Encrypted XFS RAID") and %2$s is
-#. the RAID level (eg. "RAID0")
 #. TRANSLATORS: Summary of the selected language and territory.
 #. %1$s is the language name (e.g. "Spanish").
 #. %2$s is the territory/region name (e.g. "Spain").
@@ -1996,43 +2003,47 @@ msgstr ""
 msgid "System"
 msgstr "სისტემა"
 
-#: src/components/overview/UsersSummary.tsx:58
+#. TRANSLATORS: %s is either "root" or a username like 'jdoe'
+#: src/components/overview/UsersSummary.tsx:63
+#, javascript-format
+msgid "Public key provided for %s"
+msgstr ""
+
+#. TRANSLATORS: %s is either "root" or a username like 'jdoe'
+#: src/components/overview/UsersSummary.tsx:74
+#, fuzzy, javascript-format
+msgid "Using %s account"
+msgstr "მომხმარებლის ანგარიშის ჩასწორება"
+
+#. TRANSLATORS: shown when no user accounts are configured yet
+#: src/components/overview/UsersSummary.tsx:87
 #: src/components/storage/UnusedMenu.tsx:33
 msgid "Not configured yet"
 msgstr "ჯერ მორგებული არაა"
 
-#: src/components/overview/UsersSummary.tsx:59
-msgid "Configured for the root user"
-msgstr "მორგებულია მომხმარებლისთვის root"
+#: src/components/overview/UsersSummary.tsx:96
+#, fuzzy, javascript-format
+msgid "Using %s and %s accounts"
+msgstr "გამოიყენება %s კლავიატურის განლაგება"
 
-#. TRANSLATORS: %s is a username like 'jdoe'
-#: src/components/overview/UsersSummary.tsx:64
-#, javascript-format
-msgid "Configured for root and user %s"
-msgstr "მორგებულია მომხმარებლებისთვის root და %s"
+#. TRANSLATORS: both user accounts have SSH public keys configured
+#: src/components/overview/UsersSummary.tsx:126
+msgid "Public key provided for both"
+msgstr ""
 
-#. TRANSLATORS: %s is a username like 'jdoe'
-#: src/components/overview/UsersSummary.tsx:66
-#, javascript-format
-msgid "Configured for user %s"
-msgstr "მორგებულია მომხმარებლისთვის %s"
+#. TRANSLATORS: SSH public key is configured for a single account
+#: src/components/overview/UsersSummary.tsx:129
+msgid "Public key provided"
+msgstr ""
 
-#: src/components/overview/UsersSummary.tsx:86
-msgid "Root login with password and SSH key"
-msgstr "Root-ის შესვლა პაროლით და SSH გასაღებით"
+#. TRANSLATORS: warning when root account has no SSH public key configured
+#: src/components/overview/UsersSummary.tsx:139
+msgid "No public key provided, SSH login might be restricted"
+msgstr ""
 
-#: src/components/overview/UsersSummary.tsx:87
-msgid "Root login with password"
-msgstr "Root-ით შესვლა პაროლით"
-
-#: src/components/overview/UsersSummary.tsx:88
-msgid "Root login with SSH key"
-msgstr "Root-ის შესვლა SSH გასაღებით"
-
-#: src/components/overview/UsersSummary.tsx:104
-#: src/components/users/FirstUserForm.tsx:188
-#: src/components/users/RootUserForm.tsx:137
-#: src/components/users/UsersPage.tsx:36 src/routes/users.tsx:34
+#. TRANSLATORS: section title for user authentication configuration
+#: src/components/overview/UsersSummary.tsx:156
+#: src/components/users/UsersPage.tsx:35 src/routes/users.tsx:32
 msgid "Authentication"
 msgstr "ავთენტიკაცია"
 
@@ -3237,7 +3248,6 @@ msgstr ""
 "გაშვებისას."
 
 #: src/components/storage/EncryptionSettingsPage.tsx:99
-#: src/components/users/RootUserForm.tsx:105
 msgid "Password is empty."
 msgstr "პაროლი ცარიელია."
 
@@ -3290,7 +3300,6 @@ msgstr "ფილური სისტემის ან მიმაგრე
 #: src/components/storage/FilesystemMenu.tsx:109
 #: src/components/storage/PartitionsSection.tsx:186
 #: src/components/storage/VolumeGroupEditor.tsx:179
-#: src/components/users/FirstUser.tsx:63 src/components/users/RootUser.tsx:57
 msgid "Edit"
 msgstr "ჩასწორება"
 
@@ -3351,9 +3360,9 @@ msgstr "არსებული მონაცემების განა�
 msgid "Format device as"
 msgstr "მოწყობილობების დაფორმატება, როგორც"
 
-#. TRANSLATORS: %s is the name of a logical volume, like /dev/system/home
 #. TRANSLATORS: %s is the name of a partition, like /dev/vda2
 #. TRANSLATORS: %s is the name of a device, like vda
+#. TRANSLATORS: %s is the name of a logical volume, like /dev/system/home
 #: src/components/storage/FormattableDevicePage.tsx:310
 #: src/components/storage/LogicalVolumePage.tsx:661
 #: src/components/storage/PartitionPage.tsx:596
@@ -4467,8 +4476,8 @@ msgstr ""
 "მოწყობილობები მონიშნული არაა. ქმედებებისთვის მონიშნეთ ერთი, ან მეტი "
 "მოწყობილობა."
 
-#. TRANSLATORS: table header for a DASD devices table
 #. TRANSLATORS: table header for a zFCP devices table.
+#. TRANSLATORS: table header for a DASD devices table
 #: src/components/storage/dasd/DASDTable.tsx:530
 #: src/components/storage/zfcp/ZFCPDevicesTable.tsx:173
 #: src/components/storage/zfcp/ZFCPDevicesTable.tsx:317
@@ -4984,11 +4993,11 @@ msgid "Current partitions will be kept"
 msgstr "არსებული დანაყოფები შენარჩუნდება"
 
 #. TRANSLATORS: this simply concatenates the two sentences that describe what is going to happen
-#. with partitions. The first %s corresponds to deleted partitions and the second one to resized
-#. ones.
-#. TRANSLATORS: this simply concatenates the two sentences that describe what is going to happen
 #. with logical volumes. The first %s corresponds to deleted logical volumes and the second one
 #. to resized ones.
+#. TRANSLATORS: this simply concatenates the two sentences that describe what is going to happen
+#. with partitions. The first %s corresponds to deleted partitions and the second one to resized
+#. ones.
 #: src/components/storage/utils/drive.tsx:106
 #: src/components/storage/utils/volume-group.tsx:96
 #, javascript-format
@@ -5330,17 +5339,17 @@ msgid "zFCP controllers"
 msgstr "zFCP კონტროლერები"
 
 #. TRANSLATORS: error message when system settings update request fails
-#: src/components/system/system-form/Form.tsx:173
+#: src/components/system/system-form/Form.tsx:174
 msgid "System settings could not be updated"
 msgstr "სისტემის პარამეტრების განახლება შეუძლებელია"
 
 #. TRANSLATORS: success message shown after system settings are updated
-#: src/components/system/system-form/Form.tsx:195
+#: src/components/system/system-form/Form.tsx:196
 msgid "System settings successfully updated"
 msgstr "სისტემის პარამეტრები წარმატებით განახლდა"
 
 #. TRANSLATORS: info message shown when submitting the form with no changes
-#: src/components/system/system-form/Form.tsx:197
+#: src/components/system/system-form/Form.tsx:198
 msgid "No changes detected. System settings are already up to date."
 msgstr ""
 
@@ -5445,120 +5454,163 @@ msgstr "საჭიროა, სულ ცოტა, ერთი NTP სე�
 msgid "Some NTP server addresses are invalid"
 msgstr "ზოგიერთი NTP სერვერის მისამართი არასწორია"
 
-#: src/components/users/FirstUser.tsx:57
-msgid "Define a user now"
-msgstr "მომხარებლის აღწერა"
-
-#: src/components/users/FirstUser.tsx:65
-msgid "Discard"
-msgstr "მოცილება"
-
-#: src/components/users/FirstUser.tsx:77
-msgid "No user defined yet."
-msgstr "მომხმარებელი ჯერ აღწერილი არაა."
-
-#: src/components/users/FirstUser.tsx:86
-#: src/components/users/FirstUserForm.tsx:201
-msgid "Full name"
-msgstr "სრული სახელი"
-
-#: src/components/users/FirstUser.tsx:92
-#: src/components/users/FirstUserForm.tsx:210
-msgid "Username"
-msgstr "მომხმარებლის სახელი"
-
-#: src/components/users/FirstUser.tsx:108
-msgid "First user"
-msgstr "პირველი მომხმარებელი"
-
-#: src/components/users/FirstUser.tsx:110
-msgid ""
-"Define the first user with admin (sudo) privileges for system management."
-msgstr ""
-"აღწერეთ პირველი მომხმარებელი ადმინისტრატორის (sudo) პრივილეგიებით სისტემის "
-"მართვისთვის."
-
-#: src/components/users/FirstUserForm.tsx:58
-msgid "Username suggestion dropdown"
-msgstr "მომხმარებლის სახელის მინიშნების ჩამოსაშლელი მენიუ"
-
-#. TRANSLATORS: dropdown username suggestions
-#: src/components/users/FirstUserForm.tsx:73
-msgid "Use suggested username"
-msgstr "მინიშნებული მომხმარებლის სახელის გამოყენება"
-
-#: src/components/users/FirstUserForm.tsx:125
-msgid "All fields are required"
-msgstr "ყველა ველი აუცილებელია"
-
-#: src/components/users/FirstUserForm.tsx:189
-msgid "Create user"
-msgstr "მომხმარებლის შექმნა"
-
-#: src/components/users/FirstUserForm.tsx:189
-msgid "Edit user"
-msgstr "მომხმარებლის ჩასწორება"
-
-#: src/components/users/FirstUserForm.tsx:231
-#: src/components/users/RootUserForm.tsx:159
-msgid "Using a hashed password."
-msgstr "დაჰეშილი პაროლის გამოყენება."
-
 #: src/components/users/PasswordCheck.tsx:40
 msgid "The password is weak"
 msgstr "პაროლი სუსტია"
 
-#: src/components/users/RootUser.tsx:53
-msgid "Root user"
-msgstr "Root მომხმარებელი"
+#. TRANSLATORS: fieldset legend for first user configuration
+#: src/components/users/authentication-form/FirstUserFields.tsx:73
+#, fuzzy
+msgid "Administrator account"
+msgstr "მომხმარებლის ანგარიშის ჩასწორება"
 
-#: src/components/users/RootUser.tsx:55
+#: src/components/users/authentication-form/FirstUserFields.tsx:81
 msgid ""
-"Alongside defining the first user, authentication methods for the root user "
-"can be configured."
+"Sets up a main login account. It can run administrator commands using [sudo] "
+"but is separate from the root account."
 msgstr ""
 
-#: src/components/users/RootUser.tsx:66
-msgid "Defined (hidden)"
-msgstr "აღწერილი (დამალული)"
+#. TRANSLATORS: checkbox label to enable first user definition
+#: src/components/users/authentication-form/FirstUserFields.tsx:97
+#, fuzzy
+msgid "Define an administrator user"
+msgstr "აღერეთ თქვენი ზომა"
 
-#: src/components/users/RootUser.tsx:66 src/components/users/RootUser.tsx:72
-msgid "Not defined"
-msgstr "აღწერილი არაა"
+#: src/components/users/authentication-form/FirstUserFields.tsx:115
+msgid "Full name"
+msgstr "სრული სახელი"
 
-#: src/components/users/RootUser.tsx:70
-msgid "Public SSH Key"
+#: src/components/users/authentication-form/FirstUserFields.tsx:123
+msgid "Username"
+msgstr "მომხმარებლის სახელი"
+
+#: src/components/users/authentication-form/FirstUserFields.tsx:134
+#: src/components/users/authentication-form/RootAuthFields.tsx:143
+msgid "Using a hashed password."
+msgstr "დაჰეშილი პაროლის გამოყენება."
+
+#. TRANSLATORS: label for root SSH public keys input field
+#: src/components/users/authentication-form/FirstUserFields.tsx:149
+#: src/components/users/authentication-form/RootAuthFields.tsx:161
+#, fuzzy
+msgid "SSH Public Keys"
+msgstr "Root მომხმარებლის SSH საჯარო გასაღები"
+
+#: src/components/users/authentication-form/FirstUserFields.tsx:154
+#: src/components/users/authentication-form/RootAuthFields.tsx:166
+#, fuzzy
+msgid "Invalid SSH Key"
 msgstr "საჯარო SSH გასაღები"
 
-#: src/components/users/RootUserForm.tsx:64
-msgid "Upload, paste, or drop an SSH public key"
+#: src/components/users/authentication-form/FirstUserFields.tsx:157
+#: src/components/users/authentication-form/RootAuthFields.tsx:169
+msgid "Paste or enter one or more public SSH keys (e.g. ssh-ed25519 AAAA...)"
+msgstr ""
+
+#: src/components/users/authentication-form/Form.tsx:262
+#, fuzzy
+msgid "Changes could not be applied"
+msgstr "ჰოსტის სახელის შენახვა შეუძლებელია"
+
+#. TRANSLATORS: description for no authentication mode
+#: src/components/users/authentication-form/RootAuthFields.tsx:72
+#, fuzzy
+msgid "Root login is off"
+msgstr "Root-ით შესვლა პაროლით"
+
+#. TRANSLATORS: description for password authentication mode
+#: src/components/users/authentication-form/RootAuthFields.tsx:79
+#, fuzzy
+msgid "Log in using a password"
+msgstr "დაჰეშილი პაროლის გამოყენება."
+
+#. TRANSLATORS: authentication mode option
+#: src/components/users/authentication-form/RootAuthFields.tsx:84
+#, fuzzy
+msgid "SSH Public Key"
+msgstr "Root მომხმარებლის SSH საჯარო გასაღები"
+
+#. TRANSLATORS: description for SSH public key authentication mode
+#: src/components/users/authentication-form/RootAuthFields.tsx:86
+#, fuzzy
+msgid "Log in using a trusted SSH public key"
+msgstr "Root მომხმარებლის SSH საჯარო გასაღები"
+
+#. TRANSLATORS: authentication mode option
+#: src/components/users/authentication-form/RootAuthFields.tsx:91
+#, fuzzy
+msgid "Password and SSH Public Key"
 msgstr "ატვირთეთ, ჩასვით, ან დააგდეთ ზედ SSH-ის საჯარო გასაღები"
 
-#. TRANSLATORS: push button label
-#: src/components/users/RootUserForm.tsx:66
-msgid "Upload"
-msgstr "ატვირთვა"
+#. TRANSLATORS: description for both password and SSH key authentication
+#: src/components/users/authentication-form/RootAuthFields.tsx:93
+msgid "Sets up both and use either to log in"
+msgstr ""
 
-#. TRANSLATORS: push button label, clears the related input field
-#: src/components/users/RootUserForm.tsx:68
-msgid "Clear"
-msgstr "გაწმენდა"
+#. TRANSLATORS: fieldset legend for root authentication configuration
+#: src/components/users/authentication-form/RootAuthFields.tsx:112
+#, fuzzy
+msgid "Root account"
+msgstr "მომხმარებლის ანგარიშის ჩასწორება"
 
-#: src/components/users/RootUserForm.tsx:110
-msgid "Public SSH Key is empty."
-msgstr "საჯარო SSH გასაღები ცარიელია."
+#. TRANSLATORS: explanation of how to enable the root account
+#: src/components/users/authentication-form/RootAuthFields.tsx:116
+#, fuzzy
+msgid "Choose whether to enable the root account."
+msgstr "აირჩიეთ, რა ვუყო არსებულ შემცველობას"
 
-#: src/components/users/RootUserForm.tsx:137
-msgid "root"
-msgstr "root"
+#. TRANSLATORS: label for the root authentication mode selector
+#: src/components/users/authentication-form/RootAuthFields.tsx:123
+#, fuzzy
+msgid "Root login method"
+msgstr "Root-ით შესვლა პაროლით"
 
-#: src/components/users/RootUserForm.tsx:150
-msgid "Use password"
-msgstr "პაროლის გამოყენება"
+#: src/components/users/authentication-form/fields.ts:138
+#, fuzzy
+msgid "Full name is required"
+msgstr "სახელი აუცილებელია"
 
-#: src/components/users/RootUserForm.tsx:181
-msgid "Use public SSH Key"
-msgstr "საჯარო SSH გასაღების გამოყენება"
+#: src/components/users/authentication-form/fields.ts:139
+#, fuzzy
+msgid "Username is required"
+msgstr "სახელი აუცილებელია"
+
+#: src/components/users/authentication-form/fields.ts:141
+#: src/components/users/authentication-form/fields.ts:172
+#, fuzzy
+msgid "Password is required"
+msgstr "პაროლი აუცილებელია"
+
+#: src/components/users/authentication-form/fields.ts:146
+#: src/components/users/authentication-form/fields.ts:177
+#, fuzzy
+msgid "Password confirmation is required"
+msgstr "პაროლის დადასტურება"
+
+#: src/components/users/authentication-form/fields.ts:151
+#: src/components/users/authentication-form/fields.ts:184
+#, fuzzy
+msgid "Some SSH public keys are invalid"
+msgstr "ზოგიერთი DNS-ში ძებნის დომენი არასწორია"
+
+#: src/components/users/authentication-form/fields.ts:183
+#, fuzzy
+msgid "At least one SSH public key is required"
+msgstr "საჭიროა, სულ ცოტა, ერთი DNS სერვერი"
+
+#: src/hooks/use-form-submit.tsx:160
+#, fuzzy
+msgid "Changes successfully applied"
+msgstr "ჰოსტის სახელი წარმატებით განახლდა"
+
+#: src/hooks/use-form-submit.tsx:161
+msgid "No changes to apply"
+msgstr ""
+
+#: src/hooks/use-form-submit.tsx:162
+#, fuzzy
+msgid "Fix the errors below and try again"
+msgstr "შეცვალეთ ფილტრები და თავიდან სცადეთ."
 
 #: src/routes/storage.tsx:120
 msgid "ZFCP"
@@ -5588,6 +5640,83 @@ msgstr "მარყუჟი"
 msgid "VLAN"
 msgstr "VLAN"
 
+#~ msgid "Configured for the root user"
+#~ msgstr "მორგებულია მომხმარებლისთვის root"
+
+#, javascript-format
+#~ msgid "Configured for root and user %s"
+#~ msgstr "მორგებულია მომხმარებლებისთვის root და %s"
+
+#, javascript-format
+#~ msgid "Configured for user %s"
+#~ msgstr "მორგებულია მომხმარებლისთვის %s"
+
+#~ msgid "Root login with password and SSH key"
+#~ msgstr "Root-ის შესვლა პაროლით და SSH გასაღებით"
+
+#~ msgid "Root login with SSH key"
+#~ msgstr "Root-ის შესვლა SSH გასაღებით"
+
+#~ msgid "Define a user now"
+#~ msgstr "მომხარებლის აღწერა"
+
+#~ msgid "Discard"
+#~ msgstr "მოცილება"
+
+#~ msgid "No user defined yet."
+#~ msgstr "მომხმარებელი ჯერ აღწერილი არაა."
+
+#~ msgid "First user"
+#~ msgstr "პირველი მომხმარებელი"
+
+#~ msgid ""
+#~ "Define the first user with admin (sudo) privileges for system management."
+#~ msgstr ""
+#~ "აღწერეთ პირველი მომხმარებელი ადმინისტრატორის (sudo) პრივილეგიებით "
+#~ "სისტემის მართვისთვის."
+
+#~ msgid "Username suggestion dropdown"
+#~ msgstr "მომხმარებლის სახელის მინიშნების ჩამოსაშლელი მენიუ"
+
+#~ msgid "Use suggested username"
+#~ msgstr "მინიშნებული მომხმარებლის სახელის გამოყენება"
+
+#~ msgid "All fields are required"
+#~ msgstr "ყველა ველი აუცილებელია"
+
+#~ msgid "Create user"
+#~ msgstr "მომხმარებლის შექმნა"
+
+#~ msgid "Edit user"
+#~ msgstr "მომხმარებლის ჩასწორება"
+
+#~ msgid "Root user"
+#~ msgstr "Root მომხმარებელი"
+
+#~ msgid "Defined (hidden)"
+#~ msgstr "აღწერილი (დამალული)"
+
+#~ msgid "Not defined"
+#~ msgstr "აღწერილი არაა"
+
+#~ msgid "Upload"
+#~ msgstr "ატვირთვა"
+
+#~ msgid "Clear"
+#~ msgstr "გაწმენდა"
+
+#~ msgid "Public SSH Key is empty."
+#~ msgstr "საჯარო SSH გასაღები ცარიელია."
+
+#~ msgid "root"
+#~ msgstr "root"
+
+#~ msgid "Use password"
+#~ msgstr "პაროლის გამოყენება"
+
+#~ msgid "Use public SSH Key"
+#~ msgstr "საჯარო SSH გასაღების გამოყენება"
+
 #~ msgid ""
 #~ "Before starting the installation, you need to address the following "
 #~ "problems:"
@@ -5610,12 +5739,6 @@ msgstr "VLAN"
 
 #~ msgid "Hostname could not be updated"
 #~ msgstr "ჰოსტის სახელის განახლება შეუძლებელია"
-
-#~ msgid "The hostname could not be saved"
-#~ msgstr "ჰოსტის სახელის შენახვა შეუძლებელია"
-
-#~ msgid "Hostname successfully updated"
-#~ msgstr "ჰოსტის სახელი წარმატებით განახლდა"
 
 #~ msgid "Value"
 #~ msgstr "მნიშვნელობა"
@@ -6192,9 +6315,6 @@ msgstr "VLAN"
 #~ msgid "This disk will contain any partition needed for booting"
 #~ msgstr "ეს დისკი შეიცავს ნებისმიერ დანაყოფს, რომელიც საჭიროა ჩასატვირთად"
 
-#~ msgid "Choose what to with current content"
-#~ msgstr "აირჩიეთ, რა ვუყო არსებულ შემცველობას"
-
 #~ msgid "Content will be kept"
 #~ msgstr "შემცველობა შენარჩუნებული იქნება"
 
@@ -6476,9 +6596,6 @@ msgstr "VLAN"
 #~ msgid "Setup root user authentication"
 #~ msgstr "Root-ით ავთენტიკაციის მორგება"
 
-#~ msgid "Root SSH public key"
-#~ msgstr "Root მომხმარებლის SSH საჯარო გასაღები"
-
 #~ msgid "Waiting"
 #~ msgstr "მოლოდინი"
 
@@ -6593,9 +6710,6 @@ msgstr "VLAN"
 
 #~ msgid "Storage zFCP"
 #~ msgstr "საცავი zFCP"
-
-#~ msgid "Edit user account"
-#~ msgstr "მომხმარებლის ანგარიშის ჩასწორება"
 
 #~ msgid "D-Bus Error"
 #~ msgstr "D-Bus-ის შეცდომა"
