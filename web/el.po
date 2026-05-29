@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-28 18:33+0000\n"
+"POT-Creation-Date: 2026-05-29 15:00+0000\n"
 "PO-Revision-Date: 2026-02-23 21:04+0000\n"
 "Last-Translator: Efstathios Iosifidis <eiosifidis@yandex.com>\n"
 "Language-Team: Greek <https://l10n.opensuse.org/projects/agama/agama-web/el/"
@@ -426,7 +426,7 @@ msgstr "Αποθηκευτικός χώρος"
 #: src/components/network/NetworkPage.tsx:43
 #: src/components/network/WifiConnectionForm.tsx:142
 #: src/components/network/WifiConnectionForm.tsx:198
-#: src/components/network/connection-form/Form.tsx:583
+#: src/components/network/connection-form/Form.tsx:618
 #: src/components/overview/NetworkSummary.tsx:149 src/routes/network.tsx:35
 msgid "Network"
 msgstr "Δίκτυο"
@@ -769,7 +769,7 @@ msgstr "Ασφάλεια"
 #. TRANSLATORS: table header for a zFCP devices table.
 #. TRANSLATORS: table header for an iSCSI targets table
 #: src/components/network/ConnectionDetails.tsx:108
-#: src/components/network/ConnectionDetails.tsx:224
+#: src/components/network/ConnectionDetails.tsx:249
 #: src/components/storage/dasd/DASDTable.tsx:312
 #: src/components/storage/dasd/DASDTable.tsx:536
 #: src/components/storage/iscsi/StatusFilter.tsx:77
@@ -808,17 +808,19 @@ msgstr "Αλλαγή λειτουργίας"
 #: src/components/network/ConnectionDetails.tsx:142
 #: src/components/network/ConnectionDetails.tsx:150
 #: src/components/network/ConnectionDetails.tsx:199
-#: src/components/network/ConnectionDetails.tsx:236
-#: src/components/network/ConnectionDetails.tsx:251
+#: src/components/network/ConnectionDetails.tsx:222
+#: src/components/network/ConnectionDetails.tsx:228
 #: src/components/network/ConnectionDetails.tsx:261
-#: src/components/network/ConnectionDetails.tsx:271
-#: src/components/network/ConnectionDetails.tsx:281
-#: src/components/network/ConnectionDetails.tsx:358
-#: src/components/network/ConnectionDetails.tsx:361
-#: src/components/network/ConnectionDetails.tsx:371
+#: src/components/network/ConnectionDetails.tsx:276
+#: src/components/network/ConnectionDetails.tsx:286
+#: src/components/network/ConnectionDetails.tsx:296
+#: src/components/network/ConnectionDetails.tsx:306
 #: src/components/network/ConnectionDetails.tsx:383
-#: src/components/network/ConnectionDetails.tsx:395
-#: src/components/network/ConnectionDetails.tsx:405
+#: src/components/network/ConnectionDetails.tsx:386
+#: src/components/network/ConnectionDetails.tsx:396
+#: src/components/network/ConnectionDetails.tsx:408
+#: src/components/network/ConnectionDetails.tsx:420
+#: src/components/network/ConnectionDetails.tsx:430
 msgid "None set"
 msgstr "Δεν ορίστηκε"
 
@@ -890,86 +892,112 @@ msgstr ""
 msgid "Bridge ports"
 msgstr ""
 
-#: src/components/network/ConnectionDetails.tsx:215
+#: src/components/network/ConnectionDetails.tsx:213 src/utils/network.ts:89
+msgid "VLAN"
+msgstr ""
+
+#: src/components/network/ConnectionDetails.tsx:214
+#, fuzzy
+msgid "VLAN details"
+msgstr "Λεπτομέρειες δικτύου"
+
+#. TRANSLATORS: label for the VLAN ID field.
+#: src/components/network/ConnectionDetails.tsx:216
+#: src/components/network/connection-form/VlanFields.tsx:100
+msgid "VLAN ID"
+msgstr ""
+
+#. TRANSLATORS: label for the VLAN parent device field.
+#: src/components/network/ConnectionDetails.tsx:220
+#: src/components/network/connection-form/VlanFields.tsx:116
+#, fuzzy
+msgid "Parent device"
+msgstr "Περισσότερες συσκευές"
+
+#: src/components/network/ConnectionDetails.tsx:226
+msgid "Protocol"
+msgstr ""
+
+#: src/components/network/ConnectionDetails.tsx:240
 msgid "Device details"
 msgstr "Λεπτομέρειες συσκευής"
 
 #. TRANSLATORS: table header for an iSCSI targets table
-#: src/components/network/ConnectionDetails.tsx:220
+#: src/components/network/ConnectionDetails.tsx:245
 #: src/components/storage/iscsi/TargetsTable.tsx:476
 msgid "Interface"
 msgstr "Διεπαφή"
 
-#: src/components/network/ConnectionDetails.tsx:228
+#: src/components/network/ConnectionDetails.tsx:253
 msgid "MAC"
 msgstr "MAC"
 
-#: src/components/network/ConnectionDetails.tsx:232
-#: src/components/network/ConnectionDetails.tsx:367
+#: src/components/network/ConnectionDetails.tsx:257
+#: src/components/network/ConnectionDetails.tsx:392
 msgid "Gateway"
 msgstr "Πύλη"
 
-#: src/components/network/ConnectionDetails.tsx:247
-#: src/components/network/ConnectionDetails.tsx:379
+#: src/components/network/ConnectionDetails.tsx:272
+#: src/components/network/ConnectionDetails.tsx:404
 #: src/components/network/ConnectionsTable.tsx:196
 msgid "IP Addresses"
 msgstr "Διευθύνσεις IP"
 
-#: src/components/network/ConnectionDetails.tsx:257
-#: src/components/network/ConnectionDetails.tsx:391
+#: src/components/network/ConnectionDetails.tsx:282
+#: src/components/network/ConnectionDetails.tsx:416
 msgid "DNS"
 msgstr "DNS"
 
 #. TRANSLATORS: label for the DNS search domains field.
-#: src/components/network/ConnectionDetails.tsx:267
-#: src/components/network/ConnectionDetails.tsx:401
-#: src/components/network/connection-form/Form.tsx:485
+#: src/components/network/ConnectionDetails.tsx:292
+#: src/components/network/ConnectionDetails.tsx:426
+#: src/components/network/connection-form/Form.tsx:520
 #, fuzzy
 msgid "DNS search domains"
 msgstr "Προσθήκη άλλης διεύθυνσης"
 
-#: src/components/network/ConnectionDetails.tsx:277
+#: src/components/network/ConnectionDetails.tsx:302
 msgid "Routes"
 msgstr "Διαδρομές (Routes)"
 
-#: src/components/network/ConnectionDetails.tsx:312
+#: src/components/network/ConnectionDetails.tsx:337
 msgid "Connected device"
 msgstr "Συνδεδεμένη συσκευή"
 
-#: src/components/network/ConnectionDetails.tsx:312
+#: src/components/network/ConnectionDetails.tsx:337
 msgid "Connected devices"
 msgstr "Συνδεδεμένες συσκευές"
 
-#: src/components/network/ConnectionDetails.tsx:315
+#: src/components/network/ConnectionDetails.tsx:340
 msgid "No device is currently using this connection."
 msgstr "Καμία συσκευή δεν χρησιμοποιεί αυτή τη σύνδεση αυτή τη στιγμή."
 
-#: src/components/network/ConnectionDetails.tsx:321
+#: src/components/network/ConnectionDetails.tsx:346
 msgid "Connected devices tabs"
 msgstr "Καρτέλες συνδεδεμένων συσκευών"
 
-#: src/components/network/ConnectionDetails.tsx:343
+#: src/components/network/ConnectionDetails.tsx:368
 #: src/components/storage/ProposalPage.tsx:204
 msgid "Settings"
 msgstr "Ρυθμίσεις"
 
-#: src/components/network/ConnectionDetails.tsx:347
+#: src/components/network/ConnectionDetails.tsx:372
 msgid "Edit connection settings"
 msgstr "Επεξεργασία ρυθμίσεων σύνδεσης"
 
 #. TRANSLATORS: label for NTP mode selector
 #. TRANSLATORS: label for hostname mode selector
-#: src/components/network/ConnectionDetails.tsx:354
+#: src/components/network/ConnectionDetails.tsx:379
 #: src/components/system/system-form/HostnameFields.tsx:109
 #: src/components/system/system-form/NtpFields.tsx:57
 msgid "Mode"
 msgstr "Λειτουργία"
 
-#: src/components/network/ConnectionDetails.tsx:358
+#: src/components/network/ConnectionDetails.tsx:383
 msgid "IPv4"
 msgstr "IPv4"
 
-#: src/components/network/ConnectionDetails.tsx:361
+#: src/components/network/ConnectionDetails.tsx:386
 msgid "IPv6"
 msgstr "IPv6"
 
@@ -985,7 +1013,7 @@ msgstr "Η σύνδεση δεν βρέθηκε ή χάθηκε"
 
 #. TRANSLATORS: link text on the connection not found page.
 #: src/components/network/ConnectionPage.tsx:54
-#: src/components/network/connection-form/Form.tsx:525
+#: src/components/network/connection-form/Form.tsx:560
 msgid "Go to network page"
 msgstr "Μετάβαση στη σελίδα δικτύου"
 
@@ -1004,7 +1032,7 @@ msgstr ""
 #. TRANSLATORS: label for hostname input
 #: src/components/network/ConnectionsTable.tsx:158
 #: src/components/network/ConnectionsTable.tsx:280
-#: src/components/network/connection-form/Form.tsx:374
+#: src/components/network/connection-form/Form.tsx:403
 #: src/components/storage/DeviceSelectorPage.tsx:55
 #: src/components/storage/LvmPage.tsx:182
 #: src/components/storage/iscsi/InitiatorFormPage.tsx:66
@@ -1020,14 +1048,14 @@ msgstr "Όνομα"
 #. TRANSLATORS: checkbox label for custom DNS server configuration.
 #: src/components/network/ConnectionsTable.tsx:163
 #: src/components/network/ConnectionsTable.tsx:288
-#: src/components/network/connection-form/Form.tsx:359
+#: src/components/network/connection-form/Form.tsx:388
 #: src/components/storage/DeviceSelectorPage.tsx:54
 #: src/components/storage/dasd/DASDTable.tsx:550
 msgid "Type"
 msgstr "Τύπος"
 
 #: src/components/network/ConnectionsTable.tsx:168
-#: src/components/network/ConnectionsTable.tsx:302
+#: src/components/network/ConnectionsTable.tsx:303
 #, fuzzy
 msgid "State"
 msgstr "Κατάσταση"
@@ -1062,7 +1090,7 @@ msgid "%d connections available"
 msgstr "%d διαθέσιμη λειτουργία"
 
 #: src/components/network/ConnectionsTable.tsx:291
-#: src/components/network/ConnectionsTable.tsx:305
+#: src/components/network/ConnectionsTable.tsx:306
 #: src/components/storage/dasd/DASDTable.tsx:315
 #: src/components/storage/dasd/DASDTable.tsx:327
 #: src/components/storage/iscsi/StatusFilter.tsx:58
@@ -1072,8 +1100,8 @@ msgstr "%d διαθέσιμη λειτουργία"
 msgid "All"
 msgstr "Όλα"
 
-#: src/components/network/ConnectionsTable.tsx:325
-#: src/components/network/ConnectionsTable.tsx:397
+#: src/components/network/ConnectionsTable.tsx:326
+#: src/components/network/ConnectionsTable.tsx:398
 #: src/components/storage/dasd/DASDTable.tsx:357
 #: src/components/storage/dasd/DASDTable.tsx:693
 #: src/components/storage/iscsi/TargetsTable.tsx:363
@@ -1082,7 +1110,7 @@ msgstr "Όλα"
 msgid "Clear all filters"
 msgstr "Εκκαθάριση όλων των φίλτρων"
 
-#: src/components/network/ConnectionsTable.tsx:352
+#: src/components/network/ConnectionsTable.tsx:353
 #: src/components/storage/ProposalResultTable.tsx:136
 #: src/components/storage/SpaceActionsTable.tsx:227
 msgid "Details"
@@ -1092,38 +1120,38 @@ msgstr "Λεπτομέρειες"
 #. noun ("connection"): the previous crumb is the connection name, so a
 #. bare "Edit" reads fine visually but leaves screen-reader users without
 #. the object being acted on when the crumb is announced on its own.
-#: src/components/network/ConnectionsTable.tsx:357
-#: src/components/network/connection-form/Form.tsx:593
+#: src/components/network/ConnectionsTable.tsx:358
+#: src/components/network/connection-form/Form.tsx:628
 #: src/components/storage/iscsi/TargetsTable.tsx:224
 msgid "Edit connection"
 msgstr "Επεξεργασία σύνδεσης"
 
 #. TRANSLATORS: button label, connect to a Wi-Fi network
-#: src/components/network/ConnectionsTable.tsx:366
+#: src/components/network/ConnectionsTable.tsx:367
 #: src/components/network/WifiConnectionForm.tsx:186
 #: src/components/storage/iscsi/TargetsTable.tsx:236
 #: src/components/storage/iscsi/TargetsTable.tsx:247
 msgid "Connect"
 msgstr "Σύνδεση"
 
-#: src/components/network/ConnectionsTable.tsx:371
+#: src/components/network/ConnectionsTable.tsx:372
 #: src/components/storage/iscsi/TargetsTable.tsx:228
 msgid "Disconnect"
 msgstr "Αποσύνδεση"
 
-#: src/components/network/ConnectionsTable.tsx:379
+#: src/components/network/ConnectionsTable.tsx:380
 #: src/components/storage/PartitionsSection.tsx:194
 #: src/components/storage/VolumeGroupEditor.tsx:187
 #: src/components/storage/iscsi/TargetsTable.tsx:252
 msgid "Delete"
 msgstr "Διαγραφή"
 
-#: src/components/network/ConnectionsTable.tsx:389
+#: src/components/network/ConnectionsTable.tsx:390
 #, fuzzy
 msgid "No connections match filters"
 msgstr "Κανένας στόχος δεν ταιριάζει με τα φίλτρα"
 
-#: src/components/network/ConnectionsTable.tsx:393
+#: src/components/network/ConnectionsTable.tsx:394
 #: src/components/storage/dasd/DASDTable.tsx:689
 #: src/components/storage/iscsi/TargetsTable.tsx:359
 #: src/components/storage/zfcp/ZFCPDevicesTable.tsx:425
@@ -1328,6 +1356,8 @@ msgstr ""
 #: src/components/network/connection-form/BridgeFields.tsx:85
 #: src/components/network/connection-form/BridgeFields.tsx:90
 #: src/components/network/connection-form/DeviceSelector.tsx:61
+#: src/components/network/connection-form/VlanFields.tsx:80
+#: src/components/network/connection-form/VlanFields.tsx:85
 #, fuzzy
 msgid "Device name"
 msgstr "Μενού συσκευής %s"
@@ -1350,9 +1380,11 @@ msgstr ""
 msgid "Available devices: %s"
 msgstr "Χρήση συσκευής %s"
 
+#. TRANSLATORS: option for the VLAN protocol selector when no specific protocol is chosen.
 #. TRANSLATORS: option label for the bridge STP configuration to use the system default.
 #. TRANSLATORS: NTP mode option
 #: src/components/network/connection-form/BridgeFields.tsx:40
+#: src/components/network/connection-form/VlanFields.tsx:36
 #: src/components/system/system-form/NtpFields.tsx:62
 msgid "Default"
 msgstr ""
@@ -1434,64 +1466,64 @@ msgstr "Διεύθυνση"
 
 #. TRANSLATORS: title of an error for a failed network connection save.
 #. Do not end with a period.
-#: src/components/network/connection-form/Form.tsx:342
+#: src/components/network/connection-form/Form.tsx:371
 #, fuzzy
 msgid "The connection could not be saved"
 msgstr "Αδυναμία ενημέρωσης του ονόματος συστήματος"
 
 #. TRANSLATORS: checkbox label for custom DNS server configuration.
-#: src/components/network/connection-form/Form.tsx:436
+#: src/components/network/connection-form/Form.tsx:471
 msgid "Use custom DNS servers"
 msgstr ""
 
 #. TRANSLATORS: label for the DNS servers field.
-#: src/components/network/connection-form/Form.tsx:449
+#: src/components/network/connection-form/Form.tsx:484
 #, fuzzy
 msgid "DNS servers"
 msgstr "IP διακομιστή"
 
 #. TRANSLATORS: helper text for DNS servers field explaining the format.
-#: src/components/network/connection-form/Form.tsx:453
+#: src/components/network/connection-form/Form.tsx:488
 msgid "E.g., 8.8.8.8 or 2001:4860:4860::8888"
 msgstr ""
 
 #. TRANSLATORS: validation error for an invalid DNS server address entry.
-#: src/components/network/connection-form/Form.tsx:457
+#: src/components/network/connection-form/Form.tsx:492
 #, fuzzy
 msgid "Invalid DNS server address"
 msgstr "Μη έγκυρη διεύθυνση."
 
 #. TRANSLATORS: checkbox label for custom DNS search domain configuration.
-#: src/components/network/connection-form/Form.tsx:472
+#: src/components/network/connection-form/Form.tsx:507
 msgid "Use custom DNS search domains"
 msgstr ""
 
 #. TRANSLATORS: helper text for DNS search domains field explaining the format.
-#: src/components/network/connection-form/Form.tsx:489
+#: src/components/network/connection-form/Form.tsx:524
 msgid "E.g., example.com"
 msgstr ""
 
 #. TRANSLATORS: validation error for an invalid DNS search domain entry.
-#: src/components/network/connection-form/Form.tsx:493
+#: src/components/network/connection-form/Form.tsx:528
 #, fuzzy
 msgid "Invalid DNS search domain"
 msgstr "Προσθήκη άλλης διεύθυνσης"
 
 #. TRANSLATORS: title of the page shown when the requested connection
 #. profile does not exist. Do not end with a period.
-#: src/components/network/connection-form/Form.tsx:521
+#: src/components/network/connection-form/Form.tsx:556
 #, fuzzy
 msgid "Connection not found"
 msgstr "Η σύνδεση δεν βρέθηκε ή χάθηκε"
 
 #. TRANSLATORS: body text on the connection not found page.
-#: src/components/network/connection-form/Form.tsx:523
+#: src/components/network/connection-form/Form.tsx:558
 #, fuzzy
 msgid "The connection does not exist or is no longer available."
 msgstr "Το «%s» δεν υπάρχει ή δεν είναι πλέον διαθέσιμο."
 
 #. TRANSLATORS: breadcrumb label for the new-connection form.
-#: src/components/network/connection-form/Form.tsx:597
+#: src/components/network/connection-form/Form.tsx:632
 #, fuzzy
 msgid "New connection"
 msgstr "Φόρμα σύνδεσης Wi-Fi"
@@ -1600,112 +1632,179 @@ msgstr ""
 msgid "E.g., 2001:db8::1"
 msgstr ""
 
+#. TRANSLATORS: description for the 'Default' VLAN protocol option.
+#: src/components/network/connection-form/VlanFields.tsx:38
+msgid "Use the system default (802.1Q)."
+msgstr ""
+
+#. TRANSLATORS: label for the '802.1Q' VLAN protocol option.
+#: src/components/network/connection-form/VlanFields.tsx:43
+msgid "802.1Q"
+msgstr ""
+
+#. TRANSLATORS: description for the '802.1Q' VLAN protocol option.
+#: src/components/network/connection-form/VlanFields.tsx:45
+msgid "Use the 802.1Q protocol explicitly."
+msgstr ""
+
+#. TRANSLATORS: label for the '802.1ad' VLAN protocol option.
+#: src/components/network/connection-form/VlanFields.tsx:50
+msgid "802.1ad"
+msgstr ""
+
+#. TRANSLATORS: description for the '802.1ad' VLAN protocol option.
+#: src/components/network/connection-form/VlanFields.tsx:52
+msgid "Use the 802.1ad protocol explicitly."
+msgstr ""
+
+#. TRANSLATORS: helper text for the VLAN device name field.
+#: src/components/network/connection-form/VlanFields.tsx:89
+msgid "E.g., eth0.100"
+msgstr ""
+
+#. TRANSLATORS: helper text for the VLAN ID field.
+#: src/components/network/connection-form/VlanFields.tsx:104
+msgid "Numeric identifier (0–4094)"
+msgstr ""
+
+#. TRANSLATORS: helper text for the VLAN parent device field.
+#: src/components/network/connection-form/VlanFields.tsx:120
+#, fuzzy
+msgid "Physical or Virtual device name"
+msgstr "Συσχέτιση με όνομα συσκευής"
+
+#. TRANSLATORS: label for the VLAN encapsulation protocol field.
+#: src/components/network/connection-form/VlanFields.tsx:134
+msgid "Encapsulation protocol"
+msgstr ""
+
 #. TRANSLATORS: validation error for the connection name field.
-#: src/components/network/connection-form/fields.ts:247
+#: src/components/network/connection-form/fields.ts:276
 #, fuzzy
 msgid "Name is required"
 msgstr "Όλα τα πεδία είναι υποχρεωτικά"
 
-#: src/components/network/connection-form/fields.ts:263
+#: src/components/network/connection-form/fields.ts:292
 #, fuzzy
 msgid "At least one IPv4 address is required"
 msgstr ""
 "Πρέπει να δοθεί τουλάχιστον μία διεύθυνση για την επιλεγμένη λειτουργία"
 
-#: src/components/network/connection-form/fields.ts:264
+#: src/components/network/connection-form/fields.ts:293
 msgid "Some IPv4 addresses are invalid"
 msgstr ""
 
-#: src/components/network/connection-form/fields.ts:271
+#: src/components/network/connection-form/fields.ts:300
 msgid "IPv4 gateway is required"
 msgstr ""
 
-#: src/components/network/connection-form/fields.ts:272
+#: src/components/network/connection-form/fields.ts:301
 msgid "Invalid IPv4 gateway"
 msgstr ""
 
-#: src/components/network/connection-form/fields.ts:279
+#: src/components/network/connection-form/fields.ts:308
 #, fuzzy
 msgid "At least one IPv6 address is required"
 msgstr ""
 "Πρέπει να δοθεί τουλάχιστον μία διεύθυνση για την επιλεγμένη λειτουργία"
 
-#: src/components/network/connection-form/fields.ts:280
+#: src/components/network/connection-form/fields.ts:309
 msgid "Some IPv6 addresses are invalid"
 msgstr ""
 
-#: src/components/network/connection-form/fields.ts:287
+#: src/components/network/connection-form/fields.ts:316
 msgid "IPv6 gateway is required"
 msgstr ""
 
-#: src/components/network/connection-form/fields.ts:288
+#: src/components/network/connection-form/fields.ts:317
 msgid "Invalid IPv6 gateway"
 msgstr ""
 
-#: src/components/network/connection-form/fields.ts:296
+#: src/components/network/connection-form/fields.ts:325
 msgid "At least one DNS server is required"
 msgstr ""
 
-#: src/components/network/connection-form/fields.ts:297
+#: src/components/network/connection-form/fields.ts:326
 msgid "Some DNS server addresses are invalid"
 msgstr ""
 
-#: src/components/network/connection-form/fields.ts:305
+#: src/components/network/connection-form/fields.ts:334
 msgid "At least one DNS search domain is required"
 msgstr ""
 
-#: src/components/network/connection-form/fields.ts:306
+#: src/components/network/connection-form/fields.ts:335
 msgid "Some DNS search domains are invalid"
 msgstr ""
 
 #. TRANSLATORS: validation error for the bond options field when the 'primary' option is used in an invalid mode.
 #. %s is replaced with a list of valid mode names.
-#: src/components/network/connection-form/fields.ts:333
+#: src/components/network/connection-form/fields.ts:360
 #, javascript-format
 msgid "The 'primary' option is only valid for %s modes"
 msgstr ""
 
 #. TRANSLATORS: validation error for the bond device name field.
 #. TRANSLATORS: validation error for the bridge device name field.
-#: src/components/network/connection-form/fields.ts:338
-#: src/components/network/connection-form/fields.ts:360
+#. TRANSLATORS: validation error for the VLAN device name field.
+#: src/components/network/connection-form/fields.ts:365
+#: src/components/network/connection-form/fields.ts:387
+#: src/components/network/connection-form/fields.ts:443
 #, fuzzy
 msgid "Device name is required"
 msgstr "Όλα τα πεδία είναι υποχρεωτικά"
 
 #. TRANSLATORS: validation error for the bond mode name field.
-#: src/components/network/connection-form/fields.ts:340
+#: src/components/network/connection-form/fields.ts:367
 #, fuzzy
 msgid "Bond mode is required"
 msgstr "Όλα τα πεδία είναι υποχρεωτικά"
 
 #. TRANSLATORS: validation error for the bond ports field.
-#: src/components/network/connection-form/fields.ts:342
+#: src/components/network/connection-form/fields.ts:369
 #, fuzzy
 msgid "At least one bond port is required"
 msgstr ""
 "Πρέπει να δοθεί τουλάχιστον μία διεύθυνση για την επιλεγμένη λειτουργία"
 
-#: src/components/network/connection-form/fields.ts:363
+#: src/components/network/connection-form/fields.ts:390
 #, fuzzy
 msgid "At least one bridge port is required"
 msgstr ""
 "Πρέπει να δοθεί τουλάχιστον μία διεύθυνση για την επιλεγμένη λειτουργία"
 
-#: src/components/network/connection-form/fields.ts:371
+#: src/components/network/connection-form/fields.ts:398
 msgid "Priority must be between 0 and 61440"
 msgstr ""
 
-#: src/components/network/connection-form/fields.ts:378
+#: src/components/network/connection-form/fields.ts:405
 msgid "Forward delay must be between 4 and 30 seconds"
 msgstr ""
 
-#: src/components/network/connection-form/fields.ts:385
+#: src/components/network/connection-form/fields.ts:412
 msgid "Hello time must be between 1 and 10 seconds"
 msgstr ""
 
-#: src/components/network/connection-form/fields.ts:392
+#: src/components/network/connection-form/fields.ts:419
 msgid "Max message age must be between 6 and 40 seconds"
+msgstr ""
+
+#: src/components/network/connection-form/fields.ts:430
+#, fuzzy
+msgid "Parent device is required"
+msgstr "Απαιτείται συνθηματικό"
+
+#. TRANSLATORS: validation error for the VLAN parent device field.
+#: src/components/network/connection-form/fields.ts:435
+msgid "Parent device must be different from the device name"
+msgstr ""
+
+#: src/components/network/connection-form/fields.ts:449
+#, fuzzy
+msgid "VLAN ID is required"
+msgstr "Όλα τα πεδία είναι υποχρεωτικά"
+
+#: src/components/network/connection-form/fields.ts:450
+msgid "VLAN ID must be between 0 and 4094"
 msgstr ""
 
 #. TRANSLATORS: fieldset legend for hostname configuration
@@ -5994,10 +6093,6 @@ msgstr "Wi-Fi"
 msgid "Loopback"
 msgstr ""
 
-#: src/utils/network.ts:89
-msgid "VLAN"
-msgstr ""
-
 #~ msgid "Configured for the root user"
 #~ msgstr "Ρυθμίστηκε για τον χρήστη root"
 
@@ -6124,9 +6219,6 @@ msgstr ""
 #~ msgid "The connection can be used by any available device."
 #~ msgstr ""
 #~ "Η σύνδεση μπορεί να χρησιμοποιηθεί από οποιαδήποτε διαθέσιμη συσκευή."
-
-#~ msgid "Bind to device name"
-#~ msgstr "Συσχέτιση με όνομα συσκευής"
 
 #~ msgid "Choose device to bind by name"
 #~ msgstr "Επιλέξτε συσκευή για συσχέτιση βάσει ονόματος"
