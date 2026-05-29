@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-05-28 18:33+0000\n"
-"PO-Revision-Date: 2026-05-28 01:12+0000\n"
+"PO-Revision-Date: 2026-05-29 02:12+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/agama/agama-web/"
 "ja/>\n"
@@ -437,25 +437,25 @@ msgid_plural "%s tasks active"
 msgstr[0] "%s 個の処理が動作中です"
 
 #: src/components/core/ProgressStatusMonitor.tsx:111
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "System status: %s task active"
 msgid_plural "System status: %s tasks active"
-msgstr[0] "%s 個の処理が動作中です"
+msgstr[0] "システムの状態: %s 個の処理が動作中です"
 
 #. TRANSLATORS: aria-label for system status button when idle
 #: src/components/core/ProgressStatusMonitor.tsx:118
 msgid "System status: Idle"
-msgstr ""
+msgstr "システムの状態: 待機中です"
 
 #. TRANSLATORS: header when no background tasks are running
 #: src/components/core/ProgressStatusMonitor.tsx:136
 msgid "No pending tasks"
-msgstr ""
+msgstr "処理待ちのタスクはありません"
 
 #. TRANSLATORS: message when all background tasks completed
 #: src/components/core/ProgressStatusMonitor.tsx:138
 msgid "All background tasks completed"
-msgstr ""
+msgstr "全てのバックグラウンド処理が完了しました"
 
 #: src/components/core/RebootButton.tsx:54
 msgid "Reboot"
@@ -2049,13 +2049,13 @@ msgstr "システム"
 #: src/components/overview/UsersSummary.tsx:63
 #, javascript-format
 msgid "Public key provided for %s"
-msgstr ""
+msgstr "%s に対して公開鍵を設定済み"
 
 #. TRANSLATORS: %s is either "root" or a username like 'jdoe'
 #: src/components/overview/UsersSummary.tsx:74
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "Using %s account"
-msgstr "ユーザアカウントの編集"
+msgstr "アカウント %s を使用しています"
 
 #. TRANSLATORS: shown when no user accounts are configured yet
 #: src/components/overview/UsersSummary.tsx:87
@@ -2064,24 +2064,24 @@ msgid "Not configured yet"
 msgstr "まだ設定していません"
 
 #: src/components/overview/UsersSummary.tsx:96
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "Using %s and %s accounts"
-msgstr "[%s] キーボードレイアウトを使用しています"
+msgstr "アカウント %s および %s を使用しています"
 
 #. TRANSLATORS: both user accounts have SSH public keys configured
 #: src/components/overview/UsersSummary.tsx:126
 msgid "Public key provided for both"
-msgstr ""
+msgstr "両方に対して公開鍵を設定済み"
 
 #. TRANSLATORS: SSH public key is configured for a single account
 #: src/components/overview/UsersSummary.tsx:129
 msgid "Public key provided"
-msgstr ""
+msgstr "公開鍵を設定済み"
 
 #. TRANSLATORS: warning when root account has no SSH public key configured
 #: src/components/overview/UsersSummary.tsx:139
 msgid "No public key provided, SSH login might be restricted"
-msgstr ""
+msgstr "公開鍵を設定していません。 SSH でのログインが制限されるかもしれません"
 
 #. TRANSLATORS: section title for user authentication configuration
 #: src/components/overview/UsersSummary.tsx:156
@@ -2216,7 +2216,7 @@ msgstr "続行するにはライセンスの受け入れが必要です。"
 
 #: src/components/product/ProductSelectionPage.tsx:349
 msgid "Changing the product will reset your current settings."
-msgstr ""
+msgstr "製品を変更すると、現在までに設定した内容がリセットされます。"
 
 #: src/components/product/ProductSelectionPage.tsx:404
 msgid "Switch to a different mode"
@@ -5576,21 +5576,22 @@ msgstr "パスワードが弱すぎます"
 
 #. TRANSLATORS: fieldset legend for first user configuration
 #: src/components/users/authentication-form/FirstUserFields.tsx:73
-#, fuzzy
 msgid "Administrator account"
-msgstr "ユーザアカウントの編集"
+msgstr "管理者アカウント"
 
 #: src/components/users/authentication-form/FirstUserFields.tsx:81
 msgid ""
 "Sets up a main login account. It can run administrator commands using [sudo] "
 "but is separate from the root account."
 msgstr ""
+"主に使用するログインアカウントを設定してください。このユーザは [sudo] を利用"
+"して管理者権限でコマンドを実行することができますが、 root アカウントとは区別"
+"されます。"
 
 #. TRANSLATORS: checkbox label to enable first user definition
 #: src/components/users/authentication-form/FirstUserFields.tsx:97
-#, fuzzy
 msgid "Define an administrator user"
-msgstr "独自のサイズを指定する"
+msgstr "管理者ユーザを設定する"
 
 #: src/components/users/authentication-form/FirstUserFields.tsx:115
 msgid "Full name"
@@ -5608,125 +5609,108 @@ msgstr "ハッシュ化されたパスワードを使用します。"
 #. TRANSLATORS: label for root SSH public keys input field
 #: src/components/users/authentication-form/FirstUserFields.tsx:149
 #: src/components/users/authentication-form/RootAuthFields.tsx:161
-#, fuzzy
 msgid "SSH Public Keys"
-msgstr "SSH 公開鍵のアップロード"
+msgstr "SSH 公開鍵"
 
 #: src/components/users/authentication-form/FirstUserFields.tsx:154
 #: src/components/users/authentication-form/RootAuthFields.tsx:166
-#, fuzzy
 msgid "Invalid SSH Key"
-msgstr "公開 SSH 鍵"
+msgstr "SSH 鍵が正しくありません"
 
 #: src/components/users/authentication-form/FirstUserFields.tsx:157
 #: src/components/users/authentication-form/RootAuthFields.tsx:169
 msgid "Paste or enter one or more public SSH keys (e.g. ssh-ed25519 AAAA...)"
 msgstr ""
+"1 つまたは複数の SSH 公開鍵 (例: ssh-ed25519 AAAA...) を貼り付けるか入力して"
+"ください"
 
 #: src/components/users/authentication-form/Form.tsx:262
-#, fuzzy
 msgid "Changes could not be applied"
-msgstr "ホスト名を保存できませんでした"
+msgstr "変更を適用することができませんでした"
 
 #. TRANSLATORS: description for no authentication mode
 #: src/components/users/authentication-form/RootAuthFields.tsx:72
-#, fuzzy
 msgid "Root login is off"
-msgstr "パスワードによる root ログイン"
+msgstr "root でのログインを無効化します"
 
 #. TRANSLATORS: description for password authentication mode
 #: src/components/users/authentication-form/RootAuthFields.tsx:79
-#, fuzzy
 msgid "Log in using a password"
-msgstr "ハッシュ化されたパスワードを使用します。"
+msgstr "パスワードを利用してログインします"
 
 #. TRANSLATORS: authentication mode option
 #: src/components/users/authentication-form/RootAuthFields.tsx:84
-#, fuzzy
 msgid "SSH Public Key"
-msgstr "SSH 公開鍵のアップロード"
+msgstr "SSH 公開鍵"
 
 #. TRANSLATORS: description for SSH public key authentication mode
 #: src/components/users/authentication-form/RootAuthFields.tsx:86
-#, fuzzy
 msgid "Log in using a trusted SSH public key"
-msgstr "root の SSH 公開鍵"
+msgstr "信頼済みの SSH 公開鍵を利用してログインします"
 
 #. TRANSLATORS: authentication mode option
 #: src/components/users/authentication-form/RootAuthFields.tsx:91
-#, fuzzy
 msgid "Password and SSH Public Key"
-msgstr "SSH 公開鍵のアップロード"
+msgstr "パスワードおよび SSH 公開鍵"
 
 #. TRANSLATORS: description for both password and SSH key authentication
 #: src/components/users/authentication-form/RootAuthFields.tsx:93
 msgid "Sets up both and use either to log in"
-msgstr ""
+msgstr "両方を設定し、いずれか片方を利用してログインします"
 
 #. TRANSLATORS: fieldset legend for root authentication configuration
 #: src/components/users/authentication-form/RootAuthFields.tsx:112
-#, fuzzy
 msgid "Root account"
-msgstr "ユーザアカウントの編集"
+msgstr "root アカウント"
 
 #. TRANSLATORS: explanation of how to enable the root account
 #: src/components/users/authentication-form/RootAuthFields.tsx:116
-#, fuzzy
 msgid "Choose whether to enable the root account."
-msgstr "既にストレージに記録されている情報の取り扱い"
+msgstr "root アカウントを有効化するかどうかを洗濯してください。"
 
 #. TRANSLATORS: label for the root authentication mode selector
 #: src/components/users/authentication-form/RootAuthFields.tsx:123
-#, fuzzy
 msgid "Root login method"
-msgstr "パスワードによる root ログイン"
+msgstr "root ログインの方式"
 
 #: src/components/users/authentication-form/fields.ts:138
-#, fuzzy
 msgid "Full name is required"
-msgstr "名前を指定する必要があります"
+msgstr "フルネームを指定する必要があります"
 
 #: src/components/users/authentication-form/fields.ts:139
-#, fuzzy
 msgid "Username is required"
-msgstr "名前を指定する必要があります"
+msgstr "ユーザ名を指定する必要があります"
 
 #: src/components/users/authentication-form/fields.ts:141
 #: src/components/users/authentication-form/fields.ts:172
-#, fuzzy
 msgid "Password is required"
-msgstr "パスワードが必要です"
+msgstr "パスワードを設定する必要があります"
 
 #: src/components/users/authentication-form/fields.ts:146
 #: src/components/users/authentication-form/fields.ts:177
-#, fuzzy
 msgid "Password confirmation is required"
-msgstr "パスワードの確認"
+msgstr "パスワードの確認にも入力する必要があります"
 
 #: src/components/users/authentication-form/fields.ts:151
 #: src/components/users/authentication-form/fields.ts:184
-#, fuzzy
 msgid "Some SSH public keys are invalid"
-msgstr "DNS 検索ドメインの中に正しくないものがあります"
+msgstr "SSH 公開鍵の中に正しくないものがあります"
 
 #: src/components/users/authentication-form/fields.ts:183
-#, fuzzy
 msgid "At least one SSH public key is required"
-msgstr "1 つ以上の DNS サーバを設定する必要があります"
+msgstr "1 つ以上の SSH 公開鍵を設定する必要があります"
 
 #: src/hooks/use-form-submit.tsx:160
-#, fuzzy
 msgid "Changes successfully applied"
-msgstr "ホスト名を更新しました"
+msgstr "変更の適用に成功しました"
 
 #: src/hooks/use-form-submit.tsx:161
 msgid "No changes to apply"
-msgstr ""
+msgstr "適用すべき変更はありません"
 
 #: src/hooks/use-form-submit.tsx:162
-#, fuzzy
 msgid "Fix the errors below and try again"
-msgstr "フィルタを変更してやり直してください。"
+msgstr "エラーを修正してやり直してください。"
 
 #: src/routes/storage.tsx:120
 msgid "ZFCP"
