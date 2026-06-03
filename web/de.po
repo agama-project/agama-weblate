@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-29 15:00+0000\n"
+"POT-Creation-Date: 2026-06-03 11:09+0000\n"
 "PO-Revision-Date: 2026-05-24 12:12+0000\n"
 "Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
 "Language-Team: German <https://l10n.opensuse.org/projects/agama/agama-web/de/"
@@ -405,7 +405,7 @@ msgstr "Software"
 #: src/components/storage/FormattableDevicePage.tsx:445
 #: src/components/storage/ISCSIPage.tsx:36
 #: src/components/storage/LogicalVolumePage.tsx:885
-#: src/components/storage/LvmPage.tsx:168
+#: src/components/storage/LvmPage.tsx:186
 #: src/components/storage/PartitionPage.tsx:819
 #: src/components/storage/ProposalPage.tsx:323
 #: src/components/storage/SpacePolicySelectionPage.tsx:121
@@ -1038,7 +1038,7 @@ msgstr "(MAC-gebunden)"
 #: src/components/network/ConnectionsTable.tsx:280
 #: src/components/network/connection-form/Form.tsx:403
 #: src/components/storage/DeviceSelectorPage.tsx:55
-#: src/components/storage/LvmPage.tsx:182
+#: src/components/storage/LvmPage.tsx:200
 #: src/components/storage/iscsi/InitiatorFormPage.tsx:66
 #: src/components/storage/iscsi/InitiatorFormPage.tsx:75
 #: src/components/storage/iscsi/TargetsTable.tsx:282
@@ -3306,7 +3306,7 @@ msgstr ""
 "zu durchsuchen."
 
 #: src/components/storage/DeviceSelectorModal.tsx:325
-#: src/components/storage/LvmPage.tsx:185
+#: src/components/storage/LvmPage.tsx:203
 msgid "Disks"
 msgstr "Festplatten"
 
@@ -3331,7 +3331,7 @@ msgid "No software RAID devices are available for selection."
 msgstr "Es stehen keine Software-RAID-Geräte zur Auswahl."
 
 #: src/components/storage/DeviceSelectorModal.tsx:358
-#: src/components/storage/LvmPage.tsx:169
+#: src/components/storage/LvmPage.tsx:187
 msgid "LVM"
 msgstr "LVM"
 
@@ -3830,29 +3830,35 @@ msgstr "Größenmodus"
 msgid "Go to storage page"
 msgstr "Zur Speicherungsseite gehen"
 
-#: src/components/storage/LvmPage.tsx:78
+#: src/components/storage/LvmPage.tsx:80
 msgid "Enter a name for the volume group."
 msgstr "Name für die Volume-Gruppe eingeben."
 
-#: src/components/storage/LvmPage.tsx:82
+#: src/components/storage/LvmPage.tsx:84
 #, javascript-format
 msgid "Volume group '%s' already exists. Enter a different name."
 msgstr ""
 "Volume-Gruppe ‚%s‘ existiert bereits. Geben Sie einen anderen Namen ein."
 
-#: src/components/storage/LvmPage.tsx:86
+#: src/components/storage/LvmPage.tsx:88
 msgid "Select at least one disk."
 msgstr "Wählen Sie mindestens eine Festplatte aus."
 
-#: src/components/storage/LvmPage.tsx:170
+#: src/components/storage/LvmPage.tsx:98
+msgid ""
+"This volume group only occupies the space required by its logical volumes. "
+"To expand it to cover all available disk space, recreate the volume group."
+msgstr ""
+
+#: src/components/storage/LvmPage.tsx:188
 msgid "Configure Volume Group"
 msgstr "Volume-Gruppe konfigurieren"
 
-#: src/components/storage/LvmPage.tsx:176
+#: src/components/storage/LvmPage.tsx:194
 msgid "Check the following before continuing"
 msgstr "Überprüfen Sie Folgendes, bevor Sie fortfahren"
 
-#: src/components/storage/LvmPage.tsx:188
+#: src/components/storage/LvmPage.tsx:206
 msgid ""
 "The needed LVM physical volumes will be added as partitions on the chosen "
 "disks, based on the sizes of the logical volumes. If you select more than "
@@ -3863,11 +3869,11 @@ msgstr ""
 "Volumes. Wenn Sie mehr als eine Festplatte auswählen, können die "
 "physikalischen Volumes auf mehrere Festplatten verteilt werden."
 
-#: src/components/storage/LvmPage.tsx:223
+#: src/components/storage/LvmPage.tsx:242
 msgid "Move mount points"
 msgstr "Einhängepunkte verschieben"
 
-#: src/components/storage/LvmPage.tsx:227
+#: src/components/storage/LvmPage.tsx:246
 msgid ""
 "Move the mount points currently configured at the selected disks to logical "
 "volumes of this volume group."

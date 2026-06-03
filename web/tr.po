@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-29 15:00+0000\n"
+"POT-Creation-Date: 2026-06-03 11:09+0000\n"
 "PO-Revision-Date: 2026-02-23 14:04+0000\n"
 "Last-Translator: Akın Birdal <reend21@protonmail.com>\n"
 "Language-Team: Turkish <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -417,7 +417,7 @@ msgstr "Yazılım"
 #: src/components/storage/FormattableDevicePage.tsx:445
 #: src/components/storage/ISCSIPage.tsx:36
 #: src/components/storage/LogicalVolumePage.tsx:885
-#: src/components/storage/LvmPage.tsx:168
+#: src/components/storage/LvmPage.tsx:186
 #: src/components/storage/PartitionPage.tsx:819
 #: src/components/storage/ProposalPage.tsx:323
 #: src/components/storage/SpacePolicySelectionPage.tsx:121
@@ -1050,7 +1050,7 @@ msgstr ""
 #: src/components/network/ConnectionsTable.tsx:280
 #: src/components/network/connection-form/Form.tsx:403
 #: src/components/storage/DeviceSelectorPage.tsx:55
-#: src/components/storage/LvmPage.tsx:182
+#: src/components/storage/LvmPage.tsx:200
 #: src/components/storage/iscsi/InitiatorFormPage.tsx:66
 #: src/components/storage/iscsi/InitiatorFormPage.tsx:75
 #: src/components/storage/iscsi/TargetsTable.tsx:282
@@ -3348,7 +3348,7 @@ msgid "Use the tabs to browse disks, RAID devices and LVM volume groups."
 msgstr ""
 
 #: src/components/storage/DeviceSelectorModal.tsx:325
-#: src/components/storage/LvmPage.tsx:185
+#: src/components/storage/LvmPage.tsx:203
 msgid "Disks"
 msgstr "Diskler"
 
@@ -3376,7 +3376,7 @@ msgid "No software RAID devices are available for selection."
 msgstr ""
 
 #: src/components/storage/DeviceSelectorModal.tsx:358
-#: src/components/storage/LvmPage.tsx:169
+#: src/components/storage/LvmPage.tsx:187
 msgid "LVM"
 msgstr ""
 
@@ -3871,29 +3871,35 @@ msgstr "Boyut modu"
 msgid "Go to storage page"
 msgstr "Depolama sayfasına git"
 
-#: src/components/storage/LvmPage.tsx:78
+#: src/components/storage/LvmPage.tsx:80
 msgid "Enter a name for the volume group."
 msgstr "Birim grubu için bir ad girin."
 
-#: src/components/storage/LvmPage.tsx:82
+#: src/components/storage/LvmPage.tsx:84
 #, javascript-format
 msgid "Volume group '%s' already exists. Enter a different name."
 msgstr "'%s' birim grubu zaten mevcut. Farklı bir ad girin."
 
-#: src/components/storage/LvmPage.tsx:86
+#: src/components/storage/LvmPage.tsx:88
 msgid "Select at least one disk."
 msgstr "En az bir disk seç."
 
-#: src/components/storage/LvmPage.tsx:170
+#: src/components/storage/LvmPage.tsx:98
+msgid ""
+"This volume group only occupies the space required by its logical volumes. "
+"To expand it to cover all available disk space, recreate the volume group."
+msgstr ""
+
+#: src/components/storage/LvmPage.tsx:188
 #, fuzzy
 msgid "Configure Volume Group"
 msgstr "LVM Birim Grubunu Yapılandırın"
 
-#: src/components/storage/LvmPage.tsx:176
+#: src/components/storage/LvmPage.tsx:194
 msgid "Check the following before continuing"
 msgstr "Devam etmeden önce aşağıdakileri kontrol edin"
 
-#: src/components/storage/LvmPage.tsx:188
+#: src/components/storage/LvmPage.tsx:206
 msgid ""
 "The needed LVM physical volumes will be added as partitions on the chosen "
 "disks, based on the sizes of the logical volumes. If you select more than "
@@ -3903,11 +3909,11 @@ msgstr ""
 "seçilen disklere bölümler halinde eklenecektir. Birden fazla disk "
 "seçerseniz, fiziksel birimler birkaç diske dağıtılabilir."
 
-#: src/components/storage/LvmPage.tsx:223
+#: src/components/storage/LvmPage.tsx:242
 msgid "Move mount points"
 msgstr "Bağlantı noktalarını taşı"
 
-#: src/components/storage/LvmPage.tsx:227
+#: src/components/storage/LvmPage.tsx:246
 msgid ""
 "Move the mount points currently configured at the selected disks to logical "
 "volumes of this volume group."

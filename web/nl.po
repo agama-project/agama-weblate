@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-29 15:00+0000\n"
+"POT-Creation-Date: 2026-06-03 11:09+0000\n"
 "PO-Revision-Date: 2026-05-31 09:12+0000\n"
 "Last-Translator: Feike Donia <feikedonia@proton.me>\n"
-"Language-Team: Dutch <https://l10n.opensuse.org/projects/agama/agama-web/nl/>"
-"\n"
+"Language-Team: Dutch <https://l10n.opensuse.org/projects/agama/agama-web/nl/"
+">\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -403,7 +403,7 @@ msgstr "Software"
 #: src/components/storage/FormattableDevicePage.tsx:445
 #: src/components/storage/ISCSIPage.tsx:36
 #: src/components/storage/LogicalVolumePage.tsx:885
-#: src/components/storage/LvmPage.tsx:168
+#: src/components/storage/LvmPage.tsx:186
 #: src/components/storage/PartitionPage.tsx:819
 #: src/components/storage/ProposalPage.tsx:323
 #: src/components/storage/SpacePolicySelectionPage.tsx:121
@@ -1035,7 +1035,7 @@ msgstr ""
 #: src/components/network/ConnectionsTable.tsx:280
 #: src/components/network/connection-form/Form.tsx:403
 #: src/components/storage/DeviceSelectorPage.tsx:55
-#: src/components/storage/LvmPage.tsx:182
+#: src/components/storage/LvmPage.tsx:200
 #: src/components/storage/iscsi/InitiatorFormPage.tsx:66
 #: src/components/storage/iscsi/InitiatorFormPage.tsx:75
 #: src/components/storage/iscsi/TargetsTable.tsx:282
@@ -3331,7 +3331,7 @@ msgid "Use the tabs to browse disks, RAID devices and LVM volume groups."
 msgstr ""
 
 #: src/components/storage/DeviceSelectorModal.tsx:325
-#: src/components/storage/LvmPage.tsx:185
+#: src/components/storage/LvmPage.tsx:203
 msgid "Disks"
 msgstr "Disks"
 
@@ -3359,7 +3359,7 @@ msgid "No software RAID devices are available for selection."
 msgstr ""
 
 #: src/components/storage/DeviceSelectorModal.tsx:358
-#: src/components/storage/LvmPage.tsx:169
+#: src/components/storage/LvmPage.tsx:187
 msgid "LVM"
 msgstr ""
 
@@ -3881,42 +3881,48 @@ msgstr "Maximaal gewenste grootte"
 msgid "Go to storage page"
 msgstr "Netwerk vergeten"
 
-#: src/components/storage/LvmPage.tsx:78
+#: src/components/storage/LvmPage.tsx:80
 msgid "Enter a name for the volume group."
 msgstr ""
 
-#: src/components/storage/LvmPage.tsx:82
+#: src/components/storage/LvmPage.tsx:84
 #, javascript-format
 msgid "Volume group '%s' already exists. Enter a different name."
 msgstr ""
 
-#: src/components/storage/LvmPage.tsx:86
+#: src/components/storage/LvmPage.tsx:88
 #, fuzzy
 msgid "Select at least one disk."
 msgstr "taal"
 
-#: src/components/storage/LvmPage.tsx:170
+#: src/components/storage/LvmPage.tsx:98
+msgid ""
+"This volume group only occupies the space required by its logical volumes. "
+"To expand it to cover all available disk space, recreate the volume group."
+msgstr ""
+
+#: src/components/storage/LvmPage.tsx:188
 #, fuzzy
 msgid "Configure Volume Group"
 msgstr "Een nieuwe LVM Volume Group"
 
-#: src/components/storage/LvmPage.tsx:176
+#: src/components/storage/LvmPage.tsx:194
 msgid "Check the following before continuing"
 msgstr ""
 
-#: src/components/storage/LvmPage.tsx:188
+#: src/components/storage/LvmPage.tsx:206
 msgid ""
 "The needed LVM physical volumes will be added as partitions on the chosen "
 "disks, based on the sizes of the logical volumes. If you select more than "
 "one disk, the physical volumes may be distributed along several disks."
 msgstr ""
 
-#: src/components/storage/LvmPage.tsx:223
+#: src/components/storage/LvmPage.tsx:242
 #, fuzzy
 msgid "Move mount points"
 msgstr "Koppelpunt"
 
-#: src/components/storage/LvmPage.tsx:227
+#: src/components/storage/LvmPage.tsx:246
 msgid ""
 "Move the mount points currently configured at the selected disks to logical "
 "volumes of this volume group."
