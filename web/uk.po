@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-03 11:40+0000\n"
+"POT-Creation-Date: 2026-06-04 10:07+0000\n"
 "PO-Revision-Date: 2026-06-02 20:12+0000\n"
 "Last-Translator: Eugene Krater <lachend@gmail.com>\n"
 "Language-Team: Ukrainian <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -39,8 +39,45 @@ msgstr "Змінити продукт або режим"
 msgid "Change product"
 msgstr "Змінити продукт"
 
+#. TRANSLATORS: dialog title
+#: src/components/core/ConfigDialog.tsx:63
+#, fuzzy
+#| msgid "Installation settings"
+msgid "Installation settings in JSON format"
+msgstr "Параметри встановлення"
+
+#: src/components/core/ConfigDialog.tsx:70
+msgid ""
+"Use this to reproduce this installation later using the installer command-"
+"line interface or the unattended mode."
+msgstr ""
+
+#: src/components/core/ConfigDialog.tsx:77
+#: src/components/core/ConfigDialog.tsx:78
+msgid "Copy to the clipboard"
+msgstr ""
+
+#: src/components/core/ConfigDialog.tsx:79
+#, fuzzy
+#| msgid "Configuration unreachable or invalid"
+msgid "Configuration added to clipboard"
+msgstr "Конфігурація недоступна або не синхронізована"
+
+#: src/components/core/ConfigDialog.tsx:80
+#: src/components/core/ConfigDialog.tsx:81
+#, fuzzy
+#| msgid "Download config"
+msgid "Download configuration"
+msgstr "Завантажити конфігурацію"
+
+#. TRANSLATORS: button to close the config dialog
+#: src/components/core/ConfigDialog.tsx:105
+#: src/components/product/LicenseDialog.tsx:74
+msgid "Close"
+msgstr "Закрити"
+
 #: src/components/core/DownloadLogsButton.tsx:51
-#: src/components/core/InstallerOptionsMenu.tsx:94
+#: src/components/core/InstallerOptionsMenu.tsx:98
 msgid "Download logs"
 msgstr "Завантажити журнали"
 
@@ -231,18 +268,20 @@ msgid "Change display language and keyboard layout"
 msgstr "Змінити мову та розкладку клавіатури"
 
 #. TRANSLATORS: this is an ARIA (accesibility) description of an UI element
-#: src/components/core/InstallerOptionsMenu.tsx:77
+#: src/components/core/InstallerOptionsMenu.tsx:81
 msgid "More installer options"
 msgstr "Більше параметрів встановлювача"
 
-#: src/components/core/InstallerOptionsMenu.tsx:83
+#: src/components/core/InstallerOptionsMenu.tsx:87
 #: src/components/storage/ConnectedDevicesMenu.tsx:86
 msgid "More"
 msgstr "Ще"
 
-#: src/components/core/InstallerOptionsMenu.tsx:91
-msgid "Download config"
-msgstr "Завантажити конфігурацію"
+#: src/components/core/InstallerOptionsMenu.tsx:95
+#, fuzzy
+#| msgid "Installation settings"
+msgid "Show installation settings"
+msgstr "Параметри встановлення"
 
 #: src/components/core/IssuesAlert.tsx:39
 msgid "You must fix these issues"
@@ -2206,10 +2245,6 @@ msgstr "Аутентифікація"
 #, javascript-format
 msgid "This license is not available in %s."
 msgstr "Ліцензія недоступна цією мовою: %s."
-
-#: src/components/product/LicenseDialog.tsx:74
-msgid "Close"
-msgstr "Закрити"
 
 #. TRANSLATORS: %s will be replaced by a product name. E.g., "openSUSE Tumbleweed"
 #: src/components/product/ProductLogo.tsx:32
