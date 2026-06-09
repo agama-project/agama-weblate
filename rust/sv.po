@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-05 13:38+0000\n"
+"POT-Creation-Date: 2026-06-09 15:20+0000\n"
 "PO-Revision-Date: 2026-06-09 03:12+0000\n"
 "Last-Translator: Luna  Jernberg <bittin@opensuse.org>\n"
 "Language-Team: Swedish <https://l10n.opensuse.org/projects/agama/agama-rust-"
@@ -279,83 +279,113 @@ msgstr "Misslyckades med att hämta skriptet %s. Vill du försöka igen?"
 msgid "Failed to write the file %s. Do you want to try again?"
 msgstr "Misslyckades med att skriva filen %s. Vill du försöka igen?"
 
-#: agama-manager/src/actions.rs:92
+#: agama-manager/src/actions.rs:77
 msgid "Prepare the system"
 msgstr "Förbered systemet"
 
-#: agama-manager/src/actions.rs:93
+#: agama-manager/src/actions.rs:78
 msgid "Install software"
 msgstr "Installera programvara"
 
-#: agama-manager/src/actions.rs:94
+#: agama-manager/src/actions.rs:79
 msgid "Configure the system"
 msgstr "Konfigurera systemet"
 
-#: agama-manager/src/actions.rs:197
+#: agama-manager/src/actions.rs:93
+#, fuzzy
+msgid "Preparing storage"
+msgstr "Förbereder lagringsförslag"
+
+#: agama-manager/src/actions.rs:111
+#, fuzzy
+msgid "Running post-partitioning scripts"
+msgstr "Kör användargenererade förinstallationsskript"
+
+#: agama-manager/src/actions.rs:136
+#, fuzzy
+msgid "Installing software"
+msgstr "Installera programvara"
+
+#: agama-manager/src/actions.rs:173
+#, fuzzy
+msgid "Configuring the system"
+msgstr "Konfigurera systemet"
+
+#: agama-manager/src/actions.rs:240
+#, fuzzy
+msgid "Finishing installation"
+msgstr "Väntar på att starta installation..."
+
+#: agama-manager/src/actions.rs:296
 msgid "Storing security settings"
 msgstr "Lagrar säkerhetsinställningar"
 
-#: agama-manager/src/actions.rs:207
+#: agama-manager/src/actions.rs:306
 msgid "Configuring remote access"
 msgstr "Konfigurerar fjärråtkomst"
 
-#: agama-manager/src/actions.rs:217
+#: agama-manager/src/actions.rs:316
 msgid "Setting up the hostname"
 msgstr "Ställer in värdnamnet"
 
-#: agama-manager/src/actions.rs:227
+#: agama-manager/src/actions.rs:326
 msgid "Setting up the network proxy"
 msgstr "Ställer in nätverksproxy"
 
-#: agama-manager/src/actions.rs:238
+#: agama-manager/src/actions.rs:337
 msgid "Setting up NTP"
 msgstr "Ställer in NTP"
 
-#: agama-manager/src/actions.rs:249
+#: agama-manager/src/actions.rs:348
 msgid "Importing user files and scripts"
 msgstr "Importerar användarfiler och skript"
 
-#: agama-manager/src/actions.rs:262
+#: agama-manager/src/actions.rs:361
 msgid "Running user pre-installation scripts"
 msgstr "Kör användargenererade förinstallationsskript"
 
-#: agama-manager/src/actions.rs:277
+#: agama-manager/src/actions.rs:376
 msgid "Storing questions settings"
 msgstr "Lagrar frågeinställningar"
 
-#: agama-manager/src/actions.rs:287
+#: agama-manager/src/actions.rs:386
 msgid "Storing localization settings"
 msgstr "Lagrar lokaliseringsinställningar"
 
-#: agama-manager/src/actions.rs:297
+#: agama-manager/src/actions.rs:396
 msgid "Storing users settings"
 msgstr "Lagrar användarinställningar"
 
-#: agama-manager/src/actions.rs:307
+#: agama-manager/src/actions.rs:502
 msgid "Configuring iSCSI devices"
 msgstr "Konfigurerar iSCSI-enheter"
 
-#: agama-manager/src/actions.rs:334
-msgid "Storing bootloader settings"
-msgstr "Lagrar starthanterare inställningar"
+#: agama-manager/src/actions.rs:526
+#, fuzzy
+msgid "Configuring zFCP devices"
+msgstr "Konfigurerar iSCSI-enheter"
 
-#: agama-manager/src/actions.rs:394
+#: agama-manager/src/actions.rs:550
 msgid "Configuring DASD devices"
 msgstr "Konfigurerar DASD-enheter"
 
-#: agama-manager/src/actions.rs:424
+#: agama-manager/src/actions.rs:574
 msgid "Setting up the network"
 msgstr "Konfigurerar nätverket"
 
-#: agama-manager/src/actions.rs:451
+#: agama-manager/src/actions.rs:603
 msgid "Preparing the storage proposal"
 msgstr "Förbereder lagringsförslag"
 
-#: agama-manager/src/actions.rs:483
+#: agama-manager/src/actions.rs:636
+msgid "Storing bootloader settings"
+msgstr "Lagrar starthanterare inställningar"
+
+#: agama-manager/src/actions.rs:669
 msgid "Preparing the software proposal"
 msgstr "Förbereder programvaruförslag"
 
-#: agama-manager/src/actions.rs:515
+#: agama-manager/src/actions.rs:702
 msgid "Configuring SELinux"
 msgstr "Konfigurerar SELinux"
 
@@ -405,6 +435,7 @@ msgstr "Fortsätt"
 
 #. TRANSLATORS: substituting: key ID, (key name), fingerprint
 #: agama-software/src/callbacks/security.rs:104
+#, rust-format
 msgid ""
 "The key {0} ({1}) with fingerprint {2} is unknown. Do you want to trust this "
 "key?"
@@ -492,15 +523,15 @@ msgstr ""
 msgid "First user information is incomplete"
 msgstr "Informationen om den första användaren är ofullständig"
 
-#: agama-utils/src/api/software/resolvable.rs:63
+#: agama-utils/src/resolvable.rs:62
 msgid "package"
 msgstr "paket"
 
-#: agama-utils/src/api/software/resolvable.rs:64
+#: agama-utils/src/resolvable.rs:63
 msgid "pattern"
 msgstr "mönster"
 
-#: agama-utils/src/api/software/resolvable.rs:65
+#: agama-utils/src/resolvable.rs:64
 msgid "product"
 msgstr "produkt"
 
