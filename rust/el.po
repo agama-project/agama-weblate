@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-09 15:20+0000\n"
+"POT-Creation-Date: 2026-06-09 22:18+0000\n"
 "PO-Revision-Date: 2026-02-23 21:04+0000\n"
 "Last-Translator: Efstathios Iosifidis <eiosifidis@yandex.com>\n"
 "Language-Team: Greek <https://l10n.opensuse.org/projects/agama/agama-rust-"
@@ -19,15 +19,27 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.16\n"
 
-#: agama-autoinstall/src/questions.rs:41 agama-utils/src/api/question.rs:293
-#: agama-utils/src/question/start.rs:54
-msgid "No"
-msgstr "Όχι"
+#: agama-autoinstall/src/auto_loader.rs:115
+msgid ""
+"Configuration cannot be applied because it is invalid or could not be "
+"reached."
+msgstr ""
 
-#: agama-autoinstall/src/questions.rs:41 agama-utils/src/api/question.rs:293
-#: agama-utils/src/question/start.rs:54
-msgid "Yes"
-msgstr "Ναι"
+#: agama-autoinstall/src/questions.rs:44
+#, fuzzy
+msgid "Reload configuration"
+msgstr "Ανάγνωση ρυθμίσεων"
+
+#: agama-autoinstall/src/questions.rs:45
+msgid "Skip and configure manually"
+msgstr ""
+
+#: agama-autoinstall/src/scripts.rs:134
+#, rust-format
+msgid ""
+"It was not possible to load the script from {0}. Do you want to try again?\n"
+"                "
+msgstr ""
 
 #. TRANSLATORS: an installation "scope", used in the "agama monitor" command
 #: agama-cli/src/monitor/ui.rs:39
@@ -441,6 +453,7 @@ msgstr "Συνέχεια"
 
 #. TRANSLATORS: substituting: key ID, (key name), fingerprint
 #: agama-software/src/callbacks/security.rs:104
+#, rust-format
 msgid ""
 "The key {0} ({1}) with fingerprint {2} is unknown. Do you want to trust this "
 "key?"
@@ -528,6 +541,14 @@ msgstr ""
 msgid "First user information is incomplete"
 msgstr "Οι πληροφορίες του πρώτου χρήστη είναι ελλιπείς"
 
+#: agama-utils/src/api/question.rs:293 agama-utils/src/question/start.rs:54
+msgid "No"
+msgstr "Όχι"
+
+#: agama-utils/src/api/question.rs:293 agama-utils/src/question/start.rs:54
+msgid "Yes"
+msgstr "Ναι"
+
 #: agama-utils/src/resolvable.rs:62
 msgid "package"
 msgstr ""
@@ -547,9 +568,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "Installation failed"
 #~ msgstr "Εγκατάσταση λογισμικού"
-
-#~ msgid "Reading configuration"
-#~ msgstr "Ανάγνωση ρυθμίσεων"
 
 #~ msgid "The product must be registered"
 #~ msgstr "Το προϊόν πρέπει να εγγραφεί"

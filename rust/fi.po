@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-09 15:20+0000\n"
+"POT-Creation-Date: 2026-06-09 22:18+0000\n"
 "PO-Revision-Date: 2026-03-11 07:04+0000\n"
 "Last-Translator: Timo Jyrinki <tjyrinki@suse.com>\n"
 "Language-Team: Finnish <https://l10n.opensuse.org/projects/agama/agama-rust-"
@@ -19,15 +19,27 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.16.2\n"
 
-#: agama-autoinstall/src/questions.rs:41 agama-utils/src/api/question.rs:293
-#: agama-utils/src/question/start.rs:54
-msgid "No"
-msgstr "Ei"
+#: agama-autoinstall/src/auto_loader.rs:115
+msgid ""
+"Configuration cannot be applied because it is invalid or could not be "
+"reached."
+msgstr ""
 
-#: agama-autoinstall/src/questions.rs:41 agama-utils/src/api/question.rs:293
-#: agama-utils/src/question/start.rs:54
-msgid "Yes"
-msgstr "Kyllä"
+#: agama-autoinstall/src/questions.rs:44
+#, fuzzy
+msgid "Reload configuration"
+msgstr "Luetaan asetuksia"
+
+#: agama-autoinstall/src/questions.rs:45
+msgid "Skip and configure manually"
+msgstr ""
+
+#: agama-autoinstall/src/scripts.rs:134
+#, rust-format
+msgid ""
+"It was not possible to load the script from {0}. Do you want to try again?\n"
+"                "
+msgstr ""
 
 #. TRANSLATORS: an installation "scope", used in the "agama monitor" command
 #: agama-cli/src/monitor/ui.rs:39
@@ -442,6 +454,7 @@ msgstr "Jatka"
 
 #. TRANSLATORS: substituting: key ID, (key name), fingerprint
 #: agama-software/src/callbacks/security.rs:104
+#, rust-format
 msgid ""
 "The key {0} ({1}) with fingerprint {2} is unknown. Do you want to trust this "
 "key?"
@@ -527,6 +540,14 @@ msgstr ""
 msgid "First user information is incomplete"
 msgstr "Ensimmäisen käyttäjän tiedot eivät ole riittävät"
 
+#: agama-utils/src/api/question.rs:293 agama-utils/src/question/start.rs:54
+msgid "No"
+msgstr "Ei"
+
+#: agama-utils/src/api/question.rs:293 agama-utils/src/question/start.rs:54
+msgid "Yes"
+msgstr "Kyllä"
+
 #: agama-utils/src/resolvable.rs:62
 msgid "package"
 msgstr "paketti"
@@ -546,9 +567,6 @@ msgstr "tuote"
 #, fuzzy
 #~ msgid "Installation failed"
 #~ msgstr "Asenna ohjelmistoja"
-
-#~ msgid "Reading configuration"
-#~ msgstr "Luetaan asetuksia"
 
 #~ msgid "The product must be registered"
 #~ msgstr "Tuote tulaa olla rekisteröity"
