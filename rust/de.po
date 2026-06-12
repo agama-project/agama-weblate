@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-12 12:34+0000\n"
+"POT-Creation-Date: 2026-06-12 15:05+0000\n"
 "PO-Revision-Date: 2026-06-10 19:20+0000\n"
 "Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
 "Language-Team: German <https://l10n.opensuse.org/projects/agama/agama-rust-"
@@ -36,7 +36,7 @@ msgid "Skip and configure manually"
 msgstr "Überspringen und manuell konfigurieren"
 
 #: agama-autoinstall/src/scripts.rs:134
-#, fuzzy
+#, fuzzy, rust-format
 msgid ""
 "It was not possible to load the script from {0}. Do you want to try again?\n"
 "                "
@@ -96,6 +96,7 @@ msgstr ""
 
 #. TRANSLATORS: {0} is a host name
 #: agama-cli/src/auth.rs:179
+#, rust-format
 msgid "Not authenticated in {0}"
 msgstr ""
 
@@ -207,13 +208,13 @@ msgid "Display the events in a more human-readable way"
 msgstr ""
 
 #. TRANSLATORS: CLI help for: agama config
-#: agama-cli/src/config.rs:47
+#: agama-cli/src/config.rs:46
 #, fuzzy
 msgid "Inspect or change the installation settings"
 msgstr "Lokalisierungseinstellungen speichern"
 
 #. TRANSLATORS: CLI help for: agama config (details)
-#: agama-cli/src/config.rs:49
+#: agama-cli/src/config.rs:48
 msgid ""
 "You can inspect and change installation settings from the command-line. The "
 "\"show\" subcommand generates a \"profile\" which is a JSON document "
@@ -224,23 +225,23 @@ msgid ""
 msgstr ""
 
 #. TRANSLATORS: CLI help for: agama config load
-#: agama-cli/src/config.rs:65
+#: agama-cli/src/config.rs:64
 msgid "Read and load a profile"
 msgstr ""
 
 #. TRANSLATORS: CLI help for: agama config load <URL_OR_PATH>
 #. TRANSLATORS: CLI help for: agama config generate <URL_OR_PATH>
-#: agama-cli/src/config.rs:71 agama-cli/src/config.rs:167
+#: agama-cli/src/config.rs:70 agama-cli/src/config.rs:166
 msgid "JSON file: URL or path or `-` for standard input"
 msgstr ""
 
 #. TRANSLATORS: CLI help for: agama config show
-#: agama-cli/src/config.rs:81
+#: agama-cli/src/config.rs:80
 msgid "Generate an installation profile with the current settings"
 msgstr ""
 
 #. TRANSLATORS: CLI help for: agama config show (details)
-#: agama-cli/src/config.rs:86
+#: agama-cli/src/config.rs:85
 msgid ""
 "It is possible that many configuration settings do not have a value. Those "
 "settings are not included in the output.\n"
@@ -249,43 +250,43 @@ msgid ""
 msgstr ""
 
 #. TRANSLATORS: CLI help for: agama config show --output <FILE_PATH>
-#: agama-cli/src/config.rs:104
+#: agama-cli/src/config.rs:103
 msgid "Save the output here (goes to stdout if not given)"
 msgstr ""
 
 #. TRANSLATORS: CLI help for: agama config validate
-#: agama-cli/src/config.rs:111
+#: agama-cli/src/config.rs:110
 msgid "Validate a profile using JSON Schema"
 msgstr ""
 
 #. TRANSLATORS: CLI help for: agama config validate (details)
-#: agama-cli/src/config.rs:116
+#: agama-cli/src/config.rs:115
 msgid ""
 "Schema is available at /usr/share/agama/schema/profile.schema.json Note: "
 "validation is always done as part of all other \"agama config\" commands."
 msgstr ""
 
 #. TRANSLATORS: CLI help for: agama config validate <URL_OR_PATH>
-#: agama-cli/src/config.rs:130
+#: agama-cli/src/config.rs:129
 msgid "JSON file, URL or path or `-` for standard input"
 msgstr ""
 
 #. TRANSLATORS: CLI help for: agama config validate --local
-#: agama-cli/src/config.rs:138
+#: agama-cli/src/config.rs:137
 msgid ""
 "Run subcommands (if possible) in local mode - without trying to connect to "
 "remote agama server"
 msgstr ""
 
 #. TRANSLATORS: CLI help for: agama config generate
-#: agama-cli/src/config.rs:145
+#: agama-cli/src/config.rs:144
 msgid ""
 "Generate and print a native Agama JSON configuration from any kind and "
 "location"
 msgstr ""
 
 #. TRANSLATORS: CLI help for: agama config generate (details)
-#: agama-cli/src/config.rs:147
+#: agama-cli/src/config.rs:146
 msgid ""
 "Kinds:\n"
 "- JSON\n"
@@ -302,12 +303,12 @@ msgid ""
 msgstr ""
 
 #. TRANSLATORS: CLI help for: agama config edit
-#: agama-cli/src/config.rs:173
+#: agama-cli/src/config.rs:172
 msgid "Edit and update installation option using an external editor"
 msgstr ""
 
 #. TRANSLATORS: CLI help for: agama config edit (details)
-#: agama-cli/src/config.rs:178
+#: agama-cli/src/config.rs:177
 msgid ""
 "The changes are not applied if the editor exits with an error code.\n"
 "\n"
@@ -316,16 +317,16 @@ msgid ""
 msgstr ""
 
 #. TRANSLATORS: CLI help for: agama config edit --editor <EDITOR>
-#: agama-cli/src/config.rs:195
+#: agama-cli/src/config.rs:194
 msgid "Editor command (including additional arguments if needed)"
 msgstr ""
 
-#: agama-cli/src/config.rs:218
+#: agama-cli/src/config.rs:217
 msgid "It is not a valid JSON file"
 msgstr ""
 
-#: agama-cli/src/config.rs:234
-msgid "The profile is not valid"
+#: agama-cli/src/config.rs:412
+msgid "Ignoring the changes because the editor was closed with an error code."
 msgstr ""
 
 #. TRANSLATORS: CLI help for: agama
@@ -894,6 +895,7 @@ msgstr "Fortsetzen"
 
 #. TRANSLATORS: substituting: key ID, (key name), fingerprint
 #: agama-software/src/callbacks/security.rs:104
+#, rust-format
 msgid ""
 "The key {0} ({1}) with fingerprint {2} is unknown. Do you want to trust this "
 "key?"
