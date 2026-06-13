@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-12 15:01+0000\n"
+"POT-Creation-Date: 2026-06-13 16:58+0000\n"
 "PO-Revision-Date: 2026-06-13 03:12+0000\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -36,6 +36,7 @@ msgstr "კონტრასტი"
 
 #. TRANSLATORS: short label for the option shown in the UI
 #. TRANSLATORS: the "Automatic" appearance option name
+#. TRANSLATORS: size mode option
 #. TRANSLATORS: option label for automatic IP configuration.
 #: src/components/core/AppearanceSettings.tsx:75
 #: src/components/core/AppearanceSettings.tsx:106
@@ -45,6 +46,8 @@ msgstr "კონტრასტი"
 #: src/components/storage/SizeModeSelect.tsx:191
 #: src/components/storage/SizeModeSelect.tsx:196
 #: src/components/storage/iscsi/TargetLoginPage.tsx:58
+#: src/components/storage/shared/SizeFields.tsx:67
+#: src/components/storage/shared/SizeFields.tsx:250
 msgid "Automatic"
 msgstr "ავტომატური"
 
@@ -313,6 +316,9 @@ msgstr "იგივე პარამეტრების გამოყე�
 #: src/components/core/Page.tsx:290 src/components/form/SubmitButton.tsx:49
 #: src/components/storage/dasd/FormatActionHandler.tsx:95
 #: src/components/storage/dasd/FormatActionHandler.tsx:122
+#: src/components/storage/formattable-device-form/Form.tsx:180
+#: src/components/storage/logical-volume-form/Form.tsx:243
+#: src/components/storage/partition-form/Form.tsx:253
 #: src/components/storage/zfcp/ZFCPControllersPage.tsx:161
 #: src/components/system/system-form/Form.tsx:167
 #: src/components/users/authentication-form/Form.tsx:276
@@ -512,22 +518,23 @@ msgstr "ნაბიჯი %1$d %2$d-დან"
 msgid "Software"
 msgstr "პროგრამები"
 
+#. TRANSLATORS: breadcrumb label for the storage configuration section.
 #: src/components/core/ProgressStatusMonitor.tsx:42
 #: src/components/overview/StorageSummary.tsx:190
 #: src/components/storage/BootSelectionPage.tsx:183
 #: src/components/storage/DeviceSelectorPage.tsx:75
 #: src/components/storage/EncryptionSettingsPage.tsx:121
-#: src/components/storage/FormattableDevicePage.tsx:445
 #: src/components/storage/ISCSIPage.tsx:36
-#: src/components/storage/LogicalVolumePage.tsx:885
 #: src/components/storage/LvmPage.tsx:186
-#: src/components/storage/PartitionPage.tsx:819
 #: src/components/storage/ProposalPage.tsx:323
 #: src/components/storage/SpacePolicySelectionPage.tsx:121
 #: src/components/storage/dasd/DASDPage.tsx:70
+#: src/components/storage/formattable-device-form/Form.tsx:207
 #: src/components/storage/iscsi/DiscoverFormPage.tsx:268
 #: src/components/storage/iscsi/InitiatorFormPage.tsx:58
 #: src/components/storage/iscsi/TargetLoginPage.tsx:303
+#: src/components/storage/logical-volume-form/Form.tsx:269
+#: src/components/storage/partition-form/Form.tsx:287
 #: src/components/storage/zfcp/ZFCPControllersPage.tsx:190
 #: src/components/storage/zfcp/ZFCPPage.tsx:174 src/routes/storage.tsx:46
 msgid "Storage"
@@ -1147,6 +1154,7 @@ msgstr "(მიბმა MAC-ით)"
 #: src/components/storage/iscsi/InitiatorFormPage.tsx:75
 #: src/components/storage/iscsi/TargetsTable.tsx:282
 #: src/components/storage/iscsi/TargetsTable.tsx:456
+#: src/components/storage/logical-volume-form/LogicalVolumeNameField.tsx:45
 #: src/components/system/system-form/HostnameFields.tsx:137
 #: src/components/system/system-form/HostnameFields.tsx:146
 msgid "Name"
@@ -1478,6 +1486,7 @@ msgstr "ხელმისაწვდომი მოწყობილობ�
 #. TRANSLATORS: option label for the bridge STP configuration to use the system default.
 #: src/components/network/connection-form/BridgeFields.tsx:40
 #: src/components/network/connection-form/VlanFields.tsx:38
+#: src/components/storage/shared/helpers.ts:61
 #: src/components/system/system-form/NtpFields.tsx:62
 msgid "Default"
 msgstr "ნაგულისხმევი"
@@ -1524,6 +1533,9 @@ msgstr "პროტოკოლი Spanning Tree (STP)"
 #: src/components/network/connection-form/IpFields.tsx:153
 #: src/components/product/registration-form/Form.tsx:184
 #: src/components/product/registration-form/Form.tsx:199
+#: src/components/storage/shared/FilesystemAdditionalFields.tsx:54
+#: src/components/storage/shared/FilesystemAdditionalFields.tsx:64
+#: src/components/storage/shared/FilesystemLabelField.tsx:51
 #: src/components/users/authentication-form/FirstUserFields.tsx:149
 msgid "(optional)"
 msgstr "(არასავალდებულო)"
@@ -3453,6 +3465,7 @@ msgstr "%s-ის გამოყენება"
 #: src/components/storage/SizeModeSelect.tsx:125
 #: src/components/storage/SpaceActionsTable.tsx:231
 #: src/components/storage/VolumeGroupsTable.tsx:78
+#: src/components/storage/shared/SizeFields.tsx:373
 msgid "Size"
 msgstr "ზომა"
 
@@ -3559,235 +3572,12 @@ msgid_plural ""
 msgstr[0] "კონფიგურაცია უნდა შეცვალოთ ისე, რომ გადაწყვიტოთ შემდეგი პრობლემა:"
 msgstr[1] "კონფიგურაცია უნდა შეცვალოთ ისე, რომ გადაწყვიტოთ შემდეგი პრობლემები:"
 
-#: src/components/storage/FormattableDevicePage.tsx:211
-#: src/components/storage/LogicalVolumePage.tsx:304
-#: src/components/storage/PartitionPage.tsx:296
-msgid "Select or enter a valid mount point"
-msgstr "აირჩიეთ, ან შეიყვანეთ სწორი მიმაგრების წერტილი"
-
-#: src/components/storage/FormattableDevicePage.tsx:221
-#: src/components/storage/LogicalVolumePage.tsx:314
-#: src/components/storage/PartitionPage.tsx:306
-msgid ""
-"Select or enter a mount point that is not already assigned to another device"
-msgstr ""
-"აირჩიეთ, ან შეიყვანეთ მიმაგრები წერტილი, რომელიც სხვა მოწყობილობაზე უკვე "
-"მინიჭებული არაა"
-
-#: src/components/storage/FormattableDevicePage.tsx:271
-#: src/components/storage/LogicalVolumePage.tsx:595
-#: src/components/storage/LogicalVolumePage.tsx:623
-#: src/components/storage/LogicalVolumePage.tsx:981
-#: src/components/storage/PartitionPage.tsx:558
-#: src/components/storage/PartitionPage.tsx:905
-msgid "Waiting for a mount point"
-msgstr "მიმაგრების წერტილის მოლოდინი"
-
-#. TRANSLATORS: %s is a device name (eg. /dev/sda3).
-#: src/components/storage/FormattableDevicePage.tsx:274
-#: src/components/storage/LogicalVolumePage.tsx:626
-#: src/components/storage/PartitionPage.tsx:561
-#: src/components/storage/utils/partition.tsx:57
-#, javascript-format
-msgid "Current %s"
-msgstr "მიმდინარეა %s"
-
-#: src/components/storage/FormattableDevicePage.tsx:292
-#: src/components/storage/LogicalVolumePage.tsx:644
-#: src/components/storage/PartitionPage.tsx:579
-#, javascript-format
-msgid "Default file system for %s"
-msgstr "ნაგულისხმევი ფაილური სისტემა %s-სთვის"
-
-#: src/components/storage/FormattableDevicePage.tsx:293
-msgid "Default file system for generic mount paths"
-msgstr "ნაგულისხმევი ფაილური სისტემა ზოგადი მიმაგრების წერტილებისთვის"
-
-#: src/components/storage/FormattableDevicePage.tsx:295
-msgid "Destroy current data and format device as"
-msgstr "არსებული მონაცემების განადგურება და დანაყოფის დაფორმატება, როგორც"
-
-#: src/components/storage/FormattableDevicePage.tsx:296
-msgid "Format device as"
-msgstr "მოწყობილობების დაფორმატება, როგორც"
-
-#. TRANSLATORS: %s is the name of a partition, like /dev/vda2
-#. TRANSLATORS: %s is the name of a logical volume, like /dev/system/home
-#. TRANSLATORS: %s is the name of a device, like vda
-#: src/components/storage/FormattableDevicePage.tsx:310
-#: src/components/storage/LogicalVolumePage.tsx:661
-#: src/components/storage/PartitionPage.tsx:596
-#, javascript-format
-msgid "Do not format %s and keep the data"
-msgstr "%s-ის არდაფორმატებადა მონაცემების შენარჩუნება"
-
-#: src/components/storage/FormattableDevicePage.tsx:375
-#: src/components/storage/LogicalVolumePage.tsx:727
-#: src/components/storage/PartitionPage.tsx:662
-msgid "File system label"
-msgstr "ფაილური სისტემის ჭდე"
-
-#: src/components/storage/FormattableDevicePage.tsx:447
-msgid "Configure"
-msgstr "მორგება"
-
-#: src/components/storage/FormattableDevicePage.tsx:453
-#, javascript-format
-msgid "Configure device %s"
-msgstr "მორგება მოწყობილობისთვის %s"
-
-#: src/components/storage/FormattableDevicePage.tsx:457
-#: src/components/storage/FormattableDevicePage.tsx:464
-#: src/components/storage/LogicalVolumePage.tsx:897
-#: src/components/storage/LogicalVolumePage.tsx:904
-#: src/components/storage/PartitionPage.tsx:835
-#: src/components/storage/PartitionPage.tsx:842
-msgid "Mount point"
-msgstr "მიმაგრების წერტილი"
-
-#: src/components/storage/FormattableDevicePage.tsx:462
-#: src/components/storage/LogicalVolumePage.tsx:902
-#: src/components/storage/PartitionPage.tsx:840
-msgid "Mount point toggle"
-msgstr "მიმაგრების წერტილის გადართვა"
-
-#: src/components/storage/FormattableDevicePage.tsx:463
-#: src/components/storage/LogicalVolumePage.tsx:903
-#: src/components/storage/PartitionPage.tsx:841
-msgid "Suggested mount points"
-msgstr "ნარჩევი მიმაგრების წერტილები"
-
-#: src/components/storage/FormattableDevicePage.tsx:465
-#: src/components/storage/LogicalVolumePage.tsx:905
-#: src/components/storage/PartitionPage.tsx:843
-msgid "Clear selected mount point"
-msgstr "მონიშნული მიმაგრების წერტილის გასუფთავება"
-
-#: src/components/storage/FormattableDevicePage.tsx:468
-#: src/components/storage/LogicalVolumePage.tsx:908
-#: src/components/storage/PartitionPage.tsx:846
-msgid "Use"
-msgstr "გამოყენება"
-
-#: src/components/storage/FormattableDevicePage.tsx:479
-#: src/components/storage/LogicalVolumePage.tsx:931
-#: src/components/storage/PartitionPage.tsx:867
-msgid "Select or enter a mount point"
-msgstr "აირჩიეთ, ან შეიყვანეთ მიმაგრების წერტილი"
-
-#: src/components/storage/FormattableDevicePage.tsx:488
-#: src/components/storage/LogicalVolumePage.tsx:952
-#: src/components/storage/PartitionPage.tsx:876
-msgid "File system"
-msgstr "ფაილური სისტემა"
-
-#: src/components/storage/FormattableDevicePage.tsx:499
-#: src/components/storage/LogicalVolumePage.tsx:964
-#: src/components/storage/PartitionPage.tsx:888
-msgid "Label"
-msgstr "ჭდე"
-
 #: src/components/storage/ISCSIPage.tsx:39
 #: src/components/storage/iscsi/DiscoverFormPage.tsx:269
 #: src/components/storage/iscsi/InitiatorFormPage.tsx:59
 #: src/components/storage/iscsi/TargetLoginPage.tsx:304
 msgid "iSCSI"
 msgstr "iSCSI"
-
-#: src/components/storage/LogicalVolumePage.tsx:325
-msgid "Enter a name"
-msgstr "შეიყვანეთ სახელი"
-
-#: src/components/storage/LogicalVolumePage.tsx:352
-#: src/components/storage/PartitionPage.tsx:334
-msgid "The minimum cannot be greater than the maximum"
-msgstr "მინიმუმი მაქსიმუმზე მეტი ვერ იქნება"
-
-#: src/components/storage/LogicalVolumePage.tsx:360
-#: src/components/storage/PartitionPage.tsx:342
-msgid "The maximum must be a number followed by a unit like GiB or GB"
-msgstr ""
-"მაქსიმუმი უნდა იყოს რიცხვი, რომელსაც მოჰყვება ისეთი ერთეულები, როგორიცაა, "
-"მაგალითად, GiB, ან GB"
-
-#: src/components/storage/LogicalVolumePage.tsx:368
-#: src/components/storage/PartitionPage.tsx:350
-msgid "The minimum must be a number followed by a unit like GiB or GB"
-msgstr ""
-"მინიმუმი უნდა იყოს რიცხვი, რომელსაც მოჰყვება ისეთი ერთეული, როგორიცაა, "
-"მაგალითად, GiB, ან GB"
-
-#: src/components/storage/LogicalVolumePage.tsx:375
-#: src/components/storage/PartitionPage.tsx:357
-msgid "Size limits must be numbers followed by a unit like GiB or GB"
-msgstr ""
-"ზომის ლიმიტი უნდა წარმოადგენდეს რიცხვს, რომელსაც ზომა მოჰყვება (მაგ: GiB ან "
-"GB)"
-
-#. TRANSLATORS: %s is a disk name with its size (eg. "sda, 10 GiB"
-#: src/components/storage/LogicalVolumePage.tsx:516
-#, javascript-format
-msgid "As a new logical volume on %s"
-msgstr "როგორც ახალი ლოგიკური ტომი %s-ზე"
-
-#: src/components/storage/LogicalVolumePage.tsx:518
-#, javascript-format
-msgid "Using logical volume %s"
-msgstr "გამოიყენება ლოგიკური ტომი %s"
-
-#: src/components/storage/LogicalVolumePage.tsx:549
-#: src/components/storage/PartitionPage.tsx:525
-msgid "Mount point options"
-msgstr "მიმაგრების წერტილის მორგება"
-
-#: src/components/storage/LogicalVolumePage.tsx:554
-msgid "Using an existing logical volume"
-msgstr "გამოიყენება არსებული ლოგიკური ტომი"
-
-#: src/components/storage/LogicalVolumePage.tsx:565
-msgid "There are not usable logical volumes"
-msgstr "გამოყენებადი ლოგიკური ტომები აღმოჩენილი არაა"
-
-#: src/components/storage/LogicalVolumePage.tsx:590
-#: src/components/storage/LogicalVolumePage.tsx:593
-msgid "Logical volume name"
-msgstr "ლოგიკური ტომის სახელი"
-
-#: src/components/storage/LogicalVolumePage.tsx:645
-msgid "Default file system for generic logical volume"
-msgstr "ნაგულისხმევი ფაილური ზოგადი ლოგიკური ტომისთვის"
-
-#: src/components/storage/LogicalVolumePage.tsx:647
-msgid "Destroy current data and format logical volume as"
-msgstr "არსებული მონაცემების განადგურება და ლოგიკური ტომის დაფორმატება, როგორც"
-
-#: src/components/storage/LogicalVolumePage.tsx:648
-msgid "Format logical volume as"
-msgstr "ლოგიკური ტომის დაფორმატება, როგორც"
-
-#: src/components/storage/LogicalVolumePage.tsx:887
-msgid "Configure logical volume"
-msgstr "ლოგიკური ტომის მორგება"
-
-#: src/components/storage/LogicalVolumePage.tsx:893
-#, javascript-format
-msgid "Configure logical volume at %s"
-msgstr "ლოგიკური ტომის მორგება %s-ზე"
-
-#: src/components/storage/LogicalVolumePage.tsx:915
-#: src/components/storage/PartitionPage.tsx:852
-msgid "Mount point mode"
-msgstr "მიმაგრების წერტილის რეჟიმი"
-
-#: src/components/storage/LogicalVolumePage.tsx:976
-#: src/components/storage/PartitionPage.tsx:900
-msgid "Size mode"
-msgstr "ზომის რეჟიმი"
-
-#: src/components/storage/LogicalVolumePage.tsx:1011
-#: src/components/storage/PartitionPage.tsx:935
-msgid "Go to storage page"
-msgstr "საცავის გვერდზე გადასვლა"
 
 #: src/components/storage/LvmPage.tsx:80
 msgid "Enter a name for the volume group."
@@ -3947,46 +3737,6 @@ msgid "%s will be created as a logical volume"
 msgid_plural "%s will be created as logical volumes"
 msgstr[0] "%s შეიქმნება ლოგიკური ტომის სახით"
 msgstr[1] "%s შეიქმნება ლოგიკური ტომების სახით"
-
-#. TRANSLATORS: %s is a disk name with its size (eg. "sda, 10 GiB"
-#: src/components/storage/PartitionPage.tsx:494
-#, javascript-format
-msgid "As a new partition on %s"
-msgstr "როგორც ახალი დანაყოფი %s-ზე"
-
-#: src/components/storage/PartitionPage.tsx:496
-#, javascript-format
-msgid "Using partition %s"
-msgstr "გამოიყენება დანაყოფი %s"
-
-#: src/components/storage/PartitionPage.tsx:530
-msgid "Using an existing partition"
-msgstr "არსებული დანაყოფის გამოყენება"
-
-#: src/components/storage/PartitionPage.tsx:541
-msgid "There are not usable partitions"
-msgstr "გამოყენებადი დანაყოფები აღმოჩენილი არაა"
-
-#: src/components/storage/PartitionPage.tsx:580
-msgid "Default file system for generic partitions"
-msgstr "ნაგულისხმევი ფაილური სისტემა ზოგადი დანაყოფებისთვის"
-
-#: src/components/storage/PartitionPage.tsx:582
-msgid "Destroy current data and format partition as"
-msgstr "მიმდინარე მონაცემების განადგურება და დანაყოფის დაფორმატება, როგორც"
-
-#: src/components/storage/PartitionPage.tsx:583
-msgid "Format partition as"
-msgstr "დანაყოფის დაფორმატება, როგორც"
-
-#: src/components/storage/PartitionPage.tsx:825
-msgid "Configure partition"
-msgstr "დანაყოფის მორგება"
-
-#: src/components/storage/PartitionPage.tsx:831
-#, javascript-format
-msgid "Configure partition at %s"
-msgstr "დანაყოფის აღწერა %s-ზე"
 
 #: src/components/storage/PartitionsSection.tsx:90
 msgid "Moreover, the following partitions will be created or mounted"
@@ -4823,6 +4573,52 @@ msgstr "შეყვანის გასწორება"
 msgid "Unused space"
 msgstr "გამოუყენებელი ადგილი"
 
+#: src/components/storage/formattable-device-form/Form.tsx:116
+#, fuzzy
+msgid "Invalid device location"
+msgstr "არასწორი პროგრამების არჩევანი"
+
+#: src/components/storage/formattable-device-form/Form.tsx:152
+#, fuzzy
+msgid "Device could not be configured"
+msgstr "მორგება არ მოხდება"
+
+#. TRANSLATORS: breadcrumb label for the device configuration form.
+#: src/components/storage/formattable-device-form/Form.tsx:214
+#: src/components/storage/formattable-device-form/Form.tsx:218
+msgid "Configure"
+msgstr "მორგება"
+
+#. TRANSLATORS: title of the page shown when the target device
+#. does not exist. Do not end with a period.
+#: src/components/storage/formattable-device-form/Form.tsx:228
+#: src/components/storage/partition-form/Form.tsx:307
+#, fuzzy
+msgid "Device not found"
+msgstr "სამიზნე აღმოჩენილი არაა"
+
+#. TRANSLATORS: body text on the device not found page.
+#: src/components/storage/formattable-device-form/Form.tsx:230
+#: src/components/storage/partition-form/Form.tsx:309
+#, fuzzy
+msgid "The device does not exist or is no longer available."
+msgstr "კავშირი არ არსებობს, ან ხელმისაწვდომი აღარაა."
+
+#. TRANSLATORS: link text on the device not found page.
+#. TRANSLATORS: link text on the volume group not found page.
+#: src/components/storage/formattable-device-form/Form.tsx:232
+#: src/components/storage/logical-volume-form/Form.tsx:290
+#: src/components/storage/partition-form/Form.tsx:311
+msgid "Go to storage page"
+msgstr "საცავის გვერდზე გადასვლა"
+
+#: src/components/storage/formattable-device-form/validations.ts:61
+#: src/components/storage/logical-volume-form/validations.ts:79
+#: src/components/storage/partition-form/validations.ts:63
+#, fuzzy
+msgid "Select a filesystem type"
+msgstr "მეტი ინფორმაცია ფაილური სისტემის ტიპებზე"
+
 #: src/components/storage/iscsi/DiscoverFormPage.tsx:149
 msgid "No valid address."
 msgstr "სწორი მისამართის გარეშე."
@@ -5016,6 +4812,392 @@ msgid ""
 msgstr ""
 "ჩაკეტილი სამიზნეების მართვა აქედან შეუძლებელია და ჩვენ ამის ქმედებებს არ "
 "გთავაზობთ."
+
+#: src/components/storage/logical-volume-form/Form.tsx:188
+#, fuzzy
+msgid "Logical volume could not be configured"
+msgstr "ჰოსტის სახელის განახლება შეუძლებელია"
+
+#. TRANSLATORS: breadcrumb label for the logical volume create/edit form.
+#: src/components/storage/logical-volume-form/Form.tsx:276
+#: src/components/storage/logical-volume-form/Form.tsx:279
+msgid "Configure logical volume"
+msgstr "ლოგიკური ტომის მორგება"
+
+#. TRANSLATORS: hint below the name input, with example logical volume names
+#: src/components/storage/logical-volume-form/LogicalVolumeNameField.tsx:47
+msgid "Name for the logical volume. E.g., root, home, lv0"
+msgstr ""
+
+#: src/components/storage/logical-volume-form/LogicalVolumeSourceFields.tsx:85
+#: src/components/storage/logical-volume-form/LogicalVolumeSourceFields.tsx:147
+#, fuzzy
+msgid "Logical volume"
+msgstr "ლოგიკური ტომები"
+
+#. TRANSLATORS: %s is a volume group name with its size (eg. "system (30 GiB)")
+#: src/components/storage/logical-volume-form/LogicalVolumeSourceFields.tsx:88
+#, fuzzy, javascript-format
+msgid ""
+"New logical volume. There are no available existing logical volumes on %s."
+msgstr ""
+"გამოყენებული იქნება, მხოლოდ, თავიდან გამოყენებული ლოგიკური ტომები და ადგილი, "
+"რომელიც ლოგიკურ ტომებზე მინიჭებული არაა."
+
+#: src/components/storage/logical-volume-form/LogicalVolumeSourceFields.tsx:100
+#, fuzzy
+msgid "New logical volume"
+msgstr "ლოგიკური ტომი"
+
+#. TRANSLATORS: %s is a volume group name with its size (eg. "system (30 GiB)")
+#: src/components/storage/logical-volume-form/LogicalVolumeSourceFields.tsx:103
+#, fuzzy, javascript-format
+msgid "Create a new logical volume on %s"
+msgstr "როგორც ახალი ლოგიკური ტომი %s-ზე"
+
+#. TRANSLATORS: %s is a description like "XFS partition")
+#. TRANSLATORS: %s is a description like "Ext4 logical volume"
+#: src/components/storage/logical-volume-form/LogicalVolumeSourceFields.tsx:112
+#: src/components/storage/partition-form/PartitionFields.tsx:94
+#, fuzzy, javascript-format
+msgid "Use current %s"
+msgstr "მიმდინარეა %s"
+
+#: src/components/storage/logical-volume-form/validations.ts:68
+msgid "Enter a name"
+msgstr "შეიყვანეთ სახელი"
+
+#: src/components/storage/logical-volume-form/validations.ts:92
+#: src/components/storage/partition-form/validations.ts:76
+#, fuzzy
+msgid "Value is required"
+msgstr "სახელი აუცილებელია"
+
+#: src/components/storage/logical-volume-form/validations.ts:93
+#: src/components/storage/logical-volume-form/validations.ts:102
+#: src/components/storage/logical-volume-form/validations.ts:108
+#: src/components/storage/logical-volume-form/validations.ts:132
+#: src/components/storage/partition-form/validations.ts:77
+#: src/components/storage/partition-form/validations.ts:86
+#: src/components/storage/partition-form/validations.ts:92
+#: src/components/storage/partition-form/validations.ts:116
+msgid "Invalid format (e.g. 20 GiB)"
+msgstr ""
+
+#: src/components/storage/logical-volume-form/validations.ts:101
+#: src/components/storage/logical-volume-form/validations.ts:131
+#: src/components/storage/partition-form/validations.ts:85
+#: src/components/storage/partition-form/validations.ts:115
+#, fuzzy
+msgid "Minimum is required"
+msgstr "სახელი აუცილებელია"
+
+#: src/components/storage/logical-volume-form/validations.ts:107
+#: src/components/storage/partition-form/validations.ts:91
+#, fuzzy
+msgid "Maximum is required"
+msgstr "სახელი აუცილებელია"
+
+#: src/components/storage/logical-volume-form/validations.ts:119
+#: src/components/storage/partition-form/validations.ts:103
+msgid "Must be smaller than maximum size"
+msgstr ""
+
+#: src/components/storage/logical-volume-form/validations.ts:120
+#: src/components/storage/partition-form/validations.ts:104
+msgid "Must be larger than minimum size"
+msgstr ""
+
+#: src/components/storage/partition-form/Form.tsx:157
+#, fuzzy
+msgid "Invalid partition location"
+msgstr "არასწორი პროგრამების არჩევანი"
+
+#: src/components/storage/partition-form/Form.tsx:206
+#, fuzzy
+msgid "Partition could not be configured"
+msgstr "ასევე მოხდება ჩასატვირთად საჭირო დანაყოფების მორგება."
+
+#. TRANSLATORS: breadcrumb label for the partition create/edit form.
+#: src/components/storage/partition-form/Form.tsx:294
+#: src/components/storage/partition-form/Form.tsx:297
+msgid "Configure partition"
+msgstr "დანაყოფის მორგება"
+
+#: src/components/storage/partition-form/PartitionFields.tsx:69
+#: src/components/storage/partition-form/PartitionFields.tsx:127
+#, fuzzy
+msgid "Partition"
+msgstr "დანაყოფები"
+
+#. TRANSLATORS: %s is a disk name with its size (eg. "sda, 10 GiB")
+#: src/components/storage/partition-form/PartitionFields.tsx:72
+#, javascript-format
+msgid "New partition. There are no available existing partitions on %s."
+msgstr ""
+
+#: src/components/storage/partition-form/PartitionFields.tsx:85
+#, fuzzy
+msgid "New partition"
+msgstr "დანაყოფი"
+
+#. TRANSLATORS: %s is a disk name with its size (eg. "sda, 10 GiB")
+#: src/components/storage/partition-form/PartitionFields.tsx:87
+#, fuzzy, javascript-format
+msgid "Create a new partition on %s"
+msgstr "როგორც ახალი დანაყოფი %s-ზე"
+
+#: src/components/storage/shared/FilesystemAdditionalFields.tsx:54
+#, fuzzy
+msgid "Mount options"
+msgstr "მიმაგრების წერტილის მორგება"
+
+#: src/components/storage/shared/FilesystemAdditionalFields.tsx:55
+msgid "E.g. rw, noatime, umask=0666"
+msgstr ""
+
+#: src/components/storage/shared/FilesystemAdditionalFields.tsx:65
+#, fuzzy
+msgid "Additional format arguments"
+msgstr "დამატებით ნიმუშები"
+
+#. TRANSLATORS: %s is replaced by "mkfs" (command used to format devices)
+#: src/components/storage/shared/FilesystemAdditionalFields.tsx:72
+#, javascript-format
+msgid "This will be injected to the command to create the file system (%s)."
+msgstr ""
+
+#. TRANSLATORS: checkbox label for additional filesystem configuration options
+#: src/components/storage/shared/FilesystemFields.tsx:151
+#, fuzzy
+msgid "Define more file system settings"
+msgstr "მეტი ინფორმაცია ფაილური სისტემის ტიპებზე"
+
+#: src/components/storage/shared/FilesystemLabelField.tsx:51
+msgid "Label"
+msgstr "ჭდე"
+
+#. TRANSLATORS: %s is a filesystem (eg. XFS)
+#: src/components/storage/shared/FilesystemSelector.tsx:58
+#, javascript-format
+msgid "%s (keep data)"
+msgstr ""
+
+#. TRANSLATORS: %s is a device name like "/dev/vdd2"
+#: src/components/storage/shared/FilesystemSelector.tsx:67
+#, javascript-format
+msgid "Any existing data on %s will be destroyed when installation begins."
+msgstr ""
+
+#. TRANSLATORS: %s is a filesystem type (eg. XFS)
+#: src/components/storage/shared/FilesystemSelector.tsx:79
+#, fuzzy, javascript-format
+msgid "%s (default file system for generic mount points)"
+msgstr "ნაგულისხმევი ფაილური სისტემა ზოგადი მიმაგრების წერტილებისთვის"
+
+#. TRANSLATORS: %1$s is a filesystem (eg. XFS), %2$s is a mount point (eg. "/home")
+#: src/components/storage/shared/FilesystemSelector.tsx:86
+#, fuzzy, javascript-format
+msgid "%1$s (default file system for %2$s)"
+msgstr "ნაგულისხმევი ფაილური სისტემა %s-სთვის"
+
+#: src/components/storage/shared/FilesystemSelector.tsx:146
+#: src/components/storage/shared/FilesystemSelector.tsx:162
+msgid "File system"
+msgstr "ფაილური სისტემა"
+
+#. TRANSLATORS: each %s is replaced by a mount point (e.g., "/home").
+#: src/components/storage/shared/MountPointField.tsx:33
+#, fuzzy, javascript-format
+msgid "E.g., %s, %s, %s"
+msgstr "მაგ: %s"
+
+#: src/components/storage/shared/MountPointField.tsx:98
+msgid "Mount point"
+msgstr "მიმაგრების წერტილი"
+
+#. TRANSLATORS: description for automatic size mode
+#: src/components/storage/shared/SizeFields.tsx:69
+#, fuzzy
+msgid "Let the installer set the size"
+msgstr "დაყენების პროგრამისთვის ზომის შეთავაზების უფლების დართვა"
+
+#. TRANSLATORS: size mode option
+#: src/components/storage/shared/SizeFields.tsx:74
+msgid "Fixed"
+msgstr "ფიქსირებული"
+
+#. TRANSLATORS: description for fixed size mode
+#: src/components/storage/shared/SizeFields.tsx:76
+msgid "Set a specific size"
+msgstr ""
+
+#. TRANSLATORS: size mode option
+#: src/components/storage/shared/SizeFields.tsx:81
+msgid "Range"
+msgstr "დიაპაზონი"
+
+#. TRANSLATORS: description for range size mode
+#: src/components/storage/shared/SizeFields.tsx:83
+msgid "Set minimum and maximum"
+msgstr ""
+
+#. TRANSLATORS: size mode option
+#: src/components/storage/shared/SizeFields.tsx:88
+msgid "Expand if possible"
+msgstr ""
+
+#. TRANSLATORS: description for expand size mode
+#: src/components/storage/shared/SizeFields.tsx:90
+msgid "Set minimum; use more space if available"
+msgstr ""
+
+#. TRANSLATORS: %s is an already escaped path like "/home"
+#: src/components/storage/shared/SizeFields.tsx:109
+#, fuzzy, javascript-format
+msgid "size for %s with the current settings"
+msgstr "საჭირო ადგილი მიმდინარე არჩევნით: [%s]"
+
+#. TRANSLATORS: %s is an already escaped path like "/home"
+#: src/components/storage/shared/SizeFields.tsx:113
+#, fuzzy, javascript-format
+msgid "default size for %s"
+msgstr "ნაგულისხმევი ფაილური სისტემა %s-სთვის"
+
+#. TRANSLATORS: %1$s is a size, %2$s is a sentence explaining why that minimum is used
+#: src/components/storage/shared/SizeFields.tsx:121
+#, fuzzy, javascript-format
+msgid "Minimum: %1$s (%2$s)"
+msgstr "%1$s (%2$s)"
+
+#. TRANSLATORS: %1$s is a size, %2$s is a sentence explaining why that size is used
+#: src/components/storage/shared/SizeFields.tsx:126
+#, fuzzy, javascript-format
+msgid "Value: %1$s (%2$s)"
+msgstr "%1$s (%2$s)"
+
+#. TRANSLATORS: %1$s and %2$s are sizes, %3%s is a sentence explaining why those limits are used
+#: src/components/storage/shared/SizeFields.tsx:130
+#, fuzzy, javascript-format
+msgid "Range: %1$s - %2$s (%3$s)"
+msgstr "%1$s - %2$s"
+
+#: src/components/storage/shared/SizeFields.tsx:147
+#, javascript-format
+msgid ""
+"Can be dynamically adjusted based on the amount of RAM in the system, the "
+"usage of Btrfs snapshots and the presence of a separate file system for %s."
+msgstr ""
+
+#: src/components/storage/shared/SizeFields.tsx:157
+#, javascript-format
+msgid ""
+"Can be dynamically adjusted based on the amount of RAM in the system, the "
+"usage of Btrfs snapshots and the presence of separate file systems for %s."
+msgstr ""
+
+#: src/components/storage/shared/SizeFields.tsx:164
+msgid ""
+"Can be dynamically adjusted based on the amount of RAM in the system and the "
+"usage of Btrfs snapshots."
+msgstr ""
+
+#: src/components/storage/shared/SizeFields.tsx:173
+#, javascript-format
+msgid ""
+"Can be dynamically adjusted based on the amount of RAM in the system and the "
+"presence of a separate file system for %s."
+msgstr ""
+
+#: src/components/storage/shared/SizeFields.tsx:182
+#, javascript-format
+msgid ""
+"Can be dynamically adjusted based on the amount of RAM in the system and the "
+"presence of separate file systems for %s."
+msgstr ""
+
+#: src/components/storage/shared/SizeFields.tsx:193
+#, javascript-format
+msgid ""
+"Can be dynamically adjusted based on the usage of Btrfs snapshots and the "
+"presence of a separate file system for %s."
+msgstr ""
+
+#: src/components/storage/shared/SizeFields.tsx:203
+#, javascript-format
+msgid ""
+"Can be dynamically adjusted based on the usage of Btrfs snapshots and the "
+"presence of separate file systems for %s."
+msgstr ""
+
+#: src/components/storage/shared/SizeFields.tsx:209
+msgid "Can be dynamically adjusted based on the usage of Btrfs snapshots."
+msgstr ""
+
+#. TRANSLATORS: %s is an already formatted mount point (eg. "/home")
+#: src/components/storage/shared/SizeFields.tsx:215
+#, javascript-format
+msgid ""
+"Can be dynamically adjusted based on the presence of a separate file system "
+"for %s."
+msgstr ""
+
+#. TRANSLATORS: %s is an already formatted list of mount paths (eg. "/home" and "/var/lib")
+#: src/components/storage/shared/SizeFields.tsx:222
+#, javascript-format
+msgid ""
+"Can be dynamically adjusted based on the presence of separate file systems "
+"for %s."
+msgstr ""
+
+#: src/components/storage/shared/SizeFields.tsx:251
+#, fuzzy
+msgid "Based on the mount point"
+msgstr "მიმაგრების წერტილების გადატანა"
+
+#: src/components/storage/shared/SizeFields.tsx:307
+msgid "Value"
+msgstr "მნიშვნელობა"
+
+#: src/components/storage/shared/SizeFields.tsx:318
+#: src/components/storage/shared/SizeFields.tsx:332
+msgid "Minimum"
+msgstr "მინიმუმი"
+
+#: src/components/storage/shared/SizeFields.tsx:321
+msgid "Maximum"
+msgstr "მაქსიმუმი"
+
+#: src/components/storage/shared/helpers.ts:71
+#, fuzzy
+msgid "Current"
+msgstr "მიმდინარეა %s"
+
+#. TRANSLATORS: %s is a device name like "/dev/vdd2"
+#: src/components/storage/shared/helpers.ts:74
+#, fuzzy, javascript-format
+msgid "Do not format %s and keep data"
+msgstr "%s-ის არდაფორმატებადა მონაცემების შენარჩუნება"
+
+#: src/components/storage/shared/validation-helpers.ts:74
+#, fuzzy
+msgid "Mount point is required"
+msgstr "მოწყობილობის რეჟიმი აუცილებელია"
+
+#: src/components/storage/shared/validation-helpers.ts:75
+msgid "Select or enter a valid mount point"
+msgstr "აირჩიეთ, ან შეიყვანეთ სწორი მიმაგრების წერტილი"
+
+#: src/components/storage/shared/validation-helpers.ts:77
+msgid ""
+"Select or enter a mount point that is not already assigned to another device"
+msgstr ""
+"აირჩიეთ, ან შეიყვანეთ მიმაგრები წერტილი, რომელიც სხვა მოწყობილობაზე უკვე "
+"მინიჭებული არაა"
+
+#: src/components/storage/shared/validation-helpers.ts:95
+msgid "Invalid label format"
+msgstr ""
 
 #: src/components/storage/utils.ts:60
 msgid "KiB"
@@ -5353,6 +5535,12 @@ msgstr "დანაყოფები, რომლებიც გამოყ
 #, javascript-format
 msgid "Current %1$s at %2$s"
 msgstr "მიმდინარე %1$s მოწყობილობაზე %2$s"
+
+#. TRANSLATORS: %s is a device name (eg. /dev/sda3).
+#: src/components/storage/utils/partition.tsx:57
+#, javascript-format
+msgid "Current %s"
+msgstr "მიმდინარეა %s"
 
 #. TRANSLATORS: %1$s is a filesystem type (eg. Btrfs), %2$s is a device name (eg. /dev/sda3).
 #: src/components/storage/utils/partition.tsx:60
@@ -5836,20 +6024,20 @@ msgstr "ზოგიერთი SSH საჯარო გასაღები
 msgid "At least one SSH public key is required"
 msgstr "საჭიროა, სულ ცოტა, ერთი SSH საჯარო გასაღები"
 
-#: src/hooks/use-form-submit.tsx:163
+#: src/hooks/use-form-submit.tsx:171
 msgid "Changes successfully applied"
 msgstr "ცვლილების გადატარება წარმატებულია"
 
-#: src/hooks/use-form-submit.tsx:164
+#: src/hooks/use-form-submit.tsx:172
 msgid "No changes to apply"
 msgstr "გადასატარებელი ცვლილებების გარეშე"
 
-#: src/hooks/use-form-submit.tsx:165
+#: src/hooks/use-form-submit.tsx:173
 msgid "Fix the errors below and try again"
 msgstr "გაასწორეთ ქვემორე შეცდომები და კიდევ სცადეთ"
 
 #. TRANSLATORS: Link shown in the alert after submitting a form. Text in [brackets] becomes a link. Keep the brackets.
-#: src/hooks/use-form-submit.tsx:277
+#: src/hooks/use-form-submit.tsx:286
 msgid "Go to [installation] summary."
 msgstr "გადასვლა [დაყენების] შეჯამებაზე."
 
@@ -5864,6 +6052,111 @@ msgstr "აქტივაცია"
 #: src/utils/network.ts:62
 msgid "Deactivating"
 msgstr "მიმდინარეობს დეაქტივაცია"
+
+#~ msgid "Waiting for a mount point"
+#~ msgstr "მიმაგრების წერტილის მოლოდინი"
+
+#~ msgid "Destroy current data and format device as"
+#~ msgstr "არსებული მონაცემების განადგურება და დანაყოფის დაფორმატება, როგორც"
+
+#~ msgid "Format device as"
+#~ msgstr "მოწყობილობების დაფორმატება, როგორც"
+
+#~ msgid "File system label"
+#~ msgstr "ფაილური სისტემის ჭდე"
+
+#, javascript-format
+#~ msgid "Configure device %s"
+#~ msgstr "მორგება მოწყობილობისთვის %s"
+
+#~ msgid "Mount point toggle"
+#~ msgstr "მიმაგრების წერტილის გადართვა"
+
+#~ msgid "Suggested mount points"
+#~ msgstr "ნარჩევი მიმაგრების წერტილები"
+
+#~ msgid "Clear selected mount point"
+#~ msgstr "მონიშნული მიმაგრების წერტილის გასუფთავება"
+
+#~ msgid "Use"
+#~ msgstr "გამოყენება"
+
+#~ msgid "Select or enter a mount point"
+#~ msgstr "აირჩიეთ, ან შეიყვანეთ მიმაგრების წერტილი"
+
+#~ msgid "The minimum cannot be greater than the maximum"
+#~ msgstr "მინიმუმი მაქსიმუმზე მეტი ვერ იქნება"
+
+#~ msgid "The maximum must be a number followed by a unit like GiB or GB"
+#~ msgstr ""
+#~ "მაქსიმუმი უნდა იყოს რიცხვი, რომელსაც მოჰყვება ისეთი ერთეულები, როგორიცაა, "
+#~ "მაგალითად, GiB, ან GB"
+
+#~ msgid "The minimum must be a number followed by a unit like GiB or GB"
+#~ msgstr ""
+#~ "მინიმუმი უნდა იყოს რიცხვი, რომელსაც მოჰყვება ისეთი ერთეული, როგორიცაა, "
+#~ "მაგალითად, GiB, ან GB"
+
+#~ msgid "Size limits must be numbers followed by a unit like GiB or GB"
+#~ msgstr ""
+#~ "ზომის ლიმიტი უნდა წარმოადგენდეს რიცხვს, რომელსაც ზომა მოჰყვება (მაგ: GiB "
+#~ "ან GB)"
+
+#, javascript-format
+#~ msgid "Using logical volume %s"
+#~ msgstr "გამოიყენება ლოგიკური ტომი %s"
+
+#~ msgid "Using an existing logical volume"
+#~ msgstr "გამოიყენება არსებული ლოგიკური ტომი"
+
+#~ msgid "There are not usable logical volumes"
+#~ msgstr "გამოყენებადი ლოგიკური ტომები აღმოჩენილი არაა"
+
+#~ msgid "Logical volume name"
+#~ msgstr "ლოგიკური ტომის სახელი"
+
+#~ msgid "Default file system for generic logical volume"
+#~ msgstr "ნაგულისხმევი ფაილური ზოგადი ლოგიკური ტომისთვის"
+
+#~ msgid "Destroy current data and format logical volume as"
+#~ msgstr ""
+#~ "არსებული მონაცემების განადგურება და ლოგიკური ტომის დაფორმატება, როგორც"
+
+#~ msgid "Format logical volume as"
+#~ msgstr "ლოგიკური ტომის დაფორმატება, როგორც"
+
+#, javascript-format
+#~ msgid "Configure logical volume at %s"
+#~ msgstr "ლოგიკური ტომის მორგება %s-ზე"
+
+#~ msgid "Mount point mode"
+#~ msgstr "მიმაგრების წერტილის რეჟიმი"
+
+#~ msgid "Size mode"
+#~ msgstr "ზომის რეჟიმი"
+
+#, javascript-format
+#~ msgid "Using partition %s"
+#~ msgstr "გამოიყენება დანაყოფი %s"
+
+#~ msgid "Using an existing partition"
+#~ msgstr "არსებული დანაყოფის გამოყენება"
+
+#~ msgid "There are not usable partitions"
+#~ msgstr "გამოყენებადი დანაყოფები აღმოჩენილი არაა"
+
+#~ msgid "Default file system for generic partitions"
+#~ msgstr "ნაგულისხმევი ფაილური სისტემა ზოგადი დანაყოფებისთვის"
+
+#~ msgid "Destroy current data and format partition as"
+#~ msgstr "მიმდინარე მონაცემების განადგურება და დანაყოფის დაფორმატება, როგორც"
+
+#~ msgid "Format partition as"
+#~ msgstr "დანაყოფის დაფორმატება, როგორც"
+
+#, javascript-format
+#~ msgid "Configure partition at %s"
+#~ msgstr "დანაყოფის აღწერა %s-ზე"
 
 #~ msgid "System settings successfully updated"
 #~ msgstr "სისტემის პარამეტრები წარმატებით განახლდა"
@@ -6028,12 +6321,6 @@ msgstr "მიმდინარეობს დეაქტივაცია"
 #~ "ეს ჰოსტის სახელი დინამიკურია და [შეიძლება, შეიცვალოს დაყენების, ან "
 #~ "ქსელური განახლების შემდეგ], როგორც ეს ლოკალური ქსელის ადმინისტრატორის "
 #~ "მიერაა მითითებული."
-
-#~ msgid "Hostname could not be updated"
-#~ msgstr "ჰოსტის სახელის განახლება შეუძლებელია"
-
-#~ msgid "Value"
-#~ msgstr "მნიშვნელობა"
 
 #~ msgid "Binding settings"
 #~ msgstr "მიბმის პარამეტრები"
@@ -6607,14 +6894,8 @@ msgstr "მიმდინარეობს დეაქტივაცია"
 #~ msgid "Maximum size options"
 #~ msgstr "მაქსიმალური ზომის მორგება"
 
-#~ msgid "Minimum"
-#~ msgstr "მინიმუმი"
-
 #~ msgid "Minimum size value"
 #~ msgstr "მინიმალური ზომის მნიშვნელობა"
-
-#~ msgid "Maximum"
-#~ msgstr "მაქსიმუმი"
 
 #~ msgid "Maximum size value"
 #~ msgstr "მაქსიმალური ზომის მნიშვნელობა"
@@ -6797,9 +7078,6 @@ msgstr "მიმდინარეობს დეაქტივაცია"
 #~ msgid "Edit %s file system"
 #~ msgstr "%s ფაილური სისტემის ჩასწორება"
 
-#~ msgid "More info for file system types"
-#~ msgstr "მეტი ინფორმაცია ფაილური სისტემის ტიპებზე"
-
 #~ msgid ", "
 #~ msgstr ", "
 
@@ -6814,12 +7092,6 @@ msgstr "მიმდინარეობს დეაქტივაცია"
 
 #~ msgid "Minimum desired size"
 #~ msgstr "მინიმალური სასურველი ზომა"
-
-#~ msgid "Fixed"
-#~ msgstr "ფიქსირებული"
-
-#~ msgid "Range"
-#~ msgstr "დიაპაზონი"
 
 #, c-format
 #~ msgid "Location for %s file system"
