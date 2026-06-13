@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-06-12 15:05+0000\n"
-"PO-Revision-Date: 2026-06-13 02:12+0000\n"
+"PO-Revision-Date: 2026-06-13 03:12+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/agama/agama-rust-"
 "master/ja/>\n"
@@ -63,21 +63,32 @@ msgid ""
 "You can logout at any time by using the \"auth logout\" command, although "
 "this command does not affect the root user."
 msgstr ""
+"このプログラムを root として動作させている場合を除き、ほとんどの操作に対して "
+"Agama サーバに対する認証が必要になります。認証は \"auth login\" コマンドで "
+"root のパスワードを指定することによって行います。認証が成功すると、サーバは以"
+"降の様々な操作で使用する JSON Web トークン (JWT) を返します。\n"
+"\n"
+"このプログラムをローカルで root として動作させた場合、 /run/agama/token に保"
+"存されているマスタートークンを自動的に使用しますので、認証は不要になります。"
+"このファイルは root ユーザのみがアクセスできるものであるためです。\n"
+"\n"
+"なお、 \"auth logout\" コマンドを使用することでログアウトを行うこともできます"
+"。 root ユーザの場合は何も行いません。"
 
 #. TRANSLATORS: CLI help for: agama auth logout
 #: agama-cli/src/auth.rs:88
 msgid "Deauthenticate by removing the token"
-msgstr ""
+msgstr "トークンを削除して認証情報を解除します"
 
 #. TRANSLATORS: CLI help for: agama auth show
 #: agama-cli/src/auth.rs:93
 msgid "Print the used token to the standard output"
-msgstr ""
+msgstr "使用しているトークンを標準出力に出力します"
 
 #. TRANSLATORS: CLI help for: agama auth login
 #: agama-cli/src/auth.rs:99
 msgid "Authenticate with Agama's server and store the token"
-msgstr ""
+msgstr "Agama サーバに対して認証を行い、トークンを記憶します"
 
 #. TRANSLATORS: CLI help for: agama auth login (details)
 #: agama-cli/src/auth.rs:101
@@ -87,21 +98,24 @@ msgid ""
 "token in .agama/agama-jwt. The token will be automatically sent to "
 "authenticate the following requests."
 msgstr ""
+"このコマンドではパスワードを標準入力から読み込もうとします。標準入力が存在し"
+"ない場合は、ユーザに対して対話的な入力を求めます。ログインが成功すると、"
+"トークンは .agama/agama-jwt に保存されます。保存されたトークンは、以降の"
+"リクエストで自動的に送信されます。"
 
 #: agama-cli/src/auth.rs:141
 msgid "Please enter the root password:"
-msgstr ""
+msgstr "root のパスワードを入力してください:"
 
 #. TRANSLATORS: {0} is a host name
 #: agama-cli/src/auth.rs:179
 msgid "Not authenticated in {0}"
-msgstr ""
+msgstr "{0} では認証されていません"
 
 #. TRANSLATORS: CLI help for: agama probe
 #: agama-cli/src/commands.rs:42
-#, fuzzy
 msgid "Analyze the system"
-msgstr "システムの準備"
+msgstr "システムを分析します"
 
 #. TRANSLATORS: CLI help for: agama probe (details)
 #: agama-cli/src/commands.rs:44
@@ -111,12 +125,15 @@ msgid ""
 "devices, and more. The 'probe' command initiates this analysis process and "
 "returns immediately. TODO: do we really need a \"probe\" action?"
 msgstr ""
+"Agama では 'probe' とはシステムの分析処理のことを指します。分析処理では"
+"ソフトウエアのリポジトリの読み込みのほか、ストレージデバイスの分析なども行い"
+"ます。 'probe' コマンドではこのような分析処理を裏で開始し、コマンド自体はすぐ"
+"に終了します。 TODO: 本当に \"probe\" が必要？"
 
 #. TRANSLATORS: CLI help for: agama install
 #: agama-cli/src/commands.rs:54
-#, fuzzy
 msgid "Start the system installation"
-msgstr "パッケージのインストールを開始しています"
+msgstr "システムのインストールを開始します"
 
 #. TRANSLATORS: CLI help for: agama install (details)
 #: agama-cli/src/commands.rs:56
@@ -128,11 +145,18 @@ msgid ""
 "When the preconditions for the installation are not met, it informs the user "
 "and returns, making no changes to the system."
 msgstr ""
+"このコマンドを実行すると、インストール処理を開始します。  なお、インストール"
+"処理にはストレージデバイスのセットアップやパッケージのインストール等が含まれ"
+"ますので、破壊的な処理になりうることに注意してください。\n"
+"\n"
+"なお、インストールに必要な事前要件が満たされていない場合は、その旨をユーザに"
+"通知して終了します。この場合、システムに対して変更が加えられることはありませ"
+"ん。"
 
 #. TRANSLATORS: CLI help for: agama download
 #: agama-cli/src/commands.rs:79
 msgid "Download file from a given (AutoYaST) URL"
-msgstr ""
+msgstr "指定した (AutoYaST の) URL からファイルをダウンロードします"
 
 #. TRANSLATORS: CLI help for: agama download (details)
 #: agama-cli/src/commands.rs:81
@@ -143,6 +167,12 @@ msgid ""
 "autoinstallation profiles. If you want to convert an AutoYaST profile, use "
 "\"agama config generate\"."
 msgstr ""
+"このコマンドは、 AutoYaST で対応している様々なスキーマ (例: device://) から"
+"ファイルをダウンロードします。追加のスクリプトや設定ファイルなどを"
+"ダウンロードして使用することができますし、 Agama の自動"
+"インストールプロファイルをダウンロードすることもできます。 AutoYaST で使用し"
+"ていたプロファイルを変換したい場合は、 \"agama config generate\" コマンドをお"
+"使いください。"
 
 #. TRANSLATORS: CLI help for: agama download <URL>
 #: agama-cli/src/commands.rs:95
@@ -150,17 +180,18 @@ msgid ""
 "URL reference pointing to file for download. If a relative URL is provided, "
 "it will be resolved against the current working directory"
 msgstr ""
+"ファイルのダウンロード元となる URL を指定します。相対 URL で指定した場合、現"
+"在の作業ディレクトリからの相対パスとして処理されます"
 
 #. TRANSLATORS: CLI help for: agama download <DESTINATION>
 #: agama-cli/src/commands.rs:105
 msgid "File name"
-msgstr ""
+msgstr "ファイル名"
 
 #. TRANSLATORS: CLI help for: agama finish
 #: agama-cli/src/commands.rs:112
-#, fuzzy
 msgid "Finish the installation"
-msgstr "インストールを完了しています"
+msgstr "インストールを完了します"
 
 #. TRANSLATORS: CLI help for: agama finish <METHOD>
 #: agama-cli/src/commands.rs:118
@@ -176,11 +207,24 @@ msgid ""
 "\n"
 "   poweroff - power off the installed machine."
 msgstr ""
+"インストールの完了後に実施すべきことを指定します。指定可能な値は下記のとおり"
+"です:\n"
+"\n"
+"   stop - 再起動を行わず、 Agama バックエンドを動作させたままの状態にします"
+"。\n"
+"\n"
+"   reboot - システムを再起動してインストール済みのシステムに移行します。この"
+"値が既定値です。なお、カーネルのコマンドラインパラメータ inst.finish を指定す"
+"ることで、動作を上書きすることができます。\n"
+"\n"
+"   halt - インストールが完了後にシステムを停止 (halt) します。\n"
+"\n"
+"   poweroff - インストール完了後にシステムの電源を切ります。"
 
 #. TRANSLATORS: CLI help for: agama monitor
 #: agama-cli/src/commands.rs:136
 msgid "Continuously monitors the Agama service until it finishes"
-msgstr ""
+msgstr "Agama サービスを継続的に監視して、処理が完了するのを待機します"
 
 #. TRANSLATORS: CLI help for: agama status
 #: agama-cli/src/commands.rs:143
@@ -188,27 +232,28 @@ msgid ""
 "Prints the current state of the installation (e.g., waiting, blocked, "
 "running, or finished)"
 msgstr ""
+"インストール処理における現在の状態を出力します (例: 待機中, ブロック, 処理"
+"中, 完了)"
 
 #. TRANSLATORS: CLI help for: agama status --format <FORMAT>
 #: agama-cli/src/commands.rs:151
 msgid "Specify in which format status will be shown"
-msgstr ""
+msgstr "状態を表示する際の形式を指定します"
 
 #. TRANSLATORS: CLI help for: agama events
 #: agama-cli/src/commands.rs:158
 msgid "Display Agama events"
-msgstr ""
+msgstr "Agama のイベントを表示します"
 
 #. TRANSLATORS: CLI help for: agama events --pretty
 #: agama-cli/src/commands.rs:165
 msgid "Display the events in a more human-readable way"
-msgstr ""
+msgstr "イベントをよりわかりやすく表示します"
 
 #. TRANSLATORS: CLI help for: agama config
 #: agama-cli/src/config.rs:46
-#, fuzzy
 msgid "Inspect or change the installation settings"
-msgstr "言語設定を保存しています"
+msgstr "インストール設定を調査もしくは変更します"
 
 #. TRANSLATORS: CLI help for: agama config (details)
 #: agama-cli/src/config.rs:48
@@ -220,17 +265,23 @@ msgid ""
 "If you want to change any configuration value, you can load a profile "
 "(complete or partial) using the \"load\" subcommand."
 msgstr ""
+"インストール設定はコマンドラインから調査および変更することができます。 "
+"\"show\" サブコマンドを実行すると、 JSON 形式の \"プロファイル\" で現在の設定"
+"を出力します。\n"
+"\n"
+"設定変更を行いたい場合は、 \"load\" サブコマンドでプロファイルの一部または全"
+"部を読み込むことができます。"
 
 #. TRANSLATORS: CLI help for: agama config load
 #: agama-cli/src/config.rs:64
 msgid "Read and load a profile"
-msgstr ""
+msgstr "プロファイルを読み込みます"
 
 #. TRANSLATORS: CLI help for: agama config load <URL_OR_PATH>
 #. TRANSLATORS: CLI help for: agama config generate <URL_OR_PATH>
 #: agama-cli/src/config.rs:70 agama-cli/src/config.rs:166
 msgid "JSON file: URL or path or `-` for standard input"
-msgstr ""
+msgstr "JSON ファイル: URL, パス, もしくは `-` (標準入力)"
 
 #. TRANSLATORS: CLI help for: agama config show
 #: agama-cli/src/config.rs:80
@@ -541,12 +592,11 @@ msgstr ""
 
 #: agama-cli/src/monitor/ui/question.rs:371
 msgid "Password"
-msgstr ""
+msgstr "パスワード"
 
 #: agama-cli/src/monitor/ui/question.rs:377
-#, fuzzy
 msgid "Location"
-msgstr "ローカライゼーション"
+msgstr "場所"
 
 #: agama-cli/src/monitor/ui/question.rs:383
 msgid "Value"
@@ -586,9 +636,8 @@ msgid "Idle"
 msgstr "待機"
 
 #: agama-cli/src/monitor/ui/summary.rs:79
-#, fuzzy
 msgid "Waiting for user"
-msgstr "これらの解決を待っています。"
+msgstr "ユーザの操作を待っています"
 
 #: agama-cli/src/monitor/ui/summary.rs:102
 msgid "Installing"
