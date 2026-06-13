@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-12 15:01+0000\n"
+"POT-Creation-Date: 2026-06-13 16:58+0000\n"
 "PO-Revision-Date: 2026-05-19 09:12+0000\n"
 "Last-Translator: Davide Aiello <davide.aiello@novilingulists.com>\n"
 "Language-Team: Italian <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -37,6 +37,7 @@ msgstr "Contenuto"
 
 #. TRANSLATORS: short label for the option shown in the UI
 #. TRANSLATORS: the "Automatic" appearance option name
+#. TRANSLATORS: size mode option
 #. TRANSLATORS: option label for automatic IP configuration.
 #: src/components/core/AppearanceSettings.tsx:75
 #: src/components/core/AppearanceSettings.tsx:106
@@ -46,6 +47,8 @@ msgstr "Contenuto"
 #: src/components/storage/SizeModeSelect.tsx:191
 #: src/components/storage/SizeModeSelect.tsx:196
 #: src/components/storage/iscsi/TargetLoginPage.tsx:58
+#: src/components/storage/shared/SizeFields.tsx:67
+#: src/components/storage/shared/SizeFields.tsx:250
 msgid "Automatic"
 msgstr "Automatico"
 
@@ -332,6 +335,9 @@ msgstr "Usa le stesse impostazioni per il prodotto selezionato"
 #: src/components/core/Page.tsx:290 src/components/form/SubmitButton.tsx:49
 #: src/components/storage/dasd/FormatActionHandler.tsx:95
 #: src/components/storage/dasd/FormatActionHandler.tsx:122
+#: src/components/storage/formattable-device-form/Form.tsx:180
+#: src/components/storage/logical-volume-form/Form.tsx:243
+#: src/components/storage/partition-form/Form.tsx:253
 #: src/components/storage/zfcp/ZFCPControllersPage.tsx:161
 #: src/components/system/system-form/Form.tsx:167
 #: src/components/users/authentication-form/Form.tsx:276
@@ -534,22 +540,23 @@ msgstr "Passaggio %1$d di %2$d"
 msgid "Software"
 msgstr "Software"
 
+#. TRANSLATORS: breadcrumb label for the storage configuration section.
 #: src/components/core/ProgressStatusMonitor.tsx:42
 #: src/components/overview/StorageSummary.tsx:190
 #: src/components/storage/BootSelectionPage.tsx:183
 #: src/components/storage/DeviceSelectorPage.tsx:75
 #: src/components/storage/EncryptionSettingsPage.tsx:121
-#: src/components/storage/FormattableDevicePage.tsx:445
 #: src/components/storage/ISCSIPage.tsx:36
-#: src/components/storage/LogicalVolumePage.tsx:885
 #: src/components/storage/LvmPage.tsx:186
-#: src/components/storage/PartitionPage.tsx:819
 #: src/components/storage/ProposalPage.tsx:323
 #: src/components/storage/SpacePolicySelectionPage.tsx:121
 #: src/components/storage/dasd/DASDPage.tsx:70
+#: src/components/storage/formattable-device-form/Form.tsx:207
 #: src/components/storage/iscsi/DiscoverFormPage.tsx:268
 #: src/components/storage/iscsi/InitiatorFormPage.tsx:58
 #: src/components/storage/iscsi/TargetLoginPage.tsx:303
+#: src/components/storage/logical-volume-form/Form.tsx:269
+#: src/components/storage/partition-form/Form.tsx:287
 #: src/components/storage/zfcp/ZFCPControllersPage.tsx:190
 #: src/components/storage/zfcp/ZFCPPage.tsx:174 src/routes/storage.tsx:46
 msgid "Storage"
@@ -1185,6 +1192,7 @@ msgstr ""
 #: src/components/storage/iscsi/InitiatorFormPage.tsx:75
 #: src/components/storage/iscsi/TargetsTable.tsx:282
 #: src/components/storage/iscsi/TargetsTable.tsx:456
+#: src/components/storage/logical-volume-form/LogicalVolumeNameField.tsx:45
 #: src/components/system/system-form/HostnameFields.tsx:137
 #: src/components/system/system-form/HostnameFields.tsx:146
 msgid "Name"
@@ -1534,6 +1542,7 @@ msgstr "Usa il dico %s"
 #. TRANSLATORS: option label for the bridge STP configuration to use the system default.
 #: src/components/network/connection-form/BridgeFields.tsx:40
 #: src/components/network/connection-form/VlanFields.tsx:38
+#: src/components/storage/shared/helpers.ts:61
 #: src/components/system/system-form/NtpFields.tsx:62
 msgid "Default"
 msgstr ""
@@ -1581,6 +1590,9 @@ msgstr ""
 #: src/components/network/connection-form/IpFields.tsx:153
 #: src/components/product/registration-form/Form.tsx:184
 #: src/components/product/registration-form/Form.tsx:199
+#: src/components/storage/shared/FilesystemAdditionalFields.tsx:54
+#: src/components/storage/shared/FilesystemAdditionalFields.tsx:64
+#: src/components/storage/shared/FilesystemLabelField.tsx:51
 #: src/components/users/authentication-form/FirstUserFields.tsx:149
 msgid "(optional)"
 msgstr "(facoltativo)"
@@ -3660,6 +3672,7 @@ msgstr "Usa il dico %s"
 #: src/components/storage/SizeModeSelect.tsx:125
 #: src/components/storage/SpaceActionsTable.tsx:231
 #: src/components/storage/VolumeGroupsTable.tsx:78
+#: src/components/storage/shared/SizeFields.tsx:373
 msgid "Size"
 msgstr "Dimensione"
 
@@ -3778,237 +3791,12 @@ msgstr[0] ""
 msgstr[1] ""
 "La configurazione deve essere adattata per risolvere i seguenti problemi:"
 
-#: src/components/storage/FormattableDevicePage.tsx:211
-#: src/components/storage/LogicalVolumePage.tsx:304
-#: src/components/storage/PartitionPage.tsx:296
-msgid "Select or enter a valid mount point"
-msgstr "Seleziona o immetti un punto di montaggio valido"
-
-#: src/components/storage/FormattableDevicePage.tsx:221
-#: src/components/storage/LogicalVolumePage.tsx:314
-#: src/components/storage/PartitionPage.tsx:306
-msgid ""
-"Select or enter a mount point that is not already assigned to another device"
-msgstr ""
-"Selezionare o immettere un punto di montaggio che non sia già assegnato a un "
-"altro dispositivo"
-
-#: src/components/storage/FormattableDevicePage.tsx:271
-#: src/components/storage/LogicalVolumePage.tsx:595
-#: src/components/storage/LogicalVolumePage.tsx:623
-#: src/components/storage/LogicalVolumePage.tsx:981
-#: src/components/storage/PartitionPage.tsx:558
-#: src/components/storage/PartitionPage.tsx:905
-msgid "Waiting for a mount point"
-msgstr "In attesa di un punto di mount"
-
-#. TRANSLATORS: %s is a device name (eg. /dev/sda3).
-#: src/components/storage/FormattableDevicePage.tsx:274
-#: src/components/storage/LogicalVolumePage.tsx:626
-#: src/components/storage/PartitionPage.tsx:561
-#: src/components/storage/utils/partition.tsx:57
-#, javascript-format
-msgid "Current %s"
-msgstr "Al momento %s"
-
-#: src/components/storage/FormattableDevicePage.tsx:292
-#: src/components/storage/LogicalVolumePage.tsx:644
-#: src/components/storage/PartitionPage.tsx:579
-#, javascript-format
-msgid "Default file system for %s"
-msgstr "File system predefinito con %s"
-
-#: src/components/storage/FormattableDevicePage.tsx:293
-msgid "Default file system for generic mount paths"
-msgstr "File system predefinito per percorsi di montaggio generici"
-
-#: src/components/storage/FormattableDevicePage.tsx:295
-msgid "Destroy current data and format device as"
-msgstr "Distruggi i dati correnti e formatta il dispositivo come"
-
-#: src/components/storage/FormattableDevicePage.tsx:296
-msgid "Format device as"
-msgstr "Formatta il dispositivo come"
-
-#. TRANSLATORS: %s is the name of a partition, like /dev/vda2
-#. TRANSLATORS: %s is the name of a logical volume, like /dev/system/home
-#. TRANSLATORS: %s is the name of a device, like vda
-#: src/components/storage/FormattableDevicePage.tsx:310
-#: src/components/storage/LogicalVolumePage.tsx:661
-#: src/components/storage/PartitionPage.tsx:596
-#, javascript-format
-msgid "Do not format %s and keep the data"
-msgstr "Non formattare %s e mantenere i dati all'interno"
-
-#: src/components/storage/FormattableDevicePage.tsx:375
-#: src/components/storage/LogicalVolumePage.tsx:727
-#: src/components/storage/PartitionPage.tsx:662
-msgid "File system label"
-msgstr "Etichetta del file system"
-
-#: src/components/storage/FormattableDevicePage.tsx:447
-#, fuzzy
-msgid "Configure"
-msgstr "configurato"
-
-#: src/components/storage/FormattableDevicePage.tsx:453
-#, javascript-format
-msgid "Configure device %s"
-msgstr "Configura il dispositivo %s"
-
-#: src/components/storage/FormattableDevicePage.tsx:457
-#: src/components/storage/FormattableDevicePage.tsx:464
-#: src/components/storage/LogicalVolumePage.tsx:897
-#: src/components/storage/LogicalVolumePage.tsx:904
-#: src/components/storage/PartitionPage.tsx:835
-#: src/components/storage/PartitionPage.tsx:842
-msgid "Mount point"
-msgstr "Punto di montaggio"
-
-#: src/components/storage/FormattableDevicePage.tsx:462
-#: src/components/storage/LogicalVolumePage.tsx:902
-#: src/components/storage/PartitionPage.tsx:840
-msgid "Mount point toggle"
-msgstr "Attivazione/disattivazione del punto di montaggio"
-
-#: src/components/storage/FormattableDevicePage.tsx:463
-#: src/components/storage/LogicalVolumePage.tsx:903
-#: src/components/storage/PartitionPage.tsx:841
-msgid "Suggested mount points"
-msgstr "Punti di montaggio suggeriti"
-
-#: src/components/storage/FormattableDevicePage.tsx:465
-#: src/components/storage/LogicalVolumePage.tsx:905
-#: src/components/storage/PartitionPage.tsx:843
-msgid "Clear selected mount point"
-msgstr "Cancella punto di montaggio selezionato"
-
-#: src/components/storage/FormattableDevicePage.tsx:468
-#: src/components/storage/LogicalVolumePage.tsx:908
-#: src/components/storage/PartitionPage.tsx:846
-msgid "Use"
-msgstr "Usa"
-
-#: src/components/storage/FormattableDevicePage.tsx:479
-#: src/components/storage/LogicalVolumePage.tsx:931
-#: src/components/storage/PartitionPage.tsx:867
-msgid "Select or enter a mount point"
-msgstr "Selezionare o immettere un punto di montaggio"
-
-#: src/components/storage/FormattableDevicePage.tsx:488
-#: src/components/storage/LogicalVolumePage.tsx:952
-#: src/components/storage/PartitionPage.tsx:876
-msgid "File system"
-msgstr "File system"
-
-#: src/components/storage/FormattableDevicePage.tsx:499
-#: src/components/storage/LogicalVolumePage.tsx:964
-#: src/components/storage/PartitionPage.tsx:888
-msgid "Label"
-msgstr "Etichetta"
-
 #: src/components/storage/ISCSIPage.tsx:39
 #: src/components/storage/iscsi/DiscoverFormPage.tsx:269
 #: src/components/storage/iscsi/InitiatorFormPage.tsx:59
 #: src/components/storage/iscsi/TargetLoginPage.tsx:304
 msgid "iSCSI"
 msgstr "iSCSI"
-
-#: src/components/storage/LogicalVolumePage.tsx:325
-msgid "Enter a name"
-msgstr "Immettere un nome"
-
-#: src/components/storage/LogicalVolumePage.tsx:352
-#: src/components/storage/PartitionPage.tsx:334
-msgid "The minimum cannot be greater than the maximum"
-msgstr "Il minimo non può essere superiore al massimo"
-
-#: src/components/storage/LogicalVolumePage.tsx:360
-#: src/components/storage/PartitionPage.tsx:342
-msgid "The maximum must be a number followed by a unit like GiB or GB"
-msgstr "Il massimo deve essere un numero seguito da un'unità, come GiB o GB"
-
-#: src/components/storage/LogicalVolumePage.tsx:368
-#: src/components/storage/PartitionPage.tsx:350
-msgid "The minimum must be a number followed by a unit like GiB or GB"
-msgstr "Il minimo deve essere un numero seguito da un'unità, come GiB o GB"
-
-#: src/components/storage/LogicalVolumePage.tsx:375
-#: src/components/storage/PartitionPage.tsx:357
-msgid "Size limits must be numbers followed by a unit like GiB or GB"
-msgstr ""
-"I limiti delle dimensioni devono essere numeri seguiti da un'unità, come GiB "
-"o GB"
-
-#. TRANSLATORS: %s is a disk name with its size (eg. "sda, 10 GiB"
-#: src/components/storage/LogicalVolumePage.tsx:516
-#, fuzzy, javascript-format
-msgid "As a new logical volume on %s"
-msgstr "Volumi logici per %s"
-
-#: src/components/storage/LogicalVolumePage.tsx:518
-#, fuzzy, javascript-format
-msgid "Using logical volume %s"
-msgstr "Volume LVM"
-
-#: src/components/storage/LogicalVolumePage.tsx:549
-#: src/components/storage/PartitionPage.tsx:525
-msgid "Mount point options"
-msgstr "Opzioni del punto di montaggio"
-
-#: src/components/storage/LogicalVolumePage.tsx:554
-#, fuzzy
-msgid "Using an existing logical volume"
-msgstr "Utilizza la partizione esistente"
-
-#: src/components/storage/LogicalVolumePage.tsx:565
-#, fuzzy
-msgid "There are not usable logical volumes"
-msgstr "Non ci sono partizioni utilizzabili"
-
-#: src/components/storage/LogicalVolumePage.tsx:590
-#: src/components/storage/LogicalVolumePage.tsx:593
-msgid "Logical volume name"
-msgstr "Nome volume logico"
-
-#: src/components/storage/LogicalVolumePage.tsx:645
-#, fuzzy
-msgid "Default file system for generic logical volume"
-msgstr "File system predefinito per volumi logici generici"
-
-#: src/components/storage/LogicalVolumePage.tsx:647
-#, fuzzy
-msgid "Destroy current data and format logical volume as"
-msgstr "Distruggi i dati correnti e formatta il dispositivo come"
-
-#: src/components/storage/LogicalVolumePage.tsx:648
-msgid "Format logical volume as"
-msgstr "Formatta il volume logico come"
-
-#: src/components/storage/LogicalVolumePage.tsx:887
-#, fuzzy
-msgid "Configure logical volume"
-msgstr "Volume LVM"
-
-#: src/components/storage/LogicalVolumePage.tsx:893
-#, fuzzy, javascript-format
-msgid "Configure logical volume at %s"
-msgstr "Volume LVM"
-
-#: src/components/storage/LogicalVolumePage.tsx:915
-#: src/components/storage/PartitionPage.tsx:852
-msgid "Mount point mode"
-msgstr "Modalità punto di montaggio"
-
-#: src/components/storage/LogicalVolumePage.tsx:976
-#: src/components/storage/PartitionPage.tsx:900
-msgid "Size mode"
-msgstr "Modalità dimensione"
-
-#: src/components/storage/LogicalVolumePage.tsx:1011
-#: src/components/storage/PartitionPage.tsx:935
-msgid "Go to storage page"
-msgstr "Vai alla pagina dell'archiviazione"
 
 #: src/components/storage/LvmPage.tsx:80
 msgid "Enter a name for the volume group."
@@ -4173,47 +3961,6 @@ msgid "%s will be created as a logical volume"
 msgid_plural "%s will be created as logical volumes"
 msgstr[0] "%s sarà creato come volume logico"
 msgstr[1] "%s saranno creati come volumi logici"
-
-#. TRANSLATORS: %s is a disk name with its size (eg. "sda, 10 GiB"
-#: src/components/storage/PartitionPage.tsx:494
-#, javascript-format
-msgid "As a new partition on %s"
-msgstr "Come una nuova partizione su %s"
-
-#: src/components/storage/PartitionPage.tsx:496
-#, javascript-format
-msgid "Using partition %s"
-msgstr "Uso della partizione %s"
-
-#: src/components/storage/PartitionPage.tsx:530
-msgid "Using an existing partition"
-msgstr "Utilizza la partizione esistente"
-
-#: src/components/storage/PartitionPage.tsx:541
-msgid "There are not usable partitions"
-msgstr "Non ci sono partizioni utilizzabili"
-
-#: src/components/storage/PartitionPage.tsx:580
-msgid "Default file system for generic partitions"
-msgstr "File system predefinito per partizioni generiche"
-
-#: src/components/storage/PartitionPage.tsx:582
-msgid "Destroy current data and format partition as"
-msgstr "Distruggi i dati e formatta la partizione come"
-
-#: src/components/storage/PartitionPage.tsx:583
-msgid "Format partition as"
-msgstr "Formatta la partizione come"
-
-#: src/components/storage/PartitionPage.tsx:825
-#, fuzzy
-msgid "Configure partition"
-msgstr "Configura partizione su %s"
-
-#: src/components/storage/PartitionPage.tsx:831
-#, javascript-format
-msgid "Configure partition at %s"
-msgstr "Configura partizione su %s"
 
 #: src/components/storage/PartitionsSection.tsx:90
 msgid "Moreover, the following partitions will be created or mounted"
@@ -5098,6 +4845,57 @@ msgstr "Cancella inserimento"
 msgid "Unused space"
 msgstr "Spazio inutilizzato"
 
+#: src/components/storage/formattable-device-form/Form.tsx:116
+#, fuzzy
+msgid "Invalid device location"
+msgstr "Selezione Software"
+
+#: src/components/storage/formattable-device-form/Form.tsx:152
+#, fuzzy
+#| msgid "Do not configure"
+msgid "Device could not be configured"
+msgstr "Non configurare"
+
+#. TRANSLATORS: breadcrumb label for the device configuration form.
+#: src/components/storage/formattable-device-form/Form.tsx:214
+#: src/components/storage/formattable-device-form/Form.tsx:218
+#, fuzzy
+msgid "Configure"
+msgstr "configurato"
+
+#. TRANSLATORS: title of the page shown when the target device
+#. does not exist. Do not end with a period.
+#: src/components/storage/formattable-device-form/Form.tsx:228
+#: src/components/storage/partition-form/Form.tsx:307
+#, fuzzy
+#| msgid "No devices found"
+msgid "Device not found"
+msgstr "Nessun dispositivo trovato"
+
+#. TRANSLATORS: body text on the device not found page.
+#: src/components/storage/formattable-device-form/Form.tsx:230
+#: src/components/storage/partition-form/Form.tsx:309
+#, fuzzy
+msgid "The device does not exist or is no longer available."
+msgstr ""
+"L'interfaccia del programma di installazione non è più disponibile, è "
+"possibile chiudere la finestra in modo sicuro."
+
+#. TRANSLATORS: link text on the device not found page.
+#. TRANSLATORS: link text on the volume group not found page.
+#: src/components/storage/formattable-device-form/Form.tsx:232
+#: src/components/storage/logical-volume-form/Form.tsx:290
+#: src/components/storage/partition-form/Form.tsx:311
+msgid "Go to storage page"
+msgstr "Vai alla pagina dell'archiviazione"
+
+#: src/components/storage/formattable-device-form/validations.ts:61
+#: src/components/storage/logical-volume-form/validations.ts:79
+#: src/components/storage/partition-form/validations.ts:63
+#, fuzzy
+msgid "Select a filesystem type"
+msgstr "Seleziona un disco"
+
 #: src/components/storage/iscsi/DiscoverFormPage.tsx:149
 #, fuzzy
 msgid "No valid address."
@@ -5308,6 +5106,474 @@ msgstr "Azioni per la connessione %s"
 #: src/components/storage/iscsi/TargetsTable.tsx:604
 msgid ""
 "Locked targets cannot be managed from here and do not offer any actions."
+msgstr ""
+
+#: src/components/storage/logical-volume-form/Form.tsx:188
+#, fuzzy
+#| msgid "Hostname could not be updated"
+msgid "Logical volume could not be configured"
+msgstr "Impossibile aggiornare il nome host"
+
+#. TRANSLATORS: breadcrumb label for the logical volume create/edit form.
+#: src/components/storage/logical-volume-form/Form.tsx:276
+#: src/components/storage/logical-volume-form/Form.tsx:279
+#, fuzzy
+msgid "Configure logical volume"
+msgstr "Volume LVM"
+
+#. TRANSLATORS: hint below the name input, with example logical volume names
+#: src/components/storage/logical-volume-form/LogicalVolumeNameField.tsx:47
+msgid "Name for the logical volume. E.g., root, home, lv0"
+msgstr ""
+
+#: src/components/storage/logical-volume-form/LogicalVolumeSourceFields.tsx:85
+#: src/components/storage/logical-volume-form/LogicalVolumeSourceFields.tsx:147
+#, fuzzy
+msgid "Logical volume"
+msgstr "Volume LVM"
+
+#. TRANSLATORS: %s is a volume group name with its size (eg. "system (30 GiB)")
+#: src/components/storage/logical-volume-form/LogicalVolumeSourceFields.tsx:88
+#, fuzzy, javascript-format
+msgid ""
+"New logical volume. There are no available existing logical volumes on %s."
+msgstr ""
+"Verranno utilizzati solo le partizioni riutilizzate e lo spazio non "
+"assegnato a una partizione."
+
+#: src/components/storage/logical-volume-form/LogicalVolumeSourceFields.tsx:100
+#, fuzzy
+#| msgid "logical volume"
+msgid "New logical volume"
+msgstr "volume logico"
+
+#. TRANSLATORS: %s is a volume group name with its size (eg. "system (30 GiB)")
+#: src/components/storage/logical-volume-form/LogicalVolumeSourceFields.tsx:103
+#, fuzzy, javascript-format
+msgid "Create a new logical volume on %s"
+msgstr "Volumi logici per %s"
+
+#. TRANSLATORS: %s is a description like "XFS partition")
+#. TRANSLATORS: %s is a description like "Ext4 logical volume"
+#: src/components/storage/logical-volume-form/LogicalVolumeSourceFields.tsx:112
+#: src/components/storage/partition-form/PartitionFields.tsx:94
+#, fuzzy, javascript-format
+#| msgid "Current %s"
+msgid "Use current %s"
+msgstr "Al momento %s"
+
+#: src/components/storage/logical-volume-form/validations.ts:68
+msgid "Enter a name"
+msgstr "Immettere un nome"
+
+#: src/components/storage/logical-volume-form/validations.ts:92
+#: src/components/storage/partition-form/validations.ts:76
+#, fuzzy
+msgid "Value is required"
+msgstr "Tutti i campi sono obbligatori"
+
+#: src/components/storage/logical-volume-form/validations.ts:93
+#: src/components/storage/logical-volume-form/validations.ts:102
+#: src/components/storage/logical-volume-form/validations.ts:108
+#: src/components/storage/logical-volume-form/validations.ts:132
+#: src/components/storage/partition-form/validations.ts:77
+#: src/components/storage/partition-form/validations.ts:86
+#: src/components/storage/partition-form/validations.ts:92
+#: src/components/storage/partition-form/validations.ts:116
+msgid "Invalid format (e.g. 20 GiB)"
+msgstr ""
+
+#: src/components/storage/logical-volume-form/validations.ts:101
+#: src/components/storage/logical-volume-form/validations.ts:131
+#: src/components/storage/partition-form/validations.ts:85
+#: src/components/storage/partition-form/validations.ts:115
+#, fuzzy
+msgid "Minimum is required"
+msgstr "Tutti i campi sono obbligatori"
+
+#: src/components/storage/logical-volume-form/validations.ts:107
+#: src/components/storage/partition-form/validations.ts:91
+#, fuzzy
+msgid "Maximum is required"
+msgstr "Tutti i campi sono obbligatori"
+
+#: src/components/storage/logical-volume-form/validations.ts:119
+#: src/components/storage/partition-form/validations.ts:103
+msgid "Must be smaller than maximum size"
+msgstr ""
+
+#: src/components/storage/logical-volume-form/validations.ts:120
+#: src/components/storage/partition-form/validations.ts:104
+msgid "Must be larger than minimum size"
+msgstr ""
+
+#: src/components/storage/partition-form/Form.tsx:157
+#, fuzzy
+msgid "Invalid partition location"
+msgstr "Selezione Software"
+
+#: src/components/storage/partition-form/Form.tsx:206
+#, fuzzy
+#| msgid "Any partition needed to boot will be configured."
+msgid "Partition could not be configured"
+msgstr "Le partizioni necessarie per l'avvio saranno configurate."
+
+#. TRANSLATORS: breadcrumb label for the partition create/edit form.
+#: src/components/storage/partition-form/Form.tsx:294
+#: src/components/storage/partition-form/Form.tsx:297
+#, fuzzy
+msgid "Configure partition"
+msgstr "Configura partizione su %s"
+
+#: src/components/storage/partition-form/PartitionFields.tsx:69
+#: src/components/storage/partition-form/PartitionFields.tsx:127
+#, fuzzy
+#| msgid "Partitions"
+msgid "Partition"
+msgstr "Partizioni"
+
+#. TRANSLATORS: %s is a disk name with its size (eg. "sda, 10 GiB")
+#: src/components/storage/partition-form/PartitionFields.tsx:72
+#, javascript-format
+msgid "New partition. There are no available existing partitions on %s."
+msgstr ""
+
+#: src/components/storage/partition-form/PartitionFields.tsx:85
+#, fuzzy
+#| msgid "partition"
+msgid "New partition"
+msgstr "partizione"
+
+#. TRANSLATORS: %s is a disk name with its size (eg. "sda, 10 GiB")
+#: src/components/storage/partition-form/PartitionFields.tsx:87
+#, fuzzy, javascript-format
+#| msgid "As a new partition on %s"
+msgid "Create a new partition on %s"
+msgstr "Come una nuova partizione su %s"
+
+#: src/components/storage/shared/FilesystemAdditionalFields.tsx:54
+#, fuzzy
+#| msgid "Mount point options"
+msgid "Mount options"
+msgstr "Opzioni del punto di montaggio"
+
+#: src/components/storage/shared/FilesystemAdditionalFields.tsx:55
+msgid "E.g. rw, noatime, umask=0666"
+msgstr ""
+
+#: src/components/storage/shared/FilesystemAdditionalFields.tsx:65
+#, fuzzy
+msgid "Additional format arguments"
+msgstr "Usa RAID %s per le partizioni aggiuntive"
+
+#. TRANSLATORS: %s is replaced by "mkfs" (command used to format devices)
+#: src/components/storage/shared/FilesystemAdditionalFields.tsx:72
+#, javascript-format
+msgid "This will be injected to the command to create the file system (%s)."
+msgstr ""
+
+#. TRANSLATORS: checkbox label for additional filesystem configuration options
+#: src/components/storage/shared/FilesystemFields.tsx:151
+msgid "Define more file system settings"
+msgstr ""
+
+#: src/components/storage/shared/FilesystemLabelField.tsx:51
+msgid "Label"
+msgstr "Etichetta"
+
+#. TRANSLATORS: %s is a filesystem (eg. XFS)
+#: src/components/storage/shared/FilesystemSelector.tsx:58
+#, javascript-format
+msgid "%s (keep data)"
+msgstr ""
+
+#. TRANSLATORS: %s is a device name like "/dev/vdd2"
+#: src/components/storage/shared/FilesystemSelector.tsx:67
+#, fuzzy, javascript-format
+#| msgid ""
+#| "Any existing partition will be removed and all data in the disk will be "
+#| "lost."
+msgid "Any existing data on %s will be destroyed when installation begins."
+msgstr ""
+"Tutte le partizioni esistenti saranno rimosse e tutti i dati nel disco "
+"andranno persi."
+
+#. TRANSLATORS: %s is a filesystem type (eg. XFS)
+#: src/components/storage/shared/FilesystemSelector.tsx:79
+#, fuzzy, javascript-format
+#| msgid "Default file system for generic mount paths"
+msgid "%s (default file system for generic mount points)"
+msgstr "File system predefinito per percorsi di montaggio generici"
+
+#. TRANSLATORS: %1$s is a filesystem (eg. XFS), %2$s is a mount point (eg. "/home")
+#: src/components/storage/shared/FilesystemSelector.tsx:86
+#, fuzzy, javascript-format
+#| msgid "Default file system for %s"
+msgid "%1$s (default file system for %2$s)"
+msgstr "File system predefinito con %s"
+
+#: src/components/storage/shared/FilesystemSelector.tsx:146
+#: src/components/storage/shared/FilesystemSelector.tsx:162
+msgid "File system"
+msgstr "File system"
+
+#. TRANSLATORS: each %s is replaced by a mount point (e.g., "/home").
+#: src/components/storage/shared/MountPointField.tsx:33
+#, javascript-format
+msgid "E.g., %s, %s, %s"
+msgstr ""
+
+#: src/components/storage/shared/MountPointField.tsx:98
+msgid "Mount point"
+msgstr "Punto di montaggio"
+
+#. TRANSLATORS: description for automatic size mode
+#: src/components/storage/shared/SizeFields.tsx:69
+#, fuzzy
+#| msgid "Let the installer propose a sensible size"
+msgid "Let the installer set the size"
+msgstr "Lascia proporre una dimensione sensibile al programma di installazione"
+
+#. TRANSLATORS: size mode option
+#: src/components/storage/shared/SizeFields.tsx:74
+msgid "Fixed"
+msgstr ""
+
+#. TRANSLATORS: description for fixed size mode
+#: src/components/storage/shared/SizeFields.tsx:76
+msgid "Set a specific size"
+msgstr ""
+
+#. TRANSLATORS: size mode option
+#: src/components/storage/shared/SizeFields.tsx:81
+#, fuzzy
+#| msgid "Change"
+msgid "Range"
+msgstr "Cambia"
+
+#. TRANSLATORS: description for range size mode
+#: src/components/storage/shared/SizeFields.tsx:83
+msgid "Set minimum and maximum"
+msgstr ""
+
+#. TRANSLATORS: size mode option
+#: src/components/storage/shared/SizeFields.tsx:88
+msgid "Expand if possible"
+msgstr ""
+
+#. TRANSLATORS: description for expand size mode
+#: src/components/storage/shared/SizeFields.tsx:90
+msgid "Set minimum; use more space if available"
+msgstr ""
+
+#. TRANSLATORS: %s is an already escaped path like "/home"
+#: src/components/storage/shared/SizeFields.tsx:109
+#, javascript-format
+msgid "size for %s with the current settings"
+msgstr ""
+
+#. TRANSLATORS: %s is an already escaped path like "/home"
+#: src/components/storage/shared/SizeFields.tsx:113
+#, fuzzy, javascript-format
+#| msgid "Default file system for %s"
+msgid "default size for %s"
+msgstr "File system predefinito con %s"
+
+#. TRANSLATORS: %1$s is a size, %2$s is a sentence explaining why that minimum is used
+#: src/components/storage/shared/SizeFields.tsx:121
+#, fuzzy, javascript-format
+#| msgid "%1$s (%2$s)"
+msgid "Minimum: %1$s (%2$s)"
+msgstr "%1$s (%2$s)"
+
+#. TRANSLATORS: %1$s is a size, %2$s is a sentence explaining why that size is used
+#: src/components/storage/shared/SizeFields.tsx:126
+#, fuzzy, javascript-format
+#| msgid "%1$s (%2$s)"
+msgid "Value: %1$s (%2$s)"
+msgstr "%1$s (%2$s)"
+
+#. TRANSLATORS: %1$s and %2$s are sizes, %3%s is a sentence explaining why those limits are used
+#: src/components/storage/shared/SizeFields.tsx:130
+#, fuzzy, javascript-format
+#| msgid "%1$s - %2$s"
+msgid "Range: %1$s - %2$s (%3$s)"
+msgstr "%1$s - %2$s"
+
+#: src/components/storage/shared/SizeFields.tsx:147
+#, fuzzy, javascript-format
+#| msgid ""
+#| "The size for %1$s will be dynamically adjusted based on the amount of RAM "
+#| "in the system, the usage of Btrfs snapshots and the presence of a "
+#| "separate file system for %2$s."
+msgid ""
+"Can be dynamically adjusted based on the amount of RAM in the system, the "
+"usage of Btrfs snapshots and the presence of a separate file system for %s."
+msgstr ""
+"La dimensione di %1$s verrà dinamicamente regolata in base alla quantità di "
+"RAM nel sistema, all'utilizzo degli snapshot Btrfs e alla presenza di un "
+"file system separato per %2$s."
+
+#: src/components/storage/shared/SizeFields.tsx:157
+#, fuzzy, javascript-format
+#| msgid ""
+#| "The size for %1$s will be dynamically adjusted based on the amount of RAM "
+#| "in the system, the usage of Btrfs snapshots and the presence of separate "
+#| "file systems for %2$s."
+msgid ""
+"Can be dynamically adjusted based on the amount of RAM in the system, the "
+"usage of Btrfs snapshots and the presence of separate file systems for %s."
+msgstr ""
+"La dimensione di %1$s verrà dinamicamente regolata in base alla quantità di "
+"RAM nel sistema, all'utilizzo degli snapshot Btrfs e alla presenza di un "
+"file system separato per %2$s."
+
+#: src/components/storage/shared/SizeFields.tsx:164
+#, fuzzy
+#| msgid ""
+#| "The size for %s will be dynamically adjusted based on the amount of RAM "
+#| "in the system and the usage of Btrfs snapshots."
+msgid ""
+"Can be dynamically adjusted based on the amount of RAM in the system and the "
+"usage of Btrfs snapshots."
+msgstr ""
+"La dimensione di %s verrà regolata dinamicamente in base alla quantità di "
+"RAM nel sistema e all'utilizzo degli snapshot Btrfs."
+
+#: src/components/storage/shared/SizeFields.tsx:173
+#, fuzzy, javascript-format
+#| msgid ""
+#| "The size for %1$s will be dynamically adjusted based on the amount of RAM "
+#| "in the system and the presence of a separate file system for %2$s."
+msgid ""
+"Can be dynamically adjusted based on the amount of RAM in the system and the "
+"presence of a separate file system for %s."
+msgstr ""
+"La dimensione di %1$s verrà regolata dinamicamente in base alla quantità di "
+"RAM nel sistema e alla presenza di un file system separato per %2$s."
+
+#: src/components/storage/shared/SizeFields.tsx:182
+#, fuzzy, javascript-format
+#| msgid ""
+#| "The size for %1$s will be dynamically adjusted based on the amount of RAM "
+#| "in the system and the presence of separate file systems for %2$s."
+msgid ""
+"Can be dynamically adjusted based on the amount of RAM in the system and the "
+"presence of separate file systems for %s."
+msgstr ""
+"La dimensione di %1$s verrà regolata dinamicamente in base alla quantità di "
+"RAM nel sistema e alla presenza di file system separati per %2$s."
+
+#: src/components/storage/shared/SizeFields.tsx:193
+#, fuzzy, javascript-format
+#| msgid ""
+#| "The size for %1$s will be dynamically adjusted based on the usage of "
+#| "Btrfs snapshots and the presence of a separate file system for %2$s."
+msgid ""
+"Can be dynamically adjusted based on the usage of Btrfs snapshots and the "
+"presence of a separate file system for %s."
+msgstr ""
+"La dimensione di %1$s verrà regolata dinamicamente in base all'utilizzo "
+"degli snapshot Btrfs e alla presenza di un file system separato per %2$s."
+
+#: src/components/storage/shared/SizeFields.tsx:203
+#, fuzzy, javascript-format
+#| msgid ""
+#| "The size for %1$s will be dynamically adjusted based on the usage of "
+#| "Btrfs snapshots and the presence of separate file systems for %2$s."
+msgid ""
+"Can be dynamically adjusted based on the usage of Btrfs snapshots and the "
+"presence of separate file systems for %s."
+msgstr ""
+"La dimensione di %1$s verrà regolata dinamicamente in base all'utilizzo "
+"degli snapshot Btrfs e alla presenza di file system separati per %2$s."
+
+#: src/components/storage/shared/SizeFields.tsx:209
+#, fuzzy
+#| msgid ""
+#| "The size for %s will be dynamically adjusted based on the usage of Btrfs "
+#| "snapshots."
+msgid "Can be dynamically adjusted based on the usage of Btrfs snapshots."
+msgstr ""
+"La dimensione di %s verrà regolata dinamicamente in base all'utilizzo degli "
+"snapshot Btrfs."
+
+#. TRANSLATORS: %s is an already formatted mount point (eg. "/home")
+#: src/components/storage/shared/SizeFields.tsx:215
+#, fuzzy, javascript-format
+#| msgid ""
+#| "The size for %1$s will be dynamically adjusted based on the presence of a "
+#| "separate file system for %2$s."
+msgid ""
+"Can be dynamically adjusted based on the presence of a separate file system "
+"for %s."
+msgstr ""
+"La dimensione di %1$s verrà regolata dinamicamente in base alla presenza di "
+"un file system separato per %2$s."
+
+#. TRANSLATORS: %s is an already formatted list of mount paths (eg. "/home" and "/var/lib")
+#: src/components/storage/shared/SizeFields.tsx:222
+#, fuzzy, javascript-format
+#| msgid ""
+#| "The size for %1$s will be dynamically adjusted based on the presence of "
+#| "separate file systems for %2$s."
+msgid ""
+"Can be dynamically adjusted based on the presence of separate file systems "
+"for %s."
+msgstr ""
+"La dimensione di %1$s verrà regolata dinamicamente in base alla presenza di "
+"file system separati per %2$s."
+
+#: src/components/storage/shared/SizeFields.tsx:251
+#, fuzzy
+#| msgid "Move mount points"
+msgid "Based on the mount point"
+msgstr "Sposta punti di montaggio"
+
+#: src/components/storage/shared/SizeFields.tsx:307
+msgid "Value"
+msgstr ""
+
+#: src/components/storage/shared/SizeFields.tsx:318
+#: src/components/storage/shared/SizeFields.tsx:332
+msgid "Minimum"
+msgstr "Minimo"
+
+#: src/components/storage/shared/SizeFields.tsx:321
+msgid "Maximum"
+msgstr "Massimo"
+
+#: src/components/storage/shared/helpers.ts:71
+#, fuzzy
+#| msgid "Current %s"
+msgid "Current"
+msgstr "Al momento %s"
+
+#. TRANSLATORS: %s is a device name like "/dev/vdd2"
+#: src/components/storage/shared/helpers.ts:74
+#, fuzzy, javascript-format
+#| msgid "Do not format %s and keep the data"
+msgid "Do not format %s and keep data"
+msgstr "Non formattare %s e mantenere i dati all'interno"
+
+#: src/components/storage/shared/validation-helpers.ts:74
+#, fuzzy
+msgid "Mount point is required"
+msgstr "Tutti i campi sono obbligatori"
+
+#: src/components/storage/shared/validation-helpers.ts:75
+msgid "Select or enter a valid mount point"
+msgstr "Seleziona o immetti un punto di montaggio valido"
+
+#: src/components/storage/shared/validation-helpers.ts:77
+msgid ""
+"Select or enter a mount point that is not already assigned to another device"
+msgstr ""
+"Selezionare o immettere un punto di montaggio che non sia già assegnato a un "
+"altro dispositivo"
+
+#: src/components/storage/shared/validation-helpers.ts:95
+msgid "Invalid label format"
 msgstr ""
 
 #: src/components/storage/utils.ts:60
@@ -5652,6 +5918,12 @@ msgstr "Le partizioni verranno utilizze e create per %s"
 #, javascript-format
 msgid "Current %1$s at %2$s"
 msgstr "Attuale %1$s su %2$s"
+
+#. TRANSLATORS: %s is a device name (eg. /dev/sda3).
+#: src/components/storage/utils/partition.tsx:57
+#, javascript-format
+msgid "Current %s"
+msgstr "Al momento %s"
 
 #. TRANSLATORS: %1$s is a filesystem type (eg. Btrfs), %2$s is a device name (eg. /dev/sda3).
 #: src/components/storage/utils/partition.tsx:60
@@ -6195,22 +6467,22 @@ msgstr ""
 msgid "At least one SSH public key is required"
 msgstr "Almeno un indirizzo deve essere inserito per la modalità corrente"
 
-#: src/hooks/use-form-submit.tsx:163
+#: src/hooks/use-form-submit.tsx:171
 #, fuzzy
 msgid "Changes successfully applied"
 msgstr "Nome host aggiornato"
 
-#: src/hooks/use-form-submit.tsx:164
+#: src/hooks/use-form-submit.tsx:172
 msgid "No changes to apply"
 msgstr ""
 
-#: src/hooks/use-form-submit.tsx:165
+#: src/hooks/use-form-submit.tsx:173
 #, fuzzy
 msgid "Fix the errors below and try again"
 msgstr "Modificare i filtri e riprovare."
 
 #. TRANSLATORS: Link shown in the alert after submitting a form. Text in [brackets] becomes a link. Keep the brackets.
-#: src/hooks/use-form-submit.tsx:277
+#: src/hooks/use-form-submit.tsx:286
 #, fuzzy
 msgid "Go to [installation] summary."
 msgstr "Dispositivi di installazione"
@@ -6228,6 +6500,110 @@ msgstr "Attiva"
 #, fuzzy
 msgid "Deactivating"
 msgstr "Disattiva"
+
+#~ msgid "Waiting for a mount point"
+#~ msgstr "In attesa di un punto di mount"
+
+#~ msgid "Destroy current data and format device as"
+#~ msgstr "Distruggi i dati correnti e formatta il dispositivo come"
+
+#~ msgid "Format device as"
+#~ msgstr "Formatta il dispositivo come"
+
+#~ msgid "File system label"
+#~ msgstr "Etichetta del file system"
+
+#, javascript-format
+#~ msgid "Configure device %s"
+#~ msgstr "Configura il dispositivo %s"
+
+#~ msgid "Mount point toggle"
+#~ msgstr "Attivazione/disattivazione del punto di montaggio"
+
+#~ msgid "Suggested mount points"
+#~ msgstr "Punti di montaggio suggeriti"
+
+#~ msgid "Clear selected mount point"
+#~ msgstr "Cancella punto di montaggio selezionato"
+
+#~ msgid "Use"
+#~ msgstr "Usa"
+
+#~ msgid "Select or enter a mount point"
+#~ msgstr "Selezionare o immettere un punto di montaggio"
+
+#~ msgid "The minimum cannot be greater than the maximum"
+#~ msgstr "Il minimo non può essere superiore al massimo"
+
+#~ msgid "The maximum must be a number followed by a unit like GiB or GB"
+#~ msgstr "Il massimo deve essere un numero seguito da un'unità, come GiB o GB"
+
+#~ msgid "The minimum must be a number followed by a unit like GiB or GB"
+#~ msgstr "Il minimo deve essere un numero seguito da un'unità, come GiB o GB"
+
+#~ msgid "Size limits must be numbers followed by a unit like GiB or GB"
+#~ msgstr ""
+#~ "I limiti delle dimensioni devono essere numeri seguiti da un'unità, come "
+#~ "GiB o GB"
+
+#, fuzzy, javascript-format
+#~ msgid "Using logical volume %s"
+#~ msgstr "Volume LVM"
+
+#, fuzzy
+#~ msgid "Using an existing logical volume"
+#~ msgstr "Utilizza la partizione esistente"
+
+#, fuzzy
+#~ msgid "There are not usable logical volumes"
+#~ msgstr "Non ci sono partizioni utilizzabili"
+
+#~ msgid "Logical volume name"
+#~ msgstr "Nome volume logico"
+
+#, fuzzy
+#~ msgid "Default file system for generic logical volume"
+#~ msgstr "File system predefinito per volumi logici generici"
+
+#, fuzzy
+#~ msgid "Destroy current data and format logical volume as"
+#~ msgstr "Distruggi i dati correnti e formatta il dispositivo come"
+
+#~ msgid "Format logical volume as"
+#~ msgstr "Formatta il volume logico come"
+
+#, fuzzy, javascript-format
+#~ msgid "Configure logical volume at %s"
+#~ msgstr "Volume LVM"
+
+#~ msgid "Mount point mode"
+#~ msgstr "Modalità punto di montaggio"
+
+#~ msgid "Size mode"
+#~ msgstr "Modalità dimensione"
+
+#, javascript-format
+#~ msgid "Using partition %s"
+#~ msgstr "Uso della partizione %s"
+
+#~ msgid "Using an existing partition"
+#~ msgstr "Utilizza la partizione esistente"
+
+#~ msgid "There are not usable partitions"
+#~ msgstr "Non ci sono partizioni utilizzabili"
+
+#~ msgid "Default file system for generic partitions"
+#~ msgstr "File system predefinito per partizioni generiche"
+
+#~ msgid "Destroy current data and format partition as"
+#~ msgstr "Distruggi i dati e formatta la partizione come"
+
+#~ msgid "Format partition as"
+#~ msgstr "Formatta la partizione come"
+
+#, javascript-format
+#~ msgid "Configure partition at %s"
+#~ msgstr "Configura partizione su %s"
 
 #, fuzzy
 #~ msgid "System settings successfully updated"
@@ -6392,9 +6768,6 @@ msgstr "Disattiva"
 #~ "Questo nome host è dinamico e potrebbe cambiare dopo un riavvio o una "
 #~ "aggiornamento della rete, in base alla configurazione dell'amministratore "
 #~ "di rete locale."
-
-#~ msgid "Hostname could not be updated"
-#~ msgstr "Impossibile aggiornare il nome host"
 
 #, fuzzy
 #~ msgid "Binding settings"
@@ -7062,14 +7435,8 @@ msgstr "Disattiva"
 #~ "Se si omette l'unità, verranno utilizzati i byte (B). Le unità più grandi "
 #~ "possono presentarsi nella forma GiB (potenza di 2) o GB (potenza di 10)."
 
-#~ msgid "Minimum"
-#~ msgstr "Minimo"
-
 #~ msgid "Minimum size value"
 #~ msgstr "Valore dimensione minima"
-
-#~ msgid "Maximum"
-#~ msgstr "Massimo"
 
 #~ msgid "Maximum size value"
 #~ msgstr "Valore dimensione massima"
