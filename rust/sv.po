@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-15 12:29+0000\n"
+"POT-Creation-Date: 2026-06-15 14:08+0000\n"
 "PO-Revision-Date: 2026-06-15 11:12+0000\n"
 "Last-Translator: Luna  Jernberg <bittin@opensuse.org>\n"
 "Language-Team: Swedish <https://l10n.opensuse.org/projects/agama/agama-rust-"
@@ -37,7 +37,7 @@ msgstr "Hoppa över och konfigurera manuellt"
 
 #. TRANSLATORS: {0} is a URL
 #: agama-autoinstall/src/scripts.rs:135
-#, fuzzy
+#, fuzzy, rust-format
 msgid ""
 "It was not possible to load the script from {0}. Do you want to try again?"
 msgstr ""
@@ -112,6 +112,7 @@ msgstr "Vänligen ange root-lösenord:"
 
 #. TRANSLATORS: {0} is a host name
 #: agama-cli/src/auth.rs:179
+#, rust-format
 msgid "Not authenticated in {0}"
 msgstr "Inte autentiserad i {0}"
 
@@ -584,7 +585,7 @@ msgstr "Installation slutförd."
 msgid "You can reboot the machine to log in to the new system."
 msgstr "Du kan starta om maskinen för att logga in på det nya systemet."
 
-#: agama-cli/src/monitor/ui/content.rs:68 agama-cli/src/status.rs:76
+#: agama-cli/src/monitor/ui/content.rs:68
 msgid "Installation failed."
 msgstr "Installation misslyckades."
 
@@ -600,17 +601,20 @@ msgstr "Åtgärd krävs:"
 msgid "No product has been selected yet."
 msgstr "Ingen produkt har valts ännu."
 
-#: agama-cli/src/monitor/ui/content.rs:172
-msgid "Following issues needs to be addressed in the configuration:"
-msgstr "Följande problem behöver åtgärdas i konfigurationen:"
+#: agama-cli/src/monitor/ui/content.rs:172 agama-cli/src/status.rs:88
+#, fuzzy
+msgid "Fix invalid settings before starting the installation:"
+msgstr "Väntar på att starta installation..."
 
-#: agama-cli/src/monitor/ui/content.rs:193
-msgid "Ready for installation."
+#: agama-cli/src/monitor/ui/content.rs:193 agama-cli/src/status.rs:81
+#, fuzzy
+msgid "Ready to start the installation."
 msgstr "Redo för installation."
 
 #: agama-cli/src/monitor/ui/content.rs:194
-msgid "Waiting to start installation..."
-msgstr "Väntar på att starta installation..."
+#, fuzzy
+msgid "Starting the installation."
+msgstr "Startar installation av paket"
 
 #: agama-cli/src/monitor/ui/content.rs:210
 msgid "Step"
@@ -619,10 +623,6 @@ msgstr "Steg"
 #: agama-cli/src/monitor/ui/content.rs:212
 msgid "of"
 msgstr "av"
-
-#: agama-cli/src/monitor/ui/issues.rs:64
-msgid "Waiting for these to be resolved."
-msgstr "Väntar på att dessa ska lösas."
 
 #. TRANSLATORS: additional data that question passed to user beside main question message
 #: agama-cli/src/monitor/ui/question.rs:307
@@ -768,44 +768,35 @@ msgid "Path to a file containing the answers in JSON format"
 msgstr "Sökväg till fil som innehåller svaren i JSON-format"
 
 #: agama-cli/src/status.rs:77
-msgid "Installation finished successfully."
-msgstr "Installation har slutförts framgångsrikt."
-
-#: agama-cli/src/status.rs:78
-msgid "Installation is ready to start."
-msgstr "Installation är redo att starta."
-
-#: agama-cli/src/status.rs:79
-msgid "Installation is in progress."
-msgstr "Installationen pågår."
+msgid ""
+"The installation failed. Use the \"agama logs store\" command to get the "
+"logs to troubleshoot or share with support."
+msgstr ""
 
 #: agama-cli/src/status.rs:80
-msgid "Installation is being proposed."
-msgstr "Installation föreslås."
+#, fuzzy
+msgid "The installation finished successfully."
+msgstr "Installation har slutförts framgångsrikt."
 
-#: agama-cli/src/status.rs:81
+#: agama-cli/src/status.rs:82
+#, fuzzy
+msgid "The installation is in progress."
+msgstr "Installationen pågår."
+
+#: agama-cli/src/status.rs:83
+#, fuzzy
+msgid "The installer is preparing an installation proposal."
+msgstr ""
+"Installationsprogrammet misslyckades med att beräkna installationsförslag."
+
+#: agama-cli/src/status.rs:85
+#, fuzzy
 msgid ""
-"There are unanswered questions. Use `agama monitor` command or the web user "
-"interface to answer them."
+"There are unanswered questions. Use the \"agama monitor\" command or the web "
+"user interface to answer them:"
 msgstr ""
 "Det finns obesvarade frågor. Vänligen använd `agama monitor` kommandot eller "
 "webbgränssnittet för att besvara dem."
-
-#: agama-cli/src/status.rs:82
-msgid "There are issues in configuration that are blocking the installation."
-msgstr "Det finns problem i konfigurationen som blockerar installationen."
-
-#: agama-cli/src/status.rs:118 agama-utils/src/api/problem_details.rs:192
-msgid "Details:"
-msgstr "Detaljer:"
-
-#: agama-cli/src/status.rs:120
-msgid "Open questions:"
-msgstr "Öppna frågor:"
-
-#: agama-cli/src/status.rs:126
-msgid "Blocking issues:"
-msgstr "Blockerande problem:"
 
 #. TRANSLATORS: %s is replaced by the script name.
 #: agama-files/src/service.rs:184
@@ -987,6 +978,7 @@ msgstr "Fortsätt"
 
 #. TRANSLATORS: substituting: key ID, (key name), fingerprint
 #: agama-software/src/callbacks/security.rs:104
+#, rust-format
 msgid ""
 "The key {0} ({1}) with fingerprint {2} is unknown. Do you want to trust this "
 "key?"
@@ -1098,6 +1090,10 @@ msgstr "Inte auktoriserad"
 msgid "Error:"
 msgstr "Fel:"
 
+#: agama-utils/src/api/problem_details.rs:192
+msgid "Details:"
+msgstr "Detaljer:"
+
 #: agama-utils/src/api/question.rs:293 agama-utils/src/question/start.rs:48
 msgid "No"
 msgstr "Nej"
@@ -1117,6 +1113,28 @@ msgstr "mönster"
 #: agama-utils/src/resolvable.rs:64
 msgid "product"
 msgstr "produkt"
+
+#~ msgid "Following issues needs to be addressed in the configuration:"
+#~ msgstr "Följande problem behöver åtgärdas i konfigurationen:"
+
+#~ msgid "Waiting for these to be resolved."
+#~ msgstr "Väntar på att dessa ska lösas."
+
+#~ msgid "Installation is ready to start."
+#~ msgstr "Installation är redo att starta."
+
+#~ msgid "Installation is being proposed."
+#~ msgstr "Installation föreslås."
+
+#~ msgid ""
+#~ "There are issues in configuration that are blocking the installation."
+#~ msgstr "Det finns problem i konfigurationen som blockerar installationen."
+
+#~ msgid "Open questions:"
+#~ msgstr "Öppna frågor:"
+
+#~ msgid "Blocking issues:"
+#~ msgstr "Blockerande problem:"
 
 #~ msgid "There are pending questions:"
 #~ msgstr "Det finns oavslutade frågor:"
@@ -1150,10 +1168,6 @@ msgstr "produkt"
 #~ msgstr ""
 #~ "Det finns obesvarade frågor. Använd kommandot `agama questions` eller "
 #~ "webbgränssnittet för att besvara dem:"
-
-#~ msgid "Installer is failed to calculate the installation proposal."
-#~ msgstr ""
-#~ "Installationsprogrammet misslyckades med att beräkna installationsförslag."
 
 #~ msgid "Details"
 #~ msgstr "Detaljer"

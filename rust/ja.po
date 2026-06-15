@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-15 12:29+0000\n"
+"POT-Creation-Date: 2026-06-15 14:08+0000\n"
 "PO-Revision-Date: 2026-06-13 04:12+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/agama/agama-rust-"
@@ -36,7 +36,7 @@ msgstr "処理を飛ばして手作業で設定する"
 
 #. TRANSLATORS: {0} is a URL
 #: agama-autoinstall/src/scripts.rs:135
-#, fuzzy
+#, fuzzy, rust-format
 msgid ""
 "It was not possible to load the script from {0}. Do you want to try again?"
 msgstr ""
@@ -110,6 +110,7 @@ msgstr "root のパスワードを入力してください:"
 
 #. TRANSLATORS: {0} is a host name
 #: agama-cli/src/auth.rs:179
+#, rust-format
 msgid "Not authenticated in {0}"
 msgstr "{0} では認証されていません"
 
@@ -581,7 +582,7 @@ msgstr "インストールが完了しました。"
 msgid "You can reboot the machine to log in to the new system."
 msgstr "あとはマシンを再起動して新しいシステムにログインするだけです。"
 
-#: agama-cli/src/monitor/ui/content.rs:68 agama-cli/src/status.rs:76
+#: agama-cli/src/monitor/ui/content.rs:68
 msgid "Installation failed."
 msgstr "インストールが失敗しました。"
 
@@ -597,17 +598,20 @@ msgstr "対応が必要です:"
 msgid "No product has been selected yet."
 msgstr "まだ製品を選択していません。"
 
-#: agama-cli/src/monitor/ui/content.rs:172
-msgid "Following issues needs to be addressed in the configuration:"
-msgstr "設定内にある下記の問題を解決する必要があります:"
+#: agama-cli/src/monitor/ui/content.rs:172 agama-cli/src/status.rs:88
+#, fuzzy
+msgid "Fix invalid settings before starting the installation:"
+msgstr "インストールの開始を待っています..."
 
-#: agama-cli/src/monitor/ui/content.rs:193
-msgid "Ready for installation."
+#: agama-cli/src/monitor/ui/content.rs:193 agama-cli/src/status.rs:81
+#, fuzzy
+msgid "Ready to start the installation."
 msgstr "インストールの準備ができています。"
 
 #: agama-cli/src/monitor/ui/content.rs:194
-msgid "Waiting to start installation..."
-msgstr "インストールの開始を待っています..."
+#, fuzzy
+msgid "Starting the installation."
+msgstr "パッケージのインストールを開始しています"
 
 #: agama-cli/src/monitor/ui/content.rs:210
 msgid "Step"
@@ -616,10 +620,6 @@ msgstr "ステップ"
 #: agama-cli/src/monitor/ui/content.rs:212
 msgid "of"
 msgstr "/"
-
-#: agama-cli/src/monitor/ui/issues.rs:64
-msgid "Waiting for these to be resolved."
-msgstr "これらの解決を待っています。"
 
 #. TRANSLATORS: additional data that question passed to user beside main question message
 #: agama-cli/src/monitor/ui/question.rs:307
@@ -765,44 +765,34 @@ msgid "Path to a file containing the answers in JSON format"
 msgstr "JSON 形式での回答を含むファイルパスを指定します"
 
 #: agama-cli/src/status.rs:77
-msgid "Installation finished successfully."
-msgstr "インストールが成功しました。"
-
-#: agama-cli/src/status.rs:78
-msgid "Installation is ready to start."
-msgstr "インストールの開始準備ができています。"
-
-#: agama-cli/src/status.rs:79
-msgid "Installation is in progress."
-msgstr "インストールしています。"
+msgid ""
+"The installation failed. Use the \"agama logs store\" command to get the "
+"logs to troubleshoot or share with support."
+msgstr ""
 
 #: agama-cli/src/status.rs:80
-msgid "Installation is being proposed."
-msgstr "インストールの提案を行っています。"
+#, fuzzy
+msgid "The installation finished successfully."
+msgstr "インストールが成功しました。"
 
-#: agama-cli/src/status.rs:81
+#: agama-cli/src/status.rs:82
+#, fuzzy
+msgid "The installation is in progress."
+msgstr "インストールしています。"
+
+#: agama-cli/src/status.rs:83
+#, fuzzy
+msgid "The installer is preparing an installation proposal."
+msgstr "インストーラは提案内容の作成に失敗しました。"
+
+#: agama-cli/src/status.rs:85
+#, fuzzy
 msgid ""
-"There are unanswered questions. Use `agama monitor` command or the web user "
-"interface to answer them."
+"There are unanswered questions. Use the \"agama monitor\" command or the web "
+"user interface to answer them:"
 msgstr ""
 "未回答の問題点が残っています。 `agama monitor` コマンドか Web ユーザインター"
 "フェイスを利用して回答してください。"
-
-#: agama-cli/src/status.rs:82
-msgid "There are issues in configuration that are blocking the installation."
-msgstr "インストールを妨げるような問題点が発生しています。"
-
-#: agama-cli/src/status.rs:118 agama-utils/src/api/problem_details.rs:192
-msgid "Details:"
-msgstr "詳細:"
-
-#: agama-cli/src/status.rs:120
-msgid "Open questions:"
-msgstr "未解決の問題点:"
-
-#: agama-cli/src/status.rs:126
-msgid "Blocking issues:"
-msgstr "インストールの実行を妨害している問題点:"
 
 #. TRANSLATORS: %s is replaced by the script name.
 #: agama-files/src/service.rs:184
@@ -984,6 +974,7 @@ msgstr "続行"
 
 #. TRANSLATORS: substituting: key ID, (key name), fingerprint
 #: agama-software/src/callbacks/security.rs:104
+#, rust-format
 msgid ""
 "The key {0} ({1}) with fingerprint {2} is unknown. Do you want to trust this "
 "key?"
@@ -1091,6 +1082,10 @@ msgstr "未認証"
 msgid "Error:"
 msgstr "エラー:"
 
+#: agama-utils/src/api/problem_details.rs:192
+msgid "Details:"
+msgstr "詳細:"
+
 #: agama-utils/src/api/question.rs:293 agama-utils/src/question/start.rs:48
 msgid "No"
 msgstr "いいえ"
@@ -1110,6 +1105,28 @@ msgstr "パターン"
 #: agama-utils/src/resolvable.rs:64
 msgid "product"
 msgstr "製品"
+
+#~ msgid "Following issues needs to be addressed in the configuration:"
+#~ msgstr "設定内にある下記の問題を解決する必要があります:"
+
+#~ msgid "Waiting for these to be resolved."
+#~ msgstr "これらの解決を待っています。"
+
+#~ msgid "Installation is ready to start."
+#~ msgstr "インストールの開始準備ができています。"
+
+#~ msgid "Installation is being proposed."
+#~ msgstr "インストールの提案を行っています。"
+
+#~ msgid ""
+#~ "There are issues in configuration that are blocking the installation."
+#~ msgstr "インストールを妨げるような問題点が発生しています。"
+
+#~ msgid "Open questions:"
+#~ msgstr "未解決の問題点:"
+
+#~ msgid "Blocking issues:"
+#~ msgstr "インストールの実行を妨害している問題点:"
 
 #~ msgid "There are pending questions:"
 #~ msgstr "未解決の問題点があります:"
@@ -1143,9 +1160,6 @@ msgstr "製品"
 #~ msgstr ""
 #~ "未回答の質問が残っています。 agama questions` コマンドを利用するか、もしく"
 #~ "は Web インターフェイスを利用して回答してください:"
-
-#~ msgid "Installer is failed to calculate the installation proposal."
-#~ msgstr "インストーラは提案内容の作成に失敗しました。"
 
 #~ msgid "Details"
 #~ msgstr "詳細"

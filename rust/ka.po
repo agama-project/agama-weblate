@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-15 12:29+0000\n"
+"POT-Creation-Date: 2026-06-15 14:08+0000\n"
 "PO-Revision-Date: 2026-06-14 03:12+0000\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://l10n.opensuse.org/projects/agama/agama-rust-"
@@ -37,7 +37,7 @@ msgstr "გამოტოვება და ხელით მორგებ
 
 #. TRANSLATORS: {0} is a URL
 #: agama-autoinstall/src/scripts.rs:135
-#, fuzzy
+#, fuzzy, rust-format
 msgid ""
 "It was not possible to load the script from {0}. Do you want to try again?"
 msgstr ""
@@ -96,6 +96,7 @@ msgstr "შეიყვანეთ root-ის პაროლი:"
 
 #. TRANSLATORS: {0} is a host name
 #: agama-cli/src/auth.rs:179
+#, rust-format
 msgid "Not authenticated in {0}"
 msgstr "{0}-ზე ავთენტიკაცია არ გაგივლიათ"
 
@@ -487,7 +488,7 @@ msgstr "დაყენება დასრულდა."
 msgid "You can reboot the machine to log in to the new system."
 msgstr "შეგიძლიათ, გადატვირთოთ მანაქანა და შეხვიდეთ ახალ სისტემაში."
 
-#: agama-cli/src/monitor/ui/content.rs:68 agama-cli/src/status.rs:76
+#: agama-cli/src/monitor/ui/content.rs:68
 msgid "Installation failed."
 msgstr "დაყენება ჩავარდა."
 
@@ -503,17 +504,20 @@ msgstr "საჭიროა ქმედება:"
 msgid "No product has been selected yet."
 msgstr "ჯერ პროდუქტი არჩეული არაა."
 
-#: agama-cli/src/monitor/ui/content.rs:172
-msgid "Following issues needs to be addressed in the configuration:"
-msgstr ""
+#: agama-cli/src/monitor/ui/content.rs:172 agama-cli/src/status.rs:88
+#, fuzzy
+msgid "Fix invalid settings before starting the installation:"
+msgstr "დაყენების დაწყების მოლოდინი..."
 
-#: agama-cli/src/monitor/ui/content.rs:193
-msgid "Ready for installation."
+#: agama-cli/src/monitor/ui/content.rs:193 agama-cli/src/status.rs:81
+#, fuzzy
+msgid "Ready to start the installation."
 msgstr "დაყენებისთვის მზადაა."
 
 #: agama-cli/src/monitor/ui/content.rs:194
-msgid "Waiting to start installation..."
-msgstr "დაყენების დაწყების მოლოდინი..."
+#, fuzzy
+msgid "Starting the installation."
+msgstr "პაკეტების დაყენების დაწყება"
 
 #: agama-cli/src/monitor/ui/content.rs:210
 msgid "Step"
@@ -522,10 +526,6 @@ msgstr "ნაბიჯი"
 #: agama-cli/src/monitor/ui/content.rs:212
 msgid "of"
 msgstr "/"
-
-#: agama-cli/src/monitor/ui/issues.rs:64
-msgid "Waiting for these to be resolved."
-msgstr "ამათი გადაჭრის მოლოდინი."
 
 #. TRANSLATORS: additional data that question passed to user beside main question message
 #: agama-cli/src/monitor/ui/question.rs:307
@@ -657,44 +657,33 @@ msgid "Path to a file containing the answers in JSON format"
 msgstr ""
 
 #: agama-cli/src/status.rs:77
-msgid "Installation finished successfully."
-msgstr "დაყენება წარმატებით დასრულდა."
-
-#: agama-cli/src/status.rs:78
-msgid "Installation is ready to start."
-msgstr "დაყენება მზადაა დასაწყებად."
-
-#: agama-cli/src/status.rs:79
-msgid "Installation is in progress."
-msgstr "მიმდინარეობს დაყენება."
+msgid ""
+"The installation failed. Use the \"agama logs store\" command to get the "
+"logs to troubleshoot or share with support."
+msgstr ""
 
 #: agama-cli/src/status.rs:80
-msgid "Installation is being proposed."
-msgstr "მიმდინარეობს დაყენების შეთავაზება."
+#, fuzzy
+msgid "The installation finished successfully."
+msgstr "დაყენება წარმატებით დასრულდა."
 
-#: agama-cli/src/status.rs:81
+#: agama-cli/src/status.rs:82
+#, fuzzy
+msgid "The installation is in progress."
+msgstr "მიმდინარეობს დაყენება."
+
+#: agama-cli/src/status.rs:83
+msgid "The installer is preparing an installation proposal."
+msgstr ""
+
+#: agama-cli/src/status.rs:85
+#, fuzzy
 msgid ""
-"There are unanswered questions. Use `agama monitor` command or the web user "
-"interface to answer them."
+"There are unanswered questions. Use the \"agama monitor\" command or the web "
+"user interface to answer them:"
 msgstr ""
 "არსებობს პასუხგაუცემელი კითხვები. საპასუხოდ გამოიყენეთ ვებინტერფეისი, ან "
 "ბრძანება 'agama monitor'."
-
-#: agama-cli/src/status.rs:82
-msgid "There are issues in configuration that are blocking the installation."
-msgstr ""
-
-#: agama-cli/src/status.rs:118 agama-utils/src/api/problem_details.rs:192
-msgid "Details:"
-msgstr "დეტალები:"
-
-#: agama-cli/src/status.rs:120
-msgid "Open questions:"
-msgstr "ღია კითხვები:"
-
-#: agama-cli/src/status.rs:126
-msgid "Blocking issues:"
-msgstr "მბლოკავი პრობლემები:"
 
 #. TRANSLATORS: %s is replaced by the script name.
 #: agama-files/src/service.rs:184
@@ -876,6 +865,7 @@ msgstr "გაგრძელება"
 
 #. TRANSLATORS: substituting: key ID, (key name), fingerprint
 #: agama-software/src/callbacks/security.rs:104
+#, rust-format
 msgid ""
 "The key {0} ({1}) with fingerprint {2} is unknown. Do you want to trust this "
 "key?"
@@ -983,6 +973,10 @@ msgstr "არაავტორიზებული"
 msgid "Error:"
 msgstr "შეცდომა:"
 
+#: agama-utils/src/api/problem_details.rs:192
+msgid "Details:"
+msgstr "დეტალები:"
+
 #: agama-utils/src/api/question.rs:293 agama-utils/src/question/start.rs:48
 msgid "No"
 msgstr "არა"
@@ -1002,6 +996,21 @@ msgstr "ნიმუში"
 #: agama-utils/src/resolvable.rs:64
 msgid "product"
 msgstr "პროდუქტი"
+
+#~ msgid "Waiting for these to be resolved."
+#~ msgstr "ამათი გადაჭრის მოლოდინი."
+
+#~ msgid "Installation is ready to start."
+#~ msgstr "დაყენება მზადაა დასაწყებად."
+
+#~ msgid "Installation is being proposed."
+#~ msgstr "მიმდინარეობს დაყენების შეთავაზება."
+
+#~ msgid "Open questions:"
+#~ msgstr "ღია კითხვები:"
+
+#~ msgid "Blocking issues:"
+#~ msgstr "მბლოკავი პრობლემები:"
 
 #~ msgid "There are pending questions:"
 #~ msgstr "დარჩენილია კითხვები:"
