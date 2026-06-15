@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-15 15:03+0000\n"
+"POT-Creation-Date: 2026-06-15 15:17+0000\n"
 "PO-Revision-Date: 2026-02-26 17:04+0000\n"
 "Last-Translator: Aleksey Fedorov <Aleksejfedorov963@gmail.com>\n"
 "Language-Team: Russian <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -545,7 +545,7 @@ msgstr "Программы"
 #: src/components/storage/DeviceSelectorPage.tsx:75
 #: src/components/storage/EncryptionSettingsPage.tsx:121
 #: src/components/storage/ISCSIPage.tsx:36
-#: src/components/storage/LvmPage.tsx:186
+#: src/components/storage/LvmPage.tsx:202
 #: src/components/storage/ProposalPage.tsx:323
 #: src/components/storage/SpacePolicySelectionPage.tsx:121
 #: src/components/storage/dasd/DASDPage.tsx:70
@@ -666,6 +666,84 @@ msgstr "Доп. действия"
 #: src/components/core/Summary.tsx:73
 msgid "Waiting for proposal"
 msgstr "Ожидание предложения"
+
+#. TRANSLATORS: accessible name for the divider used to resize the
+#. terminal panel by dragging or with the arrow keys
+#: src/components/core/TerminalDock.tsx:139
+#, fuzzy
+msgid "Resize terminal"
+msgstr "Открыть терминал"
+
+#: src/components/core/TerminalPane.tsx:34
+#, fuzzy
+msgid "Show terminal"
+msgstr "Описание"
+
+#. TRANSLATORS: tooltip and accessible name for the button that hides the
+#. terminal panel (it does not end the session)
+#: src/components/core/TerminalPane.tsx:35
+#: src/components/core/TerminalPane.tsx:186
+#: src/components/core/TerminalUnavailable.tsx:56
+#, fuzzy
+msgid "Hide terminal"
+msgstr "Открыть терминал"
+
+#: src/components/core/TerminalPane.tsx:36
+#, fuzzy
+msgid "Open terminal"
+msgstr "Открыть терминал"
+
+#: src/components/core/TerminalPane.tsx:37
+#, fuzzy
+msgid "Close terminal"
+msgstr "Открыть терминал"
+
+#. TRANSLATORS: tooltip for the button that makes the terminal text smaller
+#: src/components/core/TerminalPane.tsx:78
+msgid "Decrease font size"
+msgstr ""
+
+#. TRANSLATORS: tooltip for the button that makes the terminal text bigger
+#: src/components/core/TerminalPane.tsx:80
+msgid "Increase font size"
+msgstr ""
+
+#. TRANSLATORS: tooltip for the button that clears the terminal output
+#: src/components/core/TerminalPane.tsx:82
+#, fuzzy
+msgid "Clear terminal"
+msgstr "Открыть терминал"
+
+#. TRANSLATORS: accessible name of the terminal panel region
+#: src/components/core/TerminalPane.tsx:138
+#, fuzzy
+msgid "Terminal"
+msgstr "Открыть терминал"
+
+#. TRANSLATORS: tooltip and accessible name for the button that collapses the
+#. terminal panel to a bar, keeping the session
+#: src/components/core/TerminalPane.tsx:207
+#, fuzzy
+msgid "Minimize terminal"
+msgstr "Минимальное значение размера"
+
+#. TRANSLATORS: tooltip and accessible name for the button that expands the
+#. collapsed terminal panel back to its full size
+#: src/components/core/TerminalPane.tsx:210
+#, fuzzy
+msgid "Restore terminal"
+msgstr "Открыть терминал"
+
+#. TRANSLATORS: one-line summary of what the terminal is for
+#: src/components/core/TerminalPane.tsx:214
+msgid ""
+"Linux command-line with administrative privileges on the installer system."
+msgstr ""
+
+#. TRANSLATORS: shown when the screen is too small to use the terminal
+#: src/components/core/TerminalUnavailable.tsx:48
+msgid "The terminal requires a larger screen size"
+msgstr ""
 
 #. TRANSLATORS: %d will be replaced with a number of duplicate entries skipped.
 #: src/components/form/ArrayField.tsx:95
@@ -1184,7 +1262,7 @@ msgstr ""
 #: src/components/network/ConnectionsTable.tsx:280
 #: src/components/network/connection-form/Form.tsx:403
 #: src/components/storage/DeviceSelectorPage.tsx:55
-#: src/components/storage/LvmPage.tsx:200
+#: src/components/storage/LvmPage.tsx:216
 #: src/components/storage/iscsi/InitiatorFormPage.tsx:66
 #: src/components/storage/iscsi/InitiatorFormPage.tsx:75
 #: src/components/storage/iscsi/TargetsTable.tsx:282
@@ -2126,9 +2204,9 @@ msgstr ""
 msgid "Wait until current operations are completed."
 msgstr "Дождитесь завершения текущих операций."
 
-#: src/components/overview/OverviewPage.tsx:210
-msgid ""
-"You need to fix any invalid settings before proceeding with the installation."
+#: src/components/overview/OverviewPage.tsx:209
+#, fuzzy
+msgid "Fix invalid settings before starting the installation."
 msgstr ""
 "Перед продолжением установки необходимо исправить все неверные параметры."
 
@@ -2699,8 +2777,9 @@ msgstr "Сведения об инициаторе"
 
 #. TRANSLATORS: Clickable text to show technical details at popup window
 #: src/components/questions/LoadConfigRetryQuestion.tsx:90
-msgid "Show technical details (English only)"
-msgstr ""
+#, fuzzy
+msgid "Show technical details"
+msgstr "Сведения об инициаторе"
 
 #. TRANSLATORS: error message, user entered a wrong password
 #: src/components/questions/LuksActivationQuestion.tsx:37
@@ -3492,7 +3571,7 @@ msgid "Use the tabs to browse disks, RAID devices and LVM volume groups."
 msgstr ""
 
 #: src/components/storage/DeviceSelectorModal.tsx:325
-#: src/components/storage/LvmPage.tsx:203
+#: src/components/storage/LvmPage.tsx:219
 msgid "Disks"
 msgstr "Диски"
 
@@ -3520,7 +3599,7 @@ msgid "No software RAID devices are available for selection."
 msgstr ""
 
 #: src/components/storage/DeviceSelectorModal.tsx:358
-#: src/components/storage/LvmPage.tsx:187
+#: src/components/storage/LvmPage.tsx:203
 msgid "LVM"
 msgstr "LVM"
 
@@ -3796,49 +3875,75 @@ msgstr[2] ""
 msgid "iSCSI"
 msgstr "iSCSI"
 
-#: src/components/storage/LvmPage.tsx:80
+#. TRANSLATORS: Option to decide which physical volumes create for an LVM
+#: src/components/storage/LvmPage.tsx:60
+#, fuzzy
+msgid "As required by the logical volumes"
+msgstr "Добавить логический том"
+
+#. TRANSLATORS: Option to decide which physical volumes create for an LVM
+#: src/components/storage/LvmPage.tsx:62
+#, fuzzy
+msgid "Use all available space"
+msgstr "Использовать свободное пространство"
+
+#: src/components/storage/LvmPage.tsx:65
+msgid ""
+"Physical volumes may be created on some of the chosen disks based on the "
+"logical volumes total size."
+msgstr ""
+
+#. TRANSLATORS: Explanation of the size option 'Use all available space'
+#: src/components/storage/LvmPage.tsx:68
+msgid ""
+"All the available space in the chosen disks will be used to create physical "
+"volumes."
+msgstr ""
+
+#. TRANSLATORS: Label for the form element to configure LVM extent size
+#: src/components/storage/LvmPage.tsx:70
+#, fuzzy
+msgid "Physical extent size"
+msgstr "логический том"
+
+#: src/components/storage/LvmPage.tsx:96
 msgid "Enter a name for the volume group."
 msgstr "Введите имя для группы томов."
 
-#: src/components/storage/LvmPage.tsx:84
+#: src/components/storage/LvmPage.tsx:100
 #, javascript-format
 msgid "Volume group '%s' already exists. Enter a different name."
 msgstr "Группа томов „%s“ уже существует. Введите другое имя."
 
-#: src/components/storage/LvmPage.tsx:88
+#: src/components/storage/LvmPage.tsx:104
 msgid "Select at least one disk."
 msgstr "Выберите хотя бы один диск."
 
-#: src/components/storage/LvmPage.tsx:98
+#: src/components/storage/LvmPage.tsx:114
 msgid ""
 "This volume group only occupies the space required by its logical volumes. "
 "To expand it to cover all available disk space, recreate the volume group."
 msgstr ""
 
-#: src/components/storage/LvmPage.tsx:188
+#: src/components/storage/LvmPage.tsx:204
 msgid "Configure Volume Group"
 msgstr "Настройка группы томов"
 
-#: src/components/storage/LvmPage.tsx:194
+#: src/components/storage/LvmPage.tsx:210
 msgid "Check the following before continuing"
 msgstr "Прежде чем продолжить, проверьте следующее"
 
-#: src/components/storage/LvmPage.tsx:206
-msgid ""
-"The needed LVM physical volumes will be added as partitions on the chosen "
-"disks, based on the sizes of the logical volumes. If you select more than "
-"one disk, the physical volumes may be distributed along several disks."
+#: src/components/storage/LvmPage.tsx:221
+#, fuzzy
+msgid "LVM physical volumes will be added as partitions on the chosen disks."
 msgstr ""
-"Необходимые физические тома LVM будут добавлены в качестве разделов на "
-"выбранных дисках, исходя из размеров логических томов. Если вы выберете "
-"несколько дисков, физические тома могут быть распределены по нескольким "
-"дискам."
+"Файловая система будет выделена в качестве нового раздела на выбранном диске."
 
-#: src/components/storage/LvmPage.tsx:242
+#: src/components/storage/LvmPage.tsx:254
 msgid "Move mount points"
 msgstr "Переместить точки монтирования"
 
-#: src/components/storage/LvmPage.tsx:246
+#: src/components/storage/LvmPage.tsx:258
 msgid ""
 "Move the mount points currently configured at the selected disks to logical "
 "volumes of this volume group."
@@ -6464,6 +6569,16 @@ msgstr "Активировать"
 msgid "Deactivating"
 msgstr "Деактивировать"
 
+#~ msgid ""
+#~ "The needed LVM physical volumes will be added as partitions on the chosen "
+#~ "disks, based on the sizes of the logical volumes. If you select more than "
+#~ "one disk, the physical volumes may be distributed along several disks."
+#~ msgstr ""
+#~ "Необходимые физические тома LVM будут добавлены в качестве разделов на "
+#~ "выбранных дисках, исходя из размеров логических томов. Если вы выберете "
+#~ "несколько дисков, физические тома могут быть распределены по нескольким "
+#~ "дискам."
+
 #~ msgid "Waiting for a mount point"
 #~ msgstr "Ожидание точки монтирования"
 
@@ -7171,10 +7286,6 @@ msgstr "Деактивировать"
 #~ msgstr "автоматический выбор"
 
 #, fuzzy
-#~ msgid "Show description"
-#~ msgstr "Описание"
-
-#, fuzzy
 #~ msgid "Hide description"
 #~ msgstr "Описание"
 
@@ -7441,9 +7552,6 @@ msgstr "Деактивировать"
 #~ msgstr ""
 #~ "Если единица измерения не указана, будут использоваться байты (B). Более "
 #~ "крупные единицы могут иметь вид GiB (степень 2) или GB (степень 10)."
-
-#~ msgid "Minimum size value"
-#~ msgstr "Минимальное значение размера"
 
 #~ msgid "Maximum size value"
 #~ msgstr "Максимальное значение размера"
@@ -7870,12 +7978,6 @@ msgstr "Деактивировать"
 #~ msgstr "Выберите расположение"
 
 #~ msgid ""
-#~ "The file system will be allocated as a new partition at the selected disk."
-#~ msgstr ""
-#~ "Файловая система будет выделена в качестве нового раздела на выбранном "
-#~ "диске."
-
-#~ msgid ""
 #~ "A new volume group will be allocated in the selected disk and the file "
 #~ "system will be created as a logical volume."
 #~ msgstr ""
@@ -8115,9 +8217,6 @@ msgstr "Деактивировать"
 
 #~ msgid "YaST Logs"
 #~ msgstr "Журналы YaST"
-
-#~ msgid "Open Terminal"
-#~ msgstr "Открыть терминал"
 
 #~ msgid "Software issues"
 #~ msgstr "Проблемы с программным обеспечением"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-15 15:03+0000\n"
+"POT-Creation-Date: 2026-06-15 15:17+0000\n"
 "PO-Revision-Date: 2026-04-25 16:04+0000\n"
 "Last-Translator: openSUSE Weblate user 1416 "
 "<alejoh@users.noreply.l10n.opensuse.org>\n"
@@ -552,7 +552,7 @@ msgstr "Programvare"
 #: src/components/storage/DeviceSelectorPage.tsx:75
 #: src/components/storage/EncryptionSettingsPage.tsx:121
 #: src/components/storage/ISCSIPage.tsx:36
-#: src/components/storage/LvmPage.tsx:186
+#: src/components/storage/LvmPage.tsx:202
 #: src/components/storage/ProposalPage.tsx:323
 #: src/components/storage/SpacePolicySelectionPage.tsx:121
 #: src/components/storage/dasd/DASDPage.tsx:70
@@ -679,6 +679,84 @@ msgstr "Kobler til"
 #, fuzzy
 msgid "Waiting for proposal"
 msgstr "Venter på progresjons rapport..."
+
+#. TRANSLATORS: accessible name for the divider used to resize the
+#. terminal panel by dragging or with the arrow keys
+#: src/components/core/TerminalDock.tsx:139
+#, fuzzy
+msgid "Resize terminal"
+msgstr "Åpne Terminal"
+
+#: src/components/core/TerminalPane.tsx:34
+#, fuzzy
+msgid "Show terminal"
+msgstr "Kryptering"
+
+#. TRANSLATORS: tooltip and accessible name for the button that hides the
+#. terminal panel (it does not end the session)
+#: src/components/core/TerminalPane.tsx:35
+#: src/components/core/TerminalPane.tsx:186
+#: src/components/core/TerminalUnavailable.tsx:56
+#, fuzzy
+msgid "Hide terminal"
+msgstr "Åpne Terminal"
+
+#: src/components/core/TerminalPane.tsx:36
+#, fuzzy
+msgid "Open terminal"
+msgstr "Åpne Terminal"
+
+#: src/components/core/TerminalPane.tsx:37
+#, fuzzy
+msgid "Close terminal"
+msgstr "Åpne Terminal"
+
+#. TRANSLATORS: tooltip for the button that makes the terminal text smaller
+#: src/components/core/TerminalPane.tsx:78
+msgid "Decrease font size"
+msgstr ""
+
+#. TRANSLATORS: tooltip for the button that makes the terminal text bigger
+#: src/components/core/TerminalPane.tsx:80
+msgid "Increase font size"
+msgstr ""
+
+#. TRANSLATORS: tooltip for the button that clears the terminal output
+#: src/components/core/TerminalPane.tsx:82
+#, fuzzy
+msgid "Clear terminal"
+msgstr "Åpne Terminal"
+
+#. TRANSLATORS: accessible name of the terminal panel region
+#: src/components/core/TerminalPane.tsx:138
+#, fuzzy
+msgid "Terminal"
+msgstr "Åpne Terminal"
+
+#. TRANSLATORS: tooltip and accessible name for the button that collapses the
+#. terminal panel to a bar, keeping the session
+#: src/components/core/TerminalPane.tsx:207
+#, fuzzy
+msgid "Minimize terminal"
+msgstr "Minstestørrelse er nødvendig"
+
+#. TRANSLATORS: tooltip and accessible name for the button that expands the
+#. collapsed terminal panel back to its full size
+#: src/components/core/TerminalPane.tsx:210
+#, fuzzy
+msgid "Restore terminal"
+msgstr "Åpne Terminal"
+
+#. TRANSLATORS: one-line summary of what the terminal is for
+#: src/components/core/TerminalPane.tsx:214
+msgid ""
+"Linux command-line with administrative privileges on the installer system."
+msgstr ""
+
+#. TRANSLATORS: shown when the screen is too small to use the terminal
+#: src/components/core/TerminalUnavailable.tsx:48
+msgid "The terminal requires a larger screen size"
+msgstr ""
 
 #. TRANSLATORS: %d will be replaced with a number of duplicate entries skipped.
 #: src/components/form/ArrayField.tsx:95
@@ -1205,7 +1283,7 @@ msgstr ""
 #: src/components/network/ConnectionsTable.tsx:280
 #: src/components/network/connection-form/Form.tsx:403
 #: src/components/storage/DeviceSelectorPage.tsx:55
-#: src/components/storage/LvmPage.tsx:200
+#: src/components/storage/LvmPage.tsx:216
 #: src/components/storage/iscsi/InitiatorFormPage.tsx:66
 #: src/components/storage/iscsi/InitiatorFormPage.tsx:75
 #: src/components/storage/iscsi/TargetsTable.tsx:282
@@ -2146,10 +2224,9 @@ msgstr ""
 msgid "Wait until current operations are completed."
 msgstr ""
 
-#: src/components/overview/OverviewPage.tsx:210
+#: src/components/overview/OverviewPage.tsx:209
 #, fuzzy
-msgid ""
-"You need to fix any invalid settings before proceeding with the installation."
+msgid "Fix invalid settings before starting the installation."
 msgstr ""
 "Det er noen rapporterte problemer. Vennligst undersøk dem i de forrige "
 "stegene før du fortsetter med installasjonen."
@@ -2730,8 +2807,9 @@ msgstr "Initiativtakers navn"
 
 #. TRANSLATORS: Clickable text to show technical details at popup window
 #: src/components/questions/LoadConfigRetryQuestion.tsx:90
-msgid "Show technical details (English only)"
-msgstr ""
+#, fuzzy
+msgid "Show technical details"
+msgstr "Initiativtakers navn"
 
 #. TRANSLATORS: error message, user entered a wrong password
 #: src/components/questions/LuksActivationQuestion.tsx:37
@@ -3486,7 +3564,7 @@ msgid "Use the tabs to browse disks, RAID devices and LVM volume groups."
 msgstr ""
 
 #: src/components/storage/DeviceSelectorModal.tsx:325
-#: src/components/storage/LvmPage.tsx:203
+#: src/components/storage/LvmPage.tsx:219
 msgid "Disks"
 msgstr "Disker"
 
@@ -3514,7 +3592,7 @@ msgid "No software RAID devices are available for selection."
 msgstr ""
 
 #: src/components/storage/DeviceSelectorModal.tsx:358
-#: src/components/storage/LvmPage.tsx:187
+#: src/components/storage/LvmPage.tsx:203
 msgid "LVM"
 msgstr ""
 
@@ -3792,49 +3870,78 @@ msgstr[1] "Før du starter installasjonen, må du løse følgende problemer:"
 msgid "iSCSI"
 msgstr "iSCSI"
 
-#: src/components/storage/LvmPage.tsx:80
+#. TRANSLATORS: Option to decide which physical volumes create for an LVM
+#: src/components/storage/LvmPage.tsx:60
+#, fuzzy
+msgid "As required by the logical volumes"
+msgstr "Logiske volum på system LVM"
+
+#. TRANSLATORS: Option to decide which physical volumes create for an LVM
+#: src/components/storage/LvmPage.tsx:62
+#, fuzzy
+msgid "Use all available space"
+msgstr "Bruk tilgjengelig plass"
+
+#: src/components/storage/LvmPage.tsx:65
+msgid ""
+"Physical volumes may be created on some of the chosen disks based on the "
+"logical volumes total size."
+msgstr ""
+
+#. TRANSLATORS: Explanation of the size option 'Use all available space'
+#: src/components/storage/LvmPage.tsx:68
+msgid ""
+"All the available space in the chosen disks will be used to create physical "
+"volumes."
+msgstr ""
+
+#. TRANSLATORS: Label for the form element to configure LVM extent size
+#: src/components/storage/LvmPage.tsx:70
+#, fuzzy
+msgid "Physical extent size"
+msgstr "Logiske volum på system LVM"
+
+#: src/components/storage/LvmPage.tsx:96
 #, fuzzy
 msgid "Enter a name for the volume group."
 msgstr "Opprett en dedikert LVM volumgruppe"
 
-#: src/components/storage/LvmPage.tsx:84
+#: src/components/storage/LvmPage.tsx:100
 #, javascript-format
 msgid "Volume group '%s' already exists. Enter a different name."
 msgstr ""
 
-#: src/components/storage/LvmPage.tsx:88
+#: src/components/storage/LvmPage.tsx:104
 #, fuzzy
 msgid "Select at least one disk."
 msgstr "Velg en disk"
 
-#: src/components/storage/LvmPage.tsx:98
+#: src/components/storage/LvmPage.tsx:114
 msgid ""
 "This volume group only occupies the space required by its logical volumes. "
 "To expand it to cover all available disk space, recreate the volume group."
 msgstr ""
 
-#: src/components/storage/LvmPage.tsx:188
+#: src/components/storage/LvmPage.tsx:204
 #, fuzzy
 msgid "Configure Volume Group"
 msgstr "Opprett en LVM Volumgruppe"
 
-#: src/components/storage/LvmPage.tsx:194
+#: src/components/storage/LvmPage.tsx:210
 msgid "Check the following before continuing"
 msgstr ""
 
-#: src/components/storage/LvmPage.tsx:206
-msgid ""
-"The needed LVM physical volumes will be added as partitions on the chosen "
-"disks, based on the sizes of the logical volumes. If you select more than "
-"one disk, the physical volumes may be distributed along several disks."
-msgstr ""
+#: src/components/storage/LvmPage.tsx:221
+#, fuzzy
+msgid "LVM physical volumes will be added as partitions on the chosen disks."
+msgstr "Filsystemet vil bli allokert som en ny partisjon på den valgte disken."
 
-#: src/components/storage/LvmPage.tsx:242
+#: src/components/storage/LvmPage.tsx:254
 #, fuzzy
 msgid "Move mount points"
 msgstr "Monteringspunkt"
 
-#: src/components/storage/LvmPage.tsx:246
+#: src/components/storage/LvmPage.tsx:258
 msgid ""
 "Move the mount points currently configured at the selected disks to logical "
 "volumes of this volume group."
@@ -6940,10 +7047,6 @@ msgstr "Deaktivere"
 #~ msgstr "Kan ikke koble til Agama server"
 
 #, fuzzy
-#~ msgid "Show description"
-#~ msgstr "Kryptering"
-
-#, fuzzy
 #~ msgid "Hide description"
 #~ msgstr "Kryptering"
 
@@ -7159,10 +7262,6 @@ msgstr "Deaktivere"
 #, fuzzy
 #~ msgid "Maximum size options"
 #~ msgstr "Maksimal ønsket størrelse"
-
-#, fuzzy
-#~ msgid "Minimum size value"
-#~ msgstr "Minstestørrelse er nødvendig"
 
 #, fuzzy
 #~ msgid "Maximum size value"
@@ -7573,11 +7672,6 @@ msgstr "Deaktivere"
 #~ msgstr "Velg en plassering"
 
 #~ msgid ""
-#~ "The file system will be allocated as a new partition at the selected disk."
-#~ msgstr ""
-#~ "Filsystemet vil bli allokert som en ny partisjon på den valgte disken."
-
-#~ msgid ""
 #~ "A new volume group will be allocated in the selected disk and the file "
 #~ "system will be created as a logical volume."
 #~ msgstr ""
@@ -7815,9 +7909,6 @@ msgstr "Deaktivere"
 
 #~ msgid "YaST Logs"
 #~ msgstr "YaST loggfiler"
-
-#~ msgid "Open Terminal"
-#~ msgstr "Åpne Terminal"
 
 #~ msgid "Software issues"
 #~ msgstr "Programvare problemer"
