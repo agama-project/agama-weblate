@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-06-12 15:05+0000\n"
-"PO-Revision-Date: 2026-06-10 09:12+0000\n"
+"PO-Revision-Date: 2026-06-15 10:12+0000\n"
 "Last-Translator: Luna  Jernberg <bittin@opensuse.org>\n"
 "Language-Team: Swedish <https://l10n.opensuse.org/projects/agama/agama-rust-"
 "master/sv/>\n"
@@ -46,7 +46,7 @@ msgstr ""
 #. TRANSLATORS: CLI help for: agama auth
 #: agama-cli/src/auth.rs:65
 msgid "Authenticate with Agama's server"
-msgstr ""
+msgstr "Autentisera med Agamas server"
 
 #. TRANSLATORS: CLI help for: agama auth (details)
 #: agama-cli/src/auth.rs:67
@@ -64,21 +64,33 @@ msgid ""
 "You can logout at any time by using the \"auth logout\" command, although "
 "this command does not affect the root user."
 msgstr ""
+"Om du inte kör det här programmet som root måste du autentisera dig med "
+"Agamas server för de flesta operationer. Du kan logga in genom att ange root-"
+"lösenordet med kommandot \"auth login\". Vid lyckad autentisering returnerar "
+"servern en JSON Web Token (JWT) som lagras för att autentisera följande "
+"förfrågningar.\n"
+"\n"
+"Om du kör det här programmet lokalt som root kan du hoppa över "
+"autentiseringssteget eftersom det automatiskt använder mastertoken i /run/"
+"agama/token. Endast root-användaren måste ha åtkomst till en sådan fil.\n"
+"\n"
+"Du kan logga ut när som helst genom att använda kommandot \"auth logout\", "
+"även om detta kommando inte påverkar root-användaren."
 
 #. TRANSLATORS: CLI help for: agama auth logout
 #: agama-cli/src/auth.rs:88
 msgid "Deauthenticate by removing the token"
-msgstr ""
+msgstr "Avautentisera genom att ta bort token"
 
 #. TRANSLATORS: CLI help for: agama auth show
 #: agama-cli/src/auth.rs:93
 msgid "Print the used token to the standard output"
-msgstr ""
+msgstr "Skriv ut den använda token till standardutdata"
 
 #. TRANSLATORS: CLI help for: agama auth login
 #: agama-cli/src/auth.rs:99
 msgid "Authenticate with Agama's server and store the token"
-msgstr ""
+msgstr "Autentisera med Agamas server och lagra token"
 
 #. TRANSLATORS: CLI help for: agama auth login (details)
 #: agama-cli/src/auth.rs:101
@@ -88,21 +100,24 @@ msgid ""
 "token in .agama/agama-jwt. The token will be automatically sent to "
 "authenticate the following requests."
 msgstr ""
+"Det här kommandot försöker hämta lösenordet från standardinmatningen. Om det "
+"inte finns där frågar det användaren interaktivt. Vid lyckad inloggning "
+"lagras token i .agama/agama-jwt. Token skickas automatiskt för att "
+"autentisera följande förfrågningar."
 
 #: agama-cli/src/auth.rs:141
 msgid "Please enter the root password:"
-msgstr ""
+msgstr "Vänligen ange root-lösenord:"
 
 #. TRANSLATORS: {0} is a host name
 #: agama-cli/src/auth.rs:179
 msgid "Not authenticated in {0}"
-msgstr ""
+msgstr "Inte autentiserad i {0}"
 
 #. TRANSLATORS: CLI help for: agama probe
 #: agama-cli/src/commands.rs:42
-#, fuzzy
 msgid "Analyze the system"
-msgstr "Förbered systemet"
+msgstr "Analysera systemet"
 
 #. TRANSLATORS: CLI help for: agama probe (details)
 #: agama-cli/src/commands.rs:44
@@ -112,12 +127,16 @@ msgid ""
 "devices, and more. The 'probe' command initiates this analysis process and "
 "returns immediately. TODO: do we really need a \"probe\" action?"
 msgstr ""
+"I Agamas jargong hänvisar termen \"probing\" till processen att "
+"\"analysera\" systemet. Detta inkluderar att läsa programvarudatabaser, "
+"analysera lagringsenheter med mera. Kommandot \"probe\" initierar denna "
+"analysprocess och returnerar omedelbart. TODO: behöver vi verkligen en "
+"\"probe\" åtgärd?"
 
 #. TRANSLATORS: CLI help for: agama install
 #: agama-cli/src/commands.rs:54
-#, fuzzy
 msgid "Start the system installation"
-msgstr "Startar installation av paket"
+msgstr "Starta systeminstallationen"
 
 #. TRANSLATORS: CLI help for: agama install (details)
 #: agama-cli/src/commands.rs:56
@@ -129,11 +148,18 @@ msgid ""
 "When the preconditions for the installation are not met, it informs the user "
 "and returns, making no changes to the system."
 msgstr ""
+"Detta kommando startar installationsprocessen. Var försiktig, det är en "
+"destruktiv åtgärd eftersom det kommer att konfigurera lagringsenheterna, "
+"installera paketen etc.\n"
+"\n"
+"När förutsättningarna för installationen inte är uppfyllda informeras "
+"användaren och systemet återvänder, utan att göra några ändringar på "
+"systemet."
 
 #. TRANSLATORS: CLI help for: agama download
 #: agama-cli/src/commands.rs:79
 msgid "Download file from a given (AutoYaST) URL"
-msgstr ""
+msgstr "Ladda ner filen från en angiven (AutoYaST) URL"
 
 #. TRANSLATORS: CLI help for: agama download (details)
 #: agama-cli/src/commands.rs:81
@@ -144,6 +170,11 @@ msgid ""
 "autoinstallation profiles. If you want to convert an AutoYaST profile, use "
 "\"agama config generate\"."
 msgstr ""
+"Syftet med det här kommandot är att ladda ner filer med hjälp av scheman som "
+"stöds av AutoYaST (t.ex. device://). Det kan användas för att ladda ner "
+"ytterligare skript, konfigurationsfiler och så vidare. Du kan använda det "
+"för att ladda ner Agamas autoinstallationsprofiler. Om du vill konvertera en "
+"AutoYaST-profil, använd \"agama config generate\"."
 
 #. TRANSLATORS: CLI help for: agama download <URL>
 #: agama-cli/src/commands.rs:95
@@ -151,11 +182,13 @@ msgid ""
 "URL reference pointing to file for download. If a relative URL is provided, "
 "it will be resolved against the current working directory"
 msgstr ""
+"URL-referens som pekar på filen för nedladdning. Om en relativ URL anges "
+"kommer den att matchas mot den aktuella arbetskatalogen"
 
 #. TRANSLATORS: CLI help for: agama download <DESTINATION>
 #: agama-cli/src/commands.rs:105
 msgid "File name"
-msgstr ""
+msgstr "Filnamn"
 
 #. TRANSLATORS: CLI help for: agama finish
 #: agama-cli/src/commands.rs:112
