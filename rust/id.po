@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-15 12:29+0000\n"
+"POT-Creation-Date: 2026-06-15 14:08+0000\n"
 "PO-Revision-Date: 2026-06-13 02:12+0000\n"
 "Last-Translator: Arif Budiman <arifpedia@gmail.com>\n"
 "Language-Team: Indonesian <https://l10n.opensuse.org/projects/agama/agama-"
@@ -586,7 +586,7 @@ msgstr "Instalasi selesai."
 msgid "You can reboot the machine to log in to the new system."
 msgstr "Anda dapat me-reboot mesin untuk masuk ke sistem baru."
 
-#: agama-cli/src/monitor/ui/content.rs:68 agama-cli/src/status.rs:76
+#: agama-cli/src/monitor/ui/content.rs:68
 msgid "Installation failed."
 msgstr "Instalasi gagal."
 
@@ -602,17 +602,23 @@ msgstr "Perlu tindakan:"
 msgid "No product has been selected yet."
 msgstr "Belum ada produk yang dipilih."
 
-#: agama-cli/src/monitor/ui/content.rs:172
-msgid "Following issues needs to be addressed in the configuration:"
-msgstr "Masalah berikut perlu ditangani dalam konfigurasi:"
+#: agama-cli/src/monitor/ui/content.rs:172 agama-cli/src/status.rs:88
+#, fuzzy
+#| msgid "Waiting to start installation..."
+msgid "Fix invalid settings before starting the installation:"
+msgstr "Menunggu untuk memulai instalasi..."
 
-#: agama-cli/src/monitor/ui/content.rs:193
-msgid "Ready for installation."
+#: agama-cli/src/monitor/ui/content.rs:193 agama-cli/src/status.rs:81
+#, fuzzy
+#| msgid "Ready for installation."
+msgid "Ready to start the installation."
 msgstr "Siap untuk instalasi."
 
 #: agama-cli/src/monitor/ui/content.rs:194
-msgid "Waiting to start installation..."
-msgstr "Menunggu untuk memulai instalasi..."
+#, fuzzy
+#| msgid "Starting packages installation"
+msgid "Starting the installation."
+msgstr "Memulai instalasi paket"
 
 #: agama-cli/src/monitor/ui/content.rs:210
 msgid "Step"
@@ -621,10 +627,6 @@ msgstr "Langkah"
 #: agama-cli/src/monitor/ui/content.rs:212
 msgid "of"
 msgstr "dari"
-
-#: agama-cli/src/monitor/ui/issues.rs:64
-msgid "Waiting for these to be resolved."
-msgstr "Menunggu untuk diselesaikan."
 
 #. TRANSLATORS: additional data that question passed to user beside main question message
 #: agama-cli/src/monitor/ui/question.rs:307
@@ -770,44 +772,40 @@ msgid "Path to a file containing the answers in JSON format"
 msgstr "Path ke berkas yang berisi jawaban dalam format JSON"
 
 #: agama-cli/src/status.rs:77
-msgid "Installation finished successfully."
-msgstr "Instalasi selesai dengan sukses."
-
-#: agama-cli/src/status.rs:78
-msgid "Installation is ready to start."
-msgstr "Instalasi siap dimulai."
-
-#: agama-cli/src/status.rs:79
-msgid "Installation is in progress."
-msgstr "Instalasi sedang berlangsung."
+msgid ""
+"The installation failed. Use the \"agama logs store\" command to get the "
+"logs to troubleshoot or share with support."
+msgstr ""
 
 #: agama-cli/src/status.rs:80
-msgid "Installation is being proposed."
-msgstr "Instalasi sedang diusulkan."
+#, fuzzy
+#| msgid "Installation finished successfully."
+msgid "The installation finished successfully."
+msgstr "Instalasi selesai dengan sukses."
 
-#: agama-cli/src/status.rs:81
+#: agama-cli/src/status.rs:82
+#, fuzzy
+#| msgid "Installation is in progress."
+msgid "The installation is in progress."
+msgstr "Instalasi sedang berlangsung."
+
+#: agama-cli/src/status.rs:83
+#, fuzzy
+#| msgid "Installer is failed to calculate the installation proposal."
+msgid "The installer is preparing an installation proposal."
+msgstr "Penginstal gagal menghitung proposal instalasi."
+
+#: agama-cli/src/status.rs:85
+#, fuzzy
+#| msgid ""
+#| "There are unanswered questions. Use `agama monitor` command or the web "
+#| "user interface to answer them."
 msgid ""
-"There are unanswered questions. Use `agama monitor` command or the web user "
-"interface to answer them."
+"There are unanswered questions. Use the \"agama monitor\" command or the web "
+"user interface to answer them:"
 msgstr ""
 "Masih ada pertanyaan yang belum dijawab. Gunakan perintah `agama monitor` "
 "atau antarmuka pengguna web untuk menjawabnya."
-
-#: agama-cli/src/status.rs:82
-msgid "There are issues in configuration that are blocking the installation."
-msgstr "Ada masalah dalam konfigurasi yang memblokir instalasi."
-
-#: agama-cli/src/status.rs:118 agama-utils/src/api/problem_details.rs:192
-msgid "Details:"
-msgstr "Detail:"
-
-#: agama-cli/src/status.rs:120
-msgid "Open questions:"
-msgstr "Pertanyaan terbuka:"
-
-#: agama-cli/src/status.rs:126
-msgid "Blocking issues:"
-msgstr "Masalah yang menghalangi:"
 
 #. TRANSLATORS: %s is replaced by the script name.
 #: agama-files/src/service.rs:184
@@ -1100,6 +1098,10 @@ msgstr "Tidak diizinkan"
 msgid "Error:"
 msgstr "Galat:"
 
+#: agama-utils/src/api/problem_details.rs:192
+msgid "Details:"
+msgstr "Detail:"
+
 #: agama-utils/src/api/question.rs:293 agama-utils/src/question/start.rs:48
 msgid "No"
 msgstr "Tidak"
@@ -1119,6 +1121,28 @@ msgstr "pola"
 #: agama-utils/src/resolvable.rs:64
 msgid "product"
 msgstr "produk"
+
+#~ msgid "Following issues needs to be addressed in the configuration:"
+#~ msgstr "Masalah berikut perlu ditangani dalam konfigurasi:"
+
+#~ msgid "Waiting for these to be resolved."
+#~ msgstr "Menunggu untuk diselesaikan."
+
+#~ msgid "Installation is ready to start."
+#~ msgstr "Instalasi siap dimulai."
+
+#~ msgid "Installation is being proposed."
+#~ msgstr "Instalasi sedang diusulkan."
+
+#~ msgid ""
+#~ "There are issues in configuration that are blocking the installation."
+#~ msgstr "Ada masalah dalam konfigurasi yang memblokir instalasi."
+
+#~ msgid "Open questions:"
+#~ msgstr "Pertanyaan terbuka:"
+
+#~ msgid "Blocking issues:"
+#~ msgstr "Masalah yang menghalangi:"
 
 #~ msgid "There are pending questions:"
 #~ msgstr "Ada beberapa pertanyaan yang masih tertunda:"
@@ -1149,9 +1173,6 @@ msgstr "produk"
 #~ msgstr ""
 #~ "Ada pertanyaan yang belum dijawab. Harap gunakan perintah `agama "
 #~ "questions` atau antarmuka web untuk menjawabnya:"
-
-#~ msgid "Installer is failed to calculate the installation proposal."
-#~ msgstr "Penginstal gagal menghitung proposal instalasi."
 
 #~ msgid "Details"
 #~ msgstr "Detail"
