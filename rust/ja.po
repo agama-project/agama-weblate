@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-12 15:05+0000\n"
+"POT-Creation-Date: 2026-06-15 12:29+0000\n"
 "PO-Revision-Date: 2026-06-13 04:12+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/agama/agama-rust-"
@@ -34,10 +34,11 @@ msgstr "設定の再読み込み"
 msgid "Skip and configure manually"
 msgstr "処理を飛ばして手作業で設定する"
 
-#: agama-autoinstall/src/scripts.rs:134
+#. TRANSLATORS: {0} is a URL
+#: agama-autoinstall/src/scripts.rs:135
+#, fuzzy, rust-format
 msgid ""
-"It was not possible to load the script from {0}. Do you want to try again?\n"
-"                "
+"It was not possible to load the script from {0}. Do you want to try again?"
 msgstr ""
 "{0} からスクリプトを読み込むことができませんでした。再試行しますか？\n"
 "                "
@@ -72,8 +73,8 @@ msgstr ""
 "存されているマスタートークンを自動的に使用しますので、認証は不要になります。"
 "このファイルは root ユーザのみがアクセスできるものであるためです。\n"
 "\n"
-"なお、 \"auth logout\" コマンドを使用することでログアウトを行うこともできます"
-"。 root ユーザの場合は何も行いません。"
+"なお、 \"auth logout\" コマンドを使用することでログアウトを行うこともできま"
+"す。 root ユーザの場合は何も行いません。"
 
 #. TRANSLATORS: CLI help for: agama auth logout
 #: agama-cli/src/auth.rs:88
@@ -99,9 +100,9 @@ msgid ""
 "authenticate the following requests."
 msgstr ""
 "このコマンドではパスワードを標準入力から読み込もうとします。標準入力が存在し"
-"ない場合は、ユーザに対して対話的な入力を求めます。ログインが成功すると、"
-"トークンは .agama/agama-jwt に保存されます。保存されたトークンは、以降の"
-"リクエストで自動的に送信されます。"
+"ない場合は、ユーザに対して対話的な入力を求めます。ログインが成功すると、トー"
+"クンは .agama/agama-jwt に保存されます。保存されたトークンは、以降のリクエス"
+"トで自動的に送信されます。"
 
 #: agama-cli/src/auth.rs:141
 msgid "Please enter the root password:"
@@ -109,6 +110,7 @@ msgstr "root のパスワードを入力してください:"
 
 #. TRANSLATORS: {0} is a host name
 #: agama-cli/src/auth.rs:179
+#, rust-format
 msgid "Not authenticated in {0}"
 msgstr "{0} では認証されていません"
 
@@ -125,10 +127,10 @@ msgid ""
 "devices, and more. The 'probe' command initiates this analysis process and "
 "returns immediately. TODO: do we really need a \"probe\" action?"
 msgstr ""
-"Agama では 'probe' とはシステムの分析処理のことを指します。分析処理では"
-"ソフトウエアのリポジトリの読み込みのほか、ストレージデバイスの分析なども行い"
-"ます。 'probe' コマンドではこのような分析処理を裏で開始し、コマンド自体はすぐ"
-"に終了します。 TODO: 本当に \"probe\" が必要？"
+"Agama では 'probe' とはシステムの分析処理のことを指します。分析処理ではソフト"
+"ウエアのリポジトリの読み込みのほか、ストレージデバイスの分析なども行います。 "
+"'probe' コマンドではこのような分析処理を裏で開始し、コマンド自体はすぐに終了"
+"します。 TODO: 本当に \"probe\" が必要？"
 
 #. TRANSLATORS: CLI help for: agama install
 #: agama-cli/src/commands.rs:54
@@ -168,11 +170,10 @@ msgid ""
 "\"agama config generate\"."
 msgstr ""
 "このコマンドは、 AutoYaST で対応している様々なスキーマ (例: device://) から"
-"ファイルをダウンロードします。追加のスクリプトや設定ファイルなどを"
-"ダウンロードして使用することができますし、 Agama の自動"
-"インストールプロファイルをダウンロードすることもできます。 AutoYaST で使用し"
-"ていたプロファイルを変換したい場合は、 \"agama config generate\" コマンドをお"
-"使いください。"
+"ファイルをダウンロードします。追加のスクリプトや設定ファイルなどをダウンロー"
+"ドして使用することができますし、 Agama の自動インストールプロファイルをダウン"
+"ロードすることもできます。 AutoYaST で使用していたプロファイルを変換したい場"
+"合は、 \"agama config generate\" コマンドをお使いください。"
 
 #. TRANSLATORS: CLI help for: agama download <URL>
 #: agama-cli/src/commands.rs:95
@@ -210,8 +211,8 @@ msgstr ""
 "インストールの完了後に実施すべきことを指定します。指定可能な値は下記のとおり"
 "です:\n"
 "\n"
-"   stop - 再起動を行わず、 Agama バックエンドを動作させたままの状態にします"
-"。\n"
+"   stop - 再起動を行わず、 Agama バックエンドを動作させたままの状態にしま"
+"す。\n"
 "\n"
 "   reboot - システムを再起動してインストール済みのシステムに移行します。この"
 "値が既定値です。なお、カーネルのコマンドラインパラメータ inst.finish を指定す"
@@ -389,8 +390,8 @@ msgstr ""
 "外部エディタの終了コードがエラーを表すものであった場合、変更点は適用されませ"
 "ん。\n"
 "\n"
-"外部エディタの指定がない場合、 EDITOR 環境変数で指定したエディタを起動します"
-"。 EDITOR 環境変数にも設定がない場合は、 `/usr/bin/vi` を使用します。"
+"外部エディタの指定がない場合、 EDITOR 環境変数で指定したエディタを起動しま"
+"す。 EDITOR 環境変数にも設定がない場合は、 `/usr/bin/vi` を使用します。"
 
 #. TRANSLATORS: CLI help for: agama config edit --editor <EDITOR>
 #: agama-cli/src/config.rs:194
@@ -419,9 +420,9 @@ msgid ""
 "\n"
 "Please, use the \"help\" command to learn more."
 msgstr ""
-"このプログラムは Agama の設定を調査／変更したりすることができるほか、"
-"インストールプロファイルの処理方法やインストールの開始、そしてインストール処"
-"理の監視などを行うことができます。\n"
+"このプログラムは Agama の設定を調査／変更したりすることができるほか、インス"
+"トールプロファイルの処理方法やインストールの開始、そしてインストール処理の監"
+"視などを行うことができます。\n"
 "\n"
 "詳しくは \"help\" コマンドをお使いください。"
 
@@ -460,9 +461,9 @@ msgid ""
 "inspection. The file includes system and Agama-specific logs and "
 "configuration files. They are crucial to troubleshoot and debug problems."
 msgstr ""
-"インストーラログは今後の調査のため、圧縮書庫形式で保存されます。"
-"インストーラログにはシステムログや Agama 固有のログのほか、設定ファイルそのも"
-"含まれます。これらは問題の調査やバグの解決に不可欠のものです。"
+"インストーラログは今後の調査のため、圧縮書庫形式で保存されます。インストーラ"
+"ログにはシステムログや Agama 固有のログのほか、設定ファイルそのも含まれます。"
+"これらは問題の調査やバグの解決に不可欠のものです。"
 
 #. TRANSLATORS: CLI help for: agama logs store
 #: agama-cli/src/logs.rs:50
@@ -735,7 +736,8 @@ msgstr "JSON 形式で回答待ちの問題点一覧を出力します"
 msgid ""
 "Reads a question definition in JSON from stdin and prints the response when "
 "it is answered"
-msgstr "標準入力から JSON 形式で問題点を読み込み、回答があった場合にそれを出力します"
+msgstr ""
+"標準入力から JSON 形式で問題点を読み込み、回答があった場合にそれを出力します"
 
 #. TRANSLATORS: CLI help for: agama questions answers
 #: agama-cli/src/questions.rs:72
@@ -784,8 +786,8 @@ msgid ""
 "There are unanswered questions. Use `agama monitor` command or the web user "
 "interface to answer them."
 msgstr ""
-"未回答の問題点が残っています。 `agama monitor` コマンドか Web "
-"ユーザインターフェイスを利用して回答してください。"
+"未回答の問題点が残っています。 `agama monitor` コマンドか Web ユーザインター"
+"フェイスを利用して回答してください。"
 
 #: agama-cli/src/status.rs:82
 msgid "There are issues in configuration that are blocking the installation."
@@ -983,6 +985,7 @@ msgstr "続行"
 
 #. TRANSLATORS: substituting: key ID, (key name), fingerprint
 #: agama-software/src/callbacks/security.rs:104
+#, rust-format
 msgid ""
 "The key {0} ({1}) with fingerprint {2} is unknown. Do you want to trust this "
 "key?"
