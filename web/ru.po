@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-15 15:14+0000\n"
+"POT-Creation-Date: 2026-06-15 15:31+0000\n"
 "PO-Revision-Date: 2026-02-26 17:04+0000\n"
 "Last-Translator: Aleksey Fedorov <Aleksejfedorov963@gmail.com>\n"
 "Language-Team: Russian <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -132,35 +132,41 @@ msgid "Change product"
 msgstr "Изменить продукт"
 
 #. TRANSLATORS: dialog title
-#: src/components/core/ConfigDialog.tsx:65
+#: src/components/core/ConfigDialog.tsx:66
 #, fuzzy
 msgid "Installation settings in JSON format"
 msgstr "Параметры установки"
 
-#: src/components/core/ConfigDialog.tsx:72
+#: src/components/core/ConfigDialog.tsx:73
 msgid ""
 "Use this to reproduce this installation later using the installer command-"
 "line interface or the unattended mode."
 msgstr ""
 
-#: src/components/core/ConfigDialog.tsx:80
 #: src/components/core/ConfigDialog.tsx:81
+#: src/components/core/ConfigDialog.tsx:82
 msgid "Copy to the clipboard"
 msgstr ""
 
-#: src/components/core/ConfigDialog.tsx:82
+#: src/components/core/ConfigDialog.tsx:83
 #, fuzzy
 msgid "Configuration added to clipboard"
 msgstr "Конфигурация недоступна или недействительна"
 
-#: src/components/core/ConfigDialog.tsx:83
 #: src/components/core/ConfigDialog.tsx:84
+#: src/components/core/ConfigDialog.tsx:85
 #, fuzzy
 msgid "Download configuration"
 msgstr "Скачать журналы"
 
+#. TRANSLATORS: error message displayed in the JSON editor when trying to change the read-only text
+#: src/components/core/ConfigDialog.tsx:99
+#, fuzzy
+msgid "The configuration is read-only."
+msgstr "Конфигурация была изменена извне."
+
 #. TRANSLATORS: button to close the config dialog
-#: src/components/core/ConfigDialog.tsx:108
+#: src/components/core/ConfigDialog.tsx:112
 #: src/components/product/LicenseDialog.tsx:74
 msgid "Close"
 msgstr "Закрыть"
@@ -545,7 +551,7 @@ msgstr "Программы"
 #: src/components/storage/DeviceSelectorPage.tsx:75
 #: src/components/storage/EncryptionSettingsPage.tsx:121
 #: src/components/storage/ISCSIPage.tsx:36
-#: src/components/storage/LvmPage.tsx:186
+#: src/components/storage/LvmPage.tsx:202
 #: src/components/storage/ProposalPage.tsx:323
 #: src/components/storage/SpacePolicySelectionPage.tsx:121
 #: src/components/storage/dasd/DASDPage.tsx:70
@@ -1262,7 +1268,7 @@ msgstr ""
 #: src/components/network/ConnectionsTable.tsx:280
 #: src/components/network/connection-form/Form.tsx:403
 #: src/components/storage/DeviceSelectorPage.tsx:55
-#: src/components/storage/LvmPage.tsx:200
+#: src/components/storage/LvmPage.tsx:216
 #: src/components/storage/iscsi/InitiatorFormPage.tsx:66
 #: src/components/storage/iscsi/InitiatorFormPage.tsx:75
 #: src/components/storage/iscsi/TargetsTable.tsx:282
@@ -2204,10 +2210,9 @@ msgstr ""
 msgid "Wait until current operations are completed."
 msgstr "Дождитесь завершения текущих операций."
 
-#: src/components/overview/OverviewPage.tsx:210
+#: src/components/overview/OverviewPage.tsx:209
 #, fuzzy
-msgid ""
-"You need to fix any invalid settings before proceeding with the installation."
+msgid "Fix invalid settings before starting the installation."
 msgstr ""
 "Перед продолжением установки необходимо исправить все неверные параметры."
 
@@ -2779,7 +2784,7 @@ msgstr "Сведения об инициаторе"
 #. TRANSLATORS: Clickable text to show technical details at popup window
 #: src/components/questions/LoadConfigRetryQuestion.tsx:90
 #, fuzzy
-msgid "Show technical details (English only)"
+msgid "Show technical details"
 msgstr "Сведения об инициаторе"
 
 #. TRANSLATORS: error message, user entered a wrong password
@@ -3572,7 +3577,7 @@ msgid "Use the tabs to browse disks, RAID devices and LVM volume groups."
 msgstr ""
 
 #: src/components/storage/DeviceSelectorModal.tsx:325
-#: src/components/storage/LvmPage.tsx:203
+#: src/components/storage/LvmPage.tsx:219
 msgid "Disks"
 msgstr "Диски"
 
@@ -3600,7 +3605,7 @@ msgid "No software RAID devices are available for selection."
 msgstr ""
 
 #: src/components/storage/DeviceSelectorModal.tsx:358
-#: src/components/storage/LvmPage.tsx:187
+#: src/components/storage/LvmPage.tsx:203
 msgid "LVM"
 msgstr "LVM"
 
@@ -3876,49 +3881,75 @@ msgstr[2] ""
 msgid "iSCSI"
 msgstr "iSCSI"
 
-#: src/components/storage/LvmPage.tsx:80
+#. TRANSLATORS: Option to decide which physical volumes create for an LVM
+#: src/components/storage/LvmPage.tsx:60
+#, fuzzy
+msgid "As required by the logical volumes"
+msgstr "Добавить логический том"
+
+#. TRANSLATORS: Option to decide which physical volumes create for an LVM
+#: src/components/storage/LvmPage.tsx:62
+#, fuzzy
+msgid "Use all available space"
+msgstr "Использовать свободное пространство"
+
+#: src/components/storage/LvmPage.tsx:65
+msgid ""
+"Physical volumes may be created on some of the chosen disks based on the "
+"logical volumes total size."
+msgstr ""
+
+#. TRANSLATORS: Explanation of the size option 'Use all available space'
+#: src/components/storage/LvmPage.tsx:68
+msgid ""
+"All the available space in the chosen disks will be used to create physical "
+"volumes."
+msgstr ""
+
+#. TRANSLATORS: Label for the form element to configure LVM extent size
+#: src/components/storage/LvmPage.tsx:70
+#, fuzzy
+msgid "Physical extent size"
+msgstr "логический том"
+
+#: src/components/storage/LvmPage.tsx:96
 msgid "Enter a name for the volume group."
 msgstr "Введите имя для группы томов."
 
-#: src/components/storage/LvmPage.tsx:84
+#: src/components/storage/LvmPage.tsx:100
 #, javascript-format
 msgid "Volume group '%s' already exists. Enter a different name."
 msgstr "Группа томов „%s“ уже существует. Введите другое имя."
 
-#: src/components/storage/LvmPage.tsx:88
+#: src/components/storage/LvmPage.tsx:104
 msgid "Select at least one disk."
 msgstr "Выберите хотя бы один диск."
 
-#: src/components/storage/LvmPage.tsx:98
+#: src/components/storage/LvmPage.tsx:114
 msgid ""
 "This volume group only occupies the space required by its logical volumes. "
 "To expand it to cover all available disk space, recreate the volume group."
 msgstr ""
 
-#: src/components/storage/LvmPage.tsx:188
+#: src/components/storage/LvmPage.tsx:204
 msgid "Configure Volume Group"
 msgstr "Настройка группы томов"
 
-#: src/components/storage/LvmPage.tsx:194
+#: src/components/storage/LvmPage.tsx:210
 msgid "Check the following before continuing"
 msgstr "Прежде чем продолжить, проверьте следующее"
 
-#: src/components/storage/LvmPage.tsx:206
-msgid ""
-"The needed LVM physical volumes will be added as partitions on the chosen "
-"disks, based on the sizes of the logical volumes. If you select more than "
-"one disk, the physical volumes may be distributed along several disks."
+#: src/components/storage/LvmPage.tsx:221
+#, fuzzy
+msgid "LVM physical volumes will be added as partitions on the chosen disks."
 msgstr ""
-"Необходимые физические тома LVM будут добавлены в качестве разделов на "
-"выбранных дисках, исходя из размеров логических томов. Если вы выберете "
-"несколько дисков, физические тома могут быть распределены по нескольким "
-"дискам."
+"Файловая система будет выделена в качестве нового раздела на выбранном диске."
 
-#: src/components/storage/LvmPage.tsx:242
+#: src/components/storage/LvmPage.tsx:254
 msgid "Move mount points"
 msgstr "Переместить точки монтирования"
 
-#: src/components/storage/LvmPage.tsx:246
+#: src/components/storage/LvmPage.tsx:258
 msgid ""
 "Move the mount points currently configured at the selected disks to logical "
 "volumes of this volume group."
@@ -6545,23 +6576,18 @@ msgid "Deactivating"
 msgstr "Деактивировать"
 
 #, fuzzy
-#~ msgid "As required by the logical volumes"
-#~ msgstr "Добавить логический том"
+#~ msgid "Show technical details (English only)"
+#~ msgstr "Сведения об инициаторе"
 
-#, fuzzy
-#~ msgid "Use all available space"
-#~ msgstr "Использовать свободное пространство"
-
-#, fuzzy
-#~ msgid "Physical extent size"
-#~ msgstr "логический том"
-
-#, fuzzy
 #~ msgid ""
-#~ "LVM physical volumes will be added as partitions on the chosen disks."
+#~ "The needed LVM physical volumes will be added as partitions on the chosen "
+#~ "disks, based on the sizes of the logical volumes. If you select more than "
+#~ "one disk, the physical volumes may be distributed along several disks."
 #~ msgstr ""
-#~ "Файловая система будет выделена в качестве нового раздела на выбранном "
-#~ "диске."
+#~ "Необходимые физические тома LVM будут добавлены в качестве разделов на "
+#~ "выбранных дисках, исходя из размеров логических томов. Если вы выберете "
+#~ "несколько дисков, физические тома могут быть распределены по нескольким "
+#~ "дискам."
 
 #~ msgid "Waiting for a mount point"
 #~ msgstr "Ожидание точки монтирования"
@@ -7324,9 +7350,6 @@ msgstr "Деактивировать"
 
 #~ msgid "Configuration out of sync"
 #~ msgstr "Конфигурация рассинхронизирована"
-
-#~ msgid "The configuration has been updated externally."
-#~ msgstr "Конфигурация была изменена извне."
 
 #~ msgid ""
 #~ "Reloading is required to get the latest data and avoid issues or data "
