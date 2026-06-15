@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-15 15:17+0000\n"
+"POT-Creation-Date: 2026-06-15 15:14+0000\n"
 "PO-Revision-Date: 2026-06-14 20:12+0000\n"
 "Last-Translator: David Medina <medipas@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -543,7 +543,7 @@ msgstr "Programari"
 #: src/components/storage/DeviceSelectorPage.tsx:75
 #: src/components/storage/EncryptionSettingsPage.tsx:121
 #: src/components/storage/ISCSIPage.tsx:36
-#: src/components/storage/LvmPage.tsx:202
+#: src/components/storage/LvmPage.tsx:186
 #: src/components/storage/ProposalPage.tsx:323
 #: src/components/storage/SpacePolicySelectionPage.tsx:121
 #: src/components/storage/dasd/DASDPage.tsx:70
@@ -1250,7 +1250,7 @@ msgstr "(vinculació per MAC)"
 #: src/components/network/ConnectionsTable.tsx:280
 #: src/components/network/connection-form/Form.tsx:403
 #: src/components/storage/DeviceSelectorPage.tsx:55
-#: src/components/storage/LvmPage.tsx:216
+#: src/components/storage/LvmPage.tsx:200
 #: src/components/storage/iscsi/InitiatorFormPage.tsx:66
 #: src/components/storage/iscsi/InitiatorFormPage.tsx:75
 #: src/components/storage/iscsi/TargetsTable.tsx:282
@@ -2159,9 +2159,10 @@ msgstr ""
 msgid "Wait until current operations are completed."
 msgstr "Espereu fins que s'hagin completat les operacions actuals."
 
-#: src/components/overview/OverviewPage.tsx:209
+#: src/components/overview/OverviewPage.tsx:210
 #, fuzzy
-msgid "Fix invalid settings before starting the installation."
+msgid ""
+"You need to fix any invalid settings before proceeding with the installation."
 msgstr ""
 "Cal que corregiu qualsevol configuració no vàlida abans de continuar la "
 "instal·lació."
@@ -2716,9 +2717,8 @@ msgstr "Amaga'n els detalls tècnics"
 
 #. TRANSLATORS: Clickable text to show technical details at popup window
 #: src/components/questions/LoadConfigRetryQuestion.tsx:90
-#, fuzzy
-msgid "Show technical details"
-msgstr "Amaga'n els detalls tècnics"
+msgid "Show technical details (English only)"
+msgstr "Mostra'n els detalls tècnics (només en anglès)"
 
 #. TRANSLATORS: error message, user entered a wrong password
 #: src/components/questions/LuksActivationQuestion.tsx:37
@@ -3481,7 +3481,7 @@ msgstr ""
 "de volums d'LVM."
 
 #: src/components/storage/DeviceSelectorModal.tsx:325
-#: src/components/storage/LvmPage.tsx:219
+#: src/components/storage/LvmPage.tsx:203
 msgid "Disks"
 msgstr "Discs"
 
@@ -3507,7 +3507,7 @@ msgstr ""
 "No hi ha cap dispositiu de RAID de programari disponible per a la selecció."
 
 #: src/components/storage/DeviceSelectorModal.tsx:358
-#: src/components/storage/LvmPage.tsx:203
+#: src/components/storage/LvmPage.tsx:187
 msgid "LVM"
 msgstr "LVM"
 
@@ -3779,51 +3779,20 @@ msgstr[1] ""
 msgid "iSCSI"
 msgstr "iSCSI"
 
-#. TRANSLATORS: Option to decide which physical volumes create for an LVM
-#: src/components/storage/LvmPage.tsx:60
-#, fuzzy
-msgid "As required by the logical volumes"
-msgstr "Afegeix o usa un volum lògic"
-
-#. TRANSLATORS: Option to decide which physical volumes create for an LVM
-#: src/components/storage/LvmPage.tsx:62
-#, fuzzy
-msgid "Use all available space"
-msgstr "Usa l'espai disponible"
-
-#: src/components/storage/LvmPage.tsx:65
-msgid ""
-"Physical volumes may be created on some of the chosen disks based on the "
-"logical volumes total size."
-msgstr ""
-
-#. TRANSLATORS: Explanation of the size option 'Use all available space'
-#: src/components/storage/LvmPage.tsx:68
-msgid ""
-"All the available space in the chosen disks will be used to create physical "
-"volumes."
-msgstr ""
-
-#. TRANSLATORS: Label for the form element to configure LVM extent size
-#: src/components/storage/LvmPage.tsx:70
-#, fuzzy
-msgid "Physical extent size"
-msgstr "Volums físics"
-
-#: src/components/storage/LvmPage.tsx:96
+#: src/components/storage/LvmPage.tsx:80
 msgid "Enter a name for the volume group."
 msgstr "Introduïu un nom per al grup de volums."
 
-#: src/components/storage/LvmPage.tsx:100
+#: src/components/storage/LvmPage.tsx:84
 #, javascript-format
 msgid "Volume group '%s' already exists. Enter a different name."
 msgstr "El grup de volums %s ja existeix. Introduïu un nom diferent."
 
-#: src/components/storage/LvmPage.tsx:104
+#: src/components/storage/LvmPage.tsx:88
 msgid "Select at least one disk."
 msgstr "Seleccioneu almenys un disc."
 
-#: src/components/storage/LvmPage.tsx:114
+#: src/components/storage/LvmPage.tsx:98
 msgid ""
 "This volume group only occupies the space required by its logical volumes. "
 "To expand it to cover all available disk space, recreate the volume group."
@@ -3832,25 +3801,29 @@ msgstr ""
 "Per expandir-lo perquè ocupi tot l'espai de disc disponible, torneu a crear "
 "el grup de volums."
 
-#: src/components/storage/LvmPage.tsx:204
+#: src/components/storage/LvmPage.tsx:188
 msgid "Configure Volume Group"
 msgstr "Configura un grup de volums"
 
-#: src/components/storage/LvmPage.tsx:210
+#: src/components/storage/LvmPage.tsx:194
 msgid "Check the following before continuing"
 msgstr "Comproveu el següent abans de continuar:"
 
-#: src/components/storage/LvmPage.tsx:221
-#, fuzzy
-msgid "LVM physical volumes will be added as partitions on the chosen disks."
+#: src/components/storage/LvmPage.tsx:206
+msgid ""
+"The needed LVM physical volumes will be added as partitions on the chosen "
+"disks, based on the sizes of the logical volumes. If you select more than "
+"one disk, the physical volumes may be distributed along several disks."
 msgstr ""
-"El sistema de fitxers s'assignarà com a partició nova al disc seleccionat."
+"Els volums físics d'LVM necessaris s'afegiran com a particions als discs "
+"triats, segons les mides dels volums lògics. Si seleccioneu més d'un disc, "
+"els volums físics poden estar distribuïts en diversos discs."
 
-#: src/components/storage/LvmPage.tsx:254
+#: src/components/storage/LvmPage.tsx:242
 msgid "Move mount points"
 msgstr "Mou els punts de muntatge"
 
-#: src/components/storage/LvmPage.tsx:258
+#: src/components/storage/LvmPage.tsx:246
 msgid ""
 "Move the mount points currently configured at the selected disks to logical "
 "volumes of this volume group."
@@ -6345,17 +6318,27 @@ msgstr "S'activa"
 msgid "Deactivating"
 msgstr "Es desactiva"
 
-#~ msgid "Show technical details (English only)"
-#~ msgstr "Mostra'n els detalls tècnics (només en anglès)"
+#, fuzzy
+#~ msgid "Show technical details"
+#~ msgstr "Amaga'n els detalls tècnics"
 
+#, fuzzy
+#~ msgid "As required by the logical volumes"
+#~ msgstr "Afegeix o usa un volum lògic"
+
+#, fuzzy
+#~ msgid "Use all available space"
+#~ msgstr "Usa l'espai disponible"
+
+#, fuzzy
+#~ msgid "Physical extent size"
+#~ msgstr "Volums físics"
+
+#, fuzzy
 #~ msgid ""
-#~ "The needed LVM physical volumes will be added as partitions on the chosen "
-#~ "disks, based on the sizes of the logical volumes. If you select more than "
-#~ "one disk, the physical volumes may be distributed along several disks."
+#~ "LVM physical volumes will be added as partitions on the chosen disks."
 #~ msgstr ""
-#~ "Els volums físics d'LVM necessaris s'afegiran com a particions als discs "
-#~ "triats, segons les mides dels volums lògics. Si seleccioneu més d'un "
-#~ "disc, els volums físics poden estar distribuïts en diversos discs."
+#~ "El sistema de fitxers s'assignarà com a partició nova al disc seleccionat."
 
 #~ msgid "Waiting for a mount point"
 #~ msgstr "S'espera un punt de muntatge"

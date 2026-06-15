@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-15 15:17+0000\n"
+"POT-Creation-Date: 2026-06-15 15:14+0000\n"
 "PO-Revision-Date: 2026-06-14 09:12+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -541,7 +541,7 @@ msgstr "ソフトウエア"
 #: src/components/storage/DeviceSelectorPage.tsx:75
 #: src/components/storage/EncryptionSettingsPage.tsx:121
 #: src/components/storage/ISCSIPage.tsx:36
-#: src/components/storage/LvmPage.tsx:202
+#: src/components/storage/LvmPage.tsx:186
 #: src/components/storage/ProposalPage.tsx:323
 #: src/components/storage/SpacePolicySelectionPage.tsx:121
 #: src/components/storage/dasd/DASDPage.tsx:70
@@ -1247,7 +1247,7 @@ msgstr "(MAC アドレスで結びつけ)"
 #: src/components/network/ConnectionsTable.tsx:280
 #: src/components/network/connection-form/Form.tsx:403
 #: src/components/storage/DeviceSelectorPage.tsx:55
-#: src/components/storage/LvmPage.tsx:216
+#: src/components/storage/LvmPage.tsx:200
 #: src/components/storage/iscsi/InitiatorFormPage.tsx:66
 #: src/components/storage/iscsi/InitiatorFormPage.tsx:75
 #: src/components/storage/iscsi/TargetsTable.tsx:282
@@ -2148,9 +2148,10 @@ msgstr ""
 msgid "Wait until current operations are completed."
 msgstr "処理が完了するまでお待ちください。"
 
-#: src/components/overview/OverviewPage.tsx:209
+#: src/components/overview/OverviewPage.tsx:210
 #, fuzzy
-msgid "Fix invalid settings before starting the installation."
+msgid ""
+"You need to fix any invalid settings before proceeding with the installation."
 msgstr "インストールを続行する前に、設定を修正する必要があります。"
 
 #: src/components/overview/RegistrationSummary.tsx:36
@@ -2687,9 +2688,8 @@ msgstr "技術詳細を隠す"
 
 #. TRANSLATORS: Clickable text to show technical details at popup window
 #: src/components/questions/LoadConfigRetryQuestion.tsx:90
-#, fuzzy
-msgid "Show technical details"
-msgstr "技術詳細を隠す"
+msgid "Show technical details (English only)"
+msgstr "技術詳細を表示する (英語のみ)"
 
 #. TRANSLATORS: error message, user entered a wrong password
 #: src/components/questions/LuksActivationQuestion.tsx:37
@@ -3434,7 +3434,7 @@ msgstr ""
 "ディスクや RAID, LVM ボリュームグループを参照するには、タブをお使いください。"
 
 #: src/components/storage/DeviceSelectorModal.tsx:325
-#: src/components/storage/LvmPage.tsx:219
+#: src/components/storage/LvmPage.tsx:203
 msgid "Disks"
 msgstr "ディスク"
 
@@ -3459,7 +3459,7 @@ msgid "No software RAID devices are available for selection."
 msgstr "選択可能なソフトウエア RAID デバイスがありません。"
 
 #: src/components/storage/DeviceSelectorModal.tsx:358
-#: src/components/storage/LvmPage.tsx:203
+#: src/components/storage/LvmPage.tsx:187
 msgid "LVM"
 msgstr "LVM"
 
@@ -3727,52 +3727,21 @@ msgstr[0] "下記の問題に対応するため、何らかの設定調整を行
 msgid "iSCSI"
 msgstr "iSCSI"
 
-#. TRANSLATORS: Option to decide which physical volumes create for an LVM
-#: src/components/storage/LvmPage.tsx:60
-#, fuzzy
-msgid "As required by the logical volumes"
-msgstr "論理ボリュームの追加または使用"
-
-#. TRANSLATORS: Option to decide which physical volumes create for an LVM
-#: src/components/storage/LvmPage.tsx:62
-#, fuzzy
-msgid "Use all available space"
-msgstr "利用可能な領域を使用する"
-
-#: src/components/storage/LvmPage.tsx:65
-msgid ""
-"Physical volumes may be created on some of the chosen disks based on the "
-"logical volumes total size."
-msgstr ""
-
-#. TRANSLATORS: Explanation of the size option 'Use all available space'
-#: src/components/storage/LvmPage.tsx:68
-msgid ""
-"All the available space in the chosen disks will be used to create physical "
-"volumes."
-msgstr ""
-
-#. TRANSLATORS: Label for the form element to configure LVM extent size
-#: src/components/storage/LvmPage.tsx:70
-#, fuzzy
-msgid "Physical extent size"
-msgstr "物理ボリューム"
-
-#: src/components/storage/LvmPage.tsx:96
+#: src/components/storage/LvmPage.tsx:80
 msgid "Enter a name for the volume group."
 msgstr "ボリュームグループに対する名前を入力してください。"
 
-#: src/components/storage/LvmPage.tsx:100
+#: src/components/storage/LvmPage.tsx:84
 #, javascript-format
 msgid "Volume group '%s' already exists. Enter a different name."
 msgstr ""
 "ボリュームグループ '%s' は既に存在しています。別の名前を入力してください。"
 
-#: src/components/storage/LvmPage.tsx:104
+#: src/components/storage/LvmPage.tsx:88
 msgid "Select at least one disk."
 msgstr "少なくとも 1 つのディスクを選択してください。"
 
-#: src/components/storage/LvmPage.tsx:114
+#: src/components/storage/LvmPage.tsx:98
 msgid ""
 "This volume group only occupies the space required by its logical volumes. "
 "To expand it to cover all available disk space, recreate the volume group."
@@ -3781,25 +3750,29 @@ msgstr ""
 "ます。利用可能なディスク領域全てを使用するようにしたい場合は、ボリュームグ"
 "ループを作成し直してください。"
 
-#: src/components/storage/LvmPage.tsx:204
+#: src/components/storage/LvmPage.tsx:188
 msgid "Configure Volume Group"
 msgstr "ボリュームグループの設定"
 
-#: src/components/storage/LvmPage.tsx:210
+#: src/components/storage/LvmPage.tsx:194
 msgid "Check the following before continuing"
 msgstr "続行する前に下記をご確認ください"
 
-#: src/components/storage/LvmPage.tsx:221
-#, fuzzy
-msgid "LVM physical volumes will be added as partitions on the chosen disks."
+#: src/components/storage/LvmPage.tsx:206
+msgid ""
+"The needed LVM physical volumes will be added as partitions on the chosen "
+"disks, based on the sizes of the logical volumes. If you select more than "
+"one disk, the physical volumes may be distributed along several disks."
 msgstr ""
-"ファイルシステムは選択したディスク内の新規パーティションとして割り当てます。"
+"必要な LVM 物理ボリュームは、論理ボリュームのサイズを元に、選択したディスク内"
+"のパーティションとして追加されます。複数のディスクを選択した場合、物理ボ"
+"リュームはそれらのディスクに分散して配置されます。"
 
-#: src/components/storage/LvmPage.tsx:254
+#: src/components/storage/LvmPage.tsx:242
 msgid "Move mount points"
 msgstr "マウントポイントの移動"
 
-#: src/components/storage/LvmPage.tsx:258
+#: src/components/storage/LvmPage.tsx:246
 msgid ""
 "Move the mount points currently configured at the selected disks to logical "
 "volumes of this volume group."
@@ -6272,17 +6245,28 @@ msgstr "有効化中"
 msgid "Deactivating"
 msgstr "無効化中"
 
-#~ msgid "Show technical details (English only)"
-#~ msgstr "技術詳細を表示する (英語のみ)"
+#, fuzzy
+#~ msgid "Show technical details"
+#~ msgstr "技術詳細を隠す"
 
+#, fuzzy
+#~ msgid "As required by the logical volumes"
+#~ msgstr "論理ボリュームの追加または使用"
+
+#, fuzzy
+#~ msgid "Use all available space"
+#~ msgstr "利用可能な領域を使用する"
+
+#, fuzzy
+#~ msgid "Physical extent size"
+#~ msgstr "物理ボリューム"
+
+#, fuzzy
 #~ msgid ""
-#~ "The needed LVM physical volumes will be added as partitions on the chosen "
-#~ "disks, based on the sizes of the logical volumes. If you select more than "
-#~ "one disk, the physical volumes may be distributed along several disks."
+#~ "LVM physical volumes will be added as partitions on the chosen disks."
 #~ msgstr ""
-#~ "必要な LVM 物理ボリュームは、論理ボリュームのサイズを元に、選択したディス"
-#~ "ク内のパーティションとして追加されます。複数のディスクを選択した場合、物理"
-#~ "ボリュームはそれらのディスクに分散して配置されます。"
+#~ "ファイルシステムは選択したディスク内の新規パーティションとして割り当てま"
+#~ "す。"
 
 #~ msgid "Waiting for a mount point"
 #~ msgstr "マウントポイントを待機しています"

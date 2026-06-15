@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-15 15:17+0000\n"
+"POT-Creation-Date: 2026-06-15 15:14+0000\n"
 "PO-Revision-Date: 2026-05-02 19:04+0000\n"
 "Last-Translator: Victor hck <victorhck@opensuse.org>\n"
 "Language-Team: Spanish <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -544,7 +544,7 @@ msgstr "Software"
 #: src/components/storage/DeviceSelectorPage.tsx:75
 #: src/components/storage/EncryptionSettingsPage.tsx:121
 #: src/components/storage/ISCSIPage.tsx:36
-#: src/components/storage/LvmPage.tsx:202
+#: src/components/storage/LvmPage.tsx:186
 #: src/components/storage/ProposalPage.tsx:323
 #: src/components/storage/SpacePolicySelectionPage.tsx:121
 #: src/components/storage/dasd/DASDPage.tsx:70
@@ -1258,7 +1258,7 @@ msgstr "(vinculado por su MAC)"
 #: src/components/network/ConnectionsTable.tsx:280
 #: src/components/network/connection-form/Form.tsx:403
 #: src/components/storage/DeviceSelectorPage.tsx:55
-#: src/components/storage/LvmPage.tsx:216
+#: src/components/storage/LvmPage.tsx:200
 #: src/components/storage/iscsi/InitiatorFormPage.tsx:66
 #: src/components/storage/iscsi/InitiatorFormPage.tsx:75
 #: src/components/storage/iscsi/TargetsTable.tsx:282
@@ -2175,9 +2175,10 @@ msgstr ""
 msgid "Wait until current operations are completed."
 msgstr "Espere hasta que se completen las operaciones actuales."
 
-#: src/components/overview/OverviewPage.tsx:209
+#: src/components/overview/OverviewPage.tsx:210
 #, fuzzy
-msgid "Fix invalid settings before starting the installation."
+msgid ""
+"You need to fix any invalid settings before proceeding with the installation."
 msgstr ""
 "Es necesario arreglar los ajustes inválidos antes de proceder con la "
 "instalación."
@@ -2734,7 +2735,7 @@ msgstr "Detalles del iniciador"
 #. TRANSLATORS: Clickable text to show technical details at popup window
 #: src/components/questions/LoadConfigRetryQuestion.tsx:90
 #, fuzzy
-msgid "Show technical details"
+msgid "Show technical details (English only)"
 msgstr "Detalles del iniciador"
 
 #. TRANSLATORS: error message, user entered a wrong password
@@ -3498,7 +3499,7 @@ msgstr ""
 "volúmenes LVM."
 
 #: src/components/storage/DeviceSelectorModal.tsx:325
-#: src/components/storage/LvmPage.tsx:219
+#: src/components/storage/LvmPage.tsx:203
 msgid "Disks"
 msgstr "Discos"
 
@@ -3524,7 +3525,7 @@ msgstr ""
 "No hay dispositivos de software RAID disponibles para ser seleccionados."
 
 #: src/components/storage/DeviceSelectorModal.tsx:358
-#: src/components/storage/LvmPage.tsx:203
+#: src/components/storage/LvmPage.tsx:187
 msgid "LVM"
 msgstr "LVM"
 
@@ -3796,76 +3797,49 @@ msgstr[1] ""
 msgid "iSCSI"
 msgstr "iSCSI"
 
-#. TRANSLATORS: Option to decide which physical volumes create for an LVM
-#: src/components/storage/LvmPage.tsx:60
-#, fuzzy
-msgid "As required by the logical volumes"
-msgstr "Añadir o utilizar volumen lógico"
-
-#. TRANSLATORS: Option to decide which physical volumes create for an LVM
-#: src/components/storage/LvmPage.tsx:62
-#, fuzzy
-msgid "Use all available space"
-msgstr "Utilizar el espacio disponible"
-
-#: src/components/storage/LvmPage.tsx:65
-msgid ""
-"Physical volumes may be created on some of the chosen disks based on the "
-"logical volumes total size."
-msgstr ""
-
-#. TRANSLATORS: Explanation of the size option 'Use all available space'
-#: src/components/storage/LvmPage.tsx:68
-msgid ""
-"All the available space in the chosen disks will be used to create physical "
-"volumes."
-msgstr ""
-
-#. TRANSLATORS: Label for the form element to configure LVM extent size
-#: src/components/storage/LvmPage.tsx:70
-#, fuzzy
-msgid "Physical extent size"
-msgstr "Volúmenes físicos"
-
-#: src/components/storage/LvmPage.tsx:96
+#: src/components/storage/LvmPage.tsx:80
 msgid "Enter a name for the volume group."
 msgstr "Introduzca un nombre para el grupo del volúmenes."
 
-#: src/components/storage/LvmPage.tsx:100
+#: src/components/storage/LvmPage.tsx:84
 #, javascript-format
 msgid "Volume group '%s' already exists. Enter a different name."
 msgstr "Ya existe el grupo '%s' de volúmenes. Introduzca un nombre diferente."
 
-#: src/components/storage/LvmPage.tsx:104
+#: src/components/storage/LvmPage.tsx:88
 msgid "Select at least one disk."
 msgstr "Seleccione al menos un disco."
 
-#: src/components/storage/LvmPage.tsx:114
+#: src/components/storage/LvmPage.tsx:98
 msgid ""
 "This volume group only occupies the space required by its logical volumes. "
 "To expand it to cover all available disk space, recreate the volume group."
 msgstr ""
 
-#: src/components/storage/LvmPage.tsx:204
+#: src/components/storage/LvmPage.tsx:188
 msgid "Configure Volume Group"
 msgstr "Configurar Grupo de Volúmenes"
 
-#: src/components/storage/LvmPage.tsx:210
+#: src/components/storage/LvmPage.tsx:194
 msgid "Check the following before continuing"
 msgstr "Compruebe lo siguiente antes de continuar"
 
-#: src/components/storage/LvmPage.tsx:221
-#, fuzzy
-msgid "LVM physical volumes will be added as partitions on the chosen disks."
+#: src/components/storage/LvmPage.tsx:206
+msgid ""
+"The needed LVM physical volumes will be added as partitions on the chosen "
+"disks, based on the sizes of the logical volumes. If you select more than "
+"one disk, the physical volumes may be distributed along several disks."
 msgstr ""
-"El sistema de archivos se asignará como una nueva partición en el disco "
-"seleccionado."
+"Los volúmenes físicos de LVM necesarios se añadirán como particiones en los "
+"discos elegidos, basándose en los tamaños de los volúmenes lógicos. Si "
+"selecciona más de un disco, los volúmenes físicos pueden distribuirse a lo "
+"largo de varios discos."
 
-#: src/components/storage/LvmPage.tsx:254
+#: src/components/storage/LvmPage.tsx:242
 msgid "Move mount points"
 msgstr "Mover puntos de montaje"
 
-#: src/components/storage/LvmPage.tsx:258
+#: src/components/storage/LvmPage.tsx:246
 msgid ""
 "Move the mount points currently configured at the selected disks to logical "
 "volumes of this volume group."
@@ -6422,15 +6396,24 @@ msgstr "Activar"
 msgid "Deactivating"
 msgstr "Desactivar"
 
+#, fuzzy
+#~ msgid "As required by the logical volumes"
+#~ msgstr "Añadir o utilizar volumen lógico"
+
+#, fuzzy
+#~ msgid "Use all available space"
+#~ msgstr "Utilizar el espacio disponible"
+
+#, fuzzy
+#~ msgid "Physical extent size"
+#~ msgstr "Volúmenes físicos"
+
+#, fuzzy
 #~ msgid ""
-#~ "The needed LVM physical volumes will be added as partitions on the chosen "
-#~ "disks, based on the sizes of the logical volumes. If you select more than "
-#~ "one disk, the physical volumes may be distributed along several disks."
+#~ "LVM physical volumes will be added as partitions on the chosen disks."
 #~ msgstr ""
-#~ "Los volúmenes físicos de LVM necesarios se añadirán como particiones en "
-#~ "los discos elegidos, basándose en los tamaños de los volúmenes lógicos. "
-#~ "Si selecciona más de un disco, los volúmenes físicos pueden distribuirse "
-#~ "a lo largo de varios discos."
+#~ "El sistema de archivos se asignará como una nueva partición en el disco "
+#~ "seleccionado."
 
 #~ msgid "Waiting for a mount point"
 #~ msgstr "Esperando un punto de montaje"
