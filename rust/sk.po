@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-06-18 16:05+0000\n"
-"PO-Revision-Date: 2026-06-15 15:19+0000\n"
+"PO-Revision-Date: 2026-06-18 17:12+0000\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <https://l10n.opensuse.org/projects/agama/agama-rust-"
 "master/sk/>\n"
@@ -43,7 +43,7 @@ msgstr "Nebolo možné načítať skript z {0}. Chcete to skúsiť znova?"
 #. TRANSLATORS: CLI help for: agama auth
 #: agama-cli/src/auth.rs:65
 msgid "Authenticate with Agama's server"
-msgstr ""
+msgstr "Overenie pomocou servera Agama"
 
 #. TRANSLATORS: CLI help for: agama auth (details)
 #: agama-cli/src/auth.rs:67
@@ -61,6 +61,17 @@ msgid ""
 "You can logout at any time by using the \"auth logout\" command, although "
 "this command does not affect the root user."
 msgstr ""
+"Ak tento program nespúšťate ako root, pri väčšine operácií sa musíte overiť "
+"pomocou servera Agama. Prihlásiť sa môžete zadaním hesla root cez príkaz "
+"\"auth login\". Po úspešnom overení server vráti JSON Web Token (JWT), ktorý "
+"sa uloží na účely overovania nasledujúcich požiadaviek.\n"
+"\n"
+"Ak tento program spustíte lokálne ako root, môžete krok overovania "
+"preskočiť, pretože program automaticky používa hlavný token v /run/agama/"
+"token. K takémuto súboru smie mať prístup iba používateľ root.\n"
+"\n"
+"Kedykoľvek sa môžete odhlásiť pomocou príkazu \"auth logout\", hoci tento "
+"príkaz neovplyvní používateľa root."
 
 #. TRANSLATORS: CLI help for: agama auth logout
 #: agama-cli/src/auth.rs:88
