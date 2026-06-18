@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-16 14:12+0000\n"
+"POT-Creation-Date: 2026-06-18 16:05+0000\n"
 "PO-Revision-Date: 2026-06-17 07:12+0000\n"
 "Last-Translator: Luna  Jernberg <bittin@opensuse.org>\n"
 "Language-Team: Swedish <https://l10n.opensuse.org/projects/agama/agama-rust-"
@@ -37,6 +37,7 @@ msgstr "Hoppa över och konfigurera manuellt"
 
 #. TRANSLATORS: {0} is a URL
 #: agama-autoinstall/src/scripts.rs:135
+#, rust-format
 msgid ""
 "It was not possible to load the script from {0}. Do you want to try again?"
 msgstr "Det gick inte att läsa in skriptet från {0}. Vill du försöka igen?"
@@ -109,6 +110,7 @@ msgstr "Vänligen ange root-lösenord:"
 
 #. TRANSLATORS: {0} is a host name
 #: agama-cli/src/auth.rs:179
+#, rust-format
 msgid "Not authenticated in {0}"
 msgstr "Inte autentiserad i {0}"
 
@@ -399,7 +401,7 @@ msgstr "Redigeringskommando (inklusive ytterligare argument om det behövs)"
 msgid "It is not a valid JSON file"
 msgstr "Det är inte en giltig JSON-fil"
 
-#: agama-cli/src/config.rs:412
+#: agama-cli/src/config.rs:416
 msgid "Ignoring the changes because the editor was closed with an error code."
 msgstr "Ignorerar ändringarna eftersom redigeraren stängdes med en felkod."
 
@@ -946,6 +948,14 @@ msgstr "Ogiltig profilförfrågan"
 msgid "AutoYaST conversion failed"
 msgstr "AutoYaST konvertering misslyckades"
 
+#: agama-server/src/server/web.rs:86
+msgid "Missing Language Tag"
+msgstr ""
+
+#: agama-server/src/server/web.rs:89
+msgid "Profile error"
+msgstr ""
+
 #: agama-software/src/callbacks/commit_download.rs:48
 #: agama-software/src/callbacks/install.rs:56
 msgid "Ignore"
@@ -967,6 +977,7 @@ msgstr "Fortsätt"
 
 #. TRANSLATORS: substituting: key ID, (key name), fingerprint
 #: agama-software/src/callbacks/security.rs:104
+#, rust-format
 msgid ""
 "The key {0} ({1}) with fingerprint {2} is unknown. Do you want to trust this "
 "key?"

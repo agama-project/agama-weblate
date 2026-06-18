@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-16 14:12+0000\n"
+"POT-Creation-Date: 2026-06-18 16:05+0000\n"
 "PO-Revision-Date: 2026-06-16 18:12+0000\n"
 "Last-Translator: Arif Budiman <arifpedia@gmail.com>\n"
 "Language-Team: Indonesian <https://l10n.opensuse.org/projects/agama/agama-"
@@ -35,7 +35,7 @@ msgstr "Lewati dan konfigurasi secara manual"
 
 #. TRANSLATORS: {0} is a URL
 #: agama-autoinstall/src/scripts.rs:135
-#, fuzzy
+#, fuzzy, rust-format
 msgid ""
 "It was not possible to load the script from {0}. Do you want to try again?"
 msgstr ""
@@ -111,6 +111,7 @@ msgstr "Silakan masukkan kata sandi root:"
 
 #. TRANSLATORS: {0} is a host name
 #: agama-cli/src/auth.rs:179
+#, rust-format
 msgid "Not authenticated in {0}"
 msgstr "Belum terotentikasi di {0}"
 
@@ -402,7 +403,7 @@ msgstr "Perintah editor (termasuk argumen tambahan jika diperlukan)"
 msgid "It is not a valid JSON file"
 msgstr "Ini bukan berkas JSON yang valid"
 
-#: agama-cli/src/config.rs:412
+#: agama-cli/src/config.rs:416
 msgid "Ignoring the changes because the editor was closed with an error code."
 msgstr "Mengabaikan perubahan karena editor ditutup dengan kode galat."
 
@@ -953,6 +954,14 @@ msgstr "Permintaan profil tidak valid"
 msgid "AutoYaST conversion failed"
 msgstr "Konversi AutoYaST gagal"
 
+#: agama-server/src/server/web.rs:86
+msgid "Missing Language Tag"
+msgstr ""
+
+#: agama-server/src/server/web.rs:89
+msgid "Profile error"
+msgstr ""
+
 #: agama-software/src/callbacks/commit_download.rs:48
 #: agama-software/src/callbacks/install.rs:56
 msgid "Ignore"
@@ -974,6 +983,7 @@ msgstr "Lanjutkan"
 
 #. TRANSLATORS: substituting: key ID, (key name), fingerprint
 #: agama-software/src/callbacks/security.rs:104
+#, rust-format
 msgid ""
 "The key {0} ({1}) with fingerprint {2} is unknown. Do you want to trust this "
 "key?"
