@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-06-18 16:05+0000\n"
-"PO-Revision-Date: 2026-06-21 20:12+0000\n"
+"PO-Revision-Date: 2026-06-22 15:12+0000\n"
 "Last-Translator: Samanta Magalhaes <samanta_texttrans@outlook.com>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.opensuse.org/projects/agama/"
 "agama-rust-master/pt_BR/>\n"
@@ -24,26 +24,27 @@ msgid ""
 "Configuration cannot be applied because it is invalid or could not be "
 "reached."
 msgstr ""
+"Não é possível aplicar a configuração porque ele é inválida ou inacessível."
 
 #: agama-autoinstall/src/questions.rs:44
 msgid "Reload configuration"
-msgstr ""
+msgstr "Recarregar configuração"
 
 #: agama-autoinstall/src/questions.rs:45
 msgid "Skip and configure manually"
-msgstr ""
+msgstr "Ignorar e configurar manualmente"
 
 #. TRANSLATORS: {0} is a URL
 #: agama-autoinstall/src/scripts.rs:135
 #, rust-format
 msgid ""
 "It was not possible to load the script from {0}. Do you want to try again?"
-msgstr ""
+msgstr "Não foi possível carregar o script de {0}. Deseja tentar de novo?"
 
 #. TRANSLATORS: CLI help for: agama auth
 #: agama-cli/src/auth.rs:65
 msgid "Authenticate with Agama's server"
-msgstr ""
+msgstr "Autenticar com servidor do Agama"
 
 #. TRANSLATORS: CLI help for: agama auth (details)
 #: agama-cli/src/auth.rs:67
@@ -61,21 +62,33 @@ msgid ""
 "You can logout at any time by using the \"auth logout\" command, although "
 "this command does not affect the root user."
 msgstr ""
+"A menos que você esteja executando este programa como root, é necessário "
+"autenticar com o servidor do Agama para a maioria das operações. Você pode "
+"efetuar login especificando a senha de root por meio do comando \"auth "
+"login\". Após a autenticação bem-sucedida, o servidor retorna um Token Web "
+"JSON (JWT), que é armazenado para autenticar as solicitações seguintes.\n"
+"\n"
+"Se você executa este programa como root localmente, pode ignorar a etapa de "
+"autenticação porque o token master é usado automaticamente em /run/agama/"
+"token. Apenas o usuário root deve ter acesso a esse arquivo.\n"
+"\n"
+"A qualquer momento, você pode efetuar logout com o comando \"auth logout\", "
+"embora esse comando não afete o usuário root."
 
 #. TRANSLATORS: CLI help for: agama auth logout
 #: agama-cli/src/auth.rs:88
 msgid "Deauthenticate by removing the token"
-msgstr ""
+msgstr "Cancelar autenticação removendo o token"
 
 #. TRANSLATORS: CLI help for: agama auth show
 #: agama-cli/src/auth.rs:93
 msgid "Print the used token to the standard output"
-msgstr ""
+msgstr "Mostrar o token usado na saída padrão"
 
 #. TRANSLATORS: CLI help for: agama auth login
 #: agama-cli/src/auth.rs:99
 msgid "Authenticate with Agama's server and store the token"
-msgstr ""
+msgstr "Autenticar com o servidor do Agama e armazenar o token"
 
 #. TRANSLATORS: CLI help for: agama auth login (details)
 #: agama-cli/src/auth.rs:101
@@ -85,21 +98,25 @@ msgid ""
 "token in .agama/agama-jwt. The token will be automatically sent to "
 "authenticate the following requests."
 msgstr ""
+"Este comando tenta obter a senha da entrada padrão. Se ela não estiver lá, "
+"ele solicitará ao usuário de maneira interativa. Após o login bem-sucedido, "
+"o token será armazenado em .agama/agama-jwt. O token será automaticamente "
+"enviado para autenticar as solicitações seguintes."
 
 #: agama-cli/src/auth.rs:141
 msgid "Please enter the root password:"
-msgstr ""
+msgstr "Insira a senha de root:"
 
 #. TRANSLATORS: {0} is a host name
 #: agama-cli/src/auth.rs:179
 #, rust-format
 msgid "Not authenticated in {0}"
-msgstr ""
+msgstr "Não autenticado em {0}"
 
 #. TRANSLATORS: CLI help for: agama probe
 #: agama-cli/src/commands.rs:42
 msgid "Analyze the system"
-msgstr ""
+msgstr "Analisar o sistema"
 
 #. TRANSLATORS: CLI help for: agama probe (details)
 #: agama-cli/src/commands.rs:44
@@ -109,11 +126,15 @@ msgid ""
 "devices, and more. The 'probe' command initiates this analysis process and "
 "returns immediately."
 msgstr ""
+"No linguajar do Agama, o termo 'sondagem' significa o processo de 'analisar' "
+"o sistema, o que inclui ler repositórios do software, analisar dispositivos "
+"de armazenamento etc. O comando 'probe' inicia esse processo de análise e "
+"retorna os resultados imediatamente."
 
 #. TRANSLATORS: CLI help for: agama install
 #: agama-cli/src/commands.rs:53
 msgid "Start the system installation"
-msgstr ""
+msgstr "Iniciar a instalação do sistema"
 
 #. TRANSLATORS: CLI help for: agama install (details)
 #: agama-cli/src/commands.rs:55
@@ -125,11 +146,17 @@ msgid ""
 "When the preconditions for the installation are not met, it informs the user "
 "and returns, making no changes to the system."
 msgstr ""
+"Este comando inicia o processo de instalação. Esteja ciente de que esta é "
+"uma operação destrutiva, pois ela configura os dispositivo de armazenamento, "
+"instala os pacotes etc.\n"
+"\n"
+"Quando as condições prévias para a instalação não são atendidas, ele informa "
+"o usuário e retorna sem fazer alterações no sistema."
 
 #. TRANSLATORS: CLI help for: agama download
 #: agama-cli/src/commands.rs:78
 msgid "Download file from a given (AutoYaST) URL"
-msgstr ""
+msgstr "Baixar arquivo de um URL especificado (AutoYaST)"
 
 #. TRANSLATORS: CLI help for: agama download (details)
 #: agama-cli/src/commands.rs:80
@@ -140,6 +167,11 @@ msgid ""
 "autoinstallation profiles. If you want to convert an AutoYaST profile, use "
 "\"agama config generate\"."
 msgstr ""
+"A finalidade deste comando é baixar arquivos usando esquemas compatíveis com "
+"o AutoYaST (ex. device://). É possível usá-lo para baixar scripts "
+"adicionais, arquivos de configuração etc. Você pode usá-lo para baixar "
+"perfis de instalação automática do Agama. Para converter um perfil do "
+"AutoYaST, use \"agama config generate\"."
 
 #. TRANSLATORS: CLI help for: agama download <URL>
 #: agama-cli/src/commands.rs:94
@@ -147,16 +179,19 @@ msgid ""
 "URL reference pointing to file for download. If a relative URL is provided, "
 "it will be resolved against the current working directory"
 msgstr ""
+"Referência de URL que aponta para o arquivo que será baixado. Se um URL "
+"relativo for inserido, ele será resolvido com base no diretório de trabalho "
+"atual"
 
 #. TRANSLATORS: CLI help for: agama download <DESTINATION>
 #: agama-cli/src/commands.rs:104
 msgid "File name"
-msgstr ""
+msgstr "Nome do arquivo"
 
 #. TRANSLATORS: CLI help for: agama finish
 #: agama-cli/src/commands.rs:111
 msgid "Finish the installation"
-msgstr ""
+msgstr "Finalizar a instalação"
 
 #. TRANSLATORS: CLI help for: agama finish <METHOD>
 #: agama-cli/src/commands.rs:117
@@ -399,7 +434,7 @@ msgstr ""
 #. TRANSLATORS: an installation "scope", used in the "agama monitor" command
 #: agama-cli/src/monitor/ui.rs:45
 msgid "Network"
-msgstr ""
+msgstr "Rede"
 
 #. TRANSLATORS: an installation "scope", used in the "agama monitor" command
 #: agama-cli/src/monitor/ui.rs:47
@@ -429,7 +464,7 @@ msgstr ""
 #. TRANSLATORS: an installation "scope", used in the "agama monitor" command
 #: agama-cli/src/monitor/ui.rs:57
 msgid "Software"
-msgstr ""
+msgstr "Software"
 
 #. TRANSLATORS: an installation "scope", used in the "agama monitor" command
 #: agama-cli/src/monitor/ui.rs:59
@@ -454,7 +489,7 @@ msgstr ""
 #. TRANSLATORS: an installation "scope", used in the "agama monitor" command
 #: agama-cli/src/monitor/ui.rs:67
 msgid "zFCP"
-msgstr ""
+msgstr "zFCP"
 
 #. TRANSLATORS: an installation "scope", used in the "agama monitor" command
 #: agama-cli/src/monitor/ui.rs:69
@@ -474,7 +509,7 @@ msgstr ""
 #. TRANSLATORS: an installation "scope", used in the "agama monitor" command
 #: agama-cli/src/monitor/ui.rs:75
 msgid "Security"
-msgstr ""
+msgstr "Segurança"
 
 #: agama-cli/src/monitor/ui/content.rs:64
 msgid "Installation complete."
@@ -536,11 +571,11 @@ msgstr ""
 
 #: agama-cli/src/monitor/ui/question.rs:377
 msgid "Location"
-msgstr ""
+msgstr "Local"
 
 #: agama-cli/src/monitor/ui/question.rs:383
 msgid "Value"
-msgstr ""
+msgstr "Valor"
 
 #: agama-cli/src/monitor/ui/summary.rs:47
 msgid "Host: "
@@ -970,7 +1005,7 @@ msgstr ""
 
 #: agama-utils/src/api/question.rs:293 agama-utils/src/question/start.rs:48
 msgid "No"
-msgstr ""
+msgstr "Não"
 
 #: agama-utils/src/api/question.rs:293 agama-utils/src/question/start.rs:48
 msgid "Yes"
