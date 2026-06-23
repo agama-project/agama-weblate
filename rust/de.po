@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-06-18 16:05+0000\n"
-"PO-Revision-Date: 2026-06-23 10:12+0000\n"
+"PO-Revision-Date: 2026-06-23 11:12+0000\n"
 "Last-Translator: Gemineo <vistatec@gemineo.de>\n"
 "Language-Team: German <https://l10n.opensuse.org/projects/agama/agama-rust-"
 "master/de/>\n"
@@ -272,16 +272,23 @@ msgid ""
 "\n"
 "The output of command can be used as input for the \"agama config load\"."
 msgstr ""
+"Es ist möglich, dass viele Konfigurationseinstellungen keinen Wert haben. "
+"Diese Einstellungen sind in der Ausgabe nicht enthalten.\n"
+"\n"
+"Die Ausgabe des Befehls kann als Eingabe für \"agama config load\" verwendet "
+"werden."
 
 #. TRANSLATORS: CLI help for: agama config show --output <FILE_PATH>
 #: agama-cli/src/config.rs:103
 msgid "Save the output here (goes to stdout if not given)"
 msgstr ""
+"Ausgabe hier speichern (wird an \"stdout\" ausgegeben, wenn nichts angegeben "
+"wurde)"
 
 #. TRANSLATORS: CLI help for: agama config validate
 #: agama-cli/src/config.rs:110
 msgid "Validate a profile using JSON Schema"
-msgstr ""
+msgstr "Profil mithilfe des JSON-Schemas validieren"
 
 #. TRANSLATORS: CLI help for: agama config validate (details)
 #: agama-cli/src/config.rs:115
@@ -289,6 +296,9 @@ msgid ""
 "Schema is available at /usr/share/agama/schema/profile.schema.json Note: "
 "validation is always done as part of all other \"agama config\" commands."
 msgstr ""
+"Das Schema ist unter \"/usr/share/agama/schema/profile.schema.json\" "
+"verfügbar. Hinweis: Die Validierung erfolgt immer als Teil aller anderen "
+"Befehle vom Typ \"agama config\"."
 
 #. TRANSLATORS: CLI help for: agama config validate <URL_OR_PATH>
 #: agama-cli/src/config.rs:129
@@ -301,6 +311,8 @@ msgid ""
 "Run subcommands (if possible) in local mode - without trying to connect to "
 "remote agama server"
 msgstr ""
+"Unterbefehle (sofern möglich) im lokalen Modus ausführen – ohne eine "
+"Verbindung mit dem Remote-Server von Agama herzustellen"
 
 #. TRANSLATORS: CLI help for: agama config generate
 #: agama-cli/src/config.rs:144
@@ -308,6 +320,8 @@ msgid ""
 "Generate and print a native Agama JSON configuration from any kind and "
 "location"
 msgstr ""
+"Native Agama-JSON-Konfiguration aus beliebigen Quellen und an beliebigen "
+"Speicherorten generieren und drucken"
 
 #. TRANSLATORS: CLI help for: agama config generate (details)
 #: agama-cli/src/config.rs:146
@@ -325,11 +339,25 @@ msgid ""
 "https://github.com/openSUSE/agama/blob/master/rust/agama-lib/share/examples/"
 "profile.jsonnet"
 msgstr ""
+"Quellen:\n"
+"- JSON\n"
+"- Jsonnet, Injizieren der Hardware-Informationen\n"
+"- AutoYaST-Profil, einschließlich ERB und Regeln/Klassen\n"
+"\n"
+"Speicherorte:\n"
+"- Pfad\n"
+"- URL (einschließlich AutoYaST-spezifischen Schemasschemata)\n"
+"\n"
+"Ein Beispiel für ein Jsonnet-basiertes Profil finden Sie unter\n"
+"https://github.com/openSUSE/agama/blob/master/rust/agama-lib/share/examples/"
+"profile.jsonnet"
 
 #. TRANSLATORS: CLI help for: agama config edit
 #: agama-cli/src/config.rs:172
 msgid "Edit and update installation option using an external editor"
 msgstr ""
+"Installationsoption mithilfe eines externen Editors bearbeiten und "
+"aktualisieren"
 
 #. TRANSLATORS: CLI help for: agama config edit (details)
 #: agama-cli/src/config.rs:177
@@ -339,11 +367,17 @@ msgid ""
 "If an editor is not specified, it honors the EDITOR environment variable. It "
 "falls back to `/usr/bin/vi` as a last resort."
 msgstr ""
+"Die Änderungen werden nicht angewendet, wenn der Editor mit einem Fehlercode "
+"beendet wird.\n"
+"\n"
+"Wenn kein Editor angegeben wurde, wird die Umgebungsvariable EDITOR "
+"berücksichtigt. Sie wird als letzer Ausweg auf `/usr/bin/vi` zurückgesetzt."
 
 #. TRANSLATORS: CLI help for: agama config edit --editor <EDITOR>
 #: agama-cli/src/config.rs:194
 msgid "Editor command (including additional arguments if needed)"
 msgstr ""
+"Editorbefehl (einschließlich zusätzlicher Argumente, falls erforderlich)"
 
 #: agama-cli/src/config.rs:217
 msgid "It is not a valid JSON file"
@@ -352,11 +386,13 @@ msgstr "Es ist keine gültige JSON-Datei"
 #: agama-cli/src/config.rs:416
 msgid "Ignoring the changes because the editor was closed with an error code."
 msgstr ""
+"Die Änderungen werden ignoriert, da der Editor mit einem Fehlercode "
+"geschlossen wurde."
 
 #. TRANSLATORS: CLI help for: agama
 #: agama-cli/src/lib.rs:92
 msgid "Agama's command-line interface"
-msgstr ""
+msgstr "Befehlszeilenschnittstelle von Agama"
 
 #. TRANSLATORS: CLI help for: agama (details)
 #: agama-cli/src/lib.rs:97
@@ -367,6 +403,11 @@ msgid ""
 "\n"
 "Please, use the \"help\" command to learn more."
 msgstr ""
+"Dieses Programm lässt das Untersuchen oder Ändern der Konfiguration von "
+"Agama, das Verarbeiten von Installationsprofilen, das Starten der "
+"Installation, das Überwachen des Prozesses usw. zu.\n"
+"\n"
+"Verwenden Sie den Befehl \"help\", um mehr zu erfahren."
 
 #. TRANSLATORS: CLI help for: agama --host <HOST>
 #: agama-cli/src/lib.rs:115
@@ -375,6 +416,9 @@ msgid ""
 "\n"
 "Examples: https://my-server.lan my-server.local localhost:10443"
 msgstr ""
+"URI, der auf den Remote-Host von Agama verweist.\n"
+"\n"
+"Beispiele: https://my-server.lan my-server.local localhost:10443"
 
 #. TRANSLATORS: CLI help for: agama --insecure
 #: agama-cli/src/lib.rs:127
