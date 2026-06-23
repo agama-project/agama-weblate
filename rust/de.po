@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-06-18 16:05+0000\n"
-"PO-Revision-Date: 2026-06-23 11:12+0000\n"
+"PO-Revision-Date: 2026-06-23 12:12+0000\n"
 "Last-Translator: Gemineo <vistatec@gemineo.de>\n"
 "Language-Team: German <https://l10n.opensuse.org/projects/agama/agama-rust-"
 "master/de/>\n"
@@ -424,6 +424,8 @@ msgstr ""
 #: agama-cli/src/lib.rs:127
 msgid "Whether to accept invalid (self-signed, ...) certificates or not"
 msgstr ""
+"Gibt an, ob ungültige (selbst signierte, ...) Zertifikate akzeptiert werden "
+"oder nicht"
 
 #. TRANSLATORS: CLI help for: agama --local
 #: agama-cli/src/lib.rs:135
@@ -431,11 +433,13 @@ msgid ""
 "Some commands could be able to work even without connection to the agama "
 "server"
 msgstr ""
+"Einige Befehle könnten selbst ohne Verbindung mit dem Agama-Server "
+"funktionieren"
 
 #. TRANSLATORS: CLI help for: agama logs
 #: agama-cli/src/logs.rs:31
 msgid "Collect the installer logs"
-msgstr ""
+msgstr "Installationsprogrammprotokolle sammeln"
 
 #. TRANSLATORS: CLI help for: agama logs (details)
 #: agama-cli/src/logs.rs:36
@@ -444,11 +448,15 @@ msgid ""
 "inspection. The file includes system and Agama-specific logs and "
 "configuration files. They are crucial to troubleshoot and debug problems."
 msgstr ""
+"Die Installationsprogrammprotokolle werden in einem komprimierten Archiv zur "
+"weiteren Untersuchung gespeichert. Die Datei enthält Systemprotokolle und "
+"Agama-spezifische Protokolle und Konfigurationsdateien. Sie sind für die "
+"Fehlerbehebung und das Debuggen von Problemen entscheidend."
 
 #. TRANSLATORS: CLI help for: agama logs store
 #: agama-cli/src/logs.rs:50
 msgid "Collect and store the logs in a tar archive"
-msgstr ""
+msgstr "Protokolle sammeln und in einem TAR-Archiv speichern"
 
 #. TRANSLATORS: CLI help for: agama logs store --destination <DESTINATION>
 #: agama-cli/src/logs.rs:58
@@ -456,11 +464,13 @@ msgid ""
 "Path to destination directory and, optionally, the archive file name. The "
 "extension will be added automatically"
 msgstr ""
+"Der Pfad zum Zielverzeichung und optional der Archivdateiname. Die "
+"Erweiterung wird automatisch hinzugefügt"
 
 #. TRANSLATORS: CLI help for: agama logs list
 #: agama-cli/src/logs.rs:65
 msgid "List the logs to collect"
-msgstr ""
+msgstr "Die zu sammelnden Protokolle auflisten"
 
 #. TRANSLATORS: an installation "scope", used in the "agama monitor" command
 #: agama-cli/src/monitor/ui.rs:41
@@ -578,19 +588,16 @@ msgid "No product has been selected yet."
 msgstr "Es wurde noch kein Produkt ausgewählt."
 
 #: agama-cli/src/monitor/ui/content.rs:172 agama-cli/src/status.rs:88
-#, fuzzy
 msgid "Fix invalid settings before starting the installation:"
-msgstr "Warten auf den Start der Installation..."
+msgstr "Ungültige Einstellungen vor dem Starten der Installation beheben:"
 
 #: agama-cli/src/monitor/ui/content.rs:193 agama-cli/src/status.rs:81
-#, fuzzy
 msgid "Ready to start the installation."
-msgstr "Bereit zur Installation."
+msgstr "Bereit zum Starten der Installation."
 
 #: agama-cli/src/monitor/ui/content.rs:194
-#, fuzzy
 msgid "Starting the installation."
-msgstr "Paketinstallation starten"
+msgstr "Die Paketinstallation wird gestartet."
 
 #: agama-cli/src/monitor/ui/content.rs:210
 msgid "Step"
@@ -608,20 +615,19 @@ msgstr "Technische Details"
 #. TRANSLATORS: CLI hint how to scroll through additional data
 #: agama-cli/src/monitor/ui/question.rs:317
 msgid "use PageUp/PageDown to scroll"
-msgstr ""
+msgstr "Zum Blättern \"Bild auf\"/\"Bild ab\" verwenden"
 
 #: agama-cli/src/monitor/ui/question.rs:371
 msgid "Password"
-msgstr ""
+msgstr "Passwort"
 
 #: agama-cli/src/monitor/ui/question.rs:377
-#, fuzzy
 msgid "Location"
-msgstr "Lokalisierung"
+msgstr "Speicherort"
 
 #: agama-cli/src/monitor/ui/question.rs:383
 msgid "Value"
-msgstr ""
+msgstr "Wert"
 
 #: agama-cli/src/monitor/ui/summary.rs:47
 msgid "Host: "
@@ -658,7 +664,7 @@ msgstr "Leerlauf"
 
 #: agama-cli/src/monitor/ui/summary.rs:79
 msgid "Waiting for user"
-msgstr ""
+msgstr "Auf Benutzer warten"
 
 #: agama-cli/src/monitor/ui/summary.rs:102
 msgid "Installing"
@@ -679,7 +685,7 @@ msgstr "Noch nicht ausgewählt"
 #. TRANSLATORS: CLI help for: agama questions
 #: agama-cli/src/questions.rs:33
 msgid "Handle installer questions"
-msgstr ""
+msgstr "Installationsprogrammfragen verarbeiten"
 
 #. TRANSLATORS: CLI help for: agama questions (details)
 #: agama-cli/src/questions.rs:35
@@ -691,18 +697,25 @@ msgid ""
 "\n"
 "This command allows answering such questions directly from the command-line."
 msgstr ""
+"Agama kann jederzeit einen Benutzereingriff erfordern. Zu den Gründen gehört "
+"das Angeben fehlender Informationen (z. B. das Passwort zum Entschlüsseln "
+"eines Dateisystems) oder das Festlegen, was im Fall eines Fehlers zu tun ist "
+"(z. B. wenn keine Verbindung mit dem Repository hergestellt werden kann).\n"
+"\n"
+"Dieser Befehl ermöglicht es, solche Fragen direkt an der Befehlszeile zu "
+"beantworten."
 
 #. TRANSLATORS: CLI help for: agama questions mode
 #: agama-cli/src/questions.rs:49
-#, fuzzy
 msgid "Set the mode for answering questions"
-msgstr "Es gibt noch offene Fragen:"
+msgstr "Modus zum Beantworten von Fragen festlegen"
 
 #. TRANSLATORS: CLI help for: agama questions list
 #: agama-cli/src/questions.rs:61
 msgid ""
 "Prints the list of questions that are waiting for an answer in JSON format"
 msgstr ""
+"Druckt die Liste der Fragen, die auf eine Antwort warten, im JSON-Format"
 
 #. TRANSLATORS: CLI help for: agama questions ask
 #: agama-cli/src/questions.rs:66
@@ -710,11 +723,13 @@ msgid ""
 "Reads a question definition in JSON from stdin and prints the response when "
 "it is answered"
 msgstr ""
+"Liest eine Fragendefinition in JSON aus \"stdin\" und druckt die Antwort, "
+"wenn sie vorgenommen wird"
 
 #. TRANSLATORS: CLI help for: agama questions answers
 #: agama-cli/src/questions.rs:72
 msgid "Load predefined answers"
-msgstr ""
+msgstr "Vordefinierte Antworten laden"
 
 #. TRANSLATORS: CLI help for: agama questions answers (details)
 #: agama-cli/src/questions.rs:77
@@ -725,32 +740,38 @@ msgid ""
 "Please check Agama documentation for more details and examples: https://"
 "github.com/openSUSE/agama/blob/master/doc/questions."
 msgstr ""
+"Ermöglicht das Vordefinieren von Antworten für bestimmte Fragen, um sie im "
+"interaktiven Modus zu überspringen oder die Antwort im automatischen Modus "
+"zu ändern.\n"
+"\n"
+"Weitere Details und Beispiele finden Sie in der Agama-Dokumentation: https://"
+"github.com/openSUSE/agama/blob/master/doc/questions."
 
 #. TRANSLATORS: CLI help for: agama questions answers <PATH>
 #: agama-cli/src/questions.rs:94
 msgid "Path to a file containing the answers in JSON format"
-msgstr ""
+msgstr "Pfad zu einer Datei mit den Antworten im JSON-Format"
 
 #: agama-cli/src/status.rs:77
 msgid ""
 "The installation failed. Use the \"agama logs store\" command to get the "
 "logs to troubleshoot or share with support."
 msgstr ""
+"Fehler bei der Installation. Verwenden Sie den Befehl \"agama logs store\", "
+"um die Protokolle zur Fehlerbehebung oder zum Freigeben für den Support "
+"abzurufen."
 
 #: agama-cli/src/status.rs:80
-#, fuzzy
 msgid "The installation finished successfully."
-msgstr "Installation erfolgreich fertiggestellt."
+msgstr "Die Installation wurde erfolgreich beendet."
 
 #: agama-cli/src/status.rs:82
-#, fuzzy
 msgid "The installation is in progress."
-msgstr "Installation läuft."
+msgstr "Die Installation wird ausgeführt."
 
 #: agama-cli/src/status.rs:83
-#, fuzzy
 msgid "The installer is preparing an installation proposal."
-msgstr "Softwareangebot wird berechnet:"
+msgstr "Das Installationsprogramm bereittet einen Installationsvorschlag vor."
 
 #: agama-cli/src/status.rs:85
 #, fuzzy
