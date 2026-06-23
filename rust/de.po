@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-06-18 16:05+0000\n"
-"PO-Revision-Date: 2026-06-16 04:12+0000\n"
-"Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
+"PO-Revision-Date: 2026-06-23 10:12+0000\n"
+"Last-Translator: Gemineo <vistatec@gemineo.de>\n"
 "Language-Team: German <https://l10n.opensuse.org/projects/agama/agama-rust-"
 "master/de/>\n"
 "Language: de\n"
@@ -37,17 +37,16 @@ msgstr "Überspringen und manuell konfigurieren"
 
 #. TRANSLATORS: {0} is a URL
 #: agama-autoinstall/src/scripts.rs:135
-#, fuzzy
 msgid ""
 "It was not possible to load the script from {0}. Do you want to try again?"
 msgstr ""
-"Das Abrufen des Skripts %s ist fehlgeschlagen. Möchten Sie es erneut "
+"Das Skript konnte nicht aus {0} geladen werden. Möchten Sie es erneut "
 "versuchen?"
 
 #. TRANSLATORS: CLI help for: agama auth
 #: agama-cli/src/auth.rs:65
 msgid "Authenticate with Agama's server"
-msgstr ""
+msgstr "Mit dem Server von Agama authentifizieren"
 
 #. TRANSLATORS: CLI help for: agama auth (details)
 #: agama-cli/src/auth.rs:67
@@ -65,21 +64,35 @@ msgid ""
 "You can logout at any time by using the \"auth logout\" command, although "
 "this command does not affect the root user."
 msgstr ""
+"Sofern Sie dieses Programm nicht als Root ausführen, müssen Sie sich für die "
+"meisten Vorgänge beim Server von Agama authentifizieren. Sie können sich "
+"anmelden, indem Sie das Root-Passwort über den Befehl \"auth login\" "
+"angeben. Nach erfolgreicher Authentifizierung gibt der Server ein JSON Web "
+"Token (JWT) zurück, das zum Authentifizieren der folgenden Anfragen "
+"gespeichert wird.\n"
+"\n"
+"Wenn Sie diese Programm lokal als Root ausführen, können Sie den "
+"Authentifizierungsschritt überspringen, da automatisch das Master-Token "
+"unter \"/run/agama/token\" verwendet wird. Nur der Root-Benutzer muss "
+"Zugriff auf eine solche Datei haben.\n"
+"\n"
+"Sie können sich jederzeit mithilfe des Befehlt \"auth logout\" abmelden, "
+"auch wenn dieser Befehl den Root-Benutzer nicht beeinflusst."
 
 #. TRANSLATORS: CLI help for: agama auth logout
 #: agama-cli/src/auth.rs:88
 msgid "Deauthenticate by removing the token"
-msgstr ""
+msgstr "Authentifizierung durch Entfernen des Tokens aufheben"
 
 #. TRANSLATORS: CLI help for: agama auth show
 #: agama-cli/src/auth.rs:93
 msgid "Print the used token to the standard output"
-msgstr ""
+msgstr "Verwendetes Token über den Standardausgang drucken"
 
 #. TRANSLATORS: CLI help for: agama auth login
 #: agama-cli/src/auth.rs:99
 msgid "Authenticate with Agama's server and store the token"
-msgstr ""
+msgstr "Beim Server von Agama authentifizieren und Token speichern"
 
 #. TRANSLATORS: CLI help for: agama auth login (details)
 #: agama-cli/src/auth.rs:101
@@ -89,10 +102,15 @@ msgid ""
 "token in .agama/agama-jwt. The token will be automatically sent to "
 "authenticate the following requests."
 msgstr ""
+"Dieser Befehl versucht, das Passwort über die Standardeingabe abzurufen. "
+"Wenn es nicht vorhanden ist, wird der Benutzer interaktiv gefragt. Nach "
+"erfolgreicher Anmeldung wird das Token unter \".agama/agama-jwt\" "
+"gespeichert. Das Token wird automatisch gesendet, um die folgenden Anfragen "
+"zu authentifizieren."
 
 #: agama-cli/src/auth.rs:141
 msgid "Please enter the root password:"
-msgstr ""
+msgstr "Geben Sie das Root-Passwort ein:"
 
 #. TRANSLATORS: {0} is a host name
 #: agama-cli/src/auth.rs:179
@@ -112,6 +130,10 @@ msgid ""
 "devices, and more. The 'probe' command initiates this analysis process and "
 "returns immediately."
 msgstr ""
+"Im Jargon von Agama bezieht sich der Begriff 'untersuchen' auf das "
+"'Analysieren' des Systems. Dies beinhaltet das Lesen von Software-"
+"Repositorys, das Analysieren von Speichergeräten usw. Der Befehl 'probe' "
+"initiiert diesen Analyseprozess und kehrt sofort zurück."
 
 #. TRANSLATORS: CLI help for: agama install
 #: agama-cli/src/commands.rs:53
@@ -128,6 +150,13 @@ msgid ""
 "When the preconditions for the installation are not met, it informs the user "
 "and returns, making no changes to the system."
 msgstr ""
+"Dieser Befehl startet den Installationsprozess. Beachten Sie, dass dies ein "
+"destruktiver Vorgang ist, da er Speichergeräte einrichtet, die Pakete "
+"installiert usw.\n"
+"\n"
+"Wenn die Vorbedingungen für die Installation nicht erfüllt sind, informiert "
+"er den Benutzer und bricht den Vorgang ab, ohne Änderungen am System "
+"vorzunehmen."
 
 #. TRANSLATORS: CLI help for: agama download
 #: agama-cli/src/commands.rs:78
