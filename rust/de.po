@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-06-23 12:11+0000\n"
-"PO-Revision-Date: 2026-06-23 11:12+0000\n"
+"PO-Revision-Date: 2026-06-23 20:12+0000\n"
 "Last-Translator: Gemineo <vistatec@gemineo.de>\n"
 "Language-Team: German <https://l10n.opensuse.org/projects/agama/agama-rust-"
 "master/de/>\n"
@@ -161,7 +161,7 @@ msgstr ""
 #. TRANSLATORS: CLI help for: agama download
 #: agama-cli/src/commands.rs:78
 msgid "Download file from a given (AutoYaST) URL"
-msgstr ""
+msgstr "Datei von einer angegebenen URL (AutoYaST) herunterladen"
 
 #. TRANSLATORS: CLI help for: agama download (details)
 #: agama-cli/src/commands.rs:80
@@ -172,6 +172,12 @@ msgid ""
 "autoinstallation profiles. If you want to convert an AutoYaST profile, use "
 "\"agama config generate\"."
 msgstr ""
+"Der Zweck dieses Befehls besteht im Herunterladen von Dateien mit "
+"unterstützten AutoYaST-Schemata (z. B. device://). Er kann zum Herunterladen "
+"zusätzlicher Skrips, Konfigurationsdateien usw. verwendet werden. Sie können "
+"ihn auch zum Herunterladen von Agama-Profilen zur automatischen Installation "
+"verwenden. Wenn Sie ein AutoYaST-Profil konvertieren möchten, verwenden Sie "
+"\"agama config generate\"."
 
 #. TRANSLATORS: CLI help for: agama download <URL>
 #: agama-cli/src/commands.rs:94
@@ -179,6 +185,8 @@ msgid ""
 "URL reference pointing to file for download. If a relative URL is provided, "
 "it will be resolved against the current working directory"
 msgstr ""
+"URL-Verweis zur Datei für den Download. Wenn eine relative URL angegeben "
+"wird, wird sie mit dem aktuellen Arbeitsverzeichnis aufgelöst"
 
 #. TRANSLATORS: CLI help for: agama download <DESTINATION>
 #: agama-cli/src/commands.rs:104
@@ -204,11 +212,23 @@ msgid ""
 "\n"
 "   poweroff - power off the installed machine."
 msgstr ""
+"Was nach Abschluss der Installation getan werden muss. Mögliche Werte:\n"
+"\n"
+"   stop – Starten Sie nicht neu und das Agama-Backend wird weiterhin "
+"ausgeführt.\n"
+"\n"
+"   reboot – Nehmen Sie einen Neustart im installierten System vor. Dies ist "
+"der Standardwert. Er kann durch Festlegen des Kernel-Befehlszeilenarguments "
+"\"inst.finish\" überschrieben werden.\n"
+"\n"
+"   halt – Halten Sie die installierte Maschine an.\n"
+"\n"
+"   poweroff – Schalten Sie die installierte Maschine aus."
 
 #. TRANSLATORS: CLI help for: agama monitor
 #: agama-cli/src/commands.rs:135
 msgid "Continuously monitors the Agama service until it finishes"
-msgstr ""
+msgstr "Überwacht den Agama-Dienst, bis er fertig ist"
 
 #. TRANSLATORS: CLI help for: agama status
 #: agama-cli/src/commands.rs:142
@@ -216,11 +236,13 @@ msgid ""
 "Prints the current state of the installation (e.g., waiting, blocked, "
 "running, or finished)"
 msgstr ""
+"Druckt den aktuellen Status der Installation (z. B. \"Wartend\", "
+"\"Gesperrt\", \"Wird ausgeführt\" oder \"Fertig\")"
 
 #. TRANSLATORS: CLI help for: agama status --format <FORMAT>
 #: agama-cli/src/commands.rs:150
 msgid "Specify in which format status will be shown"
-msgstr ""
+msgstr "Angeben, in welchem Format der Status angezeigt wird"
 
 #. TRANSLATORS: CLI help for: agama events
 #: agama-cli/src/commands.rs:157
@@ -230,7 +252,7 @@ msgstr "Agama-Ereignisse anzeigen"
 #. TRANSLATORS: CLI help for: agama events --pretty
 #: agama-cli/src/commands.rs:164
 msgid "Display the events in a more human-readable way"
-msgstr ""
+msgstr "Ereignisse auf bessere menschenlesbare Weise anzeigen"
 
 #. TRANSLATORS: CLI help for: agama config
 #: agama-cli/src/config.rs:46
@@ -247,6 +269,12 @@ msgid ""
 "If you want to change any configuration value, you can load a profile "
 "(complete or partial) using the \"load\" subcommand."
 msgstr ""
+"Sie können die Installationseinstellung über die Befehlszeile untersuchen "
+"und ändern. Der Unterbefehl \"show\" generiert ein \"profile\", das ein JSON-"
+"Dokument ist, das die aktuelle Konfiguration beschreibt.\n"
+"\n"
+"Wenn Sie Konfigurationswerte ändern möchten, können Sie ein Profil "
+"(vollständig oder teilweise) mithilfe des Unterbefehls \"load\" laden."
 
 #. TRANSLATORS: CLI help for: agama config load
 #: agama-cli/src/config.rs:64
@@ -262,7 +290,7 @@ msgstr "JSON-Datei: URL oder Pfad oder `-` für Standardeingabe"
 #. TRANSLATORS: CLI help for: agama config show
 #: agama-cli/src/config.rs:80
 msgid "Generate an installation profile with the current settings"
-msgstr ""
+msgstr "Installationsprofil mit den aktuellen Einstellungen generieren"
 
 #. TRANSLATORS: CLI help for: agama config show (details)
 #: agama-cli/src/config.rs:85
@@ -774,13 +802,12 @@ msgid "The installer is preparing an installation proposal."
 msgstr "Das Installationsprogramm bereittet einen Installationsvorschlag vor."
 
 #: agama-cli/src/status.rs:85
-#, fuzzy
 msgid ""
 "There are unanswered questions. Use the \"agama monitor\" command or the web "
 "user interface to answer them:"
 msgstr ""
-"Es gibt noch offene Fragen. Bitte nutzen Sie den Befehl „agama questions“ "
-"oder die Weboberfläche, um diese zu beantworten."
+"Es gibt noch offene Fragen. Verwenden Sie den Befehl \"agama questions\" "
+"oder die Weboberfläche, um diese zu beantworten:"
 
 #. TRANSLATORS: %s is replaced by the script name.
 #: agama-files/src/service.rs:184
@@ -809,24 +836,20 @@ msgid "Configure the system"
 msgstr "System konfigurieren"
 
 #: agama-manager/src/actions.rs:93
-#, fuzzy
 msgid "Preparing storage"
-msgstr "Speicherungsvorschlag vorbereiten"
+msgstr "Speicherung wird vorbereitet"
 
 #: agama-manager/src/actions.rs:111
-#, fuzzy
 msgid "Running post-partitioning scripts"
-msgstr "Ausführen von Benutzer-Skripten vor der Installation"
+msgstr "Skript nach der Partitionierung wird ausgeführt"
 
 #: agama-manager/src/actions.rs:136
-#, fuzzy
 msgid "Installing software"
-msgstr "Software installieren"
+msgstr "Software wird installiert"
 
 #: agama-manager/src/actions.rs:173
-#, fuzzy
 msgid "Configuring the system"
-msgstr "System konfigurieren"
+msgstr "System wird konfiguriert"
 
 #: agama-manager/src/actions.rs:240
 msgid "Finishing installation"
@@ -930,34 +953,32 @@ msgstr ""
 "Sie diesem Zertifikat vertrauen und das Produkt registrieren?"
 
 #: agama-server/src/profile/web.rs:82
-#, fuzzy
 msgid "Profile validation failed"
-msgstr "Installation fehlgeschlagen"
+msgstr "Fehler bei der Profilvalidierung"
 
 #: agama-server/src/profile/web.rs:85
-#, fuzzy
 msgid "Could not retrieve profile"
-msgstr "Metadaten aus den Repositorien wird aktualisiert"
+msgstr "Profil konnte nicht abgerufen werden"
 
 #: agama-server/src/profile/web.rs:88
 msgid "Invalid profile encoding"
-msgstr ""
+msgstr "Ungültige Profilkodierung"
 
 #: agama-server/src/profile/web.rs:91
 msgid "Invalid profile request"
-msgstr ""
+msgstr "Ungültige Profilanfrage"
 
 #: agama-server/src/profile/web.rs:94
 msgid "AutoYaST conversion failed"
-msgstr ""
+msgstr "Fehler bei der AutoYaST-Konvertierung"
 
 #: agama-server/src/server/web.rs:86
 msgid "Missing Language Tag"
-msgstr ""
+msgstr "Sprach-Tag fehlt"
 
 #: agama-server/src/server/web.rs:89
 msgid "Profile error"
-msgstr ""
+msgstr "Profilfehler"
 
 #: agama-software/src/callbacks/commit_download.rs:48
 #: agama-software/src/callbacks/install.rs:56
@@ -1026,23 +1047,23 @@ msgstr "System wird registriert"
 #. TRANSLATORS: %s is the alias of the repository.
 #: agama-software/src/zypp_server.rs:439
 msgid "Could not remove the repository %s"
-msgstr ""
+msgstr "Repository \"%s\" konnte nicht entfernt werden"
 
 #: agama-software/src/zypp_server.rs:460
-#, fuzzy
 msgid "Could not read the repositories"
-msgstr "Metadaten aus den Repositorien wird aktualisiert"
+msgstr "Repositorys konnten nicht gelesen werden"
 
 #: agama-software/src/zypp_server.rs:497
 msgid ""
 "Failed to find the product in the repositories. You might need to register "
 "the system."
 msgstr ""
+"Das Produkt konnte in den Repositorys nicht gefunden werden. Möglicherweise "
+"müssen Sie das System registrieren."
 
 #: agama-software/src/zypp_server.rs:500
-#, fuzzy
 msgid "Failed to find the product in the repositories."
-msgstr "Liste der Repositorien wird aktualisiert"
+msgstr "Fehler beim Suchen des Produkts in den Repositorys."
 
 #: agama-software/src/zypp_server.rs:563
 msgid "There are conflicts in the software selection"
@@ -1070,29 +1091,30 @@ msgid "First user information is incomplete"
 msgstr "Die Informationen zum ersten Benutzer sind unvollständig"
 
 #: agama-utils/src/api/problem_details.rs:113
-#, fuzzy
 msgid "Schema validation failed"
-msgstr "Installation fehlgeschlagen"
+msgstr "Fehler bei der Schemavalidierung"
 
 #: agama-utils/src/api/problem_details.rs:115
 msgid "The provided configuration does not match the required schema"
 msgstr ""
+"Die angegebene Konfiguration stimmt nicht mit dem erforderlichen Schema "
+"überein"
 
 #: agama-utils/src/api/problem_details.rs:124
 msgid "Invalid JSON"
-msgstr ""
+msgstr "Ungültige JSON"
 
 #: agama-utils/src/api/problem_details.rs:132
 msgid "Internal server error"
-msgstr ""
+msgstr "Interner Serverfehler"
 
 #: agama-utils/src/api/problem_details.rs:140
 msgid "Unauthorized"
-msgstr ""
+msgstr "Nicht autorisiert"
 
 #: agama-utils/src/api/problem_details.rs:189
 msgid "Error:"
-msgstr ""
+msgstr "Fehler:"
 
 #: agama-utils/src/api/problem_details.rs:192
 msgid "Details:"
