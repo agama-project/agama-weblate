@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-06-23 12:11+0000\n"
-"PO-Revision-Date: 2026-06-17 20:12+0000\n"
+"PO-Revision-Date: 2026-06-24 17:12+0000\n"
 "Last-Translator: Eugene Krater <lachend@gmail.com>\n"
 "Language-Team: Ukrainian <https://l10n.opensuse.org/projects/agama/agama-"
 "rust-master/uk/>\n"
@@ -207,11 +207,22 @@ msgid ""
 "\n"
 "   poweroff - power off the installed machine."
 msgstr ""
+"Що робити після завершення встановлення. Можливі значення:\n"
+"\n"
+"   stop — не перезавантажувати, а бекенд Agama продовжує працювати.\n"
+"\n"
+"   reboot — перезавантажити у встановлену систему. Це значення є значенням "
+"за замовчуванням. Його можна змінити, встановивши аргумент командного рядка "
+"ядра inst.finish.\n"
+"\n"
+"   halt — зупинити встановлену машину.\n"
+"\n"
+"   poweroff — вимкнути машину після встановлення."
 
 #. TRANSLATORS: CLI help for: agama monitor
 #: agama-cli/src/commands.rs:135
 msgid "Continuously monitors the Agama service until it finishes"
-msgstr ""
+msgstr "Постійно відстежує роботу сервісу Agama до його завершення"
 
 #. TRANSLATORS: CLI help for: agama status
 #: agama-cli/src/commands.rs:142
@@ -219,26 +230,28 @@ msgid ""
 "Prints the current state of the installation (e.g., waiting, blocked, "
 "running, or finished)"
 msgstr ""
+"Виводить поточний стан інсталяції (наприклад, «очікування», «заблоковано», «"
+"виконується» або «завершено»)"
 
 #. TRANSLATORS: CLI help for: agama status --format <FORMAT>
 #: agama-cli/src/commands.rs:150
 msgid "Specify in which format status will be shown"
-msgstr ""
+msgstr "Вкажіть, у якому форматі буде відображатися статус"
 
 #. TRANSLATORS: CLI help for: agama events
 #: agama-cli/src/commands.rs:157
 msgid "Display Agama events"
-msgstr ""
+msgstr "Показати події Agama"
 
 #. TRANSLATORS: CLI help for: agama events --pretty
 #: agama-cli/src/commands.rs:164
 msgid "Display the events in a more human-readable way"
-msgstr ""
+msgstr "Відображати події у більш зручному для сприйняття вигляді"
 
 #. TRANSLATORS: CLI help for: agama config
 #: agama-cli/src/config.rs:46
 msgid "Inspect or change the installation settings"
-msgstr ""
+msgstr "Перевірити або змінити параметри встановлення"
 
 #. TRANSLATORS: CLI help for: agama config (details)
 #: agama-cli/src/config.rs:48
@@ -250,22 +263,28 @@ msgid ""
 "If you want to change any configuration value, you can load a profile "
 "(complete or partial) using the \"load\" subcommand."
 msgstr ""
+"Ви можете переглянути та змінити параметри інсталяції з командного рядка. "
+"Підкоманда «show» створює «профіль» — документ у форматі JSON, що описує "
+"поточну конфігурацію.\n"
+"\n"
+"Якщо Ви хочете змінити будь-яке значення конфігурації, Ви можете завантажити "
+"профіль (повністю або частково) за допомогою підкоманди «load»."
 
 #. TRANSLATORS: CLI help for: agama config load
 #: agama-cli/src/config.rs:64
 msgid "Read and load a profile"
-msgstr ""
+msgstr "Прочитати та завантажити профіль"
 
 #. TRANSLATORS: CLI help for: agama config load <URL_OR_PATH>
 #. TRANSLATORS: CLI help for: agama config generate <URL_OR_PATH>
 #: agama-cli/src/config.rs:70 agama-cli/src/config.rs:166
 msgid "JSON file: URL or path or `-` for standard input"
-msgstr ""
+msgstr "Файл JSON: URL-адреса, шлях або `-` для стандартного вводу"
 
 #. TRANSLATORS: CLI help for: agama config show
 #: agama-cli/src/config.rs:80
 msgid "Generate an installation profile with the current settings"
-msgstr ""
+msgstr "Створити профіль інсталяції з поточними налаштуваннями"
 
 #. TRANSLATORS: CLI help for: agama config show (details)
 #: agama-cli/src/config.rs:85
@@ -275,16 +294,21 @@ msgid ""
 "\n"
 "The output of command can be used as input for the \"agama config load\"."
 msgstr ""
+"Можливо, що багато параметрів конфігурації не мають значень. Ці параметри не "
+"відображаються у вихідних даних.\n"
+"\n"
+"Вихідні дані команди можна використовувати як вхідні дані для команди «agama "
+"config load»."
 
 #. TRANSLATORS: CLI help for: agama config show --output <FILE_PATH>
 #: agama-cli/src/config.rs:103
 msgid "Save the output here (goes to stdout if not given)"
-msgstr ""
+msgstr "Збережіть результат тут (якщо не вказано, він виводиться у stdout)"
 
 #. TRANSLATORS: CLI help for: agama config validate
 #: agama-cli/src/config.rs:110
 msgid "Validate a profile using JSON Schema"
-msgstr ""
+msgstr "Перевірка профілю за допомогою JSON Schema"
 
 #. TRANSLATORS: CLI help for: agama config validate (details)
 #: agama-cli/src/config.rs:115
@@ -292,11 +316,14 @@ msgid ""
 "Schema is available at /usr/share/agama/schema/profile.schema.json Note: "
 "validation is always done as part of all other \"agama config\" commands."
 msgstr ""
+"Схема доступна за адресою /usr/share/agama/schema/profile.schema.json. "
+"Примітка: перевірка завжди виконується в рамках виконання всіх інших команд «"
+"agama config»."
 
 #. TRANSLATORS: CLI help for: agama config validate <URL_OR_PATH>
 #: agama-cli/src/config.rs:129
 msgid "JSON file, URL or path or `-` for standard input"
-msgstr ""
+msgstr "Файл JSON, URL-адреса або шлях, або `-` для стандартного вводу"
 
 #. TRANSLATORS: CLI help for: agama config validate --local
 #: agama-cli/src/config.rs:137
@@ -304,6 +331,8 @@ msgid ""
 "Run subcommands (if possible) in local mode - without trying to connect to "
 "remote agama server"
 msgstr ""
+"Виконувати підкоманди (якщо це можливо) у локальному режимі — без спроби "
+"підключення до віддаленого сервера agama"
 
 #. TRANSLATORS: CLI help for: agama config generate
 #: agama-cli/src/config.rs:144
@@ -311,6 +340,8 @@ msgid ""
 "Generate and print a native Agama JSON configuration from any kind and "
 "location"
 msgstr ""
+"Створити та роздрукувати конфігурацію у форматі JSON, сумісну з Agama, з "
+"будь-якого типу та місця"
 
 #. TRANSLATORS: CLI help for: agama config generate (details)
 #: agama-cli/src/config.rs:146
@@ -328,6 +359,18 @@ msgid ""
 "https://github.com/openSUSE/agama/blob/master/rust/agama-lib/share/examples/"
 "profile.jsonnet"
 msgstr ""
+"Типи:\n"
+"- JSON\n"
+"- Jsonnet із вбудовуванням інформації про апаратне забезпечення\n"
+"- Профіль AutoYaST, що містить ERB та правила/класи\n"
+"\n"
+"Розташування:\n"
+"- шлях\n"
+"- URL (включно зі схемами, характерними для AutoYaST)\n"
+"\n"
+"Приклад профілю на основі Jsonnet див. за посиланням\n"
+"https://github.com/openSUSE/agama/blob/master/rust/agama-lib/share/examples/"
+"profile.jsonnet"
 
 #. TRANSLATORS: CLI help for: agama config edit
 #: agama-cli/src/config.rs:172
