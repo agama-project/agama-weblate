@@ -37,7 +37,6 @@ msgstr "Ignorer et configurer manuellement"
 
 #. TRANSLATORS: {0} is a URL
 #: agama-autoinstall/src/scripts.rs:135
-#, rust-format
 msgid ""
 "It was not possible to load the script from {0}. Do you want to try again?"
 msgstr "Impossible de charger le script depuis {0}. Voulez-vous réessayer ?"
@@ -112,7 +111,6 @@ msgstr "Saisissez le mot de passe root :"
 
 #. TRANSLATORS: {0} is a host name
 #: agama-cli/src/auth.rs:179
-#, rust-format
 msgid "Not authenticated in {0}"
 msgstr "Non authentifié dans {0}"
 
@@ -563,13 +561,11 @@ msgstr "iSCSI"
 
 #. TRANSLATORS: an installation "scope", used in the "agama monitor" command
 #: agama-cli/src/monitor/ui.rs:65
-#, fuzzy
 msgid "DASD"
 msgstr "DASD"
 
 #. TRANSLATORS: an installation "scope", used in the "agama monitor" command
 #: agama-cli/src/monitor/ui.rs:67
-#, fuzzy
 msgid "zFCP"
 msgstr "zFCP"
 
@@ -585,7 +581,6 @@ msgstr "Proxy"
 
 #. TRANSLATORS: an installation "scope", used in the "agama monitor" command
 #: agama-cli/src/monitor/ui.rs:73
-#, fuzzy
 msgid "Questions"
 msgstr "Questions"
 
@@ -638,7 +633,7 @@ msgstr "Étape"
 
 #: agama-cli/src/monitor/ui/content.rs:212
 msgid "of"
-msgstr ""
+msgstr "sur"
 
 #. TRANSLATORS: additional data that question passed to user beside main question message
 #: agama-cli/src/monitor/ui/question.rs:307
@@ -697,28 +692,28 @@ msgstr "Inactif"
 
 #: agama-cli/src/monitor/ui/summary.rs:79
 msgid "Waiting for user"
-msgstr ""
+msgstr "En attente de l'utilisateur"
 
 #: agama-cli/src/monitor/ui/summary.rs:102
 msgid "Installing"
-msgstr ""
+msgstr "Installation en cours"
 
 #: agama-cli/src/monitor/ui/summary.rs:103
 msgid "Configuring"
-msgstr ""
+msgstr "Configuration en cours"
 
 #: agama-cli/src/monitor/ui/summary.rs:104
 msgid "Finished"
-msgstr ""
+msgstr "Terminé"
 
 #: agama-cli/src/monitor/ui/summary.rs:118
 msgid "Not selected yet"
-msgstr ""
+msgstr "Pas encore sélectionné"
 
 #. TRANSLATORS: CLI help for: agama questions
 #: agama-cli/src/questions.rs:33
 msgid "Handle installer questions"
-msgstr ""
+msgstr "Traiter les questions du programme d'installation"
 
 #. TRANSLATORS: CLI help for: agama questions (details)
 #: agama-cli/src/questions.rs:35
@@ -730,17 +725,25 @@ msgid ""
 "\n"
 "This command allows answering such questions directly from the command-line."
 msgstr ""
+"Agama peut nécessiter l'intervention de l'utilisateur à tout moment. Cela "
+"peut notamment être nécessaire pour fournir des informations manquantes (par "
+"exemple, le mot de passe permettant de déchiffrer un système de fichiers) ou "
+"pour déterminer la marche à suivre en cas d'erreur (par exemple, "
+"impossibilité de se connecter au dépôt).\n"
+"\n"
+"Cette commande permet de répondre à ces questions directement depuis la "
+"ligne de commande."
 
 #. TRANSLATORS: CLI help for: agama questions mode
 #: agama-cli/src/questions.rs:49
 msgid "Set the mode for answering questions"
-msgstr ""
+msgstr "Définir le mode de réponse aux questions"
 
 #. TRANSLATORS: CLI help for: agama questions list
 #: agama-cli/src/questions.rs:61
 msgid ""
 "Prints the list of questions that are waiting for an answer in JSON format"
-msgstr ""
+msgstr "Affiche la liste des questions en attente de réponse au format JSON"
 
 #. TRANSLATORS: CLI help for: agama questions ask
 #: agama-cli/src/questions.rs:66
@@ -748,11 +751,13 @@ msgid ""
 "Reads a question definition in JSON from stdin and prints the response when "
 "it is answered"
 msgstr ""
+"Lit la définition d'une question au format JSON depuis l'entrée standard "
+"(stdin) et affiche la réponse une fois trouvée"
 
 #. TRANSLATORS: CLI help for: agama questions answers
 #: agama-cli/src/questions.rs:72
 msgid "Load predefined answers"
-msgstr ""
+msgstr "Charger les réponses prédéfinies"
 
 #. TRANSLATORS: CLI help for: agama questions answers (details)
 #: agama-cli/src/questions.rs:77
@@ -763,35 +768,46 @@ msgid ""
 "Please check Agama documentation for more details and examples: https://"
 "github.com/openSUSE/agama/blob/master/doc/questions."
 msgstr ""
+"Cela permet de prédéfinir les réponses à des questions spécifiques afin de "
+"les ignorer en mode interactif ou de modifier la réponse en mode "
+"automatique.\n"
+"\n"
+"Consultez la documentation d'Agama pour plus de détails et des exemples : "
+"https://github.com/openSUSE/agama/blob/master/doc/questions."
 
 #. TRANSLATORS: CLI help for: agama questions answers <PATH>
 #: agama-cli/src/questions.rs:94
 msgid "Path to a file containing the answers in JSON format"
-msgstr ""
+msgstr "Chemin d'accès à un fichier contenant les réponses au format JSON"
 
 #: agama-cli/src/status.rs:77
 msgid ""
 "The installation failed. Use the \"agama logs store\" command to get the "
 "logs to troubleshoot or share with support."
 msgstr ""
+"L'installation a échoué. Utilisez la commande \"agama logs store\" pour "
+"obtenir les journaux afin de résoudre le problème ou de les partager avec le "
+"support technique."
 
 #: agama-cli/src/status.rs:80
 msgid "The installation finished successfully."
-msgstr ""
+msgstr "L'installation s'est terminée avec succès."
 
 #: agama-cli/src/status.rs:82
 msgid "The installation is in progress."
-msgstr ""
+msgstr "L'installation est en cours."
 
 #: agama-cli/src/status.rs:83
 msgid "The installer is preparing an installation proposal."
-msgstr ""
+msgstr "Le programme d'installation prépare une proposition d'installation."
 
 #: agama-cli/src/status.rs:85
 msgid ""
 "There are unanswered questions. Use the \"agama monitor\" command or the web "
 "user interface to answer them:"
 msgstr ""
+"Des questions restent sans réponse. Utilisez la commande \"agama monitor\" "
+"ou l'interface utilisateur web pour y répondre :"
 
 #. TRANSLATORS: %s is replaced by the script name.
 #: agama-files/src/service.rs:184
@@ -835,75 +851,75 @@ msgstr ""
 msgid "Finishing installation"
 msgstr ""
 
-#: agama-manager/src/actions.rs:303
+#: agama-manager/src/actions.rs:303 agama-manager/src/actions.rs:296
 msgid "Storing security settings"
 msgstr ""
 
-#: agama-manager/src/actions.rs:313
+#: agama-manager/src/actions.rs:313 agama-manager/src/actions.rs:306
 msgid "Configuring remote access"
 msgstr ""
 
-#: agama-manager/src/actions.rs:323
+#: agama-manager/src/actions.rs:323 agama-manager/src/actions.rs:316
 msgid "Setting up the hostname"
 msgstr ""
 
-#: agama-manager/src/actions.rs:333
+#: agama-manager/src/actions.rs:333 agama-manager/src/actions.rs:326
 msgid "Setting up the network proxy"
 msgstr ""
 
-#: agama-manager/src/actions.rs:344
+#: agama-manager/src/actions.rs:344 agama-manager/src/actions.rs:337
 msgid "Setting up NTP"
 msgstr ""
 
-#: agama-manager/src/actions.rs:355
+#: agama-manager/src/actions.rs:355 agama-manager/src/actions.rs:348
 msgid "Importing user files and scripts"
 msgstr ""
 
-#: agama-manager/src/actions.rs:368
+#: agama-manager/src/actions.rs:368 agama-manager/src/actions.rs:361
 msgid "Running user pre-installation scripts"
 msgstr ""
 
-#: agama-manager/src/actions.rs:383
+#: agama-manager/src/actions.rs:383 agama-manager/src/actions.rs:376
 msgid "Storing questions settings"
 msgstr ""
 
-#: agama-manager/src/actions.rs:393
+#: agama-manager/src/actions.rs:393 agama-manager/src/actions.rs:386
 msgid "Storing localization settings"
 msgstr ""
 
-#: agama-manager/src/actions.rs:403
+#: agama-manager/src/actions.rs:403 agama-manager/src/actions.rs:396
 msgid "Storing users settings"
 msgstr ""
 
-#: agama-manager/src/actions.rs:509
+#: agama-manager/src/actions.rs:509 agama-manager/src/actions.rs:502
 msgid "Configuring iSCSI devices"
 msgstr ""
 
-#: agama-manager/src/actions.rs:533
+#: agama-manager/src/actions.rs:533 agama-manager/src/actions.rs:526
 msgid "Configuring zFCP devices"
 msgstr ""
 
-#: agama-manager/src/actions.rs:557
+#: agama-manager/src/actions.rs:557 agama-manager/src/actions.rs:550
 msgid "Configuring DASD devices"
 msgstr ""
 
-#: agama-manager/src/actions.rs:581
+#: agama-manager/src/actions.rs:581 agama-manager/src/actions.rs:574
 msgid "Setting up the network"
 msgstr ""
 
-#: agama-manager/src/actions.rs:610
+#: agama-manager/src/actions.rs:610 agama-manager/src/actions.rs:603
 msgid "Preparing the storage proposal"
 msgstr ""
 
-#: agama-manager/src/actions.rs:643
+#: agama-manager/src/actions.rs:643 agama-manager/src/actions.rs:636
 msgid "Storing bootloader settings"
 msgstr ""
 
-#: agama-manager/src/actions.rs:676
+#: agama-manager/src/actions.rs:676 agama-manager/src/actions.rs:669
 msgid "Preparing the software proposal"
 msgstr ""
 
-#: agama-manager/src/actions.rs:709
+#: agama-manager/src/actions.rs:709 agama-manager/src/actions.rs:702
 msgid "Configuring SELinux"
 msgstr ""
 
@@ -979,7 +995,6 @@ msgstr ""
 
 #. TRANSLATORS: substituting: key ID, (key name), fingerprint
 #: agama-software/src/callbacks/security.rs:104
-#, rust-format
 msgid ""
 "The key {0} ({1}) with fingerprint {2} is unknown. Do you want to trust this "
 "key?"
@@ -989,7 +1004,7 @@ msgstr ""
 msgid "Skip"
 msgstr ""
 
-#: agama-software/src/service.rs:304
+#: agama-software/src/service.rs:304 agama-software/src/service.rs:287
 msgid ""
 "Due to an internal error, it was not possible to create a software proposal."
 msgstr ""
