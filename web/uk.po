@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-22 20:08+0000\n"
+"POT-Creation-Date: 2026-06-25 09:54+0000\n"
 "PO-Revision-Date: 2026-06-17 20:12+0000\n"
 "Last-Translator: Eugene Krater <lachend@gmail.com>\n"
 "Language-Team: Ukrainian <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -276,9 +276,10 @@ msgid "Installation in progress"
 msgstr "Встановлення триває"
 
 #. TRANSLATORS: label for the button that opens the display language settings
+#. TRANSLATORS: label for the system language selector
 #: src/components/core/InstallerL10nOptions.tsx:74
 #: src/components/core/InstallerL10nOptions.tsx:480
-#: src/components/l10n/L10nPage.tsx:86
+#: src/components/l10n/l10n-form/LanguageField.tsx:60
 msgid "Language"
 msgstr "Мова"
 
@@ -331,12 +332,14 @@ msgid "Use these same settings for the selected product"
 msgstr "Використовувати ці ж налаштування для обраного продукту"
 
 #. TRANSLATORS: label for the form submit button.
+#. TRANSLATORS: button to save the localization settings
 #. TRANSLATORS: button to save system settings changes
 #: src/components/core/InstallerL10nOptions.tsx:350
 #: src/components/core/InstallerL10nOptions.tsx:396
 #: src/components/core/InstallerL10nOptions.tsx:410
 #: src/components/core/InstallerL10nOptions.tsx:453
 #: src/components/core/Page.tsx:290 src/components/form/SubmitButton.tsx:49
+#: src/components/l10n/l10n-form/Form.tsx:110
 #: src/components/storage/dasd/FormatActionHandler.tsx:95
 #: src/components/storage/dasd/FormatActionHandler.tsx:122
 #: src/components/storage/formattable-device-form/Form.tsx:180
@@ -363,8 +366,9 @@ msgid "Change keyboard"
 msgstr "Змінити клавіатуру"
 
 #. TRANSLATORS: label for the button that opens the keyboard layout settings
+#. TRANSLATORS: label for the keyboard layout selector
 #: src/components/core/InstallerL10nOptions.tsx:496
-#: src/components/l10n/L10nPage.tsx:100
+#: src/components/l10n/l10n-form/KeyboardField.tsx:57
 msgid "Keyboard"
 msgstr "Клавіатура"
 
@@ -396,10 +400,6 @@ msgstr "Показати конфігурацію"
 #: src/components/core/IssuesAlert.tsx:39
 msgid "You must fix these issues"
 msgstr "Ви повинні усунути ці проблеми"
-
-#: src/components/core/ListSearch.tsx:58
-msgid "Search"
-msgstr "Пошук"
 
 #: src/components/core/LoginPage.tsx:38
 msgid "Could not log in"
@@ -865,8 +865,6 @@ msgid "Using %s keyboard layout"
 msgstr "Використано %s розкладку клавіатури"
 
 #: src/components/form/PreservedValueField.tsx:64
-#: src/components/l10n/L10nPage.tsx:89 src/components/l10n/L10nPage.tsx:103
-#: src/components/l10n/L10nPage.tsx:115
 #: src/components/product/ProductSelectionPage.tsx:289
 #: src/components/storage/BootSection.tsx:97
 #: src/components/storage/DeviceSelectorModal.tsx:292
@@ -875,24 +873,7 @@ msgstr "Використано %s розкладку клавіатури"
 msgid "Change"
 msgstr "Змінити"
 
-#: src/components/l10n/KeyboardSelection.tsx:46
-msgid "Filter by description or keymap code"
-msgstr "Фільтр за описом або кодом клавішної карти"
-
-#: src/components/l10n/KeyboardSelection.tsx:75
-msgid "None of the keymaps match the filter."
-msgstr "Жодна з карт не відповідає фільтру."
-
-#: src/components/l10n/KeyboardSelection.tsx:96
-#: src/components/l10n/L10nPage.tsx:89 src/components/l10n/L10nPage.tsx:103
-#: src/components/l10n/L10nPage.tsx:115
-#: src/components/l10n/LocaleSelection.tsx:92
-#: src/components/l10n/TimezoneSelection.tsx:140
-#: src/components/product/ProductSelectionPage.tsx:289
-msgid "Select"
-msgstr "Вибір"
-
-#: src/components/l10n/L10nPage.tsx:38
+#: src/components/l10n/L10nPage.tsx:39
 msgid ""
 "These are the settings for the product to install. The installer language "
 "and keyboard layout can be adjusted using the [language and keyboard] option "
@@ -902,7 +883,7 @@ msgstr ""
 "інсталятора та розкладку клавіатури можна змінити за допомогою опції [мова "
 "та розкладка] у верхній панелі."
 
-#: src/components/l10n/L10nPage.tsx:44
+#: src/components/l10n/L10nPage.tsx:45
 msgid ""
 "These are the settings for the product to install. The installer language "
 "can be adjusted using the [language] option at the top bar."
@@ -910,30 +891,54 @@ msgstr ""
 "Це параметри, які потрібно встановити для цього продукту. Мову інсталятора "
 "можна змінити за допомогою опції [мова] у верхній панелі."
 
-#: src/components/l10n/L10nPage.tsx:94 src/components/l10n/L10nPage.tsx:107
-#: src/components/l10n/L10nPage.tsx:120
-msgid "Wrong selection"
-msgstr "Неправильний вибір"
+#. TRANSLATORS: error message when the localization update request fails
+#: src/components/l10n/l10n-form/Form.tsx:93
+#: src/components/users/authentication-form/Form.tsx:262
+msgid "Changes could not be applied"
+msgstr "Зміни не вдалося застосувати"
 
-#: src/components/l10n/L10nPage.tsx:112
-msgid "Time zone"
-msgstr "Часовий пояс"
+#. TRANSLATORS: hint for the keyboard filter input
+#: src/components/l10n/l10n-form/KeyboardField.tsx:59
+msgid "Filter by description or keymap code"
+msgstr "Фільтр за описом або кодом клавішної карти"
 
-#: src/components/l10n/LocaleSelection.tsx:43
+#. TRANSLATORS: shown when no keyboard layout matches the filter
+#: src/components/l10n/l10n-form/KeyboardField.tsx:61
+msgid "None of the keymaps match the filter."
+msgstr "Жодна з карт не відповідає фільтру."
+
+#. TRANSLATORS: hint for the language filter input
+#: src/components/l10n/l10n-form/LanguageField.tsx:62
 msgid "Filter by language, territory or locale code"
 msgstr "Фільтр за мовою, територією або кодом локалі"
 
-#: src/components/l10n/LocaleSelection.tsx:72
+#. TRANSLATORS: shown when no language matches the filter
+#: src/components/l10n/l10n-form/LanguageField.tsx:64
 msgid "None of the locales match the filter."
 msgstr "Жодна з локалей не відповідає фільтру."
 
-#: src/components/l10n/TimezoneSelection.tsx:78
+#. TRANSLATORS: label for the time zone selector
+#: src/components/l10n/l10n-form/TimezoneField.tsx:89
+msgid "Time zone"
+msgstr "Часовий пояс"
+
+#. TRANSLATORS: hint for the time zone filter input
+#: src/components/l10n/l10n-form/TimezoneField.tsx:91
 msgid "Filter by territory, time zone code or UTC offset"
 msgstr "Фільтр за територією, коду часового пояса або зміщенню UTC"
 
-#: src/components/l10n/TimezoneSelection.tsx:116
+#. TRANSLATORS: shown when no time zone matches the filter
+#: src/components/l10n/l10n-form/TimezoneField.tsx:93
 msgid "None of the time zones match the filter."
 msgstr "Жоден з часових поясів не відповідає фільтру."
+
+#. TRANSLATORS: validation error shown when a required selection is missing
+#: src/components/l10n/l10n-form/validations.ts:33
+#: src/components/storage/logical-volume-form/validations.ts:92
+#: src/components/storage/partition-form/validations.ts:76
+#, fuzzy
+msgid "Value is required"
+msgstr "Ім'я вводити обов'язково"
 
 #. TRANSLATORS: First breadcrumb item, linking back to the main page
 #. where the whole installation can be reviewed.
@@ -2517,6 +2522,10 @@ msgstr "Змінити на %s"
 #, javascript-format
 msgid "Select %s"
 msgstr "Вибір %s"
+
+#: src/components/product/ProductSelectionPage.tsx:289
+msgid "Select"
+msgstr "Вибір"
 
 #: src/components/product/ProductSelectionPage.tsx:340
 msgid "Select a product to continue."
@@ -5155,12 +5164,6 @@ msgstr "Поточна %s"
 msgid "Enter a name"
 msgstr "Введіть ім'я"
 
-#: src/components/storage/logical-volume-form/validations.ts:92
-#: src/components/storage/partition-form/validations.ts:76
-#, fuzzy
-msgid "Value is required"
-msgstr "Ім'я вводити обов'язково"
-
 #: src/components/storage/logical-volume-form/validations.ts:93
 #: src/components/storage/logical-volume-form/validations.ts:102
 #: src/components/storage/logical-volume-form/validations.ts:108
@@ -6281,10 +6284,6 @@ msgstr ""
 "Вставте або введіть один або кілька відкритих ключів SSH (наприклад, ssh-"
 "ed25519 AAAA...)"
 
-#: src/components/users/authentication-form/Form.tsx:262
-msgid "Changes could not be applied"
-msgstr "Зміни не вдалося застосувати"
-
 #. TRANSLATORS: description for no authentication mode
 #: src/components/users/authentication-form/RootAuthFields.tsx:72
 msgid "Root login is off"
@@ -6402,6 +6401,12 @@ msgstr "Активуємо"
 #: src/utils/network.ts:62
 msgid "Deactivating"
 msgstr "Деактивуємо"
+
+#~ msgid "Search"
+#~ msgstr "Пошук"
+
+#~ msgid "Wrong selection"
+#~ msgstr "Неправильний вибір"
 
 #~ msgid "Show technical details (English only)"
 #~ msgstr "Показати технічні деталі (лише англійською мовою)"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-22 20:08+0000\n"
+"POT-Creation-Date: 2026-06-25 09:54+0000\n"
 "PO-Revision-Date: 2026-06-13 02:12+0000\n"
 "Last-Translator: Arif Budiman <arifpedia@gmail.com>\n"
 "Language-Team: Indonesian <https://l10n.opensuse.org/projects/agama/agama-"
@@ -274,9 +274,10 @@ msgid "Installation in progress"
 msgstr "Instalasi sedang berlangsung"
 
 #. TRANSLATORS: label for the button that opens the display language settings
+#. TRANSLATORS: label for the system language selector
 #: src/components/core/InstallerL10nOptions.tsx:74
 #: src/components/core/InstallerL10nOptions.tsx:480
-#: src/components/l10n/L10nPage.tsx:86
+#: src/components/l10n/l10n-form/LanguageField.tsx:60
 msgid "Language"
 msgstr "Bahasa"
 
@@ -329,12 +330,14 @@ msgid "Use these same settings for the selected product"
 msgstr "Gunakan pengaturan yang sama untuk produk yang dipilih"
 
 #. TRANSLATORS: label for the form submit button.
+#. TRANSLATORS: button to save the localization settings
 #. TRANSLATORS: button to save system settings changes
 #: src/components/core/InstallerL10nOptions.tsx:350
 #: src/components/core/InstallerL10nOptions.tsx:396
 #: src/components/core/InstallerL10nOptions.tsx:410
 #: src/components/core/InstallerL10nOptions.tsx:453
 #: src/components/core/Page.tsx:290 src/components/form/SubmitButton.tsx:49
+#: src/components/l10n/l10n-form/Form.tsx:110
 #: src/components/storage/dasd/FormatActionHandler.tsx:95
 #: src/components/storage/dasd/FormatActionHandler.tsx:122
 #: src/components/storage/formattable-device-form/Form.tsx:180
@@ -361,8 +364,9 @@ msgid "Change keyboard"
 msgstr "Ganti papan ketik"
 
 #. TRANSLATORS: label for the button that opens the keyboard layout settings
+#. TRANSLATORS: label for the keyboard layout selector
 #: src/components/core/InstallerL10nOptions.tsx:496
-#: src/components/l10n/L10nPage.tsx:100
+#: src/components/l10n/l10n-form/KeyboardField.tsx:57
 msgid "Keyboard"
 msgstr "Papan ketik"
 
@@ -394,10 +398,6 @@ msgstr "Tampilkan konfigurasi"
 #: src/components/core/IssuesAlert.tsx:39
 msgid "You must fix these issues"
 msgstr "Anda harus memperbaiki masalah-masalah ini"
-
-#: src/components/core/ListSearch.tsx:58
-msgid "Search"
-msgstr "Cari"
 
 #: src/components/core/LoginPage.tsx:38
 msgid "Could not log in"
@@ -868,8 +868,6 @@ msgid "Using %s keyboard layout"
 msgstr "Menggunakan tata letak keyboard %s"
 
 #: src/components/form/PreservedValueField.tsx:64
-#: src/components/l10n/L10nPage.tsx:89 src/components/l10n/L10nPage.tsx:103
-#: src/components/l10n/L10nPage.tsx:115
 #: src/components/product/ProductSelectionPage.tsx:289
 #: src/components/storage/BootSection.tsx:97
 #: src/components/storage/DeviceSelectorModal.tsx:292
@@ -878,24 +876,7 @@ msgstr "Menggunakan tata letak keyboard %s"
 msgid "Change"
 msgstr "Ubah"
 
-#: src/components/l10n/KeyboardSelection.tsx:46
-msgid "Filter by description or keymap code"
-msgstr "Filter berdasarkan deskripsi atau kode peta kunci"
-
-#: src/components/l10n/KeyboardSelection.tsx:75
-msgid "None of the keymaps match the filter."
-msgstr "Tidak ada keymap yang cocok dengan filter."
-
-#: src/components/l10n/KeyboardSelection.tsx:96
-#: src/components/l10n/L10nPage.tsx:89 src/components/l10n/L10nPage.tsx:103
-#: src/components/l10n/L10nPage.tsx:115
-#: src/components/l10n/LocaleSelection.tsx:92
-#: src/components/l10n/TimezoneSelection.tsx:140
-#: src/components/product/ProductSelectionPage.tsx:289
-msgid "Select"
-msgstr "Pilih"
-
-#: src/components/l10n/L10nPage.tsx:38
+#: src/components/l10n/L10nPage.tsx:39
 msgid ""
 "These are the settings for the product to install. The installer language "
 "and keyboard layout can be adjusted using the [language and keyboard] option "
@@ -905,7 +886,7 @@ msgstr ""
 "tata letak keyboard dapat disesuaikan menggunakan opsi [bahasa dan keyboard] "
 "di bilah atas."
 
-#: src/components/l10n/L10nPage.tsx:44
+#: src/components/l10n/L10nPage.tsx:45
 msgid ""
 "These are the settings for the product to install. The installer language "
 "can be adjusted using the [language] option at the top bar."
@@ -913,30 +894,54 @@ msgstr ""
 "Ini adalah pengaturan untuk produk yang akan diinstal. Bahasa instalasi "
 "dapat disesuaikan menggunakan opsi [bahasa] di bilah atas."
 
-#: src/components/l10n/L10nPage.tsx:94 src/components/l10n/L10nPage.tsx:107
-#: src/components/l10n/L10nPage.tsx:120
-msgid "Wrong selection"
-msgstr "Pilihan salah"
+#. TRANSLATORS: error message when the localization update request fails
+#: src/components/l10n/l10n-form/Form.tsx:93
+#: src/components/users/authentication-form/Form.tsx:262
+msgid "Changes could not be applied"
+msgstr "Perubahan tidak dapat diterapkan"
 
-#: src/components/l10n/L10nPage.tsx:112
-msgid "Time zone"
-msgstr "Zona waktu"
+#. TRANSLATORS: hint for the keyboard filter input
+#: src/components/l10n/l10n-form/KeyboardField.tsx:59
+msgid "Filter by description or keymap code"
+msgstr "Filter berdasarkan deskripsi atau kode peta kunci"
 
-#: src/components/l10n/LocaleSelection.tsx:43
+#. TRANSLATORS: shown when no keyboard layout matches the filter
+#: src/components/l10n/l10n-form/KeyboardField.tsx:61
+msgid "None of the keymaps match the filter."
+msgstr "Tidak ada keymap yang cocok dengan filter."
+
+#. TRANSLATORS: hint for the language filter input
+#: src/components/l10n/l10n-form/LanguageField.tsx:62
 msgid "Filter by language, territory or locale code"
 msgstr "Memfilter berdasarkan bahasa, wilayah, atau kode lokal"
 
-#: src/components/l10n/LocaleSelection.tsx:72
+#. TRANSLATORS: shown when no language matches the filter
+#: src/components/l10n/l10n-form/LanguageField.tsx:64
 msgid "None of the locales match the filter."
 msgstr "Tidak ada lokasi yang cocok dengan filter."
 
-#: src/components/l10n/TimezoneSelection.tsx:78
+#. TRANSLATORS: label for the time zone selector
+#: src/components/l10n/l10n-form/TimezoneField.tsx:89
+msgid "Time zone"
+msgstr "Zona waktu"
+
+#. TRANSLATORS: hint for the time zone filter input
+#: src/components/l10n/l10n-form/TimezoneField.tsx:91
 msgid "Filter by territory, time zone code or UTC offset"
 msgstr "Memfilter berdasarkan wilayah, kode zona waktu, atau offset UTC"
 
-#: src/components/l10n/TimezoneSelection.tsx:116
+#. TRANSLATORS: shown when no time zone matches the filter
+#: src/components/l10n/l10n-form/TimezoneField.tsx:93
 msgid "None of the time zones match the filter."
 msgstr "Tidak ada zona waktu yang cocok dengan filter."
+
+#. TRANSLATORS: validation error shown when a required selection is missing
+#: src/components/l10n/l10n-form/validations.ts:33
+#: src/components/storage/logical-volume-form/validations.ts:92
+#: src/components/storage/partition-form/validations.ts:76
+#, fuzzy
+msgid "Value is required"
+msgstr "Nama wajib diisi"
 
 #. TRANSLATORS: First breadcrumb item, linking back to the main page
 #. where the whole installation can be reviewed.
@@ -2505,6 +2510,10 @@ msgstr "Ubah ke %s"
 #, javascript-format
 msgid "Select %s"
 msgstr "Pilih %s"
+
+#: src/components/product/ProductSelectionPage.tsx:289
+msgid "Select"
+msgstr "Pilih"
 
 #: src/components/product/ProductSelectionPage.tsx:340
 msgid "Select a product to continue."
@@ -5081,12 +5090,6 @@ msgstr "Saat ini %s"
 msgid "Enter a name"
 msgstr "Masukkan nama"
 
-#: src/components/storage/logical-volume-form/validations.ts:92
-#: src/components/storage/partition-form/validations.ts:76
-#, fuzzy
-msgid "Value is required"
-msgstr "Nama wajib diisi"
-
 #: src/components/storage/logical-volume-form/validations.ts:93
 #: src/components/storage/logical-volume-form/validations.ts:102
 #: src/components/storage/logical-volume-form/validations.ts:108
@@ -6198,10 +6201,6 @@ msgstr ""
 "Tempel atau masukkan satu atau lebih kunci publik SSH (misalnya ssh-ed25519 "
 "AAAA...)"
 
-#: src/components/users/authentication-form/Form.tsx:262
-msgid "Changes could not be applied"
-msgstr "Perubahan tidak dapat diterapkan"
-
 #. TRANSLATORS: description for no authentication mode
 #: src/components/users/authentication-form/RootAuthFields.tsx:72
 msgid "Root login is off"
@@ -6319,6 +6318,12 @@ msgstr "Mengaktifkan"
 #: src/utils/network.ts:62
 msgid "Deactivating"
 msgstr "Menonaktifkan"
+
+#~ msgid "Search"
+#~ msgstr "Cari"
+
+#~ msgid "Wrong selection"
+#~ msgstr "Pilihan salah"
 
 #~ msgid "Show technical details (English only)"
 #~ msgstr "Tampilkan detail teknis (hanya Inggris)"

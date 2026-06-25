@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-22 20:08+0000\n"
+"POT-Creation-Date: 2026-06-25 09:54+0000\n"
 "PO-Revision-Date: 2026-06-16 07:12+0000\n"
 "Last-Translator: Luna  Jernberg <bittin@opensuse.org>\n"
 "Language-Team: Swedish <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -273,9 +273,10 @@ msgid "Installation in progress"
 msgstr "Installation pågår"
 
 #. TRANSLATORS: label for the button that opens the display language settings
+#. TRANSLATORS: label for the system language selector
 #: src/components/core/InstallerL10nOptions.tsx:74
 #: src/components/core/InstallerL10nOptions.tsx:480
-#: src/components/l10n/L10nPage.tsx:86
+#: src/components/l10n/l10n-form/LanguageField.tsx:60
 msgid "Language"
 msgstr "Språk"
 
@@ -328,12 +329,14 @@ msgid "Use these same settings for the selected product"
 msgstr "Använd samma inställningar för den valda produkten"
 
 #. TRANSLATORS: label for the form submit button.
+#. TRANSLATORS: button to save the localization settings
 #. TRANSLATORS: button to save system settings changes
 #: src/components/core/InstallerL10nOptions.tsx:350
 #: src/components/core/InstallerL10nOptions.tsx:396
 #: src/components/core/InstallerL10nOptions.tsx:410
 #: src/components/core/InstallerL10nOptions.tsx:453
 #: src/components/core/Page.tsx:290 src/components/form/SubmitButton.tsx:49
+#: src/components/l10n/l10n-form/Form.tsx:110
 #: src/components/storage/dasd/FormatActionHandler.tsx:95
 #: src/components/storage/dasd/FormatActionHandler.tsx:122
 #: src/components/storage/formattable-device-form/Form.tsx:180
@@ -360,8 +363,9 @@ msgid "Change keyboard"
 msgstr "Ändra tangentbordslayout"
 
 #. TRANSLATORS: label for the button that opens the keyboard layout settings
+#. TRANSLATORS: label for the keyboard layout selector
 #: src/components/core/InstallerL10nOptions.tsx:496
-#: src/components/l10n/L10nPage.tsx:100
+#: src/components/l10n/l10n-form/KeyboardField.tsx:57
 msgid "Keyboard"
 msgstr "Tangentbord"
 
@@ -393,10 +397,6 @@ msgstr "Visa konfiguration"
 #: src/components/core/IssuesAlert.tsx:39
 msgid "You must fix these issues"
 msgstr "Du måste åtgärda dessa problem"
-
-#: src/components/core/ListSearch.tsx:58
-msgid "Search"
-msgstr "Sök"
 
 #: src/components/core/LoginPage.tsx:38
 msgid "Could not log in"
@@ -861,8 +861,6 @@ msgid "Using %s keyboard layout"
 msgstr "Använder %s tangentbordslayout"
 
 #: src/components/form/PreservedValueField.tsx:64
-#: src/components/l10n/L10nPage.tsx:89 src/components/l10n/L10nPage.tsx:103
-#: src/components/l10n/L10nPage.tsx:115
 #: src/components/product/ProductSelectionPage.tsx:289
 #: src/components/storage/BootSection.tsx:97
 #: src/components/storage/DeviceSelectorModal.tsx:292
@@ -871,24 +869,7 @@ msgstr "Använder %s tangentbordslayout"
 msgid "Change"
 msgstr "Ändra"
 
-#: src/components/l10n/KeyboardSelection.tsx:46
-msgid "Filter by description or keymap code"
-msgstr "Filtrera efter beskrivning eller tangentbordskod"
-
-#: src/components/l10n/KeyboardSelection.tsx:75
-msgid "None of the keymaps match the filter."
-msgstr "Ingen av tangentmapparna matchar filtret."
-
-#: src/components/l10n/KeyboardSelection.tsx:96
-#: src/components/l10n/L10nPage.tsx:89 src/components/l10n/L10nPage.tsx:103
-#: src/components/l10n/L10nPage.tsx:115
-#: src/components/l10n/LocaleSelection.tsx:92
-#: src/components/l10n/TimezoneSelection.tsx:140
-#: src/components/product/ProductSelectionPage.tsx:289
-msgid "Select"
-msgstr "Välj"
-
-#: src/components/l10n/L10nPage.tsx:38
+#: src/components/l10n/L10nPage.tsx:39
 msgid ""
 "These are the settings for the product to install. The installer language "
 "and keyboard layout can be adjusted using the [language and keyboard] option "
@@ -898,7 +879,7 @@ msgstr ""
 "Installationsprogrammets språk och tangentbordslayout kan justeras med hjälp "
 "av alternativet [språk och tangentbord] i det övre fältet."
 
-#: src/components/l10n/L10nPage.tsx:44
+#: src/components/l10n/L10nPage.tsx:45
 msgid ""
 "These are the settings for the product to install. The installer language "
 "can be adjusted using the [language] option at the top bar."
@@ -907,30 +888,53 @@ msgstr ""
 "Installationsprogrammets språk kan justeras med hjälp av alternativet "
 "[språk] i det övre fältet."
 
-#: src/components/l10n/L10nPage.tsx:94 src/components/l10n/L10nPage.tsx:107
-#: src/components/l10n/L10nPage.tsx:120
-msgid "Wrong selection"
-msgstr "Fel val"
+#. TRANSLATORS: error message when the localization update request fails
+#: src/components/l10n/l10n-form/Form.tsx:93
+#: src/components/users/authentication-form/Form.tsx:262
+msgid "Changes could not be applied"
+msgstr "Ändringar kunde inte tillämpas"
 
-#: src/components/l10n/L10nPage.tsx:112
-msgid "Time zone"
-msgstr "Tidszon"
+#. TRANSLATORS: hint for the keyboard filter input
+#: src/components/l10n/l10n-form/KeyboardField.tsx:59
+msgid "Filter by description or keymap code"
+msgstr "Filtrera efter beskrivning eller tangentbordskod"
 
-#: src/components/l10n/LocaleSelection.tsx:43
+#. TRANSLATORS: shown when no keyboard layout matches the filter
+#: src/components/l10n/l10n-form/KeyboardField.tsx:61
+msgid "None of the keymaps match the filter."
+msgstr "Ingen av tangentmapparna matchar filtret."
+
+#. TRANSLATORS: hint for the language filter input
+#: src/components/l10n/l10n-form/LanguageField.tsx:62
 msgid "Filter by language, territory or locale code"
 msgstr "Filtrera efter språk, territorium eller lokalkod"
 
-#: src/components/l10n/LocaleSelection.tsx:72
+#. TRANSLATORS: shown when no language matches the filter
+#: src/components/l10n/l10n-form/LanguageField.tsx:64
 msgid "None of the locales match the filter."
 msgstr "Inget av lokalerna matchar filtret."
 
-#: src/components/l10n/TimezoneSelection.tsx:78
+#. TRANSLATORS: label for the time zone selector
+#: src/components/l10n/l10n-form/TimezoneField.tsx:89
+msgid "Time zone"
+msgstr "Tidszon"
+
+#. TRANSLATORS: hint for the time zone filter input
+#: src/components/l10n/l10n-form/TimezoneField.tsx:91
 msgid "Filter by territory, time zone code or UTC offset"
 msgstr "Filtrera efter område, tidszonskod eller UTC-förskjutning"
 
-#: src/components/l10n/TimezoneSelection.tsx:116
+#. TRANSLATORS: shown when no time zone matches the filter
+#: src/components/l10n/l10n-form/TimezoneField.tsx:93
 msgid "None of the time zones match the filter."
 msgstr "Inget av tidszonerna matchar filtret."
+
+#. TRANSLATORS: validation error shown when a required selection is missing
+#: src/components/l10n/l10n-form/validations.ts:33
+#: src/components/storage/logical-volume-form/validations.ts:92
+#: src/components/storage/partition-form/validations.ts:76
+msgid "Value is required"
+msgstr "Värde krävs"
 
 #. TRANSLATORS: First breadcrumb item, linking back to the main page
 #. where the whole installation can be reviewed.
@@ -2503,6 +2507,10 @@ msgstr "Ändra till %s"
 #, javascript-format
 msgid "Select %s"
 msgstr "Välj %s"
+
+#: src/components/product/ProductSelectionPage.tsx:289
+msgid "Select"
+msgstr "Välj"
 
 #: src/components/product/ProductSelectionPage.tsx:340
 msgid "Select a product to continue."
@@ -5097,11 +5105,6 @@ msgstr "Använd nuvarande %s"
 msgid "Enter a name"
 msgstr "Ange ett namn"
 
-#: src/components/storage/logical-volume-form/validations.ts:92
-#: src/components/storage/partition-form/validations.ts:76
-msgid "Value is required"
-msgstr "Värde krävs"
-
 #: src/components/storage/logical-volume-form/validations.ts:93
 #: src/components/storage/logical-volume-form/validations.ts:102
 #: src/components/storage/logical-volume-form/validations.ts:108
@@ -6193,10 +6196,6 @@ msgstr ""
 "Klistra in eller ange en eller flera publika SSH-nycklar (t.ex. ssh-ed25519 "
 "AAAA...)"
 
-#: src/components/users/authentication-form/Form.tsx:262
-msgid "Changes could not be applied"
-msgstr "Ändringar kunde inte tillämpas"
-
 #. TRANSLATORS: description for no authentication mode
 #: src/components/users/authentication-form/RootAuthFields.tsx:72
 msgid "Root login is off"
@@ -6315,6 +6314,12 @@ msgstr "Aktiverar"
 #: src/utils/network.ts:62
 msgid "Deactivating"
 msgstr "Inaktiverar"
+
+#~ msgid "Search"
+#~ msgstr "Sök"
+
+#~ msgid "Wrong selection"
+#~ msgstr "Fel val"
 
 #~ msgid "Show technical details (English only)"
 #~ msgstr "Visa tekniska detaljer (Engelska endast)"
