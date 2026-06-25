@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-22 20:08+0000\n"
+"POT-Creation-Date: 2026-06-25 09:54+0000\n"
 "PO-Revision-Date: 2026-06-25 09:55+0000\n"
 "Last-Translator: Grace Yu <grace.yu@excel-gits.com>\n"
 "Language-Team: Chinese (Taiwan) <https://l10n.opensuse.org/projects/agama/"
@@ -263,9 +263,10 @@ msgid "Installation in progress"
 msgstr "安裝進行中"
 
 #. TRANSLATORS: label for the button that opens the display language settings
+#. TRANSLATORS: label for the system language selector
 #: src/components/core/InstallerL10nOptions.tsx:74
 #: src/components/core/InstallerL10nOptions.tsx:480
-#: src/components/l10n/L10nPage.tsx:86
+#: src/components/l10n/l10n-form/LanguageField.tsx:60
 msgid "Language"
 msgstr "語言"
 
@@ -315,12 +316,14 @@ msgid "Use these same settings for the selected product"
 msgstr "對所選產品使用同樣的設定"
 
 #. TRANSLATORS: label for the form submit button.
+#. TRANSLATORS: button to save the localization settings
 #. TRANSLATORS: button to save system settings changes
 #: src/components/core/InstallerL10nOptions.tsx:350
 #: src/components/core/InstallerL10nOptions.tsx:396
 #: src/components/core/InstallerL10nOptions.tsx:410
 #: src/components/core/InstallerL10nOptions.tsx:453
 #: src/components/core/Page.tsx:290 src/components/form/SubmitButton.tsx:49
+#: src/components/l10n/l10n-form/Form.tsx:110
 #: src/components/storage/dasd/FormatActionHandler.tsx:95
 #: src/components/storage/dasd/FormatActionHandler.tsx:122
 #: src/components/storage/formattable-device-form/Form.tsx:180
@@ -347,8 +350,9 @@ msgid "Change keyboard"
 msgstr "變更鍵盤"
 
 #. TRANSLATORS: label for the button that opens the keyboard layout settings
+#. TRANSLATORS: label for the keyboard layout selector
 #: src/components/core/InstallerL10nOptions.tsx:496
-#: src/components/l10n/L10nPage.tsx:100
+#: src/components/l10n/l10n-form/KeyboardField.tsx:57
 msgid "Keyboard"
 msgstr "鍵盤"
 
@@ -380,10 +384,6 @@ msgstr "顯示組態"
 #: src/components/core/IssuesAlert.tsx:39
 msgid "You must fix these issues"
 msgstr "您必須修復以下問題"
-
-#: src/components/core/ListSearch.tsx:58
-msgid "Search"
-msgstr "搜尋"
 
 #: src/components/core/LoginPage.tsx:38
 msgid "Could not log in"
@@ -843,8 +843,6 @@ msgid "Using %s keyboard layout"
 msgstr "使用 %s 鍵盤配置"
 
 #: src/components/form/PreservedValueField.tsx:64
-#: src/components/l10n/L10nPage.tsx:89 src/components/l10n/L10nPage.tsx:103
-#: src/components/l10n/L10nPage.tsx:115
 #: src/components/product/ProductSelectionPage.tsx:289
 #: src/components/storage/BootSection.tsx:97
 #: src/components/storage/DeviceSelectorModal.tsx:292
@@ -853,24 +851,7 @@ msgstr "使用 %s 鍵盤配置"
 msgid "Change"
 msgstr "變更"
 
-#: src/components/l10n/KeyboardSelection.tsx:46
-msgid "Filter by description or keymap code"
-msgstr "依描述或鍵盤對應代碼過濾"
-
-#: src/components/l10n/KeyboardSelection.tsx:75
-msgid "None of the keymaps match the filter."
-msgstr "沒有與過濾條件相符的鍵盤對應。"
-
-#: src/components/l10n/KeyboardSelection.tsx:96
-#: src/components/l10n/L10nPage.tsx:89 src/components/l10n/L10nPage.tsx:103
-#: src/components/l10n/L10nPage.tsx:115
-#: src/components/l10n/LocaleSelection.tsx:92
-#: src/components/l10n/TimezoneSelection.tsx:140
-#: src/components/product/ProductSelectionPage.tsx:289
-msgid "Select"
-msgstr "選取"
-
-#: src/components/l10n/L10nPage.tsx:38
+#: src/components/l10n/L10nPage.tsx:39
 msgid ""
 "These are the settings for the product to install. The installer language "
 "and keyboard layout can be adjusted using the [language and keyboard] option "
@@ -879,36 +860,60 @@ msgstr ""
 "以下為待安裝產品的相關設定。您可以透過頂部列的[語言和鍵盤]選項，調整安裝程式"
 "語言和鍵盤配置。"
 
-#: src/components/l10n/L10nPage.tsx:44
+#: src/components/l10n/L10nPage.tsx:45
 msgid ""
 "These are the settings for the product to install. The installer language "
 "can be adjusted using the [language] option at the top bar."
-msgstr "以下為待安裝產品的相關設定。您可以透過頂部列的[語言]選項，調整安裝程式語言。"
+msgstr ""
+"以下為待安裝產品的相關設定。您可以透過頂部列的[語言]選項，調整安裝程式語言。"
 
-#: src/components/l10n/L10nPage.tsx:94 src/components/l10n/L10nPage.tsx:107
-#: src/components/l10n/L10nPage.tsx:120
-msgid "Wrong selection"
-msgstr "選擇錯誤"
+#. TRANSLATORS: error message when the localization update request fails
+#: src/components/l10n/l10n-form/Form.tsx:93
+#: src/components/users/authentication-form/Form.tsx:262
+msgid "Changes could not be applied"
+msgstr "無法套用變更"
 
-#: src/components/l10n/L10nPage.tsx:112
-msgid "Time zone"
-msgstr "時區"
+#. TRANSLATORS: hint for the keyboard filter input
+#: src/components/l10n/l10n-form/KeyboardField.tsx:59
+msgid "Filter by description or keymap code"
+msgstr "依描述或鍵盤對應代碼過濾"
 
-#: src/components/l10n/LocaleSelection.tsx:43
+#. TRANSLATORS: shown when no keyboard layout matches the filter
+#: src/components/l10n/l10n-form/KeyboardField.tsx:61
+msgid "None of the keymaps match the filter."
+msgstr "沒有與過濾條件相符的鍵盤對應。"
+
+#. TRANSLATORS: hint for the language filter input
+#: src/components/l10n/l10n-form/LanguageField.tsx:62
 msgid "Filter by language, territory or locale code"
 msgstr "依語言、地區或地區設定代碼過濾"
 
-#: src/components/l10n/LocaleSelection.tsx:72
+#. TRANSLATORS: shown when no language matches the filter
+#: src/components/l10n/l10n-form/LanguageField.tsx:64
 msgid "None of the locales match the filter."
 msgstr "沒有與過濾條件相符的地區設定。"
 
-#: src/components/l10n/TimezoneSelection.tsx:78
+#. TRANSLATORS: label for the time zone selector
+#: src/components/l10n/l10n-form/TimezoneField.tsx:89
+msgid "Time zone"
+msgstr "時區"
+
+#. TRANSLATORS: hint for the time zone filter input
+#: src/components/l10n/l10n-form/TimezoneField.tsx:91
 msgid "Filter by territory, time zone code or UTC offset"
 msgstr "依地區、時區代碼或 UTC 偏移過濾"
 
-#: src/components/l10n/TimezoneSelection.tsx:116
+#. TRANSLATORS: shown when no time zone matches the filter
+#: src/components/l10n/l10n-form/TimezoneField.tsx:93
 msgid "None of the time zones match the filter."
 msgstr "沒有與過濾條件相符的時區。"
+
+#. TRANSLATORS: validation error shown when a required selection is missing
+#: src/components/l10n/l10n-form/validations.ts:33
+#: src/components/storage/logical-volume-form/validations.ts:92
+#: src/components/storage/partition-form/validations.ts:76
+msgid "Value is required"
+msgstr "必須指定值"
 
 #. TRANSLATORS: First breadcrumb item, linking back to the main page
 #. where the whole installation can be reviewed.
@@ -2452,6 +2457,10 @@ msgstr "變更為 %s"
 msgid "Select %s"
 msgstr "選取 %s"
 
+#: src/components/product/ProductSelectionPage.tsx:289
+msgid "Select"
+msgstr "選取"
+
 #: src/components/product/ProductSelectionPage.tsx:340
 msgid "Select a product to continue."
 msgstr "請選取產品以繼續操作。"
@@ -3161,8 +3170,8 @@ msgid ""
 "Partitions to boot will be set up if needed at the installation disk. "
 "Currently %1$s, based on the location of the %2$s file system."
 msgstr ""
-"將視需要根據 %2$s 檔案系統所在位置，在安裝磁碟 (目前為 %1$s) 中設定開機分割區"
-"。"
+"將視需要根據 %2$s 檔案系統所在位置，在安裝磁碟 (目前為 %1$s) 中設定開機分割"
+"區。"
 
 #: src/components/storage/BootSection.tsx:66
 msgid "No partitions will be automatically configured for booting."
@@ -4899,11 +4908,6 @@ msgstr "使用目前的 %s"
 msgid "Enter a name"
 msgstr "輸入名稱"
 
-#: src/components/storage/logical-volume-form/validations.ts:92
-#: src/components/storage/partition-form/validations.ts:76
-msgid "Value is required"
-msgstr "必須指定值"
-
 #: src/components/storage/logical-volume-form/validations.ts:93
 #: src/components/storage/logical-volume-form/validations.ts:102
 #: src/components/storage/logical-volume-form/validations.ts:108
@@ -5132,28 +5136,32 @@ msgstr "可動態調整，考量因素包括系統中的 RAM 容量以及 Btrfs 
 msgid ""
 "Can be dynamically adjusted based on the amount of RAM in the system and the "
 "presence of a separate file system for %s."
-msgstr "可動態調整，考量因素包括系統中的 RAM 容量以及 %s 是否存在單獨的檔案系統。"
+msgstr ""
+"可動態調整，考量因素包括系統中的 RAM 容量以及 %s 是否存在單獨的檔案系統。"
 
 #: src/components/storage/shared/SizeFields.tsx:182
 #, javascript-format
 msgid ""
 "Can be dynamically adjusted based on the amount of RAM in the system and the "
 "presence of separate file systems for %s."
-msgstr "可動態調整，考量因素包括系統中的 RAM 容量以及 %s 是否存在單獨的檔案系統。"
+msgstr ""
+"可動態調整，考量因素包括系統中的 RAM 容量以及 %s 是否存在單獨的檔案系統。"
 
 #: src/components/storage/shared/SizeFields.tsx:193
 #, javascript-format
 msgid ""
 "Can be dynamically adjusted based on the usage of Btrfs snapshots and the "
 "presence of a separate file system for %s."
-msgstr "可動態調整，考量因素包括 Btrfs 快照的使用情況以及 %s 是否存在單獨的檔案系統。"
+msgstr ""
+"可動態調整，考量因素包括 Btrfs 快照的使用情況以及 %s 是否存在單獨的檔案系統。"
 
 #: src/components/storage/shared/SizeFields.tsx:203
 #, javascript-format
 msgid ""
 "Can be dynamically adjusted based on the usage of Btrfs snapshots and the "
 "presence of separate file systems for %s."
-msgstr "可動態調整，考量因素包括 Btrfs 快照的使用情況以及 %s 是否存在單獨的檔案系統。"
+msgstr ""
+"可動態調整，考量因素包括 Btrfs 快照的使用情況以及 %s 是否存在單獨的檔案系統。"
 
 #: src/components/storage/shared/SizeFields.tsx:209
 msgid "Can be dynamically adjusted based on the usage of Btrfs snapshots."
@@ -5902,7 +5910,8 @@ msgstr "管理員帳戶"
 msgid ""
 "Sets up a main login account. It can run administrator commands using [sudo] "
 "but is separate from the root account."
-msgstr "設定主登入帳戶。該帳戶可透過 [sudo] 執行管理員指令，但與 root 帳戶相互獨立。"
+msgstr ""
+"設定主登入帳戶。該帳戶可透過 [sudo] 執行管理員指令，但與 root 帳戶相互獨立。"
 
 #. TRANSLATORS: checkbox label to enable first user definition
 #: src/components/users/authentication-form/FirstUserFields.tsx:97
@@ -5937,10 +5946,6 @@ msgstr "SSH 金鑰無效"
 #: src/components/users/authentication-form/RootAuthFields.tsx:169
 msgid "Paste or enter one or more public SSH keys (e.g. ssh-ed25519 AAAA...)"
 msgstr "粘貼或輸入一或多個 SSH 公用金鑰 (範例：ssh-ed25519 AAAA...)"
-
-#: src/components/users/authentication-form/Form.tsx:262
-msgid "Changes could not be applied"
-msgstr "無法套用變更"
 
 #. TRANSLATORS: description for no authentication mode
 #: src/components/users/authentication-form/RootAuthFields.tsx:72
@@ -6058,6 +6063,12 @@ msgstr "啟用中"
 #: src/utils/network.ts:62
 msgid "Deactivating"
 msgstr "停用中"
+
+#~ msgid "Search"
+#~ msgstr "搜尋"
+
+#~ msgid "Wrong selection"
+#~ msgstr "選擇錯誤"
 
 #, fuzzy
 #~ msgid "Show technical details (English only)"

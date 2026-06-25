@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-22 20:08+0000\n"
+"POT-Creation-Date: 2026-06-25 09:54+0000\n"
 "PO-Revision-Date: 2026-06-24 14:12+0000\n"
 "Last-Translator: Davide Aiello <davide.aiello@novilingulists.com>\n"
 "Language-Team: Italian <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -278,9 +278,10 @@ msgid "Installation in progress"
 msgstr "Installazione in corso"
 
 #. TRANSLATORS: label for the button that opens the display language settings
+#. TRANSLATORS: label for the system language selector
 #: src/components/core/InstallerL10nOptions.tsx:74
 #: src/components/core/InstallerL10nOptions.tsx:480
-#: src/components/l10n/L10nPage.tsx:86
+#: src/components/l10n/l10n-form/LanguageField.tsx:60
 msgid "Language"
 msgstr "Lingua"
 
@@ -334,12 +335,14 @@ msgid "Use these same settings for the selected product"
 msgstr "Usa le stesse impostazioni per il prodotto selezionato"
 
 #. TRANSLATORS: label for the form submit button.
+#. TRANSLATORS: button to save the localization settings
 #. TRANSLATORS: button to save system settings changes
 #: src/components/core/InstallerL10nOptions.tsx:350
 #: src/components/core/InstallerL10nOptions.tsx:396
 #: src/components/core/InstallerL10nOptions.tsx:410
 #: src/components/core/InstallerL10nOptions.tsx:453
 #: src/components/core/Page.tsx:290 src/components/form/SubmitButton.tsx:49
+#: src/components/l10n/l10n-form/Form.tsx:110
 #: src/components/storage/dasd/FormatActionHandler.tsx:95
 #: src/components/storage/dasd/FormatActionHandler.tsx:122
 #: src/components/storage/formattable-device-form/Form.tsx:180
@@ -366,8 +369,9 @@ msgid "Change keyboard"
 msgstr "Cambia tastiera"
 
 #. TRANSLATORS: label for the button that opens the keyboard layout settings
+#. TRANSLATORS: label for the keyboard layout selector
 #: src/components/core/InstallerL10nOptions.tsx:496
-#: src/components/l10n/L10nPage.tsx:100
+#: src/components/l10n/l10n-form/KeyboardField.tsx:57
 msgid "Keyboard"
 msgstr "Tastiera"
 
@@ -399,10 +403,6 @@ msgstr "Mostra configurazione"
 #: src/components/core/IssuesAlert.tsx:39
 msgid "You must fix these issues"
 msgstr "Questi problemi devono essere risolti"
-
-#: src/components/core/ListSearch.tsx:58
-msgid "Search"
-msgstr "Ricerca"
 
 #: src/components/core/LoginPage.tsx:38
 msgid "Could not log in"
@@ -868,8 +868,6 @@ msgid "Using %s keyboard layout"
 msgstr "È in uso il layout di tastiera %s"
 
 #: src/components/form/PreservedValueField.tsx:64
-#: src/components/l10n/L10nPage.tsx:89 src/components/l10n/L10nPage.tsx:103
-#: src/components/l10n/L10nPage.tsx:115
 #: src/components/product/ProductSelectionPage.tsx:289
 #: src/components/storage/BootSection.tsx:97
 #: src/components/storage/DeviceSelectorModal.tsx:292
@@ -878,24 +876,7 @@ msgstr "È in uso il layout di tastiera %s"
 msgid "Change"
 msgstr "Cambia"
 
-#: src/components/l10n/KeyboardSelection.tsx:46
-msgid "Filter by description or keymap code"
-msgstr "Filtro per descrizione or keymap"
-
-#: src/components/l10n/KeyboardSelection.tsx:75
-msgid "None of the keymaps match the filter."
-msgstr "Nessuno dei keymap corrisponde al filtro."
-
-#: src/components/l10n/KeyboardSelection.tsx:96
-#: src/components/l10n/L10nPage.tsx:89 src/components/l10n/L10nPage.tsx:103
-#: src/components/l10n/L10nPage.tsx:115
-#: src/components/l10n/LocaleSelection.tsx:92
-#: src/components/l10n/TimezoneSelection.tsx:140
-#: src/components/product/ProductSelectionPage.tsx:289
-msgid "Select"
-msgstr "Selezionare"
-
-#: src/components/l10n/L10nPage.tsx:38
+#: src/components/l10n/L10nPage.tsx:39
 msgid ""
 "These are the settings for the product to install. The installer language "
 "and keyboard layout can be adjusted using the [language and keyboard] option "
@@ -905,7 +886,7 @@ msgstr ""
 "modificare la lingua e il layout di tastiera del programma di installazione "
 "utilizzando l'opzione [lingua e tastiera] nella barra superiore."
 
-#: src/components/l10n/L10nPage.tsx:44
+#: src/components/l10n/L10nPage.tsx:45
 msgid ""
 "These are the settings for the product to install. The installer language "
 "can be adjusted using the [language] option at the top bar."
@@ -914,30 +895,53 @@ msgstr ""
 "modificare la lingua del programma di installazione utilizzando l'opzione "
 "[lingua] nella barra superiore."
 
-#: src/components/l10n/L10nPage.tsx:94 src/components/l10n/L10nPage.tsx:107
-#: src/components/l10n/L10nPage.tsx:120
-msgid "Wrong selection"
-msgstr "Selezione errata"
+#. TRANSLATORS: error message when the localization update request fails
+#: src/components/l10n/l10n-form/Form.tsx:93
+#: src/components/users/authentication-form/Form.tsx:262
+msgid "Changes could not be applied"
+msgstr "Impossibile applicare le modifiche"
 
-#: src/components/l10n/L10nPage.tsx:112
-msgid "Time zone"
-msgstr "Fuso orario"
+#. TRANSLATORS: hint for the keyboard filter input
+#: src/components/l10n/l10n-form/KeyboardField.tsx:59
+msgid "Filter by description or keymap code"
+msgstr "Filtro per descrizione or keymap"
 
-#: src/components/l10n/LocaleSelection.tsx:43
+#. TRANSLATORS: shown when no keyboard layout matches the filter
+#: src/components/l10n/l10n-form/KeyboardField.tsx:61
+msgid "None of the keymaps match the filter."
+msgstr "Nessuno dei keymap corrisponde al filtro."
+
+#. TRANSLATORS: hint for the language filter input
+#: src/components/l10n/l10n-form/LanguageField.tsx:62
 msgid "Filter by language, territory or locale code"
 msgstr "Filtra per lingua, territorio o locale di zona"
 
-#: src/components/l10n/LocaleSelection.tsx:72
+#. TRANSLATORS: shown when no language matches the filter
+#: src/components/l10n/l10n-form/LanguageField.tsx:64
 msgid "None of the locales match the filter."
 msgstr "Nessuna localizzazione corrisponde al filtro."
 
-#: src/components/l10n/TimezoneSelection.tsx:78
+#. TRANSLATORS: label for the time zone selector
+#: src/components/l10n/l10n-form/TimezoneField.tsx:89
+msgid "Time zone"
+msgstr "Fuso orario"
+
+#. TRANSLATORS: hint for the time zone filter input
+#: src/components/l10n/l10n-form/TimezoneField.tsx:91
 msgid "Filter by territory, time zone code or UTC offset"
 msgstr "Filtra per territorio, codice di fuso orario o differenza da UTC"
 
-#: src/components/l10n/TimezoneSelection.tsx:116
+#. TRANSLATORS: shown when no time zone matches the filter
+#: src/components/l10n/l10n-form/TimezoneField.tsx:93
 msgid "None of the time zones match the filter."
 msgstr "Nessuno dei fusi orari corrisponde al filtro."
+
+#. TRANSLATORS: validation error shown when a required selection is missing
+#: src/components/l10n/l10n-form/validations.ts:33
+#: src/components/storage/logical-volume-form/validations.ts:92
+#: src/components/storage/partition-form/validations.ts:76
+msgid "Value is required"
+msgstr "Il valore è obbligatorio"
 
 #. TRANSLATORS: First breadcrumb item, linking back to the main page
 #. where the whole installation can be reviewed.
@@ -1554,7 +1558,8 @@ msgstr "Scelto per indirizzo MAC"
 #. hardware address, persisting across interface renames.
 #: src/components/network/connection-form/BindingModeSelector.tsx:51
 msgid "Identify the connection device by its physical address"
-msgstr "Identifica il dispositivo della connessione con il suo indirizzo fisico"
+msgstr ""
+"Identifica il dispositivo della connessione con il suo indirizzo fisico"
 
 #. TRANSLATORS: label for the device binding dropdown.
 #: src/components/network/connection-form/BindingModeSelector.tsx:68
@@ -1965,7 +1970,8 @@ msgstr "Il tempo di saluto deve essere compreso tra 1 e 10 secondi"
 
 #: src/components/network/connection-form/fields.ts:419
 msgid "Max message age must be between 6 and 40 seconds"
-msgstr "La durata massima del messaggio deve essere compresa tra 6 e 40 secondi"
+msgstr ""
+"La durata massima del messaggio deve essere compresa tra 6 e 40 secondi"
 
 #: src/components/network/connection-form/fields.ts:437
 msgid "VLAN ID is required"
@@ -2162,7 +2168,8 @@ msgstr "Attendere il completamento delle operazioni in corso."
 
 #: src/components/overview/OverviewPage.tsx:209
 msgid "Fix invalid settings before starting the installation."
-msgstr "Correggere le impostazioni non valide prima di avviare l'installazione."
+msgstr ""
+"Correggere le impostazioni non valide prima di avviare l'installazione."
 
 #: src/components/overview/RegistrationSummary.tsx:36
 msgid "Registered without a code"
@@ -2394,7 +2401,8 @@ msgstr "Chiave pubblica fornita"
 #. TRANSLATORS: warning when root account has no SSH public key configured
 #: src/components/overview/UsersSummary.tsx:139
 msgid "No public key provided, SSH login might be restricted"
-msgstr "Nessuna chiave pubblica fornita, l'accesso SSH potrebbe essere limitato"
+msgstr ""
+"Nessuna chiave pubblica fornita, l'accesso SSH potrebbe essere limitato"
 
 #. TRANSLATORS: section title for user authentication configuration
 #: src/components/overview/UsersSummary.tsx:156
@@ -2514,6 +2522,10 @@ msgstr "Passa a %s"
 msgid "Select %s"
 msgstr "Seleziona %s"
 
+#: src/components/product/ProductSelectionPage.tsx:289
+msgid "Select"
+msgstr "Selezionare"
+
 #: src/components/product/ProductSelectionPage.tsx:340
 msgid "Select a product to continue."
 msgstr "Seleziona un prodotto per continuare."
@@ -2590,7 +2602,8 @@ msgstr "Confermare la selezione del prodotto."
 msgid "Select a product and confirm your choice."
 msgid_plural "Select a product and confirm your choice at the end of the list."
 msgstr[0] "Selezionare un prodotto e confermare la scelta."
-msgstr[1] "Selezionare un prodotto e confermare la scelta alla fine dell'elenco."
+msgstr[1] ""
+"Selezionare un prodotto e confermare la scelta alla fine dell'elenco."
 
 #: src/components/product/ProductSelectionPage.tsx:742
 msgid ""
@@ -5120,11 +5133,6 @@ msgstr "Usa %s corrente"
 msgid "Enter a name"
 msgstr "Immettere un nome"
 
-#: src/components/storage/logical-volume-form/validations.ts:92
-#: src/components/storage/partition-form/validations.ts:76
-msgid "Value is required"
-msgstr "Il valore è obbligatorio"
-
 #: src/components/storage/logical-volume-form/validations.ts:93
 #: src/components/storage/logical-volume-form/validations.ts:102
 #: src/components/storage/logical-volume-form/validations.ts:108
@@ -6222,10 +6230,6 @@ msgstr ""
 "Incollare o inserire una o più chiavi SSH pubbliche (ad esempio ssh-ed25519 "
 "AAAA...)"
 
-#: src/components/users/authentication-form/Form.tsx:262
-msgid "Changes could not be applied"
-msgstr "Impossibile applicare le modifiche"
-
 #. TRANSLATORS: description for no authentication mode
 #: src/components/users/authentication-form/RootAuthFields.tsx:72
 msgid "Root login is off"
@@ -6343,6 +6347,12 @@ msgstr "Attivazione"
 #: src/utils/network.ts:62
 msgid "Deactivating"
 msgstr "Disattivazione"
+
+#~ msgid "Search"
+#~ msgstr "Ricerca"
+
+#~ msgid "Wrong selection"
+#~ msgstr "Selezione errata"
 
 #, fuzzy
 #~ msgid "Show technical details (English only)"

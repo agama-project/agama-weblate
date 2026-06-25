@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-22 20:08+0000\n"
+"POT-Creation-Date: 2026-06-25 09:54+0000\n"
 "PO-Revision-Date: 2026-06-16 02:12+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -274,9 +274,10 @@ msgid "Installation in progress"
 msgstr "インストールを行っています"
 
 #. TRANSLATORS: label for the button that opens the display language settings
+#. TRANSLATORS: label for the system language selector
 #: src/components/core/InstallerL10nOptions.tsx:74
 #: src/components/core/InstallerL10nOptions.tsx:480
-#: src/components/l10n/L10nPage.tsx:86
+#: src/components/l10n/l10n-form/LanguageField.tsx:60
 msgid "Language"
 msgstr "言語"
 
@@ -329,12 +330,14 @@ msgid "Use these same settings for the selected product"
 msgstr "選択した製品に対しても同じ設定を使用する"
 
 #. TRANSLATORS: label for the form submit button.
+#. TRANSLATORS: button to save the localization settings
 #. TRANSLATORS: button to save system settings changes
 #: src/components/core/InstallerL10nOptions.tsx:350
 #: src/components/core/InstallerL10nOptions.tsx:396
 #: src/components/core/InstallerL10nOptions.tsx:410
 #: src/components/core/InstallerL10nOptions.tsx:453
 #: src/components/core/Page.tsx:290 src/components/form/SubmitButton.tsx:49
+#: src/components/l10n/l10n-form/Form.tsx:110
 #: src/components/storage/dasd/FormatActionHandler.tsx:95
 #: src/components/storage/dasd/FormatActionHandler.tsx:122
 #: src/components/storage/formattable-device-form/Form.tsx:180
@@ -361,8 +364,9 @@ msgid "Change keyboard"
 msgstr "キーボードの変更"
 
 #. TRANSLATORS: label for the button that opens the keyboard layout settings
+#. TRANSLATORS: label for the keyboard layout selector
 #: src/components/core/InstallerL10nOptions.tsx:496
-#: src/components/l10n/L10nPage.tsx:100
+#: src/components/l10n/l10n-form/KeyboardField.tsx:57
 msgid "Keyboard"
 msgstr "キーボード"
 
@@ -394,10 +398,6 @@ msgstr "設定の表示"
 #: src/components/core/IssuesAlert.tsx:39
 msgid "You must fix these issues"
 msgstr "これらの問題を解決しなければいけません"
-
-#: src/components/core/ListSearch.tsx:58
-msgid "Search"
-msgstr "検索"
 
 #: src/components/core/LoginPage.tsx:38
 msgid "Could not log in"
@@ -863,8 +863,6 @@ msgid "Using %s keyboard layout"
 msgstr "%s キーボードレイアウトを使用しています"
 
 #: src/components/form/PreservedValueField.tsx:64
-#: src/components/l10n/L10nPage.tsx:89 src/components/l10n/L10nPage.tsx:103
-#: src/components/l10n/L10nPage.tsx:115
 #: src/components/product/ProductSelectionPage.tsx:289
 #: src/components/storage/BootSection.tsx:97
 #: src/components/storage/DeviceSelectorModal.tsx:292
@@ -873,24 +871,7 @@ msgstr "%s キーボードレイアウトを使用しています"
 msgid "Change"
 msgstr "変更"
 
-#: src/components/l10n/KeyboardSelection.tsx:46
-msgid "Filter by description or keymap code"
-msgstr "説明またはキーマップコードでフィルタ"
-
-#: src/components/l10n/KeyboardSelection.tsx:75
-msgid "None of the keymaps match the filter."
-msgstr "フィルタに該当するキーマップがありません。"
-
-#: src/components/l10n/KeyboardSelection.tsx:96
-#: src/components/l10n/L10nPage.tsx:89 src/components/l10n/L10nPage.tsx:103
-#: src/components/l10n/L10nPage.tsx:115
-#: src/components/l10n/LocaleSelection.tsx:92
-#: src/components/l10n/TimezoneSelection.tsx:140
-#: src/components/product/ProductSelectionPage.tsx:289
-msgid "Select"
-msgstr "選択"
-
-#: src/components/l10n/L10nPage.tsx:38
+#: src/components/l10n/L10nPage.tsx:39
 msgid ""
 "These are the settings for the product to install. The installer language "
 "and keyboard layout can be adjusted using the [language and keyboard] option "
@@ -899,7 +880,7 @@ msgstr ""
 "こちらはインストールする製品に対する設定です。インストーラの言語やキーボード"
 "レイアウトの設定は、上部バーの [言語とキーボード] オプションで変更できます。"
 
-#: src/components/l10n/L10nPage.tsx:44
+#: src/components/l10n/L10nPage.tsx:45
 msgid ""
 "These are the settings for the product to install. The installer language "
 "can be adjusted using the [language] option at the top bar."
@@ -907,30 +888,53 @@ msgstr ""
 "こちらはインストールする製品に対する設定です。インストーラの言語の設定は、上"
 "部バーの [言語] オプションで変更できます。"
 
-#: src/components/l10n/L10nPage.tsx:94 src/components/l10n/L10nPage.tsx:107
-#: src/components/l10n/L10nPage.tsx:120
-msgid "Wrong selection"
-msgstr "誤った選択"
+#. TRANSLATORS: error message when the localization update request fails
+#: src/components/l10n/l10n-form/Form.tsx:93
+#: src/components/users/authentication-form/Form.tsx:262
+msgid "Changes could not be applied"
+msgstr "変更を適用することができませんでした"
 
-#: src/components/l10n/L10nPage.tsx:112
-msgid "Time zone"
-msgstr "タイムゾーン"
+#. TRANSLATORS: hint for the keyboard filter input
+#: src/components/l10n/l10n-form/KeyboardField.tsx:59
+msgid "Filter by description or keymap code"
+msgstr "説明またはキーマップコードでフィルタ"
 
-#: src/components/l10n/LocaleSelection.tsx:43
+#. TRANSLATORS: shown when no keyboard layout matches the filter
+#: src/components/l10n/l10n-form/KeyboardField.tsx:61
+msgid "None of the keymaps match the filter."
+msgstr "フィルタに該当するキーマップがありません。"
+
+#. TRANSLATORS: hint for the language filter input
+#: src/components/l10n/l10n-form/LanguageField.tsx:62
 msgid "Filter by language, territory or locale code"
 msgstr "言語／地域／ロケールコードでフィルタ"
 
-#: src/components/l10n/LocaleSelection.tsx:72
+#. TRANSLATORS: shown when no language matches the filter
+#: src/components/l10n/l10n-form/LanguageField.tsx:64
 msgid "None of the locales match the filter."
 msgstr "フィルタに該当するロケールがありません。"
 
-#: src/components/l10n/TimezoneSelection.tsx:78
+#. TRANSLATORS: label for the time zone selector
+#: src/components/l10n/l10n-form/TimezoneField.tsx:89
+msgid "Time zone"
+msgstr "タイムゾーン"
+
+#. TRANSLATORS: hint for the time zone filter input
+#: src/components/l10n/l10n-form/TimezoneField.tsx:91
 msgid "Filter by territory, time zone code or UTC offset"
 msgstr "地域／タイムゾーンコード／UTC オフセット値でフィルタ"
 
-#: src/components/l10n/TimezoneSelection.tsx:116
+#. TRANSLATORS: shown when no time zone matches the filter
+#: src/components/l10n/l10n-form/TimezoneField.tsx:93
 msgid "None of the time zones match the filter."
 msgstr "フィルタに該当するタイムゾーンがありません。"
+
+#. TRANSLATORS: validation error shown when a required selection is missing
+#: src/components/l10n/l10n-form/validations.ts:33
+#: src/components/storage/logical-volume-form/validations.ts:92
+#: src/components/storage/partition-form/validations.ts:76
+msgid "Value is required"
+msgstr "値を指定する必要があります"
 
 #. TRANSLATORS: First breadcrumb item, linking back to the main page
 #. where the whole installation can be reviewed.
@@ -2492,6 +2496,10 @@ msgstr "%s に変更"
 #, javascript-format
 msgid "Select %s"
 msgstr "%s を選択"
+
+#: src/components/product/ProductSelectionPage.tsx:289
+msgid "Select"
+msgstr "選択"
 
 #: src/components/product/ProductSelectionPage.tsx:340
 msgid "Select a product to continue."
@@ -5042,11 +5050,6 @@ msgstr "現在の %s を使用"
 msgid "Enter a name"
 msgstr "名前を入力してください"
 
-#: src/components/storage/logical-volume-form/validations.ts:92
-#: src/components/storage/partition-form/validations.ts:76
-msgid "Value is required"
-msgstr "値を指定する必要があります"
-
 #: src/components/storage/logical-volume-form/validations.ts:93
 #: src/components/storage/logical-volume-form/validations.ts:102
 #: src/components/storage/logical-volume-form/validations.ts:108
@@ -6144,10 +6147,6 @@ msgstr ""
 "1 つまたは複数の SSH 公開鍵 (例: ssh-ed25519 AAAA...) を貼り付けるか入力して"
 "ください"
 
-#: src/components/users/authentication-form/Form.tsx:262
-msgid "Changes could not be applied"
-msgstr "変更を適用することができませんでした"
-
 #. TRANSLATORS: description for no authentication mode
 #: src/components/users/authentication-form/RootAuthFields.tsx:72
 msgid "Root login is off"
@@ -6266,6 +6265,12 @@ msgstr "有効化中"
 #: src/utils/network.ts:62
 msgid "Deactivating"
 msgstr "無効化中"
+
+#~ msgid "Search"
+#~ msgstr "検索"
+
+#~ msgid "Wrong selection"
+#~ msgstr "誤った選択"
 
 #~ msgid "Show technical details (English only)"
 #~ msgstr "技術詳細を表示する (英語のみ)"
