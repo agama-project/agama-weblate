@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-25 07:52+0000\n"
+"POT-Creation-Date: 2026-06-26 10:48+0000\n"
 "PO-Revision-Date: 2026-06-25 09:13+0000\n"
 "Last-Translator: Grace Yu <grace.yu@excel-gits.com>\n"
 "Language-Team: Chinese (China) <https://l10n.opensuse.org/projects/agama/"
@@ -35,6 +35,7 @@ msgstr "跳过并手动配置"
 
 #. TRANSLATORS: {0} is a URL
 #: agama-autoinstall/src/scripts.rs:135
+#, rust-format
 msgid ""
 "It was not possible to load the script from {0}. Do you want to try again?"
 msgstr "无法从 {0} 加载脚本。是否要重试？"
@@ -62,8 +63,8 @@ msgid ""
 msgstr ""
 "除非您以 root 用户身份执行此程序，否则大多数操作均需通过 Agama 服务器进行身份"
 "验证。您可通过 \"auth login\" 命令指定 root 口令完成登录。通过身份验证后，服"
-"务器将返回 JSON Web Token (JWT)，该令牌会存储到系统中，用于后续请求的身份验证"
-"。\n"
+"务器将返回 JSON Web Token (JWT)，该令牌会存储到系统中，用于后续请求的身份验"
+"证。\n"
 "\n"
 "如果您在本地以 root 用户身份运行此程序，可跳过身份验证步骤，程序会自动使用 /"
 "run/agama/token 路径下的主令牌。只有 root 用户可访问该文件。\n"
@@ -103,6 +104,7 @@ msgstr "请输入 root 口令："
 
 #. TRANSLATORS: {0} is a host name
 #: agama-cli/src/auth.rs:179
+#, rust-format
 msgid "Not authenticated in {0}"
 msgstr "未在 {0} 中通过身份验证"
 
@@ -157,9 +159,9 @@ msgid ""
 "autoinstallation profiles. If you want to convert an AutoYaST profile, use "
 "\"agama config generate\"."
 msgstr ""
-"此命令通过 AutoYaST 支持的架构（例如 device://）下载文件，可用于下载其他脚本"
-"、配置文件等内容，也可下载 Agama 自动安装配置文件。如果您需要转换 AutoYaST 配"
-"置文件，请执行 \"agama config generate\" 命令。"
+"此命令通过 AutoYaST 支持的架构（例如 device://）下载文件，可用于下载其他脚"
+"本、配置文件等内容，也可下载 Agama 自动安装配置文件。如果您需要转换 AutoYaST "
+"配置文件，请执行 \"agama config generate\" 命令。"
 
 #. TRANSLATORS: CLI help for: agama download <URL>
 #: agama-cli/src/commands.rs:94
@@ -748,7 +750,8 @@ msgstr "安装程序正在准备安装提案。"
 msgid ""
 "There are unanswered questions. Use the \"agama monitor\" command or the web "
 "user interface to answer them:"
-msgstr "存在未答复的问询。请执行 \"agama monitor\" 命令或打开网页用户界面进行答复："
+msgstr ""
+"存在未答复的问询。请执行 \"agama monitor\" 命令或打开网页用户界面进行答复："
 
 #. TRANSLATORS: %s is replaced by the script name.
 #: agama-files/src/service.rs:184
@@ -936,6 +939,7 @@ msgstr "继续"
 
 #. TRANSLATORS: substituting: key ID, (key name), fingerprint
 #: agama-software/src/callbacks/security.rs:104
+#, rust-format
 msgid ""
 "The key {0} ({1}) with fingerprint {2} is unknown. Do you want to trust this "
 "key?"
@@ -945,7 +949,7 @@ msgstr "指纹为 {2} 的密钥 {0} ({1}) 未知。是否信任该密钥？"
 msgid "Skip"
 msgstr "跳过"
 
-#: agama-software/src/service.rs:304
+#: agama-software/src/service.rs:303
 msgid ""
 "Due to an internal error, it was not possible to create a software proposal."
 msgstr "由于出现内部错误，无法创建软件提案。"
