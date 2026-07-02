@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-30 15:10+0000\n"
+"POT-Creation-Date: 2026-07-02 08:44+0000\n"
 "PO-Revision-Date: 2026-06-25 09:13+0000\n"
 "Last-Translator: Grace Yu <grace.yu@excel-gits.com>\n"
 "Language-Team: Chinese (Taiwan) <https://l10n.opensuse.org/projects/agama/"
@@ -416,7 +416,7 @@ msgstr "登入表單"
 #. TRANSLATORS: authentication mode option
 #: src/components/core/LoginPage.tsx:91
 #: src/components/core/PasswordAndConfirmationInput.tsx:96
-#: src/components/network/WifiConnectionForm.tsx:177
+#: src/components/network/WifiConnectionForm.tsx:178
 #: src/components/questions/QuestionWithPassword.tsx:63
 #: src/components/storage/iscsi/DiscoverFormPage.tsx:210
 #: src/components/storage/iscsi/TargetLoginPage.tsx:237
@@ -445,7 +445,7 @@ msgstr "後退"
 #. TRANSLATORS: label for the form cancel button.
 #: src/components/core/Page.tsx:258 src/components/core/Popup.tsx:140
 #: src/components/form/CancelButton.tsx:47
-#: src/components/network/WifiConnectionForm.tsx:188
+#: src/components/network/WifiConnectionForm.tsx:189
 #: src/components/product/ProductSelectionPage.tsx:537
 #: src/components/storage/iscsi/DiscoverFormPage.tsx:252
 #: src/components/storage/iscsi/InitiatorFormPage.tsx:81
@@ -502,11 +502,11 @@ msgstr "正在載入資料..."
 
 #. TRANSLATORS: Message shown next to a spinner while the UI is being updated
 #. after an operation has completed.
-#: src/components/core/ProgressBackdrop.tsx:124
+#: src/components/core/ProgressBackdrop.tsx:126
 msgid "Refreshing data..."
 msgstr "正在重新整理資料..."
 
-#: src/components/core/ProgressBackdrop.tsx:177
+#: src/components/core/ProgressBackdrop.tsx:176
 #: src/components/core/ProgressStatusMonitor.tsx:74
 #, javascript-format
 msgid "(step %s of %s)"
@@ -518,24 +518,24 @@ msgid "Step %1$d of %2$d"
 msgstr "第 %1$d 步，共 %2$d 步"
 
 #: src/components/core/ProgressStatusMonitor.tsx:41
-#: src/components/overview/SoftwareSummary.tsx:160
-#: src/components/software/SoftwarePage.tsx:378
-#: src/components/software/patterns-form/Form.tsx:351
+#: src/components/overview/SoftwareSummary.tsx:164
+#: src/components/software/SoftwarePage.tsx:380
+#: src/components/software/patterns-form/Form.tsx:352
 #: src/routes/software.tsx:33
 msgid "Software"
 msgstr "軟體"
 
 #. TRANSLATORS: breadcrumb label for the storage configuration section.
 #: src/components/core/ProgressStatusMonitor.tsx:42
-#: src/components/overview/StorageSummary.tsx:190
+#: src/components/overview/StorageSummary.tsx:195
 #: src/components/storage/BootSelectionPage.tsx:183
 #: src/components/storage/DeviceSelectorPage.tsx:75
 #: src/components/storage/EncryptionSettingsPage.tsx:121
-#: src/components/storage/ISCSIPage.tsx:36
+#: src/components/storage/ISCSIPage.tsx:37
 #: src/components/storage/LvmPage.tsx:202
-#: src/components/storage/ProposalPage.tsx:323
+#: src/components/storage/ProposalPage.tsx:324
 #: src/components/storage/SpacePolicySelectionPage.tsx:121
-#: src/components/storage/dasd/DASDPage.tsx:70
+#: src/components/storage/dasd/DASDPage.tsx:72
 #: src/components/storage/formattable-device-form/Form.tsx:207
 #: src/components/storage/iscsi/DiscoverFormPage.tsx:268
 #: src/components/storage/iscsi/InitiatorFormPage.tsx:58
@@ -543,17 +543,17 @@ msgstr "軟體"
 #: src/components/storage/logical-volume-form/Form.tsx:269
 #: src/components/storage/partition-form/Form.tsx:287
 #: src/components/storage/zfcp/ZFCPControllersPage.tsx:190
-#: src/components/storage/zfcp/ZFCPPage.tsx:174 src/routes/storage.tsx:46
+#: src/components/storage/zfcp/ZFCPPage.tsx:176 src/routes/storage.tsx:46
 msgid "Storage"
 msgstr "儲存"
 
 #. TRANSLATORS: breadcrumb label for the network configuration section.
 #: src/components/core/ProgressStatusMonitor.tsx:43
-#: src/components/network/ConnectionDetails.tsx:95
-#: src/components/network/ConnectionPage.tsx:75
-#: src/components/network/NetworkPage.tsx:43
-#: src/components/network/WifiConnectionForm.tsx:142
-#: src/components/network/WifiConnectionForm.tsx:198
+#: src/components/network/ConnectionDetails.tsx:74
+#: src/components/network/ConnectionPage.tsx:76
+#: src/components/network/NetworkPage.tsx:44
+#: src/components/network/WifiConnectionForm.tsx:143
+#: src/components/network/WifiConnectionForm.tsx:199
 #: src/components/network/connection-form/Form.tsx:397
 #: src/components/overview/NetworkSummary.tsx:149 src/routes/network.tsx:35
 msgid "Network"
@@ -928,49 +928,41 @@ msgstr "安裝"
 msgid "Loading"
 msgstr "正在載入"
 
-#: src/components/network/ConnectionDetails.tsx:60
+#: src/components/network/ConnectionDetails.tsx:59
 msgid "Connection is available to all devices."
 msgstr "連接可用於所有裝置。"
 
 #. TRANSLATORS: %s will be replaced by a network device name, like eth0 or enp1s0
-#: src/components/network/ConnectionDetails.tsx:63
+#: src/components/network/ConnectionDetails.tsx:62
 #, javascript-format
 msgid "Connection is bound to device %s."
 msgstr "連接已結合至裝置 %s。"
 
 #. TRANSLATORS: %s will be replaced by MAC addrss, like 7C:D7:11:28:F5:40
-#: src/components/network/ConnectionDetails.tsx:66
+#: src/components/network/ConnectionDetails.tsx:65
 #, javascript-format
 msgid "Connection is bound to MAC address %s."
 msgstr "連接已結合至 MAC 位址 %s。"
 
-#: src/components/network/ConnectionDetails.tsx:73
-msgid "Binding"
-msgstr "正在結合"
-
-#: src/components/network/ConnectionDetails.tsx:81
-msgid "Edit binding settings"
-msgstr "編輯結合設定"
-
-#: src/components/network/ConnectionDetails.tsx:96
+#: src/components/network/ConnectionDetails.tsx:75
 msgid "Network details"
 msgstr "網路詳細資料"
 
-#: src/components/network/ConnectionDetails.tsx:98
+#: src/components/network/ConnectionDetails.tsx:77
 msgid "SSID"
 msgstr "SSID"
 
-#: src/components/network/ConnectionDetails.tsx:102
-#: src/components/network/WifiConnectionForm.tsx:153
-#: src/components/network/WifiConnectionForm.tsx:156
+#: src/components/network/ConnectionDetails.tsx:81
+#: src/components/network/WifiConnectionForm.tsx:154
+#: src/components/network/WifiConnectionForm.tsx:157
 msgid "Security"
 msgstr "安全性"
 
 #. TRANSLATORS: table header for a zFCP devices table.
 #. TRANSLATORS: table header for an iSCSI targets table
 #. TRANSLATORS: table header for a DASD devices table
-#: src/components/network/ConnectionDetails.tsx:108
-#: src/components/network/ConnectionDetails.tsx:249
+#: src/components/network/ConnectionDetails.tsx:87
+#: src/components/network/ConnectionDetails.tsx:228
 #: src/components/storage/dasd/DASDTable.tsx:312
 #: src/components/storage/dasd/DASDTable.tsx:536
 #: src/components/storage/iscsi/StatusFilter.tsx:77
@@ -980,232 +972,236 @@ msgstr "安全性"
 msgid "Status"
 msgstr "狀態"
 
-#: src/components/network/ConnectionDetails.tsx:112
+#: src/components/network/ConnectionDetails.tsx:91
 msgid "Signal strength"
 msgstr "訊號強度"
 
-#: src/components/network/ConnectionDetails.tsx:121
+#: src/components/network/ConnectionDetails.tsx:100
 msgid "Network not available"
 msgstr "網路不可用"
 
-#: src/components/network/ConnectionDetails.tsx:131
+#: src/components/network/ConnectionDetails.tsx:110
 msgid "Bond"
 msgstr "結合"
 
-#: src/components/network/ConnectionDetails.tsx:132
+#: src/components/network/ConnectionDetails.tsx:111
 msgid "Bond details"
 msgstr "結合詳細資料"
 
 #. TRANSLATORS: label for the bond mode field.
-#: src/components/network/ConnectionDetails.tsx:134
+#: src/components/network/ConnectionDetails.tsx:113
 #: src/components/network/connection-form/BondFields.tsx:86
 msgid "Bond mode"
 msgstr "結合模式"
 
-#: src/components/network/ConnectionDetails.tsx:136
-#: src/components/network/ConnectionDetails.tsx:142
-#: src/components/network/ConnectionDetails.tsx:150
-#: src/components/network/ConnectionDetails.tsx:199
-#: src/components/network/ConnectionDetails.tsx:222
-#: src/components/network/ConnectionDetails.tsx:228
-#: src/components/network/ConnectionDetails.tsx:261
-#: src/components/network/ConnectionDetails.tsx:276
-#: src/components/network/ConnectionDetails.tsx:286
-#: src/components/network/ConnectionDetails.tsx:296
-#: src/components/network/ConnectionDetails.tsx:306
-#: src/components/network/ConnectionDetails.tsx:383
-#: src/components/network/ConnectionDetails.tsx:386
-#: src/components/network/ConnectionDetails.tsx:396
-#: src/components/network/ConnectionDetails.tsx:408
-#: src/components/network/ConnectionDetails.tsx:420
-#: src/components/network/ConnectionDetails.tsx:430
+#: src/components/network/ConnectionDetails.tsx:115
+#: src/components/network/ConnectionDetails.tsx:121
+#: src/components/network/ConnectionDetails.tsx:129
+#: src/components/network/ConnectionDetails.tsx:178
+#: src/components/network/ConnectionDetails.tsx:201
+#: src/components/network/ConnectionDetails.tsx:207
+#: src/components/network/ConnectionDetails.tsx:240
+#: src/components/network/ConnectionDetails.tsx:255
+#: src/components/network/ConnectionDetails.tsx:265
+#: src/components/network/ConnectionDetails.tsx:275
+#: src/components/network/ConnectionDetails.tsx:285
+#: src/components/network/ConnectionDetails.tsx:366
+#: src/components/network/ConnectionDetails.tsx:369
+#: src/components/network/ConnectionDetails.tsx:379
+#: src/components/network/ConnectionDetails.tsx:391
+#: src/components/network/ConnectionDetails.tsx:403
+#: src/components/network/ConnectionDetails.tsx:413
 msgid "None set"
 msgstr "未進行任何設定"
 
 #. TRANSLATORS: label for the bond options field.
-#: src/components/network/ConnectionDetails.tsx:140
+#: src/components/network/ConnectionDetails.tsx:119
 #: src/components/network/connection-form/BondFields.tsx:97
 msgid "Bond options"
 msgstr "結合選項"
 
 #. TRANSLATORS: label for the bond ports field.
-#: src/components/network/ConnectionDetails.tsx:146
+#: src/components/network/ConnectionDetails.tsx:125
 #: src/components/network/connection-form/BondFields.tsx:111
 msgid "Bond ports"
 msgstr "結合埠"
 
-#: src/components/network/ConnectionDetails.tsx:164
+#: src/components/network/ConnectionDetails.tsx:143
 msgid "Bridge"
 msgstr "橋接"
 
-#: src/components/network/ConnectionDetails.tsx:165
+#: src/components/network/ConnectionDetails.tsx:144
 msgid "Bridge details"
 msgstr "橋接詳細資料"
 
-#: src/components/network/ConnectionDetails.tsx:167
+#: src/components/network/ConnectionDetails.tsx:146
 msgid "STP"
 msgstr "STP"
 
 #. TRANSLATORS: option label for disabling bridge STP.
 #. TRANSLATORS: authentication mode option
-#: src/components/network/ConnectionDetails.tsx:169
+#: src/components/network/ConnectionDetails.tsx:148
 #: src/components/network/connection-form/BridgeFields.tsx:54
 #: src/components/users/authentication-form/RootAuthFields.tsx:70
 msgid "Disabled"
 msgstr "已停用"
 
-#: src/components/network/ConnectionDetails.tsx:169
+#: src/components/network/ConnectionDetails.tsx:148
 msgid "Enabled"
 msgstr "已啟用"
 
 #. TRANSLATORS: label for the bridge priority field.
-#: src/components/network/ConnectionDetails.tsx:175
+#: src/components/network/ConnectionDetails.tsx:154
 #: src/components/network/connection-form/BridgeFields.tsx:145
 msgid "Priority"
 msgstr "優先程度"
 
 #. TRANSLATORS: label for the bridge forward delay field.
-#: src/components/network/ConnectionDetails.tsx:179
+#: src/components/network/ConnectionDetails.tsx:158
 #: src/components/network/connection-form/BridgeFields.tsx:174
 msgid "Forward delay"
 msgstr "轉遞延遲"
 
 #. TRANSLATORS: label for the bridge hello time field.
-#: src/components/network/ConnectionDetails.tsx:185
+#: src/components/network/ConnectionDetails.tsx:164
 #: src/components/network/connection-form/BridgeFields.tsx:194
 msgid "Hello time"
 msgstr "Hello 時間"
 
 #. TRANSLATORS: label for the bridge max message age field.
-#: src/components/network/ConnectionDetails.tsx:189
+#: src/components/network/ConnectionDetails.tsx:168
 #: src/components/network/connection-form/BridgeFields.tsx:214
 msgid "Max message age"
 msgstr "最大訊息留存時間"
 
 #. TRANSLATORS: label for the bridge ports field.
-#: src/components/network/ConnectionDetails.tsx:195
+#: src/components/network/ConnectionDetails.tsx:174
 #: src/components/network/connection-form/BridgeFields.tsx:106
 msgid "Bridge ports"
 msgstr "橋接埠"
 
-#: src/components/network/ConnectionDetails.tsx:213
+#: src/components/network/ConnectionDetails.tsx:192
 msgid "VLAN"
 msgstr "VLAN"
 
-#: src/components/network/ConnectionDetails.tsx:214
+#: src/components/network/ConnectionDetails.tsx:193
 msgid "VLAN details"
 msgstr "VLAN 詳細資料"
 
 #. TRANSLATORS: label for the VLAN ID field.
-#: src/components/network/ConnectionDetails.tsx:216
+#: src/components/network/ConnectionDetails.tsx:195
 #: src/components/network/connection-form/VlanFields.tsx:112
 msgid "VLAN ID"
 msgstr "VLAN ID"
 
 #. TRANSLATORS: label for the VLAN parent device field.
-#: src/components/network/ConnectionDetails.tsx:220
+#: src/components/network/ConnectionDetails.tsx:199
 #: src/components/network/connection-form/VlanFields.tsx:91
 msgid "Parent device"
 msgstr "父裝置"
 
-#: src/components/network/ConnectionDetails.tsx:226
+#: src/components/network/ConnectionDetails.tsx:205
 msgid "Protocol"
 msgstr "通訊協定"
 
-#: src/components/network/ConnectionDetails.tsx:240
+#: src/components/network/ConnectionDetails.tsx:219
 msgid "Device details"
 msgstr "裝置詳細資料"
 
 #. TRANSLATORS: table header for an iSCSI targets table
-#: src/components/network/ConnectionDetails.tsx:245
+#: src/components/network/ConnectionDetails.tsx:224
 #: src/components/storage/iscsi/TargetsTable.tsx:476
 msgid "Interface"
 msgstr "介面"
 
-#: src/components/network/ConnectionDetails.tsx:253
+#: src/components/network/ConnectionDetails.tsx:232
 msgid "MAC address"
 msgstr "MAC 位址"
 
-#: src/components/network/ConnectionDetails.tsx:257
-#: src/components/network/ConnectionDetails.tsx:392
+#: src/components/network/ConnectionDetails.tsx:236
+#: src/components/network/ConnectionDetails.tsx:375
 msgid "Gateway"
 msgstr "閘道"
 
-#: src/components/network/ConnectionDetails.tsx:272
-#: src/components/network/ConnectionDetails.tsx:404
+#: src/components/network/ConnectionDetails.tsx:251
+#: src/components/network/ConnectionDetails.tsx:387
 #: src/components/network/ConnectionsTable.tsx:196
 msgid "IP Addresses"
 msgstr "IP 位址"
 
-#: src/components/network/ConnectionDetails.tsx:282
-#: src/components/network/ConnectionDetails.tsx:416
+#: src/components/network/ConnectionDetails.tsx:261
+#: src/components/network/ConnectionDetails.tsx:399
 msgid "DNS"
 msgstr "DNS"
 
 #. TRANSLATORS: label for the DNS search domains field.
-#: src/components/network/ConnectionDetails.tsx:292
-#: src/components/network/ConnectionDetails.tsx:426
+#: src/components/network/ConnectionDetails.tsx:271
+#: src/components/network/ConnectionDetails.tsx:409
 #: src/components/network/connection-form/Form.tsx:318
 msgid "DNS search domains"
 msgstr "DNS 搜尋網域"
 
-#: src/components/network/ConnectionDetails.tsx:302
+#: src/components/network/ConnectionDetails.tsx:281
 msgid "Routes"
 msgstr "路由"
 
-#: src/components/network/ConnectionDetails.tsx:337
+#: src/components/network/ConnectionDetails.tsx:316
 msgid "Connected device"
 msgstr "已連接裝置"
 
-#: src/components/network/ConnectionDetails.tsx:337
+#: src/components/network/ConnectionDetails.tsx:316
 msgid "Connected devices"
 msgstr "已連接裝置"
 
-#: src/components/network/ConnectionDetails.tsx:340
+#: src/components/network/ConnectionDetails.tsx:319
 msgid "No device is currently using this connection."
 msgstr "目前沒有裝置在使用此連接。"
 
-#: src/components/network/ConnectionDetails.tsx:346
+#: src/components/network/ConnectionDetails.tsx:325
 msgid "Connected devices tabs"
 msgstr "已連接裝置索引標籤"
 
-#: src/components/network/ConnectionDetails.tsx:368
-#: src/components/storage/ProposalPage.tsx:204
+#: src/components/network/ConnectionDetails.tsx:347
+#: src/components/storage/ProposalPage.tsx:205
 msgid "Settings"
 msgstr "設定"
 
-#: src/components/network/ConnectionDetails.tsx:372
+#: src/components/network/ConnectionDetails.tsx:351
 msgid "Edit connection settings"
 msgstr "編輯連接設定"
 
+#: src/components/network/ConnectionDetails.tsx:358
+msgid "Binding"
+msgstr "正在結合"
+
 #. TRANSLATORS: label for NTP mode selector
 #. TRANSLATORS: label for hostname mode selector
-#: src/components/network/ConnectionDetails.tsx:379
+#: src/components/network/ConnectionDetails.tsx:362
 #: src/components/system/system-form/HostnameFields.tsx:110
 #: src/components/system/system-form/NtpFields.tsx:58
 msgid "Mode"
 msgstr "模式"
 
-#: src/components/network/ConnectionDetails.tsx:383
+#: src/components/network/ConnectionDetails.tsx:366
 msgid "IPv4"
 msgstr "IPv4"
 
-#: src/components/network/ConnectionDetails.tsx:386
+#: src/components/network/ConnectionDetails.tsx:369
 msgid "IPv6"
 msgstr "IPv6"
 
 #. TRANSLATORS: %s will be replaced with connection id
-#: src/components/network/ConnectionPage.tsx:42
+#: src/components/network/ConnectionPage.tsx:43
 #, javascript-format
 msgid "\"%s\" does not exist or is no longer available."
 msgstr "\"%s\" 不存在或不再可用。"
 
-#: src/components/network/ConnectionPage.tsx:47
+#: src/components/network/ConnectionPage.tsx:48
 msgid "Connection not found or lost"
 msgstr "未找到連接，或者連接中斷"
 
 #. TRANSLATORS: link text on the connection not found page.
-#: src/components/network/ConnectionPage.tsx:54
+#: src/components/network/ConnectionPage.tsx:55
 #: src/components/network/connection-form/Form.tsx:366
 msgid "Go to network page"
 msgstr "前往網路頁面"
@@ -1319,7 +1315,7 @@ msgstr "編輯連接"
 
 #. TRANSLATORS: button label, connect to a Wi-Fi network
 #: src/components/network/ConnectionsTable.tsx:367
-#: src/components/network/WifiConnectionForm.tsx:186
+#: src/components/network/WifiConnectionForm.tsx:187
 #: src/components/storage/iscsi/TargetsTable.tsx:236
 #: src/components/storage/iscsi/TargetsTable.tsx:247
 msgid "Connect"
@@ -1388,16 +1384,16 @@ msgid ""
 "the installed system."
 msgstr "此連接僅在安裝過程中使用，在安裝好的系統中不可用。"
 
-#: src/components/network/NetworkPage.tsx:50
+#: src/components/network/NetworkPage.tsx:51
 msgid ""
 "Manage available connections, connect to Wi-Fi, or add a new connection."
 msgstr "管理可用連接、連接至 Wi‑Fi 或新增新連接。"
 
-#: src/components/network/NetworkPage.tsx:58
+#: src/components/network/NetworkPage.tsx:59
 msgid "Add connection"
 msgstr "新增連接"
 
-#: src/components/network/NetworkPage.tsx:64
+#: src/components/network/NetworkPage.tsx:65
 msgid "Connect to Wi-Fi network"
 msgstr "連接至 Wi-Fi 網路"
 
@@ -1416,41 +1412,41 @@ msgstr ""
 
 #. TRANSLATORS: WiFi authentication mode
 #. TRANSLATORS: option label meaning the connection has no specific device binding.
-#: src/components/network/WifiConnectionForm.tsx:47
+#: src/components/network/WifiConnectionForm.tsx:48
 #: src/components/network/connection-form/BindingModeSelector.tsx:32
 msgid "None"
 msgstr "無"
 
 #. TRANSLATORS: WiFi authentication mode
-#: src/components/network/WifiConnectionForm.tsx:49
+#: src/components/network/WifiConnectionForm.tsx:50
 msgid "WPA & WPA2 Personal"
 msgstr "WPA 與 WPA2 個人模式"
 
-#: src/components/network/WifiConnectionForm.tsx:60
+#: src/components/network/WifiConnectionForm.tsx:61
 msgid "Not protected network"
 msgstr "不受保護的網路"
 
-#: src/components/network/WifiConnectionForm.tsx:62
+#: src/components/network/WifiConnectionForm.tsx:63
 msgid ""
 "You will connect to a public network without encryption. Your data may not "
 "be secure."
 msgstr "您將連接至未加密的公用網路。資料可能存在安全風險。"
 
-#: src/components/network/WifiConnectionForm.tsx:135
+#: src/components/network/WifiConnectionForm.tsx:136
 #: src/components/network/WifiNetworksList.tsx:177
 msgid "No Wi-Fi networks were found"
 msgstr "未找到 WiFi 網路"
 
-#: src/components/network/WifiConnectionForm.tsx:141
+#: src/components/network/WifiConnectionForm.tsx:142
 msgid "Wi-Fi connection form"
 msgstr "Wi-Fi 連接表單"
 
 #. TRANSLATORS: WiFi password
-#: src/components/network/WifiConnectionForm.tsx:173
+#: src/components/network/WifiConnectionForm.tsx:174
 msgid "WPA Password"
 msgstr "WPA 密碼"
 
-#: src/components/network/WifiConnectionForm.tsx:199
+#: src/components/network/WifiConnectionForm.tsx:200
 msgid "New Wi-Fi connection"
 msgstr "新增 Wi‑Fi 連接"
 
@@ -2144,7 +2140,7 @@ msgstr "已註冊"
 
 #. TRANSLATORS: count of patterns picked on top of the default selection.
 #. %d is a number.
-#: src/components/overview/SoftwareSummary.tsx:48
+#: src/components/overview/SoftwareSummary.tsx:49
 #, javascript-format
 msgid "Using %d additional pattern"
 msgid_plural "Using %d additional patterns"
@@ -2152,12 +2148,12 @@ msgstr[0] "正在使用 %d 個額外模式"
 
 #. TRANSLATORS: shown in the software summary when no desktop is selected.
 #. TRANSLATORS: alert title shown in the install confirmation dialog when no desktop is selected.
-#: src/components/overview/SoftwareSummary.tsx:71
+#: src/components/overview/SoftwareSummary.tsx:72
 #: src/components/software/NoDesktopAlert.tsx:51
 msgid "No desktop selected"
 msgstr "未選取桌面"
 
-#: src/components/overview/SoftwareSummary.tsx:87
+#: src/components/overview/SoftwareSummary.tsx:88
 #, javascript-format
 msgid "%d desktop selected"
 msgid_plural "%d desktops selected"
@@ -2165,11 +2161,11 @@ msgstr[0] "已選取 %d 個桌面"
 
 #. TRANSLATORS: shown in the software summary when the user hasn't picked
 #. anything on top of the product's default selection.
-#: src/components/overview/SoftwareSummary.tsx:97
+#: src/components/overview/SoftwareSummary.tsx:98
 msgid "Default selection"
 msgstr "預設選擇"
 
-#: src/components/overview/SoftwareSummary.tsx:132
+#: src/components/overview/SoftwareSummary.tsx:133
 #, javascript-format
 msgid "Includes %1$d additional pattern. Requires %2$s"
 msgid_plural "Includes %1$d additional patterns. Requires %2$s"
@@ -2177,64 +2173,64 @@ msgstr[0] "包含 %1$d 個額外模式，需要 %2$s"
 
 #. TRANSLATORS: total installation size shown in the software summary.
 #. %s is a human-readable disk size (e.g. "5.95 GiB").
-#: src/components/overview/SoftwareSummary.tsx:143
+#: src/components/overview/SoftwareSummary.tsx:144
 #, javascript-format
 msgid "Requires %s"
 msgstr "需要 %s"
 
-#: src/components/overview/SoftwareSummary.tsx:163
+#: src/components/overview/SoftwareSummary.tsx:167
 msgid "Invalid software selection"
 msgstr "軟體選擇無效"
 
-#: src/components/overview/StorageSummary.tsx:53
+#: src/components/overview/StorageSummary.tsx:54
 msgid "No device selected yet"
 msgstr "尚未選取裝置"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size,
 #. example: "/dev/sda, 20 GiB"
-#: src/components/overview/StorageSummary.tsx:60
+#: src/components/overview/StorageSummary.tsx:61
 #, javascript-format
 msgid "Use device %s"
 msgstr "使用裝置 %s"
 
-#: src/components/overview/StorageSummary.tsx:84
+#: src/components/overview/StorageSummary.tsx:85
 msgid "Use several devices"
 msgstr "使用多部裝置"
 
 #. TRANSLATORS: The text in [] is used as a link.
-#: src/components/overview/StorageSummary.tsx:90
+#: src/components/overview/StorageSummary.tsx:91
 msgid "Invalid [zFCP] settings"
 msgstr "[zFCP] 設定無效"
 
-#: src/components/overview/StorageSummary.tsx:110
+#: src/components/overview/StorageSummary.tsx:111
 msgid "There are no disks available for the installation"
 msgstr "沒有可用於安裝的磁碟"
 
-#: src/components/overview/StorageSummary.tsx:112
+#: src/components/overview/StorageSummary.tsx:113
 msgid "Invalid settings"
 msgstr "設定無效"
 
-#: src/components/overview/StorageSummary.tsx:116
+#: src/components/overview/StorageSummary.tsx:117
 msgid "Using an advanced storage configuration"
 msgstr "正在使用進階儲存組態"
 
-#: src/components/overview/StorageSummary.tsx:131
+#: src/components/overview/StorageSummary.tsx:132
 #: src/components/storage/ProposalFailedInfo.tsx:77
 msgid "Failed to calculate a storage layout"
 msgstr "無法計算儲存配置"
 
-#: src/components/overview/StorageSummary.tsx:134
+#: src/components/overview/StorageSummary.tsx:135
 msgid "No data loss is expected"
 msgstr "預期無資料遺失"
 
 #. TRANSLATORS: %s will be replaced by a formatted list of affected systems
 #. like "Windows and openSUSE Tumbleweed".
-#: src/components/overview/StorageSummary.tsx:141
+#: src/components/overview/StorageSummary.tsx:142
 #, javascript-format
 msgid "Potential data loss affecting at least %s"
 msgstr "至少 %s 存在資料遺失風險"
 
-#: src/components/overview/StorageSummary.tsx:146
+#: src/components/overview/StorageSummary.tsx:147
 msgid "Potential data loss"
 msgstr "存在資料遺失風險"
 
@@ -2306,45 +2302,45 @@ msgid "System"
 msgstr "系統"
 
 #. TRANSLATORS: %s is either "root" or a username like 'jdoe'
-#: src/components/overview/UsersSummary.tsx:63
+#: src/components/overview/UsersSummary.tsx:64
 #, javascript-format
 msgid "Public key provided for %s"
 msgstr "已為 %s 提供公用金鑰"
 
 #. TRANSLATORS: %s is either "root" or a username like 'jdoe'
-#: src/components/overview/UsersSummary.tsx:74
+#: src/components/overview/UsersSummary.tsx:75
 #, javascript-format
 msgid "Using %s account"
 msgstr "正在使用 %s 帳戶"
 
 #. TRANSLATORS: shown when no user accounts are configured yet
-#: src/components/overview/UsersSummary.tsx:87
+#: src/components/overview/UsersSummary.tsx:88
 #: src/components/storage/UnusedMenu.tsx:33
 msgid "Not configured yet"
 msgstr "尚未設定"
 
-#: src/components/overview/UsersSummary.tsx:96
+#: src/components/overview/UsersSummary.tsx:97
 #, javascript-format
 msgid "Using %s and %s accounts"
 msgstr "正在使用 %s 和 %s 帳戶"
 
 #. TRANSLATORS: both user accounts have SSH public keys configured
-#: src/components/overview/UsersSummary.tsx:126
+#: src/components/overview/UsersSummary.tsx:127
 msgid "Public key provided for both"
 msgstr "已為兩個帳戶提供公用金鑰"
 
 #. TRANSLATORS: SSH public key is configured for a single account
-#: src/components/overview/UsersSummary.tsx:129
+#: src/components/overview/UsersSummary.tsx:130
 msgid "Public key provided"
 msgstr "已提供公用金鑰"
 
 #. TRANSLATORS: warning when root account has no SSH public key configured
-#: src/components/overview/UsersSummary.tsx:139
+#: src/components/overview/UsersSummary.tsx:140
 msgid "No public key provided, SSH login might be restricted"
 msgstr "未提供公用金鑰，SSH 登入權限可能受限"
 
 #. TRANSLATORS: section title for user authentication configuration
-#: src/components/overview/UsersSummary.tsx:156
+#: src/components/overview/UsersSummary.tsx:157
 #: src/components/users/UsersPage.tsx:35 src/routes/users.tsx:32
 msgid "Authentication"
 msgstr "驗證"
@@ -2795,122 +2791,122 @@ msgid "The software selection could not be loaded."
 msgstr "無法載入軟體選擇。"
 
 #. TRANSLATORS: empty state title for a software section with nothing selected
-#: src/components/software/SoftwarePage.tsx:74
+#: src/components/software/SoftwarePage.tsx:75
 msgid "None selected"
 msgstr "未選取任何軟體"
 
-#: src/components/software/SoftwarePage.tsx:119
+#: src/components/software/SoftwarePage.tsx:120
 msgid "Read less"
 msgstr "收起"
 
 #. TRANSLATORS: accessible label for the collapse button; %s is the pattern name
-#: src/components/software/SoftwarePage.tsx:121
+#: src/components/software/SoftwarePage.tsx:122
 #, javascript-format
 msgid "Read less about %s"
 msgstr "收起 %s 的詳細內容"
 
-#: src/components/software/SoftwarePage.tsx:125
+#: src/components/software/SoftwarePage.tsx:126
 msgid "Read more"
 msgstr "展開"
 
 #. TRANSLATORS: accessible label for the expand button; %s is the pattern name
-#: src/components/software/SoftwarePage.tsx:127
+#: src/components/software/SoftwarePage.tsx:128
 #, javascript-format
 msgid "Read more about %s"
 msgstr "展開 %s 的詳細內容"
 
 #. TRANSLATORS: %s is the required disk space. Keep the [brackets]: they mark the value to be displayed in bold.
-#: src/components/software/SoftwarePage.tsx:197
+#: src/components/software/SoftwarePage.tsx:198
 #, javascript-format
 msgid "Required space with current selection: [%s]"
 msgstr "目前選定軟體所需的空間：[%s]"
 
 #. TRANSLATORS: %s is the required disk space. Keep the [brackets]: they mark the value to be displayed in bold.
-#: src/components/software/SoftwarePage.tsx:199
+#: src/components/software/SoftwarePage.tsx:200
 #, javascript-format
 msgid "Required space: [%s]"
 msgstr "所需空間：[%s]"
 
 #. TRANSLATORS: %1$d is selected count, %2$d is total available count
-#: src/components/software/SoftwarePage.tsx:247
-#: src/components/software/patterns-form/Form.tsx:143
+#: src/components/software/SoftwarePage.tsx:248
+#: src/components/software/patterns-form/Form.tsx:144
 #, javascript-format
 msgid "%1$d of %2$d selected"
 msgstr "已選取 %1$d 項，共 %2$d 項"
 
 #. TRANSLATORS: shown while the software proposal is not yet available
-#: src/components/software/SoftwarePage.tsx:275
+#: src/components/software/SoftwarePage.tsx:276
 msgid "No information available yet"
 msgstr "暫無可用資訊"
 
 #. TRANSLATORS: empty state title when no desktop environments are available
-#: src/components/software/SoftwarePage.tsx:291
+#: src/components/software/SoftwarePage.tsx:292
 msgid "No desktops available"
 msgstr "無可用桌面"
 
 #. TRANSLATORS: explanation shown when the product has no desktop environments
-#: src/components/software/SoftwarePage.tsx:293
+#: src/components/software/SoftwarePage.tsx:294
 msgid "This product does not provide desktop environments."
 msgstr "此產品未提供桌面環境。"
 
 #. TRANSLATORS: hint shown when no desktop environment has been chosen
-#: src/components/software/SoftwarePage.tsx:299
+#: src/components/software/SoftwarePage.tsx:300
 msgid "Select a desktop environment to get a graphical interface."
 msgstr "請選取桌面環境以啟用圖形介面。"
 
 #. TRANSLATORS: button to go to the desktop environment selection page
-#: src/components/software/SoftwarePage.tsx:301
+#: src/components/software/SoftwarePage.tsx:302
 msgid "Select a desktop"
 msgstr "選取桌面"
 
 #. TRANSLATORS: empty state title when no additional patterns are available
-#: src/components/software/SoftwarePage.tsx:309
+#: src/components/software/SoftwarePage.tsx:310
 msgid "No additional patterns available"
 msgstr "無額外模式可用"
 
 #. TRANSLATORS: explanation shown when the product has no additional patterns
-#: src/components/software/SoftwarePage.tsx:311
+#: src/components/software/SoftwarePage.tsx:312
 msgid "This product does not provide additional patterns."
 msgstr "此產品未提供額外模式。"
 
 #. TRANSLATORS: hint shown when no additional software patterns have been chosen
-#: src/components/software/SoftwarePage.tsx:317
+#: src/components/software/SoftwarePage.tsx:318
 msgid "Select one or more to extend the system."
 msgstr "請選取一或多個模式，以擴充系統功能。"
 
 #. TRANSLATORS: button to go to the pattern selection page
-#: src/components/software/SoftwarePage.tsx:319
+#: src/components/software/SoftwarePage.tsx:320
 msgid "Select patterns"
 msgstr "選取模式"
 
-#: src/components/software/SoftwarePage.tsx:331
+#: src/components/software/SoftwarePage.tsx:332
 msgid "Desktops"
 msgstr "桌面"
 
 #. TRANSLATORS: description for the Desktops section
-#: src/components/software/SoftwarePage.tsx:334
+#: src/components/software/SoftwarePage.tsx:335
 msgid "Graphical desktop environments for the system."
 msgstr "系統的圖形桌面環境。"
 
 #. TRANSLATORS: button to change the desktop selection
-#: src/components/software/SoftwarePage.tsx:338
+#: src/components/software/SoftwarePage.tsx:339
 msgid "Change desktop"
 msgid_plural "Change desktops"
 msgstr[0] "變更桌面"
 
-#: src/components/software/SoftwarePage.tsx:349
+#: src/components/software/SoftwarePage.tsx:350
 msgid "Additional patterns"
 msgstr "額外模式"
 
 #. TRANSLATORS: description for the Additional software section
-#: src/components/software/SoftwarePage.tsx:352
+#: src/components/software/SoftwarePage.tsx:353
 msgid ""
 "Curated sets of packages for common use cases and features to extend the "
 "system."
 msgstr "適用於常見用途和功能的成套套件，用於擴充系統功能。"
 
 #. TRANSLATORS: button to change the additional software selection
-#: src/components/software/SoftwarePage.tsx:355
+#: src/components/software/SoftwarePage.tsx:356
 msgid "Change patterns"
 msgstr "變更模式"
 
@@ -2929,49 +2925,49 @@ msgstr "此空間包含基礎系統以及所選軟體模式 (如有)。"
 
 #. TRANSLATORS: page title when selecting all software patterns
 #. TRANSLATORS: page title when selecting non-desktop software patterns
-#: src/components/software/patterns-form/Form.tsx:109
-#: src/components/software/patterns-form/Form.tsx:113
+#: src/components/software/patterns-form/Form.tsx:110
+#: src/components/software/patterns-form/Form.tsx:114
 msgid "Patterns selection"
 msgstr "模式選擇"
 
 #. TRANSLATORS: page title when selecting desktop environments
-#: src/components/software/patterns-form/Form.tsx:111
+#: src/components/software/patterns-form/Form.tsx:112
 msgid "Desktop selection"
 msgstr "桌面選擇"
 
 #. TRANSLATORS: shown next to a category heading when the search filter excludes all its patterns
-#: src/components/software/patterns-form/Form.tsx:152
+#: src/components/software/patterns-form/Form.tsx:153
 msgid "No patterns match the filter"
 msgstr "沒有與過濾條件相符的模式"
 
 #. TRANSLATORS: count of patterns matching the search filter in this category
-#: src/components/software/patterns-form/Form.tsx:154
+#: src/components/software/patterns-form/Form.tsx:155
 #, javascript-format
 msgid "%d matches the filter"
 msgid_plural "%d match the filter"
 msgstr[0] "共 %d 個模式符合過濾條件"
 
-#: src/components/software/patterns-form/Form.tsx:332
+#: src/components/software/patterns-form/Form.tsx:333
 #, javascript-format
 msgid "%d pattern found"
 msgid_plural "%d patterns found"
 msgstr[0] "找到 %d 個模式"
 
 #. TRANSLATORS: search results badge on the filter input when no pattern matches
-#: src/components/software/patterns-form/Form.tsx:342
+#: src/components/software/patterns-form/Form.tsx:343
 msgid "No patterns match"
 msgstr "沒有相符的模式"
 
 #. TRANSLATORS: search results badge on the filter input.
 #. %1$d is matches found, %2$d is the total number of patterns.
-#: src/components/software/patterns-form/Form.tsx:345
+#: src/components/software/patterns-form/Form.tsx:346
 #, javascript-format
 msgid "%1$d of %2$d patterns"
 msgstr "%1$d 個 (共 %2$d 個) 模式"
 
 #. TRANSLATORS: placeholder for the search field on the patterns selection page
-#: src/components/software/patterns-form/Form.tsx:388
-#: src/components/software/patterns-form/Form.tsx:390
+#: src/components/software/patterns-form/Form.tsx:392
+#: src/components/software/patterns-form/Form.tsx:394
 msgid "Filter by name and description"
 msgstr "依名稱和描述過濾"
 
@@ -3192,7 +3188,7 @@ msgstr ""
 "為確保新系統能夠開機，安裝程式可能需要在適當的磁碟中建立或設定一些分割區。"
 
 #: src/components/storage/BootSelectionPage.tsx:183
-#: src/components/storage/ProposalPage.tsx:258
+#: src/components/storage/ProposalPage.tsx:259
 msgid "Boot options"
 msgstr "開機選項"
 
@@ -3320,7 +3316,7 @@ msgid "Configure iSCSI"
 msgstr "設定 iSCSI"
 
 #: src/components/storage/ConnectedDevicesMenu.tsx:63
-#: src/components/storage/ProposalPage.tsx:163
+#: src/components/storage/ProposalPage.tsx:164
 msgid "Activate zFCP disks"
 msgstr "啟用 zFCP 磁碟"
 
@@ -3633,7 +3629,7 @@ msgid_plural ""
 "The configuration must be adapted to address the following issues:"
 msgstr[0] "必須調整組態，以解決下列問題："
 
-#: src/components/storage/ISCSIPage.tsx:39
+#: src/components/storage/ISCSIPage.tsx:40
 #: src/components/storage/iscsi/DiscoverFormPage.tsx:269
 #: src/components/storage/iscsi/InitiatorFormPage.tsx:59
 #: src/components/storage/iscsi/TargetLoginPage.tsx:304
@@ -3936,85 +3932,85 @@ msgid ""
 "space."
 msgstr "請調整下面的設定，以使新系統適配可用空間。"
 
-#: src/components/storage/ProposalPage.tsx:78
+#: src/components/storage/ProposalPage.tsx:79
 msgid "Invalid storage settings"
 msgstr "儲存設定無效"
 
-#: src/components/storage/ProposalPage.tsx:85
+#: src/components/storage/ProposalPage.tsx:86
 msgid "The current storage configuration has the following issue:"
 msgid_plural "The current storage configuration has the following issues:"
 msgstr[0] "目前的儲存組態存在以下問題："
 
-#: src/components/storage/ProposalPage.tsx:99
+#: src/components/storage/ProposalPage.tsx:100
 msgid ""
 "You may want to discard those settings and start from scratch with a simple "
 "configuration."
 msgstr "您可能需要捨棄這些設定，並採用簡單的組態從頭開始。"
 
-#: src/components/storage/ProposalPage.tsx:103
-#: src/components/storage/ProposalPage.tsx:131
+#: src/components/storage/ProposalPage.tsx:104
+#: src/components/storage/ProposalPage.tsx:132
 #: src/components/storage/UnsupportedModelInfo.tsx:55
 msgid "Reset to the default configuration"
 msgstr "重設為預設組態"
 
-#: src/components/storage/ProposalPage.tsx:115
+#: src/components/storage/ProposalPage.tsx:116
 #: src/components/storage/UnsupportedModelInfo.tsx:39
 msgid "Unable to modify the settings"
 msgstr "無法修改設定"
 
-#: src/components/storage/ProposalPage.tsx:121
+#: src/components/storage/ProposalPage.tsx:122
 msgid ""
 "The storage configuration uses elements not supported by this interface."
 msgstr "儲存組態使用了此介面不支援的元素。"
 
-#: src/components/storage/ProposalPage.tsx:127
+#: src/components/storage/ProposalPage.tsx:128
 msgid ""
 "You may want to discard the current settings and start from scratch with a "
 "simple configuration."
 msgstr "您可能需要捨棄目前設定，並採用簡單的組態從頭開始。"
 
-#: src/components/storage/ProposalPage.tsx:143
+#: src/components/storage/ProposalPage.tsx:144
 msgid ""
 "There are not disks available for the installation. You may need to "
 "configure some device."
 msgstr "沒有可用於安裝的磁碟。您可能需要設定一些裝置。"
 
-#: src/components/storage/ProposalPage.tsx:148
+#: src/components/storage/ProposalPage.tsx:149
 msgid "No devices found"
 msgstr "未找到裝置"
 
-#: src/components/storage/ProposalPage.tsx:157
+#: src/components/storage/ProposalPage.tsx:158
 msgid "Connect to iSCSI targets"
 msgstr "連接至 iSCSI 目標"
 
-#: src/components/storage/ProposalPage.tsx:170
+#: src/components/storage/ProposalPage.tsx:171
 msgid "Manage DASD devices"
 msgstr "管理 DASD 裝置"
 
-#: src/components/storage/ProposalPage.tsx:222
+#: src/components/storage/ProposalPage.tsx:223
 msgid "Start from scratch with the default configuration"
 msgstr "採用預設組態從頭開始"
 
-#: src/components/storage/ProposalPage.tsx:224
+#: src/components/storage/ProposalPage.tsx:225
 msgid "Reset to defaults"
 msgstr "重設為預設值"
 
-#: src/components/storage/ProposalPage.tsx:233
+#: src/components/storage/ProposalPage.tsx:234
 msgid ""
 "Changes in these settings will immediately update the 'Result' section below."
 msgstr "如果變更這些設定，下方 '結果’ 區段的內容將立即更新。"
 
-#: src/components/storage/ProposalPage.tsx:240
+#: src/components/storage/ProposalPage.tsx:241
 msgid "Installation devices"
 msgstr "安裝裝置"
 
-#: src/components/storage/ProposalPage.tsx:246
+#: src/components/storage/ProposalPage.tsx:247
 msgid ""
 "Structure of the new system, including disks to use and additional devices "
 "like LVM volume groups."
 msgstr "新系統的結構，包括要使用的磁碟和 LVM 磁碟區群組等其他裝置。"
 
-#: src/components/storage/ProposalPage.tsx:253
+#: src/components/storage/ProposalPage.tsx:254
 msgid "Encryption"
 msgstr "加密"
 
@@ -4426,16 +4422,16 @@ msgstr "實體磁碟區"
 msgid "Formatting devices"
 msgstr "正在格式化裝置"
 
-#: src/components/storage/dasd/DASDPage.tsx:39
-#: src/components/storage/zfcp/ZFCPPage.tsx:66
+#: src/components/storage/dasd/DASDPage.tsx:41
+#: src/components/storage/zfcp/ZFCPPage.tsx:68
 msgid "No devices available"
 msgstr "沒有可用的裝置"
 
-#: src/components/storage/dasd/DASDPage.tsx:40
+#: src/components/storage/dasd/DASDPage.tsx:42
 msgid "No DASD devices found in this machine."
 msgstr "在此機器上未找到 DASD 裝置。"
 
-#: src/components/storage/dasd/DASDPage.tsx:70 src/routes/storage.tsx:115
+#: src/components/storage/dasd/DASDPage.tsx:72 src/routes/storage.tsx:115
 msgid "DASD"
 msgstr "DASD"
 
@@ -5715,12 +5711,12 @@ msgid "Select the zFCP controllers to activate:"
 msgstr "選取要啟用的 zFCP 控制器："
 
 #: src/components/storage/zfcp/ZFCPControllersPage.tsx:191
-#: src/components/storage/zfcp/ZFCPPage.tsx:174
+#: src/components/storage/zfcp/ZFCPPage.tsx:176
 msgid "zFCP"
 msgstr "zFCP"
 
 #: src/components/storage/zfcp/ZFCPControllersPage.tsx:192
-#: src/components/storage/zfcp/ZFCPPage.tsx:109
+#: src/components/storage/zfcp/ZFCPPage.tsx:111
 msgid "Activate controllers"
 msgstr "啟用控制器"
 
@@ -5764,33 +5760,33 @@ msgstr "LUN"
 msgid "Auto Scanned"
 msgstr "已自動掃描"
 
-#: src/components/storage/zfcp/ZFCPPage.tsx:54
+#: src/components/storage/zfcp/ZFCPPage.tsx:56
 msgid "zFCP is not available"
 msgstr "無法使用 zFCP 功能"
 
-#: src/components/storage/zfcp/ZFCPPage.tsx:55
+#: src/components/storage/zfcp/ZFCPPage.tsx:57
 msgid "No zFCP controllers found in this machine."
 msgstr "在此機器上未找到 zFCP 控制器。"
 
-#: src/components/storage/zfcp/ZFCPPage.tsx:67
+#: src/components/storage/zfcp/ZFCPPage.tsx:69
 msgid "No zFCP devices found in this machine."
 msgstr "在此機器上未找到 zFCP 裝置。"
 
-#: src/components/storage/zfcp/ZFCPPage.tsx:87
+#: src/components/storage/zfcp/ZFCPPage.tsx:89
 msgid "There is a deactivated zFCP controller."
 msgstr "存在停用的 zFCP 控制器。"
 
-#: src/components/storage/zfcp/ZFCPPage.tsx:88
+#: src/components/storage/zfcp/ZFCPPage.tsx:90
 #, javascript-format
 msgid "There are %s deactivated zFCP controllers."
 msgstr "存在 %s 個停用的 zFCP 控制器。"
 
-#: src/components/storage/zfcp/ZFCPPage.tsx:92
+#: src/components/storage/zfcp/ZFCPPage.tsx:94
 msgid "All the available zFCP controllers are already activated."
 msgstr "所有可用 zFCP 控制器均已啟用。"
 
-#: src/components/storage/zfcp/ZFCPPage.tsx:104
-#: src/components/storage/zfcp/ZFCPPage.tsx:118
+#: src/components/storage/zfcp/ZFCPPage.tsx:106
+#: src/components/storage/zfcp/ZFCPPage.tsx:120
 msgid "zFCP controllers"
 msgstr "zFCP 控制器"
 
@@ -6063,6 +6059,9 @@ msgstr "啟用中"
 #: src/utils/network.ts:62
 msgid "Deactivating"
 msgstr "停用中"
+
+#~ msgid "Edit binding settings"
+#~ msgstr "編輯結合設定"
 
 #~ msgid "Search"
 #~ msgstr "搜尋"
