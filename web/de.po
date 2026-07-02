@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-30 15:10+0000\n"
+"POT-Creation-Date: 2026-07-02 08:44+0000\n"
 "PO-Revision-Date: 2026-06-23 21:12+0000\n"
 "Last-Translator: Gemineo <vistatec@gemineo.de>\n"
 "Language-Team: German <https://l10n.opensuse.org/projects/agama/agama-web/de/"
@@ -436,7 +436,7 @@ msgstr "Anmeldeformular"
 #. TRANSLATORS: authentication mode option
 #: src/components/core/LoginPage.tsx:91
 #: src/components/core/PasswordAndConfirmationInput.tsx:96
-#: src/components/network/WifiConnectionForm.tsx:177
+#: src/components/network/WifiConnectionForm.tsx:178
 #: src/components/questions/QuestionWithPassword.tsx:63
 #: src/components/storage/iscsi/DiscoverFormPage.tsx:210
 #: src/components/storage/iscsi/TargetLoginPage.tsx:237
@@ -465,7 +465,7 @@ msgstr "Zurück"
 #. TRANSLATORS: label for the form cancel button.
 #: src/components/core/Page.tsx:258 src/components/core/Popup.tsx:140
 #: src/components/form/CancelButton.tsx:47
-#: src/components/network/WifiConnectionForm.tsx:188
+#: src/components/network/WifiConnectionForm.tsx:189
 #: src/components/product/ProductSelectionPage.tsx:537
 #: src/components/storage/iscsi/DiscoverFormPage.tsx:252
 #: src/components/storage/iscsi/InitiatorFormPage.tsx:81
@@ -522,11 +522,11 @@ msgstr "Daten werden gelesen ..."
 
 #. TRANSLATORS: Message shown next to a spinner while the UI is being updated
 #. after an operation has completed.
-#: src/components/core/ProgressBackdrop.tsx:124
+#: src/components/core/ProgressBackdrop.tsx:126
 msgid "Refreshing data..."
 msgstr "Daten werden aufgefrischt ..."
 
-#: src/components/core/ProgressBackdrop.tsx:177
+#: src/components/core/ProgressBackdrop.tsx:176
 #: src/components/core/ProgressStatusMonitor.tsx:74
 #, javascript-format
 msgid "(step %s of %s)"
@@ -538,24 +538,24 @@ msgid "Step %1$d of %2$d"
 msgstr "Schritt %1$d von %2$d"
 
 #: src/components/core/ProgressStatusMonitor.tsx:41
-#: src/components/overview/SoftwareSummary.tsx:160
-#: src/components/software/SoftwarePage.tsx:378
-#: src/components/software/patterns-form/Form.tsx:351
+#: src/components/overview/SoftwareSummary.tsx:164
+#: src/components/software/SoftwarePage.tsx:380
+#: src/components/software/patterns-form/Form.tsx:352
 #: src/routes/software.tsx:33
 msgid "Software"
 msgstr "Software"
 
 #. TRANSLATORS: breadcrumb label for the storage configuration section.
 #: src/components/core/ProgressStatusMonitor.tsx:42
-#: src/components/overview/StorageSummary.tsx:190
+#: src/components/overview/StorageSummary.tsx:195
 #: src/components/storage/BootSelectionPage.tsx:183
 #: src/components/storage/DeviceSelectorPage.tsx:75
 #: src/components/storage/EncryptionSettingsPage.tsx:121
-#: src/components/storage/ISCSIPage.tsx:36
+#: src/components/storage/ISCSIPage.tsx:37
 #: src/components/storage/LvmPage.tsx:202
-#: src/components/storage/ProposalPage.tsx:323
+#: src/components/storage/ProposalPage.tsx:324
 #: src/components/storage/SpacePolicySelectionPage.tsx:121
-#: src/components/storage/dasd/DASDPage.tsx:70
+#: src/components/storage/dasd/DASDPage.tsx:72
 #: src/components/storage/formattable-device-form/Form.tsx:207
 #: src/components/storage/iscsi/DiscoverFormPage.tsx:268
 #: src/components/storage/iscsi/InitiatorFormPage.tsx:58
@@ -563,17 +563,17 @@ msgstr "Software"
 #: src/components/storage/logical-volume-form/Form.tsx:269
 #: src/components/storage/partition-form/Form.tsx:287
 #: src/components/storage/zfcp/ZFCPControllersPage.tsx:190
-#: src/components/storage/zfcp/ZFCPPage.tsx:174 src/routes/storage.tsx:46
+#: src/components/storage/zfcp/ZFCPPage.tsx:176 src/routes/storage.tsx:46
 msgid "Storage"
 msgstr "Speicherung"
 
 #. TRANSLATORS: breadcrumb label for the network configuration section.
 #: src/components/core/ProgressStatusMonitor.tsx:43
-#: src/components/network/ConnectionDetails.tsx:95
-#: src/components/network/ConnectionPage.tsx:75
-#: src/components/network/NetworkPage.tsx:43
-#: src/components/network/WifiConnectionForm.tsx:142
-#: src/components/network/WifiConnectionForm.tsx:198
+#: src/components/network/ConnectionDetails.tsx:74
+#: src/components/network/ConnectionPage.tsx:76
+#: src/components/network/NetworkPage.tsx:44
+#: src/components/network/WifiConnectionForm.tsx:143
+#: src/components/network/WifiConnectionForm.tsx:199
 #: src/components/network/connection-form/Form.tsx:397
 #: src/components/overview/NetworkSummary.tsx:149 src/routes/network.tsx:35
 msgid "Network"
@@ -956,49 +956,41 @@ msgstr "Installation"
 msgid "Loading"
 msgstr "Wird geladen"
 
-#: src/components/network/ConnectionDetails.tsx:60
+#: src/components/network/ConnectionDetails.tsx:59
 msgid "Connection is available to all devices."
 msgstr "Die Verbindung ist für alle Geräte verfügbar."
 
 #. TRANSLATORS: %s will be replaced by a network device name, like eth0 or enp1s0
-#: src/components/network/ConnectionDetails.tsx:63
+#: src/components/network/ConnectionDetails.tsx:62
 #, javascript-format
 msgid "Connection is bound to device %s."
 msgstr "Die Verbindung ist an das Gerät %s gebunden."
 
 #. TRANSLATORS: %s will be replaced by MAC addrss, like 7C:D7:11:28:F5:40
-#: src/components/network/ConnectionDetails.tsx:66
+#: src/components/network/ConnectionDetails.tsx:65
 #, javascript-format
 msgid "Connection is bound to MAC address %s."
 msgstr "Die Verbindung ist an die MAC-Adresse %s gebunden."
 
-#: src/components/network/ConnectionDetails.tsx:73
-msgid "Binding"
-msgstr "Bindung"
-
-#: src/components/network/ConnectionDetails.tsx:81
-msgid "Edit binding settings"
-msgstr "Verknüpfungseinstellungen bearbeiten"
-
-#: src/components/network/ConnectionDetails.tsx:96
+#: src/components/network/ConnectionDetails.tsx:75
 msgid "Network details"
 msgstr "Netzwerkdetails"
 
-#: src/components/network/ConnectionDetails.tsx:98
+#: src/components/network/ConnectionDetails.tsx:77
 msgid "SSID"
 msgstr "SSID"
 
-#: src/components/network/ConnectionDetails.tsx:102
-#: src/components/network/WifiConnectionForm.tsx:153
-#: src/components/network/WifiConnectionForm.tsx:156
+#: src/components/network/ConnectionDetails.tsx:81
+#: src/components/network/WifiConnectionForm.tsx:154
+#: src/components/network/WifiConnectionForm.tsx:157
 msgid "Security"
 msgstr "Sicherheit"
 
 #. TRANSLATORS: table header for a zFCP devices table.
 #. TRANSLATORS: table header for an iSCSI targets table
 #. TRANSLATORS: table header for a DASD devices table
-#: src/components/network/ConnectionDetails.tsx:108
-#: src/components/network/ConnectionDetails.tsx:249
+#: src/components/network/ConnectionDetails.tsx:87
+#: src/components/network/ConnectionDetails.tsx:228
 #: src/components/storage/dasd/DASDTable.tsx:312
 #: src/components/storage/dasd/DASDTable.tsx:536
 #: src/components/storage/iscsi/StatusFilter.tsx:77
@@ -1008,232 +1000,236 @@ msgstr "Sicherheit"
 msgid "Status"
 msgstr "Status"
 
-#: src/components/network/ConnectionDetails.tsx:112
+#: src/components/network/ConnectionDetails.tsx:91
 msgid "Signal strength"
 msgstr "Signalstärke"
 
-#: src/components/network/ConnectionDetails.tsx:121
+#: src/components/network/ConnectionDetails.tsx:100
 msgid "Network not available"
 msgstr "Netzwerk nicht verfügbar"
 
-#: src/components/network/ConnectionDetails.tsx:131
+#: src/components/network/ConnectionDetails.tsx:110
 msgid "Bond"
 msgstr "Bündelung"
 
-#: src/components/network/ConnectionDetails.tsx:132
+#: src/components/network/ConnectionDetails.tsx:111
 msgid "Bond details"
 msgstr "Bündelungsdetails"
 
 #. TRANSLATORS: label for the bond mode field.
-#: src/components/network/ConnectionDetails.tsx:134
+#: src/components/network/ConnectionDetails.tsx:113
 #: src/components/network/connection-form/BondFields.tsx:86
 msgid "Bond mode"
 msgstr "Bündelungsmodus"
 
-#: src/components/network/ConnectionDetails.tsx:136
-#: src/components/network/ConnectionDetails.tsx:142
-#: src/components/network/ConnectionDetails.tsx:150
-#: src/components/network/ConnectionDetails.tsx:199
-#: src/components/network/ConnectionDetails.tsx:222
-#: src/components/network/ConnectionDetails.tsx:228
-#: src/components/network/ConnectionDetails.tsx:261
-#: src/components/network/ConnectionDetails.tsx:276
-#: src/components/network/ConnectionDetails.tsx:286
-#: src/components/network/ConnectionDetails.tsx:296
-#: src/components/network/ConnectionDetails.tsx:306
-#: src/components/network/ConnectionDetails.tsx:383
-#: src/components/network/ConnectionDetails.tsx:386
-#: src/components/network/ConnectionDetails.tsx:396
-#: src/components/network/ConnectionDetails.tsx:408
-#: src/components/network/ConnectionDetails.tsx:420
-#: src/components/network/ConnectionDetails.tsx:430
+#: src/components/network/ConnectionDetails.tsx:115
+#: src/components/network/ConnectionDetails.tsx:121
+#: src/components/network/ConnectionDetails.tsx:129
+#: src/components/network/ConnectionDetails.tsx:178
+#: src/components/network/ConnectionDetails.tsx:201
+#: src/components/network/ConnectionDetails.tsx:207
+#: src/components/network/ConnectionDetails.tsx:240
+#: src/components/network/ConnectionDetails.tsx:255
+#: src/components/network/ConnectionDetails.tsx:265
+#: src/components/network/ConnectionDetails.tsx:275
+#: src/components/network/ConnectionDetails.tsx:285
+#: src/components/network/ConnectionDetails.tsx:366
+#: src/components/network/ConnectionDetails.tsx:369
+#: src/components/network/ConnectionDetails.tsx:379
+#: src/components/network/ConnectionDetails.tsx:391
+#: src/components/network/ConnectionDetails.tsx:403
+#: src/components/network/ConnectionDetails.tsx:413
 msgid "None set"
 msgstr "Keine festgelegt"
 
 #. TRANSLATORS: label for the bond options field.
-#: src/components/network/ConnectionDetails.tsx:140
+#: src/components/network/ConnectionDetails.tsx:119
 #: src/components/network/connection-form/BondFields.tsx:97
 msgid "Bond options"
 msgstr "Bündelungsoptionen"
 
 #. TRANSLATORS: label for the bond ports field.
-#: src/components/network/ConnectionDetails.tsx:146
+#: src/components/network/ConnectionDetails.tsx:125
 #: src/components/network/connection-form/BondFields.tsx:111
 msgid "Bond ports"
 msgstr "Bündelungsports"
 
-#: src/components/network/ConnectionDetails.tsx:164
+#: src/components/network/ConnectionDetails.tsx:143
 msgid "Bridge"
 msgstr "Brücke"
 
-#: src/components/network/ConnectionDetails.tsx:165
+#: src/components/network/ConnectionDetails.tsx:144
 msgid "Bridge details"
 msgstr "Brückendetails"
 
-#: src/components/network/ConnectionDetails.tsx:167
+#: src/components/network/ConnectionDetails.tsx:146
 msgid "STP"
 msgstr "STP"
 
 #. TRANSLATORS: option label for disabling bridge STP.
 #. TRANSLATORS: authentication mode option
-#: src/components/network/ConnectionDetails.tsx:169
+#: src/components/network/ConnectionDetails.tsx:148
 #: src/components/network/connection-form/BridgeFields.tsx:54
 #: src/components/users/authentication-form/RootAuthFields.tsx:70
 msgid "Disabled"
 msgstr "Deaktiviert"
 
-#: src/components/network/ConnectionDetails.tsx:169
+#: src/components/network/ConnectionDetails.tsx:148
 msgid "Enabled"
 msgstr "Aktiviert"
 
 #. TRANSLATORS: label for the bridge priority field.
-#: src/components/network/ConnectionDetails.tsx:175
+#: src/components/network/ConnectionDetails.tsx:154
 #: src/components/network/connection-form/BridgeFields.tsx:145
 msgid "Priority"
 msgstr "Priorität"
 
 #. TRANSLATORS: label for the bridge forward delay field.
-#: src/components/network/ConnectionDetails.tsx:179
+#: src/components/network/ConnectionDetails.tsx:158
 #: src/components/network/connection-form/BridgeFields.tsx:174
 msgid "Forward delay"
 msgstr "Weiterleitungsverzögerung"
 
 #. TRANSLATORS: label for the bridge hello time field.
-#: src/components/network/ConnectionDetails.tsx:185
+#: src/components/network/ConnectionDetails.tsx:164
 #: src/components/network/connection-form/BridgeFields.tsx:194
 msgid "Hello time"
 msgstr "Hello-Zeit"
 
 #. TRANSLATORS: label for the bridge max message age field.
-#: src/components/network/ConnectionDetails.tsx:189
+#: src/components/network/ConnectionDetails.tsx:168
 #: src/components/network/connection-form/BridgeFields.tsx:214
 msgid "Max message age"
 msgstr "Maximales Alter der Nachricht"
 
 #. TRANSLATORS: label for the bridge ports field.
-#: src/components/network/ConnectionDetails.tsx:195
+#: src/components/network/ConnectionDetails.tsx:174
 #: src/components/network/connection-form/BridgeFields.tsx:106
 msgid "Bridge ports"
 msgstr "Brückenports"
 
-#: src/components/network/ConnectionDetails.tsx:213
+#: src/components/network/ConnectionDetails.tsx:192
 msgid "VLAN"
 msgstr "VLAN"
 
-#: src/components/network/ConnectionDetails.tsx:214
+#: src/components/network/ConnectionDetails.tsx:193
 msgid "VLAN details"
 msgstr "VLAN-Details"
 
 #. TRANSLATORS: label for the VLAN ID field.
-#: src/components/network/ConnectionDetails.tsx:216
+#: src/components/network/ConnectionDetails.tsx:195
 #: src/components/network/connection-form/VlanFields.tsx:112
 msgid "VLAN ID"
 msgstr "VLAN-Kennung"
 
 #. TRANSLATORS: label for the VLAN parent device field.
-#: src/components/network/ConnectionDetails.tsx:220
+#: src/components/network/ConnectionDetails.tsx:199
 #: src/components/network/connection-form/VlanFields.tsx:91
 msgid "Parent device"
 msgstr "Übergeordnetes Gerät"
 
-#: src/components/network/ConnectionDetails.tsx:226
+#: src/components/network/ConnectionDetails.tsx:205
 msgid "Protocol"
 msgstr "Protokoll"
 
-#: src/components/network/ConnectionDetails.tsx:240
+#: src/components/network/ConnectionDetails.tsx:219
 msgid "Device details"
 msgstr "Gerätedetails"
 
 #. TRANSLATORS: table header for an iSCSI targets table
-#: src/components/network/ConnectionDetails.tsx:245
+#: src/components/network/ConnectionDetails.tsx:224
 #: src/components/storage/iscsi/TargetsTable.tsx:476
 msgid "Interface"
 msgstr "Schnittstelle"
 
-#: src/components/network/ConnectionDetails.tsx:253
+#: src/components/network/ConnectionDetails.tsx:232
 msgid "MAC address"
 msgstr "MAC-Adresse"
 
-#: src/components/network/ConnectionDetails.tsx:257
-#: src/components/network/ConnectionDetails.tsx:392
+#: src/components/network/ConnectionDetails.tsx:236
+#: src/components/network/ConnectionDetails.tsx:375
 msgid "Gateway"
 msgstr "Gateway"
 
-#: src/components/network/ConnectionDetails.tsx:272
-#: src/components/network/ConnectionDetails.tsx:404
+#: src/components/network/ConnectionDetails.tsx:251
+#: src/components/network/ConnectionDetails.tsx:387
 #: src/components/network/ConnectionsTable.tsx:196
 msgid "IP Addresses"
 msgstr "IP-Adressen"
 
-#: src/components/network/ConnectionDetails.tsx:282
-#: src/components/network/ConnectionDetails.tsx:416
+#: src/components/network/ConnectionDetails.tsx:261
+#: src/components/network/ConnectionDetails.tsx:399
 msgid "DNS"
 msgstr "DNS"
 
 #. TRANSLATORS: label for the DNS search domains field.
-#: src/components/network/ConnectionDetails.tsx:292
-#: src/components/network/ConnectionDetails.tsx:426
+#: src/components/network/ConnectionDetails.tsx:271
+#: src/components/network/ConnectionDetails.tsx:409
 #: src/components/network/connection-form/Form.tsx:318
 msgid "DNS search domains"
 msgstr "DNS-Suchdomänen"
 
-#: src/components/network/ConnectionDetails.tsx:302
+#: src/components/network/ConnectionDetails.tsx:281
 msgid "Routes"
 msgstr "Routen"
 
-#: src/components/network/ConnectionDetails.tsx:337
+#: src/components/network/ConnectionDetails.tsx:316
 msgid "Connected device"
 msgstr "Verbundenes Gerät"
 
-#: src/components/network/ConnectionDetails.tsx:337
+#: src/components/network/ConnectionDetails.tsx:316
 msgid "Connected devices"
 msgstr "Verbundene Geräte"
 
-#: src/components/network/ConnectionDetails.tsx:340
+#: src/components/network/ConnectionDetails.tsx:319
 msgid "No device is currently using this connection."
 msgstr "Derzeit verwendet kein Gerät diese Verbindung."
 
-#: src/components/network/ConnectionDetails.tsx:346
+#: src/components/network/ConnectionDetails.tsx:325
 msgid "Connected devices tabs"
 msgstr "Tabs für verbundene Geräte"
 
-#: src/components/network/ConnectionDetails.tsx:368
-#: src/components/storage/ProposalPage.tsx:204
+#: src/components/network/ConnectionDetails.tsx:347
+#: src/components/storage/ProposalPage.tsx:205
 msgid "Settings"
 msgstr "Einstellungen"
 
-#: src/components/network/ConnectionDetails.tsx:372
+#: src/components/network/ConnectionDetails.tsx:351
 msgid "Edit connection settings"
 msgstr "Verbindungseinstellungen bearbeiten"
 
+#: src/components/network/ConnectionDetails.tsx:358
+msgid "Binding"
+msgstr "Bindung"
+
 #. TRANSLATORS: label for NTP mode selector
 #. TRANSLATORS: label for hostname mode selector
-#: src/components/network/ConnectionDetails.tsx:379
+#: src/components/network/ConnectionDetails.tsx:362
 #: src/components/system/system-form/HostnameFields.tsx:110
 #: src/components/system/system-form/NtpFields.tsx:58
 msgid "Mode"
 msgstr "Modus"
 
-#: src/components/network/ConnectionDetails.tsx:383
+#: src/components/network/ConnectionDetails.tsx:366
 msgid "IPv4"
 msgstr "IPv4"
 
-#: src/components/network/ConnectionDetails.tsx:386
+#: src/components/network/ConnectionDetails.tsx:369
 msgid "IPv6"
 msgstr "IPv6"
 
 #. TRANSLATORS: %s will be replaced with connection id
-#: src/components/network/ConnectionPage.tsx:42
+#: src/components/network/ConnectionPage.tsx:43
 #, javascript-format
 msgid "\"%s\" does not exist or is no longer available."
 msgstr "„%s“ existiert nicht oder ist nicht mehr verfügbar."
 
-#: src/components/network/ConnectionPage.tsx:47
+#: src/components/network/ConnectionPage.tsx:48
 msgid "Connection not found or lost"
 msgstr "Verbindung nicht gefunden oder verloren"
 
 #. TRANSLATORS: link text on the connection not found page.
-#: src/components/network/ConnectionPage.tsx:54
+#: src/components/network/ConnectionPage.tsx:55
 #: src/components/network/connection-form/Form.tsx:366
 msgid "Go to network page"
 msgstr "Zur Netzwerkseite gehen"
@@ -1347,7 +1343,7 @@ msgstr "Verbindung bearbeiten"
 
 #. TRANSLATORS: button label, connect to a Wi-Fi network
 #: src/components/network/ConnectionsTable.tsx:367
-#: src/components/network/WifiConnectionForm.tsx:186
+#: src/components/network/WifiConnectionForm.tsx:187
 #: src/components/storage/iscsi/TargetsTable.tsx:236
 #: src/components/storage/iscsi/TargetsTable.tsx:247
 msgid "Connect"
@@ -1420,18 +1416,18 @@ msgstr ""
 "Die Verbindung wird nur während der Installation verwendet und ist im "
 "installierten System nicht verfügbar."
 
-#: src/components/network/NetworkPage.tsx:50
+#: src/components/network/NetworkPage.tsx:51
 msgid ""
 "Manage available connections, connect to Wi-Fi, or add a new connection."
 msgstr ""
 "Verfügbare Verbindungen verwalten, eine WLAN-Verbindung herstellen oder eine "
 "neue Verbindung hinzufügen."
 
-#: src/components/network/NetworkPage.tsx:58
+#: src/components/network/NetworkPage.tsx:59
 msgid "Add connection"
 msgstr "Verbindung hinzufügen"
 
-#: src/components/network/NetworkPage.tsx:64
+#: src/components/network/NetworkPage.tsx:65
 msgid "Connect to Wi-Fi network"
 msgstr "Mit einem WLAN-Netzwerk verbinden"
 
@@ -1453,21 +1449,21 @@ msgstr ""
 
 #. TRANSLATORS: WiFi authentication mode
 #. TRANSLATORS: option label meaning the connection has no specific device binding.
-#: src/components/network/WifiConnectionForm.tsx:47
+#: src/components/network/WifiConnectionForm.tsx:48
 #: src/components/network/connection-form/BindingModeSelector.tsx:32
 msgid "None"
 msgstr "Kein"
 
 #. TRANSLATORS: WiFi authentication mode
-#: src/components/network/WifiConnectionForm.tsx:49
+#: src/components/network/WifiConnectionForm.tsx:50
 msgid "WPA & WPA2 Personal"
 msgstr "WPA & WPA2 Personal"
 
-#: src/components/network/WifiConnectionForm.tsx:60
+#: src/components/network/WifiConnectionForm.tsx:61
 msgid "Not protected network"
 msgstr "Nicht geschütztes Netzwerk"
 
-#: src/components/network/WifiConnectionForm.tsx:62
+#: src/components/network/WifiConnectionForm.tsx:63
 msgid ""
 "You will connect to a public network without encryption. Your data may not "
 "be secure."
@@ -1475,21 +1471,21 @@ msgstr ""
 "Sie stellen eine Verbindung zu einem öffentlichen Netzwerk ohne "
 "Verschlüsselung her. Ihre Daten sind möglicherweise nicht sicher."
 
-#: src/components/network/WifiConnectionForm.tsx:135
+#: src/components/network/WifiConnectionForm.tsx:136
 #: src/components/network/WifiNetworksList.tsx:177
 msgid "No Wi-Fi networks were found"
 msgstr "Keine Wi-Fi-Netzwerke gefunden"
 
-#: src/components/network/WifiConnectionForm.tsx:141
+#: src/components/network/WifiConnectionForm.tsx:142
 msgid "Wi-Fi connection form"
 msgstr "Formular für die WiFi-Verbindung"
 
 #. TRANSLATORS: WiFi password
-#: src/components/network/WifiConnectionForm.tsx:173
+#: src/components/network/WifiConnectionForm.tsx:174
 msgid "WPA Password"
 msgstr "WPA-Passwort"
 
-#: src/components/network/WifiConnectionForm.tsx:199
+#: src/components/network/WifiConnectionForm.tsx:200
 msgid "New Wi-Fi connection"
 msgstr "Neue WLAN-Verbindung"
 
@@ -2203,7 +2199,7 @@ msgstr "Registriert"
 
 #. TRANSLATORS: count of patterns picked on top of the default selection.
 #. %d is a number.
-#: src/components/overview/SoftwareSummary.tsx:48
+#: src/components/overview/SoftwareSummary.tsx:49
 #, javascript-format
 msgid "Using %d additional pattern"
 msgid_plural "Using %d additional patterns"
@@ -2212,12 +2208,12 @@ msgstr[1] "%d zusätzliche Muster werden verwendet"
 
 #. TRANSLATORS: shown in the software summary when no desktop is selected.
 #. TRANSLATORS: alert title shown in the install confirmation dialog when no desktop is selected.
-#: src/components/overview/SoftwareSummary.tsx:71
+#: src/components/overview/SoftwareSummary.tsx:72
 #: src/components/software/NoDesktopAlert.tsx:51
 msgid "No desktop selected"
 msgstr "Kein Desktop ausgewählt"
 
-#: src/components/overview/SoftwareSummary.tsx:87
+#: src/components/overview/SoftwareSummary.tsx:88
 #, javascript-format
 msgid "%d desktop selected"
 msgid_plural "%d desktops selected"
@@ -2226,11 +2222,11 @@ msgstr[1] "%d Desktops ausgewählt"
 
 #. TRANSLATORS: shown in the software summary when the user hasn't picked
 #. anything on top of the product's default selection.
-#: src/components/overview/SoftwareSummary.tsx:97
+#: src/components/overview/SoftwareSummary.tsx:98
 msgid "Default selection"
 msgstr "Standardauswahl"
 
-#: src/components/overview/SoftwareSummary.tsx:132
+#: src/components/overview/SoftwareSummary.tsx:133
 #, javascript-format
 msgid "Includes %1$d additional pattern. Requires %2$s"
 msgid_plural "Includes %1$d additional patterns. Requires %2$s"
@@ -2239,64 +2235,64 @@ msgstr[1] "Enthält %1$d zusätzliche Muster. Erfordert %2$s"
 
 #. TRANSLATORS: total installation size shown in the software summary.
 #. %s is a human-readable disk size (e.g. "5.95 GiB").
-#: src/components/overview/SoftwareSummary.tsx:143
+#: src/components/overview/SoftwareSummary.tsx:144
 #, javascript-format
 msgid "Requires %s"
 msgstr "Erfordert %s"
 
-#: src/components/overview/SoftwareSummary.tsx:163
+#: src/components/overview/SoftwareSummary.tsx:167
 msgid "Invalid software selection"
 msgstr "Ungültige Softwareauswahl"
 
-#: src/components/overview/StorageSummary.tsx:53
+#: src/components/overview/StorageSummary.tsx:54
 msgid "No device selected yet"
 msgstr "Noch kein Gerät ausgewählt"
 
 #. TRANSLATORS: %s will be replaced by the device name and its size,
 #. example: "/dev/sda, 20 GiB"
-#: src/components/overview/StorageSummary.tsx:60
+#: src/components/overview/StorageSummary.tsx:61
 #, javascript-format
 msgid "Use device %s"
 msgstr "Gerät %s verwenden"
 
-#: src/components/overview/StorageSummary.tsx:84
+#: src/components/overview/StorageSummary.tsx:85
 msgid "Use several devices"
 msgstr "Mehrere Geräte verwenden"
 
 #. TRANSLATORS: The text in [] is used as a link.
-#: src/components/overview/StorageSummary.tsx:90
+#: src/components/overview/StorageSummary.tsx:91
 msgid "Invalid [zFCP] settings"
 msgstr "Ungültige [zFCP]-Einstellungen"
 
-#: src/components/overview/StorageSummary.tsx:110
+#: src/components/overview/StorageSummary.tsx:111
 msgid "There are no disks available for the installation"
 msgstr "Es sind keine Festplatten für die Installation verfügbar"
 
-#: src/components/overview/StorageSummary.tsx:112
+#: src/components/overview/StorageSummary.tsx:113
 msgid "Invalid settings"
 msgstr "Ungültige Einstellungen"
 
-#: src/components/overview/StorageSummary.tsx:116
+#: src/components/overview/StorageSummary.tsx:117
 msgid "Using an advanced storage configuration"
 msgstr "Verwendung einer erweiterten Speicherkonfiguration"
 
-#: src/components/overview/StorageSummary.tsx:131
+#: src/components/overview/StorageSummary.tsx:132
 #: src/components/storage/ProposalFailedInfo.tsx:77
 msgid "Failed to calculate a storage layout"
 msgstr "Berechnung einer Speicherungsanordnung ist fehlgeschlagen"
 
-#: src/components/overview/StorageSummary.tsx:134
+#: src/components/overview/StorageSummary.tsx:135
 msgid "No data loss is expected"
 msgstr "Es wird kein Datenverlust erwartet"
 
 #. TRANSLATORS: %s will be replaced by a formatted list of affected systems
 #. like "Windows and openSUSE Tumbleweed".
-#: src/components/overview/StorageSummary.tsx:141
+#: src/components/overview/StorageSummary.tsx:142
 #, javascript-format
 msgid "Potential data loss affecting at least %s"
 msgstr "Potenzieller Datenverlust, von dem mindestens %s betroffen sind"
 
-#: src/components/overview/StorageSummary.tsx:146
+#: src/components/overview/StorageSummary.tsx:147
 msgid "Potential data loss"
 msgstr "Potenzieller Datenverlust"
 
@@ -2371,47 +2367,47 @@ msgid "System"
 msgstr "System"
 
 #. TRANSLATORS: %s is either "root" or a username like 'jdoe'
-#: src/components/overview/UsersSummary.tsx:63
+#: src/components/overview/UsersSummary.tsx:64
 #, javascript-format
 msgid "Public key provided for %s"
 msgstr "Öffentlicher Schlüssel für %s bereitgestellt"
 
 #. TRANSLATORS: %s is either "root" or a username like 'jdoe'
-#: src/components/overview/UsersSummary.tsx:74
+#: src/components/overview/UsersSummary.tsx:75
 #, javascript-format
 msgid "Using %s account"
 msgstr "Konto %s wird verwendet"
 
 #. TRANSLATORS: shown when no user accounts are configured yet
-#: src/components/overview/UsersSummary.tsx:87
+#: src/components/overview/UsersSummary.tsx:88
 #: src/components/storage/UnusedMenu.tsx:33
 msgid "Not configured yet"
 msgstr "Noch nicht konfiguriert"
 
-#: src/components/overview/UsersSummary.tsx:96
+#: src/components/overview/UsersSummary.tsx:97
 #, javascript-format
 msgid "Using %s and %s accounts"
 msgstr "Konten %s und %s werden verwendet"
 
 #. TRANSLATORS: both user accounts have SSH public keys configured
-#: src/components/overview/UsersSummary.tsx:126
+#: src/components/overview/UsersSummary.tsx:127
 msgid "Public key provided for both"
 msgstr "Öffentlicher Schlüssel für beide bereitgestellt"
 
 #. TRANSLATORS: SSH public key is configured for a single account
-#: src/components/overview/UsersSummary.tsx:129
+#: src/components/overview/UsersSummary.tsx:130
 msgid "Public key provided"
 msgstr "Öffentlicher Schlüssel bereitgestellt"
 
 #. TRANSLATORS: warning when root account has no SSH public key configured
-#: src/components/overview/UsersSummary.tsx:139
+#: src/components/overview/UsersSummary.tsx:140
 msgid "No public key provided, SSH login might be restricted"
 msgstr ""
 "Kein öffentlicher Schlüssel angegeben, SSH-Anmeldung möglicherweise "
 "eingeschränkt"
 
 #. TRANSLATORS: section title for user authentication configuration
-#: src/components/overview/UsersSummary.tsx:156
+#: src/components/overview/UsersSummary.tsx:157
 #: src/components/users/UsersPage.tsx:35 src/routes/users.tsx:32
 msgid "Authentication"
 msgstr "Authentifizierung"
@@ -2890,118 +2886,118 @@ msgid "The software selection could not be loaded."
 msgstr "Die Softwareauswahl konnte nicht geladen werden."
 
 #. TRANSLATORS: empty state title for a software section with nothing selected
-#: src/components/software/SoftwarePage.tsx:74
+#: src/components/software/SoftwarePage.tsx:75
 msgid "None selected"
 msgstr "Nichts ausgewählt"
 
-#: src/components/software/SoftwarePage.tsx:119
+#: src/components/software/SoftwarePage.tsx:120
 msgid "Read less"
 msgstr "Weniger lesen"
 
 #. TRANSLATORS: accessible label for the collapse button; %s is the pattern name
-#: src/components/software/SoftwarePage.tsx:121
+#: src/components/software/SoftwarePage.tsx:122
 #, javascript-format
 msgid "Read less about %s"
 msgstr "Weniger lesen über %s"
 
-#: src/components/software/SoftwarePage.tsx:125
+#: src/components/software/SoftwarePage.tsx:126
 msgid "Read more"
 msgstr "Weiterlesen"
 
 #. TRANSLATORS: accessible label for the expand button; %s is the pattern name
-#: src/components/software/SoftwarePage.tsx:127
+#: src/components/software/SoftwarePage.tsx:128
 #, javascript-format
 msgid "Read more about %s"
 msgstr "Weiterlesen über %s"
 
 #. TRANSLATORS: %s is the required disk space. Keep the [brackets]: they mark the value to be displayed in bold.
-#: src/components/software/SoftwarePage.tsx:197
+#: src/components/software/SoftwarePage.tsx:198
 #, javascript-format
 msgid "Required space with current selection: [%s]"
 msgstr "Erforderlicher Speicherplatz bei aktueller Auswahl: [%s]"
 
 #. TRANSLATORS: %s is the required disk space. Keep the [brackets]: they mark the value to be displayed in bold.
-#: src/components/software/SoftwarePage.tsx:199
+#: src/components/software/SoftwarePage.tsx:200
 #, javascript-format
 msgid "Required space: [%s]"
 msgstr "Erforderlicher Speicherplatz: [%s]"
 
 #. TRANSLATORS: %1$d is selected count, %2$d is total available count
-#: src/components/software/SoftwarePage.tsx:247
-#: src/components/software/patterns-form/Form.tsx:143
+#: src/components/software/SoftwarePage.tsx:248
+#: src/components/software/patterns-form/Form.tsx:144
 #, javascript-format
 msgid "%1$d of %2$d selected"
 msgstr "%1$d von %2$d ausgewählt"
 
 #. TRANSLATORS: shown while the software proposal is not yet available
-#: src/components/software/SoftwarePage.tsx:275
+#: src/components/software/SoftwarePage.tsx:276
 msgid "No information available yet"
 msgstr "Noch keine Informationen verfügbar"
 
 #. TRANSLATORS: empty state title when no desktop environments are available
-#: src/components/software/SoftwarePage.tsx:291
+#: src/components/software/SoftwarePage.tsx:292
 msgid "No desktops available"
 msgstr "Keine Desktops verfügbar"
 
 #. TRANSLATORS: explanation shown when the product has no desktop environments
-#: src/components/software/SoftwarePage.tsx:293
+#: src/components/software/SoftwarePage.tsx:294
 msgid "This product does not provide desktop environments."
 msgstr "Dieses Produkt stellt keine Desktop-Umgebungen bereit."
 
 #. TRANSLATORS: hint shown when no desktop environment has been chosen
-#: src/components/software/SoftwarePage.tsx:299
+#: src/components/software/SoftwarePage.tsx:300
 msgid "Select a desktop environment to get a graphical interface."
 msgstr ""
 "Wählen Sie eine Desktop-Umgebung aus, um eine grafische Benutzeroberfläche "
 "zu erhalten."
 
 #. TRANSLATORS: button to go to the desktop environment selection page
-#: src/components/software/SoftwarePage.tsx:301
+#: src/components/software/SoftwarePage.tsx:302
 msgid "Select a desktop"
 msgstr "Desktop auswählen"
 
 #. TRANSLATORS: empty state title when no additional patterns are available
-#: src/components/software/SoftwarePage.tsx:309
+#: src/components/software/SoftwarePage.tsx:310
 msgid "No additional patterns available"
 msgstr "Keine zusätzlichen Muster verfügbar"
 
 #. TRANSLATORS: explanation shown when the product has no additional patterns
-#: src/components/software/SoftwarePage.tsx:311
+#: src/components/software/SoftwarePage.tsx:312
 msgid "This product does not provide additional patterns."
 msgstr "Dieses Produkt stellt keine zusätzlichen Muster bereit."
 
 #. TRANSLATORS: hint shown when no additional software patterns have been chosen
-#: src/components/software/SoftwarePage.tsx:317
+#: src/components/software/SoftwarePage.tsx:318
 msgid "Select one or more to extend the system."
 msgstr "Wählen Sie eine oder mehrere aus, um das System zu erweitern."
 
 #. TRANSLATORS: button to go to the pattern selection page
-#: src/components/software/SoftwarePage.tsx:319
+#: src/components/software/SoftwarePage.tsx:320
 msgid "Select patterns"
 msgstr "Muster auswählen"
 
-#: src/components/software/SoftwarePage.tsx:331
+#: src/components/software/SoftwarePage.tsx:332
 msgid "Desktops"
 msgstr "Desktops"
 
 #. TRANSLATORS: description for the Desktops section
-#: src/components/software/SoftwarePage.tsx:334
+#: src/components/software/SoftwarePage.tsx:335
 msgid "Graphical desktop environments for the system."
 msgstr "Grafische Desktop-Umgebungen für das System."
 
 #. TRANSLATORS: button to change the desktop selection
-#: src/components/software/SoftwarePage.tsx:338
+#: src/components/software/SoftwarePage.tsx:339
 msgid "Change desktop"
 msgid_plural "Change desktops"
 msgstr[0] "Desktop ändern"
 msgstr[1] "Desktops ändern"
 
-#: src/components/software/SoftwarePage.tsx:349
+#: src/components/software/SoftwarePage.tsx:350
 msgid "Additional patterns"
 msgstr "Zusätzliche Muster"
 
 #. TRANSLATORS: description for the Additional software section
-#: src/components/software/SoftwarePage.tsx:352
+#: src/components/software/SoftwarePage.tsx:353
 msgid ""
 "Curated sets of packages for common use cases and features to extend the "
 "system."
@@ -3010,7 +3006,7 @@ msgstr ""
 "Funktionen zur Erweiterung des Systems."
 
 #. TRANSLATORS: button to change the additional software selection
-#: src/components/software/SoftwarePage.tsx:355
+#: src/components/software/SoftwarePage.tsx:356
 msgid "Change patterns"
 msgstr "Muster ändern"
 
@@ -3031,30 +3027,30 @@ msgstr ""
 
 #. TRANSLATORS: page title when selecting all software patterns
 #. TRANSLATORS: page title when selecting non-desktop software patterns
-#: src/components/software/patterns-form/Form.tsx:109
-#: src/components/software/patterns-form/Form.tsx:113
+#: src/components/software/patterns-form/Form.tsx:110
+#: src/components/software/patterns-form/Form.tsx:114
 msgid "Patterns selection"
 msgstr "Musterauswahl"
 
 #. TRANSLATORS: page title when selecting desktop environments
-#: src/components/software/patterns-form/Form.tsx:111
+#: src/components/software/patterns-form/Form.tsx:112
 msgid "Desktop selection"
 msgstr "Desktop-Auswahl"
 
 #. TRANSLATORS: shown next to a category heading when the search filter excludes all its patterns
-#: src/components/software/patterns-form/Form.tsx:152
+#: src/components/software/patterns-form/Form.tsx:153
 msgid "No patterns match the filter"
 msgstr "Keine Muster entsprechen dem Filter"
 
 #. TRANSLATORS: count of patterns matching the search filter in this category
-#: src/components/software/patterns-form/Form.tsx:154
+#: src/components/software/patterns-form/Form.tsx:155
 #, javascript-format
 msgid "%d matches the filter"
 msgid_plural "%d match the filter"
 msgstr[0] "%d entspricht dem Filter"
 msgstr[1] "%d entsprechen dem Filter"
 
-#: src/components/software/patterns-form/Form.tsx:332
+#: src/components/software/patterns-form/Form.tsx:333
 #, javascript-format
 msgid "%d pattern found"
 msgid_plural "%d patterns found"
@@ -3062,20 +3058,20 @@ msgstr[0] "%d Muster gefunden"
 msgstr[1] "%d Muster gefunden"
 
 #. TRANSLATORS: search results badge on the filter input when no pattern matches
-#: src/components/software/patterns-form/Form.tsx:342
+#: src/components/software/patterns-form/Form.tsx:343
 msgid "No patterns match"
 msgstr "Keine Muster passen"
 
 #. TRANSLATORS: search results badge on the filter input.
 #. %1$d is matches found, %2$d is the total number of patterns.
-#: src/components/software/patterns-form/Form.tsx:345
+#: src/components/software/patterns-form/Form.tsx:346
 #, javascript-format
 msgid "%1$d of %2$d patterns"
 msgstr "%1$d von %2$d Mustern"
 
 #. TRANSLATORS: placeholder for the search field on the patterns selection page
-#: src/components/software/patterns-form/Form.tsx:388
-#: src/components/software/patterns-form/Form.tsx:390
+#: src/components/software/patterns-form/Form.tsx:392
+#: src/components/software/patterns-form/Form.tsx:394
 msgid "Filter by name and description"
 msgstr "Nach Name und Beschreibung filtern"
 
@@ -3325,7 +3321,7 @@ msgstr ""
 "entsprechenden Festplatte erstellen oder konfigurieren."
 
 #: src/components/storage/BootSelectionPage.tsx:183
-#: src/components/storage/ProposalPage.tsx:258
+#: src/components/storage/ProposalPage.tsx:259
 msgid "Boot options"
 msgstr "Boot-Optionen"
 
@@ -3465,7 +3461,7 @@ msgid "Configure iSCSI"
 msgstr "iSCSI konfigurieren"
 
 #: src/components/storage/ConnectedDevicesMenu.tsx:63
-#: src/components/storage/ProposalPage.tsx:163
+#: src/components/storage/ProposalPage.tsx:164
 msgid "Activate zFCP disks"
 msgstr "zFCP-Festplatten aktivieren"
 
@@ -3801,7 +3797,7 @@ msgstr[1] ""
 "Die Konfiguration muss angepasst werden, um die folgenden Probleme zu "
 "beheben:"
 
-#: src/components/storage/ISCSIPage.tsx:39
+#: src/components/storage/ISCSIPage.tsx:40
 #: src/components/storage/iscsi/DiscoverFormPage.tsx:269
 #: src/components/storage/iscsi/InitiatorFormPage.tsx:59
 #: src/components/storage/iscsi/TargetLoginPage.tsx:304
@@ -4129,17 +4125,17 @@ msgstr ""
 "Passen Sie die Einstellungen unten an, damit das neue System in den "
 "verfügbaren Speicherplatz passt."
 
-#: src/components/storage/ProposalPage.tsx:78
+#: src/components/storage/ProposalPage.tsx:79
 msgid "Invalid storage settings"
 msgstr "Ungültige Einstellungen für die Speicherung"
 
-#: src/components/storage/ProposalPage.tsx:85
+#: src/components/storage/ProposalPage.tsx:86
 msgid "The current storage configuration has the following issue:"
 msgid_plural "The current storage configuration has the following issues:"
 msgstr[0] "Die aktuelle Speicherungskonfiguration weist folgendes Problem auf:"
 msgstr[1] "Die aktuelle Speicherungskonfiguration weist folgende Probleme auf:"
 
-#: src/components/storage/ProposalPage.tsx:99
+#: src/components/storage/ProposalPage.tsx:100
 msgid ""
 "You may want to discard those settings and start from scratch with a simple "
 "configuration."
@@ -4147,25 +4143,25 @@ msgstr ""
 "Möglicherweise möchten Sie diese Einstellungen verwerfen und mit einer "
 "einfachen Konfiguration neu beginnen."
 
-#: src/components/storage/ProposalPage.tsx:103
-#: src/components/storage/ProposalPage.tsx:131
+#: src/components/storage/ProposalPage.tsx:104
+#: src/components/storage/ProposalPage.tsx:132
 #: src/components/storage/UnsupportedModelInfo.tsx:55
 msgid "Reset to the default configuration"
 msgstr "Auf die Standardkonfiguration zurücksetzen"
 
-#: src/components/storage/ProposalPage.tsx:115
+#: src/components/storage/ProposalPage.tsx:116
 #: src/components/storage/UnsupportedModelInfo.tsx:39
 msgid "Unable to modify the settings"
 msgstr "Einstellungen können nicht geändert werden"
 
-#: src/components/storage/ProposalPage.tsx:121
+#: src/components/storage/ProposalPage.tsx:122
 msgid ""
 "The storage configuration uses elements not supported by this interface."
 msgstr ""
 "Die Speicherungskonfiguration verwendet Elemente, die von dieser "
 "Schnittstelle nicht unterstützt werden."
 
-#: src/components/storage/ProposalPage.tsx:127
+#: src/components/storage/ProposalPage.tsx:128
 msgid ""
 "You may want to discard the current settings and start from scratch with a "
 "simple configuration."
@@ -4173,7 +4169,7 @@ msgstr ""
 "Möglicherweise möchten Sie die aktuellen Einstellungen verwerfen und mit "
 "einer einfachen Konfiguration neu beginnen."
 
-#: src/components/storage/ProposalPage.tsx:143
+#: src/components/storage/ProposalPage.tsx:144
 msgid ""
 "There are not disks available for the installation. You may need to "
 "configure some device."
@@ -4181,38 +4177,38 @@ msgstr ""
 "Es sind keine Festplatten für die Installation verfügbar. Möglicherweise "
 "müssen Sie ein Gerät konfigurieren."
 
-#: src/components/storage/ProposalPage.tsx:148
+#: src/components/storage/ProposalPage.tsx:149
 msgid "No devices found"
 msgstr "Keine Geräte gefunden"
 
-#: src/components/storage/ProposalPage.tsx:157
+#: src/components/storage/ProposalPage.tsx:158
 msgid "Connect to iSCSI targets"
 msgstr "Mit iSCSI-Zielen verbinden"
 
-#: src/components/storage/ProposalPage.tsx:170
+#: src/components/storage/ProposalPage.tsx:171
 msgid "Manage DASD devices"
 msgstr "DASD-Geräte verwalten"
 
-#: src/components/storage/ProposalPage.tsx:222
+#: src/components/storage/ProposalPage.tsx:223
 msgid "Start from scratch with the default configuration"
 msgstr "Mit der Standardkonfiguration neu beginnen"
 
-#: src/components/storage/ProposalPage.tsx:224
+#: src/components/storage/ProposalPage.tsx:225
 msgid "Reset to defaults"
 msgstr "Auf Standardeinstellungen zurücksetzen"
 
-#: src/components/storage/ProposalPage.tsx:233
+#: src/components/storage/ProposalPage.tsx:234
 msgid ""
 "Changes in these settings will immediately update the 'Result' section below."
 msgstr ""
 "Änderungen an diesen Einstellungen werden sofort im Abschnitt ‚Ergebnis‘ "
 "unten aktualisiert."
 
-#: src/components/storage/ProposalPage.tsx:240
+#: src/components/storage/ProposalPage.tsx:241
 msgid "Installation devices"
 msgstr "Installationsgeräte"
 
-#: src/components/storage/ProposalPage.tsx:246
+#: src/components/storage/ProposalPage.tsx:247
 msgid ""
 "Structure of the new system, including disks to use and additional devices "
 "like LVM volume groups."
@@ -4220,7 +4216,7 @@ msgstr ""
 "Struktur des neuen Systems, einschließlich der zu verwendenden Festplatten "
 "und zusätzlichen Geräte wie LVM-Volume-Gruppen."
 
-#: src/components/storage/ProposalPage.tsx:253
+#: src/components/storage/ProposalPage.tsx:254
 msgid "Encryption"
 msgstr "Verschlüsselung"
 
@@ -4665,16 +4661,16 @@ msgstr "Physikalische Volumes"
 msgid "Formatting devices"
 msgstr "Geräte formatieren"
 
-#: src/components/storage/dasd/DASDPage.tsx:39
-#: src/components/storage/zfcp/ZFCPPage.tsx:66
+#: src/components/storage/dasd/DASDPage.tsx:41
+#: src/components/storage/zfcp/ZFCPPage.tsx:68
 msgid "No devices available"
 msgstr "Keine Geräte verfügbar"
 
-#: src/components/storage/dasd/DASDPage.tsx:40
+#: src/components/storage/dasd/DASDPage.tsx:42
 msgid "No DASD devices found in this machine."
 msgstr "In dieser Maschine wurden keine DASD-Geräte gefunden."
 
-#: src/components/storage/dasd/DASDPage.tsx:70 src/routes/storage.tsx:115
+#: src/components/storage/dasd/DASDPage.tsx:72 src/routes/storage.tsx:115
 msgid "DASD"
 msgstr "DASD"
 
@@ -6026,12 +6022,12 @@ msgid "Select the zFCP controllers to activate:"
 msgstr "Wählen Sie die zu aktivierenden zFCP-Controller aus:"
 
 #: src/components/storage/zfcp/ZFCPControllersPage.tsx:191
-#: src/components/storage/zfcp/ZFCPPage.tsx:174
+#: src/components/storage/zfcp/ZFCPPage.tsx:176
 msgid "zFCP"
 msgstr "zFCP"
 
 #: src/components/storage/zfcp/ZFCPControllersPage.tsx:192
-#: src/components/storage/zfcp/ZFCPPage.tsx:109
+#: src/components/storage/zfcp/ZFCPPage.tsx:111
 msgid "Activate controllers"
 msgstr "Controller aktivieren"
 
@@ -6075,33 +6071,33 @@ msgstr "LUN"
 msgid "Auto Scanned"
 msgstr "Automatisch gescannt"
 
-#: src/components/storage/zfcp/ZFCPPage.tsx:54
+#: src/components/storage/zfcp/ZFCPPage.tsx:56
 msgid "zFCP is not available"
 msgstr "zFCP ist nicht verfügbar"
 
-#: src/components/storage/zfcp/ZFCPPage.tsx:55
+#: src/components/storage/zfcp/ZFCPPage.tsx:57
 msgid "No zFCP controllers found in this machine."
 msgstr "Keine zFCP-Controller in dieser Maschine gefunden."
 
-#: src/components/storage/zfcp/ZFCPPage.tsx:67
+#: src/components/storage/zfcp/ZFCPPage.tsx:69
 msgid "No zFCP devices found in this machine."
 msgstr "In dieser Maschine wurden keine zFCP-Geräte gefunden."
 
-#: src/components/storage/zfcp/ZFCPPage.tsx:87
+#: src/components/storage/zfcp/ZFCPPage.tsx:89
 msgid "There is a deactivated zFCP controller."
 msgstr "Es gibt einen deaktivierten zFCP-Controller."
 
-#: src/components/storage/zfcp/ZFCPPage.tsx:88
+#: src/components/storage/zfcp/ZFCPPage.tsx:90
 #, javascript-format
 msgid "There are %s deactivated zFCP controllers."
 msgstr "Es gibt %s deaktivierte zFCP-Controller."
 
-#: src/components/storage/zfcp/ZFCPPage.tsx:92
+#: src/components/storage/zfcp/ZFCPPage.tsx:94
 msgid "All the available zFCP controllers are already activated."
 msgstr "Alle verfügbaren zFCP-Controller sind bereits aktiviert."
 
-#: src/components/storage/zfcp/ZFCPPage.tsx:104
-#: src/components/storage/zfcp/ZFCPPage.tsx:118
+#: src/components/storage/zfcp/ZFCPPage.tsx:106
+#: src/components/storage/zfcp/ZFCPPage.tsx:120
 msgid "zFCP controllers"
 msgstr "zFCP-Controller"
 
@@ -6389,6 +6385,9 @@ msgstr "Wird aktiviert"
 #: src/utils/network.ts:62
 msgid "Deactivating"
 msgstr "Wird deaktiviert"
+
+#~ msgid "Edit binding settings"
+#~ msgstr "Verknüpfungseinstellungen bearbeiten"
 
 #~ msgid "Search"
 #~ msgstr "Suchen"
