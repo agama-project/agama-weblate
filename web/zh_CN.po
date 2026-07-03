@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-03 14:40+0000\n"
+"POT-Creation-Date: 2026-07-03 16:06+0000\n"
 "PO-Revision-Date: 2026-06-25 09:13+0000\n"
 "Last-Translator: Grace Yu <grace.yu@excel-gits.com>\n"
 "Language-Team: Chinese (China) <https://l10n.opensuse.org/projects/agama/"
@@ -980,7 +980,7 @@ msgstr "信号强度"
 msgid "Network not available"
 msgstr "网络不可用"
 
-#: src/components/network/ConnectionDetails.tsx:110
+#: src/components/network/ConnectionDetails.tsx:110 src/utils/network.ts:89
 msgid "Bond"
 msgstr "绑定"
 
@@ -1026,7 +1026,7 @@ msgstr "绑定选项"
 msgid "Bond ports"
 msgstr "绑定端口"
 
-#: src/components/network/ConnectionDetails.tsx:143
+#: src/components/network/ConnectionDetails.tsx:143 src/utils/network.ts:90
 msgid "Bridge"
 msgstr "网桥"
 
@@ -1080,7 +1080,7 @@ msgstr "最大报文留存时长"
 msgid "Bridge ports"
 msgstr "网桥端口"
 
-#: src/components/network/ConnectionDetails.tsx:192
+#: src/components/network/ConnectionDetails.tsx:192 src/utils/network.ts:91
 msgid "VLAN"
 msgstr "VLAN"
 
@@ -1328,6 +1328,7 @@ msgstr "断开连接"
 
 #: src/components/network/ConnectionsTable.tsx:380
 #: src/components/storage/PartitionsSection.tsx:194
+#: src/components/storage/SpaceActionsTable.tsx:165
 #: src/components/storage/VolumeGroupEditor.tsx:187
 #: src/components/storage/iscsi/TargetsTable.tsx:252
 msgid "Delete"
@@ -1573,7 +1574,7 @@ msgstr "采用系统默认设置启用"
 #. TRANSLATORS: option label for enabling bridge STP.
 #: src/components/network/connection-form/BridgeFields.tsx:47
 #: src/components/product/registration-form/Form.tsx:157
-#: src/components/storage/utils.ts:106 src/components/storage/utils.ts:125
+#: src/components/storage/utils.ts:72 src/components/storage/utils.ts:91
 #: src/components/system/system-form/NtpFields.tsx:73
 msgid "Custom"
 msgstr "自定义"
@@ -2235,7 +2236,7 @@ msgid "Potential data loss"
 msgstr "存在数据丢失风险"
 
 #: src/components/overview/SystemInformationSection.tsx:58
-#: src/utils/network.ts:59
+#: src/utils/network.ts:60 src/utils/network.ts:92
 msgid "Unknown"
 msgstr "未知"
 
@@ -4293,6 +4294,15 @@ msgstr "无法缩小该设备："
 msgid "Show information about %s"
 msgstr "显示关于 %s 的信息"
 
+#: src/components/storage/SpaceActionsTable.tsx:152
+msgid "Do not modify"
+msgstr "不要修改"
+
+#: src/components/storage/SpaceActionsTable.tsx:158
+#, fuzzy
+msgid "Allow shrinking"
+msgstr "允许增长"
+
 #: src/components/storage/SpaceActionsTable.tsx:235
 msgid "Action"
 msgstr "操作"
@@ -4716,6 +4726,7 @@ msgid "Initiator user name"
 msgstr "发起端用户名"
 
 #: src/components/storage/iscsi/DiscoverFormPage.tsx:237
+#: src/components/storage/iscsi/TargetLoginPage.tsx:264
 msgid "Initiator password"
 msgstr "发起端口令"
 
@@ -5220,134 +5231,110 @@ msgstr "请选择或输入尚未分配给其他设备的挂载点"
 msgid "Invalid label format"
 msgstr "标签格式无效"
 
-#: src/components/storage/utils.ts:60
-msgid "KiB"
-msgstr "KiB"
-
-#: src/components/storage/utils.ts:61
-msgid "MiB"
-msgstr "MiB"
-
-#: src/components/storage/utils.ts:62
-msgid "GiB"
-msgstr "GiB"
-
-#: src/components/storage/utils.ts:63
-msgid "TiB"
-msgstr "TiB"
-
-#: src/components/storage/utils.ts:64
-msgid "PiB"
-msgstr "PiB"
-
-#: src/components/storage/utils.ts:68
-msgid "Bcachefs"
-msgstr "Bcachefs"
-
-#: src/components/storage/utils.ts:69
-msgid "BitLocker"
-msgstr "BitLocker"
-
-#: src/components/storage/utils.ts:70
-msgid "Btrfs"
-msgstr "Btrfs"
-
-#: src/components/storage/utils.ts:71
-msgid "immutable Btrfs"
-msgstr "不可变 Btrfs"
-
-#: src/components/storage/utils.ts:72
-msgid "Btrfs with snapshots"
-msgstr "带快照的 Btrfs"
-
-#: src/components/storage/utils.ts:73
-msgid "ExFAT"
-msgstr "ExFAT"
-
-#: src/components/storage/utils.ts:74
-msgid "Ext2"
-msgstr "Ext2"
-
-#: src/components/storage/utils.ts:75
-msgid "Ext3"
-msgstr "Ext3"
-
-#: src/components/storage/utils.ts:76
-msgid "Ext4"
-msgstr "Ext4"
-
-#: src/components/storage/utils.ts:77
-msgid "F2FS"
-msgstr "F2FS"
-
-#: src/components/storage/utils.ts:78
-msgid "JFS"
-msgstr "JFS"
-
-#: src/components/storage/utils.ts:79
-msgid "NFS"
-msgstr "NFS"
-
-#: src/components/storage/utils.ts:80
-msgid "NILFS2"
-msgstr "NILFS2"
-
-#: src/components/storage/utils.ts:81
-msgid "NTFS"
-msgstr "NTFS"
-
-#: src/components/storage/utils.ts:82
-msgid "ReiserFS"
-msgstr "ReiserFS"
-
-#: src/components/storage/utils.ts:83
-msgid "Swap"
-msgstr "Swap"
-
-#: src/components/storage/utils.ts:84
-msgid "Tmpfs"
-msgstr "Tmpfs"
-
-#: src/components/storage/utils.ts:85
-msgid "FAT"
-msgstr "FAT"
-
-#: src/components/storage/utils.ts:86
-msgid "XFS"
-msgstr "XFS"
-
-#: src/components/storage/utils.ts:94 src/components/storage/utils.ts:113
+#: src/components/storage/utils.ts:66 src/components/storage/utils.ts:85
 msgid "Delete current content"
 msgstr "删除当前内容"
 
-#: src/components/storage/utils.ts:98
+#: src/components/storage/utils.ts:68
 msgid "Shrink existing partitions"
 msgstr "缩小现有分区"
 
-#: src/components/storage/utils.ts:102 src/components/storage/utils.ts:121
+#: src/components/storage/utils.ts:70 src/components/storage/utils.ts:89
 msgid "Use available space"
 msgstr "使用可用空间"
 
-#: src/components/storage/utils.ts:117
+#: src/components/storage/utils.ts:87
 msgid "Shrink existing logical volumes"
 msgstr "缩小现有逻辑卷"
+
+#: src/components/storage/utils.ts:289
+msgid "Bcachefs"
+msgstr "Bcachefs"
+
+#: src/components/storage/utils.ts:291
+msgid "Btrfs"
+msgstr "Btrfs"
+
+#: src/components/storage/utils.ts:293
+msgid "immutable Btrfs"
+msgstr "不可变 Btrfs"
+
+#: src/components/storage/utils.ts:295
+msgid "Btrfs with snapshots"
+msgstr "带快照的 Btrfs"
+
+#: src/components/storage/utils.ts:297
+msgid "ExFAT"
+msgstr "ExFAT"
+
+#: src/components/storage/utils.ts:299
+msgid "Ext2"
+msgstr "Ext2"
+
+#: src/components/storage/utils.ts:301
+msgid "Ext3"
+msgstr "Ext3"
+
+#: src/components/storage/utils.ts:303
+msgid "Ext4"
+msgstr "Ext4"
+
+#: src/components/storage/utils.ts:305
+msgid "F2FS"
+msgstr "F2FS"
+
+#: src/components/storage/utils.ts:307
+msgid "JFS"
+msgstr "JFS"
+
+#: src/components/storage/utils.ts:309
+msgid "NFS"
+msgstr "NFS"
+
+#: src/components/storage/utils.ts:311
+msgid "NILFS2"
+msgstr "NILFS2"
+
+#: src/components/storage/utils.ts:313
+msgid "NTFS"
+msgstr "NTFS"
+
+#: src/components/storage/utils.ts:315
+msgid "ReiserFS"
+msgstr "ReiserFS"
+
+#: src/components/storage/utils.ts:317
+msgid "Swap"
+msgstr "Swap"
+
+#: src/components/storage/utils.ts:319
+msgid "Tmpfs"
+msgstr "Tmpfs"
+
+#: src/components/storage/utils.ts:321
+msgid "FAT"
+msgstr "FAT"
+
+#: src/components/storage/utils.ts:323
+msgid "XFS"
+msgstr "XFS"
 
 #. TRANSLATORS: sub-string used to represent a path like "/" or "/var". %s is replaced by the path
 #. itself, the rest of the string (quotation marks in the English case) is used to encapsulate the
 #. path in a bigger sentence like 'Create partitions for "/" and "/var"'.
-#: src/components/storage/utils.ts:351
+#: src/components/storage/utils.ts:357
 #, javascript-format
 msgid "\"%s\""
 msgstr "\"%s\""
 
 #. TRANSLATORS: Size range, %1$s is the min size and %2$s is the max
-#: src/components/storage/utils.ts:362
+#: src/components/storage/utils.ts:368
 #, javascript-format
 msgid "%1$s - %2$s"
 msgstr "%1$s - %2$s"
 
 #. TRANSLATORS: minimum device size, %s is replaced by size string, e.g. "17.5 GiB"
-#: src/components/storage/utils.ts:364
+#: src/components/storage/utils.ts:370
 #, javascript-format
 msgid "at least %s"
 msgstr "至少 %s"
@@ -5717,11 +5704,11 @@ msgstr "zFCP"
 msgid "Activate controllers"
 msgstr "激活控制器"
 
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:55 src/utils/network.ts:61
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:55 src/utils/network.ts:62
 msgid "Activated"
 msgstr "已激活"
 
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:56 src/utils/network.ts:63
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:56 src/utils/network.ts:64
 msgid "Deactivated"
 msgstr "已停用"
 
@@ -6049,13 +6036,44 @@ msgstr "前往[安装]摘要页面。"
 msgid "ZFCP"
 msgstr "ZFCP"
 
-#: src/utils/network.ts:60
+#: src/utils/network.ts:61
 msgid "Activating"
 msgstr "激活中"
 
-#: src/utils/network.ts:62
+#: src/utils/network.ts:63
 msgid "Deactivating"
 msgstr "停用中"
+
+#: src/utils/network.ts:86
+#, fuzzy
+msgid "Ethernet"
+msgstr "其他"
+
+#: src/utils/network.ts:87
+msgid "Wi-Fi"
+msgstr "Wi-Fi"
+
+#: src/utils/network.ts:88
+msgid "Loopback"
+msgstr ""
+
+#~ msgid "KiB"
+#~ msgstr "KiB"
+
+#~ msgid "MiB"
+#~ msgstr "MiB"
+
+#~ msgid "GiB"
+#~ msgstr "GiB"
+
+#~ msgid "TiB"
+#~ msgstr "TiB"
+
+#~ msgid "PiB"
+#~ msgstr "PiB"
+
+#~ msgid "BitLocker"
+#~ msgstr "BitLocker"
 
 #~ msgid "Edit binding settings"
 #~ msgstr "编辑绑定设置"
@@ -6233,13 +6251,6 @@ msgstr "停用中"
 #, fuzzy
 #~ msgid "Parent device is required"
 #~ msgstr "需要口令"
-
-#, fuzzy
-#~ msgid "Ethernet"
-#~ msgstr "其他"
-
-#~ msgid "Wi-Fi"
-#~ msgstr "Wi-Fi"
 
 #, fuzzy
 #~ msgid "Configured for the root user"
@@ -7521,9 +7532,6 @@ msgstr "停用中"
 #, c-format
 #~ msgid "Space action selector for %s"
 #~ msgstr "%s 的空间操作选择器"
-
-#~ msgid "Do not modify"
-#~ msgstr "不要修改"
 
 #~ msgid "Shrinkable"
 #~ msgstr "可缩小"

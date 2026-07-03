@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-03 14:40+0000\n"
+"POT-Creation-Date: 2026-07-03 16:06+0000\n"
 "PO-Revision-Date: 2026-06-16 09:12+0000\n"
 "Last-Translator: David Medina <medipas@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -1005,7 +1005,7 @@ msgstr "Força del senyal"
 msgid "Network not available"
 msgstr "Xarxa no disponible"
 
-#: src/components/network/ConnectionDetails.tsx:110
+#: src/components/network/ConnectionDetails.tsx:110 src/utils/network.ts:89
 msgid "Bond"
 msgstr "Vincle"
 
@@ -1051,7 +1051,7 @@ msgstr "Opcions de vinculació"
 msgid "Bond ports"
 msgstr "Ports de vinculació"
 
-#: src/components/network/ConnectionDetails.tsx:143
+#: src/components/network/ConnectionDetails.tsx:143 src/utils/network.ts:90
 msgid "Bridge"
 msgstr "Pont"
 
@@ -1105,7 +1105,7 @@ msgstr "Edat màxima del missatge"
 msgid "Bridge ports"
 msgstr "Ports de pont"
 
-#: src/components/network/ConnectionDetails.tsx:192
+#: src/components/network/ConnectionDetails.tsx:192 src/utils/network.ts:91
 msgid "VLAN"
 msgstr "VLAN"
 
@@ -1353,6 +1353,7 @@ msgstr "Desconnecta"
 
 #: src/components/network/ConnectionsTable.tsx:380
 #: src/components/storage/PartitionsSection.tsx:194
+#: src/components/storage/SpaceActionsTable.tsx:165
 #: src/components/storage/VolumeGroupEditor.tsx:187
 #: src/components/storage/iscsi/TargetsTable.tsx:252
 msgid "Delete"
@@ -1607,7 +1608,7 @@ msgstr "Habilitat amb la configuració predeterminada del sistema"
 #. TRANSLATORS: option label for enabling bridge STP.
 #: src/components/network/connection-form/BridgeFields.tsx:47
 #: src/components/product/registration-form/Form.tsx:157
-#: src/components/storage/utils.ts:106 src/components/storage/utils.ts:125
+#: src/components/storage/utils.ts:72 src/components/storage/utils.ts:91
 #: src/components/system/system-form/NtpFields.tsx:73
 msgid "Custom"
 msgstr "Personalitzat"
@@ -2287,7 +2288,7 @@ msgid "Potential data loss"
 msgstr "Pèrdua potencial de dades"
 
 #: src/components/overview/SystemInformationSection.tsx:58
-#: src/utils/network.ts:59
+#: src/utils/network.ts:60 src/utils/network.ts:92
 msgid "Unknown"
 msgstr "Desconegut"
 
@@ -4486,6 +4487,15 @@ msgstr "El dispositiu no es pot encongir:"
 msgid "Show information about %s"
 msgstr "Mostra informació quant a %s"
 
+#: src/components/storage/SpaceActionsTable.tsx:152
+msgid "Do not modify"
+msgstr "No la modifiquis"
+
+#: src/components/storage/SpaceActionsTable.tsx:158
+#, fuzzy
+msgid "Allow shrinking"
+msgstr "Permet-ne l'eixamplament"
+
 #: src/components/storage/SpaceActionsTable.tsx:235
 msgid "Action"
 msgstr "Acció"
@@ -4930,6 +4940,7 @@ msgid "Initiator user name"
 msgstr "Nom d'usuari de l'iniciador"
 
 #: src/components/storage/iscsi/DiscoverFormPage.tsx:237
+#: src/components/storage/iscsi/TargetLoginPage.tsx:264
 msgid "Initiator password"
 msgstr "Contrasenya de l'iniciador"
 
@@ -5455,134 +5466,110 @@ msgstr ""
 msgid "Invalid label format"
 msgstr "Format d'etiqueta no vàlid"
 
-#: src/components/storage/utils.ts:60
-msgid "KiB"
-msgstr "KiB"
-
-#: src/components/storage/utils.ts:61
-msgid "MiB"
-msgstr "MiB"
-
-#: src/components/storage/utils.ts:62
-msgid "GiB"
-msgstr "GiB"
-
-#: src/components/storage/utils.ts:63
-msgid "TiB"
-msgstr "TiB"
-
-#: src/components/storage/utils.ts:64
-msgid "PiB"
-msgstr "PiB"
-
-#: src/components/storage/utils.ts:68
-msgid "Bcachefs"
-msgstr "Bcachefs"
-
-#: src/components/storage/utils.ts:69
-msgid "BitLocker"
-msgstr "BitLocker"
-
-#: src/components/storage/utils.ts:70
-msgid "Btrfs"
-msgstr "Btrfs"
-
-#: src/components/storage/utils.ts:71
-msgid "immutable Btrfs"
-msgstr "Btrfs immutable"
-
-#: src/components/storage/utils.ts:72
-msgid "Btrfs with snapshots"
-msgstr "Btrfs amb instantànies"
-
-#: src/components/storage/utils.ts:73
-msgid "ExFAT"
-msgstr "ExFAT"
-
-#: src/components/storage/utils.ts:74
-msgid "Ext2"
-msgstr "Ext2"
-
-#: src/components/storage/utils.ts:75
-msgid "Ext3"
-msgstr "Ext3"
-
-#: src/components/storage/utils.ts:76
-msgid "Ext4"
-msgstr "Ext4"
-
-#: src/components/storage/utils.ts:77
-msgid "F2FS"
-msgstr "F2FS"
-
-#: src/components/storage/utils.ts:78
-msgid "JFS"
-msgstr "JFS"
-
-#: src/components/storage/utils.ts:79
-msgid "NFS"
-msgstr "NFS"
-
-#: src/components/storage/utils.ts:80
-msgid "NILFS2"
-msgstr "NILFS2"
-
-#: src/components/storage/utils.ts:81
-msgid "NTFS"
-msgstr "NTFS"
-
-#: src/components/storage/utils.ts:82
-msgid "ReiserFS"
-msgstr "ReiserFS"
-
-#: src/components/storage/utils.ts:83
-msgid "Swap"
-msgstr "Intercanvi"
-
-#: src/components/storage/utils.ts:84
-msgid "Tmpfs"
-msgstr "Tmpfs"
-
-#: src/components/storage/utils.ts:85
-msgid "FAT"
-msgstr "FAT"
-
-#: src/components/storage/utils.ts:86
-msgid "XFS"
-msgstr "XFS"
-
-#: src/components/storage/utils.ts:94 src/components/storage/utils.ts:113
+#: src/components/storage/utils.ts:66 src/components/storage/utils.ts:85
 msgid "Delete current content"
 msgstr "Suprimeix el contingut actual"
 
-#: src/components/storage/utils.ts:98
+#: src/components/storage/utils.ts:68
 msgid "Shrink existing partitions"
 msgstr "Encongeix les particions existents"
 
-#: src/components/storage/utils.ts:102 src/components/storage/utils.ts:121
+#: src/components/storage/utils.ts:70 src/components/storage/utils.ts:89
 msgid "Use available space"
 msgstr "Usa l'espai disponible"
 
-#: src/components/storage/utils.ts:117
+#: src/components/storage/utils.ts:87
 msgid "Shrink existing logical volumes"
 msgstr "Encongeix els volums lògics existents"
+
+#: src/components/storage/utils.ts:289
+msgid "Bcachefs"
+msgstr "Bcachefs"
+
+#: src/components/storage/utils.ts:291
+msgid "Btrfs"
+msgstr "Btrfs"
+
+#: src/components/storage/utils.ts:293
+msgid "immutable Btrfs"
+msgstr "Btrfs immutable"
+
+#: src/components/storage/utils.ts:295
+msgid "Btrfs with snapshots"
+msgstr "Btrfs amb instantànies"
+
+#: src/components/storage/utils.ts:297
+msgid "ExFAT"
+msgstr "ExFAT"
+
+#: src/components/storage/utils.ts:299
+msgid "Ext2"
+msgstr "Ext2"
+
+#: src/components/storage/utils.ts:301
+msgid "Ext3"
+msgstr "Ext3"
+
+#: src/components/storage/utils.ts:303
+msgid "Ext4"
+msgstr "Ext4"
+
+#: src/components/storage/utils.ts:305
+msgid "F2FS"
+msgstr "F2FS"
+
+#: src/components/storage/utils.ts:307
+msgid "JFS"
+msgstr "JFS"
+
+#: src/components/storage/utils.ts:309
+msgid "NFS"
+msgstr "NFS"
+
+#: src/components/storage/utils.ts:311
+msgid "NILFS2"
+msgstr "NILFS2"
+
+#: src/components/storage/utils.ts:313
+msgid "NTFS"
+msgstr "NTFS"
+
+#: src/components/storage/utils.ts:315
+msgid "ReiserFS"
+msgstr "ReiserFS"
+
+#: src/components/storage/utils.ts:317
+msgid "Swap"
+msgstr "Intercanvi"
+
+#: src/components/storage/utils.ts:319
+msgid "Tmpfs"
+msgstr "Tmpfs"
+
+#: src/components/storage/utils.ts:321
+msgid "FAT"
+msgstr "FAT"
+
+#: src/components/storage/utils.ts:323
+msgid "XFS"
+msgstr "XFS"
 
 #. TRANSLATORS: sub-string used to represent a path like "/" or "/var". %s is replaced by the path
 #. itself, the rest of the string (quotation marks in the English case) is used to encapsulate the
 #. path in a bigger sentence like 'Create partitions for "/" and "/var"'.
-#: src/components/storage/utils.ts:351
+#: src/components/storage/utils.ts:357
 #, javascript-format
 msgid "\"%s\""
 msgstr "%s"
 
 #. TRANSLATORS: Size range, %1$s is the min size and %2$s is the max
-#: src/components/storage/utils.ts:362
+#: src/components/storage/utils.ts:368
 #, javascript-format
 msgid "%1$s - %2$s"
 msgstr "%1$s - %2$s"
 
 #. TRANSLATORS: minimum device size, %s is replaced by size string, e.g. "17.5 GiB"
-#: src/components/storage/utils.ts:364
+#: src/components/storage/utils.ts:370
 #, javascript-format
 msgid "at least %s"
 msgstr "almenys %s"
@@ -5977,11 +5964,11 @@ msgstr "zFCP"
 msgid "Activate controllers"
 msgstr "Activa els controladors"
 
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:55 src/utils/network.ts:61
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:55 src/utils/network.ts:62
 msgid "Activated"
 msgstr "Activat"
 
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:56 src/utils/network.ts:63
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:56 src/utils/network.ts:64
 msgid "Deactivated"
 msgstr "Desactivat"
 
@@ -6323,13 +6310,43 @@ msgstr "Ves al resum de la [instal·lació]."
 msgid "ZFCP"
 msgstr "ZFCP"
 
-#: src/utils/network.ts:60
+#: src/utils/network.ts:61
 msgid "Activating"
 msgstr "S'activa"
 
-#: src/utils/network.ts:62
+#: src/utils/network.ts:63
 msgid "Deactivating"
 msgstr "Es desactiva"
+
+#: src/utils/network.ts:86
+msgid "Ethernet"
+msgstr "Xarxa amb fil"
+
+#: src/utils/network.ts:87
+msgid "Wi-Fi"
+msgstr "Sense fil"
+
+#: src/utils/network.ts:88
+msgid "Loopback"
+msgstr "Loopback"
+
+#~ msgid "KiB"
+#~ msgstr "KiB"
+
+#~ msgid "MiB"
+#~ msgstr "MiB"
+
+#~ msgid "GiB"
+#~ msgstr "GiB"
+
+#~ msgid "TiB"
+#~ msgstr "TiB"
+
+#~ msgid "PiB"
+#~ msgstr "PiB"
+
+#~ msgid "BitLocker"
+#~ msgstr "BitLocker"
 
 #~ msgid "Edit binding settings"
 #~ msgstr "Edita la configuració de la vinculació"
@@ -6523,15 +6540,6 @@ msgstr "Es desactiva"
 
 #~ msgid "Parent device must be different from the device name"
 #~ msgstr "El dispositiu principal ha de ser diferent del nom del dispositiu."
-
-#~ msgid "Ethernet"
-#~ msgstr "Xarxa amb fil"
-
-#~ msgid "Wi-Fi"
-#~ msgstr "Sense fil"
-
-#~ msgid "Loopback"
-#~ msgstr "Loopback"
 
 #~ msgid "Configured for the root user"
 #~ msgstr "Configurat per a l'usuari d'arrel"
@@ -8065,9 +8073,6 @@ msgstr "Es desactiva"
 #, c-format
 #~ msgid "Space action selector for %s"
 #~ msgstr "Selector d'acció espacial per a %s"
-
-#~ msgid "Do not modify"
-#~ msgstr "No la modifiquis"
 
 #~ msgid "Shrinkable"
 #~ msgstr "Encongible"
