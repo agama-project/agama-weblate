@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-03 10:17+0000\n"
+"POT-Creation-Date: 2026-07-03 15:40+0000\n"
 "PO-Revision-Date: 2026-05-31 13:12+0000\n"
 "Last-Translator: Feike Donia <feikedonia@proton.me>\n"
 "Language-Team: Dutch <https://l10n.opensuse.org/projects/agama/agama-web-"
@@ -694,6 +694,11 @@ msgstr "Voeg een andere DNS toe"
 msgid "DNS"
 msgstr "DNS"
 
+#: src/components/network/DnsDataList.tsx:125
+#, fuzzy
+msgid "DNS data list"
+msgstr "Adressen data lijst"
+
 #: src/components/network/InstallationOnlySwitch.tsx:47
 msgid "Use for installation only"
 msgstr ""
@@ -754,6 +759,7 @@ msgid "Manual"
 msgstr "Handmatig"
 
 #. TRANSLATORS: network gateway configuration
+#: src/components/network/IpSettingsForm.tsx:184
 #: src/components/network/IpSettingsForm.tsx:188
 #: src/components/network/IpSettingsForm.tsx:191
 #: src/components/network/WifiConnectionDetails.tsx:129
@@ -1227,7 +1233,7 @@ msgid "SUSE Customer Center (SCC)"
 msgstr ""
 
 #: src/components/product/ProductRegistrationPage.tsx:67
-#: src/components/storage/utils.ts:102
+#: src/components/storage/utils.ts:94
 #, fuzzy
 msgid "Custom"
 msgstr "Installatie apparaat"
@@ -2369,7 +2375,7 @@ msgstr ""
 #: src/components/storage/FormattableDevicePage.tsx:284
 #: src/components/storage/LogicalVolumePage.tsx:463
 #: src/components/storage/PartitionPage.tsx:564
-#: src/components/storage/utils.ts:338
+#: src/components/storage/utils.ts:330
 #, fuzzy
 msgid "Btrfs with snapshots"
 msgstr "met snapshots"
@@ -2395,6 +2401,13 @@ msgstr "Formatteren DASD apparaten"
 #, fuzzy
 msgid "Format device as"
 msgstr "Formatteren DASD apparaten"
+
+#: src/components/storage/FormattableDevicePage.tsx:309
+#: src/components/storage/LogicalVolumePage.tsx:485
+#: src/components/storage/PartitionPage.tsx:589
+#, fuzzy
+msgid "Available file systems"
+msgstr "Beschikbare apparaten"
 
 #. TRANSLATORS: %s is the name of a partition, like /dev/vda2
 #. TRANSLATORS: %s is the name of a device, like vda
@@ -3198,6 +3211,20 @@ msgstr "Het apparaat kan niet gekrompen worden:"
 msgid "Show information about %s"
 msgstr "Toon informatie over %s"
 
+#: src/components/storage/SpaceActionsTable.tsx:153
+#, fuzzy
+msgid "Do not modify"
+msgstr "Niet configureren"
+
+#: src/components/storage/SpaceActionsTable.tsx:159
+msgid "Allow shrinking"
+msgstr ""
+
+#: src/components/storage/SpaceActionsTable.tsx:166
+#: src/components/storage/iscsi/NodesPresenter.jsx:84
+msgid "Delete"
+msgstr "Verwijderen"
+
 #: src/components/storage/SpaceActionsTable.tsx:208
 msgid "The content may be deleted"
 msgstr "De inhoud kan worden verwijderd"
@@ -3214,7 +3241,7 @@ msgstr "Geen inhoud gevonden"
 msgid "Action"
 msgstr "Acties"
 
-#: src/components/storage/SpacePolicyMenu.tsx:70
+#: src/components/storage/SpacePolicyMenu.tsx:71
 #, fuzzy
 msgid "Find space"
 msgstr "Lees zFCP apparaten"
@@ -3629,6 +3656,13 @@ msgstr "Onjuiste poort"
 msgid "Edit %s"
 msgstr "Wijzig %s"
 
+#. TRANSLATORS: iSCSI start up mode (on boot/manual/automatic)
+#: src/components/storage/iscsi/EditNodeForm.tsx:52
+#: src/components/storage/iscsi/LoginForm.jsx:76
+#: src/components/storage/iscsi/LoginForm.jsx:79
+msgid "Startup"
+msgstr "Modus van opstarten"
+
 #: src/components/storage/iscsi/InitiatorForm.tsx:42
 msgid "Initiator name successfully updated"
 msgstr ""
@@ -3678,12 +3712,6 @@ msgstr "Initiator"
 msgid "Login %s"
 msgstr "Login %s"
 
-#. TRANSLATORS: iSCSI start up mode (on boot/manual/automatic)
-#: src/components/storage/iscsi/LoginForm.jsx:76
-#: src/components/storage/iscsi/LoginForm.jsx:79
-msgid "Startup"
-msgstr "Modus van opstarten"
-
 #: src/components/storage/iscsi/NodeStartupOptions.js:27
 msgid "On boot"
 msgstr "Bij opstarten"
@@ -3699,10 +3727,6 @@ msgstr "Verbroken"
 #, javascript-format
 msgid "Connected (%s)"
 msgstr "Verbonden (%s)"
-
-#: src/components/storage/iscsi/NodesPresenter.jsx:84
-msgid "Delete"
-msgstr "Verwijderen"
 
 #: src/components/storage/iscsi/NodesPresenter.jsx:89
 msgid "Login"
@@ -3747,104 +3771,84 @@ msgid "Targets"
 msgstr "Doelen"
 
 #: src/components/storage/utils.ts:58
-msgid "KiB"
-msgstr "KiB"
-
-#: src/components/storage/utils.ts:59
-msgid "MiB"
-msgstr "MiB"
-
-#: src/components/storage/utils.ts:60
-msgid "GiB"
-msgstr "GiB"
-
-#: src/components/storage/utils.ts:61
-msgid "TiB"
-msgstr "TiB"
-
-#: src/components/storage/utils.ts:62
-msgid "PiB"
-msgstr "PiB"
-
-#: src/components/storage/utils.ts:66
 msgid "Bcachefs"
 msgstr ""
 
-#: src/components/storage/utils.ts:67
+#: src/components/storage/utils.ts:59
 msgid "BitLocker"
 msgstr ""
 
-#: src/components/storage/utils.ts:68
+#: src/components/storage/utils.ts:60
 msgid "Btrfs"
 msgstr ""
 
-#: src/components/storage/utils.ts:69
+#: src/components/storage/utils.ts:61
 msgid "ExFAT"
 msgstr ""
 
-#: src/components/storage/utils.ts:70
+#: src/components/storage/utils.ts:62
 msgid "Ext2"
 msgstr ""
 
-#: src/components/storage/utils.ts:71
+#: src/components/storage/utils.ts:63
 msgid "Ext3"
 msgstr ""
 
-#: src/components/storage/utils.ts:72
+#: src/components/storage/utils.ts:64
 msgid "Ext4"
 msgstr ""
 
-#: src/components/storage/utils.ts:73
+#: src/components/storage/utils.ts:65
 msgid "F2FS"
 msgstr ""
 
-#: src/components/storage/utils.ts:74
+#: src/components/storage/utils.ts:66
 msgid "JFS"
 msgstr ""
 
-#: src/components/storage/utils.ts:75
+#: src/components/storage/utils.ts:67
 #, fuzzy
 msgid "NFS"
 msgstr "DNS"
 
-#: src/components/storage/utils.ts:76
+#: src/components/storage/utils.ts:68
 msgid "NILFS2"
 msgstr ""
 
-#: src/components/storage/utils.ts:77
+#: src/components/storage/utils.ts:69
 msgid "NTFS"
 msgstr ""
 
-#: src/components/storage/utils.ts:78
+#: src/components/storage/utils.ts:70
 msgid "ReiserFS"
 msgstr ""
 
-#: src/components/storage/utils.ts:79
+#: src/components/storage/utils.ts:71
 msgid "Swap"
 msgstr ""
 
-#: src/components/storage/utils.ts:80
+#: src/components/storage/utils.ts:72
 msgid "Tmpfs"
 msgstr ""
 
-#: src/components/storage/utils.ts:81
+#: src/components/storage/utils.ts:73
 msgid "FAT"
 msgstr ""
 
-#: src/components/storage/utils.ts:82
+#: src/components/storage/utils.ts:74
 msgid "XFS"
 msgstr ""
 
-#: src/components/storage/utils.ts:90
+#: src/components/storage/utils.ts:82
 msgid "Delete current content"
 msgstr "Verwijder de huidige inhoud"
 
-#: src/components/storage/utils.ts:94
+#: src/components/storage/utils.ts:86
 #, fuzzy
 msgid "Shrink existing partitions"
 msgstr "%s met %d partities"
 
-#: src/components/storage/utils.ts:98
+#: src/components/storage/utils.ts:90
 #, fuzzy
 msgid "Use available space"
 msgstr "Beschikbare apparaten"
@@ -3852,19 +3856,19 @@ msgstr "Beschikbare apparaten"
 #. TRANSLATORS: sub-string used to represent a path like "/" or "/var". %s is replaced by the path
 #. itself, the rest of the string (quotation marks in the English case) is used to encapsulate the
 #. path in a bigger sentence like 'Create partitions for "/" and "/var"'.
-#: src/components/storage/utils.ts:358
+#: src/components/storage/utils.ts:350
 #, javascript-format
 msgid "\"%s\""
 msgstr ""
 
 #. TRANSLATORS: Size range, %1$s is the min size and %2$s is the max
-#: src/components/storage/utils.ts:369
+#: src/components/storage/utils.ts:361
 #, fuzzy, javascript-format
 msgid "%1$s - %2$s"
 msgstr "Partitie informatie"
 
 #. TRANSLATORS: minimum device size, %s is replaced by size string, e.g. "17.5 GiB"
-#: src/components/storage/utils.ts:371
+#: src/components/storage/utils.ts:363
 #, fuzzy, javascript-format
 msgid "at least %s"
 msgstr "Tenminste %s"
@@ -4357,6 +4361,21 @@ msgstr "Publieke SSH-sleutel gebruiken"
 #: src/routes/storage.tsx:113
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#~ msgid "KiB"
+#~ msgstr "KiB"
+
+#~ msgid "MiB"
+#~ msgstr "MiB"
+
+#~ msgid "GiB"
+#~ msgstr "GiB"
+
+#~ msgid "TiB"
+#~ msgstr "TiB"
+
+#~ msgid "PiB"
+#~ msgstr "PiB"
 
 #, fuzzy
 #~ msgid "DASD devices selection table"
@@ -5204,10 +5223,6 @@ msgstr "ZFCP"
 
 #~ msgid "language"
 #~ msgstr "taal"
-
-#, fuzzy
-#~ msgid "Available keymaps"
-#~ msgstr "Beschikbare apparaten"
 
 #, fuzzy
 #~ msgid "Time zone not selected yet"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-03 10:17+0000\n"
+"POT-Creation-Date: 2026-07-03 15:40+0000\n"
 "PO-Revision-Date: 2026-02-16 13:04+0000\n"
 "Last-Translator: Aleksey Fedorov <Aleksejfedorov963@gmail.com>\n"
 "Language-Team: Russian <https://l10n.opensuse.org/projects/agama/agama-web-"
@@ -681,6 +681,11 @@ msgstr "Добавить другой DNS"
 msgid "DNS"
 msgstr "DNS"
 
+#: src/components/network/DnsDataList.tsx:125
+#, fuzzy
+msgid "DNS data list"
+msgstr "Список данных адресов"
+
 #: src/components/network/InstallationOnlySwitch.tsx:47
 msgid "Use for installation only"
 msgstr "Исп. только при установке"
@@ -739,6 +744,7 @@ msgid "Manual"
 msgstr "Вручную"
 
 #. TRANSLATORS: network gateway configuration
+#: src/components/network/IpSettingsForm.tsx:184
 #: src/components/network/IpSettingsForm.tsx:188
 #: src/components/network/IpSettingsForm.tsx:191
 #: src/components/network/WifiConnectionDetails.tsx:129
@@ -1203,7 +1209,7 @@ msgid "SUSE Customer Center (SCC)"
 msgstr "Центр обслуживания клиентов SUSE (SCC)"
 
 #: src/components/product/ProductRegistrationPage.tsx:67
-#: src/components/storage/utils.ts:102
+#: src/components/storage/utils.ts:94
 msgid "Custom"
 msgstr "По-своему"
 
@@ -2330,7 +2336,7 @@ msgstr "Текущий %s"
 #: src/components/storage/FormattableDevicePage.tsx:284
 #: src/components/storage/LogicalVolumePage.tsx:463
 #: src/components/storage/PartitionPage.tsx:564
-#: src/components/storage/utils.ts:338
+#: src/components/storage/utils.ts:330
 msgid "Btrfs with snapshots"
 msgstr "Btrfs с моментальными снимками"
 
@@ -2352,6 +2358,13 @@ msgstr "Уничтожить текущие данные и отформатир
 #: src/components/storage/FormattableDevicePage.tsx:306
 msgid "Format device as"
 msgstr "Отформатировать устройство как"
+
+#: src/components/storage/FormattableDevicePage.tsx:309
+#: src/components/storage/LogicalVolumePage.tsx:485
+#: src/components/storage/PartitionPage.tsx:589
+#, fuzzy
+msgid "Available file systems"
+msgstr "Доступные карты клавиш"
 
 #. TRANSLATORS: %s is the name of a partition, like /dev/vda2
 #. TRANSLATORS: %s is the name of a device, like vda
@@ -3158,6 +3171,20 @@ msgstr "Устройство не может быть сокращено:"
 msgid "Show information about %s"
 msgstr "Показать сведения о %s"
 
+#: src/components/storage/SpaceActionsTable.tsx:153
+msgid "Do not modify"
+msgstr "Не изменять"
+
+#: src/components/storage/SpaceActionsTable.tsx:159
+#, fuzzy
+msgid "Allow shrinking"
+msgstr "Разрешить рост"
+
+#: src/components/storage/SpaceActionsTable.tsx:166
+#: src/components/storage/iscsi/NodesPresenter.jsx:84
+msgid "Delete"
+msgstr "Удалить"
+
 #: src/components/storage/SpaceActionsTable.tsx:208
 msgid "The content may be deleted"
 msgstr "Содержимое может быть удалено"
@@ -3173,7 +3200,7 @@ msgstr "Содержимое не найдено"
 msgid "Action"
 msgstr "Действие"
 
-#: src/components/storage/SpacePolicyMenu.tsx:70
+#: src/components/storage/SpacePolicyMenu.tsx:71
 msgid "Find space"
 msgstr "Найти пространство"
 
@@ -3578,6 +3605,13 @@ msgstr "Некорректный порт"
 msgid "Edit %s"
 msgstr "Изменить %s"
 
+#. TRANSLATORS: iSCSI start up mode (on boot/manual/automatic)
+#: src/components/storage/iscsi/EditNodeForm.tsx:52
+#: src/components/storage/iscsi/LoginForm.jsx:76
+#: src/components/storage/iscsi/LoginForm.jsx:79
+msgid "Startup"
+msgstr "Запуск"
+
 #: src/components/storage/iscsi/InitiatorForm.tsx:42
 msgid "Initiator name successfully updated"
 msgstr "Имя инициатора успешно обновлено"
@@ -3626,12 +3660,6 @@ msgstr "Инициатор"
 msgid "Login %s"
 msgstr "Логин %s"
 
-#. TRANSLATORS: iSCSI start up mode (on boot/manual/automatic)
-#: src/components/storage/iscsi/LoginForm.jsx:76
-#: src/components/storage/iscsi/LoginForm.jsx:79
-msgid "Startup"
-msgstr "Запуск"
-
 #: src/components/storage/iscsi/NodeStartupOptions.js:27
 msgid "On boot"
 msgstr "При загрузке"
@@ -3647,10 +3675,6 @@ msgstr "Отключено"
 #, javascript-format
 msgid "Connected (%s)"
 msgstr "Подключено (%s)"
-
-#: src/components/storage/iscsi/NodesPresenter.jsx:84
-msgid "Delete"
-msgstr "Удалить"
 
 #: src/components/storage/iscsi/NodesPresenter.jsx:89
 msgid "Login"
@@ -3694,121 +3718,101 @@ msgid "Targets"
 msgstr "Цели"
 
 #: src/components/storage/utils.ts:58
-msgid "KiB"
-msgstr "КиБ"
-
-#: src/components/storage/utils.ts:59
-msgid "MiB"
-msgstr "МиБ"
-
-#: src/components/storage/utils.ts:60
-msgid "GiB"
-msgstr "ГиБ"
-
-#: src/components/storage/utils.ts:61
-msgid "TiB"
-msgstr "ТиБ"
-
-#: src/components/storage/utils.ts:62
-msgid "PiB"
-msgstr "ПиБ"
-
-#: src/components/storage/utils.ts:66
 msgid "Bcachefs"
 msgstr "Bcachefs"
 
-#: src/components/storage/utils.ts:67
+#: src/components/storage/utils.ts:59
 msgid "BitLocker"
 msgstr "BitLocker"
 
-#: src/components/storage/utils.ts:68
+#: src/components/storage/utils.ts:60
 msgid "Btrfs"
 msgstr "Btrfs"
 
-#: src/components/storage/utils.ts:69
+#: src/components/storage/utils.ts:61
 msgid "ExFAT"
 msgstr "ExFAT"
 
-#: src/components/storage/utils.ts:70
+#: src/components/storage/utils.ts:62
 msgid "Ext2"
 msgstr "Ext2"
 
-#: src/components/storage/utils.ts:71
+#: src/components/storage/utils.ts:63
 msgid "Ext3"
 msgstr "Ext3"
 
-#: src/components/storage/utils.ts:72
+#: src/components/storage/utils.ts:64
 msgid "Ext4"
 msgstr "Ext4"
 
-#: src/components/storage/utils.ts:73
+#: src/components/storage/utils.ts:65
 msgid "F2FS"
 msgstr "F2FS"
 
-#: src/components/storage/utils.ts:74
+#: src/components/storage/utils.ts:66
 msgid "JFS"
 msgstr "JFS"
 
-#: src/components/storage/utils.ts:75
+#: src/components/storage/utils.ts:67
 msgid "NFS"
 msgstr "NFS"
 
-#: src/components/storage/utils.ts:76
+#: src/components/storage/utils.ts:68
 msgid "NILFS2"
 msgstr "NILFS2"
 
-#: src/components/storage/utils.ts:77
+#: src/components/storage/utils.ts:69
 msgid "NTFS"
 msgstr "NTFS"
 
-#: src/components/storage/utils.ts:78
+#: src/components/storage/utils.ts:70
 msgid "ReiserFS"
 msgstr "ReiserFS"
 
-#: src/components/storage/utils.ts:79
+#: src/components/storage/utils.ts:71
 msgid "Swap"
 msgstr "Swap"
 
-#: src/components/storage/utils.ts:80
+#: src/components/storage/utils.ts:72
 msgid "Tmpfs"
 msgstr "Tmpfs"
 
-#: src/components/storage/utils.ts:81
+#: src/components/storage/utils.ts:73
 msgid "FAT"
 msgstr "FAT"
 
-#: src/components/storage/utils.ts:82
+#: src/components/storage/utils.ts:74
 msgid "XFS"
 msgstr "XFS"
 
-#: src/components/storage/utils.ts:90
+#: src/components/storage/utils.ts:82
 msgid "Delete current content"
 msgstr "Удалить текущее содержимое"
 
-#: src/components/storage/utils.ts:94
+#: src/components/storage/utils.ts:86
 msgid "Shrink existing partitions"
 msgstr "Уменьшение существующих разделов"
 
-#: src/components/storage/utils.ts:98
+#: src/components/storage/utils.ts:90
 msgid "Use available space"
 msgstr "Использовать свободное пространство"
 
 #. TRANSLATORS: sub-string used to represent a path like "/" or "/var". %s is replaced by the path
 #. itself, the rest of the string (quotation marks in the English case) is used to encapsulate the
 #. path in a bigger sentence like 'Create partitions for "/" and "/var"'.
-#: src/components/storage/utils.ts:358
+#: src/components/storage/utils.ts:350
 #, javascript-format
 msgid "\"%s\""
 msgstr "«%s»"
 
 #. TRANSLATORS: Size range, %1$s is the min size and %2$s is the max
-#: src/components/storage/utils.ts:369
+#: src/components/storage/utils.ts:361
 #, javascript-format
 msgid "%1$s - %2$s"
 msgstr "%1$s - %2$s"
 
 #. TRANSLATORS: minimum device size, %s is replaced by size string, e.g. "17.5 GiB"
-#: src/components/storage/utils.ts:371
+#: src/components/storage/utils.ts:363
 #, javascript-format
 msgid "at least %s"
 msgstr "не менее %s"
@@ -4280,6 +4284,21 @@ msgstr "Использовать публичный ключ SSH"
 #: src/routes/storage.tsx:113
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#~ msgid "KiB"
+#~ msgstr "КиБ"
+
+#~ msgid "MiB"
+#~ msgstr "МиБ"
+
+#~ msgid "GiB"
+#~ msgstr "ГиБ"
+
+#~ msgid "TiB"
+#~ msgstr "ТиБ"
+
+#~ msgid "PiB"
+#~ msgstr "ПиБ"
 
 #~ msgid "Example: https://myserver.com"
 #~ msgstr "Пример: https://myserver.com"
@@ -5112,9 +5131,6 @@ msgstr "ZFCP"
 #~ msgid "Space action selector for %s"
 #~ msgstr "Выбор действий пространства для %s"
 
-#~ msgid "Do not modify"
-#~ msgstr "Не изменять"
-
 #~ msgid "Shrinkable"
 #~ msgstr "Можно уменьшить"
 
@@ -5221,9 +5237,6 @@ msgstr "ZFCP"
 
 #~ msgid "language"
 #~ msgstr "язык"
-
-#~ msgid "Available keymaps"
-#~ msgstr "Доступные карты клавиш"
 
 #, c-format
 #~ msgid "%s will use the selected time zone."

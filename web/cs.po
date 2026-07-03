@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-03 10:17+0000\n"
+"POT-Creation-Date: 2026-07-03 15:40+0000\n"
 "PO-Revision-Date: 2026-03-12 13:04+0000\n"
 "Last-Translator: Ondřej  Sedlák <sedlak.o@tutanota.com>\n"
 "Language-Team: Czech <https://l10n.opensuse.org/projects/agama/agama-web-"
@@ -676,6 +676,11 @@ msgstr "Přidat další DNS"
 msgid "DNS"
 msgstr "DNS"
 
+#: src/components/network/DnsDataList.tsx:125
+#, fuzzy
+msgid "DNS data list"
+msgstr "Seznam údajů o adresách"
+
 #: src/components/network/InstallationOnlySwitch.tsx:47
 msgid "Use for installation only"
 msgstr "Použít pouze během instalace"
@@ -734,6 +739,7 @@ msgid "Manual"
 msgstr "Ruční"
 
 #. TRANSLATORS: network gateway configuration
+#: src/components/network/IpSettingsForm.tsx:184
 #: src/components/network/IpSettingsForm.tsx:188
 #: src/components/network/IpSettingsForm.tsx:191
 #: src/components/network/WifiConnectionDetails.tsx:129
@@ -1188,7 +1194,7 @@ msgid "SUSE Customer Center (SCC)"
 msgstr "Zákaznické centrum SUSE (SCC)"
 
 #: src/components/product/ProductRegistrationPage.tsx:67
-#: src/components/storage/utils.ts:102
+#: src/components/storage/utils.ts:94
 msgid "Custom"
 msgstr "Vlastní"
 
@@ -2300,7 +2306,7 @@ msgstr "Aktuálně %s"
 #: src/components/storage/FormattableDevicePage.tsx:284
 #: src/components/storage/LogicalVolumePage.tsx:463
 #: src/components/storage/PartitionPage.tsx:564
-#: src/components/storage/utils.ts:338
+#: src/components/storage/utils.ts:330
 msgid "Btrfs with snapshots"
 msgstr "Btrfs se snímky"
 
@@ -2322,6 +2328,13 @@ msgstr "Odstranit stávající data a formátovat jako"
 #: src/components/storage/FormattableDevicePage.tsx:306
 msgid "Format device as"
 msgstr "Formátovat zařízení jako"
+
+#: src/components/storage/FormattableDevicePage.tsx:309
+#: src/components/storage/LogicalVolumePage.tsx:485
+#: src/components/storage/PartitionPage.tsx:589
+#, fuzzy
+msgid "Available file systems"
+msgstr "Přidat souborový systém"
 
 #. TRANSLATORS: %s is the name of a partition, like /dev/vda2
 #. TRANSLATORS: %s is the name of a device, like vda
@@ -3137,6 +3150,21 @@ msgstr "Zařízení nelze zmenšit:"
 msgid "Show information about %s"
 msgstr "Zobrazit informace o %s"
 
+#: src/components/storage/SpaceActionsTable.tsx:153
+#, fuzzy
+msgid "Do not modify"
+msgstr "Nekonfigurujte"
+
+#: src/components/storage/SpaceActionsTable.tsx:159
+#, fuzzy
+msgid "Allow shrinking"
+msgstr "Povolit růst"
+
+#: src/components/storage/SpaceActionsTable.tsx:166
+#: src/components/storage/iscsi/NodesPresenter.jsx:84
+msgid "Delete"
+msgstr "Smazat"
+
 #: src/components/storage/SpaceActionsTable.tsx:208
 msgid "The content may be deleted"
 msgstr "Obsah může být smazán"
@@ -3152,7 +3180,7 @@ msgstr "Nebyl nalezen žádný obsah"
 msgid "Action"
 msgstr "Akce"
 
-#: src/components/storage/SpacePolicyMenu.tsx:70
+#: src/components/storage/SpacePolicyMenu.tsx:71
 #, fuzzy
 msgid "Find space"
 msgstr "Nevyužitý prostor"
@@ -3580,6 +3608,13 @@ msgstr "Nesprávný port"
 msgid "Edit %s"
 msgstr "Upravit %s"
 
+#. TRANSLATORS: iSCSI start up mode (on boot/manual/automatic)
+#: src/components/storage/iscsi/EditNodeForm.tsx:52
+#: src/components/storage/iscsi/LoginForm.jsx:76
+#: src/components/storage/iscsi/LoginForm.jsx:79
+msgid "Startup"
+msgstr "Typ startu iSCSI"
+
 #: src/components/storage/iscsi/InitiatorForm.tsx:42
 msgid "Initiator name successfully updated"
 msgstr "Název iniciátora byl úspěšně aktualizován"
@@ -3631,12 +3666,6 @@ msgstr "Iniciátor"
 msgid "Login %s"
 msgstr "Přihlášení %s"
 
-#. TRANSLATORS: iSCSI start up mode (on boot/manual/automatic)
-#: src/components/storage/iscsi/LoginForm.jsx:76
-#: src/components/storage/iscsi/LoginForm.jsx:79
-msgid "Startup"
-msgstr "Typ startu iSCSI"
-
 #: src/components/storage/iscsi/NodeStartupOptions.js:27
 msgid "On boot"
 msgstr "Při spuštění systému"
@@ -3652,10 +3681,6 @@ msgstr "Odpojeno"
 #, javascript-format
 msgid "Connected (%s)"
 msgstr "Připojeno (%s)"
-
-#: src/components/storage/iscsi/NodesPresenter.jsx:84
-msgid "Delete"
-msgstr "Smazat"
 
 #: src/components/storage/iscsi/NodesPresenter.jsx:89
 msgid "Login"
@@ -3699,122 +3724,102 @@ msgid "Targets"
 msgstr "Cíle"
 
 #: src/components/storage/utils.ts:58
-msgid "KiB"
-msgstr "KiB"
-
-#: src/components/storage/utils.ts:59
-msgid "MiB"
-msgstr "MiB"
-
-#: src/components/storage/utils.ts:60
-msgid "GiB"
-msgstr "GiB"
-
-#: src/components/storage/utils.ts:61
-msgid "TiB"
-msgstr "TiB"
-
-#: src/components/storage/utils.ts:62
-msgid "PiB"
-msgstr "PiB"
-
-#: src/components/storage/utils.ts:66
 msgid "Bcachefs"
 msgstr "Bcachefs"
 
-#: src/components/storage/utils.ts:67
+#: src/components/storage/utils.ts:59
 msgid "BitLocker"
 msgstr "BitLocker"
 
-#: src/components/storage/utils.ts:68
+#: src/components/storage/utils.ts:60
 msgid "Btrfs"
 msgstr "Btrfs"
 
-#: src/components/storage/utils.ts:69
+#: src/components/storage/utils.ts:61
 msgid "ExFAT"
 msgstr ""
 
-#: src/components/storage/utils.ts:70
+#: src/components/storage/utils.ts:62
 msgid "Ext2"
 msgstr ""
 
-#: src/components/storage/utils.ts:71
+#: src/components/storage/utils.ts:63
 msgid "Ext3"
 msgstr ""
 
-#: src/components/storage/utils.ts:72
+#: src/components/storage/utils.ts:64
 msgid "Ext4"
 msgstr ""
 
-#: src/components/storage/utils.ts:73
+#: src/components/storage/utils.ts:65
 msgid "F2FS"
 msgstr ""
 
-#: src/components/storage/utils.ts:74
+#: src/components/storage/utils.ts:66
 msgid "JFS"
 msgstr ""
 
-#: src/components/storage/utils.ts:75
+#: src/components/storage/utils.ts:67
 #, fuzzy
 msgid "NFS"
 msgstr "DNS"
 
-#: src/components/storage/utils.ts:76
+#: src/components/storage/utils.ts:68
 msgid "NILFS2"
 msgstr ""
 
-#: src/components/storage/utils.ts:77
+#: src/components/storage/utils.ts:69
 msgid "NTFS"
 msgstr ""
 
-#: src/components/storage/utils.ts:78
+#: src/components/storage/utils.ts:70
 msgid "ReiserFS"
 msgstr ""
 
-#: src/components/storage/utils.ts:79
+#: src/components/storage/utils.ts:71
 msgid "Swap"
 msgstr ""
 
-#: src/components/storage/utils.ts:80
+#: src/components/storage/utils.ts:72
 msgid "Tmpfs"
 msgstr ""
 
-#: src/components/storage/utils.ts:81
+#: src/components/storage/utils.ts:73
 msgid "FAT"
 msgstr ""
 
-#: src/components/storage/utils.ts:82
+#: src/components/storage/utils.ts:74
 msgid "XFS"
 msgstr ""
 
-#: src/components/storage/utils.ts:90
+#: src/components/storage/utils.ts:82
 msgid "Delete current content"
 msgstr "Odstranit aktuální obsah"
 
-#: src/components/storage/utils.ts:94
+#: src/components/storage/utils.ts:86
 msgid "Shrink existing partitions"
 msgstr "Zmenšit stávající oddíly"
 
-#: src/components/storage/utils.ts:98
+#: src/components/storage/utils.ts:90
 msgid "Use available space"
 msgstr "Využít dostupný prostor"
 
 #. TRANSLATORS: sub-string used to represent a path like "/" or "/var". %s is replaced by the path
 #. itself, the rest of the string (quotation marks in the English case) is used to encapsulate the
 #. path in a bigger sentence like 'Create partitions for "/" and "/var"'.
-#: src/components/storage/utils.ts:358
+#: src/components/storage/utils.ts:350
 #, javascript-format
 msgid "\"%s\""
 msgstr ""
 
 #. TRANSLATORS: Size range, %1$s is the min size and %2$s is the max
-#: src/components/storage/utils.ts:369
+#: src/components/storage/utils.ts:361
 #, fuzzy, javascript-format
 msgid "%1$s - %2$s"
 msgstr "Přepnout na %1$s (%2$s)"
 
 #. TRANSLATORS: minimum device size, %s is replaced by size string, e.g. "17.5 GiB"
-#: src/components/storage/utils.ts:371
+#: src/components/storage/utils.ts:363
 #, javascript-format
 msgid "at least %s"
 msgstr "alespoň %s"
@@ -4304,6 +4309,21 @@ msgstr "Veřejný klíč SSH pro roota"
 msgid "ZFCP"
 msgstr "ZFCP"
 
+#~ msgid "KiB"
+#~ msgstr "KiB"
+
+#~ msgid "MiB"
+#~ msgstr "MiB"
+
+#~ msgid "GiB"
+#~ msgstr "GiB"
+
+#~ msgid "TiB"
+#~ msgstr "TiB"
+
+#~ msgid "PiB"
+#~ msgstr "PiB"
+
 #~ msgid "Example: https://myserver.com"
 #~ msgstr "Například: https://mujserver.cz"
 
@@ -4689,9 +4709,6 @@ msgstr "ZFCP"
 
 #~ msgid "Location"
 #~ msgstr "Umístění"
-
-#~ msgid "Add file system"
-#~ msgstr "Přidat souborový systém"
 
 #~ msgid "Other"
 #~ msgstr "Ostatní/jiné"

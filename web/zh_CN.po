@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-03 10:17+0000\n"
+"POT-Creation-Date: 2026-07-03 15:40+0000\n"
 "PO-Revision-Date: 2026-06-25 11:12+0000\n"
 "Last-Translator: Grace Yu <grace.yu@excel-gits.com>\n"
 "Language-Team: Chinese (China) <https://l10n.opensuse.org/projects/agama/"
@@ -654,6 +654,11 @@ msgstr "添加另一个 DNS"
 msgid "DNS"
 msgstr "DNS"
 
+#: src/components/network/DnsDataList.tsx:125
+#, fuzzy
+msgid "DNS data list"
+msgstr "地址数据列表"
+
 #: src/components/network/InstallationOnlySwitch.tsx:47
 msgid "Use for installation only"
 msgstr "仅用于安装"
@@ -710,6 +715,7 @@ msgid "Manual"
 msgstr "手动"
 
 #. TRANSLATORS: network gateway configuration
+#: src/components/network/IpSettingsForm.tsx:184
 #: src/components/network/IpSettingsForm.tsx:188
 #: src/components/network/IpSettingsForm.tsx:191
 #: src/components/network/WifiConnectionDetails.tsx:129
@@ -1154,7 +1160,7 @@ msgid "SUSE Customer Center (SCC)"
 msgstr "SUSE Customer Center (SCC)"
 
 #: src/components/product/ProductRegistrationPage.tsx:67
-#: src/components/storage/utils.ts:102
+#: src/components/storage/utils.ts:94
 msgid "Custom"
 msgstr "自定义"
 
@@ -2213,7 +2219,7 @@ msgstr "当前 %s"
 #: src/components/storage/FormattableDevicePage.tsx:284
 #: src/components/storage/LogicalVolumePage.tsx:463
 #: src/components/storage/PartitionPage.tsx:564
-#: src/components/storage/utils.ts:338
+#: src/components/storage/utils.ts:330
 msgid "Btrfs with snapshots"
 msgstr "带快照的 Btrfs"
 
@@ -2235,6 +2241,13 @@ msgstr "销毁当前数据并将设备格式化为"
 #: src/components/storage/FormattableDevicePage.tsx:306
 msgid "Format device as"
 msgstr "将设备格式化为"
+
+#: src/components/storage/FormattableDevicePage.tsx:309
+#: src/components/storage/LogicalVolumePage.tsx:485
+#: src/components/storage/PartitionPage.tsx:589
+#, fuzzy
+msgid "Available file systems"
+msgstr "可用的键盘映射"
 
 #. TRANSLATORS: %s is the name of a partition, like /dev/vda2
 #. TRANSLATORS: %s is the name of a device, like vda
@@ -2977,6 +2990,20 @@ msgstr "无法缩小该设备："
 msgid "Show information about %s"
 msgstr "显示关于 %s 的信息"
 
+#: src/components/storage/SpaceActionsTable.tsx:153
+msgid "Do not modify"
+msgstr "不要修改"
+
+#: src/components/storage/SpaceActionsTable.tsx:159
+#, fuzzy
+msgid "Allow shrinking"
+msgstr "允许增长"
+
+#: src/components/storage/SpaceActionsTable.tsx:166
+#: src/components/storage/iscsi/NodesPresenter.jsx:84
+msgid "Delete"
+msgstr "删除"
+
 #: src/components/storage/SpaceActionsTable.tsx:208
 msgid "The content may be deleted"
 msgstr "内容可能会被删除"
@@ -2992,7 +3019,7 @@ msgstr "未找到内容"
 msgid "Action"
 msgstr "操作"
 
-#: src/components/storage/SpacePolicyMenu.tsx:70
+#: src/components/storage/SpacePolicyMenu.tsx:71
 msgid "Find space"
 msgstr "查找空间"
 
@@ -3380,6 +3407,13 @@ msgstr "不正确的端口"
 msgid "Edit %s"
 msgstr "编辑 %s"
 
+#. TRANSLATORS: iSCSI start up mode (on boot/manual/automatic)
+#: src/components/storage/iscsi/EditNodeForm.tsx:52
+#: src/components/storage/iscsi/LoginForm.jsx:76
+#: src/components/storage/iscsi/LoginForm.jsx:79
+msgid "Startup"
+msgstr "启动"
+
 #: src/components/storage/iscsi/InitiatorForm.tsx:42
 msgid "Initiator name successfully updated"
 msgstr "已成功更新发起端名称"
@@ -3426,12 +3460,6 @@ msgstr "发起者"
 msgid "Login %s"
 msgstr "登录 %s"
 
-#. TRANSLATORS: iSCSI start up mode (on boot/manual/automatic)
-#: src/components/storage/iscsi/LoginForm.jsx:76
-#: src/components/storage/iscsi/LoginForm.jsx:79
-msgid "Startup"
-msgstr "启动"
-
 #: src/components/storage/iscsi/NodeStartupOptions.js:27
 msgid "On boot"
 msgstr "开机时"
@@ -3447,10 +3475,6 @@ msgstr "已断开连接"
 #, javascript-format
 msgid "Connected (%s)"
 msgstr "已连接（%s）"
-
-#: src/components/storage/iscsi/NodesPresenter.jsx:84
-msgid "Delete"
-msgstr "删除"
 
 #: src/components/storage/iscsi/NodesPresenter.jsx:89
 msgid "Login"
@@ -3494,121 +3518,101 @@ msgid "Targets"
 msgstr "目标"
 
 #: src/components/storage/utils.ts:58
-msgid "KiB"
-msgstr "KiB"
-
-#: src/components/storage/utils.ts:59
-msgid "MiB"
-msgstr "MiB"
-
-#: src/components/storage/utils.ts:60
-msgid "GiB"
-msgstr "GiB"
-
-#: src/components/storage/utils.ts:61
-msgid "TiB"
-msgstr "TiB"
-
-#: src/components/storage/utils.ts:62
-msgid "PiB"
-msgstr "PiB"
-
-#: src/components/storage/utils.ts:66
 msgid "Bcachefs"
 msgstr "Bcachefs"
 
-#: src/components/storage/utils.ts:67
+#: src/components/storage/utils.ts:59
 msgid "BitLocker"
 msgstr "BitLocker"
 
-#: src/components/storage/utils.ts:68
+#: src/components/storage/utils.ts:60
 msgid "Btrfs"
 msgstr "Btrfs"
 
-#: src/components/storage/utils.ts:69
+#: src/components/storage/utils.ts:61
 msgid "ExFAT"
 msgstr "ExFAT"
 
-#: src/components/storage/utils.ts:70
+#: src/components/storage/utils.ts:62
 msgid "Ext2"
 msgstr "Ext2"
 
-#: src/components/storage/utils.ts:71
+#: src/components/storage/utils.ts:63
 msgid "Ext3"
 msgstr "Ext3"
 
-#: src/components/storage/utils.ts:72
+#: src/components/storage/utils.ts:64
 msgid "Ext4"
 msgstr "Ext4"
 
-#: src/components/storage/utils.ts:73
+#: src/components/storage/utils.ts:65
 msgid "F2FS"
 msgstr "F2FS"
 
-#: src/components/storage/utils.ts:74
+#: src/components/storage/utils.ts:66
 msgid "JFS"
 msgstr "JFS"
 
-#: src/components/storage/utils.ts:75
+#: src/components/storage/utils.ts:67
 msgid "NFS"
 msgstr "NFS"
 
-#: src/components/storage/utils.ts:76
+#: src/components/storage/utils.ts:68
 msgid "NILFS2"
 msgstr "NILFS2"
 
-#: src/components/storage/utils.ts:77
+#: src/components/storage/utils.ts:69
 msgid "NTFS"
 msgstr "NTFS"
 
-#: src/components/storage/utils.ts:78
+#: src/components/storage/utils.ts:70
 msgid "ReiserFS"
 msgstr "ReiserFS"
 
-#: src/components/storage/utils.ts:79
+#: src/components/storage/utils.ts:71
 msgid "Swap"
 msgstr "Swap"
 
-#: src/components/storage/utils.ts:80
+#: src/components/storage/utils.ts:72
 msgid "Tmpfs"
 msgstr "Tmpfs"
 
-#: src/components/storage/utils.ts:81
+#: src/components/storage/utils.ts:73
 msgid "FAT"
 msgstr "FAT"
 
-#: src/components/storage/utils.ts:82
+#: src/components/storage/utils.ts:74
 msgid "XFS"
 msgstr "XFS"
 
-#: src/components/storage/utils.ts:90
+#: src/components/storage/utils.ts:82
 msgid "Delete current content"
 msgstr "删除当前内容"
 
-#: src/components/storage/utils.ts:94
+#: src/components/storage/utils.ts:86
 msgid "Shrink existing partitions"
 msgstr "缩小现有分区"
 
-#: src/components/storage/utils.ts:98
+#: src/components/storage/utils.ts:90
 msgid "Use available space"
 msgstr "使用可用空间"
 
 #. TRANSLATORS: sub-string used to represent a path like "/" or "/var". %s is replaced by the path
 #. itself, the rest of the string (quotation marks in the English case) is used to encapsulate the
 #. path in a bigger sentence like 'Create partitions for "/" and "/var"'.
-#: src/components/storage/utils.ts:358
+#: src/components/storage/utils.ts:350
 #, javascript-format
 msgid "\"%s\""
 msgstr "\"%s\""
 
 #. TRANSLATORS: Size range, %1$s is the min size and %2$s is the max
-#: src/components/storage/utils.ts:369
+#: src/components/storage/utils.ts:361
 #, javascript-format
 msgid "%1$s - %2$s"
 msgstr "%1$s - %2$s"
 
 #. TRANSLATORS: minimum device size, %s is replaced by size string, e.g. "17.5 GiB"
-#: src/components/storage/utils.ts:371
+#: src/components/storage/utils.ts:363
 #, javascript-format
 msgid "at least %s"
 msgstr "至少 %s"
@@ -4052,6 +4056,21 @@ msgstr "使用 SSH 公共密钥"
 #: src/routes/storage.tsx:113
 msgid "ZFCP"
 msgstr "ZFCP"
+
+#~ msgid "KiB"
+#~ msgstr "KiB"
+
+#~ msgid "MiB"
+#~ msgstr "MiB"
+
+#~ msgid "GiB"
+#~ msgstr "GiB"
+
+#~ msgid "TiB"
+#~ msgstr "TiB"
+
+#~ msgid "PiB"
+#~ msgstr "PiB"
 
 #~ msgid "Example: https://myserver.com"
 #~ msgstr "示例：https://myserver.com"
@@ -4838,9 +4857,6 @@ msgstr "ZFCP"
 #~ msgid "Space action selector for %s"
 #~ msgstr "%s 的空间操作选择器"
 
-#~ msgid "Do not modify"
-#~ msgstr "不要修改"
-
 #~ msgid "Shrinkable"
 #~ msgstr "可缩小"
 
@@ -4930,9 +4946,6 @@ msgstr "ZFCP"
 
 #~ msgid "language"
 #~ msgstr "语言"
-
-#~ msgid "Available keymaps"
-#~ msgstr "可用的键盘映射"
 
 #, c-format
 #~ msgid "%s will use the selected time zone."
