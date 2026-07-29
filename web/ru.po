@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-27 11:08+0000\n"
+"POT-Creation-Date: 2026-07-29 12:57+0000\n"
 "PO-Revision-Date: 2026-02-26 17:04+0000\n"
 "Last-Translator: Aleksey Fedorov <Aleksejfedorov963@gmail.com>\n"
 "Language-Team: Russian <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -400,7 +400,7 @@ msgstr "Ещё"
 msgid "Show configuration"
 msgstr "Скачать журналы"
 
-#: src/components/core/IssuesAlert.tsx:39
+#: src/components/core/IssuesAlert.tsx:49
 msgid "You must fix these issues"
 msgstr ""
 
@@ -538,7 +538,7 @@ msgstr "Шаг %1$d из %2$d"
 
 #: src/components/core/ProgressStatusMonitor.tsx:41
 #: src/components/overview/SoftwareSummary.tsx:164
-#: src/components/software/SoftwarePage.tsx:382
+#: src/components/software/SoftwarePage.tsx:395
 #: src/components/software/patterns-form/Form.tsx:353
 msgid "Software"
 msgstr "Программы"
@@ -950,7 +950,7 @@ msgstr "Требуется значение размера"
 #. TRANSLATORS: First breadcrumb item, linking back to the main page
 #. where the whole installation can be reviewed.
 #: src/components/layout/Header.tsx:119
-#: src/components/overview/OverviewPage.tsx:155
+#: src/components/overview/OverviewPage.tsx:124
 #, fuzzy
 msgid "Installation"
 msgstr "Только установка"
@@ -2049,6 +2049,51 @@ msgstr ""
 "Временное имя, которое может измениться после перезагрузки или изменения "
 "сетевых настроек"
 
+#. TRANSLATORS: Confirmation dialog title. %s is replaced with the product name (e.g., "openSUSE Leap")
+#: src/components/overview/InstallButton.tsx:64
+#, javascript-format
+msgid "Delete existing data and install %s?"
+msgstr "Удалить существующие данные и установить %s?"
+
+#: src/components/overview/InstallButton.tsx:64
+#, javascript-format
+msgid "Install %s?"
+msgstr "Установить %s?"
+
+#. TRANSLATORS: shown at the top of the install confirmation dialog.
+#: src/components/overview/InstallButton.tsx:75
+#, fuzzy
+msgid ""
+"Confirming starts the installation immediately with the defined settings."
+msgstr "При продолжении установка начнется с заданными параметрами."
+
+#. TRANSLATORS: Button to confirm and start the installation
+#: src/components/overview/InstallButton.tsx:82
+msgid "Confirm and install"
+msgstr "Подтвердить и установить"
+
+#: src/components/overview/InstallButton.tsx:119
+msgid "Install"
+msgstr "Установить"
+
+#: src/components/overview/InstallButton.tsx:120
+msgid "Install now with potential data loss"
+msgstr "Установить сейчас с возможной потерей данных"
+
+#: src/components/overview/InstallButton.tsx:121
+msgid "Install now"
+msgstr "Установить"
+
+#: src/components/overview/InstallButton.tsx:142
+msgid "Wait until current operations are completed."
+msgstr "Дождитесь завершения текущих операций."
+
+#: src/components/overview/InstallButton.tsx:152
+#, fuzzy
+msgid "Fix invalid settings before starting the installation."
+msgstr ""
+"Перед продолжением установки необходимо исправить все неверные параметры."
+
 #: src/components/overview/InstallationSettings.tsx:48
 msgid "Installation settings"
 msgstr "Параметры установки"
@@ -2159,59 +2204,8 @@ msgstr "Автоматически и вручную"
 msgid "Auto"
 msgstr "Автоматически"
 
-#. TRANSLATORS: Confirmation dialog title. %s is replaced with the product name (e.g., "openSUSE Leap")
-#: src/components/overview/OverviewPage.tsx:76
-#, javascript-format
-msgid "Delete existing data and install %s?"
-msgstr "Удалить существующие данные и установить %s?"
-
-#: src/components/overview/OverviewPage.tsx:76
-#, javascript-format
-msgid "Install %s?"
-msgstr "Установить %s?"
-
-#. TRANSLATORS: shown at the top of the install confirmation dialog.
-#: src/components/overview/OverviewPage.tsx:87
-#, fuzzy
-msgid ""
-"Confirming starts the installation immediately with the defined settings."
-msgstr "При продолжении установка начнется с заданными параметрами."
-
-#. TRANSLATORS: Button to confirm and start the installation
-#: src/components/overview/OverviewPage.tsx:94
-msgid "Confirm and install"
-msgstr "Подтвердить и установить"
-
-#: src/components/overview/OverviewPage.tsx:107
-#, fuzzy
-msgid "Product not found"
-msgstr "Цель не найдена"
-
-#: src/components/overview/OverviewPage.tsx:110
-msgid ""
-"The product was not found in the repositories so it is not possible to "
-"proceed with the installation."
-msgstr ""
-
-#. TRANSLATORS: This hint helps users locate the install button. Text inside
-#. square brackets [] appears in bold. Keep brackets for proper formatting.
-#: src/components/overview/OverviewPage.tsx:130
-msgid "When ready, click on the [install] button at the end of the page."
-msgstr "Когда будете готовы, нажмите кнопку [установить] в конце страницы."
-
-#: src/components/overview/OverviewPage.tsx:145
-msgid "Install"
-msgstr "Установить"
-
-#: src/components/overview/OverviewPage.tsx:146
-msgid "Install now with potential data loss"
-msgstr "Установить сейчас с возможной потерей данных"
-
-#: src/components/overview/OverviewPage.tsx:147
-msgid "Install now"
-msgstr "Установить"
-
-#: src/components/overview/OverviewPage.tsx:164
+#. TRANSLATORS: Introductory text shown on the overview page
+#: src/components/overview/OverviewPage.tsx:53
 msgid ""
 "Take a moment to review the installation settings below and adjust them as "
 "needed."
@@ -2219,15 +2213,23 @@ msgstr ""
 "Уделите немного времени, чтобы ознакомиться с параметрами установки ниже и "
 "при необходимости изменить их."
 
-#: src/components/overview/OverviewPage.tsx:199
-msgid "Wait until current operations are completed."
-msgstr "Дождитесь завершения текущих операций."
+#. TRANSLATORS: This hint helps users locate the install button. Text inside
+#. square brackets [] appears in bold. Keep brackets for proper formatting.
+#: src/components/overview/OverviewPage.tsx:61
+msgid "When ready, click on the [install] button at the end of the page."
+msgstr "Когда будете готовы, нажмите кнопку [установить] в конце страницы."
 
-#: src/components/overview/OverviewPage.tsx:209
+#. TRANSLATORS: empty state title when the product to install was not found
+#: src/components/overview/OverviewPage.tsx:103
 #, fuzzy
-msgid "Fix invalid settings before starting the installation."
+msgid "Product not found"
+msgstr "Цель не найдена"
+
+#: src/components/overview/OverviewPage.tsx:107
+msgid ""
+"The product was not found in the repositories so it is not possible to "
+"proceed with the installation."
 msgstr ""
-"Перед продолжением установки необходимо исправить все неверные параметры."
 
 #: src/components/overview/RegistrationSummary.tsx:36
 msgid "Registered without a code"
@@ -2358,30 +2360,30 @@ msgstr "Существует риск потери данных, затраги�
 msgid "Potential data loss"
 msgstr "Возможна потеря данных"
 
-#: src/components/overview/SystemInformationSection.tsx:60
+#: src/components/overview/SystemInformationSection.tsx:61
 #: src/utils/network.ts:60 src/utils/network.ts:91
 msgid "Unknown"
 msgstr ""
 
-#: src/components/overview/SystemInformationSection.tsx:89
+#: src/components/overview/SystemInformationSection.tsx:80
+msgid "IPs"
+msgstr "IP-адреса"
+
+#: src/components/overview/SystemInformationSection.tsx:109
 msgid "System Information"
 msgstr "Информация о системе"
 
-#: src/components/overview/SystemInformationSection.tsx:93
+#: src/components/overview/SystemInformationSection.tsx:113
 msgid "Model"
 msgstr "Модель"
 
-#: src/components/overview/SystemInformationSection.tsx:94
+#: src/components/overview/SystemInformationSection.tsx:114
 msgid "CPU"
 msgstr "ЦП"
 
-#: src/components/overview/SystemInformationSection.tsx:95
+#: src/components/overview/SystemInformationSection.tsx:115
 msgid "Memory"
 msgstr "Память"
-
-#: src/components/overview/SystemInformationSection.tsx:98
-msgid "IPs"
-msgstr "IP-адреса"
 
 #. TRANSLATORS: system hostname in summary. %s is the hostname.
 #: src/components/overview/SystemSummary.tsx:43
@@ -2478,6 +2480,11 @@ msgstr "Аутентификация"
 #, javascript-format
 msgid "This license is not available in %s."
 msgstr "Лицензия недоступна на этом языке: %s."
+
+#. TRANSLATORS: additional hint when the product is missing
+#: src/components/product/MissingProductState.tsx:56
+msgid "This might be due to network connectivity."
+msgstr ""
 
 #. TRANSLATORS: %s will be replaced by a product name. E.g., "openSUSE Tumbleweed"
 #: src/components/product/ProductLogo.tsx:49
@@ -2920,29 +2927,18 @@ msgid ""
 msgstr ""
 
 #. TRANSLATORS: empty state title when software cannot be selected
-#: src/components/software/PatternSelectionUnavailable.tsx:68
+#: src/components/software/PatternSelectionUnavailable.tsx:59
 #, fuzzy
 msgid "Software selection is not available"
 msgstr "Нет доступных целей"
 
 #. TRANSLATORS: link to go to registration settings
-#: src/components/software/PatternSelectionUnavailable.tsx:120
+#: src/components/software/PatternSelectionUnavailable.tsx:69
 #, fuzzy
 msgid "Go to registration"
 msgstr "Регистрация"
 
-#. TRANSLATORS: additional hint when base product is missing
-#: src/components/software/PatternSelectionUnavailable.tsx:132
-msgid "This might be due to network connectivity."
-msgstr ""
-
-#. TRANSLATORS: link to go to network settings
-#: src/components/software/PatternSelectionUnavailable.tsx:138
-#, fuzzy
-msgid "Go to network settings"
-msgstr "Перейти к разделу «Сеть»"
-
-#: src/components/software/PatternSelectionUnavailable.tsx:150
+#: src/components/software/PatternSelectionUnavailable.tsx:87
 #, fuzzy
 msgid ""
 "This product does not allow selecting software at installation time. "
@@ -2953,122 +2949,137 @@ msgstr ""
 "обеспечение после завершения установки."
 
 #. TRANSLATORS: shown when software selection cannot be determined
-#: src/components/software/PatternSelectionUnavailable.tsx:161
+#: src/components/software/PatternSelectionUnavailable.tsx:99
 #, fuzzy
 msgid "The software selection could not be loaded."
 msgstr "Не удалось обновить имя инициатора"
 
+#: src/components/software/SoftwareIssueActions.tsx:90
+msgid "Loading the installation repositories..."
+msgstr "Загрузка репозиториев установки..."
+
+#. TRANSLATORS: button to read the software information again
+#: src/components/software/SoftwareIssueActions.tsx:93
+msgid "Try again"
+msgstr "Повторить попытку"
+
+#. TRANSLATORS: link to go to network settings
+#: src/components/software/SoftwareIssueActions.tsx:107
+#, fuzzy
+msgid "Go to network settings"
+msgstr "Перейти к разделу «Сеть»"
+
 #. TRANSLATORS: empty state title for a software section with nothing selected
-#: src/components/software/SoftwarePage.tsx:77
+#: src/components/software/SoftwarePage.tsx:86
 #, fuzzy
 msgid "None selected"
 msgstr "автоматический выбор"
 
-#: src/components/software/SoftwarePage.tsx:122
+#: src/components/software/SoftwarePage.tsx:131
 #, fuzzy
 msgid "Read less"
 msgstr "только_чтение"
 
 #. TRANSLATORS: accessible label for the collapse button; %s is the pattern name
-#: src/components/software/SoftwarePage.tsx:124
+#: src/components/software/SoftwarePage.tsx:133
 #, fuzzy, javascript-format
 msgid "Read less about %s"
 msgstr "Требуется около %s"
 
-#: src/components/software/SoftwarePage.tsx:128
+#: src/components/software/SoftwarePage.tsx:137
 #, fuzzy
 msgid "Read more"
 msgstr "только_чтение"
 
 #. TRANSLATORS: accessible label for the expand button; %s is the pattern name
-#: src/components/software/SoftwarePage.tsx:130
+#: src/components/software/SoftwarePage.tsx:139
 #, fuzzy, javascript-format
 msgid "Read more about %s"
 msgstr "Требуется около %s"
 
 #. TRANSLATORS: %s is the required disk space. Keep the [brackets]: they mark the value to be displayed in bold.
-#: src/components/software/SoftwarePage.tsx:200
+#: src/components/software/SoftwarePage.tsx:209
 #, javascript-format
 msgid "Required space with current selection: [%s]"
 msgstr ""
 
 #. TRANSLATORS: %s is the required disk space. Keep the [brackets]: they mark the value to be displayed in bold.
-#: src/components/software/SoftwarePage.tsx:202
+#: src/components/software/SoftwarePage.tsx:211
 #, fuzzy, javascript-format
 msgid "Required space: [%s]"
 msgstr "Необходимые пакеты"
 
 #. TRANSLATORS: %1$d is selected count, %2$d is total available count
-#: src/components/software/SoftwarePage.tsx:250
+#: src/components/software/SoftwarePage.tsx:259
 #: src/components/software/patterns-form/Form.tsx:145
 #, fuzzy, javascript-format
 msgid "%1$d of %2$d selected"
 msgstr "Нет целей, соответствующих фильтрам"
 
 #. TRANSLATORS: shown while the software proposal is not yet available
-#: src/components/software/SoftwarePage.tsx:278
+#: src/components/software/SoftwarePage.tsx:287
 #, fuzzy
 msgid "No information available yet"
 msgstr "Показать сведения о %s"
 
 #. TRANSLATORS: empty state title when no desktop environments are available
-#: src/components/software/SoftwarePage.tsx:294
+#: src/components/software/SoftwarePage.tsx:303
 #, fuzzy
 msgid "No desktops available"
 msgstr "Нет доступных устройств"
 
 #. TRANSLATORS: explanation shown when the product has no desktop environments
-#: src/components/software/SoftwarePage.tsx:296
+#: src/components/software/SoftwarePage.tsx:305
 #, fuzzy
 msgid "This product does not provide desktop environments."
 msgstr "Этот продукт не требует регистрации."
 
 #. TRANSLATORS: hint shown when no desktop environment has been chosen
-#: src/components/software/SoftwarePage.tsx:302
+#: src/components/software/SoftwarePage.tsx:311
 msgid "Select a desktop environment to get a graphical interface."
 msgstr ""
 
 #. TRANSLATORS: button to go to the desktop environment selection page
-#: src/components/software/SoftwarePage.tsx:304
+#: src/components/software/SoftwarePage.tsx:313
 #, fuzzy
 msgid "Select a desktop"
 msgstr "Выберите диск"
 
 #. TRANSLATORS: empty state title when no additional patterns are available
-#: src/components/software/SoftwarePage.tsx:312
+#: src/components/software/SoftwarePage.tsx:321
 #, fuzzy
 msgid "No additional patterns available"
 msgstr "Исп. RAID-массив %s для дополнительных разделов"
 
 #. TRANSLATORS: explanation shown when the product has no additional patterns
-#: src/components/software/SoftwarePage.tsx:314
+#: src/components/software/SoftwarePage.tsx:323
 #, fuzzy
 msgid "This product does not provide additional patterns."
 msgstr "Этот продукт не требует регистрации."
 
 #. TRANSLATORS: hint shown when no additional software patterns have been chosen
-#: src/components/software/SoftwarePage.tsx:320
+#: src/components/software/SoftwarePage.tsx:329
 #, fuzzy
 msgid "Select one or more to extend the system."
 msgstr "Выберите способ выделения файловой системы"
 
 #. TRANSLATORS: button to go to the pattern selection page
-#: src/components/software/SoftwarePage.tsx:322
+#: src/components/software/SoftwarePage.tsx:331
 #, fuzzy
 msgid "Select patterns"
 msgstr "Выбранные шаблоны"
 
-#: src/components/software/SoftwarePage.tsx:334
+#: src/components/software/SoftwarePage.tsx:343
 msgid "Desktops"
 msgstr ""
 
 #. TRANSLATORS: description for the Desktops section
-#: src/components/software/SoftwarePage.tsx:337
+#: src/components/software/SoftwarePage.tsx:346
 msgid "Graphical desktop environments for the system."
 msgstr ""
 
 #. TRANSLATORS: button to change the desktop selection
-#: src/components/software/SoftwarePage.tsx:341
+#: src/components/software/SoftwarePage.tsx:350
 #, fuzzy
 msgid "Change desktop"
 msgid_plural "Change desktops"
@@ -3076,20 +3087,20 @@ msgstr[0] "Изменить режим"
 msgstr[1] "Изменить режим"
 msgstr[2] "Изменить режим"
 
-#: src/components/software/SoftwarePage.tsx:352
+#: src/components/software/SoftwarePage.tsx:361
 #, fuzzy
 msgid "Additional patterns"
 msgstr "Исп. RAID-массив %s для дополнительных разделов"
 
 #. TRANSLATORS: description for the Additional software section
-#: src/components/software/SoftwarePage.tsx:355
+#: src/components/software/SoftwarePage.tsx:364
 msgid ""
 "Curated sets of packages for common use cases and features to extend the "
 "system."
 msgstr ""
 
 #. TRANSLATORS: button to change the additional software selection
-#: src/components/software/SoftwarePage.tsx:358
+#: src/components/software/SoftwarePage.tsx:367
 #, fuzzy
 msgid "Change patterns"
 msgstr "Изменить на %s"
@@ -7006,12 +7017,6 @@ msgstr ""
 
 #~ msgid "Repository load failed"
 #~ msgstr "Не удалось загрузить репозиторий"
-
-#~ msgid "Loading the installation repositories..."
-#~ msgstr "Загрузка репозиториев установки..."
-
-#~ msgid "Try again"
-#~ msgstr "Повторить попытку"
 
 #~ msgid "Used space"
 #~ msgstr "Используемое"

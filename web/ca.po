@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-27 11:08+0000\n"
+"POT-Creation-Date: 2026-07-29 12:57+0000\n"
 "PO-Revision-Date: 2026-07-06 07:12+0000\n"
 "Last-Translator: David Medina <medipas@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -396,7 +396,7 @@ msgstr "Més"
 msgid "Show configuration"
 msgstr "Mostra la configuració"
 
-#: src/components/core/IssuesAlert.tsx:39
+#: src/components/core/IssuesAlert.tsx:49
 msgid "You must fix these issues"
 msgstr "Heu de solucionar aquests problemes"
 
@@ -535,7 +535,7 @@ msgstr "Pas %1$d de %2$d"
 
 #: src/components/core/ProgressStatusMonitor.tsx:41
 #: src/components/overview/SoftwareSummary.tsx:164
-#: src/components/software/SoftwarePage.tsx:382
+#: src/components/software/SoftwarePage.tsx:395
 #: src/components/software/patterns-form/Form.tsx:353
 msgid "Software"
 msgstr "Programari"
@@ -940,7 +940,7 @@ msgstr "Cal el valor"
 #. TRANSLATORS: First breadcrumb item, linking back to the main page
 #. where the whole installation can be reviewed.
 #: src/components/layout/Header.tsx:119
-#: src/components/overview/OverviewPage.tsx:155
+#: src/components/overview/OverviewPage.tsx:124
 msgid "Installation"
 msgstr "Instal·lació"
 
@@ -1992,6 +1992,50 @@ msgstr "Nom d'amfitrió"
 msgid "Temporary name that may change after reboot or network changes"
 msgstr "Nom temporal que pot canviar després d'un reinici o canvis de xarxa"
 
+#. TRANSLATORS: Confirmation dialog title. %s is replaced with the product name (e.g., "openSUSE Leap")
+#: src/components/overview/InstallButton.tsx:64
+#, javascript-format
+msgid "Delete existing data and install %s?"
+msgstr "Voleu suprimir-ne les dades existents i instal·lar-hi %s?"
+
+#: src/components/overview/InstallButton.tsx:64
+#, javascript-format
+msgid "Install %s?"
+msgstr "Voleu instal·lar %s?"
+
+#. TRANSLATORS: shown at the top of the install confirmation dialog.
+#: src/components/overview/InstallButton.tsx:75
+msgid ""
+"Confirming starts the installation immediately with the defined settings."
+msgstr ""
+"En confirmar-ho, la instal·lació s'inicia immediatament amb els paràmetres "
+"definits."
+
+#. TRANSLATORS: Button to confirm and start the installation
+#: src/components/overview/InstallButton.tsx:82
+msgid "Confirm and install"
+msgstr "Confirmació i instal·lació"
+
+#: src/components/overview/InstallButton.tsx:119
+msgid "Install"
+msgstr "Instal·la"
+
+#: src/components/overview/InstallButton.tsx:120
+msgid "Install now with potential data loss"
+msgstr "Instal·la ara amb possible pèrdua de dades"
+
+#: src/components/overview/InstallButton.tsx:121
+msgid "Install now"
+msgstr "Instal·la ara"
+
+#: src/components/overview/InstallButton.tsx:142
+msgid "Wait until current operations are completed."
+msgstr "Espereu fins que s'hagin completat les operacions actuals."
+
+#: src/components/overview/InstallButton.tsx:152
+msgid "Fix invalid settings before starting the installation."
+msgstr "Corregiu els paràmetres no vàlids abans de començar la instal·lació."
+
 #: src/components/overview/InstallationSettings.tsx:48
 msgid "Installation settings"
 msgstr "Paràmetres per a la instal·lació"
@@ -2101,62 +2145,8 @@ msgstr "Automàtica i manual"
 msgid "Auto"
 msgstr "Automàtica"
 
-#. TRANSLATORS: Confirmation dialog title. %s is replaced with the product name (e.g., "openSUSE Leap")
-#: src/components/overview/OverviewPage.tsx:76
-#, javascript-format
-msgid "Delete existing data and install %s?"
-msgstr "Voleu suprimir-ne les dades existents i instal·lar-hi %s?"
-
-#: src/components/overview/OverviewPage.tsx:76
-#, javascript-format
-msgid "Install %s?"
-msgstr "Voleu instal·lar %s?"
-
-#. TRANSLATORS: shown at the top of the install confirmation dialog.
-#: src/components/overview/OverviewPage.tsx:87
-msgid ""
-"Confirming starts the installation immediately with the defined settings."
-msgstr ""
-"En confirmar-ho, la instal·lació s'inicia immediatament amb els paràmetres "
-"definits."
-
-#. TRANSLATORS: Button to confirm and start the installation
-#: src/components/overview/OverviewPage.tsx:94
-msgid "Confirm and install"
-msgstr "Confirmació i instal·lació"
-
-#: src/components/overview/OverviewPage.tsx:107
-msgid "Product not found"
-msgstr "Producte no trobat"
-
-#: src/components/overview/OverviewPage.tsx:110
-msgid ""
-"The product was not found in the repositories so it is not possible to "
-"proceed with the installation."
-msgstr ""
-"No s'ha trobat el producte als repositoris, per la qual cosa no és possible "
-"continuar la instal·lació."
-
-#. TRANSLATORS: This hint helps users locate the install button. Text inside
-#. square brackets [] appears in bold. Keep brackets for proper formatting.
-#: src/components/overview/OverviewPage.tsx:130
-msgid "When ready, click on the [install] button at the end of the page."
-msgstr ""
-"Quan estigueu a punt, feu clic al botó [Instal·la] al final de la pàgina."
-
-#: src/components/overview/OverviewPage.tsx:145
-msgid "Install"
-msgstr "Instal·la"
-
-#: src/components/overview/OverviewPage.tsx:146
-msgid "Install now with potential data loss"
-msgstr "Instal·la ara amb possible pèrdua de dades"
-
-#: src/components/overview/OverviewPage.tsx:147
-msgid "Install now"
-msgstr "Instal·la ara"
-
-#: src/components/overview/OverviewPage.tsx:164
+#. TRANSLATORS: Introductory text shown on the overview page
+#: src/components/overview/OverviewPage.tsx:53
 msgid ""
 "Take a moment to review the installation settings below and adjust them as "
 "needed."
@@ -2164,13 +2154,25 @@ msgstr ""
 "Dediqueu un moment a revisar els paràmetres d'instal·lació següents i "
 "ajusteu-los segons calgui."
 
-#: src/components/overview/OverviewPage.tsx:199
-msgid "Wait until current operations are completed."
-msgstr "Espereu fins que s'hagin completat les operacions actuals."
+#. TRANSLATORS: This hint helps users locate the install button. Text inside
+#. square brackets [] appears in bold. Keep brackets for proper formatting.
+#: src/components/overview/OverviewPage.tsx:61
+msgid "When ready, click on the [install] button at the end of the page."
+msgstr ""
+"Quan estigueu a punt, feu clic al botó [Instal·la] al final de la pàgina."
 
-#: src/components/overview/OverviewPage.tsx:209
-msgid "Fix invalid settings before starting the installation."
-msgstr "Corregiu els paràmetres no vàlids abans de començar la instal·lació."
+#. TRANSLATORS: empty state title when the product to install was not found
+#: src/components/overview/OverviewPage.tsx:103
+msgid "Product not found"
+msgstr "Producte no trobat"
+
+#: src/components/overview/OverviewPage.tsx:107
+msgid ""
+"The product was not found in the repositories so it is not possible to "
+"proceed with the installation."
+msgstr ""
+"No s'ha trobat el producte als repositoris, per la qual cosa no és possible "
+"continuar la instal·lació."
 
 #: src/components/overview/RegistrationSummary.tsx:36
 msgid "Registered without a code"
@@ -2296,30 +2298,30 @@ msgstr ""
 msgid "Potential data loss"
 msgstr "Pèrdua potencial de dades"
 
-#: src/components/overview/SystemInformationSection.tsx:60
+#: src/components/overview/SystemInformationSection.tsx:61
 #: src/utils/network.ts:60 src/utils/network.ts:91
 msgid "Unknown"
 msgstr "Desconegut"
 
-#: src/components/overview/SystemInformationSection.tsx:89
+#: src/components/overview/SystemInformationSection.tsx:80
+msgid "IPs"
+msgstr "IPs"
+
+#: src/components/overview/SystemInformationSection.tsx:109
 msgid "System Information"
 msgstr "Informació del sistema"
 
-#: src/components/overview/SystemInformationSection.tsx:93
+#: src/components/overview/SystemInformationSection.tsx:113
 msgid "Model"
 msgstr "Model"
 
-#: src/components/overview/SystemInformationSection.tsx:94
+#: src/components/overview/SystemInformationSection.tsx:114
 msgid "CPU"
 msgstr "CPU"
 
-#: src/components/overview/SystemInformationSection.tsx:95
+#: src/components/overview/SystemInformationSection.tsx:115
 msgid "Memory"
 msgstr "Memòria"
-
-#: src/components/overview/SystemInformationSection.tsx:98
-msgid "IPs"
-msgstr "IPs"
 
 #. TRANSLATORS: system hostname in summary. %s is the hostname.
 #: src/components/overview/SystemSummary.tsx:43
@@ -2416,6 +2418,11 @@ msgstr "Autenticació"
 #, javascript-format
 msgid "This license is not available in %s."
 msgstr "Aquesta llicència no està disponible en %s."
+
+#. TRANSLATORS: additional hint when the product is missing
+#: src/components/product/MissingProductState.tsx:56
+msgid "This might be due to network connectivity."
+msgstr "Això podria ser degut a la connectivitat de la xarxa."
 
 #. TRANSLATORS: %s will be replaced by a product name. E.g., "openSUSE Tumbleweed"
 #: src/components/product/ProductLogo.tsx:49
@@ -2847,26 +2854,16 @@ msgstr ""
 "configuració de [programari]."
 
 #. TRANSLATORS: empty state title when software cannot be selected
-#: src/components/software/PatternSelectionUnavailable.tsx:68
+#: src/components/software/PatternSelectionUnavailable.tsx:59
 msgid "Software selection is not available"
 msgstr "La selecció de programari no està disponible."
 
 #. TRANSLATORS: link to go to registration settings
-#: src/components/software/PatternSelectionUnavailable.tsx:120
+#: src/components/software/PatternSelectionUnavailable.tsx:69
 msgid "Go to registration"
 msgstr "Ves al registre"
 
-#. TRANSLATORS: additional hint when base product is missing
-#: src/components/software/PatternSelectionUnavailable.tsx:132
-msgid "This might be due to network connectivity."
-msgstr "Això podria ser degut a la connectivitat de la xarxa."
-
-#. TRANSLATORS: link to go to network settings
-#: src/components/software/PatternSelectionUnavailable.tsx:138
-msgid "Go to network settings"
-msgstr "Ves a la configuració de la xarxa"
-
-#: src/components/software/PatternSelectionUnavailable.tsx:150
+#: src/components/software/PatternSelectionUnavailable.tsx:87
 msgid ""
 "This product does not allow selecting software at installation time. "
 "Additional software can be added after the installation is complete."
@@ -2876,121 +2873,135 @@ msgstr ""
 "instal·lació."
 
 #. TRANSLATORS: shown when software selection cannot be determined
-#: src/components/software/PatternSelectionUnavailable.tsx:161
+#: src/components/software/PatternSelectionUnavailable.tsx:99
 msgid "The software selection could not be loaded."
 msgstr "No s'ha pogut carregar la selecció de programari."
 
+#: src/components/software/SoftwareIssueActions.tsx:90
+msgid "Loading the installation repositories..."
+msgstr "Carregant els repositoris d'instal·lació..."
+
+#. TRANSLATORS: button to read the software information again
+#: src/components/software/SoftwareIssueActions.tsx:93
+msgid "Try again"
+msgstr "Torna-ho a provar"
+
+#. TRANSLATORS: link to go to network settings
+#: src/components/software/SoftwareIssueActions.tsx:107
+msgid "Go to network settings"
+msgstr "Ves a la configuració de la xarxa"
+
 #. TRANSLATORS: empty state title for a software section with nothing selected
-#: src/components/software/SoftwarePage.tsx:77
+#: src/components/software/SoftwarePage.tsx:86
 msgid "None selected"
 msgstr "No se n'ha seleccionat cap."
 
-#: src/components/software/SoftwarePage.tsx:122
+#: src/components/software/SoftwarePage.tsx:131
 msgid "Read less"
 msgstr "Llegeix menys"
 
 #. TRANSLATORS: accessible label for the collapse button; %s is the pattern name
-#: src/components/software/SoftwarePage.tsx:124
+#: src/components/software/SoftwarePage.tsx:133
 #, javascript-format
 msgid "Read less about %s"
 msgstr "Menys lectura sobre %s"
 
-#: src/components/software/SoftwarePage.tsx:128
+#: src/components/software/SoftwarePage.tsx:137
 msgid "Read more"
 msgstr "Llegeix més"
 
 #. TRANSLATORS: accessible label for the expand button; %s is the pattern name
-#: src/components/software/SoftwarePage.tsx:130
+#: src/components/software/SoftwarePage.tsx:139
 #, javascript-format
 msgid "Read more about %s"
 msgstr "Més lectura sobre %s"
 
 #. TRANSLATORS: %s is the required disk space. Keep the [brackets]: they mark the value to be displayed in bold.
-#: src/components/software/SoftwarePage.tsx:200
+#: src/components/software/SoftwarePage.tsx:209
 #, javascript-format
 msgid "Required space with current selection: [%s]"
 msgstr "Espai necessari amb la selecció actual: [%s]"
 
 #. TRANSLATORS: %s is the required disk space. Keep the [brackets]: they mark the value to be displayed in bold.
-#: src/components/software/SoftwarePage.tsx:202
+#: src/components/software/SoftwarePage.tsx:211
 #, javascript-format
 msgid "Required space: [%s]"
 msgstr "Espai necessari: [%s]"
 
 #. TRANSLATORS: %1$d is selected count, %2$d is total available count
-#: src/components/software/SoftwarePage.tsx:250
+#: src/components/software/SoftwarePage.tsx:259
 #: src/components/software/patterns-form/Form.tsx:145
 #, javascript-format
 msgid "%1$d of %2$d selected"
 msgstr "%1$d de %2$d seleccionats"
 
 #. TRANSLATORS: shown while the software proposal is not yet available
-#: src/components/software/SoftwarePage.tsx:278
+#: src/components/software/SoftwarePage.tsx:287
 msgid "No information available yet"
 msgstr "Encara no hi ha informació disponible"
 
 #. TRANSLATORS: empty state title when no desktop environments are available
-#: src/components/software/SoftwarePage.tsx:294
+#: src/components/software/SoftwarePage.tsx:303
 msgid "No desktops available"
 msgstr "No hi ha cap escriptori disponible."
 
 #. TRANSLATORS: explanation shown when the product has no desktop environments
-#: src/components/software/SoftwarePage.tsx:296
+#: src/components/software/SoftwarePage.tsx:305
 msgid "This product does not provide desktop environments."
 msgstr "Aquest producte no proporciona entorns d'escriptori."
 
 #. TRANSLATORS: hint shown when no desktop environment has been chosen
-#: src/components/software/SoftwarePage.tsx:302
+#: src/components/software/SoftwarePage.tsx:311
 msgid "Select a desktop environment to get a graphical interface."
 msgstr "Seleccioneu un entorn d'escriptori per obtenir una interfície gràfica."
 
 #. TRANSLATORS: button to go to the desktop environment selection page
-#: src/components/software/SoftwarePage.tsx:304
+#: src/components/software/SoftwarePage.tsx:313
 msgid "Select a desktop"
 msgstr "Seleccioneu un escriptori"
 
 #. TRANSLATORS: empty state title when no additional patterns are available
-#: src/components/software/SoftwarePage.tsx:312
+#: src/components/software/SoftwarePage.tsx:321
 msgid "No additional patterns available"
 msgstr "No hi ha patrons addicionals disponibles."
 
 #. TRANSLATORS: explanation shown when the product has no additional patterns
-#: src/components/software/SoftwarePage.tsx:314
+#: src/components/software/SoftwarePage.tsx:323
 msgid "This product does not provide additional patterns."
 msgstr "Aquest producte no proporciona patrons addicionals."
 
 #. TRANSLATORS: hint shown when no additional software patterns have been chosen
-#: src/components/software/SoftwarePage.tsx:320
+#: src/components/software/SoftwarePage.tsx:329
 msgid "Select one or more to extend the system."
 msgstr "Seleccioneu-ne un o més per ampliar el sistema."
 
 #. TRANSLATORS: button to go to the pattern selection page
-#: src/components/software/SoftwarePage.tsx:322
+#: src/components/software/SoftwarePage.tsx:331
 msgid "Select patterns"
 msgstr "Seleccioneu patrons"
 
-#: src/components/software/SoftwarePage.tsx:334
+#: src/components/software/SoftwarePage.tsx:343
 msgid "Desktops"
 msgstr "Escriptoris"
 
 #. TRANSLATORS: description for the Desktops section
-#: src/components/software/SoftwarePage.tsx:337
+#: src/components/software/SoftwarePage.tsx:346
 msgid "Graphical desktop environments for the system."
 msgstr "Entorns d'escriptori gràfics per al sistema."
 
 #. TRANSLATORS: button to change the desktop selection
-#: src/components/software/SoftwarePage.tsx:341
+#: src/components/software/SoftwarePage.tsx:350
 msgid "Change desktop"
 msgid_plural "Change desktops"
 msgstr[0] "Canvia l'escriptori"
 msgstr[1] "Canvia els escriptoris"
 
-#: src/components/software/SoftwarePage.tsx:352
+#: src/components/software/SoftwarePage.tsx:361
 msgid "Additional patterns"
 msgstr "Patrons addicionals"
 
 #. TRANSLATORS: description for the Additional software section
-#: src/components/software/SoftwarePage.tsx:355
+#: src/components/software/SoftwarePage.tsx:364
 msgid ""
 "Curated sets of packages for common use cases and features to extend the "
 "system."
@@ -2999,7 +3010,7 @@ msgstr ""
 "ampliar el sistema."
 
 #. TRANSLATORS: button to change the additional software selection
-#: src/components/software/SoftwarePage.tsx:358
+#: src/components/software/SoftwarePage.tsx:367
 msgid "Change patterns"
 msgstr "Canvia els patrons"
 
@@ -6796,12 +6807,6 @@ msgstr "Loopback"
 
 #~ msgid "Repository load failed"
 #~ msgstr "Ha fallat carregar el repositori."
-
-#~ msgid "Loading the installation repositories..."
-#~ msgstr "Carregant els repositoris d'instal·lació..."
-
-#~ msgid "Try again"
-#~ msgstr "Torna-ho a provar"
 
 #~ msgid "Used space"
 #~ msgstr "Espai usat"

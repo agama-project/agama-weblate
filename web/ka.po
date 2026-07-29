@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-27 11:08+0000\n"
+"POT-Creation-Date: 2026-07-29 12:57+0000\n"
 "PO-Revision-Date: 2026-07-17 05:12+0000\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -379,7 +379,7 @@ msgstr "მეტი"
 msgid "Show configuration"
 msgstr "კონფიგურაციის ჩვენება"
 
-#: src/components/core/IssuesAlert.tsx:39
+#: src/components/core/IssuesAlert.tsx:49
 msgid "You must fix these issues"
 msgstr "უნდა გაასწოროთ ეს შეცდომები"
 
@@ -517,7 +517,7 @@ msgstr "ნაბიჯი %1$d %2$d-დან"
 
 #: src/components/core/ProgressStatusMonitor.tsx:41
 #: src/components/overview/SoftwareSummary.tsx:164
-#: src/components/software/SoftwarePage.tsx:382
+#: src/components/software/SoftwarePage.tsx:395
 #: src/components/software/patterns-form/Form.tsx:353
 msgid "Software"
 msgstr "პროგრამები"
@@ -915,7 +915,7 @@ msgstr "მნიშვნელობა აუცილებელია"
 #. TRANSLATORS: First breadcrumb item, linking back to the main page
 #. where the whole installation can be reviewed.
 #: src/components/layout/Header.tsx:119
-#: src/components/overview/OverviewPage.tsx:155
+#: src/components/overview/OverviewPage.tsx:124
 msgid "Installation"
 msgstr "დაყენება"
 
@@ -1962,6 +1962,48 @@ msgstr ""
 "დროებითი სახელი, რომელიც შეიძლება, შეიცვალოს გადატვირთვის, ან ქსელის "
 "ცვლილების შემდეგ"
 
+#. TRANSLATORS: Confirmation dialog title. %s is replaced with the product name (e.g., "openSUSE Leap")
+#: src/components/overview/InstallButton.tsx:64
+#, javascript-format
+msgid "Delete existing data and install %s?"
+msgstr "წაიშალოს არსებული მონაცემები და დავაყენო %s?"
+
+#: src/components/overview/InstallButton.tsx:64
+#, javascript-format
+msgid "Install %s?"
+msgstr "დავაყენო %s?"
+
+#. TRANSLATORS: shown at the top of the install confirmation dialog.
+#: src/components/overview/InstallButton.tsx:75
+msgid ""
+"Confirming starts the installation immediately with the defined settings."
+msgstr "დადასტურება დაუყოვნებლივ დაიწყებს დაყენებას მოწოდებული პარამეტრებით."
+
+#. TRANSLATORS: Button to confirm and start the installation
+#: src/components/overview/InstallButton.tsx:82
+msgid "Confirm and install"
+msgstr "დადასტურება და დაყენება"
+
+#: src/components/overview/InstallButton.tsx:119
+msgid "Install"
+msgstr "დაყენება"
+
+#: src/components/overview/InstallButton.tsx:120
+msgid "Install now with potential data loss"
+msgstr "დაყენება ახლავე პოტენციური მონაცემთა კარგვით"
+
+#: src/components/overview/InstallButton.tsx:121
+msgid "Install now"
+msgstr "დაყენება ახლავე"
+
+#: src/components/overview/InstallButton.tsx:142
+msgid "Wait until current operations are completed."
+msgstr "მოითმინეთ, სანამ მიმდინარე ოპერაციები არ დასრულდება."
+
+#: src/components/overview/InstallButton.tsx:152
+msgid "Fix invalid settings before starting the installation."
+msgstr "დაყენების დაწყებამდე ყველა არასწორი პარამეტრი უნდა გაასწოროთ."
+
 #: src/components/overview/InstallationSettings.tsx:48
 msgid "Installation settings"
 msgstr "დაყენების მორგება"
@@ -2071,69 +2113,29 @@ msgstr "ავტო და ხელით"
 msgid "Auto"
 msgstr "ავტო"
 
-#. TRANSLATORS: Confirmation dialog title. %s is replaced with the product name (e.g., "openSUSE Leap")
-#: src/components/overview/OverviewPage.tsx:76
-#, javascript-format
-msgid "Delete existing data and install %s?"
-msgstr "წაიშალოს არსებული მონაცემები და დავაყენო %s?"
-
-#: src/components/overview/OverviewPage.tsx:76
-#, javascript-format
-msgid "Install %s?"
-msgstr "დავაყენო %s?"
-
-#. TRANSLATORS: shown at the top of the install confirmation dialog.
-#: src/components/overview/OverviewPage.tsx:87
-msgid ""
-"Confirming starts the installation immediately with the defined settings."
-msgstr "დადასტურება დაუყოვნებლივ დაიწყებს დაყენებას მოწოდებული პარამეტრებით."
-
-#. TRANSLATORS: Button to confirm and start the installation
-#: src/components/overview/OverviewPage.tsx:94
-msgid "Confirm and install"
-msgstr "დადასტურება და დაყენება"
-
-#: src/components/overview/OverviewPage.tsx:107
-msgid "Product not found"
-msgstr "პროდუქტი აღმოჩენილი არაა"
-
-#: src/components/overview/OverviewPage.tsx:110
-msgid ""
-"The product was not found in the repositories so it is not possible to "
-"proceed with the installation."
-msgstr ""
-
-#. TRANSLATORS: This hint helps users locate the install button. Text inside
-#. square brackets [] appears in bold. Keep brackets for proper formatting.
-#: src/components/overview/OverviewPage.tsx:130
-msgid "When ready, click on the [install] button at the end of the page."
-msgstr "როცა მზად იქნებით, გვერდის ბოლოში დააწკაპუნეთ ღილაკზე [დაყენება]."
-
-#: src/components/overview/OverviewPage.tsx:145
-msgid "Install"
-msgstr "დაყენება"
-
-#: src/components/overview/OverviewPage.tsx:146
-msgid "Install now with potential data loss"
-msgstr "დაყენება ახლავე პოტენციური მონაცემთა კარგვით"
-
-#: src/components/overview/OverviewPage.tsx:147
-msgid "Install now"
-msgstr "დაყენება ახლავე"
-
-#: src/components/overview/OverviewPage.tsx:164
+#. TRANSLATORS: Introductory text shown on the overview page
+#: src/components/overview/OverviewPage.tsx:53
 msgid ""
 "Take a moment to review the installation settings below and adjust them as "
 "needed."
 msgstr ""
 
-#: src/components/overview/OverviewPage.tsx:199
-msgid "Wait until current operations are completed."
-msgstr "მოითმინეთ, სანამ მიმდინარე ოპერაციები არ დასრულდება."
+#. TRANSLATORS: This hint helps users locate the install button. Text inside
+#. square brackets [] appears in bold. Keep brackets for proper formatting.
+#: src/components/overview/OverviewPage.tsx:61
+msgid "When ready, click on the [install] button at the end of the page."
+msgstr "როცა მზად იქნებით, გვერდის ბოლოში დააწკაპუნეთ ღილაკზე [დაყენება]."
 
-#: src/components/overview/OverviewPage.tsx:209
-msgid "Fix invalid settings before starting the installation."
-msgstr "დაყენების დაწყებამდე ყველა არასწორი პარამეტრი უნდა გაასწოროთ."
+#. TRANSLATORS: empty state title when the product to install was not found
+#: src/components/overview/OverviewPage.tsx:103
+msgid "Product not found"
+msgstr "პროდუქტი აღმოჩენილი არაა"
+
+#: src/components/overview/OverviewPage.tsx:107
+msgid ""
+"The product was not found in the repositories so it is not possible to "
+"proceed with the installation."
+msgstr ""
 
 #: src/components/overview/RegistrationSummary.tsx:36
 msgid "Registered without a code"
@@ -2258,30 +2260,30 @@ msgstr "პოტენციური მონაცემთა კარგ�
 msgid "Potential data loss"
 msgstr "პოტენციური მონაცემთა კარგვა"
 
-#: src/components/overview/SystemInformationSection.tsx:60
+#: src/components/overview/SystemInformationSection.tsx:61
 #: src/utils/network.ts:60 src/utils/network.ts:91
 msgid "Unknown"
 msgstr "უცნობი"
 
-#: src/components/overview/SystemInformationSection.tsx:89
+#: src/components/overview/SystemInformationSection.tsx:80
+msgid "IPs"
+msgstr "IP-ები"
+
+#: src/components/overview/SystemInformationSection.tsx:109
 msgid "System Information"
 msgstr "ინფორმაცია სისტემის შესახებ"
 
-#: src/components/overview/SystemInformationSection.tsx:93
+#: src/components/overview/SystemInformationSection.tsx:113
 msgid "Model"
 msgstr "მოდელი"
 
-#: src/components/overview/SystemInformationSection.tsx:94
+#: src/components/overview/SystemInformationSection.tsx:114
 msgid "CPU"
 msgstr "CPU"
 
-#: src/components/overview/SystemInformationSection.tsx:95
+#: src/components/overview/SystemInformationSection.tsx:115
 msgid "Memory"
 msgstr "მეხსიერება"
-
-#: src/components/overview/SystemInformationSection.tsx:98
-msgid "IPs"
-msgstr "IP-ები"
 
 #. TRANSLATORS: system hostname in summary. %s is the hostname.
 #: src/components/overview/SystemSummary.tsx:43
@@ -2376,6 +2378,11 @@ msgstr "ავთენტიკაცია"
 #, javascript-format
 msgid "This license is not available in %s."
 msgstr "ეს ლიცენზია %s-ში ხელმისაწვდომი არაა."
+
+#. TRANSLATORS: additional hint when the product is missing
+#: src/components/product/MissingProductState.tsx:56
+msgid "This might be due to network connectivity."
+msgstr "ეს, შეიძლება, ქსელის კავშირის გამო ხდებოდეს."
 
 #. TRANSLATORS: %s will be replaced by a product name. E.g., "openSUSE Tumbleweed"
 #: src/components/product/ProductLogo.tsx:49
@@ -2795,154 +2802,158 @@ msgid ""
 msgstr ""
 
 #. TRANSLATORS: empty state title when software cannot be selected
-#: src/components/software/PatternSelectionUnavailable.tsx:68
+#: src/components/software/PatternSelectionUnavailable.tsx:59
 msgid "Software selection is not available"
 msgstr "პროგრამების არჩევანი ხელმისაწვდომი არაა"
 
 #. TRANSLATORS: link to go to registration settings
-#: src/components/software/PatternSelectionUnavailable.tsx:120
+#: src/components/software/PatternSelectionUnavailable.tsx:69
 msgid "Go to registration"
 msgstr "რეგისტრაციაზე გადასვლა"
 
-#. TRANSLATORS: additional hint when base product is missing
-#: src/components/software/PatternSelectionUnavailable.tsx:132
-msgid "This might be due to network connectivity."
-msgstr "ეს, შეიძლება, ქსელის კავშირის გამო ხდებოდეს."
-
-#. TRANSLATORS: link to go to network settings
-#: src/components/software/PatternSelectionUnavailable.tsx:138
-msgid "Go to network settings"
-msgstr "ქსელის მორგების გვერდზე გადასვლა"
-
-#: src/components/software/PatternSelectionUnavailable.tsx:150
+#: src/components/software/PatternSelectionUnavailable.tsx:87
 msgid ""
 "This product does not allow selecting software at installation time. "
 "Additional software can be added after the installation is complete."
 msgstr ""
 
 #. TRANSLATORS: shown when software selection cannot be determined
-#: src/components/software/PatternSelectionUnavailable.tsx:161
+#: src/components/software/PatternSelectionUnavailable.tsx:99
 msgid "The software selection could not be loaded."
 msgstr "პროგრამების არჩევნის ჩატვირთვა შეუძლებელია."
 
+#: src/components/software/SoftwareIssueActions.tsx:90
+msgid "Loading the installation repositories..."
+msgstr "დაყენების რეპოზიტორიების ჩატვირთვა..."
+
+#. TRANSLATORS: button to read the software information again
+#: src/components/software/SoftwareIssueActions.tsx:93
+msgid "Try again"
+msgstr "თავიდან სცადეთ"
+
+#. TRANSLATORS: link to go to network settings
+#: src/components/software/SoftwareIssueActions.tsx:107
+msgid "Go to network settings"
+msgstr "ქსელის მორგების გვერდზე გადასვლა"
+
 #. TRANSLATORS: empty state title for a software section with nothing selected
-#: src/components/software/SoftwarePage.tsx:77
+#: src/components/software/SoftwarePage.tsx:86
 msgid "None selected"
 msgstr "არჩეული არაფერია"
 
-#: src/components/software/SoftwarePage.tsx:122
+#: src/components/software/SoftwarePage.tsx:131
 msgid "Read less"
 msgstr "ნაკლების წაკითხვა"
 
 #. TRANSLATORS: accessible label for the collapse button; %s is the pattern name
-#: src/components/software/SoftwarePage.tsx:124
+#: src/components/software/SoftwarePage.tsx:133
 #, javascript-format
 msgid "Read less about %s"
 msgstr "ნაკლების წაკითხვა %s-ის შესახებ"
 
-#: src/components/software/SoftwarePage.tsx:128
+#: src/components/software/SoftwarePage.tsx:137
 msgid "Read more"
 msgstr "მეტის წაკითხვა"
 
 #. TRANSLATORS: accessible label for the expand button; %s is the pattern name
-#: src/components/software/SoftwarePage.tsx:130
+#: src/components/software/SoftwarePage.tsx:139
 #, javascript-format
 msgid "Read more about %s"
 msgstr "მეტის წაკითხვა %s-ის შესახებ"
 
 #. TRANSLATORS: %s is the required disk space. Keep the [brackets]: they mark the value to be displayed in bold.
-#: src/components/software/SoftwarePage.tsx:200
+#: src/components/software/SoftwarePage.tsx:209
 #, javascript-format
 msgid "Required space with current selection: [%s]"
 msgstr "საჭირო ადგილი მიმდინარე არჩევნით: [%s]"
 
 #. TRANSLATORS: %s is the required disk space. Keep the [brackets]: they mark the value to be displayed in bold.
-#: src/components/software/SoftwarePage.tsx:202
+#: src/components/software/SoftwarePage.tsx:211
 #, javascript-format
 msgid "Required space: [%s]"
 msgstr "საჭირო ადგილი: [%s]"
 
 #. TRANSLATORS: %1$d is selected count, %2$d is total available count
-#: src/components/software/SoftwarePage.tsx:250
+#: src/components/software/SoftwarePage.tsx:259
 #: src/components/software/patterns-form/Form.tsx:145
 #, javascript-format
 msgid "%1$d of %2$d selected"
 msgstr "არჩეულია %1$d %2$d-დან"
 
 #. TRANSLATORS: shown while the software proposal is not yet available
-#: src/components/software/SoftwarePage.tsx:278
+#: src/components/software/SoftwarePage.tsx:287
 msgid "No information available yet"
 msgstr "ჯერ ინფორმაცია ხელმისაწვდომი არაა"
 
 #. TRANSLATORS: empty state title when no desktop environments are available
-#: src/components/software/SoftwarePage.tsx:294
+#: src/components/software/SoftwarePage.tsx:303
 msgid "No desktops available"
 msgstr "სამუშაო გარემოები ხელმისაწვდომი არაა"
 
 #. TRANSLATORS: explanation shown when the product has no desktop environments
-#: src/components/software/SoftwarePage.tsx:296
+#: src/components/software/SoftwarePage.tsx:305
 msgid "This product does not provide desktop environments."
 msgstr "ეს პროდუქტი სამუშაო გარემოებს არ მოგაწვდით."
 
 #. TRANSLATORS: hint shown when no desktop environment has been chosen
-#: src/components/software/SoftwarePage.tsx:302
+#: src/components/software/SoftwarePage.tsx:311
 msgid "Select a desktop environment to get a graphical interface."
 msgstr "გრაფიკული ინტერფეისის მისაღებად აირჩიეთ სამუშაო გარემო."
 
 #. TRANSLATORS: button to go to the desktop environment selection page
-#: src/components/software/SoftwarePage.tsx:304
+#: src/components/software/SoftwarePage.tsx:313
 msgid "Select a desktop"
 msgstr "სამუშაო გარემოს არჩევა"
 
 #. TRANSLATORS: empty state title when no additional patterns are available
-#: src/components/software/SoftwarePage.tsx:312
+#: src/components/software/SoftwarePage.tsx:321
 msgid "No additional patterns available"
 msgstr "დამატებით ნიმუშები ხელმისაწვდომი არაა"
 
 #. TRANSLATORS: explanation shown when the product has no additional patterns
-#: src/components/software/SoftwarePage.tsx:314
+#: src/components/software/SoftwarePage.tsx:323
 msgid "This product does not provide additional patterns."
 msgstr "ეს პროდუქტი სამუშაო დამატებით ნიმუშებს."
 
 #. TRANSLATORS: hint shown when no additional software patterns have been chosen
-#: src/components/software/SoftwarePage.tsx:320
+#: src/components/software/SoftwarePage.tsx:329
 msgid "Select one or more to extend the system."
 msgstr "აირჩიეთ ერთი, ან მეტი სისტემის გასაფართოებლად."
 
 #. TRANSLATORS: button to go to the pattern selection page
-#: src/components/software/SoftwarePage.tsx:322
+#: src/components/software/SoftwarePage.tsx:331
 msgid "Select patterns"
 msgstr "ნიმუშების არჩევა"
 
-#: src/components/software/SoftwarePage.tsx:334
+#: src/components/software/SoftwarePage.tsx:343
 msgid "Desktops"
 msgstr "სამუშაო გარემოები"
 
 #. TRANSLATORS: description for the Desktops section
-#: src/components/software/SoftwarePage.tsx:337
+#: src/components/software/SoftwarePage.tsx:346
 msgid "Graphical desktop environments for the system."
 msgstr "გრაფიკული სამუშაო გარემოები სისტემისთვის."
 
 #. TRANSLATORS: button to change the desktop selection
-#: src/components/software/SoftwarePage.tsx:341
+#: src/components/software/SoftwarePage.tsx:350
 msgid "Change desktop"
 msgid_plural "Change desktops"
 msgstr[0] "სამუშაო გარემოს შეცვლა"
 msgstr[1] "სამუშაო გარემოების შეცვლა"
 
-#: src/components/software/SoftwarePage.tsx:352
+#: src/components/software/SoftwarePage.tsx:361
 msgid "Additional patterns"
 msgstr "დამატებით ნიმუშები"
 
 #. TRANSLATORS: description for the Additional software section
-#: src/components/software/SoftwarePage.tsx:355
+#: src/components/software/SoftwarePage.tsx:364
 msgid ""
 "Curated sets of packages for common use cases and features to extend the "
 "system."
 msgstr ""
 
 #. TRANSLATORS: button to change the additional software selection
-#: src/components/software/SoftwarePage.tsx:358
+#: src/components/software/SoftwarePage.tsx:367
 msgid "Change patterns"
 msgstr "ნიმუშების შეცვლა"
 
@@ -6530,12 +6541,6 @@ msgstr "მარყუჟი"
 
 #~ msgid "Repository load failed"
 #~ msgstr "რეპოზიტორიის ჩატვირთვა ჩავარდა"
-
-#~ msgid "Loading the installation repositories..."
-#~ msgstr "დაყენების რეპოზიტორიების ჩატვირთვა..."
-
-#~ msgid "Try again"
-#~ msgstr "თავიდან სცადეთ"
 
 #~ msgid "Used space"
 #~ msgstr "გამოყენებული ადგილი"
