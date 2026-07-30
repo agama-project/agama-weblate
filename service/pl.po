@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-07-17 09:30+0000\n"
-"PO-Revision-Date: 2026-07-29 22:12+0000\n"
+"PO-Revision-Date: 2026-07-30 00:12+0000\n"
 "Last-Translator: Jakub Wroński <kubawronski161@gmail.com>\n"
 "Language-Team: Polish <https://l10n.opensuse.org/projects/agama/agama-"
 "service-sle-16/pl/>\n"
@@ -408,7 +408,7 @@ msgstr ""
 #: service/lib/agama/storage/config_checkers/filesystem.rb:79
 #, c-format
 msgid "Missing file system type for '%s'"
-msgstr "Nie określono systemu plików dla „%s”"
+msgstr "Nie określono systemu plików dla '%s'"
 
 #. TRANSLATORS: %{filesystem} is replaced by a file system type (e.g., "Btrfs") and
 #. %{path} is replaced by a mount path (e.g., "/home").
@@ -521,47 +521,47 @@ msgstr ""
 #: service/lib/agama/storage/config_checkers/search.rb:74
 #, c-format
 msgid "Mandatory device %s not found"
-msgstr ""
+msgstr "Nie znalaziono wymaganego urządzenia %s"
 
 #. TRANSLATORS: %s is replaced by a device type (e.g., "drive").
 #: service/lib/agama/storage/config_checkers/search.rb:77
 #, c-format
 msgid "Mandatory %s not found"
-msgstr ""
+msgstr "Nie znaleziono wymaganego %s"
 
 #. @return [String]
 #: service/lib/agama/storage/config_checkers/search.rb:85
 msgid "drive"
-msgstr ""
+msgstr "dysk"
 
 #: service/lib/agama/storage/config_checkers/search.rb:87
 msgid "MD RAID"
-msgstr ""
+msgstr "MD RAID"
 
 #: service/lib/agama/storage/config_checkers/search.rb:89
 msgid "partition"
-msgstr ""
+msgstr "partycja"
 
 #: service/lib/agama/storage/config_checkers/search.rb:91
 msgid "LVM logical volume"
-msgstr ""
+msgstr "Wolumin logiczny LVM"
 
 #: service/lib/agama/storage/config_checkers/search.rb:93
 msgid "device"
-msgstr ""
+msgstr "urządzenie"
 
 #. Issue if the volume group name is missing.
 #.
 #. @return [Issue, nil]
 #: service/lib/agama/storage/config_checkers/volume_group.rb:76
 msgid "There is a volume group without name"
-msgstr ""
+msgstr "Istnieje grupa woluminów bez nazwy"
 
 #. TRANSLATORS: %s is the replaced by a device alias (e.g., "pv1").
 #: service/lib/agama/storage/config_checkers/volume_group.rb:106
 #, c-format
 msgid "There is no LVM physical volume with alias '%s'"
-msgstr ""
+msgstr "Nie istnieje fizyczny wolumin LVM o aliasie „%s”"
 
 #. TRANSLATORS: %s is the replaced by a device alias (e.g., "pv1").
 #: service/lib/agama/storage/config_checkers/volume_group.rb:133
@@ -570,18 +570,23 @@ msgid ""
 "The list of target devices for the volume group '%s' is mixing reused devices "
 "and new devices"
 msgstr ""
+"Lista urządzeń docelowych dla grupy woluminów „%s” zawiera jednocześnie "
+"ponownie używane i nowe urządzenia"
 
 #. TRANSLATORS: %s is the replaced by a device alias (e.g., "disk1").
 #: service/lib/agama/storage/config_checkers/volume_group.rb:153
 #, c-format
 msgid "There is no target device for LVM physical volumes with alias '%s'"
 msgstr ""
+"Nie istnieje urządzenie docelowe dla fizycznych woluminów LVM o aliasie „%s”"
 
 #. TRANSLATORS: %s is the replaced by a device alias (e.g., "disk1").
 #: service/lib/agama/storage/config_checkers/volume_groups.rb:66
 #, c-format
 msgid "The device '%s' is used several times as target device for physical volumes"
 msgstr ""
+"Urządzenie „%s” jest wielokrotnie używane jako urządzenie docelowe dla "
+"woluminów fizycznych"
 
 #. Text of the reason preventing to shrink because there is no content.
 #.
@@ -592,18 +597,22 @@ msgid ""
 " the device does contain a file system or a storage system that is not support"
 "ed, resizing will most likely cause data loss."
 msgstr ""
+"Na urządzeniu nie wykryto ani systemu plików, ani systemu przechowywania "
+"danych. Jeśli urządzenie zawiera nieobsługiwany system plików lub system "
+"przechowywania danych, zmiana rozmiaru najprawdopodobniej spowoduje utratę "
+"danych."
 
 #. Text of the reason preventing to shrink because there is no valid minimum size.
 #.
 #. @return [String, nil] nil if there is a minimum size or there is any other reasons.
 #: service/lib/agama/storage/device_shrinking.rb:162
 msgid "Shrinking is not supported by this device"
-msgstr ""
+msgstr "Zmniejszanie rozmiaru nie jest obsługiwane przez to urządzenie"
 
 #. Copy /etc/nvme/host* to keep NVMe working after installation, bsc#1238038
 #: service/lib/agama/storage/finisher.rb:145
 msgid "Copying important installation files to the target system"
-msgstr ""
+msgstr "Kopiowanie ważnych plików instalacyjnych do systemu docelowego"
 
 #. Constructor
 #: service/lib/agama/storage/finisher.rb:186
@@ -613,27 +622,27 @@ msgstr ""
 #. Step to write the bootloader configuration
 #: service/lib/agama/storage/finisher.rb:197
 msgid "Installing bootloader"
-msgstr ""
+msgstr "Instalowanie programu rozruchowego"
 
 #. Step to finish the Y2Storage configuration
 #: service/lib/agama/storage/finisher.rb:214
 msgid "Adjusting storage configuration"
-msgstr ""
+msgstr "Dostosowywanie konfiguracji pamięci masowej"
 
 #. Step to finish the iSCSI configuration
 #: service/lib/agama/storage/finisher.rb:225
 msgid "Adjusting iSCSI configuration"
-msgstr ""
+msgstr "Dostosowywanie konfiguracji iSCSI"
 
 #. Step to configure the file-system snapshots
 #: service/lib/agama/storage/finisher.rb:236
 msgid "Configuring file systems snapshots"
-msgstr ""
+msgstr "Konfigurowanie migawek systemu plików"
 
 #. Step to copy the installation logs
 #: service/lib/agama/storage/finisher.rb:254
 msgid "Copying logs"
-msgstr ""
+msgstr "Kopiowanie logów"
 
 #. Executes post-installation scripts
 #: service/lib/agama/storage/finisher.rb:295
@@ -648,7 +657,7 @@ msgstr ""
 #. Step to unmount the target file-systems
 #: service/lib/agama/storage/finisher.rb:353
 msgid "Unmounting storage devices"
-msgstr ""
+msgstr "Odmontowywanie urządzeń przechowywania"
 
 #. Applies the target configs.
 #.
@@ -716,6 +725,8 @@ msgstr "Zapisywanie konfiguracji programu rozruchowego w sysconfig"
 #: service/lib/agama/storage/proposal.rb:345
 msgid "Cannot calculate a valid storage setup with the current configuration"
 msgstr ""
+"Nie można obliczyć poprawnej konfiguracji pamięci masowej dla bieżących "
+"ustawień"
 
 #. Issue to communicate a generic Y2Storage error.
 #.
