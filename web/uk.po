@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-29 12:57+0000\n"
+"POT-Creation-Date: 2026-08-03 13:21+0000\n"
 "PO-Revision-Date: 2026-07-22 20:12+0000\n"
 "Last-Translator: Eugene Krater <lachend@gmail.com>\n"
 "Language-Team: Ukrainian <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -276,25 +276,50 @@ msgid "Installation in progress"
 msgstr "Встановлення триває"
 
 #. TRANSLATORS: label for the system language selector
+#. TRANSLATORS: label for the installer interface language selector
 #. TRANSLATORS: label for the button that opens the display language settings
-#: src/components/core/InstallerL10nOptions.tsx:76
-#: src/components/core/InstallerL10nOptions.tsx:479
+#: src/components/core/InstallerL10nOptions.tsx:114
+#: src/components/core/InstallerL10nOptions.tsx:480
 #: src/components/l10n/l10n-form/LanguageField.tsx:60
 msgid "Language"
 msgstr "Мова"
 
-#: src/components/core/InstallerL10nOptions.tsx:97
-#: src/components/core/InstallerL10nOptions.tsx:104
-#: src/components/core/InstallerL10nOptions.tsx:108
+#. TRANSLATORS: hint for the language filter input
+#: src/components/core/InstallerL10nOptions.tsx:116
+#: src/components/l10n/l10n-form/LanguageField.tsx:62
+msgid "Filter by language, territory or locale code"
+msgstr "Фільтр за мовою, територією або кодом локалі"
+
+#. TRANSLATORS: shown when no language matches the filter
+#: src/components/core/InstallerL10nOptions.tsx:118
+#: src/components/l10n/l10n-form/LanguageField.tsx:64
+msgid "None of the locales match the filter."
+msgstr "Жодна з локалей не відповідає фільтру."
+
+#. TRANSLATORS: label for the installer interface keyboard layout selector
+#: src/components/core/InstallerL10nOptions.tsx:144
+#: src/components/core/InstallerL10nOptions.tsx:168
 msgid "Keyboard layout"
 msgstr "Розкладка клавіатури"
 
-#: src/components/core/InstallerL10nOptions.tsx:98
-#: src/components/core/InstallerL10nOptions.tsx:407
+#: src/components/core/InstallerL10nOptions.tsx:145
+#: src/components/core/InstallerL10nOptions.tsx:432
 msgid "Cannot be changed in remote installation"
 msgstr "Неможливо змінити під час віддаленого встановлення"
 
-#: src/components/core/InstallerL10nOptions.tsx:264
+#. TRANSLATORS: hint for the keyboard filter input
+#: src/components/core/InstallerL10nOptions.tsx:170
+#: src/components/l10n/l10n-form/KeyboardField.tsx:59
+msgid "Filter by description or keymap code"
+msgstr "Фільтр за описом або кодом клавішної карти"
+
+#. TRANSLATORS: shown when no keyboard layout matches the filter
+#: src/components/core/InstallerL10nOptions.tsx:172
+#: src/components/l10n/l10n-form/KeyboardField.tsx:61
+msgid "None of the keymaps match the filter."
+msgstr "Жодна з карт не відповідає фільтру."
+
+#: src/components/core/InstallerL10nOptions.tsx:260
 msgid ""
 "This will affect only the installer interface, not the product to be "
 "installed. You can adjust the product’s localization later in the "
@@ -304,18 +329,10 @@ msgstr ""
 "Змінити параметри локалізації продукту Ви зможете пізніше на сторінці "
 "налаштувань локалізації."
 
-#. TRANSLATORS: Explains where users can find more language and keymap
+#. TRANSLATORS: Explains where users can find more language and keyboard
 #. options for the product to install. The text in square brackets [] is a
 #. link to the localization page; keep the brackets.
-#. TRANSLATORS: Explains where users can find more language options for the
-#. product to install. The text in square brackets [] is a link to the
-#. localization page; keep the brackets.
-#. TRANSLATORS: Explains where users can find more keymap options for the
-#. product to install. The text in square brackets [] is a link to the
-#. localization page; keep the brackets.
-#: src/components/core/InstallerL10nOptions.tsx:315
-#: src/components/core/InstallerL10nOptions.tsx:362
-#: src/components/core/InstallerL10nOptions.tsx:419
+#: src/components/core/InstallerL10nOptions.tsx:323
 msgid ""
 "The [language and region] settings for the product may offer more options to "
 "choose from."
@@ -323,21 +340,11 @@ msgstr ""
 "У налаштуваннях [мови та регіону] для цього продукту може бути доступно "
 "більше варіантів на вибір."
 
-#: src/components/core/InstallerL10nOptions.tsx:319
-msgid "Language and keyboard"
-msgstr "Мова і клавіатура"
-
-#: src/components/core/InstallerL10nOptions.tsx:327
-msgid "Use these same settings for the selected product"
-msgstr "Використовувати ці ж налаштування для обраного продукту"
-
 #. TRANSLATORS: label for the form submit button.
 #. TRANSLATORS: button to save the localization settings
 #. TRANSLATORS: button to save system settings changes
-#: src/components/core/InstallerL10nOptions.tsx:349
-#: src/components/core/InstallerL10nOptions.tsx:395
-#: src/components/core/InstallerL10nOptions.tsx:409
-#: src/components/core/InstallerL10nOptions.tsx:452
+#: src/components/core/InstallerL10nOptions.tsx:364
+#: src/components/core/InstallerL10nOptions.tsx:434
 #: src/components/core/Page.tsx:290 src/components/form/SubmitButton.tsx:49
 #: src/components/l10n/l10n-form/Form.tsx:110
 #: src/components/storage/dasd/FormatActionHandler.tsx:95
@@ -351,30 +358,38 @@ msgstr "Використовувати ці ж налаштування для �
 msgid "Accept"
 msgstr "Прийняти"
 
-#: src/components/core/InstallerL10nOptions.tsx:366
+#: src/components/core/InstallerL10nOptions.tsx:379
+msgid "Language and keyboard"
+msgstr "Мова і клавіатура"
+
+#: src/components/core/InstallerL10nOptions.tsx:386
+msgid "Use these same settings for the selected product"
+msgstr "Використовувати ці ж налаштування для обраного продукту"
+
+#: src/components/core/InstallerL10nOptions.tsx:405
 msgid "Change Language"
 msgstr "Змінити мову"
 
-#: src/components/core/InstallerL10nOptions.tsx:373
-#: src/components/core/InstallerL10nOptions.tsx:430
+#: src/components/core/InstallerL10nOptions.tsx:411
+#: src/components/core/InstallerL10nOptions.tsx:447
 msgid "Use for the selected product too"
 msgstr "Використовувати також для обраного продукту"
 
-#: src/components/core/InstallerL10nOptions.tsx:406
-#: src/components/core/InstallerL10nOptions.tsx:423
+#: src/components/core/InstallerL10nOptions.tsx:431
+#: src/components/core/InstallerL10nOptions.tsx:441
 msgid "Change keyboard"
 msgstr "Змінити клавіатуру"
 
 #. TRANSLATORS: label for the keyboard layout selector
 #. TRANSLATORS: label for the button that opens the keyboard layout settings
-#: src/components/core/InstallerL10nOptions.tsx:495
+#: src/components/core/InstallerL10nOptions.tsx:496
 #: src/components/l10n/l10n-form/KeyboardField.tsx:57
 msgid "Keyboard"
 msgstr "Клавіатура"
 
 #. TRANSLATORS: label for the button that opens the display language and
 #. keyboard layout settings
-#: src/components/core/InstallerL10nOptions.tsx:515
+#: src/components/core/InstallerL10nOptions.tsx:516
 msgid "Language and Keyboard"
 msgstr "Мова і розкладка"
 
@@ -891,26 +906,6 @@ msgstr ""
 #: src/components/users/authentication-form/Form.tsx:262
 msgid "Changes could not be applied"
 msgstr "Зміни не вдалося застосувати"
-
-#. TRANSLATORS: hint for the keyboard filter input
-#: src/components/l10n/l10n-form/KeyboardField.tsx:59
-msgid "Filter by description or keymap code"
-msgstr "Фільтр за описом або кодом клавішної карти"
-
-#. TRANSLATORS: shown when no keyboard layout matches the filter
-#: src/components/l10n/l10n-form/KeyboardField.tsx:61
-msgid "None of the keymaps match the filter."
-msgstr "Жодна з карт не відповідає фільтру."
-
-#. TRANSLATORS: hint for the language filter input
-#: src/components/l10n/l10n-form/LanguageField.tsx:62
-msgid "Filter by language, territory or locale code"
-msgstr "Фільтр за мовою, територією або кодом локалі"
-
-#. TRANSLATORS: shown when no language matches the filter
-#: src/components/l10n/l10n-form/LanguageField.tsx:64
-msgid "None of the locales match the filter."
-msgstr "Жодна з локалей не відповідає фільтру."
 
 #. TRANSLATORS: label for the time zone selector
 #: src/components/l10n/l10n-form/TimezoneField.tsx:89

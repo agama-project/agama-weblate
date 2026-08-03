@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-29 12:57+0000\n"
+"POT-Creation-Date: 2026-08-03 13:21+0000\n"
 "PO-Revision-Date: 2026-07-27 04:12+0000\n"
 "Last-Translator: Grace Yu <grace.yu@excel-gits.com>\n"
 "Language-Team: Chinese (Taiwan) <https://l10n.opensuse.org/projects/agama/"
@@ -263,25 +263,50 @@ msgid "Installation in progress"
 msgstr "安裝進行中"
 
 #. TRANSLATORS: label for the system language selector
+#. TRANSLATORS: label for the installer interface language selector
 #. TRANSLATORS: label for the button that opens the display language settings
-#: src/components/core/InstallerL10nOptions.tsx:76
-#: src/components/core/InstallerL10nOptions.tsx:479
+#: src/components/core/InstallerL10nOptions.tsx:114
+#: src/components/core/InstallerL10nOptions.tsx:480
 #: src/components/l10n/l10n-form/LanguageField.tsx:60
 msgid "Language"
 msgstr "語言"
 
-#: src/components/core/InstallerL10nOptions.tsx:97
-#: src/components/core/InstallerL10nOptions.tsx:104
-#: src/components/core/InstallerL10nOptions.tsx:108
+#. TRANSLATORS: hint for the language filter input
+#: src/components/core/InstallerL10nOptions.tsx:116
+#: src/components/l10n/l10n-form/LanguageField.tsx:62
+msgid "Filter by language, territory or locale code"
+msgstr "依語言、地區或地區設定代碼過濾"
+
+#. TRANSLATORS: shown when no language matches the filter
+#: src/components/core/InstallerL10nOptions.tsx:118
+#: src/components/l10n/l10n-form/LanguageField.tsx:64
+msgid "None of the locales match the filter."
+msgstr "沒有與過濾條件相符的地區設定。"
+
+#. TRANSLATORS: label for the installer interface keyboard layout selector
+#: src/components/core/InstallerL10nOptions.tsx:144
+#: src/components/core/InstallerL10nOptions.tsx:168
 msgid "Keyboard layout"
 msgstr "鍵盤配置"
 
-#: src/components/core/InstallerL10nOptions.tsx:98
-#: src/components/core/InstallerL10nOptions.tsx:407
+#: src/components/core/InstallerL10nOptions.tsx:145
+#: src/components/core/InstallerL10nOptions.tsx:432
 msgid "Cannot be changed in remote installation"
 msgstr "無法在遠端安裝中變更"
 
-#: src/components/core/InstallerL10nOptions.tsx:264
+#. TRANSLATORS: hint for the keyboard filter input
+#: src/components/core/InstallerL10nOptions.tsx:170
+#: src/components/l10n/l10n-form/KeyboardField.tsx:59
+msgid "Filter by description or keymap code"
+msgstr "依描述或鍵盤對應代碼過濾"
+
+#. TRANSLATORS: shown when no keyboard layout matches the filter
+#: src/components/core/InstallerL10nOptions.tsx:172
+#: src/components/l10n/l10n-form/KeyboardField.tsx:61
+msgid "None of the keymaps match the filter."
+msgstr "沒有與過濾條件相符的鍵盤對應。"
+
+#: src/components/core/InstallerL10nOptions.tsx:260
 msgid ""
 "This will affect only the installer interface, not the product to be "
 "installed. You can adjust the product’s localization later in the "
@@ -290,38 +315,20 @@ msgstr ""
 "此操作只會影響安裝程式介面，不會影響要安裝的產品。您稍後可以在 \"本土化設定"
 "\" 頁面調整產品的本土化。"
 
-#. TRANSLATORS: Explains where users can find more language and keymap
+#. TRANSLATORS: Explains where users can find more language and keyboard
 #. options for the product to install. The text in square brackets [] is a
 #. link to the localization page; keep the brackets.
-#. TRANSLATORS: Explains where users can find more language options for the
-#. product to install. The text in square brackets [] is a link to the
-#. localization page; keep the brackets.
-#. TRANSLATORS: Explains where users can find more keymap options for the
-#. product to install. The text in square brackets [] is a link to the
-#. localization page; keep the brackets.
-#: src/components/core/InstallerL10nOptions.tsx:315
-#: src/components/core/InstallerL10nOptions.tsx:362
-#: src/components/core/InstallerL10nOptions.tsx:419
+#: src/components/core/InstallerL10nOptions.tsx:323
 msgid ""
 "The [language and region] settings for the product may offer more options to "
 "choose from."
 msgstr "產品的[語言和區域]設定可能會提供更多選項。"
 
-#: src/components/core/InstallerL10nOptions.tsx:319
-msgid "Language and keyboard"
-msgstr "語言與鍵盤"
-
-#: src/components/core/InstallerL10nOptions.tsx:327
-msgid "Use these same settings for the selected product"
-msgstr "對所選產品使用同樣的設定"
-
 #. TRANSLATORS: label for the form submit button.
 #. TRANSLATORS: button to save the localization settings
 #. TRANSLATORS: button to save system settings changes
-#: src/components/core/InstallerL10nOptions.tsx:349
-#: src/components/core/InstallerL10nOptions.tsx:395
-#: src/components/core/InstallerL10nOptions.tsx:409
-#: src/components/core/InstallerL10nOptions.tsx:452
+#: src/components/core/InstallerL10nOptions.tsx:364
+#: src/components/core/InstallerL10nOptions.tsx:434
 #: src/components/core/Page.tsx:290 src/components/form/SubmitButton.tsx:49
 #: src/components/l10n/l10n-form/Form.tsx:110
 #: src/components/storage/dasd/FormatActionHandler.tsx:95
@@ -335,30 +342,38 @@ msgstr "對所選產品使用同樣的設定"
 msgid "Accept"
 msgstr "接受"
 
-#: src/components/core/InstallerL10nOptions.tsx:366
+#: src/components/core/InstallerL10nOptions.tsx:379
+msgid "Language and keyboard"
+msgstr "語言與鍵盤"
+
+#: src/components/core/InstallerL10nOptions.tsx:386
+msgid "Use these same settings for the selected product"
+msgstr "對所選產品使用同樣的設定"
+
+#: src/components/core/InstallerL10nOptions.tsx:405
 msgid "Change Language"
 msgstr "變更語言"
 
-#: src/components/core/InstallerL10nOptions.tsx:373
-#: src/components/core/InstallerL10nOptions.tsx:430
+#: src/components/core/InstallerL10nOptions.tsx:411
+#: src/components/core/InstallerL10nOptions.tsx:447
 msgid "Use for the selected product too"
 msgstr "同時用於所選產品"
 
-#: src/components/core/InstallerL10nOptions.tsx:406
-#: src/components/core/InstallerL10nOptions.tsx:423
+#: src/components/core/InstallerL10nOptions.tsx:431
+#: src/components/core/InstallerL10nOptions.tsx:441
 msgid "Change keyboard"
 msgstr "變更鍵盤"
 
 #. TRANSLATORS: label for the keyboard layout selector
 #. TRANSLATORS: label for the button that opens the keyboard layout settings
-#: src/components/core/InstallerL10nOptions.tsx:495
+#: src/components/core/InstallerL10nOptions.tsx:496
 #: src/components/l10n/l10n-form/KeyboardField.tsx:57
 msgid "Keyboard"
 msgstr "鍵盤"
 
 #. TRANSLATORS: label for the button that opens the display language and
 #. keyboard layout settings
-#: src/components/core/InstallerL10nOptions.tsx:515
+#: src/components/core/InstallerL10nOptions.tsx:516
 msgid "Language and Keyboard"
 msgstr "語言和鍵盤"
 
@@ -867,26 +882,6 @@ msgstr ""
 #: src/components/users/authentication-form/Form.tsx:262
 msgid "Changes could not be applied"
 msgstr "無法套用變更"
-
-#. TRANSLATORS: hint for the keyboard filter input
-#: src/components/l10n/l10n-form/KeyboardField.tsx:59
-msgid "Filter by description or keymap code"
-msgstr "依描述或鍵盤對應代碼過濾"
-
-#. TRANSLATORS: shown when no keyboard layout matches the filter
-#: src/components/l10n/l10n-form/KeyboardField.tsx:61
-msgid "None of the keymaps match the filter."
-msgstr "沒有與過濾條件相符的鍵盤對應。"
-
-#. TRANSLATORS: hint for the language filter input
-#: src/components/l10n/l10n-form/LanguageField.tsx:62
-msgid "Filter by language, territory or locale code"
-msgstr "依語言、地區或地區設定代碼過濾"
-
-#. TRANSLATORS: shown when no language matches the filter
-#: src/components/l10n/l10n-form/LanguageField.tsx:64
-msgid "None of the locales match the filter."
-msgstr "沒有與過濾條件相符的地區設定。"
 
 #. TRANSLATORS: label for the time zone selector
 #: src/components/l10n/l10n-form/TimezoneField.tsx:89
