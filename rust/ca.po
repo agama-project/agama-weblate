@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-04 12:04+0000\n"
-"PO-Revision-Date: 2026-09-04 13:13+0000\n"
+"PO-Revision-Date: 2026-09-04 14:14+0000\n"
 "Last-Translator: David Medina <medipas@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.opensuse.org/projects/agama/agama-rust-"
 "master/ca/>\n"
@@ -24,38 +24,40 @@ msgid ""
 "Configuration cannot be applied because it is invalid or could not be "
 "reached."
 msgstr ""
+"La configuració no es pot aplicar perquè no és vàlida o no s'hi ha pogut "
+"accedir."
 
 #: agama-autoinstall/src/questions.rs:47
 msgid "Reload configuration"
-msgstr ""
+msgstr "Recarrega la configuració"
 
 #: agama-autoinstall/src/questions.rs:48
 msgid "Skip and configure manually"
-msgstr ""
+msgstr "Omet i configura manualment"
 
 #: agama-autoinstall/src/questions.rs:77 agama-cli/src/config.rs:371
 msgid "Found unsupported elements in the AutoYaST profile:"
-msgstr ""
+msgstr "S'han trobat elements no admesos al perfil d'AutoYaST:"
 
 #: agama-autoinstall/src/questions.rs:92
 #: agama-software/src/callbacks/install.rs:81
 msgid "Continue"
-msgstr ""
+msgstr "Continua"
 
 #: agama-autoinstall/src/questions.rs:93
 msgid "Abort"
-msgstr ""
+msgstr "Avorta"
 
 #. TRANSLATORS: {0} is a URL
 #: agama-autoinstall/src/scripts.rs:135
 msgid ""
 "It was not possible to load the script from {0}. Do you want to try again?"
-msgstr ""
+msgstr "No s'ha pogut carregar l'script des de {0}. Voleu tornar-ho a provar?"
 
 #. TRANSLATORS: CLI help for: agama auth
 #: agama-cli/src/auth.rs:65
 msgid "Authenticate with Agama's server"
-msgstr ""
+msgstr "Autentica amb el servidor d'Agama"
 
 #. TRANSLATORS: CLI help for: agama auth (details)
 #: agama-cli/src/auth.rs:67
@@ -73,16 +75,29 @@ msgid ""
 "You can logout at any time by using the \"auth logout\" command, although "
 "this command does not affect the root user."
 msgstr ""
+"A menys que executeu aquest programa com a usuari d'arrel, cal que us "
+"autentiqueu al servidor d'Agama per a la majoria de les operacions. Podeu "
+"iniciar la sessió especificant la contrasenya d'arrel mitjançant l'ordre "
+"auth login. Un cop l'autenticació és correcta, el servidor retorna un JSON "
+"Web Token (JWT) que es desa per autenticar les peticions posteriors.\n"
+"\n"
+"Si executeu aquest programa localment com a arrel, podeu saltar-vos el pas "
+"d'autenticació, ja que el programa utilitza automàticament el testimoni "
+"mestre situat a /run/agama/token. Només l'usuari d'arrel ha de tenir accés a "
+"aquest fitxer.\n"
+"\n"
+"Podeu tancar la sessió en qualsevol moment amb l'ordre auth logout, tot i "
+"que aquesta ordre no afecta l'usuari d'arrel."
 
 #. TRANSLATORS: CLI help for: agama auth logout
 #: agama-cli/src/auth.rs:88
 msgid "Deauthenticate by removing the token"
-msgstr ""
+msgstr "Cancel·la l'autenticació suprimint-ne el testimoni"
 
 #. TRANSLATORS: CLI help for: agama auth show
 #: agama-cli/src/auth.rs:93
 msgid "Print the used token to the standard output"
-msgstr ""
+msgstr "Imprimeix el testimoni usat a la sortida estàndard"
 
 #. TRANSLATORS: CLI help for: agama auth login
 #: agama-cli/src/auth.rs:99
@@ -1046,65 +1061,67 @@ msgstr "Hi ha conflictes en la selecció del programari"
 #. and the second %s is the name of the resolvable.
 #: agama-software/src/zypp_server.rs:594
 msgid "Could not select %s '%s' for installation"
-msgstr ""
+msgstr "No s'ha pogut seleccionar l'element %s %s per a la instal·lació"
 
 #: agama-software/src/zypp_server.rs:1006
 msgid "Failed to register the system"
-msgstr ""
+msgstr "No s'ha pogut registrar el sistema"
 
 #: agama-users/src/service.rs:178
 msgid ""
 "Defining a user, setting the root password or a SSH public key is required"
 msgstr ""
+"Cal definir un usuari i establir la contrasenya d'arrel o una clau pública "
+"SSH"
 
 #: agama-users/src/service.rs:191
 msgid "First user information is incomplete"
-msgstr ""
+msgstr "La informació del primer usuari està incompleta"
 
 #: agama-utils/src/api/problem_details.rs:120
 msgid "Schema validation failed"
-msgstr ""
+msgstr "La validació de l'esquema ha fallat"
 
 #: agama-utils/src/api/problem_details.rs:122
 msgid "The provided configuration does not match the required schema"
-msgstr ""
+msgstr "La configuració proporcionada no coincideix amb l'esquema requerit"
 
 #: agama-utils/src/api/problem_details.rs:131
 msgid "Invalid JSON"
-msgstr ""
+msgstr "JSON no vàlid"
 
 #: agama-utils/src/api/problem_details.rs:139
 msgid "Internal server error"
-msgstr ""
+msgstr "Error intern del servidor"
 
 #: agama-utils/src/api/problem_details.rs:147
 msgid "Unauthorized"
-msgstr ""
+msgstr "No autoritzat"
 
 #: agama-utils/src/api/problem_details.rs:205
 msgid "Error:"
-msgstr ""
+msgstr "Error:"
 
 #: agama-utils/src/api/problem_details.rs:208
 msgid "Details:"
-msgstr ""
+msgstr "Detalls:"
 
 #: agama-utils/src/api/question.rs:342 agama-utils/src/question/start.rs:48
 msgid "No"
-msgstr ""
+msgstr "No"
 
 #: agama-utils/src/api/question.rs:342 agama-utils/src/question/start.rs:48
 msgid "Yes"
-msgstr ""
+msgstr "Sí"
 
 #: agama-utils/src/resolvable.rs:65
 msgid "package"
-msgstr ""
+msgstr "paquet"
 
 #: agama-utils/src/resolvable.rs:66
 msgid "pattern"
-msgstr ""
+msgstr "patró"
 
 #: agama-utils/src/resolvable.rs:67
 msgid "product"
-msgstr ""
+msgstr "producte"
