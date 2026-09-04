@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-31 11:33+0000\n"
+"POT-Creation-Date: 2026-09-04 12:04+0000\n"
 "PO-Revision-Date: 2026-07-27 04:12+0000\n"
 "Last-Translator: Grace Yu <grace.yu@excel-gits.com>\n"
 "Language-Team: Chinese (China) <https://l10n.opensuse.org/projects/agama/"
@@ -48,6 +48,7 @@ msgstr ""
 
 #. TRANSLATORS: {0} is a URL
 #: agama-autoinstall/src/scripts.rs:135
+#, rust-format
 msgid ""
 "It was not possible to load the script from {0}. Do you want to try again?"
 msgstr "无法从 {0} 加载脚本。是否要重试？"
@@ -116,6 +117,7 @@ msgstr "请输入 root 口令："
 
 #. TRANSLATORS: {0} is a host name
 #: agama-cli/src/auth.rs:179
+#, rust-format
 msgid "Not authenticated in {0}"
 msgstr "未在 {0} 中通过身份验证"
 
@@ -905,33 +907,29 @@ msgid ""
 "register the product?"
 msgstr "正在尝试导入自我签名证书。是否信任该证书并注册产品？"
 
-#: agama-server/src/profile/web.rs:85
+#: agama-server/src/profile/web.rs:92
 msgid "Profile validation failed"
 msgstr "配置文件验证失败"
 
-#: agama-server/src/profile/web.rs:88
+#: agama-server/src/profile/web.rs:95
 msgid "Could not retrieve profile"
 msgstr "无法检索配置文件"
 
-#: agama-server/src/profile/web.rs:91
+#: agama-server/src/profile/web.rs:98
 msgid "Invalid profile encoding"
 msgstr "配置文件编码无效"
 
-#: agama-server/src/profile/web.rs:94
+#: agama-server/src/profile/web.rs:103
 msgid "Invalid profile request"
 msgstr "配置文件请求无效"
 
-#: agama-server/src/profile/web.rs:97
+#: agama-server/src/profile/web.rs:106
 msgid "AutoYaST conversion failed"
 msgstr "AutoYaST 转换失败"
 
 #: agama-server/src/server/web.rs:86
 msgid "Missing Language Tag"
 msgstr "缺失语言标签"
-
-#: agama-server/src/server/web.rs:89
-msgid "Profile error"
-msgstr "配置文件错误"
 
 #: agama-software/src/callbacks/commit_download.rs:47
 #: agama-software/src/callbacks/install.rs:56
@@ -950,6 +948,7 @@ msgstr "运行软件包脚本时出现问题。"
 
 #. TRANSLATORS: substituting: key ID, (key name), fingerprint
 #: agama-software/src/callbacks/security.rs:104
+#, rust-format
 msgid ""
 "The key {0} ({1}) with fingerprint {2} is unknown. Do you want to trust this "
 "key?"
@@ -1030,31 +1029,31 @@ msgstr "必须定义一个用户、设置 root 口令或配置 SSH 公钥"
 msgid "First user information is incomplete"
 msgstr "首个用户信息不完整"
 
-#: agama-utils/src/api/problem_details.rs:113
+#: agama-utils/src/api/problem_details.rs:120
 msgid "Schema validation failed"
 msgstr "规范校验失败"
 
-#: agama-utils/src/api/problem_details.rs:115
+#: agama-utils/src/api/problem_details.rs:122
 msgid "The provided configuration does not match the required schema"
 msgstr "提供的配置与所需规范不匹配"
 
-#: agama-utils/src/api/problem_details.rs:124
+#: agama-utils/src/api/problem_details.rs:131
 msgid "Invalid JSON"
 msgstr "无效 JSON"
 
-#: agama-utils/src/api/problem_details.rs:132
+#: agama-utils/src/api/problem_details.rs:139
 msgid "Internal server error"
 msgstr "内部服务器错误"
 
-#: agama-utils/src/api/problem_details.rs:140
+#: agama-utils/src/api/problem_details.rs:147
 msgid "Unauthorized"
 msgstr "未授权"
 
-#: agama-utils/src/api/problem_details.rs:189
+#: agama-utils/src/api/problem_details.rs:205
 msgid "Error:"
 msgstr "错误："
 
-#: agama-utils/src/api/problem_details.rs:192
+#: agama-utils/src/api/problem_details.rs:208
 msgid "Details:"
 msgstr "详细信息："
 
@@ -1077,3 +1076,6 @@ msgstr "软件集"
 #: agama-utils/src/resolvable.rs:67
 msgid "product"
 msgstr "产品"
+
+#~ msgid "Profile error"
+#~ msgstr "配置文件错误"

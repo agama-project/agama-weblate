@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-31 11:33+0000\n"
+"POT-Creation-Date: 2026-09-04 12:04+0000\n"
 "PO-Revision-Date: 2026-08-06 01:13+0000\n"
 "Last-Translator: Andrei Stepanov <adem4ik@gmail.com>\n"
 "Language-Team: Russian <https://l10n.opensuse.org/projects/agama/agama-rust-"
@@ -51,6 +51,7 @@ msgstr ""
 
 #. TRANSLATORS: {0} is a URL
 #: agama-autoinstall/src/scripts.rs:135
+#, rust-format
 msgid ""
 "It was not possible to load the script from {0}. Do you want to try again?"
 msgstr "Не удалось загрузить скрипт из {0}. Хотите попробовать снова?"
@@ -124,6 +125,7 @@ msgstr "Пожалуйста, введите пароль root:"
 
 #. TRANSLATORS: {0} is a host name
 #: agama-cli/src/auth.rs:179
+#, rust-format
 msgid "Not authenticated in {0}"
 msgstr "Не аутентифицирован в {0}"
 
@@ -946,33 +948,29 @@ msgstr ""
 "Попытка импорта самоподписанного сертификата. Хотите доверять ему и "
 "зарегистрировать продукт?"
 
-#: agama-server/src/profile/web.rs:85
+#: agama-server/src/profile/web.rs:92
 msgid "Profile validation failed"
 msgstr "Ошибка проверки профиля"
 
-#: agama-server/src/profile/web.rs:88
+#: agama-server/src/profile/web.rs:95
 msgid "Could not retrieve profile"
 msgstr "Не удалось получить профиль"
 
-#: agama-server/src/profile/web.rs:91
+#: agama-server/src/profile/web.rs:98
 msgid "Invalid profile encoding"
 msgstr "Неверная кодировка профиля"
 
-#: agama-server/src/profile/web.rs:94
+#: agama-server/src/profile/web.rs:103
 msgid "Invalid profile request"
 msgstr "Неверный запрос профиля"
 
-#: agama-server/src/profile/web.rs:97
+#: agama-server/src/profile/web.rs:106
 msgid "AutoYaST conversion failed"
 msgstr "Ошибка преобразования AutoYaST"
 
 #: agama-server/src/server/web.rs:86
 msgid "Missing Language Tag"
 msgstr "Отсутствует тег языка"
-
-#: agama-server/src/server/web.rs:89
-msgid "Profile error"
-msgstr "Ошибка профиля"
 
 #: agama-software/src/callbacks/commit_download.rs:47
 #: agama-software/src/callbacks/install.rs:56
@@ -991,6 +989,7 @@ msgstr "Возникла проблема при выполнении скрип
 
 #. TRANSLATORS: substituting: key ID, (key name), fingerprint
 #: agama-software/src/callbacks/security.rs:104
+#, rust-format
 msgid ""
 "The key {0} ({1}) with fingerprint {2} is unknown. Do you want to trust this "
 "key?"
@@ -1078,31 +1077,31 @@ msgstr ""
 msgid "First user information is incomplete"
 msgstr "Информация о первом пользователе неполная"
 
-#: agama-utils/src/api/problem_details.rs:113
+#: agama-utils/src/api/problem_details.rs:120
 msgid "Schema validation failed"
 msgstr "Ошибка проверки схемы"
 
-#: agama-utils/src/api/problem_details.rs:115
+#: agama-utils/src/api/problem_details.rs:122
 msgid "The provided configuration does not match the required schema"
 msgstr "Предоставленная конфигурация не соответствует требуемой схеме"
 
-#: agama-utils/src/api/problem_details.rs:124
+#: agama-utils/src/api/problem_details.rs:131
 msgid "Invalid JSON"
 msgstr "Неверный JSON"
 
-#: agama-utils/src/api/problem_details.rs:132
+#: agama-utils/src/api/problem_details.rs:139
 msgid "Internal server error"
 msgstr "Внутренняя ошибка сервера"
 
-#: agama-utils/src/api/problem_details.rs:140
+#: agama-utils/src/api/problem_details.rs:147
 msgid "Unauthorized"
 msgstr "Неавторизован"
 
-#: agama-utils/src/api/problem_details.rs:189
+#: agama-utils/src/api/problem_details.rs:205
 msgid "Error:"
 msgstr "Ошибка:"
 
-#: agama-utils/src/api/problem_details.rs:192
+#: agama-utils/src/api/problem_details.rs:208
 msgid "Details:"
 msgstr "Подробности:"
 
@@ -1125,3 +1124,6 @@ msgstr "шаблон"
 #: agama-utils/src/resolvable.rs:67
 msgid "product"
 msgstr "продукт"
+
+#~ msgid "Profile error"
+#~ msgstr "Ошибка профиля"
