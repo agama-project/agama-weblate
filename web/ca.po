@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-18 08:11+0000\n"
+"POT-Creation-Date: 2026-09-22 12:12+0000\n"
 "PO-Revision-Date: 2026-09-17 09:13+0000\n"
 "Last-Translator: David Medina <medipas@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -113,17 +113,17 @@ msgid "Breadcrumbs"
 msgstr "Ruta de navegació"
 
 #: src/components/core/ChangeProductOption.tsx:92
-#: src/components/product/ProductSelectionPage.tsx:127
+#: src/components/product/ProductSelectionPage.tsx:160
 msgid "Change mode"
 msgstr "Canvia'n el mode"
 
 #: src/components/core/ChangeProductOption.tsx:93
-#: src/components/product/ProductSelectionPage.tsx:140
+#: src/components/product/ProductSelectionPage.tsx:173
 msgid "Change product or mode"
 msgstr "Canvieu el producte o el mode"
 
 #: src/components/core/ChangeProductOption.tsx:94
-#: src/components/product/ProductSelectionPage.tsx:143
+#: src/components/product/ProductSelectionPage.tsx:176
 msgid "Change product"
 msgstr "Canvia el producte"
 
@@ -860,7 +860,7 @@ msgid "Using %s keyboard layout"
 msgstr "S'usa la disposició de teclat per a [%s]"
 
 #: src/components/form/PreservedValueField.tsx:64
-#: src/components/product/product-selection-form/Form.tsx:64
+#: src/components/product/product-selection-form/Form.tsx:66
 #: src/components/storage/BootSection.tsx:97
 #: src/components/storage/DeviceSelectorModal.tsx:296
 #: src/components/storage/EncryptionSection.tsx:59
@@ -1906,7 +1906,7 @@ msgstr "Explora amb detalls..."
 #. TRANSLATORS: confirmation button of the network device dialog while no
 #. device is picked.
 #: src/components/network/connection-form/DeviceSelectorModal.tsx:116
-#: src/components/product/product-selection-form/Form.tsx:64
+#: src/components/product/product-selection-form/Form.tsx:66
 msgid "Select"
 msgstr "Selecciona"
 
@@ -2725,38 +2725,45 @@ msgstr ""
 msgid "Extensions"
 msgstr "Extensions"
 
-#: src/components/product/ProductSelectionPage.tsx:86
+#: src/components/product/ProductSelectionPage.tsx:94
 msgid "Current selection"
 msgstr "Selecció actual"
 
-#: src/components/product/ProductSelectionPage.tsx:107
+#: src/components/product/ProductSelectionPage.tsx:120
 msgid "View license"
 msgstr "Mostra la llicència"
 
-#: src/components/product/ProductSelectionPage.tsx:130
+#. TRANSLATORS: title of the list of licenses accepted for
+#. the selected product
+#: src/components/product/ProductSelectionPage.tsx:129
+#, fuzzy
+msgid "Accepted licenses"
+msgstr "Mostra la llicència"
+
+#: src/components/product/ProductSelectionPage.tsx:163
 msgid "Select a mode"
 msgstr "Seleccioneu un mode"
 
-#: src/components/product/ProductSelectionPage.tsx:132
-#: src/components/product/ProductSelectionPage.tsx:136
+#: src/components/product/ProductSelectionPage.tsx:165
+#: src/components/product/ProductSelectionPage.tsx:169
 msgid "Select a product"
 msgstr "Seleccioneu un producte"
 
-#: src/components/product/ProductSelectionPage.tsx:159
+#: src/components/product/ProductSelectionPage.tsx:192
 msgid "Select a mode and confirm your choice."
 msgstr "Seleccioneu un mode i confirmeu-ne la tria."
 
-#: src/components/product/ProductSelectionPage.tsx:161
+#: src/components/product/ProductSelectionPage.tsx:194
 msgid "Confirm the product selection."
 msgstr "Confirmeu la selecció del producte."
 
-#: src/components/product/ProductSelectionPage.tsx:167
+#: src/components/product/ProductSelectionPage.tsx:200
 msgid "Select a product and confirm your choice."
 msgid_plural "Select a product and confirm your choice at the end of the list."
 msgstr[0] "Seleccioneu un producte i confirmeu la tria."
 msgstr[1] "Seleccioneu un producte i confirmeu la tria al final de la llista."
 
-#: src/components/product/ProductSelectionPage.tsx:230
+#: src/components/product/ProductSelectionPage.tsx:263
 msgid ""
 "The current configuration will be discarded to apply the default settings of "
 "the new product."
@@ -2811,63 +2818,71 @@ msgstr ""
 #. TRANSLATORS: Text used for the license acceptance checkbox. %s will be
 #. replaced with the product name and the text in the square brackets [] is
 #. used for the link to show the license, please keep the brackets.
-#: src/components/product/product-selection-form/EulaCheckbox.tsx:48
+#: src/components/product/product-selection-form/EulaCheckbox.tsx:60
 #, javascript-format
 msgid "I have read and accept the [license] for %s"
 msgstr "He llegit i accepto la [llicència] de %s"
 
+#. TRANSLATORS: Text used for accepting one of the several licenses of a
+#. product. %s will be replaced with the license name, which is also a link
+#. to show the license.
+#: src/components/product/product-selection-form/EulaCheckbox.tsx:83
+#, fuzzy, javascript-format
+msgid "I have read and accept the %s"
+msgstr "He llegit i accepto la [llicència] de %s"
+
 #. TRANSLATORS: %s is replaced by a device label, e.g. "sda (512 GiB)"
-#: src/components/product/product-selection-form/Form.tsx:63
+#: src/components/product/product-selection-form/Form.tsx:65
 #: src/components/storage/DeviceSelectorModal.tsx:303
 #, javascript-format
 msgid "Change to %s"
 msgstr "Canvia a %s"
 
-#: src/components/product/product-selection-form/Form.tsx:63
+#: src/components/product/product-selection-form/Form.tsx:65
 #, javascript-format
 msgid "Select %s"
 msgstr "Selecciona %s"
 
-#: src/components/product/product-selection-form/Form.tsx:109
+#: src/components/product/product-selection-form/Form.tsx:111
 msgid "Select a product to continue."
 msgstr "Seleccioneu un producte per continuar."
 
-#: src/components/product/product-selection-form/Form.tsx:111
+#: src/components/product/product-selection-form/Form.tsx:113
 msgid "Select a product mode to continue."
 msgstr "Seleccioneu un mode de producte per continuar."
 
-#: src/components/product/product-selection-form/Form.tsx:113
+#: src/components/product/product-selection-form/Form.tsx:115
 msgid "License acceptance is required to continue."
 msgstr "Cal acceptar la llicència per continuar."
 
-#: src/components/product/product-selection-form/Form.tsx:118
+#: src/components/product/product-selection-form/Form.tsx:120
 msgid "Changing the product will reset your current settings."
 msgstr "Si canvieu el producte, es restablirà la configuració actual."
 
-#: src/components/product/product-selection-form/Form.tsx:156
+#: src/components/product/product-selection-form/Form.tsx:158
 msgid "Switch to a different mode"
 msgstr "Canvieu a un mode diferent"
 
-#: src/components/product/product-selection-form/Form.tsx:160
+#: src/components/product/product-selection-form/Form.tsx:162
 msgid "Choose a mode"
 msgstr "Trieu-ne el mode"
 
-#: src/components/product/product-selection-form/Form.tsx:163
-#: src/components/product/product-selection-form/Form.tsx:168
+#: src/components/product/product-selection-form/Form.tsx:165
+#: src/components/product/product-selection-form/Form.tsx:170
 #, javascript-format
 msgid "Choose a product"
 msgid_plural "Choose from %d available products"
 msgstr[0] "Trieu el producte"
 msgstr[1] "Trieu entre %d productes disponibles"
 
-#: src/components/product/product-selection-form/Form.tsx:176
+#: src/components/product/product-selection-form/Form.tsx:178
 #, javascript-format
 msgid "Switch to another product"
 msgid_plural "Switch to one of %d available products"
 msgstr[0] "Canvieu a un altre producte"
 msgstr[1] "Canvieu a un dels %d productes disponibles"
 
-#: src/components/product/product-selection-form/Form.tsx:186
+#: src/components/product/product-selection-form/Form.tsx:188
 #, javascript-format
 msgid "Switch to a different mode or another product"
 msgid_plural "Switch to a different mode or to one of %d available products"

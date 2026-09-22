@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-18 08:11+0000\n"
+"POT-Creation-Date: 2026-09-22 12:12+0000\n"
 "PO-Revision-Date: 2026-08-21 00:13+0000\n"
 "Last-Translator: Bone NI <bounkirdni@gmail.com>\n"
 "Language-Team: Lao <https://l10n.opensuse.org/projects/agama/agama-web/lo/>\n"
@@ -112,17 +112,17 @@ msgid "Breadcrumbs"
 msgstr "ເສັ້ນທາງການນຳທາງ"
 
 #: src/components/core/ChangeProductOption.tsx:92
-#: src/components/product/ProductSelectionPage.tsx:127
+#: src/components/product/ProductSelectionPage.tsx:160
 msgid "Change mode"
 msgstr "ປ່ຽນໂໝດ"
 
 #: src/components/core/ChangeProductOption.tsx:93
-#: src/components/product/ProductSelectionPage.tsx:140
+#: src/components/product/ProductSelectionPage.tsx:173
 msgid "Change product or mode"
 msgstr "ປ່ຽນຜະລິດຕະພັນ ຫຼື ໂໝດ"
 
 #: src/components/core/ChangeProductOption.tsx:94
-#: src/components/product/ProductSelectionPage.tsx:143
+#: src/components/product/ProductSelectionPage.tsx:176
 msgid "Change product"
 msgstr "ປ່ຽນຜະລິດຕະພັນ"
 
@@ -839,7 +839,7 @@ msgid "Using %s keyboard layout"
 msgstr "ກຳລັງໃຊ້ຜັງແປ້ນພິມ %s"
 
 #: src/components/form/PreservedValueField.tsx:64
-#: src/components/product/product-selection-form/Form.tsx:64
+#: src/components/product/product-selection-form/Form.tsx:66
 #: src/components/storage/BootSection.tsx:97
 #: src/components/storage/DeviceSelectorModal.tsx:296
 #: src/components/storage/EncryptionSection.tsx:59
@@ -1867,7 +1867,7 @@ msgstr "ລາຍລະອຽດ Bridge"
 #. TRANSLATORS: confirmation button of the network device dialog while no
 #. device is picked.
 #: src/components/network/connection-form/DeviceSelectorModal.tsx:116
-#: src/components/product/product-selection-form/Form.tsx:64
+#: src/components/product/product-selection-form/Form.tsx:66
 msgid "Select"
 msgstr "ເລືອກ"
 
@@ -2666,37 +2666,44 @@ msgstr "ເພື່ອປ່ຽນຊື່ນັ້ນ, ໃຫ້ໄປທີ�
 msgid "Extensions"
 msgstr "ສ່ວນຂະຫຍາຍ (Extensions)"
 
-#: src/components/product/ProductSelectionPage.tsx:86
+#: src/components/product/ProductSelectionPage.tsx:94
 msgid "Current selection"
 msgstr "ລາຍການທີ່ເລືອກໃນປັດຈຸບັນ"
 
-#: src/components/product/ProductSelectionPage.tsx:107
+#: src/components/product/ProductSelectionPage.tsx:120
 msgid "View license"
 msgstr "ເບິ່ງໃບອະນຸຍາດ"
 
-#: src/components/product/ProductSelectionPage.tsx:130
+#. TRANSLATORS: title of the list of licenses accepted for
+#. the selected product
+#: src/components/product/ProductSelectionPage.tsx:129
+#, fuzzy
+msgid "Accepted licenses"
+msgstr "ເບິ່ງໃບອະນຸຍາດ"
+
+#: src/components/product/ProductSelectionPage.tsx:163
 msgid "Select a mode"
 msgstr "ເລືອກໂໝດ"
 
-#: src/components/product/ProductSelectionPage.tsx:132
-#: src/components/product/ProductSelectionPage.tsx:136
+#: src/components/product/ProductSelectionPage.tsx:165
+#: src/components/product/ProductSelectionPage.tsx:169
 msgid "Select a product"
 msgstr "ເລືອກຜະລິດຕະພັນ"
 
-#: src/components/product/ProductSelectionPage.tsx:159
+#: src/components/product/ProductSelectionPage.tsx:192
 msgid "Select a mode and confirm your choice."
 msgstr "ເລືອກໂໝດ ແລະ ຢືນຢັນການເລືອກຂອງທ່ານ."
 
-#: src/components/product/ProductSelectionPage.tsx:161
+#: src/components/product/ProductSelectionPage.tsx:194
 msgid "Confirm the product selection."
 msgstr "ຢືນຢັນການເລືອກຜະລິດຕະພັນ."
 
-#: src/components/product/ProductSelectionPage.tsx:167
+#: src/components/product/ProductSelectionPage.tsx:200
 msgid "Select a product and confirm your choice."
 msgid_plural "Select a product and confirm your choice at the end of the list."
 msgstr[0] "ເລືອກຜະລິດຕະພັນ ແລະ ຢືນຢັນການເລືອກຂອງທ່ານ."
 
-#: src/components/product/ProductSelectionPage.tsx:230
+#: src/components/product/ProductSelectionPage.tsx:263
 msgid ""
 "The current configuration will be discarded to apply the default settings of "
 "the new product."
@@ -2748,61 +2755,69 @@ msgstr ""
 #. TRANSLATORS: Text used for the license acceptance checkbox. %s will be
 #. replaced with the product name and the text in the square brackets [] is
 #. used for the link to show the license, please keep the brackets.
-#: src/components/product/product-selection-form/EulaCheckbox.tsx:48
+#: src/components/product/product-selection-form/EulaCheckbox.tsx:60
 #, javascript-format
 msgid "I have read and accept the [license] for %s"
 msgstr "ຂ້ອຍໄດ້ອ່ານ ແລະ ຍອມຮັບ [ໃບອະນຸຍາດ] ສຳລັບ %s"
 
+#. TRANSLATORS: Text used for accepting one of the several licenses of a
+#. product. %s will be replaced with the license name, which is also a link
+#. to show the license.
+#: src/components/product/product-selection-form/EulaCheckbox.tsx:83
+#, fuzzy, javascript-format
+msgid "I have read and accept the %s"
+msgstr "ຂ້ອຍໄດ້ອ່ານ ແລະ ຍອມຮັບ [ໃບອະນຸຍາດ] ສຳລັບ %s"
+
 #. TRANSLATORS: %s is replaced by a device label, e.g. "sda (512 GiB)"
-#: src/components/product/product-selection-form/Form.tsx:63
+#: src/components/product/product-selection-form/Form.tsx:65
 #: src/components/storage/DeviceSelectorModal.tsx:303
 #, javascript-format
 msgid "Change to %s"
 msgstr "ປ່ຽນເປັນ %s"
 
-#: src/components/product/product-selection-form/Form.tsx:63
+#: src/components/product/product-selection-form/Form.tsx:65
 #, javascript-format
 msgid "Select %s"
 msgstr "ເລືອກ %s"
 
-#: src/components/product/product-selection-form/Form.tsx:109
+#: src/components/product/product-selection-form/Form.tsx:111
 msgid "Select a product to continue."
 msgstr "ເລືອກຜະລິດຕະພັນເພື່ອດຳເນີນການຕໍ່."
 
-#: src/components/product/product-selection-form/Form.tsx:111
+#: src/components/product/product-selection-form/Form.tsx:113
 msgid "Select a product mode to continue."
 msgstr "ເລືອກໂໝດຜະລິດຕະພັນເພື່ອດຳເນີນການຕໍ່."
 
-#: src/components/product/product-selection-form/Form.tsx:113
+#: src/components/product/product-selection-form/Form.tsx:115
 msgid "License acceptance is required to continue."
 msgstr "ຈຳເປັນຕ້ອງຍອມຮັບໃບອະນຸຍາດເພື່ອດຳເນີນການຕໍ່."
 
-#: src/components/product/product-selection-form/Form.tsx:118
+#: src/components/product/product-selection-form/Form.tsx:120
 msgid "Changing the product will reset your current settings."
 msgstr "ການປ່ຽນຜະລິດຕະພັນຈະເປັນການລ້າງການຕັ້ງຄ່າປັດຈຸບັນຂອງທ່ານ."
 
-#: src/components/product/product-selection-form/Form.tsx:156
+#: src/components/product/product-selection-form/Form.tsx:158
 msgid "Switch to a different mode"
 msgstr "ປ່ຽນໄປໃຊ້ໂໝດອື່ນ"
 
-#: src/components/product/product-selection-form/Form.tsx:160
+#: src/components/product/product-selection-form/Form.tsx:162
 msgid "Choose a mode"
 msgstr "ເລືອກໂໝດ"
 
-#: src/components/product/product-selection-form/Form.tsx:163
-#: src/components/product/product-selection-form/Form.tsx:168
+#: src/components/product/product-selection-form/Form.tsx:165
+#: src/components/product/product-selection-form/Form.tsx:170
 #, javascript-format
 msgid "Choose a product"
 msgid_plural "Choose from %d available products"
 msgstr[0] "ເລືອກຜະລິດຕະພັນ%d"
 
-#: src/components/product/product-selection-form/Form.tsx:176
+#: src/components/product/product-selection-form/Form.tsx:178
 #, javascript-format
 msgid "Switch to another product"
 msgid_plural "Switch to one of %d available products"
 msgstr[0] "ປ່ຽນໄປໃຊ້ຜະລິດຕະພັນອື່ນ%d"
 
-#: src/components/product/product-selection-form/Form.tsx:186
+#: src/components/product/product-selection-form/Form.tsx:188
 #, javascript-format
 msgid "Switch to a different mode or another product"
 msgid_plural "Switch to a different mode or to one of %d available products"

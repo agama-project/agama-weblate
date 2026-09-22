@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-18 08:11+0000\n"
+"POT-Creation-Date: 2026-09-22 12:12+0000\n"
 "PO-Revision-Date: 2026-03-29 20:04+0000\n"
 "Last-Translator: Amger ugurzil <amger_ugurzil@proton.me>\n"
 "Language-Team: Kabyle <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -116,19 +116,19 @@ msgid "Breadcrumbs"
 msgstr ""
 
 #: src/components/core/ChangeProductOption.tsx:92
-#: src/components/product/ProductSelectionPage.tsx:127
+#: src/components/product/ProductSelectionPage.tsx:160
 #, fuzzy
 msgid "Change mode"
 msgstr "Beddel afaris"
 
 #: src/components/core/ChangeProductOption.tsx:93
-#: src/components/product/ProductSelectionPage.tsx:140
+#: src/components/product/ProductSelectionPage.tsx:173
 #, fuzzy
 msgid "Change product or mode"
 msgstr "Beddel afaris"
 
 #: src/components/core/ChangeProductOption.tsx:94
-#: src/components/product/ProductSelectionPage.tsx:143
+#: src/components/product/ProductSelectionPage.tsx:176
 msgid "Change product"
 msgstr "Beddel afaris"
 
@@ -857,7 +857,7 @@ msgid "Using %s keyboard layout"
 msgstr "Tesseqdaceḍ anasiw [%s]"
 
 #: src/components/form/PreservedValueField.tsx:64
-#: src/components/product/product-selection-form/Form.tsx:64
+#: src/components/product/product-selection-form/Form.tsx:66
 #: src/components/storage/BootSection.tsx:97
 #: src/components/storage/DeviceSelectorModal.tsx:296
 #: src/components/storage/EncryptionSection.tsx:59
@@ -1902,7 +1902,7 @@ msgstr "Ffer talqayt"
 #. TRANSLATORS: confirmation button of the network device dialog while no
 #. device is picked.
 #: src/components/network/connection-form/DeviceSelectorModal.tsx:116
-#: src/components/product/product-selection-form/Form.tsx:64
+#: src/components/product/product-selection-form/Form.tsx:66
 msgid "Select"
 msgstr "Fren"
 
@@ -2738,38 +2738,45 @@ msgstr ""
 msgid "Extensions"
 msgstr "Isiɣzaf"
 
-#: src/components/product/ProductSelectionPage.tsx:86
+#: src/components/product/ProductSelectionPage.tsx:94
 msgid "Current selection"
 msgstr "Tafrayt tamirant"
 
-#: src/components/product/ProductSelectionPage.tsx:107
+#: src/components/product/ProductSelectionPage.tsx:120
 msgid "View license"
 msgstr "Wali turagt"
 
-#: src/components/product/ProductSelectionPage.tsx:130
+#. TRANSLATORS: title of the list of licenses accepted for
+#. the selected product
+#: src/components/product/ProductSelectionPage.tsx:129
+#, fuzzy
+msgid "Accepted licenses"
+msgstr "Wali turagt"
+
+#: src/components/product/ProductSelectionPage.tsx:163
 msgid "Select a mode"
 msgstr "Fren askar"
 
-#: src/components/product/ProductSelectionPage.tsx:132
-#: src/components/product/ProductSelectionPage.tsx:136
+#: src/components/product/ProductSelectionPage.tsx:165
+#: src/components/product/ProductSelectionPage.tsx:169
 msgid "Select a product"
 msgstr "Fren afaris"
 
-#: src/components/product/ProductSelectionPage.tsx:159
+#: src/components/product/ProductSelectionPage.tsx:192
 msgid "Select a mode and confirm your choice."
 msgstr "Fren askar u sentem afran-ik·im."
 
-#: src/components/product/ProductSelectionPage.tsx:161
+#: src/components/product/ProductSelectionPage.tsx:194
 msgid "Confirm the product selection."
 msgstr "Sentem tafrayt n ufaris."
 
-#: src/components/product/ProductSelectionPage.tsx:167
+#: src/components/product/ProductSelectionPage.tsx:200
 msgid "Select a product and confirm your choice."
 msgid_plural "Select a product and confirm your choice at the end of the list."
 msgstr[0] "Fren afaris syin sentem afran-ik·im."
 msgstr[1] "Fren ifarisen syin sentem afran-ik·im ɣer taggara n tebdart."
 
-#: src/components/product/ProductSelectionPage.tsx:230
+#: src/components/product/ProductSelectionPage.tsx:263
 #, fuzzy
 msgid ""
 "The current configuration will be discarded to apply the default settings of "
@@ -2823,63 +2830,71 @@ msgstr ""
 #. TRANSLATORS: Text used for the license acceptance checkbox. %s will be
 #. replaced with the product name and the text in the square brackets [] is
 #. used for the link to show the license, please keep the brackets.
-#: src/components/product/product-selection-form/EulaCheckbox.tsx:48
+#: src/components/product/product-selection-form/EulaCheckbox.tsx:60
 #, javascript-format
 msgid "I have read and accept the [license] for %s"
 msgstr "Ɣriɣ yerna qebleɣ [turagt] i %s"
 
+#. TRANSLATORS: Text used for accepting one of the several licenses of a
+#. product. %s will be replaced with the license name, which is also a link
+#. to show the license.
+#: src/components/product/product-selection-form/EulaCheckbox.tsx:83
+#, fuzzy, javascript-format
+msgid "I have read and accept the %s"
+msgstr "Ɣriɣ yerna qebleɣ [turagt] i %s"
+
 #. TRANSLATORS: %s is replaced by a device label, e.g. "sda (512 GiB)"
-#: src/components/product/product-selection-form/Form.tsx:63
+#: src/components/product/product-selection-form/Form.tsx:65
 #: src/components/storage/DeviceSelectorModal.tsx:303
 #, javascript-format
 msgid "Change to %s"
 msgstr "Snifel ɣer %s"
 
-#: src/components/product/product-selection-form/Form.tsx:63
+#: src/components/product/product-selection-form/Form.tsx:65
 #, javascript-format
 msgid "Select %s"
 msgstr "Fren %s"
 
-#: src/components/product/product-selection-form/Form.tsx:109
+#: src/components/product/product-selection-form/Form.tsx:111
 msgid "Select a product to continue."
 msgstr "Fren afaris akken ad tkemmleḍ."
 
-#: src/components/product/product-selection-form/Form.tsx:111
+#: src/components/product/product-selection-form/Form.tsx:113
 msgid "Select a product mode to continue."
 msgstr "Fren askar n ufaris ara tkemmleḍ."
 
-#: src/components/product/product-selection-form/Form.tsx:113
+#: src/components/product/product-selection-form/Form.tsx:115
 msgid "License acceptance is required to continue."
 msgstr "Aqbal n turagt yettwasra i wakken ad tkemmeleḍ."
 
-#: src/components/product/product-selection-form/Form.tsx:118
+#: src/components/product/product-selection-form/Form.tsx:120
 msgid "Changing the product will reset your current settings."
 msgstr ""
 
-#: src/components/product/product-selection-form/Form.tsx:156
+#: src/components/product/product-selection-form/Form.tsx:158
 msgid "Switch to a different mode"
 msgstr "Uɣal ɣer uskar nniḍen"
 
-#: src/components/product/product-selection-form/Form.tsx:160
+#: src/components/product/product-selection-form/Form.tsx:162
 msgid "Choose a mode"
 msgstr "Fren Askar"
 
-#: src/components/product/product-selection-form/Form.tsx:163
-#: src/components/product/product-selection-form/Form.tsx:168
+#: src/components/product/product-selection-form/Form.tsx:165
+#: src/components/product/product-selection-form/Form.tsx:170
 #, javascript-format
 msgid "Choose a product"
 msgid_plural "Choose from %d available products"
 msgstr[0] "Fren afaris"
 msgstr[1] "Fren seg %d n ifarisen yellan"
 
-#: src/components/product/product-selection-form/Form.tsx:176
+#: src/components/product/product-selection-form/Form.tsx:178
 #, javascript-format
 msgid "Switch to another product"
 msgid_plural "Switch to one of %d available products"
 msgstr[0] "Uɣal ɣer ufaris niḍen"
 msgstr[1] "Uɣal ɣer yiwen seg %d yifrisen yellan"
 
-#: src/components/product/product-selection-form/Form.tsx:186
+#: src/components/product/product-selection-form/Form.tsx:188
 #, javascript-format
 msgid "Switch to a different mode or another product"
 msgid_plural "Switch to a different mode or to one of %d available products"

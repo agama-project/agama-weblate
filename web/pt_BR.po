@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-18 08:11+0000\n"
+"POT-Creation-Date: 2026-09-22 12:12+0000\n"
 "PO-Revision-Date: 2026-07-24 19:12+0000\n"
 "Last-Translator: Samanta Magalhaes <samanta_texttrans@outlook.com>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.opensuse.org/projects/agama/"
@@ -113,17 +113,17 @@ msgid "Breadcrumbs"
 msgstr "Trilhas"
 
 #: src/components/core/ChangeProductOption.tsx:92
-#: src/components/product/ProductSelectionPage.tsx:127
+#: src/components/product/ProductSelectionPage.tsx:160
 msgid "Change mode"
 msgstr "Alterar modo"
 
 #: src/components/core/ChangeProductOption.tsx:93
-#: src/components/product/ProductSelectionPage.tsx:140
+#: src/components/product/ProductSelectionPage.tsx:173
 msgid "Change product or mode"
 msgstr "Alterar produto ou modo"
 
 #: src/components/core/ChangeProductOption.tsx:94
-#: src/components/product/ProductSelectionPage.tsx:143
+#: src/components/product/ProductSelectionPage.tsx:176
 msgid "Change product"
 msgstr "Alterar produto"
 
@@ -861,7 +861,7 @@ msgid "Using %s keyboard layout"
 msgstr "Usando o layout de teclado [%s]"
 
 #: src/components/form/PreservedValueField.tsx:64
-#: src/components/product/product-selection-form/Form.tsx:64
+#: src/components/product/product-selection-form/Form.tsx:66
 #: src/components/storage/BootSection.tsx:97
 #: src/components/storage/DeviceSelectorModal.tsx:296
 #: src/components/storage/EncryptionSection.tsx:59
@@ -1907,7 +1907,7 @@ msgstr "Detalhes da ponte"
 #. TRANSLATORS: confirmation button of the network device dialog while no
 #. device is picked.
 #: src/components/network/connection-form/DeviceSelectorModal.tsx:116
-#: src/components/product/product-selection-form/Form.tsx:64
+#: src/components/product/product-selection-form/Form.tsx:66
 msgid "Select"
 msgstr "Selecionar"
 
@@ -2725,38 +2725,45 @@ msgstr ""
 msgid "Extensions"
 msgstr "Extensões"
 
-#: src/components/product/ProductSelectionPage.tsx:86
+#: src/components/product/ProductSelectionPage.tsx:94
 msgid "Current selection"
 msgstr "Seleção atual"
 
-#: src/components/product/ProductSelectionPage.tsx:107
+#: src/components/product/ProductSelectionPage.tsx:120
 msgid "View license"
 msgstr "Ver licença"
 
-#: src/components/product/ProductSelectionPage.tsx:130
+#. TRANSLATORS: title of the list of licenses accepted for
+#. the selected product
+#: src/components/product/ProductSelectionPage.tsx:129
+#, fuzzy
+msgid "Accepted licenses"
+msgstr "Ver licença"
+
+#: src/components/product/ProductSelectionPage.tsx:163
 msgid "Select a mode"
 msgstr "Selecionar um modo"
 
-#: src/components/product/ProductSelectionPage.tsx:132
-#: src/components/product/ProductSelectionPage.tsx:136
+#: src/components/product/ProductSelectionPage.tsx:165
+#: src/components/product/ProductSelectionPage.tsx:169
 msgid "Select a product"
 msgstr "Selecione um produto"
 
-#: src/components/product/ProductSelectionPage.tsx:159
+#: src/components/product/ProductSelectionPage.tsx:192
 msgid "Select a mode and confirm your choice."
 msgstr "Selecione um modo e confirme sua escolha."
 
-#: src/components/product/ProductSelectionPage.tsx:161
+#: src/components/product/ProductSelectionPage.tsx:194
 msgid "Confirm the product selection."
 msgstr "Confirme a seleção do produto."
 
-#: src/components/product/ProductSelectionPage.tsx:167
+#: src/components/product/ProductSelectionPage.tsx:200
 msgid "Select a product and confirm your choice."
 msgid_plural "Select a product and confirm your choice at the end of the list."
 msgstr[0] "Selecione um produto e confirme sua escolha."
 msgstr[1] "Selecione um produto e confirme sua escolha no fim da lista."
 
-#: src/components/product/ProductSelectionPage.tsx:230
+#: src/components/product/ProductSelectionPage.tsx:263
 msgid ""
 "The current configuration will be discarded to apply the default settings of "
 "the new product."
@@ -2811,63 +2818,71 @@ msgstr ""
 #. TRANSLATORS: Text used for the license acceptance checkbox. %s will be
 #. replaced with the product name and the text in the square brackets [] is
 #. used for the link to show the license, please keep the brackets.
-#: src/components/product/product-selection-form/EulaCheckbox.tsx:48
+#: src/components/product/product-selection-form/EulaCheckbox.tsx:60
 #, javascript-format
 msgid "I have read and accept the [license] for %s"
 msgstr "Eu li e aceito a [licença] do %s"
 
+#. TRANSLATORS: Text used for accepting one of the several licenses of a
+#. product. %s will be replaced with the license name, which is also a link
+#. to show the license.
+#: src/components/product/product-selection-form/EulaCheckbox.tsx:83
+#, fuzzy, javascript-format
+msgid "I have read and accept the %s"
+msgstr "Eu li e aceito a [licença] do %s"
+
 #. TRANSLATORS: %s is replaced by a device label, e.g. "sda (512 GiB)"
-#: src/components/product/product-selection-form/Form.tsx:63
+#: src/components/product/product-selection-form/Form.tsx:65
 #: src/components/storage/DeviceSelectorModal.tsx:303
 #, javascript-format
 msgid "Change to %s"
 msgstr "Alterar para %s"
 
-#: src/components/product/product-selection-form/Form.tsx:63
+#: src/components/product/product-selection-form/Form.tsx:65
 #, javascript-format
 msgid "Select %s"
 msgstr "Selecionar %s"
 
-#: src/components/product/product-selection-form/Form.tsx:109
+#: src/components/product/product-selection-form/Form.tsx:111
 msgid "Select a product to continue."
 msgstr "Selecione um produto para continuar."
 
-#: src/components/product/product-selection-form/Form.tsx:111
+#: src/components/product/product-selection-form/Form.tsx:113
 msgid "Select a product mode to continue."
 msgstr "Selecione um modo de produto para continuar."
 
-#: src/components/product/product-selection-form/Form.tsx:113
+#: src/components/product/product-selection-form/Form.tsx:115
 msgid "License acceptance is required to continue."
 msgstr "A aceitação da licença é necessária para continuar."
 
-#: src/components/product/product-selection-form/Form.tsx:118
+#: src/components/product/product-selection-form/Form.tsx:120
 msgid "Changing the product will reset your current settings."
 msgstr "Alterar o produto redefinirá as configurações atuais."
 
-#: src/components/product/product-selection-form/Form.tsx:156
+#: src/components/product/product-selection-form/Form.tsx:158
 msgid "Switch to a different mode"
 msgstr "Alternar para um modo diferente"
 
-#: src/components/product/product-selection-form/Form.tsx:160
+#: src/components/product/product-selection-form/Form.tsx:162
 msgid "Choose a mode"
 msgstr "Escolher modo"
 
-#: src/components/product/product-selection-form/Form.tsx:163
-#: src/components/product/product-selection-form/Form.tsx:168
+#: src/components/product/product-selection-form/Form.tsx:165
+#: src/components/product/product-selection-form/Form.tsx:170
 #, javascript-format
 msgid "Choose a product"
 msgid_plural "Choose from %d available products"
 msgstr[0] "Escolher um produto"
 msgstr[1] "Escolher entre %d produtos disponíveis"
 
-#: src/components/product/product-selection-form/Form.tsx:176
+#: src/components/product/product-selection-form/Form.tsx:178
 #, javascript-format
 msgid "Switch to another product"
 msgid_plural "Switch to one of %d available products"
 msgstr[0] "Alternar para o outro produto"
 msgstr[1] "Alternar para ums dos %d produtos disponíveis"
 
-#: src/components/product/product-selection-form/Form.tsx:186
+#: src/components/product/product-selection-form/Form.tsx:188
 #, javascript-format
 msgid "Switch to a different mode or another product"
 msgid_plural "Switch to a different mode or to one of %d available products"

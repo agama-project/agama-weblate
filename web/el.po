@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-18 08:11+0000\n"
+"POT-Creation-Date: 2026-09-22 12:12+0000\n"
 "PO-Revision-Date: 2026-02-23 21:04+0000\n"
 "Last-Translator: Efstathios Iosifidis <eiosifidis@yandex.com>\n"
 "Language-Team: Greek <https://l10n.opensuse.org/projects/agama/agama-web/el/"
@@ -116,17 +116,17 @@ msgid "Breadcrumbs"
 msgstr "Ίχνη πλοήγησης"
 
 #: src/components/core/ChangeProductOption.tsx:92
-#: src/components/product/ProductSelectionPage.tsx:127
+#: src/components/product/ProductSelectionPage.tsx:160
 msgid "Change mode"
 msgstr "Αλλαγή λειτουργίας"
 
 #: src/components/core/ChangeProductOption.tsx:93
-#: src/components/product/ProductSelectionPage.tsx:140
+#: src/components/product/ProductSelectionPage.tsx:173
 msgid "Change product or mode"
 msgstr "Αλλαγή προϊόντος ή λειτουργίας"
 
 #: src/components/core/ChangeProductOption.tsx:94
-#: src/components/product/ProductSelectionPage.tsx:143
+#: src/components/product/ProductSelectionPage.tsx:176
 msgid "Change product"
 msgstr "Αλλαγή προϊόντος"
 
@@ -858,7 +858,7 @@ msgid "Using %s keyboard layout"
 msgstr "Χρήση πληκτρολογίου [%s]"
 
 #: src/components/form/PreservedValueField.tsx:64
-#: src/components/product/product-selection-form/Form.tsx:64
+#: src/components/product/product-selection-form/Form.tsx:66
 #: src/components/storage/BootSection.tsx:97
 #: src/components/storage/DeviceSelectorModal.tsx:296
 #: src/components/storage/EncryptionSection.tsx:59
@@ -1918,7 +1918,7 @@ msgstr "Λεπτομέρειες δικτύου"
 #. TRANSLATORS: confirmation button of the network device dialog while no
 #. device is picked.
 #: src/components/network/connection-form/DeviceSelectorModal.tsx:116
-#: src/components/product/product-selection-form/Form.tsx:64
+#: src/components/product/product-selection-form/Form.tsx:66
 msgid "Select"
 msgstr "Επιλογή"
 
@@ -2767,39 +2767,46 @@ msgstr ""
 msgid "Extensions"
 msgstr "Επεκτάσεις"
 
-#: src/components/product/ProductSelectionPage.tsx:86
+#: src/components/product/ProductSelectionPage.tsx:94
 msgid "Current selection"
 msgstr "Τρέχουσα επιλογή"
 
-#: src/components/product/ProductSelectionPage.tsx:107
+#: src/components/product/ProductSelectionPage.tsx:120
 msgid "View license"
 msgstr "Προβολή άδειας χρήσης"
 
-#: src/components/product/ProductSelectionPage.tsx:130
+#. TRANSLATORS: title of the list of licenses accepted for
+#. the selected product
+#: src/components/product/ProductSelectionPage.tsx:129
+#, fuzzy
+msgid "Accepted licenses"
+msgstr "Προβολή άδειας χρήσης"
+
+#: src/components/product/ProductSelectionPage.tsx:163
 msgid "Select a mode"
 msgstr "Επιλέξτε λειτουργία"
 
-#: src/components/product/ProductSelectionPage.tsx:132
-#: src/components/product/ProductSelectionPage.tsx:136
+#: src/components/product/ProductSelectionPage.tsx:165
+#: src/components/product/ProductSelectionPage.tsx:169
 msgid "Select a product"
 msgstr "Επιλέξτε προϊόν"
 
-#: src/components/product/ProductSelectionPage.tsx:159
+#: src/components/product/ProductSelectionPage.tsx:192
 msgid "Select a mode and confirm your choice."
 msgstr "Επιλέξτε μια λειτουργία και επιβεβαιώστε την επιλογή σας."
 
-#: src/components/product/ProductSelectionPage.tsx:161
+#: src/components/product/ProductSelectionPage.tsx:194
 msgid "Confirm the product selection."
 msgstr "Επιβεβαιώστε την επιλογή προϊόντος."
 
-#: src/components/product/ProductSelectionPage.tsx:167
+#: src/components/product/ProductSelectionPage.tsx:200
 msgid "Select a product and confirm your choice."
 msgid_plural "Select a product and confirm your choice at the end of the list."
 msgstr[0] "Επιλέξτε ένα προϊόν και επιβεβαιώστε την επιλογή σας."
 msgstr[1] ""
 "Επιλέξτε ένα προϊόν και επιβεβαιώστε την επιλογή σας στο τέλος της λίστας."
 
-#: src/components/product/ProductSelectionPage.tsx:230
+#: src/components/product/ProductSelectionPage.tsx:263
 #, fuzzy
 msgid ""
 "The current configuration will be discarded to apply the default settings of "
@@ -2856,63 +2863,71 @@ msgstr ""
 #. TRANSLATORS: Text used for the license acceptance checkbox. %s will be
 #. replaced with the product name and the text in the square brackets [] is
 #. used for the link to show the license, please keep the brackets.
-#: src/components/product/product-selection-form/EulaCheckbox.tsx:48
+#: src/components/product/product-selection-form/EulaCheckbox.tsx:60
 #, javascript-format
 msgid "I have read and accept the [license] for %s"
 msgstr "Έχω διαβάσει και αποδέχομαι την [άδεια χρήσης] για το %s"
 
+#. TRANSLATORS: Text used for accepting one of the several licenses of a
+#. product. %s will be replaced with the license name, which is also a link
+#. to show the license.
+#: src/components/product/product-selection-form/EulaCheckbox.tsx:83
+#, fuzzy, javascript-format
+msgid "I have read and accept the %s"
+msgstr "Έχω διαβάσει και αποδέχομαι την [άδεια χρήσης] για το %s"
+
 #. TRANSLATORS: %s is replaced by a device label, e.g. "sda (512 GiB)"
-#: src/components/product/product-selection-form/Form.tsx:63
+#: src/components/product/product-selection-form/Form.tsx:65
 #: src/components/storage/DeviceSelectorModal.tsx:303
 #, javascript-format
 msgid "Change to %s"
 msgstr "Αλλαγή σε %s"
 
-#: src/components/product/product-selection-form/Form.tsx:63
+#: src/components/product/product-selection-form/Form.tsx:65
 #, javascript-format
 msgid "Select %s"
 msgstr "Επιλογή %s"
 
-#: src/components/product/product-selection-form/Form.tsx:109
+#: src/components/product/product-selection-form/Form.tsx:111
 msgid "Select a product to continue."
 msgstr "Επιλέξτε ένα προϊόν για να συνεχίσετε."
 
-#: src/components/product/product-selection-form/Form.tsx:111
+#: src/components/product/product-selection-form/Form.tsx:113
 msgid "Select a product mode to continue."
 msgstr "Επιλέξτε μια λειτουργία προϊόντος για να συνεχίσετε."
 
-#: src/components/product/product-selection-form/Form.tsx:113
+#: src/components/product/product-selection-form/Form.tsx:115
 msgid "License acceptance is required to continue."
 msgstr "Απαιτείται αποδοχή της άδειας χρήσης για να συνεχίσετε."
 
-#: src/components/product/product-selection-form/Form.tsx:118
+#: src/components/product/product-selection-form/Form.tsx:120
 msgid "Changing the product will reset your current settings."
 msgstr ""
 
-#: src/components/product/product-selection-form/Form.tsx:156
+#: src/components/product/product-selection-form/Form.tsx:158
 msgid "Switch to a different mode"
 msgstr "Μετάβαση σε διαφορετική λειτουργία"
 
-#: src/components/product/product-selection-form/Form.tsx:160
+#: src/components/product/product-selection-form/Form.tsx:162
 msgid "Choose a mode"
 msgstr "Επιλέξτε λειτουργία"
 
-#: src/components/product/product-selection-form/Form.tsx:163
-#: src/components/product/product-selection-form/Form.tsx:168
+#: src/components/product/product-selection-form/Form.tsx:165
+#: src/components/product/product-selection-form/Form.tsx:170
 #, javascript-format
 msgid "Choose a product"
 msgid_plural "Choose from %d available products"
 msgstr[0] "Επιλέξτε ένα προϊόν"
 msgstr[1] "Επιλέξτε από %d διαθέσιμα προϊόντα"
 
-#: src/components/product/product-selection-form/Form.tsx:176
+#: src/components/product/product-selection-form/Form.tsx:178
 #, javascript-format
 msgid "Switch to another product"
 msgid_plural "Switch to one of %d available products"
 msgstr[0] "Μετάβαση σε άλλο προϊόν"
 msgstr[1] "Μετάβαση σε ένα από τα %d διαθέσιμα προϊόντα"
 
-#: src/components/product/product-selection-form/Form.tsx:186
+#: src/components/product/product-selection-form/Form.tsx:188
 #, javascript-format
 msgid "Switch to a different mode or another product"
 msgid_plural "Switch to a different mode or to one of %d available products"
