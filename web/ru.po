@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-22 12:12+0000\n"
+"POT-Creation-Date: 2026-09-22 14:50+0000\n"
 "PO-Revision-Date: 2026-08-06 02:13+0000\n"
 "Last-Translator: Andrei Stepanov <adem4ik@gmail.com>\n"
 "Language-Team: Russian <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -358,6 +358,7 @@ msgstr ""
 "Настройки [языка и региона] для продукта могут предлагать больше вариантов "
 "на выбор."
 
+#. TRANSLATORS: confirmation button of the network device dialog.
 #. TRANSLATORS: button to save the localization settings
 #. TRANSLATORS: label for the form submit button.
 #. TRANSLATORS: button to save system settings changes
@@ -366,6 +367,7 @@ msgstr ""
 #: src/components/form/SubmitButton.tsx:54
 #: src/components/l10n/l10n-form/Form.tsx:110
 #: src/components/layout/Page.tsx:274
+#: src/components/network/connection-form/DeviceSelectorModal.tsx:224
 #: src/components/storage/dasd/FormatActionHandler.tsx:94
 #: src/components/storage/dasd/FormatActionHandler.tsx:119
 #: src/components/storage/formattable-device-form/Form.tsx:180
@@ -778,7 +780,7 @@ msgstr "Командная строка Linux с правами админист
 msgid "The terminal requires a larger screen size"
 msgstr "Для терминала требуется больший размер экрана"
 
-#: src/components/form/ArrayField.tsx:66
+#: src/components/form/ArrayField.tsx:67
 msgid ""
 "Enter or Tab to add, Backspace or Delete to remove, arrow keys to navigate "
 "entries, Escape to exit"
@@ -787,7 +789,7 @@ msgstr ""
 "навигации по записям, Escape для выхода"
 
 #. TRANSLATORS: keyboard usage hint when entries exist.
-#: src/components/form/ArrayField.tsx:88
+#: src/components/form/ArrayField.tsx:89
 msgid ""
 "Enter or Tab to add, Backspace or Delete to remove, arrow keys to navigate"
 msgstr ""
@@ -795,19 +797,19 @@ msgstr ""
 "навигации"
 
 #. TRANSLATORS: keyboard usage hint when field is empty.
-#: src/components/form/ArrayField.tsx:90
+#: src/components/form/ArrayField.tsx:91
 msgid "Enter or Tab to add"
 msgstr "Enter или Tab для добавления"
 
 #. TRANSLATORS: screen reader announcement when a duplicate entry is skipped. %s is the entry value.
-#: src/components/form/ArrayField.tsx:360
+#: src/components/form/ArrayField.tsx:361
 #, javascript-format
 msgid "%s already exists, skipped."
 msgstr "%s уже существует, пропущено."
 
 #. TRANSLATORS: screen reader announcement when an invalid entry is
 #. added. First %s is the entry value, second %s is the validation error.
-#: src/components/form/ArrayField.tsx:371
+#: src/components/form/ArrayField.tsx:372
 #, javascript-format
 msgid "%s added but is invalid: %s. Select to edit."
 msgstr "%s добавлен, но недействителен: %s. Выберите для редактирования."
@@ -816,7 +818,7 @@ msgstr "%s добавлен, но недействителен: %s. Выбери
 #. is the entry value.
 #. TRANSLATORS: said after a value joins the ones the field holds. %s is the
 #. value.
-#: src/components/form/ArrayField.tsx:374
+#: src/components/form/ArrayField.tsx:375
 #: src/components/form/multi-select-field/messages.ts:61
 #, javascript-format
 msgid "%s added."
@@ -825,7 +827,7 @@ msgstr "%s добавлен."
 #. TRANSLATORS: screen reader announcement when an entry is removed. %s is
 #. the entry value.
 #. TRANSLATORS: said after a value is taken out of the field. %s is the value.
-#: src/components/form/ArrayField.tsx:384
+#: src/components/form/ArrayField.tsx:385
 #: src/components/form/multi-select-field/messages.ts:81
 #, javascript-format
 msgid "%s removed."
@@ -833,19 +835,13 @@ msgstr "%s удалён."
 
 #. TRANSLATORS: screen reader announcement when an entry is moved to the
 #. input for editing. %s is the entry value.
-#: src/components/form/ArrayField.tsx:399
+#: src/components/form/ArrayField.tsx:400
 #, javascript-format
 msgid "%s moved to input for editing."
 msgstr "%s перемещён в поле ввода для редактирования."
 
-#. TRANSLATORS: screen reader announcement when all invalid entries are
-#. cleared. %d is the number of removed entries.
-#: src/components/form/ArrayField.tsx:409
-#, javascript-format
-msgid "%d invalid entries removed."
-msgstr "Удалено недействительных записей: %d."
-
-#: src/components/form/ArrayField.tsx:580
+#: src/components/form/ArrayField.tsx:579
+#: src/components/form/multi-select-field/MultiSelectField.tsx:928
 msgid "Select entries to edit or remove them. Or [remove all invalid entries.]"
 msgstr ""
 "Выберите записи для редактирования или удаления. Или [удалить все "
@@ -885,21 +881,21 @@ msgstr "Подробнее"
 
 #. TRANSLATORS: accessible name of the arrow that opens the list of
 #. values a field offers.
-#: src/components/form/multi-select-field/MultiSelectField.tsx:790
+#: src/components/form/multi-select-field/MultiSelectField.tsx:805
 #, fuzzy
 msgid "Show options"
 msgstr "Показать общие параметры"
 
 #. TRANSLATORS: accessible name of the button that empties a
 #. field holding several values.
-#: src/components/form/multi-select-field/MultiSelectField.tsx:859
+#: src/components/form/multi-select-field/MultiSelectField.tsx:874
 #, fuzzy
 msgid "Clear all"
 msgstr "Очистить"
 
 #. TRANSLATORS: shown in place of the options when the text the
 #. user typed leaves nothing to choose from.
-#: src/components/form/multi-select-field/MultiSelectField.tsx:884
+#: src/components/form/multi-select-field/MultiSelectField.tsx:899
 #, fuzzy
 msgid "No options match"
 msgstr "Ни один шаблон не соответствует"
@@ -1069,13 +1065,13 @@ msgid "%s entries"
 msgstr "Записи %s"
 
 #. TRANSLATORS: accessible label for an invalid entry. First %s is the entry value, second %s is the validation error.
-#: src/components/form/primitives/FieldEntry.tsx:113
+#: src/components/form/primitives/FieldEntry.tsx:117
 #, javascript-format
 msgid "%s is invalid: %s"
 msgstr "%s недействителен: %s"
 
 #. TRANSLATORS: accessible label for the remove button of an entry. %s is the entry value.
-#: src/components/form/primitives/FieldEntry.tsx:122
+#: src/components/form/primitives/FieldEntry.tsx:126
 #, javascript-format
 msgid "Remove %s"
 msgstr "Удалить %s"
@@ -1127,6 +1123,13 @@ msgstr "Добавлено записей: %d, недействительных:
 #, fuzzy, javascript-format
 msgid "%d entries added, %d not available, %d duplicates skipped."
 msgstr "Добавлено записей: %d, недействительных: %d, пропущено дубликатов: %d."
+
+#. TRANSLATORS: screen reader announcement when all invalid entries are
+#. cleared at once. %d is the number of removed entries.
+#: src/components/form/primitives/entry-helpers.ts:188
+#, javascript-format
+msgid "%d invalid entries removed."
+msgstr "Удалено недействительных записей: %d."
 
 #: src/components/l10n/L10nPage.tsx:41
 msgid ""
@@ -1239,7 +1242,7 @@ msgstr "Уровень сигнала"
 msgid "Network not available"
 msgstr "Сеть недоступна"
 
-#: src/components/network/ConnectionDetails.tsx:111 src/utils/network.ts:117
+#: src/components/network/ConnectionDetails.tsx:111 src/utils/network.ts:199
 msgid "Bond"
 msgstr "Bond"
 
@@ -1249,7 +1252,7 @@ msgstr "Сведения о Bond"
 
 #. TRANSLATORS: label for the bond mode field.
 #: src/components/network/ConnectionDetails.tsx:114
-#: src/components/network/connection-form/BondFields.tsx:86
+#: src/components/network/connection-form/BondFields.tsx:82
 msgid "Bond mode"
 msgstr "Режим Bond"
 
@@ -1275,17 +1278,17 @@ msgstr "Не задано"
 
 #. TRANSLATORS: label for the bond options field.
 #: src/components/network/ConnectionDetails.tsx:120
-#: src/components/network/connection-form/BondFields.tsx:97
+#: src/components/network/connection-form/BondFields.tsx:93
 msgid "Bond options"
 msgstr "Параметры Bond"
 
 #. TRANSLATORS: label for the bond ports field.
 #: src/components/network/ConnectionDetails.tsx:126
-#: src/components/network/connection-form/BondFields.tsx:111
+#: src/components/network/connection-form/BondFields.tsx:108
 msgid "Bond ports"
 msgstr "Порты Bond"
 
-#: src/components/network/ConnectionDetails.tsx:144 src/utils/network.ts:118
+#: src/components/network/ConnectionDetails.tsx:144 src/utils/network.ts:200
 msgid "Bridge"
 msgstr "Мост"
 
@@ -1300,7 +1303,7 @@ msgstr "STP"
 #. TRANSLATORS: option label for disabling bridge STP.
 #. TRANSLATORS: authentication mode option
 #: src/components/network/ConnectionDetails.tsx:149
-#: src/components/network/connection-form/BridgeFields.tsx:54
+#: src/components/network/connection-form/BridgeFields.tsx:53
 #: src/components/users/authentication-form/RootAuthFields.tsx:76
 msgid "Disabled"
 msgstr "Отключено"
@@ -1311,35 +1314,35 @@ msgstr "Включено"
 
 #. TRANSLATORS: label for the bridge priority field.
 #: src/components/network/ConnectionDetails.tsx:155
-#: src/components/network/connection-form/BridgeFields.tsx:143
+#: src/components/network/connection-form/BridgeFields.tsx:138
 msgid "Priority"
 msgstr "Приоритет"
 
 #. TRANSLATORS: label for the bridge forward delay field.
 #: src/components/network/ConnectionDetails.tsx:159
-#: src/components/network/connection-form/BridgeFields.tsx:172
+#: src/components/network/connection-form/BridgeFields.tsx:167
 msgid "Forward delay"
 msgstr "Задержка пересылки"
 
 #. TRANSLATORS: label for the bridge hello time field.
 #: src/components/network/ConnectionDetails.tsx:165
-#: src/components/network/connection-form/BridgeFields.tsx:192
+#: src/components/network/connection-form/BridgeFields.tsx:187
 msgid "Hello time"
 msgstr "Время Hello"
 
 #. TRANSLATORS: label for the bridge max message age field.
 #: src/components/network/ConnectionDetails.tsx:169
-#: src/components/network/connection-form/BridgeFields.tsx:212
+#: src/components/network/connection-form/BridgeFields.tsx:207
 msgid "Max message age"
 msgstr "Максимальный возраст сообщения"
 
 #. TRANSLATORS: label for the bridge ports field.
 #: src/components/network/ConnectionDetails.tsx:175
-#: src/components/network/connection-form/BridgeFields.tsx:106
+#: src/components/network/connection-form/BridgeFields.tsx:103
 msgid "Bridge ports"
 msgstr "Порты моста"
 
-#: src/components/network/ConnectionDetails.tsx:193 src/utils/network.ts:119
+#: src/components/network/ConnectionDetails.tsx:193 src/utils/network.ts:201
 msgid "VLAN"
 msgstr "VLAN"
 
@@ -1349,7 +1352,7 @@ msgstr "Сведения о VLAN"
 
 #. TRANSLATORS: label for the VLAN ID field.
 #: src/components/network/ConnectionDetails.tsx:196
-#: src/components/network/connection-form/VlanFields.tsx:112
+#: src/components/network/connection-form/VlanFields.tsx:117
 msgid "VLAN ID"
 msgstr "ID VLAN"
 
@@ -1385,7 +1388,7 @@ msgstr "Шлюз"
 #: src/components/network/ConnectionDetails.tsx:252
 #: src/components/network/ConnectionDetails.tsx:384
 #: src/components/network/ConnectionsTable.tsx:158
-#: src/components/network/connection-form/DeviceSelectorModal.tsx:94
+#: src/components/network/connection-form/DeviceSelectorModal.tsx:185
 msgid "IP Addresses"
 msgstr "IP-адреса"
 
@@ -1495,10 +1498,12 @@ msgid "Name"
 msgstr "Имя"
 
 #. TRANSLATORS: table header for a DASD devices table
+#. TRANSLATORS: table column with the type of a network device and, below
+#. it, the kernel driver it runs on.
 #. TRANSLATORS: label for the network connection type field.
 #: src/components/network/ConnectionsTable.tsx:122
 #: src/components/network/ConnectionsTable.tsx:250
-#: src/components/network/connection-form/DeviceSelectorModal.tsx:89
+#: src/components/network/connection-form/DeviceSelectorModal.tsx:149
 #: src/components/network/connection-form/Form.tsx:190
 #: src/components/storage/DeviceSelectorPage.tsx:55
 #: src/components/storage/dasd/DASDTable.tsx:528
@@ -1507,7 +1512,7 @@ msgstr "Тип"
 
 #: src/components/network/ConnectionsTable.tsx:128
 #: src/components/network/ConnectionsTable.tsx:265
-#: src/components/network/connection-form/DeviceSelectorModal.tsx:98
+#: src/components/network/connection-form/DeviceSelectorModal.tsx:168
 msgid "State"
 msgstr "Состояние"
 
@@ -1516,7 +1521,7 @@ msgstr "Состояние"
 #. TRANSLATORS: table column with the name of a network device and, below
 #. it, the hardware identifier of its interface.
 #: src/components/network/ConnectionsTable.tsx:134
-#: src/components/network/connection-form/DeviceSelectorModal.tsx:79
+#: src/components/network/connection-form/DeviceSelectorModal.tsx:137
 #: src/components/storage/DrivesTable.tsx:72
 #: src/components/storage/MdRaidsTable.tsx:71
 #: src/components/storage/ProposalResultTable.tsx:134
@@ -1779,38 +1784,38 @@ msgstr "Привязка устройства"
 #. TRANSLATORS: accessible label for the device selector. MAC address refers
 #. to the hardware identifier of the network interface.
 #. TRANSLATORS: label for the network interface name field.
-#: src/components/network/connection-form/BondFields.tsx:66
-#: src/components/network/connection-form/BondFields.tsx:71
-#: src/components/network/connection-form/BridgeFields.tsx:86
-#: src/components/network/connection-form/BridgeFields.tsx:91
-#: src/components/network/connection-form/DeviceSelector.tsx:108
+#: src/components/network/connection-form/BondFields.tsx:62
+#: src/components/network/connection-form/BondFields.tsx:67
+#: src/components/network/connection-form/BridgeFields.tsx:82
+#: src/components/network/connection-form/BridgeFields.tsx:87
+#: src/components/network/connection-form/DeviceSelector.tsx:121
 #: src/components/network/connection-form/Form.tsx:228
-#: src/components/network/connection-form/VlanFields.tsx:129
+#: src/components/network/connection-form/VlanFields.tsx:134
 msgid "Device name"
 msgstr "Имя устройства"
 
 #. TRANSLATORS: helper text for the bond device name field.
-#: src/components/network/connection-form/BondFields.tsx:75
+#: src/components/network/connection-form/BondFields.tsx:71
 msgid "E.g., bond0"
 msgstr "Например, bond0"
 
 #. TRANSLATORS: helper text for the bond options field.
-#: src/components/network/connection-form/BondFields.tsx:101
+#: src/components/network/connection-form/BondFields.tsx:97
 msgid "E.g., downdelay=0, primary=eth1, miimon=100, lacp_rate=fast"
 msgstr "Например, downdelay=0, primary=eth1, miimon=100, lacp_rate=fast"
 
-#. TRANSLATORS: helper text for the bridge ports field. %s is a list of available devices.
-#. TRANSLATORS: helper text for the bond ports field. %s is a list of available devices.
-#: src/components/network/connection-form/BondFields.tsx:115
-#: src/components/network/connection-form/BridgeFields.tsx:110
-#, javascript-format
-msgid "Available devices: %s"
-msgstr "Доступные устройства: %s"
+#. TRANSLATORS: title of the dialog for picking the ports of a bond
+#. among the devices found in the system.
+#: src/components/network/connection-form/BondFields.tsx:113
+#, fuzzy
+#| msgid "Select booting partition"
+msgid "Select bond ports"
+msgstr "Выберите загрузочный раздел"
 
 #. TRANSLATORS: option for the VLAN protocol selector when no specific protocol is chosen.
 #. TRANSLATORS: option label for the bridge STP configuration to use the system default.
 #. TRANSLATORS: NTP mode option
-#: src/components/network/connection-form/BridgeFields.tsx:40
+#: src/components/network/connection-form/BridgeFields.tsx:39
 #: src/components/network/connection-form/VlanFields.tsx:38
 #: src/components/storage/shared/helpers.ts:60
 #: src/components/system/system-form/NtpFields.tsx:66
@@ -1818,13 +1823,13 @@ msgid "Default"
 msgstr "По умолчанию"
 
 #. TRANSLATORS: description for the default bridge STP configuration.
-#: src/components/network/connection-form/BridgeFields.tsx:42
+#: src/components/network/connection-form/BridgeFields.tsx:41
 msgid "Enabled with the system default settings"
 msgstr "Включено с настройками системы по умолчанию"
 
 #. TRANSLATORS: option label for enabling bridge STP.
 #. TRANSLATORS: NTP mode option
-#: src/components/network/connection-form/BridgeFields.tsx:47
+#: src/components/network/connection-form/BridgeFields.tsx:46
 #: src/components/product/registration-form/Form.tsx:160
 #: src/components/storage/utils.ts:72 src/components/storage/utils.ts:91
 #: src/components/system/system-form/NtpFields.tsx:73
@@ -1832,30 +1837,38 @@ msgid "Custom"
 msgstr "По-своему"
 
 #. TRANSLATORS: description for enabling bridge STP with manual settings.
-#: src/components/network/connection-form/BridgeFields.tsx:49
+#: src/components/network/connection-form/BridgeFields.tsx:48
 msgid "Explicitly enabled with manual settings"
 msgstr "Явно включено с ручными настройками"
 
 #. TRANSLATORS: description for disabling bridge STP.
-#: src/components/network/connection-form/BridgeFields.tsx:56
+#: src/components/network/connection-form/BridgeFields.tsx:55
 msgid "Not used by this bridge"
 msgstr "Не используется этим мостом"
 
 #. TRANSLATORS: helper text for the bond device name field.
-#: src/components/network/connection-form/BridgeFields.tsx:95
+#: src/components/network/connection-form/BridgeFields.tsx:91
 msgid "E.g., br0"
 msgstr "Например, br0"
 
+#. TRANSLATORS: title of the dialog for picking the ports of a
+#. bridge among the devices found in the system.
+#: src/components/network/connection-form/BridgeFields.tsx:108
+#, fuzzy
+#| msgid "Bridge ports"
+msgid "Select bridge ports"
+msgstr "Порты моста"
+
 #. TRANSLATORS: label for the bridge STP (Spanning Tree Protocol) field.
-#: src/components/network/connection-form/BridgeFields.tsx:122
+#: src/components/network/connection-form/BridgeFields.tsx:117
 msgid "Spanning Tree Protocol (STP)"
 msgstr "Протокол связующего дерева (STP)"
 
 #. TRANSLATORS: label suffix indicating an optional field.
-#: src/components/network/connection-form/BridgeFields.tsx:140
-#: src/components/network/connection-form/BridgeFields.tsx:169
-#: src/components/network/connection-form/BridgeFields.tsx:189
-#: src/components/network/connection-form/BridgeFields.tsx:209
+#: src/components/network/connection-form/BridgeFields.tsx:135
+#: src/components/network/connection-form/BridgeFields.tsx:164
+#: src/components/network/connection-form/BridgeFields.tsx:184
+#: src/components/network/connection-form/BridgeFields.tsx:204
 #: src/components/network/connection-form/IpFields.tsx:150
 #: src/components/product/registration-form/Form.tsx:187
 #: src/components/product/registration-form/Form.tsx:202
@@ -1870,64 +1883,69 @@ msgstr "(необязательно)"
 #. field. Text inside square brackets [] is
 #. semantically and visually emphasized. Keep the
 #. brackets.
-#: src/components/network/connection-form/BridgeFields.tsx:154
+#: src/components/network/connection-form/BridgeFields.tsx:149
 msgid "Root bridge selection (0-61440). [Lower is higher priority]."
 msgstr "Выбор корневого моста (0-61440). [Меньше — выше приоритет]."
 
 #. TRANSLATORS: helper text for the bridge forward delay field.
-#: src/components/network/connection-form/BridgeFields.tsx:178
+#: src/components/network/connection-form/BridgeFields.tsx:173
 msgid "Listening and learning time (4-30 seconds)."
 msgstr "Время прослушивания и обучения (4-30 секунд)."
 
 #. TRANSLATORS: helper text for the bridge hello time field.
-#: src/components/network/connection-form/BridgeFields.tsx:198
+#: src/components/network/connection-form/BridgeFields.tsx:193
 msgid "Protocol message interval (1-10 seconds)."
 msgstr "Интервал сообщений протокола (1-10 секунд)."
 
 #. TRANSLATORS: helper text for the bridge max message age field.
-#: src/components/network/connection-form/BridgeFields.tsx:218
+#: src/components/network/connection-form/BridgeFields.tsx:213
 msgid "Protocol message retention time (6-40 seconds)."
 msgstr "Время хранения сообщений протокола (6-40 секунд)."
 
-#: src/components/network/connection-form/DeviceSelector.tsx:108
+#: src/components/network/connection-form/DeviceSelector.tsx:121
 #: src/components/network/connection-form/Form.tsx:237
 msgid "Device MAC address"
 msgstr "MAC-адрес устройства"
 
+#. TRANSLATORS: title of the dialog for picking a network device, when
+#. nothing more specific is known about what it will be used for.
+#: src/components/network/connection-form/DeviceSelector.tsx:125
+#, fuzzy
+msgid "Select a network device"
+msgstr "Выберите устройство"
+
+#. TRANSLATORS: entry at the end of the device list,
+#. leading to a dialog listing the same devices with
+#. more information about each of them. The trailing
+#. ellipsis hints that more follows instead of a
+#. device being picked right away.
 #. TRANSLATORS: entry at the end of the device dropdown, leading
 #. to a dialog listing the same devices with more information
 #. about each of them. The trailing ellipsis hints that more
 #. follows instead of a device being picked right away.
-#: src/components/network/connection-form/DeviceSelector.tsx:159
+#: src/components/network/connection-form/DeviceSelector.tsx:180
+#: src/components/network/connection-form/PortsField.tsx:168
 #, fuzzy
 msgid "Browse with details..."
 msgstr "Сведения о мосте"
 
-#. TRANSLATORS: confirmation button of the network device dialog while no
-#. device is picked.
-#: src/components/network/connection-form/DeviceSelectorModal.tsx:116
-#: src/components/product/product-selection-form/Form.tsx:66
-msgid "Select"
-msgstr "Выбрать"
+#. TRANSLATORS: table column telling whether a network device has a cable
+#. plugged in and, when it does, how fast the link is.
+#: src/components/network/connection-form/DeviceSelectorModal.tsx:163
+msgid "Link"
+msgstr ""
 
-#. TRANSLATORS: confirmation button of the network device dialog. %s is
-#. replaced by a device name, e.g. "enp1s0".
-#: src/components/network/connection-form/DeviceSelectorModal.tsx:119
-#, fuzzy, javascript-format
-msgid "Use %s"
-msgstr "Использовать диск %s"
+#. TRANSLATORS: table column telling which bond or bridge already
+#. uses a network device as one of its ports.
+#: src/components/network/connection-form/DeviceSelectorModal.tsx:177
+msgid "Used by"
+msgstr ""
 
 #. TRANSLATORS: shown next to the disabled confirmation button
 #. of the network device dialog, when no device is picked.
-#: src/components/network/connection-form/DeviceSelectorModal.tsx:130
+#: src/components/network/connection-form/DeviceSelectorModal.tsx:211
 #: src/components/storage/DeviceSelectorModal.tsx:310
 msgid "Select a device"
-msgstr "Выберите устройство"
-
-#. TRANSLATORS: title of the dialog for picking a network device
-#: src/components/network/connection-form/DeviceSelectorModal.tsx:153
-#, fuzzy
-msgid "Select a network device"
 msgstr "Выберите устройство"
 
 #. TRANSLATORS: title of an error for a failed network connection save.
@@ -2077,6 +2095,14 @@ msgstr "Например, 192.168.1.1"
 msgid "E.g., 2001:db8::1"
 msgstr "Например, 2001:db8::1"
 
+#. TRANSLATORS: helper text for the ports field of a bond
+#. or a bridge, naming the two ways of filling it in.
+#: src/components/network/connection-form/PortsField.tsx:148
+#, fuzzy
+#| msgid "Choose device to bind by name"
+msgid "Choose devices or enter their names."
+msgstr "Выберите устройство для привязки по имени"
+
 #. TRANSLATORS: description for the 'Default' VLAN protocol option.
 #: src/components/network/connection-form/VlanFields.tsx:40
 msgid "Use the system default (802.1Q)."
@@ -2102,77 +2128,100 @@ msgstr "802.1ad"
 msgid "Use the 802.1ad protocol explicitly."
 msgstr "Использовать протокол 802.1ad явно."
 
+#. TRANSLATORS: title of the dialog for picking the device a VLAN
+#. is built on top of.
+#: src/components/network/connection-form/VlanFields.tsx:96
+#, fuzzy
+#| msgid "Select a device"
+msgid "Select the parent device"
+msgstr "Выберите устройство"
+
 #. TRANSLATORS: helper text for the VLAN ID field.
-#: src/components/network/connection-form/VlanFields.tsx:116
+#: src/components/network/connection-form/VlanFields.tsx:121
 msgid "Numeric identifier (0–4094)"
 msgstr "Числовой идентификатор (0–4094)"
 
 #. TRANSLATORS: helper text for the VLAN device name field.
-#: src/components/network/connection-form/VlanFields.tsx:133
+#: src/components/network/connection-form/VlanFields.tsx:138
 msgid "E.g., eth0.100"
 msgstr "Например, eth0.100"
 
 #. TRANSLATORS: label for the VLAN encapsulation protocol field.
-#: src/components/network/connection-form/VlanFields.tsx:144
+#: src/components/network/connection-form/VlanFields.tsx:149
 msgid "Encapsulation protocol"
 msgstr "Протокол инкапсуляции"
 
+#. TRANSLATORS: validation error for the ports field of a bond or a bridge,
+#. when it lists the device being configured. %s is its name, e.g. "bond0".
+#: src/components/network/connection-form/validations.ts:93
+#, javascript-format
+msgid "%s cannot be a port of itself"
+msgstr ""
+
+#. TRANSLATORS: validation error for the ports field of a bond or a bridge,
+#. when it lists the loopback device.
+#: src/components/network/connection-form/validations.ts:99
+#, fuzzy
+#| msgid "The device cannot be shrunk:"
+msgid "The loopback device cannot be a port"
+msgstr "Устройство не может быть сокращено:"
+
 #. TRANSLATORS: validation error for the connection name field.
-#: src/components/network/connection-form/validations.ts:132
+#: src/components/network/connection-form/validations.ts:172
 msgid "Name is required"
 msgstr "Требуется имя"
 
-#: src/components/network/connection-form/validations.ts:148
+#: src/components/network/connection-form/validations.ts:188
 msgid "At least one IPv4 address is required"
 msgstr "Требуется хотя бы один IPv4-адрес"
 
-#: src/components/network/connection-form/validations.ts:149
+#: src/components/network/connection-form/validations.ts:189
 msgid "Some IPv4 addresses are invalid"
 msgstr "Некоторые IPv4-адреса недействительны"
 
-#: src/components/network/connection-form/validations.ts:156
+#: src/components/network/connection-form/validations.ts:196
 msgid "IPv4 gateway is required"
 msgstr "Требуется IPv4-шлюз"
 
-#: src/components/network/connection-form/validations.ts:157
+#: src/components/network/connection-form/validations.ts:197
 msgid "Invalid IPv4 gateway"
 msgstr "Недействительный IPv4-шлюз"
 
-#: src/components/network/connection-form/validations.ts:164
+#: src/components/network/connection-form/validations.ts:204
 msgid "At least one IPv6 address is required"
 msgstr "Требуется хотя бы один IPv6-адрес"
 
-#: src/components/network/connection-form/validations.ts:165
+#: src/components/network/connection-form/validations.ts:205
 msgid "Some IPv6 addresses are invalid"
 msgstr "Некоторые IPv6-адреса недействительны"
 
-#: src/components/network/connection-form/validations.ts:172
+#: src/components/network/connection-form/validations.ts:212
 msgid "IPv6 gateway is required"
 msgstr "Требуется IPv6-шлюз"
 
-#: src/components/network/connection-form/validations.ts:173
+#: src/components/network/connection-form/validations.ts:213
 msgid "Invalid IPv6 gateway"
 msgstr "Недействительный IPv6-шлюз"
 
-#: src/components/network/connection-form/validations.ts:181
+#: src/components/network/connection-form/validations.ts:221
 msgid "At least one DNS server is required"
 msgstr "Требуется хотя бы один DNS-сервер"
 
-#: src/components/network/connection-form/validations.ts:182
+#: src/components/network/connection-form/validations.ts:222
 msgid "Some DNS server addresses are invalid"
 msgstr "Некоторые адреса DNS-серверов недействительны"
 
-#: src/components/network/connection-form/validations.ts:190
+#: src/components/network/connection-form/validations.ts:230
 msgid "At least one DNS search domain is required"
 msgstr "Требуется хотя бы один домен поиска DNS"
 
-#: src/components/network/connection-form/validations.ts:191
+#: src/components/network/connection-form/validations.ts:231
 msgid "Some DNS search domains are invalid"
 msgstr "Некоторые домены поиска DNS недействительны"
 
 #. TRANSLATORS: validation error for the bond options field when the 'primary' option is used in an invalid mode.
 #. %s is replaced with a list of valid mode names.
-#: src/components/network/connection-form/validations.ts:216
+#: src/components/network/connection-form/validations.ts:256
 #, javascript-format
 msgid "The 'primary' option is only valid for %s modes"
 msgstr "Опция 'primary' допустима только для режимов %s"
@@ -2180,47 +2229,48 @@ msgstr "Опция 'primary' допустима только для режимо
 #. TRANSLATORS: validation error for the bond device name field.
 #. TRANSLATORS: validation error for the bridge device name field.
 #. TRANSLATORS: validation error for the VLAN device name field.
-#: src/components/network/connection-form/validations.ts:221
-#: src/components/network/connection-form/validations.ts:243
+#: src/components/network/connection-form/validations.ts:261
 #: src/components/network/connection-form/validations.ts:287
+#: src/components/network/connection-form/validations.ts:334
 msgid "Device name is required"
 msgstr "Требуется имя устройства"
 
 #. TRANSLATORS: validation error for the bond mode name field.
-#: src/components/network/connection-form/validations.ts:223
+#: src/components/network/connection-form/validations.ts:263
 msgid "Bond mode is required"
 msgstr "Требуется режим Bond"
 
 #. TRANSLATORS: validation error for the bond ports field.
-#: src/components/network/connection-form/validations.ts:225
+#: src/components/network/connection-form/validations.ts:268
 msgid "At least one bond port is required"
 msgstr "Требуется хотя бы один порт Bond"
 
-#: src/components/network/connection-form/validations.ts:246
+#. TRANSLATORS: validation error for the bridge ports field.
+#: src/components/network/connection-form/validations.ts:292
 msgid "At least one bridge port is required"
 msgstr "Требуется хотя бы один порт моста"
 
-#: src/components/network/connection-form/validations.ts:254
+#: src/components/network/connection-form/validations.ts:301
 msgid "Priority must be between 0 and 61440"
 msgstr "Приоритет должен быть от 0 до 61440"
 
-#: src/components/network/connection-form/validations.ts:261
+#: src/components/network/connection-form/validations.ts:308
 msgid "Forward delay must be between 4 and 30 seconds"
 msgstr "Задержка пересылки должна быть от 4 до 30 секунд"
 
-#: src/components/network/connection-form/validations.ts:268
+#: src/components/network/connection-form/validations.ts:315
 msgid "Hello time must be between 1 and 10 seconds"
 msgstr "Время Hello должно быть от 1 до 10 секунд"
 
-#: src/components/network/connection-form/validations.ts:275
+#: src/components/network/connection-form/validations.ts:322
 msgid "Max message age must be between 6 and 40 seconds"
 msgstr "Максимальный возраст сообщения должен быть от 6 до 40 секунд"
 
-#: src/components/network/connection-form/validations.ts:293
+#: src/components/network/connection-form/validations.ts:340
 msgid "VLAN ID is required"
 msgstr "Требуется ID VLAN"
 
-#: src/components/network/connection-form/validations.ts:294
+#: src/components/network/connection-form/validations.ts:341
 msgid "VLAN ID must be between 0 and 4094"
 msgstr "ID VLAN должен быть от 0 до 4094"
 
@@ -2541,7 +2591,7 @@ msgstr "Возможна потеря данных"
 
 #. TRANSLATORS: state of a network device whose situation cannot be determined
 #: src/components/overview/SystemInformationSection.tsx:61
-#: src/utils/network.ts:61 src/utils/network.ts:79 src/utils/network.ts:120
+#: src/utils/network.ts:62 src/utils/network.ts:80 src/utils/network.ts:202
 msgid "Unknown"
 msgstr "Неизвестно"
 
@@ -2844,6 +2894,10 @@ msgstr "Изменить на %s"
 #, javascript-format
 msgid "Select %s"
 msgstr "Выбрать %s"
+
+#: src/components/product/product-selection-form/Form.tsx:66
+msgid "Select"
+msgstr "Выбрать"
 
 #: src/components/product/product-selection-form/Form.tsx:111
 msgid "Select a product to continue."
@@ -5289,7 +5343,7 @@ msgid "Go to iSCSI"
 msgstr "Перейти к iSCSI"
 
 #. TRANSLATORS: state of a network device that is up and running
-#: src/components/storage/iscsi/TargetsTable.tsx:161 src/utils/network.ts:88
+#: src/components/storage/iscsi/TargetsTable.tsx:161 src/utils/network.ts:89
 msgid "Connected"
 msgstr "Подключено"
 
@@ -5310,7 +5364,7 @@ msgid "Disconnection failed"
 msgstr "Сбой при отключении"
 
 #. TRANSLATORS: state of a network device that is available but not in use
-#: src/components/storage/iscsi/TargetsTable.tsx:166 src/utils/network.ts:92
+#: src/components/storage/iscsi/TargetsTable.tsx:166 src/utils/network.ts:93
 msgid "Disconnected"
 msgstr "Отключено"
 
@@ -6243,11 +6297,11 @@ msgstr "zFCP"
 msgid "Activate controllers"
 msgstr "Активировать контроллеры"
 
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:58 src/utils/network.ts:63
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:58 src/utils/network.ts:64
 msgid "Activated"
 msgstr "Активировано"
 
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:59 src/utils/network.ts:65
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:59 src/utils/network.ts:66
 msgid "Deactivated"
 msgstr "Деактивировано"
 
@@ -6583,52 +6637,85 @@ msgstr "Исправьте ошибки ниже и попробуйте сно�
 msgid "Go to [installation] summary."
 msgstr "Перейти к сводке [установки]."
 
-#: src/utils/network.ts:62
+#: src/utils/network.ts:63
 msgid "Activating"
 msgstr "Активация"
 
-#: src/utils/network.ts:64
+#: src/utils/network.ts:65
 msgid "Deactivating"
 msgstr "Деактивация"
 
 #. TRANSLATORS: state of a network device that the installer does not manage
-#: src/utils/network.ts:81
+#: src/utils/network.ts:82
 msgid "Unmanaged"
 msgstr ""
 
 #. TRANSLATORS: state of a network device that cannot be used, for example
 #. because its cable is unplugged
-#: src/utils/network.ts:84
+#: src/utils/network.ts:85
 #, fuzzy
 msgid "Unavailable"
 msgstr "Недоступно"
 
 #. TRANSLATORS: state of a network device that is establishing a connection
-#: src/utils/network.ts:86
+#: src/utils/network.ts:87
 msgid "Connecting"
 msgstr "Подключение"
 
 #. TRANSLATORS: state of a network device that is tearing its connection down
-#: src/utils/network.ts:90
+#: src/utils/network.ts:91
 msgid "Disconnecting"
 msgstr "Отключение"
 
 #. TRANSLATORS: state of a network device whose connection attempt did not succeed
-#: src/utils/network.ts:94
+#: src/utils/network.ts:95
 msgid "Failed"
 msgstr "Сбой"
 
-#: src/utils/network.ts:114
+#. TRANSLATORS: link speed of a network device in megabits per second. %d is
+#. replaced by the number, e.g. "100 Mb/s".
+#: src/utils/network.ts:117
+#, javascript-format
+msgid "%d Mb/s"
+msgstr ""
+
+#. TRANSLATORS: link speed of a network device in gigabits per second. %s is
+#. replaced by the number, e.g. "2.5 Gb/s".
+#: src/utils/network.ts:122
+#, javascript-format
+msgid "%s Gb/s"
+msgstr ""
+
+#. TRANSLATORS: shown for a network device with no cable plugged in.
+#: src/utils/network.ts:138
+msgid "No link"
+msgstr ""
+
+#. TRANSLATORS: shown for a network device that has a link but does not
+#. report how fast it is, e.g. a wireless or a virtual one.
+#: src/utils/network.ts:143
+msgid "Link up"
+msgstr ""
+
+#: src/utils/network.ts:196
 msgid "Ethernet"
 msgstr "Ethernet"
 
-#: src/utils/network.ts:115
+#: src/utils/network.ts:197
 msgid "Wi-Fi"
 msgstr "Wi-Fi"
 
-#: src/utils/network.ts:116
+#: src/utils/network.ts:198
 msgid "Loopback"
 msgstr "Loopback"
+
+#, javascript-format
+#~ msgid "Available devices: %s"
+#~ msgstr "Доступные устройства: %s"
+
+#, fuzzy, javascript-format
+#~ msgid "Use %s"
+#~ msgstr "Использовать диск %s"
 
 #~ msgid "Hide terminal"
 #~ msgstr "Скрыть терминал"
@@ -7018,9 +7105,6 @@ msgstr "Loopback"
 
 #~ msgid "The connection can be used by any available device."
 #~ msgstr "Это подключение может использоваться любым доступным устройством."
-
-#~ msgid "Choose device to bind by name"
-#~ msgstr "Выберите устройство для привязки по имени"
 
 #~ msgid "Bind to MAC address"
 #~ msgstr "Привязать к MAC-адресу"
@@ -7825,9 +7909,6 @@ msgstr "Loopback"
 #, c-format
 #~ msgid "Installation will configure partitions for booting at %s."
 #~ msgstr "Установка настроит разделы для загрузки по адресу %s."
-
-#~ msgid "Select booting partition"
-#~ msgstr "Выберите загрузочный раздел"
 
 #~ msgid ""
 #~ "The file systems will be allocated by default as [new partitions in the "
