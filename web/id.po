@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-22 12:12+0000\n"
+"POT-Creation-Date: 2026-09-22 14:50+0000\n"
 "PO-Revision-Date: 2026-06-26 02:12+0000\n"
 "Last-Translator: Arif Budiman <arifpedia@gmail.com>\n"
 "Language-Team: Indonesian <https://l10n.opensuse.org/projects/agama/agama-"
@@ -356,6 +356,7 @@ msgstr ""
 "Pengaturan [bahasa dan wilayah] untuk produk mungkin menawarkan lebih banyak "
 "opsi untuk dipilih."
 
+#. TRANSLATORS: confirmation button of the network device dialog.
 #. TRANSLATORS: button to save the localization settings
 #. TRANSLATORS: label for the form submit button.
 #. TRANSLATORS: button to save system settings changes
@@ -364,6 +365,7 @@ msgstr ""
 #: src/components/form/SubmitButton.tsx:54
 #: src/components/l10n/l10n-form/Form.tsx:110
 #: src/components/layout/Page.tsx:274
+#: src/components/network/connection-form/DeviceSelectorModal.tsx:224
 #: src/components/storage/dasd/FormatActionHandler.tsx:94
 #: src/components/storage/dasd/FormatActionHandler.tsx:119
 #: src/components/storage/formattable-device-form/Form.tsx:180
@@ -772,7 +774,7 @@ msgstr "Command-line Linux dengan hak administratif pada sistem installer."
 msgid "The terminal requires a larger screen size"
 msgstr "Terminal memerlukan ukuran layar yang lebih besar"
 
-#: src/components/form/ArrayField.tsx:66
+#: src/components/form/ArrayField.tsx:67
 msgid ""
 "Enter or Tab to add, Backspace or Delete to remove, arrow keys to navigate "
 "entries, Escape to exit"
@@ -781,7 +783,7 @@ msgstr ""
 "menghapus, tombol panah untuk menavigasi entri, Escape untuk keluar"
 
 #. TRANSLATORS: keyboard usage hint when entries exist.
-#: src/components/form/ArrayField.tsx:88
+#: src/components/form/ArrayField.tsx:89
 msgid ""
 "Enter or Tab to add, Backspace or Delete to remove, arrow keys to navigate"
 msgstr ""
@@ -789,19 +791,19 @@ msgstr ""
 "menghapus, tombol panah untuk menavigasi"
 
 #. TRANSLATORS: keyboard usage hint when field is empty.
-#: src/components/form/ArrayField.tsx:90
+#: src/components/form/ArrayField.tsx:91
 msgid "Enter or Tab to add"
 msgstr "Masukkan atau tekan Tab untuk menambah"
 
 #. TRANSLATORS: screen reader announcement when a duplicate entry is skipped. %s is the entry value.
-#: src/components/form/ArrayField.tsx:360
+#: src/components/form/ArrayField.tsx:361
 #, javascript-format
 msgid "%s already exists, skipped."
 msgstr "%s sudah ada, dilewati."
 
 #. TRANSLATORS: screen reader announcement when an invalid entry is
 #. added. First %s is the entry value, second %s is the validation error.
-#: src/components/form/ArrayField.tsx:371
+#: src/components/form/ArrayField.tsx:372
 #, javascript-format
 msgid "%s added but is invalid: %s. Select to edit."
 msgstr "%s ditambahkan tetapi tidak valid: %s. Pilih untuk mengedit."
@@ -810,7 +812,7 @@ msgstr "%s ditambahkan tetapi tidak valid: %s. Pilih untuk mengedit."
 #. is the entry value.
 #. TRANSLATORS: said after a value joins the ones the field holds. %s is the
 #. value.
-#: src/components/form/ArrayField.tsx:374
+#: src/components/form/ArrayField.tsx:375
 #: src/components/form/multi-select-field/messages.ts:61
 #, javascript-format
 msgid "%s added."
@@ -819,7 +821,7 @@ msgstr "%s ditambahkan."
 #. TRANSLATORS: screen reader announcement when an entry is removed. %s is
 #. the entry value.
 #. TRANSLATORS: said after a value is taken out of the field. %s is the value.
-#: src/components/form/ArrayField.tsx:384
+#: src/components/form/ArrayField.tsx:385
 #: src/components/form/multi-select-field/messages.ts:81
 #, javascript-format
 msgid "%s removed."
@@ -827,19 +829,13 @@ msgstr "%s dihapus."
 
 #. TRANSLATORS: screen reader announcement when an entry is moved to the
 #. input for editing. %s is the entry value.
-#: src/components/form/ArrayField.tsx:399
+#: src/components/form/ArrayField.tsx:400
 #, javascript-format
 msgid "%s moved to input for editing."
 msgstr "%s dipindahkan ke input untuk diedit."
 
-#. TRANSLATORS: screen reader announcement when all invalid entries are
-#. cleared. %d is the number of removed entries.
-#: src/components/form/ArrayField.tsx:409
-#, javascript-format
-msgid "%d invalid entries removed."
-msgstr "%d entri tidak valid dihapus."
-
-#: src/components/form/ArrayField.tsx:580
+#: src/components/form/ArrayField.tsx:579
+#: src/components/form/multi-select-field/MultiSelectField.tsx:928
 msgid "Select entries to edit or remove them. Or [remove all invalid entries.]"
 msgstr ""
 "Pilih entri untuk mengedit atau menghapusnya. Atau [hapus semua entri tidak "
@@ -879,21 +875,21 @@ msgstr "Baca selengkapnya"
 
 #. TRANSLATORS: accessible name of the arrow that opens the list of
 #. values a field offers.
-#: src/components/form/multi-select-field/MultiSelectField.tsx:790
+#: src/components/form/multi-select-field/MultiSelectField.tsx:805
 #, fuzzy
 msgid "Show options"
 msgstr "Tampilkan opsi global"
 
 #. TRANSLATORS: accessible name of the button that empties a
 #. field holding several values.
-#: src/components/form/multi-select-field/MultiSelectField.tsx:859
+#: src/components/form/multi-select-field/MultiSelectField.tsx:874
 #, fuzzy
 msgid "Clear all"
 msgstr "Hapus"
 
 #. TRANSLATORS: shown in place of the options when the text the
 #. user typed leaves nothing to choose from.
-#: src/components/form/multi-select-field/MultiSelectField.tsx:884
+#: src/components/form/multi-select-field/MultiSelectField.tsx:899
 #, fuzzy
 msgid "No options match"
 msgstr "Tidak ada pola yang cocok"
@@ -1063,13 +1059,13 @@ msgid "%s entries"
 msgstr "%s entri"
 
 #. TRANSLATORS: accessible label for an invalid entry. First %s is the entry value, second %s is the validation error.
-#: src/components/form/primitives/FieldEntry.tsx:113
+#: src/components/form/primitives/FieldEntry.tsx:117
 #, javascript-format
 msgid "%s is invalid: %s"
 msgstr "%s tidak valid: %s"
 
 #. TRANSLATORS: accessible label for the remove button of an entry. %s is the entry value.
-#: src/components/form/primitives/FieldEntry.tsx:122
+#: src/components/form/primitives/FieldEntry.tsx:126
 #, javascript-format
 msgid "Remove %s"
 msgstr "Hapus %s"
@@ -1121,6 +1117,13 @@ msgstr "%d entri ditambahkan, %d tidak valid, %d duplikat dilewati."
 #, fuzzy, javascript-format
 msgid "%d entries added, %d not available, %d duplicates skipped."
 msgstr "%d entri ditambahkan, %d tidak valid, %d duplikat dilewati."
+
+#. TRANSLATORS: screen reader announcement when all invalid entries are
+#. cleared at once. %d is the number of removed entries.
+#: src/components/form/primitives/entry-helpers.ts:188
+#, javascript-format
+msgid "%d invalid entries removed."
+msgstr "%d entri tidak valid dihapus."
 
 #: src/components/l10n/L10nPage.tsx:41
 msgid ""
@@ -1233,7 +1236,7 @@ msgstr "Kekuatan sinyal"
 msgid "Network not available"
 msgstr "Jaringan tidak tersedia"
 
-#: src/components/network/ConnectionDetails.tsx:111 src/utils/network.ts:117
+#: src/components/network/ConnectionDetails.tsx:111 src/utils/network.ts:199
 msgid "Bond"
 msgstr "Bond"
 
@@ -1243,7 +1246,7 @@ msgstr "Detail bond"
 
 #. TRANSLATORS: label for the bond mode field.
 #: src/components/network/ConnectionDetails.tsx:114
-#: src/components/network/connection-form/BondFields.tsx:86
+#: src/components/network/connection-form/BondFields.tsx:82
 msgid "Bond mode"
 msgstr "Mode bond"
 
@@ -1269,17 +1272,17 @@ msgstr "Tidak ditetapkan"
 
 #. TRANSLATORS: label for the bond options field.
 #: src/components/network/ConnectionDetails.tsx:120
-#: src/components/network/connection-form/BondFields.tsx:97
+#: src/components/network/connection-form/BondFields.tsx:93
 msgid "Bond options"
 msgstr "Opsi bond"
 
 #. TRANSLATORS: label for the bond ports field.
 #: src/components/network/ConnectionDetails.tsx:126
-#: src/components/network/connection-form/BondFields.tsx:111
+#: src/components/network/connection-form/BondFields.tsx:108
 msgid "Bond ports"
 msgstr "Port bond"
 
-#: src/components/network/ConnectionDetails.tsx:144 src/utils/network.ts:118
+#: src/components/network/ConnectionDetails.tsx:144 src/utils/network.ts:200
 msgid "Bridge"
 msgstr "Bridge"
 
@@ -1294,7 +1297,7 @@ msgstr "STP"
 #. TRANSLATORS: option label for disabling bridge STP.
 #. TRANSLATORS: authentication mode option
 #: src/components/network/ConnectionDetails.tsx:149
-#: src/components/network/connection-form/BridgeFields.tsx:54
+#: src/components/network/connection-form/BridgeFields.tsx:53
 #: src/components/users/authentication-form/RootAuthFields.tsx:76
 msgid "Disabled"
 msgstr "Dinonaktifkan"
@@ -1305,35 +1308,35 @@ msgstr "Diaktifkan"
 
 #. TRANSLATORS: label for the bridge priority field.
 #: src/components/network/ConnectionDetails.tsx:155
-#: src/components/network/connection-form/BridgeFields.tsx:143
+#: src/components/network/connection-form/BridgeFields.tsx:138
 msgid "Priority"
 msgstr "Prioritas"
 
 #. TRANSLATORS: label for the bridge forward delay field.
 #: src/components/network/ConnectionDetails.tsx:159
-#: src/components/network/connection-form/BridgeFields.tsx:172
+#: src/components/network/connection-form/BridgeFields.tsx:167
 msgid "Forward delay"
 msgstr "Tunda penerusan"
 
 #. TRANSLATORS: label for the bridge hello time field.
 #: src/components/network/ConnectionDetails.tsx:165
-#: src/components/network/connection-form/BridgeFields.tsx:192
+#: src/components/network/connection-form/BridgeFields.tsx:187
 msgid "Hello time"
 msgstr "Waktu hello"
 
 #. TRANSLATORS: label for the bridge max message age field.
 #: src/components/network/ConnectionDetails.tsx:169
-#: src/components/network/connection-form/BridgeFields.tsx:212
+#: src/components/network/connection-form/BridgeFields.tsx:207
 msgid "Max message age"
 msgstr "Usia maksimum pesan"
 
 #. TRANSLATORS: label for the bridge ports field.
 #: src/components/network/ConnectionDetails.tsx:175
-#: src/components/network/connection-form/BridgeFields.tsx:106
+#: src/components/network/connection-form/BridgeFields.tsx:103
 msgid "Bridge ports"
 msgstr "Port bridge"
 
-#: src/components/network/ConnectionDetails.tsx:193 src/utils/network.ts:119
+#: src/components/network/ConnectionDetails.tsx:193 src/utils/network.ts:201
 msgid "VLAN"
 msgstr "VLAN"
 
@@ -1343,7 +1346,7 @@ msgstr "Detail VLAN"
 
 #. TRANSLATORS: label for the VLAN ID field.
 #: src/components/network/ConnectionDetails.tsx:196
-#: src/components/network/connection-form/VlanFields.tsx:112
+#: src/components/network/connection-form/VlanFields.tsx:117
 msgid "VLAN ID"
 msgstr "ID VLAN"
 
@@ -1379,7 +1382,7 @@ msgstr "Gateway"
 #: src/components/network/ConnectionDetails.tsx:252
 #: src/components/network/ConnectionDetails.tsx:384
 #: src/components/network/ConnectionsTable.tsx:158
-#: src/components/network/connection-form/DeviceSelectorModal.tsx:94
+#: src/components/network/connection-form/DeviceSelectorModal.tsx:185
 msgid "IP Addresses"
 msgstr "Alamat IP"
 
@@ -1489,10 +1492,12 @@ msgid "Name"
 msgstr "Nama"
 
 #. TRANSLATORS: table header for a DASD devices table
+#. TRANSLATORS: table column with the type of a network device and, below
+#. it, the kernel driver it runs on.
 #. TRANSLATORS: label for the network connection type field.
 #: src/components/network/ConnectionsTable.tsx:122
 #: src/components/network/ConnectionsTable.tsx:250
-#: src/components/network/connection-form/DeviceSelectorModal.tsx:89
+#: src/components/network/connection-form/DeviceSelectorModal.tsx:149
 #: src/components/network/connection-form/Form.tsx:190
 #: src/components/storage/DeviceSelectorPage.tsx:55
 #: src/components/storage/dasd/DASDTable.tsx:528
@@ -1501,7 +1506,7 @@ msgstr "Jenis"
 
 #: src/components/network/ConnectionsTable.tsx:128
 #: src/components/network/ConnectionsTable.tsx:265
-#: src/components/network/connection-form/DeviceSelectorModal.tsx:98
+#: src/components/network/connection-form/DeviceSelectorModal.tsx:168
 msgid "State"
 msgstr "Status"
 
@@ -1510,7 +1515,7 @@ msgstr "Status"
 #. TRANSLATORS: table column with the name of a network device and, below
 #. it, the hardware identifier of its interface.
 #: src/components/network/ConnectionsTable.tsx:134
-#: src/components/network/connection-form/DeviceSelectorModal.tsx:79
+#: src/components/network/connection-form/DeviceSelectorModal.tsx:137
 #: src/components/storage/DrivesTable.tsx:72
 #: src/components/storage/MdRaidsTable.tsx:71
 #: src/components/storage/ProposalResultTable.tsx:134
@@ -1769,38 +1774,37 @@ msgstr "Pengikatan perangkat"
 #. TRANSLATORS: accessible label for the device selector. MAC address refers
 #. to the hardware identifier of the network interface.
 #. TRANSLATORS: label for the network interface name field.
-#: src/components/network/connection-form/BondFields.tsx:66
-#: src/components/network/connection-form/BondFields.tsx:71
-#: src/components/network/connection-form/BridgeFields.tsx:86
-#: src/components/network/connection-form/BridgeFields.tsx:91
-#: src/components/network/connection-form/DeviceSelector.tsx:108
+#: src/components/network/connection-form/BondFields.tsx:62
+#: src/components/network/connection-form/BondFields.tsx:67
+#: src/components/network/connection-form/BridgeFields.tsx:82
+#: src/components/network/connection-form/BridgeFields.tsx:87
+#: src/components/network/connection-form/DeviceSelector.tsx:121
 #: src/components/network/connection-form/Form.tsx:228
-#: src/components/network/connection-form/VlanFields.tsx:129
+#: src/components/network/connection-form/VlanFields.tsx:134
 msgid "Device name"
 msgstr "Nama perangkat"
 
 #. TRANSLATORS: helper text for the bond device name field.
-#: src/components/network/connection-form/BondFields.tsx:75
+#: src/components/network/connection-form/BondFields.tsx:71
 msgid "E.g., bond0"
 msgstr "Mis., bond0"
 
 #. TRANSLATORS: helper text for the bond options field.
-#: src/components/network/connection-form/BondFields.tsx:101
+#: src/components/network/connection-form/BondFields.tsx:97
 msgid "E.g., downdelay=0, primary=eth1, miimon=100, lacp_rate=fast"
 msgstr "Misal, downdelay=0, primary=eth1, miimon=100, lacp_rate=fast"
 
-#. TRANSLATORS: helper text for the bridge ports field. %s is a list of available devices.
-#. TRANSLATORS: helper text for the bond ports field. %s is a list of available devices.
-#: src/components/network/connection-form/BondFields.tsx:115
-#: src/components/network/connection-form/BridgeFields.tsx:110
-#, javascript-format
-msgid "Available devices: %s"
-msgstr "Perangkat yang tersedia: %s"
+#. TRANSLATORS: title of the dialog for picking the ports of a bond
+#. among the devices found in the system.
+#: src/components/network/connection-form/BondFields.tsx:113
+#, fuzzy
+msgid "Select bond ports"
+msgstr "Pilih partisi booting"
 
 #. TRANSLATORS: option for the VLAN protocol selector when no specific protocol is chosen.
 #. TRANSLATORS: option label for the bridge STP configuration to use the system default.
 #. TRANSLATORS: NTP mode option
-#: src/components/network/connection-form/BridgeFields.tsx:40
+#: src/components/network/connection-form/BridgeFields.tsx:39
 #: src/components/network/connection-form/VlanFields.tsx:38
 #: src/components/storage/shared/helpers.ts:60
 #: src/components/system/system-form/NtpFields.tsx:66
@@ -1808,13 +1812,13 @@ msgid "Default"
 msgstr "Bawaan"
 
 #. TRANSLATORS: description for the default bridge STP configuration.
-#: src/components/network/connection-form/BridgeFields.tsx:42
+#: src/components/network/connection-form/BridgeFields.tsx:41
 msgid "Enabled with the system default settings"
 msgstr "Diaktifkan dengan pengaturan bawaan sistem"
 
 #. TRANSLATORS: option label for enabling bridge STP.
 #. TRANSLATORS: NTP mode option
-#: src/components/network/connection-form/BridgeFields.tsx:47
+#: src/components/network/connection-form/BridgeFields.tsx:46
 #: src/components/product/registration-form/Form.tsx:160
 #: src/components/storage/utils.ts:72 src/components/storage/utils.ts:91
 #: src/components/system/system-form/NtpFields.tsx:73
@@ -1822,30 +1826,37 @@ msgid "Custom"
 msgstr "Khusus"
 
 #. TRANSLATORS: description for enabling bridge STP with manual settings.
-#: src/components/network/connection-form/BridgeFields.tsx:49
+#: src/components/network/connection-form/BridgeFields.tsx:48
 msgid "Explicitly enabled with manual settings"
 msgstr "Diaktifkan secara eksplisit dengan pengaturan manual"
 
 #. TRANSLATORS: description for disabling bridge STP.
-#: src/components/network/connection-form/BridgeFields.tsx:56
+#: src/components/network/connection-form/BridgeFields.tsx:55
 msgid "Not used by this bridge"
 msgstr "Tidak digunakan oleh bridge ini"
 
 #. TRANSLATORS: helper text for the bond device name field.
-#: src/components/network/connection-form/BridgeFields.tsx:95
+#: src/components/network/connection-form/BridgeFields.tsx:91
 msgid "E.g., br0"
 msgstr "Misalnya, br0"
 
+#. TRANSLATORS: title of the dialog for picking the ports of a
+#. bridge among the devices found in the system.
+#: src/components/network/connection-form/BridgeFields.tsx:108
+#, fuzzy
+msgid "Select bridge ports"
+msgstr "Port bridge"
+
 #. TRANSLATORS: label for the bridge STP (Spanning Tree Protocol) field.
-#: src/components/network/connection-form/BridgeFields.tsx:122
+#: src/components/network/connection-form/BridgeFields.tsx:117
 msgid "Spanning Tree Protocol (STP)"
 msgstr "Spanning Tree Protocol (STP)"
 
 #. TRANSLATORS: label suffix indicating an optional field.
-#: src/components/network/connection-form/BridgeFields.tsx:140
-#: src/components/network/connection-form/BridgeFields.tsx:169
-#: src/components/network/connection-form/BridgeFields.tsx:189
-#: src/components/network/connection-form/BridgeFields.tsx:209
+#: src/components/network/connection-form/BridgeFields.tsx:135
+#: src/components/network/connection-form/BridgeFields.tsx:164
+#: src/components/network/connection-form/BridgeFields.tsx:184
+#: src/components/network/connection-form/BridgeFields.tsx:204
 #: src/components/network/connection-form/IpFields.tsx:150
 #: src/components/product/registration-form/Form.tsx:187
 #: src/components/product/registration-form/Form.tsx:202
@@ -1860,65 +1871,70 @@ msgstr "(opsional)"
 #. field. Text inside square brackets [] is
 #. semantically and visually emphasized. Keep the
 #. brackets.
-#: src/components/network/connection-form/BridgeFields.tsx:154
+#: src/components/network/connection-form/BridgeFields.tsx:149
 msgid "Root bridge selection (0-61440). [Lower is higher priority]."
 msgstr ""
 "Pemilihan bridge root (0-61440). [Semakin rendah, semakin tinggi prioritas]."
 
 #. TRANSLATORS: helper text for the bridge forward delay field.
-#: src/components/network/connection-form/BridgeFields.tsx:178
+#: src/components/network/connection-form/BridgeFields.tsx:173
 msgid "Listening and learning time (4-30 seconds)."
 msgstr "Waktu mendengarkan dan belajar (4-30 detik)."
 
 #. TRANSLATORS: helper text for the bridge hello time field.
-#: src/components/network/connection-form/BridgeFields.tsx:198
+#: src/components/network/connection-form/BridgeFields.tsx:193
 msgid "Protocol message interval (1-10 seconds)."
 msgstr "Interval pesan protokol (1-10 detik)."
 
 #. TRANSLATORS: helper text for the bridge max message age field.
-#: src/components/network/connection-form/BridgeFields.tsx:218
+#: src/components/network/connection-form/BridgeFields.tsx:213
 msgid "Protocol message retention time (6-40 seconds)."
 msgstr "Waktu retensi pesan protokol (6-40 detik)."
 
-#: src/components/network/connection-form/DeviceSelector.tsx:108
+#: src/components/network/connection-form/DeviceSelector.tsx:121
 #: src/components/network/connection-form/Form.tsx:237
 msgid "Device MAC address"
 msgstr "Alamat MAC perangkat"
 
+#. TRANSLATORS: title of the dialog for picking a network device, when
+#. nothing more specific is known about what it will be used for.
+#: src/components/network/connection-form/DeviceSelector.tsx:125
+#, fuzzy
+msgid "Select a network device"
+msgstr "Pilih perangkat"
+
+#. TRANSLATORS: entry at the end of the device list,
+#. leading to a dialog listing the same devices with
+#. more information about each of them. The trailing
+#. ellipsis hints that more follows instead of a
+#. device being picked right away.
 #. TRANSLATORS: entry at the end of the device dropdown, leading
 #. to a dialog listing the same devices with more information
 #. about each of them. The trailing ellipsis hints that more
 #. follows instead of a device being picked right away.
-#: src/components/network/connection-form/DeviceSelector.tsx:159
+#: src/components/network/connection-form/DeviceSelector.tsx:180
+#: src/components/network/connection-form/PortsField.tsx:168
 #, fuzzy
 msgid "Browse with details..."
 msgstr "Detail bridge"
 
-#. TRANSLATORS: confirmation button of the network device dialog while no
-#. device is picked.
-#: src/components/network/connection-form/DeviceSelectorModal.tsx:116
-#: src/components/product/product-selection-form/Form.tsx:66
-msgid "Select"
-msgstr "Pilih"
+#. TRANSLATORS: table column telling whether a network device has a cable
+#. plugged in and, when it does, how fast the link is.
+#: src/components/network/connection-form/DeviceSelectorModal.tsx:163
+msgid "Link"
+msgstr ""
 
-#. TRANSLATORS: confirmation button of the network device dialog. %s is
-#. replaced by a device name, e.g. "enp1s0".
-#: src/components/network/connection-form/DeviceSelectorModal.tsx:119
-#, fuzzy, javascript-format
-msgid "Use %s"
-msgstr "Gunakan disk %s"
+#. TRANSLATORS: table column telling which bond or bridge already
+#. uses a network device as one of its ports.
+#: src/components/network/connection-form/DeviceSelectorModal.tsx:177
+msgid "Used by"
+msgstr ""
 
 #. TRANSLATORS: shown next to the disabled confirmation button
 #. of the network device dialog, when no device is picked.
-#: src/components/network/connection-form/DeviceSelectorModal.tsx:130
+#: src/components/network/connection-form/DeviceSelectorModal.tsx:211
 #: src/components/storage/DeviceSelectorModal.tsx:310
 msgid "Select a device"
-msgstr "Pilih perangkat"
-
-#. TRANSLATORS: title of the dialog for picking a network device
-#: src/components/network/connection-form/DeviceSelectorModal.tsx:153
-#, fuzzy
-msgid "Select a network device"
 msgstr "Pilih perangkat"
 
 #. TRANSLATORS: title of an error for a failed network connection save.
@@ -2068,6 +2084,13 @@ msgstr "Mis., 192.168.1.1"
 msgid "E.g., 2001:db8::1"
 msgstr "Mis., 2001:db8::1"
 
+#. TRANSLATORS: helper text for the ports field of a bond
+#. or a bridge, naming the two ways of filling it in.
+#: src/components/network/connection-form/PortsField.tsx:148
+#, fuzzy
+msgid "Choose devices or enter their names."
+msgstr "Pilih perangkat untuk diikat berdasarkan nama"
+
 #. TRANSLATORS: description for the 'Default' VLAN protocol option.
 #: src/components/network/connection-form/VlanFields.tsx:40
 msgid "Use the system default (802.1Q)."
@@ -2093,77 +2116,98 @@ msgstr "802.1ad"
 msgid "Use the 802.1ad protocol explicitly."
 msgstr "Gunakan protokol 802.1ad secara eksplisit."
 
+#. TRANSLATORS: title of the dialog for picking the device a VLAN
+#. is built on top of.
+#: src/components/network/connection-form/VlanFields.tsx:96
+#, fuzzy
+msgid "Select the parent device"
+msgstr "Pilih perangkat"
+
 #. TRANSLATORS: helper text for the VLAN ID field.
-#: src/components/network/connection-form/VlanFields.tsx:116
+#: src/components/network/connection-form/VlanFields.tsx:121
 msgid "Numeric identifier (0–4094)"
 msgstr "Identifikator numerik (0–4094)"
 
 #. TRANSLATORS: helper text for the VLAN device name field.
-#: src/components/network/connection-form/VlanFields.tsx:133
+#: src/components/network/connection-form/VlanFields.tsx:138
 msgid "E.g., eth0.100"
 msgstr "Misalnya, eth0.100"
 
 #. TRANSLATORS: label for the VLAN encapsulation protocol field.
-#: src/components/network/connection-form/VlanFields.tsx:144
+#: src/components/network/connection-form/VlanFields.tsx:149
 msgid "Encapsulation protocol"
 msgstr "Protokol enkapsulasi"
 
+#. TRANSLATORS: validation error for the ports field of a bond or a bridge,
+#. when it lists the device being configured. %s is its name, e.g. "bond0".
+#: src/components/network/connection-form/validations.ts:93
+#, javascript-format
+msgid "%s cannot be a port of itself"
+msgstr ""
+
+#. TRANSLATORS: validation error for the ports field of a bond or a bridge,
+#. when it lists the loopback device.
+#: src/components/network/connection-form/validations.ts:99
+#, fuzzy
+msgid "The loopback device cannot be a port"
+msgstr "Perangkat tidak dapat dikecilkan:"
+
 #. TRANSLATORS: validation error for the connection name field.
-#: src/components/network/connection-form/validations.ts:132
+#: src/components/network/connection-form/validations.ts:172
 msgid "Name is required"
 msgstr "Nama wajib diisi"
 
-#: src/components/network/connection-form/validations.ts:148
+#: src/components/network/connection-form/validations.ts:188
 msgid "At least one IPv4 address is required"
 msgstr "Setidaknya satu alamat IPv4 diperlukan"
 
-#: src/components/network/connection-form/validations.ts:149
+#: src/components/network/connection-form/validations.ts:189
 msgid "Some IPv4 addresses are invalid"
 msgstr "Beberapa alamat IPv4 tidak valid"
 
-#: src/components/network/connection-form/validations.ts:156
+#: src/components/network/connection-form/validations.ts:196
 msgid "IPv4 gateway is required"
 msgstr "Gateway IPv4 wajib diisi"
 
-#: src/components/network/connection-form/validations.ts:157
+#: src/components/network/connection-form/validations.ts:197
 msgid "Invalid IPv4 gateway"
 msgstr "Gateway IPv4 tidak valid"
 
-#: src/components/network/connection-form/validations.ts:164
+#: src/components/network/connection-form/validations.ts:204
 msgid "At least one IPv6 address is required"
 msgstr "Setidaknya satu alamat IPv6 diperlukan"
 
-#: src/components/network/connection-form/validations.ts:165
+#: src/components/network/connection-form/validations.ts:205
 msgid "Some IPv6 addresses are invalid"
 msgstr "Beberapa alamat IPv6 tidak valid"
 
-#: src/components/network/connection-form/validations.ts:172
+#: src/components/network/connection-form/validations.ts:212
 msgid "IPv6 gateway is required"
 msgstr "Gateway IPv6 wajib diisi"
 
-#: src/components/network/connection-form/validations.ts:173
+#: src/components/network/connection-form/validations.ts:213
 msgid "Invalid IPv6 gateway"
 msgstr "Gateway IPv6 tidak valid"
 
-#: src/components/network/connection-form/validations.ts:181
+#: src/components/network/connection-form/validations.ts:221
 msgid "At least one DNS server is required"
 msgstr "Setidaknya satu server DNS diperlukan"
 
-#: src/components/network/connection-form/validations.ts:182
+#: src/components/network/connection-form/validations.ts:222
 msgid "Some DNS server addresses are invalid"
 msgstr "Beberapa alamat server DNS tidak valid"
 
-#: src/components/network/connection-form/validations.ts:190
+#: src/components/network/connection-form/validations.ts:230
 msgid "At least one DNS search domain is required"
 msgstr "Setidaknya satu domain pencarian DNS diperlukan"
 
-#: src/components/network/connection-form/validations.ts:191
+#: src/components/network/connection-form/validations.ts:231
 msgid "Some DNS search domains are invalid"
 msgstr "Beberapa domain pencarian DNS tidak valid"
 
 #. TRANSLATORS: validation error for the bond options field when the 'primary' option is used in an invalid mode.
 #. %s is replaced with a list of valid mode names.
-#: src/components/network/connection-form/validations.ts:216
+#: src/components/network/connection-form/validations.ts:256
 #, javascript-format
 msgid "The 'primary' option is only valid for %s modes"
 msgstr "Opsi 'primary' hanya berlaku untuk mode %s"
@@ -2171,47 +2215,48 @@ msgstr "Opsi 'primary' hanya berlaku untuk mode %s"
 #. TRANSLATORS: validation error for the bond device name field.
 #. TRANSLATORS: validation error for the bridge device name field.
 #. TRANSLATORS: validation error for the VLAN device name field.
-#: src/components/network/connection-form/validations.ts:221
-#: src/components/network/connection-form/validations.ts:243
+#: src/components/network/connection-form/validations.ts:261
 #: src/components/network/connection-form/validations.ts:287
+#: src/components/network/connection-form/validations.ts:334
 msgid "Device name is required"
 msgstr "Nama perangkat wajib diisi"
 
 #. TRANSLATORS: validation error for the bond mode name field.
-#: src/components/network/connection-form/validations.ts:223
+#: src/components/network/connection-form/validations.ts:263
 msgid "Bond mode is required"
 msgstr "Mode bond wajib diisi"
 
 #. TRANSLATORS: validation error for the bond ports field.
-#: src/components/network/connection-form/validations.ts:225
+#: src/components/network/connection-form/validations.ts:268
 msgid "At least one bond port is required"
 msgstr "Setidaknya satu port bond diperlukan"
 
-#: src/components/network/connection-form/validations.ts:246
+#. TRANSLATORS: validation error for the bridge ports field.
+#: src/components/network/connection-form/validations.ts:292
 msgid "At least one bridge port is required"
 msgstr "Setidaknya satu port bridge diperlukan"
 
-#: src/components/network/connection-form/validations.ts:254
+#: src/components/network/connection-form/validations.ts:301
 msgid "Priority must be between 0 and 61440"
 msgstr "Prioritas harus berada di antara 0 dan 61440"
 
-#: src/components/network/connection-form/validations.ts:261
+#: src/components/network/connection-form/validations.ts:308
 msgid "Forward delay must be between 4 and 30 seconds"
 msgstr "Tunda penerusan harus berada di antara 4 dan 30 detik"
 
-#: src/components/network/connection-form/validations.ts:268
+#: src/components/network/connection-form/validations.ts:315
 msgid "Hello time must be between 1 and 10 seconds"
 msgstr "Waktu hello harus berada di antara 1 dan 10 detik"
 
-#: src/components/network/connection-form/validations.ts:275
+#: src/components/network/connection-form/validations.ts:322
 msgid "Max message age must be between 6 and 40 seconds"
 msgstr "Usia maksimum pesan harus berada di antara 6 dan 40 detik"
 
-#: src/components/network/connection-form/validations.ts:293
+#: src/components/network/connection-form/validations.ts:340
 msgid "VLAN ID is required"
 msgstr "ID VLAN diperlukan"
 
-#: src/components/network/connection-form/validations.ts:294
+#: src/components/network/connection-form/validations.ts:341
 msgid "VLAN ID must be between 0 and 4094"
 msgstr "ID VLAN harus berada antara 0 dan 4094"
 
@@ -2526,7 +2571,7 @@ msgstr "Potensi kehilangan data"
 
 #. TRANSLATORS: state of a network device whose situation cannot be determined
 #: src/components/overview/SystemInformationSection.tsx:61
-#: src/utils/network.ts:61 src/utils/network.ts:79 src/utils/network.ts:120
+#: src/utils/network.ts:62 src/utils/network.ts:80 src/utils/network.ts:202
 msgid "Unknown"
 msgstr "Tidak diketahui"
 
@@ -2825,6 +2870,10 @@ msgstr "Ubah ke %s"
 #, javascript-format
 msgid "Select %s"
 msgstr "Pilih %s"
+
+#: src/components/product/product-selection-form/Form.tsx:66
+msgid "Select"
+msgstr "Pilih"
 
 #: src/components/product/product-selection-form/Form.tsx:111
 msgid "Select a product to continue."
@@ -5215,7 +5264,7 @@ msgid "Go to iSCSI"
 msgstr "Buka iSCSI"
 
 #. TRANSLATORS: state of a network device that is up and running
-#: src/components/storage/iscsi/TargetsTable.tsx:161 src/utils/network.ts:88
+#: src/components/storage/iscsi/TargetsTable.tsx:161 src/utils/network.ts:89
 msgid "Connected"
 msgstr "Tersambung"
 
@@ -5236,7 +5285,7 @@ msgid "Disconnection failed"
 msgstr "Pemutusan gagal"
 
 #. TRANSLATORS: state of a network device that is available but not in use
-#: src/components/storage/iscsi/TargetsTable.tsx:166 src/utils/network.ts:92
+#: src/components/storage/iscsi/TargetsTable.tsx:166 src/utils/network.ts:93
 msgid "Disconnected"
 msgstr "Terputus"
 
@@ -6157,11 +6206,11 @@ msgstr "zFCP"
 msgid "Activate controllers"
 msgstr "Aktifkan pengontrol"
 
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:58 src/utils/network.ts:63
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:58 src/utils/network.ts:64
 msgid "Activated"
 msgstr "Diaktifkan"
 
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:59 src/utils/network.ts:65
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:59 src/utils/network.ts:66
 msgid "Deactivated"
 msgstr "Dinonaktifkan"
 
@@ -6498,52 +6547,85 @@ msgstr "Perbaiki kesalahan di bawah ini dan coba lagi"
 msgid "Go to [installation] summary."
 msgstr "Buka ringkasan [instalasi]."
 
-#: src/utils/network.ts:62
+#: src/utils/network.ts:63
 msgid "Activating"
 msgstr "Mengaktifkan"
 
-#: src/utils/network.ts:64
+#: src/utils/network.ts:65
 msgid "Deactivating"
 msgstr "Menonaktifkan"
 
 #. TRANSLATORS: state of a network device that the installer does not manage
-#: src/utils/network.ts:81
+#: src/utils/network.ts:82
 msgid "Unmanaged"
 msgstr ""
 
 #. TRANSLATORS: state of a network device that cannot be used, for example
 #. because its cable is unplugged
-#: src/utils/network.ts:84
+#: src/utils/network.ts:85
 #, fuzzy
 msgid "Unavailable"
 msgstr "Tidak tersedia"
 
 #. TRANSLATORS: state of a network device that is establishing a connection
-#: src/utils/network.ts:86
+#: src/utils/network.ts:87
 msgid "Connecting"
 msgstr "Menyambung"
 
 #. TRANSLATORS: state of a network device that is tearing its connection down
-#: src/utils/network.ts:90
+#: src/utils/network.ts:91
 msgid "Disconnecting"
 msgstr "Memutuskan sambungan"
 
 #. TRANSLATORS: state of a network device whose connection attempt did not succeed
-#: src/utils/network.ts:94
+#: src/utils/network.ts:95
 msgid "Failed"
 msgstr ""
 
-#: src/utils/network.ts:114
+#. TRANSLATORS: link speed of a network device in megabits per second. %d is
+#. replaced by the number, e.g. "100 Mb/s".
+#: src/utils/network.ts:117
+#, javascript-format
+msgid "%d Mb/s"
+msgstr ""
+
+#. TRANSLATORS: link speed of a network device in gigabits per second. %s is
+#. replaced by the number, e.g. "2.5 Gb/s".
+#: src/utils/network.ts:122
+#, javascript-format
+msgid "%s Gb/s"
+msgstr ""
+
+#. TRANSLATORS: shown for a network device with no cable plugged in.
+#: src/utils/network.ts:138
+msgid "No link"
+msgstr ""
+
+#. TRANSLATORS: shown for a network device that has a link but does not
+#. report how fast it is, e.g. a wireless or a virtual one.
+#: src/utils/network.ts:143
+msgid "Link up"
+msgstr ""
+
+#: src/utils/network.ts:196
 msgid "Ethernet"
 msgstr "Ethernet"
 
-#: src/utils/network.ts:115
+#: src/utils/network.ts:197
 msgid "Wi-Fi"
 msgstr "Wi-Fi"
 
-#: src/utils/network.ts:116
+#: src/utils/network.ts:198
 msgid "Loopback"
 msgstr "Loopback"
+
+#, javascript-format
+#~ msgid "Available devices: %s"
+#~ msgstr "Perangkat yang tersedia: %s"
+
+#, fuzzy, javascript-format
+#~ msgid "Use %s"
+#~ msgstr "Gunakan disk %s"
 
 #~ msgid "Hide terminal"
 #~ msgstr "Sembunyikan terminal"
@@ -6935,9 +7017,6 @@ msgstr "Loopback"
 
 #~ msgid "The connection can be used by any available device."
 #~ msgstr "Koneksi ini dapat digunakan oleh perangkat apa pun yang tersedia."
-
-#~ msgid "Choose device to bind by name"
-#~ msgstr "Pilih perangkat untuk diikat berdasarkan nama"
 
 #~ msgid "Bind to MAC address"
 #~ msgstr "Mengikat ke alamat MAC"
@@ -7731,9 +7810,6 @@ msgstr "Loopback"
 #, c-format
 #~ msgid "Installation will configure partitions for booting at %s."
 #~ msgstr "Instalasi akan mengkonfigurasi partisi untuk booting pada %s."
-
-#~ msgid "Select booting partition"
-#~ msgstr "Pilih partisi booting"
 
 #~ msgid ""
 #~ "The file systems will be allocated by default as [new partitions in the "
