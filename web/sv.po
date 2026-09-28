@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-23 15:30+0000\n"
+"POT-Creation-Date: 2026-09-28 13:30+0000\n"
 "PO-Revision-Date: 2026-09-24 16:13+0000\n"
 "Last-Translator: Luna  Jernberg <bittin@opensuse.org>\n"
 "Language-Team: Swedish <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -200,24 +200,40 @@ msgstr "Oväntat fel"
 msgid "Unknown error"
 msgstr "Okänt fel"
 
-#: src/components/core/InstallationExit.tsx:35
-msgid "The system is rebooting"
-msgstr "Systemet startar om"
+#: src/components/core/ExitInstallationDialog.tsx:51
+msgid ""
+"Configuration pre-scripts have been executed and may have modified your "
+"system. You can reboot or shut down, but any changes made by these scripts "
+"will not be undone."
+msgstr ""
 
-#: src/components/core/InstallationExit.tsx:39
-msgid "The installer interface is no longer available."
-msgstr "Installationsgränssnittet är inte längre tillgängligt."
+#: src/components/core/ExitInstallationDialog.tsx:56
+msgid ""
+"You can safely reboot or shut down the system. No changes have been made to "
+"your disks, and your current installation setup will be canceled."
+msgstr ""
 
-#: src/components/core/InstallationExit.tsx:44
-msgid "You can safely close this window."
-msgstr "Du kan säkert stänga det här fönstret."
+#: src/components/core/ExitInstallationDialog.tsx:73
+#: src/components/core/InstallerOptionsMenu.tsx:164
+#, fuzzy
+msgid "Exit installation"
+msgstr "Installation"
+
+#: src/components/core/ExitInstallationDialog.tsx:79
+#: src/components/core/RebootButton.tsx:54
+msgid "Reboot"
+msgstr "Starta om"
+
+#: src/components/core/ExitInstallationDialog.tsx:82
+msgid "Shut down"
+msgstr ""
 
 #. TRANSLATORS: tooltip and accessible name for the button that ends the
 #. terminal session
 #. TRANSLATORS: menu entry that closes the terminal, closing the session
 #. TRANSLATORS: action that closes the terminal, ending the session
 #: src/components/core/InstallationFailed.tsx:60
-#: src/components/core/InstallerOptionsMenu.tsx:143
+#: src/components/core/InstallerOptionsMenu.tsx:154
 #: src/components/core/TerminalPane.tsx:238
 #: src/components/core/TerminalUnavailable.tsx:56
 msgid "Close terminal"
@@ -226,7 +242,7 @@ msgstr "Stäng terminal"
 #. TRANSLATORS: menu entry that opens the terminal
 #. TRANSLATORS: action that opens a terminal to inspect the failed installation
 #: src/components/core/InstallationFailed.tsx:62
-#: src/components/core/InstallerOptionsMenu.tsx:145
+#: src/components/core/InstallerOptionsMenu.tsx:156
 msgid "Open terminal"
 msgstr "Öppna terminal"
 
@@ -245,7 +261,7 @@ msgstr "Starta om för att försöka igen."
 #. TRANSLATORS: menu entry to download the installer logs as an archive
 #. TRANSLATORS: action to download the installer logs as an archive
 #: src/components/core/InstallationFailed.tsx:88
-#: src/components/core/InstallerOptionsMenu.tsx:135
+#: src/components/core/InstallerOptionsMenu.tsx:146
 msgid "Download logs"
 msgstr "Ladda ner loggar"
 
@@ -413,11 +429,11 @@ msgstr "Språk och tangentbord"
 
 #. TRANSLATORS: label for the button that opens the menu with additional
 #. actions (show settings, download logs, change product...)
-#: src/components/core/InstallerOptionsMenu.tsx:85
+#: src/components/core/InstallerOptionsMenu.tsx:96
 msgid "More options"
 msgstr "Mer alternativ"
 
-#: src/components/core/InstallerOptionsMenu.tsx:119
+#: src/components/core/InstallerOptionsMenu.tsx:130
 #: src/components/storage/ConnectedDevicesMenu.tsx:86
 msgid "More"
 msgstr "Mer"
@@ -426,7 +442,7 @@ msgstr "Mer"
 #. configuration as a JSON file: the machine-readable
 #. representation of the same settings the UI otherwise shows
 #. as widgets across its screens.
-#: src/components/core/InstallerOptionsMenu.tsx:131
+#: src/components/core/InstallerOptionsMenu.tsx:142
 msgid "Show configuration"
 msgstr "Visa konfiguration"
 
@@ -528,16 +544,16 @@ msgstr "[CAPS LOCK] är på"
 msgid "Password visibility button"
 msgstr "Knapp för lösenordssynlighet"
 
-#: src/components/core/Popup.tsx:116
+#: src/components/core/Popup.tsx:114
 msgid "Confirm"
 msgstr "Bekräfta"
 
-#: src/components/core/Popup.tsx:158
+#: src/components/core/Popup.tsx:155
 msgid "Close"
 msgstr "Stäng"
 
 #. TRANSLATORS: label for the form cancel button.
-#: src/components/core/Popup.tsx:183 src/components/form/CancelButton.tsx:53
+#: src/components/core/Popup.tsx:180 src/components/form/CancelButton.tsx:53
 #: src/components/layout/Page.tsx:236
 #: src/components/network/WifiConnectionForm.tsx:190
 #: src/components/storage/iscsi/DiscoverFormPage.tsx:253
@@ -548,7 +564,7 @@ msgid "Cancel"
 msgstr "Avbryt"
 
 #. TRANSLATORS: progress message
-#: src/components/core/Popup.tsx:305
+#: src/components/core/Popup.tsx:301
 msgid "Loading data..."
 msgstr "Laddar data..."
 
@@ -644,10 +660,6 @@ msgstr "Inga väntande uppgifter"
 msgid "All background tasks completed"
 msgstr "Alla bakgrundsuppgifter är slutförda"
 
-#: src/components/core/RebootButton.tsx:54
-msgid "Reboot"
-msgstr "Starta om"
-
 #: src/components/core/ResourceNotFound.tsx:42
 msgid "Resource not found or lost"
 msgstr "Resursen hittades inte eller förlorades"
@@ -701,6 +713,23 @@ msgstr "Mer åtgärder"
 #: src/components/core/Summary.tsx:72
 msgid "Waiting for proposal"
 msgstr "Väntar på förslag"
+
+#: src/components/core/TeardownDialog.tsx:35
+msgid "The system is rebooting"
+msgstr "Systemet startar om"
+
+#: src/components/core/TeardownDialog.tsx:35
+#, fuzzy
+msgid "The system is shutting down"
+msgstr "Systemet startar om"
+
+#: src/components/core/TeardownDialog.tsx:48
+msgid "The installer interface is no longer available."
+msgstr "Installationsgränssnittet är inte längre tillgängligt."
+
+#: src/components/core/TeardownDialog.tsx:53
+msgid "You can safely close this window."
+msgstr "Du kan säkert stänga det här fönstret."
 
 #. TRANSLATORS: accessible name for the divider used to resize the
 #. terminal panel by dragging or with the arrow keys

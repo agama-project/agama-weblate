@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-23 15:30+0000\n"
+"POT-Creation-Date: 2026-09-28 13:30+0000\n"
 "PO-Revision-Date: 2026-01-10 08:04+0000\n"
 "Last-Translator: \"Kristijan \\\"Fremen\\\" Velkovski\" <me@krisfremen.com>\n"
 "Language-Team: Macedonian <https://l10n.opensuse.org/projects/agama/agama-"
@@ -201,17 +201,32 @@ msgstr ""
 msgid "Unknown error"
 msgstr ""
 
-#: src/components/core/InstallationExit.tsx:35
-#, fuzzy
-msgid "The system is rebooting"
-msgstr "Вашиот систем се рестартира"
-
-#: src/components/core/InstallationExit.tsx:39
-msgid "The installer interface is no longer available."
+#: src/components/core/ExitInstallationDialog.tsx:51
+msgid ""
+"Configuration pre-scripts have been executed and may have modified your "
+"system. You can reboot or shut down, but any changes made by these scripts "
+"will not be undone."
 msgstr ""
 
-#: src/components/core/InstallationExit.tsx:44
-msgid "You can safely close this window."
+#: src/components/core/ExitInstallationDialog.tsx:56
+msgid ""
+"You can safely reboot or shut down the system. No changes have been made to "
+"your disks, and your current installation setup will be canceled."
+msgstr ""
+
+#: src/components/core/ExitInstallationDialog.tsx:73
+#: src/components/core/InstallerOptionsMenu.tsx:164
+#, fuzzy
+msgid "Exit installation"
+msgstr "Потврдете ја инсталацијата"
+
+#: src/components/core/ExitInstallationDialog.tsx:79
+#: src/components/core/RebootButton.tsx:54
+msgid "Reboot"
+msgstr "Рестартирај"
+
+#: src/components/core/ExitInstallationDialog.tsx:82
+msgid "Shut down"
 msgstr ""
 
 #. TRANSLATORS: tooltip and accessible name for the button that ends the
@@ -219,7 +234,7 @@ msgstr ""
 #. TRANSLATORS: menu entry that closes the terminal, closing the session
 #. TRANSLATORS: action that closes the terminal, ending the session
 #: src/components/core/InstallationFailed.tsx:60
-#: src/components/core/InstallerOptionsMenu.tsx:143
+#: src/components/core/InstallerOptionsMenu.tsx:154
 #: src/components/core/TerminalPane.tsx:238
 #: src/components/core/TerminalUnavailable.tsx:56
 msgid "Close terminal"
@@ -228,7 +243,7 @@ msgstr ""
 #. TRANSLATORS: menu entry that opens the terminal
 #. TRANSLATORS: action that opens a terminal to inspect the failed installation
 #: src/components/core/InstallationFailed.tsx:62
-#: src/components/core/InstallerOptionsMenu.tsx:145
+#: src/components/core/InstallerOptionsMenu.tsx:156
 msgid "Open terminal"
 msgstr ""
 
@@ -248,7 +263,7 @@ msgstr ""
 #. TRANSLATORS: menu entry to download the installer logs as an archive
 #. TRANSLATORS: action to download the installer logs as an archive
 #: src/components/core/InstallationFailed.tsx:88
-#: src/components/core/InstallerOptionsMenu.tsx:135
+#: src/components/core/InstallerOptionsMenu.tsx:146
 msgid "Download logs"
 msgstr ""
 
@@ -413,12 +428,12 @@ msgstr ""
 
 #. TRANSLATORS: label for the button that opens the menu with additional
 #. actions (show settings, download logs, change product...)
-#: src/components/core/InstallerOptionsMenu.tsx:85
+#: src/components/core/InstallerOptionsMenu.tsx:96
 #, fuzzy
 msgid "More options"
 msgstr "Не може да се поврзе со D-Bus"
 
-#: src/components/core/InstallerOptionsMenu.tsx:119
+#: src/components/core/InstallerOptionsMenu.tsx:130
 #: src/components/storage/ConnectedDevicesMenu.tsx:86
 msgid "More"
 msgstr ""
@@ -427,7 +442,7 @@ msgstr ""
 #. configuration as a JSON file: the machine-readable
 #. representation of the same settings the UI otherwise shows
 #. as widgets across its screens.
-#: src/components/core/InstallerOptionsMenu.tsx:131
+#: src/components/core/InstallerOptionsMenu.tsx:142
 #, fuzzy
 msgid "Show configuration"
 msgstr "Не може да се поврзе со D-Bus"
@@ -531,16 +546,16 @@ msgstr ""
 msgid "Password visibility button"
 msgstr ""
 
-#: src/components/core/Popup.tsx:116
+#: src/components/core/Popup.tsx:114
 msgid "Confirm"
 msgstr ""
 
-#: src/components/core/Popup.tsx:158
+#: src/components/core/Popup.tsx:155
 msgid "Close"
 msgstr "Затвори"
 
 #. TRANSLATORS: label for the form cancel button.
-#: src/components/core/Popup.tsx:183 src/components/form/CancelButton.tsx:53
+#: src/components/core/Popup.tsx:180 src/components/form/CancelButton.tsx:53
 #: src/components/layout/Page.tsx:236
 #: src/components/network/WifiConnectionForm.tsx:190
 #: src/components/storage/iscsi/DiscoverFormPage.tsx:253
@@ -551,7 +566,7 @@ msgid "Cancel"
 msgstr "Откажи"
 
 #. TRANSLATORS: progress message
-#: src/components/core/Popup.tsx:305
+#: src/components/core/Popup.tsx:301
 msgid "Loading data..."
 msgstr "Се читаат податоци..."
 
@@ -648,10 +663,6 @@ msgstr ""
 msgid "All background tasks completed"
 msgstr ""
 
-#: src/components/core/RebootButton.tsx:54
-msgid "Reboot"
-msgstr "Рестартирај"
-
 #: src/components/core/ResourceNotFound.tsx:42
 msgid "Resource not found or lost"
 msgstr ""
@@ -709,6 +720,24 @@ msgstr "Не може да се поврзе со D-Bus"
 
 #: src/components/core/Summary.tsx:72
 msgid "Waiting for proposal"
+msgstr ""
+
+#: src/components/core/TeardownDialog.tsx:35
+#, fuzzy
+msgid "The system is rebooting"
+msgstr "Вашиот систем се рестартира"
+
+#: src/components/core/TeardownDialog.tsx:35
+#, fuzzy
+msgid "The system is shutting down"
+msgstr "Вашиот систем се рестартира"
+
+#: src/components/core/TeardownDialog.tsx:48
+msgid "The installer interface is no longer available."
+msgstr ""
+
+#: src/components/core/TeardownDialog.tsx:53
+msgid "You can safely close this window."
 msgstr ""
 
 #. TRANSLATORS: accessible name for the divider used to resize the
