@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-22 12:12+0000\n"
+"POT-Creation-Date: 2026-10-01 12:15+0000\n"
 "PO-Revision-Date: 2026-07-27 04:12+0000\n"
 "Last-Translator: Grace Yu <grace.yu@excel-gits.com>\n"
 "Language-Team: Chinese (Taiwan) <https://l10n.opensuse.org/projects/agama/"
@@ -48,6 +48,7 @@ msgstr ""
 
 #. TRANSLATORS: {0} is a URL
 #: agama-autoinstall/src/scripts.rs:135
+#, rust-format
 msgid ""
 "It was not possible to load the script from {0}. Do you want to try again?"
 msgstr "無法從 {0} 載入程序檔。是否要重試？"
@@ -115,6 +116,7 @@ msgstr "請輸入 root 密碼："
 
 #. TRANSLATORS: {0} is a host name
 #: agama-cli/src/auth.rs:179
+#, rust-format
 msgid "Not authenticated in {0}"
 msgstr "未在 {0} 中進行驗證"
 
@@ -303,9 +305,11 @@ msgstr "使用 JSON 綱要驗證設定檔"
 
 #. TRANSLATORS: CLI help for: agama config validate (details)
 #: agama-cli/src/config.rs:115
+#, fuzzy
 msgid ""
-"Schema is available at /usr/share/agama/schema/profile.schema.json Note: "
-"validation is always done as part of all other \"agama config\" commands."
+"Schema is available at /usr/share/agama/openapi/nightly/schemas/"
+"config.schema.json Note: validation is always done as part of all other "
+"\"agama config\" commands."
 msgstr ""
 "綱要檔案路徑為 /usr/share/agama/schema/profile.schema.json 注意：所有其他 "
 "\"agama config\" 指令執行時均會自動進行該驗證。"
@@ -941,6 +945,7 @@ msgstr "執行套件程序檔時出現問題。"
 
 #. TRANSLATORS: substituting: key ID, (key name), fingerprint
 #: agama-software/src/callbacks/security.rs:104
+#, rust-format
 msgid ""
 "The key {0} ({1}) with fingerprint {2} is unknown. Do you want to trust this "
 "key?"
@@ -1049,11 +1054,11 @@ msgstr "錯誤："
 msgid "Details:"
 msgstr "詳細資料："
 
-#: agama-utils/src/api/question.rs:342 agama-utils/src/question/start.rs:48
+#: agama-utils/src/api/question.rs:346 agama-utils/src/question/start.rs:48
 msgid "No"
 msgstr "否"
 
-#: agama-utils/src/api/question.rs:342 agama-utils/src/question/start.rs:48
+#: agama-utils/src/api/question.rs:346 agama-utils/src/question/start.rs:48
 msgid "Yes"
 msgstr "是"
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-22 12:12+0000\n"
+"POT-Creation-Date: 2026-10-01 12:15+0000\n"
 "PO-Revision-Date: 2026-08-28 12:13+0000\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <https://l10n.opensuse.org/projects/agama/agama-rust-"
@@ -49,6 +49,7 @@ msgstr "Prerušiť"
 
 #. TRANSLATORS: {0} is a URL
 #: agama-autoinstall/src/scripts.rs:135
+#, rust-format
 msgid ""
 "It was not possible to load the script from {0}. Do you want to try again?"
 msgstr "Nebolo možné načítať skript z {0}. Chcete to skúsiť znova?"
@@ -120,6 +121,7 @@ msgstr "Prosím, zadajte heslo správcu systému:"
 
 #. TRANSLATORS: {0} is a host name
 #: agama-cli/src/auth.rs:179
+#, rust-format
 msgid "Not authenticated in {0}"
 msgstr "Bez overenia v {0}"
 
@@ -319,9 +321,11 @@ msgstr "Overiť profil pomocou schémy JSON"
 
 #. TRANSLATORS: CLI help for: agama config validate (details)
 #: agama-cli/src/config.rs:115
+#, fuzzy
 msgid ""
-"Schema is available at /usr/share/agama/schema/profile.schema.json Note: "
-"validation is always done as part of all other \"agama config\" commands."
+"Schema is available at /usr/share/agama/openapi/nightly/schemas/"
+"config.schema.json Note: validation is always done as part of all other "
+"\"agama config\" commands."
 msgstr ""
 "Schéma je k dispozícii v /usr/share/agama/schema/profile.schema.json "
 "Poznámka: overenie sa vždy vykonáva ako súčasť všetkých ostatných príkazov "
@@ -972,6 +976,7 @@ msgstr "Pri spúšťaní skriptu balíka nastal problém."
 
 #. TRANSLATORS: substituting: key ID, (key name), fingerprint
 #: agama-software/src/callbacks/security.rs:104
+#, rust-format
 msgid ""
 "The key {0} ({1}) with fingerprint {2} is unknown. Do you want to trust this "
 "key?"
@@ -1085,11 +1090,11 @@ msgstr "Chyba:"
 msgid "Details:"
 msgstr "Podrobnosti:"
 
-#: agama-utils/src/api/question.rs:342 agama-utils/src/question/start.rs:48
+#: agama-utils/src/api/question.rs:346 agama-utils/src/question/start.rs:48
 msgid "No"
 msgstr "Nie"
 
-#: agama-utils/src/api/question.rs:342 agama-utils/src/question/start.rs:48
+#: agama-utils/src/api/question.rs:346 agama-utils/src/question/start.rs:48
 msgid "Yes"
 msgstr "Áno"
 
