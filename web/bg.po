@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-28 13:30+0000\n"
+"POT-Creation-Date: 2026-10-06 12:11+0000\n"
 "PO-Revision-Date: 2026-02-26 19:04+0000\n"
 "Last-Translator: Topalski <fujinami_goops@slmail.me>\n"
 "Language-Team: Bulgarian <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -210,7 +210,7 @@ msgid ""
 msgstr ""
 
 #: src/components/core/ExitInstallationDialog.tsx:73
-#: src/components/core/InstallerOptionsMenu.tsx:164
+#: src/components/core/InstallerOptionsMenu.tsx:167
 msgid "Exit installation"
 msgstr ""
 
@@ -228,8 +228,8 @@ msgstr ""
 #. TRANSLATORS: menu entry that closes the terminal, closing the session
 #. TRANSLATORS: action that closes the terminal, ending the session
 #: src/components/core/InstallationFailed.tsx:60
-#: src/components/core/InstallerOptionsMenu.tsx:154
-#: src/components/core/TerminalPane.tsx:238
+#: src/components/core/InstallerOptionsMenu.tsx:157
+#: src/components/core/TerminalPane.tsx:373
 #: src/components/core/TerminalUnavailable.tsx:56
 msgid "Close terminal"
 msgstr ""
@@ -237,7 +237,7 @@ msgstr ""
 #. TRANSLATORS: menu entry that opens the terminal
 #. TRANSLATORS: action that opens a terminal to inspect the failed installation
 #: src/components/core/InstallationFailed.tsx:62
-#: src/components/core/InstallerOptionsMenu.tsx:156
+#: src/components/core/InstallerOptionsMenu.tsx:159
 msgid "Open terminal"
 msgstr ""
 
@@ -723,63 +723,98 @@ msgstr ""
 msgid "Resize terminal"
 msgstr ""
 
+#. TRANSLATORS: the Control key, as labeled on the keyboard
+#: src/components/core/TerminalPane.tsx:62
+msgid "Ctrl"
+msgstr ""
+
+#. TRANSLATORS: the Shift key, as labeled on the keyboard
+#: src/components/core/TerminalPane.tsx:64
+msgid "Shift"
+msgstr ""
+
+#. TRANSLATORS: the Enter (or Return) key, as labeled on the keyboard
+#: src/components/core/TerminalPane.tsx:66
+msgid "Enter"
+msgstr ""
+
+#. TRANSLATORS: the space bar, as labeled on the keyboard
+#: src/components/core/TerminalPane.tsx:68
+msgid "Space"
+msgstr ""
+
+#. TRANSLATORS: the tabulator key, as labeled on the keyboard
+#: src/components/core/TerminalPane.tsx:70
+msgid "Tab"
+msgstr ""
+
 #. TRANSLATORS: tooltip for the button that makes the terminal text smaller
-#: src/components/core/TerminalPane.tsx:57
+#: src/components/core/TerminalPane.tsx:92
 msgid "Decrease font size"
 msgstr ""
 
 #. TRANSLATORS: tooltip for the button that makes the terminal text bigger
-#: src/components/core/TerminalPane.tsx:59
+#: src/components/core/TerminalPane.tsx:94
 msgid "Increase font size"
 msgstr ""
 
 #. TRANSLATORS: tooltip for the button that clears the terminal output
-#: src/components/core/TerminalPane.tsx:61
+#: src/components/core/TerminalPane.tsx:96
 msgid "Clear terminal"
 msgstr ""
 
 #. TRANSLATORS: how to move the keyboard focus out of the terminal, where
 #. every key press otherwise goes to the shell. %1$s, %2$s and %3$s are the
 #. Ctrl, Shift and L keys, pressed together, and are shown as keys.
-#: src/components/core/TerminalPane.tsx:107
+#: src/components/core/TerminalPane.tsx:143
 #, javascript-format
 msgid "%1$s+%2$s+%3$s to move focus out"
 msgstr ""
 
-#. TRANSLATORS: the Control key, as labeled on the keyboard
-#: src/components/core/TerminalPane.tsx:110
-msgid "Ctrl"
+#. TRANSLATORS: shown over the terminal when it is reached with the keyboard,
+#. before entering the shell. %1$s and %2$s are the Enter and Space keys,
+#. either of which starts typing in the shell, and %3$s is the Tab key, which
+#. moves on to whatever comes after the terminal. All three are shown as keys.
+#: src/components/core/TerminalPane.tsx:167
+#, javascript-format
+msgid "Press %1$s or %2$s to type here, or %3$s to move on."
 msgstr ""
 
-#. TRANSLATORS: the Shift key, as labeled on the keyboard
-#: src/components/core/TerminalPane.tsx:112
-msgid "Shift"
+#. TRANSLATORS: shown right below the sentence above, as the way back out of
+#. the shell once inside. %1$s, %2$s and %3$s are the Ctrl, Shift and L keys,
+#. pressed together, and are shown as keys.
+#: src/components/core/TerminalPane.tsx:171
+#, javascript-format
+msgid "Then %1$s+%2$s+%3$s to move out."
 msgstr ""
 
+#. TRANSLATORS: accessible name of the terminal surface, where the shell
+#. output is shown and typed into
 #. TRANSLATORS: accessible name of the terminal panel region
-#: src/components/core/TerminalPane.tsx:155
+#: src/components/core/TerminalPane.tsx:210
+#: src/components/core/TerminalPane.tsx:276
 msgid "Terminal"
 msgstr ""
 
-#: src/components/core/TerminalPane.tsx:173
+#: src/components/core/TerminalPane.tsx:294
 #: src/components/layout/Header.tsx:191
 msgid "Skip to terminal"
 msgstr ""
 
 #. TRANSLATORS: tooltip and accessible name for the button that collapses the
 #. terminal panel to a bar, keeping the session
-#: src/components/core/TerminalPane.tsx:264
+#: src/components/core/TerminalPane.tsx:399
 msgid "Minimize terminal"
 msgstr ""
 
 #. TRANSLATORS: tooltip and accessible name for the button that expands the
 #. collapsed terminal panel back to its full size
-#: src/components/core/TerminalPane.tsx:267
+#: src/components/core/TerminalPane.tsx:402
 msgid "Restore terminal"
 msgstr ""
 
 #. TRANSLATORS: one-line summary of what the terminal is for
-#: src/components/core/TerminalPane.tsx:271
+#: src/components/core/TerminalPane.tsx:406
 msgid ""
 "Linux command-line with administrative privileges on the installer system."
 msgstr ""
