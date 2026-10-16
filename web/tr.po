@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-06 12:11+0000\n"
+"POT-Creation-Date: 2026-10-16 09:03+0000\n"
 "PO-Revision-Date: 2026-08-25 15:33+0000\n"
 "Last-Translator: Efe Mert <efemert1@proton.me>\n"
 "Language-Team: Turkish <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -43,8 +43,6 @@ msgstr "Kontrast"
 #: src/components/core/AppearanceSettings.tsx:144
 #: src/components/network/connection-form/IpFields.tsx:46
 #: src/components/storage/BootSelectionPage.tsx:203
-#: src/components/storage/SizeModeSelect.tsx:191
-#: src/components/storage/SizeModeSelect.tsx:196
 #: src/components/storage/iscsi/TargetLoginPage.tsx:58
 #: src/components/storage/shared/SizeFields.tsx:67
 #: src/components/storage/shared/SizeFields.tsx:250
@@ -668,11 +666,6 @@ msgstr "Yok veya ulaşılamaz."
 #: src/components/storage/ProposalResultSection.tsx:136
 msgid "Actions"
 msgstr "Eylemler"
-
-#: src/components/core/SelectTypeaheadCreatable.tsx:70
-#: src/components/storage/DeviceSelectorModal.tsx:296
-msgid "Add"
-msgstr "Ekle"
 
 #: src/components/core/SelectableDataTable.tsx:401
 msgid "Row expansion"
@@ -2082,8 +2075,6 @@ msgstr "Ağdan gelen yapılandırma artı statik adresler ve ağ geçidi"
 #. TRANSLATORS: Network summary title when using manual/static IP configuration
 #: src/components/network/connection-form/IpFields.tsx:60
 #: src/components/overview/NetworkSummary.tsx:128
-#: src/components/storage/SizeModeSelect.tsx:191
-#: src/components/storage/SizeModeSelect.tsx:199
 #: src/components/storage/iscsi/TargetLoginPage.tsx:56
 msgid "Manual"
 msgstr "Manuel"
@@ -3470,205 +3461,6 @@ msgstr "Hiçbir yerel ayar filtreye uymuyor."
 msgid "Filter by name and description"
 msgstr "Desen başlığına veya açıklamasına göre filtrele"
 
-#: src/components/storage/AutoSizeText.tsx:35
-msgid "logical volume"
-msgstr "mantıksal alan"
-
-#: src/components/storage/AutoSizeText.tsx:35
-msgid "partition"
-msgstr "bölümleme"
-
-#. TRANSLATORS: %1$s is a size with units (eg. 3 GiB) and %2$s is a device type (eg. partition)
-#: src/components/storage/AutoSizeText.tsx:48
-#, javascript-format
-msgid "A generic size of %1$s will be used for the new %2$s"
-msgstr "Yeni %2$s için %1$s genel boyutu kullanılacak"
-
-#. TRANSLATORS: %1$s and %2$s are sizes with units (eg. 3 GiB) and %3$s is a device type (eg. partition)
-#: src/components/storage/AutoSizeText.tsx:56
-#, javascript-format
-msgid ""
-"A generic size range between %1$s and %2$s will be used for the new %3$s"
-msgstr ""
-"Yeni %3$s için %1$s ile %2$s arasında genel bir boyut aralığı kullanılacak"
-
-#. TRANSLATORS: %1$s is a size with units (eg. 3 GiB) and %1$s is a device type (eg. partition)
-#: src/components/storage/AutoSizeText.tsx:65
-#, javascript-format
-msgid "A generic minimum size of %1$s will be used for the new %2$s"
-msgstr "Yeni %2$s için genel bir asgari %1$s boyutu kullanılacak"
-
-#. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
-#: src/components/storage/AutoSizeText.tsx:82
-#, javascript-format
-msgid "A %1$s of %2$s will be created for %3$s if possible"
-msgstr "Mümkünse %3$s için %2$s'den %1$s oluşturulacak"
-
-#. TRANSLATORS: %1$s is a device type (eg. partition), %2$s and %3$s are sizes with units (10 GiB), and %4$s is a mount path (/home)
-#: src/components/storage/AutoSizeText.tsx:91
-#, javascript-format
-msgid ""
-"A %1$s with a size between %2$s and %3$s will be created for %4$s if possible"
-msgstr ""
-"Mümkünse %4$s için %2$s ile %3$s arasında bir boyuta sahip %1$s oluşturulacak"
-
-#. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
-#: src/components/storage/AutoSizeText.tsx:101
-#, javascript-format
-msgid "A %1$s of at least %2$s will be created for %3$s if possible"
-msgstr "Mümkünse %3$s için en az %2$s'lik bir %1$s oluşturulacak"
-
-#. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
-#: src/components/storage/AutoSizeText.tsx:119
-#, javascript-format
-msgid ""
-"Based on the amount of RAM in the system, a %1$s of %2$s will be planned for "
-"%3$s"
-msgstr ""
-"Sistemdeki RAM miktarına bağlı olarak, %3$s için %1$s veya %2$s "
-"planlanacaktır"
-
-#: src/components/storage/AutoSizeText.tsx:129
-#, javascript-format
-msgid ""
-"Based on the amount of RAM in the system, a %1$s with a size between %2$s "
-"and %3$s will be planned for %4$s"
-msgstr ""
-"Sistemdeki RAM miktarına bağlı olarak, %4$s için %2$s ile %3$s arasında bir "
-"boyuta sahip %1$s planlanacaktır."
-
-#. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
-#: src/components/storage/AutoSizeText.tsx:140
-#, javascript-format
-msgid ""
-"Based on the amount of RAM in the system, a %1$s of at least %2$s will be "
-"planned for %3$s"
-msgstr ""
-"Sistemdeki RAM miktarına bağlı olarak, %3$s için en az %2$s'lik bir %1$s "
-"planlanacaktır"
-
-#: src/components/storage/AutoSizeText.tsx:169
-#, javascript-format
-msgid ""
-"The size for %1$s will be dynamically adjusted based on the amount of RAM in "
-"the system, the usage of Btrfs snapshots and the presence of a separate file "
-"system for %2$s."
-msgstr ""
-"%1$s için boyut, sistemdeki RAM miktarına, Btrfs anlık görüntülerinin "
-"kullanımına ve %2$s için ayrı bir dosya sisteminin varlığına bağlı olarak "
-"dinamik olarak ayarlanacaktır."
-
-#: src/components/storage/AutoSizeText.tsx:180
-#, javascript-format
-msgid ""
-"The size for %1$s will be dynamically adjusted based on the amount of RAM in "
-"the system, the usage of Btrfs snapshots and the presence of separate file "
-"systems for %2$s."
-msgstr ""
-"%1$s için boyut, sistemdeki RAM miktarına, Btrfs anlık görüntülerinin "
-"kullanımına ve %2$s için ayrı dosya sistemlerinin varlığına bağlı olarak "
-"dinamik olarak ayarlanacaktır."
-
-#: src/components/storage/AutoSizeText.tsx:190
-#, javascript-format
-msgid ""
-"The size for %s will be dynamically adjusted based on the amount of RAM in "
-"the system and the usage of Btrfs snapshots."
-msgstr ""
-"%s boyutu, sistemdeki RAM miktarına ve Btrfs anlık görüntülerinin "
-"kullanımına bağlı olarak dinamik olarak ayarlanacaktır."
-
-#: src/components/storage/AutoSizeText.tsx:201
-#, javascript-format
-msgid ""
-"The size for %1$s will be dynamically adjusted based on the amount of RAM in "
-"the system and the presence of a separate file system for %2$s."
-msgstr ""
-"%1$s için boyut, sistemdeki RAM miktarına ve %2$s için ayrı bir dosya "
-"sisteminin varlığına bağlı olarak dinamik olarak ayarlanacaktır."
-
-#: src/components/storage/AutoSizeText.tsx:211
-#, javascript-format
-msgid ""
-"The size for %1$s will be dynamically adjusted based on the amount of RAM in "
-"the system and the presence of separate file systems for %2$s."
-msgstr ""
-"%1$s için boyut, sistemdeki RAM miktarına ve %2$s için ayrı dosya "
-"sistemlerinin varlığına bağlı olarak dinamik olarak ayarlanacaktır."
-
-#: src/components/storage/AutoSizeText.tsx:223
-#, javascript-format
-msgid ""
-"The size for %1$s will be dynamically adjusted based on the usage of Btrfs "
-"snapshots and the presence of a separate file system for %2$s."
-msgstr ""
-"%1$s için boyut, Btrfs anlık görüntülerinin kullanımına ve %2$s için ayrı "
-"bir dosya sisteminin varlığına bağlı olarak dinamik olarak ayarlanacaktır."
-
-#: src/components/storage/AutoSizeText.tsx:234
-#, javascript-format
-msgid ""
-"The size for %1$s will be dynamically adjusted based on the usage of Btrfs "
-"snapshots and the presence of separate file systems for %2$s."
-msgstr ""
-"%1$s için boyut, Btrfs anlık görüntülerinin kullanımına ve %2$s için ayrı "
-"dosya sistemlerinin varlığına bağlı olarak dinamik olarak ayarlanacaktır."
-
-#. TRANSLATORS: %s is a mount point (eg. /)
-#: src/components/storage/AutoSizeText.tsx:243
-#, javascript-format
-msgid ""
-"The size for %s will be dynamically adjusted based on the usage of Btrfs "
-"snapshots."
-msgstr ""
-"%s boyutu, Btrfs anlık görüntülerinin kullanımına bağlı olarak dinamik "
-"olarak ayarlanacaktır."
-
-#: src/components/storage/AutoSizeText.tsx:252
-#, javascript-format
-msgid ""
-"The size for %1$s will be dynamically adjusted based on the presence of a "
-"separate file system for %2$s."
-msgstr ""
-"%1$s için boyut, %2$s için ayrı bir dosya sisteminin varlığına bağlı olarak "
-"dinamik olarak ayarlanacaktır."
-
-#: src/components/storage/AutoSizeText.tsx:262
-#, javascript-format
-msgid ""
-"The size for %1$s will be dynamically adjusted based on the presence of "
-"separate file systems for %2$s."
-msgstr ""
-"%1$s için boyut, %2$s için ayrı dosya sistemlerinin varlığına bağlı olarak "
-"dinamik olarak ayarlanacaktır."
-
-#. TRANSLATORS: %1$s is a device type (eg. partition) and %2$s is a size with units (eg. 10 GiB)
-#: src/components/storage/AutoSizeText.tsx:274
-#, javascript-format
-msgid ""
-"The current configuration will result in an attempt to create a %1$s of %2$s."
-msgstr ""
-"Mevcut yapılandırma %2$s'nin %1$s'sini oluşturma girişimiyle sonuçlanacaktır."
-
-#: src/components/storage/AutoSizeText.tsx:283
-#, javascript-format
-msgid ""
-"The current configuration will result in an attempt to create a %1$s with a "
-"size between %2$s and %3$s."
-msgstr ""
-"Mevcut yapılandırma, %2$s ile %3$s arasında bir boyutta %1$s oluşturma "
-"girişimine yol açacaktır."
-
-#. TRANSLATORS: %1$s is a device type (eg. partition) and %2$s is a size with units (eg. 10 GiB)
-#: src/components/storage/AutoSizeText.tsx:293
-#, javascript-format
-msgid ""
-"The current configuration will result in an attempt to create a %1$s of at "
-"least %2$s."
-msgstr ""
-"Mevcut yapılandırma en az %2$s değerinde bir %1$s oluşturma girişimine yol "
-"açacaktır."
-
 #: src/components/storage/BootSection.tsx:42
 #: src/components/storage/BootSelectionPage.tsx:156
 #, fuzzy, javascript-format
@@ -3874,6 +3666,10 @@ msgstr ""
 msgid "Rescan devices"
 msgstr "Aygıtları yeniden tara"
 
+#: src/components/storage/DeviceSelectorModal.tsx:296
+msgid "Add"
+msgstr "Ekle"
+
 #. TRANSLATORS: %s is replaced by a device label, e.g. "sda (512 GiB)"
 #: src/components/storage/DeviceSelectorModal.tsx:298
 #, fuzzy, javascript-format
@@ -4061,7 +3857,6 @@ msgstr "%s diskini kullan"
 #: src/components/storage/DrivesTable.tsx:78
 #: src/components/storage/MdRaidsTable.tsx:77
 #: src/components/storage/ProposalResultTable.tsx:137
-#: src/components/storage/SizeModeSelect.tsx:125
 #: src/components/storage/SpaceActionsTable.tsx:231
 #: src/components/storage/VolumeGroupsTable.tsx:79
 #: src/components/storage/shared/SizeFields.tsx:417
@@ -4821,53 +4616,6 @@ msgstr "Bu disk için yapılandırmayı kaldırın"
 #, fuzzy, javascript-format
 msgid "Volume group %s menu"
 msgstr "Boş LVM birim grubu %s"
-
-#: src/components/storage/SizeModeSelect.tsx:75
-#, javascript-format
-msgid ""
-"The size is configured as a range between %s and %s, but this interface "
-"cannot handle ranges with a given max size."
-msgstr ""
-"Boyut %s ile %s arasında bir aralık olarak yapılandırılmıştır, ancak bu "
-"arayüz belirli bir maksimum boyuta sahip aralıkları işleyemez."
-
-#: src/components/storage/SizeModeSelect.tsx:83
-msgid "Discard the maximum size and continue with simplified configuration"
-msgstr "Maksimum boyutu atın ve basitleştirilmiş yapılandırmayla devam edin"
-
-#: src/components/storage/SizeModeSelect.tsx:115
-msgid ""
-"The size must be a number followed by a unit of the form GiB (power of 2) or "
-"GB (power of 10)."
-msgstr ""
-"Boyut, GiB (2'nin kuvveti) veya GB (10'un kuvveti) biçiminde bir birimin "
-"izlediği bir sayı olmalıdır."
-
-#. TRANSLATORS: %s is a disk size (e.g., "10 GiB").
-#: src/components/storage/SizeModeSelect.tsx:140
-#, javascript-format
-msgid "approx. %s"
-msgstr "yaklaşık %s"
-
-#: src/components/storage/SizeModeSelect.tsx:159
-msgid "Allow growing"
-msgstr "Büyümeye izin ver"
-
-#: src/components/storage/SizeModeSelect.tsx:161
-msgid "The final size can be bigger in order to fill the extra free space."
-msgstr "Ekstra boş alanı doldurmak için son boyut daha büyük olabilir."
-
-#: src/components/storage/SizeModeSelect.tsx:194
-msgid "Size modes"
-msgstr "Boyut modları"
-
-#: src/components/storage/SizeModeSelect.tsx:195
-msgid "Let the installer propose a sensible size"
-msgstr "Kurulumcunun makul bir boyut önermesine izin verin"
-
-#: src/components/storage/SizeModeSelect.tsx:198
-msgid "Define a custom size"
-msgstr "Özel bir boyut tanımlayın"
 
 #: src/components/storage/SpaceActionsTable.tsx:73
 msgid "The device will be used by the new system."
@@ -6846,6 +6594,211 @@ msgstr "Wi-Fi"
 #: src/utils/network.ts:198
 msgid "Loopback"
 msgstr "Geri döngü"
+
+#~ msgid "logical volume"
+#~ msgstr "mantıksal alan"
+
+#~ msgid "partition"
+#~ msgstr "bölümleme"
+
+#, javascript-format
+#~ msgid "A generic size of %1$s will be used for the new %2$s"
+#~ msgstr "Yeni %2$s için %1$s genel boyutu kullanılacak"
+
+#, javascript-format
+#~ msgid ""
+#~ "A generic size range between %1$s and %2$s will be used for the new %3$s"
+#~ msgstr ""
+#~ "Yeni %3$s için %1$s ile %2$s arasında genel bir boyut aralığı kullanılacak"
+
+#, javascript-format
+#~ msgid "A generic minimum size of %1$s will be used for the new %2$s"
+#~ msgstr "Yeni %2$s için genel bir asgari %1$s boyutu kullanılacak"
+
+#, javascript-format
+#~ msgid "A %1$s of %2$s will be created for %3$s if possible"
+#~ msgstr "Mümkünse %3$s için %2$s'den %1$s oluşturulacak"
+
+#, javascript-format
+#~ msgid ""
+#~ "A %1$s with a size between %2$s and %3$s will be created for %4$s if "
+#~ "possible"
+#~ msgstr ""
+#~ "Mümkünse %4$s için %2$s ile %3$s arasında bir boyuta sahip %1$s "
+#~ "oluşturulacak"
+
+#, javascript-format
+#~ msgid "A %1$s of at least %2$s will be created for %3$s if possible"
+#~ msgstr "Mümkünse %3$s için en az %2$s'lik bir %1$s oluşturulacak"
+
+#, javascript-format
+#~ msgid ""
+#~ "Based on the amount of RAM in the system, a %1$s of %2$s will be planned "
+#~ "for %3$s"
+#~ msgstr ""
+#~ "Sistemdeki RAM miktarına bağlı olarak, %3$s için %1$s veya %2$s "
+#~ "planlanacaktır"
+
+#, javascript-format
+#~ msgid ""
+#~ "Based on the amount of RAM in the system, a %1$s with a size between %2$s "
+#~ "and %3$s will be planned for %4$s"
+#~ msgstr ""
+#~ "Sistemdeki RAM miktarına bağlı olarak, %4$s için %2$s ile %3$s arasında "
+#~ "bir boyuta sahip %1$s planlanacaktır."
+
+#, javascript-format
+#~ msgid ""
+#~ "Based on the amount of RAM in the system, a %1$s of at least %2$s will be "
+#~ "planned for %3$s"
+#~ msgstr ""
+#~ "Sistemdeki RAM miktarına bağlı olarak, %3$s için en az %2$s'lik bir %1$s "
+#~ "planlanacaktır"
+
+#, javascript-format
+#~ msgid ""
+#~ "The size for %1$s will be dynamically adjusted based on the amount of RAM "
+#~ "in the system, the usage of Btrfs snapshots and the presence of a "
+#~ "separate file system for %2$s."
+#~ msgstr ""
+#~ "%1$s için boyut, sistemdeki RAM miktarına, Btrfs anlık görüntülerinin "
+#~ "kullanımına ve %2$s için ayrı bir dosya sisteminin varlığına bağlı olarak "
+#~ "dinamik olarak ayarlanacaktır."
+
+#, javascript-format
+#~ msgid ""
+#~ "The size for %1$s will be dynamically adjusted based on the amount of RAM "
+#~ "in the system, the usage of Btrfs snapshots and the presence of separate "
+#~ "file systems for %2$s."
+#~ msgstr ""
+#~ "%1$s için boyut, sistemdeki RAM miktarına, Btrfs anlık görüntülerinin "
+#~ "kullanımına ve %2$s için ayrı dosya sistemlerinin varlığına bağlı olarak "
+#~ "dinamik olarak ayarlanacaktır."
+
+#, javascript-format
+#~ msgid ""
+#~ "The size for %s will be dynamically adjusted based on the amount of RAM "
+#~ "in the system and the usage of Btrfs snapshots."
+#~ msgstr ""
+#~ "%s boyutu, sistemdeki RAM miktarına ve Btrfs anlık görüntülerinin "
+#~ "kullanımına bağlı olarak dinamik olarak ayarlanacaktır."
+
+#, javascript-format
+#~ msgid ""
+#~ "The size for %1$s will be dynamically adjusted based on the amount of RAM "
+#~ "in the system and the presence of a separate file system for %2$s."
+#~ msgstr ""
+#~ "%1$s için boyut, sistemdeki RAM miktarına ve %2$s için ayrı bir dosya "
+#~ "sisteminin varlığına bağlı olarak dinamik olarak ayarlanacaktır."
+
+#, javascript-format
+#~ msgid ""
+#~ "The size for %1$s will be dynamically adjusted based on the amount of RAM "
+#~ "in the system and the presence of separate file systems for %2$s."
+#~ msgstr ""
+#~ "%1$s için boyut, sistemdeki RAM miktarına ve %2$s için ayrı dosya "
+#~ "sistemlerinin varlığına bağlı olarak dinamik olarak ayarlanacaktır."
+
+#, javascript-format
+#~ msgid ""
+#~ "The size for %1$s will be dynamically adjusted based on the usage of "
+#~ "Btrfs snapshots and the presence of a separate file system for %2$s."
+#~ msgstr ""
+#~ "%1$s için boyut, Btrfs anlık görüntülerinin kullanımına ve %2$s için ayrı "
+#~ "bir dosya sisteminin varlığına bağlı olarak dinamik olarak ayarlanacaktır."
+
+#, javascript-format
+#~ msgid ""
+#~ "The size for %1$s will be dynamically adjusted based on the usage of "
+#~ "Btrfs snapshots and the presence of separate file systems for %2$s."
+#~ msgstr ""
+#~ "%1$s için boyut, Btrfs anlık görüntülerinin kullanımına ve %2$s için ayrı "
+#~ "dosya sistemlerinin varlığına bağlı olarak dinamik olarak ayarlanacaktır."
+
+#, javascript-format
+#~ msgid ""
+#~ "The size for %s will be dynamically adjusted based on the usage of Btrfs "
+#~ "snapshots."
+#~ msgstr ""
+#~ "%s boyutu, Btrfs anlık görüntülerinin kullanımına bağlı olarak dinamik "
+#~ "olarak ayarlanacaktır."
+
+#, javascript-format
+#~ msgid ""
+#~ "The size for %1$s will be dynamically adjusted based on the presence of a "
+#~ "separate file system for %2$s."
+#~ msgstr ""
+#~ "%1$s için boyut, %2$s için ayrı bir dosya sisteminin varlığına bağlı "
+#~ "olarak dinamik olarak ayarlanacaktır."
+
+#, javascript-format
+#~ msgid ""
+#~ "The size for %1$s will be dynamically adjusted based on the presence of "
+#~ "separate file systems for %2$s."
+#~ msgstr ""
+#~ "%1$s için boyut, %2$s için ayrı dosya sistemlerinin varlığına bağlı "
+#~ "olarak dinamik olarak ayarlanacaktır."
+
+#, javascript-format
+#~ msgid ""
+#~ "The current configuration will result in an attempt to create a %1$s of "
+#~ "%2$s."
+#~ msgstr ""
+#~ "Mevcut yapılandırma %2$s'nin %1$s'sini oluşturma girişimiyle "
+#~ "sonuçlanacaktır."
+
+#, javascript-format
+#~ msgid ""
+#~ "The current configuration will result in an attempt to create a %1$s with "
+#~ "a size between %2$s and %3$s."
+#~ msgstr ""
+#~ "Mevcut yapılandırma, %2$s ile %3$s arasında bir boyutta %1$s oluşturma "
+#~ "girişimine yol açacaktır."
+
+#, javascript-format
+#~ msgid ""
+#~ "The current configuration will result in an attempt to create a %1$s of "
+#~ "at least %2$s."
+#~ msgstr ""
+#~ "Mevcut yapılandırma en az %2$s değerinde bir %1$s oluşturma girişimine "
+#~ "yol açacaktır."
+
+#, javascript-format
+#~ msgid ""
+#~ "The size is configured as a range between %s and %s, but this interface "
+#~ "cannot handle ranges with a given max size."
+#~ msgstr ""
+#~ "Boyut %s ile %s arasında bir aralık olarak yapılandırılmıştır, ancak bu "
+#~ "arayüz belirli bir maksimum boyuta sahip aralıkları işleyemez."
+
+#~ msgid "Discard the maximum size and continue with simplified configuration"
+#~ msgstr "Maksimum boyutu atın ve basitleştirilmiş yapılandırmayla devam edin"
+
+#~ msgid ""
+#~ "The size must be a number followed by a unit of the form GiB (power of 2) "
+#~ "or GB (power of 10)."
+#~ msgstr ""
+#~ "Boyut, GiB (2'nin kuvveti) veya GB (10'un kuvveti) biçiminde bir birimin "
+#~ "izlediği bir sayı olmalıdır."
+
+#, javascript-format
+#~ msgid "approx. %s"
+#~ msgstr "yaklaşık %s"
+
+#~ msgid "Allow growing"
+#~ msgstr "Büyümeye izin ver"
+
+#~ msgid "The final size can be bigger in order to fill the extra free space."
+#~ msgstr "Ekstra boş alanı doldurmak için son boyut daha büyük olabilir."
+
+#~ msgid "Size modes"
+#~ msgstr "Boyut modları"
+
+#~ msgid "Let the installer propose a sensible size"
+#~ msgstr "Kurulumcunun makul bir boyut önermesine izin verin"
+
+#~ msgid "Define a custom size"
+#~ msgstr "Özel bir boyut tanımlayın"
 
 #, javascript-format
 #~ msgid "Available devices: %s"

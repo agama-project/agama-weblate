@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-06 12:11+0000\n"
+"POT-Creation-Date: 2026-10-16 09:03+0000\n"
 "PO-Revision-Date: 2026-10-09 16:13+0000\n"
 "Last-Translator: Luna  Jernberg <bittin@opensuse.org>\n"
 "Language-Team: Swedish <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -43,8 +43,6 @@ msgstr "Kontrast"
 #: src/components/core/AppearanceSettings.tsx:144
 #: src/components/network/connection-form/IpFields.tsx:46
 #: src/components/storage/BootSelectionPage.tsx:203
-#: src/components/storage/SizeModeSelect.tsx:191
-#: src/components/storage/SizeModeSelect.tsx:196
 #: src/components/storage/iscsi/TargetLoginPage.tsx:58
 #: src/components/storage/shared/SizeFields.tsx:67
 #: src/components/storage/shared/SizeFields.tsx:250
@@ -677,11 +675,6 @@ msgstr "Det existerar inte eller kan inte nås."
 #: src/components/storage/ProposalResultSection.tsx:136
 msgid "Actions"
 msgstr "Åtgärder"
-
-#: src/components/core/SelectTypeaheadCreatable.tsx:70
-#: src/components/storage/DeviceSelectorModal.tsx:296
-msgid "Add"
-msgstr "Lägg till"
 
 #: src/components/core/SelectableDataTable.tsx:401
 msgid "Row expansion"
@@ -2077,8 +2070,6 @@ msgstr "Konfiguration från nätverket plus statiska adresser och gateway"
 #. TRANSLATORS: Network summary title when using manual/static IP configuration
 #: src/components/network/connection-form/IpFields.tsx:60
 #: src/components/overview/NetworkSummary.tsx:128
-#: src/components/storage/SizeModeSelect.tsx:191
-#: src/components/storage/SizeModeSelect.tsx:199
 #: src/components/storage/iscsi/TargetLoginPage.tsx:56
 msgid "Manual"
 msgstr "Manuell"
@@ -3407,208 +3398,6 @@ msgstr "%1$d av %2$d mönster"
 msgid "Filter by name and description"
 msgstr "Filtrera efter namn och beskrivning"
 
-#: src/components/storage/AutoSizeText.tsx:35
-msgid "logical volume"
-msgstr "logisk volym"
-
-#: src/components/storage/AutoSizeText.tsx:35
-msgid "partition"
-msgstr "partition"
-
-#. TRANSLATORS: %1$s is a size with units (eg. 3 GiB) and %2$s is a device type (eg. partition)
-#: src/components/storage/AutoSizeText.tsx:48
-#, javascript-format
-msgid "A generic size of %1$s will be used for the new %2$s"
-msgstr "En generisk storlek av %1$s kommer att användas för den nya %2$s"
-
-#. TRANSLATORS: %1$s and %2$s are sizes with units (eg. 3 GiB) and %3$s is a device type (eg. partition)
-#: src/components/storage/AutoSizeText.tsx:56
-#, javascript-format
-msgid ""
-"A generic size range between %1$s and %2$s will be used for the new %3$s"
-msgstr ""
-"Ett generiskt storleksintervall mellan %1$s och %2$s kommer att användas för "
-"den nya %3$s"
-
-#. TRANSLATORS: %1$s is a size with units (eg. 3 GiB) and %1$s is a device type (eg. partition)
-#: src/components/storage/AutoSizeText.tsx:65
-#, javascript-format
-msgid "A generic minimum size of %1$s will be used for the new %2$s"
-msgstr "En generisk minimistorlek av%1$s kommer att användas för den nya %2$s"
-
-#. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
-#: src/components/storage/AutoSizeText.tsx:82
-#, javascript-format
-msgid "A %1$s of %2$s will be created for %3$s if possible"
-msgstr "En %1$s av %2$s kommer att skapas för %3$s om möjligt"
-
-#. TRANSLATORS: %1$s is a device type (eg. partition), %2$s and %3$s are sizes with units (10 GiB), and %4$s is a mount path (/home)
-#: src/components/storage/AutoSizeText.tsx:91
-#, javascript-format
-msgid ""
-"A %1$s with a size between %2$s and %3$s will be created for %4$s if possible"
-msgstr ""
-"En %1$s med en storlek mellan %2$s och %3$s kommer att skapas för %4$s om "
-"möjligt"
-
-#. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
-#: src/components/storage/AutoSizeText.tsx:101
-#, javascript-format
-msgid "A %1$s of at least %2$s will be created for %3$s if possible"
-msgstr "En %1$s på minst %2$s kommer att skapas för %3$s om möjligt"
-
-#. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
-#: src/components/storage/AutoSizeText.tsx:119
-#, javascript-format
-msgid ""
-"Based on the amount of RAM in the system, a %1$s of %2$s will be planned for "
-"%3$s"
-msgstr ""
-"Baserat på mängden RAM i systemet, kommer en %1$s av %2$s att planeras för "
-"%3$s"
-
-#: src/components/storage/AutoSizeText.tsx:129
-#, javascript-format
-msgid ""
-"Based on the amount of RAM in the system, a %1$s with a size between %2$s "
-"and %3$s will be planned for %4$s"
-msgstr ""
-"Baserat på mängden RAM i systemet, kommer en %1$s med en storlek mellan %2$s "
-"och %3$s att planeras för %4$s"
-
-#. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
-#: src/components/storage/AutoSizeText.tsx:140
-#, javascript-format
-msgid ""
-"Based on the amount of RAM in the system, a %1$s of at least %2$s will be "
-"planned for %3$s"
-msgstr ""
-"Baserat på mängden RAM i systemet, kommer en %1$s på minst %2$s att planeras "
-"för %3$s"
-
-#: src/components/storage/AutoSizeText.tsx:169
-#, javascript-format
-msgid ""
-"The size for %1$s will be dynamically adjusted based on the amount of RAM in "
-"the system, the usage of Btrfs snapshots and the presence of a separate file "
-"system for %2$s."
-msgstr ""
-"Storleken för %1$s kommer att justeras dynamiskt baserat på mängden RAM i "
-"systemet, användningen av Btrfs-ögonblicksavbilder och förekomsten av ett "
-"separat filsystem för %2$s."
-
-#: src/components/storage/AutoSizeText.tsx:180
-#, javascript-format
-msgid ""
-"The size for %1$s will be dynamically adjusted based on the amount of RAM in "
-"the system, the usage of Btrfs snapshots and the presence of separate file "
-"systems for %2$s."
-msgstr ""
-"Storleken för %1$s kommer att justeras dynamiskt baserat på mängden RAM i "
-"systemet, användningen av Btrfs-ögonblicksavbilder och förekomsten av "
-"separata filsystem för %2$s."
-
-#: src/components/storage/AutoSizeText.tsx:190
-#, javascript-format
-msgid ""
-"The size for %s will be dynamically adjusted based on the amount of RAM in "
-"the system and the usage of Btrfs snapshots."
-msgstr ""
-"Storleken för %s kommer att justeras dynamiskt baserat på mängden RAM i "
-"systemet och användningen av Btrfs-ögonblicksavbilder."
-
-#: src/components/storage/AutoSizeText.tsx:201
-#, javascript-format
-msgid ""
-"The size for %1$s will be dynamically adjusted based on the amount of RAM in "
-"the system and the presence of a separate file system for %2$s."
-msgstr ""
-"Storleken för %1$s kommer att justeras dynamiskt baserat på mängden RAM i "
-"systemet och förekomsten av ett separat filsystem för %2$s."
-
-#: src/components/storage/AutoSizeText.tsx:211
-#, javascript-format
-msgid ""
-"The size for %1$s will be dynamically adjusted based on the amount of RAM in "
-"the system and the presence of separate file systems for %2$s."
-msgstr ""
-"Storleken för %1$s kommer att justeras dynamiskt baserat på mängden RAM i "
-"systemet och förekomsten av separata filsystem för %2$s."
-
-#: src/components/storage/AutoSizeText.tsx:223
-#, javascript-format
-msgid ""
-"The size for %1$s will be dynamically adjusted based on the usage of Btrfs "
-"snapshots and the presence of a separate file system for %2$s."
-msgstr ""
-"Storleken för %1$s kommer att justeras dynamiskt baserat på användningen av "
-"Btrfs-ögonblicksavbilder och närvaron av ett separat filsystem för %2$s."
-
-#: src/components/storage/AutoSizeText.tsx:234
-#, javascript-format
-msgid ""
-"The size for %1$s will be dynamically adjusted based on the usage of Btrfs "
-"snapshots and the presence of separate file systems for %2$s."
-msgstr ""
-"Storleken för %1$s kommer att justeras dynamiskt baserat på användningen av "
-"Btrfs-ögonblicksavbilder och förekomsten av separata filsystem för %2$s."
-
-#. TRANSLATORS: %s is a mount point (eg. /)
-#: src/components/storage/AutoSizeText.tsx:243
-#, javascript-format
-msgid ""
-"The size for %s will be dynamically adjusted based on the usage of Btrfs "
-"snapshots."
-msgstr ""
-"Storleken för %s kommer att justeras dynamiskt baserat på användningen av "
-"Btrfs-ögonblicksavbilder."
-
-#: src/components/storage/AutoSizeText.tsx:252
-#, javascript-format
-msgid ""
-"The size for %1$s will be dynamically adjusted based on the presence of a "
-"separate file system for %2$s."
-msgstr ""
-"Storleken för %1$s kommer att justeras dynamiskt baserat på närvaron av ett "
-"separat filsystem för %2$s."
-
-#: src/components/storage/AutoSizeText.tsx:262
-#, javascript-format
-msgid ""
-"The size for %1$s will be dynamically adjusted based on the presence of "
-"separate file systems for %2$s."
-msgstr ""
-"Storleken för %1$s kommer att justeras dynamiskt baserat på närvaron av "
-"separata filsystem för %2$s."
-
-#. TRANSLATORS: %1$s is a device type (eg. partition) and %2$s is a size with units (eg. 10 GiB)
-#: src/components/storage/AutoSizeText.tsx:274
-#, javascript-format
-msgid ""
-"The current configuration will result in an attempt to create a %1$s of %2$s."
-msgstr ""
-"Den nuvarande konfigurationen kommer att resultera i ett försök att skapa en "
-"%1$s på %2$s."
-
-#: src/components/storage/AutoSizeText.tsx:283
-#, javascript-format
-msgid ""
-"The current configuration will result in an attempt to create a %1$s with a "
-"size between %2$s and %3$s."
-msgstr ""
-"Den nuvarande konfigurationen kommer att resultera i ett försök att skapa en "
-"%1$s med en storlek mellan %2$s och %3$s."
-
-#. TRANSLATORS: %1$s is a device type (eg. partition) and %2$s is a size with units (eg. 10 GiB)
-#: src/components/storage/AutoSizeText.tsx:293
-#, javascript-format
-msgid ""
-"The current configuration will result in an attempt to create a %1$s of at "
-"least %2$s."
-msgstr ""
-"Den nuvarande konfigurationen kommer att resultera i ett försök att skapa en "
-"%1$s på minst %2$s."
-
 #: src/components/storage/BootSection.tsx:42
 #: src/components/storage/BootSelectionPage.tsx:156
 #, javascript-format
@@ -3811,6 +3600,10 @@ msgstr "Uppdatera tillgängliga diskar och aktivera krypteringsenheter"
 msgid "Rescan devices"
 msgstr "Skanna om enheter"
 
+#: src/components/storage/DeviceSelectorModal.tsx:296
+msgid "Add"
+msgstr "Lägg till"
+
 #. TRANSLATORS: %s is replaced by a device label, e.g. "sda (512 GiB)"
 #: src/components/storage/DeviceSelectorModal.tsx:298
 #, javascript-format
@@ -3994,7 +3787,6 @@ msgstr "Använd disk %s"
 #: src/components/storage/DrivesTable.tsx:78
 #: src/components/storage/MdRaidsTable.tsx:77
 #: src/components/storage/ProposalResultTable.tsx:137
-#: src/components/storage/SizeModeSelect.tsx:125
 #: src/components/storage/SpaceActionsTable.tsx:231
 #: src/components/storage/VolumeGroupsTable.tsx:79
 #: src/components/storage/shared/SizeFields.tsx:417
@@ -4752,55 +4544,6 @@ msgstr "Ta bort konfigurationen för den här volymgruppen"
 #, javascript-format
 msgid "Volume group %s menu"
 msgstr "Volymgrupp %s meny"
-
-#: src/components/storage/SizeModeSelect.tsx:75
-#, javascript-format
-msgid ""
-"The size is configured as a range between %s and %s, but this interface "
-"cannot handle ranges with a given max size."
-msgstr ""
-"Storleken är konfigurerad som ett intervall mellan %s och %s, men det här "
-"gränssnittet kan inte hantera intervall med en given maxstorlek."
-
-#: src/components/storage/SizeModeSelect.tsx:83
-msgid "Discard the maximum size and continue with simplified configuration"
-msgstr ""
-"Kassera den maximala storleken och fortsätt med förenklad konfiguration"
-
-#: src/components/storage/SizeModeSelect.tsx:115
-msgid ""
-"The size must be a number followed by a unit of the form GiB (power of 2) or "
-"GB (power of 10)."
-msgstr ""
-"Storleken måste vara ett tal följt av en enhet av formen GiB (potens 2) "
-"eller GB (potens 10)."
-
-#. TRANSLATORS: %s is a disk size (e.g., "10 GiB").
-#: src/components/storage/SizeModeSelect.tsx:140
-#, javascript-format
-msgid "approx. %s"
-msgstr "cirka. %s"
-
-#: src/components/storage/SizeModeSelect.tsx:159
-msgid "Allow growing"
-msgstr "Tillåt växande"
-
-#: src/components/storage/SizeModeSelect.tsx:161
-msgid "The final size can be bigger in order to fill the extra free space."
-msgstr ""
-"Den slutliga storleken kan bli större för att fylla det extra fria utrymmet."
-
-#: src/components/storage/SizeModeSelect.tsx:194
-msgid "Size modes"
-msgstr "Storlekslägen"
-
-#: src/components/storage/SizeModeSelect.tsx:195
-msgid "Let the installer propose a sensible size"
-msgstr "Låt installationsprogrammet föreslå en vettig storlek"
-
-#: src/components/storage/SizeModeSelect.tsx:198
-msgid "Define a custom size"
-msgstr "Definiera en anpassad storlek"
 
 #: src/components/storage/SpaceActionsTable.tsx:73
 msgid "The device will be used by the new system."
@@ -6711,6 +6454,218 @@ msgstr "Wi-Fi"
 #: src/utils/network.ts:198
 msgid "Loopback"
 msgstr "Loopback"
+
+#~ msgid "logical volume"
+#~ msgstr "logisk volym"
+
+#~ msgid "partition"
+#~ msgstr "partition"
+
+#, javascript-format
+#~ msgid "A generic size of %1$s will be used for the new %2$s"
+#~ msgstr "En generisk storlek av %1$s kommer att användas för den nya %2$s"
+
+#, javascript-format
+#~ msgid ""
+#~ "A generic size range between %1$s and %2$s will be used for the new %3$s"
+#~ msgstr ""
+#~ "Ett generiskt storleksintervall mellan %1$s och %2$s kommer att användas "
+#~ "för den nya %3$s"
+
+#, javascript-format
+#~ msgid "A generic minimum size of %1$s will be used for the new %2$s"
+#~ msgstr ""
+#~ "En generisk minimistorlek av%1$s kommer att användas för den nya %2$s"
+
+#, javascript-format
+#~ msgid "A %1$s of %2$s will be created for %3$s if possible"
+#~ msgstr "En %1$s av %2$s kommer att skapas för %3$s om möjligt"
+
+#, javascript-format
+#~ msgid ""
+#~ "A %1$s with a size between %2$s and %3$s will be created for %4$s if "
+#~ "possible"
+#~ msgstr ""
+#~ "En %1$s med en storlek mellan %2$s och %3$s kommer att skapas för %4$s om "
+#~ "möjligt"
+
+#, javascript-format
+#~ msgid "A %1$s of at least %2$s will be created for %3$s if possible"
+#~ msgstr "En %1$s på minst %2$s kommer att skapas för %3$s om möjligt"
+
+#, javascript-format
+#~ msgid ""
+#~ "Based on the amount of RAM in the system, a %1$s of %2$s will be planned "
+#~ "for %3$s"
+#~ msgstr ""
+#~ "Baserat på mängden RAM i systemet, kommer en %1$s av %2$s att planeras "
+#~ "för %3$s"
+
+#, javascript-format
+#~ msgid ""
+#~ "Based on the amount of RAM in the system, a %1$s with a size between %2$s "
+#~ "and %3$s will be planned for %4$s"
+#~ msgstr ""
+#~ "Baserat på mängden RAM i systemet, kommer en %1$s med en storlek mellan "
+#~ "%2$s och %3$s att planeras för %4$s"
+
+#, javascript-format
+#~ msgid ""
+#~ "Based on the amount of RAM in the system, a %1$s of at least %2$s will be "
+#~ "planned for %3$s"
+#~ msgstr ""
+#~ "Baserat på mängden RAM i systemet, kommer en %1$s på minst %2$s att "
+#~ "planeras för %3$s"
+
+#, javascript-format
+#~ msgid ""
+#~ "The size for %1$s will be dynamically adjusted based on the amount of RAM "
+#~ "in the system, the usage of Btrfs snapshots and the presence of a "
+#~ "separate file system for %2$s."
+#~ msgstr ""
+#~ "Storleken för %1$s kommer att justeras dynamiskt baserat på mängden RAM i "
+#~ "systemet, användningen av Btrfs-ögonblicksavbilder och förekomsten av ett "
+#~ "separat filsystem för %2$s."
+
+#, javascript-format
+#~ msgid ""
+#~ "The size for %1$s will be dynamically adjusted based on the amount of RAM "
+#~ "in the system, the usage of Btrfs snapshots and the presence of separate "
+#~ "file systems for %2$s."
+#~ msgstr ""
+#~ "Storleken för %1$s kommer att justeras dynamiskt baserat på mängden RAM i "
+#~ "systemet, användningen av Btrfs-ögonblicksavbilder och förekomsten av "
+#~ "separata filsystem för %2$s."
+
+#, javascript-format
+#~ msgid ""
+#~ "The size for %s will be dynamically adjusted based on the amount of RAM "
+#~ "in the system and the usage of Btrfs snapshots."
+#~ msgstr ""
+#~ "Storleken för %s kommer att justeras dynamiskt baserat på mängden RAM i "
+#~ "systemet och användningen av Btrfs-ögonblicksavbilder."
+
+#, javascript-format
+#~ msgid ""
+#~ "The size for %1$s will be dynamically adjusted based on the amount of RAM "
+#~ "in the system and the presence of a separate file system for %2$s."
+#~ msgstr ""
+#~ "Storleken för %1$s kommer att justeras dynamiskt baserat på mängden RAM i "
+#~ "systemet och förekomsten av ett separat filsystem för %2$s."
+
+#, javascript-format
+#~ msgid ""
+#~ "The size for %1$s will be dynamically adjusted based on the amount of RAM "
+#~ "in the system and the presence of separate file systems for %2$s."
+#~ msgstr ""
+#~ "Storleken för %1$s kommer att justeras dynamiskt baserat på mängden RAM i "
+#~ "systemet och förekomsten av separata filsystem för %2$s."
+
+#, javascript-format
+#~ msgid ""
+#~ "The size for %1$s will be dynamically adjusted based on the usage of "
+#~ "Btrfs snapshots and the presence of a separate file system for %2$s."
+#~ msgstr ""
+#~ "Storleken för %1$s kommer att justeras dynamiskt baserat på användningen "
+#~ "av Btrfs-ögonblicksavbilder och närvaron av ett separat filsystem för "
+#~ "%2$s."
+
+#, javascript-format
+#~ msgid ""
+#~ "The size for %1$s will be dynamically adjusted based on the usage of "
+#~ "Btrfs snapshots and the presence of separate file systems for %2$s."
+#~ msgstr ""
+#~ "Storleken för %1$s kommer att justeras dynamiskt baserat på användningen "
+#~ "av Btrfs-ögonblicksavbilder och förekomsten av separata filsystem för "
+#~ "%2$s."
+
+#, javascript-format
+#~ msgid ""
+#~ "The size for %s will be dynamically adjusted based on the usage of Btrfs "
+#~ "snapshots."
+#~ msgstr ""
+#~ "Storleken för %s kommer att justeras dynamiskt baserat på användningen av "
+#~ "Btrfs-ögonblicksavbilder."
+
+#, javascript-format
+#~ msgid ""
+#~ "The size for %1$s will be dynamically adjusted based on the presence of a "
+#~ "separate file system for %2$s."
+#~ msgstr ""
+#~ "Storleken för %1$s kommer att justeras dynamiskt baserat på närvaron av "
+#~ "ett separat filsystem för %2$s."
+
+#, javascript-format
+#~ msgid ""
+#~ "The size for %1$s will be dynamically adjusted based on the presence of "
+#~ "separate file systems for %2$s."
+#~ msgstr ""
+#~ "Storleken för %1$s kommer att justeras dynamiskt baserat på närvaron av "
+#~ "separata filsystem för %2$s."
+
+#, javascript-format
+#~ msgid ""
+#~ "The current configuration will result in an attempt to create a %1$s of "
+#~ "%2$s."
+#~ msgstr ""
+#~ "Den nuvarande konfigurationen kommer att resultera i ett försök att skapa "
+#~ "en %1$s på %2$s."
+
+#, javascript-format
+#~ msgid ""
+#~ "The current configuration will result in an attempt to create a %1$s with "
+#~ "a size between %2$s and %3$s."
+#~ msgstr ""
+#~ "Den nuvarande konfigurationen kommer att resultera i ett försök att skapa "
+#~ "en %1$s med en storlek mellan %2$s och %3$s."
+
+#, javascript-format
+#~ msgid ""
+#~ "The current configuration will result in an attempt to create a %1$s of "
+#~ "at least %2$s."
+#~ msgstr ""
+#~ "Den nuvarande konfigurationen kommer att resultera i ett försök att skapa "
+#~ "en %1$s på minst %2$s."
+
+#, javascript-format
+#~ msgid ""
+#~ "The size is configured as a range between %s and %s, but this interface "
+#~ "cannot handle ranges with a given max size."
+#~ msgstr ""
+#~ "Storleken är konfigurerad som ett intervall mellan %s och %s, men det här "
+#~ "gränssnittet kan inte hantera intervall med en given maxstorlek."
+
+#~ msgid "Discard the maximum size and continue with simplified configuration"
+#~ msgstr ""
+#~ "Kassera den maximala storleken och fortsätt med förenklad konfiguration"
+
+#~ msgid ""
+#~ "The size must be a number followed by a unit of the form GiB (power of 2) "
+#~ "or GB (power of 10)."
+#~ msgstr ""
+#~ "Storleken måste vara ett tal följt av en enhet av formen GiB (potens 2) "
+#~ "eller GB (potens 10)."
+
+#, javascript-format
+#~ msgid "approx. %s"
+#~ msgstr "cirka. %s"
+
+#~ msgid "Allow growing"
+#~ msgstr "Tillåt växande"
+
+#~ msgid "The final size can be bigger in order to fill the extra free space."
+#~ msgstr ""
+#~ "Den slutliga storleken kan bli större för att fylla det extra fria "
+#~ "utrymmet."
+
+#~ msgid "Size modes"
+#~ msgstr "Storlekslägen"
+
+#~ msgid "Let the installer propose a sensible size"
+#~ msgstr "Låt installationsprogrammet föreslå en vettig storlek"
+
+#~ msgid "Define a custom size"
+#~ msgstr "Definiera en anpassad storlek"
 
 #, javascript-format
 #~ msgid "Available devices: %s"
