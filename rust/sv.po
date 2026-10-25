@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-01 14:04+0000\n"
+"POT-Creation-Date: 2026-10-25 21:33+0000\n"
 "PO-Revision-Date: 2026-10-01 15:13+0000\n"
 "Last-Translator: Luna  Jernberg <bittin@opensuse.org>\n"
 "Language-Team: Swedish <https://l10n.opensuse.org/projects/agama/agama-rust-"
@@ -50,6 +50,7 @@ msgstr "Avbryt"
 
 #. TRANSLATORS: {0} is a URL
 #: agama-autoinstall/src/scripts.rs:135
+#, rust-format
 msgid ""
 "It was not possible to load the script from {0}. Do you want to try again?"
 msgstr "Det gick inte att läsa in skriptet från {0}. Vill du försöka igen?"
@@ -122,6 +123,7 @@ msgstr "Vänligen ange root-lösenord:"
 
 #. TRANSLATORS: {0} is a host name
 #: agama-cli/src/auth.rs:179
+#, rust-format
 msgid "Not authenticated in {0}"
 msgstr "Inte autentiserad i {0}"
 
@@ -329,8 +331,8 @@ msgid ""
 "\"agama config\" commands."
 msgstr ""
 "Schema finns tillgängligt på /usr/share/agama/openapi/nightly/schemas/"
-"config.schema.json. Obs: Validering utförs alltid som en del av alla andra ”"
-"agama config\" kommandon."
+"config.schema.json. Obs: Validering utförs alltid som en del av alla andra "
+"”agama config\" kommandon."
 
 #. TRANSLATORS: CLI help for: agama config validate <URL_OR_PATH>
 #: agama-cli/src/config.rs:129
@@ -932,7 +934,7 @@ msgid "Reject"
 msgstr "Avslå"
 
 #: agama-security/src/service.rs:227
-#: agama-software/src/callbacks/security.rs:111
+#: agama-software/src/callbacks/security.rs:119
 msgid "Trust"
 msgstr "Lita på"
 
@@ -980,7 +982,8 @@ msgid "There was a problem running a package script."
 msgstr "Det uppstod ett problem när ett paketskript kördes."
 
 #. TRANSLATORS: substituting: key ID, (key name), fingerprint
-#: agama-software/src/callbacks/security.rs:104
+#: agama-software/src/callbacks/security.rs:112
+#, rust-format
 msgid ""
 "The key {0} ({1}) with fingerprint {2} is unknown. Do you want to trust this "
 "key?"
@@ -988,7 +991,7 @@ msgstr ""
 "Nyckeln {0} ({1}) med fingeravtryck {2} är okänd. Vill du lita på den här "
 "nyckeln?"
 
-#: agama-software/src/callbacks/security.rs:111
+#: agama-software/src/callbacks/security.rs:119
 msgid "Skip"
 msgstr "Hoppa över"
 
