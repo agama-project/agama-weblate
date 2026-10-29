@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-29 13:04+0000\n"
+"POT-Creation-Date: 2026-10-29 14:33+0000\n"
 "PO-Revision-Date: 2026-10-13 20:13+0000\n"
 "Last-Translator: Eugene Krater <lachend@gmail.com>\n"
 "Language-Team: Ukrainian <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -42,7 +42,7 @@ msgstr "Контраст"
 #: src/components/core/AppearanceSettings.tsx:78
 #: src/components/core/AppearanceSettings.tsx:109
 #: src/components/core/AppearanceSettings.tsx:144
-#: src/components/network/connection-form/IpFields.tsx:46
+#: src/components/network/connection-form/IpFields.tsx:48
 #: src/components/storage/BootSelectionPage.tsx:203
 #: src/components/storage/iscsi/TargetLoginPage.tsx:58
 #: src/components/storage/shared/SizeFields.tsx:67
@@ -1363,10 +1363,12 @@ msgstr "Подробиці про міст"
 msgid "STP"
 msgstr "STP"
 
+#. TRANSLATORS: option label for disabling the IP configuration.
 #. TRANSLATORS: option label for disabling bridge STP.
 #. TRANSLATORS: authentication mode option
 #: src/components/network/ConnectionDetails.tsx:149
 #: src/components/network/connection-form/BridgeFields.tsx:53
+#: src/components/network/connection-form/IpFields.tsx:69
 #: src/components/users/authentication-form/RootAuthFields.tsx:76
 msgid "Disabled"
 msgstr "Вимкнено"
@@ -1930,7 +1932,7 @@ msgstr "Протокол Spanning Tree (STP)"
 #: src/components/network/connection-form/BridgeFields.tsx:164
 #: src/components/network/connection-form/BridgeFields.tsx:184
 #: src/components/network/connection-form/BridgeFields.tsx:204
-#: src/components/network/connection-form/IpFields.tsx:150
+#: src/components/network/connection-form/IpFields.tsx:160
 #: src/components/product/registration-form/Form.tsx:187
 #: src/components/product/registration-form/Form.tsx:202
 #: src/components/storage/shared/FilesystemAdditionalFields.tsx:54
@@ -2066,90 +2068,96 @@ msgid "New connection"
 msgstr "Нове з'єднання"
 
 #. TRANSLATORS: description for automatic IP configuration mode.
-#: src/components/network/connection-form/IpFields.tsx:48
+#: src/components/network/connection-form/IpFields.tsx:50
 msgid "Address and gateway assigned from the network"
 msgstr "Адреса та шлюз, призначені мережею"
 
 #. TRANSLATORS: option label for advanced automatic IP configuration with static addresses.
-#: src/components/network/connection-form/IpFields.tsx:53
+#: src/components/network/connection-form/IpFields.tsx:55
 msgid "Automatic + manual"
 msgstr "Автоматична та ручна"
 
 #. TRANSLATORS: description for advanced automatic mode with static addresses.
-#: src/components/network/connection-form/IpFields.tsx:55
+#: src/components/network/connection-form/IpFields.tsx:57
 msgid "Configuration from the network plus static addresses and gateway"
 msgstr "Налаштування через мережу, а також статичні адреси та шлюз"
 
 #. TRANSLATORS: Network summary title when using manual/static IP configuration
 #. TRANSLATORS: option label for manual IP configuration
-#: src/components/network/connection-form/IpFields.tsx:60
+#: src/components/network/connection-form/IpFields.tsx:62
 #: src/components/overview/NetworkSummary.tsx:128
 #: src/components/storage/iscsi/TargetLoginPage.tsx:56
 msgid "Manual"
 msgstr "Вручну"
 
 #. TRANSLATORS: description for manual IP configuration mode.
-#: src/components/network/connection-form/IpFields.tsx:62
+#: src/components/network/connection-form/IpFields.tsx:64
 msgid "Static addresses and gateway"
 msgstr "Статичні адреси та шлюз"
 
+#. TRANSLATORS: description for the disabled IP configuration mode.
+#: src/components/network/connection-form/IpFields.tsx:71
+#, fuzzy
+msgid "No IP configuration for this protocol"
+msgstr "Видалити конфігурацію для цього диска"
+
 #. TRANSLATORS: label for the IPv4 or IPv6 settings dropdown.
-#: src/components/network/connection-form/IpFields.tsx:93
+#: src/components/network/connection-form/IpFields.tsx:103
 msgid "IPv4 Settings"
 msgstr "Налаштування IPv4"
 
-#: src/components/network/connection-form/IpFields.tsx:93
+#: src/components/network/connection-form/IpFields.tsx:103
 msgid "IPv6 Settings"
 msgstr "Налаштування IPv6"
 
 #. TRANSLATORS: label for the IP addresses field.
-#: src/components/network/connection-form/IpFields.tsx:95
+#: src/components/network/connection-form/IpFields.tsx:105
 msgid "IPv4 Addresses"
 msgstr "IPv4-адреси"
 
-#: src/components/network/connection-form/IpFields.tsx:95
+#: src/components/network/connection-form/IpFields.tsx:105
 msgid "IPv6 Addresses"
 msgstr "IPv6-адреси"
 
 #. TRANSLATORS: label for the IP gateway field.
-#: src/components/network/connection-form/IpFields.tsx:97
+#: src/components/network/connection-form/IpFields.tsx:107
 msgid "IPv4 Gateway"
 msgstr "Шлюз IPv4"
 
-#: src/components/network/connection-form/IpFields.tsx:97
+#: src/components/network/connection-form/IpFields.tsx:107
 msgid "IPv6 Gateway"
 msgstr "Шлюз IPv6"
 
 #. TRANSLATORS: helper text for IPv4 addresses field. Explains format and that prefix is auto-added.
-#: src/components/network/connection-form/IpFields.tsx:130
+#: src/components/network/connection-form/IpFields.tsx:140
 msgid "E.g., 192.168.1.1 or 192.168.1.1/24. Prefix auto-added if omitted."
 msgstr ""
 "Наприклад, 192.168.1.1 або 192.168.1.1/24. Якщо префікс не вказано, він "
 "додається автоматично."
 
 #. TRANSLATORS: helper text for IPv6 addresses field. Explains format and that prefix is auto-added.
-#: src/components/network/connection-form/IpFields.tsx:132
+#: src/components/network/connection-form/IpFields.tsx:142
 msgid "E.g., 2001:db8::1 or 2001:db8::1/64. Prefix auto-added if omitted."
 msgstr ""
 "Наприклад, 2001:db8::1 або 2001:db8::1/64. Якщо префікс не вказано, він "
 "додається автоматично."
 
 #. TRANSLATORS: validation error for an invalid IP address entry.
-#: src/components/network/connection-form/IpFields.tsx:138
+#: src/components/network/connection-form/IpFields.tsx:148
 msgid "Invalid IPv4 address"
 msgstr "Неправильна адреса IPv4"
 
-#: src/components/network/connection-form/IpFields.tsx:138
+#: src/components/network/connection-form/IpFields.tsx:148
 msgid "Invalid IPv6 address"
 msgstr "Неправильна адреса IPv6"
 
 #. TRANSLATORS: helper text for IPv4 gateway field explaining the format.
-#: src/components/network/connection-form/IpFields.tsx:158
+#: src/components/network/connection-form/IpFields.tsx:168
 msgid "E.g., 192.168.1.1"
 msgstr "Наприклад, 192.168.1.1"
 
 #. TRANSLATORS: helper text for IPv6 gateway field explaining the format.
-#: src/components/network/connection-form/IpFields.tsx:160
+#: src/components/network/connection-form/IpFields.tsx:170
 msgid "E.g., 2001:db8::1"
 msgstr "Наприклад, 2001:db8::1"
 
