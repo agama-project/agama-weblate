@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-09 08:21+0000\n"
+"POT-Creation-Date: 2026-11-12 20:22+0000\n"
 "PO-Revision-Date: 2026-11-09 18:13+0000\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <https://l10n.opensuse.org/projects/agama/agama-rust-"
@@ -34,7 +34,7 @@ msgstr "Opätovne načítať konfiguráciu"
 msgid "Skip and configure manually"
 msgstr "Preskočiť a konfigurovať ručne"
 
-#: agama-autoinstall/src/questions.rs:77 agama-cli/src/config.rs:371
+#: agama-autoinstall/src/questions.rs:77 agama-cli/src/config.rs:372
 msgid "Found unsupported elements in the AutoYaST profile:"
 msgstr "V profile AutoYaST boli nájdené nepodporované prvky:"
 
@@ -49,6 +49,7 @@ msgstr "Prerušiť"
 
 #. TRANSLATORS: {0} is a URL
 #: agama-autoinstall/src/scripts.rs:135
+#, rust-format
 msgid ""
 "It was not possible to load the script from {0}. Do you want to try again?"
 msgstr "Nebolo možné načítať skript z {0}. Chcete to skúsiť znova?"
@@ -120,6 +121,7 @@ msgstr "Prosím, zadajte heslo správcu systému:"
 
 #. TRANSLATORS: {0} is a host name
 #: agama-cli/src/auth.rs:179
+#, rust-format
 msgid "Not authenticated in {0}"
 msgstr "Bez overenia v {0}"
 
@@ -407,7 +409,7 @@ msgstr "Príkaz editora (vrátane ďalších argumentov, ak treba)"
 msgid "It is not a valid JSON file"
 msgstr "Nie je to platný súbor JSON"
 
-#: agama-cli/src/config.rs:434
+#: agama-cli/src/config.rs:435
 msgid "Ignoring the changes because the editor was closed with an error code."
 msgstr "Ignorovanie zmien, pretože editor bol zatvorený s chybovým kódom."
 
@@ -986,6 +988,7 @@ msgstr "Pri spúšťaní skriptu balíka nastal problém."
 
 #. TRANSLATORS: substituting: key ID, (key name), fingerprint
 #: agama-software/src/callbacks/security.rs:112
+#, rust-format
 msgid ""
 "The key {0} ({1}) with fingerprint {2} is unknown. Do you want to trust this "
 "key?"
@@ -1009,32 +1012,32 @@ msgstr "Spustenie inštalácie balíkov"
 msgid "Packages download and installation failed. Would you like to retry?"
 msgstr "Zlyhalo stiahnutie a inštalácia balíkov. Chcete to skúsiť znova?"
 
-#: agama-software/src/zypp_server.rs:367
+#: agama-software/src/zypp_server.rs:368
 msgid "Updating the list of repositories"
 msgstr "Aktualizovanie zoznamu repozitárov"
 
-#: agama-software/src/zypp_server.rs:368
+#: agama-software/src/zypp_server.rs:369
 msgid "Refreshing metadata from the repositories"
 msgstr "Obnovovanie metadát z repozitárov"
 
-#: agama-software/src/zypp_server.rs:369
+#: agama-software/src/zypp_server.rs:370
 msgid "Calculating the software proposal"
 msgstr "Kalkulácia softvérového návrhu"
 
-#: agama-software/src/zypp_server.rs:372
+#: agama-software/src/zypp_server.rs:373
 msgid "Registering the system"
 msgstr "Registrovanie systému"
 
 #. TRANSLATORS: %s is the alias of the repository.
-#: agama-software/src/zypp_server.rs:445
+#: agama-software/src/zypp_server.rs:451
 msgid "Could not remove the repository %s"
 msgstr "Nepodarilo sa odstrániť repozitár %s"
 
-#: agama-software/src/zypp_server.rs:465
+#: agama-software/src/zypp_server.rs:471
 msgid "Could not read the repositories"
 msgstr "Nepodarilo sa prečítať repozitáre"
 
-#: agama-software/src/zypp_server.rs:501
+#: agama-software/src/zypp_server.rs:507
 msgid ""
 "Failed to find the product in the repositories. You might need to register "
 "the system."
@@ -1042,21 +1045,21 @@ msgstr ""
 "Zlyhalo vyhľadanie produktu v repozitároch. Možno bude potrebné "
 "zaregistrovať systém."
 
-#: agama-software/src/zypp_server.rs:504
+#: agama-software/src/zypp_server.rs:510
 msgid "Failed to find the product in the repositories."
 msgstr "Zlyhalo vyhľadanie produktu v repozitároch."
 
-#: agama-software/src/zypp_server.rs:567
+#: agama-software/src/zypp_server.rs:573
 msgid "There are conflicts in the software selection"
 msgstr "Pri výbere softvéru dochádza ku konfliktom"
 
 #. TRANSLATORS: the first %s is the kind of resolvable (e.g., "package")
 #. and the second %s is the name of the resolvable.
-#: agama-software/src/zypp_server.rs:594
+#: agama-software/src/zypp_server.rs:600
 msgid "Could not select %s '%s' for installation"
 msgstr "Nepodarilo sa vybrať %s '%s' pre inštaláciu"
 
-#: agama-software/src/zypp_server.rs:1012
+#: agama-software/src/zypp_server.rs:1018
 msgid "Failed to register the system"
 msgstr "Zlyhala registrácia systému"
 
