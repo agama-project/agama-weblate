@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-23 15:41+0000\n"
+"POT-Creation-Date: 2026-11-25 10:29+0000\n"
 "PO-Revision-Date: 2026-10-13 20:13+0000\n"
 "Last-Translator: Eugene Krater <lachend@gmail.com>\n"
 "Language-Team: Ukrainian <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -624,12 +624,12 @@ msgstr "Сховище"
 
 #. TRANSLATORS: breadcrumb label for the network configuration section.
 #: src/components/core/ProgressStatusMonitor.tsx:43
-#: src/components/network/ConnectionDetails.tsx:75
-#: src/components/network/ConnectionPage.tsx:77
+#: src/components/network/ConnectionDetails.tsx:110
+#: src/components/network/ConnectionPage.tsx:80
 #: src/components/network/NetworkPage.tsx:45
 #: src/components/network/WifiConnectionForm.tsx:145
 #: src/components/network/WifiConnectionForm.tsx:200
-#: src/components/network/connection-form/Form.tsx:405
+#: src/components/network/connection-form/Form.tsx:419
 #: src/components/overview/NetworkSummary.tsx:149
 msgid "Network"
 msgstr "Мережа"
@@ -1267,15 +1267,34 @@ msgstr "З'єднання прив'язане до пристрою %s."
 msgid "Connection is bound to MAC address %s."
 msgstr "З'єднання прив'язане до MAC-адреси %s."
 
-#: src/components/network/ConnectionDetails.tsx:76
+#: src/components/network/ConnectionDetails.tsx:92
+#: src/components/network/ConnectionDetails.tsx:151
+#: src/components/network/ConnectionDetails.tsx:157
+#: src/components/network/ConnectionDetails.tsx:227
+#: src/components/network/ConnectionDetails.tsx:233
+#: src/components/network/ConnectionDetails.tsx:252
+#: src/components/network/ConnectionDetails.tsx:267
+#: src/components/network/ConnectionDetails.tsx:277
+#: src/components/network/ConnectionDetails.tsx:287
+#: src/components/network/ConnectionDetails.tsx:297
+#: src/components/network/ConnectionDetails.tsx:440
+#: src/components/network/ConnectionDetails.tsx:443
+#: src/components/network/ConnectionDetails.tsx:453
+#: src/components/network/ConnectionDetails.tsx:465
+#: src/components/network/ConnectionDetails.tsx:477
+#: src/components/network/ConnectionDetails.tsx:489
+msgid "None set"
+msgstr "Не задано"
+
+#: src/components/network/ConnectionDetails.tsx:111
 msgid "Network details"
 msgstr "Відомості про мережу"
 
-#: src/components/network/ConnectionDetails.tsx:78
+#: src/components/network/ConnectionDetails.tsx:113
 msgid "SSID"
 msgstr "Назва мережі"
 
-#: src/components/network/ConnectionDetails.tsx:82
+#: src/components/network/ConnectionDetails.tsx:117
 #: src/components/network/WifiConnectionForm.tsx:156
 #: src/components/network/WifiConnectionForm.tsx:159
 msgid "Security"
@@ -1284,8 +1303,8 @@ msgstr "Захист"
 #. TRANSLATORS: table header for a zFCP devices table.
 #. TRANSLATORS: table header for an iSCSI targets table
 #. TRANSLATORS: table header for a DASD devices table
-#: src/components/network/ConnectionDetails.tsx:88
-#: src/components/network/ConnectionDetails.tsx:229
+#: src/components/network/ConnectionDetails.tsx:123
+#: src/components/network/ConnectionDetails.tsx:329
 #: src/components/storage/dasd/DASDTable.tsx:319
 #: src/components/storage/dasd/DASDTable.tsx:514
 #: src/components/storage/iscsi/StatusFilter.tsx:78
@@ -1295,262 +1314,257 @@ msgstr "Захист"
 msgid "Status"
 msgstr "Стан"
 
-#: src/components/network/ConnectionDetails.tsx:92
+#: src/components/network/ConnectionDetails.tsx:127
 msgid "Signal strength"
 msgstr "Потужність сигналу"
 
-#: src/components/network/ConnectionDetails.tsx:101
+#: src/components/network/ConnectionDetails.tsx:136
 msgid "Network not available"
 msgstr "Мережа недоступна"
 
-#: src/components/network/ConnectionDetails.tsx:111 src/utils/network.ts:199
+#: src/components/network/ConnectionDetails.tsx:146 src/utils/network.ts:200
 msgid "Bond"
 msgstr "Прив'язати"
 
-#: src/components/network/ConnectionDetails.tsx:112
+#: src/components/network/ConnectionDetails.tsx:147
 msgid "Bond details"
 msgstr "Подробиці прив'язки"
 
 #. TRANSLATORS: label for the bond mode field.
-#: src/components/network/ConnectionDetails.tsx:114
-#: src/components/network/connection-form/BondFields.tsx:82
+#: src/components/network/ConnectionDetails.tsx:149
+#: src/components/network/connection-form/BondFields.tsx:85
 msgid "Bond mode"
 msgstr "Режим прив'язки"
 
-#: src/components/network/ConnectionDetails.tsx:116
-#: src/components/network/ConnectionDetails.tsx:122
-#: src/components/network/ConnectionDetails.tsx:130
-#: src/components/network/ConnectionDetails.tsx:179
-#: src/components/network/ConnectionDetails.tsx:202
-#: src/components/network/ConnectionDetails.tsx:208
-#: src/components/network/ConnectionDetails.tsx:241
-#: src/components/network/ConnectionDetails.tsx:256
-#: src/components/network/ConnectionDetails.tsx:266
-#: src/components/network/ConnectionDetails.tsx:276
-#: src/components/network/ConnectionDetails.tsx:286
-#: src/components/network/ConnectionDetails.tsx:363
-#: src/components/network/ConnectionDetails.tsx:366
-#: src/components/network/ConnectionDetails.tsx:376
-#: src/components/network/ConnectionDetails.tsx:388
-#: src/components/network/ConnectionDetails.tsx:400
-#: src/components/network/ConnectionDetails.tsx:410
-msgid "None set"
-msgstr "Не задано"
-
 #. TRANSLATORS: label for the bond options field.
-#: src/components/network/ConnectionDetails.tsx:120
-#: src/components/network/connection-form/BondFields.tsx:93
+#: src/components/network/ConnectionDetails.tsx:155
+#: src/components/network/connection-form/BondFields.tsx:96
 msgid "Bond options"
 msgstr "Параметри прив'язки"
 
 #. TRANSLATORS: label for the bond ports field.
-#: src/components/network/ConnectionDetails.tsx:126
-#: src/components/network/connection-form/BondFields.tsx:108
+#: src/components/network/ConnectionDetails.tsx:161
+#: src/components/network/connection-form/BondFields.tsx:112
 msgid "Bond ports"
 msgstr "Порти прив'язки"
 
-#: src/components/network/ConnectionDetails.tsx:144 src/utils/network.ts:200
+#: src/components/network/ConnectionDetails.tsx:175 src/utils/network.ts:201
 msgid "Bridge"
 msgstr "Міст"
 
-#: src/components/network/ConnectionDetails.tsx:145
+#: src/components/network/ConnectionDetails.tsx:176
 msgid "Bridge details"
 msgstr "Подробиці про міст"
 
-#: src/components/network/ConnectionDetails.tsx:147
+#: src/components/network/ConnectionDetails.tsx:178
 msgid "STP"
 msgstr "STP"
 
 #. TRANSLATORS: authentication mode option
 #. TRANSLATORS: option label for disabling the IP configuration.
 #. TRANSLATORS: option label for disabling bridge STP.
-#: src/components/network/ConnectionDetails.tsx:149
+#: src/components/network/ConnectionDetails.tsx:180
 #: src/components/network/connection-form/BridgeFields.tsx:53
 #: src/components/network/connection-form/IpFields.tsx:69
 #: src/components/users/authentication-form/RootAuthFields.tsx:76
 msgid "Disabled"
 msgstr "Вимкнено"
 
-#: src/components/network/ConnectionDetails.tsx:149
+#: src/components/network/ConnectionDetails.tsx:180
 msgid "Enabled"
 msgstr "Увімкнено"
 
 #. TRANSLATORS: label for the bridge priority field.
-#: src/components/network/ConnectionDetails.tsx:155
-#: src/components/network/connection-form/BridgeFields.tsx:138
+#: src/components/network/ConnectionDetails.tsx:186
+#: src/components/network/connection-form/BridgeFields.tsx:142
 msgid "Priority"
 msgstr "Пріоритет"
 
 #. TRANSLATORS: label for the bridge forward delay field.
-#: src/components/network/ConnectionDetails.tsx:159
-#: src/components/network/connection-form/BridgeFields.tsx:167
+#: src/components/network/ConnectionDetails.tsx:190
+#: src/components/network/connection-form/BridgeFields.tsx:171
 msgid "Forward delay"
 msgstr "Затримка на вході"
 
 #. TRANSLATORS: label for the bridge hello time field.
-#: src/components/network/ConnectionDetails.tsx:165
-#: src/components/network/connection-form/BridgeFields.tsx:187
+#: src/components/network/ConnectionDetails.tsx:196
+#: src/components/network/connection-form/BridgeFields.tsx:191
 msgid "Hello time"
 msgstr "Час на привітання"
 
 #. TRANSLATORS: label for the bridge max message age field.
-#: src/components/network/ConnectionDetails.tsx:169
-#: src/components/network/connection-form/BridgeFields.tsx:207
+#: src/components/network/ConnectionDetails.tsx:200
+#: src/components/network/connection-form/BridgeFields.tsx:211
 msgid "Max message age"
 msgstr "Макс. термін зберігання повідомлення"
 
 #. TRANSLATORS: label for the bridge ports field.
-#: src/components/network/ConnectionDetails.tsx:175
-#: src/components/network/connection-form/BridgeFields.tsx:103
+#: src/components/network/ConnectionDetails.tsx:206
+#: src/components/network/connection-form/BridgeFields.tsx:107
 msgid "Bridge ports"
 msgstr "Порти мосту"
 
-#: src/components/network/ConnectionDetails.tsx:193 src/utils/network.ts:201
+#: src/components/network/ConnectionDetails.tsx:218 src/utils/network.ts:202
 msgid "VLAN"
 msgstr "VLAN"
 
-#: src/components/network/ConnectionDetails.tsx:194
+#: src/components/network/ConnectionDetails.tsx:219
 msgid "VLAN details"
 msgstr "Подробиці VLAN"
 
 #. TRANSLATORS: label for the VLAN ID field.
-#: src/components/network/ConnectionDetails.tsx:196
+#: src/components/network/ConnectionDetails.tsx:221
 #: src/components/network/connection-form/VlanFields.tsx:117
 msgid "VLAN ID"
 msgstr "VLAN ID"
 
 #. TRANSLATORS: label for the VLAN parent device field.
-#: src/components/network/ConnectionDetails.tsx:200
+#: src/components/network/ConnectionDetails.tsx:225
 #: src/components/network/connection-form/VlanFields.tsx:91
 msgid "Parent device"
 msgstr "Базовий пристрій"
 
-#: src/components/network/ConnectionDetails.tsx:206
+#: src/components/network/ConnectionDetails.tsx:231
 msgid "Protocol"
 msgstr "Протокол"
 
-#: src/components/network/ConnectionDetails.tsx:220
-msgid "Device details"
-msgstr "Відомості про пристрій"
-
-#. TRANSLATORS: table header for an iSCSI targets table
-#: src/components/network/ConnectionDetails.tsx:225
-#: src/components/storage/iscsi/TargetsTable.tsx:454
-msgid "Interface"
-msgstr "Інтерфейс"
-
-#: src/components/network/ConnectionDetails.tsx:233
-msgid "MAC address"
-msgstr "MAC адреса"
-
-#: src/components/network/ConnectionDetails.tsx:237
-#: src/components/network/ConnectionDetails.tsx:372
+#: src/components/network/ConnectionDetails.tsx:248
+#: src/components/network/ConnectionDetails.tsx:449
 msgid "Gateway"
 msgstr "Шлюз"
 
-#: src/components/network/ConnectionDetails.tsx:252
-#: src/components/network/ConnectionDetails.tsx:384
-#: src/components/network/ConnectionsTable.tsx:158
+#: src/components/network/ConnectionDetails.tsx:263
+#: src/components/network/ConnectionDetails.tsx:461
+#: src/components/network/ConnectionsTable.tsx:191
 #: src/components/network/connection-form/DeviceSelectorModal.tsx:185
 msgid "IP Addresses"
 msgstr "IP-адреси"
 
-#: src/components/network/ConnectionDetails.tsx:262
-#: src/components/network/ConnectionDetails.tsx:396
+#: src/components/network/ConnectionDetails.tsx:273
+#: src/components/network/ConnectionDetails.tsx:473
 msgid "DNS"
 msgstr "DNS"
 
 #. TRANSLATORS: label for the DNS search domains field.
-#: src/components/network/ConnectionDetails.tsx:272
-#: src/components/network/ConnectionDetails.tsx:406
-#: src/components/network/connection-form/Form.tsx:326
+#: src/components/network/ConnectionDetails.tsx:283
+#: src/components/network/ConnectionDetails.tsx:485
+#: src/components/network/connection-form/Form.tsx:338
 msgid "DNS search domains"
 msgstr "Домени пошуку DNS"
 
-#: src/components/network/ConnectionDetails.tsx:282
+#: src/components/network/ConnectionDetails.tsx:293
 msgid "Routes"
 msgstr "Маршрути"
 
-#: src/components/network/ConnectionDetails.tsx:316
+#: src/components/network/ConnectionDetails.tsx:320
+msgid "Device details"
+msgstr "Відомості про пристрій"
+
+#. TRANSLATORS: table header for an iSCSI targets table
+#: src/components/network/ConnectionDetails.tsx:325
+#: src/components/storage/iscsi/TargetsTable.tsx:454
+msgid "Interface"
+msgstr "Інтерфейс"
+
+#: src/components/network/ConnectionDetails.tsx:333
+msgid "MAC address"
+msgstr "MAC адреса"
+
+#: src/components/network/ConnectionDetails.tsx:371
 msgid "Connected device"
 msgstr "Підключений пристрій"
 
-#: src/components/network/ConnectionDetails.tsx:316
+#: src/components/network/ConnectionDetails.tsx:371
 msgid "Connected devices"
 msgstr "Підключені пристрої"
 
-#: src/components/network/ConnectionDetails.tsx:317
+#: src/components/network/ConnectionDetails.tsx:372
 msgid "No device is currently using this connection."
 msgstr "Наразі жоден пристрій не використовує це з'єднання."
 
-#: src/components/network/ConnectionDetails.tsx:323
+#: src/components/network/ConnectionDetails.tsx:378
 msgid "Connected devices tabs"
 msgstr "Вкладки підключених пристроїв"
 
-#: src/components/network/ConnectionDetails.tsx:345
+#: src/components/network/ConnectionDetails.tsx:412
 #: src/components/storage/ProposalPage.tsx:200
 msgid "Settings"
 msgstr "Налаштування"
 
-#: src/components/network/ConnectionDetails.tsx:348
+#: src/components/network/ConnectionDetails.tsx:415
 msgid "Edit connection settings"
 msgstr "Змінити налаштування з'єднання"
 
-#: src/components/network/ConnectionDetails.tsx:355
+#: src/components/network/ConnectionDetails.tsx:422
 msgid "Binding"
 msgstr "Прив'язка"
+
+#: src/components/network/ConnectionDetails.tsx:427
+#, fuzzy
+#| msgid "zFCP controllers"
+msgid "Controller"
+msgstr "Контролери zFCP"
 
 #. TRANSLATORS: label for NTP mode selector
 #. TRANSLATORS: label for hostname mode selector
 #. TRANSLATORS: title of the block showing the mode selected
 #. for the current product (e.g., "Standard" or "Immutable")
-#: src/components/network/ConnectionDetails.tsx:359
+#: src/components/network/ConnectionDetails.tsx:436
 #: src/components/product/ProductSelectionPage.tsx:111
 #: src/components/system/system-form/HostnameFields.tsx:125
 #: src/components/system/system-form/NtpFields.tsx:60
 msgid "Mode"
 msgstr "Режим"
 
-#: src/components/network/ConnectionDetails.tsx:363
+#: src/components/network/ConnectionDetails.tsx:440
 msgid "IPv4"
 msgstr "IPv4"
 
-#: src/components/network/ConnectionDetails.tsx:366
+#: src/components/network/ConnectionDetails.tsx:443
 msgid "IPv6"
 msgstr "IPv6"
 
 #. TRANSLATORS: %s will be replaced with connection id
-#: src/components/network/ConnectionPage.tsx:44
+#: src/components/network/ConnectionPage.tsx:45
 #, javascript-format
 msgid "\"%s\" does not exist or is no longer available."
 msgstr "\"%s\" не існує або більше не доступна."
 
-#: src/components/network/ConnectionPage.tsx:49
+#: src/components/network/ConnectionPage.tsx:50
 msgid "Connection not found or lost"
 msgstr "З'єднання не знайдено або втрачено"
 
 #. TRANSLATORS: link text on the connection not found page.
-#: src/components/network/ConnectionPage.tsx:56
-#: src/components/network/connection-form/Form.tsx:374
+#: src/components/network/ConnectionPage.tsx:57
+#: src/components/network/connection-form/Form.tsx:388
 msgid "Go to network page"
 msgstr "Перейти до розділу «Мережа»"
 
-#: src/components/network/ConnectionsTable.tsx:109
+#: src/components/network/ConnectionsTable.tsx:111
 msgid "(bound by name)"
 msgstr "(прив'язаний за назвою)"
 
-#: src/components/network/ConnectionsTable.tsx:110
+#: src/components/network/ConnectionsTable.tsx:112
 msgid "(bound by MAC)"
 msgstr "(прив'язаний до MAC-адреси)"
+
+#. TRANSLATORS: supplementary label in the "Name" column of the network
+#. connections table for a port of a bond or a bridge. %s is replaced by
+#. the name of the bond or the bridge, e.g. "(port of bond0)".
+#: src/components/network/ConnectionsTable.tsx:132
+#, fuzzy, javascript-format
+#| msgid "(step %s of %s)"
+msgid "(port of %s)"
+msgstr "(крок %s з %s)"
 
 #. TRANSLATORS: table header for an iSCSI targets table
 #. TRANSLATORS: input field for the iSCSI initiator name
 #. TRANSLATORS: label for hostname value display
 #. TRANSLATORS: label for hostname input
 #. TRANSLATORS: label for the network connection profile name field.
-#: src/components/network/ConnectionsTable.tsx:116
-#: src/components/network/ConnectionsTable.tsx:234
-#: src/components/network/connection-form/Form.tsx:205
+#: src/components/network/ConnectionsTable.tsx:139
+#: src/components/network/ConnectionsTable.tsx:271
+#: src/components/network/connection-form/Form.tsx:210
 #: src/components/storage/DeviceSelectorPage.tsx:56
 #: src/components/storage/LvmPage.tsx:217
 #: src/components/storage/iscsi/InitiatorFormPage.tsx:66
@@ -1567,17 +1581,17 @@ msgstr "Назва"
 #. TRANSLATORS: label for the network connection type field.
 #. TRANSLATORS: table column with the type of a network device and, below
 #. it, the kernel driver it runs on.
-#: src/components/network/ConnectionsTable.tsx:122
-#: src/components/network/ConnectionsTable.tsx:242
+#: src/components/network/ConnectionsTable.tsx:154
+#: src/components/network/ConnectionsTable.tsx:279
 #: src/components/network/connection-form/DeviceSelectorModal.tsx:149
-#: src/components/network/connection-form/Form.tsx:190
+#: src/components/network/connection-form/Form.tsx:195
 #: src/components/storage/DeviceSelectorPage.tsx:55
 #: src/components/storage/dasd/DASDTable.tsx:528
 msgid "Type"
 msgstr "Тип"
 
-#: src/components/network/ConnectionsTable.tsx:128
-#: src/components/network/ConnectionsTable.tsx:257
+#: src/components/network/ConnectionsTable.tsx:160
+#: src/components/network/ConnectionsTable.tsx:294
 #: src/components/network/connection-form/DeviceSelectorModal.tsx:168
 msgid "State"
 msgstr "Стан"
@@ -1586,7 +1600,7 @@ msgstr "Стан"
 #. TRANSLATORS: table header for a DASD devices table
 #. TRANSLATORS: table column with the name of a network device and, below
 #. it, the hardware identifier of its interface.
-#: src/components/network/ConnectionsTable.tsx:134
+#: src/components/network/ConnectionsTable.tsx:166
 #: src/components/network/connection-form/DeviceSelectorModal.tsx:137
 #: src/components/storage/DrivesTable.tsx:72
 #: src/components/storage/MdRaidsTable.tsx:71
@@ -1600,20 +1614,20 @@ msgstr "Пристрій"
 
 #. TRANSLATORS: shown in the filter toolbar when filters are active.
 #. %1$s is the number of matching connections, %2$s is the total number.
-#: src/components/network/ConnectionsTable.tsx:215
+#: src/components/network/ConnectionsTable.tsx:252
 #, javascript-format
 msgid "%1$d of %2$d connections match filters"
 msgstr "%1$d з %2$d з'єднань відповідають фільтрам"
 
 #. TRANSLATORS: shown in the filter toolbar when no filters are active.
 #. %s is the total number of connections.
-#: src/components/network/ConnectionsTable.tsx:222
+#: src/components/network/ConnectionsTable.tsx:259
 #, javascript-format
 msgid "%d connections available"
 msgstr "%d з'єднань доступно"
 
-#: src/components/network/ConnectionsTable.tsx:245
-#: src/components/network/ConnectionsTable.tsx:260
+#: src/components/network/ConnectionsTable.tsx:282
+#: src/components/network/ConnectionsTable.tsx:297
 #: src/components/storage/dasd/DASDTable.tsx:322
 #: src/components/storage/dasd/DASDTable.tsx:334
 #: src/components/storage/iscsi/StatusFilter.tsx:58
@@ -1623,8 +1637,8 @@ msgstr "%d з'єднань доступно"
 msgid "All"
 msgstr "Всі"
 
-#: src/components/network/ConnectionsTable.tsx:280
-#: src/components/network/ConnectionsTable.tsx:360
+#: src/components/network/ConnectionsTable.tsx:317
+#: src/components/network/ConnectionsTable.tsx:397
 #: src/components/storage/dasd/DASDTable.tsx:364
 #: src/components/storage/dasd/DASDTable.tsx:683
 #: src/components/storage/iscsi/TargetsTable.tsx:366
@@ -1633,7 +1647,7 @@ msgstr "Всі"
 msgid "Clear all filters"
 msgstr "Очистити всі фільтри"
 
-#: src/components/network/ConnectionsTable.tsx:307
+#: src/components/network/ConnectionsTable.tsx:344
 #: src/components/storage/ProposalResultTable.tsx:136
 #: src/components/storage/SpaceActionsTable.tsx:227
 msgid "Details"
@@ -1643,26 +1657,26 @@ msgstr "Подробиці"
 #. noun ("connection"): the previous crumb is the connection name, so a
 #. bare "Edit" reads fine visually but leaves screen-reader users without
 #. the object being acted on when the crumb is announced on its own.
-#: src/components/network/ConnectionsTable.tsx:312
-#: src/components/network/connection-form/Form.tsx:415
+#: src/components/network/ConnectionsTable.tsx:349
+#: src/components/network/connection-form/Form.tsx:429
 #: src/components/storage/iscsi/TargetsTable.tsx:227
 msgid "Edit connection"
 msgstr "Редагувати з'єднання"
 
 #. TRANSLATORS: button label, connect to a Wi-Fi network
-#: src/components/network/ConnectionsTable.tsx:321
+#: src/components/network/ConnectionsTable.tsx:358
 #: src/components/network/WifiConnectionForm.tsx:188
 #: src/components/storage/iscsi/TargetsTable.tsx:239
 #: src/components/storage/iscsi/TargetsTable.tsx:250
 msgid "Connect"
 msgstr "З'єднати"
 
-#: src/components/network/ConnectionsTable.tsx:326
+#: src/components/network/ConnectionsTable.tsx:363
 #: src/components/storage/iscsi/TargetsTable.tsx:231
 msgid "Disconnect"
 msgstr "Роз'єднати"
 
-#: src/components/network/ConnectionsTable.tsx:334
+#: src/components/network/ConnectionsTable.tsx:371
 #: src/components/storage/PartitionsSection.tsx:191
 #: src/components/storage/SpaceActionsTable.tsx:165
 #: src/components/storage/VolumeGroupEditor.tsx:184
@@ -1679,18 +1693,18 @@ msgstr "Вилучити"
 #. TRANSLATORS: accessible label for the connection actions toggle
 #. button. %s is replaced by connection id, e.g. "Actions for
 #. Ethernet 2"
-#: src/components/network/ConnectionsTable.tsx:345
+#: src/components/network/ConnectionsTable.tsx:382
 #: src/components/storage/dasd/DASDTable.tsx:669
 #: src/components/storage/zfcp/ZFCPDevicesTable.tsx:370
 #, javascript-format
 msgid "Actions for %s"
 msgstr "Дії для %s"
 
-#: src/components/network/ConnectionsTable.tsx:352
+#: src/components/network/ConnectionsTable.tsx:389
 msgid "No connections match filters"
 msgstr "Жодне з'єднання не відповідає фільтрам"
 
-#: src/components/network/ConnectionsTable.tsx:356
+#: src/components/network/ConnectionsTable.tsx:393
 #: src/components/storage/dasd/DASDTable.tsx:679
 #: src/components/storage/iscsi/TargetsTable.tsx:362
 #: src/components/storage/zfcp/ZFCPDevicesTable.tsx:379
@@ -1850,29 +1864,29 @@ msgstr "Прив'язка пристрою"
 #. TRANSLATORS: accessible label for the device selector. MAC address refers
 #. to the hardware identifier of the network interface.
 #. TRANSLATORS: label for the network interface name field.
-#: src/components/network/connection-form/BondFields.tsx:62
-#: src/components/network/connection-form/BondFields.tsx:67
-#: src/components/network/connection-form/BridgeFields.tsx:82
-#: src/components/network/connection-form/BridgeFields.tsx:87
+#: src/components/network/connection-form/BondFields.tsx:65
+#: src/components/network/connection-form/BondFields.tsx:70
+#: src/components/network/connection-form/BridgeFields.tsx:85
+#: src/components/network/connection-form/BridgeFields.tsx:90
 #: src/components/network/connection-form/DeviceSelector.tsx:121
-#: src/components/network/connection-form/Form.tsx:228
+#: src/components/network/connection-form/Form.tsx:233
 #: src/components/network/connection-form/VlanFields.tsx:134
 msgid "Device name"
 msgstr "Назва пристрою"
 
 #. TRANSLATORS: helper text for the bond device name field.
-#: src/components/network/connection-form/BondFields.tsx:71
+#: src/components/network/connection-form/BondFields.tsx:74
 msgid "E.g., bond0"
 msgstr "Наприклад, bond0"
 
 #. TRANSLATORS: helper text for the bond options field.
-#: src/components/network/connection-form/BondFields.tsx:97
+#: src/components/network/connection-form/BondFields.tsx:100
 msgid "E.g., downdelay=0, primary=eth1, miimon=100, lacp_rate=fast"
 msgstr "Наприклад, downdelay=0, primary=eth1, miimon=100, lacp_rate=fast"
 
 #. TRANSLATORS: title of the dialog for picking the ports of a bond
 #. among the devices found in the system.
-#: src/components/network/connection-form/BondFields.tsx:113
+#: src/components/network/connection-form/BondFields.tsx:117
 msgid "Select bond ports"
 msgstr "Оберіть порти зв’язку"
 
@@ -1911,26 +1925,26 @@ msgid "Not used by this bridge"
 msgstr "Цей міст його не використовує"
 
 #. TRANSLATORS: helper text for the bond device name field.
-#: src/components/network/connection-form/BridgeFields.tsx:91
+#: src/components/network/connection-form/BridgeFields.tsx:94
 msgid "E.g., br0"
 msgstr "Наприклад, br0"
 
 #. TRANSLATORS: title of the dialog for picking the ports of a
 #. bridge among the devices found in the system.
-#: src/components/network/connection-form/BridgeFields.tsx:108
+#: src/components/network/connection-form/BridgeFields.tsx:112
 msgid "Select bridge ports"
 msgstr "Оберіть порти мосту"
 
 #. TRANSLATORS: label for the bridge STP (Spanning Tree Protocol) field.
-#: src/components/network/connection-form/BridgeFields.tsx:117
+#: src/components/network/connection-form/BridgeFields.tsx:121
 msgid "Spanning Tree Protocol (STP)"
 msgstr "Протокол Spanning Tree (STP)"
 
 #. TRANSLATORS: label suffix indicating an optional field.
-#: src/components/network/connection-form/BridgeFields.tsx:135
-#: src/components/network/connection-form/BridgeFields.tsx:164
-#: src/components/network/connection-form/BridgeFields.tsx:184
-#: src/components/network/connection-form/BridgeFields.tsx:204
+#: src/components/network/connection-form/BridgeFields.tsx:139
+#: src/components/network/connection-form/BridgeFields.tsx:168
+#: src/components/network/connection-form/BridgeFields.tsx:188
+#: src/components/network/connection-form/BridgeFields.tsx:208
 #: src/components/network/connection-form/IpFields.tsx:160
 #: src/components/product/registration-form/Form.tsx:187
 #: src/components/product/registration-form/Form.tsx:202
@@ -1945,28 +1959,28 @@ msgstr "(не обов'язково)"
 #. field. Text inside square brackets [] is
 #. semantically and visually emphasized. Keep the
 #. brackets.
-#: src/components/network/connection-form/BridgeFields.tsx:149
+#: src/components/network/connection-form/BridgeFields.tsx:153
 msgid "Root bridge selection (0-61440). [Lower is higher priority]."
 msgstr ""
 "Вибір кореневого мосту (0–61440). [Чим менше значення, тим вищий пріоритет]."
 
 #. TRANSLATORS: helper text for the bridge forward delay field.
-#: src/components/network/connection-form/BridgeFields.tsx:173
+#: src/components/network/connection-form/BridgeFields.tsx:177
 msgid "Listening and learning time (4-30 seconds)."
 msgstr "Час для прослуховування та вивчення (4–30 секунд)."
 
 #. TRANSLATORS: helper text for the bridge hello time field.
-#: src/components/network/connection-form/BridgeFields.tsx:193
+#: src/components/network/connection-form/BridgeFields.tsx:197
 msgid "Protocol message interval (1-10 seconds)."
 msgstr "Інтервал між повідомленнями протоколу (1–10 секунд)."
 
 #. TRANSLATORS: helper text for the bridge max message age field.
-#: src/components/network/connection-form/BridgeFields.tsx:213
+#: src/components/network/connection-form/BridgeFields.tsx:217
 msgid "Protocol message retention time (6-40 seconds)."
 msgstr "Час зберігання повідомлень протоколу (6–40 секунд)."
 
 #: src/components/network/connection-form/DeviceSelector.tsx:121
-#: src/components/network/connection-form/Form.tsx:237
+#: src/components/network/connection-form/Form.tsx:242
 msgid "Device MAC address"
 msgstr "MAC-адреса пристрою"
 
@@ -1986,7 +2000,7 @@ msgstr "Виберіть мережевий пристрій"
 #. ellipsis hints that more follows instead of a
 #. device being picked right away.
 #: src/components/network/connection-form/DeviceSelector.tsx:180
-#: src/components/network/connection-form/PortsField.tsx:168
+#: src/components/network/connection-form/PortsField.tsx:184
 msgid "Browse with details..."
 msgstr "Переглянути з докладною інформацією..."
 
@@ -2011,58 +2025,58 @@ msgstr "Виберіть пристрій"
 
 #. TRANSLATORS: title of an error for a failed network connection save.
 #. Do not end with a period.
-#: src/components/network/connection-form/Form.tsx:170
+#: src/components/network/connection-form/Form.tsx:175
 msgid "The connection could not be saved"
 msgstr "З'єднання не вдалося зберегти"
 
 #. TRANSLATORS: checkbox label for custom DNS server configuration.
-#: src/components/network/connection-form/Form.tsx:277
+#: src/components/network/connection-form/Form.tsx:289
 msgid "Use custom DNS servers"
 msgstr "Використовувати власні DNS-сервери"
 
 #. TRANSLATORS: label for the DNS servers field.
-#: src/components/network/connection-form/Form.tsx:290
+#: src/components/network/connection-form/Form.tsx:302
 msgid "DNS servers"
 msgstr "DNS-сервери"
 
 #. TRANSLATORS: helper text for DNS servers field explaining the format.
-#: src/components/network/connection-form/Form.tsx:294
+#: src/components/network/connection-form/Form.tsx:306
 msgid "E.g., 8.8.8.8 or 2001:4860:4860::8888"
 msgstr "Наприклад, 8.8.8.8 або 2001:4860:4860::8888"
 
 #. TRANSLATORS: validation error for an invalid DNS server address entry.
-#: src/components/network/connection-form/Form.tsx:298
+#: src/components/network/connection-form/Form.tsx:310
 msgid "Invalid DNS server address"
 msgstr "Неправильна адреса DNS-сервера"
 
 #. TRANSLATORS: checkbox label for custom DNS search domain configuration.
-#: src/components/network/connection-form/Form.tsx:313
+#: src/components/network/connection-form/Form.tsx:325
 msgid "Use custom DNS search domains"
 msgstr "Використовувати власні домени пошуку DNS"
 
 #. TRANSLATORS: helper text for DNS search domains field explaining the format.
-#: src/components/network/connection-form/Form.tsx:330
+#: src/components/network/connection-form/Form.tsx:342
 msgid "E.g., example.com"
 msgstr "Наприклад, example.com"
 
 #. TRANSLATORS: validation error for an invalid DNS search domain entry.
-#: src/components/network/connection-form/Form.tsx:334
+#: src/components/network/connection-form/Form.tsx:346
 msgid "Invalid DNS search domain"
 msgstr "Недійсний домен пошуку DNS"
 
 #. TRANSLATORS: title of the page shown when the requested connection
 #. profile does not exist. Do not end with a period.
-#: src/components/network/connection-form/Form.tsx:370
+#: src/components/network/connection-form/Form.tsx:384
 msgid "Connection not found"
 msgstr "З'єднання не знайдено"
 
 #. TRANSLATORS: body text on the connection not found page.
-#: src/components/network/connection-form/Form.tsx:372
+#: src/components/network/connection-form/Form.tsx:386
 msgid "The connection does not exist or is no longer available."
 msgstr "З'єднання не існує або більше не доступне."
 
 #. TRANSLATORS: breadcrumb label for the new-connection form.
-#: src/components/network/connection-form/Form.tsx:419
+#: src/components/network/connection-form/Form.tsx:433
 msgid "New connection"
 msgstr "Нове з'єднання"
 
@@ -2161,7 +2175,7 @@ msgstr "Наприклад, 2001:db8::1"
 
 #. TRANSLATORS: helper text for the ports field of a bond
 #. or a bridge, naming the two ways of filling it in.
-#: src/components/network/connection-form/PortsField.tsx:148
+#: src/components/network/connection-form/PortsField.tsx:164
 msgid "Choose devices or enter their names."
 msgstr "Виберіть пристрої або вкажіть їхні назви."
 
@@ -2650,7 +2664,7 @@ msgstr "Потенційна втрата даних"
 
 #. TRANSLATORS: state of a network device whose situation cannot be determined
 #: src/components/overview/SystemInformationSection.tsx:61
-#: src/utils/network.ts:62 src/utils/network.ts:80 src/utils/network.ts:202
+#: src/utils/network.ts:63 src/utils/network.ts:81 src/utils/network.ts:203
 msgid "Unknown"
 msgstr "Невідоме"
 
@@ -5160,7 +5174,7 @@ msgid "Go to iSCSI"
 msgstr "Перейти до iSCSI"
 
 #. TRANSLATORS: state of a network device that is up and running
-#: src/components/storage/iscsi/TargetsTable.tsx:161 src/utils/network.ts:89
+#: src/components/storage/iscsi/TargetsTable.tsx:161 src/utils/network.ts:90
 msgid "Connected"
 msgstr "З'єднано"
 
@@ -5181,7 +5195,7 @@ msgid "Disconnection failed"
 msgstr "Не вдалося від'єднати"
 
 #. TRANSLATORS: state of a network device that is available but not in use
-#: src/components/storage/iscsi/TargetsTable.tsx:166 src/utils/network.ts:93
+#: src/components/storage/iscsi/TargetsTable.tsx:166 src/utils/network.ts:94
 msgid "Disconnected"
 msgstr "Роз'єднано"
 
@@ -6110,11 +6124,11 @@ msgstr "zFCP"
 msgid "Activate controllers"
 msgstr "Активувати контроллери"
 
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:58 src/utils/network.ts:64
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:58 src/utils/network.ts:65
 msgid "Activated"
 msgstr "Активовано"
 
-#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:59 src/utils/network.ts:66
+#: src/components/storage/zfcp/ZFCPDevicesTable.tsx:59 src/utils/network.ts:67
 msgid "Deactivated"
 msgstr "Деактивовано"
 
@@ -6452,74 +6466,74 @@ msgstr "Виправте наведені нижче помилки та спр�
 msgid "Go to [installation] summary."
 msgstr "Перейти до підсумків [встановлення]."
 
-#: src/utils/network.ts:63
+#: src/utils/network.ts:64
 msgid "Activating"
 msgstr "Активуємо"
 
-#: src/utils/network.ts:65
+#: src/utils/network.ts:66
 msgid "Deactivating"
 msgstr "Деактивуємо"
 
 #. TRANSLATORS: state of a network device that the installer does not manage
-#: src/utils/network.ts:82
+#: src/utils/network.ts:83
 msgid "Unmanaged"
 msgstr "Некерований"
 
 #. TRANSLATORS: state of a network device that cannot be used, for example
 #. because its cable is unplugged
-#: src/utils/network.ts:85
+#: src/utils/network.ts:86
 msgid "Unavailable"
 msgstr "Не доступно"
 
 #. TRANSLATORS: state of a network device that is establishing a connection
-#: src/utils/network.ts:87
+#: src/utils/network.ts:88
 msgid "Connecting"
 msgstr "З'єднуємо"
 
 #. TRANSLATORS: state of a network device that is tearing its connection down
-#: src/utils/network.ts:91
+#: src/utils/network.ts:92
 msgid "Disconnecting"
 msgstr "Перериваємо зв'язок"
 
 #. TRANSLATORS: state of a network device whose connection attempt did not succeed
-#: src/utils/network.ts:95
+#: src/utils/network.ts:96
 msgid "Failed"
 msgstr "Невдача"
 
 #. TRANSLATORS: link speed of a network device in megabits per second. %d is
 #. replaced by the number, e.g. "100 Mb/s".
-#: src/utils/network.ts:117
+#: src/utils/network.ts:118
 #, javascript-format
 msgid "%d Mb/s"
 msgstr "%d Mb/s"
 
 #. TRANSLATORS: link speed of a network device in gigabits per second. %s is
 #. replaced by the number, e.g. "2.5 Gb/s".
-#: src/utils/network.ts:122
+#: src/utils/network.ts:123
 #, javascript-format
 msgid "%s Gb/s"
 msgstr "%s Gb/s"
 
 #. TRANSLATORS: shown for a network device with no cable plugged in.
-#: src/utils/network.ts:138
+#: src/utils/network.ts:139
 msgid "No link"
 msgstr "Немає з'єднання"
 
 #. TRANSLATORS: shown for a network device that has a link but does not
 #. report how fast it is, e.g. a wireless or a virtual one.
-#: src/utils/network.ts:143
+#: src/utils/network.ts:144
 msgid "Link up"
 msgstr "Підключитися"
 
-#: src/utils/network.ts:196
+#: src/utils/network.ts:197
 msgid "Ethernet"
 msgstr "Ethernet"
 
-#: src/utils/network.ts:197
+#: src/utils/network.ts:198
 msgid "Wi-Fi"
 msgstr "Wi-Fi"
 
-#: src/utils/network.ts:198
+#: src/utils/network.ts:199
 msgid "Loopback"
 msgstr "Зациклення"
 
