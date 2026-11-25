@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-01 14:59+0000\n"
+"POT-Creation-Date: 2026-11-25 13:16+0000\n"
 "PO-Revision-Date: 2026-07-27 08:12+0000\n"
 "Last-Translator: Davide Aiello <davide.aiello@novilingulists.com>\n"
 "Language-Team: Italian <https://l10n.opensuse.org/projects/agama/agama-web/"
@@ -34,17 +34,15 @@ msgstr "Combinazione di colori"
 msgid "Contrast"
 msgstr "Contrasto"
 
+#. TRANSLATORS: size mode option
+#. TRANSLATORS: option label for automatic IP configuration.
 #. TRANSLATORS: short label for the option shown in the UI
 #. TRANSLATORS: the "Automatic" appearance option name
-#. TRANSLATORS: option label for automatic IP configuration.
-#. TRANSLATORS: size mode option
 #: src/components/core/AppearanceSettings.tsx:78
 #: src/components/core/AppearanceSettings.tsx:109
 #: src/components/core/AppearanceSettings.tsx:144
-#: src/components/network/connection-form/IpFields.tsx:46
+#: src/components/network/connection-form/IpFields.tsx:48
 #: src/components/storage/BootSelectionPage.tsx:202
-#: src/components/storage/SizeModeSelect.tsx:191
-#: src/components/storage/SizeModeSelect.tsx:196
 #: src/components/storage/iscsi/TargetLoginPage.tsx:58
 #: src/components/storage/shared/SizeFields.tsx:67
 #: src/components/storage/shared/SizeFields.tsx:250
@@ -113,17 +111,17 @@ msgid "Breadcrumbs"
 msgstr "Breadcrumb"
 
 #: src/components/core/ChangeProductOption.tsx:92
-#: src/components/product/ProductSelectionPage.tsx:622
+#: src/components/product/ProductSelectionPage.tsx:728
 msgid "Change mode"
 msgstr "Cambia modalità"
 
 #: src/components/core/ChangeProductOption.tsx:93
-#: src/components/product/ProductSelectionPage.tsx:635
+#: src/components/product/ProductSelectionPage.tsx:741
 msgid "Change product or mode"
 msgstr "Cambia prodotto o modalità"
 
 #: src/components/core/ChangeProductOption.tsx:94
-#: src/components/product/ProductSelectionPage.tsx:638
+#: src/components/product/ProductSelectionPage.tsx:744
 msgid "Change product"
 msgstr "Cambia prodotto"
 
@@ -143,7 +141,7 @@ msgstr ""
 
 #. TRANSLATORS: button to close the config dialog
 #: src/components/core/ConfigDialog.tsx:74
-#: src/components/product/LicenseDialog.tsx:74
+#: src/components/product/LicenseDialog.tsx:81
 msgid "Close"
 msgstr "Esci"
 
@@ -273,7 +271,7 @@ msgstr "Installazione completata"
 msgid "You can reboot the machine to log in to the new system."
 msgstr "È possibile riavviare la macchina per accedere al nuovo sistema."
 
-#: src/components/core/InstallationProgress.tsx:49
+#: src/components/core/InstallationProgress.tsx:50
 msgid "Installation in progress"
 msgstr "Installazione in corso"
 
@@ -343,9 +341,9 @@ msgstr ""
 "Le impostazioni di [lingua e area geografica] del prodotto possono offrire "
 "altre opzioni tra cui scegliere."
 
-#. TRANSLATORS: label for the form submit button.
 #. TRANSLATORS: button to save the localization settings
 #. TRANSLATORS: button to save system settings changes
+#. TRANSLATORS: label for the form submit button.
 #: src/components/core/InstallerL10nOptions.tsx:364
 #: src/components/core/InstallerL10nOptions.tsx:434
 #: src/components/core/Page.tsx:290 src/components/form/SubmitButton.tsx:49
@@ -480,7 +478,7 @@ msgstr "Indietro"
 #: src/components/core/Page.tsx:258 src/components/core/Popup.tsx:140
 #: src/components/form/CancelButton.tsx:47
 #: src/components/network/WifiConnectionForm.tsx:188
-#: src/components/product/ProductSelectionPage.tsx:538
+#: src/components/product/ProductSelectionPage.tsx:615
 #: src/components/storage/iscsi/DiscoverFormPage.tsx:252
 #: src/components/storage/iscsi/InitiatorFormPage.tsx:81
 #: src/components/storage/iscsi/TargetLoginPage.tsx:278
@@ -500,14 +498,17 @@ msgstr "Le password non corrispondono"
 msgid "Password confirmation"
 msgstr "Conferma password"
 
-#. TRANSLATORS: Message to inform users which keyboard layout is active. %s
-#. will be replaced with the layout name (e.g., "de", "cn", "cz"). Keep
-#. square brackets around %s to apply special formatting in
-#. the UI.
-#: src/components/core/PasswordInput.tsx:69
+#. TRANSLATORS: Message to inform users which keyboard layout is active
+#. %s will be replaced with the keyboard layout name (e.g., "US", "DE").
+#. Example: "Using us keyboard".
+#.
+#. TRANSLATORS: Message to inform users which keyboard layout is active.
+#. %s will be replaced with the layout name (e.g., "de", "cn", "cz").
+#: src/components/core/PasswordInput.tsx:70
+#: src/components/form/MaskedField.tsx:86
 #, javascript-format
-msgid "Using [%s] keyboard layout"
-msgstr "Utilizzo del layout di tastiera [%s]"
+msgid "Using %s keyboard layout"
+msgstr "È in uso il layout di tastiera %s"
 
 #. TRANSLATORS: Warns users that CAPS LOCK is on.
 #. Text inside square brackets [] will be formatted in bold.
@@ -515,12 +516,12 @@ msgstr "Utilizzo del layout di tastiera [%s]"
 #.
 #. TRANSLATORS: Warns users that CAPS LOCK is on.
 #. Keep square brackets to apply special formatting in the UI.
-#: src/components/core/PasswordInput.tsx:90
+#: src/components/core/PasswordInput.tsx:89
 #: src/components/form/MaskedField.tsx:116
 msgid "[CAPS LOCK] is on"
 msgstr "[BLOC MAIUSC] attivo"
 
-#: src/components/core/PasswordInput.tsx:144
+#: src/components/core/PasswordInput.tsx:145
 #: src/components/form/MaskedField.tsx:194
 msgid "Password visibility button"
 msgstr "bottone visibilità password"
@@ -546,7 +547,7 @@ msgstr "Aggiornamento dati..."
 msgid "(step %s of %s)"
 msgstr "(passaggio %s of %s)"
 
-#: src/components/core/ProgressReport.tsx:66
+#: src/components/core/ProgressReport.tsx:70
 #, javascript-format
 msgid "Step %1$d of %2$d"
 msgstr "Passaggio %1$d di %2$d"
@@ -582,12 +583,12 @@ msgstr "Memorizzazione"
 
 #. TRANSLATORS: breadcrumb label for the network configuration section.
 #: src/components/core/ProgressStatusMonitor.tsx:43
-#: src/components/network/ConnectionDetails.tsx:74
-#: src/components/network/ConnectionPage.tsx:76
+#: src/components/network/ConnectionDetails.tsx:109
+#: src/components/network/ConnectionPage.tsx:79
 #: src/components/network/NetworkPage.tsx:44
 #: src/components/network/WifiConnectionForm.tsx:143
 #: src/components/network/WifiConnectionForm.tsx:198
-#: src/components/network/connection-form/Form.tsx:397
+#: src/components/network/connection-form/Form.tsx:411
 #: src/components/overview/NetworkSummary.tsx:149
 msgid "Network"
 msgstr "Rete"
@@ -642,11 +643,6 @@ msgstr "Non esiste o non è raggiungibile."
 #: src/components/storage/ProposalResultSection.tsx:138
 msgid "Actions"
 msgstr "Azioni"
-
-#: src/components/core/SelectTypeaheadCreatable.tsx:70
-#: src/components/storage/DeviceSelectorModal.tsx:292
-msgid "Add"
-msgstr "Aggiungi"
 
 #: src/components/core/SelectableDataTable.tsx:387
 msgid "Row expansion"
@@ -868,17 +864,8 @@ msgstr ""
 "Selezionare le voci da modificare o rimuovere. In alternativa, [rimuovere "
 "tutte le voci non valide.]"
 
-#. TRANSLATORS: Message to inform users which keyboard layout is active
-#. %s will be replaced with the keyboard layout name (e.g., "US", "DE").
-#. Example: "Using us keyboard".
-#.
-#: src/components/form/MaskedField.tsx:86
-#, javascript-format
-msgid "Using %s keyboard layout"
-msgstr "È in uso il layout di tastiera %s"
-
 #: src/components/form/PreservedValueField.tsx:64
-#: src/components/product/ProductSelectionPage.tsx:280
+#: src/components/product/ProductSelectionPage.tsx:344
 #: src/components/storage/BootSection.tsx:97
 #: src/components/storage/DeviceSelectorModal.tsx:292
 #: src/components/storage/EncryptionSection.tsx:59
@@ -933,10 +920,10 @@ msgstr "Nessuno dei fusi orari corrisponde al filtro."
 msgid "Value is required"
 msgstr "Il valore è obbligatorio"
 
-#. TRANSLATORS: Breadcrumb item for the main page, where the whole
-#. installation can be reviewed.
 #. TRANSLATORS: First breadcrumb item, linking back to the main page
 #. where the whole installation can be reviewed.
+#. TRANSLATORS: Breadcrumb item for the main page, where the whole
+#. installation can be reviewed.
 #: src/components/layout/Header.tsx:120
 #: src/components/overview/OverviewPage.tsx:123
 msgid "Installation"
@@ -962,25 +949,44 @@ msgstr "Connessione associata al dispositivo %s."
 msgid "Connection is bound to MAC address %s."
 msgstr "Connessione associata all'indirizzo MAC %s."
 
-#: src/components/network/ConnectionDetails.tsx:75
+#: src/components/network/ConnectionDetails.tsx:91
+#: src/components/network/ConnectionDetails.tsx:150
+#: src/components/network/ConnectionDetails.tsx:156
+#: src/components/network/ConnectionDetails.tsx:226
+#: src/components/network/ConnectionDetails.tsx:232
+#: src/components/network/ConnectionDetails.tsx:251
+#: src/components/network/ConnectionDetails.tsx:266
+#: src/components/network/ConnectionDetails.tsx:276
+#: src/components/network/ConnectionDetails.tsx:286
+#: src/components/network/ConnectionDetails.tsx:296
+#: src/components/network/ConnectionDetails.tsx:443
+#: src/components/network/ConnectionDetails.tsx:446
+#: src/components/network/ConnectionDetails.tsx:456
+#: src/components/network/ConnectionDetails.tsx:468
+#: src/components/network/ConnectionDetails.tsx:480
+#: src/components/network/ConnectionDetails.tsx:492
+msgid "None set"
+msgstr "Nessuno impostato"
+
+#: src/components/network/ConnectionDetails.tsx:110
 msgid "Network details"
 msgstr "Dettagli rete"
 
-#: src/components/network/ConnectionDetails.tsx:77
+#: src/components/network/ConnectionDetails.tsx:112
 msgid "SSID"
 msgstr "SSID"
 
-#: src/components/network/ConnectionDetails.tsx:81
+#: src/components/network/ConnectionDetails.tsx:116
 #: src/components/network/WifiConnectionForm.tsx:154
 #: src/components/network/WifiConnectionForm.tsx:157
 msgid "Security"
 msgstr "Sicurezza"
 
-#. TRANSLATORS: table header for a DASD devices table
-#. TRANSLATORS: table header for an iSCSI targets table
 #. TRANSLATORS: table header for a zFCP devices table.
-#: src/components/network/ConnectionDetails.tsx:87
-#: src/components/network/ConnectionDetails.tsx:228
+#. TRANSLATORS: table header for an iSCSI targets table
+#. TRANSLATORS: table header for a DASD devices table
+#: src/components/network/ConnectionDetails.tsx:122
+#: src/components/network/ConnectionDetails.tsx:328
 #: src/components/storage/dasd/DASDTable.tsx:316
 #: src/components/storage/dasd/DASDTable.tsx:540
 #: src/components/storage/iscsi/StatusFilter.tsx:77
@@ -990,256 +996,251 @@ msgstr "Sicurezza"
 msgid "Status"
 msgstr "Stato"
 
-#: src/components/network/ConnectionDetails.tsx:91
+#: src/components/network/ConnectionDetails.tsx:126
 msgid "Signal strength"
 msgstr "Potenza del segnale"
 
-#: src/components/network/ConnectionDetails.tsx:100
+#: src/components/network/ConnectionDetails.tsx:135
 msgid "Network not available"
 msgstr "Rete non disponibile"
 
-#: src/components/network/ConnectionDetails.tsx:110 src/utils/network.ts:88
+#: src/components/network/ConnectionDetails.tsx:145 src/utils/network.ts:88
 msgid "Bond"
 msgstr "Bonding"
 
-#: src/components/network/ConnectionDetails.tsx:111
+#: src/components/network/ConnectionDetails.tsx:146
 msgid "Bond details"
 msgstr "Dettagli bonding"
 
 #. TRANSLATORS: label for the bond mode field.
-#: src/components/network/ConnectionDetails.tsx:113
-#: src/components/network/connection-form/BondFields.tsx:86
+#: src/components/network/ConnectionDetails.tsx:148
+#: src/components/network/connection-form/BondFields.tsx:90
 msgid "Bond mode"
 msgstr "Modalità di bonding"
 
-#: src/components/network/ConnectionDetails.tsx:115
-#: src/components/network/ConnectionDetails.tsx:121
-#: src/components/network/ConnectionDetails.tsx:129
-#: src/components/network/ConnectionDetails.tsx:178
-#: src/components/network/ConnectionDetails.tsx:201
-#: src/components/network/ConnectionDetails.tsx:207
-#: src/components/network/ConnectionDetails.tsx:240
-#: src/components/network/ConnectionDetails.tsx:255
-#: src/components/network/ConnectionDetails.tsx:265
-#: src/components/network/ConnectionDetails.tsx:275
-#: src/components/network/ConnectionDetails.tsx:285
-#: src/components/network/ConnectionDetails.tsx:366
-#: src/components/network/ConnectionDetails.tsx:369
-#: src/components/network/ConnectionDetails.tsx:379
-#: src/components/network/ConnectionDetails.tsx:391
-#: src/components/network/ConnectionDetails.tsx:403
-#: src/components/network/ConnectionDetails.tsx:413
-msgid "None set"
-msgstr "Nessuno impostato"
-
 #. TRANSLATORS: label for the bond options field.
-#: src/components/network/ConnectionDetails.tsx:119
-#: src/components/network/connection-form/BondFields.tsx:97
+#: src/components/network/ConnectionDetails.tsx:154
+#: src/components/network/connection-form/BondFields.tsx:101
 msgid "Bond options"
 msgstr "Opzioni di bonding"
 
 #. TRANSLATORS: label for the bond ports field.
-#: src/components/network/ConnectionDetails.tsx:125
-#: src/components/network/connection-form/BondFields.tsx:111
+#: src/components/network/ConnectionDetails.tsx:160
+#: src/components/network/connection-form/BondFields.tsx:115
 msgid "Bond ports"
 msgstr "Porte di bonding"
 
-#: src/components/network/ConnectionDetails.tsx:143 src/utils/network.ts:89
+#: src/components/network/ConnectionDetails.tsx:174 src/utils/network.ts:89
 msgid "Bridge"
 msgstr "Bridging"
 
-#: src/components/network/ConnectionDetails.tsx:144
+#: src/components/network/ConnectionDetails.tsx:175
 msgid "Bridge details"
 msgstr "Dettagli bridging"
 
-#: src/components/network/ConnectionDetails.tsx:146
+#: src/components/network/ConnectionDetails.tsx:177
 msgid "STP"
 msgstr "STP"
 
 #. TRANSLATORS: authentication mode option
+#. TRANSLATORS: option label for disabling the IP configuration.
 #. TRANSLATORS: option label for disabling bridge STP.
-#: src/components/network/ConnectionDetails.tsx:148
+#: src/components/network/ConnectionDetails.tsx:179
 #: src/components/network/connection-form/BridgeFields.tsx:54
+#: src/components/network/connection-form/IpFields.tsx:69
 #: src/components/users/authentication-form/RootAuthFields.tsx:76
 msgid "Disabled"
 msgstr "Disabilitato"
 
-#: src/components/network/ConnectionDetails.tsx:148
+#: src/components/network/ConnectionDetails.tsx:179
 msgid "Enabled"
 msgstr "Abilitato"
 
 #. TRANSLATORS: label for the bridge priority field.
-#: src/components/network/ConnectionDetails.tsx:154
-#: src/components/network/connection-form/BridgeFields.tsx:143
+#: src/components/network/ConnectionDetails.tsx:185
+#: src/components/network/connection-form/BridgeFields.tsx:147
 msgid "Priority"
 msgstr "Priorità"
 
 #. TRANSLATORS: label for the bridge forward delay field.
-#: src/components/network/ConnectionDetails.tsx:158
-#: src/components/network/connection-form/BridgeFields.tsx:172
+#: src/components/network/ConnectionDetails.tsx:189
+#: src/components/network/connection-form/BridgeFields.tsx:176
 msgid "Forward delay"
 msgstr "Ritardo inoltro"
 
 #. TRANSLATORS: label for the bridge hello time field.
-#: src/components/network/ConnectionDetails.tsx:164
-#: src/components/network/connection-form/BridgeFields.tsx:192
+#: src/components/network/ConnectionDetails.tsx:195
+#: src/components/network/connection-form/BridgeFields.tsx:196
 msgid "Hello time"
 msgstr "Orario saluto"
 
 #. TRANSLATORS: label for the bridge max message age field.
-#: src/components/network/ConnectionDetails.tsx:168
-#: src/components/network/connection-form/BridgeFields.tsx:212
+#: src/components/network/ConnectionDetails.tsx:199
+#: src/components/network/connection-form/BridgeFields.tsx:216
 msgid "Max message age"
 msgstr "Durata massima messaggio"
 
 #. TRANSLATORS: label for the bridge ports field.
-#: src/components/network/ConnectionDetails.tsx:174
-#: src/components/network/connection-form/BridgeFields.tsx:106
+#: src/components/network/ConnectionDetails.tsx:205
+#: src/components/network/connection-form/BridgeFields.tsx:110
 msgid "Bridge ports"
 msgstr "Porte di bridging"
 
-#: src/components/network/ConnectionDetails.tsx:192 src/utils/network.ts:90
+#: src/components/network/ConnectionDetails.tsx:217 src/utils/network.ts:90
 msgid "VLAN"
 msgstr "VLAN"
 
-#: src/components/network/ConnectionDetails.tsx:193
+#: src/components/network/ConnectionDetails.tsx:218
 msgid "VLAN details"
 msgstr "Dettagli VLAN"
 
 #. TRANSLATORS: label for the VLAN ID field.
-#: src/components/network/ConnectionDetails.tsx:195
+#: src/components/network/ConnectionDetails.tsx:220
 #: src/components/network/connection-form/VlanFields.tsx:112
 msgid "VLAN ID"
 msgstr "ID VLAN"
 
 #. TRANSLATORS: label for the VLAN parent device field.
-#: src/components/network/ConnectionDetails.tsx:199
+#: src/components/network/ConnectionDetails.tsx:224
 #: src/components/network/connection-form/VlanFields.tsx:91
 msgid "Parent device"
 msgstr "Dispositivo principale"
 
-#: src/components/network/ConnectionDetails.tsx:205
+#: src/components/network/ConnectionDetails.tsx:230
 msgid "Protocol"
 msgstr "Protocollo"
 
-#: src/components/network/ConnectionDetails.tsx:219
-msgid "Device details"
-msgstr "Dettagli dispositivo"
-
-#. TRANSLATORS: table header for an iSCSI targets table
-#: src/components/network/ConnectionDetails.tsx:224
-#: src/components/storage/iscsi/TargetsTable.tsx:476
-msgid "Interface"
-msgstr "Interfaccia"
-
-#: src/components/network/ConnectionDetails.tsx:232
-msgid "MAC address"
-msgstr "Indirizzo MAC"
-
-#: src/components/network/ConnectionDetails.tsx:236
-#: src/components/network/ConnectionDetails.tsx:375
+#: src/components/network/ConnectionDetails.tsx:247
+#: src/components/network/ConnectionDetails.tsx:452
 msgid "Gateway"
 msgstr "Gateway"
 
-#: src/components/network/ConnectionDetails.tsx:251
-#: src/components/network/ConnectionDetails.tsx:387
-#: src/components/network/ConnectionsTable.tsx:196
+#: src/components/network/ConnectionDetails.tsx:262
+#: src/components/network/ConnectionDetails.tsx:464
+#: src/components/network/ConnectionsTable.tsx:229
 msgid "IP Addresses"
 msgstr "Indirizzi IP"
 
-#: src/components/network/ConnectionDetails.tsx:261
-#: src/components/network/ConnectionDetails.tsx:399
+#: src/components/network/ConnectionDetails.tsx:272
+#: src/components/network/ConnectionDetails.tsx:476
 msgid "DNS"
 msgstr "DNS"
 
 #. TRANSLATORS: label for the DNS search domains field.
-#: src/components/network/ConnectionDetails.tsx:271
-#: src/components/network/ConnectionDetails.tsx:409
-#: src/components/network/connection-form/Form.tsx:318
+#: src/components/network/ConnectionDetails.tsx:282
+#: src/components/network/ConnectionDetails.tsx:488
+#: src/components/network/connection-form/Form.tsx:330
 msgid "DNS search domains"
 msgstr "Domini di ricerca DNS"
 
-#: src/components/network/ConnectionDetails.tsx:281
+#: src/components/network/ConnectionDetails.tsx:292
 msgid "Routes"
 msgstr "Rotte"
 
-#: src/components/network/ConnectionDetails.tsx:316
+#: src/components/network/ConnectionDetails.tsx:319
+msgid "Device details"
+msgstr "Dettagli dispositivo"
+
+#. TRANSLATORS: table header for an iSCSI targets table
+#: src/components/network/ConnectionDetails.tsx:324
+#: src/components/storage/iscsi/TargetsTable.tsx:476
+msgid "Interface"
+msgstr "Interfaccia"
+
+#: src/components/network/ConnectionDetails.tsx:332
+msgid "MAC address"
+msgstr "Indirizzo MAC"
+
+#: src/components/network/ConnectionDetails.tsx:371
 msgid "Connected device"
 msgstr "Dispositivo connesso"
 
-#: src/components/network/ConnectionDetails.tsx:316
+#: src/components/network/ConnectionDetails.tsx:371
 msgid "Connected devices"
 msgstr "Dispositivi connessi"
 
-#: src/components/network/ConnectionDetails.tsx:319
+#: src/components/network/ConnectionDetails.tsx:374
 msgid "No device is currently using this connection."
 msgstr "Nessun dispositivo sta attualmente utilizzando questa connessione."
 
-#: src/components/network/ConnectionDetails.tsx:325
+#: src/components/network/ConnectionDetails.tsx:380
 msgid "Connected devices tabs"
 msgstr "Schede dispositivi connessi"
 
-#: src/components/network/ConnectionDetails.tsx:347
+#: src/components/network/ConnectionDetails.tsx:414
 #: src/components/storage/ProposalPage.tsx:205
 msgid "Settings"
 msgstr "Impostazioni"
 
-#: src/components/network/ConnectionDetails.tsx:351
+#: src/components/network/ConnectionDetails.tsx:418
 msgid "Edit connection settings"
 msgstr "Modifica impostazioni di connessione"
 
-#: src/components/network/ConnectionDetails.tsx:358
+#: src/components/network/ConnectionDetails.tsx:425
 msgid "Binding"
 msgstr "Associazione"
 
+#: src/components/network/ConnectionDetails.tsx:430
+#, fuzzy
+msgid "Controller"
+msgstr "Controller zFCP"
+
 #. TRANSLATORS: label for NTP mode selector
 #. TRANSLATORS: label for hostname mode selector
-#: src/components/network/ConnectionDetails.tsx:362
+#: src/components/network/ConnectionDetails.tsx:439
 #: src/components/system/system-form/HostnameFields.tsx:111
 #: src/components/system/system-form/NtpFields.tsx:60
 msgid "Mode"
 msgstr "Modalità"
 
-#: src/components/network/ConnectionDetails.tsx:366
+#: src/components/network/ConnectionDetails.tsx:443
 msgid "IPv4"
 msgstr "IPv4"
 
-#: src/components/network/ConnectionDetails.tsx:369
+#: src/components/network/ConnectionDetails.tsx:446
 msgid "IPv6"
 msgstr "IPv6"
 
 #. TRANSLATORS: %s will be replaced with connection id
-#: src/components/network/ConnectionPage.tsx:43
+#: src/components/network/ConnectionPage.tsx:44
 #, javascript-format
 msgid "\"%s\" does not exist or is no longer available."
 msgstr "\"%s\" non esiste o non è più disponibile."
 
-#: src/components/network/ConnectionPage.tsx:48
+#: src/components/network/ConnectionPage.tsx:49
 msgid "Connection not found or lost"
 msgstr "Connessione non trovata o persa"
 
 #. TRANSLATORS: link text on the connection not found page.
-#: src/components/network/ConnectionPage.tsx:55
-#: src/components/network/connection-form/Form.tsx:366
+#: src/components/network/ConnectionPage.tsx:56
+#: src/components/network/connection-form/Form.tsx:380
 msgid "Go to network page"
 msgstr "Vai alla pagina della rete"
 
-#: src/components/network/ConnectionsTable.tsx:151
+#: src/components/network/ConnectionsTable.tsx:153
 msgid "(bound by name)"
 msgstr "(associato per nome)"
 
-#: src/components/network/ConnectionsTable.tsx:152
+#: src/components/network/ConnectionsTable.tsx:154
 msgid "(bound by MAC)"
 msgstr "(associato per MAC)"
 
-#. TRANSLATORS: label for the network connection profile name field.
+#. TRANSLATORS: supplementary label in the "Name" column of the network
+#. connections table for a port of a bond or a bridge. %s is replaced by
+#. the name of the bond or the bridge, e.g. "(port of bond0)".
+#: src/components/network/ConnectionsTable.tsx:174
+#, fuzzy, javascript-format
+msgid "(port of %s)"
+msgstr "(passaggio %s of %s)"
+
+#. TRANSLATORS: table header for an iSCSI targets table
+#. TRANSLATORS: input field for the iSCSI initiator name
 #. TRANSLATORS: label for hostname value display
 #. TRANSLATORS: label for hostname input
-#. TRANSLATORS: input field for the iSCSI initiator name
-#. TRANSLATORS: table header for an iSCSI targets table
-#: src/components/network/ConnectionsTable.tsx:158
-#: src/components/network/ConnectionsTable.tsx:280
-#: src/components/network/connection-form/Form.tsx:197
+#. TRANSLATORS: label for the network connection profile name field.
+#: src/components/network/ConnectionsTable.tsx:181
+#: src/components/network/ConnectionsTable.tsx:309
+#: src/components/network/connection-form/Form.tsx:202
 #: src/components/storage/DeviceSelectorPage.tsx:55
 #: src/components/storage/LvmPage.tsx:216
 #: src/components/storage/iscsi/InitiatorFormPage.tsx:66
@@ -1252,24 +1253,24 @@ msgstr "(associato per MAC)"
 msgid "Name"
 msgstr "Nome"
 
-#. TRANSLATORS: label for the network connection type field.
 #. TRANSLATORS: table header for a DASD devices table
-#: src/components/network/ConnectionsTable.tsx:163
-#: src/components/network/ConnectionsTable.tsx:288
-#: src/components/network/connection-form/Form.tsx:182
+#. TRANSLATORS: label for the network connection type field.
+#: src/components/network/ConnectionsTable.tsx:195
+#: src/components/network/ConnectionsTable.tsx:317
+#: src/components/network/connection-form/Form.tsx:187
 #: src/components/storage/DeviceSelectorPage.tsx:54
 #: src/components/storage/dasd/DASDTable.tsx:554
 msgid "Type"
 msgstr "Tipo"
 
-#: src/components/network/ConnectionsTable.tsx:168
-#: src/components/network/ConnectionsTable.tsx:303
+#: src/components/network/ConnectionsTable.tsx:200
+#: src/components/network/ConnectionsTable.tsx:332
 msgid "State"
 msgstr "Stato"
 
-#. TRANSLATORS: table header for a DASD devices table
 #. TRANSLATORS: table header for a zFCP devices table.
-#: src/components/network/ConnectionsTable.tsx:173
+#. TRANSLATORS: table header for a DASD devices table
+#: src/components/network/ConnectionsTable.tsx:205
 #: src/components/storage/DrivesTable.tsx:72
 #: src/components/storage/MdRaidsTable.tsx:71
 #: src/components/storage/ProposalResultTable.tsx:134
@@ -1282,20 +1283,20 @@ msgstr "Dispositivo"
 
 #. TRANSLATORS: shown in the filter toolbar when filters are active.
 #. %1$s is the number of matching connections, %2$s is the total number.
-#: src/components/network/ConnectionsTable.tsx:261
+#: src/components/network/ConnectionsTable.tsx:290
 #, javascript-format
 msgid "%1$d of %2$d connections match filters"
 msgstr "%1$d connessioni su %2$d corrispondono ai filtri"
 
 #. TRANSLATORS: shown in the filter toolbar when no filters are active.
 #. %s is the total number of connections.
-#: src/components/network/ConnectionsTable.tsx:268
+#: src/components/network/ConnectionsTable.tsx:297
 #, javascript-format
 msgid "%d connections available"
 msgstr "%d connessioni disponibili"
 
-#: src/components/network/ConnectionsTable.tsx:291
-#: src/components/network/ConnectionsTable.tsx:306
+#: src/components/network/ConnectionsTable.tsx:320
+#: src/components/network/ConnectionsTable.tsx:335
 #: src/components/storage/dasd/DASDTable.tsx:319
 #: src/components/storage/dasd/DASDTable.tsx:331
 #: src/components/storage/iscsi/StatusFilter.tsx:58
@@ -1305,8 +1306,8 @@ msgstr "%d connessioni disponibili"
 msgid "All"
 msgstr "Tutti"
 
-#: src/components/network/ConnectionsTable.tsx:326
-#: src/components/network/ConnectionsTable.tsx:406
+#: src/components/network/ConnectionsTable.tsx:355
+#: src/components/network/ConnectionsTable.tsx:435
 #: src/components/storage/dasd/DASDTable.tsx:361
 #: src/components/storage/dasd/DASDTable.tsx:703
 #: src/components/storage/iscsi/TargetsTable.tsx:363
@@ -1315,7 +1316,7 @@ msgstr "Tutti"
 msgid "Clear all filters"
 msgstr "Cancella tutti i filtri"
 
-#: src/components/network/ConnectionsTable.tsx:353
+#: src/components/network/ConnectionsTable.tsx:382
 #: src/components/storage/ProposalResultTable.tsx:136
 #: src/components/storage/SpaceActionsTable.tsx:227
 msgid "Details"
@@ -1325,26 +1326,26 @@ msgstr "Dettagli"
 #. noun ("connection"): the previous crumb is the connection name, so a
 #. bare "Edit" reads fine visually but leaves screen-reader users without
 #. the object being acted on when the crumb is announced on its own.
-#: src/components/network/ConnectionsTable.tsx:358
-#: src/components/network/connection-form/Form.tsx:407
+#: src/components/network/ConnectionsTable.tsx:387
+#: src/components/network/connection-form/Form.tsx:421
 #: src/components/storage/iscsi/TargetsTable.tsx:224
 msgid "Edit connection"
 msgstr "Modifica connessione"
 
 #. TRANSLATORS: button label, connect to a Wi-Fi network
-#: src/components/network/ConnectionsTable.tsx:367
+#: src/components/network/ConnectionsTable.tsx:396
 #: src/components/network/WifiConnectionForm.tsx:186
 #: src/components/storage/iscsi/TargetsTable.tsx:236
 #: src/components/storage/iscsi/TargetsTable.tsx:247
 msgid "Connect"
 msgstr "Connetti"
 
-#: src/components/network/ConnectionsTable.tsx:372
+#: src/components/network/ConnectionsTable.tsx:401
 #: src/components/storage/iscsi/TargetsTable.tsx:228
 msgid "Disconnect"
 msgstr "Disconnetti"
 
-#: src/components/network/ConnectionsTable.tsx:380
+#: src/components/network/ConnectionsTable.tsx:409
 #: src/components/storage/PartitionsSection.tsx:194
 #: src/components/storage/SpaceActionsTable.tsx:165
 #: src/components/storage/VolumeGroupEditor.tsx:187
@@ -1353,26 +1354,26 @@ msgid "Delete"
 msgstr "Elimina"
 
 #. TRANSLATORS: accessible label for the connection actions toggle
-#. button. %s is replaced by connection id, e.g. "Actions for
-#. Ethernet 2"
+#. button. %s is replaced with the zFCP LUN, e.g. "Actions for
+#. 0x4010403200000000"
 #. TRANSLATORS: accessible label for the connection actions toggle
 #. button. %s is replaced by device channel identifier, e.g. "Actions
 #. for 0.0.0150"
 #. TRANSLATORS: accessible label for the connection actions toggle
-#. button. %s is replaced with the zFCP LUN, e.g. "Actions for
-#. 0x4010403200000000"
-#: src/components/network/ConnectionsTable.tsx:391
+#. button. %s is replaced by connection id, e.g. "Actions for
+#. Ethernet 2"
+#: src/components/network/ConnectionsTable.tsx:420
 #: src/components/storage/dasd/DASDTable.tsx:689
 #: src/components/storage/zfcp/ZFCPDevicesTable.tsx:420
 #, javascript-format
 msgid "Actions for %s"
 msgstr "Azioni per %s"
 
-#: src/components/network/ConnectionsTable.tsx:398
+#: src/components/network/ConnectionsTable.tsx:427
 msgid "No connections match filters"
 msgstr "Nessuna connessione corrispondente ai filtri"
 
-#: src/components/network/ConnectionsTable.tsx:402
+#: src/components/network/ConnectionsTable.tsx:431
 #: src/components/storage/dasd/DASDTable.tsx:699
 #: src/components/storage/iscsi/TargetsTable.tsx:359
 #: src/components/storage/zfcp/ZFCPDevicesTable.tsx:429
@@ -1452,8 +1453,8 @@ msgstr ""
 "attualmente impostate per essere utilizzate solo durante l'installazione e "
 "non saranno copiate nel sistema installato"
 
-#. TRANSLATORS: WiFi authentication mode
 #. TRANSLATORS: option label meaning the connection has no specific device binding.
+#. TRANSLATORS: WiFi authentication mode
 #: src/components/network/WifiConnectionForm.tsx:48
 #: src/components/network/connection-form/BindingModeSelector.tsx:32
 msgid "None"
@@ -1573,37 +1574,37 @@ msgstr "Binding dispositivo"
 #. TRANSLATORS: accessible label for the device selector. MAC address refers
 #. to the hardware identifier of the network interface.
 #. TRANSLATORS: label for the network interface name field.
-#: src/components/network/connection-form/BondFields.tsx:66
-#: src/components/network/connection-form/BondFields.tsx:71
-#: src/components/network/connection-form/BridgeFields.tsx:86
-#: src/components/network/connection-form/BridgeFields.tsx:91
+#: src/components/network/connection-form/BondFields.tsx:70
+#: src/components/network/connection-form/BondFields.tsx:75
+#: src/components/network/connection-form/BridgeFields.tsx:90
+#: src/components/network/connection-form/BridgeFields.tsx:95
 #: src/components/network/connection-form/DeviceSelector.tsx:106
-#: src/components/network/connection-form/Form.tsx:220
+#: src/components/network/connection-form/Form.tsx:225
 #: src/components/network/connection-form/VlanFields.tsx:129
 msgid "Device name"
 msgstr "Nome dispositivo"
 
 #. TRANSLATORS: helper text for the bond device name field.
-#: src/components/network/connection-form/BondFields.tsx:75
+#: src/components/network/connection-form/BondFields.tsx:79
 msgid "E.g., bond0"
 msgstr "Ad esempio bond0"
 
 #. TRANSLATORS: helper text for the bond options field.
-#: src/components/network/connection-form/BondFields.tsx:101
+#: src/components/network/connection-form/BondFields.tsx:105
 msgid "E.g., downdelay=0, primary=eth1, miimon=100, lacp_rate=fast"
 msgstr "Ad esempio downdelay=0, primary=eth1, miimon=100, lacp_rate=fast"
 
-#. TRANSLATORS: helper text for the bridge ports field. %s is a list of available devices.
 #. TRANSLATORS: helper text for the bond ports field. %s is a list of available devices.
-#: src/components/network/connection-form/BondFields.tsx:115
-#: src/components/network/connection-form/BridgeFields.tsx:110
+#. TRANSLATORS: helper text for the bridge ports field. %s is a list of available devices.
+#: src/components/network/connection-form/BondFields.tsx:119
+#: src/components/network/connection-form/BridgeFields.tsx:114
 #, javascript-format
 msgid "Available devices: %s"
 msgstr "Dispositivi disponibili: %s"
 
-#. TRANSLATORS: option label for the bridge STP configuration to use the system default.
-#. TRANSLATORS: option for the VLAN protocol selector when no specific protocol is chosen.
 #. TRANSLATORS: NTP mode option
+#. TRANSLATORS: option for the VLAN protocol selector when no specific protocol is chosen.
+#. TRANSLATORS: option label for the bridge STP configuration to use the system default.
 #: src/components/network/connection-form/BridgeFields.tsx:40
 #: src/components/network/connection-form/VlanFields.tsx:38
 #: src/components/storage/shared/helpers.ts:60
@@ -1616,8 +1617,8 @@ msgstr "Predefinito"
 msgid "Enabled with the system default settings"
 msgstr "Abilitato con le impostazioni predefinite del sistema"
 
-#. TRANSLATORS: option label for enabling bridge STP.
 #. TRANSLATORS: NTP mode option
+#. TRANSLATORS: option label for enabling bridge STP.
 #: src/components/network/connection-form/BridgeFields.tsx:47
 #: src/components/product/registration-form/Form.tsx:160
 #: src/components/storage/utils.ts:72 src/components/storage/utils.ts:91
@@ -1636,21 +1637,21 @@ msgid "Not used by this bridge"
 msgstr "Non utilizzato da questo bridging"
 
 #. TRANSLATORS: helper text for the bond device name field.
-#: src/components/network/connection-form/BridgeFields.tsx:95
+#: src/components/network/connection-form/BridgeFields.tsx:99
 msgid "E.g., br0"
 msgstr "Ad esempio br0"
 
 #. TRANSLATORS: label for the bridge STP (Spanning Tree Protocol) field.
-#: src/components/network/connection-form/BridgeFields.tsx:122
+#: src/components/network/connection-form/BridgeFields.tsx:126
 msgid "Spanning Tree Protocol (STP)"
 msgstr "STP (Spanning Tree Protocol)"
 
 #. TRANSLATORS: label suffix indicating an optional field.
-#: src/components/network/connection-form/BridgeFields.tsx:140
-#: src/components/network/connection-form/BridgeFields.tsx:169
-#: src/components/network/connection-form/BridgeFields.tsx:189
-#: src/components/network/connection-form/BridgeFields.tsx:209
-#: src/components/network/connection-form/IpFields.tsx:150
+#: src/components/network/connection-form/BridgeFields.tsx:144
+#: src/components/network/connection-form/BridgeFields.tsx:173
+#: src/components/network/connection-form/BridgeFields.tsx:193
+#: src/components/network/connection-form/BridgeFields.tsx:213
+#: src/components/network/connection-form/IpFields.tsx:160
 #: src/components/product/registration-form/Form.tsx:187
 #: src/components/product/registration-form/Form.tsx:202
 #: src/components/storage/shared/FilesystemAdditionalFields.tsx:54
@@ -1664,175 +1665,179 @@ msgstr "(facoltativo)"
 #. field. Text inside square brackets [] is
 #. semantically and visually emphasized. Keep the
 #. brackets.
-#: src/components/network/connection-form/BridgeFields.tsx:154
+#: src/components/network/connection-form/BridgeFields.tsx:158
 msgid "Root bridge selection (0-61440). [Lower is higher priority]."
 msgstr ""
 "Selezione del bridging root (0-61440). [La priorità va al valore più basso]."
 
 #. TRANSLATORS: helper text for the bridge forward delay field.
-#: src/components/network/connection-form/BridgeFields.tsx:178
+#: src/components/network/connection-form/BridgeFields.tsx:182
 msgid "Listening and learning time (4-30 seconds)."
 msgstr "Tempo di ascolto e apprendimento (4-30 secondi)."
 
 #. TRANSLATORS: helper text for the bridge hello time field.
-#: src/components/network/connection-form/BridgeFields.tsx:198
+#: src/components/network/connection-form/BridgeFields.tsx:202
 msgid "Protocol message interval (1-10 seconds)."
 msgstr "Intervallo dei messaggi del protocollo (1-10 secondi)."
 
 #. TRANSLATORS: helper text for the bridge max message age field.
-#: src/components/network/connection-form/BridgeFields.tsx:218
+#: src/components/network/connection-form/BridgeFields.tsx:222
 msgid "Protocol message retention time (6-40 seconds)."
 msgstr "Tempo di conservazione dei messaggi del protocollo (6-40 secondi)."
 
 #: src/components/network/connection-form/DeviceSelector.tsx:106
-#: src/components/network/connection-form/Form.tsx:229
+#: src/components/network/connection-form/Form.tsx:234
 msgid "Device MAC address"
 msgstr "Indirizzo MAC dispositivo"
 
 #. TRANSLATORS: title of an error for a failed network connection save.
 #. Do not end with a period.
-#: src/components/network/connection-form/Form.tsx:162
+#: src/components/network/connection-form/Form.tsx:167
 msgid "The connection could not be saved"
 msgstr "Impossibile salvare la connessione"
 
 #. TRANSLATORS: checkbox label for custom DNS server configuration.
-#: src/components/network/connection-form/Form.tsx:269
+#: src/components/network/connection-form/Form.tsx:281
 msgid "Use custom DNS servers"
 msgstr "Usa server DNS personalizzati"
 
 #. TRANSLATORS: label for the DNS servers field.
-#: src/components/network/connection-form/Form.tsx:282
+#: src/components/network/connection-form/Form.tsx:294
 msgid "DNS servers"
 msgstr "Server DNS"
 
 #. TRANSLATORS: helper text for DNS servers field explaining the format.
-#: src/components/network/connection-form/Form.tsx:286
+#: src/components/network/connection-form/Form.tsx:298
 msgid "E.g., 8.8.8.8 or 2001:4860:4860::8888"
 msgstr "Ad esempio 8.8.8.8 o 2001:4860:4860::8888"
 
 #. TRANSLATORS: validation error for an invalid DNS server address entry.
-#: src/components/network/connection-form/Form.tsx:290
+#: src/components/network/connection-form/Form.tsx:302
 msgid "Invalid DNS server address"
 msgstr "Indirizzo del server DNS non valido"
 
 #. TRANSLATORS: checkbox label for custom DNS search domain configuration.
-#: src/components/network/connection-form/Form.tsx:305
+#: src/components/network/connection-form/Form.tsx:317
 msgid "Use custom DNS search domains"
 msgstr "Usa domini di ricerca DNS personalizzati"
 
 #. TRANSLATORS: helper text for DNS search domains field explaining the format.
-#: src/components/network/connection-form/Form.tsx:322
+#: src/components/network/connection-form/Form.tsx:334
 msgid "E.g., example.com"
 msgstr "Ad esempio example.com"
 
 #. TRANSLATORS: validation error for an invalid DNS search domain entry.
-#: src/components/network/connection-form/Form.tsx:326
+#: src/components/network/connection-form/Form.tsx:338
 msgid "Invalid DNS search domain"
 msgstr "Dominio di ricerca DNS non valido"
 
 #. TRANSLATORS: title of the page shown when the requested connection
 #. profile does not exist. Do not end with a period.
-#: src/components/network/connection-form/Form.tsx:362
+#: src/components/network/connection-form/Form.tsx:376
 msgid "Connection not found"
 msgstr "Connessione non trovata"
 
 #. TRANSLATORS: body text on the connection not found page.
-#: src/components/network/connection-form/Form.tsx:364
+#: src/components/network/connection-form/Form.tsx:378
 msgid "The connection does not exist or is no longer available."
 msgstr "La connessione non esiste o non è più disponibile."
 
 #. TRANSLATORS: breadcrumb label for the new-connection form.
-#: src/components/network/connection-form/Form.tsx:411
+#: src/components/network/connection-form/Form.tsx:425
 msgid "New connection"
 msgstr "Nuova connessione"
 
 #. TRANSLATORS: description for automatic IP configuration mode.
-#: src/components/network/connection-form/IpFields.tsx:48
+#: src/components/network/connection-form/IpFields.tsx:50
 msgid "Address and gateway assigned from the network"
 msgstr "Indirizzo e gateway assegnati dalla rete"
 
 #. TRANSLATORS: option label for advanced automatic IP configuration with static addresses.
-#: src/components/network/connection-form/IpFields.tsx:53
+#: src/components/network/connection-form/IpFields.tsx:55
 msgid "Automatic + manual"
 msgstr "Automatico + manuale"
 
 #. TRANSLATORS: description for advanced automatic mode with static addresses.
-#: src/components/network/connection-form/IpFields.tsx:55
+#: src/components/network/connection-form/IpFields.tsx:57
 msgid "Configuration from the network plus static addresses and gateway"
 msgstr "Configurazione dalla rete più gateway e indirizzi statici"
 
-#. TRANSLATORS: Network summary title when using manual/static IP configuration
 #. TRANSLATORS: option label for manual IP configuration
-#: src/components/network/connection-form/IpFields.tsx:60
+#. TRANSLATORS: Network summary title when using manual/static IP configuration
+#: src/components/network/connection-form/IpFields.tsx:62
 #: src/components/overview/NetworkSummary.tsx:128
-#: src/components/storage/SizeModeSelect.tsx:191
-#: src/components/storage/SizeModeSelect.tsx:199
 #: src/components/storage/iscsi/TargetLoginPage.tsx:56
 msgid "Manual"
 msgstr "Manuale"
 
 #. TRANSLATORS: description for manual IP configuration mode.
-#: src/components/network/connection-form/IpFields.tsx:62
+#: src/components/network/connection-form/IpFields.tsx:64
 msgid "Static addresses and gateway"
 msgstr "Gateway e indirizzi statici"
 
+#. TRANSLATORS: description for the disabled IP configuration mode.
+#: src/components/network/connection-form/IpFields.tsx:71
+#, fuzzy
+msgid "No IP configuration for this protocol"
+msgstr "Rimuovi la configurazione per questo disco"
+
 #. TRANSLATORS: label for the IPv4 or IPv6 settings dropdown.
-#: src/components/network/connection-form/IpFields.tsx:93
+#: src/components/network/connection-form/IpFields.tsx:103
 msgid "IPv4 Settings"
 msgstr "Impostazioni IPv4"
 
-#: src/components/network/connection-form/IpFields.tsx:93
+#: src/components/network/connection-form/IpFields.tsx:103
 msgid "IPv6 Settings"
 msgstr "Impostazioni IPv6"
 
 #. TRANSLATORS: label for the IP addresses field.
-#: src/components/network/connection-form/IpFields.tsx:95
+#: src/components/network/connection-form/IpFields.tsx:105
 msgid "IPv4 Addresses"
 msgstr "Indirizzi IPv4"
 
-#: src/components/network/connection-form/IpFields.tsx:95
+#: src/components/network/connection-form/IpFields.tsx:105
 msgid "IPv6 Addresses"
 msgstr "Indirizzi IPv6"
 
 #. TRANSLATORS: label for the IP gateway field.
-#: src/components/network/connection-form/IpFields.tsx:97
+#: src/components/network/connection-form/IpFields.tsx:107
 msgid "IPv4 Gateway"
 msgstr "Gateway IPv4"
 
-#: src/components/network/connection-form/IpFields.tsx:97
+#: src/components/network/connection-form/IpFields.tsx:107
 msgid "IPv6 Gateway"
 msgstr "Gateway IPv6"
 
 #. TRANSLATORS: helper text for IPv4 addresses field. Explains format and that prefix is auto-added.
-#: src/components/network/connection-form/IpFields.tsx:130
+#: src/components/network/connection-form/IpFields.tsx:140
 msgid "E.g., 192.168.1.1 or 192.168.1.1/24. Prefix auto-added if omitted."
 msgstr ""
 "Ad esempio 192.168.1.1 o 192.168.1.1/24. Prefisso aggiunto automaticamente "
 "se omesso."
 
 #. TRANSLATORS: helper text for IPv6 addresses field. Explains format and that prefix is auto-added.
-#: src/components/network/connection-form/IpFields.tsx:132
+#: src/components/network/connection-form/IpFields.tsx:142
 msgid "E.g., 2001:db8::1 or 2001:db8::1/64. Prefix auto-added if omitted."
 msgstr ""
 "Ad esempio 2001:db8::1 o 2001:db8::1/64. Prefisso aggiunto automaticamente "
 "se omesso."
 
 #. TRANSLATORS: validation error for an invalid IP address entry.
-#: src/components/network/connection-form/IpFields.tsx:138
+#: src/components/network/connection-form/IpFields.tsx:148
 msgid "Invalid IPv4 address"
 msgstr "Indirizzo IPv4 non valido"
 
-#: src/components/network/connection-form/IpFields.tsx:138
+#: src/components/network/connection-form/IpFields.tsx:148
 msgid "Invalid IPv6 address"
 msgstr "Indirizzo IPv6 non valido"
 
 #. TRANSLATORS: helper text for IPv4 gateway field explaining the format.
-#: src/components/network/connection-form/IpFields.tsx:158
+#: src/components/network/connection-form/IpFields.tsx:168
 msgid "E.g., 192.168.1.1"
 msgstr "Ad esempio 192.168.1.1"
 
 #. TRANSLATORS: helper text for IPv6 gateway field explaining the format.
-#: src/components/network/connection-form/IpFields.tsx:160
+#: src/components/network/connection-form/IpFields.tsx:170
 msgid "E.g., 2001:db8::1"
 msgstr "Ad esempio 2001:db8::1"
 
@@ -2043,15 +2048,15 @@ msgstr ""
 msgid "Installation settings"
 msgstr "Impostazioni di installazione"
 
-#. TRANSLATORS: Summary of the selected language and territory.
-#. %1$s is the language name (e.g. "Spanish").
-#. %2$s is the territory/region name (e.g. "Spain").
 #. TRANSLATORS: %1$s is a description of the device (eg. "Encrypted XFS RAID") and %2$s is
 #. the RAID level (eg. "RAID0")
 #. TRANSLATORS: %1$s is an already formatted mount path (eg. "/"),
 #. %2$s is a size description (eg. at least 10 GiB)
 #. TRANSLATORS: %1$s is a filesystem type description (eg. "Btrfs with snapshots"),
 #. %2$s is a description of the size or the size limits (eg. "at least 10 GiB")
+#. TRANSLATORS: Summary of the selected language and territory.
+#. %1$s is the language name (e.g. "Spanish").
+#. %2$s is the territory/region name (e.g. "Spain").
 #: src/components/overview/L10nSummary.tsx:50
 #: src/components/storage/device-utils.tsx:94
 #: src/components/storage/utils/partition.tsx:41
@@ -2190,7 +2195,7 @@ msgid "Using code ending in %s"
 msgstr "È in uso il codice che termina con %s"
 
 #: src/components/overview/RegistrationSummary.tsx:72
-#: src/components/product/ProductRegistrationPage.tsx:225
+#: src/components/product/ProductRegistrationPage.tsx:227
 msgid "Registration"
 msgstr "Registrazione"
 
@@ -2428,191 +2433,208 @@ msgstr "Il problema potrebbe essere dovuto alla connettività di rete."
 msgid "%s logo"
 msgstr "Logo di %s"
 
-#: src/components/product/ProductRegistrationPage.tsx:68
+#: src/components/product/ProductRegistrationPage.tsx:69
 #, javascript-format
 msgid "%s has been registered with below information."
 msgstr "%s è stato registrato con le informazioni riportate di seguito."
 
-#: src/components/product/ProductRegistrationPage.tsx:74
+#: src/components/product/ProductRegistrationPage.tsx:75
 #: src/components/product/registration-form/Form.tsx:151
 msgid "Registration server"
 msgstr "Server di registrazione"
 
-#: src/components/product/ProductRegistrationPage.tsx:80
+#: src/components/product/ProductRegistrationPage.tsx:81
 #: src/components/product/RegistrationExtension.tsx:151
 #: src/components/product/registration-form/Form.tsx:188
 msgid "Registration code"
 msgstr "Codice di registrazione"
 
 #. TRANSLATORS: switch for displaying or hiding the registration code
-#: src/components/product/ProductRegistrationPage.tsx:85
+#: src/components/product/ProductRegistrationPage.tsx:86
 #: src/components/product/RegistrationExtension.tsx:67
 msgid "Hide"
 msgstr "Nascondi"
 
-#: src/components/product/ProductRegistrationPage.tsx:85
+#: src/components/product/ProductRegistrationPage.tsx:86
 #: src/components/product/RegistrationExtension.tsx:67
 msgid "Show"
 msgstr "Mostra"
 
-#: src/components/product/ProductRegistrationPage.tsx:93
+#: src/components/product/ProductRegistrationPage.tsx:94
 #: src/components/product/registration-form/Form.tsx:202
 msgid "Email"
 msgstr "E-mail"
 
-#: src/components/product/ProductRegistrationPage.tsx:108
+#: src/components/product/ProductRegistrationPage.tsx:109
 msgid "Hostname cannot be changed after registration"
 msgstr "Il nome host non può essere modificato dopo la registrazione"
 
 #. TRANSLATORS: %s will be replaced with the hostname value
-#: src/components/product/ProductRegistrationPage.tsx:117
+#: src/components/product/ProductRegistrationPage.tsx:118
 #, javascript-format
 msgid "Configured as %s."
 msgstr "Configurato come %s."
 
 #. TRANSLATORS: text in square brackets is the section name and will be
 #. rendered as a link. Keep the brackets
-#: src/components/product/ProductRegistrationPage.tsx:129
+#: src/components/product/ProductRegistrationPage.tsx:130
 msgid ""
 "To change that name, visit [system] section settings before registering."
 msgstr ""
 "Per modificare il nome, visitare le impostazioni della sezione [sistema] "
 "prima della registrazione."
 
-#: src/components/product/ProductRegistrationPage.tsx:206
+#: src/components/product/ProductRegistrationPage.tsx:207
 msgid "Extensions"
 msgstr "Estensioni"
 
-#: src/components/product/ProductSelectionPage.tsx:110
+#: src/components/product/ProductSelectionPage.tsx:130
 #, javascript-format
 msgid "%d other mode available"
 msgid_plural "%d other modes available"
 msgstr[0] "%d altra modalità disponibile"
 msgstr[1] "%d altre modalità disponibili"
 
-#: src/components/product/ProductSelectionPage.tsx:111
+#: src/components/product/ProductSelectionPage.tsx:131
 #, javascript-format
 msgid "%d mode available"
 msgid_plural "%d modes available"
 msgstr[0] "%d modalità disponibile"
 msgstr[1] "%d modalità disponibili"
 
-#: src/components/product/ProductSelectionPage.tsx:137
+#: src/components/product/ProductSelectionPage.tsx:157
 msgid "License acceptance required"
 msgstr "Accettazione della licenza obbligatoria"
 
-#: src/components/product/ProductSelectionPage.tsx:151
+#: src/components/product/ProductSelectionPage.tsx:171
 msgid "Show more"
 msgstr "Mostra di più"
 
-#: src/components/product/ProductSelectionPage.tsx:152
+#: src/components/product/ProductSelectionPage.tsx:172
 msgid "Show less"
 msgstr "Mostra di meno"
 
 #. TRANSLATORS: Text used for the license acceptance checkbox. %s will be
 #. replaced with the product name and the text in the square brackets [] is
 #. used for the link to show the license, please keep the brackets.
-#: src/components/product/ProductSelectionPage.tsx:234
+#: src/components/product/ProductSelectionPage.tsx:263
 #, javascript-format
 msgid "I have read and accept the [license] for %s"
 msgstr "Confermo di aver letto e accettato la [licenza] per %s"
 
+#. TRANSLATORS: Text used for accepting one of the several licenses of a
+#. product. %s will be replaced with the license name, which is also a link
+#. to show the license.
+#: src/components/product/ProductSelectionPage.tsx:286
+#, fuzzy, javascript-format
+msgid "I have read and accept the %s"
+msgstr "Confermo di aver letto e accettato la [licenza] per %s"
+
 #. TRANSLATORS: %s is replaced by a device label, e.g. "sda (512 GiB)"
-#: src/components/product/ProductSelectionPage.tsx:279
+#: src/components/product/ProductSelectionPage.tsx:343
 #: src/components/storage/DeviceSelectorModal.tsx:299
 #, javascript-format
 msgid "Change to %s"
 msgstr "Passa a %s"
 
-#: src/components/product/ProductSelectionPage.tsx:279
+#: src/components/product/ProductSelectionPage.tsx:343
 #, javascript-format
 msgid "Select %s"
 msgstr "Seleziona %s"
 
-#: src/components/product/ProductSelectionPage.tsx:280
+#: src/components/product/ProductSelectionPage.tsx:344
 msgid "Select"
 msgstr "Selezionare"
 
-#: src/components/product/ProductSelectionPage.tsx:331
+#: src/components/product/ProductSelectionPage.tsx:395
 msgid "Select a product to continue."
 msgstr "Seleziona un prodotto per continuare."
 
-#: src/components/product/ProductSelectionPage.tsx:333
+#: src/components/product/ProductSelectionPage.tsx:397
 msgid "Select a product mode to continue."
 msgstr "Seleziona una modalità del prodotto per continuare."
 
-#: src/components/product/ProductSelectionPage.tsx:335
+#: src/components/product/ProductSelectionPage.tsx:399
 msgid "License acceptance is required to continue."
 msgstr "Per continuare è obbligatorio accettare la licenza."
 
-#: src/components/product/ProductSelectionPage.tsx:340
+#: src/components/product/ProductSelectionPage.tsx:404
 msgid "Changing the product will reset your current settings."
 msgstr ""
 "La modifica del prodotto comporterà il ripristino delle impostazioni attuali."
 
-#: src/components/product/ProductSelectionPage.tsx:395
+#: src/components/product/ProductSelectionPage.tsx:461
 msgid "Switch to a different mode"
 msgstr "Passa a un'altra modalità"
 
-#: src/components/product/ProductSelectionPage.tsx:400
+#: src/components/product/ProductSelectionPage.tsx:466
 msgid "Choose a mode"
 msgstr "Scegliere una modalità"
 
-#: src/components/product/ProductSelectionPage.tsx:405
-#: src/components/product/ProductSelectionPage.tsx:411
-#, javascript-format
+#: src/components/product/ProductSelectionPage.tsx:471
+#, fuzzy
 msgid "Choose a product"
-msgid_plural "Choose from %d available products"
-msgstr[0] "Scegliere un prodotto"
-msgstr[1] "Scegliere tra i %d prodotti disponibili"
+msgstr "Scegliere un prodotto"
 
-#: src/components/product/ProductSelectionPage.tsx:420
+#: src/components/product/ProductSelectionPage.tsx:476
+#, fuzzy, javascript-format
+msgid "Choose from %d available products"
+msgstr "Scegliere un prodotto"
+
+#: src/components/product/ProductSelectionPage.tsx:483
 #, javascript-format
 msgid "Switch to another product"
 msgid_plural "Switch to one of %d available products"
 msgstr[0] "Passa a un altro prodotto"
 msgstr[1] "Passa a uno dei %d prodotti disponibili"
 
-#: src/components/product/ProductSelectionPage.tsx:431
+#: src/components/product/ProductSelectionPage.tsx:494
 #, javascript-format
 msgid "Switch to a different mode or another product"
 msgid_plural "Switch to a different mode or to one of %d available products"
 msgstr[0] "Passa a un'altra modalità o prodotto"
 msgstr[1] "Passa a un'altra modalità o a uno dei %d prodotti disponibili"
 
-#: src/components/product/ProductSelectionPage.tsx:581
+#: src/components/product/ProductSelectionPage.tsx:662
 msgid "Current selection"
 msgstr "Selezione attuale"
 
-#: src/components/product/ProductSelectionPage.tsx:602
+#: src/components/product/ProductSelectionPage.tsx:688
 msgid "View license"
 msgstr "Visualizza licenza"
 
-#: src/components/product/ProductSelectionPage.tsx:625
+#. TRANSLATORS: title of the list of licenses accepted for
+#. the selected product
+#: src/components/product/ProductSelectionPage.tsx:697
+#, fuzzy
+msgid "Accepted licenses"
+msgstr "Visualizza licenza"
+
+#: src/components/product/ProductSelectionPage.tsx:731
 msgid "Select a mode"
 msgstr "Selezionare una modalità"
 
-#: src/components/product/ProductSelectionPage.tsx:627
-#: src/components/product/ProductSelectionPage.tsx:631
+#: src/components/product/ProductSelectionPage.tsx:733
+#: src/components/product/ProductSelectionPage.tsx:737
 msgid "Select a product"
 msgstr "Seleziona un prodotto"
 
-#: src/components/product/ProductSelectionPage.tsx:654
+#: src/components/product/ProductSelectionPage.tsx:760
 msgid "Select a mode and confirm your choice."
 msgstr "Selezionare una modalità e confermare la scelta."
 
-#: src/components/product/ProductSelectionPage.tsx:656
+#: src/components/product/ProductSelectionPage.tsx:762
 msgid "Confirm the product selection."
 msgstr "Confermare la selezione del prodotto."
 
-#: src/components/product/ProductSelectionPage.tsx:662
+#: src/components/product/ProductSelectionPage.tsx:768
 msgid "Select a product and confirm your choice."
 msgid_plural "Select a product and confirm your choice at the end of the list."
 msgstr[0] "Selezionare un prodotto e confermare la scelta."
 msgstr[1] ""
 "Selezionare un prodotto e confermare la scelta alla fine dell'elenco."
 
-#: src/components/product/ProductSelectionPage.tsx:725
+#: src/components/product/ProductSelectionPage.tsx:831
 msgid ""
 "The current configuration will be discarded to apply the default settings of "
 "the new product."
@@ -2704,35 +2726,36 @@ msgstr "Inserire un URL di server"
 msgid "Enter a registration code"
 msgstr "Inserire un codice di registrazione"
 
+#. TRANSLATORS: Clickable text to hide technical details at a popup window
+#: src/components/questions/ExpandableTechnicalSection.tsx:40
+msgid "Hide technical details"
+msgstr "Nascondi dettagli tecnici"
+
+#. TRANSLATORS: Clickable text to show technical details at a popup window
+#: src/components/questions/ExpandableTechnicalSection.tsx:44
+msgid "Show technical details"
+msgstr "Mostra dettagli tecnici"
+
 #: src/components/questions/GenericQuestion.tsx:51
 #: src/components/questions/LuksActivationQuestion.tsx:69
+#: src/components/questions/StorageCommitErrorQuestion.tsx:50
 msgid "Question"
 msgstr "Domanda"
 
-#: src/components/questions/LoadConfigRetryQuestion.tsx:62
+#: src/components/questions/LoadConfigRetryQuestion.tsx:55
 msgid "Cannot apply configuration"
 msgstr "Impossibile applicare la configurazione"
 
 #. TRANSLATORS: field label for location of configuration file
-#: src/components/questions/LoadConfigRetryQuestion.tsx:67
+#: src/components/questions/LoadConfigRetryQuestion.tsx:60
 msgid "Location"
 msgstr "Posizione"
 
 #. TRANSLATORS: help text in popup to clarify what user should do
-#: src/components/questions/LoadConfigRetryQuestion.tsx:79
+#: src/components/questions/LoadConfigRetryQuestion.tsx:72
 msgid "Make sure the location is correct and the configuration is valid."
 msgstr ""
 "Verificare che la posizione sia corretta e che la configurazione sia valida."
-
-#. TRANSLATORS: Clickable text to hide technical details from popup window
-#: src/components/questions/LoadConfigRetryQuestion.tsx:86
-msgid "Hide technical details"
-msgstr "Nascondi dettagli tecnici"
-
-#. TRANSLATORS: Clickable text to show technical details at popup window
-#: src/components/questions/LoadConfigRetryQuestion.tsx:90
-msgid "Show technical details"
-msgstr "Mostra dettagli tecnici"
 
 #. TRANSLATORS: error message, user entered a wrong password
 #: src/components/questions/LuksActivationQuestion.tsx:37
@@ -2827,9 +2850,10 @@ msgid "No support is planned."
 msgstr "Non è previsto alcun supporto."
 
 #: src/components/questions/UnsupportedAutoYaST.tsx:108
+#, fuzzy
 msgid ""
 "If you want to disable this check, please specify \"inst.ay_check=0\" at "
-"kernels command-line"
+"kernel's command-line"
 msgstr ""
 "Per disabilitare questo controllo, specificare \"inst.ay_check=0\" nella "
 "riga di comando dei kernel"
@@ -3078,208 +3102,6 @@ msgstr "%1$d di %2$d pattern"
 msgid "Filter by name and description"
 msgstr "Filtra per nome e descrizione"
 
-#: src/components/storage/AutoSizeText.tsx:35
-msgid "logical volume"
-msgstr "volume logico"
-
-#: src/components/storage/AutoSizeText.tsx:35
-msgid "partition"
-msgstr "partizione"
-
-#. TRANSLATORS: %1$s is a size with units (eg. 3 GiB) and %2$s is a device type (eg. partition)
-#: src/components/storage/AutoSizeText.tsx:48
-#, javascript-format
-msgid "A generic size of %1$s will be used for the new %2$s"
-msgstr "Una dimensione generica di %1$s sará utilizzata per la nuova %2$s"
-
-#. TRANSLATORS: %1$s and %2$s are sizes with units (eg. 3 GiB) and %3$s is a device type (eg. partition)
-#: src/components/storage/AutoSizeText.tsx:56
-#, javascript-format
-msgid ""
-"A generic size range between %1$s and %2$s will be used for the new %3$s"
-msgstr ""
-"Una dimensione generica tra %1$s e %2$s sará utilizzata per la nuova %3$s"
-
-#. TRANSLATORS: %1$s is a size with units (eg. 3 GiB) and %1$s is a device type (eg. partition)
-#: src/components/storage/AutoSizeText.tsx:65
-#, javascript-format
-msgid "A generic minimum size of %1$s will be used for the new %2$s"
-msgstr ""
-"Una dimensione minima generica di %1$s sarà utilizzata per la nuova %2$s"
-
-#. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
-#: src/components/storage/AutoSizeText.tsx:82
-#, javascript-format
-msgid "A %1$s of %2$s will be created for %3$s if possible"
-msgstr "Una %1$s di %2$s verrà creata per %3$s se possibile"
-
-#. TRANSLATORS: %1$s is a device type (eg. partition), %2$s and %3$s are sizes with units (10 GiB), and %4$s is a mount path (/home)
-#: src/components/storage/AutoSizeText.tsx:91
-#, javascript-format
-msgid ""
-"A %1$s with a size between %2$s and %3$s will be created for %4$s if possible"
-msgstr ""
-"Una %1$s con una dimensione tra %2$s e %3$s verrà creata per %4$s se "
-"possibile"
-
-#. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
-#: src/components/storage/AutoSizeText.tsx:101
-#, javascript-format
-msgid "A %1$s of at least %2$s will be created for %3$s if possible"
-msgstr "Una %1$s di almeno %2$s verrà creata per %3$s se possibile"
-
-#. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
-#: src/components/storage/AutoSizeText.tsx:119
-#, javascript-format
-msgid ""
-"Based on the amount of RAM in the system, a %1$s of %2$s will be planned for "
-"%3$s"
-msgstr ""
-"In base alla quantità di RAM nel sistema, %1$s di %2$s saranno pianificati "
-"per %3$s"
-
-#: src/components/storage/AutoSizeText.tsx:129
-#, javascript-format
-msgid ""
-"Based on the amount of RAM in the system, a %1$s with a size between %2$s "
-"and %3$s will be planned for %4$s"
-msgstr ""
-"In base alla quantità di RAM nel sistema, un %1$s con dimensione compresa "
-"tra %2$s e %3$s sarà pianificato per %4$s"
-
-#. TRANSLATORS: %1$s is a device type (eg. partition), %2$s is a size with units (10 GiB) and %3$s is a mount path (/home)
-#: src/components/storage/AutoSizeText.tsx:140
-#, javascript-format
-msgid ""
-"Based on the amount of RAM in the system, a %1$s of at least %2$s will be "
-"planned for %3$s"
-msgstr ""
-"In base alla quantità di RAM nel sistema, un %1$s di almeno %2$s sarà "
-"pianificato per %3$s"
-
-#: src/components/storage/AutoSizeText.tsx:169
-#, javascript-format
-msgid ""
-"The size for %1$s will be dynamically adjusted based on the amount of RAM in "
-"the system, the usage of Btrfs snapshots and the presence of a separate file "
-"system for %2$s."
-msgstr ""
-"La dimensione di %1$s verrà dinamicamente regolata in base alla quantità di "
-"RAM nel sistema, all'utilizzo degli snapshot Btrfs e alla presenza di un "
-"file system separato per %2$s."
-
-#: src/components/storage/AutoSizeText.tsx:180
-#, javascript-format
-msgid ""
-"The size for %1$s will be dynamically adjusted based on the amount of RAM in "
-"the system, the usage of Btrfs snapshots and the presence of separate file "
-"systems for %2$s."
-msgstr ""
-"La dimensione di %1$s verrà dinamicamente regolata in base alla quantità di "
-"RAM nel sistema, all'utilizzo degli snapshot Btrfs e alla presenza di un "
-"file system separato per %2$s."
-
-#: src/components/storage/AutoSizeText.tsx:190
-#, javascript-format
-msgid ""
-"The size for %s will be dynamically adjusted based on the amount of RAM in "
-"the system and the usage of Btrfs snapshots."
-msgstr ""
-"La dimensione di %s verrà regolata dinamicamente in base alla quantità di "
-"RAM nel sistema e all'utilizzo degli snapshot Btrfs."
-
-#: src/components/storage/AutoSizeText.tsx:201
-#, javascript-format
-msgid ""
-"The size for %1$s will be dynamically adjusted based on the amount of RAM in "
-"the system and the presence of a separate file system for %2$s."
-msgstr ""
-"La dimensione di %1$s verrà regolata dinamicamente in base alla quantità di "
-"RAM nel sistema e alla presenza di un file system separato per %2$s."
-
-#: src/components/storage/AutoSizeText.tsx:211
-#, javascript-format
-msgid ""
-"The size for %1$s will be dynamically adjusted based on the amount of RAM in "
-"the system and the presence of separate file systems for %2$s."
-msgstr ""
-"La dimensione di %1$s verrà regolata dinamicamente in base alla quantità di "
-"RAM nel sistema e alla presenza di file system separati per %2$s."
-
-#: src/components/storage/AutoSizeText.tsx:223
-#, javascript-format
-msgid ""
-"The size for %1$s will be dynamically adjusted based on the usage of Btrfs "
-"snapshots and the presence of a separate file system for %2$s."
-msgstr ""
-"La dimensione di %1$s verrà regolata dinamicamente in base all'utilizzo "
-"degli snapshot Btrfs e alla presenza di un file system separato per %2$s."
-
-#: src/components/storage/AutoSizeText.tsx:234
-#, javascript-format
-msgid ""
-"The size for %1$s will be dynamically adjusted based on the usage of Btrfs "
-"snapshots and the presence of separate file systems for %2$s."
-msgstr ""
-"La dimensione di %1$s verrà regolata dinamicamente in base all'utilizzo "
-"degli snapshot Btrfs e alla presenza di file system separati per %2$s."
-
-#. TRANSLATORS: %s is a mount point (eg. /)
-#: src/components/storage/AutoSizeText.tsx:243
-#, javascript-format
-msgid ""
-"The size for %s will be dynamically adjusted based on the usage of Btrfs "
-"snapshots."
-msgstr ""
-"La dimensione di %s verrà regolata dinamicamente in base all'utilizzo degli "
-"snapshot Btrfs."
-
-#: src/components/storage/AutoSizeText.tsx:252
-#, javascript-format
-msgid ""
-"The size for %1$s will be dynamically adjusted based on the presence of a "
-"separate file system for %2$s."
-msgstr ""
-"La dimensione di %1$s verrà regolata dinamicamente in base alla presenza di "
-"un file system separato per %2$s."
-
-#: src/components/storage/AutoSizeText.tsx:262
-#, javascript-format
-msgid ""
-"The size for %1$s will be dynamically adjusted based on the presence of "
-"separate file systems for %2$s."
-msgstr ""
-"La dimensione di %1$s verrà regolata dinamicamente in base alla presenza di "
-"file system separati per %2$s."
-
-#. TRANSLATORS: %1$s is a device type (eg. partition) and %2$s is a size with units (eg. 10 GiB)
-#: src/components/storage/AutoSizeText.tsx:274
-#, javascript-format
-msgid ""
-"The current configuration will result in an attempt to create a %1$s of %2$s."
-msgstr ""
-"La configurazione corrente darà come risultato un tentativo di creazione "
-"%1$s di %2$s."
-
-#: src/components/storage/AutoSizeText.tsx:283
-#, javascript-format
-msgid ""
-"The current configuration will result in an attempt to create a %1$s with a "
-"size between %2$s and %3$s."
-msgstr ""
-"La configurazione attuale porterà a un tentativo di creazione di una %1$s "
-"con una dimensione compresa tra %2$s e %3$s."
-
-#. TRANSLATORS: %1$s is a device type (eg. partition) and %2$s is a size with units (eg. 10 GiB)
-#: src/components/storage/AutoSizeText.tsx:293
-#, javascript-format
-msgid ""
-"The current configuration will result in an attempt to create a %1$s of at "
-"least %2$s."
-msgstr ""
-"La configurazione attuale porterà a un tentativo di creazione di una %1$s di "
-"almeno %2$s."
-
 #: src/components/storage/BootSection.tsx:42
 #: src/components/storage/BootSelectionPage.tsx:155
 #, javascript-format
@@ -3483,6 +3305,10 @@ msgstr "Aggiorna i dischi disponibili e attiva i i dispositivi di cifratura"
 msgid "Rescan devices"
 msgstr "Riesamina i dispositivi"
 
+#: src/components/storage/DeviceSelectorModal.tsx:292
+msgid "Add"
+msgstr "Aggiungi"
+
 #. TRANSLATORS: %s is replaced by a device label, e.g. "sda (512 GiB)"
 #: src/components/storage/DeviceSelectorModal.tsx:294
 #, javascript-format
@@ -3671,7 +3497,6 @@ msgstr "Usa il dico %s"
 #: src/components/storage/DrivesTable.tsx:78
 #: src/components/storage/MdRaidsTable.tsx:77
 #: src/components/storage/ProposalResultTable.tsx:137
-#: src/components/storage/SizeModeSelect.tsx:125
 #: src/components/storage/SpaceActionsTable.tsx:231
 #: src/components/storage/VolumeGroupsTable.tsx:79
 #: src/components/storage/shared/SizeFields.tsx:417
@@ -4431,57 +4256,6 @@ msgstr "Rimuovere la configurazione di questo gruppo di volumi"
 msgid "Volume group %s menu"
 msgstr "Menu del gruppo di volumi %s"
 
-#: src/components/storage/SizeModeSelect.tsx:75
-#, javascript-format
-msgid ""
-"The size is configured as a range between %s and %s, but this interface "
-"cannot handle ranges with a given max size."
-msgstr ""
-"La dimensione è configurata come un intervallo tra %s e %s, ma questa "
-"interfaccia non è in grado di gestire intervalli in cui è specificata una "
-"dimensione massima."
-
-#: src/components/storage/SizeModeSelect.tsx:83
-msgid "Discard the maximum size and continue with simplified configuration"
-msgstr ""
-"Ignora la dimensione massima e continua con la configurazione semplificata"
-
-#: src/components/storage/SizeModeSelect.tsx:115
-msgid ""
-"The size must be a number followed by a unit of the form GiB (power of 2) or "
-"GB (power of 10)."
-msgstr ""
-"La dimensione deve essere un numero seguito da un'unità nella forma GiB "
-"(potenza di 2) o GB (potenza di 10)."
-
-#. TRANSLATORS: %s is a disk size (e.g., "10 GiB").
-#: src/components/storage/SizeModeSelect.tsx:140
-#, javascript-format
-msgid "approx. %s"
-msgstr "circa %s"
-
-#: src/components/storage/SizeModeSelect.tsx:159
-msgid "Allow growing"
-msgstr "Consenti crescita"
-
-#: src/components/storage/SizeModeSelect.tsx:161
-msgid "The final size can be bigger in order to fill the extra free space."
-msgstr ""
-"La dimensione finale può essere maggiore al fine di utilizzare tutto lo "
-"spazio libero aggiuntivo."
-
-#: src/components/storage/SizeModeSelect.tsx:194
-msgid "Size modes"
-msgstr "Modalità dimensione"
-
-#: src/components/storage/SizeModeSelect.tsx:195
-msgid "Let the installer propose a sensible size"
-msgstr "Lascia proporre una dimensione sensibile al programma di installazione"
-
-#: src/components/storage/SizeModeSelect.tsx:198
-msgid "Define a custom size"
-msgstr "Definisci una dimensione personalizzata"
-
 #: src/components/storage/SpaceActionsTable.tsx:73
 msgid "The device will be used by the new system."
 msgstr "Il dispositivi verrà utilizzato dal nuovo sistema."
@@ -4781,8 +4555,8 @@ msgstr ""
 "Nessun dispositivo selezionato. Selezionare uno o più dispositivi per "
 "eseguire le azioni in blocco."
 
-#. TRANSLATORS: table header for a DASD devices table
 #. TRANSLATORS: table header for a zFCP devices table.
+#. TRANSLATORS: table header for a DASD devices table
 #: src/components/storage/dasd/DASDTable.tsx:534
 #: src/components/storage/zfcp/ZFCPDevicesTable.tsx:173
 #: src/components/storage/zfcp/ZFCPDevicesTable.tsx:317
@@ -5017,8 +4791,8 @@ msgstr "Destinazione"
 msgid "Portal"
 msgstr "Portale"
 
-#. TRANSLATORS: iSCSI start up mode (on boot/manual/automatic)
 #. TRANSLATORS: table header for an iSCSI targets table
+#. TRANSLATORS: iSCSI start up mode (on boot/manual/automatic)
 #: src/components/storage/iscsi/TargetLoginPage.tsx:212
 #: src/components/storage/iscsi/TargetLoginPage.tsx:216
 #: src/components/storage/iscsi/TargetsTable.tsx:482
@@ -6346,6 +6120,221 @@ msgstr "WiFi"
 #: src/utils/network.ts:87
 msgid "Loopback"
 msgstr "Loopback"
+
+#, javascript-format
+#~ msgid "Using [%s] keyboard layout"
+#~ msgstr "Utilizzo del layout di tastiera [%s]"
+
+#~ msgid "logical volume"
+#~ msgstr "volume logico"
+
+#~ msgid "partition"
+#~ msgstr "partizione"
+
+#, javascript-format
+#~ msgid "A generic size of %1$s will be used for the new %2$s"
+#~ msgstr "Una dimensione generica di %1$s sará utilizzata per la nuova %2$s"
+
+#, javascript-format
+#~ msgid ""
+#~ "A generic size range between %1$s and %2$s will be used for the new %3$s"
+#~ msgstr ""
+#~ "Una dimensione generica tra %1$s e %2$s sará utilizzata per la nuova %3$s"
+
+#, javascript-format
+#~ msgid "A generic minimum size of %1$s will be used for the new %2$s"
+#~ msgstr ""
+#~ "Una dimensione minima generica di %1$s sarà utilizzata per la nuova %2$s"
+
+#, javascript-format
+#~ msgid "A %1$s of %2$s will be created for %3$s if possible"
+#~ msgstr "Una %1$s di %2$s verrà creata per %3$s se possibile"
+
+#, javascript-format
+#~ msgid ""
+#~ "A %1$s with a size between %2$s and %3$s will be created for %4$s if "
+#~ "possible"
+#~ msgstr ""
+#~ "Una %1$s con una dimensione tra %2$s e %3$s verrà creata per %4$s se "
+#~ "possibile"
+
+#, javascript-format
+#~ msgid "A %1$s of at least %2$s will be created for %3$s if possible"
+#~ msgstr "Una %1$s di almeno %2$s verrà creata per %3$s se possibile"
+
+#, javascript-format
+#~ msgid ""
+#~ "Based on the amount of RAM in the system, a %1$s of %2$s will be planned "
+#~ "for %3$s"
+#~ msgstr ""
+#~ "In base alla quantità di RAM nel sistema, %1$s di %2$s saranno "
+#~ "pianificati per %3$s"
+
+#, javascript-format
+#~ msgid ""
+#~ "Based on the amount of RAM in the system, a %1$s with a size between %2$s "
+#~ "and %3$s will be planned for %4$s"
+#~ msgstr ""
+#~ "In base alla quantità di RAM nel sistema, un %1$s con dimensione compresa "
+#~ "tra %2$s e %3$s sarà pianificato per %4$s"
+
+#, javascript-format
+#~ msgid ""
+#~ "Based on the amount of RAM in the system, a %1$s of at least %2$s will be "
+#~ "planned for %3$s"
+#~ msgstr ""
+#~ "In base alla quantità di RAM nel sistema, un %1$s di almeno %2$s sarà "
+#~ "pianificato per %3$s"
+
+#, javascript-format
+#~ msgid ""
+#~ "The size for %1$s will be dynamically adjusted based on the amount of RAM "
+#~ "in the system, the usage of Btrfs snapshots and the presence of a "
+#~ "separate file system for %2$s."
+#~ msgstr ""
+#~ "La dimensione di %1$s verrà dinamicamente regolata in base alla quantità "
+#~ "di RAM nel sistema, all'utilizzo degli snapshot Btrfs e alla presenza di "
+#~ "un file system separato per %2$s."
+
+#, javascript-format
+#~ msgid ""
+#~ "The size for %1$s will be dynamically adjusted based on the amount of RAM "
+#~ "in the system, the usage of Btrfs snapshots and the presence of separate "
+#~ "file systems for %2$s."
+#~ msgstr ""
+#~ "La dimensione di %1$s verrà dinamicamente regolata in base alla quantità "
+#~ "di RAM nel sistema, all'utilizzo degli snapshot Btrfs e alla presenza di "
+#~ "un file system separato per %2$s."
+
+#, javascript-format
+#~ msgid ""
+#~ "The size for %s will be dynamically adjusted based on the amount of RAM "
+#~ "in the system and the usage of Btrfs snapshots."
+#~ msgstr ""
+#~ "La dimensione di %s verrà regolata dinamicamente in base alla quantità di "
+#~ "RAM nel sistema e all'utilizzo degli snapshot Btrfs."
+
+#, javascript-format
+#~ msgid ""
+#~ "The size for %1$s will be dynamically adjusted based on the amount of RAM "
+#~ "in the system and the presence of a separate file system for %2$s."
+#~ msgstr ""
+#~ "La dimensione di %1$s verrà regolata dinamicamente in base alla quantità "
+#~ "di RAM nel sistema e alla presenza di un file system separato per %2$s."
+
+#, javascript-format
+#~ msgid ""
+#~ "The size for %1$s will be dynamically adjusted based on the amount of RAM "
+#~ "in the system and the presence of separate file systems for %2$s."
+#~ msgstr ""
+#~ "La dimensione di %1$s verrà regolata dinamicamente in base alla quantità "
+#~ "di RAM nel sistema e alla presenza di file system separati per %2$s."
+
+#, javascript-format
+#~ msgid ""
+#~ "The size for %1$s will be dynamically adjusted based on the usage of "
+#~ "Btrfs snapshots and the presence of a separate file system for %2$s."
+#~ msgstr ""
+#~ "La dimensione di %1$s verrà regolata dinamicamente in base all'utilizzo "
+#~ "degli snapshot Btrfs e alla presenza di un file system separato per %2$s."
+
+#, javascript-format
+#~ msgid ""
+#~ "The size for %1$s will be dynamically adjusted based on the usage of "
+#~ "Btrfs snapshots and the presence of separate file systems for %2$s."
+#~ msgstr ""
+#~ "La dimensione di %1$s verrà regolata dinamicamente in base all'utilizzo "
+#~ "degli snapshot Btrfs e alla presenza di file system separati per %2$s."
+
+#, javascript-format
+#~ msgid ""
+#~ "The size for %s will be dynamically adjusted based on the usage of Btrfs "
+#~ "snapshots."
+#~ msgstr ""
+#~ "La dimensione di %s verrà regolata dinamicamente in base all'utilizzo "
+#~ "degli snapshot Btrfs."
+
+#, javascript-format
+#~ msgid ""
+#~ "The size for %1$s will be dynamically adjusted based on the presence of a "
+#~ "separate file system for %2$s."
+#~ msgstr ""
+#~ "La dimensione di %1$s verrà regolata dinamicamente in base alla presenza "
+#~ "di un file system separato per %2$s."
+
+#, javascript-format
+#~ msgid ""
+#~ "The size for %1$s will be dynamically adjusted based on the presence of "
+#~ "separate file systems for %2$s."
+#~ msgstr ""
+#~ "La dimensione di %1$s verrà regolata dinamicamente in base alla presenza "
+#~ "di file system separati per %2$s."
+
+#, javascript-format
+#~ msgid ""
+#~ "The current configuration will result in an attempt to create a %1$s of "
+#~ "%2$s."
+#~ msgstr ""
+#~ "La configurazione corrente darà come risultato un tentativo di creazione "
+#~ "%1$s di %2$s."
+
+#, javascript-format
+#~ msgid ""
+#~ "The current configuration will result in an attempt to create a %1$s with "
+#~ "a size between %2$s and %3$s."
+#~ msgstr ""
+#~ "La configurazione attuale porterà a un tentativo di creazione di una %1$s "
+#~ "con una dimensione compresa tra %2$s e %3$s."
+
+#, javascript-format
+#~ msgid ""
+#~ "The current configuration will result in an attempt to create a %1$s of "
+#~ "at least %2$s."
+#~ msgstr ""
+#~ "La configurazione attuale porterà a un tentativo di creazione di una %1$s "
+#~ "di almeno %2$s."
+
+#, javascript-format
+#~ msgid ""
+#~ "The size is configured as a range between %s and %s, but this interface "
+#~ "cannot handle ranges with a given max size."
+#~ msgstr ""
+#~ "La dimensione è configurata come un intervallo tra %s e %s, ma questa "
+#~ "interfaccia non è in grado di gestire intervalli in cui è specificata una "
+#~ "dimensione massima."
+
+#~ msgid "Discard the maximum size and continue with simplified configuration"
+#~ msgstr ""
+#~ "Ignora la dimensione massima e continua con la configurazione semplificata"
+
+#~ msgid ""
+#~ "The size must be a number followed by a unit of the form GiB (power of 2) "
+#~ "or GB (power of 10)."
+#~ msgstr ""
+#~ "La dimensione deve essere un numero seguito da un'unità nella forma GiB "
+#~ "(potenza di 2) o GB (potenza di 10)."
+
+#, javascript-format
+#~ msgid "approx. %s"
+#~ msgstr "circa %s"
+
+#~ msgid "Allow growing"
+#~ msgstr "Consenti crescita"
+
+#~ msgid "The final size can be bigger in order to fill the extra free space."
+#~ msgstr ""
+#~ "La dimensione finale può essere maggiore al fine di utilizzare tutto lo "
+#~ "spazio libero aggiuntivo."
+
+#~ msgid "Size modes"
+#~ msgstr "Modalità dimensione"
+
+#~ msgid "Let the installer propose a sensible size"
+#~ msgstr ""
+#~ "Lascia proporre una dimensione sensibile al programma di installazione"
+
+#~ msgid "Define a custom size"
+#~ msgstr "Definisci una dimensione personalizzata"
 
 #~ msgid "ZFCP"
 #~ msgstr "ZFCP"
