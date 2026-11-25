@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-31 11:33+0000\n"
+"POT-Creation-Date: 2026-11-25 13:16+0000\n"
 "PO-Revision-Date: 2026-08-30 15:13+0000\n"
 "Last-Translator: Luna  Jernberg <bittin@opensuse.org>\n"
 "Language-Team: Swedish <https://l10n.opensuse.org/projects/agama/agama-rust-"
@@ -35,7 +35,7 @@ msgstr "Ladda om konfiguration"
 msgid "Skip and configure manually"
 msgstr "Hoppa över och konfigurera manuellt"
 
-#: agama-autoinstall/src/questions.rs:77 agama-cli/src/config.rs:371
+#: agama-autoinstall/src/questions.rs:77 agama-cli/src/config.rs:372
 msgid "Found unsupported elements in the AutoYaST profile:"
 msgstr "Hittade element som inte stöds i AutoYaST-profil:"
 
@@ -50,6 +50,7 @@ msgstr "Avbryt"
 
 #. TRANSLATORS: {0} is a URL
 #: agama-autoinstall/src/scripts.rs:135
+#, rust-format
 msgid ""
 "It was not possible to load the script from {0}. Do you want to try again?"
 msgstr "Det gick inte att läsa in skriptet från {0}. Vill du försöka igen?"
@@ -122,6 +123,7 @@ msgstr "Vänligen ange root-lösenord:"
 
 #. TRANSLATORS: {0} is a host name
 #: agama-cli/src/auth.rs:179
+#, rust-format
 msgid "Not authenticated in {0}"
 msgstr "Inte autentiserad i {0}"
 
@@ -412,7 +414,7 @@ msgstr "Redigeringskommando (inklusive ytterligare argument om det behövs)"
 msgid "It is not a valid JSON file"
 msgstr "Det är inte en giltig JSON-fil"
 
-#: agama-cli/src/config.rs:434
+#: agama-cli/src/config.rs:435
 msgid "Ignoring the changes because the editor was closed with an error code."
 msgstr "Ignorerar ändringarna eftersom redigeraren stängdes med en felkod."
 
@@ -585,6 +587,11 @@ msgstr "Frågor"
 msgid "Security"
 msgstr "Säkerhet"
 
+#. TRANSLATORS: fallback for a scope not known to this client version
+#: agama-cli/src/monitor/ui.rs:77 agama-cli/src/monitor/ui/summary.rs:106
+msgid "Unknown"
+msgstr ""
+
 #: agama-cli/src/monitor/ui/content.rs:64
 msgid "Installation complete."
 msgstr "Installation slutförd."
@@ -651,6 +658,12 @@ msgstr "Plats"
 msgid "Value"
 msgstr "Värde"
 
+#: agama-cli/src/monitor/ui/question.rs:413
+msgid ""
+"This question needs a kind of answer this client version does not support. "
+"Choosing an action below might not answer it as intended."
+msgstr ""
+
 #: agama-cli/src/monitor/ui/summary.rs:47
 msgid "Host: "
 msgstr "Värd: "
@@ -700,7 +713,7 @@ msgstr "Konfigurerar"
 msgid "Finished"
 msgstr "Slutfört"
 
-#: agama-cli/src/monitor/ui/summary.rs:118
+#: agama-cli/src/monitor/ui/summary.rs:119
 msgid "Not selected yet"
 msgstr "Inte vald än"
 
@@ -810,111 +823,111 @@ msgstr "Misslyckades med att hämta skriptet %s. Vill du försöka igen?"
 msgid "Failed to write the file %s. Do you want to try again?"
 msgstr "Misslyckades med att skriva filen %s. Vill du försöka igen?"
 
-#: agama-manager/src/actions.rs:78
+#: agama-manager/src/actions.rs:79
 msgid "Prepare the system"
 msgstr "Förbered systemet"
 
-#: agama-manager/src/actions.rs:79
+#: agama-manager/src/actions.rs:80
 msgid "Install software"
 msgstr "Installera programvara"
 
-#: agama-manager/src/actions.rs:80
+#: agama-manager/src/actions.rs:81
 msgid "Configure the system"
 msgstr "Konfigurera systemet"
 
-#: agama-manager/src/actions.rs:94
+#: agama-manager/src/actions.rs:95
 msgid "Preparing storage"
 msgstr "Förbereder lagring"
 
-#: agama-manager/src/actions.rs:112
+#: agama-manager/src/actions.rs:113
 msgid "Running post-partitioning scripts"
 msgstr "Kör partitionering efter skript"
 
-#: agama-manager/src/actions.rs:137
+#: agama-manager/src/actions.rs:138
 msgid "Installing software"
 msgstr "Installerar programvara"
 
-#: agama-manager/src/actions.rs:174
+#: agama-manager/src/actions.rs:176
 msgid "Configuring the system"
 msgstr "Konfigurerar systemet"
 
-#: agama-manager/src/actions.rs:242
+#: agama-manager/src/actions.rs:248
 msgid "Finishing installation"
 msgstr "Slutför installationen"
 
-#: agama-manager/src/actions.rs:271
+#: agama-manager/src/actions.rs:277
 msgid "Finalize installation"
 msgstr "Slutför installation"
 
-#: agama-manager/src/actions.rs:346
+#: agama-manager/src/actions.rs:352
 msgid "Storing questions settings"
 msgstr "Lagrar frågeinställningar"
 
-#: agama-manager/src/actions.rs:357
+#: agama-manager/src/actions.rs:363
 msgid "Importing user files and scripts"
 msgstr "Importerar användarfiler och skript"
 
-#: agama-manager/src/actions.rs:371
+#: agama-manager/src/actions.rs:377
 msgid "Running user pre-installation scripts"
 msgstr "Kör användargenererade förinstallationsskript"
 
-#: agama-manager/src/actions.rs:386
+#: agama-manager/src/actions.rs:392
 msgid "Storing security settings"
 msgstr "Lagrar säkerhetsinställningar"
 
-#: agama-manager/src/actions.rs:396
+#: agama-manager/src/actions.rs:402
 msgid "Configuring remote access"
 msgstr "Konfigurerar fjärråtkomst"
 
-#: agama-manager/src/actions.rs:406
+#: agama-manager/src/actions.rs:412
 msgid "Setting up the hostname"
 msgstr "Ställer in värdnamnet"
 
-#: agama-manager/src/actions.rs:416
+#: agama-manager/src/actions.rs:422
 msgid "Setting up the network proxy"
 msgstr "Ställer in nätverksproxy"
 
-#: agama-manager/src/actions.rs:427
+#: agama-manager/src/actions.rs:433
 msgid "Setting up NTP"
 msgstr "Ställer in NTP"
 
-#: agama-manager/src/actions.rs:437
+#: agama-manager/src/actions.rs:443
 msgid "Storing localization settings"
 msgstr "Lagrar lokaliseringsinställningar"
 
-#: agama-manager/src/actions.rs:447
+#: agama-manager/src/actions.rs:453
 msgid "Storing users settings"
 msgstr "Lagrar användarinställningar"
 
-#: agama-manager/src/actions.rs:557
+#: agama-manager/src/actions.rs:563
 msgid "Configuring iSCSI devices"
 msgstr "Konfigurerar iSCSI-enheter"
 
-#: agama-manager/src/actions.rs:581
+#: agama-manager/src/actions.rs:588
 msgid "Configuring zFCP devices"
 msgstr "Konfigurerar zFCP-enheter"
 
-#: agama-manager/src/actions.rs:606
+#: agama-manager/src/actions.rs:614
 msgid "Configuring DASD devices"
 msgstr "Konfigurerar DASD-enheter"
 
-#: agama-manager/src/actions.rs:631
+#: agama-manager/src/actions.rs:640
 msgid "Setting up the network"
 msgstr "Konfigurerar nätverket"
 
-#: agama-manager/src/actions.rs:661
+#: agama-manager/src/actions.rs:670
 msgid "Preparing the storage proposal"
 msgstr "Förbereder lagringsförslag"
 
-#: agama-manager/src/actions.rs:690
+#: agama-manager/src/actions.rs:700
 msgid "Storing bootloader settings"
 msgstr "Lagrar starthanterare inställningar"
 
-#: agama-manager/src/actions.rs:723
+#: agama-manager/src/actions.rs:734
 msgid "Preparing the software proposal"
 msgstr "Förbereder programvaruförslag"
 
-#: agama-manager/src/actions.rs:753
+#: agama-manager/src/actions.rs:764
 msgid "Configuring SELinux"
 msgstr "Konfigurerar SELinux"
 
@@ -926,16 +939,16 @@ msgstr "Skriver nätverkskonfiguration"
 msgid "Syncing the network service state"
 msgstr "Synkronisera nätverkstjänstens status"
 
-#: agama-security/src/service.rs:226
+#: agama-security/src/service.rs:228
 msgid "Reject"
 msgstr "Avslå"
 
-#: agama-security/src/service.rs:226
-#: agama-software/src/callbacks/security.rs:111
+#: agama-security/src/service.rs:228
+#: agama-software/src/callbacks/security.rs:119
 msgid "Trust"
 msgstr "Lita på"
 
-#: agama-security/src/service.rs:227
+#: agama-security/src/service.rs:229
 msgid ""
 "Trying to import a self-signed certificate. Do you want to trust it and "
 "register the product?"
@@ -963,11 +976,7 @@ msgstr "Ogiltig profilförfrågan"
 msgid "AutoYaST conversion failed"
 msgstr "AutoYaST konvertering misslyckades"
 
-#: agama-server/src/server/web.rs:86
-msgid "Missing Language Tag"
-msgstr "Saknar språk tagg"
-
-#: agama-server/src/server/web.rs:89
+#: agama-server/src/server/web.rs:83
 msgid "Profile error"
 msgstr "Profil fel"
 
@@ -987,7 +996,8 @@ msgid "There was a problem running a package script."
 msgstr "Det uppstod ett problem när ett paketskript kördes."
 
 #. TRANSLATORS: substituting: key ID, (key name), fingerprint
-#: agama-software/src/callbacks/security.rs:104
+#: agama-software/src/callbacks/security.rs:112
+#, rust-format
 msgid ""
 "The key {0} ({1}) with fingerprint {2} is unknown. Do you want to trust this "
 "key?"
@@ -995,7 +1005,7 @@ msgstr ""
 "Nyckeln {0} ({1}) med fingeravtryck {2} är okänd. Vill du lita på den här "
 "nyckeln?"
 
-#: agama-software/src/callbacks/security.rs:111
+#: agama-software/src/callbacks/security.rs:119
 msgid "Skip"
 msgstr "Hoppa över"
 
@@ -1014,53 +1024,53 @@ msgid "Packages download and installation failed. Would you like to retry?"
 msgstr ""
 "Nedladdning och installation av paket misslyckades. Vill du försöka igen?"
 
-#: agama-software/src/zypp_server.rs:367
+#: agama-software/src/zypp_server.rs:368
 msgid "Updating the list of repositories"
 msgstr "Uppdaterar listan över förråd"
 
-#: agama-software/src/zypp_server.rs:368
+#: agama-software/src/zypp_server.rs:369
 msgid "Refreshing metadata from the repositories"
 msgstr "Uppdaterar metadata från förråd"
 
-#: agama-software/src/zypp_server.rs:369
+#: agama-software/src/zypp_server.rs:370
 msgid "Calculating the software proposal"
 msgstr "Beräknar programvaruförslag"
 
-#: agama-software/src/zypp_server.rs:372
+#: agama-software/src/zypp_server.rs:373
 msgid "Registering the system"
 msgstr "Registrerar systemet"
 
 #. TRANSLATORS: %s is the alias of the repository.
-#: agama-software/src/zypp_server.rs:445
+#: agama-software/src/zypp_server.rs:451
 msgid "Could not remove the repository %s"
 msgstr "Kunde ta bort förråd %s"
 
-#: agama-software/src/zypp_server.rs:465
+#: agama-software/src/zypp_server.rs:471
 msgid "Could not read the repositories"
 msgstr "Kunde inte läsa från förråd"
 
-#: agama-software/src/zypp_server.rs:501
+#: agama-software/src/zypp_server.rs:507
 msgid ""
 "Failed to find the product in the repositories. You might need to register "
 "the system."
 msgstr ""
 "Misslyckades att hitta produkt i förråd. Du kan behöva registrera systemet."
 
-#: agama-software/src/zypp_server.rs:504
+#: agama-software/src/zypp_server.rs:510
 msgid "Failed to find the product in the repositories."
 msgstr "Misslyckades att hitta produkt i förråd."
 
-#: agama-software/src/zypp_server.rs:567
+#: agama-software/src/zypp_server.rs:573
 msgid "There are conflicts in the software selection"
 msgstr "Det finns konflikter i programvaruval"
 
 #. TRANSLATORS: the first %s is the kind of resolvable (e.g., "package")
 #. and the second %s is the name of the resolvable.
-#: agama-software/src/zypp_server.rs:594
+#: agama-software/src/zypp_server.rs:600
 msgid "Could not select %s '%s' for installation"
 msgstr "Kunde inte välja %s '%s' för installation"
 
-#: agama-software/src/zypp_server.rs:1006
+#: agama-software/src/zypp_server.rs:1018
 msgid "Failed to register the system"
 msgstr "Misslyckades att registrera systemet"
 
@@ -1075,31 +1085,35 @@ msgstr ""
 msgid "First user information is incomplete"
 msgstr "Informationen om den första användaren är ofullständig"
 
-#: agama-utils/src/api/problem_details.rs:113
+#: agama-utils/src/api/problem_details.rs:122
 msgid "Schema validation failed"
 msgstr "Schemavalidering misslyckades"
 
-#: agama-utils/src/api/problem_details.rs:115
+#: agama-utils/src/api/problem_details.rs:124
 msgid "The provided configuration does not match the required schema"
 msgstr "Den angivna konfigurationen matchar inte det som krävs för schema"
 
-#: agama-utils/src/api/problem_details.rs:124
+#: agama-utils/src/api/problem_details.rs:133
 msgid "Invalid JSON"
 msgstr "Ogiltig JSON"
 
-#: agama-utils/src/api/problem_details.rs:132
+#: agama-utils/src/api/problem_details.rs:141
 msgid "Internal server error"
 msgstr "Internt serverfel"
 
-#: agama-utils/src/api/problem_details.rs:140
+#: agama-utils/src/api/problem_details.rs:149
 msgid "Unauthorized"
 msgstr "Inte auktoriserad"
 
 #: agama-utils/src/api/problem_details.rs:189
+msgid "An error occurred that this client version doesn't recognize"
+msgstr ""
+
+#: agama-utils/src/api/problem_details.rs:205
 msgid "Error:"
 msgstr "Fel:"
 
-#: agama-utils/src/api/problem_details.rs:192
+#: agama-utils/src/api/problem_details.rs:208
 msgid "Details:"
 msgstr "Detaljer:"
 
@@ -1122,6 +1136,9 @@ msgstr "mönster"
 #: agama-utils/src/resolvable.rs:67
 msgid "product"
 msgstr "produkt"
+
+#~ msgid "Missing Language Tag"
+#~ msgstr "Saknar språk tagg"
 
 #~ msgid "Additional data"
 #~ msgstr "Ytterligare data"

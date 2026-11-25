@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-31 11:33+0000\n"
+"POT-Creation-Date: 2026-11-25 13:16+0000\n"
 "PO-Revision-Date: 2026-11-05 18:13+0000\n"
 "Last-Translator: Eugene Krater <lachend@gmail.com>\n"
 "Language-Team: Ukrainian <https://l10n.opensuse.org/projects/agama/agama-"
@@ -36,7 +36,7 @@ msgstr "Оновити конфігурацію"
 msgid "Skip and configure manually"
 msgstr "Пропустити та налаштувати вручну"
 
-#: agama-autoinstall/src/questions.rs:77 agama-cli/src/config.rs:371
+#: agama-autoinstall/src/questions.rs:77 agama-cli/src/config.rs:372
 msgid "Found unsupported elements in the AutoYaST profile:"
 msgstr "У профілі AutoYaST виявлено елементи, що не підтримуються:"
 
@@ -51,6 +51,7 @@ msgstr "Відмінити"
 
 #. TRANSLATORS: {0} is a URL
 #: agama-autoinstall/src/scripts.rs:135
+#, rust-format
 msgid ""
 "It was not possible to load the script from {0}. Do you want to try again?"
 msgstr "Не вдалося завантажити скрипт із {0}. Спробувати ще раз?"
@@ -123,6 +124,7 @@ msgstr "Введіть пароль користувача root:"
 
 #. TRANSLATORS: {0} is a host name
 #: agama-cli/src/auth.rs:179
+#, rust-format
 msgid "Not authenticated in {0}"
 msgstr "Не авторизовано в {0}"
 
@@ -414,7 +416,7 @@ msgstr "Команда редагування (включно з додатко�
 msgid "It is not a valid JSON file"
 msgstr "Це недійсний файл JSON"
 
-#: agama-cli/src/config.rs:434
+#: agama-cli/src/config.rs:435
 msgid "Ignoring the changes because the editor was closed with an error code."
 msgstr "Ігнорування змін, оскільки редактор було закрито з кодом помилки."
 
@@ -587,6 +589,11 @@ msgstr "Питання"
 msgid "Security"
 msgstr "Захист"
 
+#. TRANSLATORS: fallback for a scope not known to this client version
+#: agama-cli/src/monitor/ui.rs:77 agama-cli/src/monitor/ui/summary.rs:106
+msgid "Unknown"
+msgstr ""
+
 #: agama-cli/src/monitor/ui/content.rs:64
 msgid "Installation complete."
 msgstr "Встановлення завершено."
@@ -653,6 +660,12 @@ msgstr "Розташування"
 msgid "Value"
 msgstr "Значення"
 
+#: agama-cli/src/monitor/ui/question.rs:413
+msgid ""
+"This question needs a kind of answer this client version does not support. "
+"Choosing an action below might not answer it as intended."
+msgstr ""
+
 #: agama-cli/src/monitor/ui/summary.rs:47
 msgid "Host: "
 msgstr "Хост: "
@@ -702,7 +715,7 @@ msgstr "Налаштовуємо"
 msgid "Finished"
 msgstr "Завершено"
 
-#: agama-cli/src/monitor/ui/summary.rs:118
+#: agama-cli/src/monitor/ui/summary.rs:119
 msgid "Not selected yet"
 msgstr "Ще не вибрано"
 
@@ -814,111 +827,111 @@ msgstr "Не вдалося завантажити скрипт %s. Чи хоч�
 msgid "Failed to write the file %s. Do you want to try again?"
 msgstr "Не вдалося записати файл %s. Спробувати ще раз?"
 
-#: agama-manager/src/actions.rs:78
+#: agama-manager/src/actions.rs:79
 msgid "Prepare the system"
 msgstr "Підготовка системи"
 
-#: agama-manager/src/actions.rs:79
+#: agama-manager/src/actions.rs:80
 msgid "Install software"
 msgstr "Встановлення програм"
 
-#: agama-manager/src/actions.rs:80
+#: agama-manager/src/actions.rs:81
 msgid "Configure the system"
 msgstr "Налаштування системи"
 
-#: agama-manager/src/actions.rs:94
+#: agama-manager/src/actions.rs:95
 msgid "Preparing storage"
 msgstr "Підготовка місця для зберігання"
 
-#: agama-manager/src/actions.rs:112
+#: agama-manager/src/actions.rs:113
 msgid "Running post-partitioning scripts"
 msgstr "Виконання скриптів після створення розділів"
 
-#: agama-manager/src/actions.rs:137
+#: agama-manager/src/actions.rs:138
 msgid "Installing software"
 msgstr "Встановлення програмного забезпечення"
 
-#: agama-manager/src/actions.rs:174
+#: agama-manager/src/actions.rs:176
 msgid "Configuring the system"
 msgstr "Налаштування системи"
 
-#: agama-manager/src/actions.rs:242
+#: agama-manager/src/actions.rs:248
 msgid "Finishing installation"
 msgstr "Завершення встановлення"
 
-#: agama-manager/src/actions.rs:271
+#: agama-manager/src/actions.rs:277
 msgid "Finalize installation"
 msgstr "Закінчити встановлення"
 
-#: agama-manager/src/actions.rs:346
+#: agama-manager/src/actions.rs:352
 msgid "Storing questions settings"
 msgstr "Збереження налаштувань запитань"
 
-#: agama-manager/src/actions.rs:357
+#: agama-manager/src/actions.rs:363
 msgid "Importing user files and scripts"
 msgstr "Імпорт файлів користувача та скриптів"
 
-#: agama-manager/src/actions.rs:371
+#: agama-manager/src/actions.rs:377
 msgid "Running user pre-installation scripts"
 msgstr "Виконання користувацьких скриптів перед інсталяцією"
 
-#: agama-manager/src/actions.rs:386
+#: agama-manager/src/actions.rs:392
 msgid "Storing security settings"
 msgstr "Збереження налаштувань безпеки"
 
-#: agama-manager/src/actions.rs:396
+#: agama-manager/src/actions.rs:402
 msgid "Configuring remote access"
 msgstr "Налаштування віддаленого доступу"
 
-#: agama-manager/src/actions.rs:406
+#: agama-manager/src/actions.rs:412
 msgid "Setting up the hostname"
 msgstr "Налаштування імені хоста"
 
-#: agama-manager/src/actions.rs:416
+#: agama-manager/src/actions.rs:422
 msgid "Setting up the network proxy"
 msgstr "Налаштування мережевого проксі-сервера"
 
-#: agama-manager/src/actions.rs:427
+#: agama-manager/src/actions.rs:433
 msgid "Setting up NTP"
 msgstr "Налаштування NTP"
 
-#: agama-manager/src/actions.rs:437
+#: agama-manager/src/actions.rs:443
 msgid "Storing localization settings"
 msgstr "Збереження налаштувань локалізації"
 
-#: agama-manager/src/actions.rs:447
+#: agama-manager/src/actions.rs:453
 msgid "Storing users settings"
 msgstr "Збереження налаштувань користувачів"
 
-#: agama-manager/src/actions.rs:557
+#: agama-manager/src/actions.rs:563
 msgid "Configuring iSCSI devices"
 msgstr "Налаштування пристроїв iSCSI"
 
-#: agama-manager/src/actions.rs:581
+#: agama-manager/src/actions.rs:588
 msgid "Configuring zFCP devices"
 msgstr "Налаштування пристроїв zFCP"
 
-#: agama-manager/src/actions.rs:606
+#: agama-manager/src/actions.rs:614
 msgid "Configuring DASD devices"
 msgstr "Налаштування пристроїв DASD"
 
-#: agama-manager/src/actions.rs:631
+#: agama-manager/src/actions.rs:640
 msgid "Setting up the network"
 msgstr "Налаштування мережі"
 
-#: agama-manager/src/actions.rs:661
+#: agama-manager/src/actions.rs:670
 msgid "Preparing the storage proposal"
 msgstr "Підготовка пропозиції щодо сховища"
 
-#: agama-manager/src/actions.rs:690
+#: agama-manager/src/actions.rs:700
 msgid "Storing bootloader settings"
 msgstr "Збереження налаштувань завантажувача"
 
-#: agama-manager/src/actions.rs:723
+#: agama-manager/src/actions.rs:734
 msgid "Preparing the software proposal"
 msgstr "Підготовка пропозиції щодо програмного забезпечення"
 
-#: agama-manager/src/actions.rs:753
+#: agama-manager/src/actions.rs:764
 msgid "Configuring SELinux"
 msgstr "Налаштування SELinux"
 
@@ -930,16 +943,16 @@ msgstr "Запис конфігурації мережі"
 msgid "Syncing the network service state"
 msgstr "Синхронізація стану мережевої служби"
 
-#: agama-security/src/service.rs:226
+#: agama-security/src/service.rs:228
 msgid "Reject"
 msgstr "Відхилити"
 
-#: agama-security/src/service.rs:226
-#: agama-software/src/callbacks/security.rs:111
+#: agama-security/src/service.rs:228
+#: agama-software/src/callbacks/security.rs:119
 msgid "Trust"
 msgstr "Довіряти"
 
-#: agama-security/src/service.rs:227
+#: agama-security/src/service.rs:229
 msgid ""
 "Trying to import a self-signed certificate. Do you want to trust it and "
 "register the product?"
@@ -967,11 +980,7 @@ msgstr "Неправильний запит на профіль"
 msgid "AutoYaST conversion failed"
 msgstr "Помилка перетворення AutoYaST"
 
-#: agama-server/src/server/web.rs:86
-msgid "Missing Language Tag"
-msgstr "Відсутній мовний тег"
-
-#: agama-server/src/server/web.rs:89
+#: agama-server/src/server/web.rs:83
 msgid "Profile error"
 msgstr "Помилка профілю"
 
@@ -991,13 +1000,14 @@ msgid "There was a problem running a package script."
 msgstr "Виникла проблема із запуском скрипта пакунка."
 
 #. TRANSLATORS: substituting: key ID, (key name), fingerprint
-#: agama-software/src/callbacks/security.rs:104
+#: agama-software/src/callbacks/security.rs:112
+#, rust-format
 msgid ""
 "The key {0} ({1}) with fingerprint {2} is unknown. Do you want to trust this "
 "key?"
 msgstr "Ключ {0} ({1}) з відбитком {2} невідомий. Довіряти цьому ключу?"
 
-#: agama-software/src/callbacks/security.rs:111
+#: agama-software/src/callbacks/security.rs:119
 msgid "Skip"
 msgstr "Пропустити"
 
@@ -1016,32 +1026,32 @@ msgstr "Початок встановлення пакетів"
 msgid "Packages download and installation failed. Would you like to retry?"
 msgstr "Завантаження та встановлення пакетів не вдалося. Спробувати ще раз?"
 
-#: agama-software/src/zypp_server.rs:367
+#: agama-software/src/zypp_server.rs:368
 msgid "Updating the list of repositories"
 msgstr "Оновлення списку репозиторіїв"
 
-#: agama-software/src/zypp_server.rs:368
+#: agama-software/src/zypp_server.rs:369
 msgid "Refreshing metadata from the repositories"
 msgstr "Оновлення метаданих із репозиторіїв"
 
-#: agama-software/src/zypp_server.rs:369
+#: agama-software/src/zypp_server.rs:370
 msgid "Calculating the software proposal"
 msgstr "Розрахунок пропозиції щодо програмного забезпечення"
 
-#: agama-software/src/zypp_server.rs:372
+#: agama-software/src/zypp_server.rs:373
 msgid "Registering the system"
 msgstr "Реєстрація системи"
 
 #. TRANSLATORS: %s is the alias of the repository.
-#: agama-software/src/zypp_server.rs:445
+#: agama-software/src/zypp_server.rs:451
 msgid "Could not remove the repository %s"
 msgstr "Не вдалося видалити репозиторій %s"
 
-#: agama-software/src/zypp_server.rs:465
+#: agama-software/src/zypp_server.rs:471
 msgid "Could not read the repositories"
 msgstr "Не вдалося прочитати репозиторії"
 
-#: agama-software/src/zypp_server.rs:501
+#: agama-software/src/zypp_server.rs:507
 msgid ""
 "Failed to find the product in the repositories. You might need to register "
 "the system."
@@ -1049,21 +1059,21 @@ msgstr ""
 "Не вдалося знайти продукт у репозиторіях. Можливо, вам доведеться "
 "зареєструвати систему."
 
-#: agama-software/src/zypp_server.rs:504
+#: agama-software/src/zypp_server.rs:510
 msgid "Failed to find the product in the repositories."
 msgstr "Не вдалося знайти продукт у репозиторіях."
 
-#: agama-software/src/zypp_server.rs:567
+#: agama-software/src/zypp_server.rs:573
 msgid "There are conflicts in the software selection"
 msgstr "При виборі програмного забезпечення виникають суперечності"
 
 #. TRANSLATORS: the first %s is the kind of resolvable (e.g., "package")
 #. and the second %s is the name of the resolvable.
-#: agama-software/src/zypp_server.rs:594
+#: agama-software/src/zypp_server.rs:600
 msgid "Could not select %s '%s' for installation"
 msgstr "Не вдалося вибрати %s «%s» для встановлення"
 
-#: agama-software/src/zypp_server.rs:1006
+#: agama-software/src/zypp_server.rs:1018
 msgid "Failed to register the system"
 msgstr "Не вдалося зареєструвати систему"
 
@@ -1077,31 +1087,35 @@ msgstr ""
 msgid "First user information is incomplete"
 msgstr "Інформація про першого користувача є неповною"
 
-#: agama-utils/src/api/problem_details.rs:113
+#: agama-utils/src/api/problem_details.rs:122
 msgid "Schema validation failed"
 msgstr "Помилка перевірки схеми"
 
-#: agama-utils/src/api/problem_details.rs:115
+#: agama-utils/src/api/problem_details.rs:124
 msgid "The provided configuration does not match the required schema"
 msgstr "Надана конфігурація не відповідає необхідній схемі"
 
-#: agama-utils/src/api/problem_details.rs:124
+#: agama-utils/src/api/problem_details.rs:133
 msgid "Invalid JSON"
 msgstr "Неправильний формат JSON"
 
-#: agama-utils/src/api/problem_details.rs:132
+#: agama-utils/src/api/problem_details.rs:141
 msgid "Internal server error"
 msgstr "Внутрішня помилка сервера"
 
-#: agama-utils/src/api/problem_details.rs:140
+#: agama-utils/src/api/problem_details.rs:149
 msgid "Unauthorized"
 msgstr "Не пройшов перевірку"
 
 #: agama-utils/src/api/problem_details.rs:189
+msgid "An error occurred that this client version doesn't recognize"
+msgstr ""
+
+#: agama-utils/src/api/problem_details.rs:205
 msgid "Error:"
 msgstr "Помилка:"
 
-#: agama-utils/src/api/problem_details.rs:192
+#: agama-utils/src/api/problem_details.rs:208
 msgid "Details:"
 msgstr "Подробиці:"
 
@@ -1124,3 +1138,6 @@ msgstr "шаблон"
 #: agama-utils/src/resolvable.rs:67
 msgid "product"
 msgstr "продукт"
+
+#~ msgid "Missing Language Tag"
+#~ msgstr "Відсутній мовний тег"

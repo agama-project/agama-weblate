@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-31 11:33+0000\n"
+"POT-Creation-Date: 2026-11-25 13:16+0000\n"
 "PO-Revision-Date: 2026-07-27 08:12+0000\n"
 "Last-Translator: Sophie Leroy <sophie@stoquart.com>\n"
 "Language-Team: French <https://l10n.opensuse.org/projects/agama/agama-rust-"
@@ -35,7 +35,7 @@ msgstr "Recharger la configuration"
 msgid "Skip and configure manually"
 msgstr "Ignorer et configurer manuellement"
 
-#: agama-autoinstall/src/questions.rs:77 agama-cli/src/config.rs:371
+#: agama-autoinstall/src/questions.rs:77 agama-cli/src/config.rs:372
 msgid "Found unsupported elements in the AutoYaST profile:"
 msgstr ""
 
@@ -50,6 +50,7 @@ msgstr ""
 
 #. TRANSLATORS: {0} is a URL
 #: agama-autoinstall/src/scripts.rs:135
+#, rust-format
 msgid ""
 "It was not possible to load the script from {0}. Do you want to try again?"
 msgstr "Impossible de charger le script depuis {0}. Voulez-vous réessayer ?"
@@ -124,6 +125,7 @@ msgstr "Saisissez le mot de passe root :"
 
 #. TRANSLATORS: {0} is a host name
 #: agama-cli/src/auth.rs:179
+#, rust-format
 msgid "Not authenticated in {0}"
 msgstr "Non authentifié dans {0}"
 
@@ -421,7 +423,7 @@ msgstr ""
 msgid "It is not a valid JSON file"
 msgstr "Il ne s'agit pas d'un fichier JSON valide"
 
-#: agama-cli/src/config.rs:434
+#: agama-cli/src/config.rs:435
 msgid "Ignoring the changes because the editor was closed with an error code."
 msgstr ""
 "Les modifications sont ignorées, car l'éditeur s'est fermé avec un code "
@@ -600,6 +602,11 @@ msgstr "Questions"
 msgid "Security"
 msgstr "Sécurité"
 
+#. TRANSLATORS: fallback for a scope not known to this client version
+#: agama-cli/src/monitor/ui.rs:77 agama-cli/src/monitor/ui/summary.rs:106
+msgid "Unknown"
+msgstr ""
+
 #: agama-cli/src/monitor/ui/content.rs:64
 msgid "Installation complete."
 msgstr "Installation terminée."
@@ -668,6 +675,12 @@ msgstr "Emplacement"
 msgid "Value"
 msgstr "Valeur"
 
+#: agama-cli/src/monitor/ui/question.rs:413
+msgid ""
+"This question needs a kind of answer this client version does not support. "
+"Choosing an action below might not answer it as intended."
+msgstr ""
+
 #: agama-cli/src/monitor/ui/summary.rs:47
 msgid "Host: "
 msgstr "Hôte : "
@@ -717,7 +730,7 @@ msgstr "Configuration en cours"
 msgid "Finished"
 msgstr "Terminé"
 
-#: agama-cli/src/monitor/ui/summary.rs:118
+#: agama-cli/src/monitor/ui/summary.rs:119
 msgid "Not selected yet"
 msgstr "Pas encore sélectionné"
 
@@ -830,111 +843,111 @@ msgstr "Impossible de récupérer le script %s. Voulez-vous réessayer ?"
 msgid "Failed to write the file %s. Do you want to try again?"
 msgstr "Impossible d'écrire le fichier %s. Voulez-vous réessayer ?"
 
-#: agama-manager/src/actions.rs:78
+#: agama-manager/src/actions.rs:79
 msgid "Prepare the system"
 msgstr "Préparer le système"
 
-#: agama-manager/src/actions.rs:79
+#: agama-manager/src/actions.rs:80
 msgid "Install software"
 msgstr "Installer le logiciel"
 
-#: agama-manager/src/actions.rs:80
+#: agama-manager/src/actions.rs:81
 msgid "Configure the system"
 msgstr "Configurer le système"
 
-#: agama-manager/src/actions.rs:94
+#: agama-manager/src/actions.rs:95
 msgid "Preparing storage"
 msgstr "Préparation du stockage"
 
-#: agama-manager/src/actions.rs:112
+#: agama-manager/src/actions.rs:113
 msgid "Running post-partitioning scripts"
 msgstr "Exécution des scripts de post-partitionnement"
 
-#: agama-manager/src/actions.rs:137
+#: agama-manager/src/actions.rs:138
 msgid "Installing software"
 msgstr "Installation du logiciel"
 
-#: agama-manager/src/actions.rs:174
+#: agama-manager/src/actions.rs:176
 msgid "Configuring the system"
 msgstr "Configuration du système"
 
-#: agama-manager/src/actions.rs:242
+#: agama-manager/src/actions.rs:248
 msgid "Finishing installation"
 msgstr "Finalisation de l'installation"
 
-#: agama-manager/src/actions.rs:271
+#: agama-manager/src/actions.rs:277
 msgid "Finalize installation"
 msgstr "Finaliser l'installation"
 
-#: agama-manager/src/actions.rs:346
+#: agama-manager/src/actions.rs:352
 msgid "Storing questions settings"
 msgstr "Stockage des paramètres des questions"
 
-#: agama-manager/src/actions.rs:357
+#: agama-manager/src/actions.rs:363
 msgid "Importing user files and scripts"
 msgstr "Importation des fichiers et scripts utilisateur"
 
-#: agama-manager/src/actions.rs:371
+#: agama-manager/src/actions.rs:377
 msgid "Running user pre-installation scripts"
 msgstr "Exécution des scripts de pré-installation utilisateur"
 
-#: agama-manager/src/actions.rs:386
+#: agama-manager/src/actions.rs:392
 msgid "Storing security settings"
 msgstr "Stockage des paramètres de sécurité"
 
-#: agama-manager/src/actions.rs:396
+#: agama-manager/src/actions.rs:402
 msgid "Configuring remote access"
 msgstr "Configuration de l'accès à distance"
 
-#: agama-manager/src/actions.rs:406
+#: agama-manager/src/actions.rs:412
 msgid "Setting up the hostname"
 msgstr "Configuration du nom d'hôte"
 
-#: agama-manager/src/actions.rs:416
+#: agama-manager/src/actions.rs:422
 msgid "Setting up the network proxy"
 msgstr "Configuration du proxy réseau"
 
-#: agama-manager/src/actions.rs:427
+#: agama-manager/src/actions.rs:433
 msgid "Setting up NTP"
 msgstr "Configuration de NTP"
 
-#: agama-manager/src/actions.rs:437
+#: agama-manager/src/actions.rs:443
 msgid "Storing localization settings"
 msgstr "Stockage des paramètres de localisation"
 
-#: agama-manager/src/actions.rs:447
+#: agama-manager/src/actions.rs:453
 msgid "Storing users settings"
 msgstr "Stockage des paramètres des utilisateurs"
 
-#: agama-manager/src/actions.rs:557
+#: agama-manager/src/actions.rs:563
 msgid "Configuring iSCSI devices"
 msgstr "Configuration des périphériques iSCSI"
 
-#: agama-manager/src/actions.rs:581
+#: agama-manager/src/actions.rs:588
 msgid "Configuring zFCP devices"
 msgstr "Configuration des périphériques zFCP"
 
-#: agama-manager/src/actions.rs:606
+#: agama-manager/src/actions.rs:614
 msgid "Configuring DASD devices"
 msgstr "Configuration des périphériques DASD"
 
-#: agama-manager/src/actions.rs:631
+#: agama-manager/src/actions.rs:640
 msgid "Setting up the network"
 msgstr "Configuration du réseau"
 
-#: agama-manager/src/actions.rs:661
+#: agama-manager/src/actions.rs:670
 msgid "Preparing the storage proposal"
 msgstr "Préparation de la proposition de stockage"
 
-#: agama-manager/src/actions.rs:690
+#: agama-manager/src/actions.rs:700
 msgid "Storing bootloader settings"
 msgstr "Stockage des paramètres du chargeur d'amorçage"
 
-#: agama-manager/src/actions.rs:723
+#: agama-manager/src/actions.rs:734
 msgid "Preparing the software proposal"
 msgstr "Préparation de la proposition de logiciel"
 
-#: agama-manager/src/actions.rs:753
+#: agama-manager/src/actions.rs:764
 msgid "Configuring SELinux"
 msgstr "Configuration de SELinux"
 
@@ -946,16 +959,16 @@ msgstr "Écriture de la configuration réseau"
 msgid "Syncing the network service state"
 msgstr "Synchronisation de l'état du service réseau"
 
-#: agama-security/src/service.rs:226
+#: agama-security/src/service.rs:228
 msgid "Reject"
 msgstr "Rejeter"
 
-#: agama-security/src/service.rs:226
-#: agama-software/src/callbacks/security.rs:111
+#: agama-security/src/service.rs:228
+#: agama-software/src/callbacks/security.rs:119
 msgid "Trust"
 msgstr "Approuver"
 
-#: agama-security/src/service.rs:227
+#: agama-security/src/service.rs:229
 msgid ""
 "Trying to import a self-signed certificate. Do you want to trust it and "
 "register the product?"
@@ -983,11 +996,7 @@ msgstr "Demande de profil non valide"
 msgid "AutoYaST conversion failed"
 msgstr "Échec de la conversion AutoYaST"
 
-#: agama-server/src/server/web.rs:86
-msgid "Missing Language Tag"
-msgstr "Balise de langue manquante"
-
-#: agama-server/src/server/web.rs:89
+#: agama-server/src/server/web.rs:83
 msgid "Profile error"
 msgstr "Erreur de profil"
 
@@ -1007,7 +1016,8 @@ msgid "There was a problem running a package script."
 msgstr "Un problème est survenu lors de l'exécution d'un script de paquet."
 
 #. TRANSLATORS: substituting: key ID, (key name), fingerprint
-#: agama-software/src/callbacks/security.rs:104
+#: agama-software/src/callbacks/security.rs:112
+#, rust-format
 msgid ""
 "The key {0} ({1}) with fingerprint {2} is unknown. Do you want to trust this "
 "key?"
@@ -1015,7 +1025,7 @@ msgstr ""
 "La clé {0} ({1}) avec l'empreinte {2} est inconnue. Voulez-vous approuver "
 "cette clé ?"
 
-#: agama-software/src/callbacks/security.rs:111
+#: agama-software/src/callbacks/security.rs:119
 msgid "Skip"
 msgstr "Ignorer"
 
@@ -1036,32 +1046,32 @@ msgstr ""
 "Le téléchargement et l'installation des paquets ont échoué. Voulez-vous "
 "réessayer ?"
 
-#: agama-software/src/zypp_server.rs:367
+#: agama-software/src/zypp_server.rs:368
 msgid "Updating the list of repositories"
 msgstr "Mise à jour de la liste des dépôts"
 
-#: agama-software/src/zypp_server.rs:368
+#: agama-software/src/zypp_server.rs:369
 msgid "Refreshing metadata from the repositories"
 msgstr "Rafraîchissement des métadonnées à partir des dépôts"
 
-#: agama-software/src/zypp_server.rs:369
+#: agama-software/src/zypp_server.rs:370
 msgid "Calculating the software proposal"
 msgstr "Calcul de la proposition de logiciel"
 
-#: agama-software/src/zypp_server.rs:372
+#: agama-software/src/zypp_server.rs:373
 msgid "Registering the system"
 msgstr "Enregistrement du système"
 
 #. TRANSLATORS: %s is the alias of the repository.
-#: agama-software/src/zypp_server.rs:445
+#: agama-software/src/zypp_server.rs:451
 msgid "Could not remove the repository %s"
 msgstr "Impossible de supprimer le dépôt %s"
 
-#: agama-software/src/zypp_server.rs:465
+#: agama-software/src/zypp_server.rs:471
 msgid "Could not read the repositories"
 msgstr "Impossible de lire les dépôts"
 
-#: agama-software/src/zypp_server.rs:501
+#: agama-software/src/zypp_server.rs:507
 msgid ""
 "Failed to find the product in the repositories. You might need to register "
 "the system."
@@ -1069,21 +1079,21 @@ msgstr ""
 "Impossible de trouver le produit dans les dépôts. Vous devez peut-être "
 "enregistrer le système."
 
-#: agama-software/src/zypp_server.rs:504
+#: agama-software/src/zypp_server.rs:510
 msgid "Failed to find the product in the repositories."
 msgstr "Impossible de trouver le produit dans les dépôts."
 
-#: agama-software/src/zypp_server.rs:567
+#: agama-software/src/zypp_server.rs:573
 msgid "There are conflicts in the software selection"
 msgstr "Il existe des conflits dans la sélection de logiciels"
 
 #. TRANSLATORS: the first %s is the kind of resolvable (e.g., "package")
 #. and the second %s is the name of the resolvable.
-#: agama-software/src/zypp_server.rs:594
+#: agama-software/src/zypp_server.rs:600
 msgid "Could not select %s '%s' for installation"
 msgstr "Impossible de sélectionner %s '%s' pour installation"
 
-#: agama-software/src/zypp_server.rs:1006
+#: agama-software/src/zypp_server.rs:1018
 msgid "Failed to register the system"
 msgstr "Impossible d'enregistrer le système"
 
@@ -1098,31 +1108,35 @@ msgstr ""
 msgid "First user information is incomplete"
 msgstr "Les informations du premier utilisateur sont incomplètes"
 
-#: agama-utils/src/api/problem_details.rs:113
+#: agama-utils/src/api/problem_details.rs:122
 msgid "Schema validation failed"
 msgstr "Échec de la validation du schéma"
 
-#: agama-utils/src/api/problem_details.rs:115
+#: agama-utils/src/api/problem_details.rs:124
 msgid "The provided configuration does not match the required schema"
 msgstr "La configuration fournie ne correspond pas au schéma requis"
 
-#: agama-utils/src/api/problem_details.rs:124
+#: agama-utils/src/api/problem_details.rs:133
 msgid "Invalid JSON"
 msgstr "JSON non valide"
 
-#: agama-utils/src/api/problem_details.rs:132
+#: agama-utils/src/api/problem_details.rs:141
 msgid "Internal server error"
 msgstr "Erreur de serveur interne"
 
-#: agama-utils/src/api/problem_details.rs:140
+#: agama-utils/src/api/problem_details.rs:149
 msgid "Unauthorized"
 msgstr "Non autorisé"
 
 #: agama-utils/src/api/problem_details.rs:189
+msgid "An error occurred that this client version doesn't recognize"
+msgstr ""
+
+#: agama-utils/src/api/problem_details.rs:205
 msgid "Error:"
 msgstr "Erreur :"
 
-#: agama-utils/src/api/problem_details.rs:192
+#: agama-utils/src/api/problem_details.rs:208
 msgid "Details:"
 msgstr "Détails :"
 
@@ -1145,3 +1159,6 @@ msgstr "modèle"
 #: agama-utils/src/resolvable.rs:67
 msgid "product"
 msgstr "produit"
+
+#~ msgid "Missing Language Tag"
+#~ msgstr "Balise de langue manquante"
