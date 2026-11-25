@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-13 15:13+0000\n"
+"POT-Creation-Date: 2026-11-25 11:57+0000\n"
 "PO-Revision-Date: 2026-11-05 17:16+0000\n"
 "Last-Translator: Eugene Krater <lachend@gmail.com>\n"
 "Language-Team: Ukrainian <https://l10n.opensuse.org/projects/agama/agama-"
@@ -19,6 +19,19 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2026.11.1\n"
+
+#. Keep in sync with real Yast2::Popup
+#. at first construct agama question to display.
+#. NOTE: timeout is not supported.
+#. FIXME: what to do with richtext?
+#: service/lib/agama/autoyast/report_patching.rb:56
+msgid "Question"
+msgstr ""
+
+#. NOTE: implement confirm if needed
+#: service/lib/agama/autoyast/report_patching.rb:101
+msgid "Password"
+msgstr ""
 
 #. Implementation for the API method #Probe.
 #: service/lib/agama/dbus/storage/dasd.rb:65
@@ -84,6 +97,27 @@ msgstr "Пошук пристроїв зберігання"
 #: service/lib/agama/dbus/storage/manager.rb:265
 msgid "Applying storage configuration"
 msgstr "Застосування конфігурації сховища"
+
+#. Question to ask for LUKS activation
+#.
+#. @return [QuestionWithPassword]
+#: service/lib/agama/storage/callbacks/activate_luks.rb:83
+msgid "Encrypted device"
+msgstr ""
+
+#. Question to ask for multipath activation
+#.
+#. @return [Question]
+#: service/lib/agama/storage/callbacks/activate_multipath.rb:74
+msgid "Multipath activation"
+msgstr ""
+
+#. Question to ask to continue
+#.
+#. @return [Question]
+#: service/lib/agama/storage/callbacks/commit_error.rb:81
+msgid "Storage error"
+msgstr ""
 
 #. Issue when the device has several users.
 #.
@@ -471,35 +505,33 @@ msgstr "Встановлення завантажувача"
 #. skip or abort the installation.
 #.
 #. @raise [StandardError] if the installation fails and the user chooses to abort.
+#: service/lib/agama/storage/finisher.rb:186
+msgid "Writing bootloader configuration failed."
+msgstr "Помилка під час запису налаштувань завантажувача."
+
 #. Asks the user whether to retry, skip, or abort the installation.
 #.
 #. @param exception [Exception] Exception with details of the problem
 #. @return [Symbol] Action chosen by the user (:retry, :skip, :abort)
-#: service/lib/agama/storage/finisher.rb:186
-#: service/lib/agama/storage/finisher.rb:222
-msgid "Writing bootloader configuration failed."
-msgstr "Помилка під час запису налаштувань завантажувача."
-
-#: service/lib/agama/storage/finisher.rb:223
+#: service/lib/agama/storage/finisher.rb:219
 msgid ""
-"Bootloader installation failed. Do you want to retry, skip or abort the "
-"installation?"
+"It was not possible to install the bootloader. You can try again or skip the "
+"bootloader installation completely. If you skip the bootloader installation "
+"your system might not boot."
 msgstr ""
-"Встановлення завантажувача завершилося з помилкою. Хочете спробувати ще раз, "
-"пропустити цей етап чи припинити встановлення?"
 
 #. Step to finish the Y2Storage configuration
-#: service/lib/agama/storage/finisher.rb:243
+#: service/lib/agama/storage/finisher.rb:245
 msgid "Adjusting storage configuration"
 msgstr "Налаштування конфігурації сховища"
 
 #. Step to finish the iSCSI configuration
-#: service/lib/agama/storage/finisher.rb:257
+#: service/lib/agama/storage/finisher.rb:259
 msgid "Adjusting iSCSI configuration"
 msgstr "Налаштування конфігурації iSCSI"
 
 #. Step to configure the file-system snapshots
-#: service/lib/agama/storage/finisher.rb:269
+#: service/lib/agama/storage/finisher.rb:271
 msgid "Configuring file systems snapshots"
 msgstr "Налаштування моментальних знімків файлових систем"
 
@@ -554,6 +586,13 @@ msgstr "Пристрій zFCP %s не може бути активований"
 #, c-format
 msgid "The zFCP device %s cannot be deactivated"
 msgstr "Пристрій zFCP %s не може бути деактивований"
+
+#~ msgid ""
+#~ "Bootloader installation failed. Do you want to retry, skip or abort the "
+#~ "installation?"
+#~ msgstr ""
+#~ "Встановлення завантажувача завершилося з помилкою. Хочете спробувати ще "
+#~ "раз, пропустити цей етап чи припинити встановлення?"
 
 #~ msgid "Failed to set default GRUB2 boot entry:"
 #~ msgstr "Не вдалося задати типовий запис завантаження GRUB2:"

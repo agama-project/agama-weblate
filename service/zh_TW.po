@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-13 15:13+0000\n"
+"POT-Creation-Date: 2026-11-25 11:57+0000\n"
 "PO-Revision-Date: 2026-06-25 09:55+0000\n"
 "Last-Translator: Grace Yu <grace.yu@excel-gits.com>\n"
 "Language-Team: Chinese (Taiwan) <https://l10n.opensuse.org/projects/agama/"
@@ -18,6 +18,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 2026.6.1\n"
+
+#. Keep in sync with real Yast2::Popup
+#. at first construct agama question to display.
+#. NOTE: timeout is not supported.
+#. FIXME: what to do with richtext?
+#: service/lib/agama/autoyast/report_patching.rb:56
+msgid "Question"
+msgstr ""
+
+#. NOTE: implement confirm if needed
+#: service/lib/agama/autoyast/report_patching.rb:101
+msgid "Password"
+msgstr ""
 
 #. Implementation for the API method #Probe.
 #: service/lib/agama/dbus/storage/dasd.rb:65
@@ -83,6 +96,27 @@ msgstr "查探儲存裝置"
 #: service/lib/agama/dbus/storage/manager.rb:265
 msgid "Applying storage configuration"
 msgstr "套用儲存組態"
+
+#. Question to ask for LUKS activation
+#.
+#. @return [QuestionWithPassword]
+#: service/lib/agama/storage/callbacks/activate_luks.rb:83
+msgid "Encrypted device"
+msgstr ""
+
+#. Question to ask for multipath activation
+#.
+#. @return [Question]
+#: service/lib/agama/storage/callbacks/activate_multipath.rb:74
+msgid "Multipath activation"
+msgstr ""
+
+#. Question to ask to continue
+#.
+#. @return [Question]
+#: service/lib/agama/storage/callbacks/commit_error.rb:81
+msgid "Storage error"
+msgstr ""
 
 #. Issue when the device has several users.
 #.
@@ -456,34 +490,34 @@ msgstr "正在安裝開機載入程式"
 #. skip or abort the installation.
 #.
 #. @raise [StandardError] if the installation fails and the user chooses to abort.
-#. Asks the user whether to retry, skip, or abort the installation.
-#.
-#. @param exception [Exception] Exception with details of the problem
-#. @return [Symbol] Action chosen by the user (:retry, :skip, :abort)
 #: service/lib/agama/storage/finisher.rb:186
-#: service/lib/agama/storage/finisher.rb:222
 #, fuzzy
 msgid "Writing bootloader configuration failed."
 msgstr "寫入開機載入程式 sysconfig"
 
-#: service/lib/agama/storage/finisher.rb:223
+#. Asks the user whether to retry, skip, or abort the installation.
+#.
+#. @param exception [Exception] Exception with details of the problem
+#. @return [Symbol] Action chosen by the user (:retry, :skip, :abort)
+#: service/lib/agama/storage/finisher.rb:219
 msgid ""
-"Bootloader installation failed. Do you want to retry, skip or abort the "
-"installation?"
+"It was not possible to install the bootloader. You can try again or skip the "
+"bootloader installation completely. If you skip the bootloader installation "
+"your system might not boot."
 msgstr ""
 
 #. Step to finish the Y2Storage configuration
-#: service/lib/agama/storage/finisher.rb:243
+#: service/lib/agama/storage/finisher.rb:245
 msgid "Adjusting storage configuration"
 msgstr "正在調整儲存組態"
 
 #. Step to finish the iSCSI configuration
-#: service/lib/agama/storage/finisher.rb:257
+#: service/lib/agama/storage/finisher.rb:259
 msgid "Adjusting iSCSI configuration"
 msgstr "正在調整 iSCSI 組態"
 
 #. Step to configure the file-system snapshots
-#: service/lib/agama/storage/finisher.rb:269
+#: service/lib/agama/storage/finisher.rb:271
 msgid "Configuring file systems snapshots"
 msgstr "正在設定檔案系統快照"
 
