@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-23 15:41+0000\n"
+"POT-Creation-Date: 2026-11-25 11:57+0000\n"
 "PO-Revision-Date: 2026-08-19 15:13+0000\n"
 "Last-Translator: Bone NI <bounkirdni@gmail.com>\n"
 "Language-Team: Lao <https://l10n.opensuse.org/projects/agama/agama-rust-"
@@ -19,38 +19,54 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 2026.8.1\n"
 
-#: agama-autoinstall/src/auto_loader.rs:166
+#: agama-autoinstall/src/auto_loader.rs:167
 msgid ""
 "Configuration cannot be applied because it is invalid or could not be "
 "reached."
 msgstr "ບໍ່ສາມາດນຳໃຊ້ການຕັ້ງຄ່າໄດ້ ເນື່ອງຈາກມັນບໍ່ຖືກຕ້ອງ ຫຼື ບໍ່ສາມາດເຂົ້າເຖິງໄດ້."
 
-#: agama-autoinstall/src/questions.rs:47
+#: agama-autoinstall/src/auto_loader.rs:169
+#, fuzzy
+msgid "Configuration error"
+msgstr "ກຳລັງຕັ້ງຄ່າ"
+
+#: agama-autoinstall/src/questions.rs:49
 msgid "Reload configuration"
 msgstr "ໂຫລດການຕັ້ງຄ່າຄືນໃໝ່"
 
-#: agama-autoinstall/src/questions.rs:48
+#: agama-autoinstall/src/questions.rs:50
 msgid "Skip and configure manually"
 msgstr "ຂ້າມ ແລະ ຕັ້ງຄ່າດ້ວຍຕົນເອງ"
 
-#: agama-autoinstall/src/questions.rs:77 agama-cli/src/config.rs:372
+#: agama-autoinstall/src/questions.rs:79 agama-cli/src/config.rs:372
 msgid "Found unsupported elements in the AutoYaST profile:"
 msgstr ""
 
-#: agama-autoinstall/src/questions.rs:92
-#: agama-software/src/callbacks/install.rs:81
-msgid "Continue"
-msgstr "ດຳເນີນການຕໍ່"
+#: agama-autoinstall/src/questions.rs:94
+#, fuzzy
+msgid "Load the profile"
+msgstr "ບໍ່ສາມາດດຶງຂໍ້ມູນໂປຣໄຟລ໌ໄດ້"
 
-#: agama-autoinstall/src/questions.rs:93
-msgid "Abort"
-msgstr "ຢຸດການເຮັດວຽກ"
+#: agama-autoinstall/src/questions.rs:95
+#: agama-software/src/callbacks/security.rs:120
+msgid "Skip"
+msgstr "ຂ້າມ"
+
+#: agama-autoinstall/src/questions.rs:97
+msgid "Unsupported AutoYaST elements"
+msgstr ""
 
 #. TRANSLATORS: {0} is a URL
-#: agama-autoinstall/src/scripts.rs:135
+#: agama-autoinstall/src/scripts.rs:136
+#, rust-format
 msgid ""
 "It was not possible to load the script from {0}. Do you want to try again?"
 msgstr "ບໍ່ສາມາດໂຫລດສະຄຣິບຈາກ {0} ໄດ້. ເຈົ້າຕ້ອງການລອງໃໝ່ບໍ່?"
+
+#: agama-autoinstall/src/scripts.rs:139
+#, fuzzy
+msgid "Configuration script failed"
+msgstr "ກຳລັງຕັ້ງຄ່າການເຂົ້າເຖິງທາງໄກ"
 
 #. TRANSLATORS: CLI help for: agama auth
 #: agama-cli/src/auth.rs:65
@@ -118,6 +134,7 @@ msgstr "ກະລຸນາປ້ອນລະຫັດຜ່ານ root:"
 
 #. TRANSLATORS: {0} is a host name
 #: agama-cli/src/auth.rs:179
+#, rust-format
 msgid "Not authenticated in {0}"
 msgstr "ຍັງບໍ່ໄດ້ຢືນຢັນຕົວຕົນໃນ {0}"
 
@@ -313,9 +330,9 @@ msgstr "ກວດສອບຄວາມຖືກຕ້ອງຂອງໂປຣໄ
 #: agama-cli/src/config.rs:115
 #, fuzzy
 msgid ""
-"Schema is available at /usr/share/agama/openapi/nightly/schemas/config."
-"schema.json Note: validation is always done as part of all other \"agama "
-"config\" commands."
+"Schema is available at /usr/share/agama/openapi/nightly/schemas/"
+"config.schema.json Note: validation is always done as part of all other "
+"\"agama config\" commands."
 msgstr ""
 "Schema ມີໃຫ້ຢູ່ທີ່ /usr/share/agama/schema/profile.schema.json ໝາຍເຫດ: "
 "ການກວດສອບຄວາມຖືກຕ້ອງຈະຖືກເຮັດເປັນສ່ວນໜຶ່ງຂອງທຸກໆຄຳສັ່ງ \"agama config\" ອື່ນໆ."
@@ -788,15 +805,28 @@ msgstr ""
 "ມີຄຳຖາມທີ່ຍັງບໍ່ໄດ້ຕອບ. ໃຫ້ໃຊ້ຄຳສັ່ງ \"agama monitor\" ຫຼື "
 "ສ່ວນຕິດຕໍ່ຜູ້ໃຊ້ທາງເວັບເພື່ອຕອບຄຳຖາມເຫຼົ່ານັ້ນ:"
 
+#: agama-files/src/runner.rs:152
+msgid "Failed to run a script"
+msgstr ""
+
 #. TRANSLATORS: %s is replaced by the script name.
 #: agama-files/src/service.rs:183
 msgid "Failed to retrieve the script %s. Do you want to try again?"
 msgstr "ບໍ່ສາມາດດຶງຂໍ້ມູນສະຄຣິບ %s ໄດ້. ເຈົ້າຕ້ອງການລອງໃໝ່ບໍ່?"
 
+#: agama-files/src/service.rs:186
+msgid "Script fetching error"
+msgstr ""
+
 #. TRANSLATORS: %s is replaced by the script name.
-#: agama-files/src/service.rs:207
+#: agama-files/src/service.rs:208
 msgid "Failed to write the file %s. Do you want to try again?"
 msgstr "ບໍ່ສາມາດຂຽນໄຟລ໌ %s ໄດ້. ເຈົ້າຕ້ອງການລອງໃໝ່ບໍ່?"
+
+#: agama-files/src/service.rs:210
+#, fuzzy
+msgid "File write error"
+msgstr "ຂໍ້ຜິດພາດຂອງໂປຣໄຟລ໌"
 
 #: agama-manager/src/actions.rs:78
 msgid "Prepare the system"
@@ -919,16 +949,21 @@ msgid "Reject"
 msgstr "ປະຕິເສດ"
 
 #: agama-security/src/service.rs:227
-#: agama-software/src/callbacks/security.rs:119
+#: agama-software/src/callbacks/security.rs:120
 msgid "Trust"
 msgstr "ເຊື່ອຖື"
 
-#: agama-security/src/service.rs:228
+#: agama-security/src/service.rs:229
+#, fuzzy
 msgid ""
-"Trying to import a self-signed certificate. Do you want to trust it and "
-"register the product?"
+"The registration server uses a self-signed certificate. Do you want to trust "
+"the certificate?"
 msgstr ""
 "ກຳລັງພະຍາຍາມນຳເຂົ້າໃບຢັ້ງຢືນທີ່ເຊັນດ້ວຍຕົນເອງ. ເຈົ້າຕ້ອງການເຊື່ອຖືມັນ ແລະ ລົງທະບຽນຜະລິດຕະພັນບໍ່?"
+
+#: agama-security/src/service.rs:234
+msgid "Self-signed certificate"
+msgstr ""
 
 #: agama-server/src/profile/web.rs:92
 msgid "Profile validation failed"
@@ -950,31 +985,71 @@ msgstr "ຄຳຮ້ອງຂໍໂປຣໄຟລ໌ບໍ່ຖືກຕ້ອ
 msgid "AutoYaST conversion failed"
 msgstr "ການແປງ AutoYaST ຫຼົ້ມເຫຼວ"
 
-#: agama-software/src/callbacks/commit_download.rs:47
-#: agama-software/src/callbacks/install.rs:56
+#: agama-software/src/callbacks/commit_download.rs:46
+msgid "Package download failed"
+msgstr ""
+
+#: agama-software/src/callbacks/commit_download.rs:52
+#: agama-software/src/callbacks/install.rs:60
+#: agama-software/src/callbacks/install.rs:95
 msgid "Ignore"
 msgstr "ບໍ່ສົນໃຈ"
 
-#: agama-software/src/callbacks/commit_download.rs:47
-#: agama-software/src/callbacks/install.rs:56
-#: agama-software/src/callbacks/install.rs:81
+#: agama-software/src/callbacks/commit_download.rs:52
+#: agama-software/src/callbacks/install.rs:60
+#: agama-software/src/callbacks/install.rs:93
 msgid "Retry"
 msgstr "ລອງໃໝ່"
 
-#: agama-software/src/callbacks/install.rs:78
-msgid "There was a problem running a package script."
-msgstr "ເກີດບັນຫາໃນການລັນສະຄຣິບຂອງແພັກເກດ."
+#: agama-software/src/callbacks/install.rs:55
+#, fuzzy
+msgid "Package installation error"
+msgstr "ກຳລັງເລີ່ມຕົ້ນການຕິດຕັ້ງແພັກເກດ"
+
+#: agama-software/src/callbacks/install.rs:83
+msgid ""
+"There was a problem running a package script. You can try running the script "
+"again or ignore the error and continue."
+msgstr ""
+
+#: agama-software/src/callbacks/install.rs:88
+msgid "Package script error"
+msgstr ""
+
+#: agama-software/src/callbacks/security.rs:68
+msgid "Unsigned file"
+msgstr ""
 
 #. TRANSLATORS: substituting: key ID, (key name), fingerprint
-#: agama-software/src/callbacks/security.rs:112
+#: agama-software/src/callbacks/security.rs:113
+#, rust-format
 msgid ""
 "The key {0} ({1}) with fingerprint {2} is unknown. Do you want to trust this "
 "key?"
 msgstr "ຄີ {0} ({1}) ທີ່ມີ fingerprint {2} ແມ່ນບໍ່ຮູ້ຈັກ. ເຈົ້າຕ້ອງການເຊື່ອຖືຄີນີ້ບໍ່?"
 
 #: agama-software/src/callbacks/security.rs:119
-msgid "Skip"
-msgstr "ຂ້າມ"
+#: agama-software/src/callbacks/security.rs:160
+#, fuzzy
+msgid "Unknown GPG key"
+msgstr "ບໍ່ຮູ້"
+
+#: agama-software/src/callbacks/security.rs:203
+msgid "Signature check failed"
+msgstr ""
+
+#: agama-software/src/callbacks/security.rs:226
+msgid "Missing checksum"
+msgstr ""
+
+#: agama-software/src/callbacks/security.rs:248
+#, fuzzy
+msgid "Unknown checksum"
+msgstr "ບໍ່ຮູ້"
+
+#: agama-software/src/callbacks/security.rs:267
+msgid "Wrong checksum"
+msgstr ""
 
 #: agama-software/src/service.rs:297
 msgid ""
@@ -986,55 +1061,61 @@ msgid "Starting packages installation"
 msgstr "ກຳລັງເລີ່ມຕົ້ນການຕິດຕັ້ງແພັກເກດ"
 
 #: agama-software/src/zypp_server.rs:313
-msgid "Packages download and installation failed. Would you like to retry?"
+#, fuzzy
+msgid "Packages download and installation failed. Would you like to try again?"
 msgstr "ການດາວໂຫລດ ແລະ ຕິດຕັ້ງແພັກເກດຫຼົ້ມເຫຼວ. ເຈົ້າຕ້ອງການລອງໃໝ່ບໍ່?"
 
-#: agama-software/src/zypp_server.rs:368
+#: agama-software/src/zypp_server.rs:315
+#, fuzzy
+msgid "Packages installation failed"
+msgstr "ການຕິດຕັ້ງຫຼົ້ມເຫຼວ."
+
+#: agama-software/src/zypp_server.rs:373
 msgid "Updating the list of repositories"
 msgstr "ກຳລັງອັບເດດລາຍຊື່ຄັງຊອບແວ"
 
-#: agama-software/src/zypp_server.rs:369
+#: agama-software/src/zypp_server.rs:374
 msgid "Refreshing metadata from the repositories"
 msgstr "ກຳລັງຣີເຟຣຊຂໍ້ມູນ (metadata) ຈາກຄັງຊອບແວ"
 
-#: agama-software/src/zypp_server.rs:370
+#: agama-software/src/zypp_server.rs:375
 msgid "Calculating the software proposal"
 msgstr "ກຳລັງຄຳນວນຂໍ້ສະເໜີຊອບແວ"
 
-#: agama-software/src/zypp_server.rs:373
+#: agama-software/src/zypp_server.rs:378
 msgid "Registering the system"
 msgstr "ກຳລັງລົງທະບຽນລະບົບ"
 
 #. TRANSLATORS: %s is the alias of the repository.
-#: agama-software/src/zypp_server.rs:451
+#: agama-software/src/zypp_server.rs:456
 msgid "Could not remove the repository %s"
 msgstr "ບໍ່ສາມາດລຶບຄັງຊອບແວ %s ອອກໄດ້"
 
-#: agama-software/src/zypp_server.rs:472
+#: agama-software/src/zypp_server.rs:477
 msgid "Could not read the repositories"
 msgstr "ບໍ່ສາມາດອ່ານຄັງຊອບແວໄດ້"
 
-#: agama-software/src/zypp_server.rs:508
+#: agama-software/src/zypp_server.rs:513
 msgid ""
 "Failed to find the product in the repositories. You might need to register "
 "the system."
 msgstr "ບໍ່ພົບຜະລິດຕະພັນໃນຄັງຊອບແວ. ເຈົ້າອາດຈະຕ້ອງໄດ້ລົງທະບຽນລະບົບກ່ອນ."
 
-#: agama-software/src/zypp_server.rs:511
+#: agama-software/src/zypp_server.rs:516
 msgid "Failed to find the product in the repositories."
 msgstr "ບໍ່ພົບຜະລິດຕະພັນໃນຄັງຊອບແວ."
 
-#: agama-software/src/zypp_server.rs:574
+#: agama-software/src/zypp_server.rs:579
 msgid "There are conflicts in the software selection"
 msgstr "ມີຂໍ້ຂັດແຍ່ງໃນການເລືອກຊອບແວ"
 
 #. TRANSLATORS: the first %s is the kind of resolvable (e.g., "package")
 #. and the second %s is the name of the resolvable.
-#: agama-software/src/zypp_server.rs:601
+#: agama-software/src/zypp_server.rs:606
 msgid "Could not select %s '%s' for installation"
 msgstr "ບໍ່ສາມາດເລືອກ %s '%s' ສຳລັບການຕິດຕັ້ງໄດ້"
 
-#: agama-software/src/zypp_server.rs:1019
+#: agama-software/src/zypp_server.rs:1024
 msgid "Failed to register the system"
 msgstr "ລົງທະບຽນລະບົບຫຼົ້ມເຫຼວ"
 
@@ -1079,11 +1160,16 @@ msgstr "ຂໍ້ຜິດພາດ:"
 msgid "Details:"
 msgstr "ລາຍລະອຽດ:"
 
-#: agama-utils/src/api/question.rs:347 agama-utils/src/question/start.rs:48
+#: agama-utils/src/api/question.rs:252
+#, fuzzy
+msgid "Question"
+msgstr "ຄຳຖາມ"
+
+#: agama-utils/src/api/question.rs:357 agama-utils/src/question/start.rs:48
 msgid "No"
 msgstr "ບໍ່"
 
-#: agama-utils/src/api/question.rs:347 agama-utils/src/question/start.rs:48
+#: agama-utils/src/api/question.rs:357 agama-utils/src/question/start.rs:48
 msgid "Yes"
 msgstr "ແມ່ນ"
 
@@ -1099,8 +1185,14 @@ msgstr "ແພັດເທີນ"
 msgid "product"
 msgstr "ຜະລິດຕະພັນ"
 
+#~ msgid "Continue"
+#~ msgstr "ດຳເນີນການຕໍ່"
+
+#~ msgid "Abort"
+#~ msgstr "ຢຸດການເຮັດວຽກ"
+
+#~ msgid "There was a problem running a package script."
+#~ msgstr "ເກີດບັນຫາໃນການລັນສະຄຣິບຂອງແພັກເກດ."
+
 #~ msgid "Missing Language Tag"
 #~ msgstr "ແທັກພາສາ (Language Tag) ຂາດຫາຍ"
-
-#~ msgid "Profile error"
-#~ msgstr "ຂໍ້ຜິດພາດຂອງໂປຣໄຟລ໌"

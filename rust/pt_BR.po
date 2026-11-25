@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-23 15:41+0000\n"
+"POT-Creation-Date: 2026-11-25 11:57+0000\n"
 "PO-Revision-Date: 2026-07-24 18:12+0000\n"
 "Last-Translator: Samanta Magalhaes <samanta_texttrans@outlook.com>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.opensuse.org/projects/agama/"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 2026.7.1\n"
 
-#: agama-autoinstall/src/auto_loader.rs:166
+#: agama-autoinstall/src/auto_loader.rs:167
 msgid ""
 "Configuration cannot be applied because it is invalid or could not be "
 "reached."
@@ -27,32 +27,48 @@ msgstr ""
 "Não é possível aplicar a configuração porque ela é inválida ou está "
 "inacessível."
 
-#: agama-autoinstall/src/questions.rs:47
+#: agama-autoinstall/src/auto_loader.rs:169
+#, fuzzy
+msgid "Configuration error"
+msgstr "Configurando"
+
+#: agama-autoinstall/src/questions.rs:49
 msgid "Reload configuration"
 msgstr "Recarregar configuração"
 
-#: agama-autoinstall/src/questions.rs:48
+#: agama-autoinstall/src/questions.rs:50
 msgid "Skip and configure manually"
 msgstr "Ignorar e configurar manualmente"
 
-#: agama-autoinstall/src/questions.rs:77 agama-cli/src/config.rs:372
+#: agama-autoinstall/src/questions.rs:79 agama-cli/src/config.rs:372
 msgid "Found unsupported elements in the AutoYaST profile:"
 msgstr ""
 
-#: agama-autoinstall/src/questions.rs:92
-#: agama-software/src/callbacks/install.rs:81
-msgid "Continue"
-msgstr "Continuar"
+#: agama-autoinstall/src/questions.rs:94
+#, fuzzy
+msgid "Load the profile"
+msgstr "Não foi possível recuperar o perfil"
 
-#: agama-autoinstall/src/questions.rs:93
-msgid "Abort"
-msgstr "Cancelar"
+#: agama-autoinstall/src/questions.rs:95
+#: agama-software/src/callbacks/security.rs:120
+msgid "Skip"
+msgstr "Ignorar"
+
+#: agama-autoinstall/src/questions.rs:97
+msgid "Unsupported AutoYaST elements"
+msgstr ""
 
 #. TRANSLATORS: {0} is a URL
-#: agama-autoinstall/src/scripts.rs:135
+#: agama-autoinstall/src/scripts.rs:136
+#, rust-format
 msgid ""
 "It was not possible to load the script from {0}. Do you want to try again?"
 msgstr "Não foi possível carregar o script de {0}. Deseja tentar de novo?"
+
+#: agama-autoinstall/src/scripts.rs:139
+#, fuzzy
+msgid "Configuration script failed"
+msgstr "Configurando o acesso remoto"
 
 #. TRANSLATORS: CLI help for: agama auth
 #: agama-cli/src/auth.rs:65
@@ -122,6 +138,7 @@ msgstr "Insira a senha de root:"
 
 #. TRANSLATORS: {0} is a host name
 #: agama-cli/src/auth.rs:179
+#, rust-format
 msgid "Not authenticated in {0}"
 msgstr "Não autenticado em {0}"
 
@@ -326,9 +343,9 @@ msgstr "Validar perfil usando esquema JSON"
 #: agama-cli/src/config.rs:115
 #, fuzzy
 msgid ""
-"Schema is available at /usr/share/agama/openapi/nightly/schemas/config."
-"schema.json Note: validation is always done as part of all other \"agama "
-"config\" commands."
+"Schema is available at /usr/share/agama/openapi/nightly/schemas/"
+"config.schema.json Note: validation is always done as part of all other "
+"\"agama config\" commands."
 msgstr ""
 "O esquema está disponível em /usr/share/agama/schema/profile.schema.json "
 "Nota: a validação sempre é feita como parte de todos os outros comandos "
@@ -814,15 +831,28 @@ msgstr ""
 "Há questões sem resposta. Use o comando \"agama monitor\" ou a interface de "
 "usuário da web para respondê-las:"
 
+#: agama-files/src/runner.rs:152
+msgid "Failed to run a script"
+msgstr ""
+
 #. TRANSLATORS: %s is replaced by the script name.
 #: agama-files/src/service.rs:183
 msgid "Failed to retrieve the script %s. Do you want to try again?"
 msgstr "Falha ao recuperar o script %s. Deseja tentar de novo?"
 
+#: agama-files/src/service.rs:186
+msgid "Script fetching error"
+msgstr ""
+
 #. TRANSLATORS: %s is replaced by the script name.
-#: agama-files/src/service.rs:207
+#: agama-files/src/service.rs:208
 msgid "Failed to write the file %s. Do you want to try again?"
 msgstr "Falha ao gravar o arquivo %s. Deseja tentar de novo?"
+
+#: agama-files/src/service.rs:210
+#, fuzzy
+msgid "File write error"
+msgstr "Erro de perfil"
 
 #: agama-manager/src/actions.rs:78
 msgid "Prepare the system"
@@ -945,17 +975,22 @@ msgid "Reject"
 msgstr "Rejeitar"
 
 #: agama-security/src/service.rs:227
-#: agama-software/src/callbacks/security.rs:119
+#: agama-software/src/callbacks/security.rs:120
 msgid "Trust"
 msgstr "Confiar"
 
-#: agama-security/src/service.rs:228
+#: agama-security/src/service.rs:229
+#, fuzzy
 msgid ""
-"Trying to import a self-signed certificate. Do you want to trust it and "
-"register the product?"
+"The registration server uses a self-signed certificate. Do you want to trust "
+"the certificate?"
 msgstr ""
 "Tentando importar um certificado autoassinado. Deseja confiar nele e "
 "registrar o produto?"
+
+#: agama-security/src/service.rs:234
+msgid "Self-signed certificate"
+msgstr ""
 
 #: agama-server/src/profile/web.rs:92
 msgid "Profile validation failed"
@@ -977,23 +1012,44 @@ msgstr "Solicitação de perfil inválida"
 msgid "AutoYaST conversion failed"
 msgstr "Falha na conversão do AutoYaST"
 
-#: agama-software/src/callbacks/commit_download.rs:47
-#: agama-software/src/callbacks/install.rs:56
+#: agama-software/src/callbacks/commit_download.rs:46
+msgid "Package download failed"
+msgstr ""
+
+#: agama-software/src/callbacks/commit_download.rs:52
+#: agama-software/src/callbacks/install.rs:60
+#: agama-software/src/callbacks/install.rs:95
 msgid "Ignore"
 msgstr "Ignorar"
 
-#: agama-software/src/callbacks/commit_download.rs:47
-#: agama-software/src/callbacks/install.rs:56
-#: agama-software/src/callbacks/install.rs:81
+#: agama-software/src/callbacks/commit_download.rs:52
+#: agama-software/src/callbacks/install.rs:60
+#: agama-software/src/callbacks/install.rs:93
 msgid "Retry"
 msgstr "Repetir"
 
-#: agama-software/src/callbacks/install.rs:78
-msgid "There was a problem running a package script."
-msgstr "Houve um problema ao executar um script de pacote."
+#: agama-software/src/callbacks/install.rs:55
+#, fuzzy
+msgid "Package installation error"
+msgstr "Iniciando instalação dos pacotes"
+
+#: agama-software/src/callbacks/install.rs:83
+msgid ""
+"There was a problem running a package script. You can try running the script "
+"again or ignore the error and continue."
+msgstr ""
+
+#: agama-software/src/callbacks/install.rs:88
+msgid "Package script error"
+msgstr ""
+
+#: agama-software/src/callbacks/security.rs:68
+msgid "Unsigned file"
+msgstr ""
 
 #. TRANSLATORS: substituting: key ID, (key name), fingerprint
-#: agama-software/src/callbacks/security.rs:112
+#: agama-software/src/callbacks/security.rs:113
+#, rust-format
 msgid ""
 "The key {0} ({1}) with fingerprint {2} is unknown. Do you want to trust this "
 "key?"
@@ -1002,8 +1058,27 @@ msgstr ""
 "nessa chave?"
 
 #: agama-software/src/callbacks/security.rs:119
-msgid "Skip"
-msgstr "Ignorar"
+#: agama-software/src/callbacks/security.rs:160
+#, fuzzy
+msgid "Unknown GPG key"
+msgstr "Desconhecido"
+
+#: agama-software/src/callbacks/security.rs:203
+msgid "Signature check failed"
+msgstr ""
+
+#: agama-software/src/callbacks/security.rs:226
+msgid "Missing checksum"
+msgstr ""
+
+#: agama-software/src/callbacks/security.rs:248
+#, fuzzy
+msgid "Unknown checksum"
+msgstr "Desconhecido"
+
+#: agama-software/src/callbacks/security.rs:267
+msgid "Wrong checksum"
+msgstr ""
 
 #: agama-software/src/service.rs:297
 msgid ""
@@ -1016,35 +1091,41 @@ msgid "Starting packages installation"
 msgstr "Iniciando instalação dos pacotes"
 
 #: agama-software/src/zypp_server.rs:313
-msgid "Packages download and installation failed. Would you like to retry?"
+#, fuzzy
+msgid "Packages download and installation failed. Would you like to try again?"
 msgstr "Falha no download e na instalação dos pacotes. Deseja repetir?"
 
-#: agama-software/src/zypp_server.rs:368
+#: agama-software/src/zypp_server.rs:315
+#, fuzzy
+msgid "Packages installation failed"
+msgstr "Falha na instalação."
+
+#: agama-software/src/zypp_server.rs:373
 msgid "Updating the list of repositories"
 msgstr "Atualizando a lista de repositórios"
 
-#: agama-software/src/zypp_server.rs:369
+#: agama-software/src/zypp_server.rs:374
 msgid "Refreshing metadata from the repositories"
 msgstr "Atualizando metadados dos repositórios"
 
-#: agama-software/src/zypp_server.rs:370
+#: agama-software/src/zypp_server.rs:375
 msgid "Calculating the software proposal"
 msgstr "Calculando a proposta de software"
 
-#: agama-software/src/zypp_server.rs:373
+#: agama-software/src/zypp_server.rs:378
 msgid "Registering the system"
 msgstr "Registrando o sistema"
 
 #. TRANSLATORS: %s is the alias of the repository.
-#: agama-software/src/zypp_server.rs:451
+#: agama-software/src/zypp_server.rs:456
 msgid "Could not remove the repository %s"
 msgstr "Não foi possível remover o repositório %s"
 
-#: agama-software/src/zypp_server.rs:472
+#: agama-software/src/zypp_server.rs:477
 msgid "Could not read the repositories"
 msgstr "Não foi possível ler os repositórios"
 
-#: agama-software/src/zypp_server.rs:508
+#: agama-software/src/zypp_server.rs:513
 msgid ""
 "Failed to find the product in the repositories. You might need to register "
 "the system."
@@ -1052,21 +1133,21 @@ msgstr ""
 "Falha ao localizar o produto nos repositórios. Talvez seja necessário "
 "registrar o sistema."
 
-#: agama-software/src/zypp_server.rs:511
+#: agama-software/src/zypp_server.rs:516
 msgid "Failed to find the product in the repositories."
 msgstr "Falha ao localizar o produto nos repositórios."
 
-#: agama-software/src/zypp_server.rs:574
+#: agama-software/src/zypp_server.rs:579
 msgid "There are conflicts in the software selection"
 msgstr "Há conflitos na seleção de software"
 
 #. TRANSLATORS: the first %s is the kind of resolvable (e.g., "package")
 #. and the second %s is the name of the resolvable.
-#: agama-software/src/zypp_server.rs:601
+#: agama-software/src/zypp_server.rs:606
 msgid "Could not select %s '%s' for installation"
 msgstr "Não foi possível selecionar %s '%s' para instalação"
 
-#: agama-software/src/zypp_server.rs:1019
+#: agama-software/src/zypp_server.rs:1024
 msgid "Failed to register the system"
 msgstr "Falha ao registrar o sistema"
 
@@ -1113,11 +1194,16 @@ msgstr "Erro:"
 msgid "Details:"
 msgstr "Detalhes:"
 
-#: agama-utils/src/api/question.rs:347 agama-utils/src/question/start.rs:48
+#: agama-utils/src/api/question.rs:252
+#, fuzzy
+msgid "Question"
+msgstr "Perguntas"
+
+#: agama-utils/src/api/question.rs:357 agama-utils/src/question/start.rs:48
 msgid "No"
 msgstr "Não"
 
-#: agama-utils/src/api/question.rs:347 agama-utils/src/question/start.rs:48
+#: agama-utils/src/api/question.rs:357 agama-utils/src/question/start.rs:48
 msgid "Yes"
 msgstr "Sim"
 
@@ -1133,8 +1219,14 @@ msgstr "padrão"
 msgid "product"
 msgstr "produto"
 
+#~ msgid "Continue"
+#~ msgstr "Continuar"
+
+#~ msgid "Abort"
+#~ msgstr "Cancelar"
+
+#~ msgid "There was a problem running a package script."
+#~ msgstr "Houve um problema ao executar um script de pacote."
+
 #~ msgid "Missing Language Tag"
 #~ msgstr "Tag de idioma ausente"
-
-#~ msgid "Profile error"
-#~ msgstr "Erro de perfil"

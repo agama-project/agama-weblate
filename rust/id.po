@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-23 15:41+0000\n"
+"POT-Creation-Date: 2026-11-25 11:57+0000\n"
 "PO-Revision-Date: 2026-10-20 15:13+0000\n"
 "Last-Translator: Arif Budiman <arifpedia@gmail.com>\n"
 "Language-Team: Indonesian <https://l10n.opensuse.org/projects/agama/agama-"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 2026.10.1\n"
 
-#: agama-autoinstall/src/auto_loader.rs:166
+#: agama-autoinstall/src/auto_loader.rs:167
 msgid ""
 "Configuration cannot be applied because it is invalid or could not be "
 "reached."
@@ -27,34 +27,50 @@ msgstr ""
 "Konfigurasi tidak dapat diterapkan karena tidak valid atau tidak dapat "
 "dijangkau."
 
-#: agama-autoinstall/src/questions.rs:47
+#: agama-autoinstall/src/auto_loader.rs:169
+#, fuzzy
+msgid "Configuration error"
+msgstr "Mengonfigurasi"
+
+#: agama-autoinstall/src/questions.rs:49
 msgid "Reload configuration"
 msgstr "Muat ulang konfigurasi"
 
-#: agama-autoinstall/src/questions.rs:48
+#: agama-autoinstall/src/questions.rs:50
 msgid "Skip and configure manually"
 msgstr "Lewati dan konfigurasikan secara manual"
 
-#: agama-autoinstall/src/questions.rs:77 agama-cli/src/config.rs:372
+#: agama-autoinstall/src/questions.rs:79 agama-cli/src/config.rs:372
 msgid "Found unsupported elements in the AutoYaST profile:"
 msgstr "Ditemukan elemen yang tidak didukung dalam profil AutoYaST:"
 
-#: agama-autoinstall/src/questions.rs:92
-#: agama-software/src/callbacks/install.rs:81
-msgid "Continue"
-msgstr "Lanjutkan"
+#: agama-autoinstall/src/questions.rs:94
+#, fuzzy
+msgid "Load the profile"
+msgstr "Tidak dapat mengambil profil"
 
-#: agama-autoinstall/src/questions.rs:93
-msgid "Abort"
-msgstr "Batalkan"
+#: agama-autoinstall/src/questions.rs:95
+#: agama-software/src/callbacks/security.rs:120
+msgid "Skip"
+msgstr "Lewati"
+
+#: agama-autoinstall/src/questions.rs:97
+msgid "Unsupported AutoYaST elements"
+msgstr ""
 
 #. TRANSLATORS: {0} is a URL
-#: agama-autoinstall/src/scripts.rs:135
+#: agama-autoinstall/src/scripts.rs:136
+#, rust-format
 msgid ""
 "It was not possible to load the script from {0}. Do you want to try again?"
 msgstr ""
 "Tidak memungkinkan untuk memuat skrip dari {0}. Apakah Anda ingin mencoba "
 "lagi?"
+
+#: agama-autoinstall/src/scripts.rs:139
+#, fuzzy
+msgid "Configuration script failed"
+msgstr "Mengkonfigurasi akses jarak jauh"
 
 #. TRANSLATORS: CLI help for: agama auth
 #: agama-cli/src/auth.rs:65
@@ -125,6 +141,7 @@ msgstr "Silakan masukkan kata sandi root:"
 
 #. TRANSLATORS: {0} is a host name
 #: agama-cli/src/auth.rs:179
+#, rust-format
 msgid "Not authenticated in {0}"
 msgstr "Belum terotentikasi di {0}"
 
@@ -226,8 +243,8 @@ msgstr ""
 "   stop - jangan reboot dan backend Agama tetap berjalan.\n"
 "\n"
 "   reboot - reboot ke sistem yang terpasang. Nilai ini adalah bawaan. Nilai "
-"ini dapat diganti dengan menetapkan argumen baris perintah kernel inst."
-"finish.\n"
+"ini dapat diganti dengan menetapkan argumen baris perintah kernel "
+"inst.finish.\n"
 "\n"
 "   halt - hentikan mesin yang terpasang.\n"
 "\n"
@@ -327,13 +344,13 @@ msgstr "Validasi profil menggunakan JSON Schema"
 #. TRANSLATORS: CLI help for: agama config validate (details)
 #: agama-cli/src/config.rs:115
 msgid ""
-"Schema is available at /usr/share/agama/openapi/nightly/schemas/config."
-"schema.json Note: validation is always done as part of all other \"agama "
-"config\" commands."
+"Schema is available at /usr/share/agama/openapi/nightly/schemas/"
+"config.schema.json Note: validation is always done as part of all other "
+"\"agama config\" commands."
 msgstr ""
-"Skema tersedia di /usr/share/agama/openapi/nightly/schemas/config.schema."
-"json Catatan: validasi selalu dilakukan sebagai bagian dari semua perintah "
-"\"agama config\" lainnya."
+"Skema tersedia di /usr/share/agama/openapi/nightly/schemas/"
+"config.schema.json Catatan: validasi selalu dilakukan sebagai bagian dari "
+"semua perintah \"agama config\" lainnya."
 
 #. TRANSLATORS: CLI help for: agama config validate <URL_OR_PATH>
 #: agama-cli/src/config.rs:129
@@ -818,15 +835,28 @@ msgstr ""
 "Ada pertanyaan yang belum dijawab. Gunakan perintah \"agama monitor\" atau "
 "antarmuka web untuk menjawabnya:"
 
+#: agama-files/src/runner.rs:152
+msgid "Failed to run a script"
+msgstr ""
+
 #. TRANSLATORS: %s is replaced by the script name.
 #: agama-files/src/service.rs:183
 msgid "Failed to retrieve the script %s. Do you want to try again?"
 msgstr "Gagal mengambil skrip %s. Apakah Anda ingin mencoba lagi?"
 
+#: agama-files/src/service.rs:186
+msgid "Script fetching error"
+msgstr ""
+
 #. TRANSLATORS: %s is replaced by the script name.
-#: agama-files/src/service.rs:207
+#: agama-files/src/service.rs:208
 msgid "Failed to write the file %s. Do you want to try again?"
 msgstr "Gagal menulis file %s. Apakah Anda ingin mencoba lagi?"
+
+#: agama-files/src/service.rs:210
+#, fuzzy
+msgid "File write error"
+msgstr "Kesalahan Profil"
 
 #: agama-manager/src/actions.rs:78
 msgid "Prepare the system"
@@ -949,17 +979,22 @@ msgid "Reject"
 msgstr "Tolak"
 
 #: agama-security/src/service.rs:227
-#: agama-software/src/callbacks/security.rs:119
+#: agama-software/src/callbacks/security.rs:120
 msgid "Trust"
 msgstr "Percayai"
 
-#: agama-security/src/service.rs:228
+#: agama-security/src/service.rs:229
+#, fuzzy
 msgid ""
-"Trying to import a self-signed certificate. Do you want to trust it and "
-"register the product?"
+"The registration server uses a self-signed certificate. Do you want to trust "
+"the certificate?"
 msgstr ""
 "Mencoba mengimpor sertifikat yang ditandatangani sendiri. Apakah Anda ingin "
 "mempercayainya dan mendaftarkan produk?"
+
+#: agama-security/src/service.rs:234
+msgid "Self-signed certificate"
+msgstr ""
 
 #: agama-server/src/profile/web.rs:92
 msgid "Profile validation failed"
@@ -981,23 +1016,44 @@ msgstr "Permintaan profil tidak valid"
 msgid "AutoYaST conversion failed"
 msgstr "Konversi AutoYaST gagal"
 
-#: agama-software/src/callbacks/commit_download.rs:47
-#: agama-software/src/callbacks/install.rs:56
+#: agama-software/src/callbacks/commit_download.rs:46
+msgid "Package download failed"
+msgstr ""
+
+#: agama-software/src/callbacks/commit_download.rs:52
+#: agama-software/src/callbacks/install.rs:60
+#: agama-software/src/callbacks/install.rs:95
 msgid "Ignore"
 msgstr "Abaikan"
 
-#: agama-software/src/callbacks/commit_download.rs:47
-#: agama-software/src/callbacks/install.rs:56
-#: agama-software/src/callbacks/install.rs:81
+#: agama-software/src/callbacks/commit_download.rs:52
+#: agama-software/src/callbacks/install.rs:60
+#: agama-software/src/callbacks/install.rs:93
 msgid "Retry"
 msgstr "Coba lagi"
 
-#: agama-software/src/callbacks/install.rs:78
-msgid "There was a problem running a package script."
-msgstr "Terjadi masalah saat menjalankan skrip paket."
+#: agama-software/src/callbacks/install.rs:55
+#, fuzzy
+msgid "Package installation error"
+msgstr "Memulai instalasi paket"
+
+#: agama-software/src/callbacks/install.rs:83
+msgid ""
+"There was a problem running a package script. You can try running the script "
+"again or ignore the error and continue."
+msgstr ""
+
+#: agama-software/src/callbacks/install.rs:88
+msgid "Package script error"
+msgstr ""
+
+#: agama-software/src/callbacks/security.rs:68
+msgid "Unsigned file"
+msgstr ""
 
 #. TRANSLATORS: substituting: key ID, (key name), fingerprint
-#: agama-software/src/callbacks/security.rs:112
+#: agama-software/src/callbacks/security.rs:113
+#, rust-format
 msgid ""
 "The key {0} ({1}) with fingerprint {2} is unknown. Do you want to trust this "
 "key?"
@@ -1006,8 +1062,27 @@ msgstr ""
 "mempercayai kunci ini?"
 
 #: agama-software/src/callbacks/security.rs:119
-msgid "Skip"
-msgstr "Lewati"
+#: agama-software/src/callbacks/security.rs:160
+#, fuzzy
+msgid "Unknown GPG key"
+msgstr "Tidak dikenal"
+
+#: agama-software/src/callbacks/security.rs:203
+msgid "Signature check failed"
+msgstr ""
+
+#: agama-software/src/callbacks/security.rs:226
+msgid "Missing checksum"
+msgstr ""
+
+#: agama-software/src/callbacks/security.rs:248
+#, fuzzy
+msgid "Unknown checksum"
+msgstr "Tidak dikenal"
+
+#: agama-software/src/callbacks/security.rs:267
+msgid "Wrong checksum"
+msgstr ""
 
 #: agama-software/src/service.rs:297
 msgid ""
@@ -1021,56 +1096,62 @@ msgid "Starting packages installation"
 msgstr "Memulai instalasi paket"
 
 #: agama-software/src/zypp_server.rs:313
-msgid "Packages download and installation failed. Would you like to retry?"
+#, fuzzy
+msgid "Packages download and installation failed. Would you like to try again?"
 msgstr "Unduhan dan instalasi paket gagal. Apakah Anda ingin mencoba lagi?"
 
-#: agama-software/src/zypp_server.rs:368
+#: agama-software/src/zypp_server.rs:315
+#, fuzzy
+msgid "Packages installation failed"
+msgstr "Instalasi gagal."
+
+#: agama-software/src/zypp_server.rs:373
 msgid "Updating the list of repositories"
 msgstr "Memperbarui daftar repositori"
 
-#: agama-software/src/zypp_server.rs:369
+#: agama-software/src/zypp_server.rs:374
 msgid "Refreshing metadata from the repositories"
 msgstr "Menyegarkan metadata dari repositori"
 
-#: agama-software/src/zypp_server.rs:370
+#: agama-software/src/zypp_server.rs:375
 msgid "Calculating the software proposal"
 msgstr "Menghitung usulan perangkat lunak"
 
-#: agama-software/src/zypp_server.rs:373
+#: agama-software/src/zypp_server.rs:378
 msgid "Registering the system"
 msgstr "Mendaftarkan sistem"
 
 #. TRANSLATORS: %s is the alias of the repository.
-#: agama-software/src/zypp_server.rs:451
+#: agama-software/src/zypp_server.rs:456
 msgid "Could not remove the repository %s"
 msgstr "Tidak dapat menghapus repositori %s"
 
-#: agama-software/src/zypp_server.rs:472
+#: agama-software/src/zypp_server.rs:477
 msgid "Could not read the repositories"
 msgstr "Tidak dapat membaca repositori"
 
-#: agama-software/src/zypp_server.rs:508
+#: agama-software/src/zypp_server.rs:513
 msgid ""
 "Failed to find the product in the repositories. You might need to register "
 "the system."
 msgstr ""
 "Gagal menemukan produk di repositori. Anda mungkin perlu mendaftarkan sistem."
 
-#: agama-software/src/zypp_server.rs:511
+#: agama-software/src/zypp_server.rs:516
 msgid "Failed to find the product in the repositories."
 msgstr "Gagal menemukan produk di repositori."
 
-#: agama-software/src/zypp_server.rs:574
+#: agama-software/src/zypp_server.rs:579
 msgid "There are conflicts in the software selection"
 msgstr "Terdapat konflik dalam pemilihan perangkat lunak"
 
 #. TRANSLATORS: the first %s is the kind of resolvable (e.g., "package")
 #. and the second %s is the name of the resolvable.
-#: agama-software/src/zypp_server.rs:601
+#: agama-software/src/zypp_server.rs:606
 msgid "Could not select %s '%s' for installation"
 msgstr "Tidak dapat memilih %s '%s' untuk instalasi"
 
-#: agama-software/src/zypp_server.rs:1019
+#: agama-software/src/zypp_server.rs:1024
 msgid "Failed to register the system"
 msgstr "Gagal mendaftarkan sistem"
 
@@ -1117,11 +1198,16 @@ msgstr "Galat:"
 msgid "Details:"
 msgstr "Detail:"
 
-#: agama-utils/src/api/question.rs:347 agama-utils/src/question/start.rs:48
+#: agama-utils/src/api/question.rs:252
+#, fuzzy
+msgid "Question"
+msgstr "Pertanyaan"
+
+#: agama-utils/src/api/question.rs:357 agama-utils/src/question/start.rs:48
 msgid "No"
 msgstr "Tidak"
 
-#: agama-utils/src/api/question.rs:347 agama-utils/src/question/start.rs:48
+#: agama-utils/src/api/question.rs:357 agama-utils/src/question/start.rs:48
 msgid "Yes"
 msgstr "Ya"
 
@@ -1137,11 +1223,17 @@ msgstr "pola"
 msgid "product"
 msgstr "produk"
 
+#~ msgid "Continue"
+#~ msgstr "Lanjutkan"
+
+#~ msgid "Abort"
+#~ msgstr "Batalkan"
+
+#~ msgid "There was a problem running a package script."
+#~ msgstr "Terjadi masalah saat menjalankan skrip paket."
+
 #~ msgid "Missing Language Tag"
 #~ msgstr "Tag Bahasa Hilang"
-
-#~ msgid "Profile error"
-#~ msgstr "Kesalahan Profil"
 
 #~ msgid "Additional data"
 #~ msgstr "Data tambahan"
