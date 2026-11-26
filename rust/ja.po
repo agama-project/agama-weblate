@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-11-25 11:57+0000\n"
-"PO-Revision-Date: 2026-11-10 02:13+0000\n"
+"PO-Revision-Date: 2026-11-26 03:14+0000\n"
 "Last-Translator: Yasuhiko Kamata <belphegor@belbel.or.jp>\n"
 "Language-Team: Japanese <https://l10n.opensuse.org/projects/agama/agama-rust-"
 "master/ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2026.11.1\n"
+"X-Generator: Weblate 2026.11.2\n"
 
 #: agama-autoinstall/src/auto_loader.rs:167
 msgid ""
@@ -27,9 +27,8 @@ msgstr ""
 "内容が正しくないか、もしくはアクセスできないため、設定を適用できません。"
 
 #: agama-autoinstall/src/auto_loader.rs:169
-#, fuzzy
 msgid "Configuration error"
-msgstr "設定しています"
+msgstr "設定エラー"
 
 #: agama-autoinstall/src/questions.rs:49
 msgid "Reload configuration"
@@ -44,9 +43,8 @@ msgid "Found unsupported elements in the AutoYaST profile:"
 msgstr "AutoYaST プロファイル内にサポート対象外の要素が見つかりました:"
 
 #: agama-autoinstall/src/questions.rs:94
-#, fuzzy
 msgid "Load the profile"
-msgstr "プロファイルを取得できません"
+msgstr "プロファイルの読み込み"
 
 #: agama-autoinstall/src/questions.rs:95
 #: agama-software/src/callbacks/security.rs:120
@@ -55,7 +53,7 @@ msgstr "飛ばす"
 
 #: agama-autoinstall/src/questions.rs:97
 msgid "Unsupported AutoYaST elements"
-msgstr ""
+msgstr "サポートされていない AutoYaST 要素"
 
 #. TRANSLATORS: {0} is a URL
 #: agama-autoinstall/src/scripts.rs:136
@@ -64,9 +62,8 @@ msgid ""
 msgstr "{0} からスクリプトを読み込むことができませんでした。再試行しますか？"
 
 #: agama-autoinstall/src/scripts.rs:139
-#, fuzzy
 msgid "Configuration script failed"
-msgstr "リモートアクセスを設定しています"
+msgstr "設定スクリプトの処理が失敗しました"
 
 #. TRANSLATORS: CLI help for: agama auth
 #: agama-cli/src/auth.rs:65
@@ -652,7 +649,7 @@ msgstr "/"
 #. TRANSLATORS: additional data that question passed to user beside main question message
 #: agama-cli/src/monitor/ui/question.rs:307
 msgid "Technical details"
-msgstr "記述詳細"
+msgstr "技術詳細"
 
 #. TRANSLATORS: CLI hint how to scroll through additional data
 #: agama-cli/src/monitor/ui/question.rs:317
@@ -830,7 +827,7 @@ msgstr ""
 
 #: agama-files/src/runner.rs:152
 msgid "Failed to run a script"
-msgstr ""
+msgstr "スクリプトの実行に失敗しました"
 
 #. TRANSLATORS: %s is replaced by the script name.
 #: agama-files/src/service.rs:183
@@ -839,7 +836,7 @@ msgstr "スクリプト %s の取得に失敗しました。再試行します�
 
 #: agama-files/src/service.rs:186
 msgid "Script fetching error"
-msgstr ""
+msgstr "スクリプト取得エラー"
 
 #. TRANSLATORS: %s is replaced by the script name.
 #: agama-files/src/service.rs:208
@@ -847,9 +844,8 @@ msgid "Failed to write the file %s. Do you want to try again?"
 msgstr "ファイル %s の書き込みに失敗しました。再試行しますか？"
 
 #: agama-files/src/service.rs:210
-#, fuzzy
 msgid "File write error"
-msgstr "プロファイルエラー"
+msgstr "ファイル書き込みエラー"
 
 #: agama-manager/src/actions.rs:78
 msgid "Prepare the system"
@@ -977,17 +973,16 @@ msgid "Trust"
 msgstr "信頼する"
 
 #: agama-security/src/service.rs:229
-#, fuzzy
 msgid ""
 "The registration server uses a self-signed certificate. Do you want to trust "
 "the certificate?"
 msgstr ""
-"自己署名型の証明書を取り込もうとしています。この証明書を信用し、製品を登録し"
-"てよろしいですか？"
+"この登録サーバでは自己署名型の証明書を使用しています。この証明書を信頼してよ"
+"ろしいですか？"
 
 #: agama-security/src/service.rs:234
 msgid "Self-signed certificate"
-msgstr ""
+msgstr "自己署名型証明書"
 
 #: agama-server/src/profile/web.rs:92
 msgid "Profile validation failed"
@@ -1011,7 +1006,7 @@ msgstr "AudoYaST からの変換に失敗しました"
 
 #: agama-software/src/callbacks/commit_download.rs:46
 msgid "Package download failed"
-msgstr ""
+msgstr "パッケージのダウンロードに失敗しました"
 
 #: agama-software/src/callbacks/commit_download.rs:52
 #: agama-software/src/callbacks/install.rs:60
@@ -1026,23 +1021,24 @@ msgid "Retry"
 msgstr "再試行"
 
 #: agama-software/src/callbacks/install.rs:55
-#, fuzzy
 msgid "Package installation error"
-msgstr "パッケージのインストールを開始しています"
+msgstr "パッケージのインストールエラー"
 
 #: agama-software/src/callbacks/install.rs:83
 msgid ""
 "There was a problem running a package script. You can try running the script "
 "again or ignore the error and continue."
 msgstr ""
+"パッケージスクリプトの実行時に問題が発生しました。スクリプトを再度実行するか"
+"、エラーを無視して続行することができます。"
 
 #: agama-software/src/callbacks/install.rs:88
 msgid "Package script error"
-msgstr ""
+msgstr "パッケージスクリプトエラー"
 
 #: agama-software/src/callbacks/security.rs:68
 msgid "Unsigned file"
-msgstr ""
+msgstr "未署名のファイル"
 
 #. TRANSLATORS: substituting: key ID, (key name), fingerprint
 #: agama-software/src/callbacks/security.rs:113
@@ -1054,26 +1050,24 @@ msgstr ""
 
 #: agama-software/src/callbacks/security.rs:119
 #: agama-software/src/callbacks/security.rs:160
-#, fuzzy
 msgid "Unknown GPG key"
-msgstr "不明"
+msgstr "不明な GPG 鍵"
 
 #: agama-software/src/callbacks/security.rs:203
 msgid "Signature check failed"
-msgstr ""
+msgstr "署名チェックに失敗しました"
 
 #: agama-software/src/callbacks/security.rs:226
 msgid "Missing checksum"
-msgstr ""
+msgstr "チェックサムが存在していません"
 
 #: agama-software/src/callbacks/security.rs:248
-#, fuzzy
 msgid "Unknown checksum"
-msgstr "不明"
+msgstr "未知のチェックサム"
 
 #: agama-software/src/callbacks/security.rs:267
 msgid "Wrong checksum"
-msgstr ""
+msgstr "誤ったチェックサム"
 
 #: agama-software/src/service.rs:297
 msgid ""
@@ -1085,14 +1079,12 @@ msgid "Starting packages installation"
 msgstr "パッケージのインストールを開始しています"
 
 #: agama-software/src/zypp_server.rs:313
-#, fuzzy
 msgid "Packages download and installation failed. Would you like to try again?"
 msgstr "パッケージのダウンロードとインストールが失敗しました。再試行しますか？"
 
 #: agama-software/src/zypp_server.rs:315
-#, fuzzy
 msgid "Packages installation failed"
-msgstr "インストールが失敗しました。"
+msgstr "パッケージのインストールに失敗しました"
 
 #: agama-software/src/zypp_server.rs:373
 msgid "Updating the list of repositories"
@@ -1187,9 +1179,8 @@ msgid "Details:"
 msgstr "詳細:"
 
 #: agama-utils/src/api/question.rs:252
-#, fuzzy
 msgid "Question"
-msgstr "問題点"
+msgstr "質問"
 
 #: agama-utils/src/api/question.rs:357 agama-utils/src/question/start.rs:48
 msgid "No"
