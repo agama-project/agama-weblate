@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-25 11:57+0000\n"
+"POT-Creation-Date: 2026-11-27 13:05+0000\n"
 "PO-Revision-Date: 2026-11-25 20:05+0000\n"
 "Last-Translator: David Medina <medipas@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.opensuse.org/projects/agama/agama-rust-"
@@ -58,6 +58,7 @@ msgstr "Elements de l'AutoYaST no admesos"
 
 #. TRANSLATORS: {0} is a URL
 #: agama-autoinstall/src/scripts.rs:136
+#, rust-format
 msgid ""
 "It was not possible to load the script from {0}. Do you want to try again?"
 msgstr "No s'ha pogut carregar l'script des de {0}. Voleu tornar-ho a provar?"
@@ -135,6 +136,7 @@ msgstr "Si us plau, introduïu la contrasenya d'arrel:"
 
 #. TRANSLATORS: {0} is a host name
 #: agama-cli/src/auth.rs:179
+#, rust-format
 msgid "Not authenticated in {0}"
 msgstr "No autenticat a {0}"
 
@@ -982,29 +984,30 @@ msgstr "Confia-hi"
 msgid ""
 "The registration server uses a self-signed certificate. Do you want to trust "
 "the certificate?"
-msgstr "El servidor de registre usa un certificat autosignat. Voleu confiar-hi?"
+msgstr ""
+"El servidor de registre usa un certificat autosignat. Voleu confiar-hi?"
 
 #: agama-security/src/service.rs:234
 msgid "Self-signed certificate"
 msgstr "Certificat autosignat"
 
-#: agama-server/src/profile/web.rs:92
+#: agama-server/src/profile/web.rs:97
 msgid "Profile validation failed"
 msgstr "La validació del perfil ha fallat"
 
-#: agama-server/src/profile/web.rs:95
+#: agama-server/src/profile/web.rs:100
 msgid "Could not retrieve profile"
 msgstr "No s'ha pogut recuperar el perfil"
 
-#: agama-server/src/profile/web.rs:98
+#: agama-server/src/profile/web.rs:103
 msgid "Invalid profile encoding"
 msgstr "Codificació del perfil no vàlida"
 
-#: agama-server/src/profile/web.rs:103
+#: agama-server/src/profile/web.rs:108
 msgid "Invalid profile request"
 msgstr "Sol·licitud de perfil no vàlida"
 
-#: agama-server/src/profile/web.rs:106
+#: agama-server/src/profile/web.rs:111
 msgid "AutoYaST conversion failed"
 msgstr "La conversió d'AutoYaST ha fallat"
 
@@ -1046,6 +1049,7 @@ msgstr "Fitxer no signat"
 
 #. TRANSLATORS: substituting: key ID, (key name), fingerprint
 #: agama-software/src/callbacks/security.rs:113
+#, rust-format
 msgid ""
 "The key {0} ({1}) with fingerprint {2} is unknown. Do you want to trust this "
 "key?"
